@@ -2,6 +2,8 @@
 
 A set of simple PNG icons for popular websites in a variety of sizes, ranging from 16px to 4096px.
 
+Work in progress. Create an Issue if you have a request.
+
 ## Sources and acknowledgements
 
 ### Amazon
