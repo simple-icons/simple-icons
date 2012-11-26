@@ -47,7 +47,7 @@ Original artist: Facebook, Inc.
 HEX colour value: #3B5998 (taken from CSS)
 
 ### GitHub
-Image source: https://github.com/github/media/tree/master/logos  
+Image source: https://github.com/github/media/tree/master/octocats  
 Original artist: GitHub, Inc.  
 HEX colour value: #4183C4 (taken from CSS)
 
@@ -85,6 +85,11 @@ HEX colour value: #80B719 (taken from .EPS file)
 Image source: http://www.logoeps.com/new-stumbleupon-logo-vector-eps/5727  
 Original artist: ???  
 HEX colour value: #EB4924 (taken from CSS)
+
+### Treehouse
+Image source: http://teamtreehouse.com/about  
+Original artist: Treehouse Island, Inc  
+HEX colour value: #7FA24C (taken from .EPS file)
 
 ### Tumblr
 Image source: http://www.tumblr.com/press  
