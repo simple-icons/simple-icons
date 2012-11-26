@@ -106,6 +106,11 @@ Image source: http://vimeo.com/about/press
 Original artist: Vimeo, Inc.  
 HEX colour value: #44BBFF (taken from CSS)
 
+### WordPress
+Image source: http://wordpress.org/about/logos/  
+Original artist: WordPress Foundation  
+HEX colour value: #21759B (taken from brand guidelines)
+
 ### Yahoo
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
