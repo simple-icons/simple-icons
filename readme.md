@@ -6,6 +6,11 @@ Work in progress. Create an Issue if you have a request.
 
 ## Sources and acknowledgements
 
+### 500px
+Image source: http://500px.com/press  
+Original artist: 500px  
+HEX colour value: #444444 (taken from CSS)
+
 ### Amazon
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
@@ -46,6 +51,11 @@ Image source: https://www.facebook.com/brandpermissions/logos.php
 Original artist: Facebook, Inc.  
 HEX colour value: #3B5998 (taken from CSS)
 
+### Foursquare
+Image source: https://foursquare.com/about/logos  
+Original artist: Foursquare  
+HEX colour value: #2398C9 (taken from CSS)
+
 ### GitHub
 Image source: https://github.com/github/media/tree/master/octocats  
 Original artist: GitHub, Inc.  
@@ -56,10 +66,15 @@ Image source: http://boldperspective.com/2011/free-google-plus-icon-vector
 Original artist: Sean McCabe, Bold Perspective  
 HEX colour value: #D14836 (taken from CSS)
 
+### Last.fm
+Image source: http://www.last.fm/resources  
+Original artist: Last.fm Ltd  
+HEX colour value: #D51007 (taken from brand guidelines)
+
 ### LinkedIn
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
-HEX colour value: 007FB1 (taken from official .TIFF image)
+HEX colour value: #007FB1 (taken from official .TIFF image)
 
 ### Path
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
