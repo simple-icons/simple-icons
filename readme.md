@@ -56,6 +56,21 @@ Image source: http://boldperspective.com/2011/free-google-plus-icon-vector
 Original artist: Sean McCabe, Bold Perspective  
 HEX colour value: #D14836 (taken from CSS)
 
+### Instagram 1
+Image source: N/A  
+Original artist: Dan Leech  
+HEX colour value: #3F729B (taken from CSS)
+
+### Instagram 2
+Image source: N/A  
+Original artist: Dan Leech  
+HEX colour value: #3F729B (taken from CSS)
+
+### Instagram 3
+Image source: http://dribbble.com/shots/690589-Instagram-Vector-Icon-Download  
+Original artist: Kyle Mac  
+HEX colour value: #3F729B (taken from CSS)
+
 ### LinkedIn
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
