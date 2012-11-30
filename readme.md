@@ -81,10 +81,20 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #E41F11 (taken from CSS)
 
+### Pinboard
+Image source: http://www.alexpeattie.com/projects/justvector_icons  
+Original artist: Alex Peattie  
+HEX colour value: #0000FF
+
 ### Pinterest
 Image source: http://pinterest.com/about/press  
 Original artist: Pinterest, Inc.  
 HEX colour value: #CB2027 (taken from CSS)
+
+### RSS
+Image source: http://www.alexpeattie.com/projects/justvector_icons  
+Original artist: Alex Peattie  
+HEX colour value: #FF6600
 
 ### Skype
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
