@@ -61,6 +61,11 @@ Image source: https://github.com/github/media/tree/master/octocats
 Original artist: GitHub, Inc.  
 HEX colour value: #4183C4 (taken from CSS)
 
+### Goodreads
+Image source: http://www.goodreads.com/about/press  
+Original artist: Goodreads Inc  
+HEX colour value: #5A471B (taken from .EPS file)
+
 ### Google+
 Image source: http://boldperspective.com/2011/free-google-plus-icon-vector  
 Original artist: Sean McCabe, Bold Perspective  
@@ -100,6 +105,11 @@ HEX colour value: #FF6600
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
 HEX colour value: #00AFF0 (taken from CSS)
+
+### SoundCloud
+Image source: http://www.soundcloud.com/press/material  
+Original artist: SoundCloud Ltd  
+HEX colour value: #FF6600 (taken from CSS)
 
 ### Spotify
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
