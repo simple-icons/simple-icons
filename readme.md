@@ -51,6 +51,11 @@ Image source: http://dribbble.com/site/brand
 Original artist: Dribbble LLC  
 HEX colour value: #EA4C89 (taken from brand guidelines)
 
+### Dropbox
+Image source: https://www.dropbox.com/sh/sf6whlu5dae4869/lHmM1DJilW/Dropbox%20Logos  
+Original artist: Dropbox Inc.  
+HEX colour value: #2281CF (taken from CSS)
+
 ### Email
 Image source: http://thenounproject.com/noun/mail/#icon-No90  
 Original artist: Roger Cook, Don Shanosky  
