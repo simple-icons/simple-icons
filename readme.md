@@ -46,6 +46,11 @@ Image source: http://dribbble.com/site/brand
 Original artist: Dribbble LLC  
 HEX colour value: #EA4C89 (taken from brand guidelines)
 
+### Email
+Image source: http://thenounproject.com/noun/mail/#icon-No90  
+Original artist: Roger Cook, Don Shanosky  
+HEX colour value: #666 (The Number of the Beast)
+
 ### Facebook
 Image source: https://www.facebook.com/brandpermissions/logos.php  
 Original artist: Facebook, Inc.  
