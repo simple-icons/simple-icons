@@ -114,7 +114,7 @@ HEX colour value: #CB2027 (taken from CSS)
 ### RSS
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
-HEX colour value: #FF6600
+HEX colour value: #FF8300
 
 ### Skype
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
