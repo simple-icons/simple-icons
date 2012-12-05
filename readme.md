@@ -18,7 +18,7 @@ Work in progress. Create an Issue if you have a request.
 	</thead>
 	<tbody>
 		<tr>
-			<td>*500px*</td>
+			<td>__500px__</td>
 			<td><span style="color:#444444">#444444</span></td>
 			<td>CSS</td>
 			<td>http://500px.com/press</td>
