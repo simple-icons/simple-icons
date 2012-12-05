@@ -6,10 +6,26 @@ Work in progress. Create an Issue if you have a request.
 
 ## Sources and acknowledgements
 
-### 500px
-Image source: http://500px.com/press  
-Original artist: 500px  
-HEX colour value: #444444 (taken from CSS)
+<table>
+	<thead>
+		<tr>
+			<th>Icon</th>
+			<th>Colour</th>
+			<th>Colour Source</th>
+			<th>Image Source</th>
+			<th>Original Artist</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>*500px*</td>
+			<td><span style="color:#444444">#444444</span></td>
+			<td>CSS</td>
+			<td>http://500px.com/press</td>
+			<td>500px</td>
+		</tr>
+	</tbody>
+</table>
 
 ### Amazon
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
