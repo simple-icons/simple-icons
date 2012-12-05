@@ -13,50 +13,48 @@ Work in progress. Create an Issue if you have a request.
 			<th>Colour</th>
 			<th>Colour Source</th>
 			<th>Image Source</th>
-			<th>Original Artist</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td><strong>500px</strong></td>
-			<td><span style="color:#444444">#444444</span></td>
+			<td>#444444</td>
 			<td>CSS</td>
 			<td>http://500px.com/press</td>
-			<td>500px</td>
 		</tr>
 		<tr>
 			<td><strong>Amazon</strong></td>
-			<td><span class="style:color:#FF9900">#FF9900</span></td>
+			<td>#FF9900</td>
 			<td>Brand Guidelines</td>
 			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
-			<td>Alex Peattie</td>
 		</tr>
 		<tr>
 			<td><strong>Android</strong></td>
-			<td><span class="style:color:#A4C639">#A4C639</span></td>
+			<td>#A4C639</td>
 			<td>Brand Guidelines</td>
 			<td>http://www.hdicon.com/vector-logos/android-robot</td>
-			<td>Google, Inc</td>
 		</tr>
 		<tr>
 			<td><strong>App.net</strong></td>
-			<td><span class="style:color:#898D90">#898D90</span></td>
+			<td>#898D90</td>
 			<td>CSS</td>
-			<td>https://account.app.net/legal/assets  </td>
-			<td>App.net</td>
+			<td>https://account.app.net/legal/assets</td>
+		</tr>
+		<tr>
+			<td><strong>Apple</strong></td>
+			<td>#B9BFC1</td>
+			<td>PDF</td>
+			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
+		</tr>
+		<tr>
+			<td><strong>AWS</strong></td>
+			<td>#FF9900</td>
+			<td>Brand Guidelines</td>
+			<td>http://aws.amazon.com/architecture/icons</td>
 		</tr>
 	</tbody>
 </table>
 
-### Apple
-Image source: http://www.alexpeattie.com/projects/justvector_icons  
-Original artist: Alex Peattie  
-HEX colour value: #B9BFC1 (taken from PDF)
-
-### AWS
-Image source: http://aws.amazon.com/architecture/icons  
-Original artist: Amazon, Inc.  
-HEX colour value: #FF9900 (taken from brand guidelines)
 
 ### Behance
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
