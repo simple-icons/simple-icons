@@ -25,13 +25,13 @@ Work in progress. Create an Issue if you have a request.
 		<tr>
 			<td><strong>Amazon</strong></td>
 			<td><code>#FF9900</code></td>
-			<td>Brand Guidelines</td>
+			<td>Guidelines</td>
 			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
 		</tr>
 		<tr>
 			<td><strong>Android</strong></td>
 			<td><code>#A4C639</code></td>
-			<td>Brand Guidelines</td>
+			<td>Guidelines</td>
 			<td>http://www.hdicon.com/vector-logos/android-robot</td>
 		</tr>
 		<tr>
@@ -49,7 +49,7 @@ Work in progress. Create an Issue if you have a request.
 		<tr>
 			<td><strong>AWS</strong></td>
 			<td><code>#FF9900</code></td>
-			<td>Brand Guidelines</td>
+			<td>Guidelines</td>
 			<td>http://aws.amazon.com/architecture/icons</td>
 		</tr>
 		<tr>
@@ -73,7 +73,7 @@ Work in progress. Create an Issue if you have a request.
 		<tr>
 			<td><strong>Dribbble</strong></td>
 			<td><code>#EA4C89</code></td>
-			<td>Brand Guidelines</td>
+			<td>Guidelines</td>
 			<td>http://dribbble.com/site/brand</td>
 		</tr>
 		<tr>
