@@ -52,44 +52,51 @@ Work in progress. Create an Issue if you have a request.
 			<td>Brand Guidelines</td>
 			<td>http://aws.amazon.com/architecture/icons</td>
 		</tr>
+		<tr>
+			<td><strong>Behance</strong></td>
+			<td>#1769FF</td>
+			<td>CSS</td>
+			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
+		</tr>
+		<tr>
+			<td><strong>Blogger</strong></td>
+			<td>#F57D00</td>
+			<td>SVG</td>
+			<td>http://en.wikipedia.org/wiki/File:Blogger.svg</td>
+		</tr>
+		<tr>
+			<td><strong>Digg</strong></td>
+			<td>#14589E</td>
+			<td>CSS</td>
+			<td>http://logo-vector-free.blogspot.co.uk/2009/09/digg-logo-vector-ii.html</td>
+		</tr>
+		<tr>
+			<td><strong>Dribbble</strong></td>
+			<td>#EA4C89</td>
+			<td>Brand Guidelines</td>
+			<td>http://dribbble.com/site/brand</td>
+		</tr>
+		<tr>
+			<td><strong>Dropbox</strong></td>
+			<td>#2281CF</td>
+			<td>CSS</td>
+			<td>https://www.dropbox.com/sh/sf6whlu5dae4869/lHmM1DJilW/Dropbox%20Logos</td>
+		</tr>
+		<tr>
+			<td><strong>Email</strong></td>
+			<td>#666</td>
+			<td>N/A</td>
+			<td>http://thenounproject.com/noun/mail/#icon-No90</td>
+		</tr>
+		<tr>
+			<td><strong>Facebook</strong></td>
+			<td>#3B5998</td>
+			<td>CSS</td>
+			<td>https://www.facebook.com/brandpermissions/logos.php</td>
+		</tr>
 	</tbody>
 </table>
 
-
-### Behance
-Image source: http://www.alexpeattie.com/projects/justvector_icons  
-Original artist: Alex Peattie  
-HEX colour value: #1769FF (taken from CSS)
-
-### Blogger
-Image source: http://en.wikipedia.org/wiki/File:Blogger.svg  
-Original artist: Google, Inc.  
-HEX colour value: #F57D00 (taken from .SVG file)
-
-### Digg
-Image source: http://logo-vector-free.blogspot.co.uk/2009/09/digg-logo-vector-ii.html  
-Original artist: ???  
-HEX colour value: #14589E (taken from CSS)
-
-### Dribbble
-Image source: http://dribbble.com/site/brand  
-Original artist: Dribbble LLC  
-HEX colour value: #EA4C89 (taken from brand guidelines)
-
-### Dropbox
-Image source: https://www.dropbox.com/sh/sf6whlu5dae4869/lHmM1DJilW/Dropbox%20Logos  
-Original artist: Dropbox Inc.  
-HEX colour value: #2281CF (taken from CSS)
-
-### Email
-Image source: http://thenounproject.com/noun/mail/#icon-No90  
-Original artist: Roger Cook, Don Shanosky  
-HEX colour value: #666 (The Number of the Beast)
-
-### Facebook
-Image source: https://www.facebook.com/brandpermissions/logos.php  
-Original artist: Facebook, Inc.  
-HEX colour value: #3B5998 (taken from CSS)
 
 ### Foursquare
 Image source: https://foursquare.com/about/logos  
