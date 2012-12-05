@@ -18,79 +18,79 @@ Work in progress. Create an Issue if you have a request.
 	<tbody>
 		<tr>
 			<td><strong>500px</strong></td>
-			<td>#444444</td>
+			<td><code>#444444</code></td>
 			<td>CSS</td>
 			<td>http://500px.com/press</td>
 		</tr>
 		<tr>
 			<td><strong>Amazon</strong></td>
-			<td>#FF9900</td>
+			<td><code>#FF9900</code></td>
 			<td>Brand Guidelines</td>
 			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
 		</tr>
 		<tr>
 			<td><strong>Android</strong></td>
-			<td>#A4C639</td>
+			<td><code>#A4C639</code></td>
 			<td>Brand Guidelines</td>
 			<td>http://www.hdicon.com/vector-logos/android-robot</td>
 		</tr>
 		<tr>
 			<td><strong>App.net</strong></td>
-			<td>#898D90</td>
+			<td><code>#898D90</code></td>
 			<td>CSS</td>
 			<td>https://account.app.net/legal/assets</td>
 		</tr>
 		<tr>
 			<td><strong>Apple</strong></td>
-			<td>#B9BFC1</td>
+			<td><code>#B9BFC1</code></td>
 			<td>PDF</td>
 			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
 		</tr>
 		<tr>
 			<td><strong>AWS</strong></td>
-			<td>#FF9900</td>
+			<td><code>#FF9900</code></td>
 			<td>Brand Guidelines</td>
 			<td>http://aws.amazon.com/architecture/icons</td>
 		</tr>
 		<tr>
 			<td><strong>Behance</strong></td>
-			<td>#1769FF</td>
+			<td><code>#1769FF</code></td>
 			<td>CSS</td>
 			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
 		</tr>
 		<tr>
 			<td><strong>Blogger</strong></td>
-			<td>#F57D00</td>
+			<td><code>#F57D00</code></td>
 			<td>SVG</td>
 			<td>http://en.wikipedia.org/wiki/File:Blogger.svg</td>
 		</tr>
 		<tr>
 			<td><strong>Digg</strong></td>
-			<td>#14589E</td>
+			<td><code>#14589E</code></td>
 			<td>CSS</td>
 			<td>http://logo-vector-free.blogspot.co.uk/2009/09/digg-logo-vector-ii.html</td>
 		</tr>
 		<tr>
 			<td><strong>Dribbble</strong></td>
-			<td>#EA4C89</td>
+			<td><code>#EA4C89</code></td>
 			<td>Brand Guidelines</td>
 			<td>http://dribbble.com/site/brand</td>
 		</tr>
 		<tr>
 			<td><strong>Dropbox</strong></td>
-			<td>#2281CF</td>
+			<td><code>#2281CF</code></td>
 			<td>CSS</td>
 			<td>https://www.dropbox.com/sh/sf6whlu5dae4869/lHmM1DJilW/Dropbox%20Logos</td>
 		</tr>
 		<tr>
 			<td><strong>Email</strong></td>
-			<td>#666</td>
+			<td><code>#666666</code></td>
 			<td>N/A</td>
 			<td>http://thenounproject.com/noun/mail/#icon-No90</td>
 		</tr>
 		<tr>
 			<td><strong>Facebook</strong></td>
-			<td>#3B5998</td>
+			<td><code>#3B5998</code></td>
 			<td>CSS</td>
 			<td>https://www.facebook.com/brandpermissions/logos.php</td>
 		</tr>
