@@ -18,29 +18,35 @@ Work in progress. Create an Issue if you have a request.
 	</thead>
 	<tbody>
 		<tr>
-			<td>__500px__</td>
+			<td><strong>500px</strong></td>
 			<td><span style="color:#444444">#444444</span></td>
 			<td>CSS</td>
 			<td>http://500px.com/press</td>
 			<td>500px</td>
 		</tr>
+		<tr>
+			<td><strong>Amazon</strong></td>
+			<td><span class="style:color:#FF9900">#FF9900</span></td>
+			<td>Brand Guidelines</td>
+			<td>http://www.alexpeattie.com/projects/justvector_icons</td>
+			<td>Alex Peattie</td>
+		</tr>
+		<tr>
+			<td><strong>Android</strong></td>
+			<td><span class="style:color:#A4C639">#A4C639</span></td>
+			<td>Brand Guidelines</td>
+			<td>http://www.hdicon.com/vector-logos/android-robot</td>
+			<td>Google, Inc</td>
+		</tr>
+		<tr>
+			<td><strong>App.net</strong></td>
+			<td><span class="style:color:#898D90">#898D90</span></td>
+			<td>CSS</td>
+			<td>https://account.app.net/legal/assets  </td>
+			<td>App.net</td>
+		</tr>
 	</tbody>
 </table>
-
-### Amazon
-Image source: http://www.alexpeattie.com/projects/justvector_icons  
-Original artist: Alex Peattie  
-HEX colour value: #FF9900 (taken from brand guidelines)
-
-### Android
-Image source: http://www.hdicon.com/vector-logos/android-robot  
-Original artist: Google, Inc  
-HEX colour value: #A4C639 (taken from brand guidelines)
-
-### App.net
-Image source: https://account.app.net/legal/assets  
-Original artist: App.net  
-HEX colour value: #898D90 (taken from CSS)
 
 ### Apple
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
