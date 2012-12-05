@@ -41,6 +41,11 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #1769FF (taken from CSS)
 
+### Blogger
+Image source: http://en.wikipedia.org/wiki/File:Blogger.svg  
+Original artist: Google, Inc.  
+HEX colour value: #F57D00 (taken from .SVG file)
+
 ### Digg
 Image source: http://logo-vector-free.blogspot.co.uk/2009/09/digg-logo-vector-ii.html  
 Original artist: ???  
@@ -96,6 +101,11 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #007FB1 (taken from official .TIFF image)
 
+### Orkut
+Image source: http://en.wikipedia.org/wiki/File:Logo_ORKUT.svg  
+Original artist: Google, Inc.  
+HEX colour value: #ED2590 (taken from .SVG file)
+
 ### Path
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
@@ -110,6 +120,11 @@ HEX colour value: #0000FF
 Image source: http://pinterest.com/about/press  
 Original artist: Pinterest, Inc.  
 HEX colour value: #CB2027 (taken from CSS)
+
+### Posterous
+Image source: http://posterous.com/press  
+Original arist: Posterous Inc  
+HEX colour value: #FFDD68 (taken from CSS)
 
 ### RSS
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
@@ -165,3 +180,8 @@ HEX colour value: #21759B (taken from brand guidelines)
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
 HEX colour value: #731A8B (taken from CSS)
+
+### YouTube
+Image source: https://developers.google.com/youtube/branding  
+Original artist: YouTube, LLC  
+HEX colour value: #CD332D (taken from brand guidelines)
