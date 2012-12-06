@@ -11,6 +11,11 @@ Image source: http://500px.com/press
 Original artist: 500px  
 HEX colour value: #444444 (taken from CSS)
 
+### About.me
+Image source: http://about.me/assets  
+Original artist: AOL Inc.  
+HEX colour value: #00405D (taken from brand guidelines)
+
 ### Amazon
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
