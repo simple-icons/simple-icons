@@ -71,6 +71,16 @@ Image source: http://thenounproject.com/noun/mail/#icon-No90
 Original artist: Roger Cook, Don Shanosky  
 HEX colour value: #666 (The Number of the Beast)
 
+### Event Store
+Image source: http://geteventstore.com/assets  
+Original artist: Dan Leech  
+HEX colour value: #6BA300 (taken from brand guidelines)
+
+### Evernote
+Image source: http://evernote.com/trademark/#a_logos  
+Original artist: Evernote Corporation  
+HEX colour value: #7AC142 (taken from .EPS file)
+
 ### Facebook
 Image source: https://www.facebook.com/brandpermissions/logos.php  
 Original artist: Facebook, Inc.  
