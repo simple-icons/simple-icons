@@ -96,6 +96,11 @@ Image source: http://boldperspective.com/2011/free-google-plus-icon-vector
 Original artist: Sean McCabe, Bold Perspective  
 HEX colour value: #D14836 (taken from CSS)
 
+### Instagram
+Image source: http://instagram.com/accounts/badges  
+Original artist: Instagram  
+HEX colour value: #3F729B (taken from CSS)
+
 ### Last.fm
 Image source: http://www.last.fm/resources  
 Original artist: Last.fm Ltd  
