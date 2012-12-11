@@ -151,6 +151,11 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #FF8300
 
+### Simple Icons
+Image source: N/A (“S” set in Source Sans Pro Bold)  
+Original artist: N/A  
+HEX colour value: #BF1813
+
 ### Skype
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
