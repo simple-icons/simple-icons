@@ -52,8 +52,8 @@ Original artist: Google, Inc.
 HEX colour value: #F57D00 (taken from .SVG file)
 
 ### Digg
-Image source: http://logo-vector-free.blogspot.co.uk/2009/09/digg-logo-vector-ii.html  
-Original artist: ???  
+Image source: http://www.alexpeattie.com/projects/justvector_icons  
+Original artist: Alex Peattie  
 HEX colour value: #14589E (taken from CSS)
 
 ### Dribbble
