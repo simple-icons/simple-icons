@@ -171,6 +171,11 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #80B719 (taken from .EPS file)
 
+### Stack Exchange
+Image source: http://stackexchange.com/about/logos  
+Original artist: Stack Exchange, Inc  
+HEX colour value: #1F5196 (taken from .EPS file)
+
 ### Stack Overflow
 Image source: http://stackexchange.com/about/logos  
 Original artist: Stack Exchange, Inc  
