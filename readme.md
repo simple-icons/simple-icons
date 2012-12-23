@@ -6,6 +6,26 @@ Work in progress. Create an Issue if you have a request.
 
 ## Sources and acknowledgements
 
+<table>
+	<thead>
+		<tr>
+			<td>Icon</td>
+			<td>Colour</td>
+			<td>Source</td>
+			<td>Original Artist</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>500px</td>
+			<td><a title="Taken from CSS">#444444</a></td>
+			<td>http://500px.com/press</td>
+			<td>500px</td>
+		</tr>
+	</tbody>
+</table>
+			
+
 ### 500px
 Image source: http://500px.com/press  
 Original artist: 500px  
