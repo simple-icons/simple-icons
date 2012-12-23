@@ -18,7 +18,7 @@ Work in progress. Create an Issue if you have a request.
 	<tbody>
 		<tr>
 			<td>500px</td>
-			<td><abbr title="Taken from CSS">#444444</abbr></td>
+			<td>#444444 <small>taken from CSS</small></td>
 			<td>500px</td>
 			<td>http://500px.com/press</td>
 		</tr>
