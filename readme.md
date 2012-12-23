@@ -186,6 +186,11 @@ Image source: http://www.logoeps.com/new-stumbleupon-logo-vector-eps/5727
 Original artist: ???  
 HEX colour value: #EB4924 (taken from CSS)
 
+### Super User
+Image source: http://stackexchange.com/about/logos  
+Original artist: Stack Exchange, Inc  
+Hex colour value: #2DABE2 (taken from .EPS file)
+
 ### Treehouse
 Image source: http://teamtreehouse.com/about  
 Original artist: Treehouse Island, Inc  
