@@ -9,18 +9,18 @@ Work in progress. Create an Issue if you have a request.
 <table>
 	<thead>
 		<tr>
-			<td>Icon</td>
-			<td>Colour</td>
-			<td>Source</td>
-			<td>Original Artist</td>
+			<th>Icon</th>
+			<th>Colour</th>
+			<th>Original Artist</th>
+			<th>Source</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>500px</td>
-			<td><a title="Taken from CSS">#444444</a></td>
-			<td>http://500px.com/press</td>
+			<td><abbr title="Taken from CSS">#444444</abbr></td>
 			<td>500px</td>
+			<td>http://500px.com/press</td>
 		</tr>
 	</tbody>
 </table>
