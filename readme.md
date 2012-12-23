@@ -171,6 +171,11 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #80B719 (taken from .EPS file)
 
+### Stack Overflow
+Image source: http://stackexchange.com/about/logos  
+Original artist: Stack Exchange, Inc  
+HEX colour value: #F47920 (taken from .EPS file)
+
 ### StumbleUpon
 Image source: http://www.logoeps.com/new-stumbleupon-logo-vector-eps/5727  
 Original artist: ???  
