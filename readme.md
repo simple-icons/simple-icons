@@ -41,6 +41,11 @@ Image source: http://aws.amazon.com/architecture/icons
 Original artist: Amazon, Inc.  
 HEX colour value: #FF9900 (taken from brand guidelines)
 
+### Bebo
+Image source: http://www.bebo.com/StaticPage.jsp?StaticPageId=3904836005  
+Original artist: Bebo  
+HEX colour value: #EE1010 (taken from brand guideliens)
+
 ### Behance
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
@@ -106,6 +111,11 @@ Image source: http://boldperspective.com/2011/free-google-plus-icon-vector
 Original artist: Sean McCabe, Bold Perspective  
 HEX colour value: #D14836 (taken from CSS)
 
+### Grooveshark
+Image source: https://www.grooveshark.com/logos  
+Original artist: Grooveshark  
+HEX colour value: #000000 (taken from .EPS file)
+
 ### Instagram
 Image source: http://instagram.com/accounts/badges  
 Original artist: Instagram  
@@ -120,6 +130,11 @@ HEX colour value: #D51007 (taken from brand guidelines)
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
 HEX colour value: #007FB1 (taken from official .TIFF image)
+
+### Newsvine
+Image source: http://www.newsvine.com/_nv/cms/info/identity  
+Original artist: Newsvine, Inc  
+HEX colour value: #075B2F (taken from .EPS file)
 
 ### Orkut
 Image source: http://en.wikipedia.org/wiki/File:Logo_ORKUT.svg  
@@ -160,6 +175,11 @@ HEX colour value: #BF1813
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
 HEX colour value: #00AFF0 (taken from CSS)
+
+### SlideShare
+Image source: http://www.slideshare.net/about/logos  
+Original artist: SlideShare Inc  
+HEX colour value: #009999 (taken from CSS)
 
 ### SoundCloud
 Image source: http://www.soundcloud.com/press/material  
