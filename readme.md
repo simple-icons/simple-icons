@@ -161,6 +161,11 @@ Image source: http://en.wikipedia.org/wiki/File:Logo_ORKUT.svg
 Original artist: Google, Inc.  
 HEX colour value: #ED2590 (taken from .SVG file)
 
+### Outlook
+Image source: http://www.logoeps.com/outlook-mail-logo-vector/27883/  
+Original artist: ???  
+HEX colour value: #0072C6 (taken from .EPS file)
+
 ### Path
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
