@@ -263,7 +263,7 @@ HEX colour value: #68217A (taken from .EPS file)
 
 ### Windows
 Image source: http://www.logoeps.com/windows-8-icon-vector/25130/  
-Original artist: ???
+Original artist: ???  
 HEX colour value: #00BDF6 (taken from .EPS file)
 
 ### WordPress
