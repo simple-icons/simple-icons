@@ -61,6 +61,11 @@ Image source: http://www.codeschool.com/pages/press_kit
 Original artist: Code School LLC  
 HEX colour value: #C68044 (taken from .EPS file)
 
+### Codeacademy
+Image source: http://www.codecademy.com/about  
+Original artist: Codeacademy  
+HEX colour value: #0088CC (taken from CSS)
+
 ### Digg
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
