@@ -151,6 +151,11 @@ Image source: http://www.alexpeattie.com/projects/justvector_icons
 Original artist: Alex Peattie  
 HEX colour value: #007FB1 (taken from official .TIFF image)
 
+### MySpace
+Image source: http://www.logoeps.com/myspace-2013-logo-vector/31307/  
+Original artist: ???  
+HEX colour value: #008DDE
+
 ### Newsvine
 Image source: http://www.newsvine.com/_nv/cms/info/identity  
 Original artist: Newsvine, Inc  
