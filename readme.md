@@ -136,6 +136,11 @@ Image source: http://instagram.com/accounts/badges
 Original artist: Instagram  
 HEX colour value: #3F729B (taken from CSS)
 
+### Klout
+Image source: http://www.logoeps.com/klout/10854/  
+Original artist: ???  
+HEX colour value: #E24A25 (taken from .EPS file)
+
 ### Last.fm
 Image source: http://www.last.fm/resources  
 Original artist: Last.fm Ltd  
@@ -195,6 +200,11 @@ HEX colour value: #FF8300
 Image source: N/A (“S” set in Source Sans Pro Bold)  
 Original artist: N/A  
 HEX colour value: #BF1813
+
+### SkyDrive
+Image source: http://www.logoeps.com/skydrive-logo-vector/31288/  
+Original artist: ???  
+HEX colour value: #094AB1 (taken from .EPS file)
 
 ### Skype
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
