@@ -151,6 +151,11 @@ Image source: http://www.newsvine.com/_nv/cms/info/identity
 Original artist: Newsvine, Inc  
 HEX colour value: #075B2F (taken from .EPS file)
 
+### Office
+Image source: http://www.logoeps.com/microsoft-office-2013/11119/  
+Original artist: ???  
+HEX colour value: #EB3C00 (taken from .EPS file)
+
 ### Orkut
 Image source: http://en.wikipedia.org/wiki/File:Logo_ORKUT.svg  
 Original artist: Google, Inc.  
@@ -245,6 +250,16 @@ HEX colour value: #39A9E0 (taken from .EPS source image)
 Image source: http://vimeo.com/about/press  
 Original artist: Vimeo, Inc.  
 HEX colour value: #44BBFF (taken from CSS)
+
+### Visual Studio
+Image source: http://www.logoeps.com/visual-studio-2012/9864/  
+Original artist: ???  
+HEX colour value: #68217A (taken from .EPS file)
+
+### Windows
+Image source: http://www.logoeps.com/windows-8-icon-vector/25130/  
+Original artist: ???
+HEX colour value: #00BDF6 (taken from .EPS file)
 
 ### WordPress
 Image source: http://wordpress.org/about/logos/  
