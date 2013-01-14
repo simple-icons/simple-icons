@@ -56,6 +56,11 @@ Image source: http://en.wikipedia.org/wiki/File:Blogger.svg
 Original artist: Google, Inc.  
 HEX colour value: #F57D00 (taken from .SVG file)
 
+### Code School
+Image source: http://www.codeschool.com/pages/press_kit  
+Original artist: Code School LLC  
+HEX colour value: #C68044 (taken from .EPS file)
+
 ### Digg
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
