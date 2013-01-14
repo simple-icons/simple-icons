@@ -114,7 +114,7 @@ HEX colour value: #D14836 (taken from CSS)
 ### GOV.UK
 Image source: https://github.com/alphagov/design-assets/tree/master/Icons  
 Original artist: Government Digital Service  
-HEX colour value: #231f20 (taken from brand guidelines)
+HEX colour value: #231F20 (taken from brand guidelines)
 
 ### Grooveshark
 Image source: https://www.grooveshark.com/logos  
