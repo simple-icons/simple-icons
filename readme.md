@@ -111,6 +111,11 @@ Image source: http://boldperspective.com/2011/free-google-plus-icon-vector
 Original artist: Sean McCabe, Bold Perspective  
 HEX colour value: #D14836 (taken from CSS)
 
+### GOV.UK
+Image source: https://github.com/alphagov/design-assets/tree/master/Icons  
+Original artist: Government Digital Service  
+HEX colour value: #231f20 (taken from brand guidelines)
+
 ### Grooveshark
 Image source: https://www.grooveshark.com/logos  
 Original artist: Grooveshark  
