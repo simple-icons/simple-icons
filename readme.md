@@ -264,7 +264,12 @@ HEX colour value: #EB4924 (taken from CSS)
 ### Super User
 Image source: http://stackexchange.com/about/logos  
 Original artist: Stack Exchange, Inc  
-Hex colour value: #2DABE2 (taken from .EPS file)
+HEX colour value: #2DABE2 (taken from .EPS file)
+
+### Trakt.tv
+Image source: Requested directly  
+Original artist: trakt  
+HEX colour value: #222222 (taken from CSS)
 
 ### Treehouse
 Image source: http://teamtreehouse.com/about  
