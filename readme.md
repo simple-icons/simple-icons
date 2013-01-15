@@ -81,6 +81,11 @@ Image source: https://www.dropbox.com/sh/sf6whlu5dae4869/lHmM1DJilW/Dropbox%20Lo
 Original artist: Dropbox Inc.  
 HEX colour value: #2281CF (taken from CSS)
 
+### Ebay
+Image source: http://www.logoeps.com/new-ebay-logo-2012-vector-free-download/8509/  
+Original artist: ???  
+HEX colour value: #0064D2 (taken from .EPS file)
+
 ### Email
 Image source: http://thenounproject.com/noun/mail/#icon-No90  
 Original artist: Roger Cook, Don Shanosky  
@@ -90,6 +95,11 @@ HEX colour value: #666 (The Number of the Beast)
 Image source: http://geteventstore.com/assets  
 Original artist: Dan Leech  
 HEX colour value: #6BA300 (taken from brand guidelines)
+
+### Eventbrite
+Image source: http://www.eventbrite.com/presskit/  
+Original artist: Eventbrite  
+HEX colour value: #F3844C (taken from CSS)
 
 ### Evernote
 Image source: http://evernote.com/trademark/#a_logos  
@@ -196,6 +206,11 @@ Image source: http://posterous.com/press
 Original arist: Posterous Inc  
 HEX colour value: #FFDD68 (taken from CSS)
 
+### Reddit
+Image source: http://www.logoeps.com/reddit-logo-vector-eps-crd-ai/6547/  
+Original artist: ???  
+HEX colour value: #FF4500 (taken from CSS)
+
 ### RSS
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
@@ -290,6 +305,11 @@ HEX colour value: #21759B (taken from brand guidelines)
 Image source: http://www.alexpeattie.com/projects/justvector_icons  
 Original artist: Alex Peattie  
 HEX colour value: #731A8B (taken from CSS)
+
+### Yelp
+Image source: http://www.logoeps.com/yelp-logo-vector/4399/  
+Original artist: ???  
+HEX colour value: #C93C27 (taken from .EPS file)
 
 ### YouTube
 Image source: https://developers.google.com/youtube/branding  
