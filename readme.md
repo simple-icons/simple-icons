@@ -116,6 +116,11 @@ Image source: https://foursquare.com/about/logos
 Original artist: Foursquare  
 HEX colour value: #2398C9 (taken from CSS)
 
+### Geeklist
+Image source: http://geekli.st/press  
+Original artist: Geeklist Inc.  
+HEX colour value: #8CC63E (taken from .EPS file)
+
 ### GitHub
 Image source: https://github.com/github/media/tree/master/octocats  
 Original artist: GitHub, Inc.  
