@@ -151,6 +151,11 @@ Image source: http://instagram.com/accounts/badges
 Original artist: Instagram  
 HEX colour value: #3F729B (taken from CSS)
 
+### Kickstarter
+Image source: http://www.kickstarter.com/help/style_guide  
+Original artist: Kickstarter, Inc.  
+HEX colour value: #87C442 (taken from brand guidelines)
+
 ### Klout
 Image source: http://www.logoeps.com/klout/10854/  
 Original artist: ???  
