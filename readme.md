@@ -211,6 +211,11 @@ Image source: http://posterous.com/press
 Original arist: Posterous Inc  
 HEX colour value: #FFDD68 (taken from CSS)
 
+### Readability
+Image source: http://readability.com  
+Original artist: Readability  
+HEX colour value: #870000 (taken from .EPS file)
+
 ### Reddit
 Image source: http://www.logoeps.com/reddit-logo-vector-eps-crd-ai/6547/  
 Original artist: ???  
