@@ -111,6 +111,11 @@ Image source: https://www.facebook.com/brandpermissions/logos.php
 Original artist: Facebook, Inc.  
 HEX colour value: #3B5998 (taken from CSS)
 
+### Forrst
+Image source: http://forrst.com/posts/Forrst_Logo-5ZL  
+Original artist: Forrst  
+HEX colour value: #5B9A68 (taken from .AI file)
+
 ### Foursquare
 Image source: https://foursquare.com/about/logos  
 Original artist: Foursquare  
