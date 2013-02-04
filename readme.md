@@ -1,6 +1,6 @@
 # Simple Icons
 
-A set of simple PNG icons for popular websites in a variety of sizes, ranging from 16px to 4096px. Preview them at http://danleech.github.com/simple-icons/. 
+A set of simple PNG icons for popular websites in a variety of sizes, ranging from 16px to 4096px. Preview them at http://simpleicons.org. 
 
 Work in progress.
 
