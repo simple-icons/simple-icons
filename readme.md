@@ -6,4 +6,4 @@ Work in progress.
 
 ## Requests
 
-Create an Issue if you have a request.
+Create an <a href="https://github.com/danleech/simple-icons/issues">Issue</a> if you have a request for a new icon.
