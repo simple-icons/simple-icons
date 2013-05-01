@@ -1,8 +1,18 @@
-# Simple Icons – http://simpleicons.org
+# Simple Icons
 
-PNG icons in eleven sizes, from 16px to 4096px.
+Preview the set at [simpleicons.org](http://simpleicons.org "Simple Icons")
 
-The Simple Icons set is a constant work in progress. New icons will appear over time. If you have a specific request—or a comment—create an <a href="https://github.com/danleech/simple-icons/issues">Issue</a> on this repository.
+## What is Simple Icons?
+
+Coming soon
+
+## Usage
+
+Coming soon
+
+## Feedback & Requests
+
+Coming soon
 
 ## License
 
