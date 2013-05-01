@@ -2,10 +2,6 @@
 
 Preview the set at [simpleicons.org](http://simpleicons.org "Simple Icons")
 
-## What is Simple Icons?
-
-Coming soon
-
 ## Usage
 
 Coming soon
