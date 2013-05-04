@@ -4,11 +4,11 @@ Preview the set at [simpleicons.org](http://simpleicons.org "Simple Icons")
 
 ## Usage
 
-Coming soon
+Code samples coming soon.
 
 ## Feedback & Requests
 
-Coming soon
+Please leave feedback, requests and bugs in the Issues section of this repository.
 
 ## License
 
