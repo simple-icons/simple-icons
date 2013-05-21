@@ -5,15 +5,20 @@
 		"credit" : "500px"
 	},
 	{
+		"name" : "A List Apart",
+		"hex" : "222222",
+		"credit" : "A List Apart"
+	},
+	{
 		"name" : "About.me",
 		"hex" : "00405D",
 		"credit" : "AOL Inc."
 	},
 	{
-		"name" : "A List Apart",
-		"hex" : "222222",
-		"credit" : "A List Apart"
-	},
+		"name" : "AIM",
+		"hex" : "F2D523",
+		"credit" : "Alex Peattie"
+	}
 	{
 		"name" : "Amazon",
 		"hex" : "FF9900",
@@ -360,6 +365,11 @@
 		"credit" : "Mendeley"
 	},
 	{
+		"name" : "Microformats",
+		"hex" : "8CC319",
+		"credit" : "Microformats"
+	},
+	{
 		"name" : "Modernizr",
 		"hex" : "D81A76",
 		"credit" : "Modernizr"
@@ -623,5 +633,10 @@
 		"name" : "YouTube",
 		"hex" : "CD332D",
 		"credit" : "YouTube, LLC"
+	},
+	{
+		"name" : "Zerply",
+		"hex" : "9DBC7A",
+		"credit" : "Alex Peattie"
 	}
 ]
