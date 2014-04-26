@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{config.dist}}/assets/css/styles.css">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="{{config.dist}}/assets/js/jquery.bxslider.min.js"></script>
+    <title>{{title}} | {{site.title}}</title>
+
+  </head>
+  <body>
+    <h1>{{#if title}}{{title}}{{else}}{{site.title}}{{/if}}</h1>
+    {{> body }}
+
+    {{> footer }}
+
+    <script src="{{config.dist}}/assets/js/site.js"></script>
+  </body>
+</html>
