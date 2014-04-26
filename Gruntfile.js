@@ -23,8 +23,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     config: {
-      src: 'example-src',
-      dist: 'example'
+      src: 'directory-source',
+      dist: 'directory'
     },
 
     watch: {
