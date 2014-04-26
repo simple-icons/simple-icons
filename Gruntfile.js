@@ -24,7 +24,9 @@ module.exports = function(grunt) {
 
     config: {
       src: 'directory-source',
-      dist: 'directory'
+      dist: 'directory',
+      iconsSrc: 'icons-source',
+      iconsDist: 'icons'
     },
 
     watch: {
@@ -75,7 +77,7 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      main: {
+      directory: {
         files: [
           // Copy any vanilla CSS files included in the style source
           {expand: true, cwd: '<%= config.src %>/assets/styles', src: ['**', '!*.scss', '!*.sass'], dest: '<%= config.dist %>/assets/css'},
@@ -85,6 +87,12 @@ module.exports = function(grunt) {
 
           // Copy any vanilla JS files included in the script source
           {expand: true, cwd: '<%= config.src %>/assets/scripts', src: ['**', '!*.coffee'], dest: '<%= config.dist %>/assets/js'}
+        ]
+      },
+      icons: {
+        files: [
+          // Copy all the SVG source icons
+          {expand: true, cwd: '<%= config.iconsSrc %>', src: ['**'], dest: '<%= config.iconsDist %>'}
         ]
       }
     },
@@ -122,20 +130,28 @@ module.exports = function(grunt) {
 
   grunt.registerTask('server', [
     //'clean',
-    'copy',
+    'copy:directory',
     'sass',
     'assemble',
     'connect:livereload',
     'watch'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('build:directory', [
     //'clean',
-    'copy',
+    'copy:directory',
     'sass',
     'assemble',
   ]);
 
+  grunt.registerTask('build:icons', [
+    'copy:icons'
+  ]);
+  grunt.registerTask('build', [
+    //'clean',
+    'build:icons',
+    'build:directory'
+  ]);
   grunt.registerTask('default', [
     'build'
   ]);
