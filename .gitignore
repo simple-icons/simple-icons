@@ -39,3 +39,7 @@ Thumbs.db
 # Project Specific #
 ####################
 node_modules
+.sass-cache
+
+# ignore compiled demo directory
+example
