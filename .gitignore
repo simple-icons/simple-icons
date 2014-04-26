@@ -41,5 +41,6 @@ Thumbs.db
 node_modules
 .sass-cache
 
-# ignore compiled demo directory
-example
+# ignore compiled directories
+icons
+directory
