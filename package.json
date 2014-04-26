@@ -30,12 +30,17 @@
     "assemble": "~0.4.33",
     "grunt": "~0.4.2",
     "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
     "load-grunt-tasks": "~0.2.1",
     "time-grunt": "~0.2.7",
+    "assemble-markdown-data": "*",
     "grunt-contrib-sass": "~0.7.2",
     "grunt-contrib-copy": "~0.5.0",
     "handlebars-helper-slugify": "~0.2.0",
     "bower": "~1.2.8",
+    "grunt-bower-requirejs": "~0.8.4",
+    "grunt-contrib-requirejs": "~0.4.1",
     "handlebars-helper-compose": "*"
   },
   "licenses": [
