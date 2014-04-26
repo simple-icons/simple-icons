@@ -29,6 +29,13 @@ module.exports = function(grunt) {
       iconsDist: 'icons'
     },
 
+    makeIcons: {
+      icons: {
+        src: ['<%= config.iconsSrc %>/*'],
+        filter: 'isDirectory'
+      }
+    },
+
     watch: {
       assemble: {
         files: ['<%= config.src %>/{content,data,templates,assets}/{,*/}*.{md,hbs,yml,sass,scss,js}'],
@@ -128,6 +135,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
+  grunt.registerMultiTask('makeIcons', 'Log stuff.', function() {
+  });
+
   grunt.registerTask('server', [
     //'clean',
     'copy:directory',
@@ -145,7 +155,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build:icons', [
-    'copy:icons'
+    'copy:icons',
+    'makeIcons'
   ]);
   grunt.registerTask('build', [
     //'clean',
