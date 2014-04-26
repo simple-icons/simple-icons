@@ -1,0 +1,51 @@
+{
+  "name": "Simple Icons",
+  "description": "Simple SVG and PNG icons for popular services, social networks",
+  "version": "0.1.0",
+  "homepage": "https://github.com/justinthrelkeld/simple-icons",
+  "contributors": [
+    {
+      "name": "Justin Threlkeld",
+      "url": "http://github.com/justinthrelkeld/"
+    },
+    {
+      "name": "Dan Leech",
+      "url": "https://github.com/danleech"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinthrelkeld/simple-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justinthrelkeld/simple-icons/issues"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "grunt assemble"
+  },
+  "devDependencies": {
+    "assemble": "~0.4.33",
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "load-grunt-tasks": "~0.2.1",
+    "time-grunt": "~0.2.7",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "handlebars-helper-slugify": "~0.2.0",
+    "bower": "~1.2.8",
+    "handlebars-helper-compose": "*"
+  },
+  "licenses": [
+    {
+      "type": "Free Art License",
+      "url": "http://artlibre.org/?page_id=65"
+    }
+  ],
+  "keywords": [
+    "icons",
+    "elements"
+  ]
+}
