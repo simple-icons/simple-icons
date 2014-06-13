@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var svg2png = require('gulp-svg2png');
+var handlebars = require('gulp-compile-handlebars');
+var rename = require('gulp-rename');
 
 var iconsConfig = require('./icons.json');
 
@@ -16,4 +18,15 @@ gulp.task('icons', function () {
       .pipe(svg2png())
       .pipe(gulp.dest('./icons/' + slug + '/png' ));
   };
+});
+gulp.task('directory', function(){
+  var templateData = {
+    icons: iconsConfig
+    }
+  }
+
+  return gulp.src('directory-source/index.hbs')
+    .pipe(handlebars(templateData, options))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('icons'));
 });

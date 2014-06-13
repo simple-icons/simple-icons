@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    .icon{
+      width: 10em;
+      height: 10em;
+      overflow: hidden;
+      line-height: 10em;
+      text-align: center;
+    }
+    figure{
+      margin: 0;
+      padding: 0;
+      width: 6em;
+      height: 6em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+
+    /* cleverly using server-side handlebars to generate some stylesheet classes */
+    {{#each icons}}
+    #icon-{{slug}}{
+      background-color: #{{hex}};
+    }
+    {{/each}}
+  </style>
+</head>
+<body>{{#each icons}}
+  <article class="icon" id="icon-{{slug}}">
+    <figure>
+      <img src="{{slug}}/svg/{{slug}}.svg" alt="{{name}}">
+    </figure>
+  </article>{{/each}}
+</body>
+</html>
+
+
