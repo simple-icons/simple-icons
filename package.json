@@ -41,7 +41,8 @@
     "bower": "~1.2.8",
     "grunt-bower-requirejs": "~0.8.4",
     "grunt-contrib-requirejs": "~0.4.1",
-    "handlebars-helper-compose": "*"
+    "handlebars-helper-compose": "*",
+    "gulp": "~3.8.0"
   },
   "licenses": [
     {
