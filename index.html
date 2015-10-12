@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Icons</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        html {
+            font-size: 16px;
+        }
+        body {
+            color: #666;
+            font-family: Lato, sans-serif;
+            -webkit-font-feature-settings: "dlig", "kern", "liga";
+                    font-feature-settings: "dlig", "kern", "liga";
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+            line-height: 1.5rem;
+            margin: 0;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        a {
+            color: #333;
+        }
+        a:focus, a:hover {
+            color: #999;
+        }
+        .navbar {
+            background: #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        .title {
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.05rem;
+            margin: 0;
+            padding: 1.5rem;
+            text-transform: uppercase;
+        }
+        .navbar__text {
+            font-size: 0.75rem;
+            letter-spacing: 0.05rem;
+            margin: 1.5rem;
+            text-transform: uppercase;
+        }
+        .tiles {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 1.25rem;
+            padding: 0;
+        }
+        .tiles__item {
+            box-sizing: border-box;
+            background: #ccc;
+            border: 0.25rem solid #fff;
+            padding: 0;
+            width: 100%;
+        }
+        .tiles__item img {
+            height: 3rem;
+        }
+        @media (min-width: 600px) { .tiles__item { width: 50%; } }
+        @media (min-width: 800px) { .tiles__item { width: 33.333%; } }
+        @media (min-width: 1000px) { .tiles__item { width: 25% } }
+        @media (min-width: 1200px) { .tiles__item { width: 20% } }
+        @media (min-width: 1500px) { .tiles__item { width: 16.666% } }
+        @media (min-width: 1800px) { .tiles__item { width: 12.5% } }
+        .footer {
+            margin: 3rem;
+        }
+        .footer p {
+            font-size: 0.75rem;
+            letter-spacing: 0.05rem;
+            margin: 0 auto;
+            max-width: 31.5rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar" role="banner">
+        <h1 class="title">Simple Icons</h1>
+        <p class="navbar__text">Share on <a href="#">Facebook</a> &amp; <a href="#">Twitter</a></p>
+    </header>
+    <main role="main">
+        <ul class="tiles">
+            <li class="tiles__item" data-colour="009CDB">
+                <img src="http://placehold.it/1024x1024">
+                <span class="name">Facebook</span>
+                <span class="colour"></span>
+            </li>
+            <li class="tiles__item" data-colour="009900">
+                Tile
+            </li>
+            <li class="tiles__item" data-colour="222420">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+            <li class="tiles__item">
+                Tile
+            </li>
+        </ul>
+    </main>
+    <footer class="footer" role="contentinfo">
+        <p>Distributed for free by Dan Leech under the Free Art License. Company logos in icons are copyright of their respective owners. <a href="#">Donations towards coffee fund</a> are greatly appreciated!</p>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".tiles__item").each(function () {
+                $hex = "#" + $(this).data('colour');
+                $(this).css('background', $hex);
+            });
+
+            $(".tiles__item").sort(sortTiles).appendTo('.tiles');
+            function sortTiles(a, b){
+                return ($(b).data('colour')) < ($(a).data('colour')) ? 1 : -1;
+            }
+        });
+    </script>
+</body>
+</html>
