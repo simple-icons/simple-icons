@@ -27,7 +27,7 @@
             color: #999;
         }
         .navbar {
-            background: #eee;
+            background: #EEE;
             display: flex;
             justify-content: space-between;
         }
@@ -54,13 +54,11 @@
         }
         .tiles__item {
             box-sizing: border-box;
-            background: #ccc;
-            border: 0.25rem solid #fff;
-            padding: 0;
+            background: #333;
+            border: 0.25rem solid #FFF;
+            color: #FFF;
+            padding: 1.5rem;
             width: 100%;
-        }
-        .tiles__item img {
-            height: 3rem;
         }
         @media (min-width: 600px) { .tiles__item { width: 50%; } }
         @media (min-width: 800px) { .tiles__item { width: 33.333%; } }
@@ -89,94 +87,73 @@
     </header>
     <main role="main">
         <ul class="tiles">
-            <li class="tiles__item" data-colour="009CDB">
-                <img src="http://placehold.it/1024x1024">
-                <span class="name">Facebook</span>
-                <span class="colour"></span>
+            <li class="tiles__item" data-colour="5AB552">
+                Event Store
             </li>
-            <li class="tiles__item" data-colour="009900">
-                Tile
+            <li class="tiles__item" data-colour="3B5998">
+                Facebook
             </li>
-            <li class="tiles__item" data-colour="222420">
-                Tile
+            <li class="tiles__item" data-colour="55ACEE">
+                Twitter
             </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
-            </li>
-            <li class="tiles__item">
-                Tile
+            <li class="tiles__item" data-colour="CD201F">
+                YouTube
             </li>
         </ul>
     </main>
     <footer class="footer" role="contentinfo">
-        <p>Distributed for free by Dan Leech under the Free Art License. Company logos in icons are copyright of their respective owners. <a href="#">Donations towards coffee fund</a> are greatly appreciated!</p>
+        <p>Distributed for free by Dan Leech under the Free Art License. Company logos in icons are copyright of their respective owners. <a href="#">Coffee fund donations</a> are greatly appreciated!</p>
     </footer>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(document).ready(function() {
             $(".tiles__item").each(function () {
-                $hex = "#" + $(this).data('colour');
-                $(this).css('background', $hex);
-            });
 
-            $(".tiles__item").sort(sortTiles).appendTo('.tiles');
-            function sortTiles(a, b){
-                return ($(b).data('colour')) < ($(a).data('colour')) ? 1 : -1;
-            }
+                // Get colour attribute as a string
+                var hex = $(this).data('colour') + "";
+                console.log(hex);
+
+                // Set tile background colour
+                $(this).css('background', "#" + hex);
+
+                // Calculate RGB values from hex
+                var red = parseInt(hex.substr(0,2), 16) / 255;
+                var green = parseInt(hex.substr(2,2), 16) / 255;
+                var blue = parseInt(hex.substr(4,2), 16) / 255;
+
+                var maxRGB = Math.max(red, green, blue);
+                var minRGB = Math.min(red, green, blue);
+                var delta = maxRGB - minRGB;
+
+                if (delta === 0) {
+                    var hue = 0;
+                } else {
+                    if (maxRGB === red) {
+                        var hue = ((green - blue) / delta);
+                        hue *= 60;
+                        if (hue < 0) {
+                            hue += 360;
+                        }
+                    } else if (maxRGB === green) {
+                        var hue = (((blue - red) / delta) + 2);
+                        hue *= 60;
+                    } else {
+                        hue = (((red - green) / delta) + 4);
+                        hue *= 60;
+                    }
+                }
+
+                // Set data attribute for hue
+                this.setAttribute('data-hue', hue);
+
+                // Sort by hue
+                $(".tiles__item").sort(sort_li) // sort elements
+                    .appendTo('.tiles'); // append again to the list
+                // sort function callback
+                function sort_li(a, b){
+                    return ($(b).data('hue')) > ($(a).data('hue')) ? 1 : -1;
+                }
+            });
         });
     </script>
 </body>
