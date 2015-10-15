@@ -28,28 +28,41 @@
         }
         .navbar {
             background: #EEE;
-            display: flex;
-            justify-content: space-between;
+            text-align: center;
         }
         .title {
             font-size: 1rem;
             font-weight: 400;
             letter-spacing: 0.05rem;
             margin: 0;
-            padding: 1.5rem;
+            padding: 1.5rem 1.5rem 0;
             text-transform: uppercase;
         }
         .navbar__text {
             font-size: 0.75rem;
             letter-spacing: 0.05rem;
-            margin: 1.5rem;
+            margin: 0;
+            padding: 0 1.5rem 1.5rem;
             text-transform: uppercase;
+        }
+        @media (min-width: 800px) {
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .title {
+                padding: 1.5rem;
+            }
+            .navbar__text {
+                padding: 1.5rem;
+            }
         }
         .hero {
             font-size: 0.75rem;
             letter-spacing: 0.05rem;
             margin: 0 auto;
-            max-width: 21rem;
+            max-width: 18rem;
             padding: 3rem;
             text-align: center;
             text-transform: uppercase;
@@ -68,9 +81,19 @@
             color: #FFF;
             font-size: 0.75rem;
             letter-spacing: 0.05rem;
-            padding: 0.75rem 1.5rem;
+            line-height: 1rem;
+            padding: 1.25rem 0.75rem 1.25rem;
             text-transform: uppercase;
             width: 100%;
+        }
+        .tiles li svg {
+            float: left;
+            height: 2rem;
+            margin: -0.5rem 0.75rem 0 0;
+            padding: 0.5rem 0.5rem 0;
+        }
+        .hex {
+            opacity: 0.5;
         }
         @media (min-width: 600px) { .tiles li { width: 50%; } }
         @media (min-width: 800px) { .tiles li { width: 33.333%; } }
@@ -98,5 +121,3 @@
         <p class="navbar__text">Share on <a href="#">Facebook</a> &amp; <a href="#">Twitter</a></p>
     </header>
     <main role="main">
-        <p class="hero">A set of SVG icons for popular brands. Download them from <a href="https://github.com/danleech/simple-icons">GitHub</a>.</p>
-        <ul class="tiles">
