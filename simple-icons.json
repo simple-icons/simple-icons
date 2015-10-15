@@ -1,6 +1,11 @@
 {
     "icons": [
         {
+            "title": "Android",
+            "hex": "A4C639",
+            "source": "http://developer.android.com/distribute/tools/promote/brand.html"
+        },
+        {
             "title": "Bitly",
             "hex": "EE6123",
             "source": "https://bitly.com/pages/press"
@@ -49,6 +54,11 @@
             "title": "GOV.UK",
             "hex": "005EA5",
             "source": "https://github.com/alphagov/design-assets/tree/master/Icons"
+        },
+        {
+            "title": "Instagram",
+            "hex": "125688",
+            "source": "https://www.instagram-brand.com"
         },
         {
             "title": "JustGiving",
