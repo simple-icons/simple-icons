@@ -74,7 +74,7 @@ var header = fs.readFileSync('./src/header.html', 'utf8');
 var footer = fs.readFileSync('./src/footer.html', 'utf8');
 
 // Build content
-var main = "<p class=\"hero\">" + source.icons.length + " SVG icons for popular brands. Download them from <a href=\"https://github.com/danleech/simple-icons\">GitHub</a>.</p>\n<ul class=\"tiles\">";
+var main = "<p class=\"hero\">" + source.icons.length + " SVG icons for popular brands <a href=\"https://github.com/danleech/simple-icons\">Download them from GitHub</a></p>\n<ul class=\"tiles\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var filePath = source.icons[i].title.toLowerCase();
