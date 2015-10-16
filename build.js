@@ -16,14 +16,15 @@ for (var i = 0; i < source.icons.length; i++) {
     var min = Math.min(red, green, blue);
     var delta = max - min;
     source.icons[i].luminance = 100 * (max + min) / 2;
-    if (source.icons[i].luminance < 50) {
-        source.icons[i].saturation = 100 * (max - min) / (max + min);
-    } else {
-        source.icons[i].saturation = 100 * (max - min) / (2 - max - min);
-    }
     if (delta === 0) {
         var hue = 0;
+        source.icons[i].saturation = 0;
     } else {
+        if (source.icons[i].luminance < 50) {
+            source.icons[i].saturation = 100 * (max - min) / (max + min);
+        } else {
+            source.icons[i].saturation = 100 * (max - min) / (2 - max - min);
+        }
         if (max === red) {
             var hue = ((green - blue) / delta) * 60;
             if (hue < 0) {
