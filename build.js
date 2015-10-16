@@ -15,7 +15,12 @@ for (var i = 0; i < source.icons.length; i++) {
     var max = Math.max(red, green, blue);
     var min = Math.min(red, green, blue);
     var delta = max - min;
-    source.icons[i].luminance = 100 * (max - min) / 2;
+    source.icons[i].luminance = 100 * (max + min) / 2;
+    if (source.icons[i].luminance < 50) {
+        source.icons[i].saturation = 100 * (max - min) / (max + min);
+    } else {
+        source.icons[i].saturation = 100 * (max - min) / (2 - max - min);
+    }
     if (delta === 0) {
         var hue = 0;
     } else {
@@ -46,6 +51,13 @@ source.icons.sort(function(a, b) {
 var tmp = [];
 for (var i = 0; i < source.icons.length; i++) {
     if (source.icons[i].luminance < 10) {
+        tmp.push(source.icons[i]);
+        source.icons.splice(i,1);
+        i--;
+    }
+}
+for (var i = 0; i < source.icons.length; i++) {
+    if (source.icons[i].saturation < 5) {
         tmp.push(source.icons[i]);
         source.icons.splice(i,1);
         i--;
@@ -82,7 +94,7 @@ for (var i = 0; i < source.icons.length; i++) {
     filePath = filePath.replace('.', '');
     filePath = filePath.replace('+', 'plus');
     filePath = "./icons/" + filePath + ".svg";
-    console.log(source.icons[i].title + ", lum = " + source.icons[i].luminance);
+    console.log(source.icons[i].title + ", sat = " + source.icons[i].saturation);
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
     main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"#\">" + svg + source.icons[i].title + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>\n";
