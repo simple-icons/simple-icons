@@ -85,7 +85,7 @@ for (var i = 0; i < source.icons.length; i++) {
     console.log(source.icons[i].title + ", lum = " + source.icons[i].luminance);
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\">" + svg + source.icons[i].title + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></li>\n";
+    main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"#\">" + svg + source.icons[i].title + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>\n";
 }
 
 // Put all content together and export to index.html
