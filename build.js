@@ -87,7 +87,7 @@ var header = fs.readFileSync('./src/header.html', 'utf8');
 var footer = fs.readFileSync('./src/footer.html', 'utf8');
 
 // Build content
-var main = "<p class=\"hero\">" + source.icons.length + " SVG icons for popular brands <a href=\"https://github.com/danleech/simple-icons\">Download them from GitHub</a></p>\n<ul class=\"tiles\">";
+var main = "<p class=\"hero\">" + source.icons.length + " SVG icons for popular brands <a href=\"https://github.com/danleech/simpleicons.org\">Download them from GitHub</a></p>\n<ul class=\"tiles\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
@@ -99,7 +99,7 @@ for (var i = 0; i < source.icons.length; i++) {
     console.log(source.icons[i].title + ", sat = " + source.icons[i].saturation);
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://github.com/danleech/simple-icons/tree/master/icons/" + fileName + ".svg\">" + svg + source.icons[i].title + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>\n";
+    main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://github.com/danleech/simpleicons.org/tree/master/icons/" + fileName + ".svg\">" + svg + source.icons[i].title + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>\n";
 }
 
 // Put all content together and export to index.html
