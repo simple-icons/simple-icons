@@ -1,742 +1,514 @@
-[
-	{
-		"name" : "500px",
-		"hex" : "444444",
-		"credit" : "500px"
-	},
-	{
-		"name" : "A List Apart",
-		"hex" : "222222",
-		"credit" : "A List Apart"
-	},
-	{
-		"name" : "About.me",
-		"hex" : "00405D",
-		"credit" : "AOL Inc."
-	},
-	{
-		"name" : "AIM",
-		"hex" : "F2D523",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Amazon",
-		"hex" : "FF9900",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Amazon Wishlist",
-		"hex" : "FF9900",
-		"credit" : "Amazon"
-	},
-	{
-		"name" : "Android",
-		"hex" : "A4C639",
-		"credit" : "Google, Inc"
-	},
-	{
-		"name" : "AngelList",
-		"hex" : "000000",
-		"credit" : "AngelList"
-	},
-	{
-		"name" : "Aol",
-		"hex" : "000000",
-		"credit" : "Nathaniel Taintor"
-	},
-	{
-		"name" : "App Dot Net",
-		"hex" : "898D90",
-		"credit" : "App.net"
-	},
-	{
-		"name" : "Apple",
-		"hex" : "B9BFC1",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Audioboo",
-		"hex" : "AE006E",
-		"credit" : "Audioboo"
-	},
-	{
-		"name" : "AWS",
-		"hex" : "FF9900",
-		"credit" : "Amazon, Inc."
-	},
-	{
-		"name" : "Basecamp",
-		"hex" : "66AD4E",
-		"credit" : "37signals"
-	},
-	{
-		"name" : "Bebo",
-		"hex" : "EE1010",
-		"credit" : "Bebo"
-	},
-	{
-		"name" : "Behance",
-		"hex" : "1769FF",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Bitbucket",
-		"hex" : "205081",
-		"credit" : "Atlassian"
-	},
-	{
-		"name" : "Bitly",
-		"hex" : "ED6022",
-		"credit" : "Bitly"
-	},
-	{
-		"name" : "Blip",
-		"hex" : "FF1919",
-		"credit" : "Blip"
-	},
-	{
-		"name" : "Blogger",
-		"hex" : "F57D00",
-		"credit" : "Google, Inc."
-	},
-	{
-		"name" : "Bootstrap",
-		"hex" : "0088CC",
-		"credit" : "N/A"
-	},
-	{
-		"name" : "Codepen",
-		"hex" : "231F20",
-		"credit" : "Codepen"
-	},
-	{
-		"name" : "Code School",
-		"hex" : "C68044",
-		"credit" : "Code School LLC"
-	},
-	{
-		"name" : "Codecademy",
-		"hex" : "0088CC",
-		"credit" : "Codecademy"
-	},
-	{
-		"name" : "coderbits",
-		"hex" : "F16522",
-		"credit" : "coderbits"
-	},
-	{
-		"name" : "Coderwall",
-		"hex" : "3E8DCC",
-		"credit" : "Coderwall"
-	},
-	{
-		"name" : "Conservatives",
-		"hex" : "0087DC",
-		"credit" : "Conservatives"
-	},
-	{
-		"name" : "Coursera",
-		"hex" : "3A6D8E",
-		"credit" : "Coursera"
-	},
-	{
-		"name" : "CSS3",
-		"hex" : "0092BF",
-		"credit" : "W3C"
-	},
-	{
-		"name" : "Delicious",
-		"hex" : "3274D1",
-		"credit" : "Delicious"
-	},
-	{
-		"name" : "Designer News",
-		"hex" : "1C52A2",
-		"credit" : "Layer Vault"
-	},
-	{
-		"name" : "DeviantART",
-		"hex" : "4B5D50",
-		"credit" : "???"
-	},
-	{
-		"name" : "Digg",
-		"hex" : "14589E",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Disqus",
-		"hex" : "2E9FFF",
-		"credit" : "Disqus"
-	},
-	{
-		"name" : "Dribbble",
-		"hex" : "EA4C89",
-		"credit" : "Dribbble LLC"
-	},
-	{
-		"name" : "Dropbox",
-		"hex" : "2281CF",
-		"credit" : "Dropbox Inc."
-	},
-	{
-		"name" : "Drupal",
-		"hex" : "0077C0",
-		"credit" : "Drupal"
-	},
-	{
-		"name" : "Ebay",
-		"hex" : "0064D2",
-		"credit" : "???"
-	},
-	{
-		"name" : "Envato",
-		"hex" : "528036",
-		"credit" : "Envato"
-	},
-	{
-		"name" : "Event Store",
-		"hex" : "6BA300",
-		"credit" : "Dan Leech"
-	},
-	{
-		"name" : "Eventbrite",
-		"hex" : "F3844C",
-		"credit" : "Eventbrite"
-	},
-	{
-		"name" : "Evernote",
-		"hex" : "6BB130",
-		"credit" : "Evernote Corporation"
-	},
-	{
-		"name" : "exfm",
-		"hex" : "0097F8",
-		"credit" : "Extension Entertainment Inc."
-	},
-	{
-		"name" : "Facebook",
-		"hex" : "3B5998",
-		"credit" : "Facebook, Inc."
-	},
-	{
-		"name" : "Flattr",
-		"hex" : "F67C1A",
-		"credit" : "Flattr"
-	},
-	{
-		"name" : "Flickr",
-		"hex" : "0063DB",
-		"credit" : "???"
-	},
-	{
-		"name" : "Formspring",
-		"hex" : "0076C0",
-		"credit" : "Formspring"
-	},
-	{
-		"name" : "Forrst",
-		"hex" : "5B9A68",
-		"credit" : "Forrst"
-	},
-	{
-		"name" : "Foursquare",
-		"hex" : "2398C9",
-		"credit" : "Foursquare"
-	},
-	{
-		"name" : "Geeklist",
-		"hex" : "8CC63E",
-		"credit" : "Geeklist Inc."
-	},
-	{
-		"name" : "GitHub",
-		"hex" : "4183C4",
-		"credit" : "GitHub, Inc."
-	},
-	{
-		"name" : "Gmail",
-		"hex" : "DD4B39",
-		"credit" : "???"
-	},
-	{
-		"name" : "Goodreads",
-		"hex" : "5A471B",
-		"credit" : "Goodreads Inc"
-	},
-	{
-		"name" : "Google",
-		"hex" : "245DC1",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Google Plus",
-		"hex" : "D14836",
-		"credit" : "Sean McCabe, Bold Perspective"
-	},
-	{
-		"name" : "GOV.UK",
-		"hex" : "231F20",
-		"credit" : "Government Digital Service"
-	},
-	{
-		"name" : "Gravatar",
-		"hex" : "1E8CBE",
-		"credit" : "Automattic"
-	},
-	{
-		"name" : "Grooveshark",
-		"hex" : "000000",
-		"credit" : "Grooveshark"
-	},
-	{
-		"name" : "Hacker News",
-		"hex" : "FF6600",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Heroku",
-		"hex" : "6762A6",
-		"credit" : "Heroku"
-	},
-	{
-		"name" : "HTML5",
-		"hex" : "F06529",
-		"credit" : "W3C"
-	},
-	{
-		"name" : "IMDb",
-		"hex" : "F3CE00",
-		"credit" : "IMDb.com, Inc."
-	},
-	{
-		"name" : "Instagram",
-		"hex" : "3F729B",
-		"credit" : "Instagram"
-	},
-	{
-		"name" : "jQuery",
-		"hex" : "0867AB",
-		"credit" : "jQuery Foundation"
-	},
-	{
-		"name" : "jQuery UI",
-		"hex" : "FEA620",
-		"credit" : "jQuery Foundation"
-	},
-	{
-		"name" : "JSDB",
-		"hex" : "DA320B",
-		"credit" : "JSDB"
-	},
-	{
-		"name" : "jsFiddle",
-		"hex" : "4679A4",
-		"credit" : "jsFiddle"
-	},
-	{
-		"name" : "JustGiving",
-		"hex" : "78256D",
-		"credit" : "JustGiving"
-	},
-	{
-		"name" : "Khan Academy",
-		"hex" : "9DB63B",
-		"credit" : "Khan Academy"
-	},
-	{
-		"name" : "Kickstarter",
-		"hex" : "87C442",
-		"credit" : "Kickstarter, Inc."
-	},
-	{
-		"name" : "kik",
-		"hex" : "87C541",
-		"credit" : "kik"
-	},
-	{
-		"name" : "Klout",
-		"hex" : "E24A25",
-		"credit" : "???"
-	},
-	{
-		"name" : "Labour",
-		"hex" : "C41230",
-		"credit" : "Labour"
-	},
-	{
-		"name" : "Laravel",
-		"hex" : "FB502B",
-		"credit" : "Laravel"
-	},
-	{
-		"name" : "Last.fm",
-		"hex" : "D51007",
-		"credit" : "Last.fm Ltd"
-	},
-	{
-		"name" : "Layer Vault",
-		"hex" : "26AE90",
-		"credit" : "Layer Vault"
-	},
-	{
-		"name" : "Letterboxd",
-		"hex" : "2C3641",
-		"credit" : "Letterboxd"
-	},
-	{
-		"name" : "Liberal Democrats",
-		"hex" : "F7B135",
-		"credit" : "Liberal Democrats"
-	},
-	{
-		"name" : "LinkedIn",
-		"hex" : "007FB1",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "LiveJournal",
-		"hex" : "195397",
-		"credit" : "LiveJournal, Inc"
-	},
-	{
-		"name" : "Media Temple",
-		"hex" : "000000",
-		"credit" : "Media Temple"
-	},
-	{
-		"name" : "Mendeley",
-		"hex" : "B61F2F",
-		"credit" : "Mendeley"
-	},
-	{
-		"name" : "Microformats",
-		"hex" : "8CC319",
-		"credit" : "Microformats"
-	},
-	{
-		"name" : "Microsoft Account",
-		"hex" : "3E73B4",
-		"credit" : "Nathaniel Taintor"
-	},
-	{
-		"name" : "Modernizr",
-		"hex" : "D81A76",
-		"credit" : "Modernizr"
-	},
-	{
-		"name" : "MySpace",
-		"hex" : "008DDE",
-		"credit" : "???"
-	},
-	{
-		"name" : "MySQL",
-		"hex" : "007597",
-		"credit" : "MySQL"
-	},
-	{
-		"name" : "National Rail",
-		"hex" : "003366",
-		"credit" : "National Rail"
-	},
-	{
-		"name" : "Netlog",
-		"hex" : "000000",
-		"credit" : "Nathaniel Taintor"
-	},
-	{
-		"name" : "Newsvine",
-		"hex" : "075B2F",
-		"credit" : "Newsvine, Inc"
-	},
-	{
-		"name" : "Office",
-		"hex" : "EB3C00",
-		"credit" : "???"
-	},
-	{
-		"name" : "Orkut",
-		"hex" : "ED2590",
-		"credit" : "Google, Inc."
-	},
-	{
-		"name" : "Outlook",
-		"hex" : "0072C6",
-		"credit" : "???"
-	},
-	{
-		"name" : "Path",
-		"hex" : "E41F11",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Paypal",
-		"hex" : "1F356F",
-		"credit" : "Nathaniel Taintor"
-	},
-	{
-		"name" : "Picasa",
-		"hex" : "4B5D5F",
-		"credit" : "Google, Inc."
-	},
-	{
-		"name" : "Pocket",
-		"hex" : "EF4056",
-		"credit" : "Pocket"
-	},
-	{
-		"name" : "PHP",
-		"hex" : "6181B6",
-		"credit" : "The PHP Group"
-	},
-	{
-		"name" : "Pinboard",
-		"hex" : "0000FF",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Pingup",
-		"hex" : "00B1AB",
-		"credit" : "Pingup"
-	},
-	{
-		"name" : "Pinterest",
-		"hex" : "CB2027",
-		"credit" : "Pinterest, Inc."
-	},
-	{
-		"name" : "Proto.io",
-		"hex" : "40C8F4",
-		"credit" : "Proto.io"
-	},
-	{
-		"name" : "Quora",
-		"hex" : "A82400",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Rails",
-		"hex" : "A62C39",
-		"credit" : "???"
-	},
-	{
-		"name" : "Rdio",
-		"hex" : "006ED2",
-		"credit" : "Rdio"
-	},
-	{
-		"name" : "Readability",
-		"hex" : "870000",
-		"credit" : "Readability"
-	},
-	{
-		"name" : "Readmill",
-		"hex" : "052336",
-		"credit" : "Readmill.com"
-	},
-	{
-		"name" : "Reddit",
-		"hex" : "FF4500",
-		"credit" : "???"
-	},
-	{
-		"name" : "RSS",
-		"hex" : "FF8300",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Salesforce",
-		"hex" : "333333",
-		"credit" : "Salesforce.com"
-	},
-	{
-		"name" : "Sina Weibo",
-		"hex" : "E6162D",
-		"credit" : "???"
-	},
-	{
-		"name" : "SkyDrive",
-		"hex" : "094AB1",
-		"credit" : "???"
-	},
-	{
-		"name" : "Skype",
-		"hex" : "00AFF0",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "SlideShare",
-		"hex" : "009999",
-		"credit" : "SlideShare Inc"
-	},
-	{
-		"name" : "Smashing Magazine",
-		"hex" : "E95C33",
-		"credit" : "Smashing Magazine"
-	},
-	{
-		"name" : "SoundCloud",
-		"hex" : "FF6600",
-		"credit" : "SoundCloud Ltd"
-	},
-	{
-		"name" : "Spotify",
-		"hex" : "80B719",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Squarespace",
-		"hex" : "000000",
-		"credit" : "Squarespace"
-	},
-	{
-		"name" : "Stack Exchange",
-		"hex" : "1F5196",
-		"credit" : "Stack Exchange, Inc"
-	},
-	{
-		"name" : "Stack Overflow",
-		"hex" : "F47920",
-		"credit" : "Stack Exchange, Inc"
-	},
-	{
-		"name" : "Steam",
-		"hex" : "000000",
-		"credit" : "Valve Corporation"
-	},
-	{
-		"name" : "StumbleUpon",
-		"hex" : "EB4924",
-		"credit" : "???"
-	},
-	{
-		"name" : "Super User",
-		"hex" : "2DABE2",
-		"credit" : "Stack Exchange, Inc"
-	},
-	{
-		"name" : "TED",
-		"hex" : "FF2B06",
-		"credit" : "TED"
-	},
-	{
-		"name" : "Trakt",
-		"hex" : "222222",
-		"credit" : "trakt"
-	},
-	{
-		"name" : "Treehouse",
-		"hex" : "7FA24C",
-		"credit" : "Treehouse Island, Inc"
-	},
-	{
-		"name" : "Trip Advisor",
-		"hex" : "589442",
-		"credit" : "???"
-	},
-	{
-		"name" : "Tumblr",
-		"hex" : "2C4762",
-		"credit" : "Tumblr, Inc."
-	},
-	{
-		"name" : "Twitch",
-		"hex" : "6441A5",
-		"credit" : "Justin.tv Inc."
-	},
-	{
-		"name" : "Twitter",
-		"hex" : "00ACED",
-		"credit" : "Twitter, Inc."
-	},
-	{
-		"name" : "TYPO3",
-		"hex" : "FF8700",
-		"credit" : "TYPO3"
-	},
-	{
-		"name" : "VeriSign",
-		"hex" : "FFC10C",
-		"credit" : "VeriSign, Inc."
-	},
-	{
-		"name" : "Viadeo",
-		"hex" : "F4982B",
-		"credit" : "Viadeo"
-	},
-	{
-		"name" : "Vimeo",
-		"hex" : "44BBFF",
-		"credit" : "Vimeo"
-	},
-	{
-		"name" : "Vine",
-		"hex" : "00A47A",
-		"credit" : "Vine"
-	},
-	{
-		"name" : "Visual Studio",
-		"hex" : "68217A",
-		"credit" : "???"
-	},
-	{
-		"name" : "VK",
-		"hex" : "45668E",
-		"credit" : "Nathaniel Taintor"
-	},
-	{
-		"name" : "W3C",
-		"hex" : "0066B0",
-		"credit" : "W3C"
-	},
-	{
-		"name" : "WhatsApp",
-		"hex" : "64D448",
-		"credit" : "WhatsApp Inc"
-	},
-	{
-		"name" : "Wikipedia",
-		"hex" : "000000",
-		"credit" : "Wikipedia"
-	},
-	{
-		"name" : "Windows",
-		"hex" : "00BDF6",
-		"credit" : "???"
-	},
-	{
-		"name" : "WordPress",
-		"hex" : "21759B",
-		"credit" : "WordPress Foundation"
-	},
-	{
-		"name" : "Xbox",
-		"hex" : "107C10",
-		"credit" : "Microsoft"
-	},
-	{
-		"name" : "Xing",
-		"hex" : "006567",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Yahoo!",
-		"hex" : "731A8B",
-		"credit" : "Alex Peattie"
-	},
-	{
-		"name" : "Yelp",
-		"hex" : "C93C27",
-		"credit" : "???"
-	},
-	{
-		"name" : "YouTube",
-		"hex" : "CD332D",
-		"credit" : "YouTube, LLC"
-	},
-	{
-		"name" : "Zerply",
-		"hex" : "9DBC7A",
-		"credit" : "Alex Peattie"
-	}
-]
+{
+    "icons": [
+        {
+            "title": "500px",
+            "hex": "0099E5",
+            "source": "https://about.500px.com/press"
+        },
+        {
+            "title": "Android",
+            "hex": "A4C639",
+            "source": "http://developer.android.com/distribute/tools/promote/brand.html"
+        },
+        {
+            "title": "App.net",
+            "hex": "3A393C",
+            "source": "https://account.app.net/legal/assets"
+        },
+        {
+            "title": "Apple",
+            "hex": "999999",
+            "source": "https://worldvectorlogo.com/logo/apple"
+        },
+        {
+            "title": "Basecamp",
+            "hex": "66CC66",
+            "source": "https://worldvectorlogo.com/logo/basecamp"
+        },
+        {
+            "title": "Behance",
+            "hex": "1769FF",
+            "source": "https://www.behance.net/dev/api/brand"
+        },
+        {
+            "title": "Bing",
+            "hex": "F4BD27",
+            "source": "https://commons.wikimedia.org/wiki/File:Bing_logo_(2013).svg"
+        },
+        {
+            "title": "Bitbucket",
+            "hex": "205081",
+            "source": "https://bitbucket.org"
+        },
+        {
+            "title": "Bitly",
+            "hex": "EE6123",
+            "source": "https://bitly.com/pages/press"
+        },
+        {
+            "title": "BuzzFeed",
+            "hex": "EE3322",
+            "source": "http://www.buzzfeed.com/press/downloads"
+        },
+        {
+            "title": "Code School",
+            "hex": "4CADC0",
+            "source": "https://www.codeschool.com/brand-assets"
+        },
+        {
+            "title": "CodePen",
+            "hex": "000000",
+            "source": "http://codepen.io"
+        },
+        {
+            "title": "Codio",
+            "hex": "4574E0",
+            "source": "https://codio.com"
+        },
+        {
+            "title": "Coursera",
+            "hex": "757575",
+            "source": "https://www.coursera.org"
+        },
+        {
+            "title": "Delicious",
+            "hex": "3399FF",
+            "source": "https://en.wikipedia.org/wiki/Delicious_(website)"
+        },
+        {
+            "title": "Designer News",
+            "hex": "2D72D9",
+            "source": "https://www.designernews.co"
+        },
+        {
+            "title": "DeviantArt",
+            "hex": "05CC47",
+            "source": "http://help.deviantart.com/21"
+        },
+        {
+            "title": "Digg",
+            "hex": "000000",
+            "source": "https://en.wikipedia.org/wiki/Digg"
+        },
+        {
+            "title": "Disqus",
+            "hex": "2E9FFF",
+            "source": "https://disqus.com/brand"
+        },
+        {
+            "title": "Dribbble",
+            "hex": "EA4C89",
+            "source": "https://dribbble.com/branding"
+        },
+        {
+            "title": "Dropbox",
+            "hex": "007EE5",
+            "source": "https://www.dropbox.com/branding"
+        },
+        {
+            "title": "Ello",
+            "hex": "000000",
+            "source": "https://ello.co"
+        },
+        {
+            "title": "Etsy",
+            "hex": "F45800",
+            "source": "https://www.etsy.com/uk/press"
+        },
+        {
+            "title": "Event Store",
+            "hex": "5AB552",
+            "source": "https://github.com/eventstore/brand"
+        },
+        {
+            "title": "Eventbrite",
+            "hex": "FF8000",
+            "source": "https://www.eventbrite.com/press"
+        },
+        {
+            "title": "Evernote",
+            "hex": "6Fb536",
+            "source": "https://evernote.com/media/pdf/evernote_quick_brand_guidelines.pdf"
+        },
+        {
+            "title": "Facebook",
+            "hex": "3B5998",
+            "source": "https://www.facebookbrand.com"
+        },
+        {
+            "title": "Feedly",
+            "hex": "6CC655",
+            "source": "https://worldvectorlogo.com/logo/feedly"
+        },
+        {
+            "title": "Flickr",
+            "hex": "0063DC",
+            "source": "https://worldvectorlogo.com/logo/flickr-1"
+        },
+        {
+            "title": "Flipboard",
+            "hex": "E12828",
+            "source": "https://about.flipboard.com/brand-guidelines"
+        },
+        {
+            "title": "Foursquare",
+            "hex": "F94877",
+            "source": "https://foursquare.com/about/logos"
+        },
+        {
+            "title": "Geeklist",
+            "hex": "8CC63F",
+            "source": "https://geekli.st/press"
+        },
+        {
+            "title": "Geocaching",
+            "hex": "467126",
+            "source": "https://www.geocaching.com/about/logousage.aspx"
+        },
+        {
+            "title": "GitHub",
+            "hex": "181717",
+            "source": "https://github.com/logos"
+        },
+        {
+            "title": "Google",
+            "hex": "4285F4",
+            "source": "https://developers.google.com/+/branding-guidelines?hl=en"
+        },
+        {
+            "title": "Google+",
+            "hex": "DD4B39",
+            "source": "https://developers.google.com/+/branding-guidelines?hl=en"
+        },
+        {
+            "title": "GOV.UK",
+            "hex": "005EA5",
+            "source": "https://github.com/alphagov/design-assets/tree/master/Icons"
+        },
+        {
+            "title": "Gravatar",
+            "hex": "1E8CBE",
+            "source": "https://automattic.com/press"
+        },
+        {
+            "title": "IMDb",
+            "hex": "E6B91E",
+            "source": "http://www.imdb.com/pressroom/brand_guidelines"
+        },
+        {
+            "title": "Instagram",
+            "hex": "125688",
+            "source": "https://www.instagram-brand.com"
+        },
+        {
+            "title": "JustGiving",
+            "hex": "AD29B6",
+            "source": "https://justgiving.com"
+        },
+        {
+            "title": "Khan Academy",
+            "hex": "9DB63B",
+            "source": "https://khanacademy.zendesk.com/hc/en-us/articles/202483630-Press-room"
+        },
+        {
+            "title": "Kickstarter",
+            "hex": "2BDE73",
+            "source": "https://www.kickstarter.com/help/brand_assets"
+        },
+        {
+            "title": "Kik",
+            "hex": "82BC23",
+            "source": "http://www.kik.com/press"
+        },
+        {
+            "title": "Klout",
+            "hex": "E44600",
+            "source": "https://klout.com/s/developers/styleguide"
+        },
+        {
+            "title": "Koding",
+            "hex": "00B057",
+            "source": "https://koding.com/About"
+        },
+        {
+            "title": "Lanyrd",
+            "hex": "3C80CA",
+            "source": "http://lanyrd.com/help/faq/#branding"
+        },
+        {
+            "title": "Laravel",
+            "hex": "E74430",
+            "source": "https://github.com/laravel/art"
+        },
+        {
+            "title": "Last.fm",
+            "hex": "D51007",
+            "source": "http://www.last.fm/about/resources"
+        },
+        {
+            "title": "LinkedIn",
+            "hex": "0077B5",
+            "source": "https://brand.linkedin.com"
+        },
+        {
+            "title": "MediaTemple",
+            "hex": "000000",
+            "source": "https://mediatemple.net/company/about-us"
+        },
+        {
+            "title": "Medium",
+            "hex": "02B875",
+            "source": "https://medium.com/policy/logos-and-brand-guidelines-f1a01a733592"
+        },
+        {
+            "title": "Messenger",
+            "hex": "0084FF",
+            "source": "https://worldvectorlogo.com/logo/facebook-messenger"
+        },
+        {
+            "title": "Mixcloud",
+            "hex": "314359",
+            "source": "https://www.mixcloud.com/branding"
+        },
+        {
+            "title": "Myspace",
+            "hex": "030303",
+            "source": "https://myspace.com/pressroom/assetslogos"
+        },
+        {
+            "title": "OneDrive",
+            "hex": "094AB2",
+            "source": "https://msdn.microsoft.com/en-us/onedrive/dn673556.aspx"
+        },
+        {
+            "title": "Periscope",
+            "hex": "40A4C4",
+            "source": "https://www.periscope.tv/press"
+        },
+        {
+            "title": "Pingup",
+            "hex": "00B1AB",
+            "source": "http://pingup.com/resources"
+        },
+        {
+            "title": "Pinterest",
+            "hex": "BD081C",
+            "source": "https://business.pinterest.com/en/brand-guidelines"
+        },
+        {
+            "title": "Pocket",
+            "hex": "EF3F56",
+            "source": "https://getpocket.com/blog/press/"
+        },
+        {
+            "title": "Proto.io",
+            "hex": "34A7C1",
+            "source": "https://proto.io/en/presskit"
+        },
+        {
+            "title": "Quora",
+            "hex": "B92B27",
+            "source": "https://www.quora.com"
+        },
+        {
+            "title": "Readability",
+            "hex": "990000",
+            "source": "https://readability.com/about"
+        },
+        {
+            "title": "Reddit",
+            "hex": "FF4500",
+            "source": "https://worldvectorlogo.com/logo/reddit-2"
+        },
+        {
+            "title": "RSS",
+            "hex": "FFA500",
+            "source": "https://en.wikipedia.org/wiki/Feed_icon"
+        },
+        {
+            "title": "Sauce Labs",
+            "hex": "EC4047",
+            "source": "https://saucelabs.com/press-room/press-coverage"
+        },
+        {
+            "title": "Sina Weibo",
+            "hex": "E6162D",
+            "source": "https://en.wikipedia.org/wiki/Sina_Weibo"
+        },
+        {
+            "title": "Skype",
+            "hex": "00AFF0",
+            "source": "http://blogs.skype.com/?attachment_id=56273"
+        },
+        {
+            "title": "Slack",
+            "hex": "56B68B",
+            "source": "https://slack.com/brand-guidelines"
+        },
+        {
+            "title": "Songkick",
+            "hex": "F80046",
+            "source": "http://blog.songkick.com/media-assets"
+        },
+        {
+            "title": "SoundCloud",
+            "hex": "FF3300",
+            "source": "https://soundcloud.com/press"
+        },
+        {
+            "title": "Spotify",
+            "hex": "84BD00",
+            "source": "https://developer.spotify.com/design"
+        },
+        {
+            "title": "Spreaker",
+            "hex": "F5C300",
+            "source": "http://www.spreaker.com/press"
+        },
+        {
+            "title": "Squarespace",
+            "hex": "000000",
+            "source": "http://squarespace.com/brand-guidelines"
+        },
+        {
+            "title": "StumbleUpon",
+            "hex": "EB4924",
+            "source": "http://corp.stumbleupon.com/press"
+        },
+        {
+            "title": "Swarm",
+            "hex": "FBB631",
+            "source": "https://foursquare.com/about/logos"
+        },
+        {
+            "title": "TED",
+            "hex": "E62B1E",
+            "source": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo"
+        },
+        {
+            "title": "Tinder",
+            "hex": "FF6B6B",
+            "source": "http://www.gotinder.com/press"
+        },
+        {
+            "title": "Trakt",
+            "hex": "ED1C24",
+            "source": "https://trakt.tv"
+        },
+        {
+            "title": "Treehouse",
+            "hex": "5FCF80",
+            "source": "https://teamtreehouse.com/about"
+        },
+        {
+            "title": "Trello",
+            "hex": "0079BF",
+            "source": "https://trello.com/about/branding"
+        },
+        {
+            "title": "TripAdvisor",
+            "hex": "589442",
+            "source": "http://www.tripadvisor.co.uk/PressCenter"
+        },
+        {
+            "title": "Tumblr",
+            "hex": "36465D",
+            "source": "https://www.tumblr.com/logo"
+        },
+        {
+            "title": "Twitch",
+            "hex": "6441A5",
+            "source": "http://www.twitch.tv/p/brand-assets"
+        },
+        {
+            "title": "Twitter",
+            "hex": "55ACEE",
+            "source": "https://about.twitter.com/company/brand-assets"
+        },
+        {
+            "title": "Twoo",
+            "hex": "FF7102",
+            "source": "http://www.twoo.com/about/press"
+        },
+        {
+            "title": "Udacity",
+            "hex": "F08C35",
+            "source": "https://www.udacity.com/press"
+        },
+        {
+            "title": "Viadeo",
+            "hex": "F88D2D",
+            "source": "http://corporate.viadeo.com/en/media/resources"
+        },
+        {
+            "title": "Vimeo",
+            "hex": "1AB7EA",
+            "source": "https://vimeo.com/about/brand_guidelines"
+        },
+        {
+            "title": "Vine",
+            "hex": "11B48A",
+            "source": "https://vine.co/logo"
+        },
+        {
+            "title": "VK",
+            "hex": "6383A8",
+            "source": "https://vk.com/about"
+        },
+        {
+            "title": "WhatsApp",
+            "hex": "64D448",
+            "source": "http://media.whatsapp.com"
+        },
+        {
+            "title": "Wikipedia",
+            "hex": "000000",
+            "source": "https://en.wikipedia.org/wiki/Logo_of_Wikipedia"
+        },
+        {
+            "title": "WordPress",
+            "hex": "21759B",
+            "source": "https://wordpress.org/about/logos"
+        },
+        {
+            "title": "Xero",
+            "hex": "00B7E3",
+            "source": "https://www.xero.com/uk/about/media/downloads"
+        },
+        {
+            "title": "Xing",
+            "hex": "005A5F",
+            "source": "https://worldvectorlogo.com/logo/xing-icon"
+        },
+        {
+            "title": "Yahoo!",
+            "hex": "440099",
+            "source": "https://en.wikipedia.org/wiki/Yahoo!"
+        },
+        {
+            "title": "Yammer",
+            "hex": "0072C6",
+            "source": "https://developer.yammer.com/docs/branding-guide"
+        },
+        {
+            "title": "Yelp",
+            "hex": "C41200",
+            "source": "http://www.yelp.com/brand"
+        },
+        {
+            "title": "YouTube",
+            "hex": "CD201F",
+            "source": "https://www.youtube.com/yt/brand/en-GB/downloads.html"
+        },
+        {
+            "title": "Zapier",
+            "hex": "FF4A00",
+            "source": "https://zapier.com/about/brand"
+        },
+        {
+            "title": "Zillow",
+            "hex": "0074E4",
+            "source": "http://zillow.mediaroom.com/logos"
+        }
+    ]
+}
