@@ -92,6 +92,7 @@ var main = "<p class=\"hero\">" + source.icons.length + " SVG icons for popular 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
     fileName = fileName.replace(' ', '');
+    fileName = fileName.replace('!', '');
     fileName = fileName.replace('.', '');
     fileName = fileName.replace('+', 'plus');
     filePath = "./icons/" + fileName + ".svg";
