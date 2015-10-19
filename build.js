@@ -111,6 +111,14 @@ fs.writeFile("./index.html", htmlOutput, function(err) {
     console.log("The file was saved!");
 });
 
+// Also output to 404.html
+fs.writeFile("./404.html", htmlOutput, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The 404 file was saved!");
+});
+
 // Build Sharing content
 var sharingMain = "";
 for (var i = 0; i < source.icons.length; i++) {
