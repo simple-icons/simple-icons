@@ -110,3 +110,41 @@ fs.writeFile("./index.html", htmlOutput, function(err) {
     }
     console.log("The file was saved!");
 });
+
+// Build Sharing content
+var sharingMain = "";
+for (var i = 0; i < source.icons.length; i++) {
+    var fileName = source.icons[i].title.toLowerCase();
+    fileName = fileName.replace(' ', '');
+    fileName = fileName.replace('!', '');
+    fileName = fileName.replace('.', '');
+    fileName = fileName.replace('+', 'plus');
+    filePath = "./icons/" + fileName + ".svg";
+    console.log(source.icons[i].title + ", sat = " + source.icons[i].saturation);
+    var fs = require('fs');
+    var svg = fs.readFileSync(filePath, 'utf8');
+    sharingMain += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\" class=\"bars__item\"></li>\n";
+}
+
+// Read sharing header and footer content into variables
+var fs = require('fs');
+function readFile(path, callback) {
+    try {
+        var filename = require.resolve(path);
+        fs.readFile(filename, 'utf8', callback);
+    } catch (e) {
+        callback(e);
+    }
+}
+var fs = require('fs');
+var sharingHeader = fs.readFileSync('./src/sharing-header.html', 'utf8');
+var sharingFooter = fs.readFileSync('./src/sharing-footer.html', 'utf8');
+
+// Put all sharing content together and export to sharing.html
+var sharingHtmlOutput = sharingHeader + sharingMain + sharingFooter;
+fs.writeFile("./sharing.html", sharingHtmlOutput, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The sharing file was saved!");
+});
