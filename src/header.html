@@ -69,8 +69,21 @@
             padding: 0 0 1.5rem;
             text-align: center;
         }
+        @keyframes pulse {
+            0% {
+                background-color: #CCC;
+            }
+            50% {
+                background-color: #AAA;
+            }
+            100% {
+                background-color: #CCC;
+            }
+        }
         .donate-button {
             -webkit-appearance: none;
+            animation: pulse 2.5s infinite;
+            animation-timing-function: ease-in-out;
             background: #CCC;
             border: 0;
             border-radius: 1.5rem;
