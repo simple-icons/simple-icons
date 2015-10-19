@@ -142,7 +142,7 @@ var sharingFooter = fs.readFileSync('./src/sharing-footer.html', 'utf8');
 
 // Put all sharing content together and export to sharing.html
 var sharingHtmlOutput = sharingHeader + sharingMain + sharingFooter;
-fs.writeFile("./sharing.html", sharingHtmlOutput, function(err) {
+fs.writeFile("./src/sharing.html", sharingHtmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
