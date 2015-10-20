@@ -99,7 +99,7 @@ for (var i = 0; i < source.icons.length; i++) {
     console.log(source.icons[i].title + ", sat = " + source.icons[i].saturation);
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://github.com/danleech/simple-icons/blob/gh-pages/icons/" + fileName + ".svg\">" + svg + source.icons[i].title + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>\n";
+    main += "\t\t\t<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/" + fileName + ".svg\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span>" + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>\n";
 }
 
 // Put all content together and export to index.html

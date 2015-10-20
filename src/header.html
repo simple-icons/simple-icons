@@ -7,6 +7,7 @@
     <link rel="canonical" href="https://simpleicons.org">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//raw.githubusercontent.com">
     <title>Simple Icons</title>
     <meta name="description" content="SVG icons for popular brands.">
     <meta property="og:type" content="website">
@@ -98,6 +99,7 @@
             text-transform: uppercase;
         }
         .donate-button:focus, .donate-button:hover {
+            animation: none;
             background: #333;
         }
         @media (min-width: 800px) {
@@ -156,6 +158,13 @@
             display: block;
             padding: 1.25rem 0.75rem 1.25rem;
             text-decoration: none;
+        }
+        .tile-name {
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: calc(100% - 4rem);
         }
         .tiles svg {
             float: left;
