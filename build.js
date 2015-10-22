@@ -43,11 +43,11 @@ for (var i = 0; i < source.icons.length; i++) {
 
 // Ensures blue icons appear first in the last, purple ones last
 for (var i = 0; i < source.icons.length; i++) {
-    source.icons[i].hue += 100;
+    source.icons[i].hue += 75;
     source.icons[i].hue = source.icons[i].hue % 360;
 }
 source.icons.sort(function(a, b) {
-    return parseFloat(b.hue) - parseFloat(a.hue);
+    return parseFloat(a.hue) - parseFloat(b.hue);
 });
 var tmp = [];
 for (var i = 0; i < source.icons.length; i++) {
