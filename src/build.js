@@ -83,8 +83,8 @@ function readFile(path, callback) {
     }
 }
 var fs = require('fs');
-var header = fs.readFileSync('./src/header.html', 'utf8');
-var footer = fs.readFileSync('./src/footer.html', 'utf8');
+var header = fs.readFileSync('./header.html', 'utf8');
+var footer = fs.readFileSync('./footer.html', 'utf8');
 
 // Build content
 var main = "<p class=\"hero\">" + source.icons.length + " SVG icons for popular brands <a href=\"https://github.com/danleech/simple-icons\">Download them from GitHub</a></p>\n<ul class=\"tiles\">";
@@ -95,7 +95,7 @@ for (var i = 0; i < source.icons.length; i++) {
     fileName = fileName.replace('!', '');
     fileName = fileName.replace('.', '');
     fileName = fileName.replace('+', 'plus');
-    filePath = "./icons/" + fileName + ".svg";
+    filePath = "../icons/" + fileName + ".svg";
     console.log(source.icons[i].title + ", sat = " + source.icons[i].saturation);
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
@@ -104,7 +104,7 @@ for (var i = 0; i < source.icons.length; i++) {
 
 // Put all content together and export to index.html
 var htmlOutput = header + main + footer;
-fs.writeFile("./index.html", htmlOutput, function(err) {
+fs.writeFile("../index.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
@@ -112,7 +112,7 @@ fs.writeFile("./index.html", htmlOutput, function(err) {
 });
 
 // Also output to 404.html
-fs.writeFile("./404.html", htmlOutput, function(err) {
+fs.writeFile("../404.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
