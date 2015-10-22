@@ -1,1 +1,1 @@
-[![Simple Icons](/og.png)](https://simpleicons.org)
+[![Simple Icons](/images/og.png)](https://simpleicons.org)
