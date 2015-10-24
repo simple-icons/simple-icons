@@ -29,186 +29,186 @@
     <link rel="apple-touch-icon" href="https://simpleicons.org/images/apple-touch-icon.png">
     <link rel="mask-icon" href="https://simpleicons.org/images/logo.svg" color="#111111">
     <style>
-        html {
-            font-size: 16px;
-        }
-        body {
-            background-color: #FFF;
-            color: #666;
-            font-family: Lato, sans-serif;
-            -webkit-font-feature-settings: "dlig", "kern", "liga";
-                    font-feature-settings: "dlig", "kern", "liga";
-            -webkit-font-smoothing: antialiased;
-            font-weight: 400;
-            line-height: 1.5rem;
-            margin: 0;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        a {
-            color: #333;
-        }
-        a:focus, a:hover {
-            color: #999;
-        }
-        .navbar {
-            background: #EEE;
-            text-align: center;
-        }
-        .title {
-            font-size: 1rem;
-            font-weight: 400;
-            letter-spacing: 0.05rem;
-            margin: 0;
-            padding: 1.5rem 1.5rem 0;
-            text-transform: uppercase;
-        }
-        .navbar__text {
-            font-size: 0.75rem;
-            letter-spacing: 0.05rem;
-            margin: 0;
-            padding: 0;
-            text-transform: uppercase;
-        }
-        .donate-form {
-            margin: 0;
-            padding: 0 0 1.5rem;
-            text-align: center;
-        }
-        @keyframes pulse {
-            0% {
-                background-color: #CCC;
-            }
-            50% {
-                background-color: #AAA;
-            }
-            100% {
-                background-color: #CCC;
-            }
-        }
-        .donate-button {
-            -webkit-appearance: none;
-            animation: pulse 2.5s infinite;
-            animation-timing-function: ease-in-out;
-            background: #CCC;
-            border: 0;
-            border-radius: 1.5rem;
-            color: #FFF;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 0.05rem;
-            padding: 0.75rem 1.5rem;
-            text-transform: uppercase;
-        }
-        .donate-button:focus, .donate-button:hover {
-            animation: none;
-            background: #333;
-        }
-        @media (min-width: 800px) {
-            .navbar {
-                display: flex;
-                justify-content: space-between;
-                text-align: left;
-            }
-            .title {
-                padding: 1.5rem;
-            }
-            .navbar__text {
-                display: inline-block;
-                padding: 1.5rem 0.75rem;
-            }
-            .donate-form {
-                margin: 0 1.5rem 0 0;
-                padding: 0;
-            }
-        }
-        .hero {
-            font-size: 0.75rem;
-            letter-spacing: 0.05rem;
-            margin: 0 auto;
-            max-width: 18rem;
-            padding: 3rem;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        .tiles {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            margin: -0.25rem 1.25rem;
-            padding: 0;
-        }
-        .tiles li {
-            box-sizing: border-box;
-            background: #333;
-            border: 0.25rem solid #FFF;
-            color: #FFF;
-            font-size: 0.75rem;
-            letter-spacing: 0.05rem;
-            line-height: 1rem;
-            padding: 0;
-            text-transform: uppercase;
-            transition: all 0.05s ease-out;
-            width: 100%;
-        }
-        .tiles li:hover {
-            border: 0.125rem solid #FFF;
-            padding: 0.125rem 0 0 0.125rem;
-        }
-        .tiles a {
-            color: #FFF;
-            display: block;
-            padding: 1.25rem 0.75rem 1.25rem;
-            text-decoration: none;
-        }
-        .tile-name {
-            display: inline-block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: calc(100% - 4rem);
-        }
-        .tiles svg {
-            float: left;
-            height: 2rem;
-            margin: -0.5rem 0.75rem 0 0;
-            padding: 0.5rem 0.5rem 0;
-            width: 2rem;
-        }
-        .hex {
-            opacity: 0.5;
-        }
-        @media (min-width: 500px) { .tiles li { width: 50%; } }
-        @media (min-width: 700px) { .tiles li { width: 33.333%; } }
-        @media (min-width: 900px) { .tiles li { width: 25% } }
-        @media (min-width: 1100px) { .tiles li { width: 20% } }
-        @media (min-width: 1250px) { .tiles li { width: 16.666% } }
-        @media (min-width: 1700px) { .tiles li { width: 12.5% } }
-        @media (min-width: 2100px) { .tiles li { width: 10% } }
-        .footer {
-            margin: 3rem;
-        }
-        .footer p {
-            font-size: 0.75rem;
-            letter-spacing: 0.05rem;
-            margin: 1.5rem auto 0;
-            max-width: 31.5rem;
-            text-align: center;
-            text-transform: uppercase;
-        }
+	html {
+	    font-size: 16px;
+	}
+	body {
+	    background-color: #FFF;
+	    color: #666;
+	    font-family: Lato, sans-serif;
+	    -webkit-font-feature-settings: "dlig", "kern", "liga";
+		    font-feature-settings: "dlig", "kern", "liga";
+	    -webkit-font-smoothing: antialiased;
+	    font-weight: 400;
+	    line-height: 1.5rem;
+	    margin: 0;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	a {
+	    color: #333;
+	}
+	a:focus, a:hover {
+	    color: #999;
+	}
+	.navbar {
+	    background: #EEE;
+	    text-align: center;
+	}
+	.title {
+	    font-size: 1rem;
+	    font-weight: 400;
+	    letter-spacing: 0.05rem;
+	    margin: 0;
+	    padding: 1.5rem 1.5rem 0;
+	    text-transform: uppercase;
+	}
+	.navbar__text {
+	    font-size: 0.75rem;
+	    letter-spacing: 0.05rem;
+	    margin: 0;
+	    padding: 0;
+	    text-transform: uppercase;
+	}
+	.donate-form {
+	    margin: 0;
+	    padding: 0 0 1.5rem;
+	    text-align: center;
+	}
+	@keyframes pulse {
+	    0% {
+		background-color: #CCC;
+	    }
+	    50% {
+		background-color: #AAA;
+	    }
+	    100% {
+		background-color: #CCC;
+	    }
+	}
+	.donate-button {
+	    -webkit-appearance: none;
+	    animation: pulse 2.5s infinite;
+	    animation-timing-function: ease-in-out;
+	    background: #CCC;
+	    border: 0;
+	    border-radius: 1.5rem;
+	    color: #FFF;
+	    cursor: pointer;
+	    font-family: inherit;
+	    font-size: 0.75rem;
+	    font-weight: 400;
+	    letter-spacing: 0.05rem;
+	    padding: 0.75rem 1.5rem;
+	    text-transform: uppercase;
+	}
+	.donate-button:focus, .donate-button:hover {
+	    animation: none;
+	    background: #333;
+	}
+	@media (min-width: 800px) {
+	    .navbar {
+		display: flex;
+		justify-content: space-between;
+		text-align: left;
+	    }
+	    .title {
+		padding: 1.5rem;
+	    }
+	    .navbar__text {
+		display: inline-block;
+		padding: 1.5rem 0.75rem;
+	    }
+	    .donate-form {
+		margin: 0 1.5rem 0 0;
+		padding: 0;
+	    }
+	}
+	.hero {
+	    font-size: 0.75rem;
+	    letter-spacing: 0.05rem;
+	    margin: 0 auto;
+	    max-width: 18rem;
+	    padding: 3rem;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+	.tiles {
+	    display: flex;
+	    flex-wrap: wrap;
+	    list-style: none;
+	    margin: -0.25rem 1.25rem;
+	    padding: 0;
+	}
+	.tiles li {
+	    box-sizing: border-box;
+	    background: #333;
+	    border: 0.25rem solid #FFF;
+	    color: #FFF;
+	    font-size: 0.75rem;
+	    letter-spacing: 0.05rem;
+	    line-height: 1rem;
+	    padding: 0;
+	    text-transform: uppercase;
+	    transition: all 0.05s ease-out;
+	    width: 100%;
+	}
+	.tiles li:hover {
+	    border: 0.125rem solid #FFF;
+	    padding: 0.125rem 0 0 0.125rem;
+	}
+	.tiles a {
+	    color: #FFF;
+	    display: block;
+	    padding: 1.25rem 0.75rem 1.25rem;
+	    text-decoration: none;
+	}
+	.tile-name {
+	    display: inline-block;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	    width: calc(100% - 4rem);
+	}
+	.tiles svg {
+	    float: left;
+	    height: 2rem;
+	    margin: -0.5rem 0.75rem 0 0;
+	    padding: 0.5rem 0.5rem 0;
+	    width: 2rem;
+	}
+	.hex {
+	    opacity: 0.5;
+	}
+	@media (min-width: 500px) { .tiles li { width: 50%; } }
+	@media (min-width: 700px) { .tiles li { width: 33.333%; } }
+	@media (min-width: 900px) { .tiles li { width: 25% } }
+	@media (min-width: 1100px) { .tiles li { width: 20% } }
+	@media (min-width: 1250px) { .tiles li { width: 16.666% } }
+	@media (min-width: 1700px) { .tiles li { width: 12.5% } }
+	@media (min-width: 2100px) { .tiles li { width: 10% } }
+	.footer {
+	    margin: 3rem;
+	}
+	.footer p {
+	    font-size: 0.75rem;
+	    letter-spacing: 0.05rem;
+	    margin: 1.5rem auto 0;
+	    max-width: 31.5rem;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
     </style>
 </head>
 
 <body>
     <header class="navbar" role="banner">
-        <h1 class="title">Simple Icons</h1>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-form">
-            <p class="navbar__text">Like this?</p>
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="UCMEG4SWEYFUC">
-            <input type="submit" name="submit" value="Buy Dan a coffee!" class="donate-button">
-        </form>
+	<h1 class="title">Simple Icons</h1>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-form">
+	    <p class="navbar__text">Like this?</p>
+	    <input type="hidden" name="cmd" value="_s-xclick">
+	    <input type="hidden" name="hosted_button_id" value="UCMEG4SWEYFUC">
+	    <input type="submit" name="submit" value="Buy Dan a coffee!" class="donate-button">
+	</form>
     </header>
     <main role="main">
 <p class="hero">134 SVG icons for popular brands <a href="https://github.com/danleech/simple-icons">Download them from GitHub</a></p>
@@ -288,7 +288,7 @@
 			<li style="background-color:#2BDE73"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/kickstarter.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M6.406 5.453L9.34 1.2C9.895.4 10.61 0 11.49 0c.715 0 1.335.254 1.86.762.522.51.784 1.117.784 1.826 0 .523-.138.986-.416 1.386L11.073 7.82l3.235 4.102c.323.408.485.886.485 1.433 0 .724-.254 1.345-.763 1.865-.508.52-1.124.78-1.848.78-.793 0-1.398-.258-1.814-.774l-3.962-4.944v2.726c0 .778-.135 1.383-.405 1.814C5.51 15.607 4.793 16 3.854 16c-.855 0-1.518-.29-1.987-.866-.44-.532-.66-1.237-.66-2.114V2.91c0-.83.224-1.516.67-2.055C2.347.285 2.995 0 3.82 0c.786 0 1.44.285 1.964.855.292.316.477.635.554.96.047.2.07.572.07 1.12v2.518z" fill="#fff"/></svg><span class="tile-name">Kickstarter</span><br><span class="hex">#2BDE73</span></a></li>
 			<li style="background-color:#00B057"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/koding.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M.5 0h15v3.98H.5zm0 6.01h11.497v3.98H.5zm0 6.01h15V16H.5z" fill="#FFF" fill-rule="nonzero"/></svg><span class="tile-name">Koding</span><br><span class="hex">#00B057</span></a></li>
 			<li style="background-color:#56B68B"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/slack.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><g fill="#fff" fill-rule="nonzero"><path d="M6.586 7.33l.69 2.057 2.137-.716-.69-2.056-2.137.716z"/><path d="M12.55 9.37l-1.037.347.36 1.073c.145.434-.09.904-.524 1.05-.096.03-.19.045-.287.042-.338-.01-.65-.226-.765-.566l-.36-1.072-2.138.716.36 1.072c.145.435-.09.905-.523 1.05-.096.032-.192.045-.286.043-.34-.01-.65-.226-.764-.566l-.36-1.075-1.037.348c-.096.03-.19.045-.286.042-.34-.008-.65-.226-.765-.565-.146-.434.09-.904.522-1.05L5.7 9.914l-.69-2.058-1.037.347c-.094.032-.19.045-.285.043-.338-.01-.65-.226-.765-.566-.145-.434.09-.904.523-1.05l1.037-.347-.36-1.073c-.145-.434.09-.904.524-1.05.435-.145.905.09 1.05.524l.36 1.072 2.137-.716-.36-1.072c-.144-.435.09-.905.524-1.05.435-.145.906.09 1.05.523l.36 1.075 1.037-.347c.434-.146.904.088 1.05.522.145.434-.09.904-.523 1.05l-1.037.347.69 2.057 1.036-.347c.435-.145.905.09 1.05.523.146.434-.09.904-.522 1.05zm2.78-3.57C13.68.304 11.298-.98 5.8.67.304 2.32-.98 4.7.67 10.2c1.65 5.497 4.03 6.78 9.53 5.13 5.497-1.65 6.78-4.03 5.13-9.53z"/></g></svg><span class="tile-name">Slack</span><br><span class="hex">#56B68B</span></a></li>
-			<li style="background-color:#02B875"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/medium.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M5.333 14.236c0 .454-.332.66-.738.457L.443 12.617C.2 12.495 0 12.172 0 11.9V1.722c0-.363.266-.527.59-.365L5.315 3.72c.013.005.023.015.03.027l1.836 2.98 3.227-5.243c.126-.205.387-.3.613-.235.024.005.047.014.072.025l.018.008L15.942 3.7c.005.002.01.005.013.01.028.02.045.054.045.09v10.436c0 .456-.397.627-.886.383l-4.447-2.225-5.334-2.667v4.508z" fill="#fff"/></svg><span class="tile-name">Medium</span><br><span class="hex">#02B875</span></a></li>
+			<li style="background-color:#00AB6C"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/medium.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M5.333 14.236c0 .454-.332.66-.738.457L.443 12.617C.2 12.495 0 12.172 0 11.9V1.722c0-.363.266-.527.59-.365L5.315 3.72c.013.005.023.015.03.027l1.836 2.98 3.227-5.243c.126-.205.387-.3.613-.235.024.005.047.014.072.025l.018.008L15.942 3.7c.005.002.01.005.013.01.028.02.045.054.045.09v10.436c0 .456-.397.627-.886.383l-4.447-2.225-5.334-2.667v4.508z" fill="#fff"/></svg><span class="tile-name">Medium</span><br><span class="hex">#00AB6C</span></a></li>
 			<li style="background-color:#11B48A"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/vine.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.013 7.954c-.412.095-.81.137-1.17.137-2.018 0-3.572-1.41-3.572-3.86 0-1.202.465-1.827 1.122-1.827.625 0 1.042.56 1.042 1.7 0 .645-.173 1.354-.3 1.774 0 0 .62 1.085 2.322.752.36-.803.557-1.842.557-2.753 0-2.45-1.25-3.877-3.54-3.877-2.356 0-3.734 1.81-3.734 4.198 0 2.365 1.105 4.395 2.928 5.32-.767 1.533-1.742 2.884-2.76 3.902C6.064 11.19 4.395 8.212 3.71 2.403H.987c1.258 9.675 5.007 12.755 5.998 13.347.56.336 1.044.32 1.556.032.806-.458 3.223-2.875 4.563-5.705.562-.002 1.238-.066 1.91-.218V7.953z" fill="#fff" fill-rule="nonzero"/></svg><span class="tile-name">Vine</span><br><span class="hex">#11B48A</span></a></li>
 			<li style="background-color:#00B1AB"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/pingup.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M9.11 0H1.146v16H6.17V6.478H4.33c-.336 0-.433-.21-.213-.466L7 2.65c.218-.256.578-.256.797 0l2.882 3.362c.218.256.122.466-.215.466h-1.84v4.45h.486c4.152 0 5.745-2.872 5.745-5.654C14.855 2.604 13.105 0 9.11 0" fill="#fff" fill-rule="nonzero"/></svg><span class="tile-name">Pingup</span><br><span class="hex">#00B1AB</span></a></li>
 			<li style="background-color:#005A5F"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/xing.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M12.126 0c-.345 0-.494.217-.618.44 0 0-4.97 8.816-5.135 9.105.01.016 3.28 6.015 3.28 6.015.113.205.29.44.644.44H12.6c.14 0 .25-.052.308-.147.06-.1.06-.23-.005-.357L9.65 9.552c-.003-.004-.003-.01 0-.015L14.76.504c.063-.128.064-.258.004-.357-.06-.095-.168-.147-.307-.147h-2.33zM2.432 3.16c-.14 0-.256.05-.315.144-.06.1-.052.226.013.354l1.56 2.7c.003.006.003.01 0 .014L1.24 10.7c-.065.126-.062.254 0 .353.057.095.16.157.3.157h2.308c.345 0 .51-.232.63-.445l2.49-4.406-1.586-2.767c-.115-.205-.29-.433-.642-.433H2.432z" fill="#fff"/></svg><span class="tile-name">Xing</span><br><span class="hex">#005A5F</span></a></li>
@@ -346,16 +346,16 @@
 			<li style="background-color:#000000"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/diaspora.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M10.172 14.618l-1.554-2.17c-.415-.58-.752-1.032-.77-1.032-.018 0-.67.877-1.544 2.076-.832 1.142-1.52 2.076-1.53 2.076-.022 0-2.998-2.096-3.006-2.118-.004-.01.67-.998 1.495-2.194.826-1.197 1.502-2.195 1.502-2.218 0-.037-.268-.13-2.367-.83l-2.396-.8c-.02-.01.103-.424.528-1.766.306-.964.563-1.76.57-1.77.01-.01 1.14.35 2.515.804 1.375.452 2.51.822 2.525.822.014 0 .03-.02.035-.047.006-.025.018-1.195.027-2.6.01-1.404.024-2.565.033-2.58.013-.02.4-.026 1.817-.025.99 0 1.81.007 1.823.015.016.01.043.783.09 2.518.073 2.848.075 2.886.12 2.886.018 0 1.107-.365 2.42-.81 1.315-.446 2.396-.803 2.404-.795.026.03 1.103 3.537 1.09 3.55-.007.008-1.104.383-2.437.835-1.833.622-2.425.83-2.43.856-.003.02.627.963 1.43 2.136.788 1.155 1.43 2.11 1.428 2.12-.007.024-2.96 2.2-2.986 2.2-.01 0-.384-.512-.832-1.138z" fill="#fff" fill-rule="nonzero"/></svg><span class="tile-name">Diaspora</span><br><span class="hex">#000000</span></a></li>
 			<li style="background-color:#000000"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/squarespace.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.103 5.812c-1.2-1.2-3.15-1.2-4.376 0l-4.9 4.9c-.3.3-.3.8 0 1.1.3.3.8.3 1.1 0l4.9-4.9c.6-.6 1.576-.6 2.176 0 .6.6.6 1.576 0 2.176l-4.826 4.826c.6.6 1.575.6 2.175 0l3.726-3.726c1.225-1.225 1.225-3.176.025-4.376zm-1.65 1.625c-.3-.3-.8-.3-1.1 0L7.45 12.363c-.6.6-1.574.6-2.174 0-.3-.3-.8-.3-1.1 0-.3.3-.3.8 0 1.1 1.2 1.2 3.15 1.2 4.376 0l4.9-4.9c.3-.325.3-.826 0-1.126zm-1.626-4.9c-1.2-1.2-3.15-1.2-4.376 0l-4.9 4.9c-.3.3-.3.8 0 1.1.3.3.8.3 1.1 0l4.927-4.9c.6-.6 1.575-.6 2.175 0 .3.3.8.3 1.1 0 .275-.325.275-.8-.025-1.1zm-1.65 1.625c-.3-.3-.8-.3-1.1 0l-4.9 4.926c-.6.6-1.576.6-2.177 0-.6-.6-.6-1.576 0-2.176l4.826-4.826c-.6-.6-1.575-.6-2.175 0L.9 5.812c-1.2 1.2-1.2 3.15 0 4.376 1.2 1.2 3.15 1.2 4.376 0l4.9-4.9c.3-.326.3-.826 0-1.126z" fill="#fff" fill-rule="nonzero"/></svg><span class="tile-name">Squarespace</span><br><span class="hex">#000000</span></a></li>
 			<li style="background-color:#000000"><a href="https://raw.githubusercontent.com/danleech/simple-icons/gh-pages/icons/ello.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0c4.415 0 8 3.585 8 8s-3.585 8-8 8-8-3.585-8-8 3.585-8 8-8zm0 12.8c-2.187 0-4.107-1.493-4.64-3.6-.053-.24.08-.507.32-.56.24-.053.507.08.56.32.453 1.707 2 2.907 3.76 2.907 1.76 0 3.307-1.2 3.76-2.907.053-.24.32-.4.56-.32.24.053.4.32.32.56-.533 2.107-2.453 3.6-4.64 3.6z" fill="#fff"/></svg><span class="tile-name">Ello</span><br><span class="hex">#000000</span></a></li>
-        </ul>
+	</ul>
     </main>
     <footer class="footer" role="contentinfo">
     <p>Contributions, corrections &amp; requests can be left on <a href="https://github.com/danleech/simple-icons">GitHub</a>. Company logos in icons are copyright of their respective owners. Distributed for free by <a href="https://twitter.com/bathtype">Dan Leech</a> under the Free Art License.</p>
     </footer>
     <style>@import url('https://fonts.googleapis.com/css?family=Lato:400&text=ABCDEFGHIJKLMNOPQERSTUVWXYZ.!%20%23%2B%3F%26%2C1234567890');</style>
     <script>
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA-46210978-2', 'auto');
-        ga('send', 'pageview');
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-46210978-2', 'auto');
+	ga('send', 'pageview');
     </script>
     <script async src='//www.google-analytics.com/analytics.js'></script>
 </body>
