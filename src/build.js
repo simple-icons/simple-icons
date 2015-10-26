@@ -70,7 +70,6 @@ tmp.sort(function(a, b) {
 for (var i = 0; i < tmp.length; i++) {
     source.icons.push(tmp[i]);
 }
-console.log(tmp);
 
 // Read header and footer content into variables
 var fs = require('fs');
@@ -96,7 +95,6 @@ for (var i = 0; i < source.icons.length; i++) {
     fileName = fileName.replace('.', '');
     fileName = fileName.replace('+', 'plus');
     filePath = "../icons/" + fileName + ".svg";
-    console.log(source.icons[i].title + ", sat = " + source.icons[i].saturation);
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
     main += "\n            <li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span>" + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>";
@@ -108,7 +106,7 @@ fs.writeFile("../index.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The file was saved!");
+    console.log("The index.html file was saved!");
 });
 
 // Also output to 404.html
@@ -116,5 +114,5 @@ fs.writeFile("../404.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The 404 file was saved!");
+    console.log("The 404.html file was saved!");
 });
