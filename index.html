@@ -388,9 +388,16 @@
             search();
         });
 
-        var query = window.location.hash.substring(1);
-        document.getElementById("search").value = query;
-        search();
+        hashSearch();
+        window.addEventListener('hashchange', function (evt) {
+            hashSearch();
+        });
+
+        function hashSearch() {
+            var query = window.location.hash.substring(1);
+            document.getElementById("search").value = query;
+            search();
+        }
 
         function search() {
             var searchTerm = searchField.value.toLowerCase();
