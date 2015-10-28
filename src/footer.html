@@ -10,6 +10,11 @@
         searchField.addEventListener('input', function (evt) {
             search();
         });
+
+        var query = window.location.hash.substring(1);
+        document.getElementById("search").value = query;
+        search();
+
         function search() {
             var searchTerm = searchField.value.toLowerCase();
             var icons = document.getElementsByClassName("tiles__item");
