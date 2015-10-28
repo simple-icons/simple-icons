@@ -86,7 +86,7 @@ var header = fs.readFileSync('./header.html', 'utf8');
 var footer = fs.readFileSync('./footer.html', 'utf8');
 
 // Build content
-var main = "        <p class=\"hero\">" + source.icons.length + " SVG icons for popular brands <a href=\"https://github.com/danleech/simple-icons\">Download them from GitHub</a></p>\n        <ul class=\"tiles\">";
+var main = "        <p class=\"hero\">" + source.icons.length + " SVG icons for popular brands <a href=\"https://github.com/danleech/simple-icons\">Download them from GitHub</a></p>\n        <input type=\"text\" id=\"search\" class=\"search-field\" autofocus>\n            <ul class=\"tiles\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
@@ -97,7 +97,7 @@ for (var i = 0; i < source.icons.length; i++) {
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n            <li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span>" + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>";
+    main += "\n            <li class=\"tiles__item\" data-search=\"" + source.icons[i].title.toLowerCase() + " " + fileName.toLowerCase() + " " + source.icons[i].hex.toLowerCase() + "\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span>" + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>";
 }
 
 // Put all content together and export to index.html
