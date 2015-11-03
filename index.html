@@ -231,7 +231,7 @@
         </form>
     </header>
     <main role="main">
-        <p class="hero">146 SVG icons for popular brands <a href="https://github.com/danleech/simple-icons">Download them from GitHub</a></p>
+        <p class="hero"> SVG icons for popular brands <a href="https://github.com/danleech/simple-icons">Download them from GitHub</a></p>
         <input type="text" id="search" class="search-field" autofocus>
             <ul class="tiles">
             <li class="tiles__item" data-search="justgiving justgiving ad29b6" style="background-color:#AD29B6"><a href="https://simpleicons.org/icons/justgiving.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.81 6.616h-5.59l-3.266 3.28h4.485c-.59 1.316-1.902 2.04-3.432 2.04-2.072 0-3.758-1.78-3.758-3.848 0-2.075 1.686-3.808 3.758-3.808.755 0 1.458.196 2.04.58l3.027-3.04C11.693.687 9.927 0 8 0 3.58 0 0 3.578 0 8c0 4.415 3.58 8 8 8s8-3.41 8-7.826c0-.597-.068-.9-.19-1.558z" fill="#fff" fill-rule="nonzero"/></svg><span class="tile-name">JustGiving</span><br><span class="hex">#AD29B6</span></a></li>
@@ -414,6 +414,9 @@
                 }
             }
         }
+
+        var countItems = document.getElementsByTagName("ul")[0].childElementCount;
+        document.getElementsByClassName('hero')[0].insertAdjacentHTML( 'afterbegin', countItems);
     </script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
