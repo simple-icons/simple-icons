@@ -74,37 +74,24 @@
             padding: 0 0 1.5rem;
             text-align: center;
         }
-        @keyframes pulse {
-            0% {
-                background-color: #CCC;
-            }
-            50% {
-                background-color: #AAA;
-            }
-            100% {
-                background-color: #CCC;
-            }
-        }
         .donate-button {
             -webkit-appearance: none;
-            animation: pulse 2.5s infinite;
-            animation-timing-function: ease-in-out;
-            background: #CCC;
+            background: transparent;
             border: 0;
-            border-radius: 1.5rem;
-            color: #FFF;
+            color: #333;
             cursor: pointer;
+            display: inline-block;
             font-family: inherit;
             font-size: 0.75rem;
             font-weight: 400;
             letter-spacing: 0.05rem;
-            margin: 1.5rem 0 0;
-            padding: 0.75rem 1.5rem;
+            margin: 0;
+            padding: 0;
+            text-decoration: underline;
             text-transform: uppercase;
         }
         .donate-button:focus, .donate-button:hover {
-            animation: none;
-            background: #333;
+            color: #999;
         }
         @media (min-width: 800px) {
             .navbar {
@@ -117,10 +104,10 @@
             }
             .navbar__text {
                 display: inline-block;
-                padding: 1.5rem 0.75rem;
+                padding: 1.5rem 0;
             }
             .donate-form {
-                margin: -0.5rem 1.5rem 0 0;
+                margin: 0 1.5rem 0 0;
                 padding: 0;
             }
         }
@@ -227,6 +214,7 @@
     <header class="navbar" role="banner">
         <h1 class="title">Simple Icons</h1>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-form">
+            <span class="navbar__text">Like this?</span>
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="UCMEG4SWEYFUC">
             <input type="submit" name="submit" value="Buy Dan a coffee!" class="donate-button">
