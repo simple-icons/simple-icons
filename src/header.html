@@ -98,12 +98,17 @@
             font-size: 0.75rem;
             font-weight: 400;
             letter-spacing: 0.05rem;
+            margin: 1.5rem 0 0;
             padding: 0.75rem 1.5rem;
             text-transform: uppercase;
         }
         .donate-button:focus, .donate-button:hover {
             animation: none;
             background: #333;
+        }
+        .sharing-buttons {
+            height: 1.5rem;
+            padding: 1.5rem;
         }
         @media (min-width: 800px) {
             .navbar {
@@ -223,13 +228,31 @@
 </head>
 
 <body>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;
+                js.src=p+'://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js,fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+    </script>
     <header class="navbar" role="banner">
         <h1 class="title">Simple Icons</h1>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-form">
-            <p class="navbar__text">Like this?</p>
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="UCMEG4SWEYFUC">
-            <input type="submit" name="submit" value="Buy Dan a coffee!" class="donate-button">
-        </form>
+        <div class="sharing-buttons">
+            <div class="fb-share-button" data-href="https://simpleicons.org" data-layout="button_count"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://simpleicons.org" data-via="bathtype" data-dnt="true">Tweet</a>
+        </div>
     </header>
     <main role="main">
