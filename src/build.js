@@ -49,14 +49,14 @@ source.icons.sort(function(a, b) {
 });
 var tmp = [];
 for (var i = 0; i < source.icons.length; i++) {
-    if (source.icons[i].luminance < 10) {
+    if (source.icons[i].luminance < 15) {
         tmp.push(source.icons[i]);
         source.icons.splice(i,1);
         i--;
     }
 }
 for (var i = 0; i < source.icons.length; i++) {
-    if (source.icons[i].saturation < 5) {
+    if (source.icons[i].saturation < 25) {
         tmp.push(source.icons[i]);
         source.icons.splice(i,1);
         i--;
