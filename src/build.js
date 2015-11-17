@@ -88,10 +88,8 @@ var main = "        <p class=\"hero\">" + source.icons.length + " SVG icons for 
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
-    fileName = fileName.replace(' ', '');
-    fileName = fileName.replace('!', '');
-    fileName = fileName.replace('.', '');
-    fileName = fileName.replace('+', 'plus');
+    fileName = fileName.replace(/[ |!|.]/g, '');
+    fileName = fileName.replace(/[+]/, 'plus');
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
