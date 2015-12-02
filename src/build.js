@@ -40,10 +40,8 @@ for (var i = 0; i < source.icons.length; i++) {
 }
 
 // Sort icons by hue
-
-// Ensures blue icons appear first in the last, purple ones last
 for (var i = 0; i < source.icons.length; i++) {
-    source.icons[i].hue += 75;
+    source.icons[i].hue += 90;
     source.icons[i].hue = source.icons[i].hue % 360;
 }
 source.icons.sort(function(a, b) {
@@ -51,14 +49,14 @@ source.icons.sort(function(a, b) {
 });
 var tmp = [];
 for (var i = 0; i < source.icons.length; i++) {
-    if (source.icons[i].luminance < 10) {
+    if (source.icons[i].luminance < 15) {
         tmp.push(source.icons[i]);
         source.icons.splice(i,1);
         i--;
     }
 }
 for (var i = 0; i < source.icons.length; i++) {
-    if (source.icons[i].saturation < 5) {
+    if (source.icons[i].saturation < 25) {
         tmp.push(source.icons[i]);
         source.icons.splice(i,1);
         i--;
@@ -90,14 +88,12 @@ var main = "        <p class=\"hero\">" + source.icons.length + " SVG icons for 
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
-    fileName = fileName.replace(' ', '');
-    fileName = fileName.replace('!', '');
-    fileName = fileName.replace('.', '');
-    fileName = fileName.replace('+', 'plus');
+    fileName = fileName.replace(/[ |!|.]/g, '');
+    fileName = fileName.replace(/[+]/, 'plus');
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n            <li class=\"tiles__item\" data-search=\"" + source.icons[i].title.toLowerCase() + " " + fileName.toLowerCase() + " " + source.icons[i].hex.toLowerCase() + "\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span>" + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></a></li>";
+    main += "\n            <li class=\"tiles__item\" data-search=\"" + source.icons[i].title.toLowerCase() + " " + fileName.toLowerCase() + " " + source.icons[i].hex.toLowerCase() + "\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\">" + svg + "</a><span class=\"tile-name\">" + source.icons[i].title + "</span>" + "<br><span class=\"hex\">#" + source.icons[i].hex + "</span></li>";
 }
 
 // Put all content together and export to index.html
