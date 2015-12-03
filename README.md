@@ -11,6 +11,6 @@
    - Simplify and minimise paths.
    - Make all paths white.
 1. Export SVG.
-1. Run SVGO on the SVG file.
+1. Run [SVGO](https://github.com/svg/svgo) on the SVG file.
 1. Add object to [simple-icons.json](https://github.com/danleech/simple-icons/blob/gh-pages/src/simple-icons.json).
 1. Run [build.js](https://github.com/danleech/simple-icons/blob/gh-pages/src/build.js) in Node.
