@@ -6,7 +6,7 @@
 
 1. Find an official source vector image.
 2. Use your SVG editor of choice to produce a monochrome icon (with a view to keeping the file size as small as possible).
-3. Optimize the SVG using SVGO and add it to the `/icons` directory.
+3. Optimize the SVG using SVGO(https://github.com/svg/svgo) and add it to the `/icons` directory.
 4. Add an entry to `/src/simple-icons.json` with:
    - The icon title
    - The HEX colour value
