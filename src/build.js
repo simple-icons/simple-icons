@@ -88,8 +88,8 @@ var main = "        <p class=\"hero\">" + source.icons.length + " SVG icons for 
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
-    fileName = fileName.replace(/[ |!|.]/g, '');
-    fileName = fileName.replace(/[+]/, 'plus');
+    fileName = fileName.replace(/[!|’|.| ]/g, ''); // Replace bang, apostrophe, period and space with nothing.
+    fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
