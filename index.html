@@ -63,6 +63,7 @@
         }
         .button {
             background-color: #6C6;
+            border-bottom: 0.125rem solid rgba(0,0,0,0.25);
             border-radius: 0.125rem;
             color: #FFF;
             display: block;
@@ -74,6 +75,10 @@
         .button:focus, .button:hover {
             background-color: #5B5;
             color: #FFF;
+        }
+        .button:active {
+            border-bottom: 0.125rem solid rgba(0,0,0,0);
+            transform: translateY(0.125rem);
         }
         .search-field {
             -webkit-appearance: none;
@@ -211,7 +216,7 @@
             <h1 class="title">Simple Icons</h1>
             <input type="text" id="search" class="search-field" autofocus>
             <p><strong>SVG icons for popular brands.</strong> Contributions, corrections &amp; requests can be left on <a href="https://github.com/danleech/simple-icons">GitHub</a>. Company logos in icons are copyright of their respective owners. Distributed for free by <a href="https://twitter.com/bathtype">Dan Leech</a> under the Free Art License.</p>
-            <p><a href="https://github.com/danleech/simple-icons" class="button">Download</a></p>
+            <p><a href="https://github.com/danleech/simple-icons/tree/gh-pages/icons" class="button">Download</a></p>
         </div>
         <div class="block block--ad">
             <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=simpleiconsorg" id="_carbonads_js"></script>
