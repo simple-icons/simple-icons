@@ -50,90 +50,58 @@
             color: #999;
         }
         .navbar {
-            background: #EEE;
-            text-align: center;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            padding: 1.5rem;
         }
         .title {
             font-size: 1rem;
             font-weight: 600;
             margin: 0;
-            padding: 1.5rem 1.5rem 0;
+            padding: 0;
             text-transform: uppercase;
         }
-        .navbar__text {
-            font-size: 0.8125rem;
-            margin: 0;
-            padding: 0;
-        }
-        .donate-form {
-            margin: 0;
-            padding: 0 0 1.5rem;
+        .button {
+            background-color: #6C6;
+            border-radius: 0.125rem;
+            color: #FFF;
+            display: block;
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
             text-align: center;
+            text-decoration: none;
         }
-        .donate-button {
-            -webkit-appearance: none;
-            background: transparent;
-            border: 0;
-            color: #333;
-            cursor: pointer;
-            display: inline-block;
-            font-family: inherit;
-            font-size: 0.8125rem;
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-            text-decoration: underline;
-        }
-        .donate-button:focus, .donate-button:hover {
-            color: #999;
-        }
-        @media (min-width: 800px) {
-            .navbar {
-                display: flex;
-                justify-content: space-between;
-                text-align: left;
-            }
-            .title {
-                padding: 1.5rem;
-            }
-            .navbar__text {
-                display: inline-block;
-                padding: 1.5rem 0;
-            }
-            .donate-form {
-                margin: 0 1.5rem 0 0;
-                padding: 0;
-            }
-        }
-        .hero {
-            margin: 0 auto;
-            max-width: 18rem;
-            padding: 3rem 3rem 0;
-            text-align: center;
+        .button:focus, .button:hover {
+            background-color: #5B5;
+            color: #FFF;
         }
         .search-field {
             -webkit-appearance: none;
             background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1taXRlcmxpbWl0PSIxLjQxNCI+PHBhdGggZD0iTTE1LjY4NSAxNC4xODNMMTEuNjIgMTAuMWMuNzUtMS4wNSAxLjE4Mi0yLjMxNyAxLjE4Mi0zLjcgMC0zLjUzMy0yLjg2Ny02LjQtNi40LTYuNC0zLjUzMyAwLTYuNCAyLjg2Ny02LjQgNi40IDAgMy41MzMgMi44NjcgNi40IDYuNCA2LjQgMS4zODMgMCAyLjY1LS40MzMgMy43LTEuMTgzbDQuMDgzIDQuMDY2Yy4yLjIxNy40ODQuMzE3Ljc1LjMxNy4yNjcgMCAuNTUtLjEuNzUtLjMxNy40MTctLjQxNi40MTctMS4wODMgMC0xLjV6bS05LjI4My0yLjc2NmMtMi43NjcgMC01LjAxNy0yLjI1LTUuMDE3LTUuMDE3IDAtMi43NjcgMi4yNS01LjAxNyA1LjAxNy01LjAxNyAyLjc2NyAwIDUuMDE3IDIuMjUgNS4wMTcgNS4wMTcgMCAyLjc2Ny0yLjI1IDUuMDE3LTUuMDE4IDUuMDE3eiIgZmlsbD0iI2QxZDFkMSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9zdmc+);
-            background-position: left center;
+            background-position: 0.25rem center;
             background-repeat: no-repeat;
             background-size: 1rem 1rem;
             border: none;
             border-bottom: 1px solid #EEE;
+            box-sizing: border-box;
             color: #999;
             display: block;
             font-family: inherit;
             font-size: 1rem;
             line-height: 1rem;
-            margin: 1.5rem auto;
+            margin: 1.5rem 0;
             outline: 0;
-            padding: 0.375rem 0.375rem 0.375rem 1.375rem;
-            width: 12rem;
+            padding: 0.375rem 0.375rem 0.375rem 1.5rem;
+            width: 100%;
+        }
+        .site-main {
+            width: 100%;
         }
         .tiles {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
-            margin: -0.25rem 1.25rem;
+            margin: 1.25rem 1.25rem;
             padding: 0;
         }
         .tiles li {
@@ -179,13 +147,13 @@
             opacity: 0.5;
             text-transform: uppercase;
         }
-        @media (min-width: 500px) { .tiles li { width: 50%; } }
-        @media (min-width: 700px) { .tiles li { width: 33.333%; } }
-        @media (min-width: 900px) { .tiles li { width: 25% } }
-        @media (min-width: 1100px) { .tiles li { width: 20% } }
-        @media (min-width: 1400px) { .tiles li { width: 16.666% } }
-        @media (min-width: 1700px) { .tiles li { width: 12.5% } }
-        @media (min-width: 2100px) { .tiles li { width: 10% } }
+        @media (min-width: 800px) { .tiles li { width: 50%; } }
+        @media (min-width: 1000px) { .tiles li { width: 33.333%; } }
+        @media (min-width: 1200px) { .tiles li { width: 25% } }
+        @media (min-width: 1500px) { .tiles li { width: 20% } }
+        @media (min-width: 1800px) { .tiles li { width: 16.666% } }
+        @media (min-width: 2000px) { .tiles li { width: 12.5% } }
+        @media (min-width: 2400px) { .tiles li { width: 10% } }
         .footer {
             margin: 3rem;
         }
@@ -195,22 +163,61 @@
             max-width: 25.5rem;
             text-align: center;
         }
+        .block {
+            background-color: #EEE;
+            margin: 0 0 0.75rem;
+            padding: 1.5rem;
+        }
+        .block--ad {
+            padding: 0.75rem;
+        }
+        .carbon-wrap:after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+        .carbon-img {
+            float: left;
+        }
+        .carbon-text {
+            float: right;
+            width: calc(100% - 130px - 0.75rem);
+        }
+        .carbon-poweredby {
+            color: #AAA;
+            display: block;
+            margin: 0.25rem 0 0;
+            text-align: center;
+            text-decoration: none;
+        }
+        @media (min-width: 600px) {
+            body {
+                display: flex;
+            }
+            .navbar {
+                padding: 1.5rem 0 1.5rem 1.5rem;
+                width: 18.5rem;
+            }
+            .site-main {
+                width: calc(100% - 20rem);
+            }
+        }
     </style>
 </head>
 
 <body>
     <header class="navbar" role="banner">
-        <h1 class="title">Simple Icons</h1>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" class="donate-form">
-            <span class="navbar__text">Like this?</span>
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="UCMEG4SWEYFUC">
-            <input type="submit" name="submit" value="Buy Dan a coffee!" class="donate-button">
-        </form>
+        <div class="block">
+            <h1 class="title">Simple Icons</h1>
+            <input type="text" id="search" class="search-field" autofocus>
+            <p><strong>SVG icons for popular brands.</strong> Contributions, corrections &amp; requests can be left on <a href="https://github.com/danleech/simple-icons">GitHub</a>. Company logos in icons are copyright of their respective owners. Distributed for free by <a href="https://twitter.com/bathtype">Dan Leech</a> under the Free Art License.</p>
+            <p><a href="https://github.com/danleech/simple-icons" class="button">Download</a></p>
+        </div>
+        <div class="block block--ad">
+            <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=simpleiconsorg" id="_carbonads_js"></script>
+        </div>
     </header>
-    <main role="main">
-        <p class="hero">187 SVG icons for popular brands <a href="https://github.com/danleech/simple-icons">Download them from GitHub</a></p>
-        <input type="text" id="search" class="search-field" autofocus>
+    <main class="site-main" role="main">
             <ul class="tiles">
             <li class="tiles__item" data-search="podcasts podcasts 9933cc" style="background-color:#9933CC"><a href="https://simpleicons.org/icons/podcasts.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16s1.75 0 1.75-5.18c0-.965-.784-1.75-1.75-1.75s-1.75.785-1.75 1.75C6.25 16 8 16 8 16zm2.147-1.766c.077-.296.136-.595.183-.897l.035-.24c.077-.032.154-.065.23-.1 1.215-.55 2.238-1.49 2.89-2.653.297-.534.516-1.11.646-1.71.148-.67.182-1.368.104-2.052-.073-.64-.246-1.266-.512-1.853-.31-.687-.746-1.316-1.28-1.848-.55-.55-1.203-.998-1.916-1.31-.737-.323-1.536-.5-2.34-.52-.81-.02-1.623.116-2.38.404-.73.278-1.405.694-1.983 1.218-.557.506-1.02 1.113-1.365 1.782-.29.57-.494 1.184-.6 1.815-.108.655-.112 1.326-.01 1.982.088.583.26 1.153.51 1.688.586 1.253 1.59 2.295 2.823 2.926.148.076.3.146.453.21.01.087.024.174.037.26.047.297.104.59.18.88-.276-.085-.546-.188-.808-.307-1.436-.65-2.64-1.77-3.392-3.155-.34-.624-.585-1.3-.728-1.995-.16-.782-.19-1.59-.09-2.382.095-.74.305-1.465.62-2.14.37-.792.884-1.515 1.51-2.125C3.606 1.483 4.37.973 5.2.62 6.066.256 6.997.062 7.933.05c.938-.01 1.877.16 2.75.503.842.332 1.618.824 2.28 1.44.64.595 1.17 1.304 1.558 2.086.33.665.558 1.382.67 2.117.117.76.112 1.538-.013 2.296-.117.704-.34 1.39-.657 2.028-.7 1.412-1.864 2.574-3.274 3.276-.354.175-.722.322-1.1.438zm.346-2.854l.006-.312c0-.21.003-.42-.03-.627-.01-.08-.027-.157-.047-.235.372-.307.685-.685.916-1.11.175-.324.303-.674.377-1.035.083-.407.1-.828.046-1.24-.047-.37-.15-.73-.302-1.07-.187-.414-.45-.793-.77-1.115-.322-.32-.7-.584-1.115-.77-.456-.207-.953-.32-1.453-.333-.504-.013-1.01.075-1.48.26-.422.168-.814.412-1.15.72-.337.304-.617.67-.824 1.073-.17.33-.288.684-.354 1.048-.067.378-.077.766-.028 1.147.047.37.15.73.302 1.07.23.508.574.96.998 1.322-.024.088-.043.178-.057.27-.033.207-.03.415-.03.626l.006.28c-.698-.435-1.28-1.05-1.674-1.775-.224-.41-.386-.855-.48-1.313-.105-.514-.124-1.046-.058-1.567.06-.467.19-.926.383-1.355.237-.524.57-1.003.976-1.41.406-.406.886-.738 1.41-.975.577-.262 1.205-.404 1.84-.42.637-.017 1.276.095 1.87.33.536.21 1.03.52 1.458.908.425.386.78.85 1.04 1.36.215.416.367.865.45 1.327.084.477.097.968.035 1.45-.06.467-.19.926-.383 1.355-.396.876-1.06 1.62-1.88 2.118zM8 5.016c.974 0 1.764.79 1.764 1.765 0 .975-.79 1.765-1.764 1.765s-1.764-.79-1.764-1.764c0-.973.79-1.764 1.764-1.764z" fill="#fff"/></svg></a><span class="tile-name">Podcasts</span><br><span class="hex">#9933CC</span></li>
             <li class="tiles__item" data-search="justgiving justgiving ad29b6" style="background-color:#AD29B6"><a href="https://simpleicons.org/icons/justgiving.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.81 6.616h-5.59l-3.266 3.28h4.485c-.59 1.316-1.902 2.04-3.432 2.04-2.072 0-3.758-1.78-3.758-3.848 0-2.075 1.686-3.808 3.758-3.808.755 0 1.458.196 2.04.58l3.027-3.04C11.693.687 9.927 0 8 0 3.58 0 0 3.578 0 8c0 4.415 3.58 8 8 8s8-3.41 8-7.826c0-.597-.068-.9-.19-1.558z" fill="#fff" fill-rule="nonzero"/></svg></a><span class="tile-name">JustGiving</span><br><span class="hex">#AD29B6</span></li>
@@ -401,9 +408,6 @@
             <li class="tiles__item" data-search="stitcher stitcher 000000" style="background-color:#000000"><a href="https://simpleicons.org/icons/stitcher.svg"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M11.987 4.625h-.24v6.75h.24v-6.75zm-.497.75h-.24v5.25h.24v-5.25zm-.744 0H0v5.25h10.746v-5.25zm5.254 0h-3.005v5.25H16v-5.25zm-3.504 0h-.24v5.25h.24v-5.25z" fill="#fff"/></svg></a><span class="tile-name">Stitcher</span><br><span class="hex">#000000</span></li>
         </ul>
     </main>
-    <footer class="footer" role="contentinfo">
-    <p>Contributions, corrections &amp; requests can be left on <a href="https://github.com/danleech/simple-icons">GitHub</a>. Company logos in icons are copyright of their respective owners. Distributed for free by <a href="https://twitter.com/bathtype">Dan Leech</a> under the Free Art License.</p>
-    </footer>
     <script>
         var searchField = document.getElementById("search");
         searchField.addEventListener('input', function (evt) {
