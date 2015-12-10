@@ -171,8 +171,17 @@
         .block--ad {
             padding: 0.75rem;
         }
-        .carbon-wrap {
-            display: flex;
+        .carbon-wrap:after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+        .carbon-img {
+            float: left;
+        }
+        .carbon-text {
+            float: right;
+            width: calc(100% - 130px);
         }
         .carbon-poweredby {
             color: #AAA;
