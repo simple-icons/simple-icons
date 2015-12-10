@@ -63,6 +63,7 @@
         }
         .button {
             background-color: #6C6;
+            border-bottom: 0.125rem solid rgba(0,0,0,0.25);
             border-radius: 0.125rem;
             color: #FFF;
             display: block;
@@ -74,6 +75,10 @@
         .button:focus, .button:hover {
             background-color: #5B5;
             color: #FFF;
+        }
+        .button:active {
+            border-bottom: 0.125rem solid rgba(0,0,0,0);
+            transform: translateY(0.125rem);
         }
         .search-field {
             -webkit-appearance: none;
