@@ -29,6 +29,16 @@
                 }
             }
         }
+
+        function toggleNames() {
+            var list = document.getElementsByClassName("tiles tiles--icons");
+            if(list.length == 1) {
+                list[0].className = "tiles tiles--full";
+            } else {
+                var list = document.getElementsByClassName("tiles tiles--full");
+                list[0].className = "tiles tiles--icons";
+            }
+        }
     </script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

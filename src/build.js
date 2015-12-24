@@ -84,7 +84,7 @@ var header = fs.readFileSync('./header.html', 'utf8');
 var footer = fs.readFileSync('./footer.html', 'utf8');
 
 // Build content
-var main = "            <ul class=\"tiles\">";
+var main = "            <ul class=\"tiles tiles--full\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
