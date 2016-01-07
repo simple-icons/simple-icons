@@ -102,7 +102,7 @@ fs.writeFile("../index.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The index.html file was saved!");
+    console.log("The index.html file was built with " + source.icons.length + " icons!");
 });
 
 // Also output to 404.html
@@ -110,5 +110,5 @@ fs.writeFile("../404.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The 404.html file was saved!");
+    console.log("The 404.html file was built with " + source.icons.length + " icons!");
 });
