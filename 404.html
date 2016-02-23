@@ -153,7 +153,8 @@
             width: 2rem;
         }
         .tiles--full svg {
-            margin: -0.5rem 0.75rem 0 0;
+            margin: -0.5rem 0 0 0;
+            padding-right: 1.25rem;
         }
         .tiles path, .tiles ellipse, .tiles circle {
             fill: #FFF;
@@ -162,6 +163,10 @@
             font-size: 0.75rem;
             opacity: 0.5;
             text-transform: uppercase;
+            transition: opacity .3s ease-in-out;
+        }
+        .tiles--full .tiles__item:hover .hex, .tiles--full .tiles__item:active .hex, .tiles--full .tiles__item:focus .hex {
+            opacity: 1;
         }
         @media (min-width: 800px) { .tiles li { width: 50%; } }
         @media (min-width: 1000px) { .tiles li { width: 33.333%; } }
