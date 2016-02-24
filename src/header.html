@@ -149,9 +149,12 @@
         .tiles svg {
             float: left;
             height: 2rem;
-            margin: -0.5rem 0.75rem 0 0;
             padding: 0.5rem 0.5rem 0;
             width: 2rem;
+        }
+        .tiles--full svg {
+            margin: -0.5rem 0 0 0;
+            padding-right: 1.25rem;
         }
         .tiles path, .tiles ellipse, .tiles circle {
             fill: #FFF;
@@ -160,6 +163,10 @@
             font-size: 0.75rem;
             opacity: 0.5;
             text-transform: uppercase;
+            transition: opacity .3s ease-in-out;
+        }
+        .tiles--full .tiles__item:hover .hex, .tiles--full .tiles__item:active .hex, .tiles--full .tiles__item:focus .hex {
+            opacity: 1;
         }
         @media (min-width: 800px) { .tiles li { width: 50%; } }
         @media (min-width: 1000px) { .tiles li { width: 33.333%; } }
@@ -171,13 +178,29 @@
         .tiles--icons {
             justify-content: center;
         }
+        .tiles--icons .tiles__item {
+            position: relative;
+        }
+        .tiles--icons .icon--link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
         .tiles--icons li {
             height: 4rem;
             width: 4rem !important;
         }
         .tiles--icons svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
             height: 1.5rem;
-            margin: -0.25rem 0 0 0.25rem;
+            margin: 0;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
             padding: 0;
             width: 1.5rem;
         }
@@ -186,6 +209,9 @@
         }
         .tiles--icons .hex {
             visibility: hidden;
+        }
+        .icon--link:hover .tile-name, .icon--link:active .tile-name, .icon--link:focus .tile-name {
+            text-decoration: underline;
         }
         .footer {
             margin: 3rem;
