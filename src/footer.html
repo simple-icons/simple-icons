@@ -34,9 +34,11 @@
             var list = document.getElementsByClassName("tiles tiles--icons");
             if(list.length == 1) {
                 list[0].className = "tiles tiles--full";
+                document.getElementById("toggle-button").innerHTML = "Hide Names & Colour Values";
             } else {
                 var list = document.getElementsByClassName("tiles tiles--full");
                 list[0].className = "tiles tiles--icons";
+                document.getElementById("toggle-button").innerHTML = "Show Names & Colour Values";
             }
         }
     </script>
