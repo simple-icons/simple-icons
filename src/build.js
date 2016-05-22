@@ -88,7 +88,7 @@ var main = "            <ul class=\"tiles tiles--icons\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
-    fileName = fileName.replace(/[!|’|.| ]/g, ''); // Replace bang, apostrophe, period and space with nothing.
+    fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
     fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
