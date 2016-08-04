@@ -116,3 +116,59 @@ fs.writeFile("../404.html", htmlOutput, function(err) {
     }
     console.log("The 404.html file was built with " + source.icons.length + " icons!");
 });
+
+var sass = "// Brand colours from simpleicons.org\n";
+var less = "// Brand colours from simpleicons.org\n";
+var maxNameLength = 0;
+
+for (var i = 0; i < source.icons.length; i++) {
+    var fileName = source.icons[i].title.toLowerCase();
+    fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
+    fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
+
+    if (fileName.length > maxNameLength) {
+        maxNameLength = fileName.length;
+    }
+}
+
+// Sort icons alphabetically
+source.icons.sort(function(a, b) {
+    if (a.title < b.title) {
+        return -1;
+    }
+    if (a.title > b.title) {
+        return 1;
+    }
+    // names must be equal
+    return 0;
+});
+
+for (var i = 0; i < source.icons.length; i++) {
+    var fileName = source.icons[i].title.toLowerCase();
+    fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
+    fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
+
+    spacing = "";
+    if (fileName.length < maxNameLength) {
+        spacing = " ".repeat(maxNameLength - fileName.length);
+    }
+
+    sass += "\n$color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
+    less += "\n@color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
+}
+
+// Generate Sass file with colour variables
+fs.writeFile("../colour-variables.scss", sass, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The Sass file was built");
+});
+
+// Generate Less file with colour variables
+fs.writeFile("../colour-variables.less", less, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log("The Less file was built");
+});
