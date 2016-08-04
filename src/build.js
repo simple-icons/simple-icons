@@ -1,6 +1,8 @@
 // Get JSON from source file
 var source = require('./simple-icons.json');
 
+console.log("\nBuilding " + source.icons.length + " icons...\n");
+
 // Loop through icons
 for (var i = 0; i < source.icons.length; i++) {
 
@@ -106,7 +108,7 @@ fs.writeFile("../index.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The index.html file was built with " + source.icons.length + " icons!");
+    console.log(" - index.html built successfully.");
 });
 
 // Also output to 404.html
@@ -114,7 +116,7 @@ fs.writeFile("../404.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The 404.html file was built with " + source.icons.length + " icons!");
+    console.log(" - 404.html built successfully.");
 });
 
 var sass = "// Brand colours from simpleicons.org\n";
@@ -162,7 +164,7 @@ fs.writeFile("../colour-variables.scss", sass, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The Sass file was built");
+    console.log(" - brand-colours.scss built successfully.");
 });
 
 // Generate Less file with colour variables
@@ -170,5 +172,5 @@ fs.writeFile("../colour-variables.less", less, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The Less file was built");
+    console.log(" - brand-colours.less built successfully.");
 });
