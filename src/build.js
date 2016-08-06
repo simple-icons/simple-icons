@@ -1,6 +1,8 @@
 // Get JSON from source file
 var source = require('./simple-icons.json');
 
+console.log("\nBuilding " + source.icons.length + " icons...\n");
+
 // Loop through icons
 for (var i = 0; i < source.icons.length; i++) {
 
@@ -84,7 +86,7 @@ var header = fs.readFileSync('./header.html', 'utf8');
 var footer = fs.readFileSync('./footer.html', 'utf8');
 
 // Build content
-var main = "            <ul class=\"tiles tiles--icons\">";
+var main = "            <ul class=\"tiles tiles--full\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
@@ -93,7 +95,11 @@ for (var i = 0; i < source.icons.length; i++) {
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n            <li class=\"tiles__item\" data-search=\"" + source.icons[i].title.toLowerCase() + " " + fileName.toLowerCase() + " " + source.icons[i].hex.toLowerCase() + "\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\" class=\"icon--link\" title=\"" + source.icons[i].title + "\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span></a>" + "<span class=\"hex\">#" + source.icons[i].hex + "</span></li>";
+    var searchTerms = source.icons[i].title.toLowerCase() + " " + source.icons[i].hex.toLowerCase();
+    if (source.icons[i].title.toLowerCase() != fileName.toLowerCase()) {
+        searchTerms = searchTerms + " " + fileName.toLowerCase();
+    }
+    main += "\n            <li class=\"tiles__item\" data-search=\"" + searchTerms + "\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\" class=\"icon--link\" title=\"" + source.icons[i].title + "\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span></a>" + "<span class=\"hex\">#" + source.icons[i].hex + "</span></li>";
 }
 
 // Put all content together and export to index.html
@@ -102,7 +108,7 @@ fs.writeFile("../index.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The index.html file was built with " + source.icons.length + " icons!");
+    console.log(" - index.html built successfully.");
 });
 
 // Also output to 404.html
@@ -110,5 +116,61 @@ fs.writeFile("../404.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log("The 404.html file was built with " + source.icons.length + " icons!");
+    console.log(" - 404.html built successfully.");
+});
+
+var sass = "// Brand colours from simpleicons.org\n";
+var less = "// Brand colours from simpleicons.org\n";
+var maxNameLength = 0;
+
+for (var i = 0; i < source.icons.length; i++) {
+    var fileName = source.icons[i].title.toLowerCase();
+    fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
+    fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
+
+    if (fileName.length > maxNameLength) {
+        maxNameLength = fileName.length;
+    }
+}
+
+// Sort icons alphabetically
+source.icons.sort(function(a, b) {
+    if (a.title < b.title) {
+        return -1;
+    }
+    if (a.title > b.title) {
+        return 1;
+    }
+    // names must be equal
+    return 0;
+});
+
+for (var i = 0; i < source.icons.length; i++) {
+    var fileName = source.icons[i].title.toLowerCase();
+    fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
+    fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
+
+    spacing = "";
+    if (fileName.length < maxNameLength) {
+        spacing = " ".repeat(maxNameLength - fileName.length);
+    }
+
+    sass += "\n$color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
+    less += "\n@color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
+}
+
+// Generate Sass file with colour variables
+fs.writeFile("../colour-variables.scss", sass, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log(" - brand-colours.scss built successfully.");
+});
+
+// Generate Less file with colour variables
+fs.writeFile("../colour-variables.less", less, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log(" - brand-colours.less built successfully.");
 });
