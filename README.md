@@ -1,5 +1,7 @@
 # Simple Icons
 
+SVG icons for popular brands. [See them all on one page at **simpleicons.org**](https://simpleicons.org).
+
 ## Want to contribute?
 
 1. Find an official source vector image.
