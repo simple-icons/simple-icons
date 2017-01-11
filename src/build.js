@@ -95,7 +95,7 @@ for (var i = 0; i < source.icons.length; i++) {
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n            <li class=\"tiles__item\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\" class=\"icon--link\" title=\"" + source.icons[i].title + "\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span></a>" + "<span class=\"hex\">#" + source.icons[i].hex + "</span></li>";
+    main += "\n            <li class=\"tiles__item\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\" class=\"icon--link\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span></a>" + "<span class=\"hex\">#" + source.icons[i].hex + "</span></li>";
 }
 
 // Put all content together and export to index.html
