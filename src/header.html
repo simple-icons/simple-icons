@@ -36,10 +36,6 @@
             background-color: #FFF;
             color: #424242;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-            font-kerning: normal;
-            -webkit-font-variant-ligatures: common-ligatures;
-                    font-variant-ligatures: common-ligatures;
-            font-weight: 400;
             line-height: 1.5rem;
             margin: 0;
         }
@@ -70,7 +66,6 @@
             display: inline-block;
             font-weight: 700;
             padding: 0.75rem 1.5rem;
-            text-align: center;
             text-decoration: none;
         }
         .btn:focus, .btn:hover {
@@ -84,7 +79,7 @@
             display: flex;
             flex-wrap: wrap;
             list-style: none;
-            margin: 1.25rem 1.25rem;
+            margin: 1.25rem;
             padding: 0;
         }
         .tiles li {
@@ -128,7 +123,7 @@
             opacity: 0.5;
             text-transform: uppercase;
         }
-        .tiles__item:active .hex, .tiles__item:focus .hex, .tiles__item:hover .hex {
+        .tiles li:active .hex, .tiles li:focus .hex, .tiles li:hover .hex {
             opacity: 1;
         }
         @media (min-width: 800px) { .tiles li { width: 50%; } }
@@ -194,14 +189,10 @@
 </head>
 
 <body>
-    <header class="navbar" role="banner">
-        <h1 class="title">Simple Icons</h1>
-        <p><strong>SVG icons for popular brands</strong>, maintained by <a href="https://twitter.com/bathtype">Dan&nbsp;Leech</a>. Contributions, corrections &amp; requests can be made on <a href="https://github.com/danleech/simple-icons">GitHub</a>.</p>
-        <p>
-            <a href="https://github.com/danleech/simple-icons/tree/gh-pages/icons" class="btn">Download from GitHub</a>
-        </p>
-        <div class="ad">
-            <script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=simpleiconsorg" id="_carbonads_js"></script>
-        </div>
-    </header>
-    <main class="site-main" role="main">
+<header class="navbar" role="banner">
+<h1 class="title">Simple Icons</h1>
+<p><strong>SVG icons for popular brands</strong>, maintained by <a href="https://twitter.com/bathtype">Dan&nbsp;Leech</a>. Contributions, corrections &amp; requests can be made on <a href="https://github.com/danleech/simple-icons">GitHub</a>.</p>
+<p><a href="https://github.com/danleech/simple-icons/tree/gh-pages/icons" class="btn">Download from GitHub</a></p>
+<div class="ad"><script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=simpleiconsorg" id="_carbonads_js"></script></div>
+</header>
+<main class="site-main" role="main">
