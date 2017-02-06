@@ -86,20 +86,19 @@ var header = fs.readFileSync('./header.html', 'utf8');
 var footer = fs.readFileSync('./footer.html', 'utf8');
 
 // Build content
-var main = "            <ul class=\"tiles\">";
+var main = "        <ul class=\"tiles\">";
 
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
     fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
     fileName = fileName.replace(/[+]/, 'plus'); // Replace the plus symbol with “plus”.
-    filePath = "../icons/" + fileName + ".svg";
-    var fs = require('fs');
-    var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n            <li class=\"tiles__item\" style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"https://simpleicons.org/icons/" + fileName + ".svg\" class=\"icon--link\">" + svg + "<span class=\"tile-name\">" + source.icons[i].title + "</span></a>" + "<span class=\"hex\">#" + source.icons[i].hex + "</span></li>";
+    filePath = "/icons/" + fileName + ".svg";
+    main += "\n            <li class=\"tiles__item\" style=\"background-color:#" + source.icons[i].hex + "\">\n                <a href=\"" + filePath + "\" class=\"icon--link\">\n                    <img src=\"" + filePath + "\" height=\"32\" width=\"32\" alt=\"" + source.icons[i].title + " icon\">\n                    <span class=\"tile-name\">" + source.icons[i].title + "</span>\n                </a>" + "\n                <span class=\"hex\">#" + source.icons[i].hex + "</span>\n            </li>";
 }
 
 // Put all content together and export to index.html
 var htmlOutput = header + main + footer;
+var fs = require('fs');
 fs.writeFile("../index.html", htmlOutput, function(err) {
     if(err) {
         return console.log(err);
