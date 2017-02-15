@@ -25,35 +25,44 @@
     <link rel="apple-touch-icon" href="https://simpleicons.org/images/apple-touch-icon.png">
     <link rel="mask-icon" href="https://simpleicons.org/images/logo.svg" color="#111111">
     <style>
-        html {
+        :root {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
             font-size: 100%;
+            line-height: 1.5rem;
         }
         body {
             background-color: #FFF;
             color: #424242;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-            line-height: 1.5rem;
             margin: 0;
         }
         a {
             color: #0091EA;
         }
-        a:focus, a:hover {
-            color: #00B0FF;
+        a:hover h2, a:active h2, a:focus h2 {
+            text-decoration: underline;
+        }
+        aside {
+            background-color: #F0F0F0;
+            margin: 1.5rem 0 0;
+            padding: 0.75rem;
+        }
+        aside a {
+            color: #424242;
         }
         p {
             margin: 1.5rem 0 0;
         }
-        .navbar {
+        h1 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+        header {
             font-size: 0.75rem;
             line-height: 1.125rem;
             padding: 1.5rem;
-        }
-        .title {
-            font-size: 1rem;
-            font-weight: 700;
-            margin: 0;
-            padding: 0;
         }
         .btn {
             background-color: #00C853;
@@ -68,87 +77,60 @@
             background-color: #00E676;
             color: #FFF;
         }
-        .site-main {
+        main {
             width: 100%;
         }
-        .tiles {
+        ul {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
-            margin: 1.25rem;
+            margin: 1.5rem calc(1.5rem - 1px) calc(1.5rem - 1px) 1.5rem;
             padding: 0;
         }
-        .tiles li {
+        li {
             box-sizing: border-box;
             background: #424242;
-            border: 0.25rem solid #FFF;
             color: #FFF;
             font-size: 0.8125rem;
             line-height: 1rem;
+            margin: 0 1px 1px 0;
             padding: 1rem 0.75rem;
-            width: 100%;
+            width: calc(100% - 1px);
         }
-        .tiles ::selection {
-            background: #FFF;
-            color: #424242;
-        }
-        .tiles ::-moz-selection {
-            background: #FFF;
-            color: #424242;
-        }
-        .tile-name {
+        h2 {
             color: #FFF;
             display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 400;
+            line-height: 1rem;
+            margin: 0;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             width: calc(100% - 4rem);
         }
-        .tiles svg {
+        svg {
             float: left;
             height: 2rem;
             margin: -0.5rem 0 0 0;
             padding: 0.5rem 1.25rem 0 0.5rem;
             width: 2rem;
         }
-        .tiles path, .tiles ellipse, .tiles circle {
+        path, ellipse, circle {
             fill: #FFF;
         }
-        .hex {
+        span {
             font-size: 0.75rem;
             opacity: 0.5;
             text-transform: uppercase;
         }
-        .tiles li:active .hex, .tiles li:focus .hex, .tiles li:hover .hex {
-            opacity: 1;
-        }
-        @media (min-width: 800px) { .tiles li { width: 50%; } }
-        @media (min-width: 1000px) { .tiles li { width: 33.333%; } }
-        @media (min-width: 1100px) { .tiles li { width: 25% } }
-        @media (min-width: 1400px) { .tiles li { width: 20% } }
-        @media (min-width: 1600px) { .tiles li { width: 16.666% } }
-        @media (min-width: 1900px) { .tiles li { width: 12.5% } }
-        @media (min-width: 2300px) { .tiles li { width: 10% } }
-        .icon--link:hover .tile-name, .icon--link:active .tile-name, .icon--link:focus .tile-name {
-            text-decoration: underline;
-        }
-        .footer {
-            margin: 3rem;
-        }
-        .footer p {
-            font-size: 0.8125rem;
-            margin: 1.5rem auto 0;
-            max-width: 25.5rem;
-            text-align: center;
-        }
-        .ad {
-            background-color: #F0F0F0;
-            margin: 1.5rem 0 0;
-            padding: 0.75rem;
-        }
-        .ad a {
-            color: #424242;
-        }
+        @media (min-width: 800px)  { li { width: calc(50% - 1px) } }
+        @media (min-width: 1000px) { li { width: calc(33.333% - 1px) } }
+        @media (min-width: 1100px) { li { width: calc(25% - 1px) } }
+        @media (min-width: 1400px) { li { width: calc(20% - 1px) } }
+        @media (min-width: 1600px) { li { width: calc(16.666% - 1px) } }
+        @media (min-width: 1900px) { li { width: calc(12.5% - 1px) } }
+        @media (min-width: 2300px) { li { width: calc(10% - 1px) } }
         .carbon-wrap:after {
             clear: both;
             content: " ";
@@ -173,11 +155,11 @@
             body {
                 display: flex;
             }
-            .navbar {
+            header {
                 padding: 1.5rem 0 1.5rem 1.5rem;
                 width: 18.5rem;
             }
-            .site-main {
+            main {
                 width: calc(100% - 20rem);
             }
         }
@@ -185,10 +167,12 @@
 </head>
 
 <body>
-<header class="navbar" role="banner">
-<h1 class="title">Simple Icons</h1>
+<header role="banner">
+<h1>Simple Icons</h1>
 <p><strong>SVG icons for popular brands</strong>, maintained by <a href="https://twitter.com/bathtype">Dan&nbsp;Leech</a>. Contributions, corrections &amp; requests can be made on <a href="https://github.com/danleech/simple-icons">GitHub</a>.</p>
 <p><a href="https://github.com/danleech/simple-icons/tree/gh-pages/icons" class="btn">Download from GitHub</a></p>
-<div class="ad"><script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=simpleiconsorg" id="_carbonads_js"></script></div>
+<aside role="complementary">
+<script async type="text/javascript" src="https://cdn.carbonads.com/carbon.js?zoneid=1696&serve=CVYD42T&placement=simpleiconsorg" id="_carbonads_js"></script>
+</aside>
 </header>
-<main class="site-main" role="main">
+<main role="main">
