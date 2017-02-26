@@ -117,6 +117,7 @@ fs.writeFile("../404.html", htmlOutput, function(err) {
 
 var sass = "// Brand colours from simpleicons.org\n";
 var less = "// Brand colours from simpleicons.org\n";
+var css = "/* Brand colours from simpleicons.org */\n\n:root {";
 var maxNameLength = 0;
 
 for (var i = 0; i < source.icons.length; i++) {
@@ -153,7 +154,10 @@ for (var i = 0; i < source.icons.length; i++) {
 
     sass += "\n$color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
     less += "\n@color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
+    css += "\n    --color-brand-" + fileName.toLowerCase() + ": " + spacing + "#" + source.icons[i].hex.toUpperCase() + ";";
 }
+
+css += "\n}";
 
 // Generate Sass file with colour variables
 fs.writeFile("../colour-variables.scss", sass, function(err) {
@@ -169,4 +173,12 @@ fs.writeFile("../colour-variables.less", less, function(err) {
         return console.log(err);
     }
     console.log(" - brand-colours.less built successfully.");
+});
+
+// Generate CSS file with colour variables
+fs.writeFile("../colour-variables.css", css, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+    console.log(" - brand-colours.css build successfully.");
 });
