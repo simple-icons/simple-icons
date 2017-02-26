@@ -180,5 +180,5 @@ fs.writeFile("../colour-variables.css", css, function(err) {
     if(err) {
         return console.log(err);
     }
-    console.log(" - brand-colours.css build successfully.");
+    console.log(" - brand-colours.css built successfully.");
 });
