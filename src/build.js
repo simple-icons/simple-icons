@@ -88,6 +88,14 @@ var footer = fs.readFileSync('./footer.html', 'utf8');
 // Build content
 var main = "<ul>";
 
+// Luminosity aka Brightness measuring, to provide a better contrast
+function getTextColor(hex) {
+    var red   = parseInt(hex.substr(0,2), 16);
+    var green = parseInt(hex.substr(2,2), 16);
+    var blue  = parseInt(hex.substr(4,2), 16);
+    return Math.round((red * 299 + green * 587 + blue * 114) / 1000) > 127 ? 'black' : 'white';
+}
+
 for (var i = 0; i < source.icons.length; i++) {
     var fileName = source.icons[i].title.toLowerCase();
     fileName = fileName.replace(/[!|’|.| |-]/g, ''); // Replace bang, apostrophe, period and space with nothing.
@@ -95,7 +103,7 @@ for (var i = 0; i < source.icons.length; i++) {
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"/icons/" + fileName + ".svg\" class=\"icon--link\" download>" + svg + "<h2>" + source.icons[i].title + "</h2></a>" + "<span>#" + source.icons[i].hex + "</span></li>";
+    main += "\n<li style=\"background-color:#" + source.icons[i].hex + ";color:" + getTextColor(source.icons[i].hex) + "\"><a href=\"/icons/" + fileName + ".svg\" class=\"icon--link\" download>" + svg + "<h2 style=\"color:" + getTextColor(source.icons[i].hex) + "\">" + source.icons[i].title + "</h2></a>" + "<span>#" + source.icons[i].hex + "</span></li>";
 }
 
 // Put all content together and export to index.html
