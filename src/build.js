@@ -95,7 +95,7 @@ for (var i = 0; i < source.icons.length; i++) {
     filePath = "../icons/" + fileName + ".svg";
     var fs = require('fs');
     var svg = fs.readFileSync(filePath, 'utf8');
-    main += "\n<li style=\"background-color:#" + source.icons[i].hex + "\"><a href=\"/icons/" + fileName + ".svg\" class=\"icon--link\" download>" + svg + "<h2>" + source.icons[i].title + "</h2></a>" + "<span>#" + source.icons[i].hex + "</span></li>";
+    main += "\n<li style=\"background-color:#" + source.icons[i].hex + "\" id=\"_" + source.icons[i].title.replace(/[^\w]/g, '-').toLowerCase() + "\"><a href=\"/icons/" + fileName + ".svg\" class=\"icon--link\" download>" + svg + "<h2>" + source.icons[i].title + "</h2></a>" + "<span>#" + source.icons[i].hex + "</span></li>";
 }
 
 // Put all content together and export to index.html

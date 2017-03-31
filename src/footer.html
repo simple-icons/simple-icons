@@ -2,4 +2,82 @@
 </ul>
 </main>
 </body>
+<script>
+  (function(window, document) {
+    'use strict';
+
+    var url = 'src/simple-icons.json';
+    var list;
+
+    if (!String.prototype.includes) {
+      String.prototype.includes = function(search, start) {
+        if (typeof start !== 'number') {
+          start = 0;
+        }
+
+        if (start + search.length > this.length) {
+          return false;
+        } else {
+          return this.indexOf(search, start) !== -1;
+        }
+      };
+    }
+
+    function loadJS(src, cb){
+      var ref    = document.getElementsByTagName('script')[0];
+      var script = document.createElement('script');
+
+      script.src   = src;
+      script.async = true;
+      ref.parentNode.insertBefore(script, ref);
+
+      if (cb && typeof(cb) === 'function') {
+        script.onload = cb;
+      }
+
+      return script;
+    };
+
+    function filterList(list, query) {
+      list.forEach(function (item) {
+        var itemTitle = item.title.toLowerCase();
+        var match     = false;
+
+        if (itemTitle.includes(query)) {
+          match = true;
+        }
+
+        document.querySelector('#_' + itemTitle.replace(/[^\w]/g, '-').toLowerCase()).classList.toggle('is-hidden', !match);
+      });
+    }
+
+    function onInput(event) {
+      var query = event.target.value.toLowerCase();
+
+      if (!list) {
+        return;
+      }
+
+      filterList(list, query);
+    }
+
+    function fetchData(url) {
+      fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (result) {
+        return list = result.icons;
+      });
+    }
+
+    if (!window.fetch) {
+      loadJS('https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js', function() {
+        fetchData(url);
+      });
+    } else {
+      fetchData(url);
+    }
+
+    document.querySelector('.js-search').addEventListener('input', onInput);
+  })(window, document);
+</script>
 </html>
