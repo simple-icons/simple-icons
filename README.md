@@ -1,3 +1,7 @@
+> I’m thinking of changing these icons from 16px² to padded 24px². If you have an opinion, please answer [this one-question Twitter poll](https://twitter.com/bathtype/status/847069496191963136).
+> 
+> Thanks!
+
 # Simple Icons
 
 SVG icons for popular brands. [See them all on one page at **simpleicons.org**](https://simpleicons.org).
