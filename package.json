@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"no tests available\""
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danleech/simple-icons.git"
@@ -23,9 +20,7 @@
     "design-assets"
   ],
   "author": "Dan Leech <dan@danleech.com> (https://danleech.com)",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "bugs": {
-    "url": "https://github.com/danleech/simple-icons/issues"
-  },
+  "license": "CC0-1.0",
+  "bugs": "https://github.com/danleech/simple-icons/issues",
   "homepage": "https://github.com/danleech/simple-icons#readme"
 }
