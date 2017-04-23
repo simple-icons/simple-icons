@@ -1,3 +1,147 @@
+{% assign sortableString = "" %}
+{% assign sortableStringGreys = "" %}
+
+{% for icon in site.data.simple-icons.icons %}
+    {% assign hex = icon.hex %}
+
+    {% assign hexR1 = hex | slice: 0, 1 %}
+    {% assign hexR2 = hex | slice: 1, 1 %}
+    {% assign hexG1 = hex | slice: 2, 1 %}
+    {% assign hexG2 = hex | slice: 3, 1 %}
+    {% assign hexB1 = hex | slice: 4, 1 %}
+    {% assign hexB2 = hex | slice: 5, 1 %}
+
+    {% capture hexString %}{{ hexR1 }},{{ hexR2 }},{{ hexG1 }},{{ hexG2 }},{{ hexB1 }},{{ hexB2 }}{% endcapture %}
+    {% assign hexArray = hexString | split: "," %}
+
+    {% assign decString = "" %}
+
+    {% for hex in hexArray %}
+        {% case hex %}
+            {% when "0" %}
+                {% assign decString = decString | append: "0" %}
+            {% when "1" %}
+                {% assign decString = decString | append: "1" %}
+            {% when "2" %}
+                {% assign decString = decString | append: "2" %}
+            {% when "3" %}
+                {% assign decString = decString | append: "3" %}
+            {% when "4" %}
+                {% assign decString = decString | append: "4" %}
+            {% when "5" %}
+                {% assign decString = decString | append: "5" %}
+            {% when "6" %}
+                {% assign decString = decString | append: "6" %}
+            {% when "7" %}
+                {% assign decString = decString | append: "7" %}
+            {% when "8" %}
+                {% assign decString = decString | append: "8" %}
+            {% when "9" %}
+                {% assign decString = decString | append: "9" %}
+            {% when "A" %}
+                {% assign decString = decString | append: "10" %}
+            {% when "B" %}
+                {% assign decString = decString | append: "11" %}
+            {% when "C" %}
+                {% assign decString = decString | append: "12" %}
+            {% when "D" %}
+                {% assign decString = decString | append: "13" %}
+            {% when "E" %}
+                {% assign decString = decString | append: "14" %}
+            {% when "F" %}
+                {% assign decString = decString | append: "15" %}
+        {% endcase %}
+        {% unless forloop.last %}{% assign decString = decString | append: "," %}{% endunless %}
+    {% endfor %}
+
+    {% assign decArray = decString | split: "," %}
+
+    {% assign decR = decArray[0] | times: 16 | plus: decArray[1] | divided_by: 255.0 %}
+    {% assign decG = decArray[2] | times: 16 | plus: decArray[3] | divided_by: 255.0 %}
+    {% assign decB = decArray[4] | times: 16 | plus: decArray[5] | divided_by: 255.0 %}
+
+    {% if decR <= decG and decR <= decB %}
+        {% assign decMin = decR %}
+    {% endif %}
+
+    {% if decG < decR and decG <= decB %}
+        {% assign decMin = decG %}
+    {% endif %}
+
+    {% if decB < decR and decB < decG %}
+        {% assign decMin = decB %}
+    {% endif %}
+
+
+
+    {% if decR >= decG and decR >= decB %}
+        {% assign decMax = decR %}
+    {% endif %}
+
+    {% if decG > decR and decG >= decB %}
+        {% assign decMax = decG %}
+    {% endif %}
+
+    {% if decB > decR and decB > decG %}
+        {% assign decMax = decB %}
+    {% endif %}
+
+    {% assign decDelta = decMax | minus: decMin | times: 1.0 %}
+
+
+
+    {% assign hslL = decMax | plus: decMin | times: 50.0 %}
+
+
+
+    {% if decMax == decMin %}
+        {% assign hslH = 360.0 %}
+        {% assign hslS = 0.0 %}
+    {% else %}
+        {% if hslL < 50 %}
+            {% assign hslS = decMax | plus: decMin | times: 0.01 %}
+            {% assign hslS = decDelta | divided_by: hslS %}
+        {% else %}
+            {% assign hslS = 2 | minus: decMax | minus: decMin | times: 1.0 %}
+            {% assign hslS = 100 | times: decDelta | divided_by: hslS %}
+        {% endif %}
+        {% if decMax == decR %}
+            {% assign hslH = decG | minus: decB | divided_by: decDelta | times: 60.0 %}
+            {% if hslH < 0 %}
+                {% assign hslH = hslH | plus: 360.0 %}
+            {% endif %}
+        {% else if decMax == decG %}
+            {% assign hslH = decB | minus: decR | divided_by: decDelta | plus: 2.0 | times: 60.0 %}
+        {% else %}
+            {% assign hslH = decR | minus: decG | divided_by: decDelta | plus: 4.0 | times: 60.0 %}
+        {% endif %}
+    {% endif %}
+
+    {% assign hslH = hslH | plus: 90 | modulo: 360 %}
+
+    {% assign padding = "" %}
+    {% if hslH < 100 %}
+        {% assign padding = "0" %}
+    {% endif %}
+    {% if hslH < 10 %}
+        {% assign padding = "00" %}
+    {% endif %}
+
+    {% if hslS < 25 %}
+        {% capture sortableStringGreys %}{{ sortableStringGreys }}|{{ hslL }}${{ padding }}{{ hslH }}${{ hslS }}${{ hex }}${{ icon.title }}{% endcapture %}
+    {% else %}
+        {% capture sortableString %}{{ sortableString }}|{{ padding }}{{ hslH }}${{ hslS }}${{ hslL }}${{ hex }}${{ icon.title }}{% endcapture %}
+    {% endif %}
+
+
+{% endfor %}
+
+{% assign sortableString = sortableString | replace_first: "|", "" %}
+{% assign sortableArray = sortableString | split: "|" %}
+{% assign sortableArray = sortableArray | sort %}
+{% assign sortableArrayGreys = sortableStringGreys | split: "|" %}
+{% assign sortableArrayGreys = sortableArrayGreys | sort | reverse %}
+
 <!doctype html>
 <html lang="en-gb">
 <head>
@@ -29,692 +173,33 @@
                     </span>
                 </div>
             </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
-            <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li>
+            {% for entry in sortableArray %}
+{% assign entryArray = entry | split: "$" %}
+<li class="grid-item" style="background-color:#{{ entryArray[3] }}">
+    <a class="grid-item__link" href="#">
+        <img class="grid-item__image" src="http://placehold.it/24x24">
+        <h2 class="grid-item__title">{{ entryArray[1] }}</h2>
+    </a>
+    <p class="grid-item__subtitle">#{{ entryArray[3] }}</p>
+</li>
+{% endfor %}
+{% for entry in sortableArrayGreys %}
+{% assign entryArray = entry | split: "$" %}
+<li class="grid-item" style="background-color:#{{ entryArray[3] }}">
+    <a class="grid-item__link" href="#">
+        <img class="grid-item__image" src="http://placehold.it/24x24">
+        <h2 class="grid-item__title">{{ entryArray[4] }}</h2>
+    </a>
+    <p class="grid-item__subtitle">#{{ entryArray[3] }}</p>
+</li>
+{% endfor %}
+            <!-- <li class="grid-item">
+                <a class="grid-item__link" href="#">
+                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
+                    <h2 class="grid-item__title">Icon name</h2>
+                </a>
+                <p class="grid-item__subtitle">#AABBCC</p>
+            </li> -->
         </ul>
     </main>
     <footer class="footer" role="contentinfo">

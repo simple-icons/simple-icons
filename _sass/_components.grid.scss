@@ -47,6 +47,9 @@
     font-weight: 400;
     line-height: 1rem;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .grid-item__subtitle {
