@@ -1,0 +1,34 @@
+#carbonads {
+    height: 100%;
+    width: 100%;
+    a {
+        color: $color-black;
+    }
+    & > span {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+}
+
+.carbon-img {
+    display: block;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.carbon-text {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 0 auto;
+    max-width: 15rem;
+}
+
+.carbon-poweredby {
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    opacity: 0.25;
+    text-transform: uppercase;
+}

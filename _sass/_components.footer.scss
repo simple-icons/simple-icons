@@ -1,0 +1,15 @@
+.footer {
+    background-color: #EEE;
+    padding: 1.5rem;
+    @media (min-width: 720px) {
+        padding: 3rem;
+    }
+    a {
+        color: $color-black;
+        text-decoration: underline;
+    }
+    p {
+        margin: 0;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,58 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9rem,1fr));
+    grid-auto-rows: 6rem;
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
+    grid-auto-flow: dense;
+    list-style: none;
+    margin: 1.5rem;
+    padding: 0;
+    @media (min-width: 720px) {
+        margin: 3rem;
+    }
+}
+
+.grid-item {
+    background-color: #757575;
+    text-align: center;
+}
+
+.grid-item--ad {
+    background-color: #EEE;
+    grid-column: -2 / -1;
+    grid-row-end: span 2;
+    height: auto;
+    @media (min-width: 21.75rem) {
+        // 21.75rem is the minimum viewport
+        // width with multiple columns
+        grid-column: -3 / -1;
+    }
+}
+
+.grid-item__link {
+    color: $color-white;
+    display: block;
+    padding: 1rem 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.grid-item__image {
+
+}
+
+.grid-item__title {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1rem;
+    margin: 0;
+}
+
+.grid-item__subtitle {
+    color: $color-white;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 0;
+    opacity: 0.5;
+}
