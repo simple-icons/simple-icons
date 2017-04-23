@@ -1,0 +1,16 @@
+:root {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $color-white;
+    color: $color-black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin: 0;
+}

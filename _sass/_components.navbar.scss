@@ -1,0 +1,38 @@
+.navbar {
+    background-color: $color-black;
+}
+
+.navbar__nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @media (min-width: 720px) {
+        padding: 0 1.5rem;
+    }
+}
+
+.navbar__nav-item {
+    a {
+        color: #FFF;
+        display: block;
+        opacity: 0.5;
+        padding: 1.5rem 0.375rem;
+        &:focus, &:hover {
+            opacity: 1;
+        }
+    }
+    &:last-child {
+        a {
+            padding: 1.5rem 1.5rem 1.5rem 0.375rem;
+        }
+    }
+}
+
+.navbar__nav-item--home {
+    flex-grow: 1;
+    a {
+        opacity: 1;
+        padding: 1.5rem 0 1.5rem 1.5rem;
+    }
+}
