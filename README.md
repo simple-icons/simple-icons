@@ -4,8 +4,8 @@ SVG icons for popular brands. [See them all on one page at **simpleicons.org**](
 
 ## To do
 
-- [ ] New page layout
-- [ ] Jekyll code for sorting icons by hue
+- [x] New page layout
+- [x] Jekyll code for sorting icons by hue
 - [ ] JS search function
 - [ ] Analytics tracking for icon clicks
 - [ ] Social sharing tags
