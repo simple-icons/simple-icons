@@ -142,7 +142,7 @@
             {% for icon in iconsArray %}
                 {% assign iconArray = icon | split: "," %}
                 <li class="grid-item" style="background-color: #{{ iconArray[4] }}">
-                    <a class="grid-item__link" href="#">
+                    <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg">
                         {% assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
                         <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
@@ -153,7 +153,7 @@
             {% for icon in greyscaleIconsArray %}
                 {% assign iconArray = icon | split: "," %}
                 <li class="grid-item" style="background-color: #{{ iconArray[4] }}">
-                    <a class="grid-item__link" href="#">
+                    <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg">
                         {% assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
                         <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
@@ -161,13 +161,6 @@
                     <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
                 </li>
             {% endfor %}
-            <!-- <li class="grid-item">
-                <a class="grid-item__link" href="#">
-                    <img class="grid-item__image" src="http://placehold.it/24x24" alt="Icon name">
-                    <h2 class="grid-item__title">Icon name</h2>
-                </a>
-                <p class="grid-item__subtitle">#AABBCC</p>
-            </li> -->
         </ul>
     </main>
     <footer class="footer" role="contentinfo">
