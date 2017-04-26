@@ -1,14 +1,10 @@
 {% assign iconsUnsortedString = "" %}
 {% assign greyscaleIconsUnsortedString = "" %}
-
 {% for icon in site.data.simple-icons.icons %}
     {% assign title = icon.title %}
-
     {% assign filename = icon.title | replace: "+", "plus" | replace: " ", "" | replace: ".", "" | replace: "-", "" | replace: "!", "" | replace: "’", "" | downcase %}
     {% assign hex = icon.hex %}
-
     {% assign hex = icon.hex %}
-
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
     {% assign hexCharacter2 = hex | slice: 1, 1 %}
     {% assign hexCharacter3 = hex | slice: 2, 1 %}
@@ -41,7 +37,6 @@
     {% assign rgbRed   = rgbArray[0] | times: 16 | plus: rgbArray[1] | divided_by: 255.0 | round: 2 %}
     {% assign rgbGreen = rgbArray[2] | times: 16 | plus: rgbArray[3] | divided_by: 255.0 | round: 2 %}
     {% assign rgbBlue  = rgbArray[4] | times: 16 | plus: rgbArray[5] | divided_by: 255.0 | round: 2 %}
-
     {% assign rgbMax = 0.0 %}
     {% if rgbRed > rgbMax %}
         {% assign rgbMax = rgbRed %}
@@ -52,7 +47,6 @@
     {% if rgbBlue > rgbMax %}
         {% assign rgbMax = rgbBlue %}
     {% endif %}
-
     {% assign rgbMin = 1.0 %}
     {% if rgbRed < rgbMin %}
         {% assign rgbMin = rgbRed %}
@@ -63,17 +57,12 @@
     {% if rgbBlue < rgbMin %}
         {% assign rgbMin = rgbBlue %}
     {% endif %}
-
     {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
-
     {% assign rgbDelta = rgbMax | minus: rgbMin %}
     {% if rgbDelta == 0 %}
         {% assign hslHue = 0 %}
         {% assign hslSaturation = 0 %}
     {% else %}
-        {% assign hslHue = "Undefined" %}
-        {% assign hslSaturation = "Undefined" %}
-
         {% if hslLuminance < 0.5 %}
             {% assign rgbMaxPlusMin = rgbMax | plus: rgbMin %}
             {% assign hslSaturation = 100 | times: rgbDelta | divided_by: rgbMaxPlusMin %}
@@ -81,7 +70,6 @@
             {% assign rgbTwoMinusMaxMinusMin = 2 | minus: rgbMax | minus: rgbMin %}
             {% assign hslSaturation = 100 | times: rgbDelta | divided_by: rgbTwoMinusMaxMinusMin %}
         {% endif %}
-
         {% if rgbMax == rgbRed %}
             {% assign hslHue = rgbGreen | minus: rgbBlue | divided_by: rgbDelta | times: 60.0 | modulo: 360.0 %}
         {% elsif rgbMax == rgbGreen %}
@@ -89,11 +77,8 @@
         {% else %}
             {% assign hslHue = rgbRed | minus: rgbGreen | divided_by: rgbDelta | plus: 4.0 | times: 60.0 | modulo: 360.0 %}
         {% endif %}
-
         {% assign hslHue = hslHue | plus: 90.0 | modulo: 360.0 %}
-
     {% endif %}
-
     {% if hslSaturation < 10 %}
         {% assign hslLuminance = hslLuminance | round: 0 | prepend: "000" | slice: -3, 3 %}
         {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }}{% unless forloop.last %};{% endunless %}{% endcapture %}
@@ -102,7 +87,6 @@
         {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% endif %}
 {% endfor %}
-
 {% assign iconsArray = iconsUnsortedString | split: ";" %}
 {% assign iconsArray = iconsArray | sort %}
 {% assign greyscaleIconsArray = greyscaleIconsUnsortedString | split: ";" %}
