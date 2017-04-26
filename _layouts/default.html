@@ -99,6 +99,7 @@
     <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
     <link href="/css/styles.css" rel="stylesheet">
     <link rel="preconnect" href="//www.google-analytics.com">
+    <link rel="preconnect" href="//cdn.carbonads.com">
     <link rel="preconnect" href="//github.com">
     <title>Simple Icons</title>
     <meta name="description" content="SVG icons for popular brands.">
@@ -131,17 +132,7 @@
     <main role="main">
         <ul class="grid">
             <li class="grid-item grid-item--ad">
-                <div id="carbonads">
-                    <span>
-                        <span class="carbon-wrap">
-                            <a class="carbon-img" href="#">
-                                <img src="http://placehold.it/130x100&text=Ad">
-                            </a>
-                            <a class="carbon-text" href="#">Create your website with a beautiful Squarespace template. Start a free trial.</a>
-                        </span>
-                        <a class="carbon-poweredby" href="#">ads via Carbon</a>
-                    </span>
-                </div>
+                <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=simpleiconsorg" id="_carbonads_js"></script>
             </li>
             {% for icon in iconsArray %}
                 {% assign iconArray = icon | split: "," %}
