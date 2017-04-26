@@ -14,3 +14,4 @@ SVG icons for popular brands, maintained by [Dan Leech](https://twitter.com/bath
 - [ ] New README.md
 - [ ] New CONTRIBUTING.md
 - [ ] Use Gitflow
+- [ ] Add 404 page

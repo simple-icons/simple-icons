@@ -1,3 +1,176 @@
 ---
-layout: default
 ---
+
+{% assign iconsUnsortedString = "" %}
+{% assign greyscaleIconsUnsortedString = "" %}
+{% for icon in site.data.simple-icons.icons %}
+    {% assign title = icon.title %}
+    {% assign filename = icon.title | replace: "+", "plus" | replace: " ", "" | replace: ".", "" | replace: "-", "" | replace: "!", "" | replace: "’", "" | downcase %}
+    {% assign hex = icon.hex %}
+    {% assign hex = icon.hex %}
+    {% assign hexCharacter1 = hex | slice: 0, 1 %}
+    {% assign hexCharacter2 = hex | slice: 1, 1 %}
+    {% assign hexCharacter3 = hex | slice: 2, 1 %}
+    {% assign hexCharacter4 = hex | slice: 3, 1 %}
+    {% assign hexCharacter5 = hex | slice: 4, 1 %}
+    {% assign hexCharacter6 = hex | slice: 5, 1 %}
+    {% capture hexCharacterString %}{{ hexCharacter1 }},{{ hexCharacter2 }},{{ hexCharacter3 }},{{ hexCharacter4 }},{{ hexCharacter5 }},{{ hexCharacter6 }}{% endcapture %}
+    {% assign hexCharacterArray = hexCharacterString | split: "," %}
+    {% assign rgbString = "" %}
+    {% for hexCharacter in hexCharacterArray %}
+        {% case hexCharacter %}
+            {% when "A" %}
+                {% assign rgbString = rgbString | append: "10" %}
+            {% when "B" %}
+                {% assign rgbString = rgbString | append: "11" %}
+            {% when "C" %}
+                {% assign rgbString = rgbString | append: "12" %}
+            {% when "D" %}
+                {% assign rgbString = rgbString | append: "13" %}
+            {% when "E" %}
+                {% assign rgbString = rgbString | append: "14" %}
+            {% when "F" %}
+                {% assign rgbString = rgbString | append: "15" %}
+            {% else %}
+                {% assign rgbString = rgbString | append: hexCharacter %}
+        {% endcase %}
+        {% unless forloop.last %}{% assign rgbString = rgbString | append: "," %}{% endunless %}
+    {% endfor %}
+    {% assign rgbArray = rgbString | split: "," %}
+    {% assign rgbRed   = rgbArray[0] | times: 16 | plus: rgbArray[1] | divided_by: 255.0 | round: 2 %}
+    {% assign rgbGreen = rgbArray[2] | times: 16 | plus: rgbArray[3] | divided_by: 255.0 | round: 2 %}
+    {% assign rgbBlue  = rgbArray[4] | times: 16 | plus: rgbArray[5] | divided_by: 255.0 | round: 2 %}
+    {% assign rgbMax = 0.0 %}
+    {% if rgbRed > rgbMax %}
+        {% assign rgbMax = rgbRed %}
+    {% endif %}
+    {% if rgbGreen > rgbMax %}
+        {% assign rgbMax = rgbGreen %}
+    {% endif %}
+    {% if rgbBlue > rgbMax %}
+        {% assign rgbMax = rgbBlue %}
+    {% endif %}
+    {% assign rgbMin = 1.0 %}
+    {% if rgbRed < rgbMin %}
+        {% assign rgbMin = rgbRed %}
+    {% endif %}
+    {% if rgbGreen < rgbMin %}
+        {% assign rgbMin = rgbGreen %}
+    {% endif %}
+    {% if rgbBlue < rgbMin %}
+        {% assign rgbMin = rgbBlue %}
+    {% endif %}
+    {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
+    {% assign rgbDelta = rgbMax | minus: rgbMin %}
+    {% if rgbDelta == 0 %}
+        {% assign hslHue = 0 %}
+        {% assign hslSaturation = 0 %}
+    {% else %}
+        {% if hslLuminance < 0.5 %}
+            {% assign rgbMaxPlusMin = rgbMax | plus: rgbMin %}
+            {% assign hslSaturation = 100 | times: rgbDelta | divided_by: rgbMaxPlusMin %}
+        {% else %}
+            {% assign rgbTwoMinusMaxMinusMin = 2 | minus: rgbMax | minus: rgbMin %}
+            {% assign hslSaturation = 100 | times: rgbDelta | divided_by: rgbTwoMinusMaxMinusMin %}
+        {% endif %}
+        {% if rgbMax == rgbRed %}
+            {% assign hslHue = rgbGreen | minus: rgbBlue | divided_by: rgbDelta | times: 60.0 | modulo: 360.0 %}
+        {% elsif rgbMax == rgbGreen %}
+            {% assign hslHue = rgbBlue | minus: rgbRed | divided_by: rgbDelta | plus: 2.0 | times: 60.0 | modulo: 360.0 %}
+        {% else %}
+            {% assign hslHue = rgbRed | minus: rgbGreen | divided_by: rgbDelta | plus: 4.0 | times: 60.0 | modulo: 360.0 %}
+        {% endif %}
+        {% assign hslHue = hslHue | plus: 90.0 | modulo: 360.0 %}
+    {% endif %}
+    {% if hslSaturation < 10 %}
+        {% assign hslLuminance = hslLuminance | round: 0 | prepend: "000" | slice: -3, 3 %}
+        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+    {% else %}
+        {% assign hslHue = hslHue | round: 0 | prepend: "000" | slice: -3, 3 %}
+        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+    {% endif %}
+{% endfor %}
+{% assign iconsArray = iconsUnsortedString | split: ";" %}
+{% assign iconsArray = iconsArray | sort %}
+{% assign greyscaleIconsArray = greyscaleIconsUnsortedString | split: ";" %}
+{% assign greyscaleIconsArray = greyscaleIconsArray | sort | reverse %}
+
+<!doctype html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="//www.google-analytics.com">
+    <link rel="preconnect" href="//cdn.carbonads.com">
+    <link rel="preconnect" href="//github.com">
+    <title>Simple Icons</title>
+    <meta name="description" content="SVG icons for popular brands.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Simple Icons">
+    <meta property="og:description" content="SVG icons for popular brands.">
+    <meta property="og:url" content="https://simpleicons.org">
+    <meta property="og:site_name" content="Simple Icons">
+    <meta property="og:image" content="https://simpleicons.org/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simple Icons">
+    <meta name="twitter:description" content="SVG icons for popular brands.">
+    <meta name="twitter:site" content="@bathtype">
+    <meta name="twitter:domain" content="Simple Icons">
+    <meta name="twitter:image:src" content="https://simpleicons.org/images/og.png">
+    <link rel="icon" type="image/x-icon" href="https://simpleicons.org/images/favicon.ico">
+    <link rel="icon" type="image/png" href="https://simpleicons.org/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://simpleicons.org/images/apple-touch-icon.png">
+    <link rel="mask-icon" href="https://simpleicons.org/images/logo.svg" color="#111111">
+</head>
+
+<body>
+    <header class="navbar" role="banner">
+        <ul class="navbar__nav" role="navigation">
+            <li class="navbar__nav-item navbar__nav-item--home"><a href="/">Simple&nbsp;Icons</a></li>
+            <li class="navbar__nav-item"><a href="https://github.com/danleech/simple-icons/blob/master/README.md">About</a></li>
+            <li class="navbar__nav-item"><a href="https://github.com/danleech/simple-icons">GitHub</a></li>
+        </ul>
+    </header>
+    <main role="main">
+        <ul class="grid">
+            <li class="grid-item grid-item--ad">
+                <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=simpleiconsorg" id="_carbonads_js"></script>
+            </li>
+            {% for icon in iconsArray %}
+                {% assign iconArray = icon | split: "," %}
+                <li class="grid-item" style="background-color: #{{ iconArray[4] }}">
+                    <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg">
+                        {% assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" %}
+                        {% include_relative {{ filePath }} %}
+                        <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
+                    </a>
+                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
+                </li>
+            {% endfor %}
+            {% for icon in greyscaleIconsArray %}
+                {% assign iconArray = icon | split: "," %}
+                <li class="grid-item" style="background-color: #{{ iconArray[4] }}">
+                    <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg">
+                        {% assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" %}
+                        {% include_relative {{ filePath }} %}
+                        <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
+                    </a>
+                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer class="footer" role="contentinfo">
+        <p>A <a href="https://github.com/danleech/simple-icons/blob/master/LICENSE.md">CC0</a> project maintained by <a href="https://twitter.com/bathtype">Dan&nbsp;Leech</a>.</p>
+        <p>Use <a href="https://github.com/danleech/simple-icons">GitHub</a> for requests, corrections and contributions.</p>
+    </footer>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-97917186-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
