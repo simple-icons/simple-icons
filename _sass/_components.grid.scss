@@ -4,6 +4,9 @@
     list-style: none;
     margin: 1.5rem;
     padding: 0;
+    @media (min-width: 720px) {
+        margin: 3rem;
+    }
     @supports (display: grid) {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(9rem,1fr));
@@ -11,9 +14,6 @@
         grid-column-gap: 0.375rem;
         grid-row-gap: 0.375rem;
         grid-auto-flow: dense;
-    }
-    @media (min-width: 720px) {
-        margin: 3rem;
     }
 }
 
@@ -32,13 +32,13 @@
     grid-column: -2 / -1;
     grid-row-end: span 2;
     height: auto;
-    @supports not (display: grid) {
-        width: 100%;
-    }
     @media (min-width: 21.75rem) {
         // 21.75rem is the minimum viewport
         // width with multiple columns
         grid-column: -3 / -1;
+    }
+    @supports not (display: grid) {
+        width: 100%;
     }
 }
 
