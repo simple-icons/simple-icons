@@ -18,3 +18,12 @@ body {
     line-height: 1.5rem;
     margin: 0;
 }
+
+svg {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+path, rect, circle {
+    fill: #FFF;
+}
