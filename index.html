@@ -134,6 +134,10 @@
           text-decoration: none;
         }
 
+        abbr {
+            text-decoration: none;
+        }
+
         body {
           background-color: #FFFFFF;
           color: #263238;
@@ -203,6 +207,14 @@
         .footer p {
           margin: 0;
           opacity: 0.5;
+        }
+
+        .hero {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 0;
+            padding: 4.5rem 1.5rem 1.5rem;
+            text-align: center;
         }
 
         .grid {
@@ -336,6 +348,7 @@
         </ul>
     </header>
     <main role="main">
+        <p class="hero">{{ site.data.simple-icons.icons | size }} free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular brands</p>
         <ul class="grid">
             <li class="grid-item grid-item--ad">
                 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=simpleiconsorg" id="_carbonads_js"></script>
