@@ -195,7 +195,7 @@
           background-color: #EEE;
           padding: 1.5rem;
         }
-        @media (min-width: 720px) {
+        @media (min-width: 45rem) {
           .footer {
             padding: 3rem;
           }
@@ -213,8 +213,13 @@
             font-size: 1.5rem;
             line-height: 2rem;
             margin: 0;
-            padding: 4.5rem 1.5rem 1.5rem;
+            padding: 3rem 1.5rem 1.5rem;
             text-align: center;
+        }
+        @media (min-width: 45rem) {
+            .hero {
+                padding: 4.5rem 3rem 1.5rem;
+            }
         }
 
         .grid {
@@ -224,7 +229,7 @@
           margin: 1.5rem;
           padding: 0;
         }
-        @media (min-width: 720px) {
+        @media (min-width: 45rem) {
           .grid {
             margin: 3rem;
           }
@@ -310,7 +315,7 @@
           margin: 0;
           padding: 0;
         }
-        @media (min-width: 720px) {
+        @media (min-width: 45rem) {
           .navbar__nav {
             padding: 0 1.5rem;
           }
@@ -348,7 +353,7 @@
         </ul>
     </header>
     <main role="main">
-        <p class="hero">{{ site.data.simple-icons.icons | size }} free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular brands</p>
+        <p class="hero">{{ site.data.simple-icons.icons | size }} free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
         <ul class="grid">
             <li class="grid-item grid-item--ad">
                 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=simpleiconsorg" id="_carbonads_js"></script>
