@@ -1,6 +1,6 @@
 # Simple Icons
 
-SVG icons for popular brands, maintained by [Dan Leech](https://twitter.com/bathtype). Contributions, corrections & requests can be made on GitHub. [See them all on one page at **simpleicons.org**](https://simpleicons.org).
+Free SVG icons for popular brands, maintained by [Dan Leech](https://twitter.com/bathtype). Contributions, corrections & requests can be made on GitHub. [See them all on one page at **simpleicons.org**](https://simpleicons.org).
 
 ## To do
 
@@ -10,8 +10,5 @@ SVG icons for popular brands, maintained by [Dan Leech](https://twitter.com/bath
 - [ ] Analytics tracking for icon clicks
 - [x] CSS grid fallback
 - [x] Social sharing tags
-- [ ] AMP support
 - [ ] New README.md
 - [ ] New CONTRIBUTING.md
-- [ ] Use Gitflow
-- [ ] Add 404 page
