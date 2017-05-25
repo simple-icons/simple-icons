@@ -424,9 +424,22 @@
         {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[1] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
     {% endfor %}
     <script type="text/javascript">
-        (function() {
-            var icons = [{{ allIconNames }}];
-        })();
+        (function(document) {
+            var icons  = [{{ allIconNames }}],
+                $icons = document.querySelectorAll('.grid > .grid-item:not(.grid-item--ad)');
+
+            function search(value) {
+                value = value.toLowerCase();
+
+                icons.forEach(function(e, i) {
+                    if (e.indexOf(value) > -1) {
+                        $icons[i].classList.remove('hidden');
+                    } else {
+                        $icons[i].classList.add('hidden');
+                    }
+                })
+            };
+        })( document );
     </script>
 </body>
 </html>
