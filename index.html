@@ -410,5 +410,19 @@
             Use <a href="https://github.com/danleech/simple-icons">GitHub</a> for requests, corrections and contributions.</p>
         <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&via=bathtype&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
     </footer>
+    {% assign allIconNames = "" %}
+    {% for icon in iconsArray %}
+        {% assign iconArray = icon | split: "," %}
+        {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[3] }}",{% endcapture %}
+    {% endfor %}
+    {% for icon in greyscaleIconsArray %}
+        {% assign iconArray = icon | split: "," %}
+        {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[1] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
+    {% endfor %}
+    <script type="text/javascript">
+        (function() {
+            var icons = [{{ allIconNames }}];
+        })();
+    </script>
 </body>
 </html>
