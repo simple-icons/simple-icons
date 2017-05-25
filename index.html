@@ -478,8 +478,47 @@
     {% endfor %}
     <script type="text/javascript">
         (function(document) {
-            var icons  = [{{ allIconNames }}],
-                $icons = document.querySelectorAll('.grid > .grid-item:not(.grid-item--ad)');
+            var icons        = [{{ allIconNames }}],
+                $icons       = document.querySelectorAll('.grid > .grid-item:not(.grid-item--ad)'),
+                $search      = document.querySelector('.search'),
+                $searchClose = $search.querySelector('.search__close'),
+                $searchInput = $search.querySelector('input');
+
+            // include a modified debounce underscorejs helper function.
+            // see
+            //   - http://underscorejs.org/docs/underscore.html#section-83
+            //   - http://underscorejs.org/#debounce
+            function debounce(func, wait, immediate) {
+                var timeout, args, context, timestamp, result;
+
+                var later = function() {
+                    var last = +new Date - timestamp;
+
+                    if (last < wait && last >= 0) {
+                        timeout = setTimeout(later, wait - last);
+                    } else {
+                        timeout = null;
+                        if (!immediate) {
+                            result = func.apply(context, args);
+                            if (!timeout) context = args = null;
+                        }
+                    }
+                };
+
+                return function() {
+                    context = this;
+                    args = arguments;
+                    timestamp = +new Date;
+                    var callNow = immediate && !timeout;
+                    if (!timeout) timeout = setTimeout(later, wait);
+                    if (callNow) {
+                        result = func.apply(context, args);
+                        context = args = null;
+                    }
+
+                    return result;
+                };
+            }
 
             function search(value) {
                 value = value.toLowerCase();
@@ -491,7 +530,26 @@
                         $icons[i].classList.add('hidden');
                     }
                 })
-            };
+            }
+
+            $search.addEventListener('input', debounce(function(e) {
+                e.preventDefault();
+
+                var value = e.target.value;
+                if (value) {
+                    $search.classList.add('search--active');
+                    search(value);
+                } else {
+                    $search.classList.remove('search--active');
+                }
+            }, 250), false);
+            $searchClose.addEventListener('click', function(e) {
+                e.stopPropagation();
+
+                $searchInput.value = '';
+                $search.classList.remove('search--active');
+                search('');
+            }, false);
         })( document );
     </script>
 </body>
