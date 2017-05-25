@@ -245,16 +245,63 @@
             }
         }
 
+        .search {
+            margin: 1rem 1.5rem;
+            text-align: center;
+        }
+        @media (min-width: 45rem) {
+            .search {
+                margin: 1rem 3rem;
+                text-align: left;
+            }
+        }
+
+        .search .search__wrapper {
+            display: inline-block;
+            position: relative;
+        }
+        .search .search__close {
+            display: none;
+            font-size: 1rem;
+            padding: 6px 12px;
+            position: absolute;
+            right: 0;
+            top: 1px;
+        }
+        .search .search__close span {
+            cursor: pointer;
+        }
+
+        .search input {
+            color: #333;
+            font-size: 1rem;
+            padding: 6px 12px;
+        }
+        @media (min-width: 45rem) {
+            .search input {
+                width: 250px;
+            }
+        }
+
+        .search--active .search__close {
+            display: block;
+        }
+        .search--active input {
+            padding-right: 32px;
+        }
+
         .grid {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
             margin: 1.5rem;
+            margin-top: 0;
             padding: 0;
         }
         @media (min-width: 45rem) {
             .grid {
                 margin: 3rem;
+                margin-top: 0;
             }
         }
         @supports (display: grid) {
@@ -381,6 +428,12 @@
     </header>
     <main role="main">
         <p class="hero">Free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
+        <div class="search">
+            <div class="search__wrapper">
+                <div class="search__close"><span>&times;</span></div>
+                <input type="text" placeholder="Search by brand …" />
+            </div>
+        </div>
         <ul class="grid">
             <li class="grid-item grid-item--ad">
                 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1696&amp;serve=CVYD42T&amp;placement=simpleiconsorg" id="_carbonads_js"></script>
