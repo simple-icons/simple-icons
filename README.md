@@ -6,7 +6,7 @@ Free SVG icons for popular brands, maintained by [Dan Leech](https://twitter.com
 
 - [x] New page layout
 - [x] Jekyll code for sorting icons by hue
-- [ ] JS search function
+- [x] JS search function
 - [ ] Analytics tracking for icon clicks
 - [x] CSS grid fallback
 - [x] Social sharing tags
