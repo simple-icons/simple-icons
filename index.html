@@ -521,7 +521,7 @@
             }
 
             function search(value) {
-                value = value.toLowerCase();
+                value = value.toLowerCase().trim();
 
                 icons.forEach(function(e, i) {
                     if (e.indexOf(value) > -1) {
