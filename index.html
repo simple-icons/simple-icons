@@ -538,10 +538,10 @@
                 var value = e.target.value;
                 if (value) {
                     $search.classList.add('search--active');
-                    search(value);
                 } else {
                     $search.classList.remove('search--active');
                 }
+                search(value);
             }, 250), false);
             $searchClose.addEventListener('click', function(e) {
                 e.stopPropagation();
