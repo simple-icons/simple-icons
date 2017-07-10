@@ -497,7 +497,7 @@
     {% endfor %}
     <script type="text/javascript">
         (function(document) {
-            var icons        = [{{ allIconNames }}],
+            var icons        = [{{ allIconNames }}].map(normalizeSearchTerm),
                 $grid        = document.querySelector('.grid'),
                 $icons       = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
                 $search      = document.querySelector('.search'),
@@ -542,7 +542,7 @@
 
             function search(value) {
                 var hiddenCounter = 0,
-                    value = value.toLowerCase().trim();
+                    value = normalizeSearchTerm(value);
 
                 icons.forEach(function(e, i) {
                     if (e.indexOf(value) > -1) {
@@ -554,6 +554,10 @@
                 })
 
                 $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
+            }
+
+            function normalizeSearchTerm(value) {
+                return value.toLowerCase().replace(/ /g, '');
             }
 
             $search.addEventListener('input', debounce(function(e) {
