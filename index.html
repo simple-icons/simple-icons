@@ -311,6 +311,9 @@
             line-height: 1.5em;
             text-align: center;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         @supports (display: grid) {
@@ -324,7 +327,6 @@
             }
             .grid.search__empty:after {
                 grid-column: 1/span 2;
-                grid-row-end: span 2;
             }
 
             @media (min-width: 30.75rem) {
