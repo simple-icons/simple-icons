@@ -1,0 +1,14 @@
+{
+  "name": "simple-icons",
+  "version": "1.0.0",
+  "description": "SVG icons for popular brands https://simpleicons.org",
+  "homepage": "https://www.simpleicons.org",
+  "keywords": [
+    "svg",
+    "icons"
+  ],
+  "main": "_data/simple-icons.json",
+  "repository": "git@github.com:danleech/simple-icons.git",
+  "author": "Dan Leech",
+  "license": "CCO"
+}
