@@ -1,0 +1,70 @@
+#!/usr/bin/env node
+const xml2js = require("xml2js").parseString;
+const chalk = require("chalk");
+const util = require("util");
+util.inspect.styles.string = "cyan";
+util.inspect.styles.regexp = "grey";
+const inspect = value => util.inspect(value, {colors: true});
+
+/**
+ * All the rules we use for SVG linting
+ * Are given a single argument, the parsed SVG object
+ * Should throw an error if it fails
+ */
+const RULES = [
+    function viewBox(svg) {
+        const expected = "0 0 24 24";
+        if (svg.$.viewBox !== expected) {
+            throw new Error("Expected viewBox to be "+
+                inspect(expected)+
+                " got "+
+                inspect(svg.$.viewBox));
+        }
+    }
+];
+
+async function lintSVG(svgStr) {
+    const svg = (await parseXML(svgStr)).svg;
+
+    const messages = [];
+    for (let rule of RULES) {
+        try {
+            rule(svg);
+        } catch (e) {
+            messages.push(e.message);
+        }
+    }
+    return messages;
+}
+
+/**
+ * Parses an XML string to a JS object
+ * @param {String} xmlStr  The XML string
+ * @returns {Promise<Object>}
+ */
+function parseXML(xmlStr) {
+    return new Promise((res,rej)=>{
+        xml2js(xmlStr, (err, result)=>{
+            if (err) {
+                return rej(err);
+            }
+            res(result);
+        });
+    });
+}
+
+module.exports = async (name, content) => {
+    const messages = await lintSVG(content);
+    if (messages.length) {
+        console.log(chalk.red(`✖ ${name}`));
+        for (let msg of messages) {
+            console.log(`    ${chalk.red(msg)}`);
+        }
+    } else {
+        console.log(chalk.green(`✔ ${name}`));
+    }
+    return !messages.length;
+};
+if (require.main === module) {
+    // TODO: get file paths from argv and lint them
+}

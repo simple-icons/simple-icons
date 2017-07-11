@@ -10,5 +10,9 @@
   "main": "_data/simple-icons.json",
   "repository": "git@github.com:danleech/simple-icons.git",
   "author": "Dan Leech",
-  "license": "CCO"
+  "license": "CCO",
+  "devDependencies": {
+    "chalk": "^2.0.1",
+    "xml2js": "^0.4.17"
+  }
 }
