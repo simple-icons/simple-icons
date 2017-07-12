@@ -57,12 +57,15 @@ const RULES = [
         const msgs = [];
 
         const attrWhitelist = [
+            "id",
             "cx", "cy", "r", // <circle>
             "rx", "ry", // <ellipsis>
             "x1", "x2", "y1", "y2", // <line>
             "d", // <path>
             "points", // <polygon>,
             "x", "y", "width", "height", // <rect>
+            "fx", "fy", "fr", // <radialGradient>
+            "stop-color", "offset", // <stop>
         ];
 
         for (let child of children) {
