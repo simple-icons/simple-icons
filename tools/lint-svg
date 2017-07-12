@@ -132,5 +132,12 @@ module.exports = async (name, content) => {
     return !messages.length;
 };
 if (require.main === module) {
-    // TODO: get file paths from argv and lint them
+    (async function(){
+        const [,, ...files] = process.argv;
+        const fs = require("fs");
+        for (let file of files) {
+            const content = fs.readFileSync(file);
+            await module.exports(file, content);
+        }
+    })();
 }
