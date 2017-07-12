@@ -12,30 +12,25 @@ const inspect = value => util.inspect(value, {colors: true});
  * Should throw an error if it fails
  */
 const RULES = [
-    function viewBox(svg) {
-        const expected = "0 0 24 24";
-        if (svg.$.viewBox !== expected) {
-            throw new Error("Expected viewBox to be "+
-                inspect(expected)+
-                ", got "+
-                inspect(svg.$.viewBox));
-        }
-    },
-
     function rootAttributes(svg) {
-        const expected = ["xmlns", "viewBox", "aria-labelledby", "role"];
+        const expected = {
+            xmlns: "http://www.w3.org/2000/svg", 
+            viewBox: "0 0 24 24", 
+            "aria-labelledby": "title", 
+            role: "img"
+        };
         let msg = [];
-        
-        const expectedNotFound = expected.filter(attr => !svg.$.hasOwnProperty(attr));
-        if (expectedNotFound.length) {
-            msg.push(`Expected SVG attribute${expectedNotFound.length>1?"s":""} not found: `+
-                expectedNotFound.map(inspect));
+
+        for (let attr in expected) {
+            if (svg.$[attr] !== expected[attr]) {
+                msg.push(`Attribute ${chalk.bold(attr)} should be ${inspect(expected[attr])}, was ${inspect(svg.$[attr])}`);
+            }
         }
-        const unexpected = Object.keys(svg.$).filter(attr => !expected.includes(attr));
-        if (unexpected.length) {
-            msg.push(`Unexpected SVG attribute${unexpected.length>1?"s":""}: `+
-                unexpected.map(inspect));
-        }
+        Object.keys(svg.$)
+            .filter(attr => !expected.hasOwnProperty(attr))
+            .forEach(attr => {
+                msg.push(`Unexpected attribute ${chalk.bold(attr)}`);
+            });
 
         if (msg.length) {
             throw new Error(msg.join("\n"));
