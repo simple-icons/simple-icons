@@ -29,11 +29,26 @@ const RULES = [
         Object.keys(svg.attr)
             .filter(attr => !expected.hasOwnProperty(attr))
             .forEach(attr => {
-                msg.push(`Unexpected attribute ${chalk.bold(attr)}`);
+                msg.push(`Attribute ${chalk.bold(attr)} should not exist`);
             });
 
         if (msg.length) {
             throw new Error(msg.join("\n"));
+        }
+    },
+
+    function checkTitle(svg) {
+        const titles = svg.children.filter(elm => elm.name === "title");
+        if (titles.length === 0) {
+            throw new Error(`${chalk.bold("<title>")} must exist`);
+        }
+        if (titles.length > 1) {
+            throw new Error(`${chalk.bold("<title>")} should exists once, found ${inspect(titles.length)}`);
+        }
+
+        const title = titles[0];
+        if (!title.val || !/icon$/.test(title.val)) {
+            throw new Error(`${chalk.bold("<title>")} should have format ${inspect("[name] icon")}, was ${inspect(title.val)}`);
         }
     }
 ];
