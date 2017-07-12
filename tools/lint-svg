@@ -23,13 +23,13 @@ const RULES = [
 
         for (let attr in expected) {
             if (svg.attr[attr] !== expected[attr]) {
-                msgs.push(`SVG attribute ${chalk.bold(attr)} should be ${inspect(expected[attr])}, was ${inspect(svg.attr[attr])}`);
+                msgs.push(`SVG attribute ${chalk.bold(attr)} is ${inspect(svg.attr[attr])}; should be ${inspect(expected[attr])}`);
             }
         }
         Object.keys(svg.attr)
             .filter(attr => !expected.hasOwnProperty(attr))
             .forEach(attr => {
-                msgs.push(`SVG attribute ${chalk.bold(attr)} should not exist`);
+                msgs.push(`SVG attribute ${chalk.bold(attr)} is unexpected`);
             });
 
         if (msgs.length) {
@@ -43,12 +43,12 @@ const RULES = [
             throw new Error(`${chalk.bold("<title>")} must exist`);
         }
         if (titles.length > 1) {
-            throw new Error(`${chalk.bold("<title>")} should exists once, found ${inspect(titles.length)}`);
+            throw new Error(`${chalk.bold("<title>")} should exist once, found ${inspect(titles.length)}`);
         }
 
         const title = titles[0];
         if (!title.val || !/icon$/.test(title.val)) {
-            throw new Error(`${chalk.bold("<title>")} should have format ${inspect("[name] icon")}, was ${inspect(title.val)}`);
+            throw new Error(`${chalk.bold("<title>")} is ${inspect(title.val)}, should have format ${inspect("[name] icon")}`);
         }
     },
 
@@ -75,7 +75,7 @@ const RULES = [
             for (let attr in child.attr) {
                 if (attr === "stroke") { continue; }
                 if (attrWhitelist.indexOf(attr) === -1) {
-                    msgs.push(`Attribute ${chalk.bold(attr)} should not exist on ${chalk.bold("<"+child.name+">")} (${child.line}:${child.column})`)
+                    msgs.push(`Attribute ${chalk.bold(attr)} is unexpected on ${chalk.bold("<"+child.name+">")} (${child.line}:${child.column})`)
                 }
             }
         }
