@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const xml2js = require("xml2js").parseString;
+const XMLDoc = require("xmldoc").XmlDocument;
 const chalk = require("chalk");
 const util = require("util");
 util.inspect.styles.string = "cyan";
@@ -22,11 +22,11 @@ const RULES = [
         let msg = [];
 
         for (let attr in expected) {
-            if (svg.$[attr] !== expected[attr]) {
-                msg.push(`Attribute ${chalk.bold(attr)} should be ${inspect(expected[attr])}, was ${inspect(svg.$[attr])}`);
+            if (svg.attr[attr] !== expected[attr]) {
+                msg.push(`Attribute ${chalk.bold(attr)} should be ${inspect(expected[attr])}, was ${inspect(svg.attr[attr])}`);
             }
         }
-        Object.keys(svg.$)
+        Object.keys(svg.attr)
             .filter(attr => !expected.hasOwnProperty(attr))
             .forEach(attr => {
                 msg.push(`Unexpected attribute ${chalk.bold(attr)}`);
@@ -38,8 +38,8 @@ const RULES = [
     }
 ];
 
-async function lintSVG(svgStr) {
-    const svg = (await parseXML(svgStr)).svg;
+function lintSVG(svgStr) {
+    const svg = new XMLDoc(svgStr);
 
     const messages = [];
     for (let rule of RULES) {
@@ -53,19 +53,18 @@ async function lintSVG(svgStr) {
 }
 
 /**
- * Parses an XML string to a JS object
- * @param {String} xmlStr  The XML string
- * @returns {Promise<Object>}
+ * Gets all children of an element. The resulting array is flat
+ * @param {Object} elm
+ * @returns {Array<Object>}
  */
-function parseXML(xmlStr) {
-    return new Promise((res,rej)=>{
-        xml2js(xmlStr, (err, result)=>{
-            if (err) {
-                return rej(err);
-            }
-            res(result);
-        });
-    });
+function extractChildren(elm) {
+    const children = Object.keys(elm)
+            .filter(tag => tag !== "$" && tag !== "_")
+            .reduce((elms,tag) => elms.concat(elm[tag]), [])
+            .map(child => child instanceof Array ? extractChildren(child) : child)
+            .concat(elm);
+    
+    return children;
 }
 
 module.exports = async (name, content) => {
