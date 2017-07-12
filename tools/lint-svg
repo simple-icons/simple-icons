@@ -19,21 +19,21 @@ const RULES = [
             "aria-labelledby": "title", 
             role: "img"
         };
-        let msg = [];
+        const msgs = [];
 
         for (let attr in expected) {
             if (svg.attr[attr] !== expected[attr]) {
-                msg.push(`Attribute ${chalk.bold(attr)} should be ${inspect(expected[attr])}, was ${inspect(svg.attr[attr])}`);
+                msgs.push(`SVG attribute ${chalk.bold(attr)} should be ${inspect(expected[attr])}, was ${inspect(svg.attr[attr])}`);
             }
         }
         Object.keys(svg.attr)
             .filter(attr => !expected.hasOwnProperty(attr))
             .forEach(attr => {
-                msg.push(`Attribute ${chalk.bold(attr)} should not exist`);
+                msgs.push(`SVG attribute ${chalk.bold(attr)} should not exist`);
             });
 
-        if (msg.length) {
-            throw new Error(msg.join("\n"));
+        if (msgs.length) {
+            throw new Error(msgs.join("\n"));
         }
     },
 
@@ -50,12 +50,42 @@ const RULES = [
         if (!title.val || !/icon$/.test(title.val)) {
             throw new Error(`${chalk.bold("<title>")} should have format ${inspect("[name] icon")}, was ${inspect(title.val)}`);
         }
+    },
+
+    function elementAttributes(svg) {
+        const children = extractChildren(svg);
+        const msgs = [];
+
+        const attrWhitelist = [
+            "cx", "cy", "r", // <circle>
+            "rx", "ry", // <ellipsis>
+            "x1", "x2", "y1", "y2", // <line>
+            "d", // <path>
+            "points", // <polygon>,
+            "x", "y", "width", "height", // <rect>
+        ];
+
+        for (let child of children) {
+            if (child.attr.hasOwnProperty("stroke")) {
+                msgs.push(`Attribute stroke should be converted to paths on ${chalk.bold("<"+child.name+">")}`);
+            }
+            for (let attr in child.attr) {
+                if (attr === "stroke") { continue; }
+                if (attrWhitelist.indexOf(attr) === -1) {
+                    msgs.push(`Attribute ${chalk.bold(attr)} should not exist on ${chalk.bold("<"+child.name+">")} (${child.line}:${child.column})`)
+                }
+            }
+        }
+
+        if (msgs.length) {
+            throw new Error(msgs.join("\n"));
+        }
     }
 ];
 
 function lintSVG(svgStr) {
     const svg = new XMLDoc(svgStr);
-
+    
     const messages = [];
     for (let rule of RULES) {
         try {
@@ -73,11 +103,15 @@ function lintSVG(svgStr) {
  * @returns {Array<Object>}
  */
 function extractChildren(elm) {
-    const children = Object.keys(elm)
-            .filter(tag => tag !== "$" && tag !== "_")
-            .reduce((elms,tag) => elms.concat(elm[tag]), [])
-            .map(child => child instanceof Array ? extractChildren(child) : child)
-            .concat(elm);
+    if (!elm.children || !elm.children.length) {
+        return [];
+    }
+
+    console.log("Extracting",elm);
+
+    const children = elm.children
+        .filter(elm => !elm.hasOwnProperty("text"))
+        .reduce((elms, elm) => elms.concat(extractChildren(elm).concat(elm)), []);
     
     return children;
 }
