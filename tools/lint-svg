@@ -17,8 +17,28 @@ const RULES = [
         if (svg.$.viewBox !== expected) {
             throw new Error("Expected viewBox to be "+
                 inspect(expected)+
-                " got "+
+                ", got "+
                 inspect(svg.$.viewBox));
+        }
+    },
+
+    function rootAttributes(svg) {
+        const expected = ["xmlns", "viewBox", "aria-labelledby", "role"];
+        let msg = [];
+        
+        const expectedNotFound = expected.filter(attr => !svg.$.hasOwnProperty(attr));
+        if (expectedNotFound.length) {
+            msg.push(`Expected SVG attribute${expectedNotFound.length>1?"s":""} not found: `+
+                expectedNotFound.map(inspect));
+        }
+        const unexpected = Object.keys(svg.$).filter(attr => !expected.includes(attr));
+        if (unexpected.length) {
+            msg.push(`Unexpected SVG attribute${unexpected.length>1?"s":""}: `+
+                unexpected.map(inspect));
+        }
+
+        if (msg.length) {
+            throw new Error(msg.join("\n"));
         }
     }
 ];
@@ -58,7 +78,9 @@ module.exports = async (name, content) => {
     if (messages.length) {
         console.log(chalk.red(`✖ ${name}`));
         for (let msg of messages) {
-            console.log(`    ${chalk.red(msg)}`);
+            console.log(msg.split("\n")
+                .map(msg => `    ${chalk.red(msg)}`)
+                .join("\n"));
         }
     } else {
         console.log(chalk.green(`✔ ${name}`));
