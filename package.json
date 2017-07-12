@@ -13,6 +13,10 @@
   "license": "CCO",
   "devDependencies": {
     "chalk": "^2.0.1",
+    "husky": "^0.14.3",
     "xmldoc": "^1.1.0"
+  },
+  "scripts":{
+    "precommit": "tools/lint-staged"
   }
 }

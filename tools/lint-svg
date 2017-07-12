@@ -110,8 +110,6 @@ function extractChildren(elm) {
         return [];
     }
 
-    console.log("Extracting",elm);
-
     const children = elm.children
         .filter(elm => !elm.hasOwnProperty("text"))
         .reduce((elms, elm) => elms.concat(extractChildren(elm).concat(elm)), []);

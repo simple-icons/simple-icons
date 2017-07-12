@@ -9,7 +9,7 @@ const lintSVG = require("./lint-svg");
 
     const svgs = stagedFiles.filter(file => /\.svg$/.test(file.path));
     for (let svg of svgs) {
-        const result = await lintSVG(svg.path, svg.content);
+        const result = lintSVG(svg.path, svg.content);
         success = success && result;
     }
 
