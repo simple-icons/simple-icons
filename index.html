@@ -61,7 +61,6 @@
         {% assign rgbMin = rgbBlue %}
     {% endif %}
 
-
     {% if rgbRed <= 0.03928 %}
         {% assign lRed = rgbRed | divided_by: 12.92 | times: 0.2126 %}
     {% else %}
@@ -77,14 +76,12 @@
     {% else %}
         {% assign lBlue = rgbBlue | times: 0.3053 | plus: 0.6822 | times: rgbBlue | plus: 0.0125 | times: rgbBlue | times: 0.0722 %}
     {% endif %}
-    {% assign L = lRed | plus: lGreen | plus: lBlue %}
-
-    {% if L >= 0.6 %}
+    {% assign luminance = lRed | plus: lGreen | plus: lBlue %}
+    {% if luminance >= 0.83 %}
         {% assign class = "dark" %}
     {% else %}
         {% assign class = "light" %}
     {% endif %}
-
 
     {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
     {% assign rgbDelta = rgbMax | minus: rgbMin %}
@@ -110,10 +107,10 @@
     {% endif %}
     {% if hslSaturation < 10 %}
         {% assign hslLuminance = hslLuminance | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }},{{ L }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% else %}
         {% assign hslHue = hslHue | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }},{{ L }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% endif %}
 {% endfor %}
 {% assign iconsArray = iconsUnsortedString | split: ";" %}
