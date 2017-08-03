@@ -78,9 +78,9 @@
     {% endif %}
     {% assign luminance = lRed | plus: lGreen | plus: lBlue %}
     {% if luminance >= 0.83 %}
-        {% assign class = "dark" %}
+        {% assign class = "grid-item--dark" %}
     {% else %}
-        {% assign class = "light" %}
+        {% assign class = "grid-item--light" %}
     {% endif %}
 
     {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
@@ -177,25 +177,9 @@
         }
 
         svg {
+            fill: currentColor;
             height: 1.5rem;
             width: 1.5rem;
-        }
-
-        .grid-item.light path,
-        .grid-item.light rect,
-        .grid-item.light circle,
-        .grid-item.light h2,
-        .grid-item.light p {
-            color: #FFF;
-            fill: #FFF;
-        }
-        .grid-item.dark path,
-        .grid-item.dark rect,
-        .grid-item.dark circle,
-        .grid-item.dark h2,
-        .grid-item.dark p {
-            color: #000;
-            fill: #000;
         }
 
         #carbonads {
@@ -376,6 +360,15 @@
             background-color: #757575;
             text-align: center;
         }
+        .grid-item--light {
+            color: #FFF;
+        }
+        .grid-item--dark {
+            color: #000;
+        }
+        .grid-item__link {
+            color: inherit;
+        }
         @supports not (display: grid) {
             .grid-item {
                 border: 0.1875rem solid #FFF;
@@ -402,7 +395,6 @@
         }
 
         .grid-item__link {
-            color: #FFFFFF;
             display: block;
             padding: 1rem 1rem 0;
             text-align: center;
@@ -425,7 +417,6 @@
         }
 
         .grid-item__subtitle {
-            color: #FFFFFF;
             font-size: 0.75rem;
             line-height: 1rem;
             margin: 0;
