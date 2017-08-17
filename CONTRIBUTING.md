@@ -54,8 +54,7 @@ Here is the un-minified contents of the GitHub icon, for reference:
 
 # Building locally
 
-Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`). Then follow these steps:
-- Initialize this repository as a new Jekyll project using `$ jekyll new . --force` from the root of the repo.
-- Remove the newly generated `index.md` file.
-- Build and run the website locally using `$ bundle exec jekyll serve`.
+- Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
+- Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
+- Build and run the website locally using `$ jekyll serve`.
 - Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
