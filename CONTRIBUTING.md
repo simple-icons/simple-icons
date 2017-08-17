@@ -13,7 +13,7 @@ This repository welcomes contributions and corrections. Before submitting a pull
 ## JSON data for simpleicons.org
 
 In addition to following the guidelines for SVGs, list new icons in the `_data/simple-icons.json` file. Each icon in the array has three required values:
- 
+
   - The `title` of the new SVG.
   - A `hex` color value that matches the brand or logo's main accent color. (Without the `#` pound symbol.)
   - The `source` URL of the logo being used.
@@ -50,3 +50,12 @@ Here is the un-minified contents of the GitHub icon, for reference:
 </svg>
 ```
 
+* * *
+
+# Building locally
+
+Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`). Then follow these steps:
+- Initialize this repository as a new Jekyll project using `$ jekyll new . --force` from the root of the repo.
+- Remove the newly generated `index.md` file.
+- Build and run the website locally using `$ bundle exec jekyll serve`.
+- Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
