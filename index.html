@@ -60,6 +60,29 @@
     {% if rgbBlue < rgbMin %}
         {% assign rgbMin = rgbBlue %}
     {% endif %}
+
+    {% if rgbRed <= 0.03928 %}
+        {% assign lRed = rgbRed | divided_by: 12.92 | times: 0.2126 %}
+    {% else %}
+      {% assign lRed = rgbRed | times: 0.3053 | plus: 0.6822 | times: rgbRed | plus: 0.0125 | times: rgbRed | times: 0.2126 %}
+    {% endif %}
+    {% if rgbGreen <= 0.03928 %}
+        {% assign lGreen = rgbGreen | divided_by: 12.92 | times: 0.7152 %}
+    {% else %}
+        {% assign lGreen = rgbGreen | times: 0.3053 | plus: 0.6822 | times: rgbGreen | plus: 0.0125 | times: rgbGreen | times: 0.7152 %}
+    {% endif %}
+    {% if rgbBlue <= 0.03928 %}
+        {% assign lBlue = rgbBlue | divided_by: 12.92 | times: 0.0722 %}
+    {% else %}
+        {% assign lBlue = rgbBlue | times: 0.3053 | plus: 0.6822 | times: rgbBlue | plus: 0.0125 | times: rgbBlue | times: 0.0722 %}
+    {% endif %}
+    {% assign luminance = lRed | plus: lGreen | plus: lBlue %}
+    {% if luminance >= 0.83 %}
+        {% assign class = "grid-item--dark" %}
+    {% else %}
+        {% assign class = "grid-item--light" %}
+    {% endif %}
+
     {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
     {% assign rgbDelta = rgbMax | minus: rgbMin %}
     {% if rgbDelta == 0 %}
@@ -84,10 +107,10 @@
     {% endif %}
     {% if hslSaturation < 10 %}
         {% assign hslLuminance = hslLuminance | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% else %}
         {% assign hslHue = hslHue | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% endif %}
 {% endfor %}
 {% assign iconsArray = iconsUnsortedString | split: ";" %}
@@ -154,12 +177,9 @@
         }
 
         svg {
+            fill: currentColor;
             height: 1.5rem;
             width: 1.5rem;
-        }
-
-        path, rect, circle {
-            fill: #FFF;
         }
 
         #carbonads {
@@ -340,6 +360,15 @@
             background-color: #757575;
             text-align: center;
         }
+        .grid-item--light {
+            color: #FFF;
+        }
+        .grid-item--dark {
+            color: #222;
+        }
+        .grid-item__link {
+            color: inherit;
+        }
         @supports not (display: grid) {
             .grid-item {
                 border: 0.1875rem solid #FFF;
@@ -366,7 +395,6 @@
         }
 
         .grid-item__link {
-            color: #FFFFFF;
             display: block;
             padding: 1rem 1rem 0;
             text-align: center;
@@ -389,7 +417,6 @@
         }
 
         .grid-item__subtitle {
-            color: #FFFFFF;
             font-size: 0.75rem;
             line-height: 1rem;
             margin: 0;
@@ -461,7 +488,7 @@
             </li>
             {% for icon in iconsArray %}
                 {% assign iconArray = icon | split: "," %}
-                <li class="grid-item" style="background-color: #{{ iconArray[4] }}">
+                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}">
                     <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg" download>
                         {% assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
@@ -472,7 +499,7 @@
             {% endfor %}
             {% for icon in greyscaleIconsArray %}
                 {% assign iconArray = icon | split: "," %}
-                <li class="grid-item" style="background-color: #{{ iconArray[4] }}">
+                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}">
                     <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg" download>
                         {% assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}

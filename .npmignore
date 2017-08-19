@@ -1,0 +1,8 @@
+# Ignore all files in root
+/*
+# Except the ones we want to publish
+!_data/
+!icons/
+!package.json
+!README.md
+!LICENSE.md
