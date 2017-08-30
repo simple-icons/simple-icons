@@ -1,0 +1,143 @@
+#!/usr/bin/env node
+const XMLDoc = require("xmldoc").XmlDocument;
+const chalk = require("chalk");
+const util = require("util");
+util.inspect.styles.string = "cyan";
+util.inspect.styles.regexp = "grey";
+const inspect = value => util.inspect(value, {colors: true});
+
+/**
+ * All the rules we use for SVG linting
+ * Are given a single argument, the parsed SVG object
+ * Should throw an error if it fails
+ */
+const RULES = [
+    function rootAttributes(svg) {
+        const expected = {
+            xmlns: "http://www.w3.org/2000/svg", 
+            viewBox: "0 0 24 24", 
+            "aria-labelledby": "title", 
+            role: "img"
+        };
+        const msgs = [];
+
+        for (let attr in expected) {
+            if (svg.attr[attr] !== expected[attr]) {
+                msgs.push(`SVG attribute ${chalk.bold(attr)} is ${inspect(svg.attr[attr])}; should be ${inspect(expected[attr])}`);
+            }
+        }
+        Object.keys(svg.attr)
+            .filter(attr => !expected.hasOwnProperty(attr))
+            .forEach(attr => {
+                msgs.push(`SVG attribute ${chalk.bold(attr)} is unexpected`);
+            });
+
+        if (msgs.length) {
+            throw new Error(msgs.join("\n"));
+        }
+    },
+
+    function checkTitle(svg) {
+        const titles = svg.children.filter(elm => elm.name === "title");
+        if (titles.length === 0) {
+            throw new Error(`${chalk.bold("<title>")} must exist`);
+        }
+        if (titles.length > 1) {
+            throw new Error(`${chalk.bold("<title>")} should exist once, found ${inspect(titles.length)}`);
+        }
+
+        const title = titles[0];
+        if (!title.val || !/icon$/.test(title.val)) {
+            throw new Error(`${chalk.bold("<title>")} is ${inspect(title.val)}, should have format ${inspect("[name] icon")}`);
+        }
+    },
+
+    function elementAttributes(svg) {
+        const children = extractChildren(svg);
+        const msgs = [];
+
+        const attrWhitelist = [
+            "id",
+            "cx", "cy", "r", // <circle>
+            "rx", "ry", // <ellipsis>
+            "x1", "x2", "y1", "y2", // <line>
+            "d", // <path>
+            "points", // <polygon>,
+            "x", "y", "width", "height", // <rect>
+            "fx", "fy", "fr", // <radialGradient>
+            "stop-color", "offset", // <stop>
+        ];
+
+        for (let child of children) {
+            if (child.attr.hasOwnProperty("stroke")) {
+                msgs.push(`Attribute stroke should be converted to paths on ${chalk.bold("<"+child.name+">")}`);
+            }
+            for (let attr in child.attr) {
+                if (attr === "stroke") { continue; }
+                if (attrWhitelist.indexOf(attr) === -1) {
+                    msgs.push(`Attribute ${chalk.bold(attr)} is unexpected on ${chalk.bold("<"+child.name+">")} (${child.line}:${child.column})`)
+                }
+            }
+        }
+
+        if (msgs.length) {
+            throw new Error(msgs.join("\n"));
+        }
+    }
+];
+
+function lintSVG(svgStr) {
+    const svg = new XMLDoc(svgStr);
+    
+    const messages = [];
+    for (let rule of RULES) {
+        try {
+            rule(svg);
+        } catch (e) {
+            messages.push(e.message);
+        }
+    }
+    return messages;
+}
+
+/**
+ * Gets all children of an element. The resulting array is flat
+ * @param {Object} elm
+ * @returns {Array<Object>}
+ */
+function extractChildren(elm) {
+    if (!elm.children || !elm.children.length) {
+        return [];
+    }
+
+    const children = elm.children
+        .filter(elm => !elm.hasOwnProperty("text"))
+        .reduce((elms, elm) => elms.concat(extractChildren(elm).concat(elm)), []);
+    
+    return children;
+}
+
+module.exports = async (name, content) => {
+    const messages = await lintSVG(content);
+    if (messages.length) {
+        console.log(chalk.red(`✖ ${name}`));
+        for (let msg of messages) {
+            console.log(msg.split("\n")
+                .map(msg => `    ${chalk.red(msg)}`)
+                .join("\n"));
+        }
+    } else {
+        console.log(chalk.green(`✔ ${name}`));
+    }
+    return !messages.length;
+};
+if (require.main === module) {
+    (async function(){
+        const [,, ...files] = process.argv;
+        const fs = require("fs");
+        for (let file of files) {
+            const content = fs.readFileSync(file);
+            await module.exports(file, content);
+        }
+    })();
+}

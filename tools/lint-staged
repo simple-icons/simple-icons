@@ -1,0 +1,68 @@
+#!/usr/bin/env node
+const exec = require("child_process").exec;
+const lintSVG = require("./lint-svg");
+
+// Lint all staged files
+(async function(){
+    let success = true;
+    const stagedFiles = await getStagedFiles();
+
+    const svgs = stagedFiles.filter(file => /\.svg$/.test(file.path));
+    for (let svg of svgs) {
+        const result = lintSVG(svg.path, svg.content);
+        success = success && result;
+    }
+
+    process.exit(success ? 0 : 1);
+})();
+
+/**
+ * @typedef {Object} StagedFile
+ * @property {String} status  A single-letter status. See man git-diff --diff-filter
+ * @property {String} path  The relative path to the file
+ * @property {String} content  The full content of the staged file
+ */
+/**
+ * Gets currently staged files from Git
+ * Resolves to an array of StagedFile's
+ * @returns {Promise<Array<StagedFile>>}
+ */
+async function getStagedFiles() {
+    const filesStr = await execute("git diff --cached --name-status");
+    const files = filesStr
+        .trim().split("\n")
+        .map(fileStr => {
+            const match = /([A-Z])\s*([^\s]+)/.exec(fileStr);
+            if (!match) { return undefined; }
+            return {
+                status: match[1],
+                path: match[2],
+                content: undefined
+            };
+        })
+        .filter(Boolean);
+    
+    const filePromises = files
+        .map(async file => {
+            if (file.status === "D") { return file; }
+
+            file.content = await execute(`git show :${file.path}`);
+            return file;
+        });
+    
+    return Promise.all(filePromises);
+}
+
+/**
+ * Executes a shell command
+ * Resolves to stdout
+ * @returns {Promise<String>}
+ */
+function execute(command) {
+    return new Promise((res,rej)=>{
+        exec(command, (e, stdout)=>{
+            if (e) { return rej(e); }
+            res(stdout);
+        });
+    });
+}
