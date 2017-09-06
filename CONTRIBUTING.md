@@ -3,7 +3,7 @@
 This repository welcomes contributions and corrections. Before submitting a pull request, ensure that you respect these guidelines for SVGs:
 
   - Include the SVG namespace declaration `xmlns="http://www.w3.org/2000/svg"`. This is not required if the SVG is included inline on HTML5 web pages.
-  - Include a descriptive `<title>` element for accessibility. The `<title>` must have an ID of the format `simpleicon-<iconname>-title` - for example, `<title id="simpleicon-github-title">GitHub icon</title>`.
+  - Include a descriptive `<title>` element for accessibility. The `<title>` must have an ID of the format `simpleicon-<iconname>-title` - for example, `<title id="simpleicons-github-title">GitHub icon</title>`.
   - Add `aria-labelledby="simpleicon-<iconname>-title"` and `role="img"` to the `<svg>` element to improve screen reader support.
   - Use a `viewBox` of 24 by 24, following [Google’s Material Design guidelines for system icons](https://material.io/guidelines/style/icons.html#icons-system-icons).
   - Ensure that all paths and strokes have been converted to fills.
