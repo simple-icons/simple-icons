@@ -13,5 +13,8 @@
   "license": "CCO",
   "devDependencies": {
     "jsonlint": "^1.6.2"
+  },
+  "scripts": {
+    "jsonlint": "jsonlint _data/simple-icons.json -q"
   }
 }
