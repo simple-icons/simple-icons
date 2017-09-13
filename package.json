@@ -15,6 +15,6 @@
     "jsonlint": "^1.6.2"
   },
   "scripts": {
-    "jsonlint": "jsonlint _data/simple-icons.json -q"
+    "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema"
   }
 }
