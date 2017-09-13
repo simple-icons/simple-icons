@@ -1,9 +1,9 @@
 {
-    "title": "SimpleIcons icons",
+    "title": "Simple Icons",
     "type": "object",
     "properties": {
         "icons": {
-            "description": "The actual icons",
+            "description": "The list of icons",
             "type": "array",
             "items": {
                 "description": "A single icon",
