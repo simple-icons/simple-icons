@@ -37,3 +37,7 @@ Temporary Items
 *.css.map
 
 # End of https://www.gitignore.io/api/sass,macos,jekyll
+
+
+# NPM dependencies
+node_modules/
