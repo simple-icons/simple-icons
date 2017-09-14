@@ -10,5 +10,11 @@
   "main": "_data/simple-icons.json",
   "repository": "git@github.com:danleech/simple-icons.git",
   "author": "Dan Leech",
-  "license": "CCO"
+  "license": "CCO",
+  "devDependencies": {
+    "jsonlint": "^1.6.2"
+  },
+  "scripts": {
+    "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema"
+  }
 }
