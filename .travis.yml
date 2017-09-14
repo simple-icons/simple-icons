@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "6"
+
+script:
+  - npm run jsonlint
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
