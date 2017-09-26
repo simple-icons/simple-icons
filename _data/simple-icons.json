@@ -61,6 +61,11 @@
             "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
         },
         {
+            "title": "Adobe Photoshop",
+            "hex": "00C8FF",
+            "source": "http://www.adobe.com/products/photoshop.html"
+        },
+        {
             "title": "AIM",
             "hex": "FFCA00",
             "source": "http://aim.com"
@@ -356,6 +361,11 @@
             "source": "https://disqus.com/brand"
         },
         {
+            "title": "Django",
+            "hex": "092E20",
+            "source": "https://www.djangoproject.com/community/logos/"
+        },
+        {
             "title": "Docker",
             "hex": "1488C6",
             "source": "https://www.docker.com"
@@ -479,6 +489,11 @@
             "title": "Garmin",
             "hex": "007CC3",
             "source": "https://developer.garmin.com/resources/brand-guidelines/"
+        },
+        {
+            "title": "Gatsby",
+            "hex": "744C9E",
+            "source": "https://www.gatsbyjs.org/"
         },
         {
             "title": "Gauges",
@@ -751,6 +766,11 @@
             "source": "https://docs.joomla.org/Joomla:Brand_Identity_Elements"
         },
         {
+            "title": "jQuery",
+            "hex": "0769AD",
+            "source": "https://brand.jquery.org/logos/"
+        },
+        {
             "title": "JSFiddle",
             "hex": "4679A4",
             "source": "http://doc.jsfiddle.net/meta/downloads.html"
@@ -961,11 +981,6 @@
             "source": "https://www.office.com"
         },
         {
-            "title": "Minecraft",
-            "hex": "62B74A",
-            "source": "https://minecraft.net/"
-        },
-        {
             "title": "Minutemailer",
             "hex": "3ABFE6",
             "source": "https://minutemailer.com/press"
@@ -1004,6 +1019,11 @@
             "title": "Myspace",
             "hex": "030303",
             "source": "https://myspace.com/pressroom/assetslogos"
+        },
+        {
+            "title": "MySQL",
+            "hex": "4479A1",
+            "source": "https://www.mysql.com/about/legal/logos.html"
         },
         {
             "title": "Netflix",
