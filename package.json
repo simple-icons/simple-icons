@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "1.0.0",
+  "version": "1.2.3",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://www.simpleicons.org",
   "keywords": [
@@ -8,9 +8,15 @@
     "icons"
   ],
   "main": "index.js",
-  "repository": "git@github.com:danleech/simple-icons.git",
-  "author": "Dan Leech",
-  "license": "CCO",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/simple-icons/simple-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simple-icons/simple-icons/issues"
+  },
+  "author": "Simple Icons Collaborators",
+  "license": "CC0",
   "devDependencies": {
     "jsonlint": "^1.6.2"
   },
