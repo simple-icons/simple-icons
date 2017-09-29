@@ -39,7 +39,7 @@ Before minification, your SVG should look follow the template below:
 </svg>
 ```
 
-While the parent `<svg>` element can sometimes contain other attributes, the attributes listed above are the only necessary ones. You can remove safely remove attributes like `width` and `height`, or clean them using a tool like [SVGO](https://github.com/svg/svgo) or [SVGOMG](https://jakearchibald.github.io/svgomg/).
+While the parent `<svg>` element can sometimes contain other attributes, the attributes listed above are the only necessary ones. You can safely remove attributes like `width` and `height`, or clean them using a tool like [SVGO](https://github.com/svg/svgo) or [SVGOMG](https://jakearchibald.github.io/svgomg/).
 
 Here is the un-minified contents of the GitHub icon, for reference:
 
