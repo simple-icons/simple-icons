@@ -8,7 +8,7 @@ This repository welcomes contributions and corrections. Before submitting a pull
   - Use a `viewBox` of 24 by 24, following [Google’s Material Design guidelines for system icons](https://material.io/guidelines/style/icons.html#icons-system-icons).
   - Ensure that all paths and strokes have been converted to fills.
   - Ensure your SVG is monochromatic. Remove all fill colors so that icons default to black.
-  - Minify your SVG after exporting it. We recommend using [SVGO](https://github.com/svg/svgo) or [SVGOMG](https://jakearchibald.github.io/svgomg/) to automate this process.
+  - Minify your SVG after exporting it. We recommend using [SVGO](https://github.com/svg/svgo) or [SVGOMG](https://jakearchibald.github.io/svgomg/) to automate this process. **Do not go below a precision of 3**.
 
 ## JSON data for simpleicons.org
 
