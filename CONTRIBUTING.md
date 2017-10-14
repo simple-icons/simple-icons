@@ -6,7 +6,7 @@ This repository welcomes contributions and corrections. Before submitting a pull
   - Include a descriptive `<title>` element for accessibility. The `<title>` must have an ID of the format `simpleicon-<iconname>-title` - for example, `<title id="simpleicons-github-title">GitHub icon</title>`.
   - Add `aria-labelledby="simpleicon-<iconname>-title"` and `role="img"` to the `<svg>` element to improve screen reader support.
   - Use a `viewBox` of 24 by 24, following [Google’s Material Design guidelines for system icons](https://material.io/guidelines/style/icons.html#icons-system-icons).
-  - Ensure the icon is scaled to fit the viewbox, while preserving the icon's original propportions. This means the icon should be touching _at least_ two sides of the viewbox.
+  - Ensure the icon is scaled to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching _at least_ two sides of the viewbox.
   - Ensure the icon is horizontally and vertically centered.
   - Ensure that all paths and strokes have been converted to fills.
   - Ensure your SVG is monochromatic. Remove all fill colors so that icons default to black.
