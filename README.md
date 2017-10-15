@@ -1,6 +1,12 @@
-# Simple Icons
-
-Free SVG icons for popular brands, started by [Dan Leech](https://twitter.com/bathtype). [See them all on one page at **simpleicons.org**](https://simpleicons.org). Contributions, corrections & requests can be made on GitHub.
+<p align="center">
+<a href="https://simpleicons.org/">
+<img src="https://simpleicons.org/icons/simpleicons.svg" alt="Simple Icons" width=64 height=64>
+</a>
+<h3 align="center">Simple Icons</h3>
+<br>
+<p align="center">
+Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+</p>
 
 ## Usage
 
