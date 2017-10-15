@@ -30,3 +30,7 @@ console.log(simpleIcons['Google+']);
 }
 */
 ```
+
+## Status
+
+[![Build Status](https://travis-ci.org/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.org/simple-icons/simple-icons)
