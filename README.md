@@ -33,4 +33,4 @@ console.log(simpleIcons['Google+']);
 
 ## Status
 
-[![Build Status](https://travis-ci.org/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.org/simple-icons/simple-icons)
+[![Build Status](https://travis-ci.org/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.org/simple-icons/simple-icons) [![npm version](https://badge.fury.io/js/simple-icons.svg)](https://badge.fury.io/js/simple-icons)
