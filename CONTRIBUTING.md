@@ -1,62 +1,153 @@
-# Contributing
+# Contributing To Simple Icons
 
-This repository welcomes contributions and corrections. Before submitting a pull request, ensure that you respect these guidelines for SVGs:
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidance below.
 
-  - Include the SVG namespace declaration `xmlns="http://www.w3.org/2000/svg"`. This is not required if the SVG is included inline on HTML5 web pages.
-  - Include a descriptive `<title>` element for accessibility. The `<title>` must have an ID of the format `simpleicon-<iconname>-title` - for example, `<title id="simpleicons-github-title">GitHub icon</title>`.
-  - Add `aria-labelledby="simpleicon-<iconname>-title"` and `role="img"` to the `<svg>` element to improve screen reader support.
-  - Use a `viewBox` of 24 by 24, following [Google’s Material Design guidelines for system icons](https://material.io/guidelines/style/icons.html#icons-system-icons).
-  - Ensure the icon is scaled to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching _at least_ two sides of the viewbox.
-  - Ensure the icon is horizontally and vertically centered.
-  - Ensure that all paths and strokes have been converted to fills.
-  - Ensure your SVG is monochromatic. Remove all fill colors so that icons default to black.
-  - Minify your SVG after exporting it. We recommend using [SVGO](https://github.com/svg/svgo) or [SVGOMG](https://jakearchibald.github.io/svgomg/) to automate this process. **Do not go below a precision of 3**.
+## Table of contents
 
-## JSON data for simpleicons.org
+* [How To Request An Icon](#how-to-request-an-icon)
+* [How To Add An Icon](#how-to-add-an-icon)
+* [How To Label Issues](#how-to-label-issues)
+* [How To Build Locally](#how-to-build-locally)
 
-In addition to following the guidelines for SVGs, list new icons in the `_data/simple-icons.json` file. Each icon in the array has three required values:
+## How To Request An Icon
 
-  - The `title` of the new SVG.
-  - A `hex` color value that matches the brand or logo's main accent color. (Without the `#` pound symbol.)
-  - The `source` URL of the logo being used.
+We welcome icon requests. However, before you submit a new issue please make sure the icon:
 
-Here is the object for the GitHub logo as an example:
+* Is a _popular_ brand.
+* Has not already been requested.
+* Can be represented in a monochromatic format.
+
+When submitting a new icon request, please submit the issue with the following information:
+
+* **Title:** Include the brand name. Example: `Request: GitHub Icon`
+* **Body:** Include links to official sources for the brand's icon and official colors (e.g. media kits, brand guidelines, SVG files etc.)
+
+## How To Add An Icon
+
+### 1. Identify Official Logos and Colors
+
+Most of the icons and brand colors on SimpleIcons have been derived from official sources. Using official sources helps ensure that the icons and colors in SimpleIcons accurately match the brand they represent. Thankfully, this is usually a simple process as organizations often provide brand guides and high quality versions of their logo for download.
+
+Official high quality brand logos and brand colors can usually be found in the following locations:
+
+1. About pages, Press pages, Media Kits, and Brand Guidelines.
+1. Website headers
+1. Favicons
+1. Wikimedia (which should provide a source)
+
+Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well such as EPS. In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
+
+For color, the brand's primary web color should be used. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+
+### 2. Extract The Icon From The Logo
+
+There are many different tools for editing SVG files, some options include:
+
+| Name | Description | Platform | Price | Wikipedia |
+| :---- | :---- | :----: | :----: | ----: |
+| [Inkscape](https://inkscape.org/en/)| Vector Graphics Editor | Win, Mac, Linux | Free | [Wiki](https://en.wikipedia.org/wiki/Inkscape) |
+| [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Win, Mac | $ - $$$ | [Wiki](https://en.wikipedia.org/wiki/Adobe_Illustrator) |
+| [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free | -- |
+
+Using your preferred tool you should:
+
+1. Isolate the logomark from any text or extraneous items.
+1. Change the icon's viewbox/canvas/page size to 24x24.
+1. Scaled the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
+1. Center the icon horizontally and vertically.
+1. Export the icon as an SVG.
+
+### 3. Optimize The Icon
+
+All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
+
+* The [SVGO Command Line Tool](https://github.com/svg/svgo)
+  * Install SVGO
+    * With npm: `npm install -g svgo`
+    * With Homebrew: `brew install svgo`
+  * Run the following command `svgo -p 3 icon.svg icon.min.svg`
+* The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
+  * Click "Open SVG" and select an SVG file.
+  * Set the precision to 3, leave the remaining settings at the default values.
+  * Click the download button.
+
+### 4. Annotate The Icon
+
+Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
+
+* An svg element with:
+  * An aria label (Note the format).
+    * `aria-labelledby="simpleicons-adobephotoshop-icon"`
+  * An img role attribute.
+    * `role="img"`
+  * A 24x24 viewbox.
+    * `viewBox="0 0 24 24"`
+  * The svg namespace.
+    * `xmlns="http://www.w3.org/2000/svg"`
+* A title element with id attribute (Note the format).
+  * `<title id="simpleicons-adobephotoshop-icon">Adobe Photoshop icon</title>`
+
+Here is _part of_ the svg for the Adobe Photoshop icon as an example:
+
+```svg
+<svg aria-labelledby="simpleicons-adobephotoshop-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-adobephotoshop-icon">Adobe Photoshop icon</title>...</svg>
+```
+
+### 5. Check The Icon
+
+The final icon should:
+
+* Be properly annotated as discussed above.
+* Be monochromatic.
+  * Remove all fill colors so that icon defaults to black.
+* Be scaled to fit the viewbox, while preserving the icon's original proportions.
+  * This means the icon should be touching at least two sides of the viewbox.
+* Be vertically and horizontally centered.
+* Contain one single line with no whitespace.
+* Contain only one single path.
+* Not contain extraneous attributes.
+  * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
+
+Here is the svg for the Adobe Photoshop icon as an example:
+
+```svg
+<svg aria-labelledby="simpleicons-adobephotoshop-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-adobephotoshop-icon">Adobe Photoshop icon</title><path d="M0 .3v23.4h24V.3H0zm1 1h22v21.4H1V1.3zm4.8 4.48c0-.067.14-.116.224-.116.644-.033 1.588-.05 2.578-.05 2.772 0 3.85 1.52 3.85 3.466 0 2.54-1.842 3.63-4.102 3.63-.38 0-.51-.017-.775-.017v3.842c0 .083-.033.116-.115.116H5.916c-.083 0-.115-.03-.115-.113V5.78zm1.775 5.312c.23.016.412.016.81.016 1.17 0 2.27-.412 2.27-1.996 0-1.27-.786-1.914-2.122-1.914-.396 0-.775.016-.957.033v3.864zm8.607-1.188c-.792 0-1.056.396-1.056.726 0 .363.18.61 1.237 1.155 1.568.76 2.062 1.485 2.062 2.557 0 1.6-1.22 2.46-2.87 2.46-.876 0-1.62-.183-2.05-.43-.065-.033-.08-.082-.08-.165V14.74c0-.1.048-.133.114-.084.624.413 1.352.594 2.012.594.792 0 1.122-.33 1.122-.776 0-.363-.23-.677-1.237-1.205-1.42-.68-2.014-1.37-2.014-2.527 0-1.287 1.006-2.36 2.755-2.36.86 0 1.464.132 1.794.28.082.05.1.132.1.198v1.37c0 .083-.05.133-.15.1-.444-.264-1.1-.43-1.743-.43z"/></svg>
+```
+
+### 6. Update The JSON Data For SimpleIcons.org
+
+Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
+
+  * The `title` of the new SVG.
+  * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
+  * The `source` URL of the logo being used. (Be specific!)
+
+Here is the object for the Adobe Photoshop icon as an example:
 
 ```json
 {
-  "title": "GitHub",
-  "hex": "181717",
-  "source": "https://github.com/logos"
+    "title": "Adobe Photoshop",
+    "hex": "00C8FF",
+    "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
 },
 ```
 
-## SVG example
+## How To Label Issues
 
-Before minification, your SVG should look follow the template below:
+We use several labels to help organize and identify issues. Here's what they represent and how we use them:
 
-```svg
-<svg aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <title>[BRAND] icon</title>
-  <path [VALUE] />
-</svg>
-```
+* icon - Issues for adding or updating an icon.
+* docs - Issues for improving or updating documentation.
+* meta - Issues regarding the project itself or our GitHub repository.
+* good first issue - Issues we believe are simple and a good first stab at contributing to the project.
+* help wanted - Issues we would like help from the community to resolve.
+* awaiting reply - Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed.
 
-While the parent `<svg>` element can sometimes contain other attributes, the attributes listed above are the only necessary ones. You can safely remove attributes like `width` and `height`, or clean them using a tool like [SVGO](https://github.com/svg/svgo) or [SVGOMG](https://jakearchibald.github.io/svgomg/).
+See all the issue labels [here](https://github.com/simple-icons/simple-icons/labels).
 
-Here is the un-minified contents of the GitHub icon, for reference:
+## How To Build Locally
 
-```svg
-<svg aria-labelledby="title" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
-  <title>GitHub icon</title>
-  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-</svg>
-```
-
-* * *
-
-# Building locally
-
-- Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-- Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
-- Build and run the website locally using `$ jekyll serve`.
-- Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
+* Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
+* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
+* Build and run the website locally using `$ jekyll serve`.
+* Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
