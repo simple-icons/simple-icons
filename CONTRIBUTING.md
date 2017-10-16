@@ -1,28 +1,33 @@
 # Contributing To Simple Icons
 
-Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidance below.
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below.
 
 ## Table of contents
 
-* [How To Request An Icon](#how-to-request-an-icon)
-* [How To Add An Icon](#how-to-add-an-icon)
-* [How To Label Issues](#how-to-label-issues)
-* [How To Build Locally](#how-to-build-locally)
+* [Requesting An Icon](#requesting-an-icon)
+* [Adding or Updating An Icon](#adding-or-updating-an-icon)
+* [Labeling Issues](#labeling-issues)
+* [Building Locally](#building-locally)
 
-## How To Request An Icon
+## Requesting An Icon
 
 We welcome icon requests. However, before you submit a new issue please make sure the icon:
 
-* Is a _popular_ brand.
+* Is of a _popular_ brand.
 * Has not already been requested.
 * Can be represented in a monochromatic format.
 
-When submitting a new icon request, please submit the issue with the following information:
+When submitting a request for a new icon, please submit the issue with the following information:
 
 * **Title:** Include the brand name. Example: `Request: GitHub Icon`
 * **Body:** Include links to official sources for the brand's icon and official colors (e.g. media kits, brand guidelines, SVG files etc.)
 
-## How To Add An Icon
+When submitting a request to update an existing icon, please submit the issue with the following information:
+
+* **Title:** Include the brand name. Examples: `Update: GitHub Color`, `Update: GitHub Icon`
+* **Body:** Include what needs updating. The color? The icon? Include links to official sources for the updated icon or color (e.g. media kits, brand guidelines, SVG files etc.)
+
+## Adding or Updating An Icon
 
 ### 1. Identify Official Logos and Colors
 
@@ -103,7 +108,7 @@ The final icon should:
 * Be scaled to fit the viewbox, while preserving the icon's original proportions.
   * This means the icon should be touching at least two sides of the viewbox.
 * Be vertically and horizontally centered.
-* Contain one single line with no whitespace.
+* Be minified to a single line with no formatting.
 * Contain only one single path.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
@@ -132,7 +137,7 @@ Here is the object for the Adobe Photoshop icon as an example:
 },
 ```
 
-## How To Label Issues
+## Labeling Issues
 
 We use several labels to help organize and identify issues. Here's what they represent and how we use them:
 
@@ -144,7 +149,7 @@ We use several labels to help organize and identify issues. Here's what they rep
 
 See all the issue labels [here](https://github.com/simple-icons/simple-icons/labels).
 
-## How To Build Locally
+## Building Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
 * Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
