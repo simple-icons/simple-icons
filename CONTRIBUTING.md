@@ -97,7 +97,7 @@ Here is _part of_ the svg for the Adobe Photoshop icon as an example:
 
 The final icon should:
 
-* Be properly annotated as discussed above.
+* Be properly annotated [as discussed above](#4-annotate-the-icon).
 * Be monochromatic.
   * Remove all fill colors so that icon defaults to black.
 * Be scaled to fit the viewbox, while preserving the icon's original proportions.
@@ -138,7 +138,6 @@ We use several labels to help organize and identify issues. Here's what they rep
 
 * icon - Issues for adding or updating an icon.
 * docs - Issues for improving or updating documentation.
-* meta - Issues regarding the project itself or our GitHub repository.
 * good first issue - Issues we believe are simple and a good first stab at contributing to the project.
 * help wanted - Issues we would like help from the community to resolve.
 * awaiting reply - Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed.
