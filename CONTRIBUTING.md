@@ -17,15 +17,13 @@ We welcome icon requests. However, before you submit a new issue please make sur
 * Has not already been requested.
 * Can be represented in a monochromatic format.
 
-When submitting a request for a new icon, please submit the issue with the following information:
+When submitting a request for a new or updated icon, please submit the issue with the following information:
 
-* **Title:** Include the brand name. Example: `Request: GitHub Icon`
-* **Body:** Include links to official sources for the brand's icon and official colors (e.g. media kits, brand guidelines, SVG files etc.)
+* **Issue Title:** Include the brand name. For example:
+  * New Icons: `Request: GitHub Icon`
+  * Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
-When submitting a request to update an existing icon, please submit the issue with the following information:
-
-* **Title:** Include the brand name. Examples: `Update: GitHub Color`, `Update: GitHub Icon`
-* **Body:** Include what needs updating. The color? The icon? Include links to official sources for the updated icon or color (e.g. media kits, brand guidelines, SVG files etc.)
+* **Issue Body:** Include links to official sources for the brand's icon and official colors (e.g. media kits, brand guidelines, SVG files etc.)
 
 ## Adding or Updating An Icon
 
@@ -42,17 +40,17 @@ Official high quality brand logos and brand colors can usually be found in the f
 
 Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well such as EPS. In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
 
-For color, the brand's primary web color should be used. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, provide the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
 ### 2. Extract The Icon From The Logo
 
 There are many different tools for editing SVG files, some options include:
 
-| Name | Description | Platform | Price | Wikipedia |
-| :---- | :---- | :----: | :----: | ----: |
-| [Inkscape](https://inkscape.org/en/)| Vector Graphics Editor | Win, Mac, Linux | Free | [Wiki](https://en.wikipedia.org/wiki/Inkscape) |
-| [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Win, Mac | $ - $$$ | [Wiki](https://en.wikipedia.org/wiki/Adobe_Illustrator) |
-| [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free | -- |
+| Name | Description | Platform | Price |
+| :---- | :---- | :----: | :----: |
+| [Inkscape](https://inkscape.org/en/)| Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
+| [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free |
 
 Using your preferred tool you should:
 
@@ -141,11 +139,13 @@ Here is the object for the Adobe Photoshop icon as an example:
 
 We use several labels to help organize and identify issues. Here's what they represent and how we use them:
 
-* icon - Issues for adding or updating an icon.
-* docs - Issues for improving or updating documentation.
-* good first issue - Issues we believe are simple and a good first stab at contributing to the project.
-* help wanted - Issues we would like help from the community to resolve.
-* awaiting reply - Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed.
+| Label Name | Description |
+| :---- | :---- |
+| [icon](https://github.com/simple-icons/simple-icons/labels/icon) | Issues for adding or updating an icon. |
+| [docs](https://github.com/simple-icons/simple-icons/labels/docs) | Issues for improving or updating documentation. |
+| [good first issue](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue) | Issues we believe are simple and a good first stab at contributing to the project. |
+| [help wanted](https://github.com/simple-icons/simple-icons/labels/help%20wanted) | Issues we would like help from the community to resolve. |
+| [awaiting reply](https://github.com/simple-icons/simple-icons/labels/awaiting%20reply) | Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed. |
 
 See all the issue labels [here](https://github.com/simple-icons/simple-icons/labels).
 
