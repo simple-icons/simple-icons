@@ -11,7 +11,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 ## Requesting An Icon
 
-We welcome icon requests, before you submit a new issue please make sure the icon:
+We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Is of a _popular_ brand.
 * Has not already been requested.
