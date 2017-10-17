@@ -38,9 +38,9 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Favicons
 1. Wikimedia (which should provide a source)
 
-Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well such as EPS. In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
+Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well (e.g. EPS, AI, PDF). In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
 
-For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, provide the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
 ### 2. Extract The Icon From The Logo
 
