@@ -2,7 +2,7 @@
   "name": "simple-icons",
   "version": "1.2.7",
   "description": "SVG icons for popular brands https://simpleicons.org",
-  "homepage": "https://www.simpleicons.org",
+  "homepage": "https://simpleicons.org",
   "license": "CC0",
   "author": "Simple Icons Collaborators",
   "main": "index.js",
@@ -14,13 +14,15 @@
     "type": "git",
     "url": "git+ssh://git@github.com/simple-icons/simple-icons.git"
   },
-  "bugs": {
-    "url": "https://github.com/simple-icons/simple-icons/issues"
-  },
   "devDependencies": {
     "jsonlint": "^1.6.2"
   },
-  "scripts": {
-    "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema"
-  }
+  "ignore": [
+    "images/",
+    ".*",
+    "CNAME",
+    "CONTRIBUTING.md",
+    "index.html",
+    "package.json"
+  ]
 }

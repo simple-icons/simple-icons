@@ -24,10 +24,14 @@ Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/packa
 
 ### Node Usage
 
-The icons are also available through our npm package. To install, simply run:
+The icons are also available through our npm and bower packages. To install, simply run:
 
-```
+```bash
+# For npm
 $ npm install simple-icons
+
+# For Bower
+$ bower install simple-icons
 ```
 
 The API can then be used as follows:
