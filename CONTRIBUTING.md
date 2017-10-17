@@ -11,19 +11,18 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 ## Requesting An Icon
 
-We welcome icon requests. However, before you submit a new issue please make sure the icon:
+We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Is of a _popular_ brand.
 * Has not already been requested.
-* Can be represented in a monochromatic format.
 
-When submitting a request for a new or updated icon, please submit the issue with the following information:
+When submitting a request for a new or updated icon include helpful information such as:
 
-* **Issue Title:** Include the brand name. For example:
+* **Issue Title:** The brand name. For example:
   * New Icons: `Request: GitHub Icon`
   * Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
-* **Issue Body:** Include links to official sources for the brand's icon and official colors (e.g. media kits, brand guidelines, SVG files etc.)
+* **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files etc.)
 
 ## Adding or Updating An Icon
 
@@ -108,7 +107,6 @@ The final icon should:
   * This means the icon should be touching at least two sides of the viewbox.
 * Be vertically and horizontally centered.
 * Be minified to a single line with no formatting.
-* Contain only one single path.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
@@ -138,7 +136,7 @@ Here is the object for the Adobe Photoshop icon as an example:
 
 ## Labeling Issues
 
-We use several labels to help organize and identify issues. Here's what they represent and how we use them:
+We use several labels to help organize and identify issues. You can find all labels [here](https://github.com/simple-icons/simple-icons/labels). Here's what they represent and how we use them:
 
 | Label Name | Description |
 | :---- | :---- |
@@ -147,8 +145,6 @@ We use several labels to help organize and identify issues. Here's what they rep
 | [good first issue](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue) | Issues we believe are simple and a good first stab at contributing to the project. |
 | [help wanted](https://github.com/simple-icons/simple-icons/labels/help%20wanted) | Issues we would like help from the community to resolve. |
 | [awaiting reply](https://github.com/simple-icons/simple-icons/labels/awaiting%20reply) | Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed. |
-
-See all the issue labels [here](https://github.com/simple-icons/simple-icons/labels).
 
 ## Building Locally
 
