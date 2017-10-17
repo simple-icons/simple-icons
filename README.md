@@ -13,6 +13,15 @@ Free SVG icons for popular brands. See them all on one page at <a href="https://
 
 Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the icon you want, and the download should start automatically.
 
+### CDN Usage
+
+Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+
+```html
+<img width="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@1.2.7/icons/stackoverflow.svg" />
+<img width="32" width="32" src="https://unpkg.com/simple-icons@1.2.7/icons/stackoverflow.svg" />
+```
+
 ### Node Usage
 
 The icons are also available through our npm package. To install, simply run:
