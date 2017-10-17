@@ -56,8 +56,9 @@ Using your preferred tool you should:
 
 1. Isolate the icon from any text or extraneous items.
 1. Change the icon's viewbox/canvas/page size to 24x24.
-1. Scaled the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
+1. Scale the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
 1. Center the icon horizontally and vertically.
+1. Remove all colors. The icon should be monochromatic.
 1. Export the icon as an SVG.
 
 ### 3. Optimize The Icon
