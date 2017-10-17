@@ -488,7 +488,7 @@
         <div class="search">
             <div class="search__wrapper">
                 <div class="search__close"><span>&times;</span></div>
-                <input type="text" placeholder="Search by brand …" />
+                <input type="text" placeholder="Search by brand …" title="Search not available when JavaScript is disabled" disabled />
             </div>
         </div>
         <ul class="grid">
@@ -541,6 +541,10 @@
                 $search      = document.querySelector('.search'),
                 $searchClose = $search.querySelector('.search__close'),
                 $searchInput = $search.querySelector('input');
+
+            // Remove the "disabled" attribute from the search input
+            $searchInput.setAttribute('title', 'Search Simple Icons');
+            $searchInput.removeAttribute('disabled');
 
             // include a modified debounce underscorejs helper function.
             // see
