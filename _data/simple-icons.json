@@ -7,7 +7,7 @@
         },
         {
             "title": "About.me",
-            "hex": "044A75",
+            "hex": "00A98F",
             "source": "https://about.me/assets"
         },
         {
@@ -66,11 +66,6 @@
             "source": "http://aim.com"
         },
         {
-            "title": "Air",
-            "hex": "FF2D55",
-            "source": "http://getair.co"
-        },
-        {
             "title": "Airbnb",
             "hex": "FF5A5F",
             "source": "https://www.airbnb.com"
@@ -106,14 +101,19 @@
             "source": "https://angular.io/assets/images/logos/angular/angular_solidBlack.svg"
         },
         {
-            "title": "App.net",
-            "hex": "3A393C",
-            "source": "https://account.app.net/legal/assets"
-        },
-        {
             "title": "Apple",
             "hex": "999999",
             "source": "https://worldvectorlogo.com/logo/apple"
+        },
+        {
+            "title": "Apple Music",
+            "hex": "000000",
+            "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
+        },
+        {
+            "title": "Arch Linux",
+            "hex": "1793D1",
+            "source": "https://www.archlinux.org/art/"
         },
         {
             "title": "Asana",
@@ -152,18 +152,13 @@
         },
         {
             "title": "Basecamp",
-            "hex": "66CC66",
-            "source": "https://worldvectorlogo.com/logo/basecamp"
+            "hex": "5ECC62",
+            "source": "https://basecamp.com/about/press"
         },
         {
             "title": "Bath ASU",
             "hex": "00A3E0",
             "source": "https://bathasu.com/press/"
-        },
-        {
-            "title": "Bebo",
-            "hex": "DE484A",
-            "source": "http://bebo.com/press"
         },
         {
             "title": "Behance",
@@ -182,8 +177,8 @@
         },
         {
             "title": "Bitbucket",
-            "hex": "205081",
-            "source": "https://bitbucket.org"
+            "hex": "0052CC",
+            "source": "https://www.atlassian.com/company/news/press-kit"
         },
         {
             "title": "Bitcoin",
@@ -197,7 +192,7 @@
         },
         {
             "title": "Blogger",
-            "hex": "F38936",
+            "hex": "FF5722",
             "source": "https://www.blogger.com"
         },
         {
@@ -492,7 +487,7 @@
         },
         {
             "title": "Garmin",
-            "hex": "007CC3",
+            "hex": "007DC3",
             "source": "https://developer.garmin.com/resources/brand-guidelines/"
         },
         {
@@ -556,9 +551,14 @@
             "source": "https://material.io/guidelines/resources/sticker-sheets-icons.html#sticker-sheets-icons-components"
         },
         {
-          "title": "GNU",
-          "hex": "A42E2B",
-          "source": "https://gnu.org"
+            "title": "GNU",
+            "hex": "A42E2B",
+            "source": "https://gnu.org"
+        },
+        {
+            "title": "GNU social",
+            "hex": "A22430",
+            "source": "https://www.gnu.org/graphics/social.html"
         },
         {
             "title": "GoldenLine",
@@ -701,6 +701,11 @@
             "source": "http://www.hulu.com/press/assets"
         },
         {
+            "title": "ICQ",
+            "hex": "7EBD00",
+            "source": "https://en.wikipedia.org/wiki/File:ICQ.svg"
+        },
+        {
             "title": "iFixit",
             "hex": "0071CE",
             "source": "https://www.ifixit.com/"
@@ -801,6 +806,11 @@
             "source": "https://github.com/keybase/client/tree/master/media/logos"
         },
         {
+            "title": "KeyCDN",
+            "hex": "3686BE",
+            "source": "https://www.keycdn.com/logos"
+        },
+        {
             "title": "Khan Academy",
             "hex": "9DB63B",
             "source": "https://khanacademy.zendesk.com/hc/en-us/articles/202483630-Press-room"
@@ -887,8 +897,8 @@
         },
         {
             "title": "Macy’s",
-            "hex": "E11A2B",
-            "source": "http://macys.com"
+            "hex": "E21A2C",
+            "source": "http://www.macysinc.com/press-room/logo-photo-gallery/logos-macys-inc/default.aspx"
         },
         {
             "title": "Magento",
@@ -1001,6 +1011,11 @@
             "source": "https://getmonero.org"
         },
         {
+            "title": "MongoDB",
+            "hex": "47A248",
+            "source": "https://www.mongodb.com/pressroom"
+        },
+        {
             "title": "Monkey tie",
             "hex": "FFC619",
             "source": "https://www.monkey-tie.com/presse"
@@ -1029,6 +1044,11 @@
             "title": "MySQL",
             "hex": "4479A1",
             "source": "https://www.mysql.com/about/legal/logos.html"
+        },
+        {
+            "title": "Neo4j",
+            "hex": "008CC1",
+            "source": "https://neo4j.com/style-guide/"
         },
         {
             "title": "Netflix",
@@ -1127,8 +1147,8 @@
         },
         {
             "title": "Patreon",
-            "hex": "E6461A",
-            "source": "https://worldvectorlogo.com/logo/patreon"
+            "hex": "F96854",
+            "source": "https://www.patreon.com/brand/downloads"
         },
         {
             "title": "PayPal",
@@ -1252,7 +1272,7 @@
         },
         {
             "title": "Raspberry Pi",
-            "hex": "C7053D",
+            "hex": "C51A4A",
             "source": "https://www.raspberrypi.org/trademark-rules"
         },
         {
@@ -1274,6 +1294,11 @@
             "title": "Reddit",
             "hex": "FF4500",
             "source": "https://worldvectorlogo.com/logo/reddit-2"
+        },
+        {
+            "title": "Redis",
+            "hex": "D82C20",
+            "source": "https://redis.io/images/redis-logo.svg"
         },
         {
             "title": "Redux",
@@ -1344,6 +1369,11 @@
             "title": "Server Fault",
             "hex": "E7282D",
             "source": "http://stackoverflow.com/company/logos"
+        },
+        {
+            "title": "Shazam",
+            "hex": "0088FF",
+            "source": "https://brandfolder.com/shazam"
         },
         {
             "title": "Shopify",
@@ -1537,7 +1567,7 @@
         },
         {
             "title": "Swarm",
-            "hex": "FBB631",
+            "hex": "FFA633",
             "source": "https://foursquare.com/about/logos"
         },
         {
@@ -1582,8 +1612,8 @@
         },
         {
             "title": "Toggl",
-            "hex": "C5000B",
-            "source": "https://blog.toggl.com/media-kit/"
+            "hex": "E01B22",
+            "source": "https://toggl.com/media-toolkit"
         },
         {
             "title": "Topcoder",
@@ -1689,6 +1719,11 @@
             "title": "Viber",
             "hex": "7C529E",
             "source": "http://www.viber.com/en/media-kit"
+        },
+        {
+            "title": "Vim",
+            "hex": "019733",
+            "source": "https://commons.wikimedia.org/wiki/File:Vimlogo.svg"
         },
         {
             "title": "Vimeo",

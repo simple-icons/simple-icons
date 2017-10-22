@@ -1,10 +1,26 @@
-# Simple Icons
-
-Free SVG icons for popular brands, started by [Dan Leech](https://twitter.com/bathtype). [See them all on one page at **simpleicons.org**](https://simpleicons.org). Contributions, corrections & requests can be made on GitHub.
+<p align="center">
+<a href="https://simpleicons.org/">
+<img src="https://simpleicons.org/icons/simpleicons.svg" alt="Simple Icons" width=64 height=64>
+</a>
+<h3 align="center">Simple Icons</h3>
+<p align="center">
+Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+</p>
 
 ## Usage
 
+### General Usage
+
 Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the icon you want, and the download should start automatically.
+
+### CDN Usage
+
+Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+
+```html
+<img width="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@1.2.7/icons/stackoverflow.svg" />
+<img width="32" width="32" src="https://unpkg.com/simple-icons@1.2.7/icons/stackoverflow.svg" />
+```
 
 ### Node Usage
 
@@ -30,3 +46,8 @@ console.log(simpleIcons['Google+']);
 }
 */
 ```
+
+## Status
+
+[![Build Status](https://img.shields.io/travis/simple-icons/simple-icons/develop.svg)](https://travis-ci.org/simple-icons/simple-icons)
+[![npm version](https://img.shields.io/npm/v/simple-icons.svg)](https://www.npmjs.com/package/simple-icons)
