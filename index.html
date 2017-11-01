@@ -585,16 +585,51 @@
 
             function search(value) {
                 var hiddenCounter = 0,
-                    value = normalizeSearchTerm(value);
+                    query = normalizeSearchTerm(value);
 
-                icons.forEach(function(e, i) {
-                    if (e.indexOf(value) > -1) {
-                        $icons[i].classList.remove('hidden');
-                    } else {
-                        hiddenCounter++;
-                        $icons[i].classList.add('hidden');
+                icons.map(function(icon, iconIndex) {
+                    var letters = query.split(''),
+                        indexes = [],
+                        index = 0;
+
+                    if (icon === query) {
+                        return {element: $icons[iconIndex], score: 1};
                     }
-                })
+
+                    for (var i = 0; i < letters.length; i++) {
+                        var letter = letters[i];
+                        index = icon.indexOf(letter, index);
+
+                        if (index === -1) {
+                            $icons[iconIndex].classList.add('hidden');
+                            return null;
+                        }
+
+                        indexes.push(index);
+                        index++;
+                    }
+
+                    return {
+                        element: $icons[iconIndex],
+                        score: indexes.reduce(function(a, b) {
+                            return a + b;
+                        }, 2)
+                    };
+                }).filter(function(item) {
+                    return item !== null;
+                }).sort(function(a, b) {
+                    return a.score - b.score;
+                }).forEach(function(item, index) {
+                    item.element.classList.remove('hidden');
+
+                    if (query !== '') {
+                        // Order according to relevance (i.e. score) if there is a query
+                        item.element.style.order = index;
+                    } else {
+                        // Use color-based order if there is no query
+                        item.element.style.removeProperty('order');
+                    }
+                });
 
                 $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
             }
