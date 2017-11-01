@@ -584,6 +584,17 @@
                 };
             }
 
+            // Get any parameter from the URL's search section (location.search).
+            // see
+            //   - https://davidwalsh.name/query-string-javascript
+            //   - https://github.com/WebReflection/url-search-params
+            function getUrlParameter(parameter) {
+                name = parameter.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
             function search(value) {
                 var hiddenCounter = 0,
                     value = normalizeSearchTerm(value);
@@ -606,7 +617,7 @@
 
             document.addEventListener('DOMContentLoaded', function() {
                 // Load search query if present
-                var query = new URLSearchParams(window.location.search).get(queryParameter);
+                var query = getUrlParameter(queryParameter);
                 if (query !== null) {
                     $search.classList.add('search--active');
                     $searchInput.value = query;
