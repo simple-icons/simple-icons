@@ -536,12 +536,13 @@
     {% endfor %}
     <script type="text/javascript">
         (function(document) {
-            var icons        = [{{ allIconNames }}].map(normalizeSearchTerm),
-                $grid        = document.querySelector('.grid'),
-                $icons       = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
-                $search      = document.querySelector('.search'),
-                $searchClose = $search.querySelector('.search__close'),
-                $searchInput = $search.querySelector('input');
+            var icons          = [{{ allIconNames }}].map(normalizeSearchTerm),
+                queryParameter = 'q',
+                $grid          = document.querySelector('.grid'),
+                $icons         = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
+                $search        = document.querySelector('.search'),
+                $searchClose   = $search.querySelector('.search__close'),
+                $searchInput   = $search.querySelector('input');
 
             // Remove the "disabled" attribute from the search input
             $searchInput.setAttribute('title', 'Search Simple Icons');
@@ -583,6 +584,17 @@
                 };
             }
 
+            // Get any parameter from the URL's search section (location.search).
+            // see
+            //   - https://davidwalsh.name/query-string-javascript
+            //   - https://github.com/WebReflection/url-search-params
+            function getUrlParameter(parameter) {
+                name = parameter.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
             function search(value) {
                 var hiddenCounter = 0,
                     value = normalizeSearchTerm(value);
@@ -603,14 +615,25 @@
                 return value.toLowerCase().replace(/ /g, '');
             }
 
+            document.addEventListener('DOMContentLoaded', function() {
+                // Load search query if present
+                var query = getUrlParameter(queryParameter);
+                if (query !== null) {
+                    $search.classList.add('search--active');
+                    $searchInput.value = query;
+                    search(query);
+                }
+            });
             $search.addEventListener('input', debounce(function(e) {
                 e.preventDefault();
 
                 var value = e.target.value;
                 if (value) {
                     $search.classList.add('search--active');
+                    window.history.replaceState(null, '', '?' + queryParameter + '=' + value);
                 } else {
                     $search.classList.remove('search--active');
+                    window.history.replaceState(null, '', '/');
                 }
                 search(value);
             }, 50), false);
@@ -619,6 +642,7 @@
 
                 $searchInput.value = '';
                 $search.classList.remove('search--active');
+                window.history.replaceState(null, '', '/');
                 search('');
             }, false);
         })( document );
