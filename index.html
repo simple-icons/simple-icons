@@ -653,7 +653,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 // Load search query if present
                 var query = getUrlParameter(queryParameter);
-                if (query !== null) {
+                if (query) {
                     $search.classList.add('search--active');
                     $searchInput.value = query;
                     search(query);
