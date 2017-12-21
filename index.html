@@ -276,6 +276,8 @@
         }
 
         .search {
+            display: flex;
+            align-items: center;
             margin: 1rem 1.5rem;
             text-align: center;
         }
@@ -318,6 +320,21 @@
         }
         .search--active input {
             padding-right: 32px;
+        }
+
+        .sort-btn {
+            cursor: pointer;
+            margin-left: .5rem;
+            opacity: .5;
+        }
+        .sort-btn.active {
+            opacity: 1;
+        }
+        .sort-btn:hover {
+            opacity: .8;
+        }
+        .sort-btn:first-of-type {
+            margin-left: 1rem;
         }
 
         .grid {
@@ -492,6 +509,9 @@
                 <div class="search__close"><span>&times;</span></div>
                 <input type="text" placeholder="Search by brand …" title="Search not available when JavaScript is disabled" disabled />
             </div>
+
+            <svg id="test-color" class="sort-btn active" aria-labelledby="sort-color" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="sort-color">Sort colors</title><path d="M12.22 10.286h6c.125 0 .228-.04.308-.12a.416.416 0 0 0 .121-.308V7.286a.416.416 0 0 0-.121-.308.417.417 0 0 0-.308-.12h-6a.417.417 0 0 0-.308.12.42.42 0 0 0-.12.308v2.572c0 .125.04.228.12.308.08.08.183.12.308.12zM12.22 3.428h3.429c.125 0 .229-.04.308-.12a.414.414 0 0 0 .12-.308V.429A.414.414 0 0 0 15.648 0H12.22a.418.418 0 0 0-.308.121.42.42 0 0 0-.121.308V3c0 .125.04.228.121.308.08.08.183.12.308.12zM9.22 18.856H6.648V.429a.417.417 0 0 0-.12-.308A.418.418 0 0 0 6.22 0H3.648a.416.416 0 0 0-.428.428v18.428H.648a.398.398 0 0 0-.402.269c-.071.169-.04.326.094.469l4.285 4.285a.482.482 0 0 0 .309.121c.116 0 .219-.04.309-.121l4.271-4.271a.5.5 0 0 0 .134-.321.424.424 0 0 0-.12-.31.418.418 0 0 0-.308-.121zM23.671 20.692a.421.421 0 0 0-.308-.121H12.22c-.125 0-.228.041-.308.121s-.12.183-.12.308v2.571a.413.413 0 0 0 .428.429h11.144a.412.412 0 0 0 .428-.429V21a.414.414 0 0 0-.121-.308zM12.22 17.144h8.571a.422.422 0 0 0 .309-.121.422.422 0 0 0 .121-.309v-2.571a.418.418 0 0 0-.121-.308.421.421 0 0 0-.309-.12H12.22a.417.417 0 0 0-.308.12.417.417 0 0 0-.12.308v2.571c0 .125.04.229.12.309.08.08.183.121.308.121z"/></g></svg>
+            <svg id="test-alphabetically" class="sort-btn" aria-labelledby="sort-alphabetically" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="sort-alphabetically">Sort alphabetically</title><path d="M10.097 18.857H7.525V.429A.414.414 0 0 0 7.097 0H4.525a.414.414 0 0 0-.429.429v18.429H1.525c-.196 0-.331.089-.402.268-.072.17-.04.326.094.469l4.286 4.286a.486.486 0 0 0 .308.119c.116 0 .219-.04.308-.12l4.272-4.272a.506.506 0 0 0 .134-.321.417.417 0 0 0-.428-.43zM20.102 22.474H16.78c-.188 0-.322.009-.402.026l-.188.026V22.5l.147-.147c.134-.16.228-.276.281-.348l4.941-7.099v-1.191h-7.594v3.066h1.607v-1.54h3.107c.16 0 .295-.014.401-.04a.841.841 0 0 0 .101-.007c.04-.004.069-.007.087-.007v.04l-.147.121c-.08.08-.175.2-.281.361l-4.94 7.086V24h7.821v-3.12h-1.62v1.594h.001zM21.977 8.866L18.896 0h-2.169l-3.081 8.866h-.937v1.419h3.843V8.866h-1.004l.63-1.929h3.254l.63 1.929h-1.004v1.419h3.856V8.866h-.937zm-5.358-3.402l.978-2.92c.036-.107.069-.236.101-.388s.047-.232.047-.241l.04-.268h.054c0 .036.009.125.026.268l.161.629.964 2.92h-2.371z"/></g></svg>
         </div>
         <ul class="grid">
             <li class="grid-item grid-item--ad">
@@ -499,24 +519,24 @@
             </li>
             {% for icon in iconsArray %}
                 {% assign iconArray = icon | split: "," %}
-                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}; order: {{ iconArray[7] }}">
+                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}" order="{{ iconArray[7] }}">
                     <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg" download>
                         {% assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
                         <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
                     </a>
-                    <p class="grid-item__subtitle">#{{ iconArray[4] }} - {{ iconArray[7] }}</p>
+                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
                 </li>
             {% endfor %}
             {% for icon in greyscaleIconsArray %}
                 {% assign iconArray = icon | split: "," %}
-                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}; order: {{ iconArray[7] }}">
+                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}" order="{{ iconArray[7] }}">
                     <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg" download>
                         {% assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
                         <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
                     </a>
-                    <p class="grid-item__subtitle">#{{ iconArray[4] }} - {{ iconArray[7] }}</p>
+                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
                 </li>
             {% endfor %}
         </ul>
@@ -543,7 +563,9 @@
                 $icons         = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
                 $search        = document.querySelector('.search'),
                 $searchClose   = $search.querySelector('.search__close'),
-                $searchInput   = $search.querySelector('input');
+                $searchInput   = $search.querySelector('input'),
+                $sortColor     = document.getElementById('test-color'),
+                $sortAlpha     = document.getElementById('test-alphabetically');
 
             // Remove the "disabled" attribute from the search input
             $searchInput.setAttribute('title', 'Search Simple Icons');
@@ -681,6 +703,19 @@
                 window.history.replaceState(null, '', '/');
                 search('');
             }, false);
+
+            $sortColor.addEventListener('click', function() {
+                $icons.forEach(icon => { icon.style.order = null; });
+
+                $sortColor.classList.add('active');
+                $sortAlpha.classList.remove('active');
+            });
+            $sortAlpha.addEventListener('click', function() {
+                $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
+
+                $sortAlpha.classList.add('active');
+                $sortColor.classList.remove('active');
+            });
         })( document );
     </script>
 </body>
