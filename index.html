@@ -36,11 +36,13 @@
         {% endcase %}
         {% unless forloop.last %}{% assign rgbString = rgbString | append: "," %}{% endunless %}
     {% endfor %}
+
     {% assign rgbArray = rgbString | split: "," %}
     {% assign rgbRed   = rgbArray[0] | times: 16 | plus: rgbArray[1] | divided_by: 255.0 | round: 2 %}
     {% assign rgbGreen = rgbArray[2] | times: 16 | plus: rgbArray[3] | divided_by: 255.0 | round: 2 %}
     {% assign rgbBlue  = rgbArray[4] | times: 16 | plus: rgbArray[5] | divided_by: 255.0 | round: 2 %}
     {% assign rgbMax = 0.0 %}
+
     {% if rgbRed > rgbMax %}
         {% assign rgbMax = rgbRed %}
     {% endif %}
@@ -105,18 +107,17 @@
         {% endif %}
         {% assign hslHue = hslHue | plus: 90.0 | modulo: 360.0 %}
     {% endif %}
+
     {% if hslSaturation < 10 %}
         {% assign hslLuminance = hslLuminance | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% else %}
         {% assign hslHue = hslHue | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% endif %}
 {% endfor %}
-{% assign iconsArray = iconsUnsortedString | split: ";" %}
-{% assign iconsArray = iconsArray | sort %}
-{% assign greyscaleIconsArray = greyscaleIconsUnsortedString | split: ";" %}
-{% assign greyscaleIconsArray = greyscaleIconsArray | sort | reverse %}
+{% assign iconsArray = iconsUnsortedString | split: ";" | sort %}
+{% assign greyscaleIconsArray = greyscaleIconsUnsortedString | split: ";" | sort | reverse %}
 
 <!doctype html>
 <html lang="en-gb">
@@ -498,24 +499,24 @@
             </li>
             {% for icon in iconsArray %}
                 {% assign iconArray = icon | split: "," %}
-                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}">
+                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}; order: {{ iconArray[7] }}">
                     <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg" download>
                         {% assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
                         <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
                     </a>
-                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
+                    <p class="grid-item__subtitle">#{{ iconArray[4] }} - {{ iconArray[7] }}</p>
                 </li>
             {% endfor %}
             {% for icon in greyscaleIconsArray %}
                 {% assign iconArray = icon | split: "," %}
-                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}">
+                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}; order: {{ iconArray[7] }}">
                     <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg" download>
                         {% assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" %}
                         {% include_relative {{ filePath }} %}
                         <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
                     </a>
-                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
+                    <p class="grid-item__subtitle">#{{ iconArray[4] }} - {{ iconArray[7] }}</p>
                 </li>
             {% endfor %}
         </ul>
