@@ -145,6 +145,7 @@ We use several labels to help organize and identify issues. You can find all lab
 | [good first issue](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue) | Issues we believe are simple and a good first stab at contributing to the project. |
 | [help wanted](https://github.com/simple-icons/simple-icons/labels/help%20wanted) | Issues we would like help from the community to resolve. |
 | [awaiting reply](https://github.com/simple-icons/simple-icons/labels/awaiting%20reply) | Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed. |
+| [icon outdated](https://github.com/simple-icons/simple-icons/labels/icon%20outdated) | Issues regarding icons that are outdated, this can be the SVG or color or both. |
 
 ## Building Locally
 
