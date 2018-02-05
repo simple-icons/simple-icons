@@ -1,6 +1,4 @@
-const dataFile = './_data/simple-icons.json';
-const data = require(dataFile);
-const fs = require('fs');
+const data = require('./_data/simple-icons.json');
 
 const icons = {};
 
