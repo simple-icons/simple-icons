@@ -18,8 +18,8 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img width="32" height="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/stackoverflow.svg" />
-<img width="32" height="32" src="https://unpkg.com/simple-icons@latest/icons/stackoverflow.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/stackoverflow.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/stackoverflow.svg" />
 ```
 
 ### Node Usage
