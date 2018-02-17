@@ -1,6 +1,11 @@
 # Contributing To Simple Icons
 
-Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below.
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
+
+1. Fork this repository
+1. Hack on a separate topic branch from the latest `develop`
+1. Commit and push to the topic branch
+1. Make a pull request
 
 ## Table of contents
 
