@@ -27,14 +27,13 @@ Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/packa
 The icons are also available through our npm package. To install, simply run:
 
 ```
-$ npm install simple-icons
+$ npm install --save simple-icons
 ```
 
-The API can then be used as follows:
+In a NodeJS environment the API can be used as follows:
 
 ```javascript
 const simpleIcons = require('simple-icons');
-
 console.log(simpleIcons['Google+']);
 
 /*
@@ -43,6 +42,22 @@ console.log(simpleIcons['Google+']);
     hex: 'DC4E41',
     source: 'https://developers.google.com/+/branding-guidelines',
     svg: '<svg aria-labelledby="simpleicons-googleplus-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
+}
+*/
+```
+
+In a browser the API can be used as follows:
+
+```javascript
+const simpleIcons = require('simple-icons');
+console.log(simpleIcons['Google+']);
+
+/*
+{
+    title: 'Google+',
+    hex: 'DC4E41',
+    source: 'https://developers.google.com/+/branding-guidelines',
+    svg: 'https://unpkg.com/simple-icons@latest/icons/googleplus.svg'
 }
 */
 ```
