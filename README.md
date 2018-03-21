@@ -47,9 +47,11 @@ console.log(simpleIcons['Google+']);
 */
 ```
 
-### WordPress Usage
+## Third Party Extensions
 
-Icons are also available on WordPress through a simple plugin, which you can find [here](https://wordpress.org/plugins/simple-icons/).
+### WordPress
+
+Icons are also available on WordPress through a simple plugin created by [@tjtaylo](https://github.com/tjtaylo), which you can find [here](https://wordpress.org/plugins/simple-icons/).
 
 ## Status
 
