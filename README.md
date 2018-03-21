@@ -47,6 +47,10 @@ console.log(simpleIcons['Google+']);
 */
 ```
 
+### WordPress Usage
+
+Icons are also available on WordPress through a simple plugin, which you can find [here](https://wordpress.org/plugins/simple-icons/).
+
 ## Status
 
 [![Build Status](https://img.shields.io/travis/simple-icons/simple-icons/develop.svg)](https://travis-ci.org/simple-icons/simple-icons)
