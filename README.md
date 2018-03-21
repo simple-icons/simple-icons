@@ -47,6 +47,12 @@ console.log(simpleIcons['Google+']);
 */
 ```
 
+## Third Party Extensions
+
+### WordPress
+
+Icons are also available on WordPress through a simple plugin created by [@tjtaylo](https://github.com/tjtaylo), which you can find [here](https://wordpress.org/plugins/simple-icons/).
+
 ## Status
 
 [![Build Status](https://img.shields.io/travis/simple-icons/simple-icons/develop.svg)](https://travis-ci.org/simple-icons/simple-icons)
