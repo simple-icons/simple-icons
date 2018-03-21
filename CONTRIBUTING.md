@@ -39,7 +39,7 @@ Most of the icons and brand colors on SimpleIcons have been derived from officia
 Official high quality brand logos and brand colors can usually be found in the following locations:
 
 1. About pages, Press pages, Media Kits, and Brand Guidelines.
-1. Website headers
+1. Website headers (you can use [svg-grabber](https://chrome.google.com/webstore/detail/svg-grabber-get-all-the-s/ndakggdliegnegeclmfgodmgemdokdmg) for Chrome)
 1. Favicons
 1. Wikimedia (which should provide a source)
 
