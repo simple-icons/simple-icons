@@ -140,6 +140,10 @@ Here is the object for the Adobe Photoshop icon as an example:
 },
 ```
 
+### 7. Create a pull request
+
+Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch.
+
 ## Labeling Issues
 
 We use several labels to help organize and identify issues. You can find all labels [here](https://github.com/simple-icons/simple-icons/labels). Here's what they represent and how we use them:
