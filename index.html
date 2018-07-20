@@ -5,7 +5,7 @@
 {% assign greyscaleIconsUnsortedString = "" %}
 {% for icon in site.data.simple-icons.icons %}
     {% assign title = icon.title %}
-    {% assign filename = icon.title | replace: "+", "plus" | replace: " ", "" | replace: ".", "" | replace: "-", "" | replace: "!", "" | replace: "’", "" | downcase %}
+    {% assign filename = icon.title | replace: "+", "plus" | replace: " ", "" | replace: ".", "-dot-" | replace: "!", "" | replace: "’", "" | downcase %}
     {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
