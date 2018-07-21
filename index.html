@@ -5,7 +5,16 @@
 {% assign greyscaleIconsUnsortedString = "" %}
 {% for icon in site.data.simple-icons.icons %}
     {% assign title = icon.title %}
-    {% assign filename = icon.title | replace: "+", "plus" | replace: " ", "" | replace: ".", "-dot-" | replace: "!", "" | replace: "’", "" | downcase %}
+    {% assign filename = icon.title %}
+    {% assign _splitFilename = filename | split: "" %}
+    {% if _splitFilename.first == "." %}
+        {% assign filename = filename | replace_first: ".", "dot-" %}
+    {% endif %}
+    {% if _splitFilename.last == "." %}
+        {% assign _filenameLenMin1 = filename | size | minus: 1 %}
+        {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-dot" %}
+    {% endif %}
+    {% assign filename = filename | replace: "+", "plus" | replace: " ", "" | replace: ".", "-dot-" | replace: "!", "" | replace: "’", "" | downcase %}
     {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
