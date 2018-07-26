@@ -7,7 +7,10 @@ const icons = {};
 data.icons.forEach(i => {
   const filename = i.title.toLowerCase()
     .replace(/\+/g, "plus")
-    .replace(/[ .\-!’]/g, '');
+    .replace(/^\./, "dot-")
+    .replace(/\.$/, "-dot")
+    .replace(/\./g, "-dot-")
+    .replace(/[ !’]/g, '');
   i.svg = fs.readFileSync(`${__dirname}/icons/${filename}.svg`, 'utf8');
   icons[i.title] = i
 });
