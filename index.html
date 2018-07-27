@@ -177,7 +177,12 @@
     </script>
     <script>
       function normalizeSearchTerm(value) {
-          return value.toLowerCase().replace(/ /g, '');
+          return value.toLowerCase()
+              .replace(/\+/g, "plus")
+              .replace(/^\./, "dot-")
+              .replace(/\.$/, "-dot")
+              .replace(/\./g, "-dot-")
+              .replace(/[ !’]/g, '');
       }
       var icons = [{{ allIconNames }}].map(normalizeSearchTerm);
     </script>
