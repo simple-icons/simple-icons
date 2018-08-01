@@ -1,19 +1,35 @@
-language: node_js
-node_js:
-  - "6"
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - "6"
 
-script:
-  - npm run jsonlint
-  - jekyll build
+      script:
+        - npm run jsonlint
 
-notifications:
-  email:
-    on_success: never
-    on_failure: change
+      notifications:
+        email:
+          on_success: never
+          on_failure: change
 
-deploy:
-  provider: npm
-  email: "johanringmann@gmail.com"
-  api_key: "$NPM_KEY"
-  on:
-    branch: master
+      deploy:
+        provider: npm
+        email: "johanringmann@gmail.com"
+        api_key: "$NPM_KEY"
+        on:
+          branch: master
+
+    - language: ruby
+      rvm:
+        - 2.4.1
+
+      install:
+        - gem install jekyll
+
+      script:
+        - jekyll build
+
+      notifications:
+        email:
+          on_success: never
+          on_failure: change
