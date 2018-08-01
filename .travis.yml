@@ -4,6 +4,7 @@ node_js:
 
 script:
   - npm run jsonlint
+  - jekyll build
 
 notifications:
   email:
