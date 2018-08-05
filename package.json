@@ -23,6 +23,6 @@
   },
   "scripts": {
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
-    "svglint": "svglint --config scripts/svglintrc.js icons/* --ci"
+    "svglint": "svglint icons/* --ci"
   }
 }
