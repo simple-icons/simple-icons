@@ -19,7 +19,7 @@
   "license": "CC0",
   "devDependencies": {
     "jsonlint2": "^1.7.1",
-    "svglint": "^1.0.0"
+    "svglint": "^1.0.1"
   },
   "scripts": {
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
