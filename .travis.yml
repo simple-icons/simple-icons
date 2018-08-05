@@ -6,6 +6,7 @@ matrix:
 
       script:
         - npm run jsonlint
+        - npm run svglint
 
       notifications:
         email:
