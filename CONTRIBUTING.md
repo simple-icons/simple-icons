@@ -80,7 +80,8 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Run the following command `svgo -p 3 icon.svg icon.min.svg`
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.
-  * Set the precision to 3, leave the remaining settings at the default values.
+  * Set the precision to 3.
+  * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
   * Click the download button.
 
 ### 4. Annotate The Icon
