@@ -21,6 +21,21 @@ module.exports = {
                 "rule::selector": "svg > title",
                 "rule::whitelist": true,
             }
+        ],
+        custom: [
+            // ensure that aria-labelledby and id match
+            function checkValidAria(reporter, $, ast) {
+                const labelledByValue = $.find("svg").attr("aria-labelledby");
+                const $title = $.find("svg > title");
+                const titleIdValue = $title.attr("id");
+                if (labelledByValue !== titleIdValue) {
+                    reporter.error(
+                        `'aria-labelledby' and 'id' should match, were '${labelledByValue}' and '${titleIdValue}'`,
+                        $title[0],
+                        ast
+                    );
+                }
+            }
         ]
     }
 };
