@@ -24,7 +24,7 @@
   "scripts": {
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
-    "prepublish": "node scripts/prepublish.js",
+    "prepublishOnly": "node scripts/prepublish.js",
     "postpublish": "rm icons/*.js && rm index.js"
   }
 }
