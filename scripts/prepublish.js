@@ -11,7 +11,7 @@ const dataFile = "../_data/simple-icons.json";
 const indexFile = `${__dirname}/../index.js`;
 const iconsDir = `${__dirname}/../icons`;
 const data = require(dataFile);
-const fs = require('fs');
+const fs = require("fs");
 
 const { titleToFilename } = require("./utils");
 
