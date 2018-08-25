@@ -25,6 +25,6 @@
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
     "prepublishOnly": "node scripts/prepublish.js",
-    "postpublish": "rm icons/*.js && rm index.js"
+    "postpublish": "rm icons/*.js index.js"
   }
 }
