@@ -9,6 +9,6 @@ module.exports = {
             .replace(/^\./, "dot-")
             .replace(/\.$/, "-dot")
             .replace(/\./g, "-dot-")
-            .replace(/[ !’]/g, '')
+            .replace(/[ !’]/g, "")
     )
 }
