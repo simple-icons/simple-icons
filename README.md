@@ -48,7 +48,7 @@ console.log(simpleIcons['Google+']);
 ```
 
 Alternatively you can import the needed icons individually.
-This is useful if you are e.g. compiling your code with webpack and therefore have to be mindful of your package size.
+This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```js
 const googleplus = require('simple-icons/icons/googleplus');
