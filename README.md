@@ -47,6 +47,23 @@ console.log(simpleIcons['Google+']);
 */
 ```
 
+Alternatively you can import the needed icons individually.
+This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
+
+```js
+const googleplus = require('simple-icons/icons/googleplus');
+
+console.log(googleplus);
+/*
+{
+    title: 'Google+',
+    hex: 'DC4E41',
+    source: 'https://developers.google.com/+/branding-guidelines',
+    svg: '<svg aria-labelledby="simpleicons-googleplus-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
+}
+*/
+```
+
 ## Third Party Extensions
 
 ### WordPress
