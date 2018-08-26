@@ -16,14 +16,14 @@ const fs = require("fs");
 const { titleToFilename } = require("./utils");
 
 const icons = {};
-data.icons.forEach(i => {
-    const filename = titleToFilename(i.title);
-    i.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
-    icons[i.title] = i;
+data.icons.forEach(icon => {
+    const filename = titleToFilename(icon.title);
+    icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
+    icons[icon.title] = icon;
     // write the static .js file for the icon
     fs.writeFileSync(
         `${iconsDir}/${filename}.js`,
-        `module.exports=${JSON.stringify(i)};`
+        `module.exports=${JSON.stringify(icon)};`
     );
 });
 
