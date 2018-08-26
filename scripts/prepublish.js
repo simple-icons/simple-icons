@@ -23,9 +23,9 @@ data.icons.forEach(i => {
     // write the static .js file for the icon
     fs.writeFileSync(
         `${iconsDir}/${filename}.js`,
-        `module.exports = ${JSON.stringify(i)};`
+        `module.exports=${JSON.stringify(i)};`
     );
 });
 
 // write our generic index.js
-fs.writeFileSync(indexFile, `module.exports = ${JSON.stringify(icons)};`);
+fs.writeFileSync(indexFile, `module.exports=${JSON.stringify(icons)};`);
