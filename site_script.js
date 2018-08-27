@@ -96,14 +96,19 @@
     }).sort(function(a, b) {
       return a.score - b.score;
     }).forEach(function(item, index) {
-      item.element.classList.remove('hidden');
+      var element = item.element;
+      element.classList.remove('hidden');
 
       if (query !== '') {
         // Order according to relevance (i.e. score) if there is a query
-        item.element.style.order = index;
+        element.style.order = index;
       } else {
         // Use color-based order if there is no query
-        item.element.style.removeProperty('order');
+        if ($sortColor.classList.contains('active')) {
+          element.style.order = null;
+        } else {
+          element.style.order = element.getAttribute('order');
+        }
       }
     });
 
@@ -149,12 +154,16 @@
   }, false);
 
   $sortColor.addEventListener('click', function() {
+    if ($sortColor.hasAttribute('disabled')) return;
+
     $icons.forEach(icon => { icon.style.order = null; });
 
     $sortColor.classList.add('active');
     $sortAlpha.classList.remove('active');
   });
   $sortAlpha.addEventListener('click', function() {
+    if ($sortAlpha.hasAttribute('disabled')) return;
+
     $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
 
     $sortAlpha.classList.add('active');
