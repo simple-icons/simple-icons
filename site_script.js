@@ -108,8 +108,7 @@
     $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
     if (query === '') {
       if ($sortRelevance.classList.contains('active')) {
-        previousOrder.classList.add('active');
-
+        selectSort(previousOrder);
         sort();
       }
 
@@ -117,11 +116,7 @@
       previousQuery = null;
     } else {
       if (previousQuery === null) {
-        $sortRelevance.classList.add('active');
-        $sortAlpha.classList.remove('active');
-        $sortColor.classList.remove('active');
-        $sortRelevance.removeAttribute('display');
-
+        selectSort($sortRelevance);
         sort();
       }
 
@@ -135,6 +130,20 @@
       $icons.forEach(icon => { icon.style.order = null; });
     } else if ($sortRelevance.classList.contains('active')) {
       $icons.forEach(icon => { icon.style.order = icon.getAttribute('data-relevance'); });
+    }
+  }
+  function selectSort(selected) {
+    selected.classList.add('active');
+
+    var options = [$sortColor, $sortAlpha, $sortRelevance];
+    for (var option of options.filter(option => option !== selected)) {
+      option.classList.remove('active');
+    }
+
+    if (selected !== $sortRelevance) {
+      previousOrder = selected;
+    } else {
+      $sortRelevance.removeAttribute('display');
     }
   }
 
@@ -170,28 +179,15 @@
   }, false);
 
   $sortColor.addEventListener('click', function() {
-    previousOrder = $sortColor;
-
-    $sortColor.classList.add('active');
-    $sortAlpha.classList.remove('active');
-    $sortRelevance.classList.remove('active');
-
+    selectSort($sortColor);
     sort();
   });
   $sortAlpha.addEventListener('click', function() {
-    previousOrder = $sortAlpha;
-
-    $sortAlpha.classList.add('active');
-    $sortColor.classList.remove('active');
-    $sortRelevance.classList.remove('active');
-
+    selectSort($sortAlpha);
     sort();
   });
   $sortRelevance.addEventListener('click', function() {
-    $sortRelevance.classList.add('active');
-    $sortAlpha.classList.remove('active');
-    $sortColor.classList.remove('active');
-
+    selectSort($sortRelevance);
     sort();
   });
 })( document );
