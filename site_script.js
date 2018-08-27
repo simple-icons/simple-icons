@@ -103,7 +103,7 @@
         // Order according to relevance (i.e. score) if there is a query
         element.style.order = index;
       } else {
-        // Use color-based order if there is no query
+        // Restore icon order (color/alphabetically) when there is no query
         if ($sortColor.classList.contains('active')) {
           element.style.order = null;
         } else {
