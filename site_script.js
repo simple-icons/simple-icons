@@ -6,7 +6,8 @@
       $searchClose   = $search.querySelector('.search__close'),
       $searchInput   = $search.querySelector('input'),
       $sortColor     = document.getElementById('sort-color'),
-      $sortAlpha     = document.getElementById('sort-alphabetically');
+      $sortAlpha     = document.getElementById('sort-alphabetically'),
+      $sortRelevance = document.getElementById('sort-relevance');
 
   // Remove the "disabled" attribute from the search input
   $searchInput.setAttribute('title', 'Search Simple Icons');
@@ -114,11 +115,9 @@
 
     $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
     if (query === '') {
-      $sortColor.removeAttribute('disabled');
-      $sortAlpha.removeAttribute('disabled');
+      $sortRelevance.setAttribute('display', 'none');
     } else {
-      $sortColor.setAttribute('disabled', true);
-      $sortAlpha.setAttribute('disabled', true);
+      $sortRelevance.removeAttribute('display');
     }
   }
 
@@ -154,16 +153,12 @@
   }, false);
 
   $sortColor.addEventListener('click', function() {
-    if ($sortColor.hasAttribute('disabled')) return;
-
     $icons.forEach(icon => { icon.style.order = null; });
 
     $sortColor.classList.add('active');
     $sortAlpha.classList.remove('active');
   });
   $sortAlpha.addEventListener('click', function() {
-    if ($sortAlpha.hasAttribute('disabled')) return;
-
     $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
 
     $sortAlpha.classList.add('active');

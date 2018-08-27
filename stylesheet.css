@@ -170,40 +170,35 @@ a.share-button {
   margin-left: .5rem;
   opacity: .5;
 }
+.sort-btn.active {
+  opacity: 1;
+}
 .sort-btn:first-of-type {
   margin-left: 1rem;
 }
-.sort-btn:not([disabled]).active {
-  opacity: 1;
-}
 
-.sort-btn:not([disabled]):hover {
+.sort-btn:hover {
   opacity: 1;
 }
-.sort-btn:not([disabled]):hover path:first-of-type {
+.sort-btn:hover path:first-of-type {
   opacity: 0.8;
 }
 
-.sort-btn[disabled] {
-  cursor: not-allowed;
-  opacity: 0.4;
-}
-
-#sort-color:not([disabled]):hover path:nth-of-type(2) {
+#sort-color:hover path:nth-of-type(2) {
   fill: #E57373;
 }
-#sort-color:not([disabled]):hover path:nth-of-type(3) {
+#sort-color:hover path:nth-of-type(3) {
   fill: #F44336;
 }
-#sort-color:not([disabled]):hover path:nth-of-type(4) {
+#sort-color:hover path:nth-of-type(4) {
   fill: #D32F2F;
 }
-#sort-color:not([disabled]):hover path:nth-of-type(5) {
+#sort-color:hover path:nth-of-type(5) {
   fill: #B71C1C;
 }
 
-#sort-alphabetically:not([disabled]):hover path:nth-of-type(2),
-#sort-alphabetically:not([disabled]):hover path:nth-of-type(3) {
+#sort-alphabetically:hover path:nth-of-type(2),
+#sort-alphabetically:hover path:nth-of-type(3) {
   opacity: 1;
 }
 
