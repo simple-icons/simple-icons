@@ -1,7 +1,5 @@
 (function(document) {
-  var queryParameter = 'q',
-      previousQuery  = null,
-      $grid          = document.querySelector('.grid'),
+  var $grid          = document.querySelector('.grid'),
       $icons         = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
       $search        = document.querySelector('.search'),
       $searchClose   = $search.querySelector('.search__close'),
@@ -9,6 +7,10 @@
       $sortColor     = document.getElementById('sort-color'),
       $sortAlpha     = document.getElementById('sort-alphabetically'),
       $sortRelevance = document.getElementById('sort-relevance');
+
+  var queryParameter = 'q',
+      previousQuery  = null,
+      previousOrder  = $sortColor;
 
   // Remove the "disabled" attribute from the search input
   $searchInput.setAttribute('title', 'Search Simple Icons');
@@ -105,7 +107,10 @@
 
     $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
     if (query === '') {
-      // TODO: restore sort order if still on relevance
+      if ($sortRelevance.classList.contains('active')) {
+        previousOrder.classList.add('active');
+      }
+
       $sortRelevance.setAttribute('display', 'none');
       previousQuery = null;
     } else {
@@ -163,6 +168,8 @@
   }, false);
 
   $sortColor.addEventListener('click', function() {
+    previousOrder = $sortColor;
+
     $sortColor.classList.add('active');
     $sortAlpha.classList.remove('active');
     $sortRelevance.classList.remove('active');
@@ -170,6 +177,8 @@
     sort();
   });
   $sortAlpha.addEventListener('click', function() {
+    previousOrder = $sortAlpha;
+
     $sortAlpha.classList.add('active');
     $sortColor.classList.remove('active');
     $sortRelevance.classList.remove('active');
