@@ -1,5 +1,6 @@
 (function(document) {
   var queryParameter = 'q',
+      previousQuery  = null,
       $grid          = document.querySelector('.grid'),
       $icons         = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
       $search        = document.querySelector('.search'),
@@ -98,26 +99,35 @@
       return a.score - b.score;
     }).forEach(function(item, index) {
       var element = item.element;
+      element.setAttribute('data-relevance', index);
       element.classList.remove('hidden');
-
-      if (query !== '') {
-        // Order according to relevance (i.e. score) if there is a query
-        element.style.order = index;
-      } else {
-        // Restore icon order (color/alphabetically) when there is no query
-        if ($sortColor.classList.contains('active')) {
-          element.style.order = null;
-        } else {
-          element.style.order = element.getAttribute('order');
-        }
-      }
     });
 
     $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
     if (query === '') {
+      // TODO: restore sort order if still on relevance
       $sortRelevance.setAttribute('display', 'none');
+      previousQuery = null;
     } else {
-      $sortRelevance.removeAttribute('display');
+      if (previousQuery === null) {
+        $sortRelevance.classList.add('active');
+        $sortAlpha.classList.remove('active');
+        $sortColor.classList.remove('active');
+        $sortRelevance.removeAttribute('display');
+      }
+
+      previousQuery = query;
+    }
+
+    sort();
+  }
+  function sort() {
+    if ($sortAlpha.classList.contains('active')) {
+      $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
+    } else if ($sortColor.classList.contains('active')) {
+      $icons.forEach(icon => { icon.style.order = null; });
+    } else if ($sortRelevance.classList.contains('active')) {
+      $icons.forEach(icon => { icon.style.order = icon.getAttribute('data-relevance'); });
     }
   }
 
@@ -153,15 +163,24 @@
   }, false);
 
   $sortColor.addEventListener('click', function() {
-    $icons.forEach(icon => { icon.style.order = null; });
-
     $sortColor.classList.add('active');
     $sortAlpha.classList.remove('active');
+    $sortRelevance.classList.remove('active');
+
+    sort();
   });
   $sortAlpha.addEventListener('click', function() {
-    $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
-
     $sortAlpha.classList.add('active');
     $sortColor.classList.remove('active');
+    $sortRelevance.classList.remove('active');
+
+    sort();
+  });
+  $sortRelevance.addEventListener('click', function() {
+    $sortRelevance.classList.add('active');
+    $sortAlpha.classList.remove('active');
+    $sortColor.classList.remove('active');
+
+    sort();
   });
 })( document );
