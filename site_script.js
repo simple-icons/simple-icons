@@ -1,12 +1,12 @@
 (function(document) {
-  var $grid          = document.querySelector('.grid'),
-      $icons         = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
-      $search        = document.querySelector('.search'),
-      $searchClose   = $search.querySelector('.search__close'),
-      $searchInput   = $search.querySelector('input'),
-      $sortColor     = document.getElementById('sort-color'),
-      $sortAlpha     = document.getElementById('sort-alphabetically'),
-      $sortRelevance = document.getElementById('sort-relevance');
+  var $grid               = document.querySelector('.grid'),
+      $icons              = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
+      $search             = document.querySelector('.search'),
+      $searchClose        = $search.querySelector('.search__close'),
+      $searchInput        = $search.querySelector('input'),
+      $sortColor          = document.getElementById('sort-color'),
+      $sortAlphabetically = document.getElementById('sort-alphabetically'),
+      $sortRelevance      = document.getElementById('sort-relevance');
 
   var queryParameter = 'q',
       previousQuery  = null,
@@ -108,34 +108,32 @@
     $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
     if (query === '') {
       if ($sortRelevance.classList.contains('active')) {
-        selectSort(previousOrder);
-        sort();
+        selectSortingOrder(previousOrder);
       }
 
       $sortRelevance.setAttribute('display', 'none');
       previousQuery = null;
     } else {
       if (previousQuery === null) {
-        selectSort($sortRelevance);
-        sort();
+        selectSortingOrder($sortRelevance);
       }
 
       previousQuery = query;
     }
   }
   function sort() {
-    if ($sortAlpha.classList.contains('active')) {
-      $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
-    } else if ($sortColor.classList.contains('active')) {
+    if ($sortColor.classList.contains('active')) {
       $icons.forEach(icon => { icon.style.order = null; });
+    } else if ($sortAlphabetically.classList.contains('active')) {
+      $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
     } else if ($sortRelevance.classList.contains('active')) {
       $icons.forEach(icon => { icon.style.order = icon.getAttribute('data-relevance'); });
     }
   }
-  function selectSort(selected) {
+  function selectSortingOrder(selected) {
     selected.classList.add('active');
 
-    var options = [$sortColor, $sortAlpha, $sortRelevance];
+    var options = [$sortColor, $sortAlphabetically, $sortRelevance];
     for (var option of options.filter(option => option !== selected)) {
       option.classList.remove('active');
     }
@@ -145,6 +143,8 @@
     } else {
       $sortRelevance.removeAttribute('display');
     }
+
+    sort();
   }
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -179,15 +179,12 @@
   }, false);
 
   $sortColor.addEventListener('click', function() {
-    selectSort($sortColor);
-    sort();
+    selectSortingOrder($sortColor);
   });
-  $sortAlpha.addEventListener('click', function() {
-    selectSort($sortAlpha);
-    sort();
+  $sortAlphabetically.addEventListener('click', function() {
+    selectSortingOrder($sortAlphabetically);
   });
   $sortRelevance.addEventListener('click', function() {
-    selectSort($sortRelevance);
-    sort();
+    selectSortingOrder($sortRelevance);
   });
 })( document );
