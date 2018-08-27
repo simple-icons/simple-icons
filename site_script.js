@@ -109,6 +109,8 @@
     if (query === '') {
       if ($sortRelevance.classList.contains('active')) {
         previousOrder.classList.add('active');
+
+        sort();
       }
 
       $sortRelevance.setAttribute('display', 'none');
@@ -119,12 +121,12 @@
         $sortAlpha.classList.remove('active');
         $sortColor.classList.remove('active');
         $sortRelevance.removeAttribute('display');
+
+        sort();
       }
 
       previousQuery = query;
     }
-
-    sort();
   }
   function sort() {
     if ($sortAlpha.classList.contains('active')) {
