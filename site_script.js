@@ -108,6 +108,13 @@
     });
 
     $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
+    if (query === '') {
+      $sortColor.removeAttribute('disabled');
+      $sortAlpha.removeAttribute('disabled');
+    } else {
+      $sortColor.setAttribute('disabled', true);
+      $sortAlpha.setAttribute('disabled', true);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function() {
