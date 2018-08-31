@@ -1,16 +1,25 @@
-matrix:
+jobs:
   include:
-    - language: node_js
-      node_js:
-        - "6"
-
+    - stage: "Test"
+      name: "Lint"
+      language: node_js
+      node_js: 8
       script:
         - npm run jsonlint
+        - npm run svglint
+    - name: "Build website"
+      language: ruby
+      rvm: 2.4.1
+      install:
+        - gem install jekyll
+      script:
+        - jekyll build
 
-      notifications:
-        email:
-          on_success: never
-          on_failure: change
+    - stage: deploy
+      name: "NPM Package"
+      language: node_js
+      node_js: 8
+      if: branch = master
 
       deploy:
         provider: npm
@@ -19,17 +28,7 @@ matrix:
         on:
           branch: master
 
-    - language: ruby
-      rvm:
-        - 2.4.1
-
-      install:
-        - gem install jekyll
-
-      script:
-        - jekyll build
-
-      notifications:
-        email:
-          on_success: never
-          on_failure: change
+notifications:
+  email:
+    on_success: never
+    on_failure: change
