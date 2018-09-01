@@ -202,6 +202,10 @@ a.share-button {
   opacity: 1;
 }
 
+#sort-relevance:hover path:not(:nth-of-type(1)) {
+  fill: #fbc02d;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
