@@ -18,6 +18,7 @@
   "author": "Simple Icons Collaborators",
   "license": "CC0",
   "devDependencies": {
+    "jest": "^23.5.0",
     "jsonlint2": "^1.7.1",
     "svglint": "^1.0.2"
   },
@@ -25,6 +26,7 @@
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
     "prepublishOnly": "node scripts/prepublish.js",
-    "postpublish": "rm icons/*.js index.js"
+    "postpublish": "rm icons/*.js index.js",
+    "test": "jest"
   }
 }
