@@ -5,7 +5,10 @@
 {% assign greyscaleIconsUnsortedString = "" %}
 {% for icon in site.data.simple-icons.icons %}
     {% assign title = icon.title %}
+
     {% assign filename = icon.title %}
+
+    {% comment %} Replace a period by 'dot' {% endcomment %}
     {% assign _splitFilename = filename | split: "" %}
     {% if _splitFilename.first == "." %}
         {% assign filename = filename | replace_first: ".", "dot-" %}
@@ -14,7 +17,18 @@
         {% assign _filenameLenMin1 = filename | size | minus: 1 %}
         {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-dot" %}
     {% endif %}
-    {% assign filename = filename | replace: "+", "plus" | replace: " ", "" | replace: ".", "-dot-" | replace: "!", "" | replace: "’", "" | downcase %}
+
+    {% comment %} Replace an ampersand by 'and' {% endcomment %}
+    {% if _splitFilename.first == "&" %}
+        {% assign filename = filename | replace_first: "&", "and-" %}
+    {% endif %}
+    {% if _splitFilename.last == "&" %}
+        {% assign _filenameLenMin1 = filename | size | minus: 1 %}
+        {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-and" %}
+    {% endif %}
+
+    {% assign filename = filename | replace: "+", "plus" | replace: " ", "" | replace: ".", "-dot-" |  replace: "&", "-and-" | replace: "!", "" | replace: "’", "" | downcase %}
+
     {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
