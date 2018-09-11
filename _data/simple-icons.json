@@ -126,6 +126,11 @@
             "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
         },
         {
+            "title": "Apple Pay",
+            "hex": "000000",
+            "source": "https://developer.apple.com/apple-pay/marketing/"
+        },
+        {
             "title": "Arch Linux",
             "hex": "1793D1",
             "source": "https://www.archlinux.org/art/"
@@ -154,6 +159,11 @@
             "title": "Atom",
             "hex": "66595C",
             "source": "https://commons.wikimedia.org/wiki/File:Atom_editor_logo.svg"
+        },
+        {
+            "title": "AT&T",
+            "hex": "00A8E0",
+            "source": "https://commons.wikimedia.org/wiki/File:AT%26T_logo_2016.svg"
         },
         {
             "title": "Aurelia",
@@ -234,6 +244,11 @@
             "title": "Blogger",
             "hex": "FF5722",
             "source": "https://www.blogger.com"
+        },
+        {
+            "title": "Boost",
+            "hex": "F69220",
+            "source": "https://www.boostmobile.com/"
         },
         {
             "title": "Bootstrap",
@@ -354,6 +369,11 @@
             "title": "Coursera",
             "hex": "2A73CC",
             "source": "https://about.coursera.org/press"
+        },
+        {
+            "title": "Adobe Creative Cloud",
+            "hex": "D41818",
+            "source": "https://www.adobe.io/apis/creativecloud/creativesdk/docs/websdk/adobe-creative-sdk-for-web_master/branding-guidelines.html"
         },
         {
             "title": "CSS3",
@@ -486,6 +506,11 @@
             "source": "https://www.drupal.org/drupalorg/style-guide/colors"
         },
         {
+            "title": "DTube",
+            "hex": "FF0000",
+            "source": "https://about.d.tube/mediakit.html"
+        },
+        {
             "title": "eBay",
             "hex": "E53238",
             "source": "https://go.developer.ebay.com/logos"
@@ -591,6 +616,11 @@
             "source": "https://foursquare.com/about/logos"
         },
         {
+            "title": "Framer",
+            "hex": "0055FF",
+            "source": "https://framer.com"
+        },
+        {
             "title": "freeCodeCamp",
             "hex": "006400",
             "source": "https://freecodecamp.com"
@@ -672,7 +702,7 @@
         },
         {
             "title": "GoldenLine",
-            "hex": "FBBF00",
+            "hex": "F1B92B",
             "source": "http://www.goldenline.pl"
         },
         {
@@ -746,6 +776,11 @@
             "source": "https://automattic.com/press"
         },
         {
+            "title": "Groupon",
+            "hex": "53A318",
+            "source": "https://brandplaybook.groupon.com/guidelines/logo/"
+        },
+        {
             "title": "Gulp",
             "hex": "DA4648",
             "source": "https://github.com/gulpjs/artwork/blob/master/gulp.svg"
@@ -801,6 +836,11 @@
             "source": "https://www.atlassian.com/company/news/press-kit"
         },
         {
+            "title": "HockeyApp",
+            "hex": "009EE1",
+            "source": "https://hockeyapp.net/brand-guidelines/"
+        },
+        {
             "title": "homify",
             "hex": "7DCDA3",
             "source": "http://lsg.homify.com/"
@@ -829,6 +869,11 @@
             "title": "Humble Bundle",
             "hex": "CC2929",
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
+        },
+        {
+            "title": "IconJar",
+            "hex": "16A5F3",
+            "source": "https://geticonjar.com/press-kit/"
         },
         {
             "title": "ICQ",
@@ -1184,6 +1229,11 @@
             "title": "Minutemailer",
             "hex": "3ABFE6",
             "source": "https://minutemailer.com/press"
+        },
+        {
+            "title": "Mix",
+            "hex": "FF8126",
+            "source": "https://mix.com"
         },
         {
             "title": "Mixcloud",
@@ -1591,6 +1641,11 @@
             "source": "https://www.rust-lang.org/"
         },
         {
+            "title": "Safari",
+            "hex": "000000",
+            "source": "https://images.techhive.com/images/article/2014/11/safari-favorites-100530680-large.jpg"
+        },
+        {
             "title": "Salesforce",
             "hex": "00A1E0",
             "source": "https://www.salesforce.com/"
@@ -1756,6 +1811,11 @@
             "source": "http://www.spreaker.com/press"
         },
         {
+            "title": "Sprint",
+            "hex": "FFCE0A",
+            "source": "https://www.sprint.com/"
+        },
+        {
             "title": "Squarespace",
             "hex": "000000",
             "source": "http://squarespace.com/brand-guidelines"
@@ -1814,11 +1874,6 @@
             "title": "StubHub",
             "hex": "003168",
             "source": "http://www.stubhub.com"
-        },
-        {
-            "title": "StumbleUpon",
-            "hex": "EB4924",
-            "source": "http://corp.stumbleupon.com/press"
         },
         {
             "title": "StyleShare",
@@ -1904,6 +1959,11 @@
             "title": "Tinder",
             "hex": "FF6B6B",
             "source": "http://www.gotinder.com/press"
+        },
+        {
+            "title": "T-Mobile",
+            "hex": "E20074",
+            "source": "https://www.t-mobile.com/news/media-library?fulltext=logo"
         },
         {
             "title": "Toggl",
@@ -2024,6 +2084,11 @@
             "title": "Vagrant",
             "hex": "1563FF",
             "source": "https://www.hashicorp.com/brand#vagrant"
+        },
+        {
+            "title": "Verizon",
+            "hex": "CD040B",
+            "source": "https://www.verizondigitalmedia.com/about/logo-usage/"
         },
         {
             "title": "Viadeo",
