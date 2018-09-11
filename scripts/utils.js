@@ -9,6 +9,9 @@ module.exports = {
             .replace(/^\./, "dot-")
             .replace(/\.$/, "-dot")
             .replace(/\./g, "-dot-")
+            .replace(/^&/, "and-")
+            .replace(/&$/, "-and")
+            .replace(/&/g, "-and-")
             .replace(/[ !’]/g, "")
     )
 }
