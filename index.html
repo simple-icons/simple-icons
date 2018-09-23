@@ -146,11 +146,11 @@
 {% assign allIconNames = "" %}
 {% for icon in iconsArray %}
     {% assign iconArray = icon | split: "," %}
-    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[3] }}",{% endcapture %}
+    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[5] }}",{% endcapture %}
 {% endfor %}
 {% for icon in greyscaleIconsArray %}
     {% assign iconArray = icon | split: "," %}
-    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[1] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
+    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[5] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
 {% endfor %}
 
 <!doctype html>
@@ -191,12 +191,7 @@
     </script>
     <script>
       function normalizeSearchTerm(value) {
-          return value.toLowerCase()
-              .replace(/\+/g, "plus")
-              .replace(/^\./, "dot-")
-              .replace(/\.$/, "-dot")
-              .replace(/\./g, "-dot-")
-              .replace(/[ !’]/g, '');
+          return value.toLowerCase();
       }
       var icons = [{{ allIconNames }}].map(normalizeSearchTerm);
     </script>
