@@ -76,16 +76,6 @@
             "source": "https://www.airbnb.com"
         },
         {
-            "title": "Go",
-            "hex": "76E1FE",
-            "source": "https://golang.org/doc/gopher/"
-        },
-        {
-            "title": "Google Allo",
-            "hex": "ECB842",
-            "source": "https://allo.google.com/web"
-        },
-        {
             "title": "Amazon",
             "hex": "FF9900",
             "source": "https://worldvectorlogo.com/logo/amazon-icon"
@@ -756,9 +746,19 @@
             "source": "https://www.goodreads.com/about/press"
         },
         {
+            "title": "Go",
+            "hex": "76E1FE",
+            "source": "https://golang.org/doc/gopher/"
+        },
+        {
             "title": "Google",
             "hex": "4285F4",
             "source": "https://developers.google.com/+/branding-guidelines?hl=en"
+        },
+        {
+            "title": "Google Allo",
+            "hex": "ECB842",
+            "source": "https://allo.google.com/web"
         },
         {
             "title": "Google Chrome",
@@ -2164,6 +2164,11 @@
             "title": "Vagrant",
             "hex": "1563FF",
             "source": "https://www.hashicorp.com/brand#vagrant"
+        },
+        {
+            "title": "Venmo",
+            "hex": "3D95CE",
+            "source": "https://venmo.com/about/brand/"
         },
         {
             "title": "Verizon",
