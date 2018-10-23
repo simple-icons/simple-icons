@@ -10,8 +10,6 @@ Before opening your pull request, have a quick look at our contribution guidelin
   - [ ] The SVG `viewbox` is `0 0 24 24`
 
 ### Description
-
-
 <!--
 Anything relevant, for example:
   - Why did you pick the hex value?
