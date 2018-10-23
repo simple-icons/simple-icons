@@ -8,6 +8,5 @@ about: Help us improve by reporting outdated icons
 
 <!-- When reporting an update to an icon we need information such as: -->
 **Name:**
-  <!-- include this in the title as well -->
 **Official resources for icon and color:**
   <!-- for example media kits, brand guidelines, SVG files, ...) -->

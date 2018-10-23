@@ -9,7 +9,7 @@ about: For issues about or improvements to the website
 ### Kind of issue <!-- Change the one that applies to `[x]`  -->
   - [ ] Improvement
   - [ ] Bug
-  - [ ] Other, namely: <!-- 1 to 3 words -->
+  - [ ] Other, namely: 
 
 ### Description
 
