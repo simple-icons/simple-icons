@@ -3,10 +3,20 @@ name: Website
 about: For issues about or improvements to the website
 ---
 
-Before opening a new issue search for duplicate or closed issues.
+<!-- Before opening a new issue search for duplicate or closed issues -->
 
-When requesting or reporting about the website include helpful information such as:
-* An indicator for the type of issue (bug, improvement, etc.) in the title.
-* In case of a bug, what the expected behavior is.
-* In case of an improvement, an example of a use case.
-* Screenshots whenever possible.
+
+### Kind of issue <!-- Change the one that applies to `[x]`  -->
+  - [ ] Improvement
+  - [ ] Bug
+  - [ ] Other, namely: <!-- 1 to 3 words -->
+
+### Description
+
+
+<!--
+Anything that is even remotely relevant, include screenshots whenever possible.
+
+In case of a bug: Steps to reproduce and Expected behavior
+In case of an improvement: An example of a use case.
+-->
