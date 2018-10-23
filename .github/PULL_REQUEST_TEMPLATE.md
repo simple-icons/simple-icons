@@ -17,4 +17,5 @@ Anything relevant, for example:
   - Why did you pick the hex value?
   - Did you manually vectorize the logo?
   - Have you used multiple sources?
+  - etc.
 -->

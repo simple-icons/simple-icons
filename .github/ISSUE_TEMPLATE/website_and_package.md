@@ -25,4 +25,5 @@ Anything relevant, for example:
   - For improvements: An example of a use case
   - Package issues: What is your node version ($ node --version)
   - Website issues: What browser do you use
+  - etc.
 -->
