@@ -221,15 +221,15 @@ a.share-button {
   }
 }
 
-.grid.search__empty:after {
-  content: 'No matching icons found.';
+.grid > .grid-item--if-empty {
+  display: none;
+}
+
+.grid.search__empty > .grid-item--if-empty {
+  display: block;
   font-size: 1.25em;
+  grid-column: span 3;
   line-height: 1.5em;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @supports (display: grid) {
