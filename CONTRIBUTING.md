@@ -133,16 +133,16 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 
   * The `title` of the new SVG.
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
-  * The `source` URL of the logo being used. (Be specific!)
+  * The `source` URL of the logo being used. This is used to find updates if the logo ever changes.
 
-Here is the object for the Adobe Photoshop icon as an example:
+Here is the object for The Movie Database as an example:
 
 ```json
 {
-    "title": "Adobe Photoshop",
-    "hex": "00C8FF",
-    "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
-},
+    "title": "The Movie Database",
+    "hex": "01D277",
+    "source": "https://www.themoviedb.org/about/logos-attribution"
+}
 ```
 
 ### 7. Create a pull request
