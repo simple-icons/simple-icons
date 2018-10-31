@@ -64,10 +64,9 @@
   }
 
   function search(value) {
-    var hiddenCounter = 0,
-        query = normalizeSearchTerm(value);
+    var query = normalizeSearchTerm(value);
 
-    icons.map(function(icon, iconIndex) {
+    var matchedIcons = icons.map(function(icon, iconIndex) {
       var letters = query.split(''),
           indexes = [],
           index = 0;
@@ -97,7 +96,9 @@
       };
     }).filter(function(item) {
       return item !== null;
-    }).sort(function(a, b) {
+    });
+
+    matchedIcons.sort(function(a, b) {
       return a.score - b.score;
     }).forEach(function(item, index) {
       var element = item.element;
@@ -105,7 +106,7 @@
       element.classList.remove('hidden');
     });
 
-    $grid.classList.toggle('search__empty', hiddenCounter == icons.length);
+    $grid.classList.toggle('search__empty', matchedIcons.length == 0);
     if (query === '') {
       if ($sortRelevance.classList.contains('active')) {
         selectSortingOrder(previousOrder);
