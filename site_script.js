@@ -150,7 +150,7 @@
 
     // Store ordering preference
     var preferenceOptions = [$orderByColor, $orderAlphabetically];
-    if (preferenceOptions.includes(selected)) {
+    if (localStorage && preferenceOptions.includes(selected)) {
       localStorage.setItem(orderingPreferenceIdentifier, selected.id);
     }
   }
@@ -158,9 +158,11 @@
   document.addEventListener('DOMContentLoaded', function() {
     // Restore ordering preference of the user. This should be performed before
     // applying the search query as it would overwrite "order by relevance"
-    var storedOrderingId = localStorage.getItem(orderingPreferenceIdentifier);
-    var ordering = document.getElementById(storedOrderingId);
-    if (ordering) selectOrdering(ordering);
+    if (localStorage) {
+      var storedOrderingId = localStorage.getItem(orderingPreferenceIdentifier);
+      var ordering = document.getElementById(storedOrderingId);
+      if (ordering) selectOrdering(ordering);
+    }
 
     // Load search query if present
     var query = getUrlParameter(queryParameter);
