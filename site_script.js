@@ -146,6 +146,7 @@
     }
 
     sort();
+    localStorage.setItem('sort-order', selected.id);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -156,6 +157,11 @@
       $searchInput.value = query;
       search(query);
     }
+
+    // Restore sort order selected by the user
+    var sortingOrderId = localStorage.getItem('sort-order');
+    var sortingOrder = document.getElementById(sortingOrderId);
+    if (sortingOrder) selectSortingOrder(sortingOrder);
   });
   $search.addEventListener('input', debounce(function(e) {
     e.preventDefault();
