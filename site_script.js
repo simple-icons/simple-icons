@@ -146,10 +146,19 @@
     }
 
     sort();
-    localStorage.setItem('sort-order', selected.id);
+
+    // Store sorting order preference
+    var preferenceOptions = [$sortColor, $sortAlphabetically];
+    if (preferenceOptions.includes(selected)) localStorage.setItem('sort-order', selected.id);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    // Restore sort order selected by the user. This should be performed before
+    // applying the search query as it would overwrite "sort by relevance" 
+    var sortingOrderId = localStorage.getItem('sort-order');
+    var sortingOrder = document.getElementById(sortingOrderId);
+    if (sortingOrder) selectSortingOrder(sortingOrder);
+
     // Load search query if present
     var query = getUrlParameter(queryParameter);
     if (query) {
@@ -157,11 +166,6 @@
       $searchInput.value = query;
       search(query);
     }
-
-    // Restore sort order selected by the user
-    var sortingOrderId = localStorage.getItem('sort-order');
-    var sortingOrder = document.getElementById(sortingOrderId);
-    if (sortingOrder) selectSortingOrder(sortingOrder);
   });
   $search.addEventListener('input', debounce(function(e) {
     e.preventDefault();
