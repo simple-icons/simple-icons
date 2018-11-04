@@ -1,16 +1,16 @@
 (function(document) {
-  var $grid               = document.querySelector('.grid'),
-      $icons              = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
-      $search             = document.querySelector('.search'),
-      $searchClose        = $search.querySelector('.search__close'),
-      $searchInput        = $search.querySelector('input'),
-      $sortColor          = document.getElementById('sort-color'),
-      $sortAlphabetically = document.getElementById('sort-alphabetically'),
-      $sortRelevance      = document.getElementById('sort-relevance');
+  var $grid                = document.querySelector('.grid'),
+      $icons               = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
+      $search              = document.querySelector('.search'),
+      $searchClose         = $search.querySelector('.search__close'),
+      $searchInput         = $search.querySelector('input'),
+      $orderByColor        = document.getElementById('sort-color'),
+      $orderAlphabetically = document.getElementById('sort-alphabetically'),
+      $orderByRelevance    = document.getElementById('sort-relevance');
 
   var queryParameter = 'q',
       previousQuery  = null,
-      previousOrder  = $sortColor;
+      previousOrdering  = $orderByColor;
 
   // Remove the "disabled" attribute from the search input
   $searchInput.setAttribute('title', 'Search Simple Icons');
@@ -108,56 +108,56 @@
 
     $grid.classList.toggle('search__empty', matchedIcons.length == 0);
     if (query === '') {
-      if ($sortRelevance.classList.contains('active')) {
-        selectSortingOrder(previousOrder);
+      if ($orderByRelevance.classList.contains('active')) {
+        selectOrdering(previousOrdering);
       }
 
-      $sortRelevance.setAttribute('display', 'none');
+      $orderByRelevance.setAttribute('display', 'none');
       previousQuery = null;
     } else {
       if (previousQuery === null) {
-        selectSortingOrder($sortRelevance);
+        selectOrdering($orderByRelevance);
       }
 
       previousQuery = query;
     }
   }
-  function sort() {
-    if ($sortColor.classList.contains('active')) {
+  function orderIcons() {
+    if ($orderByColor.classList.contains('active')) {
       $icons.forEach(icon => { icon.style.order = null; });
-    } else if ($sortAlphabetically.classList.contains('active')) {
+    } else if ($orderAlphabetically.classList.contains('active')) {
       $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
-    } else if ($sortRelevance.classList.contains('active')) {
+    } else if ($orderByRelevance.classList.contains('active')) {
       $icons.forEach(icon => { icon.style.order = icon.getAttribute('data-relevance'); });
     }
   }
-  function selectSortingOrder(selected) {
+  function selectOrdering(selected) {
     selected.classList.add('active');
 
-    var options = [$sortColor, $sortAlphabetically, $sortRelevance];
+    var options = [$orderByColor, $orderAlphabetically, $orderByRelevance];
     for (var option of options.filter(option => option !== selected)) {
       option.classList.remove('active');
     }
 
-    if (selected !== $sortRelevance) {
-      previousOrder = selected;
+    if (selected !== $orderByRelevance) {
+      previousOrdering = selected;
     } else {
-      $sortRelevance.removeAttribute('display');
+      $orderByRelevance.removeAttribute('display');
     }
 
-    sort();
+    orderIcons();
 
-    // Store sorting order preference
-    var preferenceOptions = [$sortColor, $sortAlphabetically];
-    if (preferenceOptions.includes(selected)) localStorage.setItem('sort-order', selected.id);
+    // Store ordering preference
+    var preferenceOptions = [$orderByColor, $orderAlphabetically];
+    if (preferenceOptions.includes(selected)) localStorage.setItem('ordering', selected.id);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Restore sort order selected by the user. This should be performed before
-    // applying the search query as it would overwrite "sort by relevance" 
-    var sortingOrderId = localStorage.getItem('sort-order');
-    var sortingOrder = document.getElementById(sortingOrderId);
-    if (sortingOrder) selectSortingOrder(sortingOrder);
+    // Restore ordering preference of the user. This should be performed before
+    // applying the search query as it would overwrite "order by relevance"
+    var storedOrderingId = localStorage.getItem('ordering');
+    var ordering = document.getElementById(storedOrderingId);
+    if (ordering) selectOrdering(ordering);
 
     // Load search query if present
     var query = getUrlParameter(queryParameter);
@@ -189,13 +189,13 @@
     search('');
   }, false);
 
-  $sortColor.addEventListener('click', function() {
-    selectSortingOrder($sortColor);
+  $orderByColor.addEventListener('click', function() {
+    selectOrdering($orderByColor);
   });
-  $sortAlphabetically.addEventListener('click', function() {
-    selectSortingOrder($sortAlphabetically);
+  $orderAlphabetically.addEventListener('click', function() {
+    selectOrdering($orderAlphabetically);
   });
-  $sortRelevance.addEventListener('click', function() {
-    selectSortingOrder($sortRelevance);
+  $orderByRelevance.addEventListener('click', function() {
+    selectOrdering($orderByRelevance);
   });
 })( document );
