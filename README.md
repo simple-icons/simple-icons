@@ -42,7 +42,7 @@ console.log(simpleIcons['Google+']);
     title: 'Google+',
     hex: 'DC4E41',
     source: 'https://developers.google.com/+/branding-guidelines',
-    svg: '<svg aria-labelledby="simpleicons-googleplus-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
+    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
 }
 */
 ```
@@ -59,7 +59,7 @@ console.log(googleplus);
     title: 'Google+',
     hex: 'DC4E41',
     source: 'https://developers.google.com/+/branding-guidelines',
-    svg: '<svg aria-labelledby="simpleicons-googleplus-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
+    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
 }
 */
 ```
