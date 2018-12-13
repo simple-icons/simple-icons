@@ -3,8 +3,11 @@ jobs:
     - stage: "Test"
       name: "Lint"
       language: node_js
+      before_install:
+        - sudo apt-get install -y xmlstarlet
       node_js: 8
       script:
+        - xmlstarlet validate --well-formed icons/*.svg
         - npm run jsonlint
         - npm run svglint
     - name: "Build website"
