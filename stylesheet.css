@@ -262,7 +262,15 @@ a.share-button {
 }
 .grid-item--light {
   color: #FFF;
+  transition: transform .2s;
 }
+
+.grid-item--light:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
 .grid-item--dark {
   color: #222;
 }
