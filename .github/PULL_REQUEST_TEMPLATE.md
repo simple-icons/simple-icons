@@ -6,6 +6,7 @@ Before opening your pull request, have a quick look at our contribution guidelin
 
 
 ### Checklist
+  - [ ] I updated the JSON data in `_data/simple-icons.json`
   - [ ] I optimized the icon with SVGO or SVGOMG
   - [ ] The SVG `viewbox` is `0 0 24 24`
 
