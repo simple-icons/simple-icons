@@ -1,3 +1,4 @@
+// @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt CC0
 #!/usr/bin/env node
 /**
  * @fileoverview
@@ -29,3 +30,4 @@ data.icons.forEach(icon => {
 
 // write our generic index.js
 fs.writeFileSync(indexFile, `module.exports=${JSON.stringify(icons)};`);
+// @license-end

@@ -1,3 +1,4 @@
+// @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt CC0
 (function(document) {
   var $grid                = document.querySelector('.grid'),
       $icons               = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
@@ -204,3 +205,4 @@
     selectOrdering($orderByRelevance);
   });
 })( document );
+// @license-end
