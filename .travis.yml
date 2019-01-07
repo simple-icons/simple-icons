@@ -7,7 +7,7 @@ jobs:
         - sudo apt-get install -y xmlstarlet
       node_js: 8
       script:
-        - xmlstarlet validate --well-formed icons/*.svg
+        - xmlstarlet validate --err --list-bad --well-formed icons/*.svg
         - npm run jsonlint
         - npm run svglint
     - name: "Build website"
