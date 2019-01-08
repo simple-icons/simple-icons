@@ -6,6 +6,7 @@
 <p align="center">
 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
 </p>
+<a href='https://coveralls.io/github/d3xt3r1232/simple-icons?branch=develop'><img src='https://coveralls.io/repos/github/d3xt3r1232/simple-icons/badge.svg?branch=develop' alt='Coverage Status' /></a>
 
 ## Usage
 
