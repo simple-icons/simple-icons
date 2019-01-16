@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt CC0
 /**
  * @fileoverview
  * Compiles our icons into static .js files that can be imported in the browser
@@ -7,7 +6,7 @@
  * The static .js files go in icons/{filename}.js.
  * Also generates an index.js that exports all icons by title, but is not tree-shakeable
  */
-
+const licenseStringCC0 = "// @license magnet:?xt=urn:btih:90dc5c0be029de84e523b9b3922520e79e0e6f08&dn=cc0.txt CC0";
 const dataFile = "../_data/simple-icons.json";
 const indexFile = `${__dirname}/../index.js`;
 const iconsDir = `${__dirname}/../icons`;
@@ -29,5 +28,9 @@ data.icons.forEach(icon => {
 });
 
 // write our generic index.js
-fs.writeFileSync(indexFile, `module.exports=${JSON.stringify(icons)};`);
-// @license-end
+fs.writeFileSync(
+    indexFile,
+    licenseStringCC0 +
+    `module.exports=${JSON.stringify(icons)};` +
+    "// @license-end"    
+);
