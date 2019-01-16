@@ -94,19 +94,18 @@
 
     $grid.classList.toggle('search__empty', matchedIcons.length == 0);
     $body.classList.toggle('search__active', matchedIcons.length < icons.length);
+
     if (query === '') {
       if ($orderByRelevance.classList.contains('active')) {
         selectOrdering(previousOrdering);
       }
-
-      previousQuery = null;
     } else {
-      if (previousQuery === null) {
+      if (previousQuery === '') {
         selectOrdering($orderByRelevance);
       }
-
-      previousQuery = query;
     }
+
+    previousQuery = query;
   }
   function selectOrdering(selected) {
     // Set the ordering type as a class on body
