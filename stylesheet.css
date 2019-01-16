@@ -170,9 +170,6 @@ a.share-button {
   margin-left: .5rem;
   opacity: .5;
 }
-.sort-btn.active {
-  opacity: 1;
-}
 .sort-btn:first-of-type {
   margin-left: 1rem;
 }
@@ -259,12 +256,6 @@ a.share-button {
   justify-content: center;
   padding: 1rem;
   text-align: center;
-}
-.order-by-relevance .grid-item {
-  order: var(--order-relevance);
-}
-.order-alphabetically .grid-item {
-  order: var(--order-alpha);
 }
 .grid-item--light {
   color: #FFF;
@@ -361,5 +352,29 @@ a.share-button {
 }
 
 .hidden {
+  display: none;
+}
+
+body.order-by-color #sort-color {
+  opacity: 1;
+}
+
+body.order-by-relevance .grid-item {
+  order: var(--order-relevance);
+}
+
+body.order-by-relevance #sort-relevance {
+  opacity: 1;
+}
+
+body.order-alphabetically .grid-item {
+  order: var(--order-alpha);
+}
+
+body.order-alphabetically #sort-alphabetically {
+  opacity: 1;
+}
+
+body:not(.search__active) #sort-relevance {
   display: none;
 }

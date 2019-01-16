@@ -1,5 +1,6 @@
 (function(document) {
-  var $grid                = document.querySelector('.grid'),
+  var $body                = document.body,
+      $grid                = document.querySelector('.grid'),
       $icons               = $grid.querySelectorAll('.grid-item:not(.grid-item--ad)'),
       $search              = document.querySelector('.search'),
       $searchClose         = $search.querySelector('.search__close'),
@@ -92,12 +93,12 @@
     });
 
     $grid.classList.toggle('search__empty', matchedIcons.length == 0);
+    $body.classList.toggle('search__active', matchedIcons.length < icons.length);
     if (query === '') {
       if ($orderByRelevance.classList.contains('active')) {
         selectOrdering(previousOrdering);
       }
 
-      $orderByRelevance.setAttribute('display', 'none');
       previousQuery = null;
     } else {
       if (previousQuery === null) {
@@ -108,26 +109,14 @@
     }
   }
   function selectOrdering(selected) {
-    // Set the correct button to active
-    var options = [$orderByColor, $orderAlphabetically, $orderByRelevance];
-    for (var option of options) {
-      option.classList.remove('active');
-    }
-    selected.classList.add('active');
-
-    // Show the order by relevance button if its selected
-    if (selected === $orderByRelevance) {
-      $orderByRelevance.removeAttribute('display');
-    }
-
     // Set the ordering type as a class on body
-    document.body.classList.remove('order-alphabetically', 'order-by-color', 'order-by-relevance');
-    if ($orderByColor.classList.contains('active')) {
-      document.body.classList.add('order-by-color');
-    } else if ($orderAlphabetically.classList.contains('active')) {
-      document.body.classList.add('order-alphabetically');
-    } else if ($orderByRelevance.classList.contains('active')) {
-      document.body.classList.add('order-by-relevance');
+    $body.classList.remove('order-alphabetically', 'order-by-color', 'order-by-relevance');
+    if (selected === $orderByColor) {
+      $body.classList.add('order-by-color');
+    } else if (selected === $orderAlphabetically) {
+      $body.classList.add('order-alphabetically');
+    } else if (selected === $orderByRelevance) {
+      $body.classList.add('order-by-relevance');
     }
 
     // Store ordering preference
