@@ -65,46 +65,30 @@
   }
 
   function search(value) {
-    var query = normalizeSearchTerm(value);
+    var query = normalizeSearchTerm(value)
+        queryLetters = query.split('');
 
-    var matchedIcons = icons.map(function(icon, iconIndex) {
-      var letters = query.split(''),
-          indexes = [],
+    var matchedIcons = icons.filter(function(iconName, iconIndex) {
+      var element = $icons[iconIndex],
+          score = iconName.length - query.length;
           index = 0;
 
-      if (icon === query) {
-        return {element: $icons[iconIndex], score: 1};
-      }
-
-      for (var i = 0; i < letters.length; i++) {
-        var letter = letters[i];
-        index = icon.indexOf(letter, index);
+      for (var i = 0; i < queryLetters.length; i++) {
+        var letter = queryLetters[i];
+        index = iconName.indexOf(letter, index);
 
         if (index === -1) {
-          $icons[iconIndex].classList.add('hidden');
-          return null;
+          element.classList.add('hidden');
+          return false;
         }
 
-        indexes.push(index);
+        score += index;
         index++;
       }
 
-      return {
-        element: $icons[iconIndex],
-        score: indexes.reduce(function(a, b) {
-          return a + b;
-        }, 2)
-      };
-    }).filter(function(item) {
-      return item !== null;
-    });
-
-    matchedIcons.sort(function(a, b) {
-      return a.score - b.score;
-    }).forEach(function(item, index) {
-      var element = item.element;
-      element.setAttribute('data-relevance', index);
+      element.style.setProperty("--order-relevance", score);
       element.classList.remove('hidden');
+      return true;
     });
 
     $grid.classList.toggle('search__empty', matchedIcons.length == 0);
@@ -123,35 +107,36 @@
       previousQuery = query;
     }
   }
-  function orderIcons() {
-    if ($orderByColor.classList.contains('active')) {
-      $icons.forEach(icon => { icon.style.order = null; });
-    } else if ($orderAlphabetically.classList.contains('active')) {
-      $icons.forEach(icon => { icon.style.order = icon.getAttribute('order'); });
-    } else if ($orderByRelevance.classList.contains('active')) {
-      $icons.forEach(icon => { icon.style.order = icon.getAttribute('data-relevance'); });
-    }
-  }
   function selectOrdering(selected) {
-    selected.classList.add('active');
-
+    // Set the correct button to active
     var options = [$orderByColor, $orderAlphabetically, $orderByRelevance];
-    for (var option of options.filter(option => option !== selected)) {
+    for (var option of options) {
       option.classList.remove('active');
     }
+    selected.classList.add('active');
 
-    if (selected !== $orderByRelevance) {
-      previousOrdering = selected;
-    } else {
+    // Show the order by relevance button if its selected
+    if (selected === $orderByRelevance) {
       $orderByRelevance.removeAttribute('display');
     }
 
-    orderIcons();
+    // Set the ordering type as a class on body
+    document.body.classList.remove('order-alphabetically', 'order-by-color', 'order-by-relevance');
+    if ($orderByColor.classList.contains('active')) {
+      document.body.classList.add('order-by-color');
+    } else if ($orderAlphabetically.classList.contains('active')) {
+      document.body.classList.add('order-alphabetically');
+    } else if ($orderByRelevance.classList.contains('active')) {
+      document.body.classList.add('order-by-relevance');
+    }
 
     // Store ordering preference
     var preferenceOptions = [$orderByColor, $orderAlphabetically];
     if (localStorage && preferenceOptions.includes(selected)) {
       localStorage.setItem(orderingPreferenceIdentifier, selected.id);
+    }
+    if (selected !== $orderByRelevance) {
+      previousOrdering = selected;
     }
   }
 

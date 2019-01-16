@@ -260,14 +260,17 @@ a.share-button {
   padding: 1rem;
   text-align: center;
 }
+.order-by-relevance .grid-item {
+  order: var(--order-relevance);
+}
+.order-alphabetically .grid-item {
+  order: var(--order-alpha);
+}
 .grid-item--light {
   color: #FFF;
 }
 .grid-item--dark {
   color: #222;
-}
-.grid-item__link {
-  color: inherit;
 }
 @supports not (display: grid) {
   .grid-item {
@@ -295,6 +298,7 @@ a.share-button {
 }
 
 .grid-item__link {
+  color: inherit;
   display: block;
   text-align: center;
   width: 100%;
