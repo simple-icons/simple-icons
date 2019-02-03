@@ -157,7 +157,7 @@
       window.history.replaceState(null, '', '/');
     }
     search(value);
-  }, 50), false);
+  }, 200), false);
   $searchClose.addEventListener('click', function(e) {
     e.stopPropagation();
 
