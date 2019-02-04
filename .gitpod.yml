@@ -1,0 +1,6 @@
+ports:
+  - port: 4000
+    onOpen: open-preview
+tasks:
+  - init: gem install jekyll bundler
+    command: jekyll serve --host 0.0.0.0
