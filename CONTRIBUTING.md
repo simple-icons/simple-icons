@@ -77,7 +77,7 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Install SVGO
     * With npm: `npm install -g svgo`
     * With Homebrew: `brew install svgo`
-  * Run the following command `svgo --precision=3 icon.svg icon.min.svg`
+  * Run the following command `svgo --precision=3 -i icon.svg -o icon.min.svg`
   * Check if there is a loss of quality in the output, if so increase the precision.
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.
@@ -166,3 +166,9 @@ We use several labels to help organize and identify issues. You can find all lab
 * Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
 * Build and run the website locally using `$ jekyll serve`.
 * Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
+
+## Building In Your Browser
+
+Alternatively, you can build and run the website in a readily configured online workspace:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
