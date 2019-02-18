@@ -162,6 +162,7 @@ We use several labels to help organize and identify issues. You can find all lab
 | [help wanted](https://github.com/simple-icons/simple-icons/labels/help%20wanted) | Issues we would like help from the community to resolve. |
 | [awaiting reply](https://github.com/simple-icons/simple-icons/labels/awaiting%20reply) | Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed. |
 | [won't add](https://github.com/simple-icons/simple-icons/labels/won%27t%20add) | Icon requests or other features that won't be added. |
+| [release](https://github.com/simple-icons/simple-icons/pulls?q=is%3Apr+label%3Arelease+is%3Aclosed) | Pull requests that released a new version. |
 
 ## Building Locally
 
