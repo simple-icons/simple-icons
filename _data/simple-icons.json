@@ -336,6 +336,11 @@
             "source": "http://supertop.co/castro/press/"
         },
         {
+            "title": "CEVO",
+            "hex": "1EABE2",
+            "source": "https://cevo.com/"
+        },
+        {
             "title": "Circle",
             "hex": "8669AE",
             "source": "https://www.circle.com/"
@@ -361,6 +366,11 @@
             "source": "https://www.cloudflare.com/logo/"
         },
         {
+            "title": "CMake",
+            "hex": "064F8C",
+            "source": "https://www.kitware.com/platforms/"
+        },
+        {
             "title": "Codacy",
             "hex": "222F29",
             "source": "https://www.codacy.com/blog/"
@@ -369,6 +379,11 @@
             "title": "Codecademy",
             "hex": "1F4056",
             "source": "https://www.codecademy.com/"
+        },
+        {
+            "title": "Code Climate",
+            "hex": "000000",
+            "source": "https://codeclimate.com/"
         },
         {
             "title": "Codecov",
@@ -509,6 +524,11 @@
             "title": "Dell",
             "hex": "007DB8",
             "source": "https://datasecurity.dell.com/wp-content/themes/dell/images/logo-dell.svg"
+        },
+        {
+            "title": "Deno",
+            "hex": "000000",
+            "source": "https://github.com/denoland/deno/tree/1cc02a5d9d867f1a239ee4b69f587d8afac07b02/website/images"
         },
         {
             "title": "Dependabot",
@@ -671,6 +691,11 @@
             "source": "https://envato.com/"
         },
         {
+            "title": "ESEA",
+            "hex": "0E9648",
+            "source": "https://play.esea.net/"
+        },
+        {
             "title": "ESLint",
             "hex": "4B32C3",
             "source": "https://eslint.org/img/logo.svg"
@@ -721,6 +746,11 @@
             "source": "https://www.facebookbrand.com"
         },
         {
+            "title": "FACEIT",
+            "hex": "FF5500",
+            "source": "https://corporate.faceit.com/branding/"
+        },
+        {
             "title": "Fandango",
             "hex": "FF7300",
             "source": "https://www.fandango.com"
@@ -734,6 +764,11 @@
             "title": "Feedly",
             "hex": "2BB24C",
             "source": "https://blog.feedly.com/wp-content/themes/feedly-2017-v1.19.3/assets/images/logos/logo.svg"
+        },
+        {
+            "title": "Fido Alliance",
+            "hex": "FFBF3B",
+            "source": "https://fidoalliance.org/overview/legal/logo-usage/"
         },
         {
             "title": "Firebase",
@@ -1229,6 +1264,11 @@
             "title": "KaiOS",
             "hex": "6F02B5",
             "source": "https://www.dropbox.com/sh/2qihtgrzllws8ki/AABmo9X1KMT6lHnvh4Em7dpWa?dl=0"
+        },
+        {
+            "title": "Kentico",
+            "hex": "F05A22",
+            "source": "https://brand.kentico.com"
         },
         {
             "title": "Keybase",
@@ -1971,6 +2011,11 @@
             "source": "https://www.ruby-lang.org/en/about/logo/"
         },
         {
+            "title": "RubyGems",
+            "hex": "E9573F",
+            "source": "https://rubygems.org/pages/about"
+        },
+        {
             "title": "Runkeeper",
             "hex": "2DC9D7",
             "source": "https://runkeeper.com/partnerships"
@@ -2219,6 +2264,11 @@
             "title": "Stack Overflow",
             "hex": "FE7A16",
             "source": "http://stackoverflow.com"
+        },
+        {
+            "title": "StackShare",
+            "hex": "0690FA",
+            "source": "https://stackshare.io/branding"
         },
         {
             "title": "Statamic",
@@ -2581,9 +2631,14 @@
             "source": "https://www.weasyl.com/"
         },
         {
-          "title": "Webpack",
-          "hex": "8DD6F9",
-          "source": "https://webpack.js.org/branding/"
+            "title": "Webpack",
+            "hex": "8DD6F9",
+            "source": "https://webpack.js.org/branding/"
+        },
+        {
+            "title": "webcomponents.org",
+            "hex": "29ABE2",
+            "source": "https://www.webcomponents.org/"
         },
         {
             "title": "WebStorm",
