@@ -147,23 +147,6 @@ Here is the object for The Movie Database as an example:
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch.
 
-## Labeling Issues
-
-We use several labels to help organize and identify issues. You can find all labels [here](https://github.com/simple-icons/simple-icons/labels). Here's what they represent and how we use them:
-
-| Label Name | Description |
-| :---- | :---- |
-| [new icon](https://github.com/simple-icons/simple-icons/labels/new%20icon) | Issues for adding a new icon. |
-| [icon outdated](https://github.com/simple-icons/simple-icons/labels/icon%20outdated) | Issues regarding icons that are outdated, this can be the SVG or color or both. |
-| [website](https://github.com/simple-icons/simple-icons/labels/website) | Issues for the website [simpleicons.org](http://simpleicons.org/). |
-| [docs](https://github.com/simple-icons/simple-icons/labels/docs) | Issues for improving or updating documentation. |
-| [meta](https://github.com/simple-icons/simple-icons/labels/meta) | Issues regarding the project or repository itself. |
-| [good first issue](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue) | Issues we believe are simple and a good first stab at contributing to the project. |
-| [help wanted](https://github.com/simple-icons/simple-icons/labels/help%20wanted) | Issues we would like help from the community to resolve. |
-| [awaiting reply](https://github.com/simple-icons/simple-icons/labels/awaiting%20reply) | Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed. |
-| [won't add](https://github.com/simple-icons/simple-icons/labels/won%27t%20add) | Icon requests or other features that won't be added. |
-| [release](https://github.com/simple-icons/simple-icons/pulls?q=is%3Apr+label%3Arelease+is%3Aclosed) | Pull requests that released a new version. |
-
 ## Building Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
