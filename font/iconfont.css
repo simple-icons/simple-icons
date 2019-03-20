@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Simple Icons';
+	src: url(SimpleIcons.woff) format('woff'),
+	     url(SimpleIcons.woff2) format('woff2')
+}
+
+i.simpleicons {
+	font-style: normal;
+	font-family: 'Simple Icons', sans-serif;
+}

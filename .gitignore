@@ -41,3 +41,7 @@ Temporary Items
 
 # NPM dependencies
 node_modules/
+
+
+# Generated web font
+/font/*.woff*
