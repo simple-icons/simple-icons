@@ -17,6 +17,11 @@ module.exports = {
             { // ensure that the title elm has the appropriate attr
                 "rule::selector": "svg > title",
                 "rule::whitelist": true,
+            },
+            { // ensure that the path element only has the 'd' attr (no style, opacity, etc.)
+                "d": /^[,a-zA-Z0-9\. -]+$/,
+                "rule::selector": "svg > path",
+                "rule::whitelist": true,
             }
         ]
     }
