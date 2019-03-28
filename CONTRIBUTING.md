@@ -116,6 +116,9 @@ The final icon should:
   * This means the icon should be touching at least two sides of the viewbox.
 * Be vertically and horizontally centered.
 * Be minified to a single line with no formatting.
+* Contain only a single `path` element.
+* Not contain extraneous elements.
+  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
