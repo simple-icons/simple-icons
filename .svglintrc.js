@@ -3,7 +3,8 @@ module.exports = {
         elm: {
             "svg": 1,
             "svg > title": 1,
-            "g": false,
+            "svg > path": 1,
+            "*": false,
         },
         attr: [
             { // ensure that the SVG elm has the appropriate attrs
