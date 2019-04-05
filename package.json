@@ -20,7 +20,7 @@
   "devDependencies": {
     "jest": "^24.1.0",
     "jsonlint2": "^1.7.1",
-    "svglint": "^1.0.3"
+    "svglint": "^1.0.4"
   },
   "scripts": {
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
