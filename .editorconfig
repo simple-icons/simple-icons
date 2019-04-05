@@ -16,7 +16,6 @@ indent_style=space
 trim_trailing_whitespace=false # Templates with trailing whitespace are more usable
 
 [_data/simple-icons.json]
-insert_final_newline=false
 indent_style=space
 indent_size=4
 trim_trailing_whitespace=true
