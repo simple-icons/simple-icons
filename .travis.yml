@@ -7,6 +7,7 @@ jobs:
       script:
         - npm run jsonlint
         - npm run svglint
+        - npm run wslint
     - name: "Build website"
       language: ruby
       rvm: 2.4.1
