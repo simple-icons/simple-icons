@@ -26,7 +26,7 @@
   "scripts": {
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
-    "wslint": "editorconfig-checker",
+    "wslint": "editorconfig-checker --ignore",
     "prepublishOnly": "node scripts/prepublish.js",
     "postpublish": "rm icons/*.js index.js",
     "test": "jest",

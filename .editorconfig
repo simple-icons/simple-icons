@@ -12,6 +12,9 @@ indent_style=space
 indent_size=2
 indent_style=space
 
+[*.svg]
+insert_final_newline=false
+
 [.github/**/*.md]
 trim_trailing_whitespace=false # Templates with trailing whitespace are more usable
 
