@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "1.9.25",
+  "version": "1.9.26",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://www.simpleicons.org",
   "keywords": [
@@ -18,13 +18,15 @@
   "author": "Simple Icons Collaborators",
   "license": "CC0-1.0",
   "devDependencies": {
+    "editorconfig-checker": "^2.0.8",
     "jest": "^24.1.0",
     "jsonlint2": "^1.7.1",
-    "svglint": "^1.0.3"
+    "svglint": "^1.0.4"
   },
   "scripts": {
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
+    "wslint": "editorconfig-checker --ignore",
     "prepublishOnly": "node scripts/prepublish.js",
     "postpublish": "rm icons/*.js index.js",
     "test": "jest",
