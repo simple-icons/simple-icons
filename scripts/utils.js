@@ -13,5 +13,13 @@ module.exports = {
             .replace(/&$/, "-and")
             .replace(/&/g, "-and-")
             .replace(/[ !’]/g, "")
+            .replace(/à|á|â|ã|ä/, "a")
+            .replace(/ç/, "c")
+            .replace(/è|é|ê|ë/, "e")
+            .replace(/ì|í|î|ï/, "i")
+            .replace(/ò|ó|ô|õ|ö/, "o")
+            .replace(/ù|ú|û|ü/, "u")
+            .replace(/ñ/, "n")
+            .replace(/ý|ÿ/, "y")
     )
 }
