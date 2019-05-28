@@ -17,9 +17,9 @@ module.exports = {
             .replace(/ç/, "c")
             .replace(/è|é|ê|ë/, "e")
             .replace(/ì|í|î|ï/, "i")
+            .replace(/ñ/, "n")
             .replace(/ò|ó|ô|õ|ö/, "o")
             .replace(/ù|ú|û|ü/, "u")
-            .replace(/ñ/, "n")
             .replace(/ý|ÿ/, "y")
     )
 }
