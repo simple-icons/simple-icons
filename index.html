@@ -27,7 +27,19 @@
         {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-and" %}
     {% endif %}
 
-    {% assign filename = filename | replace: "+", "plus" | replace: " ", "" | replace: ".", "-dot-" |  replace: "&", "-and-" | replace: "!", "" | replace: "’", "" | downcase %}
+    {% assign filename = filename | downcase %}
+    {% assign filename = filename | replace: "+", "plus" %}
+    {% assign filename = filename | replace: ".", "-dot-" %}
+    {% assign filename = filename | replace: "&", "-and-" %}
+    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: "’", "" %}
+    {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" %}
+    {% assign filename = filename | replace: "ç", "c" %}
+    {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" %}
+    {% assign filename = filename | replace: "ì", "i" | replace: "í", "i" | replace: "î", "i" | replace: "ï", "i" %}
+    {% assign filename = filename | replace: "ñ", "n" %}
+    {% assign filename = filename | replace: "ò", "o" | replace: "ó", "o" | replace: "ô", "o" | replace: "õ", "o" | replace: "ö", "o" %}
+    {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" %}
+    {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" %}
 
     {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
