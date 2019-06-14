@@ -20,4 +20,9 @@ icons.forEach(icon => {
   test(`${icon.title} has an "svg"`, () => {
     expect(typeof subject.svg).toBe('string');
   });
+
+  test(`${icon.title} has a "path"`, () => {
+    expect(typeof subject.path).toBe('string');
+    expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAa0-9-,.\s]+$/g);
+  });
 });
