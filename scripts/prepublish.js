@@ -19,6 +19,7 @@ const icons = {};
 data.icons.forEach(icon => {
     const filename = titleToFilename(icon.title);
     icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
+    icon.path = icon.svg.match(/<path\s+d="([^"]*)/)[1];
     icons[icon.title] = icon;
     // write the static .js file for the icon
     fs.writeFileSync(
