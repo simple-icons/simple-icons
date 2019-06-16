@@ -37,6 +37,9 @@ jobs:
       language: node_js
       node_js: 8
       before_install:
+        # Install temporary dependency
+        - npm install semver --no-save
+        # Clone the simple-icons-font repository
         - git clone https://github.com/simple-icons/simple-icons-font.git
         - cd simple-icons-font
       install:
@@ -47,6 +50,9 @@ jobs:
         - npm install
       script:
         - npm run build
+        # Test updating the version number
+        - cat package.json
+        - node ../scripts/update-version-number.js
         - cat package.json
 
 notifications:
