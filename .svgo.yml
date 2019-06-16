@@ -1,0 +1,69 @@
+plugins:
+  # Sort attributes on the <SVG>
+  - sortAttrs:
+      order:
+        - xmlns
+        - role
+        - viewBox
+
+  # Convert basic shapes (such as <circle>) to <path>, including <arc>
+  - convertShapeToPath:
+      convertArcs: true
+
+  # Compound all <path>s into one, blocked by: https://github.com/svg/svgo/pull/1084
+  - mergePaths:
+      force: true
+
+  # Keep the <title>
+  - removeTitle: false
+
+  # Don't remove the role="img" attribute and automatically
+  # add it to the SVG if it's not
+  - addAttributesToSVGElement:
+      attributes:
+        - role: img
+  - removeUnknownsAndDefaults:
+      keepRoleAttr: true
+
+  # Enable everything else
+  - removeDoctype
+  - removeXMLProcInst
+  - removeComments
+  - removeMetadata
+  - removeXMLNS
+  - removeEditorsNSData
+  - cleanupAttrs
+  - inlineStyles
+  - minifyStyles
+  - convertStyleToAttrs
+  - cleanupIDs
+  - prefixIds
+  - removeRasterImages
+  - removeUselessDefs
+  - cleanupNumericValues
+  - cleanupListOfValues
+  - convertColors
+  - removeNonInheritableGroupAttrs
+  - removeUselessStrokeAndFill
+  - removeViewBox
+  - cleanupEnableBackground
+  - removeHiddenElems
+  - removeEmptyText
+  - moveElemsAttrsToGroup
+  - moveGroupAttrsToElems
+  - collapseGroups
+  - convertPathData
+  - convertTransform
+  - removeEmptyAttrs
+  - removeEmptyContainers
+  - removeUnusedNS
+  - removeDesc
+  - removeDimensions
+  - removeAttrs
+  - removeAttributesBySelector
+  - removeElementsByAttr
+  - addClassesToSVGElement
+  - removeStyleElement
+  - removeScriptElement
+  - removeOffCanvasPaths
+  - reusePaths
