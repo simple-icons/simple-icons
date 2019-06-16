@@ -33,6 +33,16 @@ jobs:
         api_key: "$NPM_KEY"
         on:
           branch: master
+    - name: "Simple Icons Font"
+      language: node_js
+      node_js: 8
+      before_install:
+        - git clone https://github.com/simple-icons/simple-icons-font.git
+        - cd simple-icons-font
+      install:
+        - npm install
+      script:
+        - npm run build
 
 notifications:
   email:
