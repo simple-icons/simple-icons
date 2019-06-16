@@ -40,9 +40,14 @@ jobs:
         - git clone https://github.com/simple-icons/simple-icons-font.git
         - cd simple-icons-font
       install:
+        # Update simple-icons to the latest version
+        - npm uninstall simple-icons
+        - npm install simple-icons --save-dev
+        # Install other dependencies
         - npm install
       script:
         - npm run build
+        - cat package.json
 
 notifications:
   email:
