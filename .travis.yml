@@ -22,38 +22,24 @@ jobs:
         - npm run test
 
     - stage: deploy
-      name: "NPM Package"
+      name: "Simple Icons Font"
       language: node_js
       node_js: 8
-      if: branch = master
+      if: branch = develop
 
-      deploy:
-        provider: npm
-        email: "johanringmann@gmail.com"
-        api_key: "$NPM_KEY"
-        on:
-          branch: master
-    - name: "Simple Icons Font"
-      language: node_js
-      node_js: 8
-      before_install:
-        # Install temporary dependency
-        - npm install semver --no-save
-        # Clone the simple-icons-font repository
-        - git clone https://github.com/simple-icons/simple-icons-font.git
-        - cd simple-icons-font
       install:
-        # Update simple-icons to the latest version
-        - npm uninstall simple-icons
-        - npm install simple-icons --save-dev
-        # Install other dependencies
         - npm install
       script:
-        - npm run build
-        # Test updating the version number
-        - cat package.json
-        - node ../scripts/update-version-number.js
-        - cat package.json
+        - mkdir _site
+        - touch _site/index.html
+
+      deploy:
+        local-dir: ./_site
+        provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        on:
+          branch: develop
 
 notifications:
   email:
