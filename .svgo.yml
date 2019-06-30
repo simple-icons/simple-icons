@@ -1,4 +1,8 @@
 plugins:
+  # Set <path> precision to 3 decimal places
+  - convertPathData:
+      floatPrecision: 3
+
   # Sort attributes on the <SVG>
   - sortAttrs:
       order:
@@ -52,7 +56,6 @@ plugins:
   - moveElemsAttrsToGroup
   - moveGroupAttrsToElems
   - collapseGroups
-  - convertPathData
   - convertTransform
   - removeEmptyAttrs
   - removeEmptyContainers
