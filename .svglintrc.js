@@ -1,4 +1,4 @@
-const icons = require("./_data/simple-icons.json").icons;
+const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 
 const titleRegexp = /(.+) icon$/;
@@ -40,7 +40,7 @@ module.exports = {
               // titleMatch = [ "[ICON_NAME] icon", "[ICON_NAME]" ]
               const rawIconName = titleMatch[1];
               const iconName = htmlFriendlyToTitle(rawIconName);
-              const icon = icons.find(icon => icon.title === iconName);
+              const icon = data.icons.find(icon => icon.title === iconName);
               if (icon === undefined) {
                 reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
               }
