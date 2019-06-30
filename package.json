@@ -33,6 +33,6 @@
     "test": "jest",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
-    "svgo": "svgo --config=./.svgo.yml --multipass"
+    "svgo": "svgo --config=./.svgo.yml"
   }
 }

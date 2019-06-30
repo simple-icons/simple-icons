@@ -1,3 +1,5 @@
+multipass: true
+
 plugins:
   # Set <path> precision to 3 decimal places
   - convertPathData:
