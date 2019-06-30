@@ -1,3 +1,5 @@
+const titleRegexp = /.+ icon$/;
+
 module.exports = {
     rules: {
         elm: {
@@ -24,6 +26,14 @@ module.exports = {
                 "rule::selector": "svg > path",
                 "rule::whitelist": true,
             }
+        ],
+        custom: [
+          function(reporter, $, ast) {
+            const iconTitleText = $.find("title").text();
+            if (!titleRegexp.test(iconTitleText)) {
+              reporter.error("<title> should follow the format \"[ICON_NAME] icon\"");
+            }
+          },
         ]
     }
 };
