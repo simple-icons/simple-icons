@@ -28,19 +28,5 @@ data.icons.forEach(icon => {
     );
 });
 
-/* Backwards compatibility */
-// https://github.com/simple-icons/simple-icons/pull/1365
-const adobeLightroom = icons["Adobe Lightroom Classic"];
-adobeLightroom.title = "Adobe Lightroom";
-icons["Adobe Lightroom"] = adobeLightroom;
-fs.writeFileSync(
-    `${iconsDir}/adobelightroom.svg`,
-    adobeLightroom.svg
-);
-fs.writeFileSync(
-    `${iconsDir}/adobelightroom.js`,
-    `module.exports=${JSON.stringify(adobeLightroom)};`
-);
-
 // write our generic index.js
 fs.writeFileSync(indexFile, `module.exports=${JSON.stringify(icons)};`);
