@@ -1,4 +1,6 @@
-const titleRegexp = /.+ icon$/;
+const icons = require("./_data/simple-icons.json").icons;
+
+const titleRegexp = /(.+) icon$/;
 
 module.exports = {
     rules: {
@@ -32,6 +34,12 @@ module.exports = {
             const iconTitleText = $.find("title").text();
             if (!titleRegexp.test(iconTitleText)) {
               reporter.error("<title> should follow the format \"[ICON_NAME] icon\"");
+            } else {
+              const iconName = iconTitleText.match(titleRegexp)[1];
+              const icon = icons.find(icon => icon.title === iconName);
+              if (icon === undefined) {
+                reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
+              }
             }
           },
         ]
