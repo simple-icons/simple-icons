@@ -6,9 +6,9 @@ plugins:
   # Sort attributes on the <SVG>
   - sortAttrs:
       order:
-        - xmlns
         - role
         - viewBox
+      xmlnsOrder: end
 
   # Convert basic shapes (such as <circle>) to <path>, including <arc>
   - convertShapeToPath:
