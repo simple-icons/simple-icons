@@ -15,18 +15,29 @@ const fs = require("fs");
 
 const { titleToFilename } = require("./utils");
 
-const icons = {};
+// Local helper functions
+function iconToKeyValue(icon) {
+  return `'${icon.title}':${iconToObject(icon)}`;
+}
+function iconToObject(icon) {
+  return `{title:'${icon.title}',svg:'${icon.svg}',path:'${icon.path}',source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
+}
+
+// 'main'
+const icons = [];
 data.icons.forEach(icon => {
     const filename = titleToFilename(icon.title);
     icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
     icon.path = icon.svg.match(/<path\s+d="([^"]*)/)[1];
-    icons[icon.title] = icon;
+    icons.push(icon)
+
     // write the static .js file for the icon
     fs.writeFileSync(
         `${iconsDir}/${filename}.js`,
-        `module.exports=${JSON.stringify(icon)};`
+        `module.exports=${iconToObject(icon)};`
     );
 });
 
 // write our generic index.js
-fs.writeFileSync(indexFile, `module.exports=${JSON.stringify(icons)};`);
+const iconsString = icons.map(iconToKeyValue).join(',');
+fs.writeFileSync(indexFile, `module.exports={${iconsString}};`);
