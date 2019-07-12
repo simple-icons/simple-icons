@@ -20,7 +20,10 @@ function iconToKeyValue(icon) {
   return `'${icon.title}':${iconToObject(icon)}`;
 }
 function iconToObject(icon) {
-  return `{title:'${icon.title}',svg:'${icon.svg}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
+  return `{title:'${icon.title}',svg:'${icon.svg}',source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
+}
+function getObjectDefinesPropertyString(subject) {
+  return `Object.defineProperty(${subject},'path',{get:function(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];}})`;
 }
 
 // 'main'
@@ -34,10 +37,10 @@ data.icons.forEach(icon => {
     // write the static .js file for the icon
     fs.writeFileSync(
         `${iconsDir}/${filename}.js`,
-        `module.exports=${iconToObject(icon)};`
+        `module.exports=${iconToObject(icon)};${getObjectDefinesPropertyString("module.exports")}`
     );
 });
 
 // write our generic index.js
 const iconsString = icons.map(iconToKeyValue).join(',');
-fs.writeFileSync(indexFile, `module.exports={${iconsString}};`);
+fs.writeFileSync(indexFile, `module.exports={${iconsString}};for(var i in module.exports){${getObjectDefinesPropertyString("module.exports[i]")}}`);
