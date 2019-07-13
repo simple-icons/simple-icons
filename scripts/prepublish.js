@@ -7,12 +7,15 @@
  * Also generates an index.js that exports all icons by title, but is not tree-shakeable
  */
 
+const fs = require("fs");
+const util = require("util");
+
 const dataFile = "../_data/simple-icons.json";
 const indexFile = `${__dirname}/../index.js`;
 const iconsDir = `${__dirname}/../icons`;
-const data = require(dataFile);
-const fs = require("fs");
+const indexTemplateFile = `${__dirname}/templates/index.js`;
 
+const data = require(dataFile);
 const { titleToFilename } = require("./utils");
 
 const icons = {};
@@ -30,4 +33,5 @@ data.icons.forEach(icon => {
 });
 
 // write our generic index.js
-fs.writeFileSync(indexFile, `module.exports=${JSON.stringify(icons)};`);
+const indexTemplate = fs.readFileSync(indexTemplateFile, "utf8");
+fs.writeFileSync(indexFile, util.format(indexTemplate, JSON.stringify(icons)));
