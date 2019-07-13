@@ -9,6 +9,7 @@
 
 const fs = require("fs");
 const util = require("util");
+const minify = require("uglify-js").minify;
 
 const dataFile = "../_data/simple-icons.json";
 const indexFile = `${__dirname}/../index.js`;
@@ -34,4 +35,9 @@ data.icons.forEach(icon => {
 
 // write our generic index.js
 const indexTemplate = fs.readFileSync(indexTemplateFile, "utf8");
-fs.writeFileSync(indexFile, util.format(indexTemplate, JSON.stringify(icons)));
+const { error, code } = minify(util.format(indexTemplate, JSON.stringify(icons)));
+if (error) {
+  process.exit(1);
+} else {
+  fs.writeFileSync(indexFile, code);
+}
