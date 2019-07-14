@@ -7,12 +7,16 @@
  * Also generates an index.js that exports all icons by title, but is not tree-shakeable
  */
 
+const fs = require("fs");
+const util = require("util");
+const minify = require("uglify-js").minify;
+
 const dataFile = "../_data/simple-icons.json";
 const indexFile = `${__dirname}/../index.js`;
 const iconsDir = `${__dirname}/../icons`;
-const data = require(dataFile);
-const fs = require("fs");
+const indexTemplateFile = `${__dirname}/templates/index.js`;
 
+const data = require(dataFile);
 const { titleToFilename } = require("./utils");
 
 // Local helper functions
@@ -39,5 +43,10 @@ data.icons.forEach(icon => {
 });
 
 // write our generic index.js
-const iconsString = icons.map(iconToKeyValue).join(',');
-fs.writeFileSync(indexFile, `module.exports={${iconsString}};`);
+const indexTemplate = fs.readFileSync(indexTemplateFile, "utf8");
+const { error, code } = minify(util.format(indexTemplate, icons.map(iconToKeyValue).join(',')));
+if (error) {
+  process.exit(1);
+} else {
+  fs.writeFileSync(indexFile, code);
+}
