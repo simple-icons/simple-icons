@@ -19,23 +19,32 @@ const indexTemplateFile = `${__dirname}/templates/index.js`;
 const data = require(dataFile);
 const { titleToFilename } = require("./utils");
 
-const icons = {};
+// Local helper functions
+function iconToKeyValue(icon) {
+  return `'${icon.title}':${iconToObject(icon)}`;
+}
+function iconToObject(icon) {
+  return `{title:'${icon.title}',slug:'${icon.slug}',svg:'${icon.svg}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
+}
+
+// 'main'
+const icons = [];
 data.icons.forEach(icon => {
     const filename = titleToFilename(icon.title);
     icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
-    icon.path = icon.svg.match(/<path\s+d="([^"]*)/)[1];
-    icon.name = filename;
-    icons[icon.title] = icon;
+    icon.slug = filename;
+    icons.push(icon)
+
     // write the static .js file for the icon
     fs.writeFileSync(
         `${iconsDir}/${filename}.js`,
-        `module.exports=${JSON.stringify(icon)};`
+        `module.exports=${iconToObject(icon)};`
     );
 });
 
 // write our generic index.js
 const indexTemplate = fs.readFileSync(indexTemplateFile, "utf8");
-const { error, code } = minify(util.format(indexTemplate, JSON.stringify(icons)));
+const { error, code } = minify(util.format(indexTemplate, icons.map(iconToKeyValue).join(',')));
 if (error) {
   process.exit(1);
 } else {

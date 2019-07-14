@@ -1,4 +1,4 @@
-var icons = %s;
+var icons = {%s};
 
 module.exports = icons;
 module.exports.get = function(targetName) {
@@ -9,7 +9,7 @@ module.exports.get = function(targetName) {
     for (var iconName in icons) {
       var icon = icons[iconName];
       if ((icon.title && icon.title.toLowerCase() === normalizedName)
-       || (icon.name && icon.name === normalizedName)) {
+       || (icon.slug && icon.slug === normalizedName)) {
          return icon;
       }
     }
