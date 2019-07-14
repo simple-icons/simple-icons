@@ -146,9 +146,19 @@
             "source": "https://angular.io/presskit"
         },
         {
+            "title": "Ansible",
+            "hex": "EE0000",
+            "source": "https://www.ansible.com/logos"
+        },
+        {
             "title": "Apache",
             "hex": "D22128",
             "source": "https://www.apache.org/foundation/press/kit/"
+        },
+        {
+            "title": "Apache Flink",
+            "hex": "E6526F",
+            "source": "https://flink.apache.org/material.html"
         },
         {
             "title": "Apple",
@@ -244,6 +254,11 @@
             "title": "Azure Pipelines",
             "hex": "2560E0",
             "source": "https://github.com/vscode-icons/vscode-icons/pull/1741"
+        },
+        {
+            "title": "Babel",
+            "hex": "F9DC3E",
+            "source": "https://babeljs.io/"
         },
         {
             "title": "Baidu",
@@ -376,6 +391,11 @@
             "source": "https://www.campaignmonitor.com/brand"
         },
         {
+            "title": "Canva",
+            "hex": "00C4CC",
+            "source": "https://www.canva.com/"
+        },
+        {
             "title": "Cash App",
             "hex": "00C244",
             "source": "https://cash.app/press"
@@ -401,6 +421,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Chase_logo_2007.svg"
         },
         {
+            "title": "Chef",
+            "hex": "F09820",
+            "source":"https://www.chef.io/"
+        },
+        {
             "title": "Circle",
             "hex": "8669AE",
             "source": "https://www.circle.com/"
@@ -409,6 +434,11 @@
             "title": "CircleCI",
             "hex": "343434",
             "source": "https://circleci.com/press"
+        },
+        {
+            "title": "Cirrus CI",
+            "hex": "212121",
+            "source": "https://cirrus-ci.org"
         },
         {
             "title": "CiviCRM",
@@ -501,6 +531,11 @@
             "source": "https://coffeescript.org/"
         },
         {
+            "title": "Composer",
+            "hex": "885630",
+            "source": "https://getcomposer.org/"
+        },
+        {
             "title": "ComproPago",
             "hex": "00AAEF",
             "source": "https://compropago.com"
@@ -579,6 +614,11 @@
             "title": "Dailymotion",
             "hex": "0066DC",
             "source": "http://press.dailymotion.com/?page_id=346"
+        },
+        {
+            "title": "Dassault Systèmes",
+            "hex": "005386",
+            "source": "https://www.3ds.com/statics/menu/2/assets/img/logo/3ds-dark.svg"
         },
         {
             "title": "DAZN",
@@ -731,6 +771,11 @@
             "source": "https://duckduckgo.com/"
         },
         {
+            "title": "Dynatrace",
+            "hex": "1496FF",
+            "source": "https://www.dynatrace.com/company/press-kit/"
+        },
+        {
             "title": "eBay",
             "hex": "E53238",
             "source": "https://go.developer.ebay.com/logos"
@@ -739,6 +784,11 @@
             "title": "EVRY",
             "hex": "063A54",
             "source": "https://www.evry.com/en/"
+        },
+        {
+            "title": "Exercism",
+            "hex": "009CAB",
+            "source": "https://github.com/exercism/website-icons/blob/master/exercism/logo-icon.svg"
         },
         {
             "title": "Eclipse IDE",
@@ -781,6 +831,11 @@
             "source": "https://ello.co"
         },
         {
+            "title": "Elsevier",
+            "hex": "FF6C00",
+            "source": "https://www.elsevier.com"
+        },
+        {
             "title": "Empire Kred",
             "hex": "72BE50",
             "source": "http://www.empire.kred"
@@ -789,6 +844,11 @@
             "title": "Envato",
             "hex": "81B441",
             "source": "https://envato.com/"
+        },
+        {
+            "title": "Epic Games",
+            "hex": "313131",
+            "source": "https://www.epicgames.com/"
         },
         {
             "title": "ESEA",
@@ -1066,6 +1126,11 @@
             "source": "https://blog.google/press/?product_tag=chrome"
         },
         {
+            "title": "Google Cloud",
+            "hex": "4285F4",
+            "source": "https://cloud.google.com/"
+        },
+        {
             "title": "Google Analytics",
             "hex": "FFC107",
             "source": "https://analytics.google.com"
@@ -1104,11 +1169,6 @@
             "title": "Google Podcasts",
             "hex": "4285F4",
             "source": "https://developers.google.com/search/docs/data-types/podcast"
-        },
-        {
-            "title": "Google+",
-            "hex": "DC4E41",
-            "source": "https://developers.google.com/+/branding-guidelines"
         },
         {
             "title": "GOV.UK",
@@ -1204,6 +1264,11 @@
             "title": "Hatena Bookmark",
             "hex": "00A4DE",
             "source": "http://hatenacorp.jp/press/resource"
+        },
+        {
+            "title": "Haxe",
+            "hex": "EA8220",
+            "source": "https://haxe.org/foundation/branding.html"
         },
         {
             "title": "HERE",
@@ -1329,6 +1394,11 @@
             "title": "Intel",
             "hex": "0071C5",
             "source": "https://www.intel.com"
+        },
+        {
+            "title": "IntelliJ IDEA",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/idea/"
         },
         {
             "title": "Intercom",
@@ -1479,6 +1549,11 @@
             "title": "Known",
             "hex": "333333",
             "source": "https://withknown.com/img/logo_k.png"
+        },
+        {
+            "title": "Kodi",
+            "hex": "17B2E7",
+            "source": "https://kodi.tv/"
         },
         {
             "title": "Koding",
@@ -2021,6 +2096,11 @@
             "source": "http://blog.pandora.com/us/the-color-of-music-unveiling-a-new-pandora-look-that-reflects-your-music-experience/"
         },
         {
+            "title": "Pantheon",
+            "hex": "EFD01B",
+            "source": "https://projects.invisionapp.com/boards/8UOJQWW2J3G5#/1145336"
+        },
+        {
             "title": "Patreon",
             "hex": "F96854",
             "source": "https://www.patreon.com/brand/downloads"
@@ -2134,6 +2214,11 @@
             "title": "PowerShell",
             "hex": "5391FE",
             "source": "https://github.com/PowerShell/PowerShell"
+        },
+        {
+            "title": "Prettier",
+            "hex": "F7B93E",
+            "source": "https://github.com/prettier/prettier-logo/tree/master/images"
         },
         {
             "title": "Prismic",
@@ -2519,6 +2604,11 @@
             "title": "Spacemacs",
             "hex": "9266CC",
             "source": "http://spacemacs.org/"
+        },
+        {
+            "title": "SpaceX",
+            "hex": "005288",
+            "source": "https://www.spacex.com/sites/all/themes/spacex2012/images/logo.svg"
         },
         {
             "title": "SparkFun",

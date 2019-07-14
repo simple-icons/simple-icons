@@ -23,7 +23,7 @@
                     "source": {
                         "description": "The website from which the icon originated",
                         "type": "string",
-                        "pattern": "^https?://",
+                        "pattern": "^https?://[^\\s]+$",
                         "required": true
                     }
                 },
