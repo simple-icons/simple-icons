@@ -20,7 +20,7 @@ function iconToKeyValue(icon) {
   return `'${icon.title}':${iconToObject(icon)}`;
 }
 function iconToObject(icon) {
-  return `{title:'${icon.title}',name:'${icon.name}',svg:'${icon.svg}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
+  return `{title:'${icon.title}',slug:'${icon.slug}',svg:'${icon.svg}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
 }
 
 // 'main'
@@ -28,7 +28,7 @@ const icons = [];
 data.icons.forEach(icon => {
     const filename = titleToFilename(icon.title);
     icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
-    icon.name = filename;
+    icon.slug = filename;
     icons.push(icon)
 
     // write the static .js file for the icon
