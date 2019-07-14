@@ -16,11 +16,14 @@ const fs = require("fs");
 const { titleToFilename } = require("./utils");
 
 // Local helper functions
+function escape(value) {
+  return value.replace(/'/g, "\\'");
+}
 function iconToKeyValue(icon) {
   return `'${icon.title}':${iconToObject(icon)}`;
 }
 function iconToObject(icon) {
-  return `{title:'${icon.title}',svg:'${icon.svg}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${icon.source.replace(/'/g, "\\'")}',hex:'${icon.hex}'}`;
+  return `{title:'${escape(icon.title)}',svg:'${escape(icon.svg)}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${escape(icon.source)}',hex:'${icon.hex}'}`;
 }
 
 // 'main'
