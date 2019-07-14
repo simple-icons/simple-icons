@@ -16,7 +16,7 @@ plugins:
   - convertShapeToPath:
       convertArcs: true
 
-  # Compound all <path>s into one, blocked by: https://github.com/svg/svgo/pull/1084
+  # Compound all <path>s into one
   - mergePaths:
       force: true
 
