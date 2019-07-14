@@ -25,4 +25,8 @@ icons.forEach(icon => {
     expect(typeof subject.path).toBe('string');
     expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAa0-9-,.\s]+$/g);
   });
+
+  test(`${icon.title} has a "slug"`, () => {
+    expect(typeof subject.slug).toBe('string');
+  });
 });

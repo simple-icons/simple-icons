@@ -47,6 +47,7 @@ console.log(simpleIcons['Simple Icons']);
 /*
 {
     title: 'Simple Icons',
+    slug: 'simpleicons',
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
@@ -66,6 +67,7 @@ console.log(icon);
 /*
 {
     title: 'Simple Icons',
+    slug: 'simpleicons',
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
