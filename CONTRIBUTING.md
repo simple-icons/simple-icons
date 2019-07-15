@@ -83,6 +83,10 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Set the precision to about 3, depending on if there is a loss of quality.
   * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
   * Click the download button.
+* The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
+  * If none of the options above work for you, it is possible to build a Docker image for compressing the images
+  * Build: `docker build -t simple-icons/svgo-optimizer .`
+  * Run: `docker run --rm -v ${full local path}:/image.svg simple-icons/svgo-optimizer`
 
 ### 4. Annotate The Icon
 
