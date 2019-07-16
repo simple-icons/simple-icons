@@ -1,6 +1,7 @@
 ---
 name: Icon update
 about: Help us improve by reporting outdated icons
+labels: icon outdated
 ---
 
 <!-- Before opening a new issue search for duplicate or closed issues -->

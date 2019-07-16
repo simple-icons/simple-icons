@@ -42,14 +42,16 @@ The API can then be used as follows:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-console.log(simpleIcons['Simple Icons']);
+console.log(simpleIcons.get('Simple Icons'));
 
 /*
 {
     title: 'Simple Icons',
+    slug: 'simpleicons',
     hex: '111111',
     source: 'https://simpleicons.org/',
-    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
+    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
+    path: 'M12 12v-1.5c-2.484 ...'
 }
 */
 ```
@@ -65,9 +67,11 @@ console.log(icon);
 /*
 {
     title: 'Simple Icons',
+    slug: 'simpleicons',
     hex: '111111',
     source: 'https://simpleicons.org/',
-    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>'
+    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
+    path: 'M12 12v-1.5c-2.484 ...'
 }
 */
 ```
@@ -80,5 +84,5 @@ Icons are also available on WordPress through a simple plugin created by [@tjtay
 
 ## Status
 
-[![Build Status](https://img.shields.io/travis/simple-icons/simple-icons/develop.svg)](https://travis-ci.org/simple-icons/simple-icons)
+[![Build Status](https://travis-ci.com/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.com/simple-icons/simple-icons)
 [![npm version](https://img.shields.io/npm/v/simple-icons.svg)](https://www.npmjs.com/package/simple-icons)

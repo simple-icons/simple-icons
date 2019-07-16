@@ -74,10 +74,9 @@ Using your preferred tool you should:
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  * Install SVGO
-    * With npm: `npm install -g svgo`
-    * With Homebrew: `brew install svgo`
-  * Run the following command `svgo --precision=3 -i icon.svg -o icon.min.svg`
+  * Install dependencies
+    * With npm: `npm install` from the root of this repository
+  * Run the following command `npm run svgo -- icons/file-to-optimize.svg`
   * Check if there is a loss of quality in the output, if so increase the precision.
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.
@@ -116,6 +115,9 @@ The final icon should:
   * This means the icon should be touching at least two sides of the viewbox.
 * Be vertically and horizontally centered.
 * Be minified to a single line with no formatting.
+* Contain only a single `path` element.
+* Not contain extraneous elements.
+  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 

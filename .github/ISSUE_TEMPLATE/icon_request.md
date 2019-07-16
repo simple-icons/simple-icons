@@ -1,6 +1,7 @@
 ---
 name: Icon request
 about: Request a new icon for SimpleIcons
+labels: new icon
 ---
 
 <!-- Before opening a new issue search for duplicate or closed issues -->
