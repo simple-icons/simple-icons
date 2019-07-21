@@ -49,7 +49,7 @@ data.icons.forEach(icon => {
     const filename = titleToFilename(icon.title);
     icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, UTF8);
     icon.slug = filename;
-    icons.push(icon)
+    icons.push(icon);
 
     // write the static .js file for the icon
     fs.writeFileSync(
