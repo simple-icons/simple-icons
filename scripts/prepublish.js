@@ -52,10 +52,14 @@ data.icons.forEach(icon => {
     icons.push(icon);
 
     // write the static .js file for the icon
-    fs.writeFileSync(
-        `${iconsDir}/${filename}.js`,
-        minify(`module.exports = ${iconToObject(icon)};`).code
-    );
+    const { error, code } = minify(`module.exports=${iconToObject(icon)};`);
+    if (error) {
+      console.error(error);
+      process.exit(1);
+    } else {
+      fs.writeFileSync(`${iconsDir}/${filename}.js`, code);
+    }
+
 });
 
 // write our generic index.js
