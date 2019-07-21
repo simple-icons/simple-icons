@@ -26,7 +26,7 @@
     "uglify-js": "^3.6.0"
   },
   "scripts": {
-    "build": "node scripts/prepublish.js",
+    "build": "node scripts/build-package.js",
     "clean": "rm icons/*.js index.js",
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
