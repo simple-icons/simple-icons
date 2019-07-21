@@ -49,6 +49,7 @@ data.icons.forEach(icon => {
 const indexTemplate = fs.readFileSync(indexTemplateFile, "utf8");
 const { error, code } = minify(util.format(indexTemplate, icons.map(iconToKeyValue).join(',')));
 if (error) {
+  console.error(error);
   process.exit(1);
 } else {
   fs.writeFileSync(indexFile, code);
