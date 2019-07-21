@@ -54,7 +54,7 @@ data.icons.forEach(icon => {
     // write the static .js file for the icon
     fs.writeFileSync(
         `${iconsDir}/${filename}.js`,
-        minify(`module.exports=${iconToObject(icon)};`)
+        minify(`module.exports = ${iconToObject(icon)};`).code
     );
 });
 
