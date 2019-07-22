@@ -26,11 +26,13 @@
     "uglify-js": "^3.6.0"
   },
   "scripts": {
+    "build": "node scripts/build-package.js",
+    "clean": "rm icons/*.js index.js",
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
     "wslint": "editorconfig-checker --ignore",
-    "prepublishOnly": "node scripts/prepublish.js",
-    "postpublish": "rm icons/*.js index.js",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run clean",
     "test": "jest",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
