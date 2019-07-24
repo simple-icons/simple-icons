@@ -44,3 +44,11 @@ icons.forEach(icon => {
     expect(found.title).toEqual(icon.title);
   });
 });
+
+test(`Iterating over simpleIcons only exposes icons`, () => {
+  const iconArray = Object.values(simpleIcons);
+  for (let icon of iconArray) {
+    expect(icon).toBeDefined();
+    expect(typeof icon).toBe('object');
+  }
+});
