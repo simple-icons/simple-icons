@@ -22,7 +22,22 @@ jobs:
         - npm run test
 
     - stage: deploy
-      name: "NPM Package"
+      name: "Git tag"
+      language: node_js
+      node_js: 8
+      if: branch = master
+
+      before_deploy:
+        # Set up git user name and tag this commit
+        - git config --local user.name "YOUR GIT USER NAME"
+        - git config --local user.email "YOUR GIT USER EMAIL"
+        - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+        - git tag $TRAVIS_TAG
+      deploy:
+        provider: releases
+        api_key: "$GITHUB_KEY"
+        skip_cleanup: true
+    - name: "NPM Package"
       language: node_js
       node_js: 8
       if: branch = master
