@@ -1,7 +1,7 @@
 var icons = {%s};
 
 Object.defineProperty(icons, "get", {
-  enumerate: false,
+  enumerable: false,
   value: function(targetName) {
     if (icons[targetName]) {
       return icons[targetName];
