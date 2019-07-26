@@ -20,6 +20,12 @@ jobs:
       node_js: 8
       script:
         - npm run test
+    
+    - stage: Test deploy
+      name: Test extract version from package.json
+      script:
+        - export TEST=`cat package.json | grep 'version' | sed 's/"version": //' | sed 's/[ ",]//g'`
+        - echo "The current version of the package is $TEST"
 
     - stage: deploy
       name: "Git tag"
