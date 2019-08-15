@@ -11,13 +11,7 @@ package-lock.json  -diff
 *.png              binary
 
 # Don't export/archive these files
-images/            export-ignore
-scripts/           export-ignore
-tests/             export-ignore
-.*                 export-ignore
+.github            export-ignore
+.gitpod.yml        export-ignore
+.travis.yml        export-ignore
 CNAME              export-ignore
-CONTRIBUTING.md    export-ignore
-package-lock.json  export-ignore
-index.html         export-ignore
-site_script.js     export-ignore
-stylesheet.css     export-ignore
