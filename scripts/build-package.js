@@ -11,10 +11,17 @@ const fs = require("fs");
 const util = require("util");
 const minify = require("uglify-js").minify;
 
+const UTF8 = "utf8";
+
 const dataFile = "../_data/simple-icons.json";
 const indexFile = `${__dirname}/../index.js`;
 const iconsDir = `${__dirname}/../icons`;
+
 const indexTemplateFile = `${__dirname}/templates/index.js`;
+const iconObjectTemplateFile = `${__dirname}/templates/icon-object.js`;
+
+const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
+const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
 const { titleToFilename } = require("./utils");
@@ -27,27 +34,37 @@ function iconToKeyValue(icon) {
   return `'${icon.title}':${iconToObject(icon)}`;
 }
 function iconToObject(icon) {
-  return `{title:'${escape(icon.title)}',slug:'${escape(icon.slug)}',svg:'${escape(icon.svg)}',get path(){return this.svg.match(/<path\\s+d="([^"]*)/)[1];},source:'${escape(icon.source)}',hex:'${icon.hex}'}`;
+  return util.format(iconObjectTemplate,
+    escape(icon.title),
+    escape(icon.slug),
+    escape(icon.svg),
+    escape(icon.source),
+    escape(icon.hex)
+  );
 }
 
 // 'main'
 const icons = [];
 data.icons.forEach(icon => {
     const filename = titleToFilename(icon.title);
-    icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, "utf8");
+    icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, UTF8);
     icon.slug = filename;
-    icons.push(icon)
+    icons.push(icon);
 
     // write the static .js file for the icon
-    fs.writeFileSync(
-        `${iconsDir}/${filename}.js`,
-        `module.exports=${iconToObject(icon)};`
-    );
+    const { error, code } = minify(`module.exports=${iconToObject(icon)};`);
+    if (error) {
+      console.error(error);
+      process.exit(1);
+    } else {
+      fs.writeFileSync(`${iconsDir}/${filename}.js`, code);
+    }
+
 });
 
 // write our generic index.js
-const indexTemplate = fs.readFileSync(indexTemplateFile, "utf8");
-const { error, code } = minify(util.format(indexTemplate, icons.map(iconToKeyValue).join(',')));
+const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','));
+const { error, code } = minify(rawIndexJs);
 if (error) {
   console.error(error);
   process.exit(1);
