@@ -11,6 +11,11 @@
             "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
         },
         {
+            "title": "Nintendo 3DS",
+            "hex": "",
+            "source": "https://www.nintendo.de/"
+        },
+        {
             "title": "500px",
             "hex": "0099E5",
             "source": "https://about.500px.com/press"
@@ -443,7 +448,7 @@
         {
             "title": "Chef",
             "hex": "F09820",
-            "source":"https://www.chef.io/"
+            "source": "https://www.chef.io/"
         },
         {
             "title": "Circle",
@@ -3192,8 +3197,8 @@
         },
         {
             "title": "VK",
-            "hex": "6383A8",
-            "source": "https://vk.com/about"
+            "hex": "4680C2",
+            "source": "https://vk.com/brand"
         },
         {
             "title": "VLC media player",
@@ -3404,6 +3409,11 @@
             "title": "Zorin",
             "hex": "0CC1F3",
             "source": "https://zorinos.com/press/"
+        },
+        {
+            "title": "Zulip",
+            "hex": "52C2AF",
+            "source": "https://github.com/zulip/zulip/"
         }
     ]
 }
