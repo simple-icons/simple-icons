@@ -443,7 +443,7 @@
         {
             "title": "Chef",
             "hex": "F09820",
-            "source":"https://www.chef.io/"
+            "source": "https://www.chef.io/"
         },
         {
             "title": "Circle",
@@ -2041,6 +2041,11 @@
             "source": "https://en.wikipedia.org/wiki/Nintendo#/media/File:Nintendo.svg"
         },
         {
+            "title": "Nintendo 3DS",
+            "hex": "D12228",
+            "source": "https://www.nintendo.de/"
+        },
+        {
             "title": "Nintendo GameCube",
             "hex": "6A5FBB",
             "source": "https://www.nintendo.com/consumer/systems/nintendogamecube/index.jsp"
@@ -3192,8 +3197,8 @@
         },
         {
             "title": "VK",
-            "hex": "6383A8",
-            "source": "https://vk.com/about"
+            "hex": "4680C2",
+            "source": "https://vk.com/brand"
         },
         {
             "title": "VLC media player",
@@ -3404,6 +3409,11 @@
             "title": "Zorin",
             "hex": "0CC1F3",
             "source": "https://zorinos.com/press/"
+        },
+        {
+            "title": "Zulip",
+            "hex": "52C2AF",
+            "source": "https://github.com/zulip/zulip/"
         }
     ]
 }
