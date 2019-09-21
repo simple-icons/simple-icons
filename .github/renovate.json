@@ -1,14 +1,12 @@
 {
   "labels": ["dependencies"],
   "extends": [
-    "group:all",
     "schedule:monthly"
   ],
   "lockFileMaintenance": {
     "commitMessageAction": "Update",
     "enabled": true,
     "extends": [
-      "group:all",
       "schedule:monthly"
     ]
   }
