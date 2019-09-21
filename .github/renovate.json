@@ -4,7 +4,6 @@
     "group:all",
     "schedule:monthly"
   ],
-  "separateMajorMinor": false,
   "lockFileMaintenance": {
     "commitMessageAction": "Update",
     "enabled": true,
