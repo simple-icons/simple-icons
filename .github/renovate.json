@@ -1,6 +1,16 @@
 {
+  "labels": ["dependencies"],
   "extends": [
-    "config:base"
+    "group:all",
+    "schedule:monthly",
+    ":maintainLockFilesMonthly",
+    ":preserveSemverRanges"
   ],
-  "labels": ["dependencies"]
+  "separateMajorMinor": false,
+  "lockFileMaintenance": {
+    "extends": [
+      "group:all"
+    ],
+    "commitMessageAction": "Update"
+  }
 }
