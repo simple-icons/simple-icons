@@ -3,8 +3,7 @@
   "extends": [
     "group:all",
     "schedule:monthly",
-    ":maintainLockFilesMonthly",
-    ":preserveSemverRanges"
+    ":maintainLockFilesMonthly"
   ],
   "separateMajorMinor": false,
   "lockFileMaintenance": {
