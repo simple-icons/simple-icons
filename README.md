@@ -76,6 +76,25 @@ console.log(icon);
 */
 ```
 
+### PHP usage
+
+The icons are also available through our Packagist package. To install, simply run:
+
+```
+$ composer require simple-icons/simple-icons
+```
+
+The package can then be used as follows:
+
+```php
+<?php
+
+echo file_get_contents('path/to/package/icons/simple-icons.svg');
+
+// <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>
+?>
+```
+
 ## Third Party Extensions
 
 ### WordPress
