@@ -1,0 +1,31 @@
+{
+  extends: [
+    "config:base",
+
+    // Make sure we get a single PR combining all updates
+    "group:all",
+  ],
+
+  lockFileMaintenance: {
+    extends: [
+      // Make sure we get a single PR combining all updates
+      "group:all",
+    ],
+    commitMessageAction: "Update",
+
+    // Explicitly enable lockfile maintenance
+    enabled: true,
+
+    // This schedule should be the same as the general schedule!
+    schedule: "on the 2nd and 4th day instance on sunday after 11pm",
+  },
+
+  // Use our labelling system
+  labels: ["dependencies"],
+
+  // Schedule the PRs to interleave with our release schedule
+  schedule: "on the 2nd and 4th day instance on sunday after 11pm",
+
+  // We generally always want the major version
+  separateMajorMinor: false,
+}
