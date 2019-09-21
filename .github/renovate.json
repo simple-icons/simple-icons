@@ -1,17 +1,17 @@
 {
-  "labels": ["dependencies"],
-  "schedule": "on the 2nd and 4th day instance on sunday after 11pm",
   "extends": [
     "config:base",
     "group:all"
   ],
   "lockFileMaintenance": {
-    "commitMessageAction": "Update",
-    "enabled": true,
-    "schedule": "on the 2nd and 4th day instance on sunday after 11pm",
     "extends": [
       "group:all"
-    ]
+    ],
+    "commitMessageAction": "Update",
+    "enabled": true,
+    "schedule": "on the 2nd and 4th day instance on sunday after 11pm"
   },
+  "labels": ["dependencies"],
+  "schedule": "on the 2nd and 4th day instance on sunday after 11pm",
   "separateMajorMinor": false
 }
