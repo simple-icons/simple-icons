@@ -2,14 +2,15 @@
   "labels": ["dependencies"],
   "extends": [
     "group:all",
-    "schedule:monthly",
-    ":maintainLockFilesMonthly"
+    "schedule:monthly"
   ],
   "separateMajorMinor": false,
   "lockFileMaintenance": {
+    "commitMessageAction": "Update",
+    "enabled": true,
     "extends": [
-      "group:all"
-    ],
-    "commitMessageAction": "Update"
+      "group:all",
+      "schedule:monthly"
+    ]
   }
 }
