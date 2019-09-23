@@ -251,6 +251,11 @@
             "source": "https://www.aventrix.com/press"
         },
         {
+            "title": "Azure Artifacts",
+            "hex": "CB2E6D",
+            "source": "https://azure.microsoft.com/en-us/services/devops/artifacts/"
+        },
+        {
             "title": "Azure DevOps",
             "hex": "0078D7",
             "source": "http://azure.com/devops"
@@ -443,7 +448,7 @@
         {
             "title": "Chef",
             "hex": "F09820",
-            "source":"https://www.chef.io/"
+            "source": "https://www.chef.io/"
         },
         {
             "title": "Circle",
@@ -509,6 +514,11 @@
             "title": "Codecov",
             "hex": "F01F7A",
             "source": "https://codecov.io/"
+        },
+        {
+            "title": "CodeFactor",
+            "hex": "F44A6A",
+            "source": "https://www.codefactor.io/"
         },
         {
             "title": "Codeforces",
@@ -931,6 +941,11 @@
             "source": "https://www.experts-exchange.com/"
         },
         {
+            "title": "Expo",
+            "hex": "000000",
+            "source": "http://expo.io"
+        },
+        {
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
@@ -1124,6 +1139,11 @@
             "title": "GNU",
             "hex": "A42E2B",
             "source": "https://gnu.org"
+        },
+        {
+            "title": "GNU Privacy Guard",
+            "hex": "0093DD",
+            "source": "https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=tree;f=artwork/icons"
         },
         {
             "title": "GNU social",
@@ -2041,6 +2061,11 @@
             "source": "https://en.wikipedia.org/wiki/Nintendo#/media/File:Nintendo.svg"
         },
         {
+            "title": "Nintendo 3DS",
+            "hex": "D12228",
+            "source": "https://www.nintendo.de/"
+        },
+        {
             "title": "Nintendo GameCube",
             "hex": "6A5FBB",
             "source": "https://www.nintendo.com/consumer/systems/nintendogamecube/index.jsp"
@@ -2606,6 +2631,11 @@
             "source": "https://press.shopify.com/brand"
         },
         {
+            "title": "Showpad",
+            "hex": "2D2E83",
+            "source": "https://www.showpad.com/"
+        },
+        {
             "title": "Signal",
             "hex": "2592E9",
             "source": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
@@ -2874,6 +2904,11 @@
             "title": "Super User",
             "hex": "2EACE3",
             "source": "http://stackoverflow.com/company/logos"
+        },
+        {
+            "title": "Svelte",
+            "hex": "FF3E00",
+            "source": "https://github.com/sveltejs/svelte/tree/master/site/static"
         },
         {
             "title": "Swarm",
@@ -3192,8 +3227,8 @@
         },
         {
             "title": "VK",
-            "hex": "6383A8",
-            "source": "https://vk.com/about"
+            "hex": "4680C2",
+            "source": "https://vk.com/brand"
         },
         {
             "title": "VLC media player",
@@ -3376,6 +3411,11 @@
             "source": "https://www.youtube.com/yt/about/brand-resources/#logos-icons-colors"
         },
         {
+            "title": "Zalando",
+            "hex": "FF6900",
+            "source": "https://www.zalando.co.uk/"
+        },
+        {
             "title": "Zapier",
             "hex": "FF4A00",
             "source": "https://zapier.com/about/brand"
@@ -3404,6 +3444,11 @@
             "title": "Zorin",
             "hex": "0CC1F3",
             "source": "https://zorinos.com/press/"
+        },
+        {
+            "title": "Zulip",
+            "hex": "52C2AF",
+            "source": "https://github.com/zulip/zulip/"
         }
     ]
 }
