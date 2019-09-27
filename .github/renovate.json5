@@ -11,7 +11,6 @@
       // Make sure we get a single PR combining all updates
       "group:all",
     ],
-    commitMessageAction: "Update",
 
     // Explicitly enable lockfile maintenance
     enabled: true,
