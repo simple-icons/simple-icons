@@ -4,6 +4,7 @@ plugins:
   # Set <path> precision to 3 decimal places
   - convertPathData:
       floatPrecision: 3
+      noSpaceAfterFlags: false
 
   # Sort attributes on the <SVG>
   - sortAttrs:
