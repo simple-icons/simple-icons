@@ -23,7 +23,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For anything else, popularity will be judged on a case-by-case basis.
 * Isn't related to anything that provides an illegal service (e.g. piracy, malware, threatening material, spam, etc.).
 
-If you are in doubt, feel free to submit it and we'll have a look.
+If you are in doubt, feel free to submit it and we'll have a look on it.
 
 When submitting a request for a new or updated icon include helpful information such as:
 
