@@ -2511,6 +2511,11 @@
             "source": "https://github.com/pytorch/pytorch/tree/master/docs/source/_static/img"
         },
         {
+            "title": "qBittorrent",
+            "hex": "2F67BA",
+            "source": "https://www.qbittorrent.org/"   
+        },
+        {
             "title": "Qgis",
             "hex": "589632",
             "source": "https://www.qgis.org/en/site/getinvolved/styleguide.html"
@@ -3640,10 +3645,6 @@
             "hex": "52C2AF",
             "source": "https://github.com/zulip/zulip/"
         }
-        {
-            "title": "qBittorrent",
-            "hex": "2f67ba",
-            "source": "https://www.qbittorrent.org/"   
-        }
+        
     ]
 }
