@@ -264,34 +264,6 @@ a.share-button {
   color: #222;
 }
 
-.grid-item.grid-item--light:hover{
-  position: relative;
-  z-index: 999;
-  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-}
-
 @supports not (display: grid) {
   .grid-item {
     border: 0.1875rem solid #FFF;
