@@ -37,10 +37,12 @@ svg {
   height: 100%;
   width: 100%;
 }
+
 #carbonads a {
   color: #263238;
 }
-#carbonads > span {
+
+#carbonads>span {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -73,6 +75,7 @@ svg {
   margin-top: auto;
   padding: 1.5rem;
 }
+
 @media (min-width: 45rem) {
   .footer {
     display: flex;
@@ -81,14 +84,17 @@ svg {
     padding: 3rem;
   }
 }
+
 .footer a {
   color: #263238;
   text-decoration: underline;
 }
+
 .footer p {
   margin: 0;
   opacity: 0.5;
 }
+
 a.share-button {
   background-color: #1DA1F2;
   border-radius: 0.125rem;
@@ -99,6 +105,7 @@ a.share-button {
   text-align: center;
   text-decoration: none;
 }
+
 @media (min-width: 45rem) {
   a.share-button {
     margin: 0;
@@ -112,6 +119,7 @@ a.share-button {
   padding: 3rem 1.5rem 1.5rem;
   text-align: center;
 }
+
 @media (min-width: 45rem) {
   .hero {
     padding: 4.5rem 3rem 1.5rem;
@@ -124,6 +132,7 @@ a.share-button {
   margin: 1rem 1.5rem;
   text-align: center;
 }
+
 @media (min-width: 45rem) {
   .search {
     margin: 1rem 3rem;
@@ -135,6 +144,7 @@ a.share-button {
   display: inline-block;
   position: relative;
 }
+
 .search .search__close {
   display: none;
   font-size: 1rem;
@@ -143,6 +153,7 @@ a.share-button {
   right: 0;
   top: 1px;
 }
+
 .search .search__close span {
   cursor: pointer;
 }
@@ -152,6 +163,7 @@ a.share-button {
   font-size: 1rem;
   padding: 6px 12px;
 }
+
 @media (min-width: 45rem) {
   .search input {
     width: 250px;
@@ -161,6 +173,7 @@ a.share-button {
 .search--active .search__close {
   display: block;
 }
+
 .search--active input {
   padding-right: 32px;
 }
@@ -170,6 +183,7 @@ a.share-button {
   margin-left: .5rem;
   opacity: .5;
 }
+
 .sort-btn:first-of-type {
   margin-left: 1rem;
 }
@@ -177,6 +191,7 @@ a.share-button {
 .sort-btn:hover {
   opacity: 1;
 }
+
 .sort-btn:hover path:first-of-type {
   opacity: 0.8;
 }
@@ -184,12 +199,15 @@ a.share-button {
 #sort-color:hover path:nth-of-type(2) {
   fill: #E57373;
 }
+
 #sort-color:hover path:nth-of-type(3) {
   fill: #F44336;
 }
+
 #sort-color:hover path:nth-of-type(4) {
   fill: #D32F2F;
 }
+
 #sort-color:hover path:nth-of-type(5) {
   fill: #B71C1C;
 }
@@ -211,6 +229,7 @@ a.share-button {
   margin-top: 0;
   padding: 0;
 }
+
 @media (min-width: 45rem) {
   .grid {
     margin: 3rem;
@@ -218,11 +237,11 @@ a.share-button {
   }
 }
 
-.grid > .grid-item--if-empty {
+.grid>.grid-item--if-empty {
   display: none;
 }
 
-.grid.search__empty > .grid-item--if-empty {
+.grid.search__empty>.grid-item--if-empty {
   display: block;
   font-size: 1.25em;
   grid-column: span 3;
@@ -238,6 +257,7 @@ a.share-button {
     grid-row-gap: 0.375rem;
     grid-auto-flow: dense;
   }
+
   .grid.search__empty:after {
     grid-column: 1/span 2;
   }
@@ -257,12 +277,15 @@ a.share-button {
   padding: 1rem;
   text-align: center;
 }
+
 .grid-item--light {
   color: #FFF;
 }
+
 .grid-item--dark {
   color: #222;
 }
+
 @supports not (display: grid) {
   .grid-item {
     border: 0.1875rem solid #FFF;
@@ -277,11 +300,13 @@ a.share-button {
   grid-row-end: span 2;
   height: auto;
 }
+
 @media (min-width: 21.75rem) {
   .grid-item--ad {
     grid-column: -3 / -1;
   }
 }
+
 @supports not (display: grid) {
   .grid-item--ad {
     width: 100%;
@@ -316,6 +341,7 @@ a.share-button {
 
 .navbar {
   background-color: #263238;
+
 }
 
 .navbar__nav {
@@ -324,6 +350,7 @@ a.share-button {
   margin: 0;
   padding: 0;
 }
+
 @media (min-width: 45rem) {
   .navbar__nav {
     padding: 0 1.5rem;
@@ -335,10 +362,14 @@ a.share-button {
   display: block;
   opacity: 0.5;
   padding: 1.5rem 0.375rem;
+  font-size: 26px;
 }
-.navbar__nav-item a:focus, .navbar__nav-item a:hover {
+
+.navbar__nav-item a:focus,
+.navbar__nav-item a:hover {
   opacity: 1;
 }
+
 .navbar__nav-item:last-child a {
   padding: 1.5rem 1.5rem 1.5rem 0.375rem;
 }
@@ -346,6 +377,7 @@ a.share-button {
 .navbar__nav-item--home {
   flex-grow: 1;
 }
+
 .navbar__nav-item--home a {
   opacity: 1;
   padding: 1.5rem 0 1.5rem 1.5rem;
