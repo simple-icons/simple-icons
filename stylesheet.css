@@ -277,8 +277,8 @@ a.share-button {
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.45);
+            transform: scale(1.45);
   }
 }
 @keyframes scale-up-center {
@@ -287,8 +287,8 @@ a.share-button {
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.45);
+            transform: scale(1.45);
   }
 }
 
