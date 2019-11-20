@@ -101,6 +101,10 @@ echo file_get_contents('path/to/package/icons/simple-icons.svg');
 
 Icons are also available on WordPress through a simple plugin created by [@tjtaylo](https://github.com/tjtaylo), which you can find [here](https://wordpress.org/plugins/simple-icons/).
 
+### Drupal
+
+Icons are also availabe on Drupal through a module created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme), which you can find [here](https://www.drupal.org/project/simple_icons).
+
 ## Status
 
 [![Build Status](https://travis-ci.com/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.com/simple-icons/simple-icons)
