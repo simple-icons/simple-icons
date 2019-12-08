@@ -20,6 +20,7 @@ plugins:
   # Compound all <path>s into one
   - mergePaths:
       force: true
+      noSpaceAfterFlags: false
 
   # Keep the <title>
   - removeTitle: false
