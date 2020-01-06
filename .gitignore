@@ -1,13 +1,14 @@
-
 # Created by https://www.gitignore.io/api/sass,macos,jekyll
 
 ### Jekyll ###
 _site/
 .sass-cache/
+.jekyll-cache/
 .jekyll-metadata
 
 ### macOS ###
-*.DS_Store
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -35,6 +36,8 @@ Temporary Items
 
 ### Sass ###
 *.css.map
+*.sass.map
+*.scss.map
 
 # End of https://www.gitignore.io/api/sass,macos,jekyll
 
