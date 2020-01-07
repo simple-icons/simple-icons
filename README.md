@@ -105,6 +105,10 @@ Icons are also available on WordPress through a simple plugin created by [@tjtay
 
 Icons are also availabe on Drupal through a module created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme), which you can find [here](https://www.drupal.org/project/simple_icons).
 
+### Kirby
+
+Icons are also available on Kirby through a simple plugin created by [@runxel](https://github.com/runxel), which you can find [here](https://github.com/runxel/kirby3-simpleicons).
+
 ## Status
 
 [![Build Status](https://travis-ci.com/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.com/simple-icons/simple-icons)
