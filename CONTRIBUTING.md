@@ -145,6 +145,8 @@ Here is the object for The Movie Database as an example:
 }
 ```
 
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+
 ### 7. Create a pull request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch.
