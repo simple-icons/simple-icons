@@ -98,26 +98,14 @@
         {% assign rgbMin = rgbBlue %}
     {% endif %}
 
-    {% if rgbRed <= 0.03928 %}
-        {% assign lRed = rgbRed | divided_by: 12.92 | times: 0.2126 %}
-    {% else %}
-      {% assign lRed = rgbRed | times: 0.3053 | plus: 0.6822 | times: rgbRed | plus: 0.0125 | times: rgbRed | times: 0.2126 %}
-    {% endif %}
-    {% if rgbGreen <= 0.03928 %}
-        {% assign lGreen = rgbGreen | divided_by: 12.92 | times: 0.7152 %}
-    {% else %}
-        {% assign lGreen = rgbGreen | times: 0.3053 | plus: 0.6822 | times: rgbGreen | plus: 0.0125 | times: rgbGreen | times: 0.7152 %}
-    {% endif %}
-    {% if rgbBlue <= 0.03928 %}
-        {% assign lBlue = rgbBlue | divided_by: 12.92 | times: 0.0722 %}
-    {% else %}
-        {% assign lBlue = rgbBlue | times: 0.3053 | plus: 0.6822 | times: rgbBlue | plus: 0.0125 | times: rgbBlue | times: 0.0722 %}
-    {% endif %}
-    {% assign luminance = lRed | plus: lGreen | plus: lBlue %}
-    {% if luminance >= 0.83 %}
-        {% assign class = "grid-item--dark" %}
-    {% else %}
+    {% assign redLuminance   = rgbArray[0] | times: 16 | plus: rgbArray[1] | times: 0.299 | round: 0 %}
+    {% assign greenLuminance = rgbArray[2] | times: 16 | plus: rgbArray[3] | times: 0.587 | round: 0 %}
+    {% assign blueLuminance  = rgbArray[4] | times: 16 | plus: rgbArray[5] | times: 0.114 | round: 0 %}
+    {% assign luminance = redLuminance | plus: greenLuminance | plus: blueLuminance %}
+    {% if luminance < 210 %}
         {% assign class = "grid-item--light" %}
+    {% else %}
+        {% assign class = "grid-item--dark" %}
     {% endif %}
 
     {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
