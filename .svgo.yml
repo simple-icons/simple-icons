@@ -33,6 +33,11 @@ plugins:
   - removeUnknownsAndDefaults:
       keepRoleAttr: true
 
+  # remove any unnecessary attributes
+  - removeAttrs:
+      attrs:
+        - baseProfile
+
   # Enable everything else
   - removeDoctype
   - removeXMLProcInst
@@ -66,7 +71,6 @@ plugins:
   - removeUnusedNS
   - removeDesc
   - removeDimensions
-  - removeAttrs
   - removeAttributesBySelector
   - removeElementsByAttr
   - addClassesToSVGElement
