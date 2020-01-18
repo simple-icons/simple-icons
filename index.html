@@ -102,7 +102,7 @@
     {% assign greenLuminance = rgbArray[2] | times: 16 | plus: rgbArray[3] | times: 0.587 | round: 0 %}
     {% assign blueLuminance  = rgbArray[4] | times: 16 | plus: rgbArray[5] | times: 0.114 | round: 0 %}
     {% assign luminance = redLuminance | plus: greenLuminance | plus: blueLuminance %}
-    {% if luminance < 210 %}
+    {% if luminance < 160 %}
         {% assign class = "grid-item--light" %}
     {% else %}
         {% assign class = "grid-item--dark" %}
