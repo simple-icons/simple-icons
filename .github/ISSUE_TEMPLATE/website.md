@@ -1,6 +1,7 @@
 ---
 name: Website
 about: Issues and improvements for the website
+labels: website
 ---
 
 <!-- Before opening a new issue search for duplicate or closed issues -->

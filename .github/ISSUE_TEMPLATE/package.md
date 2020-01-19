@@ -1,6 +1,7 @@
 ---
 name: Packages
 about: Issues and improvements for the packages
+labels: package
 ---
 
 <!-- Before opening a new issue search for duplicate or closed issues -->
