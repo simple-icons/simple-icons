@@ -146,9 +146,19 @@
             "source": "https://en.wikipedia.org/wiki/Asian_Football_Confederation"
         },
         {
+            "title": "Aiqfome",
+            "hex": "7A1FA2",
+            "source": "https://aiqfome.com"
+        },
+        {
             "title": "Airbnb",
             "hex": "FF5A5F",
             "source": "https://www.airbnb.com"
+        },
+        {
+            "title": "Airbus",
+            "hex": "00205B",
+            "source": "https://brand.airbus.com/brand-elements/logo.html"
         },
         {
             "title": "AirPlay Audio",
@@ -251,6 +261,11 @@
             "source": "https://angular.io/presskit"
         },
         {
+            "title": "AngularJS",
+            "hex": "E23237",
+            "source": "https://angularjs.org/"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -284,6 +299,11 @@
             "title": "Apache Kafka",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:Apache_kafka.svg"
+        },
+        {
+            "title": "Apache Maven",
+            "hex": "C71A36",
+            "source": "https://en.wikipedia.org/wiki/Apache_Maven"
         },
         {
             "title": "Apache NetBeans IDE",
@@ -716,6 +736,11 @@
             "source": "http://supertop.co/castro/press/"
         },
         {
+            "title": "CD Projekt",
+            "hex": "DC0D15",
+            "source": "https://www.cdprojekt.com/en/media/logotypes/"
+        },
+        {
             "title": "Celery",
             "hex": "37814A",
             "source": "http://www.celeryproject.org/"
@@ -779,6 +804,11 @@
             "title": "CiviCRM",
             "hex": "81C459",
             "source": "https://civicrm.org/trademark"
+        },
+        {
+            "title": "Claris",
+            "hex": "000000",
+            "source": "https://www.claris.com/"
         },
         {
             "title": "Clockify",
@@ -1004,6 +1034,11 @@
             "title": "Dart",
             "hex": "0175C2",
             "source": "https://github.com/dart-lang/site-shared/tree/master/src/_assets/image/dart/logo"
+        },
+        {
+            "title": "Das Erste",
+            "hex": "001A4B",
+            "source": "https://en.wikipedia.org/wiki/Das_Erste"
         },
         {
             "title": "Dashlane",
@@ -1436,6 +1471,11 @@
             "source": "https://fedoraproject.org/wiki/Logo/UsageGuidelines"
         },
         {
+            "title": "FedRAMP",
+            "hex": "112E51",
+            "source": "https://www.fedramp.gov/assets/resources/documents/FedRAMP_Branding_Guidance.pdf"
+        },
+        {
             "title": "Feedly",
             "hex": "2BB24C",
             "source": "https://blog.feedly.com/wp-content/themes/feedly-2017-v1.19.3/assets/images/logos/logo.svg"
@@ -1504,6 +1544,11 @@
             "title": "Floatplane",
             "hex": "00AEEF",
             "source": "https://www.floatplane.com/"
+        },
+        {
+            "title": "Flood",
+            "hex": "4285F4",
+            "source": "https://flood.io/"
         },
         {
             "title": "Flutter",
@@ -1766,6 +1811,11 @@
             "source": "https://developers.google.com/drive/web/branding"
         },
         {
+            "title": "Google Fit",
+            "hex": "4285F4",
+            "source": "https://en.wikipedia.org/wiki/Google_Fit"
+        },
+        {
             "title": "Google Hangouts",
             "hex": "0C9D58",
             "source": "https://material.google.com/resources/sticker-sheets-icons.html#sticker-sheets-icons-components"
@@ -1779,6 +1829,11 @@
             "title": "Google Keep",
             "hex": "FFBB00",
             "source": "https://play.google.com/store/apps/details?id=com.google.android.keep"
+        },
+        {
+            "title": "Google Lens",
+            "hex": "4285F4",
+            "source": "https://lens.google.com/"
         },
         {
             "title": "Google Maps",
@@ -1949,6 +2004,11 @@
             "title": "Haxe",
             "hex": "EA8220",
             "source": "https://haxe.org/foundation/branding.html"
+        },
+        {
+            "title": "HelloFresh",
+            "hex": "91C11E",
+            "source": "https://www.hellofresh.com/landing/student"
         },
         {
             "title": "Helm",
@@ -2241,6 +2301,11 @@
             "source": "https://wiki.jenkins-ci.org/display/JENKINS/Logo"
         },
         {
+            "title": "Jenkins X",
+            "hex": "73C3D5",
+            "source": "https://github.com/cdfoundation/artwork"
+        },
+        {
             "title": "Jest",
             "hex": "C21325",
             "source": "https://jestjs.io/"
@@ -2461,14 +2526,14 @@
             "source": "https://www.lenovopartnernetwork.com/us/branding/"
         },
         {
-            "title": "Letterboxd",
-            "hex": "00D735",
-            "source": "https://letterboxd.com/about/logos/"
-        },
-        {
             "title": "Let’s Encrypt",
             "hex": "003A70",
             "source": "https://letsencrypt.org/trademarks/"
+        },
+        {
+            "title": "Letterboxd",
+            "hex": "00D735",
+            "source": "https://letterboxd.com/about/logos/"
         },
         {
             "title": "LGTM",
@@ -2544,6 +2609,16 @@
             "title": "LLVM",
             "hex": "262D3A",
             "source": "https://llvm.org/Logo.html"
+        },
+        {
+            "title": "LMMS",
+            "hex": "10B146",
+            "source": "https://lmms.io/branding"
+        },
+        {
+            "title": "LogMeIn",
+            "hex": "45B6F2",
+            "source": "https://www.logmein.com/"
         },
         {
             "title": "Logstash",
@@ -2644,6 +2719,11 @@
             "title": "Material Design",
             "hex": "757575",
             "source": "https://material.io/design/"
+        },
+        {
+            "title": "Material Design Icons",
+            "hex": "2196F3",
+            "source": "https://materialdesignicons.com/icon/vector-square"
         },
         {
             "title": "Material-UI",
@@ -2753,7 +2833,7 @@
         {
             "title": "Microsoft Edge",
             "hex": "0078D7",
-            "source": "https://compass-ssl.microsoft.com/assets/86/b5/86b52157-162f-4130-ab00-3db03397c46d.svg?n=edge.svg"
+            "source": "https://support.microsoft.com/en-us/help/17171/microsoft-edge-get-to-know"
         },
         {
             "title": "Microsoft Excel",
@@ -3086,6 +3166,11 @@
             "source": "http://v.ok.ru/logo.html"
         },
         {
+            "title": "Opel",
+            "hex": "F7D900",
+            "source": "https://de.wikipedia.org/wiki/Opel"
+        },
+        {
             "title": "Open Access",
             "hex": "F68212",
             "source": "https://commons.wikimedia.org/wiki/File:Open_Access_logo_PLoS_white.svg"
@@ -3291,6 +3376,11 @@
             "source": "https://www.pivotaltracker.com/branding-guidelines"
         },
         {
+            "title": "Pixabay",
+            "hex": "2EC66D",
+            "source": "https://pixabay.com/service/about/"
+        },
+        {
             "title": "PJSIP",
             "hex": "F86001",
             "source": "https://www.pjsip.org/favicon.ico"
@@ -3354,6 +3444,11 @@
             "title": "Pocket Casts",
             "hex": "F43E37",
             "source": "https://blog.pocketcasts.com/press/"
+        },
+        {
+            "title": "Polymer Project",
+            "hex": "FF4470",
+            "source": "https://github.com/Polymer/polymer-project.org/tree/master/app/images/logos"
         },
         {
             "title": "PostgreSQL",
@@ -3799,6 +3894,11 @@
             "title": "Sellfy",
             "hex": "21B352",
             "source": "https://sellfy.com/about/"
+        },
+        {
+            "title": "Semantic Web",
+            "hex": "005A9C",
+            "source": "https://www.w3.org/2007/10/sw-logos.html"
         },
         {
             "title": "Semaphore CI",
@@ -4884,6 +4984,11 @@
             "title": "Xamarin",
             "hex": "3498DB",
             "source": "https://github.com/dotnet/swag/tree/master/xamarin"
+        },
+        {
+            "title": "XAMPP",
+            "hex": "FB7A24",
+            "source": "https://www.apachefriends.org/en/"
         },
         {
             "title": "Xbox",
