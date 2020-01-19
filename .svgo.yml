@@ -30,10 +30,10 @@ plugins:
   - addAttributesToSVGElement:
       attributes:
         - role: img
-  - removeUnknownsAndDefaults:
-      keepRoleAttr: true
 
   # remove any unnecessary attributes
+  - removeUnknownsAndDefaults:
+      keepRoleAttr: true
   - removeAttrs:
       attrs:
         - baseProfile
