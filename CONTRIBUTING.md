@@ -35,6 +35,8 @@ When submitting a request for a new or updated icon include helpful information 
 
 ## Adding or Updating An Icon
 
+**Note**: If you decide to add an icon without requesting it first, the requirements above still apply.
+
 ### 1. Identify Official Logos and Colors
 
 Most of the icons and brand colors on SimpleIcons have been derived from official sources. Using official sources helps ensure that the icons and colors in SimpleIcons accurately match the brand they represent. Thankfully, this is usually a simple process as organizations often provide brand guides and high quality versions of their logo for download.
@@ -144,6 +146,8 @@ Here is the object for The Movie Database as an example:
     "source": "https://www.themoviedb.org/about/logos-attribution"
 }
 ```
+
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
 ### 7. Create a pull request
 
