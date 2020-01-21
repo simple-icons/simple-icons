@@ -5,7 +5,7 @@
   - on: added
   - icons/*.svg
 
-# Add `new outdated` label when there is an SVG modified to the icons/ directory
+# Add `icon outdated` label when there is an SVG modified to the icons/ directory
 "icon outdated":
   - on: modified
   - icons/*.svg
