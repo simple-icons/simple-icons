@@ -30,8 +30,13 @@ plugins:
   - addAttributesToSVGElement:
       attributes:
         - role: img
+
+  # remove any unnecessary attributes
   - removeUnknownsAndDefaults:
       keepRoleAttr: true
+  - removeAttrs:
+      attrs:
+        - baseProfile
 
   # Enable everything else
   - removeDoctype
@@ -66,7 +71,6 @@ plugins:
   - removeUnusedNS
   - removeDesc
   - removeDimensions
-  - removeAttrs
   - removeAttributesBySelector
   - removeElementsByAttr
   - addClassesToSVGElement
