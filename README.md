@@ -109,6 +109,10 @@ Icons are also availabe on Drupal through a module created by [Phil Wolstenholme
 
 Icons are also available on Kirby through a simple plugin created by [@runxel](https://github.com/runxel), which you can find [here](https://github.com/runxel/kirby3-simpleicons).
 
+### React
+
+Icons are also available on React through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/mamut-dev/icons-pack/tree/master/packages/react-simple-icons).
+
 ## Status
 
 [![Build Status](https://travis-ci.com/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.com/simple-icons/simple-icons)
