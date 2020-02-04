@@ -38,6 +38,10 @@ plugins:
       attrs:
         - baseProfile
 
+  # remove paths with fill="none"
+  - removeUselessStrokeAndFill:
+      removeNone: true
+
   # Enable everything else
   - removeDoctype
   - removeXMLProcInst
@@ -57,7 +61,6 @@ plugins:
   - cleanupListOfValues
   - convertColors
   - removeNonInheritableGroupAttrs
-  - removeUselessStrokeAndFill
   - removeViewBox
   - cleanupEnableBackground
   - removeHiddenElems
