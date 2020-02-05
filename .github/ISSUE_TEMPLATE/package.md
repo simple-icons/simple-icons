@@ -1,6 +1,7 @@
 ---
-name: Website & Packages
-about: For general issues and improvements
+name: Packages
+about: Issues and improvements for the packages
+labels: package
 ---
 
 <!-- Before opening a new issue search for duplicate or closed issues -->
@@ -9,13 +10,11 @@ about: For general issues and improvements
 ### Kind of issue <!-- Change the one that applies to `[x]`  -->
   - [ ] Improvement
   - [ ] Bug
-  - [ ] Other, namely: 
+  - [ ] Other, namely:
 
 ### This issue concerns <!-- Change the one that applies to `[x]`  -->
   - [ ] The NPM Package
   - [ ] The Packagist Package
-  - [ ] The website
-  - [ ] Other, namely: 
 
 ### Description
 
@@ -27,6 +26,5 @@ Anything relevant, for example:
   - Package issues: Version information
     - For JavaScript/NodeJS: $ node --version
     - For PHP/Packagist: $ composer --version
-  - Website issues: What browser do you use
   - etc.
 -->
