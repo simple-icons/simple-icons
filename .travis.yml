@@ -8,6 +8,7 @@ jobs:
         - npm run jsonlint
         - npm run svglint
         - npm run wslint
+        - npm run our-lint
     - name: "Build website"
       language: ruby
       rvm: 2.4.1
@@ -43,7 +44,7 @@ jobs:
       deploy:
         provider: npm
         skip_cleanup: true
-        email: "johanringmann@gmail.com"
+        email: "$NPM_EMAIL"
         api_key: "$NPM_KEY"
         on:
           branch: master
