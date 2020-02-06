@@ -1,3 +1,6 @@
+os: linux
+language: node_js
+
 jobs:
   include:
     - stage: "Test"
@@ -29,9 +32,8 @@ jobs:
 
       deploy:
         provider: npm
-        skip_cleanup: true
         email: "$NPM_EMAIL"
-        api_key: "$NPM_KEY"
+        api_token: "$NPM_KEY"
         on:
           branch: master
 
