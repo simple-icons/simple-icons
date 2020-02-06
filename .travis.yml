@@ -27,7 +27,7 @@ jobs:
 
     - stage: deploy
       name: "Git tag"
-      language: minimal
+      language: shell
       if: branch = master
 
       before_deploy:
@@ -37,8 +37,7 @@ jobs:
         - git tag $PACKAGE_VERSION
       deploy:
         provider: releases
-        api_key: "$GITHUB_TOKEN"
-        skip_cleanup: true
+        token: "$GITHUB_TOKEN"
     - name: "NPM Package"
       language: node_js
       node_js: 8
