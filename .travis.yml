@@ -28,14 +28,14 @@ jobs:
     - name: "NPM Package"
       language: node_js
       node_js: 8
-      if: branch = master
+      if: branch = testing-ci
 
       deploy:
         provider: npm
         email: "$NPM_EMAIL"
         api_token: "$NPM_KEY"
         on:
-          branch: master
+          branch: testing-ci
 
 notifications:
   email:
