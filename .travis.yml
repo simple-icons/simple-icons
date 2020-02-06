@@ -44,7 +44,7 @@ jobs:
       deploy:
         provider: npm
         skip_cleanup: true
-        email: "johanringmann@gmail.com"
+        email: "$NPM_EMAIL"
         api_key: "$NPM_KEY"
         on:
           branch: master
