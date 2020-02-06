@@ -28,7 +28,6 @@ jobs:
     - name: "NPM Package"
       language: node_js
       node_js: 8
-      version: 1.0
       if: branch = testing-ci
 
       deploy:
