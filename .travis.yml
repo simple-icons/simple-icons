@@ -1,3 +1,6 @@
+os: linux
+language: node_js
+
 jobs:
   include:
     - stage: "Test"
@@ -24,7 +27,7 @@ jobs:
 
     - stage: deploy
       name: "Git tag"
-      language: minimal
+      language: shell
       if: branch = master
 
       before_deploy:
@@ -34,18 +37,17 @@ jobs:
         - git tag $PACKAGE_VERSION
       deploy:
         provider: releases
-        api_key: "$GITHUB_TOKEN"
-        skip_cleanup: true
+        token: "$GITHUB_TOKEN"
     - name: "NPM Package"
       language: node_js
       node_js: 8
       if: branch = master
 
       deploy:
+        edge: true
         provider: npm
-        skip_cleanup: true
         email: "$NPM_EMAIL"
-        api_key: "$NPM_KEY"
+        api_token: "$NPM_KEY"
         on:
           branch: master
 
