@@ -174,6 +174,6 @@ We use [Semantic Versioning](https://semver.org/) in this project. Given a versi
 
 | Version number | Kinds of changes |
 | :---- | :---- |
-| _Major_ | Removed icons; Breaking API changes |
+| _Major_ | Removed icons; Renamed icons; Breaking API changes |
 | _Minor_ | New icons; API changes |
 | _Patch_ | Updated icons |
