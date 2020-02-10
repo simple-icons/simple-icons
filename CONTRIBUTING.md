@@ -135,7 +135,7 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 
   * The `title` of the new SVG.
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
-  * The `source` URL of the logo being used. This is used to find updates if the logo ever changes.
+  * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
 Here is the object for The Movie Database as an example:
 
@@ -148,6 +148,19 @@ Here is the object for The Movie Database as an example:
 ```
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+
+#### Source guidelines
+
+We use the source URL as a reference for the current SVG in our repository and as a jumping-off point to find updates if the logo changes. If you used one of the sources listed below, make sure to follow these guidelines.
+
+If the new SVG is sourced from:
+
+- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
+- **GitHub**: For an SVG from a GitHub repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself. In either case the commit hash should be part of the URL.
+- **Wikimedia**: For an SVG from Wikipedia/Wikimedia the source URL should be the Wikimedia link for the file that was use as a source.
+
+In general, make sure the URL does not contain any tracking identifiers.
 
 ### 7. Create a pull request
 
