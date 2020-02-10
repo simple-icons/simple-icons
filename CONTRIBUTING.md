@@ -165,3 +165,15 @@ Once you've completed the previous steps, create a pull request to merge your ed
 Alternatively, you can build and run the website in a readily configured online workspace:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
+
+---
+
+# Versioning
+
+We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
+
+| Version number | Kinds of changes |
+| :---- | :---- |
+| _Major_ | Removed icons; Renamed icons; Breaking API changes |
+| _Minor_ | New icons; API changes |
+| _Patch_ | Updated SVGs; Updated metadata |
