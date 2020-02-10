@@ -47,6 +47,7 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Website headers (you can use [svg-grabber](https://chrome.google.com/webstore/detail/svg-grabber-get-all-the-s/ndakggdliegnegeclmfgodmgemdokdmg) for Chrome)
 1. Favicons
 1. Wikimedia (which should provide a source)
+1. GitHub repositories
 
 Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well (e.g. EPS, AI, PDF). In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
 
