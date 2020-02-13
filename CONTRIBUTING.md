@@ -35,6 +35,8 @@ When submitting a request for a new or updated icon include helpful information 
 
 ## Adding or Updating An Icon
 
+**Note**: If you decide to add an icon without requesting it first, the requirements above still apply.
+
 ### 1. Identify Official Logos and Colors
 
 Most of the icons and brand colors on SimpleIcons have been derived from official sources. Using official sources helps ensure that the icons and colors in SimpleIcons accurately match the brand they represent. Thankfully, this is usually a simple process as organizations often provide brand guides and high quality versions of their logo for download.
@@ -74,10 +76,9 @@ Using your preferred tool you should:
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  * Install SVGO
-    * With npm: `npm install -g svgo`
-    * With Homebrew: `brew install svgo`
-  * Run the following command `svgo --precision=3 icon.svg icon.min.svg`
+  * Install dependencies
+    * With npm: `npm install` from the root of this repository
+  * Run the following command `npm run svgo -- icons/file-to-optimize.svg`
   * Check if there is a loss of quality in the output, if so increase the precision.
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.
@@ -96,7 +97,7 @@ Each icon in Simple Icons has been annotated with a number of attributes and ele
     * `viewBox="0 0 24 24"`
   * The svg namespace.
     * `xmlns="http://www.w3.org/2000/svg"`
-* A title element with id attribute (Note the format).
+* A title element (Note the format).
   * `<title>Adobe Photoshop icon</title>`
 
 Here is _part of_ the svg for the Adobe Photoshop icon as an example:
@@ -116,6 +117,9 @@ The final icon should:
   * This means the icon should be touching at least two sides of the viewbox.
 * Be vertically and horizontally centered.
 * Be minified to a single line with no formatting.
+* Contain only a single `path` element.
+* Not contain extraneous elements.
+  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
@@ -143,22 +147,11 @@ Here is the object for The Movie Database as an example:
 }
 ```
 
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+
 ### 7. Create a pull request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch.
-
-## Labeling Issues
-
-We use several labels to help organize and identify issues. You can find all labels [here](https://github.com/simple-icons/simple-icons/labels). Here's what they represent and how we use them:
-
-| Label Name | Description |
-| :---- | :---- |
-| [icon](https://github.com/simple-icons/simple-icons/labels/icon) | Issues for adding or updating an icon. |
-| [docs](https://github.com/simple-icons/simple-icons/labels/docs) | Issues for improving or updating documentation. |
-| [good first issue](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue) | Issues we believe are simple and a good first stab at contributing to the project. |
-| [help wanted](https://github.com/simple-icons/simple-icons/labels/help%20wanted) | Issues we would like help from the community to resolve. |
-| [awaiting reply](https://github.com/simple-icons/simple-icons/labels/awaiting%20reply) | Issues awaiting reply from an individual (issue author or 3rd party) before it may be addressed. |
-| [icon outdated](https://github.com/simple-icons/simple-icons/labels/icon%20outdated) | Issues regarding icons that are outdated, this can be the SVG or color or both. |
 
 ## Building Locally
 
@@ -166,3 +159,21 @@ We use several labels to help organize and identify issues. You can find all lab
 * Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
 * Build and run the website locally using `$ jekyll serve`.
 * Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
+
+## Building In Your Browser
+
+Alternatively, you can build and run the website in a readily configured online workspace:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
+
+---
+
+# Versioning
+
+We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
+
+| Version number | Kinds of changes |
+| :---- | :---- |
+| _Major_ | Removed icons; Renamed icons; Breaking API changes |
+| _Minor_ | New icons; API changes |
+| _Patch_ | Updated SVGs; Updated metadata |

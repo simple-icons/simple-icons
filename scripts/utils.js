@@ -13,5 +13,24 @@ module.exports = {
             .replace(/&$/, "-and")
             .replace(/&/g, "-and-")
             .replace(/[ !’]/g, "")
+            .replace(/à|á|â|ã|ä/, "a")
+            .replace(/ç/, "c")
+            .replace(/è|é|ê|ë/, "e")
+            .replace(/ì|í|î|ï/, "i")
+            .replace(/ñ/, "n")
+            .replace(/ò|ó|ô|õ|ö/, "o")
+            .replace(/ù|ú|û|ü/, "u")
+            .replace(/ý|ÿ/, "y")
+    ),
+
+    /**
+     * Converts a brand title in HTML friendly format into a brand title (as it
+     * is seen in simple-icons.json)
+     * @param {String} htmlFriendlyTitle The title to convert
+     */
+    htmlFriendlyToTitle: htmlFriendlyTitle => (
+      htmlFriendlyTitle
+        .replace(/&amp;/g, "&")
+        .replace(/&apos;/g, "’")
     )
 }
