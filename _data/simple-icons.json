@@ -6971,7 +6971,16 @@
         {
             "title": "Pokémon GO",
             "hex": "FF0000",
+<<<<<<< HEAD
             "source": "https://www.pokemongo.com/"
+=======
+            "source": "https://commons.wikimedia.org/wiki/File:Pok%C3%A9mon_GO_logo.svg"
+        },
+        {
+            "title": "Polymer Project",
+            "hex": "FF4470",
+            "source": "https://github.com/Polymer/polymer-project.org/tree/master/app/images/logos"
+>>>>>>> 5a24006c (Update simple-icons.json)
         },
         {
             "title": "PostgreSQL",
