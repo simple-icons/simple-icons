@@ -117,3 +117,4 @@ Icons are also available on React through a simple package created by [@wootsbot
 
 [![Build Status](https://travis-ci.com/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.com/simple-icons/simple-icons)
 [![npm version](https://img.shields.io/npm/v/simple-icons.svg)](https://www.npmjs.com/package/simple-icons)
+[![Packagist version](https://img.shields.io/packagist/v/simple-icons/simple-icons)](https://packagist.org/packages/simple-icons/simple-icons)
