@@ -149,6 +149,8 @@ Here is the object for The Movie Database as an example:
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
+The filename of the SVG should correspond to the `title` above. In general, it should be all lowercase and whitespace and special characters must be removed (full details can be found [in this snippet](https://github.com/simple-icons/simple-icons/blob/36abec3c39887814155c59ff9c7f7d04ba41b044/scripts/utils.js)). If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
+
 ### 7. Create a pull request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch.
