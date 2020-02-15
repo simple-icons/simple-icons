@@ -1,3 +1,10 @@
+#!/usr/bin/env node
+/**
+ * @fileoverview
+ * Takes a brand name as argument and outputs the corresonding filename to
+ * standard output.
+ */
+
 const utils = require('./utils.js');
 
 if (process.argv.length < 3) {
@@ -5,8 +12,7 @@ if (process.argv.length < 3) {
 } else {
   let brandName = "";
   for (let i = 2; i < process.argv.length; i++) {
-    brandName += " ";
-    brandName += process.argv[i];
+    brandName += ` ${process.argv[i]}`;
   }
 
   brandName = brandName.substring(1);
