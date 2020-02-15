@@ -159,7 +159,7 @@ If the new SVG is sourced from:
 - **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
 - **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
 - **GitHub**: For an SVG from a GitHub repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself. In either case the commit hash should be part of the URL.
-- **Wikipedia**: For an SVG from Wikipedia/Wikimedia the source URL should link to the page containing file information (e.g. [this one for AmericanExpress](https://commons.wikimedia.org/wiki/File:American_Express_logo.svg)).
+- **Wikipedia**: For an SVG from Wikipedia/Wikimedia the source URL should link to the logo file's page on the relevant site, and not the brand's Wikipedia pages. For example, [this is the link for AmericanExpress](https://commons.wikimedia.org/wiki/File:American_Express_logo.svg).
 
 In general, make sure the URL does not contain any tracking identifiers.
 
