@@ -149,7 +149,38 @@ Here is the object for The Movie Database as an example:
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
-The filename of the SVG should correspond to the `title` above. In general, it should be all lowercase and whitespace and special characters must be removed (full details can be found [in this snippet](https://github.com/simple-icons/simple-icons/blob/36abec3c39887814155c59ff9c7f7d04ba41b044/scripts/utils.js)). If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
+#### SVG Filename Convention
+
+The filename of the SVG should correspond to the `title` used in the JSON file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
+
+1. Use **lowercase letters** without **whitespace**, for example:
+
+    ```yml
+    title: Adobe Photoshop
+    filename: adobephotoshop.svg
+    ```
+
+1. Only use **latin** letters, for example:
+
+    ```yml
+    title: Citroën
+    filename: citroen.svg
+    ```
+
+1. Replace the following symbols with their alias depending on their position in the title:
+
+    | Symbol | Start | Middle | End  |
+    | :----: | ----- | ------ | ---- |
+    |   +    | plus  | plus   | plus |
+    |   .    | dot-  | -dot-  | -dot |
+    |   &    | and-  | -and-  | -and |
+
+    for example:
+
+    ```yml
+    title: .Net
+    filename: dot-net.svg
+    ```
 
 ### 7. Create a pull request
 
