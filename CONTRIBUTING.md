@@ -150,7 +150,7 @@ Here is the object for The Movie Database as an example:
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
-#### Source guidelines
+#### Source Guidelines
 
 We use the source URL as a reference for the current SVG in our repository and as a jumping-off point to find updates if the logo changes. If you used one of the sources listed below, make sure to follow these guidelines.
 
