@@ -141,6 +141,11 @@
             "source": "https://www.adobe.com/products/xd.html"
         },
         {
+            "title": "AdonisJS",
+            "hex": "220052",
+            "source": "https://adonisjs.com/"
+        },
+        {
             "title": "Affinity",
             "hex": "222324",
             "source": "https://affinity.serif.com/"
@@ -216,6 +221,11 @@
             "source": "http://www.allocine.fr/favicon.ico"
         },
         {
+            "title": "Alpine Linux",
+            "hex": "0D597F",
+            "source": "https://alpinelinux.org/"
+        },
+        {
             "title": "Amazon",
             "hex": "FF9900",
             "source": "https://worldvectorlogo.com/logo/amazon-icon"
@@ -261,9 +271,19 @@
             "source": "https://anchor.fm/"
         },
         {
+            "title": "Andela",
+            "hex": "3359DF",
+            "source": "https://andela.com/press/"
+        },
+        {
             "title": "Android",
             "hex": "3DDC84",
             "source": "https://developer.android.com/distribute/marketing-tools/brand-guidelines"
+        },
+        {
+            "title": "Android Studio",
+            "hex": "3DDC84",
+            "source": "https://en.wikipedia.org/wiki/Android_Studio"
         },
         {
             "title": "AngelList",
@@ -349,6 +369,11 @@
             "title": "Apache RocketMQ",
             "hex": "D77310",
             "source": "https://rocketmq.apache.org/"
+        },
+        {
+            "title": "Apache Solr",
+            "hex": "D9411E",
+            "source": "https://lucene.apache.org/solr/"
         },
         {
             "title": "Apache Spark",
@@ -701,6 +726,11 @@
             "source": "https://buffer.com/press"
         },
         {
+            "title": "Bugsnag",
+            "hex": "4949E4",
+            "source": "https://www.bugsnag.com/newsroom"
+        },
+        {
             "title": "Bulma",
             "hex": "00D1B2",
             "source": "https://github.com/jgthms/bulma/"
@@ -918,7 +948,7 @@
         {
             "title": "CodePen",
             "hex": "000000",
-            "source": "http://codepen.io"
+            "source": "https://blog.codepen.io/documentation/brand-assets/logos/"
         },
         {
             "title": "Coderwall",
@@ -1232,8 +1262,8 @@
         },
         {
             "title": "Docker",
-            "hex": "1488C6",
-            "source": "https://www.docker.com"
+            "hex": "2496ED",
+            "source": "https://www.docker.com/company/newsroom/media-resources"
         },
         {
             "title": "DocuSign",
@@ -1294,6 +1324,11 @@
             "title": "Duolingo",
             "hex": "58CC02",
             "source": "https://www.duolingo.com/"
+        },
+        {
+            "title": "Dynamics 365",
+            "hex": "002050",
+            "source": "http://thepartnerchannel.com/wp-content/uploads/Dynamics365_styleguide_092816.pdf"
         },
         {
             "title": "Dynatrace",
@@ -1867,7 +1902,7 @@
         },
         {
             "title": "Google Analytics",
-            "hex": "FFC107",
+            "hex": "E37400",
             "source": "https://analytics.google.com"
         },
         {
@@ -1941,6 +1976,11 @@
             "source": "https://messages.google.com/"
         },
         {
+            "title": "Google My Business",
+            "hex": "4285F4",
+            "source": "https://business.google.com/"
+        },
+        {
             "title": "Google Nearby",
             "hex": "4285F4",
             "source": "https://developers.google.com/nearby/developer-guidelines"
@@ -1969,6 +2009,16 @@
             "title": "Google Search Console",
             "hex": "458CF5",
             "source": "https://search.google.com/search-console"
+        },
+        {
+            "title": "Google Sheets",
+            "hex": "0F9D58",
+            "source": "http://sheets.google.com/"
+        },
+        {
+            "title": "Google Tag Manager",
+            "hex": "246FDB",
+            "source": "https://tagmanager.google.com/#/home"
         },
         {
             "title": "Google Translate",
@@ -2562,7 +2612,7 @@
         },
         {
             "title": "Kickstarter",
-            "hex": "2BDE73",
+            "hex": "05CE78",
             "source": "https://www.kickstarter.com/help/brand_assets"
         },
         {
@@ -2572,8 +2622,13 @@
         },
         {
             "title": "Kirby",
-            "hex": "FF0100",
-            "source": "http://getkirby.com/assets/images/logo.svg"
+            "hex": "000000",
+            "source": "https://getkirby.com/press"
+        },
+        {
+            "title": "KLM",
+            "hex": "00A1DE",
+            "source": "https://www.klm.com"
         },
         {
             "title": "Klout",
@@ -2704,6 +2759,11 @@
             "title": "LibreOffice",
             "hex": "18A303",
             "source": "https://wiki.documentfoundation.org/Marketing/Branding"
+        },
+        {
+            "title": "Lighthouse",
+            "hex": "F44B21",
+            "source": "https://github.com/GoogleChrome/lighthouse/blob/80d2e6c1948f232ec4f1bdeabc8bc632fc5d0bfd/assets/lh_favicon.svg"
         },
         {
             "title": "Line",
@@ -3043,7 +3103,7 @@
         {
             "title": "Microsoft Word",
             "hex": "2B579A",
-            "source": "https://www.office.com"
+            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
         },
         {
             "title": "MicroStrategy",
@@ -3526,6 +3586,11 @@
             "source": "https://github.com/Chocobozzz/PeerTube/tree/develop/client/src/assets/images"
         },
         {
+            "title": "Pepsi",
+            "hex": "2151A1",
+            "source": "https://commons.wikimedia.org/wiki/File:Pepsi_logo_new.svg"
+        },
+        {
             "title": "Periscope",
             "hex": "40A4C4",
             "source": "https://www.periscope.tv/press"
@@ -3624,6 +3689,11 @@
             "title": "PlayStation 4",
             "hex": "003791",
             "source": "https://commons.wikimedia.org/wiki/File:PlayStation_4_logo_and_wordmark.svg"
+        },
+        {
+            "title": "Pleroma",
+            "hex": "FBA457",
+            "source": "https://pleroma.social/"
         },
         {
             "title": "Plesk",
@@ -3812,8 +3882,8 @@
         },
         {
             "title": "Quantopian",
-            "hex": "C50000",
-            "source": "https://www.quantopian.com"
+            "hex": "C51E25",
+            "source": "https://www.quantopian.com/about"
         },
         {
             "title": "Quarkus",
@@ -3928,7 +3998,7 @@
         {
             "title": "Reddit",
             "hex": "FF4500",
-            "source": "https://worldvectorlogo.com/logo/reddit-2"
+            "source": "https://www.redditinc.com/brand"
         },
         {
             "title": "Redis",
@@ -4816,9 +4886,9 @@
             "source": "https://www.trendmicro.com/"
         },
         {
-            "title": "TripAdvisor",
-            "hex": "00AF87",
-            "source": "https://tripadvisor.mediaroom.com/download/TripAdvisor_Logo_Guidelines_5_15_17.pdf"
+            "title": "Tripadvisor",
+            "hex": "34E0A1",
+            "source": "https://tripadvisor.mediaroom.com/logo-guidelines"
         },
         {
             "title": "Trulia",
@@ -4934,6 +5004,11 @@
             "title": "Unsplash",
             "hex": "000000",
             "source": "https://unsplash.com/"
+        },
+        {
+            "title": "Untangle",
+            "hex": "68BD49",
+            "source": "https://www.untangle.com/company-overview/"
         },
         {
             "title": "Untappd",
@@ -5364,6 +5439,16 @@
             "title": "YouTube",
             "hex": "FF0000",
             "source": "https://www.youtube.com/yt/about/brand-resources/#logos-icons-colors"
+        },
+        {
+            "title": "YouTube Gaming",
+            "hex": "FF0000",
+            "source": "https://gaming.youtube.com/"
+        },
+        {
+            "title": "YouTube TV",
+            "hex": "FF0000",
+            "source": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.unplugged"
         },
         {
             "title": "Z-Wave",
