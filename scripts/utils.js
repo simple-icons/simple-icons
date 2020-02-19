@@ -13,14 +13,14 @@ module.exports = {
             .replace(/&$/, "-and")
             .replace(/&/g, "-and-")
             .replace(/[ !:’]/g, "")
-            .replace(/à|á|â|ã|ä/, "a")
-            .replace(/ç/, "c")
-            .replace(/è|é|ê|ë/, "e")
-            .replace(/ì|í|î|ï/, "i")
-            .replace(/ñ/, "n")
-            .replace(/ò|ó|ô|õ|ö/, "o")
-            .replace(/ù|ú|û|ü/, "u")
-            .replace(/ý|ÿ/, "y")
+            .replace(/à|á|â|ã|ä/g, "a")
+            .replace(/ç/g, "c")
+            .replace(/è|é|ê|ë/g, "e")
+            .replace(/ì|í|î|ï/g, "i")
+            .replace(/ñ/g, "n")
+            .replace(/ò|ó|ô|õ|ö/g, "o")
+            .replace(/ù|ú|û|ü/g, "u")
+            .replace(/ý|ÿ/g, "y")
     ),
 
     /**
