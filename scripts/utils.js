@@ -12,7 +12,7 @@ module.exports = {
             .replace(/^&/, "and-")
             .replace(/&$/, "-and")
             .replace(/&/g, "-and-")
-            .replace(/[ !’]/g, "")
+            .replace(/[ !:’]/g, "")
             .replace(/à|á|â|ã|ä/, "a")
             .replace(/ç/, "c")
             .replace(/è|é|ê|ë/, "e")
