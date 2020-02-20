@@ -14,14 +14,15 @@ module.exports = {
             .replace(/&/g, "-and-")
             .replace(/[ !:’']/g, "")
             .replace(/à|á|â|ã|ä/g, "a")
-            .replace(/ç/g, "c")
+            .replace(/ç|č|ć/g, "c")
             .replace(/è|é|ê|ë/g, "e")
             .replace(/ì|í|î|ï/g, "i")
-            .replace(/ñ/g, "n")
+            .replace(/ñ|ň|ń/g, "n")
             .replace(/ò|ó|ô|õ|ö/g, "o")
-            .replace(/š/g, "s")
+            .replace(/š|ś/g, "s")
             .replace(/ù|ú|û|ü/g, "u")
             .replace(/ý|ÿ/g, "y")
+            .replace(/ž|ź/g, "z")
     ),
 
     /**
