@@ -154,7 +154,7 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 We use the source URL as a reference for the current SVG in our repository and as a jumping-off point to find updates if the logo changes. If you used one of the sources listed below, make sure to follow these guidelines. If you're unsure about the source URL you can open a Pull Request and ask for help from others.
 
-If the new SVG is sourced from:
+If the SVG is sourced from:
 
 - **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
 - **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
