@@ -47,6 +47,7 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Website headers (you can use [svg-grabber](https://chrome.google.com/webstore/detail/svg-grabber-get-all-the-s/ndakggdliegnegeclmfgodmgemdokdmg) for Chrome)
 1. Favicons
 1. Wikimedia (which should provide a source)
+1. GitHub repositories
 
 Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well (e.g. EPS, AI, PDF). In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
 
@@ -135,7 +136,7 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 
   * The `title` of the new SVG.
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
-  * The `source` URL of the logo being used. This is used to find updates if the logo ever changes.
+  * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
 Here is the object for The Movie Database as an example:
 
@@ -148,6 +149,22 @@ Here is the object for The Movie Database as an example:
 ```
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+
+#### Source Guidelines
+
+We use the source URL as a reference for the current SVG in our repository and as a jumping-off point to find updates if the logo changes. If you used one of the sources listed below, make sure to follow these guidelines. If you're unsure about the source URL you can open a Pull Request and ask for help from others.
+
+If the SVG is sourced from:
+
+- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
+- **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself.
+
+  In any case the commit hash should be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files).
+
+- **Wikipedia**: For an SVG from Wikipedia/Wikimedia the source URL should link to the logo file's page on the relevant site, and not the brand's Wikipedia pages. For example, [this is the link for AmericanExpress](https://commons.wikimedia.org/wiki/File:American_Express_logo.svg).
+
+In general, make sure the URL does not contain any tracking identifiers.
 
 ### 7. Create a pull request
 
