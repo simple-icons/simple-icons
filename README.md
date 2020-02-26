@@ -76,6 +76,14 @@ console.log(icon);
 */
 ```
 
+#### TypeScript Usage
+
+There are also TypeScript type definitions for the Node package. To use them, simply run:
+
+```
+$ npm install @types/simple-icons
+```
+
 ### PHP usage
 
 The icons are also available through our Packagist package. To install, simply run:
