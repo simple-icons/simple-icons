@@ -84,7 +84,7 @@ There are also TypeScript type definitions for the Node package. To use them, si
 $ npm install @types/simple-icons
 ```
 
-### PHP usage
+### PHP Usage
 
 The icons are also available through our Packagist package. To install, simply run:
 
