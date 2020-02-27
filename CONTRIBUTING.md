@@ -150,6 +150,39 @@ Here is the object for The Movie Database as an example:
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
+#### SVG Filename Convention
+
+The filename of the SVG should correspond to the `title` used in the JSON file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
+
+1. Use **lowercase letters** without **whitespace**, for example:
+
+    ```yml
+    title: Adobe Photoshop
+    filename: adobephotoshop.svg
+    ```
+
+1. Only use **latin** letters, for example:
+
+    ```yml
+    title: Citroën
+    filename: citroen.svg
+    ```
+
+1. Replace the following symbols with their alias depending on their position in the title:
+
+    | Symbol | Start | Middle | End  |
+    | :----: | ----- | ------ | ---- |
+    |   +    | plus  | plus   | plus |
+    |   .    | dot-  | -dot-  | -dot |
+    |   &    | and-  | -and-  | -and |
+
+    for example:
+
+    ```yml
+    title: .Net
+    filename: dot-net.svg
+    ```
+
 #### Source Guidelines
 
 We use the source URL as a reference for the current SVG in our repository and as a jumping-off point to find updates if the logo changes. If you used one of the sources listed below, make sure to follow these guidelines. If you're unsure about the source URL you can open a Pull Request and ask for help from others.
