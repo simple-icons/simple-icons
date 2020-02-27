@@ -1,5 +1,11 @@
 <!--
-Before opening your pull request, have a quick look at our contribution guidelines: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
+Before opening your pull request, have a quick look at our contribution guidelines:
+https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
+-->
+
+<!--
+Add a preview image of your submission using
+https://petershaggynoble.github.io/MDI-Sandbox/simpleicons/preview/
 -->
 
 **Issue:**
