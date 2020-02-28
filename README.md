@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+Over 1000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
 </p>
 
 ## Usage
@@ -76,7 +76,15 @@ console.log(icon);
 */
 ```
 
-### PHP usage
+#### TypeScript Usage
+
+There are also TypeScript type definitions for the Node package. To use them, simply run:
+
+```
+$ npm install @types/simple-icons
+```
+
+### PHP Usage
 
 The icons are also available through our Packagist package. To install, simply run:
 
@@ -117,3 +125,4 @@ Icons are also available on React through a simple package created by [@wootsbot
 
 [![Build Status](https://travis-ci.com/simple-icons/simple-icons.svg?branch=develop)](https://travis-ci.com/simple-icons/simple-icons)
 [![npm version](https://img.shields.io/npm/v/simple-icons.svg)](https://www.npmjs.com/package/simple-icons)
+[![Packagist version](https://img.shields.io/packagist/v/simple-icons/simple-icons)](https://packagist.org/packages/simple-icons/simple-icons)
