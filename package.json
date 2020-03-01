@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://www.simpleicons.org",
   "keywords": [
@@ -37,6 +37,7 @@
     "test": "jest",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
-    "svgo": "svgo --config=./.svgo.yml"
+    "svgo": "svgo --config=./.svgo.yml",
+    "get-filename": "node scripts/get-filename.js"
   }
 }
