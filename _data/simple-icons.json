@@ -61,6 +61,11 @@
             "source": "https://www.activision.com/"
         },
         {
+            "title": "AdBlock",
+            "hex": "F40D12",
+            "source": "https://getadblock.com/"
+        },
+        {
             "title": "AddThis",
             "hex": "FF6550",
             "source": "http://www.addthis.com/"
@@ -127,8 +132,8 @@
         },
         {
             "title": "Adobe Photoshop",
-            "hex": "00C8FF",
-            "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
+            "hex": "26C9FF",
+            "source": "https://www.adobe.com/products/photoshop.html"
         },
         {
             "title": "Adobe Premiere",
@@ -424,6 +429,11 @@
             "title": "Apple Podcasts",
             "hex": "9933CC",
             "source": "https://www.apple.com/itunes/marketing-on-podcasts/identity-guidelines.html#apple-podcasts-icon"
+        },
+        {
+            "title": "Apple TV",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:AppleTV.svg"
         },
         {
             "title": "AppVeyor",
@@ -961,6 +971,11 @@
             "source": "https://cloudsmith.io/branding/"
         },
         {
+            "title": "Clyp",
+            "hex": "3CBDB1",
+            "source": "https://clyp.it/"
+        },
+        {
             "title": "CMake",
             "hex": "064F8C",
             "source": "https://www.kitware.com/platforms/"
@@ -1189,6 +1204,11 @@
             "title": "Das Erste",
             "hex": "001A4B",
             "source": "https://en.wikipedia.org/wiki/Das_Erste"
+        },
+        {
+            "title": "Dash",
+            "hex": "008DE4",
+            "source": "https://www.dash.org/brand-assets/"
         },
         {
             "title": "Dashlane",
@@ -2326,6 +2346,11 @@
             "source": "https://haxe.org/foundation/branding.html"
         },
         {
+            "title": "HBO",
+            "hex": "000000",
+            "source": "https://www.hbo.com/"
+        },
+        {
             "title": "HelloFresh",
             "hex": "91C11E",
             "source": "https://www.hellofresh.com/landing/student"
@@ -3251,6 +3276,11 @@
             "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
         },
         {
+            "title": "Microsoft Exchange",
+            "hex": "0078D4",
+            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/"
+        },
+        {
             "title": "Microsoft Office",
             "hex": "D83B01",
             "source": "https://developer.microsoft.com/en-us/microsoft-365"
@@ -3971,6 +4001,11 @@
             "source": "https://www.porsche.com/"
         },
         {
+            "title": "PostCSS",
+            "hex": "DD3A0A",
+            "source": "https://postcss.org/"
+        },
+        {
             "title": "PostgreSQL",
             "hex": "336791",
             "source": "https://wiki.postgresql.org/wiki/Logo"
@@ -4064,6 +4099,11 @@
             "title": "Publons",
             "hex": "336699",
             "source": "https://publons.com/about/logos"
+        },
+        {
+            "title": "Puppet",
+            "hex": "FFAE1A",
+            "source": "https://puppet.com/company/press-room/"
         },
         {
             "title": "PureScript",
@@ -5371,6 +5411,11 @@
             "source": "https://www.vauxhall.co.uk/microapps/vxr/corsa-vxr/"
         },
         {
+            "title": "vBulletin",
+            "hex": "184D66",
+            "source": "https://commons.wikimedia.org/wiki/File:VBulletin.svg"
+        },
+        {
             "title": "Veeam",
             "hex": "00B336",
             "source": "https://www.veeam.com/newsroom/veeam-graphics.html"
@@ -5434,6 +5479,11 @@
             "title": "Visual Studio Code",
             "hex": "007ACC",
             "source": "https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
+        },
+        {
+            "title": "Vivaldi",
+            "hex": "EF3939",
+            "source": "https://vivaldi.com/press/"
         },
         {
             "title": "Vivino",
