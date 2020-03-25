@@ -137,13 +137,16 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
   * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
+There is also an optional field that may be used to specify the brand guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+
 Here is the object for The Movie Database as an example:
 
 ```json
 {
     "title": "The Movie Database",
     "hex": "01D277",
-    "source": "https://www.themoviedb.org/about/logos-attribution"
+    "source": "https://www.themoviedb.org/about/logos-attribution",
+    "guidelines": "https://www.themoviedb.org/about/logos-attribution"
 }
 ```
 
