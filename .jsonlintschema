@@ -25,6 +25,12 @@
                         "type": "string",
                         "pattern": "^https?://[^\\s]+$",
                         "required": true
+                    },
+                    "guidelines": {
+                        "description": "The brand guidelines for the icon and/r color",
+                        "type": "string",
+                        "pattern": "^https?://[^\\s]+$",
+                        "required": false
                     }
                 },
                 "required": true
