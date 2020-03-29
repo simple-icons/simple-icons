@@ -27,7 +27,7 @@
                         "required": true
                     },
                     "guidelines": {
-                        "description": "The brand guidelines for the icon and/r color",
+                        "description": "The brand guidelines for the icon and/or color",
                         "type": "string",
                         "pattern": "^https?://[^\\s]+$",
                         "required": false
