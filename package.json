@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://www.simpleicons.org",
   "keywords": [
@@ -18,7 +18,7 @@
   "author": "Simple Icons Collaborators",
   "license": "CC0-1.0",
   "devDependencies": {
-    "editorconfig-checker": "3.0.3",
+    "editorconfig-checker": "3.0.4",
     "jest": "25.1.0",
     "jsonlint2": "1.7.1",
     "svglint": "1.0.5",
