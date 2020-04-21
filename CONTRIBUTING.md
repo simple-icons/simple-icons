@@ -65,7 +65,9 @@ There are many different tools for editing SVG files, some options include:
 
 Using your preferred tool you should:
 
-1. Isolate the icon from any text or extraneous items. Please also make sure that there are no overlapping paths by merging them.
+1. Isolate the icon from any text or extraneous items.
+1. Merge any overlapping paths.
+1. Compound all paths into one.
 1. Change the icon's viewbox/canvas/page size to 24x24.
 1. Scale the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
 1. Center the icon horizontally and vertically.
