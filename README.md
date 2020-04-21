@@ -29,6 +29,8 @@ Where `[ICON NAME]` is replaced by the icon name, for example:
 <img height="32" width="32" src="https://unpkg.com/simple-icons@v2/icons/simpleicons.svg" />
 ```
 
+These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
+
 ### Node Usage
 
 The icons are also available through our npm package. To install, simply run:
