@@ -203,7 +203,7 @@ In general, make sure the URL does not contain any tracking identifiers.
 
 ### 7. Create a Pull Request
 
-Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch.
+Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
 ## Building Locally
 
