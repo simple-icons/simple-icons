@@ -92,18 +92,18 @@
         },
         {
             "title": "Adobe Acrobat Reader",
-            "hex": "EE3F24",
-            "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
+            "hex": "EC1C24",
+            "source": "https://acrobat.adobe.com/"
         },
         {
             "title": "Adobe After Effects",
             "hex": "D291FF",
-            "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
+            "source": "https://www.adobe.com/products/aftereffects.html"
         },
         {
             "title": "Adobe Audition",
-            "hex": "00E4BB",
-            "source": "https://helpx.adobe.com/content/dam/help/mnemonics/au_cc_app_RGB.svg"
+            "hex": "4CC0AD",
+            "source": "https://www.adobe.com/products/audition.html"
         },
         {
             "title": "Adobe Creative Cloud",
@@ -113,7 +113,7 @@
         {
             "title": "Adobe Dreamweaver",
             "hex": "35FA00",
-            "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
+            "source": "https://www.adobe.com/products/dreamweaver.html"
         },
         {
             "title": "Adobe Fonts",
@@ -122,13 +122,13 @@
         },
         {
             "title": "Adobe Illustrator",
-            "hex": "FF7C00",
-            "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
+            "hex": "F37021",
+            "source": "https://www.adobe.com/products/illustrator.html"
         },
         {
             "title": "Adobe InDesign",
-            "hex": "FD3F93",
-            "source": "https://wwwimages2.adobe.com/etc/clientlibs/beagle/ace/source/font/aceui-fonts.svg"
+            "hex": "EE3D8F",
+            "source": "https://www.adobe.com/products/indesign.html"
         },
         {
             "title": "Adobe Lightroom CC",
@@ -391,6 +391,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Apache-Ant-logo.svg"
         },
         {
+            "title": "Apache CloudStack",
+            "hex": "2AA5DC",
+            "source": "http://cloudstack.apache.org/trademark-guidelines.html"
+        },
+        {
             "title": "Apache Cordova",
             "hex": "E8E8E8",
             "source": "https://cordova.apache.org/artwork/"
@@ -516,6 +521,11 @@
             "source": "https://archiveofourown.org/"
         },
         {
+            "title": "Ardour",
+            "hex": "C61C3E",
+            "source": "https://github.com/Ardour/ardour/tree/master/tools/misc_resources/"
+        },
+        {
             "title": "Arduino",
             "hex": "00979D",
             "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
@@ -591,6 +601,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Audible_logo.svg"
         },
         {
+            "title": "Audio-Technica",
+            "hex": "000000",
+            "source": "https://wikipedia.org/wiki/File:Audio-technica.svg"
+        },
+        {
             "title": "Audioboom",
             "hex": "007CE2",
             "source": "https://audioboom.com/about/brand-guidelines"
@@ -616,6 +631,11 @@
             "source": "https://authy.com/"
         },
         {
+            "title": "Autodesk",
+            "hex": "0696D7",
+            "source": "https://www.autodesk.com"
+        },
+        {
             "title": "Automatic",
             "hex": "7D8084",
             "source": "https://www.automatic.com/press"
@@ -629,6 +649,11 @@
             "title": "Aventrix",
             "hex": "0099DD",
             "source": "https://www.aventrix.com/press"
+        },
+        {
+            "title": "Awesome Lists",
+            "hex": "FC60A8",
+            "source": "https://github.com/sindresorhus/awesome/tree/master/media"
         },
         {
             "title": "awesomeWM",
@@ -646,6 +671,11 @@
             "source": "http://azure.com/devops"
         },
         {
+            "title": "Azure Functions",
+            "hex": "0062AD",
+            "source": "https://azure.microsoft.com/en-us/services/functions"
+        },
+        {
             "title": "Azure Pipelines",
             "hex": "2560E0",
             "source": "https://github.com/vscode-icons/vscode-icons/pull/1741"
@@ -659,6 +689,11 @@
             "title": "Badgr",
             "hex": "282C4C",
             "source": "https://info.badgr.com/"
+        },
+        {
+            "title": "Badoo",
+            "hex": "783BF9",
+            "source": "https://badoo.com/team/press/"
         },
         {
             "title": "Baidu",
@@ -839,6 +874,11 @@
             "title": "Bosch",
             "hex": "EA0016",
             "source": "https://www.bosch.de/"
+        },
+        {
+            "title": "Bose",
+            "hex": "000000",
+            "source": "https://developer.bose.com/sites/default/files/Bose%20AR%20Design%20Guidelines%20v1.0.pdf"
         },
         {
             "title": "Bower",
@@ -1831,6 +1871,11 @@
             "source": "https://en.facebookbrand.com/"
         },
         {
+            "title": "Facebook Live",
+            "hex": "ED4242",
+            "source": "https://en.facebookbrand.com/"
+        },
+        {
             "title": "FACEIT",
             "hex": "FF5500",
             "source": "https://corporate.faceit.com/branding/"
@@ -1956,9 +2001,9 @@
             "source": "http://flask.pocoo.org/community/logos/"
         },
         {
-        	"title": "Flathub",
-        	"hex": "4A86CF",
-        	"source": "https://flathub.org/"
+            "title": "Flathub",
+            "hex": "4A86CF",
+            "source": "https://flathub.org/"
         },
         {
             "title": "Flattr",
@@ -2486,9 +2531,9 @@
             "source": "https://commons.wikimedia.org/wiki/File:Guangzhou_Metro_logo.svg"
         },
         {
-            "title": "Gulp",
-            "hex": "DA4648",
-            "source": "https://github.com/gulpjs/artwork/blob/master/gulp.svg"
+            "title": "gulp",
+            "hex": "CF4647",
+            "source": "https://gulpjs.com/"
         },
         {
             "title": "Gumroad",
@@ -3826,6 +3871,11 @@
             "source": "https://docs.nativescript.org/"
         },
         {
+            "title": "NBB",
+            "hex": "FF7100",
+            "source": "https://presse.notebooksbilliger.de/presskits/style-guide"
+        },
+        {
             "title": "NDR",
             "hex": "0C1754",
             "source": "https://www.ndr.de/"
@@ -4031,6 +4081,11 @@
             "source": "http://v.ok.ru/logo.html"
         },
         {
+            "title": "OnePlus",
+            "hex": "F5010C",
+            "source": "https://en.wikipedia.org/wiki/OnePlus#/media/File:OP_LU_Reg_1L_RGB_red_copy-01.svg"
+        },
+        {
             "title": "OnStar",
             "hex": "003D7D",
             "source": "https://www.onstar.com/"
@@ -4044,6 +4099,11 @@
             "title": "Open Access",
             "hex": "F68212",
             "source": "https://commons.wikimedia.org/wiki/File:Open_Access_logo_PLoS_white.svg"
+        },
+        {
+            "title": "Open Badges",
+            "hex": "073B5A",
+            "source": "https://backpack.openbadges.org/"
         },
         {
             "title": "Open Collective",
@@ -4164,6 +4224,11 @@
             "title": "Pagekit",
             "hex": "212121",
             "source": "https://pagekit.com/logo-guide"
+        },
+        {
+            "title": "PagerDuty",
+            "hex": "06AC38",
+            "source": "https://www.pagerduty.com/brand/"
         },
         {
             "title": "PagSeguro",
@@ -4441,6 +4506,11 @@
             "source": "https://github.com/liyasthomas/postwoman"
         },
         {
+            "title": "Power BI",
+            "hex": "F2C811",
+            "source": "https://powerbi.microsoft.com/en-us/"
+        },
+        {
             "title": "POWERS",
             "hex": "D21F3C",
             "source": "https://www.powerswhiskey.com/"
@@ -4666,6 +4736,11 @@
             "source": "http://rubyonrails.org/images/rails-logo.svg"
         },
         {
+            "title": "Rancher",
+            "hex": "0075A8",
+            "source": "https://rancher.com/brand-guidelines/"
+        },
+        {
             "title": "Raspberry Pi",
             "hex": "C51A4A",
             "source": "https://www.raspberrypi.org/trademark-rules"
@@ -4808,7 +4883,7 @@
         {
             "title": "Roots",
             "hex": "525DDC",
-            "source": "https://roots.io/"
+            "source": "https://roots.io/about/brand/"
         },
         {
           "title": "Roots Bedrock",
@@ -6410,6 +6485,11 @@
             "title": "Yelp",
             "hex": "D32323",
             "source": "http://www.yelp.com/brand"
+        },
+        {
+            "title": "Yoast",
+            "hex": "A4286A",
+            "source": "https://yoast.com/media/logo/"
         },
         {
             "title": "YouTube",
