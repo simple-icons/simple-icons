@@ -33,7 +33,7 @@
     "our-lint": "node scripts/lint.js",
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
     "svglint": "svglint icons/* --ci",
-    "wslint": "editorconfig-checker -exclude *.svg",
+    "wslint": "editorconfig-checker -exclude \\.svg$",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
     "test": "jest",
