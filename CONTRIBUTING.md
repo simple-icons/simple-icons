@@ -18,7 +18,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
-* Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a recation or a comment to move it up our list of priorities.
+* Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or a comment to move it up our list of priorities.
 * Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For anything else, popularity will be judged on a case-by-case basis.
 * Isn't related to anything that provides an illegal service (e.g. piracy, malware, threatening material, spam, etc.).
 
