@@ -81,6 +81,8 @@ If you have an affiliation to the brand you are requesting that allows you to sp
 
 If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
+If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
+
 ## Adding or Updating an Icon
 
 **Note**: If you decide to add an icon without requesting it first, the requirements above still apply.
