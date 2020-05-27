@@ -121,7 +121,11 @@ Icons are also available on Kirby through a simple plugin created by [@runxel](h
 
 ### React
 
-Icons are also available on React through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/mamut-dev/icons-pack/tree/master/packages/react-simple-icons).
+Icons are also available on React through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/icons-pack/react-simple-icons).
+
+### Svelte
+
+Icons are also available on Svelte through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/icons-pack/svelte-simple-icons).
 
 ## Status
 
