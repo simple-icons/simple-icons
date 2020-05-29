@@ -113,7 +113,7 @@ Icons are also available as a [Drupal module](https://www.drupal.org/project/sim
 
 ### Home Assistant
 
-Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vignotion](https://github.com/vigonotion/).
+Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
 
 ### Kirby
 
