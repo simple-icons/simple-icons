@@ -109,27 +109,27 @@ echo file_get_contents('path/to/package/icons/simple-icons.svg');
 
 ### Drupal
 
-Icons are also availabe on Drupal through a simple module created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme), which you can find [here](https://www.drupal.org/project/simple_icons).
+Icons are also available as a [Drupal module](https://www.drupal.org/project/simple_icons) created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme).
 
 ### Home Assistant
 
-Icons are also available for Home Assistant through a simple plugin created by [@vignotion](https://github.com/vigonotion/), which you can find [here](https://github.com/vigonotion/hass-simpleicons).
+Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
 
 ### Kirby
 
-Icons are also available on Kirby through a simple plugin created by [@runxel](https://github.com/runxel), which you can find [here](https://github.com/runxel/kirby3-simpleicons).
+Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
 
 ### React
 
-Icons are also available on React through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/icons-pack/react-simple-icons).
+Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
 
 ### Svelte
 
-Icons are also available on Svelte through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/icons-pack/svelte-simple-icons).
+Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
 
 ### WordPress
 
-Icons are also available on WordPress through a simple plugin created by [@tjtaylo](https://github.com/tjtaylo), which you can find [here](https://wordpress.org/plugins/simple-icons/).
+Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
 
 ## Status
 
