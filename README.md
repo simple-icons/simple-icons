@@ -107,13 +107,13 @@ echo file_get_contents('path/to/package/icons/simple-icons.svg');
 
 ## Third Party Extensions
 
-### WordPress
-
-Icons are also available on WordPress through a simple plugin created by [@tjtaylo](https://github.com/tjtaylo), which you can find [here](https://wordpress.org/plugins/simple-icons/).
-
 ### Drupal
 
-Icons are also availabe on Drupal through a module created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme), which you can find [here](https://www.drupal.org/project/simple_icons).
+Icons are also availabe on Drupal through a simple module created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme), which you can find [here](https://www.drupal.org/project/simple_icons).
+
+### Home Assistant
+
+Icons are also available for Home Assistant through a simple plugin created by [@vignotion](https://github.com/vigonotion/), which you can find [here](https://github.com/vigonotion/hass-simpleicons).
 
 ### Kirby
 
@@ -126,6 +126,10 @@ Icons are also available on React through a simple package created by [@wootsbot
 ### Svelte
 
 Icons are also available on Svelte through a simple package created by [@wootsbot](https://github.com/wootsbot), which you can find [here](https://github.com/icons-pack/svelte-simple-icons).
+
+### WordPress
+
+Icons are also available on WordPress through a simple plugin created by [@tjtaylo](https://github.com/tjtaylo), which you can find [here](https://wordpress.org/plugins/simple-icons/).
 
 ## Status
 
