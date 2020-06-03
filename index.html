@@ -1,6 +1,7 @@
 ---
 ---
 
+{% assign iconCount = site.data.simple-icons.icons.size %}
 {% assign iconsUnsortedString = "" %}
 {% assign greyscaleIconsUnsortedString = "" %}
 {% for icon in site.data.simple-icons.icons %}
@@ -31,15 +32,17 @@
     {% assign filename = filename | replace: "+", "plus" %}
     {% assign filename = filename | replace: ".", "-dot-" %}
     {% assign filename = filename | replace: "&", "-and-" %}
-    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: "’", "" %}
+    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" %}
     {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" %}
-    {% assign filename = filename | replace: "ç", "c" %}
+    {% assign filename = filename | replace: "ç", "c" | replace: "č", "c" | replace: "ć", "c" %}
     {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" %}
     {% assign filename = filename | replace: "ì", "i" | replace: "í", "i" | replace: "î", "i" | replace: "ï", "i" %}
-    {% assign filename = filename | replace: "ñ", "n" %}
+    {% assign filename = filename | replace: "ñ", "n" | replace: "ň", "n" | replace: "ń", "n" %}
     {% assign filename = filename | replace: "ò", "o" | replace: "ó", "o" | replace: "ô", "o" | replace: "õ", "o" | replace: "ö", "o" %}
+    {% assign filename = filename | replace: "š", "s" | replace: "ś", "s" %}
     {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" %}
     {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" %}
+    {% assign filename = filename | replace: "ž", "z" | replace: "ź", "z" %}
 
     {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
@@ -98,26 +101,14 @@
         {% assign rgbMin = rgbBlue %}
     {% endif %}
 
-    {% if rgbRed <= 0.03928 %}
-        {% assign lRed = rgbRed | divided_by: 12.92 | times: 0.2126 %}
-    {% else %}
-      {% assign lRed = rgbRed | times: 0.3053 | plus: 0.6822 | times: rgbRed | plus: 0.0125 | times: rgbRed | times: 0.2126 %}
-    {% endif %}
-    {% if rgbGreen <= 0.03928 %}
-        {% assign lGreen = rgbGreen | divided_by: 12.92 | times: 0.7152 %}
-    {% else %}
-        {% assign lGreen = rgbGreen | times: 0.3053 | plus: 0.6822 | times: rgbGreen | plus: 0.0125 | times: rgbGreen | times: 0.7152 %}
-    {% endif %}
-    {% if rgbBlue <= 0.03928 %}
-        {% assign lBlue = rgbBlue | divided_by: 12.92 | times: 0.0722 %}
-    {% else %}
-        {% assign lBlue = rgbBlue | times: 0.3053 | plus: 0.6822 | times: rgbBlue | plus: 0.0125 | times: rgbBlue | times: 0.0722 %}
-    {% endif %}
-    {% assign luminance = lRed | plus: lGreen | plus: lBlue %}
-    {% if luminance >= 0.83 %}
-        {% assign class = "grid-item--dark" %}
-    {% else %}
+    {% assign redLuminance   = rgbArray[0] | times: 16 | plus: rgbArray[1] | times: 0.299 | round: 0 %}
+    {% assign greenLuminance = rgbArray[2] | times: 16 | plus: rgbArray[3] | times: 0.587 | round: 0 %}
+    {% assign blueLuminance  = rgbArray[4] | times: 16 | plus: rgbArray[5] | times: 0.114 | round: 0 %}
+    {% assign luminance = redLuminance | plus: greenLuminance | plus: blueLuminance %}
+    {% if luminance < 160 %}
         {% assign class = "grid-item--light" %}
+    {% else %}
+        {% assign class = "grid-item--dark" %}
     {% endif %}
 
     {% assign hslLuminance = rgbMax | plus: rgbMin | times: 50.0 %}
@@ -174,16 +165,16 @@
     <link rel="preconnect" href="//cdn.carbonads.com">
     <link rel="preconnect" href="//github.com">
     <title>Simple Icons</title>
-    <meta name="description" content="Free SVG icons for popular brands.">
+    <meta name="description" content="{{ iconCount }} Free SVG icons for popular brands.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Simple Icons">
-    <meta property="og:description" content="Free SVG icons for popular brands.">
+    <meta property="og:description" content="{{ iconCount }} Free SVG icons for popular brands.">
     <meta property="og:url" content="https://simpleicons.org">
     <meta property="og:site_name" content="Simple Icons">
     <meta property="og:image" content="https://simpleicons.org/images/og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Simple Icons">
-    <meta name="twitter:description" content="Free SVG icons for popular brands.">
+    <meta name="twitter:description" content="{{ iconCount }} Free SVG icons for popular brands.">
     <meta name="twitter:site" content="@bathtype">
     <meta name="twitter:domain" content="Simple Icons">
     <meta name="twitter:image:src" content="https://simpleicons.org/images/og.png">
@@ -216,10 +207,11 @@
             <li class="navbar__nav-item"><a href="https://github.com/simple-icons/simple-icons/blob/develop/README.md">About</a></li>
             <li class="navbar__nav-item"><a href="https://github.com/simple-icons/simple-icons">GitHub</a></li>
             <li class="navbar__nav-item"><a href="https://www.npmjs.com/package/simple-icons">NPM</a></li>
+            <li class="navbar__nav-item"><a href="https://packagist.org/packages/simple-icons/simple-icons">Packagist</a></li>
         </ul>
     </header>
     <main role="main">
-        <p class="hero">Free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
+        <p class="hero">{{ iconCount }} Free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
         <div class="search">
             <div class="search__wrapper">
                 <div class="search__close"><span>&times;</span></div>

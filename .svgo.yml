@@ -4,6 +4,7 @@ plugins:
   # Set <path> precision to 3 decimal places
   - convertPathData:
       floatPrecision: 3
+      noSpaceAfterFlags: false
 
   # Sort attributes on the <SVG>
   - sortAttrs:
@@ -19,6 +20,7 @@ plugins:
   # Compound all <path>s into one
   - mergePaths:
       force: true
+      noSpaceAfterFlags: false
 
   # Keep the <title>
   - removeTitle: false
@@ -28,8 +30,19 @@ plugins:
   - addAttributesToSVGElement:
       attributes:
         - role: img
+
+  # remove any unnecessary attributes
   - removeUnknownsAndDefaults:
       keepRoleAttr: true
+  - removeAttrs:
+      attrs:
+        - baseProfile
+        - version
+        - fill-rule
+
+  # remove paths with fill="none"
+  - removeUselessStrokeAndFill:
+      removeNone: true
 
   # Enable everything else
   - removeDoctype
@@ -50,7 +63,6 @@ plugins:
   - cleanupListOfValues
   - convertColors
   - removeNonInheritableGroupAttrs
-  - removeUselessStrokeAndFill
   - removeViewBox
   - cleanupEnableBackground
   - removeHiddenElems
@@ -64,7 +76,6 @@ plugins:
   - removeUnusedNS
   - removeDesc
   - removeDimensions
-  - removeAttrs
   - removeAttributesBySelector
   - removeElementsByAttr
   - addClassesToSVGElement

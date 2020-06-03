@@ -24,7 +24,7 @@ icons.forEach(icon => {
 
   test(`${icon.title} has a "path"`, () => {
     expect(typeof subject.path).toBe('string');
-    expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAa0-9-,.\s]+$/g);
+    expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAae0-9-,.\s]+$/g);
   });
 
   test(`${icon.title} has a "slug"`, () => {
@@ -43,4 +43,12 @@ icons.forEach(icon => {
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
   });
+});
+
+test(`Iterating over simpleIcons only exposes icons`, () => {
+  const iconArray = Object.values(simpleIcons);
+  for (let icon of iconArray) {
+    expect(icon).toBeDefined();
+    expect(typeof icon).toBe('object');
+  }
 });
