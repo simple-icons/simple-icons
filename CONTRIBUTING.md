@@ -92,9 +92,9 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
   * Click the download button.
 * The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
-  * If none of the options above work for you, it is possible to build a Docker image for compressing the images
-  * Build: `docker build -t simple-icons/svgo-optimizer .`
-  * Run: `docker run --rm -v ${full local path}:/image.svg simple-icons/svgo-optimizer`
+  * If none of the options above work for you, it is possible to build a Docker image for compressing the images.
+  * Build: `docker build . -t simple-icons`
+  * Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
 
 ### 4. Annotate the Icon
 
@@ -232,32 +232,11 @@ Alternatively, you can build and run the website in a readily configured online 
 You can build a Docker image for this project from the Dockerfile by running:
 
 ```bash
-# Build the Docker image for simple-icons
+# Build the Docker image for simple-icons (if you haven't yet)
 $ docker build . -t simple-icons
 
-# Start a Docker container for simple-icons
-$ docker run -dit --name simple-icons simple-icons
-
-# Get inside the docker container to run e.g. npm test`
-$ docker attach simple-icons
-```
-
-### Optimizing an SVG
-
-To optimize an SVG using SVGO inside the container from outside the container, run:
-
-```bash
-# Make sure the simple-icons container is running
-$ docker start simple-icons
-
-# Copy the SVG to optimize into the container
-$ docker cp ./icons/file-to-optimize.svg simple-icons:/simple-icons/icons/file-to-optimize.svg
-
-# Optimize the SVG using our custom SVGO command
-$ docker exec simple-icons npm run svgo -- icons/file-to-optimize.svg
-
-# Copy the optimized SVG back onto your machine
-$ docker cp simple-icons:/simple-icons/icons/file-to-optimize.svg ./icons/file-to-optimize.svg
+# Start a Docker container for simple-icons and attach to it
+$ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
 
 ### Jekyll Server using Docker
