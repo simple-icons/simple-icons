@@ -1,8 +1,9 @@
-FROM node:6
+FROM alpine:3.12
 
-WORKDIR /work
-COPY package*.json /work/
+RUN apk add --update nodejs npm
+
+WORKDIR /simple-icons
+COPY package*.json /simple-icons/
 RUN npm install
 
-COPY * /work/
-ENTRYPOINT [ "npm", "run", "svgo", "--", "/image.svg" ]
+COPY . .

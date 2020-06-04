@@ -1,3 +1,11 @@
-Dockerfile
-README.md
-icons/*
+node_modules/
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Build files
+icons/*.js
+/index.js
