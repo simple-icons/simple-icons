@@ -13,6 +13,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
 * [Building the Website](#building-locally)
+* [Using Docker](#using-docker)
 
 ## Requesting an Icon
 
@@ -225,6 +226,54 @@ If you have an affiliation to the brand you contributing that allows you to spea
 Alternatively, you can build and run the website in a readily configured online workspace:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
+
+## Using Docker
+
+You can build a Docker image for this project from the Dockerfile by running:
+
+```bash
+# Build the Docker image for simple-icons
+$ docker build . -t simple-icons
+
+# Start a Docker container for simple-icons
+$ docker run -dit --name simple-icons simple-icons
+
+# Get inside the docker container to run e.g. npm test`
+$ docker attach simple-icons
+```
+
+### Optimizing an SVG
+
+To optimize an SVG using SVGO inside the container from outside the container, run:
+
+```bash
+# Make sure the simple-icons container is running
+$ docker start simple-icons
+
+# Copy the SVG to optimize into the container
+$ docker cp ./icons/file-to-optimize.svg simple-icons:/simple-icons/icons/file-to-optimize.svg
+
+# Optimize the SVG using our custom SVGO command
+$ docker exec simple-icons npm run svgo -- icons/file-to-optimize.svg
+
+# Copy the optimized SVG back onto your machine
+$ docker cp simple-icons:/simple-icons/icons/file-to-optimize.svg ./icons/file-to-optimize.svg
+```
+
+### Jekyll Server using Docker
+
+To use a Docker container to run the Jekyll server for the website, run:
+
+```bash
+# Start a container running `jekyll serve` in the background
+$ docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
+
+# Inspect the server logs
+$ docker logs simple-icons-server
+
+# Stop the server (and delete the container)
+$ docker stop simple-icons-server
+```
 
 ---
 
