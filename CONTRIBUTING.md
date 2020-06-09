@@ -91,7 +91,7 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
   * Click the download button.
 
-After optimizing the icon, double-check it against your original version to ensure no visual imperfections have crept in. Also make sure that the dimensions of the path have not been changed so that the icon no longer fits exactly within the canvas, up to 3 decimal points of precision.
+After optimizing the icon, double-check it against your original version to ensure no visual imperfections have crept in. Also make sure that the dimensions of the path have not been changed so that the icon no longer fits exactly within the canvas. We currently check the dimensions up to a precision of 3 decimal points.
 
 ### 4. Annotate the Icon
 
