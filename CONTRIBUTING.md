@@ -18,7 +18,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
-* Has not already been requested.
+* Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
 * Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For anything else, popularity will be judged on a case-by-case basis.
 * Isn't related to anything that provides an illegal service (e.g. piracy, malware, threatening material, spam, etc.).
 
@@ -31,6 +31,8 @@ When submitting a request for a new or updated icon include helpful information 
   * Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
 * **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files etc.)
+
+If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
 ## Adding or Updating an Icon
 
@@ -204,6 +206,8 @@ In general, make sure the URL does not contain any tracking identifiers.
 ### 7. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
+
+If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
 ## Building Locally
 

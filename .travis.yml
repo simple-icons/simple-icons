@@ -6,7 +6,7 @@ jobs:
     - stage: "Test"
       name: "Lint"
       language: node_js
-      node_js: 8
+      node_js: 10
       script:
         - npm run jsonlint
         - npm run svglint
@@ -21,7 +21,7 @@ jobs:
         - jekyll build
     - name: "Test package"
       language: node_js
-      node_js: 8
+      node_js: 10
       script:
         - npm run test
 
@@ -40,7 +40,7 @@ jobs:
         token: "$GITHUB_TOKEN"
     - name: "NPM Package"
       language: node_js
-      node_js: 8
+      node_js: 10
       if: branch = master
 
       deploy:
