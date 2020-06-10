@@ -96,6 +96,8 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Build: `docker build . -t simple-icons`
   * Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
 
+After optimizing the icon, double-check it against your original version to ensure no visual imperfections have crept in. Also make sure that the dimensions of the path have not been changed so that the icon no longer fits exactly within the canvas. We currently check the dimensions up to a precision of 3 decimal points.
+
 ### 4. Annotate the Icon
 
 Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
