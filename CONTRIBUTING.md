@@ -13,12 +13,13 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
 * [Building the Website](#building-locally)
+* [Using Docker](#using-docker)
 
 ## Requesting an Icon
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
-* Has not already been requested.
+* Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
 * Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For anything else, popularity will be judged on a case-by-case basis.
 * Isn't related to anything that provides an illegal service (e.g. piracy, malware, threatening material, spam, etc.).
 
@@ -31,6 +32,8 @@ When submitting a request for a new or updated icon include helpful information 
   * Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
 * **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files etc.)
+
+If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
 ## Adding or Updating an Icon
 
@@ -88,6 +91,12 @@ All icons in Simple Icons have been optimized with the [SVGO tool](https://githu
   * Set the precision to about 3, depending on if there is a loss of quality.
   * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
   * Click the download button.
+* The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
+  * If none of the options above work for you, it is possible to build a Docker image for compressing the images.
+  * Build: `docker build . -t simple-icons`
+  * Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
+
+After optimizing the icon, double-check it against your original version to ensure no visual imperfections have crept in. Also make sure that the dimensions of the path have not been changed so that the icon no longer fits exactly within the canvas. We currently check the dimensions up to a precision of 3 decimal points.
 
 ### 4. Annotate the Icon
 
@@ -205,6 +214,8 @@ In general, make sure the URL does not contain any tracking identifiers.
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
+If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
+
 ## Building Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
@@ -217,6 +228,33 @@ Once you've completed the previous steps, create a pull request to merge your ed
 Alternatively, you can build and run the website in a readily configured online workspace:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
+
+## Using Docker
+
+You can build a Docker image for this project from the Dockerfile by running:
+
+```bash
+# Build the Docker image for simple-icons (if you haven't yet)
+$ docker build . -t simple-icons
+
+# Start a Docker container for simple-icons and attach to it
+$ docker run -it --rm --entrypoint "/bin/ash" simple-icons
+```
+
+### Jekyll Server using Docker
+
+To use a Docker container to run the Jekyll server for the website, run:
+
+```bash
+# Start a container running `jekyll serve` in the background
+$ docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
+
+# Inspect the server logs
+$ docker logs simple-icons-server
+
+# Stop the server (and delete the container)
+$ docker stop simple-icons-server
+```
 
 ---
 
