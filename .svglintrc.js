@@ -1,7 +1,11 @@
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
+const getBounds = require("svg-path-bounding-box");
 
 const titleRegexp = /(.+) icon$/;
+const iconSize = 24;
+const iconFloatPrecision = 3;
+const iconIgnored = require("./.svglint-ignored.json");
 
 module.exports = {
     rules: {
@@ -14,7 +18,7 @@ module.exports = {
         attr: [
             { // ensure that the SVG elm has the appropriate attrs
                 "role": "img",
-                "viewBox": "0 0 24 24",
+                "viewBox": `0 0 ${iconSize} ${iconSize}`,
                 "xmlns": "http://www.w3.org/2000/svg",
 
                 "rule::selector": "svg",
@@ -32,6 +36,8 @@ module.exports = {
         ],
         custom: [
           function(reporter, $, ast) {
+            reporter.name = "icon-title";
+
             const iconTitleText = $.find("title").text();
             if (!titleRegexp.test(iconTitleText)) {
               reporter.error("<title> should follow the format \"[ICON_NAME] icon\"");
@@ -44,6 +50,24 @@ module.exports = {
               if (icon === undefined) {
                 reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
               }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "icon-size";
+
+            const iconPath = $.find("path").attr("d");
+            if (iconIgnored.hasOwnProperty(iconPath)) {
+              return;
+            }
+
+            const bounds = getBounds(iconPath);
+            const width = +bounds.width.toFixed(iconFloatPrecision);
+            const height = +bounds.height.toFixed(iconFloatPrecision);
+
+            if (width === 0 && height === 0) {
+              reporter.error("Path bounds were reported as 0 x 0; check if the path is valid");
+            } else if (width !== iconSize && height !== iconSize) {
+              reporter.error(`Size of <path> must be exactly ${iconSize} in one dimension; the size is currently ${width} x ${height}`);
             }
           },
         ]
