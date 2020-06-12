@@ -24,3 +24,4 @@ labels: new icon
 
 **Official resources for icon and color:**
   <!-- for example media kits, brand guidelines, SVG files, ...) -->
+  
