@@ -18,9 +18,11 @@ labels: new icon
 **Website:**
 **Alexa rank:**
   <!-- The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/
-       Please see our contributing guidelines at
-       https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
-       for more details on how we assess a brand's popularity. -->
+       Please see our contributing guidelines for more details on how we
+       assess a brand's popularity. -->
 
 **Official resources for icon and color:**
-  <!-- for example media kits, brand guidelines, SVG files, ...) -->
+  <!-- for example media kits, brand guidelines, SVG files, etc. -->
+  
+<!-- For more deatils on our processes our contributing guidelines
+     can be found at https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
