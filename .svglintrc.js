@@ -77,7 +77,7 @@ module.exports = {
 
             const rawSVG = $.html();
             if (!svgRegexp.test(rawSVG)) {
-              reporter.error("Detected unexpected characters outside the <svg>");
+              reporter.error("Unexpected character(s) detected outside the opening and/or closing <svg> tags");
             }
           },
         ]
