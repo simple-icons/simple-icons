@@ -24,5 +24,6 @@ labels: new icon
 **Official resources for icon and color:**
   <!-- for example media kits, brand guidelines, SVG files, etc. -->
   
-<!-- For more details on our processes our contributing guidelines
-     can be found at https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
+<!-- For more details on our processes please see our contributing
+     guidelines, which can be found at
+     https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md -->
