@@ -3,6 +3,8 @@ const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 const getBounds = require("svg-path-bounding-box");
 
 const titleRegexp = /(.+) icon$/;
+const svgRegexp = /^<svg.*<\/svg>\r?\n?$/;
+
 const iconSize = 24;
 const iconFloatPrecision = 3;
 const iconIgnored = require("./.svglint-ignored.json");
@@ -68,6 +70,14 @@ module.exports = {
               reporter.error("Path bounds were reported as 0 x 0; check if the path is valid");
             } else if (width !== iconSize && height !== iconSize) {
               reporter.error(`Size of <path> must be exactly ${iconSize} in one dimension; the size is currently ${width} x ${height}`);
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "extraneous";
+
+            const rawSVG = $.html();
+            if (!svgRegexp.test(rawSVG)) {
+              reporter.error("Unexpected character(s) detected outside the opening and/or closing <svg> tags");
             }
           },
         ]
