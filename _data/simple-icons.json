@@ -371,6 +371,11 @@
             "source": "https://www.ansible.com/logos"
         },
         {
+            "title": "Ansys",
+            "hex": "FFB71B",
+            "source": "https://www.ansys.com/about-ansys/brand"
+        },
+        {
             "title": "Antena 3",
             "hex": "FF7328",
             "source": "https://www.antena3.com/"
@@ -407,8 +412,8 @@
         },
         {
             "title": "Apache ECharts",
-            "hex": "A9334C",
-            "source": "https://echarts.apache.org/"
+            "hex": "AA344D",
+            "source": "https://apache.org/logos/"
         },
         {
             "title": "Apache Flink",
@@ -438,7 +443,7 @@
         {
             "title": "Apache Pulsar",
             "hex": "188FFF",
-            "source": "https://pulsar.apache.org/"
+            "source": "https://apache.org/logos/"
         },
         {
             "title": "Apache RocketMQ",
@@ -817,8 +822,8 @@
         },
         {
             "title": "Bitwarden",
-            "hex": "3C8DBC",
-            "source": "https://github.com/bitwarden/brand/blob/f2d666eda756e2aba26f1463f102bc24ba179df2/icons/icon.svg"
+            "hex": "175DDC",
+            "source": "https://github.com/bitwarden/brand/blob/6182cd64321d810c6f6255db08c2a17804d2b724/icons/icon.svg"
         },
         {
             "title": "Blackberry",
@@ -989,6 +994,11 @@
             "title": "Campaign Monitor",
             "hex": "111324",
             "source": "https://www.campaignmonitor.com/company/brand/"
+        },
+        {
+            "title": "Canonical",
+            "hex": "77216F",
+            "source": "https://design.ubuntu.com/downloads/"
         },
         {
             "title": "Canva",
@@ -1416,6 +1426,11 @@
             "source": "https://curl.haxx.se/logo/"
         },
         {
+            "title": "Cypress",
+            "hex": "17202C",
+            "source": "https://cypress.io"
+        },
+        {
             "title": "D3.js",
             "hex": "F9A03C",
             "source": "https://github.com/d3/d3-logo"
@@ -1521,6 +1536,11 @@
             "source": "https://dependabot.com/dependabot-logo-symbol-square-mono.svg"
         },
         {
+            "title": "Der Spiegel",
+            "hex": "E64415",
+            "source": "https://www.spiegel.de/"
+        },
+        {
             "title": "Designer News",
             "hex": "2D72D9",
             "source": "https://www.designernews.co"
@@ -1539,6 +1559,11 @@
             "title": "devRant",
             "hex": "F99A66",
             "source": "https://devrant.com"
+        },
+        {
+            "title": "DHL",
+            "hex": "FFCC00",
+            "source": "https://www.dpdhl-brands.com/dhl/en/guides/design-basics/logo-and-claim.html"
         },
         {
             "title": "Diaspora",
@@ -2152,7 +2177,7 @@
         },
         {
             "title": "Fur Affinity",
-            "hex": "FAAF3A",
+            "hex": "36566F",
             "source": "https://www.furaffinity.net/"
         },
         {
@@ -2179,6 +2204,11 @@
             "title": "Gauges",
             "hex": "2FA66A",
             "source": "http://get.gaug.es/"
+        },
+        {
+            "title": "GeeksforGeeks",
+            "hex": "0F9D58",
+            "source": "https://www.geeksforgeeks.org/"
         },
         {
             "title": "General Motors",
@@ -2456,6 +2486,11 @@
             "source": "https://developers.google.com/nearby/developer-guidelines"
         },
         {
+            "title": "Google News",
+            "hex": "174EA6",
+            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+        },
+        {
             "title": "Google Pay",
             "hex": "4285F4",
             "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
@@ -2472,8 +2507,8 @@
         },
         {
             "title": "Google Scholar",
-            "hex": "4885ED",
-            "source": "https://scholar.google.com/intl/fr/scholar/images/2x/sprite_20161020.png"
+            "hex": "4285F4",
+            "source": "https://commons.wikimedia.org/wiki/File:Google_Scholar_logo.svg"
         },
         {
             "title": "Google Search Console",
@@ -2937,8 +2972,8 @@
         },
         {
             "title": "Intercom",
-            "hex": "1F8DED",
-            "source": "https://www.intercom.io"
+            "hex": "6AFDEF",
+            "source": "https://www.intercom.com/press"
         },
         {
             "title": "Internet Archive",
@@ -3009,6 +3044,11 @@
             "title": "Jameson",
             "hex": "004027",
             "source": "https://www.jamesonwhiskey.com/"
+        },
+        {
+            "title": "Jasmine",
+            "hex": "8A4182",
+            "source": "https://github.com/jasmine/jasmine/blob/8991b1bba39b5b7e89fc5eeb07ae271a684cb1a4/images/jasmine-horizontal.svg"
         },
         {
             "title": "Java",
@@ -3256,6 +3296,11 @@
             "source": "https://krita.org/en/about/press/"
         },
         {
+            "title": "KTM",
+            "hex": "FF6600",
+            "source": "https://ktm.com"
+        },
+        {
             "title": "Kubernetes",
             "hex": "326CE5",
             "source": "https://github.com/kubernetes/kubernetes/tree/master/logo"
@@ -3274,6 +3319,11 @@
             "title": "Lamborghini",
             "hex": "DDB320",
             "source": "https://en.wikipedia.org/wiki/File:Lamborghini_Logo.svg"
+        },
+        {
+            "title": "Land Rover",
+            "hex": "005A2B",
+            "source": "https://www.landrover.com.au/download-a-brochure/index.html"
         },
         {
             "title": "Laravel",
@@ -3681,6 +3731,16 @@
             "source": "http://logo.meteorapp.com/"
         },
         {
+            "title": "Metro de la Ciudad de México",
+            "hex": "F77E1C",
+            "source": "https://es.wikipedia.org/wiki/Archivo:Metro_de_la_Ciudad_de_M%C3%A9xico_(logo)_version_2019.svg"
+        },
+        {
+            "title": "Metro de Madrid",
+            "hex": "255E9C",
+            "source": "https://commons.wikimedia.org/wiki/File:MetroMadridLogo.svg"
+        },
+        {
             "title": "Métro de Paris",
             "hex": "003E95",
             "source": "https://www.ratp.fr/"
@@ -3804,6 +3864,11 @@
             "title": "Minetest",
             "hex": "53AC56",
             "source": "https://www.minetest.net/"
+        },
+        {
+            "title": "Mini",
+            "hex": "000000",
+            "source": "https://mini.co.uk"
         },
         {
             "title": "Minutemailer",
@@ -3936,6 +4001,11 @@
             "source": "https://www.mysql.com/about/legal/logos.html"
         },
         {
+            "title": "N26",
+            "hex": "48AC98",
+            "source": "https://n26.com/"
+        },
+        {
             "title": "NativeScript",
             "hex": "3655FF",
             "source": "https://docs.nativescript.org/"
@@ -3964,6 +4034,11 @@
             "title": "Neovim",
             "hex": "57A143",
             "source": "https://github.com/neovim/neovim.github.io/tree/master/logos"
+        },
+        {
+            "title": "NestJS",
+            "hex": "E0234E",
+            "source": "https://nestjs.com/"
         },
         {
             "title": "NetApp",
@@ -4214,6 +4289,11 @@
             "title": "OpenID",
             "hex": "F78C40",
             "source": "https://openid.net/add-openid/logos/"
+        },
+        {
+            "title": "Openlayers",
+            "hex": "1F6B75",
+            "source": "https://github.com/openlayers/openlayers.github.io/blob/5b93e18b8d302eb49a812fb96abb529895ceb7a2/assets/logo.svg"
         },
         {
             "title": "OpenSSL",
@@ -4626,6 +4706,16 @@
             "source": "https://prezi.com/press/kit/"
         },
         {
+            "title": "Prime",
+            "hex": "00A8E1",
+            "source": "https://www.amazon.com/b?node=17277626011"
+        },
+        {
+            "title": "Prime Video",
+            "hex": "1F2E3E",
+            "source": "https://m.media-amazon.com/images/G/01/cooper/PV_Branding_Guidelines_Logos_Lock_Ups._CB1539191655_.pdf"
+        },
+        {
             "title": "Prismic",
             "hex": "484A7A",
             "source": "https://prismic.io/"
@@ -4741,6 +4831,11 @@
             "source": "https://qiwi.com/"
         },
         {
+            "title": "Qt",
+            "hex": "41CD52",
+            "source": "https://qt-brandbook.webflow.io/design"
+        },
+        {
             "title": "Qualcomm",
             "hex": "3253DC",
             "source": "https://www.qualcomm.com"
@@ -4764,6 +4859,11 @@
             "title": "Quarkus",
             "hex": "4695EB",
             "source": "https://design.jboss.org/quarkus/"
+        },
+        {
+            "title": "Quasar",
+            "hex": "1976D2",
+            "source": "https://github.com/quasarframework/quasar-art/blob/cbbbb4b0b7ec7181dfc2d1b29a1ce025e71575bc/src/quasar-logo.svg"
         },
         {
             "title": "Quest",
@@ -5091,6 +5191,11 @@
             "source": "https://www.scopus.com/"
         },
         {
+            "title": "Scratch",
+            "hex": "4D97FF",
+            "source": "https://github.com/LLK/scratch-link/blob/027e3754ba6db976495e905023d5ac5e730dccfc/Assets/Windows/SVG/Windows%20Tray%20400x400.svg"
+        },
+        {
             "title": "Scribd",
             "hex": "1A7BBA",
             "source": "https://www.scribd.com"
@@ -5136,6 +5241,11 @@
             "source": "http://design.sencha.com/"
         },
         {
+            "title": "Sennheiser",
+            "hex": "000000",
+            "source": "https://sennheiser.com"
+        },
+        {
             "title": "Sensu",
             "hex": "89C967",
             "source": "https://github.com/sensu/sensu-go/blob/master/dashboard/src/assets/logo/graphic/green.svg"
@@ -5169,6 +5279,16 @@
             "title": "Shell",
             "hex": "FFD500",
             "source": "https://en.wikipedia.org/wiki/File:Shell_logo.svg"
+        },
+        {
+            "title": "Shenzhen Metro",
+            "hex": "009943",
+            "source": "https://en.wikipedia.org/wiki/File:Shenzhen_Metro_Corporation_logo_full.svg"
+        },
+        {
+            "title": "Shikimori",
+            "hex": "343434",
+            "source": "https://shikimori.one"
         },
         {
             "title": "Shopify",
@@ -5392,8 +5512,8 @@
         },
         {
             "title": "SpaceX",
-            "hex": "005288",
-            "source": "https://www.spacex.com/sites/all/themes/spacex2012/images/logo.svg"
+            "hex": "000000",
+            "source": "https://www.spacex.com/"
         },
         {
             "title": "SparkFun",
@@ -5861,6 +5981,11 @@
             "source": "https://toggl.com/media-toolkit"
         },
         {
+            "title": "Tokyo Metro",
+            "hex": "149DD3",
+            "source": "https://en.wikipedia.org/wiki/File:TokyoMetro.svg"
+        },
+        {
             "title": "Tomorrowland",
             "hex": "000000",
             "source": "https://global.tomorrowland.com/"
@@ -5936,6 +6061,11 @@
             "source": "https://tripadvisor.mediaroom.com/logo-guidelines"
         },
         {
+            "title": "Trove",
+            "hex": "609540",
+            "source": "https://trove.nla.gov.au/"
+        },
+        {
             "title": "Trulia",
             "hex": "53B50A",
             "source": "http://www.trulia.com"
@@ -5959,6 +6089,11 @@
             "title": "Tumblr",
             "hex": "36465D",
             "source": "https://www.tumblr.com/logo"
+        },
+        {
+            "title": "TuneIn",
+            "hex": "14D8CC",
+            "source": "https://cms.tunein.com/press/"
         },
         {
             "title": "Turkish Airlines",
@@ -6174,6 +6309,11 @@
             "title": "Virb",
             "hex": "0093DA",
             "source": "http://virb.com/about"
+        },
+        {
+            "title": "VirusTotal",
+            "hex": "394EFF",
+            "source": "https://www.virustotal.com/"
         },
         {
             "title": "Visa",
