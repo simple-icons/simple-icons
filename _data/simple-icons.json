@@ -151,7 +151,7 @@
             "source": "https://www.adobe.com/products/photoshop.html"
         },
         {
-            "title": "Adobe Premiere",
+            "title": "Adobe Premiere Pro",
             "hex": "EA77FF",
             "source": "https://www.adobe.com/ie/products/premiere.html"
         },
@@ -394,6 +394,11 @@
             "title": "Apache Ant",
             "hex": "A81C7D",
             "source": "https://commons.wikimedia.org/wiki/File:Apache-Ant-logo.svg"
+        },
+        {
+            "title": "Apache Cassandra",
+            "hex": "1287B1",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg"
         },
         {
             "title": "Apache CloudStack",
@@ -1019,11 +1024,6 @@
             "title": "Cash App",
             "hex": "00C244",
             "source": "https://cash.app/press"
-        },
-        {
-            "title": "Cassandra",
-            "hex": "1287B1",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg"
         },
         {
             "title": "Castbox",
@@ -3911,9 +3911,9 @@
             "source": "https://mochajs.org/"
         },
         {
-            "title": "Mojang",
+            "title": "Mojang Studios",
             "hex": "DB1F29",
-            "source": "https://www.mojang.com/"
+            "source": "https://www.minecraft.net/en-us/article/meet-mojang-studios"
         },
         {
             "title": "Moleculer",
@@ -4931,11 +4931,6 @@
             "source": "https://help.radiopublic.com/hc/en-us/articles/360002546754-RadioPublic-logos"
         },
         {
-            "title": "Rails",
-            "hex": "CC0000",
-            "source": "http://rubyonrails.org/images/rails-logo.svg"
-        },
-        {
             "title": "Rancher",
             "hex": "0075A8",
             "source": "https://rancher.com/brand-guidelines/"
@@ -5114,6 +5109,11 @@
             "title": "Ruby",
             "hex": "CC342D",
             "source": "https://www.ruby-lang.org/en/about/logo/"
+        },
+        {
+            "title": "Ruby on Rails",
+            "hex": "CC0000",
+            "source": "http://rubyonrails.org/images/rails-logo.svg"
         },
         {
             "title": "RubyGems",
@@ -5976,7 +5976,7 @@
             "source": "https://www.tide.co/newsroom/"
         },
         {
-            "title": "Tik Tok",
+            "title": "TikTok",
             "hex": "000000",
             "source": "https://tiktok.com"
         },
@@ -6289,6 +6289,11 @@
             "title": "Venmo",
             "hex": "3D95CE",
             "source": "https://venmo.com/about/brand/"
+        },
+        {
+            "title": "Vercel",
+            "hex": "000000",
+            "source": "https://vercel.com/design"
         },
         {
             "title": "Veritas",
@@ -6804,11 +6809,6 @@
             "title": "ZDF",
             "hex": "FA7D19",
             "source": "https://www.zdf.de/"
-        },
-        {
-            "title": "Zeit",
-            "hex": "000000",
-            "source": "https://zeit.co/design/brand"
         },
         {
             "title": "Zend",
