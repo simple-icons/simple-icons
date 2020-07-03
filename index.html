@@ -29,10 +29,6 @@
     {% endif %}
 
     {% assign filename = filename | downcase %}
-    {% assign filename = filename | replace: "+", "plus" %}
-    {% assign filename = filename | replace: ".", "-dot-" %}
-    {% assign filename = filename | replace: "&", "-and-" %}
-    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" %}
     {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" %}
     {% assign filename = filename | replace: "ç", "c" | replace: "č", "c" | replace: "ć", "c" %}
     {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" %}
@@ -43,6 +39,12 @@
     {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" %}
     {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" %}
     {% assign filename = filename | replace: "ž", "z" | replace: "ź", "z" %}
+
+    {% assign searchTerm = filename %}
+    {% assign filename = filename | replace: "+", "plus" %}
+    {% assign filename = filename | replace: ".", "-dot-" %}
+    {% assign filename = filename | replace: "&", "-and-" %}
+    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" %}
 
     {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
@@ -136,10 +138,10 @@
 
     {% if hslSaturation < 10 %}
         {% assign hslLuminance = hslLuminance | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture greyscaleIconsUnsortedString %}{{ greyscaleIconsUnsortedString }}{{ hslLuminance }},{{ filename }},{{ hslHue }},{{ hslSaturation }},{{ hex }},{{ title }},{{ class }},{{ searchTerm }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% else %}
         {% assign hslHue = hslHue | round: 0 | prepend: "000" | slice: -3, 3 %}
-        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
+        {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }},{{ searchTerm }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% endif %}
 {% endfor %}
 
@@ -149,11 +151,11 @@
 {% assign allIconNames = "" %}
 {% for icon in iconsArray %}
     {% assign iconArray = icon | split: "," %}
-    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[5] }}",{% endcapture %}
+    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[7] }}",{% endcapture %}
 {% endfor %}
 {% for icon in greyscaleIconsArray %}
     {% assign iconArray = icon | split: "," %}
-    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[5] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
+    {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[7] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
 {% endfor %}
 
 <!doctype html>
@@ -191,12 +193,8 @@
 
       ga('create', 'UA-100751516-2', 'auto');
       ga('send', 'pageview');
-    </script>
-    <script>
-      function normalizeSearchTerm(value) {
-          return value.toLowerCase();
-      }
-      var icons = [{{ allIconNames }}].map(normalizeSearchTerm);
+
+      var icons = [{{ allIconNames }}];
     </script>
 </head>
 
