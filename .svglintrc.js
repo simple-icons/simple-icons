@@ -3,7 +3,7 @@ const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 const getBounds = require("svg-path-bounding-box");
 
 const titleRegexp = /(.+) icon$/;
-const svgRegexp = /^<svg.*<\/svg>\r?\n?$/;
+const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
@@ -77,7 +77,7 @@ module.exports = {
 
             const rawSVG = $.html();
             if (!svgRegexp.test(rawSVG)) {
-              reporter.error("Unexpected character(s) detected outside the opening and/or closing <svg> tags");
+              reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
             }
           },
         ]
