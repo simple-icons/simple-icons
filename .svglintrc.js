@@ -7,6 +7,7 @@ const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/sv
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
+const iconTolerance = 0.001;
 const iconIgnored = require("./.svglint-ignored.json");
 
 module.exports = {
@@ -58,7 +59,7 @@ module.exports = {
             reporter.name = "icon-size";
 
             const iconPath = $.find("path").attr("d");
-            if (iconIgnored.hasOwnProperty(iconPath)) {
+            if (iconIgnored.size.hasOwnProperty(iconPath)) {
               return;
             }
 
@@ -80,6 +81,31 @@ module.exports = {
               reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
             }
           },
+          function(reporter, $, ast) {
+            reporter.name = "icon-centered";
+            const iconPath = $.find("path").attr("d");
+            const bounds = getBounds(iconPath);
+
+            if (
+              iconIgnored.size.hasOwnProperty(iconPath) ||
+              iconIgnored.center.hasOwnProperty(iconPath)
+            ) {
+              return
+            }
+
+            const targetCenter = iconSize / 2;
+            const centerX = +((bounds.minX + bounds.maxX) / 2).toFixed(iconFloatPrecision);
+            const devianceX = centerX - targetCenter;
+            const centerY = +((bounds.minY + bounds.maxY) / 2).toFixed(iconFloatPrecision);
+            const devianceY = centerY - targetCenter;
+
+            if (
+              Math.abs(devianceX) > iconTolerance ||
+              Math.abs(devianceY) > iconTolerance
+            ) {
+              reporter.error(`<path> must be centered at (${targetCenter}, ${targetCenter}); the center is currently (${centerX}, ${centerY})`);
+            }
+          }
         ]
     }
 };
