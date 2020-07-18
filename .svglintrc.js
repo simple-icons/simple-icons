@@ -90,7 +90,7 @@ module.exports = {
               iconIgnored.size.hasOwnProperty(iconPath) ||
               iconIgnored.center.hasOwnProperty(iconPath)
             ) {
-              return
+              return;
             }
 
             const targetCenter = iconSize / 2;
