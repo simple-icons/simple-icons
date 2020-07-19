@@ -151,14 +151,9 @@
             "source": "https://www.adobe.com/products/photoshop.html"
         },
         {
-            "title": "Adobe Premiere",
+            "title": "Adobe Premiere Pro",
             "hex": "EA77FF",
             "source": "https://www.adobe.com/ie/products/premiere.html"
-        },
-        {
-            "title": "Adobe Typekit",
-            "hex": "87EC00",
-            "source": "https://helpx.adobe.com/content/dam/help/mnemonics/tk_appicon_RGB.svg"
         },
         {
             "title": "Adobe XD",
@@ -399,6 +394,11 @@
             "title": "Apache Ant",
             "hex": "A81C7D",
             "source": "https://commons.wikimedia.org/wiki/File:Apache-Ant-logo.svg"
+        },
+        {
+            "title": "Apache Cassandra",
+            "hex": "1287B1",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg"
         },
         {
             "title": "Apache CloudStack",
@@ -737,7 +737,7 @@
         },
         {
             "title": "Basecamp",
-            "hex": "5ECC62",
+            "hex": "1D2D35",
             "source": "https://basecamp.com/about/press"
         },
         {
@@ -1024,11 +1024,6 @@
             "title": "Cash App",
             "hex": "00C244",
             "source": "https://cash.app/press"
-        },
-        {
-            "title": "Cassandra",
-            "hex": "1287B1",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg"
         },
         {
             "title": "Castbox",
@@ -1671,6 +1666,11 @@
             "source": "https://github.com/drone/brand"
         },
         {
+            "title": "Drooble",
+            "hex": "19C4BE",
+            "source": "https://blog.drooble.com/press/"
+        },
+        {
             "title": "Dropbox",
             "hex": "0061FF",
             "source": "https://www.dropbox.com/branding"
@@ -1931,6 +1931,11 @@
             "source": "https://en.facebookbrand.com/"
         },
         {
+            "title": "Facebook Gaming",
+            "hex": "005FED",
+            "source": "https://www.facebook.com/fbgaminghome/"
+        },
+        {
             "title": "Facebook Live",
             "hex": "ED4242",
             "source": "https://en.facebookbrand.com/"
@@ -2039,6 +2044,16 @@
             "title": "Firebase",
             "hex": "FFCA28",
             "source": "https://firebase.google.com/brand-guidelines/"
+        },
+        {
+            "title": "Firefox",
+            "hex": "FF7139",
+            "source": "https://mozilla.design/firefox/logos-usage/"
+        },
+        {
+            "title": "Firefox Browser",
+            "hex": "FF7139",
+            "source": "https://mozilla.design/firefox/logos-usage/"
         },
         {
             "title": "FIRST",
@@ -2576,11 +2591,6 @@
             "source": "https://automattic.com/press"
         },
         {
-            "title": "Greenkeeper",
-            "hex": "00C775",
-            "source": "https://greenkeeper.io/"
-        },
-        {
             "title": "GreenSock",
             "hex": "88CE02",
             "source": "https://greensock.com/"
@@ -2921,6 +2931,11 @@
             "source": "https://ifood.com.br/"
         },
         {
+            "title": "IFTTT",
+            "hex": "000000",
+            "source": "https://ifttt.com/discover/brand-guidelines"
+        },
+        {
             "title": "iHeartRadio",
             "hex": "C6002B",
             "source": "https://brand.iheart.com/logo"
@@ -3127,7 +3142,12 @@
         },
         {
             "title": "Jira",
-            "hex": "172B4D",
+            "hex": "0052CC",
+            "source": "https://atlassian.design/guidelines/marketing/resources/logo-files"
+        },
+        {
+            "title": "Jira Software",
+            "hex": "0052CC",
             "source": "https://www.atlassian.com/company/news/press-kit"
         },
         {
@@ -3139,6 +3159,11 @@
             "title": "Joomla",
             "hex": "5091CD",
             "source": "https://docs.joomla.org/Joomla:Brand_Identity_Elements"
+        },
+        {
+            "title": "JPEG",
+            "hex": "8A8A8A",
+            "source": "https://jpeg.org/contact.html"
         },
         {
             "title": "jQuery",
@@ -3441,7 +3466,7 @@
             "source": "https://github.com/GoogleChrome/lighthouse/blob/80d2e6c1948f232ec4f1bdeabc8bc632fc5d0bfd/assets/lh_favicon.svg"
         },
         {
-            "title": "Line",
+            "title": "LINE",
             "hex": "00C300",
             "source": "http://line.me/en/logo"
         },
@@ -3921,9 +3946,9 @@
             "source": "https://mochajs.org/"
         },
         {
-            "title": "Mojang",
+            "title": "Mojang Studios",
             "hex": "DB1F29",
-            "source": "https://www.mojang.com/"
+            "source": "https://www.minecraft.net/en-us/article/meet-mojang-studios"
         },
         {
             "title": "Moleculer",
@@ -3974,16 +3999,6 @@
             "title": "Mozilla",
             "hex": "000000",
             "source": "https://mozilla.ninja/our-logo"
-        },
-        {
-            "title": "Mozilla Firefox",
-            "hex": "FF7139",
-            "source": "https://mozilla.design/firefox/logos-usage/"
-        },
-        {
-            "title": "Mozilla Thunderbird",
-            "hex": "0A84FF",
-            "source": "https://demo.identihub.co/thunderbird"
         },
         {
             "title": "MTA",
@@ -4192,8 +4207,8 @@
         },
         {
             "title": "Nucleo",
-            "hex": "766DCC",
-            "source": "https://nucleoapp.com/wp-content/themes/nucleo-webapp-12/img/logo.svg"
+            "hex": "111111",
+            "source": "https://nucleoapp.com/"
         },
         {
             "title": "NuGet",
@@ -4247,8 +4262,8 @@
         },
         {
             "title": "Odnoklassniki",
-            "hex": "F4731C",
-            "source": "http://v.ok.ru/logo.html"
+            "hex": "EE8208",
+            "source": "https://insideok.ru/brandbook"
         },
         {
             "title": "OnePlus",
@@ -4481,6 +4496,11 @@
             "source": "https://github.com/Chocobozzz/PeerTube/tree/develop/client/src/assets/images"
         },
         {
+            "title": "Pelican",
+            "hex": "14A0C4",
+            "source": "https://blog.getpelican.com/pages/gratitude.html"
+        },
+        {
             "title": "Pepsi",
             "hex": "2151A1",
             "source": "https://commons.wikimedia.org/wiki/File:Pepsi_logo_new.svg"
@@ -4511,6 +4531,11 @@
             "source": "https://phacility.com/trademarks/"
         },
         {
+            "title": "Philips Hue",
+            "hex": "0065D3",
+            "source": "https://www2.meethue.com/en-us/support"
+        },
+        {
             "title": "Photocrowd",
             "hex": "3DAD4B",
             "source": "https://www.photocrowd.com/"
@@ -4529,6 +4554,11 @@
             "title": "Picarto.TV",
             "hex": "1DA456",
             "source": "https://picarto.tv/site/press"
+        },
+        {
+            "title": "Pimcore",
+            "hex": "6428B4",
+            "source": "https://pimcore.com/en/media-kit"
         },
         {
             "title": "Pinboard",
@@ -4574,6 +4604,11 @@
             "title": "PJSIP",
             "hex": "F86001",
             "source": "https://www.pjsip.org/favicon.ico"
+        },
+        {
+            "title": "Planet",
+            "hex": "009DB1",
+            "source": "https://www.planet.com/explorer/"
         },
         {
             "title": "PlanGrid",
@@ -4882,8 +4917,8 @@
         },
         {
             "title": "Quantcast",
-            "hex": "1E262C",
-            "source": "http://branding.quantcast.com/logouse/"
+            "hex": "000000",
+            "source": "https://www.quantcast.com/user/login"
         },
         {
             "title": "Quantopian",
@@ -4944,11 +4979,6 @@
             "title": "RadioPublic",
             "hex": "CE262F",
             "source": "https://help.radiopublic.com/hc/en-us/articles/360002546754-RadioPublic-logos"
-        },
-        {
-            "title": "Rails",
-            "hex": "CC0000",
-            "source": "http://rubyonrails.org/images/rails-logo.svg"
         },
         {
             "title": "Rancher",
@@ -5129,6 +5159,11 @@
             "title": "Ruby",
             "hex": "CC342D",
             "source": "https://www.ruby-lang.org/en/about/logo/"
+        },
+        {
+            "title": "Ruby on Rails",
+            "hex": "CC0000",
+            "source": "http://rubyonrails.org/images/rails-logo.svg"
         },
         {
             "title": "RubyGems",
@@ -5567,7 +5602,7 @@
         },
         {
             "title": "Speaker Deck",
-            "hex": "339966",
+            "hex": "009287",
             "source": "https://speakerdeck.com/"
         },
         {
@@ -5981,6 +6016,11 @@
             "source": "https://threema.ch/en/press"
         },
         {
+            "title": "Thunderbird",
+            "hex": "0A84FF",
+            "source": "https://demo.identihub.co/thunderbird"
+        },
+        {
             "title": "Tidal",
             "hex": "000000",
             "source": "https://tidal.com"
@@ -5991,7 +6031,7 @@
             "source": "https://www.tide.co/newsroom/"
         },
         {
-            "title": "Tik Tok",
+            "title": "TikTok",
             "hex": "000000",
             "source": "https://tiktok.com"
         },
@@ -6304,6 +6344,11 @@
             "title": "Venmo",
             "hex": "3D95CE",
             "source": "https://venmo.com/about/brand/"
+        },
+        {
+            "title": "Vercel",
+            "hex": "000000",
+            "source": "https://vercel.com/design"
         },
         {
             "title": "Veritas",
@@ -6819,11 +6864,6 @@
             "title": "ZDF",
             "hex": "FA7D19",
             "source": "https://www.zdf.de/"
-        },
-        {
-            "title": "Zeit",
-            "hex": "000000",
-            "source": "https://zeit.co/design/brand"
         },
         {
             "title": "Zend",
