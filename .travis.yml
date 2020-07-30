@@ -1,13 +1,17 @@
+os: linux
+language: node_js
+
 jobs:
   include:
     - stage: "Test"
       name: "Lint"
       language: node_js
-      node_js: 8
+      node_js: 10
       script:
         - npm run jsonlint
         - npm run svglint
         - npm run wslint
+        - npm run our-lint
     - name: "Build website"
       language: ruby
       rvm: 2.4.1
@@ -17,13 +21,13 @@ jobs:
         - jekyll build
     - name: "Test package"
       language: node_js
-      node_js: 8
+      node_js: 10
       script:
         - npm run test
 
     - stage: deploy
       name: "Git tag"
-      language: minimal
+      language: shell
       if: branch = master
 
       before_deploy:
@@ -33,18 +37,17 @@ jobs:
         - git tag $PACKAGE_VERSION
       deploy:
         provider: releases
-        api_key: "$GITHUB_TOKEN"
-        skip_cleanup: true
+        token: "$GITHUB_TOKEN"
     - name: "NPM Package"
       language: node_js
-      node_js: 8
+      node_js: 10
       if: branch = master
 
       deploy:
+        edge: true
         provider: npm
-        skip_cleanup: true
-        email: "johanringmann@gmail.com"
-        api_key: "$NPM_KEY"
+        email: "$NPM_EMAIL"
+        api_token: "$NPM_KEY"
         on:
           branch: master
 

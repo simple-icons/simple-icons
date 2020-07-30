@@ -59,10 +59,24 @@
   //   - https://davidwalsh.name/query-string-javascript
   //   - https://github.com/WebReflection/url-search-params
   function getUrlParameter(parameter) {
-    name = parameter.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var name = parameter.replace(/[\[]/g, '\\[').replace(/[\]]/g, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
+  function normalizeSearchTerm(value) {
+    return value.toLowerCase().toLowerCase()
+      .replace(/à|á|â|ã|ä/g, "a")
+      .replace(/ç|č|ć/g, "c")
+      .replace(/è|é|ê|ë/g, "e")
+      .replace(/ì|í|î|ï/g, "i")
+      .replace(/ñ|ň|ń/g, "n")
+      .replace(/ò|ó|ô|õ|ö/g, "o")
+      .replace(/š|ś/g, "s")
+      .replace(/ù|ú|û|ü/g, "u")
+      .replace(/ý|ÿ/g, "y")
+      .replace(/ž|ź/g, "z");
   }
 
   function search(value) {
@@ -70,9 +84,9 @@
         queryLetters = query.split('');
 
     var matchedIcons = icons.filter(function(iconName, iconIndex) {
-      var element = $icons[iconIndex],
-          score = iconName.length - query.length;
-          index = 0;
+      var element = $icons[iconIndex];
+      var score = iconName.length - query.length;
+      var index = 0;
 
       for (var i = 0; i < queryLetters.length; i++) {
         var letter = queryLetters[i];
