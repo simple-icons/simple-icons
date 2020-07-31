@@ -54,12 +54,12 @@
     };
   }
 
-  // Get any parameter from the URL's search section (location.search).
-  // see
+  // Get a parameter from the URL's search section (location.search). Based on:
   //   - https://davidwalsh.name/query-string-javascript
   //   - https://github.com/WebReflection/url-search-params
+  //   - https://stackoverflow.com/a/6969486
   function getUrlParameter(parameter) {
-    var name = parameter.replace(/[\[]/g, '\\[').replace(/[\]]/g, '\\]');
+    var name = parameter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
