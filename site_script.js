@@ -57,7 +57,7 @@
   // Get a parameter from the URL's search section (location.search). Based on:
   //   - https://davidwalsh.name/query-string-javascript
   //   - https://github.com/WebReflection/url-search-params
-  //   - https://stackoverflow.com/a/6969486
+  //   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Escaping
   function getUrlParameter(parameter) {
     var name = parameter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
