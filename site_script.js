@@ -54,12 +54,12 @@
     };
   }
 
-  // Get any parameter from the URL's search section (location.search).
-  // see
+  // Get a parameter from the URL's search section (location.search). Based on:
   //   - https://davidwalsh.name/query-string-javascript
   //   - https://github.com/WebReflection/url-search-params
+  //   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Escaping
   function getUrlParameter(parameter) {
-    name = parameter.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var name = parameter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
@@ -84,9 +84,9 @@
         queryLetters = query.split('');
 
     var matchedIcons = icons.filter(function(iconName, iconIndex) {
-      var element = $icons[iconIndex],
-          score = iconName.length - query.length;
-          index = 0;
+      var element = $icons[iconIndex];
+      var score = iconName.length - query.length;
+      var index = 0;
 
       for (var i = 0; i < queryLetters.length; i++) {
         var letter = queryLetters[i];
