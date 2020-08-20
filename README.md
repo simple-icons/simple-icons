@@ -127,6 +127,10 @@ Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-si
 
 Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
 
+### Vue
+
+Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by  [@noahlitvin](https://github.com/noahlitvin).
+
 ### Svelte
 
 Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
