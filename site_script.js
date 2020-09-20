@@ -17,6 +17,7 @@
   // Remove the "disabled" attribute from the search input
   $searchInput.setAttribute('title', 'Search Simple Icons');
   $searchInput.removeAttribute('disabled');
+  $searchInput.focus();
 
   // include a modified debounce underscorejs helper function.
   // see
