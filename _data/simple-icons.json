@@ -16,6 +16,11 @@
             "source": "https://1password.com/press/"
         },
         {
+            "title": "42",
+            "hex": "000000",
+            "source": "https://www.42.fr/"
+        },
+        {
             "title": "4D",
             "hex": "004088",
             "source": "https://www.4d.com/"
@@ -102,13 +107,13 @@
         },
         {
             "title": "Adobe After Effects",
-            "hex": "D291FF",
+            "hex": "9999FF",
             "source": "https://www.adobe.com/products/aftereffects.html"
         },
         {
             "title": "Adobe Audition",
-            "hex": "4CC0AD",
-            "source": "https://www.adobe.com/products/audition.html"
+            "hex": "9999FF",
+            "source": "https://www.adobe.com/creativecloud/video.html"
         },
         {
             "title": "Adobe Creative Cloud",
@@ -117,7 +122,7 @@
         },
         {
             "title": "Adobe Dreamweaver",
-            "hex": "35FA00",
+            "hex": "FF61F6",
             "source": "https://www.adobe.com/products/dreamweaver.html"
         },
         {
@@ -127,7 +132,7 @@
         },
         {
             "title": "Adobe Illustrator",
-            "hex": "F37021",
+            "hex": "FF9A00",
             "source": "https://www.adobe.com/products/illustrator.html"
         },
         {
@@ -137,12 +142,12 @@
         },
         {
             "title": "Adobe Lightroom CC",
-            "hex": "3DF0F0",
+            "hex": "31A8FF",
             "source": "https://www.adobe.com/products/photoshop-lightroom.html"
         },
         {
             "title": "Adobe Lightroom Classic",
-            "hex": "AED6EA",
+            "hex": "31A8FF",
             "source": "https://www.adobe.com/products/photoshop-lightroom-classic.html"
         },
         {
@@ -152,7 +157,7 @@
         },
         {
             "title": "Adobe Photoshop",
-            "hex": "26C9FF",
+            "hex": "31A8FF",
             "source": "https://www.adobe.com/products/photoshop.html"
         },
         {
@@ -946,6 +951,11 @@
             "source": "https://buddy.works/about"
         },
         {
+            "title": "Buefy",
+            "hex": "7957D5",
+            "source": "https://github.com/buefy/buefy/blob/a9a724efca0b531e6a64ab734889b00bf4507a9d/static/img/icons/safari-pinned-tab.svg"
+        },
+        {
             "title": "Buffer",
             "hex": "168EEA",
             "source": "https://buffer.com/press"
@@ -959,6 +969,11 @@
             "title": "Bugsnag",
             "hex": "4949E4",
             "source": "https://www.bugsnag.com/newsroom"
+        },
+        {
+            "title": "Buildkite",
+            "hex": "14CC80",
+            "source": "https://buildkite.com/brand-assets"
         },
         {
             "title": "Bulma",
@@ -1866,6 +1881,11 @@
             "source": "https://global.epson.com/IR/library/"
         },
         {
+            "title": "Erlang",
+            "hex": "A90533",
+            "source": "https://github.com/erlang/erlide_eclipse/blob/99d1d61fde8e32ef1630ca0e1b05a6822b3d6489/meta/media/erlang-logo.svg"
+        },
+        {
             "title": "ESEA",
             "hex": "0E9648",
             "source": "https://play.esea.net/"
@@ -2192,8 +2212,8 @@
         },
         {
             "title": "freeCodeCamp",
-            "hex": "006400",
-            "source": "https://freecodecamp.com"
+            "hex": "0A0A23",
+            "source": "https://design-style-guide.freecodecamp.org/"
         },
         {
             "title": "freedesktop.org",
@@ -2661,6 +2681,11 @@
             "source": "https://habr.com/"
         },
         {
+            "title": "Hack Club",
+            "hex": "EC3750",
+            "source": "https://hackclub.com/brand"
+        },
+        {
             "title": "Hackaday",
             "hex": "1A1A1A",
             "source": "https://hackaday.com/"
@@ -2799,6 +2824,11 @@
             "title": "Home Assistant",
             "hex": "41BDF5",
             "source": "https://github.com/home-assistant/home-assistant-assets"
+        },
+        {
+            "title": "Homebrew",
+            "hex": "FBB040",
+            "source": "https://github.com/Homebrew/brew.sh/blob/2e576aaca83e62dda41a188597bb4bd20e75e385/assets/img/homebrew.svg"
         },
         {
             "title": "homify",
@@ -4203,7 +4233,7 @@
         {
             "title": "Nissan",
             "hex": "C3002F",
-            "source": "https://commons.wikimedia.org/wiki/File:Nissan-logo.svg"
+            "source": "https://www.nissan.ie/"
         },
         {
             "title": "NixOS",
@@ -4259,6 +4289,11 @@
             "title": "Nuke",
             "hex": "000000",
             "source": "https://www.foundry.com/products/nuke"
+        },
+        {
+            "title": "NumPy",
+            "hex": "013243",
+            "source": "https://numpy.org"
         },
         {
             "title": "Nutanix",
@@ -4434,6 +4469,11 @@
             "title": "Origin",
             "hex": "F56C2D",
             "source": "https://www.origin.com/gbr/en-us/store"
+        },
+        {
+            "title": "Osano",
+            "hex": "7764FA",
+            "source": "https://www.osano.com/"
         },
         {
             "title": "Oshkosh",
@@ -5051,6 +5091,11 @@
             "source": "https://reacttraining.com/react-router/"
         },
         {
+            "title": "ReactiveX",
+            "hex": "B7178C",
+            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg"
+        },
+        {
             "title": "ReactOS",
             "hex": "0088CC",
             "source": "https://github.com/reactos/press-media"
@@ -5104,6 +5149,11 @@
             "title": "Redux",
             "hex": "764ABC",
             "source": "https://github.com/reactjs/redux/tree/master/logo"
+        },
+        {
+            "title": "Ren'Py",
+            "hex": "FF7F7F",
+            "source": "https://renpy.org"
         },
         {
             "title": "Renault",
@@ -5287,8 +5337,8 @@
         },
         {
             "title": "SAP",
-            "hex": "008FD3",
-            "source": "https://support.sap.com/content/dam/support/sap-logo.svg"
+            "hex": "0FAAFF",
+            "source": "https://www.sap.com/"
         },
         {
             "title": "Sass",
@@ -5319,6 +5369,11 @@
             "title": "Scania",
             "hex": "041E42",
             "source": "https://www.scania.com/"
+        },
+        {
+            "title": "scikit-learn",
+            "hex": "F7931E",
+            "source": "https://github.com/scikit-learn/scikit-learn/blob/c5ef2e985c13119001aa697e446ebb3dbcb326e5/doc/logos/scikit-learn-logo.svg"
         },
         {
             "title": "Scopus",
@@ -5439,6 +5494,11 @@
             "title": "Showpad",
             "hex": "2D2E83",
             "source": "https://www.showpad.com/"
+        },
+        {
+            "title": "Shutterstock",
+            "hex": "EE2B24",
+            "source": "https://www.shutterstock.com/press/media"
         },
         {
             "title": "Siemens",
@@ -6152,8 +6212,8 @@
         },
         {
             "title": "Toyota",
-            "hex": "EB0A1E",
-            "source": "https://www.toyota.com/brandguidelines/"
+            "hex": "282830",
+            "source": "https://www.toyota.ie/world-of-toyota/articles-news-events/2020/new-brand-design.json"
         },
         {
             "title": "TrainerRoad",
@@ -6284,6 +6344,11 @@
             "title": "Uber Eats",
             "hex": "5FB709",
             "source": "https://about.ubereats.com/en/logo/"
+        },
+        {
+            "title": "Ubiquiti",
+            "hex": "0559C9",
+            "source": "https://www.ui.com/marketing/#logos"
         },
         {
             "title": "Ubisoft",
