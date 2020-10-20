@@ -137,7 +137,9 @@ module.exports = {
             const iconPath = $.find("path").attr("d");
             const decimalRegex = /\d+\.(\d+)/g;
             const precisionArray = Array.from(iconPath.matchAll(decimalRegex)).map(([_, decimal]) => decimal.length)
-            const precisionAverage = Math.round(precisionArray.reduce((prev, curr) => prev + curr) / precisionArray.length);
+            const precisionAverage = precisionArray && precisionArray.length > 0 ?
+              Math.round(precisionArray.reduce((prev, curr) => prev + curr) / precisionArray.length) :
+              0;
 
             if (precisionAverage < iconMinFloatPrecision || precisionAverage > iconMaxFloatPrecision) {
               reporter.error(`Precision level should be between ${iconMinFloatPrecision} and ${iconMaxFloatPrecision}; the average is currently ${precisionAverage}`);
