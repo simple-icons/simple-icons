@@ -9,6 +9,8 @@ const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/sv
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
+const iconMinFloatPrecision = 2;
+const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
 
 // set env SI_UPDATE_IGNORE to recreate the ignore file
@@ -124,6 +126,21 @@ module.exports = {
               }
             } else if (width !== iconSize && height !== iconSize) {
               reporter.error(`Size of <path> must be exactly ${iconSize} in one dimension; the size is currently ${width} x ${height}`);
+              if (updateIgnoreFile) {
+                ignoreIcon(reporter.name, iconPath, $);
+              }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "icon-precision";
+
+            const iconPath = $.find("path").attr("d");
+            const decimalRegex = /\d+\.(\d+)/g;
+            const precisionArray = Array.from(iconPath.matchAll(decimalRegex)).map(([_, decimal]) => decimal.length)
+            const precisionAverage = Math.round(precisionArray.reduce((prev, curr) => prev + curr) / precisionArray.length);
+
+            if (precisionAverage < iconMinFloatPrecision || precisionAverage > iconMaxFloatPrecision) {
+              reporter.error(`Precision level should be between ${iconMinFloatPrecision} and ${iconMaxFloatPrecision}; the average is currently ${precisionAverage}`);
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
