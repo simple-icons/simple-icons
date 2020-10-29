@@ -47,9 +47,7 @@ if (updateIgnoreFile) {
 }
 
 function isIgnored(linterName, path) {
-  return iconIgnored[linterName]
-    .map(ignored => ignored.hasOwnProperty(path))
-    .some(v => v === true);
+  return iconIgnored[linterName].hasOwnProperty(path);
 }
 
 function ignoreIcon(linterName, path, $) {
