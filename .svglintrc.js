@@ -3,6 +3,7 @@ const fs = require('fs');
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 const getBounds = require("svg-path-bounding-box");
+const parsePath = require("svgpath/lib/path_parse");
 
 const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
@@ -135,8 +136,21 @@ module.exports = {
             reporter.name = "icon-precision";
 
             const iconPath = $.find("path").attr("d");
-            const decimalRegex = /\d+\.(\d+)/g;
-            const precisionArray = Array.from(iconPath.matchAll(decimalRegex)).map(([_, decimal]) => decimal.length)
+            const { segments } = parsePath(iconPath);
+            const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
+
+            const countDecimals = (num) => {
+              let text = num.toString();
+              if (text.indexOf('e-') > -1) {
+                let [base, trail] = text.split('e-');
+                let elen = parseInt(trail, 10);
+                let idx = base.indexOf('.');
+                return idx == -1 ? 0 + elen : (base.length - idx - 1) + elen;
+              }
+              let index = text.indexOf('.');
+              return index == -1 ? 0 : (text.length - index - 1);
+            };
+            const precisionArray = segmentParts.map(countDecimals);
             const precisionAverage = precisionArray && precisionArray.length > 0 ?
               Math.round(precisionArray.reduce((prev, curr) => prev + curr) / precisionArray.length) :
               0;
