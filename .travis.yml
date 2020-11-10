@@ -1,5 +1,4 @@
 os: linux
-language: node_js
 
 jobs:
   include:
@@ -12,20 +11,29 @@ jobs:
         - npm run svglint
         - npm run wslint
         - npm run our-lint
+      git:
+        depth: 1
     - name: "Build website"
       language: ruby
-      rvm: 2.4.1
+      rvm: 2.5.3
+      cache:
+        directories:
+          - /home/travis/.rvm/
       install:
         - gem install jekyll
       script:
         - jekyll build
+      git:
+        depth: 1
     - name: "Test package"
       language: node_js
       node_js: 10
       script:
         - npm run test
+      git:
+        depth: 1
 
-    - stage: deploy
+    - stage: "Deploy"
       name: "Git tag"
       language: shell
       if: branch = master
@@ -38,9 +46,12 @@ jobs:
       deploy:
         provider: releases
         token: "$GITHUB_TOKEN"
+        skip_cleanup: true
     - name: "NPM Package"
       language: node_js
       node_js: 10
+      git:
+        depth: 1
       if: branch = master
 
       deploy:
