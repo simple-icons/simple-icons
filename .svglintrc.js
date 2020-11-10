@@ -140,15 +140,13 @@ module.exports = {
             const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
 
             const countDecimals = (num) => {
-              let text = num.toString();
-              if (text.indexOf('e-') > -1) {
-                let [base, trail] = text.split('e-');
+              if (num && num % 1) {
+                let [base, op, trail] = num.toExponential().split(/e([+-])/);
                 let elen = parseInt(trail, 10);
                 let idx = base.indexOf('.');
-                return idx == -1 ? 0 + elen : (base.length - idx - 1) + elen;
+                return idx == -1 ? elen : base.length - idx - 1 + (op === '+' ? -elen : elen);
               }
-              let index = text.indexOf('.');
-              return index == -1 ? 0 : (text.length - index - 1);
+              return 0;
             };
             const precisionArray = segmentParts.map(countDecimals);
             const precisionAverage = precisionArray && precisionArray.length > 0 ?
