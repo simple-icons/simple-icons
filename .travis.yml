@@ -46,7 +46,7 @@ jobs:
       deploy:
         provider: releases
         token: "$GITHUB_TOKEN"
-        skip_cleanup: true
+        cleanup: false
     - name: "NPM Package"
       language: node_js
       node_js: 10
@@ -59,6 +59,7 @@ jobs:
         provider: npm
         email: "$NPM_EMAIL"
         api_token: "$NPM_KEY"
+        cleanup: false
         on:
           branch: master
 
