@@ -36,6 +36,8 @@ jobs:
     - stage: "Deploy"
       name: "Git tag"
       language: shell
+      git:
+        depth: 1
       if: branch = master
 
       before_deploy:
