@@ -6,16 +6,18 @@ jobs:
       name: "Lint"
       language: node_js
       node_js: 10
+      git:
+        depth: 1
       script:
         - npm run jsonlint
         - npm run svglint
         - npm run wslint
         - npm run our-lint
-      git:
-        depth: 1
     - name: "Build website"
       language: ruby
       rvm: 2.5.3
+      git:
+        depth: 1
       cache:
         directories:
           - /home/travis/.rvm/
@@ -23,15 +25,13 @@ jobs:
         - gem install jekyll
       script:
         - jekyll build
-      git:
-        depth: 1
     - name: "Test package"
       language: node_js
       node_js: 10
-      script:
-        - npm run test
       git:
         depth: 1
+      script:
+        - npm run test
 
     - stage: "Deploy"
       name: "Git tag"
