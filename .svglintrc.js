@@ -10,7 +10,6 @@ const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/sv
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
-const iconMinFloatPrecision = 2;
 const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
 
@@ -149,12 +148,12 @@ module.exports = {
               return 0;
             };
             const precisionArray = segmentParts.map(countDecimals);
-            const precisionAverage = precisionArray && precisionArray.length > 0 ?
-              Math.round(precisionArray.reduce((prev, curr) => prev + curr) / precisionArray.length) :
+            const precisionMax = precisionArray && precisionArray.length > 0 ?
+              Math.max(...precisionArray) :
               0;
 
-            if (precisionAverage < iconMinFloatPrecision || precisionAverage > iconMaxFloatPrecision) {
-              reporter.error(`Precision level should be between ${iconMinFloatPrecision} and ${iconMaxFloatPrecision}; the average is currently ${precisionAverage}`);
+            if (precisionMax > iconMaxFloatPrecision) {
+              reporter.error(`Precision level should not be greater than ${iconMaxFloatPrecision}; the maximum is currently ${precisionMax}`);
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
