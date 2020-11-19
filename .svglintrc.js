@@ -140,6 +140,10 @@ module.exports = {
             reporter.name = "icon-precision";
 
             const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+            
             const { segments } = parsePath(iconPath);
             const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
 
