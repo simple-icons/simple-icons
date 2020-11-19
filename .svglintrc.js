@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
-const getBounds = require("svg-path-bounding-box");
+const { svgPathBbox } = require("svg-path-bbox");
 
 const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
@@ -113,9 +113,9 @@ module.exports = {
               return;
             }
 
-            const bounds = getBounds(iconPath);
-            const width = +bounds.width.toFixed(iconFloatPrecision);
-            const height = +bounds.height.toFixed(iconFloatPrecision);
+            const bbox = svgPathBbox(iconPath);
+            const width = +(bbox[2]-bbox[0]).toFixed(iconFloatPrecision);
+            const height = +(bbox[3]-bbox[1]).toFixed(iconFloatPrecision);
 
             if (width === 0 && height === 0) {
               reporter.error("Path bounds were reported as 0 x 0; check if the path is valid");
@@ -145,11 +145,11 @@ module.exports = {
               return;
             }
 
-            const bounds = getBounds(iconPath);
+            const bbox = svgPathBbox(iconPath);
             const targetCenter = iconSize / 2;
-            const centerX = +((bounds.minX + bounds.maxX) / 2).toFixed(iconFloatPrecision);
+            const centerX = +((bbox[0] + bbox[2]) / 2).toFixed(iconFloatPrecision);
             const devianceX = centerX - targetCenter;
-            const centerY = +((bounds.minY + bounds.maxY) / 2).toFixed(iconFloatPrecision);
+            const centerY = +((bbox[1] + bbox[3]) / 2).toFixed(iconFloatPrecision);
             const devianceY = centerY - targetCenter;
 
             if (
