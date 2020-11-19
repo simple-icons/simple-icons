@@ -7,11 +7,6 @@
     "svg",
     "icons"
   ],
-  "engines": {
-    "node": ">=12.0.0",
-    "npm": ">= 6.0.0",
-    "yarn": ">= 1.15.0"
-  },
   "main": "index.js",
   "repository": {
     "type": "git",

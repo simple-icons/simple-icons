@@ -1,3 +1,8 @@
+if (Array.prototype.flat === undefined) {
+  console.error(`Minimum NodeJS v11.15.0 is required, but you are running ${process.version}.`);
+  process.exit(1);
+}
+
 const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
