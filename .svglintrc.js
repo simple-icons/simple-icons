@@ -1,8 +1,3 @@
-if (Array.prototype.flat === undefined) {
-  console.error(`Minimum NodeJS v11.15.0 is required, but you are running ${process.version}.`);
-  process.exit(1);
-}
-
 const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
@@ -35,6 +30,11 @@ function sortObjectByValue(obj) {
     .keys(obj)
     .sort((a, b) => ('' + obj[a]).localeCompare(obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
+}
+
+if (Array.prototype.flat === undefined) {
+  console.error(`Minimum NodeJS v11.15.0 is required, but you are running ${process.version}.`);
+  process.exit(1);
 }
 
 if (updateIgnoreFile) {
