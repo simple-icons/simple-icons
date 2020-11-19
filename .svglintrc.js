@@ -153,7 +153,7 @@ module.exports = {
               0;
 
             if (precisionMax > iconMaxFloatPrecision) {
-              reporter.error(`Precision level should not be greater than ${iconMaxFloatPrecision}; the maximum is currently ${precisionMax}`);
+              reporter.error(`Maximum precision should not be greater than ${iconMaxFloatPrecision}; it is currently ${precisionMax}`);
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
