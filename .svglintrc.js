@@ -113,9 +113,9 @@ module.exports = {
               return;
             }
 
-            const bbox = svgPathBbox(iconPath);
-            const width = +(bbox[2]-bbox[0]).toFixed(iconFloatPrecision);
-            const height = +(bbox[3]-bbox[1]).toFixed(iconFloatPrecision);
+            const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
+            const width = +(maxX - minX).toFixed(iconFloatPrecision);
+            const height = +(maxY - minY).toFixed(iconFloatPrecision);
 
             if (width === 0 && height === 0) {
               reporter.error("Path bounds were reported as 0 x 0; check if the path is valid");
@@ -145,11 +145,11 @@ module.exports = {
               return;
             }
 
-            const bbox = svgPathBbox(iconPath);
+            const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
             const targetCenter = iconSize / 2;
-            const centerX = +((bbox[0] + bbox[2]) / 2).toFixed(iconFloatPrecision);
+            const centerX = +((minX + maxX) / 2).toFixed(iconFloatPrecision);
             const devianceX = centerX - targetCenter;
-            const centerY = +((bbox[1] + bbox[3]) / 2).toFixed(iconFloatPrecision);
+            const centerY = +((minY + maxY) / 2).toFixed(iconFloatPrecision);
             const devianceY = centerY - targetCenter;
 
             if (
