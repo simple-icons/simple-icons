@@ -32,11 +32,6 @@ function sortObjectByValue(obj) {
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 }
 
-if (Array.prototype.flat === undefined) {
-  console.error(`Minimum NodeJS v11.15.0 is required, but you are running ${process.version}.`);
-  process.exit(1);
-}
-
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
