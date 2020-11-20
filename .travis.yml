@@ -5,7 +5,7 @@ jobs:
     - stage: "Test"
       name: "Lint"
       language: node_js
-      node_js: 10
+      node_js: 12
       git:
         depth: 1
       script:
@@ -27,7 +27,7 @@ jobs:
         - jekyll build
     - name: "Test package"
       language: node_js
-      node_js: 10
+      node_js: 12
       git:
         depth: 1
       script:
@@ -51,7 +51,7 @@ jobs:
         cleanup: false
     - name: "NPM Package"
       language: node_js
-      node_js: 10
+      node_js: 12
       git:
         depth: 1
       if: branch = master
