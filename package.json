@@ -43,5 +43,8 @@
     "posttest": "npm run postpublish",
     "svgo": "svgo --config=./.svgo.yml",
     "get-filename": "node scripts/get-filename.js"
+  },
+  "engine": {
+    "node": ">=0.12.18"
   }
 }
