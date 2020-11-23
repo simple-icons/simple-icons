@@ -219,7 +219,7 @@ If you have an affiliation to the brand you contributing that allows you to spea
 ## Building Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
+* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`). At least version 3.5 is required.
 * Build and run the website locally using `$ jekyll serve`.
 * Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
 
