@@ -30,10 +30,20 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.5
+    - name: Setup cache for gems
+      uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
     - name: Install Jekyll
-      run: gem install jekyll
+      run: |
+        echo -e 'source "https://rubygems.org"\n\ngem "jekyll"' > Gemfile
+        bundle config set path 'vendor/bundle'
+        bundle install --jobs 4 --retry 3
     - name: Build website
-      run: jekyll build
+      run: bundle exec jekyll build
   test:
     name: Test package
     runs-on: ubuntu-latest
