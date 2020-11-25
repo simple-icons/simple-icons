@@ -44,18 +44,16 @@ jobs:
     - name: Get release message
       id: commit
       uses: kceb/git-message-action@v1
-    - name: Create git tag
-      id: create_tag
+    - name: Get version
+      id: get_version
       run: |
-        git config --local user.name ${{ secrets.GH_USERNAME }}
-        git config --local user.email ${{ secrets.GH_EMAIL }}
         export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
-        git tag $PACKAGE_VERSION
-        echo "::set-output name=tag::$PACKAGE_VERSION"
-    - name: Push git tag
+        echo "::set-output name=version::$PACKAGE_VERSION"
+    - name: Create and push git tag
       uses: actions-ecosystem/action-push-tag@v1
       with:
-        tag: ${{ steps.create_tag.outputs.tag }}
+        tag: ${{ steps.get_version.outputs.version }}
+        message: ${{ steps.commit.outputs.git-message }}
     - name: Create release
       uses: actions/create-release@v1
       env:
