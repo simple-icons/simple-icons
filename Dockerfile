@@ -1,6 +1,4 @@
-FROM alpine:3.12
-
-RUN apk add --update nodejs npm
+FROM node:12-alpine
 
 WORKDIR /simple-icons
 COPY package*.json /simple-icons/
