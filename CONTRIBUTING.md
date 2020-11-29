@@ -219,12 +219,19 @@ Once you've completed the previous steps, create a pull request to merge your ed
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
-## Building Locally
+## Building Website Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
+* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`). At least version 3.5 is required.
 * Build and run the website locally using `$ jekyll serve`.
 * Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
+
+## Testing Package Locally
+
+* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 11.15.0 is required.
+* Install the dependencies using `$ npm install`.
+* Build and test the package using `$ npm test`.
+* Run the project linting process using `$ npm run lint`.
 
 ## Building in Your Browser
 

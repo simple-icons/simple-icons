@@ -1,0 +1,6 @@
+new icon:
+- any: [icons/*.svg]
+  status: 'added'
+icon outdated:
+- any: [icons/*.svg]
+  status: 'modified'
