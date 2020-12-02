@@ -27,9 +27,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Use Ruby 2.5
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.5
+        ruby-version: 2.7
     - name: Setup cache for gems
       uses: actions/cache@v2
       with:
