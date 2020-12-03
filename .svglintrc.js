@@ -172,19 +172,30 @@ module.exports = {
             }
 
             const { segments } = parsePath(iconPath);
-            const isSegmentInvalid = ([command, coord1, coord2, ...rest], index) => {
-              if (['m', 'l', 'h', 'v'].includes(command) && coord1 === 0 && coord2 === 0) {
-                return true;
-              }
-              if (index > 0) {
-                const [prevCoord2, prevCoord1, ...rest] = segments[index - 1].reverse();
-                if (['M', 'L', 'H', 'V'].includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2) {
+
+            const lowerCommand = ['m', 'l', 'h', 'v'];
+            const upperCommand = ['M', 'L', 'H', 'V'];
+            const commands = [...lowerCommand, ...upperCommand];
+            const getInvalidSegments = ([command, coord1, coord2, ...rest], index) => {
+              if (commands.includes(command)) {
+                if (lowerCommand.includes(command) && coord1 === 0 && coord2 === 0) {
                   return true;
+                }
+                if (index > 0) {
+                  const [prevCoord2, prevCoord1, ...rest] = [...segments[index - 1]].reverse();
+                  if (upperCommand.includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2) {
+                    return true;
+                  }
                 }
               }
             };
-            if (segments.some(isSegmentInvalid)) {
-              reporter.error(`Unexpected segment in path.`);
+            const invalidSegments = segments.filter(getInvalidSegments);
+
+            if (invalidSegments.length) {
+              invalidSegments.forEach(([command, coord1, coord2]) => {
+                const readableSegment = `${command}${coord1} ${coord2}`;
+                reporter.error(`Unexpected segment ${readableSegment} in path.`);
+              });
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
