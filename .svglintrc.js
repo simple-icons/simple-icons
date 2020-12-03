@@ -172,7 +172,17 @@ module.exports = {
             }
 
             const { segments } = parsePath(iconPath);
-            const isSegmentInvalid = ([command, coord1, coord2, ...rest]) => ['m', 'l', 'h', 'v'].includes(command) && coord1 === 0 && coord2 === 0;
+            const isSegmentInvalid = ([command, coord1, coord2, ...rest], index) => {
+              if (['m', 'l', 'h', 'v'].includes(command) && coord1 === 0 && coord2 === 0) {
+                return true;
+              }
+              if (index > 0) {
+                const [prevCoord2, prevCoord1, ...rest] = segments[index - 1].reverse();
+                if (['M', 'L', 'H', 'V'].includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2) {
+                  return true;
+                }
+              }
+            };
             if (segments.some(isSegmentInvalid)) {
               reporter.error(`Unexpected segment in path.`);
               if (updateIgnoreFile) {
