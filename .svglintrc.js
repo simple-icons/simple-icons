@@ -49,7 +49,7 @@ if (updateIgnoreFile) {
 }
 
 function isIgnored(linterName, path) {
-  return iconIgnored[linterName].hasOwnProperty(path);
+  return iconIgnored[linterName] && iconIgnored[linterName].hasOwnProperty(path);
 }
 
 function ignoreIcon(linterName, path, $) {
@@ -138,7 +138,7 @@ module.exports = {
             if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
               return;
             }
-            
+
             const { segments } = parsePath(iconPath);
             const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
 
@@ -158,6 +158,23 @@ module.exports = {
 
             if (precisionMax > iconMaxFloatPrecision) {
               reporter.error(`Maximum precision should not be greater than ${iconMaxFloatPrecision}; it is currently ${precisionMax}`);
+              if (updateIgnoreFile) {
+                ignoreIcon(reporter.name, iconPath, $);
+              }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "icon-path";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+
+            const { segments } = parsePath(iconPath);
+            const isSegmentInvalid = ([command, coord1, coord2, ...rest]) => ['m', 'l', 'h', 'v'].includes(command) && coord1 === 0 && coord2 === 0;
+            if (segments.some(isSegmentInvalid)) {
+              reporter.error(`Unexpected segment in path.`);
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
