@@ -146,7 +146,7 @@
             "source": "https://www.adobe.com/products/indesign.html"
         },
         {
-            "title": "Adobe Lightroom CC",
+            "title": "Adobe Lightroom",
             "hex": "31A8FF",
             "source": "https://www.adobe.com/products/photoshop-lightroom.html"
         },
@@ -451,6 +451,11 @@
             "source": "https://flink.apache.org/material.html"
         },
         {
+            "title": "Apache Groovy",
+            "hex": "4298B8",
+            "source": "https://groovy-lang.org/"
+        },
+        {
             "title": "Apache Kafka",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:Apache_kafka.svg"
@@ -623,7 +628,7 @@
         {
             "title": "Atlassian",
             "hex": "0052CC",
-            "source": "https://atlassian.design/guidelines/brand/logos-1"
+            "source": "https://www.atlassian.com/company/news/press-kit"
         },
         {
             "title": "Atom",
@@ -1022,7 +1027,7 @@
         },
         {
             "title": "Buy Me A Coffee",
-            "hex": "FF813F",
+            "hex": "FFDD00",
             "source": "https://www.buymeacoffee.com/brand"
         },
         {
@@ -1871,6 +1876,11 @@
             "source": "https://electronjs.org/images/electron-logo.svg"
         },
         {
+            "title": "Element",
+            "hex": "0DBD8B",
+            "source": "https://element.io/"
+        },
+        {
             "title": "elementary",
             "hex": "64BAFF",
             "source": "https://elementary.io/brand"
@@ -2411,6 +2421,11 @@
             "source": "https://github.com/features/actions"
         },
         {
+            "title": "GitHub Sponsors",
+            "hex": "EA4AAA",
+            "source": "https://github.com/sponsors"
+        },
+        {
             "title": "GitKraken",
             "hex": "179287",
             "source": "https://www.gitkraken.com/"
@@ -2551,6 +2566,11 @@
             "source": "https://partnermarketinghub.withgoogle.com/#/brands"
         },
         {
+            "title": "Google Chat",
+            "hex": "00897B",
+            "source": "https://chat.google.com/error/noaccess"
+        },
+        {
             "title": "Google Chrome",
             "hex": "4285F4",
             "source": "https://blog.google/press/?product_tag=chrome"
@@ -2586,16 +2606,6 @@
             "source": "https://material.google.com/resources/sticker-sheets-icons.html#sticker-sheets-icons-components"
         },
         {
-            "title": "Google Hangouts Chat",
-            "hex": "00897B",
-            "source": "https://chat.google.com/error/noaccess"
-        },
-        {
-            "title": "Google Hangouts Meet",
-            "hex": "00897B",
-            "source": "https://meet.google.com/"
-        },
-        {
             "title": "Google Keep",
             "hex": "FFBB00",
             "source": "https://play.google.com/store/apps/details?id=com.google.android.keep"
@@ -2609,6 +2619,11 @@
             "title": "Google Maps",
             "hex": "4285F4",
             "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg"
+        },
+        {
+            "title": "Google Meet",
+            "hex": "00897B",
+            "source": "https://meet.google.com/"
         },
         {
             "title": "Google Messages",
@@ -2719,11 +2734,6 @@
             "title": "Gridsome",
             "hex": "00A672",
             "source": "https://gridsome.org/logos/only-logo.svg"
-        },
-        {
-            "title": "Groovy",
-            "hex": "4298B8",
-            "source": "https://groovy-lang.org/"
         },
         {
             "title": "Groupon",
@@ -2939,6 +2949,11 @@
             "title": "Hootsuite",
             "hex": "000000",
             "source": "https://hootsuite.com/en-gb/about/media-kit"
+        },
+        {
+            "title": "Hoppscotch",
+            "hex": "31C48D",
+            "source": "https://github.com/hoppscotch/hoppscotch/blob/77862cdf9bd902a4ea64bd8b2301ed2206820649/static/images/ufo_logo.svg"
         },
         {
             "title": "Hotels.com",
@@ -4151,11 +4166,6 @@
             "source": "https://www.mixcloud.com/branding"
         },
         {
-            "title": "Mixer",
-            "hex": "002050",
-            "source": "https://github.com/mixer/branding-kit/"
-        },
-        {
             "title": "Mocha",
             "hex": "8D6748",
             "source": "https://mochajs.org/"
@@ -4439,6 +4449,11 @@
             "title": "Nuke",
             "hex": "000000",
             "source": "https://www.foundry.com/products/nuke"
+        },
+        {
+            "title": "Numba",
+            "hex": "00A3E0",
+            "source": "https://github.com/numba/numba/blob/0db8a2bcd0f53c0d0ad8a798432fb3f37f14af27/docs/_static/numba-blue-icon-rgb.svg"
         },
         {
             "title": "NumPy",
@@ -4733,7 +4748,7 @@
         {
             "title": "Pepsi",
             "hex": "2151A1",
-            "source": "https://commons.wikimedia.org/wiki/File:Pepsi_logo_new.svg"
+            "source": "http://gillettepepsicola.com/promotions-media/media-kit/"
         },
         {
             "title": "Periscope",
@@ -4964,11 +4979,6 @@
             "title": "Postman",
             "hex": "FF6C37",
             "source": "https://www.getpostman.com/resources/media-assets/"
-        },
-        {
-            "title": "Postwoman",
-            "hex": "50FA7B",
-            "source": "https://github.com/liyasthomas/postwoman"
         },
         {
             "title": "Power BI",
@@ -5369,11 +5379,6 @@
             "title": "Ring",
             "hex": "1C9AD6",
             "source": "https://store.ring.com/press"
-        },
-        {
-            "title": "Riot",
-            "hex": "368BD6",
-            "source": "https://about.riot.im/"
         },
         {
             "title": "Riot Games",
@@ -6421,13 +6426,13 @@
             "source": "https://www.toptal.com/branding"
         },
         {
-            "title": "Tor",
-            "hex": "7E4798",
-            "source": "https://github.com/TheTorProject/tor-media/tree/master/Onion%20Icon"
-        },
-        {
             "title": "Tor Browser",
             "hex": "7D4698",
+            "source": "https://styleguide.torproject.org/brand-assets/"
+        },
+        {
+            "title": "Tor Project",
+            "hex": "7E4798",
             "source": "https://styleguide.torproject.org/brand-assets/"
         },
         {
@@ -7132,7 +7137,7 @@
         },
         {
             "title": "XDA Developers",
-            "hex": "F59812",
+            "hex": "EA7100",
             "source": "https://www.xda-developers.com/"
         },
         {

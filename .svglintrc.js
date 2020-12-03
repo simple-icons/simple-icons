@@ -2,13 +2,15 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
-const getBounds = require("svg-path-bounding-box");
+const parsePath = require("svgpath/lib/path_parse");
+const { svgPathBbox } = require("svg-path-bbox");
 
 const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
+const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
 
 // set env SI_UPDATE_IGNORE to recreate the ignore file
@@ -47,9 +49,7 @@ if (updateIgnoreFile) {
 }
 
 function isIgnored(linterName, path) {
-  return iconIgnored[linterName]
-    .map(ignored => ignored.hasOwnProperty(path))
-    .some(v => v === true);
+  return iconIgnored[linterName].hasOwnProperty(path);
 }
 
 function ignoreIcon(linterName, path, $) {
@@ -115,9 +115,9 @@ module.exports = {
               return;
             }
 
-            const bounds = getBounds(iconPath);
-            const width = +bounds.width.toFixed(iconFloatPrecision);
-            const height = +bounds.height.toFixed(iconFloatPrecision);
+            const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
+            const width = +(maxX - minX).toFixed(iconFloatPrecision);
+            const height = +(maxY - minY).toFixed(iconFloatPrecision);
 
             if (width === 0 && height === 0) {
               reporter.error("Path bounds were reported as 0 x 0; check if the path is valid");
@@ -126,6 +126,38 @@ module.exports = {
               }
             } else if (width !== iconSize && height !== iconSize) {
               reporter.error(`Size of <path> must be exactly ${iconSize} in one dimension; the size is currently ${width} x ${height}`);
+              if (updateIgnoreFile) {
+                ignoreIcon(reporter.name, iconPath, $);
+              }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "icon-precision";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+            
+            const { segments } = parsePath(iconPath);
+            const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
+
+            const countDecimals = (num) => {
+              if (num && num % 1) {
+                let [base, op, trail] = num.toExponential().split(/e([+-])/);
+                let elen = parseInt(trail, 10);
+                let idx = base.indexOf('.');
+                return idx == -1 ? elen : base.length - idx - 1 + (op === '+' ? -elen : elen);
+              }
+              return 0;
+            };
+            const precisionArray = segmentParts.map(countDecimals);
+            const precisionMax = precisionArray && precisionArray.length > 0 ?
+              Math.max(...precisionArray) :
+              0;
+
+            if (precisionMax > iconMaxFloatPrecision) {
+              reporter.error(`Maximum precision should not be greater than ${iconMaxFloatPrecision}; it is currently ${precisionMax}`);
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
@@ -147,11 +179,11 @@ module.exports = {
               return;
             }
 
-            const bounds = getBounds(iconPath);
+            const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
             const targetCenter = iconSize / 2;
-            const centerX = +((bounds.minX + bounds.maxX) / 2).toFixed(iconFloatPrecision);
+            const centerX = +((minX + maxX) / 2).toFixed(iconFloatPrecision);
             const devianceX = centerX - targetCenter;
-            const centerY = +((bounds.minY + bounds.maxY) / 2).toFixed(iconFloatPrecision);
+            const centerY = +((minY + maxY) / 2).toFixed(iconFloatPrecision);
             const devianceY = centerY - targetCenter;
 
             if (
