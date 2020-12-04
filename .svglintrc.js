@@ -173,16 +173,24 @@ module.exports = {
 
             const { segments } = parsePath(iconPath);
 
-            const lowerCommand = ['m', 'l', 'h', 'v'];
-            const upperCommand = ['M', 'L', 'H', 'V'];
-            const commands = [...lowerCommand, ...upperCommand];
+            const lowerCommand = ['m', 'l'];
+            const lowerDirectionCommand = ['h', 'v'];
+            const upperCommand = ['M', 'L'];
+            const upperDirectionCommand = ['H', 'V'];
+            const commands = [...lowerCommand, ...lowerDirectionCommand, ...upperCommand, ...upperDirectionCommand];
             const getInvalidSegments = ([command, coord1, coord2, ...rest], index) => {
               if (commands.includes(command)) {
+                // Relative directions (h or v) having a length of 0
+                if (lowerDirectionCommand.includes(command) && coord1 === 0) {
+                  return true;
+                }
+                // Relative movement (m or l) having a distance of 0
                 if (lowerCommand.includes(command) && coord1 === 0 && coord2 === 0) {
                   return true;
                 }
                 if (index > 0) {
                   const [prevCoord2, prevCoord1, ...rest] = [...segments[index - 1]].reverse();
+                  // Absolute movement (M or L) having the same coordinate as the previous segment
                   if (upperCommand.includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2) {
                     return true;
                   }
@@ -193,7 +201,10 @@ module.exports = {
 
             if (invalidSegments.length) {
               invalidSegments.forEach(([command, coord1, coord2]) => {
-                const readableSegment = `${command}${coord1} ${coord2}`;
+                let readableSegment = `${command}${coord1}`;
+                if (coord2 !== undefined) {
+                  readableSegment = `${readableSegment} ${coord2}`
+                }
                 reporter.error(`Unexpected segment ${readableSegment} in path.`);
               });
               if (updateIgnoreFile) {
