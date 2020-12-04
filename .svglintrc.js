@@ -176,7 +176,9 @@ module.exports = {
             const lowerCommand = ['m', 'l'];
             const lowerDirectionCommand = ['h', 'v'];
             const upperCommand = ['M', 'L'];
-            const upperDirectionCommand = ['H', 'V'];
+            const upperHorDirectionCommand = 'H';
+            const upperVerDirectionCommand = 'V';
+            const upperDirectionCommand = [upperHorDirectionCommand, upperVerDirectionCommand];
             const commands = [...lowerCommand, ...lowerDirectionCommand, ...upperCommand, ...upperDirectionCommand];
             const getInvalidSegments = ([command, coord1, coord2, ...rest], index) => {
               if (commands.includes(command)) {
@@ -190,6 +192,14 @@ module.exports = {
                 }
                 if (index > 0) {
                   const [prevCoord2, prevCoord1, ...rest] = [...segments[index - 1]].reverse();
+                  // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                  if (upperHorDirectionCommand === command && coord1 === prevCoord1) {
+                    return true;
+                  }
+                  // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                  if (upperVerDirectionCommand === command && coord1 === prevCoord2) {
+                    return true;
+                  }
                   // Absolute movement (M or L) having the same coordinate as the previous segment
                   if (upperCommand.includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2) {
                     return true;
