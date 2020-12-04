@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
+const svgPath = require("svgpath");
 const parsePath = require("svgpath/lib/path_parse");
 const { svgPathBbox } = require("svg-path-bbox");
 
@@ -172,6 +173,7 @@ module.exports = {
             }
 
             const { segments } = parsePath(iconPath);
+            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
 
             const lowerCommand = ['m', 'l'];
             const lowerDirectionCommand = ['h', 'v'];
@@ -191,7 +193,12 @@ module.exports = {
                   return true;
                 }
                 if (index > 0) {
-                  const [prevCoord2, prevCoord1, ...rest] = [...segments[index - 1]].reverse();
+                  let [prevCoord2, prevCoord1, ...rest] = [...absSegments[index - 1]].reverse();
+                  // If the previous command was a horizontal movement, we need to consider the single coordinate as x
+                  if (upperHorDirectionCommand === prevCoord1) {
+                    prevCoord1 = prevCoord2;
+                    prevCoord2 = undefined;
+                  }
                   // Absolute horizontal direction (H) having the same x coordinate as the previous segment
                   if (upperHorDirectionCommand === command && coord1 === prevCoord1) {
                     return true;
