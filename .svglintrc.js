@@ -203,7 +203,7 @@ module.exports = {
               invalidSegments.forEach(([command, coord1, coord2]) => {
                 let readableSegment = `${command}${coord1}`;
                 if (coord2 !== undefined) {
-                  readableSegment = `${readableSegment} ${coord2}`
+                  readableSegment += ` ${coord2}`;
                 }
                 reporter.error(`Unexpected segment ${readableSegment} in path.`);
               });
