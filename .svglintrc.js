@@ -182,30 +182,50 @@ module.exports = {
             const upperVerDirectionCommand = 'V';
             const upperDirectionCommands = [upperHorDirectionCommand, upperVerDirectionCommand];
             const commands = [...lowerCommands, ...lowerDirectionCommands, ...upperCommands, ...upperDirectionCommands];
-            const getInvalidSegments = ([command, coord1, coord2, ...rest], index) => {
+            const getInvalidSegments = ([command, xCoord, yCoord, ...rest], index) => {
               if (commands.includes(command)) {
                 // Relative directions (h or v) having a length of 0
-                if (lowerDirectionCommands.includes(command) && coord1 === 0) {
+                if (lowerDirectionCommands.includes(command) && xCoord === 0) {
                   return true;
                 }
                 // Relative movement (m or l) having a distance of 0
-                if (lowerCommands.includes(command) && coord1 === 0 && coord2 === 0) {
+                if (lowerCommands.includes(command) && xCoord === 0 && yCoord === 0) {
                   return true;
                 }
                 if (index > 0) {
-                  let [prevCoord2, prevCoord1, ...rest] = [...absSegments[index - 1]].reverse();
-                  // If the previous command was a horizontal movement, we need to consider the single coordinate as x
-                  if (upperHorDirectionCommand === prevCoord1) {
-                    prevCoord1 = prevCoord2;
-                    prevCoord2 = undefined;
+                  let [yPrevCoord, xPrevCoord, ...rest] = [...absSegments[index - 1]].reverse();
+                  // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
+                  if (upperDirectionCommands.includes(xPrevCoord)) {
+                    xPrevCoord = undefined;
+                    yPrevCoord = undefined;
+                    let idx = index;
+                    while (--idx > 0 && (xPrevCoord === undefined || yPrevCoord === undefined)) {
+                      let [yPrevCoordDeep, xPrevCoordDeep, ...rest] = [...absSegments[idx]].reverse();
+                      // If the previous command was a horizontal movement, we need to consider the single coordinate as x
+                      if (upperHorDirectionCommand === xPrevCoordDeep) {
+                        xPrevCoordDeep = yPrevCoordDeep;
+                        yPrevCoordDeep = undefined;
+                      }
+                      // If the previous command was a vertical movement, we need to consider the single coordinate as y
+                      if (upperVerDirectionCommand === xPrevCoordDeep) {
+                        xPrevCoordDeep = undefined;
+                      }
+                      if (xPrevCoord === undefined && xPrevCoordDeep !== undefined) {
+                        xPrevCoord = xPrevCoordDeep;
+                      }
+                      if (yPrevCoord === undefined && yPrevCoordDeep !== undefined) {
+                        yPrevCoord = yPrevCoordDeep;
+                      }
+                    }
                   }
+
                   return (
                     // Absolute horizontal direction (H) having the same x coordinate as the previous segment
-                    (upperHorDirectionCommand === command && coord1 === prevCoord1) ||
+                    (upperHorDirectionCommand === command && xCoord === xPrevCoord) ||
                     // Absolute vertical direction (V) having the same y coordinate as the previous segment
-                    (upperVerDirectionCommand === command && coord1 === prevCoord2) ||
+                    (upperVerDirectionCommand === command && xCoord === yPrevCoord) ||
                     // Absolute movement (M or L) having the same coordinate as the previous segment
-                    (upperCommands.includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2)
+                    (upperCommands.includes(command) && xCoord === xPrevCoord && yCoord === yPrevCoord)
                   );
                 }
               }
@@ -213,10 +233,10 @@ module.exports = {
             const invalidSegments = segments.filter(getInvalidSegments);
 
             if (invalidSegments.length) {
-              invalidSegments.forEach(([command, coord1, coord2]) => {
-                let readableSegment = `${command}${coord1}`;
-                if (coord2 !== undefined) {
-                  readableSegment += ` ${coord2}`;
+              invalidSegments.forEach(([command, xCoord, yCoord]) => {
+                let readableSegment = `${command}${xCoord}`;
+                if (yCoord !== undefined) {
+                  readableSegment += ` ${yCoord}`;
                 }
                 reporter.error(`Unexpected segment ${readableSegment} in path.`);
               });
