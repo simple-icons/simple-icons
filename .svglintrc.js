@@ -175,21 +175,21 @@ module.exports = {
             const { segments } = parsePath(iconPath);
             const { segments: absSegments } = svgPath(iconPath).abs().unshort();
 
-            const lowerCommand = ['m', 'l'];
-            const lowerDirectionCommand = ['h', 'v'];
-            const upperCommand = ['M', 'L'];
+            const lowerCommands = ['m', 'l'];
+            const lowerDirectionCommands = ['h', 'v'];
+            const upperCommands = ['M', 'L'];
             const upperHorDirectionCommand = 'H';
             const upperVerDirectionCommand = 'V';
-            const upperDirectionCommand = [upperHorDirectionCommand, upperVerDirectionCommand];
-            const commands = [...lowerCommand, ...lowerDirectionCommand, ...upperCommand, ...upperDirectionCommand];
+            const upperDirectionCommands = [upperHorDirectionCommand, upperVerDirectionCommand];
+            const commands = [...lowerCommands, ...lowerDirectionCommands, ...upperCommands, ...upperDirectionCommands];
             const getInvalidSegments = ([command, coord1, coord2, ...rest], index) => {
               if (commands.includes(command)) {
                 // Relative directions (h or v) having a length of 0
-                if (lowerDirectionCommand.includes(command) && coord1 === 0) {
+                if (lowerDirectionCommands.includes(command) && coord1 === 0) {
                   return true;
                 }
                 // Relative movement (m or l) having a distance of 0
-                if (lowerCommand.includes(command) && coord1 === 0 && coord2 === 0) {
+                if (lowerCommands.includes(command) && coord1 === 0 && coord2 === 0) {
                   return true;
                 }
                 if (index > 0) {
@@ -199,18 +199,14 @@ module.exports = {
                     prevCoord1 = prevCoord2;
                     prevCoord2 = undefined;
                   }
-                  // Absolute horizontal direction (H) having the same x coordinate as the previous segment
-                  if (upperHorDirectionCommand === command && coord1 === prevCoord1) {
-                    return true;
-                  }
-                  // Absolute vertical direction (V) having the same y coordinate as the previous segment
-                  if (upperVerDirectionCommand === command && coord1 === prevCoord2) {
-                    return true;
-                  }
-                  // Absolute movement (M or L) having the same coordinate as the previous segment
-                  if (upperCommand.includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2) {
-                    return true;
-                  }
+                  return (
+                    // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                    (upperHorDirectionCommand === command && coord1 === prevCoord1) ||
+                    // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                    (upperVerDirectionCommand === command && coord1 === prevCoord2) ||
+                    // Absolute movement (M or L) having the same coordinate as the previous segment
+                    (upperCommands.includes(command) && coord1 === prevCoord1 && coord2 === prevCoord2)
+                  );
                 }
               }
             };
