@@ -51,7 +51,19 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
 
+#### Icon Guidelines
+
 Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well (e.g. EPS, AI, PDF). In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
+
+If the icon includes a (registered) trademark icon we follow the guidelines below to decide whether to include the symbol or not:
+
+* If brand guidelines explicitly require including the symbol, it must be included.
+* If the symbol is incorporated into the design of the logo (e.g. [Intel](https://github.com/simple-icons/simple-icons/blob/develop/icons/intel.svg)), it must be included.
+* If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
+* If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
+* If there is no explicit requirement that a symbol must be included, it must not be included.
+
+#### Color Guidelines
 
 For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
