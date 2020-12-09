@@ -165,7 +165,7 @@ module.exports = {
             }
           },
           function(reporter, $, ast) {
-            reporter.name = "icon-path";
+            reporter.name = "ineffective-segments";
 
             const iconPath = $.find("path").attr("d");
             if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
