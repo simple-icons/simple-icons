@@ -1,4 +1,4 @@
-name: "Automated releases"
+name: Automated releases
 on:
   pull_request_review:
     types: [submitted]
@@ -9,7 +9,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: (github.event_name == 'pull_request_review' && contains(github.event.pull_request.labels.*.name, 'release')) || github.event_name == 'schedule'
     steps:
     - uses: simple-icons/release-action@master
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        repo-token: ${{ secrets.RELEASE_TOKEN }}
