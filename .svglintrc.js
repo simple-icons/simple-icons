@@ -175,13 +175,18 @@ module.exports = {
             const { segments } = parsePath(iconPath);
             const { segments: absSegments } = svgPath(iconPath).abs().unshort();
 
-            const lowerCommands = ['m', 'l'];
+            const lowerMovementCommands = ['m', 'l'];
             const lowerDirectionCommands = ['h', 'v'];
-            const upperCommands = ['M', 'L'];
+            const lowerCurveCommand = 'c';
+            const lowerShorthandCurveCommand = 's';
+            const lowerCurveCommands = [lowerCurveCommand, lowerShorthandCurveCommand];
+            const upperMovementCommands = ['M', 'L'];
             const upperHorDirectionCommand = 'H';
             const upperVerDirectionCommand = 'V';
             const upperDirectionCommands = [upperHorDirectionCommand, upperVerDirectionCommand];
-            const commands = [...lowerCommands, ...lowerDirectionCommands, ...upperCommands, ...upperDirectionCommands];
+            const upperCurveCommands = ['C', 'S'];
+            const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
+            const commands = [...lowerMovementCommands, ...lowerDirectionCommands, ...upperMovementCommands, ...upperDirectionCommands, ...curveCommands];
             const getInvalidSegments = ([command, xCoord, yCoord, ...rest], index) => {
               if (commands.includes(command)) {
                 // Relative directions (h or v) having a length of 0
@@ -189,8 +194,19 @@ module.exports = {
                   return true;
                 }
                 // Relative movement (m or l) having a distance of 0
-                if (lowerCommands.includes(command) && xCoord === 0 && yCoord === 0) {
+                if (lowerMovementCommands.includes(command) && xCoord === 0 && yCoord === 0) {
                   return true;
+                }
+                // Relative shorthand curve (s) having a control point of 0
+                if (command === lowerShorthandCurveCommand && xCoord === 0 && yCoord === 0) {
+                  return true;
+                }
+                // Relative bézier curve (c) having control points of 0
+                if (command === lowerCurveCommand && xCoord === 0 && yCoord === 0) {
+                  const [x2Coord, y2Coord] = rest;
+                  if (x2Coord === 0 && y2Coord === 0) {
+                    return true;
+                  }
                 }
                 if (index > 0) {
                   let [yPrevCoord, xPrevCoord, ...rest] = [...absSegments[index - 1]].reverse();
@@ -225,7 +241,7 @@ module.exports = {
                     // Absolute vertical direction (V) having the same y coordinate as the previous segment
                     (upperVerDirectionCommand === command && xCoord === yPrevCoord) ||
                     // Absolute movement (M or L) having the same coordinate as the previous segment
-                    (upperCommands.includes(command) && xCoord === xPrevCoord && yCoord === yPrevCoord)
+                    (upperMovementCommands.includes(command) && xCoord === xPrevCoord && yCoord === yPrevCoord)
                   );
                 }
               }
@@ -233,10 +249,23 @@ module.exports = {
             const invalidSegments = segments.filter(getInvalidSegments);
 
             if (invalidSegments.length) {
-              invalidSegments.forEach(([command, xCoord, yCoord]) => {
-                let readableSegment = `${command}${xCoord}`;
-                if (yCoord !== undefined) {
-                  readableSegment += ` ${yCoord}`;
+              invalidSegments.forEach(([command, x1Coord, y1Coord, ...rest]) => {
+                let readableSegment = `${command}${x1Coord}`;
+                if (y1Coord !== undefined) {
+                  readableSegment += ` ${y1Coord}`;
+                }
+                if (curveCommands.includes(command)) {
+                  const [x2Coord, y2Coord, xCoord, yCoord] = rest;
+                  readableSegment += `, ${x2Coord} ${y2Coord}`;
+                  if (yCoord !== undefined) {
+                    readableSegment += `, ${xCoord} ${yCoord}`;
+                  }
+                  if (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) {
+                    readableSegment += ` (should be "l${x2Coord} ${y2Coord}")`;
+                  }
+                  if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
+                    readableSegment += ` (should be "l${xCoord} ${yCoord}")`;
+                  }
                 }
                 reporter.error(`Unexpected segment ${readableSegment} in path.`);
               });
