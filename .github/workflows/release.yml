@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: simple-icons/release-action@master
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token: ${{ secrets.RELEASE_TOKEN }}
