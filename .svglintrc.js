@@ -184,32 +184,34 @@ module.exports = {
             const upperHorDirectionCommand = 'H';
             const upperVerDirectionCommand = 'V';
             const upperDirectionCommands = [upperHorDirectionCommand, upperVerDirectionCommand];
-            const upperCurveCommands = ['C', 'S'];
+            const upperCurveCommand = 'C';
+            const upperShorthandCurveCommand = 'S';
+            const upperCurveCommands = [upperCurveCommand, upperShorthandCurveCommand];
             const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
             const commands = [...lowerMovementCommands, ...lowerDirectionCommands, ...upperMovementCommands, ...upperDirectionCommands, ...curveCommands];
-            const getInvalidSegments = ([command, xCoord, yCoord, ...rest], index) => {
+            const getInvalidSegments = ([command, x1Coord, y1Coord, ...rest], index) => {
               if (commands.includes(command)) {
                 // Relative directions (h or v) having a length of 0
-                if (lowerDirectionCommands.includes(command) && xCoord === 0) {
+                if (lowerDirectionCommands.includes(command) && x1Coord === 0) {
                   return true;
                 }
                 // Relative movement (m or l) having a distance of 0
-                if (lowerMovementCommands.includes(command) && xCoord === 0 && yCoord === 0) {
+                if (lowerMovementCommands.includes(command) && x1Coord === 0 && y1Coord === 0) {
                   return true;
                 }
-                // Relative shorthand curve (s) having a control point of 0
-                if (command === lowerShorthandCurveCommand && xCoord === 0 && yCoord === 0) {
-                  return true;
-                }
-                // Relative bézier curve (c) having control points of 0
-                if (command === lowerCurveCommand && xCoord === 0 && yCoord === 0) {
+                if (lowerCurveCommands.includes(command) && x1Coord === 0 && y1Coord === 0) {
                   const [x2Coord, y2Coord] = rest;
-                  if (x2Coord === 0 && y2Coord === 0) {
+                  if (
+                    // Relative shorthand curve (s) having a control point of 0
+                    command === lowerShorthandCurveCommand ||
+                    // Relative bézier curve (c) having control points of 0
+                    (command === lowerCurveCommand && x2Coord === 0 && y2Coord === 0)
+                  ) {
                     return true;
                   }
                 }
                 if (index > 0) {
-                  let [yPrevCoord, xPrevCoord, ...rest] = [...absSegments[index - 1]].reverse();
+                  let [yPrevCoord, xPrevCoord, ...prevRest] = [...absSegments[index - 1]].reverse();
                   // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
                   if (upperDirectionCommands.includes(xPrevCoord)) {
                     xPrevCoord = undefined;
@@ -235,13 +237,25 @@ module.exports = {
                     }
                   }
 
+                  if (upperCurveCommands.includes(command)) {
+                    const [x2Coord, y2Coord, xCoord, yCoord] = rest;
+                    // Absolute shorthand curve (S) having a control point equal to the ending point
+                    if (upperShorthandCurveCommand === command && x1Coord === x2Coord && y1Coord === y2Coord) {
+                      return true;
+                    }
+                    // Absolute bézier curve (C) having the same coordinate as the previous segment and last control point equal to the ending point
+                    if (upperCurveCommand === command && x1Coord === xPrevCoord && y1Coord === yPrevCoord && x2Coord === xCoord && y2Coord === yCoord) {
+                      return true;
+                    }
+                  }
+
                   return (
                     // Absolute horizontal direction (H) having the same x coordinate as the previous segment
-                    (upperHorDirectionCommand === command && xCoord === xPrevCoord) ||
+                    (upperHorDirectionCommand === command && x1Coord === xPrevCoord) ||
                     // Absolute vertical direction (V) having the same y coordinate as the previous segment
-                    (upperVerDirectionCommand === command && xCoord === yPrevCoord) ||
+                    (upperVerDirectionCommand === command && x1Coord === yPrevCoord) ||
                     // Absolute movement (M or L) having the same coordinate as the previous segment
-                    (upperMovementCommands.includes(command) && xCoord === xPrevCoord && yCoord === yPrevCoord)
+                    (upperMovementCommands.includes(command) && x1Coord === xPrevCoord && y1Coord === yPrevCoord)
                   );
                 }
               }
@@ -260,10 +274,16 @@ module.exports = {
                   if (yCoord !== undefined) {
                     readableSegment += `, ${xCoord} ${yCoord}`;
                   }
-                  if (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) {
+                  if (
+                    (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) ||
+                    command === upperShorthandCurveCommand
+                  ) {
                     readableSegment += ` (should be "l${x2Coord} ${y2Coord}")`;
                   }
-                  if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
+                  if (
+                    (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) ||
+                    command === upperCurveCommand
+                  ) {
                     readableSegment += ` (should be "l${xCoord} ${yCoord}")`;
                   }
                 }
