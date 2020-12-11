@@ -44,7 +44,7 @@ const TESTS = {
       const dataDiff = diffLinesUnified(simpleIconsDataPretty.split("\n"),
                                         simpleIconsDataString.split("\n"),
                                         {expand: false});
-      return `Data file is not prettified:\n${dataDiff}`;
+      return `Data file is not prettified:\n\n${dataDiff}`;
     }
   }
 };
