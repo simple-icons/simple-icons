@@ -332,8 +332,8 @@
         },
         {
             "title": "Anaconda",
-            "hex": "42B029",
-            "source": "https://www.anaconda.com/media-kit/"
+            "hex": "44A833",
+            "source": "https://www.anaconda.com"
         },
         {
             "title": "Analogue",
@@ -473,7 +473,7 @@
         {
             "title": "Apache OpenOffice",
             "hex": "0E85CD",
-            "source": "https://www.openoffice.org/marketing/art/galleries/logos/index.html"
+            "source": "https://apache.org/logos"
         },
         {
             "title": "Apache Pulsar",
@@ -1228,7 +1228,7 @@
         {
             "title": "Clockify",
             "hex": "03A9F4",
-            "source": "https://clockify.me/"
+            "source": "https://clockify.me/brand-assets"
         },
         {
             "title": "Clojure",
@@ -1441,6 +1441,11 @@
             "source": "https://corona-renderer.com/about"
         },
         {
+            "title": "Couchbase",
+            "hex": "EA2328",
+            "source": "https://www.couchbase.com/"
+        },
+        {
             "title": "Counter-Strike",
             "hex": "000000",
             "source": "https://en.wikipedia.org/wiki/File:CS-GO_Logo.svg"
@@ -1562,8 +1567,8 @@
         },
         {
             "title": "Dashlane",
-            "hex": "007C97",
-            "source": "https://www.dashlane.com/"
+            "hex": "0E353D",
+            "source": "https://brandfolder.com/dashlane/brandkitpartners"
         },
         {
             "title": "Dassault Systèmes",
@@ -1664,8 +1669,11 @@
             "title": "DHL",
             "hex": "FFCC00",
             "source": "https://www.dpdhl-brands.com/dhl/en/guides/design-basics/logo-and-claim.html"
-        },
-        {
+        }, {
+            "title": "diagrams.net",
+            "hex": "F08705",
+            "source": "https://github.com/jgraph/drawio/blob/4743eba8d5eaa497dc003df7bf7295b695c59bea/src/main/webapp/images/drawlogo.svg"
+        }, {
             "title": "Diaspora",
             "hex": "000000",
             "source": "https://wiki.diasporafoundation.org/Branding"
@@ -1787,7 +1795,7 @@
         },
         {
             "title": "DTube",
-            "hex": "FF0000",
+            "hex": "F01A30",
             "source": "https://about.d.tube/mediakit.html"
         },
         {
@@ -2566,6 +2574,11 @@
             "source": "https://partnermarketinghub.withgoogle.com/#/brands"
         },
         {
+            "title": "Google Chat",
+            "hex": "00897B",
+            "source": "https://chat.google.com/error/noaccess"
+        },
+        {
             "title": "Google Chrome",
             "hex": "4285F4",
             "source": "https://blog.google/press/?product_tag=chrome"
@@ -2601,16 +2614,6 @@
             "source": "https://material.google.com/resources/sticker-sheets-icons.html#sticker-sheets-icons-components"
         },
         {
-            "title": "Google Hangouts Chat",
-            "hex": "00897B",
-            "source": "https://chat.google.com/error/noaccess"
-        },
-        {
-            "title": "Google Hangouts Meet",
-            "hex": "00897B",
-            "source": "https://meet.google.com/"
-        },
-        {
             "title": "Google Keep",
             "hex": "FFBB00",
             "source": "https://play.google.com/store/apps/details?id=com.google.android.keep"
@@ -2624,6 +2627,11 @@
             "title": "Google Maps",
             "hex": "4285F4",
             "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg"
+        },
+        {
+            "title": "Google Meet",
+            "hex": "00897B",
+            "source": "https://meet.google.com/"
         },
         {
             "title": "Google Messages",
@@ -2779,6 +2787,11 @@
             "title": "Hack Club",
             "hex": "EC3750",
             "source": "https://hackclub.com/brand"
+        },
+        {
+            "title": "Hack The Box",
+            "hex": "9FEF00",
+            "source": "https://www.hackthebox.eu/docs/Hack_The_Box_Brand_Assets_Guide.pdf"
         },
         {
             "title": "Hackaday",
@@ -2949,6 +2962,11 @@
             "title": "Hootsuite",
             "hex": "000000",
             "source": "https://hootsuite.com/en-gb/about/media-kit"
+        },
+        {
+            "title": "Hoppscotch",
+            "hex": "31C48D",
+            "source": "https://github.com/hoppscotch/hoppscotch/blob/77862cdf9bd902a4ea64bd8b2301ed2206820649/static/images/ufo_logo.svg"
         },
         {
             "title": "Hotels.com",
@@ -3452,7 +3470,7 @@
         },
         {
             "title": "KeyCDN",
-            "hex": "3686BE",
+            "hex": "047AED",
             "source": "https://www.keycdn.com/logos"
         },
         {
@@ -4246,6 +4264,11 @@
             "source": "https://mxlinux.org/art/"
         },
         {
+            "title": "MYOB",
+            "hex": "6100A5",
+            "source": "https://myob-identikit.frontify.com/d/JK2D4WFOdAwV/for-developers"
+        },
+        {
             "title": "Myspace",
             "hex": "030303",
             "source": "https://myspace.com/pressroom/assetslogos"
@@ -4259,6 +4282,11 @@
             "title": "N26",
             "hex": "48AC98",
             "source": "https://n26.com/"
+        },
+        {
+            "title": "National Grid",
+            "hex": "00148C",
+            "source": "https://www.nationalgrid.com/themes/custom/national_grid_group/logo.svg"
         },
         {
             "title": "NativeScript",
@@ -4429,6 +4457,11 @@
             "title": "NPM",
             "hex": "CB3837",
             "source": "https://github.com/npm/logos"
+        },
+        {
+            "title": "Nubank",
+            "hex": "8A05BE",
+            "source": "https://nubank.com.br/imprensa/"
         },
         {
             "title": "Nucleo",
@@ -4786,6 +4819,11 @@
             "source": "http://php.net/download-logos.php"
         },
         {
+            "title": "PhpStorm",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/logos/"
+        },
+        {
             "title": "Pi-hole",
             "hex": "F60D1A",
             "source": "https://github.com/pi-hole/web/"
@@ -4974,11 +5012,6 @@
             "title": "Postman",
             "hex": "FF6C37",
             "source": "https://www.getpostman.com/resources/media-assets/"
-        },
-        {
-            "title": "Postwoman",
-            "hex": "50FA7B",
-            "source": "https://github.com/liyasthomas/postwoman"
         },
         {
             "title": "Power BI",
@@ -5498,7 +5531,7 @@
         {
             "title": "Salesforce",
             "hex": "00A1E0",
-            "source": "https://www.salesforce.com/"
+            "source": "https://www.salesforce.com/styleguide/elements/logos"
         },
         {
             "title": "SaltStack",
@@ -5582,8 +5615,8 @@
         },
         {
             "title": "Seagate",
-            "hex": "72BE4F",
-            "source": "https://www.seagate.com"
+            "hex": "6EBE49",
+            "source": "https://branding.seagate.com/productpage/3fc51aba-c35a-4eff-a833-a258b0440bd2"
         },
         {
             "title": "SEAT",
@@ -5821,6 +5854,11 @@
             "source": "https://github.com/snapcore/snap-store-badges"
         },
         {
+            "title": "Snowflake",
+            "hex": "56B9EB",
+            "source": "https://www.snowflake.com/about/press-and-news/"
+        },
+        {
             "title": "Snyk",
             "hex": "4C4A73",
             "source": "https://snyk.io/press-kit"
@@ -5898,7 +5936,7 @@
         {
             "title": "Sourcegraph",
             "hex": "00B4F2",
-            "source": "https://github.com/sourcegraph/about"
+            "source": "https://sourcegraph.com/.assets/img"
         },
         {
             "title": "Spacemacs",
@@ -6012,8 +6050,8 @@
         },
         {
             "title": "Stackbit",
-            "hex": "3EB0FD",
-            "source": "https://www.stackbit.com/"
+            "hex": "207BEA",
+            "source": "https://www.stackbit.com/branding-guidelines/"
         },
         {
             "title": "StackPath",
@@ -6067,8 +6105,8 @@
         },
         {
             "title": "Steem",
-            "hex": "4BA2F2",
-            "source": "https://steem.io/"
+            "hex": "171FC9",
+            "source": "https://steem.com/brand/"
         },
         {
             "title": "Steemit",
@@ -6256,6 +6294,11 @@
             "source": "https://www.tata.com/"
         },
         {
+            "title": "TeamCity",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/logos/"
+        },
+        {
             "title": "TeamSpeak",
             "hex": "2580C3",
             "source": "https://www.teamspeak.com/en/more/media-pack/"
@@ -6426,13 +6469,13 @@
             "source": "https://www.toptal.com/branding"
         },
         {
-            "title": "Tor",
-            "hex": "7E4798",
-            "source": "https://github.com/TheTorProject/tor-media/tree/master/Onion%20Icon"
-        },
-        {
             "title": "Tor Browser",
             "hex": "7D4698",
+            "source": "https://styleguide.torproject.org/brand-assets/"
+        },
+        {
+            "title": "Tor Project",
+            "hex": "7E4798",
             "source": "https://styleguide.torproject.org/brand-assets/"
         },
         {
@@ -6454,6 +6497,11 @@
             "title": "Trakt",
             "hex": "ED1C24",
             "source": "https://trakt.tv"
+        },
+        {
+            "title": "TransferWise",
+            "hex": "00B9FF",
+            "source": "https://brand.transferwise.com/logo"
         },
         {
             "title": "Transport for Ireland",
@@ -6539,6 +6587,11 @@
             "title": "Turkish Airlines",
             "hex": "C70A0C",
             "source": "https://www.turkishairlines.com/tr-int/basin-odasi/logo-arsivi/index.html"
+        },
+        {
+            "title": "Tutanota",
+            "hex": "840010",
+            "source": "https://github.com/tutao/tutanota/blob/8ff5f0e7d78834ac8fcb0f2357c394b757ea4793/resources/images/logo-solo-red.svg"
         },
         {
             "title": "Twilio",
@@ -6836,6 +6889,11 @@
             "source": "https://www.media.volvocars.com/global/en-gb/logos"
         },
         {
+            "title": "Vonage",
+            "hex": "FFFFFF",
+            "source": "https://www.vonage.com"
+        },
+        {
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vsco.co/about/press/vsco-releases-redesigned-mobile-app"
@@ -7014,6 +7072,11 @@
             "title": "WireGuard",
             "hex": "88171A",
             "source": "https://www.wireguard.com/img/wireguard.svg"
+        },
+        {
+            "title": "Wireshark",
+            "hex": "1679A7",
+            "source": "https://gitlab.com/wanduow/wireshark/-/blob/master/image/wsicon.svg"
         },
         {
             "title": "Wish",
