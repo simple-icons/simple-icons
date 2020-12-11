@@ -157,6 +157,8 @@
     {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[7] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
 {%- endfor -%}
 
+
+
 <!doctype html>
 <html lang="en-gb">
 <head>
@@ -196,7 +198,7 @@
       var icons = [{{ allIconNames }}];
     </script>
 </head>
-<body>
+<body class="order-by-color">
     <header class="navbar" role="banner">
         <ul class="navbar__nav" role="navigation">
             <li class="navbar__nav-item navbar__nav-item--home"><a href="/">Simple&nbsp;Icons</a></li>
