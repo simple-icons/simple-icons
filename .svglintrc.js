@@ -239,8 +239,8 @@ module.exports = {
 
                   if (upperCurveCommands.includes(command)) {
                     const [x2Coord, y2Coord, xCoord, yCoord] = rest;
-                    // Absolute shorthand curve (S) having a control point equal to the ending point
-                    if (upperShorthandCurveCommand === command && x1Coord === x2Coord && y1Coord === y2Coord) {
+                    // Absolute shorthand curve (S) having the same coordinate as the previous segment and a control point equal to the ending point
+                    if (upperShorthandCurveCommand === command && x1Coord === xPrevCoord && y1Coord === yPrevCoord && x1Coord === x2Coord && y1Coord === y2Coord) {
                       return true;
                     }
                     // Absolute bézier curve (C) having the same coordinate as the previous segment and last control point equal to the ending point
@@ -274,17 +274,17 @@ module.exports = {
                   if (yCoord !== undefined) {
                     readableSegment += `, ${xCoord} ${yCoord}`;
                   }
-                  if (
-                    (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) ||
-                    command === upperShorthandCurveCommand
-                  ) {
-                    readableSegment += ` (should be "l${x2Coord} ${y2Coord}")`;
+                  if (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) {
+                    readableSegment += ` (should be "l${x2Coord} ${y2Coord}" or removed)`;
                   }
-                  if (
-                    (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) ||
-                    command === upperCurveCommand
-                  ) {
-                    readableSegment += ` (should be "l${xCoord} ${yCoord}")`;
+                  if (command === upperShorthandCurveCommand) {
+                    readableSegment += ` (should be "L${x2Coord} ${y2Coord}" or removed)`;
+                  }
+                  if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
+                    readableSegment += ` (should be "l${xCoord} ${yCoord}" or removed)`;
+                  }
+                  if (command === upperCurveCommand) {
+                    readableSegment += ` (should be "L${xCoord} ${yCoord}" or removed)`;
                   }
                 }
                 reporter.error(`Unexpected segment ${readableSegment} in path.`);
