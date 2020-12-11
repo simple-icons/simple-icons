@@ -6,11 +6,12 @@
 const fs = require("fs");
 const path = require("path");
 
-const { diffLinesUnified } = require('jest-diff');
+const chalk = require("chalk");
+const { diffLinesUnified } = require("jest-diff");
 
 const simpleIconsData = require("../_data/simple-icons.json");
 const simpleIconsDataFile = path.resolve(
-  __dirname, '..', '_data', 'simple-icons.json');
+  __dirname, "..", "_data", "simple-icons.json");
 
 /**
  * Contains our tests so they can be isolated from eachother; I don't think each test is worth its own file
@@ -38,12 +39,18 @@ const TESTS = {
 
   /* Check the prettification of the data file */
   prettified: function() {
-    const simpleIconsDataString = fs.readFileSync(simpleIconsDataFile, 'utf8');
-    const simpleIconsDataPretty = `${JSON.stringify(simpleIconsData, null, '    ')}\n`;
+    const simpleIconsDataString = fs.readFileSync(simpleIconsDataFile, "utf8");
+    const simpleIconsDataPretty = `${JSON.stringify(simpleIconsData, null, "    ")}\n`;
     if (simpleIconsDataString !== simpleIconsDataPretty) {
-      const dataDiff = diffLinesUnified(simpleIconsDataPretty.split("\n"),
-                                        simpleIconsDataString.split("\n"),
-                                        {expand: false});
+      const dataDiff = diffLinesUnified(simpleIconsDataString.split("\n"),
+                                        simpleIconsDataPretty.split("\n"),
+                                        {
+                                          expand: false,
+                                          aAnnotation: 'Received',
+                                          bAnnotation: 'Expected',
+                                          aColor: chalk.red,
+                                          bColor: chalk.green
+                                        });
       return `Data file is not prettified:\n\n${dataDiff}`;
     }
   }
