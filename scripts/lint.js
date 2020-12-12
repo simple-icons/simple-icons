@@ -6,7 +6,6 @@
 const fs = require("fs");
 const path = require("path");
 
-const chalk = require("chalk");
 const { diffLinesUnified } = require("jest-diff");
 
 const simpleIconsData = require("../_data/simple-icons.json");
@@ -46,10 +45,11 @@ const TESTS = {
                                         simpleIconsDataPretty.split("\n"),
                                         {
                                           expand: false,
-                                          aAnnotation: 'Received',
-                                          bAnnotation: 'Expected',
-                                          aColor: chalk.red,
-                                          bColor: chalk.green
+                                          aColor: (v) => v,
+                                          bColor: (v) => v,
+                                          commonColor: (v) => v,
+                                          patchColor: (v) => v,
+                                          omitAnnotationLines: true
                                         });
       return `Data file is not prettified:\n\n${dataDiff}`;
     }
