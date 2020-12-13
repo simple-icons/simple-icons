@@ -320,7 +320,7 @@ module.exports = {
             // Find negative zeros inside path
             const negativeZeroMatches = Array.from(iconPath.matchAll(negativeZerosRegexp));
             if (negativeZeroMatches.length) {
-              // Calculate the index of the match in the file
+              // Calculate the index for each match in the file
               const pathDStart = '<path d="';
               const pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length + 1;
 
