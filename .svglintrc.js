@@ -330,7 +330,7 @@ module.exports = {
 
               negativeZeroMatches.forEach((match) => {
                 const negativeZeroFileIndex = match.index + pathDIndex;
-                reporter.error(`Found "-0" at index ${negativeZeroFileIndex}`);
+                reporter.error(`Found "-0" at index ${negativeZeroFileIndex} (should be "0")`);
               })
             }
           },
