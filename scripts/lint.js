@@ -38,7 +38,8 @@ const TESTS = {
 
   /* Check the prettification of the data file */
   prettified: function() {
-    const simpleIconsDataString = fs.readFileSync(simpleIconsDataFile, "utf8");
+    const simpleIconsDataString = fs.readFileSync(
+      simpleIconsDataFile, "utf8").replace(/\r\n/g, '\n');
     const simpleIconsDataPretty = `${JSON.stringify(simpleIconsData, null, "    ")}\n`;
     if (simpleIconsDataString !== simpleIconsDataPretty) {
       const dataDiff = diffLinesUnified(simpleIconsDataString.split("\n"),
