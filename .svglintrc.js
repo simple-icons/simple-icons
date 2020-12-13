@@ -33,6 +33,11 @@ function sortObjectByValue(obj) {
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 }
 
+function removeLeadingZeros(number) {
+  // convert 0.03 to '.03'
+  return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
+}
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -264,7 +269,8 @@ module.exports = {
 
             if (invalidSegments.length) {
               invalidSegments.forEach(([command, x1Coord, y1Coord, ...rest]) => {
-                let readableSegment = `${command}${x1Coord}`;
+                let readableSegment = `${command}${x1Coord}`,
+                    resolutionTip = 'should be removed';
                 if (y1Coord !== undefined) {
                   readableSegment += ` ${y1Coord}`;
                 }
@@ -275,19 +281,19 @@ module.exports = {
                     readableSegment += `, ${xCoord} ${yCoord}`;
                   }
                   if (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) {
-                    readableSegment += ` (should be "l${x2Coord} ${y2Coord}" or removed)`;
+                    resolutionTip = `should be "l${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
                   }
                   if (command === upperShorthandCurveCommand) {
-                    readableSegment += ` (should be "L${x2Coord} ${y2Coord}" or removed)`;
+                    readableSegment = `should be "L${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
                   }
                   if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
-                    readableSegment += ` (should be "l${xCoord} ${yCoord}" or removed)`;
+                    readableSegment += `should be "l${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
                   }
                   if (command === upperCurveCommand) {
-                    readableSegment += ` (should be "L${xCoord} ${yCoord}" or removed)`;
+                    readableSegment += `should be "L${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
                   }
                 }
-                reporter.error(`Unexpected segment ${readableSegment} in path.`);
+                reporter.error(`Ineffective segment "${readableSegment}" in path (${resolutionTip}).`);
               });
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
