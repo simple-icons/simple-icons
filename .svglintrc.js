@@ -318,11 +318,7 @@ module.exports = {
             }
 
             // Find negative zeros inside path
-            const negativeZeroMatches = []
-            for (const match of iconPath.matchAll(negativeZerosRegexp)) {
-              negativeZeroMatches.push(match);
-            }
-
+            const negativeZeroMatches = Array.from(iconPath.matchAll(negativeZerosRegexp));
             if (negativeZeroMatches.length) {
               // Calculate the index of the match in the file
               const pathDStart = '<path d="';
