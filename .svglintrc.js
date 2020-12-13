@@ -284,13 +284,13 @@ module.exports = {
                     resolutionTip = `should be "l${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
                   }
                   if (command === upperShorthandCurveCommand) {
-                    readableSegment = `should be "L${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
+                    resolutionTip = `should be "L${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
                   }
                   if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
-                    readableSegment += `should be "l${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
+                    resolutionTip = `should be "l${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
                   }
                   if (command === upperCurveCommand) {
-                    readableSegment += `should be "L${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
+                    resolutionTip = `should be "L${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
                   }
                 }
                 reporter.error(`Ineffective segment "${readableSegment}" in path (${resolutionTip}).`);
