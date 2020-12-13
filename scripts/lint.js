@@ -46,10 +46,6 @@ const TESTS = {
                                         simpleIconsDataPretty.split("\n"),
                                         {
                                           expand: false,
-                                          aColor: (v) => v,
-                                          bColor: (v) => v,
-                                          commonColor: (v) => v,
-                                          patchColor: (v) => v,
                                           omitAnnotationLines: true
                                         });
       return `Data file is not prettified:\n\n${dataDiff}`;
