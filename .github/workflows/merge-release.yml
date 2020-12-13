@@ -6,7 +6,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: (github.event_name == 'pull_request_review' && contains(github.event.pull_request.labels.*.name, 'release'))
+    if: contains(github.event.pull_request.labels.*.name, 'release')
     steps:
     - uses: simple-icons/release-action@master
       with:
