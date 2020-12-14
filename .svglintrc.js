@@ -2,11 +2,13 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
-const getBounds = require("svg-path-bounding-box");
+const svgPath = require("svgpath");
 const parsePath = require("svgpath/lib/path_parse");
+const { svgPathBbox } = require("svg-path-bbox");
 
 const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
+const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
@@ -32,9 +34,9 @@ function sortObjectByValue(obj) {
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 }
 
-if (Array.prototype.flat === undefined) {
-  console.error(`Minimum NodeJS v11.15.0 is required, but you are running ${process.version}.`);
-  process.exit(1);
+function removeLeadingZeros(number) {
+  // convert 0.03 to '.03'
+  return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 }
 
 if (updateIgnoreFile) {
@@ -54,7 +56,7 @@ if (updateIgnoreFile) {
 }
 
 function isIgnored(linterName, path) {
-  return iconIgnored[linterName].hasOwnProperty(path);
+  return iconIgnored[linterName] && iconIgnored[linterName].hasOwnProperty(path);
 }
 
 function ignoreIcon(linterName, path, $) {
@@ -120,9 +122,9 @@ module.exports = {
               return;
             }
 
-            const bounds = getBounds(iconPath);
-            const width = +bounds.width.toFixed(iconFloatPrecision);
-            const height = +bounds.height.toFixed(iconFloatPrecision);
+            const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
+            const width = +(maxX - minX).toFixed(iconFloatPrecision);
+            const height = +(maxY - minY).toFixed(iconFloatPrecision);
 
             if (width === 0 && height === 0) {
               reporter.error("Path bounds were reported as 0 x 0; check if the path is valid");
@@ -143,7 +145,7 @@ module.exports = {
             if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
               return;
             }
-            
+
             const { segments } = parsePath(iconPath);
             const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
 
@@ -169,11 +171,166 @@ module.exports = {
             }
           },
           function(reporter, $, ast) {
+            reporter.name = "ineffective-segments";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+
+            const { segments } = parsePath(iconPath);
+            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
+
+            const lowerMovementCommands = ['m', 'l'];
+            const lowerDirectionCommands = ['h', 'v'];
+            const lowerCurveCommand = 'c';
+            const lowerShorthandCurveCommand = 's';
+            const lowerCurveCommands = [lowerCurveCommand, lowerShorthandCurveCommand];
+            const upperMovementCommands = ['M', 'L'];
+            const upperHorDirectionCommand = 'H';
+            const upperVerDirectionCommand = 'V';
+            const upperDirectionCommands = [upperHorDirectionCommand, upperVerDirectionCommand];
+            const upperCurveCommand = 'C';
+            const upperShorthandCurveCommand = 'S';
+            const upperCurveCommands = [upperCurveCommand, upperShorthandCurveCommand];
+            const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
+            const commands = [...lowerMovementCommands, ...lowerDirectionCommands, ...upperMovementCommands, ...upperDirectionCommands, ...curveCommands];
+            const getInvalidSegments = ([command, x1Coord, y1Coord, ...rest], index) => {
+              if (commands.includes(command)) {
+                // Relative directions (h or v) having a length of 0
+                if (lowerDirectionCommands.includes(command) && x1Coord === 0) {
+                  return true;
+                }
+                // Relative movement (m or l) having a distance of 0
+                if (lowerMovementCommands.includes(command) && x1Coord === 0 && y1Coord === 0) {
+                  return true;
+                }
+                if (lowerCurveCommands.includes(command) && x1Coord === 0 && y1Coord === 0) {
+                  const [x2Coord, y2Coord] = rest;
+                  if (
+                    // Relative shorthand curve (s) having a control point of 0
+                    command === lowerShorthandCurveCommand ||
+                    // Relative bézier curve (c) having control points of 0
+                    (command === lowerCurveCommand && x2Coord === 0 && y2Coord === 0)
+                  ) {
+                    return true;
+                  }
+                }
+                if (index > 0) {
+                  let [yPrevCoord, xPrevCoord, ...prevRest] = [...absSegments[index - 1]].reverse();
+                  // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
+                  if (upperDirectionCommands.includes(xPrevCoord)) {
+                    xPrevCoord = undefined;
+                    yPrevCoord = undefined;
+                    let idx = index;
+                    while (--idx > 0 && (xPrevCoord === undefined || yPrevCoord === undefined)) {
+                      let [yPrevCoordDeep, xPrevCoordDeep, ...rest] = [...absSegments[idx]].reverse();
+                      // If the previous command was a horizontal movement, we need to consider the single coordinate as x
+                      if (upperHorDirectionCommand === xPrevCoordDeep) {
+                        xPrevCoordDeep = yPrevCoordDeep;
+                        yPrevCoordDeep = undefined;
+                      }
+                      // If the previous command was a vertical movement, we need to consider the single coordinate as y
+                      if (upperVerDirectionCommand === xPrevCoordDeep) {
+                        xPrevCoordDeep = undefined;
+                      }
+                      if (xPrevCoord === undefined && xPrevCoordDeep !== undefined) {
+                        xPrevCoord = xPrevCoordDeep;
+                      }
+                      if (yPrevCoord === undefined && yPrevCoordDeep !== undefined) {
+                        yPrevCoord = yPrevCoordDeep;
+                      }
+                    }
+                  }
+
+                  if (upperCurveCommands.includes(command)) {
+                    const [x2Coord, y2Coord, xCoord, yCoord] = rest;
+                    // Absolute shorthand curve (S) having the same coordinate as the previous segment and a control point equal to the ending point
+                    if (upperShorthandCurveCommand === command && x1Coord === xPrevCoord && y1Coord === yPrevCoord && x1Coord === x2Coord && y1Coord === y2Coord) {
+                      return true;
+                    }
+                    // Absolute bézier curve (C) having the same coordinate as the previous segment and last control point equal to the ending point
+                    if (upperCurveCommand === command && x1Coord === xPrevCoord && y1Coord === yPrevCoord && x2Coord === xCoord && y2Coord === yCoord) {
+                      return true;
+                    }
+                  }
+
+                  return (
+                    // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                    (upperHorDirectionCommand === command && x1Coord === xPrevCoord) ||
+                    // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                    (upperVerDirectionCommand === command && x1Coord === yPrevCoord) ||
+                    // Absolute movement (M or L) having the same coordinate as the previous segment
+                    (upperMovementCommands.includes(command) && x1Coord === xPrevCoord && y1Coord === yPrevCoord)
+                  );
+                }
+              }
+            };
+            const invalidSegments = segments.filter(getInvalidSegments);
+
+            if (invalidSegments.length) {
+              invalidSegments.forEach(([command, x1Coord, y1Coord, ...rest]) => {
+                let readableSegment = `${command}${x1Coord}`,
+                    resolutionTip = 'should be removed';
+                if (y1Coord !== undefined) {
+                  readableSegment += ` ${y1Coord}`;
+                }
+                if (curveCommands.includes(command)) {
+                  const [x2Coord, y2Coord, xCoord, yCoord] = rest;
+                  readableSegment += `, ${x2Coord} ${y2Coord}`;
+                  if (yCoord !== undefined) {
+                    readableSegment += `, ${xCoord} ${yCoord}`;
+                  }
+                  if (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) {
+                    resolutionTip = `should be "l${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
+                  }
+                  if (command === upperShorthandCurveCommand) {
+                    resolutionTip = `should be "L${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
+                  }
+                  if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
+                    resolutionTip = `should be "l${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
+                  }
+                  if (command === upperCurveCommand) {
+                    resolutionTip = `should be "L${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
+                  }
+                }
+                reporter.error(`Ineffective segment "${readableSegment}" in path (${resolutionTip}).`);
+              });
+              if (updateIgnoreFile) {
+                ignoreIcon(reporter.name, iconPath, $);
+              }
+            }
+          },
+          function(reporter, $, ast) {
             reporter.name = "extraneous";
 
             const rawSVG = $.html();
             if (!svgRegexp.test(rawSVG)) {
               reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "negative-zeros";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+
+            // Find negative zeros inside path
+            const negativeZeroMatches = Array.from(iconPath.matchAll(negativeZerosRegexp));
+            if (negativeZeroMatches.length) {
+              // Calculate the index for each match in the file
+              const pathDStart = '<path d="';
+              const svgFileHtml = $.html();
+              const pathDIndex = svgFileHtml.indexOf(pathDStart) + pathDStart.length;
+
+              negativeZeroMatches.forEach((match) => {
+                const negativeZeroFileIndex = match.index + pathDIndex;
+                const previousChar = svgFileHtml[negativeZeroFileIndex - 1];
+                const replacement = "0123456789".includes(previousChar) ? " 0" : "0";
+                reporter.error(`Found "-0" at index ${negativeZeroFileIndex} (should be "${replacement}")`);
+              })
             }
           },
           function(reporter, $, ast) {
@@ -184,11 +341,11 @@ module.exports = {
               return;
             }
 
-            const bounds = getBounds(iconPath);
+            const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
             const targetCenter = iconSize / 2;
-            const centerX = +((bounds.minX + bounds.maxX) / 2).toFixed(iconFloatPrecision);
+            const centerX = +((minX + maxX) / 2).toFixed(iconFloatPrecision);
             const devianceX = centerX - targetCenter;
-            const centerY = +((bounds.minY + bounds.maxY) / 2).toFixed(iconFloatPrecision);
+            const centerY = +((minY + maxY) / 2).toFixed(iconFloatPrecision);
             const devianceY = centerY - targetCenter;
 
             if (
