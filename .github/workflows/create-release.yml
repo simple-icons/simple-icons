@@ -1,7 +1,5 @@
-name: "Automated releases"
+name: Automated releases
 on:
-  pull_request_review:
-    types: [submitted]
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
     - cron: "0 0 * * 0"
@@ -12,4 +10,4 @@ jobs:
     steps:
     - uses: simple-icons/release-action@master
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        repo-token: ${{ secrets.NPM_TOKEN }}
