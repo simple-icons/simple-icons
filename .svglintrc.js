@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
+const svgPath = require("svgpath");
 const parsePath = require("svgpath/lib/path_parse");
 const { svgPathBbox } = require("svg-path-bbox");
 
@@ -32,6 +33,11 @@ function sortObjectByValue(obj) {
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 }
 
+function removeLeadingZeros(number) {
+  // convert 0.03 to '.03'
+  return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
+}
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -49,7 +55,7 @@ if (updateIgnoreFile) {
 }
 
 function isIgnored(linterName, path) {
-  return iconIgnored[linterName].hasOwnProperty(path);
+  return iconIgnored[linterName] && iconIgnored[linterName].hasOwnProperty(path);
 }
 
 function ignoreIcon(linterName, path, $) {
@@ -138,7 +144,7 @@ module.exports = {
             if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
               return;
             }
-            
+
             const { segments } = parsePath(iconPath);
             const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
 
@@ -158,6 +164,137 @@ module.exports = {
 
             if (precisionMax > iconMaxFloatPrecision) {
               reporter.error(`Maximum precision should not be greater than ${iconMaxFloatPrecision}; it is currently ${precisionMax}`);
+              if (updateIgnoreFile) {
+                ignoreIcon(reporter.name, iconPath, $);
+              }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "ineffective-segments";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+
+            const { segments } = parsePath(iconPath);
+            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
+
+            const lowerMovementCommands = ['m', 'l'];
+            const lowerDirectionCommands = ['h', 'v'];
+            const lowerCurveCommand = 'c';
+            const lowerShorthandCurveCommand = 's';
+            const lowerCurveCommands = [lowerCurveCommand, lowerShorthandCurveCommand];
+            const upperMovementCommands = ['M', 'L'];
+            const upperHorDirectionCommand = 'H';
+            const upperVerDirectionCommand = 'V';
+            const upperDirectionCommands = [upperHorDirectionCommand, upperVerDirectionCommand];
+            const upperCurveCommand = 'C';
+            const upperShorthandCurveCommand = 'S';
+            const upperCurveCommands = [upperCurveCommand, upperShorthandCurveCommand];
+            const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
+            const commands = [...lowerMovementCommands, ...lowerDirectionCommands, ...upperMovementCommands, ...upperDirectionCommands, ...curveCommands];
+            const getInvalidSegments = ([command, x1Coord, y1Coord, ...rest], index) => {
+              if (commands.includes(command)) {
+                // Relative directions (h or v) having a length of 0
+                if (lowerDirectionCommands.includes(command) && x1Coord === 0) {
+                  return true;
+                }
+                // Relative movement (m or l) having a distance of 0
+                if (lowerMovementCommands.includes(command) && x1Coord === 0 && y1Coord === 0) {
+                  return true;
+                }
+                if (lowerCurveCommands.includes(command) && x1Coord === 0 && y1Coord === 0) {
+                  const [x2Coord, y2Coord] = rest;
+                  if (
+                    // Relative shorthand curve (s) having a control point of 0
+                    command === lowerShorthandCurveCommand ||
+                    // Relative bézier curve (c) having control points of 0
+                    (command === lowerCurveCommand && x2Coord === 0 && y2Coord === 0)
+                  ) {
+                    return true;
+                  }
+                }
+                if (index > 0) {
+                  let [yPrevCoord, xPrevCoord, ...prevRest] = [...absSegments[index - 1]].reverse();
+                  // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
+                  if (upperDirectionCommands.includes(xPrevCoord)) {
+                    xPrevCoord = undefined;
+                    yPrevCoord = undefined;
+                    let idx = index;
+                    while (--idx > 0 && (xPrevCoord === undefined || yPrevCoord === undefined)) {
+                      let [yPrevCoordDeep, xPrevCoordDeep, ...rest] = [...absSegments[idx]].reverse();
+                      // If the previous command was a horizontal movement, we need to consider the single coordinate as x
+                      if (upperHorDirectionCommand === xPrevCoordDeep) {
+                        xPrevCoordDeep = yPrevCoordDeep;
+                        yPrevCoordDeep = undefined;
+                      }
+                      // If the previous command was a vertical movement, we need to consider the single coordinate as y
+                      if (upperVerDirectionCommand === xPrevCoordDeep) {
+                        xPrevCoordDeep = undefined;
+                      }
+                      if (xPrevCoord === undefined && xPrevCoordDeep !== undefined) {
+                        xPrevCoord = xPrevCoordDeep;
+                      }
+                      if (yPrevCoord === undefined && yPrevCoordDeep !== undefined) {
+                        yPrevCoord = yPrevCoordDeep;
+                      }
+                    }
+                  }
+
+                  if (upperCurveCommands.includes(command)) {
+                    const [x2Coord, y2Coord, xCoord, yCoord] = rest;
+                    // Absolute shorthand curve (S) having the same coordinate as the previous segment and a control point equal to the ending point
+                    if (upperShorthandCurveCommand === command && x1Coord === xPrevCoord && y1Coord === yPrevCoord && x1Coord === x2Coord && y1Coord === y2Coord) {
+                      return true;
+                    }
+                    // Absolute bézier curve (C) having the same coordinate as the previous segment and last control point equal to the ending point
+                    if (upperCurveCommand === command && x1Coord === xPrevCoord && y1Coord === yPrevCoord && x2Coord === xCoord && y2Coord === yCoord) {
+                      return true;
+                    }
+                  }
+
+                  return (
+                    // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                    (upperHorDirectionCommand === command && x1Coord === xPrevCoord) ||
+                    // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                    (upperVerDirectionCommand === command && x1Coord === yPrevCoord) ||
+                    // Absolute movement (M or L) having the same coordinate as the previous segment
+                    (upperMovementCommands.includes(command) && x1Coord === xPrevCoord && y1Coord === yPrevCoord)
+                  );
+                }
+              }
+            };
+            const invalidSegments = segments.filter(getInvalidSegments);
+
+            if (invalidSegments.length) {
+              invalidSegments.forEach(([command, x1Coord, y1Coord, ...rest]) => {
+                let readableSegment = `${command}${x1Coord}`,
+                    resolutionTip = 'should be removed';
+                if (y1Coord !== undefined) {
+                  readableSegment += ` ${y1Coord}`;
+                }
+                if (curveCommands.includes(command)) {
+                  const [x2Coord, y2Coord, xCoord, yCoord] = rest;
+                  readableSegment += `, ${x2Coord} ${y2Coord}`;
+                  if (yCoord !== undefined) {
+                    readableSegment += `, ${xCoord} ${yCoord}`;
+                  }
+                  if (command === lowerShorthandCurveCommand && (x2Coord !== 0 || y2Coord !== 0)) {
+                    resolutionTip = `should be "l${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
+                  }
+                  if (command === upperShorthandCurveCommand) {
+                    resolutionTip = `should be "L${removeLeadingZeros(x2Coord)} ${removeLeadingZeros(y2Coord)}" or removed`;
+                  }
+                  if (command === lowerCurveCommand && (xCoord !== 0 || yCoord !== 0)) {
+                    resolutionTip = `should be "l${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
+                  }
+                  if (command === upperCurveCommand) {
+                    resolutionTip = `should be "L${removeLeadingZeros(xCoord)} ${removeLeadingZeros(yCoord)}" or removed`;
+                  }
+                }
+                reporter.error(`Ineffective segment "${readableSegment}" in path (${resolutionTip}).`);
+              });
               if (updateIgnoreFile) {
                 ignoreIcon(reporter.name, iconPath, $);
               }
