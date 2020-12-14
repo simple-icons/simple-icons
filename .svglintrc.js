@@ -322,11 +322,14 @@ module.exports = {
             if (negativeZeroMatches.length) {
               // Calculate the index for each match in the file
               const pathDStart = '<path d="';
-              const pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length + 1;
+              const svgFileHtml = $.html();
+              const pathDIndex = svgFileHtml.indexOf(pathDStart) + pathDStart.length;
 
               negativeZeroMatches.forEach((match) => {
                 const negativeZeroFileIndex = match.index + pathDIndex;
-                reporter.error(`Found "-0" at index ${negativeZeroFileIndex} (should be "0")`);
+                const previousChar = svgFileHtml[negativeZeroFileIndex - 1];
+                const replacement = "0123456789".includes(previousChar) ? " 0" : "0";
+                reporter.error(`Found "-0" at index ${negativeZeroFileIndex} (should be "${replacement}")`);
               })
             }
           },
