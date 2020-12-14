@@ -8,6 +8,7 @@ const { svgPathBbox } = require("svg-path-bbox");
 
 const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
+const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
@@ -306,6 +307,30 @@ module.exports = {
             const rawSVG = $.html();
             if (!svgRegexp.test(rawSVG)) {
               reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "negative-zeros";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+
+            // Find negative zeros inside path
+            const negativeZeroMatches = Array.from(iconPath.matchAll(negativeZerosRegexp));
+            if (negativeZeroMatches.length) {
+              // Calculate the index for each match in the file
+              const pathDStart = '<path d="';
+              const svgFileHtml = $.html();
+              const pathDIndex = svgFileHtml.indexOf(pathDStart) + pathDStart.length;
+
+              negativeZeroMatches.forEach((match) => {
+                const negativeZeroFileIndex = match.index + pathDIndex;
+                const previousChar = svgFileHtml[negativeZeroFileIndex - 1];
+                const replacement = "0123456789".includes(previousChar) ? " 0" : "0";
+                reporter.error(`Found "-0" at index ${negativeZeroFileIndex} (should be "${replacement}")`);
+              })
             }
           },
           function(reporter, $, ast) {
