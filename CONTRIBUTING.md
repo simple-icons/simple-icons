@@ -27,10 +27,10 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Flags
     - Sport Clubs (e.g. Bayern Munich, FC Barcelona, ...), BUT we do allow sport organizations (e.g. FIFA, NBA, Olympic etc.)  
     - Anything related to "yearly releases" (e.g. FIFA World Cup 2022, NBA 2020, ...)
-    - Universities
-    - Musicians and bands
-    - YouTubers and YouTube Channels
-    - Any other brands representing individuals rather than an organization, company or product.
+    - Universities or educational institutes
+    - Musicians or bands
+    - YouTubers or YouTube Channels
+    - Any other brands representing individuals rather than an organization, company or product
 
 If you are in doubt, feel free to submit it and we'll have a look.
 
