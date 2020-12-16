@@ -1,6 +1,5 @@
 name: Remove outdated labels
 on:
-  # https://github.community/t/github-actions-are-severely-limited-on-prs/18179/15
   pull_request_target:
     types:
       - closed
