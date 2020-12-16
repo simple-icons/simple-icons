@@ -23,14 +23,14 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For GitHub projects, the amount of "stars" should be above 5k. For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
     - Anything that provides an illegal service (e.g. piracy, malware, threatening material, spam etc.)
-    - Governmental agencies, programs, departments (e.g. US Air Force, FBI) BUT we do allow international organizations and NGOs with supranational interest (e.g. WHO, Unicef, NASA, ESA, ...)
+    - Governmental agencies, programs, departments (e.g. US Air Force, FBI) BUT we do allow international organizations and NGOs with supranational interests (e.g. WHO, Unicef, NASA, ESA, ...)
     - Flags
     - Sport Clubs (e.g. Bayern Munich, FC Barcelona, ...), BUT we do allow sport organizations (e.g. FIFA, NBA, Olympic etc.)  
-    - Anything related to a "yearly release" (e.g. FIFA World Cup 2022, NBA 2020, ...)
+    - Anything related to "yearly releases" (e.g. FIFA World Cup 2022, NBA 2020, ...)
     - Universities
     - Musicians and bands
     - YouTubers and YouTube Channels
-    - Any other brands representing individuals rather than an organization or company.
+    - Any other brands representing individuals rather than an organization, company or product.
 
 If you are in doubt, feel free to submit it and we'll have a look.
 
