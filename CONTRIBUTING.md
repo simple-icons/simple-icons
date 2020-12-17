@@ -20,16 +20,22 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-* Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For GitHub projects, the amount of "stars" should be above 5k. For anything else, popularity will be judged on a case-by-case basis.
+* Is of a _popular_ brand:
+    - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
+    - For GitHub projects, the amount of "stars" should be above 5k.
+    - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
     - Anything that provides an illegal service (e.g. piracy, malware, threatening material, spam etc.)
-    - Governmental agencies, programs, departments (e.g. US Air Force, FBI) BUT we do allow international organizations and NGOs with supranational interests (e.g. WHO, Unicef, NASA, ESA, ...)
-    - Flags
-    - Sport Clubs (e.g. Bayern Munich, FC Barcelona, ...), BUT we do allow sport organizations (e.g. FIFA, NBA, Olympic etc.)  
+    - Governmental agencies, programs, departments.
+       - Allowed: International organizations and NGOs with supranational interests (e.g. WHO and Unicef).
+       - Allowed: Organizations like NASA or ESA.
+    - Symbols, including flags and banners
+    - Sport Clubs (e.g. Bayern Munich, FC Barcelona, ...)
+       - Allowed: Sport organizations (e.g. FIFA, NBA, Olympic etc.)  
     - Anything related to "yearly releases" (e.g. FIFA World Cup 2022, NBA 2020, ...)
-    - Universities or educational institutes
+    - Universities or other educational institutions
     - Musicians or bands
-    - YouTubers or YouTube Channels
+    - Social media personalities or groups/channels (e.g. YouTubers, Twitch streamers, ...)
     - Any other brands representing individuals rather than an organization, company or product
 
 If you are in doubt, feel free to submit it and we'll have a look.
