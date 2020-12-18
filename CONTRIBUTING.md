@@ -25,19 +25,17 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - For GitHub projects, the amount of "stars" should be above 5k.
     - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
-    - Anything that provides an illegal service (e.g. piracy, malware, threatening material, spam etc.)
+    - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
     - Governmental agencies, programs, departments
-       - Allowed: International organizations and NGOs with supranational interests (e.g. WHO and Unicef)
-       - Allowed: Organizations like NASA or ESA
+       - Allowed: International organizations and NGOs with supranational interests
+       - Allowed: Space Agencies
     - Symbols, including flags and banners
-    - Sport Clubs (e.g. Bayern Munich, FC Barcelona, ...)
-       - Allowed: Sport organizations (e.g. FIFA, NBA, Olympic etc.)  
-    - Anything related to "yearly releases" (e.g. FIFA World Cup 2022, NBA 2020, ...)
+    - Sport Clubs
+       - Allowed: Sport organizations 
+    - Yearly releases
     - Universities or other educational institutions
-    - Musicians or bands
-    - Social media personalities or groups/channels (e.g. YouTubers, Twitch streamers, ...)
-    - Any other brands representing individuals rather than an organization, company or product
-
+    - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
+    
 If you are in doubt, feel free to submit it and we'll have a look.
 
 When submitting a request for a new or updated icon include helpful information such as:
