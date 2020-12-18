@@ -28,9 +28,9 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
     - Governmental agencies, programs, departments
        - Allowed: International organizations and NGOs with supranational interests
-       - Allowed: Space Agencies
+       - Allowed: Space agencies
     - Symbols, including flags and banners
-    - Sport Clubs
+    - Sport clubs
        - Allowed: Sport organizations 
     - Yearly releases
     - Universities or other educational institutions
