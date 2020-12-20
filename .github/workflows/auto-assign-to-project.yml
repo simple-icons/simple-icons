@@ -1,0 +1,26 @@
+name: Auto Assign to Project(s)
+
+on:
+  pull_request:
+    types: [opened, labeled]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  assign_one_project:
+    runs-on: ubuntu-latest
+    name: Assign to One Project
+    steps:
+    - name: Assign NEW pull requests to "Unprioritised" column
+      uses: srggrs/assign-one-project-github-action@1.2.0
+      if: github.event.action == 'opened'
+      with:
+        project: 'https://github.com/orgs/simple-icons/projects/2'
+        column_name: 'Unprioritised'
+
+    - name: Assign pull requests with `icon outdated` label to "Priority 1" column
+      uses: srggrs/assign-one-project-github-action@1.2.0
+      if: contains(github.event.pull_request.labels.*.name, 'icon outdated')
+      with:
+        project: 'https://github.com/orgs/simple-icons/projects/2'
+        column_name: 'Priority 1'
