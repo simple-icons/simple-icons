@@ -39,7 +39,6 @@ jobs:
           ${{ runner.os }}-gems-
     - name: Install Jekyll
       run: |
-        echo -e 'source "https://rubygems.org"\n\ngem "jekyll"' > Gemfile
         bundle config set path 'vendor/bundle'
         bundle install --jobs 4 --retry 3
     - name: Build website
