@@ -632,8 +632,8 @@
         },
         {
             "title": "AT&T",
-            "hex": "00A8E0",
-            "source": "https://commons.wikimedia.org/wiki/File:AT%26T_logo_2016.svg"
+            "hex": "009FDB",
+            "source": "https://www.att.com"
         },
         {
             "title": "Atari",
@@ -772,8 +772,8 @@
         },
         {
             "title": "Baidu",
-            "hex": "2319DC",
-            "source": "https://en.wikipedia.org/wiki/File:Baidu.svg"
+            "hex": "2932E1",
+            "source": "https://www.baidu.com"
         },
         {
             "title": "Bamboo",
@@ -948,7 +948,7 @@
         {
             "title": "Boeing",
             "hex": "1D439C",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
         },
         {
             "title": "Boost",
@@ -1022,7 +1022,7 @@
         },
         {
             "title": "Buffer",
-            "hex": "168EEA",
+            "hex": "231F20",
             "source": "https://buffer.com/press"
         },
         {
@@ -1212,7 +1212,7 @@
         },
         {
             "title": "Cirrus CI",
-            "hex": "212121",
+            "hex": "4051B5",
             "source": "https://cirrus-ci.org"
         },
         {
@@ -1314,6 +1314,11 @@
             "title": "CocoaPods",
             "hex": "EE3322",
             "source": "https://github.com/CocoaPods/shared_resources"
+        },
+        {
+            "title": "Cocos",
+            "hex": "55C2E1",
+            "source": "https://www.cocos.com/en/"
         },
         {
             "title": "Coda",
@@ -3306,6 +3311,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Jabber-bulb.svg"
         },
         {
+            "title": "Jaguar",
+            "hex": "FFFFFF",
+            "source": "https://media.jaguar.com/en/press-kit"
+        },
+        {
             "title": "Jamboard",
             "hex": "F37C20",
             "source": "https://cdn2.hubspot.net/hubfs/159104/ECS/Jamboard/Approved%20Jamboard%20Brand%20Book.pdf"
@@ -3528,7 +3538,7 @@
         {
             "title": "Keybase",
             "hex": "33A0FF",
-            "source": "https://github.com/keybase/client/tree/master/media/logos"
+            "source": "https://github.com/keybase/client/tree/a144e0ce38ee9e495cc5acbcd4ef859f5534d820/media/logos"
         },
         {
             "title": "KeyCDN",
@@ -4094,6 +4104,11 @@
             "title": "Métro de Paris",
             "hex": "003E95",
             "source": "https://www.ratp.fr/"
+        },
+        {
+            "title": "MeWe",
+            "hex": "17377F",
+            "source": "https://mewe.com"
         },
         {
             "title": "micro:bit",
@@ -6096,6 +6111,11 @@
             "source": "https://www.sprint.com/"
         },
         {
+            "title": "Spyder IDE",
+            "hex": "FF0000",
+            "source": "https://www.spyder-ide.org/"
+        },
+        {
             "title": "SQLite",
             "hex": "003B57",
             "source": "https://github.com/sqlite/sqlite/blob/43e862723ec680542ca6f608f9963c0993dd7324/art/sqlite370.eps"
@@ -6511,6 +6531,11 @@
             "source": "https://demo.identihub.co/thunderbird"
         },
         {
+            "title": "Thymeleaf",
+            "hex": "005F0F",
+            "source": "https://github.com/thymeleaf/thymeleaf-dist/tree/master/src/artwork/thymeleaf%202016"
+        },
+        {
             "title": "Tidal",
             "hex": "000000",
             "source": "https://tidal.com"
@@ -6631,6 +6656,11 @@
             "source": "https://www.trendmicro.com/"
         },
         {
+            "title": "Triller",
+            "hex": "FF0089",
+            "source": "https://triller.co/static/media/illustrations/logo-full-white.svg"
+        },
+        {
             "title": "Tripadvisor",
             "hex": "34E0A1",
             "source": "https://tripadvisor.mediaroom.com/logo-guidelines"
@@ -6659,6 +6689,11 @@
             "title": "Try It Online",
             "hex": "303030",
             "source": "https://tio.run/"
+        },
+        {
+            "title": "TryHackMe",
+            "hex": "212C42",
+            "source": "https://tryhackme.com/about"
         },
         {
             "title": "TUI",
