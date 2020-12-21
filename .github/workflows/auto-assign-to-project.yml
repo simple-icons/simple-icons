@@ -7,7 +7,7 @@ env:
   MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  assign_one_project:
+  assign-to-project:
     runs-on: ubuntu-latest
     name: Assign to Project
     steps:
