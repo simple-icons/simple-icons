@@ -20,9 +20,22 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-* Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For anything else, popularity will be judged on a case-by-case basis.
-* Isn't related to anything that provides an illegal service (e.g. piracy, malware, threatening material, spam, etc.).
-
+* Is of a _popular_ brand:
+    - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
+    - For GitHub projects, the amount of "stars" should be above 5k.
+    - For anything else, popularity will be judged on a case-by-case basis.
+* Doesn't fall into one of the following categories:
+    - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
+    - Governmental agencies, programs, departments
+       - Allowed: International organizations and NGOs with supranational interests
+       - Allowed: Space agencies
+    - Symbols, including flags and banners
+    - Sport clubs
+       - Allowed: Sport organizations 
+    - Yearly releases
+    - Universities or other educational institutions
+    - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
+    
 If you are in doubt, feel free to submit it and we'll have a look.
 
 When submitting a request for a new or updated icon include helpful information such as:
@@ -237,7 +250,7 @@ If you have an affiliation to the brand you contributing that allows you to spea
 
 ## Testing Package Locally
 
-* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 11.15.0 is required.
+* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
 * Install the dependencies using `$ npm install`.
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
