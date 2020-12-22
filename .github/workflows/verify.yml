@@ -30,6 +30,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7
+        # https://github.com/ruby/setup-ruby/blob/master/README.md#caching-bundle-install-automatically
         bundler-cache: true
     - name: Build website
       run: bundle exec jekyll build
