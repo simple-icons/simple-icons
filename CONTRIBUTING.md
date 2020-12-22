@@ -4,8 +4,11 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 1. Fork this repository
 1. (Optional) Clone the fork
-   ```
+   ```bash
+   # Using SSH
    git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+
+   # Using HTTPS
    git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
    ```
 1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
