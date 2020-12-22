@@ -30,17 +30,7 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7
-    - name: Setup cache for gems
-      uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    - name: Install Jekyll
-      run: |
-        bundle config set path 'vendor/bundle'
-        bundle install --jobs 4 --retry 3
+        bundler-cache: true
     - name: Build website
       run: bundle exec jekyll build
   test:
