@@ -6,6 +6,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 1. (Optional) Clone the fork
    ```
    git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+   git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
    ```
 1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
 1. Start hacking on the new branch
