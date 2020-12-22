@@ -3,6 +3,10 @@
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
 
 1. Fork this repository
+1. (Optional) Clone the fork
+   ```
+   git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+   ```
 1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
 1. Start hacking on the new branch
 1. Commit and push to the new branch
@@ -31,11 +35,11 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
        - Allowed: Space agencies
     - Symbols, including flags and banners
     - Sport clubs
-       - Allowed: Sport organizations 
+       - Allowed: Sport organizations
     - Yearly releases
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
-    
+
 If you are in doubt, feel free to submit it and we'll have a look.
 
 When submitting a request for a new or updated icon include helpful information such as:
