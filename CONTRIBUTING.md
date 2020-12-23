@@ -4,6 +4,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 1. Fork this repository
 1. (Optional) Clone the fork
+
    ```bash
    # Using SSH
    git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
@@ -14,6 +15,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
    # Using GitHub CLI
    gh repo clone simple-icons/simple-icons -- --filter=tree:0
    ```
+
 1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
 1. Start hacking on the new branch
 1. Commit and push to the new branch
