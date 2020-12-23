@@ -2438,7 +2438,7 @@
         {
             "title": "Genius",
             "hex": "FFFF64",
-            "source": "https://upload.wikimedia.org/wikipedia/en/a/ad/Genius_website_logo.svg"
+            "source": "https://genius.com"
         },
         {
             "title": "Gentoo",
@@ -2488,7 +2488,7 @@
         {
             "title": "Gitea",
             "hex": "609926",
-            "source": "https://github.com/go-gitea/gitea/tree/master/assets"
+            "source": "https://github.com/go-gitea/gitea/blob/e0c753e770a64cda5e3900aa1da3d7e1f3263c9a/assets/logo.svg"
         },
         {
             "title": "GitHub",
@@ -2952,12 +2952,12 @@
         },
         {
             "title": "Helm",
-            "hex": "277A9F",
+            "hex": "0F1689",
             "source": "https://helm.sh"
         },
         {
             "title": "HERE",
-            "hex": "48DAD0",
+            "hex": "00AFAA",
             "source": "https://www.here.com"
         },
         {
@@ -3023,7 +3023,7 @@
         {
             "title": "homify",
             "hex": "7DCDA3",
-            "source": "http://lsg.homify.com/"
+            "source": "https://www.homify.com"
         },
         {
             "title": "Honda",
@@ -3162,8 +3162,8 @@
         },
         {
             "title": "ICQ",
-            "hex": "7EBD00",
-            "source": "https://en.wikipedia.org/wiki/File:ICQ.svg"
+            "hex": "24FF00",
+            "source": "https://commons.wikimedia.org/wiki/File:ICQNewlogo.svg"
         },
         {
             "title": "iDEAL",
@@ -3209,6 +3209,11 @@
             "title": "InfluxDB",
             "hex": "22ADF6",
             "source": "https://www.influxdata.com/"
+        },
+        {
+            "title": "Informatica",
+            "hex": "FF4D00",
+            "source": "https://www.informatica.com/content/dam/informatica-com/en/images/cc02v2/logo-informatica.svg"
         },
         {
             "title": "Inkscape",
@@ -3498,7 +3503,7 @@
         {
             "title": "KaiOS",
             "hex": "6F02B5",
-            "source": "https://www.dropbox.com/sh/2qihtgrzllws8ki/AABmo9X1KMT6lHnvh4Em7dpWa?dl=0"
+            "source": "https://www.kaiostech.com/company/press-room"
         },
         {
             "title": "Kakao",
@@ -4277,8 +4282,8 @@
         },
         {
             "title": "Mojang Studios",
-            "hex": "DB1F29",
-            "source": "https://www.minecraft.net/en-us/article/meet-mojang-studios"
+            "hex": "EF323D",
+            "source": "https://www.minecraft.net"
         },
         {
             "title": "Moleculer",
@@ -5856,6 +5861,11 @@
             "source": "https://en.wikipedia.org/wiki/Sina_Weibo"
         },
         {
+            "title": "SingleStore",
+            "hex": "AA00FF",
+            "source": "https://www.singlestore.com/brand/"
+        },
+        {
             "title": "SitePoint",
             "hex": "258AAF",
             "source": "http://www.sitepoint.com"
@@ -6807,7 +6817,7 @@
         },
         {
             "title": "Udacity",
-            "hex": "01B3E3",
+            "hex": "02B3E4",
             "source": "https://www.udacity.com"
         },
         {
@@ -7092,8 +7102,8 @@
         },
         {
             "title": "Wattpad",
-            "hex": "F68D12",
-            "source": "https://www.wattpad.com/press/#assets"
+            "hex": "FF500A",
+            "source": "https://company.wattpad.com/media-kit"
         },
         {
             "title": "Waze",
@@ -7157,8 +7167,8 @@
         },
         {
             "title": "WeChat",
-            "hex": "7BB32E",
-            "source": "https://worldvectorlogo.com/logo/wechat-3"
+            "hex": "07C160",
+            "source": "https://wechat.design/standard/download/brand"
         },
         {
             "title": "WEMO",
@@ -7328,7 +7338,7 @@
         {
             "title": "XAML",
             "hex": "0C54C2",
-            "source": "https://github.com/microsoft/microsoft-ui-xaml/issues/1185"
+            "source": "https://github.com/microsoft/microsoft-ui-xaml/issues/1185#issuecomment-529731046"
         },
         {
             "title": "XAMPP",
@@ -7423,7 +7433,7 @@
         {
             "title": "Yelp",
             "hex": "D32323",
-            "source": "http://www.yelp.com/brand"
+            "source": "https://www.yelp.com/styleguide/icons"
         },
         {
             "title": "Yoast",
@@ -7537,8 +7547,8 @@
         },
         {
             "title": "Zulip",
-            "hex": "52C2AF",
-            "source": "https://github.com/zulip/zulip/"
+            "hex": "FFFFFF",
+            "source": "https://github.com/zulip/zulip/blob/df9e40491dc77b658d943cff36a816d46e32ce1b/static/images/logo/zulip-org-logo.svg"
         }
     ]
 }
