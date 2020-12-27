@@ -147,7 +147,7 @@
         },
         {
             "title": "Adobe InDesign",
-            "hex": "EE3D8F",
+            "hex": "FF3366",
             "source": "https://www.adobe.com/products/indesign.html"
         },
         {
@@ -317,8 +317,8 @@
         },
         {
             "title": "Amazon Lumberyard",
-            "hex": "67459B",
-            "source": "https://github.com/aws/lumberyard"
+            "hex": "66459B",
+            "source": "https://aws.amazon.com/lumberyard/support"
         },
         {
             "title": "Amazon Prime",
@@ -478,7 +478,7 @@
         {
             "title": "Apache NetBeans IDE",
             "hex": "1B6AC6",
-            "source": "https://netbeans.apache.org/images/"
+            "source": "https://apache.org/logos/"
         },
         {
             "title": "Apache OpenOffice",
@@ -504,6 +504,11 @@
             "title": "Apache Spark",
             "hex": "E25A1C",
             "source": "https://spark.apache.org/images/"
+        },
+        {
+            "title": "Apache Tomcat",
+            "hex": "F8DC75",
+            "source": "https://apache.org/logos/"
         },
         {
             "title": "Apollo GraphQL",
@@ -627,8 +632,8 @@
         },
         {
             "title": "AT&T",
-            "hex": "00A8E0",
-            "source": "https://commons.wikimedia.org/wiki/File:AT%26T_logo_2016.svg"
+            "hex": "009FDB",
+            "source": "https://www.att.com"
         },
         {
             "title": "Atari",
@@ -767,8 +772,8 @@
         },
         {
             "title": "Baidu",
-            "hex": "2319DC",
-            "source": "https://en.wikipedia.org/wiki/File:Baidu.svg"
+            "hex": "2932E1",
+            "source": "https://www.baidu.com"
         },
         {
             "title": "Bamboo",
@@ -911,6 +916,11 @@
             "source": "https://www.blackberry.com/"
         },
         {
+            "title": "Blazemeter",
+            "hex": "CA2133",
+            "source": "https://www.blazemeter.com/"
+        },
+        {
             "title": "Blender",
             "hex": "F5792A",
             "source": "https://www.blender.org/about/logo/"
@@ -943,7 +953,7 @@
         {
             "title": "Boeing",
             "hex": "1D439C",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Boeing_full_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
         },
         {
             "title": "Boost",
@@ -1017,7 +1027,7 @@
         },
         {
             "title": "Buffer",
-            "hex": "168EEA",
+            "hex": "231F20",
             "source": "https://buffer.com/press"
         },
         {
@@ -1193,7 +1203,7 @@
         {
             "title": "Cinema 4D",
             "hex": "011A6A",
-            "source": "https://www.maxon.net/de/header-meta-navigation/ueber-maxon/pressematerial/"
+            "source": "https://www.maxon.net/en/about-maxon/branding"
         },
         {
             "title": "Circle",
@@ -1207,7 +1217,7 @@
         },
         {
             "title": "Cirrus CI",
-            "hex": "212121",
+            "hex": "4051B5",
             "source": "https://cirrus-ci.org"
         },
         {
@@ -1311,6 +1321,11 @@
             "source": "https://github.com/CocoaPods/shared_resources"
         },
         {
+            "title": "Cocos",
+            "hex": "55C2E1",
+            "source": "https://www.cocos.com/en/"
+        },
+        {
             "title": "Coda",
             "hex": "F46A54",
             "source": "https://coda.io/"
@@ -1352,7 +1367,7 @@
         },
         {
             "title": "CodeIgniter",
-            "hex": "EE4623",
+            "hex": "EF4223",
             "source": "https://www.codeigniter.com/help/legal"
         },
         {
@@ -1377,13 +1392,13 @@
         },
         {
             "title": "Codeship",
-            "hex": "3C4858",
+            "hex": "004466",
             "source": "https://app.codeship.com/"
         },
         {
             "title": "Codewars",
-            "hex": "AD2C27",
-            "source": "https://www.codewars.com"
+            "hex": "B1361E",
+            "source": "https://github.com/codewars/branding"
         },
         {
             "title": "Codio",
@@ -1403,7 +1418,7 @@
         {
             "title": "Common Workflow Language",
             "hex": "B5314C",
-            "source": "https://github.com/common-workflow-language/logo/blob/master/CWL-Logo-nofonts.svg"
+            "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
         },
         {
             "title": "Composer",
@@ -1602,13 +1617,13 @@
         },
         {
             "title": "DataCamp",
-            "hex": "33AACC",
+            "hex": "03EF62",
             "source": "https://www.datacamp.com/"
         },
         {
             "title": "Datadog",
             "hex": "632CA6",
-            "source": "https://www.datadoghq.com/"
+            "source": "https://www.datadoghq.com/about/resources"
         },
         {
             "title": "DAZN",
@@ -1654,6 +1669,11 @@
             "title": "Dell",
             "hex": "007DB8",
             "source": "https://datasecurity.dell.com/wp-content/themes/dell/images/logo-dell.svg"
+        },
+        {
+            "title": "Delphi",
+            "hex": "EE1F35",
+            "source": "https://www.embarcadero.com/news/logo"
         },
         {
             "title": "Deno",
@@ -1784,6 +1804,11 @@
             "title": "Dolby",
             "hex": "000000",
             "source": "https://www.dolby.com/us/en/about/brand-identity.html"
+        },
+        {
+            "title": "DoorDash",
+            "hex": "FF3008",
+            "source": "https://www.doordash.com/about/"
         },
         {
             "title": "Douban",
@@ -2387,8 +2412,8 @@
         },
         {
             "title": "Garmin",
-            "hex": "007CC3",
-            "source": "https://developer.garmin.com/resources/brand-guidelines/"
+            "hex": "000000",
+            "source": "https://creative.garmin.com/styleguide/brand/"
         },
         {
             "title": "Gatling",
@@ -2418,7 +2443,7 @@
         {
             "title": "Genius",
             "hex": "FFFF64",
-            "source": "https://upload.wikimedia.org/wikipedia/en/a/ad/Genius_website_logo.svg"
+            "source": "https://genius.com"
         },
         {
             "title": "Gentoo",
@@ -2461,9 +2486,14 @@
             "source": "http://git-scm.com/downloads/logos"
         },
         {
+            "title": "GitBook",
+            "hex": "3884FF",
+            "source": "http://styleguide.gitbook.com/icons"
+        },
+        {
             "title": "Gitea",
             "hex": "609926",
-            "source": "https://github.com/go-gitea/gitea/tree/master/assets"
+            "source": "https://github.com/go-gitea/gitea/blob/e0c753e770a64cda5e3900aa1da3d7e1f3263c9a/assets/logo.svg"
         },
         {
             "title": "GitHub",
@@ -2572,12 +2602,12 @@
         },
         {
             "title": "GoldenLine",
-            "hex": "F1B92B",
+            "hex": "FFE005",
             "source": "http://www.goldenline.pl"
         },
         {
             "title": "Goodreads",
-            "hex": "663300",
+            "hex": "372213",
             "source": "https://www.goodreads.com/about/press"
         },
         {
@@ -2847,7 +2877,7 @@
         },
         {
             "title": "HackerEarth",
-            "hex": "323754",
+            "hex": "2C3454",
             "source": "https://www.hackerearth.com/logo/"
         },
         {
@@ -2927,12 +2957,12 @@
         },
         {
             "title": "Helm",
-            "hex": "277A9F",
+            "hex": "0F1689",
             "source": "https://helm.sh"
         },
         {
             "title": "HERE",
-            "hex": "48DAD0",
+            "hex": "00AFAA",
             "source": "https://www.here.com"
         },
         {
@@ -2998,7 +3028,7 @@
         {
             "title": "homify",
             "hex": "7DCDA3",
-            "source": "http://lsg.homify.com/"
+            "source": "https://www.homify.com"
         },
         {
             "title": "Honda",
@@ -3108,7 +3138,7 @@
         {
             "title": "iCloud",
             "hex": "3693F3",
-            "source": "https://www.icloud.com/"
+            "source": "https://commons.wikimedia.org/wiki/File:ICloud_logo.svg"
         },
         {
             "title": "IcoMoon",
@@ -3137,8 +3167,8 @@
         },
         {
             "title": "ICQ",
-            "hex": "7EBD00",
-            "source": "https://en.wikipedia.org/wiki/File:ICQ.svg"
+            "hex": "24FF00",
+            "source": "https://commons.wikimedia.org/wiki/File:ICQNewlogo.svg"
         },
         {
             "title": "iDEAL",
@@ -3184,6 +3214,11 @@
             "title": "InfluxDB",
             "hex": "22ADF6",
             "source": "https://www.influxdata.com/"
+        },
+        {
+            "title": "Informatica",
+            "hex": "FF4D00",
+            "source": "https://www.informatica.com/content/dam/informatica-com/en/images/cc02v2/logo-informatica.svg"
         },
         {
             "title": "Inkscape",
@@ -3296,6 +3331,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Jabber-bulb.svg"
         },
         {
+            "title": "Jaguar",
+            "hex": "FFFFFF",
+            "source": "https://media.jaguar.com/en/press-kit"
+        },
+        {
             "title": "Jamboard",
             "hex": "F37C20",
             "source": "https://cdn2.hubspot.net/hubfs/159104/ECS/Jamboard/Approved%20Jamboard%20Brand%20Book.pdf"
@@ -3378,7 +3418,7 @@
         {
             "title": "Jinja",
             "hex": "B41717",
-            "source": "https://github.com/pallets/jinja/"
+            "source": "https://github.com/pallets/jinja/blob/1c240154865a7b6034033027e3c2ca8a2fa53fc2/artwork/jinjalogo.svg"
         },
         {
             "title": "Jira",
@@ -3468,7 +3508,7 @@
         {
             "title": "KaiOS",
             "hex": "6F02B5",
-            "source": "https://www.dropbox.com/sh/2qihtgrzllws8ki/AABmo9X1KMT6lHnvh4Em7dpWa?dl=0"
+            "source": "https://www.kaiostech.com/company/press-room"
         },
         {
             "title": "Kakao",
@@ -3508,7 +3548,7 @@
         {
             "title": "Kentico",
             "hex": "F05A22",
-            "source": "https://brand.kentico.com"
+            "source": "https://www.kentico.com"
         },
         {
             "title": "Keras",
@@ -3518,7 +3558,7 @@
         {
             "title": "Keybase",
             "hex": "33A0FF",
-            "source": "https://github.com/keybase/client/tree/master/media/logos"
+            "source": "https://github.com/keybase/client/tree/a144e0ce38ee9e495cc5acbcd4ef859f5534d820/media/logos"
         },
         {
             "title": "KeyCDN",
@@ -3658,7 +3698,7 @@
         {
             "title": "Last.fm",
             "hex": "D51007",
-            "source": "http://www.last.fm/about/resources"
+            "source": "https://commons.wikimedia.org/wiki/File:Lastfm_logo.svg"
         },
         {
             "title": "LastPass",
@@ -3692,8 +3732,8 @@
         },
         {
             "title": "LeetCode",
-            "hex": "F89F1B",
-            "source": "https://leetcode.com"
+            "hex": "FFA116",
+            "source": "https://leetcode.com/store"
         },
         {
             "title": "Lenovo",
@@ -3996,6 +4036,11 @@
             "source": "http://mttr.net"
         },
         {
+            "title": "Max-Planck-Gesellschaft",
+            "hex": "006C66",
+            "source": "https://www.mpg.de"
+        },
+        {
             "title": "Maytag",
             "hex": "002E5F",
             "source": "https://www.maytagcommerciallaundry.com/mclstorefront/c/-/p/MYR40PD"
@@ -4079,6 +4124,11 @@
             "title": "Métro de Paris",
             "hex": "003E95",
             "source": "https://www.ratp.fr/"
+        },
+        {
+            "title": "MeWe",
+            "hex": "17377F",
+            "source": "https://mewe.com"
         },
         {
             "title": "micro:bit",
@@ -4237,8 +4287,8 @@
         },
         {
             "title": "Mojang Studios",
-            "hex": "DB1F29",
-            "source": "https://www.minecraft.net/en-us/article/meet-mojang-studios"
+            "hex": "EF323D",
+            "source": "https://www.minecraft.net"
         },
         {
             "title": "Moleculer",
@@ -4424,6 +4474,11 @@
             "title": "NGINX",
             "hex": "269539",
             "source": "https://www.nginx.com/"
+        },
+        {
+            "title": "ngrok",
+            "hex": "1F1E37",
+            "source": "https://ngrok.com/"
         },
         {
             "title": "niconico",
@@ -4746,6 +4801,11 @@
             "source": "https://www.ovh.com/fr/news/logo-ovh.xml"
         },
         {
+            "title": "Packagist",
+            "hex": "F28D1A",
+            "source": "https://github.com/composer/packagist"
+        },
+        {
             "title": "Pagekit",
             "hex": "212121",
             "source": "https://pagekit.com/logo-guide"
@@ -4768,7 +4828,7 @@
         {
             "title": "Palo Alto Software",
             "hex": "83DA77",
-            "source": "https://press.paloalto.com/logos"
+            "source": "https://www.paloalto.com"
         },
         {
             "title": "pandas",
@@ -4814,6 +4874,11 @@
             "title": "PayPal",
             "hex": "00457C",
             "source": "https://www.paypal-marketing.com/html/partner/na/portal-v2/pdf/PP_Masterbrandguidelines_v21_mm.pdf"
+        },
+        {
+            "title": "PCGamingWiki",
+            "hex": "556DB3",
+            "source": "https://static.pcgamingwiki.com/logos/pcgamingwiki.svg"
         },
         {
             "title": "PeerTube",
@@ -4877,8 +4942,8 @@
         },
         {
             "title": "Pi-hole",
-            "hex": "F60D1A",
-            "source": "https://github.com/pi-hole/web/"
+            "hex": "FF0000",
+            "source": "https://docs.pi-hole.net"
         },
         {
             "title": "Picarto.TV",
@@ -5117,8 +5182,13 @@
         },
         {
             "title": "Prismic",
-            "hex": "484A7A",
+            "hex": "5163BA",
             "source": "https://prismic.io/"
+        },
+        {
+            "title": "Pro Tools",
+            "hex": "7ACB10",
+            "source": "https://cdn-www.avid.com/Content/fonts/avidmoon.ttf"
         },
         {
             "title": "Probot",
@@ -5338,7 +5408,7 @@
         {
             "title": "React",
             "hex": "61DAFB",
-            "source": "https://facebook.github.io/react/"
+            "source": "https://github.com/facebook/create-react-app/blob/282c03f9525fdf8061ffa1ec50dce89296d916bd/test/fixtures/relative-paths/src/logo.svg"
         },
         {
             "title": "React Router",
@@ -5801,6 +5871,11 @@
             "source": "https://en.wikipedia.org/wiki/Sina_Weibo"
         },
         {
+            "title": "SingleStore",
+            "hex": "AA00FF",
+            "source": "https://www.singlestore.com/brand/"
+        },
+        {
             "title": "SitePoint",
             "hex": "258AAF",
             "source": "http://www.sitepoint.com"
@@ -6074,6 +6149,11 @@
             "title": "Sprint",
             "hex": "FFCE0A",
             "source": "https://www.sprint.com/"
+        },
+        {
+            "title": "Spyder IDE",
+            "hex": "FF0000",
+            "source": "https://www.spyder-ide.org/"
         },
         {
             "title": "SQLite",
@@ -6491,6 +6571,11 @@
             "source": "https://demo.identihub.co/thunderbird"
         },
         {
+            "title": "Thymeleaf",
+            "hex": "005F0F",
+            "source": "https://github.com/thymeleaf/thymeleaf-dist/tree/master/src/artwork/thymeleaf%202016"
+        },
+        {
             "title": "Tidal",
             "hex": "000000",
             "source": "https://tidal.com"
@@ -6537,7 +6622,7 @@
         },
         {
             "title": "Topcoder",
-            "hex": "29A8E0",
+            "hex": "29A7DF",
             "source": "http://topcoder.com/"
         },
         {
@@ -6611,6 +6696,11 @@
             "source": "https://www.trendmicro.com/"
         },
         {
+            "title": "Triller",
+            "hex": "FF0089",
+            "source": "https://triller.co/static/media/illustrations/logo-full-white.svg"
+        },
+        {
             "title": "Tripadvisor",
             "hex": "34E0A1",
             "source": "https://tripadvisor.mediaroom.com/logo-guidelines"
@@ -6639,6 +6729,11 @@
             "title": "Try It Online",
             "hex": "303030",
             "source": "https://tio.run/"
+        },
+        {
+            "title": "TryHackMe",
+            "hex": "212C42",
+            "source": "https://tryhackme.com/about"
         },
         {
             "title": "TUI",
@@ -6732,7 +6827,7 @@
         },
         {
             "title": "Udacity",
-            "hex": "01B3E3",
+            "hex": "02B3E4",
             "source": "https://www.udacity.com"
         },
         {
@@ -7017,8 +7112,8 @@
         },
         {
             "title": "Wattpad",
-            "hex": "F68D12",
-            "source": "https://www.wattpad.com/press/#assets"
+            "hex": "FF500A",
+            "source": "https://company.wattpad.com/media-kit"
         },
         {
             "title": "Waze",
@@ -7082,8 +7177,8 @@
         },
         {
             "title": "WeChat",
-            "hex": "7BB32E",
-            "source": "https://worldvectorlogo.com/logo/wechat-3"
+            "hex": "07C160",
+            "source": "https://wechat.design/standard/download/brand"
         },
         {
             "title": "WEMO",
@@ -7253,7 +7348,7 @@
         {
             "title": "XAML",
             "hex": "0C54C2",
-            "source": "https://github.com/microsoft/microsoft-ui-xaml/issues/1185"
+            "source": "https://github.com/microsoft/microsoft-ui-xaml/issues/1185#issuecomment-529731046"
         },
         {
             "title": "XAMPP",
@@ -7348,7 +7443,7 @@
         {
             "title": "Yelp",
             "hex": "D32323",
-            "source": "http://www.yelp.com/brand"
+            "source": "https://www.yelp.com/styleguide/icons"
         },
         {
             "title": "Yoast",
@@ -7462,8 +7557,8 @@
         },
         {
             "title": "Zulip",
-            "hex": "52C2AF",
-            "source": "https://github.com/zulip/zulip/"
+            "hex": "FFFFFF",
+            "source": "https://github.com/zulip/zulip/blob/df9e40491dc77b658d943cff36a816d46e32ce1b/static/images/logo/zulip-org-logo.svg"
         }
     ]
 }
