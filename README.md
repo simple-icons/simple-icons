@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
 </p>
 
 ## Usage
@@ -141,6 +141,6 @@ Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/s
 
 ## Status
 
-[![Build status](https://github.com/simple-icons/simple-icons/workflows/Verify/badge.svg)](https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop)
-[![npm version](https://img.shields.io/npm/v/simple-icons.svg)](https://www.npmjs.com/package/simple-icons)
+[![Build status](https://img.shields.io/github/workflow/status/simple-icons/simple-icons/Verify/develop?logo=github)](https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop)
+[![npm version](https://img.shields.io/npm/v/simple-icons.svg?logo=npm)](https://www.npmjs.com/package/simple-icons)
 [![Packagist version](https://img.shields.io/packagist/v/simple-icons/simple-icons)](https://packagist.org/packages/simple-icons/simple-icons)
