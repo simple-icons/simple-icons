@@ -3,7 +3,6 @@ const fs = require('fs');
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 const svgPath = require("svgpath");
-const parsePath = require("svgpath/lib/path_parse");
 const { svgPathBbox } = require("svg-path-bbox");
 
 const titleRegexp = /(.+) icon$/;
@@ -146,7 +145,7 @@ module.exports = {
               return;
             }
 
-            const { segments } = parsePath(iconPath);
+            const { segments } = svgPath(iconPath);
             const segmentParts = segments.flat().filter((num) => (typeof num === 'number'));
 
             const countDecimals = (num) => {
@@ -178,8 +177,9 @@ module.exports = {
               return;
             }
 
-            const { segments } = parsePath(iconPath);
-            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
+            const parsedPath = svgPath(iconPath);
+            const { segments } = parsedPath;
+            const { segments: absSegments } = parsedPath.abs().unshort();
 
             const lowerMovementCommands = ['m', 'l'];
             const lowerDirectionCommands = ['h', 'v'];
