@@ -169,7 +169,7 @@ The final icon should:
 * Be minified to a single line with no formatting.
 * Contain only a single `path` element.
 * Not contain extraneous elements.
-  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
+  * This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
