@@ -9,7 +9,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: 12.x
     - name: Install dependencies
@@ -30,18 +30,8 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7
-    - name: Setup cache for gems
-      uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    - name: Install Jekyll
-      run: |
-        echo -e 'source "https://rubygems.org"\n\ngem "jekyll"' > Gemfile
-        bundle config set path 'vendor/bundle'
-        bundle install --jobs 4 --retry 3
+        # https://github.com/ruby/setup-ruby/blob/master/README.md#caching-bundle-install-automatically
+        bundler-cache: true
     - name: Build website
       run: bundle exec jekyll build
   test:
@@ -51,7 +41,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: 12.x
     - name: Install dependencies
