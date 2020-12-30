@@ -3,6 +3,19 @@
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
 
 1. Fork this repository
+1. (Optional) Clone the fork
+
+   ```bash
+   # Using SSH
+   git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+
+   # Using HTTPS
+   git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+
+   # Using GitHub CLI
+   gh repo clone simple-icons/simple-icons -- --filter=tree:0
+   ```
+
 1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
 1. Start hacking on the new branch
 1. Commit and push to the new branch
@@ -20,8 +33,21 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-* Is of a _popular_ brand. For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k. For anything else, popularity will be judged on a case-by-case basis.
-* Isn't related to anything that provides an illegal service (e.g. piracy, malware, threatening material, spam, etc.).
+* Is of a _popular_ brand:
+    - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
+    - For GitHub projects, the amount of "stars" should be above 5k.
+    - For anything else, popularity will be judged on a case-by-case basis.
+* Doesn't fall into one of the following categories:
+    - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
+    - Governmental agencies, programs, departments
+       - Allowed: International organizations and NGOs with supranational interests
+       - Allowed: Space agencies
+    - Symbols, including flags and banners
+    - Sport clubs
+       - Allowed: Sport organizations
+    - Yearly releases
+    - Universities or other educational institutions
+    - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
 
 If you are in doubt, feel free to submit it and we'll have a look.
 
@@ -51,7 +77,19 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
 
+#### Icon Guidelines
+
 Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well (e.g. EPS, AI, PDF). In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
+
+If the icon includes a (registered) trademark icon we follow the guidelines below to decide whether to include the symbol or not:
+
+* If brand guidelines explicitly require including the symbol, it must be included.
+* If the symbol is incorporated into the design of the logo (e.g. [Intel](https://github.com/simple-icons/simple-icons/blob/develop/icons/intel.svg)), it must be included.
+* If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
+* If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
+* If there is no explicit requirement that a symbol must be included, it must not be included.
+
+#### Color Guidelines
 
 For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
@@ -131,7 +169,7 @@ The final icon should:
 * Be minified to a single line with no formatting.
 * Contain only a single `path` element.
 * Not contain extraneous elements.
-  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
+  * This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
@@ -216,12 +254,21 @@ Once you've completed the previous steps, create a pull request to merge your ed
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
-## Building Locally
+## Building Website Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`).
-* Build and run the website locally using `$ jekyll serve`.
+* Make sure you have [Bundler](https://bundler.io/) installed (using `$ gem install bundler`).
+* Set your local gems installation location for the simple-icons website using `$ bundle config set path 'vendor/bundle'`.
+* Install dependencies using `$ bundle install`.
+* Build and run the website locally using `$ bundle exec jekyll serve`.
 * Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
+
+## Testing Package Locally
+
+* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
+* Install the dependencies using `$ npm install`.
+* Build and test the package using `$ npm test`.
+* Run the project linting process using `$ npm run lint`.
 
 ## Building in Your Browser
 
