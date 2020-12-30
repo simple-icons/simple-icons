@@ -69,3 +69,13 @@ jobs:
         tag_name: ${{ steps.get-version.outputs.version }}
         release_name: ${{ steps.release.outputs.title }}
         body: ${{ steps.release.outputs.body }}
+  font:
+    name: Trigger simple-icons-font release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger simple-icons-font release
+      run: |
+        curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.SIMPLE_ICONS_FONT_TOKEN }}" \
+          -d '{"ref":"develop"}' \
+          https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
