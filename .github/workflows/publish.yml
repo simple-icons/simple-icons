@@ -71,6 +71,7 @@ jobs:
         body: ${{ steps.release.outputs.body }}
   font:
     name: Trigger simple-icons-font release
+    needs: npm
     runs-on: ubuntu-latest
     steps:
     - name: Trigger simple-icons-font release
