@@ -1,11 +1,6 @@
 {
     "icons": [
         {
-            "title": "tmux",
-            "hex": "1BB91F",
-            "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
-        },
-        {
             "title": ".NET",
             "hex": "5C2D91",
             "source": "https://docs.microsoft.com/en-us/dotnet/images/hub/net.svg"
@@ -6739,6 +6734,11 @@
             "title": "TinyLetter",
             "hex": "ED1C24",
             "source": "https://tinyletter.com/site/press"
+        },
+        {
+            "title": "tmux",
+            "hex": "1BB91F",
+            "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
         },
         {
             "title": "Todoist",
