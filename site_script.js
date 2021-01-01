@@ -11,12 +11,13 @@
 
   var queryParameter = 'q',
       orderingPreferenceIdentifier = 'ordering-preference',
-      previousQuery  = null,
+      previousQuery  = '',
       previousOrdering  = $orderByColor;
 
   // Remove the "disabled" attribute from the search input
   $searchInput.setAttribute('title', 'Search Simple Icons');
   $searchInput.removeAttribute('disabled');
+  $searchInput.focus();
 
   // include a modified debounce underscorejs helper function.
   // see
@@ -66,7 +67,7 @@
   }
 
   function normalizeSearchTerm(value) {
-    return value.toLowerCase().toLowerCase()
+    return value.toLowerCase()
       .replace(/à|á|â|ã|ä/g, "a")
       .replace(/ç|č|ć/g, "c")
       .replace(/è|é|ê|ë/g, "e")
@@ -110,7 +111,7 @@
     $body.classList.toggle('search__active', matchedIcons.length < icons.length);
 
     if (query === '') {
-      if ($orderByRelevance.classList.contains('active')) {
+      if ($body.classList.contains('order-by-relevance')) {
         selectOrdering(previousOrdering);
       }
     } else {
