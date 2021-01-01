@@ -99,8 +99,8 @@ There are many different tools for editing SVG files, some options include:
 
 | Name | Description | Platform | Price |
 | :---- | :---- | :----: | :----: |
-| [Inkscape](https://inkscape.org/en/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
-| [Affinity Designer](https://affinity.serif.com/de/designer/) | Vector Graphics Editor | Windows, Mac | $ |
+| [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 | [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free |
 
