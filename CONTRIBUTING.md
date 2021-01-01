@@ -115,7 +115,7 @@ Using your preferred tool you should:
 1. Remove all colors. The icon should be monochromatic.
 1. Export the icon as an SVG.
 
-Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, preferring a wide of 0.5px, but will be defined in a per icon basis.
+Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
 
 ### 3. Optimize the Icon
 
