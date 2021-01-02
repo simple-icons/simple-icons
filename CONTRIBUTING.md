@@ -99,8 +99,8 @@ There are many different tools for editing SVG files, some options include:
 
 | Name | Description | Platform | Price |
 | :---- | :---- | :----: | :----: |
-| [Inkscape](https://inkscape.org/en/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
-| [Affinity Designer](https://affinity.serif.com/de/designer/) | Vector Graphics Editor | Windows, Mac | $ |
+| [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 | [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free |
 
@@ -169,7 +169,7 @@ The final icon should:
 * Be minified to a single line with no formatting.
 * Contain only a single `path` element.
 * Not contain extraneous elements.
-  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
+  * This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
