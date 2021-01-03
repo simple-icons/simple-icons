@@ -39,8 +39,8 @@ function removeLeadingZeros(number) {
 }
 
 /**
- * Given three points, returns if the middle one is collinear to the limit
- *   points line.
+ * Given three points, returns if the middle one (x2, y2) is collinear to the
+ *   limit points line.
  **/
 function collinear(x1, y1, x2, y2, x3, y3) {
     return (x1 * (y2 - y3) + x2 * (y3 - y1) +  x3 * (y1 - y2)) === 0;
@@ -317,16 +317,18 @@ module.exports = {
             }
             
             /**
-             * Extracts collinear coordinates from SVG path straight lines,
-             *   does not extract collinear coordinates of curves.
+             * Extracts collinear coordinates from SVG path straight lines
+             *   (does not extracts collinear coordinates from curves).
              **/
             const getCollinearSegments = (path) => {
-              const { segments } = svgPath(path).unarc().unshort();
-              const collinearSegments = [];
-              let _inStraightLine = false,
-                  _nextInStraightLine = false,
-                  _currentLine = [],
-                  _currAbsCoord = [undefined, undefined];
+              const { segments } = svgPath(path).unarc().unshort(),
+                    collinearSegments = [],
+                    straightLineCommands = 'HhVvLlMm',
+                    zCommands = 'Zz';
+              let currLine = [],
+                  currAbsCoord = [undefined, undefined],
+                  _inStraightLine = false,
+                  _nextInStraightLine = false;
 
               for (let s = 0; s < segments.length; s++) {
                 let seg = segments[s],
@@ -334,73 +336,73 @@ module.exports = {
                     nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
                 
                     if ('LM'.includes(cmd)) {
-                      _currAbsCoord[0] = seg[1];
-                      _currAbsCoord[1] = seg[2];
+                      currAbsCoord[0] = seg[1];
+                      currAbsCoord[1] = seg[2];
                     } else if ('lm'.includes(cmd)) {
-                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[1];
-                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[2];
+                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
                     } else if (cmd === 'H') {
-                      _currAbsCoord[0] = seg[1];
+                      currAbsCoord[0] = seg[1];
                     } else if (cmd === 'h') {
-                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[1];
+                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
                     } else if (cmd === 'V') {
-                      _currAbsCoord[1] = seg[1];
+                      currAbsCoord[1] = seg[1];
                     } else if (cmd === 'v') {
-                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[1];
+                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
                     } else if (cmd === 'C') {
-                      _currAbsCoord[0] = seg[5];
-                      _currAbsCoord[1] = seg[6];
+                      currAbsCoord[0] = seg[5];
+                      currAbsCoord[1] = seg[6];
                     } else if (cmd === 'c') {
-                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[5];
-                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[6];
+                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
+                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
                     } else if (cmd === 'Q') {
-                      _currAbsCoord[0] = seg[3];
-                      _currAbsCoord[1] = seg[4];
+                      currAbsCoord[0] = seg[3];
+                      currAbsCoord[1] = seg[4];
                     } else if (cmd === 'q') {
-                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[3];
-                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[4];
-                    } else if (!'zZ'.includes(cmd)) {
+                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
+                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
+                    } else if (zCommands.includes(cmd)) {
+                      // Overlapping in Z should be handled in another rule
+                      currAbsCoord = [undefined, undefined];
+                    } else {
                       throw new Error(`"${cmd}" command not handled`)
-                    } else {  // zZ (collinearity or overlapping in Z should be handled in another rule)
-                      _currAbsCoord = [undefined, undefined];
                     }
                 
-                _nextInStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(nextCmd);
+                _nextInStraightLine = straightLineCommands.includes(nextCmd);
                 let _exitingStraightLine = (_inStraightLine && !_nextInStraightLine);
-                _inStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(cmd);
+                _inStraightLine = straightLineCommands.includes(cmd);
 
                 if (_inStraightLine) {
-                  _currentLine.push([_currAbsCoord[0], _currAbsCoord[1]]);
+                  currLine.push([currAbsCoord[0], currAbsCoord[1]]);
                 } else {
                   if (_exitingStraightLine) {
-                    if (!'zZ'.includes(cmd)) {
-                      _currentLine.push([_currAbsCoord[0], _currAbsCoord[1]]);
+                    if (!zCommands.includes(cmd)) {
+                      currLine.push([currAbsCoord[0], currAbsCoord[1]]);
                     }
                     // Get collinear coordinates
-                    for (let p = 0; p < _currentLine.length; p++) {
-                      if (p === 0 || p === _currentLine.length - 1) {
+                    for (let p = 0; p < currLine.length; p++) {
+                      if (p === 0 || p === currLine.length - 1) {
                         continue;
                       }
-                      let _collinearCoord = collinear(_currentLine[p - 1][0],
-                                                      _currentLine[p - 1][1],
-                                                      _currentLine[p][0],
-                                                      _currentLine[p][1],
-                                                      _currentLine[p + 1][0],
-                                                      _currentLine[p + 1][1])
+                      let _collinearCoord = collinear(currLine[p - 1][0],
+                                                      currLine[p - 1][1],
+                                                      currLine[p][0],
+                                                      currLine[p][1],
+                                                      currLine[p + 1][0],
+                                                      currLine[p + 1][1])
                       if (_collinearCoord) {
-                        collinearSegments.push(segments[s - _currentLine.length + p + 1]);
+                        collinearSegments.push(segments[s - currLine.length + p + 1]);
                       }
                     }
                   }
-                  _currentLine = [];
+                  currLine = [];
                 }
               }
               
               return collinearSegments;
             }
-            
-            const collinearSegments = getCollinearSegments(iconPath);
-            collinearSegments.forEach((segment) => {
+
+            getCollinearSegments(iconPath).forEach((segment) => {
               let segmentString = `${segment[0]}${segment[1]}`;
               if ('LlMm'.includes(segment[0])) {
                 segmentString += ` ${segment[2]}`
