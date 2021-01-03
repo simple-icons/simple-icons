@@ -177,9 +177,8 @@ module.exports = {
               return;
             }
 
-            const parsedPath = svgPath(iconPath);
-            const { segments } = parsedPath;
-            const { segments: absSegments } = parsedPath.abs().unshort();
+            const { segments } = svgPath(iconPath);
+            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
 
             const lowerMovementCommands = ['m', 'l'];
             const lowerDirectionCommands = ['h', 'v'];
