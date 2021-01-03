@@ -39,8 +39,8 @@ function removeLeadingZeros(number) {
 }
 
 /**
- * Given three points, returns if the middle one (x2, y2) is collinear to the
- *   limit points line.
+ * Given three points, returns if the middle one (x2, y2) is collinear
+ *   to the line formed by the two limit points.
  **/
 function collinear(x1, y1, x2, y2, x3, y3) {
     return (x1 * (y2 - y3) + x2 * (y3 - y1) +  x3 * (y1 - y2)) === 0;
