@@ -38,6 +38,10 @@ function removeLeadingZeros(number) {
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 }
 
+const collinear = (x1, y1, x2, y2, x3, y3) => {
+    return (x1 * (y2 - y3) + x2 * (y3 - y1) +  x3 * (y1 - y2)) === 0;
+}
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -177,9 +181,8 @@ module.exports = {
               return;
             }
 
-            const parsedPath = svgPath(iconPath);
-            const { segments } = parsedPath;
-            const { segments: absSegments } = parsedPath.abs().unshort();
+            const { segments } = svgPath(iconPath);
+            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
 
             const lowerMovementCommands = ['m', 'l'];
             const lowerDirectionCommands = ['h', 'v'];
@@ -300,6 +303,104 @@ module.exports = {
                 ignoreIcon(reporter.name, iconPath, $);
               }
             }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "collinear-segments";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+            
+            const getCollinearSegments = (path) => {
+              const { segments } = svgPath(path).unarc().unshort();
+              // Collinear coordinates
+              const collinearSegments = [];
+              // We are in a line?
+              // What are the points of the current line?
+              // What is the current absolute coordinate?
+              let _inStraightLine = false,
+                  _newInStraightLine = false,
+                  _currentLine = [],
+                  _currentAbsCoord = [undefined, undefined];
+
+              for (let s = 0; s < segments.length; s++) {
+                let seg = segments[s],
+                    cmd = seg[0],
+                    nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
+                
+                    if ('LM'.includes(cmd)) {
+                      _currentAbsCoord[0] = seg[1];
+                      _currentAbsCoord[1] = seg[2];
+                    } else if ('lm'.includes(cmd)) {
+                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[1];
+                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[2];
+                    } else if (cmd === 'H') {
+                      _currentAbsCoord[0] = seg[1];
+                    } else if (cmd === 'h') {
+                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[1];
+                    } else if (cmd === 'V') {
+                      _currentAbsCoord[1] = seg[1];
+                    } else if (cmd === 'v') {
+                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[1];
+                    } else if (cmd === 'C') {
+                      _currentAbsCoord[0] = seg[5];
+                      _currentAbsCoord[1] = seg[6];
+                    } else if (cmd === 'c') {
+                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[5];
+                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[6];
+                    } else if (cmd === 'Q') {
+                      _currentAbsCoord[0] = seg[3];
+                      _currentAbsCoord[1] = seg[4];
+                    } else if (cmd === 'q') {
+                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[3];
+                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[4];
+                    } else if (!'zZ'.includes(cmd)) {
+                      throw new Error(`"${cmd}" command not handled`)
+                    }
+                
+                _newInStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(nextCmd);
+                let _exitingStraightLine = (_inStraightLine && !_newInStraightLine);
+                _inStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(cmd);
+
+                if (_inStraightLine) {
+                  _currentLine.push([_currentAbsCoord[0], _currentAbsCoord[1]]);
+                } else {
+                  if (_exitingStraightLine) {
+                    if (!'zZ'.includes(cmd)) {
+                      _currentLine.push([_currentAbsCoord[0], _currentAbsCoord[1]]);
+                    }
+                    // Get collinear coordinates
+                    for (let p = 0; p < _currentLine.length; p++) {
+                      if (p === 0 || p === _currentLine.length - 1) {
+                        continue;
+                      }
+                      let _collinearCoord = collinear(_currentLine[p - 1][0],
+                                                      _currentLine[p - 1][1],
+                                                      _currentLine[p][0],
+                                                      _currentLine[p][1],
+                                                      _currentLine[p + 1][0],
+                                                      _currentLine[p + 1][1])
+                      if (_collinearCoord) {
+                        collinearSegments.push(segments[s - _currentLine.length + p + 1]);
+                      }
+                    }
+                  }
+                  _currentLine = [];
+                }
+              }
+              
+              return collinearSegments;
+            }
+            
+            const collinearSegments = getCollinearSegments(iconPath);
+            collinearSegments.forEach((segment) => {
+              let segmentString = `${segment[0]}${segment[1]}`;
+              if ('LlMm'.includes(segment[0])) {
+                segmentString += ` ${segment[2]}`
+              }
+              reporter.error(`Collinear segment "${segmentString}" in path (should be removed)`);
+            });
           },
           function(reporter, $, ast) {
             reporter.name = "extraneous";
