@@ -16,6 +16,11 @@
             "source": "https://1password.com/press/"
         },
         {
+            "title": "3M",
+            "hex": "FF0000",
+            "source": "https://www.3m.com/"
+        },
+        {
             "title": "42",
             "hex": "000000",
             "source": "https://www.42.fr/"
@@ -2683,7 +2688,7 @@
         {
             "title": "Google Cardboard",
             "hex": "FF7143",
-            "source": "https://arvr.google.com/cardboard/"
+            "source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
         },
         {
             "title": "Google Cast",
@@ -5371,6 +5376,11 @@
             "source": "https://pypi.org/"
         },
         {
+            "title": "PyPy",
+            "hex": "193440",
+            "source": "https://www.pypy.org/images/pypy-logo.svg"
+        },
+        {
             "title": "Python",
             "hex": "3776AB",
             "source": "https://www.python.org/community/logos/"
@@ -6446,6 +6456,11 @@
             "source": "https://itunes.apple.com/us/app/strava-running-and-cycling-gps/id426826309"
         },
         {
+            "title": "Streamlit",
+            "hex": "FF4B4B",
+            "source": "https://www.streamlit.io/brand"
+        },
+        {
             "title": "Stripe",
             "hex": "008CDD",
             "source": "https://stripe.com/about/resources"
@@ -6557,7 +6572,7 @@
         },
         {
             "title": "Synology",
-            "hex": "B6B5B6",
+            "hex": "B5B5B6",
             "source": "https://www.synology.com/en-global/company/branding"
         },
         {
