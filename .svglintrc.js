@@ -38,7 +38,11 @@ function removeLeadingZeros(number) {
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 }
 
-const collinear = (x1, y1, x2, y2, x3, y3) => {
+/**
+ * Given three points, returns if the middle one is collinear to the limit
+ *   points line.
+ **/
+function collinear(x1, y1, x2, y2, x3, y3) {
     return (x1 * (y2 - y3) + x2 * (y3 - y1) +  x3 * (y1 - y2)) === 0;
 }
 
@@ -312,17 +316,17 @@ module.exports = {
               return;
             }
             
+            /**
+             * Extracts collinear coordinates from SVG path straight lines,
+             *   does not extract collinear coordinates of curves.
+             **/
             const getCollinearSegments = (path) => {
               const { segments } = svgPath(path).unarc().unshort();
-              // Collinear coordinates
               const collinearSegments = [];
-              // We are in a line?
-              // What are the points of the current line?
-              // What is the current absolute coordinate?
               let _inStraightLine = false,
-                  _newInStraightLine = false,
+                  _nextInStraightLine = false,
                   _currentLine = [],
-                  _currentAbsCoord = [undefined, undefined];
+                  _currAbsCoord = [undefined, undefined];
 
               for (let s = 0; s < segments.length; s++) {
                 let seg = segments[s],
@@ -330,45 +334,47 @@ module.exports = {
                     nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
                 
                     if ('LM'.includes(cmd)) {
-                      _currentAbsCoord[0] = seg[1];
-                      _currentAbsCoord[1] = seg[2];
+                      _currAbsCoord[0] = seg[1];
+                      _currAbsCoord[1] = seg[2];
                     } else if ('lm'.includes(cmd)) {
-                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[1];
-                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[2];
+                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[1];
+                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[2];
                     } else if (cmd === 'H') {
-                      _currentAbsCoord[0] = seg[1];
+                      _currAbsCoord[0] = seg[1];
                     } else if (cmd === 'h') {
-                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[1];
+                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[1];
                     } else if (cmd === 'V') {
-                      _currentAbsCoord[1] = seg[1];
+                      _currAbsCoord[1] = seg[1];
                     } else if (cmd === 'v') {
-                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[1];
+                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[1];
                     } else if (cmd === 'C') {
-                      _currentAbsCoord[0] = seg[5];
-                      _currentAbsCoord[1] = seg[6];
+                      _currAbsCoord[0] = seg[5];
+                      _currAbsCoord[1] = seg[6];
                     } else if (cmd === 'c') {
-                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[5];
-                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[6];
+                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[5];
+                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[6];
                     } else if (cmd === 'Q') {
-                      _currentAbsCoord[0] = seg[3];
-                      _currentAbsCoord[1] = seg[4];
+                      _currAbsCoord[0] = seg[3];
+                      _currAbsCoord[1] = seg[4];
                     } else if (cmd === 'q') {
-                      _currentAbsCoord[0] = (!_currentAbsCoord[0] ? 0 : _currentAbsCoord[0]) + seg[3];
-                      _currentAbsCoord[1] = (!_currentAbsCoord[1] ? 0 : _currentAbsCoord[1]) + seg[4];
+                      _currAbsCoord[0] = (!_currAbsCoord[0] ? 0 : _currAbsCoord[0]) + seg[3];
+                      _currAbsCoord[1] = (!_currAbsCoord[1] ? 0 : _currAbsCoord[1]) + seg[4];
                     } else if (!'zZ'.includes(cmd)) {
                       throw new Error(`"${cmd}" command not handled`)
+                    } else {  // zZ (collinearity or overlapping in Z should be handled in another rule)
+                      _currAbsCoord = [undefined, undefined];
                     }
                 
-                _newInStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(nextCmd);
-                let _exitingStraightLine = (_inStraightLine && !_newInStraightLine);
+                _nextInStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(nextCmd);
+                let _exitingStraightLine = (_inStraightLine && !_nextInStraightLine);
                 _inStraightLine = ['H', 'h', 'V', 'v', 'L', 'l', 'M', 'm'].includes(cmd);
 
                 if (_inStraightLine) {
-                  _currentLine.push([_currentAbsCoord[0], _currentAbsCoord[1]]);
+                  _currentLine.push([_currAbsCoord[0], _currAbsCoord[1]]);
                 } else {
                   if (_exitingStraightLine) {
                     if (!'zZ'.includes(cmd)) {
-                      _currentLine.push([_currentAbsCoord[0], _currentAbsCoord[1]]);
+                      _currentLine.push([_currAbsCoord[0], _currAbsCoord[1]]);
                     }
                     // Get collinear coordinates
                     for (let p = 0; p < _currentLine.length; p++) {
