@@ -335,39 +335,39 @@ module.exports = {
                     cmd = seg[0],
                     nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
                 
-                    if ('LM'.includes(cmd)) {
-                      currAbsCoord[0] = seg[1];
-                      currAbsCoord[1] = seg[2];
-                    } else if ('lm'.includes(cmd)) {
-                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-                    } else if (cmd === 'H') {
-                      currAbsCoord[0] = seg[1];
-                    } else if (cmd === 'h') {
-                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                    } else if (cmd === 'V') {
-                      currAbsCoord[1] = seg[1];
-                    } else if (cmd === 'v') {
-                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
-                    } else if (cmd === 'C') {
-                      currAbsCoord[0] = seg[5];
-                      currAbsCoord[1] = seg[6];
-                    } else if (cmd === 'c') {
-                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
-                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
-                    } else if (cmd === 'Q') {
-                      currAbsCoord[0] = seg[3];
-                      currAbsCoord[1] = seg[4];
-                    } else if (cmd === 'q') {
-                      currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
-                      currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
-                    } else if (zCommands.includes(cmd)) {
-                      // Overlapping in Z should be handled in another rule
-                      currAbsCoord = [undefined, undefined];
-                    } else {
-                      throw new Error(`"${cmd}" command not handled`)
-                    }
-                
+                if ('LM'.includes(cmd)) {
+                  currAbsCoord[0] = seg[1];
+                  currAbsCoord[1] = seg[2];
+                } else if ('lm'.includes(cmd)) {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                } else if (cmd === 'H') {
+                  currAbsCoord[0] = seg[1];
+                } else if (cmd === 'h') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                } else if (cmd === 'V') {
+                  currAbsCoord[1] = seg[1];
+                } else if (cmd === 'v') {
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
+                } else if (cmd === 'C') {
+                  currAbsCoord[0] = seg[5];
+                  currAbsCoord[1] = seg[6];
+                } else if (cmd === 'c') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
+                } else if (cmd === 'Q') {
+                  currAbsCoord[0] = seg[3];
+                  currAbsCoord[1] = seg[4];
+                } else if (cmd === 'q') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
+                } else if (zCommands.includes(cmd)) {
+                  // Overlapping in Z should be handled in another rule
+                  currAbsCoord = [undefined, undefined];
+                } else {
+                  throw new Error(`"${cmd}" command not handled`)
+                }
+
                 _nextInStraightLine = straightLineCommands.includes(nextCmd);
                 let _exitingStraightLine = (_inStraightLine && !_nextInStraightLine);
                 _inStraightLine = straightLineCommands.includes(cmd);
@@ -376,14 +376,11 @@ module.exports = {
                   currLine.push([currAbsCoord[0], currAbsCoord[1]]);
                 } else {
                   if (_exitingStraightLine) {
-                    if (!zCommands.includes(cmd)) {
+                    if (straightLineCommands.includes(cmd)) {
                       currLine.push([currAbsCoord[0], currAbsCoord[1]]);
                     }
                     // Get collinear coordinates
-                    for (let p = 0; p < currLine.length; p++) {
-                      if (p === 0 || p === currLine.length - 1) {
-                        continue;
-                      }
+                    for (let p = 1; p < currLine.length - 1; p++) {
                       let _collinearCoord = collinear(currLine[p - 1][0],
                                                       currLine[p - 1][1],
                                                       currLine[p][0],
