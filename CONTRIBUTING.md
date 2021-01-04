@@ -3,6 +3,19 @@
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
 
 1. Fork this repository
+1. (Optional) Clone the fork
+
+   ```bash
+   # Using SSH
+   git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+
+   # Using HTTPS
+   git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+
+   # Using GitHub CLI
+   gh repo clone simple-icons/simple-icons -- --filter=tree:0
+   ```
+
 1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
 1. Start hacking on the new branch
 1. Commit and push to the new branch
@@ -31,11 +44,11 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
        - Allowed: Space agencies
     - Symbols, including flags and banners
     - Sport clubs
-       - Allowed: Sport organizations 
+       - Allowed: Sport organizations
     - Yearly releases
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
-    
+
 If you are in doubt, feel free to submit it and we'll have a look.
 
 When submitting a request for a new or updated icon include helpful information such as:
@@ -86,8 +99,8 @@ There are many different tools for editing SVG files, some options include:
 
 | Name | Description | Platform | Price |
 | :---- | :---- | :----: | :----: |
-| [Inkscape](https://inkscape.org/en/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
-| [Affinity Designer](https://affinity.serif.com/de/designer/) | Vector Graphics Editor | Windows, Mac | $ |
+| [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 | [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free |
 
@@ -101,6 +114,8 @@ Using your preferred tool you should:
 1. Center the icon horizontally and vertically.
 1. Remove all colors. The icon should be monochromatic.
 1. Export the icon as an SVG.
+
+Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
 
 ### 3. Optimize the Icon
 
@@ -156,7 +171,7 @@ The final icon should:
 * Be minified to a single line with no formatting.
 * Contain only a single `path` element.
 * Not contain extraneous elements.
-  * This includes: `circ`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
+  * This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
 * Not contain extraneous attributes.
   * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
@@ -244,8 +259,10 @@ If you have an affiliation to the brand you contributing that allows you to spea
 ## Building Website Locally
 
 * Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Jekyll](https://jekyllrb.com/) installed (using `$ gem install jekyll bundler`). At least version 3.5 is required.
-* Build and run the website locally using `$ jekyll serve`.
+* Make sure you have [Bundler](https://bundler.io/) installed (using `$ gem install bundler`).
+* Set your local gems installation location for the simple-icons website using `$ bundle config set path 'vendor/bundle'`.
+* Install dependencies using `$ bundle install`.
+* Build and run the website locally using `$ bundle exec jekyll serve`.
 * Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
 
 ## Testing Package Locally
