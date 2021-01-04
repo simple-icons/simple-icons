@@ -1,10 +1,10 @@
 ---
 ---
 
-{% assign iconCount = site.data.simple-icons.icons.size %}
-{% assign iconsUnsortedString = "" %}
-{% assign greyscaleIconsUnsortedString = "" %}
-{% for icon in site.data.simple-icons.icons %}
+{%- assign iconCount = site.data.simple-icons.icons.size -%}
+{%- assign iconsUnsortedString = "" -%}
+{%- assign greyscaleIconsUnsortedString = "" -%}
+{%- for icon in site.data.simple-icons.icons -%}
     {% assign title = icon.title %}
 
     {% assign filename = icon.title %}
@@ -46,7 +46,6 @@
     {% assign filename = filename | replace: "&", "-and-" %}
     {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" %}
 
-    {% assign hex = icon.hex %}
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
     {% assign hexCharacter2 = hex | slice: 1, 1 %}
@@ -143,20 +142,20 @@
         {% assign hslHue = hslHue | round: 0 | prepend: "000" | slice: -3, 3 %}
         {% capture iconsUnsortedString %}{{ iconsUnsortedString }}{{ hslHue }},{{ hslSaturation }},{{ hslLuminance }},{{ filename }},{{ hex }},{{ title }},{{ class }},{{ searchTerm }},{{ forloop.index }}{% unless forloop.last %};{% endunless %}{% endcapture %}
     {% endif %}
-{% endfor %}
+{%- endfor -%}
 
-{% assign iconsArray = iconsUnsortedString | split: ";" | sort %}
-{% assign greyscaleIconsArray = greyscaleIconsUnsortedString | split: ";" | sort | reverse %}
+{%- assign iconsArray = iconsUnsortedString | split: ";" | sort -%}
+{%- assign greyscaleIconsArray = greyscaleIconsUnsortedString | split: ";" | sort | reverse -%}
 
-{% assign allIconNames = "" %}
-{% for icon in iconsArray %}
+{%- assign allIconNames = "" -%}
+{%- for icon in iconsArray -%}
     {% assign iconArray = icon | split: "," %}
     {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[7] }}",{% endcapture %}
-{% endfor %}
-{% for icon in greyscaleIconsArray %}
+{%- endfor -%}
+{%- for icon in greyscaleIconsArray -%}
     {% assign iconArray = icon | split: "," %}
     {% capture allIconNames %}{{ allIconNames }}"{{ iconArray[7] }}"{% unless forloop.last %},{% endunless %}{% endcapture %}
-{% endfor %}
+{%- endfor -%}
 
 <!doctype html>
 <html lang="en-gb">
@@ -197,8 +196,7 @@
       var icons = [{{ allIconNames }}];
     </script>
 </head>
-
-<body>
+<body class="order-by-color">
     <header class="navbar" role="banner">
         <ul class="navbar__nav" role="navigation">
             <li class="navbar__nav-item navbar__nav-item--home"><a href="/">Simple&nbsp;Icons</a></li>
@@ -215,8 +213,7 @@
                 <div class="search__close"><span>&times;</span></div>
                 <input type="text" placeholder="Search by brand …" title="Search not available when JavaScript is disabled" disabled />
             </div>
-
-            <svg id="sort-color" class="sort-btn active" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Sort by color</title><path d="M9.219 18.857H6.648V.429A.414.414 0 0 0 6.219 0H3.648a.418.418 0 0 0-.308.121.418.418 0 0 0-.121.308v18.428H.648a.4.4 0 0 0-.402.268c-.071.17-.04.326.094.469l4.286 4.287c.098.08.2.119.308.119a.447.447 0 0 0 .308-.119l4.272-4.273a.506.506 0 0 0 .134-.32.417.417 0 0 0-.429-.431z"/><path d="M12.219 3.429h3.429A.412.412 0 0 0 16.076 3V.429A.416.416 0 0 0 15.648 0h-3.429a.414.414 0 0 0-.429.429V3a.414.414 0 0 0 .429.429z"/><path d="M12.219 10.286h6a.42.42 0 0 0 .309-.12.42.42 0 0 0 .121-.308V7.286a.418.418 0 0 0-.121-.308.417.417 0 0 0-.309-.121h-6a.414.414 0 0 0-.308.121.417.417 0 0 0-.12.308v2.572c0 .125.04.228.12.308a.42.42 0 0 0 .308.12z"/><path d="M12.219 17.143h8.572c.125 0 .229-.039.309-.119s.119-.184.119-.309v-2.572c0-.125-.039-.227-.119-.307s-.184-.121-.309-.121h-8.572a.418.418 0 0 0-.308.121.415.415 0 0 0-.12.307v2.572c0 .125.04.229.12.309.081.08.183.119.308.119z"/><path d="M23.67 20.693a.408.408 0 0 0-.307-.121H12.219a.416.416 0 0 0-.429.428v2.572c0 .125.04.227.121.309a.42.42 0 0 0 .308.119h11.144a.414.414 0 0 0 .307-.119.424.424 0 0 0 .121-.309V21a.416.416 0 0 0-.121-.307z"/></svg>
+            <svg id="sort-color" class="sort-btn" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Sort by color</title><path d="M9.219 18.857H6.648V.429A.414.414 0 0 0 6.219 0H3.648a.418.418 0 0 0-.308.121.418.418 0 0 0-.121.308v18.428H.648a.4.4 0 0 0-.402.268c-.071.17-.04.326.094.469l4.286 4.287c.098.08.2.119.308.119a.447.447 0 0 0 .308-.119l4.272-4.273a.506.506 0 0 0 .134-.32.417.417 0 0 0-.429-.431z"/><path d="M12.219 3.429h3.429A.412.412 0 0 0 16.076 3V.429A.416.416 0 0 0 15.648 0h-3.429a.414.414 0 0 0-.429.429V3a.414.414 0 0 0 .429.429z"/><path d="M12.219 10.286h6a.42.42 0 0 0 .309-.12.42.42 0 0 0 .121-.308V7.286a.418.418 0 0 0-.121-.308.417.417 0 0 0-.309-.121h-6a.414.414 0 0 0-.308.121.417.417 0 0 0-.12.308v2.572c0 .125.04.228.12.308a.42.42 0 0 0 .308.12z"/><path d="M12.219 17.143h8.572c.125 0 .229-.039.309-.119s.119-.184.119-.309v-2.572c0-.125-.039-.227-.119-.307s-.184-.121-.309-.121h-8.572a.418.418 0 0 0-.308.121.415.415 0 0 0-.12.307v2.572c0 .125.04.229.12.309.081.08.183.119.308.119z"/><path d="M23.67 20.693a.408.408 0 0 0-.307-.121H12.219a.416.416 0 0 0-.429.428v2.572c0 .125.04.227.121.309a.42.42 0 0 0 .308.119h11.144a.414.414 0 0 0 .307-.119.424.424 0 0 0 .121-.309V21a.416.416 0 0 0-.121-.307z"/></svg>
             <svg id="sort-alphabetically" class="sort-btn" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Sort alphabetically</title><path d="M10.096 18.857H7.525V.429A.414.414 0 0 0 7.096 0H4.525a.414.414 0 0 0-.429.429v18.429H1.525c-.196 0-.331.089-.402.268-.072.17-.04.326.094.469l4.286 4.286c.098.079.2.119.308.119.116 0 .219-.04.308-.12l4.272-4.272a.506.506 0 0 0 .134-.321.414.414 0 0 0-.429-.43z"/><path d="M20.102 22.474H16.78c-.188 0-.322.009-.402.026l-.188.026V22.5l.148-.147c.133-.16.227-.276.281-.348l4.941-7.099v-1.191h-7.594v3.066h1.607v-1.54h3.107c.16 0 .295-.014.4-.04a.856.856 0 0 0 .102-.007c.039-.004.068-.007.086-.007v.04l-.146.121c-.08.08-.176.2-.281.361L13.9 22.795V24h7.82v-3.12h-1.619v1.594h.001z"/><path d="M21.977 8.866L18.895 0h-2.168l-3.082 8.866h-.936v1.419h3.842V8.866h-1.004l.631-1.929h3.254l.629 1.929h-1.004v1.419h3.857V8.866h-.937zm-5.358-3.402l.977-2.92c.037-.107.07-.236.102-.388s.047-.232.047-.241l.039-.268h.055c0 .036.008.125.025.268l.162.629.963 2.92h-2.37z"/></svg>
             <svg id="sort-relevance" class="sort-btn" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Sort by relevance</title><path d="M9.219,18.857H6.648V0.429C6.656,0.201,6.478,0.008,6.25,0H3.648C3.533-0.004,3.421,0.04,3.34,0.121C3.259,0.203,3.215,0.314,3.219,0.429v18.428H0.648c-0.179-0.012-0.344,0.098-0.402,0.268c-0.071,0.17-0.04,0.326,0.094,0.469l4.286,4.287C4.724,23.961,4.826,24,4.934,24c0.114,0.001,0.224-0.041,0.308-0.119l4.272-4.273c0.081-0.086,0.128-0.199,0.134-0.318c0.008-0.23-0.172-0.423-0.402-0.432C9.237,18.857,9.228,18.857,9.219,18.857z"/><path d="M22.971,4.984c0.226-0.22,0.304-0.543,0.207-0.843c-0.099-0.3-0.352-0.515-0.666-0.561l-2.777-0.403c-0.119-0.018-0.221-0.092-0.274-0.199l-1.241-2.519C18.079,0.174,17.797,0,17.479,0c-0.316,0-0.598,0.176-0.737,0.458l-1.243,2.519c-0.054,0.108-0.156,0.183-0.273,0.199L12.445,3.58c-0.311,0.043-0.569,0.261-0.665,0.56c-0.098,0.3-0.019,0.624,0.207,0.843l2.012,1.96c0.086,0.084,0.125,0.207,0.104,0.322l-0.475,2.769c-0.041,0.245,0.021,0.481,0.18,0.667c0.244,0.292,0.674,0.381,1.016,0.201l2.486-1.307c0.104-0.056,0.232-0.054,0.339,0l2.485,1.307C20.256,10.967,20.387,11,20.518,11c0.245,0,0.477-0.109,0.633-0.298c0.156-0.185,0.223-0.429,0.18-0.667l-0.475-2.768c-0.021-0.117,0.02-0.24,0.104-0.322L22.971,4.984z"/><path d="M22.966,17.984c0.227-0.219,0.307-0.543,0.209-0.844c-0.099-0.299-0.354-0.516-0.666-0.561l-2.777-0.404c-0.119-0.018-0.221-0.092-0.274-0.199l-1.241-2.518c-0.141-0.283-0.422-0.46-0.738-0.46s-0.6,0.177-0.738,0.46l-1.242,2.518c-0.054,0.107-0.156,0.184-0.275,0.199l-2.775,0.404c-0.314,0.045-0.568,0.259-0.666,0.561c-0.098,0.301-0.018,0.623,0.207,0.844l2.011,1.961c0.087,0.082,0.124,0.205,0.104,0.322l-0.475,2.769c-0.055,0.312,0.07,0.618,0.328,0.806c0.254,0.186,0.586,0.207,0.865,0.063l2.484-1.307c0.107-0.056,0.234-0.056,0.341,0l2.485,1.307C20.253,23.968,20.384,24,20.515,24c0.172,0,0.34-0.055,0.482-0.158c0.256-0.188,0.383-0.494,0.329-0.806l-0.478-2.769c-0.02-0.117,0.021-0.24,0.104-0.322L22.966,17.984z M20.874,23.115c0.021,0.14-0.029,0.273-0.145,0.354c-0.115,0.086-0.258,0.094-0.385,0.029l-2.487-1.309c-0.118-0.063-0.251-0.096-0.382-0.096s-0.264,0.032-0.385,0.098l-2.485,1.307c-0.124,0.064-0.269,0.057-0.382-0.029c-0.116-0.08-0.168-0.215-0.146-0.354l0.479-2.77c0.045-0.267-0.043-0.539-0.236-0.729l-2.014-1.96c-0.104-0.099-0.135-0.237-0.092-0.371c0.045-0.136,0.154-0.228,0.295-0.249l2.778-0.403c0.269-0.038,0.5-0.207,0.618-0.448l1.242-2.521c0.064-0.127,0.184-0.202,0.326-0.202c0.144,0,0.265,0.075,0.328,0.202l1.242,2.521c0.117,0.241,0.35,0.41,0.617,0.448l2.78,0.403c0.14,0.021,0.249,0.113,0.292,0.249c0.044,0.134,0.011,0.272-0.092,0.371l-2.01,1.96c-0.192,0.189-0.281,0.461-0.235,0.729L20.874,23.115z"/></svg>
         </div>
@@ -227,28 +224,40 @@
             <li class="grid-item grid-item--ad">
                 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIPK7M&placement=simpleiconsorg" id="_carbonads_js"></script>
             </li>
-            {% for icon in iconsArray %}
-                {% assign iconArray = icon | split: "," %}
-                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}; --order-alpha: {{ iconArray[8] }}">
-                    <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg" download>
-                        {% assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" %}
-                        {% include_relative {{ filePath }} %}
-                        <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
-                    </a>
-                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
-                </li>
-            {% endfor %}
-            {% for icon in greyscaleIconsArray %}
-                {% assign iconArray = icon | split: "," %}
-                <li class="grid-item {{ iconArray[6] }}" style="background-color: #{{ iconArray[4] }}; --order-alpha: {{ iconArray[8] }}">
-                    <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg" download>
-                        {% assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" %}
-                        {% include_relative {{ filePath }} %}
-                        <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
-                    </a>
-                    <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
-                </li>
-            {% endfor %}
+            {%- for icon in iconsArray -%}
+            {%- assign iconArray = icon | split: "," -%}
+            {%- assign hex0 = iconArray[4] | slice: 0 -%}
+            {%- assign hex1 = iconArray[4] | slice: 1 -%}
+            {%- assign hex2 = iconArray[4] | slice: 2 -%}
+            {%- assign hex3 = iconArray[4] | slice: 3 -%}
+            {%- assign hex4 = iconArray[4] | slice: 4 -%}
+            {%- assign hex5 = iconArray[4] | slice: 5 -%}
+            <li class="grid-item {{ iconArray[6] }}" style="background-color: #{%- if hex0 == hex1 and hex2 == hex3 and hex4 == hex5 -%}{{hex0}}{{hex2}}{{hex4}}{%- else -%}{{ iconArray[4] }}{%- endif -%}; --order-alpha: {{ iconArray[8] }}">
+                <a class="grid-item__link" href="/icons/{{ iconArray[3] }}.svg" download>
+                    {%- assign filePath = iconArray[3] | prepend: "icons/" | append: ".svg" -%}
+                    {%- include_relative {{ filePath }} -%}
+                    <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
+                </a>
+                <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
+            </li>
+            {%- endfor -%}
+            {%- for icon in greyscaleIconsArray -%}
+            {%- assign iconArray = icon | split: "," -%}
+            {%- assign hex0 = iconArray[4] | slice: 0 -%}
+            {%- assign hex1 = iconArray[4] | slice: 1 -%}
+            {%- assign hex2 = iconArray[4] | slice: 2 -%}
+            {%- assign hex3 = iconArray[4] | slice: 3 -%}
+            {%- assign hex4 = iconArray[4] | slice: 4 -%}
+            {%- assign hex5 = iconArray[4] | slice: 5 -%}
+            <li class="grid-item {{ iconArray[6] }}" style="background-color: #{%- if hex0 == hex1 and hex2 == hex3 and hex4 == hex5 -%}{{hex0}}{{hex2}}{{hex4}}{%- else -%}{{ iconArray[4] }}{%- endif -%}; --order-alpha: {{ iconArray[8] }}">
+                <a class="grid-item__link" href="/icons/{{ iconArray[1] }}.svg" download>
+                    {%- assign filePath = iconArray[1] | prepend: "icons/" | append: ".svg" -%}
+                    {%- include_relative {{ filePath }} -%}
+                    <h2 class="grid-item__title">{{ iconArray[5] }}</h2>
+                </a>
+                <p class="grid-item__subtitle">#{{ iconArray[4] }}</p>
+            </li>
+            {%- endfor -%}
         </ul>
     </main>
     <footer class="footer" role="contentinfo">
