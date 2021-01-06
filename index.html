@@ -44,7 +44,7 @@
     {% assign filename = filename | replace: "+", "plus" %}
     {% assign filename = filename | replace: ".", "-dot-" %}
     {% assign filename = filename | replace: "&", "-and-" %}
-    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" %}
+    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
 
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
