@@ -32,7 +32,7 @@ module.exports = {
      */
     htmlFriendlyToTitle: htmlFriendlyTitle => (
       htmlFriendlyTitle
-        .replace(/&amp;/g, "&")
         .replace(/&apos;/g, "’")
+        .replace(/&amp;/g, "&")
     )
 }
