@@ -48,7 +48,7 @@ node_modules/
 icons/*.js
 /index.js
 
-# Ignore files that are not SVGs in the icons folder
+# Ignore all files in the icons folder
 icons/*
-#except SVG files
+# Except SVG files
 !*.svg
