@@ -8,6 +8,6 @@ labels: icon outdated
 
 
 <!-- When reporting an update to an icon we need information such as: -->
-**Name:**
+**Brand Name:**
 **Official resources for icon and color:**
   <!-- for example media kits, brand guidelines, SVG files, ...) -->
