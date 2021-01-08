@@ -12,7 +12,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: 12.x
     - name: Install dependencies
@@ -32,7 +32,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: 12.x
     - name: Install dependencies
@@ -52,22 +52,31 @@ jobs:
         RELEASE_BODY=$(echo '${{ steps.commit.outputs.git-message }}' | tail -n $(expr $(echo '${{ steps.commit.outputs.git-message }}' | wc -l) - 1))
         echo "::set-output name=body::$RELEASE_BODY"
     - name: Get release version
-      id: get_version
+      id: get-version
       run: |
         export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
         echo "::set-output name=version::$PACKAGE_VERSION"
     - name: Create and push git tag
       uses: actions-ecosystem/action-push-tag@v1
       with:
-        tag: ${{ steps.get_version.outputs.version }}
+        tag: ${{ steps.get-version.outputs.version }}
         message: ${{ steps.commit.outputs.git-message }}
     - name: Create release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.get_version.outputs.version }}
+        tag_name: ${{ steps.get-version.outputs.version }}
         release_name: ${{ steps.release.outputs.title }}
         body: ${{ steps.release.outputs.body }}
-        draft: false
-        prerelease: false
+  font:
+    name: Trigger simple-icons-font release
+    needs: npm
+    runs-on: ubuntu-latest
+    steps:
+    - name: Trigger simple-icons-font release
+      run: |
+        curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.SIMPLE_ICONS_FONT_TOKEN }}" \
+          -d '{"ref":"develop"}' \
+          https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
