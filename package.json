@@ -31,7 +31,7 @@
   },
   "scripts": {
     "build": "node scripts/build-package.js",
-    "clean": "rm icons/*.js index.js",
+    "clean": "rm -f icons/*.js index.js",
     "lint": "run-s our-lint jsonlint svglint wslint",
     "our-lint": "node scripts/lint.js",
     "jsonlint": "jsonlint _data/simple-icons.json -q -V .jsonlintschema",
