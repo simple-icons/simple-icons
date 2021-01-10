@@ -7,9 +7,8 @@ indent_style=space
 insert_final_newline=true
 trim_trailing_whitespace=true
 
-[LICENSE.md]
+[*.md]
 indent_size=unset
-indent_style=space
 
 [*.svg]
 insert_final_newline=false
