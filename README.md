@@ -143,4 +143,4 @@ Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/s
 
 [![Build status](https://img.shields.io/github/workflow/status/simple-icons/simple-icons/Verify/develop?logo=github)](https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop)
 [![npm version](https://img.shields.io/npm/v/simple-icons.svg?logo=npm)](https://www.npmjs.com/package/simple-icons)
-[![Packagist version](https://img.shields.io/packagist/v/simple-icons/simple-icons)](https://packagist.org/packages/simple-icons/simple-icons)
+[![Packagist version](https://img.shields.io/packagist/v/simple-icons/simple-icons?logo=packagist&logoColor=white)](https://packagist.org/packages/simple-icons/simple-icons)
