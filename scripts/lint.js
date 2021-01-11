@@ -2,15 +2,22 @@
 /**
  * @fileoverview Lints for the package that can't be implemented in the existing linters (e.g. jsonlint/svglint)
  */
+ 
+const fs = require("fs");
+const path = require("path");
 
-const { icons } = require("../_data/simple-icons.json");
+const { diffLinesUnified } = require("jest-diff");
+
+const simpleIconsData = require("../_data/simple-icons.json");
+const simpleIconsDataFile = path.resolve(
+  __dirname, "..", "_data", "simple-icons.json");
 
 /**
  * Contains our tests so they can be isolated from eachother; I don't think each test is worth its own file
  * @type {{[k:string]: () => (string|undefined)}}
  */
 const TESTS = {
-  /** Tests whether our icons are in alphabetical order */
+  /* Tests whether our icons are in alphabetical order */
   alphabetical: function() {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
@@ -22,10 +29,26 @@ const TESTS = {
       return invalidEntries;
     };
 
-    const invalids = icons.reduce(collector, []);
+    const invalids = simpleIconsData.icons.reduce(collector, []);
     if (invalids.length) {
       return `Some icons aren't in alphabetical order:
         ${invalids.map(icon => icon.title).join(", ")}`;
+    }
+  },
+
+  /* Check the prettification of the data file */
+  prettified: function() {
+    const simpleIconsDataString = fs.readFileSync(
+      simpleIconsDataFile, "utf8").replace(/\r\n/g, '\n');
+    const simpleIconsDataPretty = `${JSON.stringify(simpleIconsData, null, "    ")}\n`;
+    if (simpleIconsDataString !== simpleIconsDataPretty) {
+      const dataDiff = diffLinesUnified(simpleIconsDataString.split("\n"),
+                                        simpleIconsDataPretty.split("\n"),
+                                        {
+                                          expand: false,
+                                          omitAnnotationLines: true
+                                        });
+      return `Data file is not prettified:\n\n${dataDiff}`;
     }
   }
 };
