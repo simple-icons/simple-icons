@@ -28,7 +28,7 @@ const { titleToFilename } = require("./utils");
 
 // Local helper functions
 function escape(value) {
-  return value.replace(/'/g, "\\'");
+  return value.replace(/(?<!\\)'/g, "\\'");
 }
 function iconToKeyValue(icon) {
   const iconTitle = escape(icon.title);

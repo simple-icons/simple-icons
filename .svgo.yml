@@ -37,6 +37,8 @@ plugins:
   - removeAttrs:
       attrs:
         - baseProfile
+        - version
+        - fill-rule
 
   # remove paths with fill="none"
   - removeUselessStrokeAndFill:

@@ -1,0 +1,10 @@
+exclude:
+- tests
+- scripts
+- composer.json
+- CONTRIBUTING.md
+- Dockerfile
+- index.js
+- package-lock.json
+- package.json
+- README.md
