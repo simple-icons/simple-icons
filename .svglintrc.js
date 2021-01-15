@@ -327,8 +327,10 @@ module.exports = {
                     zCommands = 'Zz';
               let currLine = [],
                   currAbsCoord = [undefined, undefined],
+                  startPoint,
                   _inStraightLine = false,
-                  _nextInStraightLine = false;
+                  _nextInStraightLine = false,
+                  _resetStartPoint = false;
 
               for (let s = 0; s < segments.length; s++) {
                 let seg = segments[s],
@@ -363,9 +365,17 @@ module.exports = {
                   currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
                 } else if (zCommands.includes(cmd)) {
                   // Overlapping in Z should be handled in another rule
-                  currAbsCoord = [undefined, undefined];
+                  currAbsCoord = [startPoint[0], startPoint[1]];
+                  _resetStartPoint = true;
                 } else {
                   throw new Error(`"${cmd}" command not handled`);
+                }
+
+                if (startPoint === undefined) {
+                  startPoint = [currAbsCoord[0], currAbsCoord[1]];
+                } else if (_resetStartPoint) {
+                  startPoint = undefined;
+                  _resetStartPoint = false;
                 }
 
                 _nextInStraightLine = straightLineCommands.includes(nextCmd);
