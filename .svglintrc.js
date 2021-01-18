@@ -15,7 +15,7 @@ const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
 
 // set env SI_UPDATE_IGNORE to recreate the ignore file
-const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true'
+const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
 const ignoreFile = "./.svglint-ignored.json";
 const iconIgnored = !updateIgnoreFile ? require(ignoreFile) : {};
 
@@ -36,6 +36,14 @@ function sortObjectByValue(obj) {
 function removeLeadingZeros(number) {
   // convert 0.03 to '.03'
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
+}
+
+/**
+ * Given three points, returns if the middle one (x2, y2) is collinear
+ *   to the line formed by the two limit points.
+ **/
+function collinear(x1, y1, x2, y2, x3, y3) {
+    return (x1 * (y2 - y3) + x2 * (y3 - y1) +  x3 * (y1 - y2)) === 0;
 }
 
 if (updateIgnoreFile) {
@@ -177,9 +185,8 @@ module.exports = {
               return;
             }
 
-            const parsedPath = svgPath(iconPath);
-            const { segments } = parsedPath;
-            const { segments: absSegments } = parsedPath.abs().unshort();
+            const { segments } = svgPath(iconPath);
+            const { segments: absSegments } = svgPath(iconPath).abs().unshort();
 
             const lowerMovementCommands = ['m', 'l'];
             const lowerDirectionCommands = ['h', 'v'];
@@ -217,14 +224,14 @@ module.exports = {
                   }
                 }
                 if (index > 0) {
-                  let [yPrevCoord, xPrevCoord, ...prevRest] = [...absSegments[index - 1]].reverse();
+                  let [yPrevCoord, xPrevCoord] = [...absSegments[index - 1]].reverse();
                   // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
                   if (upperDirectionCommands.includes(xPrevCoord)) {
                     xPrevCoord = undefined;
                     yPrevCoord = undefined;
                     let idx = index;
                     while (--idx > 0 && (xPrevCoord === undefined || yPrevCoord === undefined)) {
-                      let [yPrevCoordDeep, xPrevCoordDeep, ...rest] = [...absSegments[idx]].reverse();
+                      let [yPrevCoordDeep, xPrevCoordDeep] = [...absSegments[idx]].reverse();
                       // If the previous command was a horizontal movement, we need to consider the single coordinate as x
                       if (upperHorDirectionCommand === xPrevCoordDeep) {
                         xPrevCoordDeep = yPrevCoordDeep;
@@ -300,6 +307,115 @@ module.exports = {
                 ignoreIcon(reporter.name, iconPath, $);
               }
             }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "collinear-segments";
+
+            const iconPath = $.find("path").attr("d");
+            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+              return;
+            }
+
+            /**
+             * Extracts collinear coordinates from SVG path straight lines
+             *   (does not extracts collinear coordinates from curves).
+             **/
+            const getCollinearSegments = (path) => {
+              const { segments } = svgPath(path).unarc().unshort(),
+                    collinearSegments = [],
+                    straightLineCommands = 'HhVvLlMm',
+                    zCommands = 'Zz';
+              let currLine = [],
+                  currAbsCoord = [undefined, undefined],
+                  startPoint,
+                  _inStraightLine = false,
+                  _nextInStraightLine = false,
+                  _resetStartPoint = false;
+
+              for (let s = 0; s < segments.length; s++) {
+                let seg = segments[s],
+                    cmd = seg[0],
+                    nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
+
+                if ('LM'.includes(cmd)) {
+                  currAbsCoord[0] = seg[1];
+                  currAbsCoord[1] = seg[2];
+                } else if ('lm'.includes(cmd)) {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                } else if (cmd === 'H') {
+                  currAbsCoord[0] = seg[1];
+                } else if (cmd === 'h') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                } else if (cmd === 'V') {
+                  currAbsCoord[1] = seg[1];
+                } else if (cmd === 'v') {
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
+                } else if (cmd === 'C') {
+                  currAbsCoord[0] = seg[5];
+                  currAbsCoord[1] = seg[6];
+                } else if (cmd === 'c') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
+                } else if (cmd === 'Q') {
+                  currAbsCoord[0] = seg[3];
+                  currAbsCoord[1] = seg[4];
+                } else if (cmd === 'q') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
+                } else if (zCommands.includes(cmd)) {
+                  // Overlapping in Z should be handled in another rule
+                  currAbsCoord = [startPoint[0], startPoint[1]];
+                  _resetStartPoint = true;
+                } else {
+                  throw new Error(`"${cmd}" command not handled`);
+                }
+
+                if (startPoint === undefined) {
+                  startPoint = [currAbsCoord[0], currAbsCoord[1]];
+                } else if (_resetStartPoint) {
+                  startPoint = undefined;
+                  _resetStartPoint = false;
+                }
+
+                _nextInStraightLine = straightLineCommands.includes(nextCmd);
+                let _exitingStraightLine = (_inStraightLine && !_nextInStraightLine);
+                _inStraightLine = straightLineCommands.includes(cmd);
+
+                if (_inStraightLine) {
+                  currLine.push([currAbsCoord[0], currAbsCoord[1]]);
+                } else {
+                  if (_exitingStraightLine) {
+                    if (straightLineCommands.includes(cmd)) {
+                      currLine.push([currAbsCoord[0], currAbsCoord[1]]);
+                    }
+                    // Get collinear coordinates
+                    for (let p = 1; p < currLine.length - 1; p++) {
+                      let _collinearCoord = collinear(currLine[p - 1][0],
+                                                      currLine[p - 1][1],
+                                                      currLine[p][0],
+                                                      currLine[p][1],
+                                                      currLine[p + 1][0],
+                                                      currLine[p + 1][1]);
+                      if (_collinearCoord) {
+                        collinearSegments.push(segments[s - currLine.length + p + 1]);
+                      }
+                    }
+                  }
+                  currLine = [];
+                }
+              }
+
+              return collinearSegments;
+            }
+
+            getCollinearSegments(iconPath).forEach((segment) => {
+              let segmentString = `${segment[0]}${segment[1]}`;
+              if ('LlMm'.includes(segment[0])) {
+                segmentString += ` ${segment[2]}`
+              }
+              reporter.error(`Collinear segment "${segmentString}" in path (should be removed)`);
+            });
           },
           function(reporter, $, ast) {
             reporter.name = "extraneous";
