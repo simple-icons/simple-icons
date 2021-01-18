@@ -78,6 +78,17 @@ jobs:
       - name: Trigger simple-icons-font release
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.SIMPLE_ICONS_FONT_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
+  website:
+    name: Trigger simple-icons-website update
+    needs: npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger simple-icons-website update
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -d '{"ref":"master"}' \
+            https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches
