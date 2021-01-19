@@ -99,8 +99,8 @@ There are many different tools for editing SVG files, some options include:
 
 | Name | Description | Platform | Price |
 | :---- | :---- | :----: | :----: |
-| [Inkscape](https://inkscape.org/en/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
-| [Affinity Designer](https://affinity.serif.com/de/designer/) | Vector Graphics Editor | Windows, Mac | $ |
+| [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 | [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free |
 
@@ -114,6 +114,8 @@ Using your preferred tool you should:
 1. Center the icon horizontally and vertically.
 1. Remove all colors. The icon should be monochromatic.
 1. Export the icon as an SVG.
+
+Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
 
 ### 3. Optimize the Icon
 
@@ -187,13 +189,16 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
   * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
+There is also an optional field that may be used to specify the brand guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+
 Here is the object for The Movie Database as an example:
 
 ```json
 {
     "title": "The Movie Database",
     "hex": "01D277",
-    "source": "https://www.themoviedb.org/about/logos-attribution"
+    "source": "https://www.themoviedb.org/about/logos-attribution",
+    "guidelines": "https://www.themoviedb.org/about/logos-attribution"
 }
 ```
 
