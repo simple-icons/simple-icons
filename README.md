@@ -84,6 +84,18 @@ console.log(icon);
 */
 ```
 
+Lastly, the `simpleIcons` object is also enumerable.
+This is useful if you want to do a computation on every icon:
+
+```javascript
+const simpleIcons = require('simple-icons');
+
+for (const title in simpleIcons) {
+    const icon = simpleIcons.get(title);
+    // do stuff
+}
+```
+
 #### TypeScript Usage
 
 There are also TypeScript type definitions for the Node package. To use them, simply run:
