@@ -10,7 +10,7 @@ Object.defineProperty(icons, "get", {
     for (var iconName in icons) {
       var icon = icons[iconName];
       if (icon.title.toLowerCase() === normalizedName || icon.slug === normalizedName) {
-         return icon;
+        return icon;
       }
     }
   }
