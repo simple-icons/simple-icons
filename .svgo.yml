@@ -3,7 +3,7 @@ multipass: true
 plugins:
   # Set <path> precision to 3 decimal places
   - convertPathData:
-      floatPrecision: 3
+      floatPrecision: 4
       noSpaceAfterFlags: false
 
   # Sort attributes on the <SVG>
