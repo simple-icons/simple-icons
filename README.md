@@ -21,7 +21,7 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 
 ### CDN Usage
 
-Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+Icons can be served from a CDN such as <img src="https://simpleicons.org/icons/jsdelivr.svg" alt="JSDelivr" width=14 height=14> [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/[ICON NAME].svg" />
@@ -37,9 +37,9 @@ Where `[ICON NAME]` is replaced by the icon name, for example:
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-### Node Usage
+### Node Usage <img src="https://simpleicons.org/icons/node-dot-js.svg" alt="Node" align=left width=24 height=24>
 
-The icons are also available through our npm package. To install, simply run:
+The icons are also available through our <img src="https://simpleicons.org/icons/npm.svg" alt="npm" width=18 height=18> npm package. To install, simply run:
 
 ```
 $ npm install simple-icons
@@ -65,7 +65,7 @@ console.log(simpleIcons.get('Simple Icons'));
 ```
 
 Alternatively you can import the needed icons individually.
-This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
+This is useful if you are e.g. compiling your code with <img src="https://simpleicons.org/icons/webpack.svg" alt="webpack" width=14 height=14> [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
 const icon = require('simple-icons/icons/simpleicons');
