@@ -68,16 +68,25 @@
 
   function normalizeSearchTerm(value) {
     return value.toLowerCase()
-      .replace(/à|á|â|ã|ä/g, "a")
-      .replace(/ç|č|ć/g, "c")
-      .replace(/è|é|ê|ë/g, "e")
-      .replace(/ì|í|î|ï/g, "i")
-      .replace(/ñ|ň|ń/g, "n")
-      .replace(/ò|ó|ô|õ|ö/g, "o")
-      .replace(/š|ś/g, "s")
-      .replace(/ù|ú|û|ü/g, "u")
-      .replace(/ý|ÿ/g, "y")
-      .replace(/ž|ź/g, "z");
+      .replace(/[àáâãäāăą]/g, "a")
+      .replace(/[çćĉċč]/g, "c")
+      .replace(/[ďđ]/g, "d")
+      .replace(/[èéêëēĕėęě]/g, "e")
+      .replace(/[ĝğġģ]/g, "g")
+      .replace(/[ĥħ]/g, "h")
+      .replace(/[ìíîïĩīĭįı]/g, "i")
+      .replace(/[ĵ]/g, "j")
+      .replace(/[ķĸ]/g, "k")
+      .replace(/[ĺļľŀł]/g, "l")
+      .replace(/[ñńņň]/g, "n")
+      .replace(/[òóôõöōŏő]/g, "o")
+      .replace(/[ŕŗř]/g, "r")
+      .replace(/[śŝşš]/g, "s")
+      .replace(/[ţťŧ]/g, "t")
+      .replace(/[ùúûüũūŭůűų]/g, "u")
+      .replace(/[ŵ]/g, "w")
+      .replace(/[ýÿŷ]/g, "y")
+      .replace(/[źżž]/g, "z");
   }
 
   function search(value) {
