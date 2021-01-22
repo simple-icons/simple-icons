@@ -22,7 +22,7 @@ module.exports = {
             .replace(/ŧ/g, "t")
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^\w\-]/g, "")
+            .replace(/[^a-z0-9_\-]/g, "")
     ),
 
     /**
