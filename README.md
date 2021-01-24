@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://simpleicons.org/">
-<img src="https://simpleicons.org/icons/simpleicons.svg" alt="Simple Icons" width=64 height=64>
+<img src="./icons/simpleicons.svg" alt="Simple Icons" width=64 height=64>
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
@@ -21,7 +21,7 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 
 ### CDN Usage
 
-Icons can be served from a CDN such as <img src="https://simpleicons.org/icons/jsdelivr.svg" alt="JSDelivr" width=14 height=14> [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/[ICON NAME].svg" />
@@ -37,9 +37,9 @@ Where `[ICON NAME]` is replaced by the icon name, for example:
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-### Node Usage <img src="https://simpleicons.org/icons/node-dot-js.svg" alt="Node" align=left width=24 height=24>
+### Node Usage <img src="./icons/node-dot-js.svg" alt="Node" align=left width=24 height=24>
 
-The icons are also available through our <img src="https://simpleicons.org/icons/npm.svg" alt="npm" width=18 height=18> npm package. To install, simply run:
+The icons are also available through our npm package. To install, simply run:
 
 ```
 $ npm install simple-icons
@@ -65,7 +65,7 @@ console.log(simpleIcons.get('Simple Icons'));
 ```
 
 Alternatively you can import the needed icons individually.
-This is useful if you are e.g. compiling your code with <img src="https://simpleicons.org/icons/webpack.svg" alt="webpack" width=14 height=14> [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
+This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
 const icon = require('simple-icons/icons/simpleicons');
@@ -96,7 +96,7 @@ for (const title in simpleIcons) {
 }
 ```
 
-#### TypeScript Usage <img src="https://simpleicons.org/icons/typescript.svg" alt="TypeScript" align=left width=24 height=24>
+#### TypeScript Usage <img src="./icons/typescript.svg" alt="TypeScript" align=left width=24 height=24>
 
 There are also TypeScript type definitions for the Node package. To use them, simply run:
 
@@ -104,7 +104,7 @@ There are also TypeScript type definitions for the Node package. To use them, si
 $ npm install @types/simple-icons
 ```
 
-### PHP Usage <img src="https://simpleicons.org/icons/php.svg" alt="PHP" align=left width=24 height=24>
+### PHP Usage <img src="./icons/php.svg" alt="PHP" align=left width=24 height=24>
 
 The icons are also available through our Packagist package. To install, simply run:
 
@@ -125,34 +125,34 @@ echo file_get_contents('path/to/package/icons/simple-icons.svg');
 
 ## Third Party Extensions
 
-### Drupal <img src="https://simpleicons.org/icons/drupal.svg" alt="Drupal" align=left width=24 height=24>
+### Drupal <img src="./icons/drupal.svg" alt="Drupal" align=left width=24 height=24>
 
 Icons are also available as a [Drupal module](https://www.drupal.org/project/simple_icons) created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme).
 
-### Flutter <img src="https://simpleicons.org/icons/flutter.svg" alt="Flutter" align=left width=24 height=24>
+### Flutter <img src="./icons/flutter.svg" alt="Flutter" align=left width=24 height=24>
 
 Icons are also available as a [Flutter package](https://pub.dev/packages/flutter_brand_icons) created by  [@muj-programmer](https://github.com/muj-programmer).
 
-### Home Assistant <img src="https://simpleicons.org/icons/homeassistant.svg" alt="Home Assistant" align=left width=24 height=24>
+### Home Assistant <img src="./icons/homeassistant.svg" alt="Home Assistant" align=left width=24 height=24>
 
 Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
 
-### Kirby <img src="https://simpleicons.org/icons/kirby.svg" alt="Kirby" align=left width=24 height=24>
+### Kirby <img src="./icons/kirby.svg" alt="Kirby" align=left width=24 height=24>
 
 Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
 
-### React <img src="https://simpleicons.org/icons/react.svg" alt="React" align=left width=24 height=24>
+### React <img src="./icons/react.svg" alt="React" align=left width=24 height=24>
 
 Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
 
-### Svelte <img src="https://simpleicons.org/icons/svelte.svg" alt="Svelte" align=left width=24 height=24>
+### Svelte <img src="./icons/svelte.svg" alt="Svelte" align=left width=24 height=24>
 
 Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
 
-### Vue <img src="https://simpleicons.org/icons/vue-dot-js.svg" alt="Vue" align=left width=24 height=24>
+### Vue <img src="./icons/vue-dot-js.svg" alt="Vue" align=left width=24 height=24>
 
 Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by  [@noahlitvin](https://github.com/noahlitvin).
 
-### WordPress <img src="https://simpleicons.org/icons/wordpress.svg" alt="WordPress" align=left width=24 height=24>
+### WordPress <img src="./icons/wordpress.svg" alt="WordPress" align=left width=24 height=24>
 
 Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
