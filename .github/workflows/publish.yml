@@ -47,9 +47,9 @@ jobs:
       - name: Get release title and body
         id: release
         run: |
-          RELEASE_TITLE=$(echo '${{ steps.commit.outputs.git-message }}' | head -n 1)
+          RELEASE_TITLE=$(echo "${{ steps.commit.outputs.git-message }}" | head -n 1)
           echo "::set-output name=title::$RELEASE_TITLE"
-          RELEASE_BODY=$(echo '${{ steps.commit.outputs.git-message }}' | tail -n +3)
+          RELEASE_BODY=$(echo "${{ steps.commit.outputs.git-message }}" | tail -n +3)
           echo "::set-output name=body::$RELEASE_BODY"
       - name: Get release version
         id: get-version
