@@ -360,10 +360,21 @@ a.share-button {
 .redesign-banner a {
   color: #0096ee;
 }
-.redesign-banner a:hover {
+.redesign-banner a:focus, .redesign-banner a:hover,
+.redesign-banner button:focus, .redesign-banner button:hover {
   text-decoration: underline;
 }
-
+.redesign-banner span {
+  float: right
+}
+.redesign-banner button {
+  border: none;
+  background-color: transparent;
+  color: #0096ee;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
 
 .hidden {
   display: none;

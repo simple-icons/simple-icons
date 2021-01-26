@@ -191,4 +191,49 @@
   $orderByRelevance.addEventListener('click', function() {
     selectOrdering($orderByRelevance);
   });
+
+  /* Redesign */
+
+  var $banner = document.querySelector('.redesign-banner'),
+      $redirectAutomatically = document.getElementById('redirect-to-redesign'),
+      $hideOnce = document.getElementById('hide-feedback-request-once'),
+      $hideAlways = document.getElementById('hide-feedback-request');
+
+  var redesignUrl = 'https://simple-icons.github.io/simple-icons-website/',
+      hideBannerAlwaysIdentifier = 'hide-banner',
+      redirectAutomaticallyIdentifier = 'redirect-to-redesign';
+
+  $redirectAutomatically.addEventListener('click', function() {
+    console.log('redirect button');
+    if (localStorage) {
+      localStorage.setItem(redirectAutomaticallyIdentifier, true);
+    }
+
+    window.location.replace(redesignUrl);
+  });
+  $hideOnce.addEventListener('click', function () {
+    console.log('hide once button');
+    $banner.classList.add('hidden');
+  });
+  $hideAlways.addEventListener('click', function () {
+    console.log('hide always button');
+    if (localStorage) {
+      localStorage.setItem(hideBannerAlwaysIdentifier, true);
+    }
+
+    $banner.classList.add('hidden');
+  });
+
+  if (localStorage) {
+    var redirect = localStorage.getItem(redirectAutomaticallyIdentifier);
+    console.log('should redirect', redirect, document.referrer);
+    if (redirect && !(document.referrer === redesignUrl)) {
+      window.location.replace(redesignUrl);
+    }
+
+    var hide = localStorage.getItem(hideBannerAlwaysIdentifier);
+    if (hide) {
+      $banner.classList.add('hidden');
+    }
+  }
 })( document );
