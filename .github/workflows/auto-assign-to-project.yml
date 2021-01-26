@@ -1,7 +1,7 @@
 name: Auto Assign to Project(s)
 
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, labeled]
 env:
   MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
