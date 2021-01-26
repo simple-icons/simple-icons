@@ -204,19 +204,26 @@
       redirectAutomaticallyIdentifier = 'redirect-to-redesign';
 
   $redirectAutomatically.addEventListener('click', function() {
-    console.log('redirect button');
+    var redirect = true;
     if (localStorage) {
-      localStorage.setItem(redirectAutomaticallyIdentifier, true);
+      var currentVal = localStorage.getItem(redirectAutomaticallyIdentifier);
+      if (currentVal === 'true') {
+        redirect = false;
+      }
+
+      localStorage.setItem(redirectAutomaticallyIdentifier, redirect);
     }
 
-    window.location.replace(redesignUrl);
+    if (redirect) {
+      window.location.replace(redesignUrl);
+    } else {
+      $redirectAutomatically.innerHTML = "Redirect automatically";
+    }
   });
   $hideOnce.addEventListener('click', function () {
-    console.log('hide once button');
     $banner.classList.add('hidden');
   });
   $hideAlways.addEventListener('click', function () {
-    console.log('hide always button');
     if (localStorage) {
       localStorage.setItem(hideBannerAlwaysIdentifier, true);
     }
@@ -226,9 +233,11 @@
 
   if (localStorage) {
     var redirect = localStorage.getItem(redirectAutomaticallyIdentifier);
-    console.log('should redirect', redirect, document.referrer);
-    if (redirect && !(document.referrer === redesignUrl)) {
-      window.location.replace(redesignUrl);
+    if (redirect === 'true') {
+      $redirectAutomatically.innerHTML = "Disable redirect";
+      if (document.referrer !== redesignUrl) {
+        window.location.replace(redesignUrl);
+      }
     }
 
     var hide = localStorage.getItem(hideBannerAlwaysIdentifier);
