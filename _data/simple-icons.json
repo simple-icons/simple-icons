@@ -76,6 +76,11 @@
             "source": "https://www.accenture.com/"
         },
         {
+            "title": "Acclaim",
+            "hex": "26689A",
+            "source": "https://www.youracclaim.com/"
+        },
+        {
             "title": "Accusoft",
             "hex": "A9225C",
             "source": "https://company-39138.frontify.com/d/7EKFm12NQSa8/accusoft-corporation-style-guide#/style-guide/logo"
@@ -293,12 +298,17 @@
         {
             "title": "AliExpress",
             "hex": "FF4747",
-            "source": "https://doc.irasia.com/listco/hk/alibabagroup/annual/2020/ar2020.pdf"
+            "source": "https://www.alibabagroup.com/en/ir/reports"
         },
         {
             "title": "Alipay",
             "hex": "00A1E9",
             "source": "https://gw.alipayobjects.com/os/rmsportal/trUJZfSrlnRCcFgfZGjD.ai"
+        },
+        {
+            "title": "Alitalia",
+            "hex": "006643",
+            "source": "https://www.alitalia.com/it_it/fly-alitalia/in-flight/ulisse-magazine.html"
         },
         {
             "title": "AlliedModders",
@@ -334,6 +344,11 @@
             "title": "Amazon AWS",
             "hex": "232F3E",
             "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+        },
+        {
+            "title": "Amazon DynamoDB",
+            "hex": "4053D6",
+            "source": "https://aws.amazon.com/architecture/icons/"
         },
         {
             "title": "Amazon Fire TV",
@@ -1031,6 +1046,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
         },
         {
+            "title": "Bookmeter",
+            "hex": "64BC4B",
+            "source": "https://bookmeter.com/"
+        },
+        {
             "title": "Boost",
             "hex": "F7901E",
             "source": "https://www.boostmobile.com/"
@@ -1166,6 +1186,11 @@
             "source": "https://github.com/isocpp/logos"
         },
         {
+            "title": "Cachet",
+            "hex": "7ED321",
+            "source": "https://cachethq.io/press"
+        },
+        {
             "title": "Cairo Metro",
             "hex": "C10C0C",
             "source": "https://en.wikipedia.org/wiki/File:Cairo_metro_logo2012.svg"
@@ -1259,6 +1284,16 @@
             "title": "CEVO",
             "hex": "1EABE2",
             "source": "https://cevo.com/"
+        },
+        {
+            "title": "Chainlink",
+            "hex": "375BD2",
+            "source": "https://chain.link/brand-assets"
+        },
+        {
+            "title": "Chakra UI",
+            "hex": "319795",
+            "source": "https://github.com/chakra-ui/chakra-ui/blob/327e1624d22936abb43068e1f57054e43c9c6819/logo/logomark-colored.svg"
         },
         {
             "title": "ChartMogul",
@@ -1627,6 +1662,12 @@
             "source": "https://corona-renderer.com/about"
         },
         {
+            "title": "Corsair",
+            "hex": "000000",
+            "source": "https://www.corsair.com",
+            "guidelines": "https://www.corsair.com/press"
+        },
+        {
             "title": "Couchbase",
             "hex": "EA2328",
             "source": "https://www.couchbase.com/"
@@ -1685,6 +1726,11 @@
             "title": "CRYENGINE",
             "hex": "000000",
             "source": "https://www.cryengine.com/brand"
+        },
+        {
+            "title": "Crystal",
+            "hex": "000000",
+            "source": "https://crystal-lang.org/media/"
         },
         {
             "title": "CSS Wizardry",
@@ -2070,6 +2116,11 @@
             "title": "EA",
             "hex": "000000",
             "source": "https://www.ea.com"
+        },
+        {
+            "title": "Eagle",
+            "hex": "0072EF",
+            "source": "https://en.eagle.cool/"
         },
         {
             "title": "easyJet",
@@ -2835,8 +2886,8 @@
         },
         {
             "title": "Gmail",
-            "hex": "D14836",
-            "source": "https://material.io/guidelines/resources/sticker-sheets-icons.html#sticker-sheets-icons-components"
+            "hex": "EA4335",
+            "source": "https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg"
         },
         {
             "title": "GNOME",
@@ -2931,7 +2982,7 @@
         {
             "title": "Google Calendar",
             "hex": "4285F4",
-            "source": "https://commons.wikimedia.org/wiki/File:Google_Calendar_icon.svg"
+            "source": "https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg"
         },
         {
             "title": "Google Cardboard",
@@ -4340,6 +4391,11 @@
             "source": "https://lumen.laravel.com/"
         },
         {
+            "title": "Lydia",
+            "hex": "0180FF",
+            "source": "https://lydia-app.com/en/info/press.html"
+        },
+        {
             "title": "Lyft",
             "hex": "FF00BF",
             "source": "https://www.lyft.com/press"
@@ -4860,6 +4916,11 @@
             "source": "https://n26.com/"
         },
         {
+            "title": "Namecheap",
+            "hex": "DE3723",
+            "source": "https://www.namecheap.com/"
+        },
+        {
             "title": "National Grid",
             "hex": "00148C",
             "source": "https://www.nationalgrid.com/themes/custom/national_grid_group/logo.svg"
@@ -5140,6 +5201,11 @@
             "source": "https://okcupid.com/press"
         },
         {
+            "title": "Okta",
+            "hex": "007DC1",
+            "source": "https://www.okta.com/press-room/media-assets/"
+        },
+        {
             "title": "OnePlus",
             "hex": "F5010C",
             "source": "https://en.wikipedia.org/wiki/OnePlus#/media/File:OP_LU_Reg_1L_RGB_red_copy-01.svg"
@@ -5258,6 +5324,11 @@
             "title": "Opera",
             "hex": "FF1B2D",
             "source": "https://github.com/operasoftware/logo"
+        },
+        {
+            "title": "OPNSense",
+            "hex": "D94F00",
+            "source": "https://github.com/opnsense/core/blob/06b1804a3d358041607ec3a963ab90b720564cc3/src/opnsense/www/themes/opnsense/build/images/icon-logo.svg"
         },
         {
             "title": "Opsgenie",
@@ -6500,6 +6571,11 @@
             "source": "https://serverless.com/"
         },
         {
+            "title": "SFML",
+            "hex": "8CC445",
+            "source": "https://www.sfml-dev.org/download/goodies/"
+        },
+        {
             "title": "Shanghai Metro",
             "hex": "EC1C24",
             "source": "https://en.wikipedia.org/wiki/File:Shanghai_Metro_Full_Logo.svg"
@@ -6753,6 +6829,11 @@
             "title": "Songkick",
             "hex": "F80046",
             "source": "http://blog.songkick.com/media-assets"
+        },
+        {
+            "title": "Songoda",
+            "hex": "FC494A",
+            "source": "https://songoda.com/branding"
         },
         {
             "title": "SonicWall",
@@ -7202,7 +7283,7 @@
         {
             "title": "Taobao",
             "hex": "E94F20",
-            "source": "https://doc.irasia.com/listco/hk/alibabagroup/annual/2020/ar2020.pdf"
+            "source": "https://www.alibabagroup.com/en/ir/reports"
         },
         {
             "title": "Tapas",
