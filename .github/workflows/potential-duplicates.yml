@@ -14,33 +14,13 @@ jobs:
           # Exclude keyworlds in title before detecting.
           exclude: |
             icon
-            Icon
             icons
-            Icons
             logo
-            Logo
             logos
-            Logos
             request
             request:
-            Request
-            Request:
             add
-            Add
             adding
-            Adding
-            update
-            Update
-            updating
-            Updating
-            rename
-            Rename
-            renaming
-            Renaming
-            remove
-            Remove
-            removing
-            Removing
           # Get issues with state to compare. Supported state: 'all', 'closed', 'open'.
           state: all
           # If similarity is higher than this threshold([0,1]), issue will be marked as duplicate.
