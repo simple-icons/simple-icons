@@ -2,7 +2,7 @@
 /**
  * @fileoverview Lints for the package that can't be implemented in the existing linters (e.g. jsonlint/svglint)
  */
- 
+
 const fs = require("fs");
 const path = require("path");
 
