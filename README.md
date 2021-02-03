@@ -50,7 +50,7 @@ The API can then be used as follows:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-console.log(simpleIcons.get('Simple Icons'));
+console.log(simpleIcons.get('simpleicons'));
 
 /*
 {
