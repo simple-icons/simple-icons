@@ -29,16 +29,26 @@
     {% endif %}
 
     {% assign filename = filename | downcase %}
-    {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" %}
-    {% assign filename = filename | replace: "ç", "c" | replace: "č", "c" | replace: "ć", "c" %}
-    {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" %}
-    {% assign filename = filename | replace: "ì", "i" | replace: "í", "i" | replace: "î", "i" | replace: "ï", "i" %}
-    {% assign filename = filename | replace: "ñ", "n" | replace: "ň", "n" | replace: "ń", "n" %}
-    {% assign filename = filename | replace: "ò", "o" | replace: "ó", "o" | replace: "ô", "o" | replace: "õ", "o" | replace: "ö", "o" %}
-    {% assign filename = filename | replace: "š", "s" | replace: "ś", "s" %}
-    {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" %}
-    {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" %}
-    {% assign filename = filename | replace: "ž", "z" | replace: "ź", "z" %}
+    {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" | replace: "ā", "a" | replace: "ă", "a" | replace: "ą", "a" %}
+    {% assign filename = filename | replace: "ç", "c" | replace: "ć", "c" | replace: "ĉ", "c" | replace: "ċ", "c" | replace: "č", "c" %}
+    {% assign filename = filename | replace: "ď", "d" | replace: "đ", "d" %}
+    {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" | replace: "ē", "e" | replace: "ĕ", "e" | replace: "ė", "e" | replace: "ę", "e" | replace: "ě", "e" %}
+    {% assign filename = filename | replace: "ĝ", "g" | replace: "ğ", "g" | replace: "ġ", "g" | replace: "ģ", "g" %}
+    {% assign filename = filename | replace: "ĥ", "h" | replace: "ħ", "h" %}
+    {% assign filename = filename | replace: "ì", "i" | replace: "í", "i" | replace: "î", "i" | replace: "ï", "i" | replace: "ĩ", "i" | replace: "ī", "i" | replace: "ĭ", "i" | replace: "į", "i" | replace: "ı", "i" %}
+    {% assign filename = filename | replace: "ĵ", "j" %}
+    {% assign filename = filename | replace: "ķ", "k" | replace: "ĸ", "k" %}
+    {% assign filename = filename | replace: "ĺ", "l" | replace: "ļ", "l" | replace: "ľ", "l" | replace: "ŀ", "l" | replace: "ł", "l" %}
+    {% assign filename = filename | replace: "ñ", "n" | replace: "ń", "n" | replace: "ņ", "n" | replace: "ň", "n" %}
+    {% assign filename = filename | replace: "ò", "o" | replace: "ó", "o" | replace: "ô", "o" | replace: "õ", "o" | replace: "ö", "o" | replace: "ō", "o" | replace: "ŏ", "o" | replace: "ő", "o" %}
+    {% assign filename = filename | replace: "ŕ", "r" | replace: "ŗ", "r" | replace: "ř", "r" %}
+    {% assign filename = filename | replace: "ś", "s" | replace: "ŝ", "s" | replace: "ş", "s" | replace: "š", "s" %}
+    {% assign filename = filename | replace: "ß", "ss" %}
+    {% assign filename = filename | replace: "ţ", "t" | replace: "ť", "t" | replace: "ŧ", "t" %}
+    {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" | replace: "ũ", "u" | replace: "ū", "u" | replace: "ŭ", "u" | replace: "ů", "u" | replace: "ű", "u" | replace: "ų", "u" %}
+    {% assign filename = filename | replace: "ŵ", "w" %}
+    {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" | replace: "ŷ", "y" %}
+    {% assign filename = filename | replace: "ź", "z" | replace: "ż", "z" | replace: "ž", "z" %}
 
     {% assign searchTerm = filename %}
     {% assign filename = filename | replace: "+", "plus" %}
