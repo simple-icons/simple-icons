@@ -2,6 +2,7 @@ name: Potential Duplicates
 on:
   issues:
     types: [opened, edited]
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -9,9 +10,7 @@ jobs:
       - uses: bubkoo/potential-duplicates@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Label to set, when potential duplicates are detected.
           label: potential duplicate
-          # Exclude keyworlds in title before detecting.
           exclude: |
             icon
             icons
@@ -21,16 +20,10 @@ jobs:
             request:
             add
             adding
-          # Get issues with state to compare. Supported state: 'all', 'closed', 'open'.
           state: all
-          # If similarity is higher than this threshold([0,1]), issue will be marked as duplicate.
           threshold: 0.7
-          # Reactions to be add to comment when potential duplicates are detected.
-          # Available reactions: "-1", "+1", "confused", "laugh", "heart", "hooray", "rocket", "eyes"
-          reactions: eyes
-          # Comment to post when potential duplicates are detected.
           comment: >
-            Potential duplicates:
+            This issue is potentially a duplicate of one of the following issues:
             {{#issues}}
               - [#{{ number }}] {{ title }} ({{ accuracy }}%)
             {{/issues}}
