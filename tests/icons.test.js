@@ -2,7 +2,7 @@ const { icons } = require('../_data/simple-icons.json');
 const { titleToFilename } = require('../scripts/utils.js');
 
 icons.forEach(icon => {
-  const filename = titleToFilename(icon.title);
+  const filename = icon.slug || titleToFilename(icon.title);
   const subject = require(`../icons/${filename}.js`);
 
   test(`${icon.title} has a "title"`, () => {

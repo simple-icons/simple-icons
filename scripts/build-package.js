@@ -47,7 +47,7 @@ function iconToObject(icon) {
 // 'main'
 const icons = [];
 data.icons.forEach(icon => {
-    const filename = titleToFilename(icon.title);
+    const filename = icon.slug || titleToFilename(icon.title);
     icon.svg = fs.readFileSync(`${iconsDir}/${filename}.svg`, UTF8).replace(/\r?\n/, '');
     icon.slug = filename;
     icons.push(icon);
