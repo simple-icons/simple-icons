@@ -265,12 +265,6 @@ If you have an affiliation to the brand you contributing that allows you to spea
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
 
-## Building in Your Browser
-
-Alternatively, you can build and run the website in a readily configured online workspace:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
-
 ## Using Docker
 
 You can build a Docker image for this project from the Dockerfile by running:

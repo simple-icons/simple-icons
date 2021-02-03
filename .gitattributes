@@ -8,4 +8,3 @@ package-lock.json  -diff
 
 # Don't export/archive these files
 .github            export-ignore
-.gitpod.yml        export-ignore
