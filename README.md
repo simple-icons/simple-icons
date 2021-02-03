@@ -131,7 +131,7 @@ Icons are also available as a [Drupal module](https://www.drupal.org/project/sim
 
 ### Flutter
 
-Icons are also available as a [Flutter package](https://pub.dev/packages/flutter_brand_icons) created by  [@muj-programmer](https://github.com/muj-programmer).
+Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by  [@jlnrrg](https://jlnrrg.github.io/).
 
 ### Home Assistant
 
