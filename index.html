@@ -55,6 +55,9 @@
     {% assign filename = filename | replace: ".", "-dot-" %}
     {% assign filename = filename | replace: "&", "-and-" %}
     {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
+    {% if icon.slug %}
+        {% assign filename = icon.slug %}
+    {% endif %}
 
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
