@@ -31,8 +31,8 @@ function escape(value) {
   return value.replace(/(?<!\\)'/g, "\\'");
 }
 function iconToKeyValue(icon) {
-  const iconTitle = escape(icon.title);
-  return `'${iconTitle}':${iconToObject(icon)}`;
+  const iconName = icon.slug;
+  return `'${iconName}':${iconToObject(icon)}`;
 }
 function iconToObject(icon) {
   return util.format(iconObjectTemplate,

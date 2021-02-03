@@ -6,13 +6,6 @@ Object.defineProperty(icons, "get", {
     if (icons[targetName]) {
       return icons[targetName];
     }
-    var normalizedName = targetName.toLowerCase();
-    for (var iconName in icons) {
-      var icon = icons[iconName];
-      if (icon.title.toLowerCase() === normalizedName || icon.slug === normalizedName) {
-        return icon;
-      }
-    }
   }
 });
 
