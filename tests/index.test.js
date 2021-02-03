@@ -32,6 +32,8 @@ icons.forEach(icon => {
     expect(typeof subject.slug).toBe('string');
   });
 
+  // NOTE: Icons with custom slugs have a custom slug because their title is
+  // already taken, so they should explicitly not be findable by their title.
   if (icon.slug === undefined) {
     test(`${icon.title} can be found by it's title`, () => {
       const found = simpleIcons.get(icon.title);
@@ -42,7 +44,7 @@ icons.forEach(icon => {
     });
   }
 
-  test(`${icon.title},${icon.slug} can be found by it's slug`, () => {
+  test(`${icon.title} can be found by it's slug`, () => {
     const slug = icon.slug || titleToFilename(icon.title);
     const found = simpleIcons.get(slug);
     expect(found).toBeDefined();
