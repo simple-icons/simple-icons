@@ -20,20 +20,6 @@ jobs:
           npm run svglint
           npm run wslint
           npm run our-lint
-  build:
-    name: Build website
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Use Ruby 2.7
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-          # https://github.com/ruby/setup-ruby/blob/master/README.md#caching-bundle-install-automatically
-          bundler-cache: true
-      - name: Build website
-        run: bundle exec jekyll build
   test:
     name: Test package
     runs-on: ubuntu-latest
