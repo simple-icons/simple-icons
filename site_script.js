@@ -191,4 +191,58 @@
   $orderByRelevance.addEventListener('click', function() {
     selectOrdering($orderByRelevance);
   });
+
+  /* Redesign */
+
+  var $banner = document.querySelector('.redesign-banner'),
+      $redirectAutomatically = document.getElementById('redirect-to-redesign'),
+      $hideOnce = document.getElementById('hide-feedback-request-once'),
+      $hideAlways = document.getElementById('hide-feedback-request');
+
+  var redesignUrl = 'https://simple-icons.github.io/simple-icons-website/',
+      hideBannerAlwaysIdentifier = 'hide-banner',
+      redirectAutomaticallyIdentifier = 'redirect-to-redesign';
+
+  $redirectAutomatically.addEventListener('click', function() {
+    var redirect = true;
+    if (localStorage) {
+      var currentVal = localStorage.getItem(redirectAutomaticallyIdentifier);
+      if (currentVal === 'true') {
+        redirect = false;
+      }
+
+      localStorage.setItem(redirectAutomaticallyIdentifier, redirect);
+    }
+
+    if (redirect) {
+      window.location.replace(redesignUrl);
+    } else {
+      $redirectAutomatically.innerHTML = "Redirect automatically";
+    }
+  });
+  $hideOnce.addEventListener('click', function () {
+    $banner.classList.add('hidden');
+  });
+  $hideAlways.addEventListener('click', function () {
+    if (localStorage) {
+      localStorage.setItem(hideBannerAlwaysIdentifier, true);
+    }
+
+    $banner.classList.add('hidden');
+  });
+
+  if (localStorage) {
+    var redirect = localStorage.getItem(redirectAutomaticallyIdentifier);
+    if (redirect === 'true') {
+      $redirectAutomatically.innerHTML = "Disable redirect";
+      if (document.referrer !== redesignUrl) {
+        window.location.replace(redesignUrl);
+      }
+    }
+
+    var hide = localStorage.getItem(hideBannerAlwaysIdentifier);
+    if (hide) {
+      $banner.classList.add('hidden');
+    }
+  }
 })( document );
