@@ -12,14 +12,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           label: potential duplicate
           exclude: |
-            icon
             icons
-            logo
+            icon
             logos
-            request
-            request:
-            add
+            logo
             adding
+            add
+            requesting
+            request
           state: all
           threshold: 0.7
           comment: |
