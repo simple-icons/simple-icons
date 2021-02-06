@@ -3,31 +3,31 @@
   "type": "object",
   "properties": {
     "icons": {
-      "description": "The list of icons",
+      "description": "A list of brands",
       "type": "array",
       "items": {
-        "description": "A single icon",
+        "description": "A single brand",
         "type": "object",
         "properties": {
           "title": {
-            "description": "The icons name",
+            "description": "The name of the brand",
             "type": "string",
             "required": true
           },
           "hex": {
-            "description": "The icons color, as HEX (without #)",
+            "description": "The brand color as a 6-character value (without #)",
             "type": "string",
             "pattern": "^[0-9A-F]{6}$",
             "required": true
           },
           "source": {
-            "description": "The website from which the icon originated",
+            "description": "The website from which the icon was sourced",
             "type": "string",
             "pattern": "^https?://[^\\s]+$",
             "required": true
           },
           "guidelines": {
-            "description": "The brand guidelines for the icon and/or color",
+            "description": "The brand guidelines",
             "type": "string",
             "pattern": "^https?://[^\\s]+$",
             "required": false
@@ -37,7 +37,7 @@
             "type": "object",
             "properties": {
               "type": {
-                "description": "The SPDX License Identifier (or 'custom')",
+                "description": "An SPDX License Identifier (or 'custom')",
                 "type": "string",
                 "enum": [
                   "custom",
@@ -118,7 +118,7 @@
                 "required": true
               },
               "url": {
-                "description": "The URL to the (brand's) license",
+                "description": "The URL to the license text by the brand",
                 "type": "string",
                 "pattern": "^https?://[^\\s]+$",
                 "required": false
@@ -127,7 +127,7 @@
             "additionalProperties": false,
             "required": false
           }
-        }
+        },
         "additionalProperties": false,
         "required": true
       }
