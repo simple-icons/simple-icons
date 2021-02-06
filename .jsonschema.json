@@ -4,11 +4,7 @@
     "brand": {
       "description": "A single brand",
       "type": "object",
-      "required": [
-        "title",
-        "hex",
-        "source"
-      ],
+      "required": ["title", "hex", "source"],
       "properties": {
         "title": {
           "description": "The name of the brand",

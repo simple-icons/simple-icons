@@ -7,7 +7,7 @@ const dataFile = path.resolve(__dirname, "..", "_data", "simple-icons.json");
 const schema = require(schemaFile);
 const data = require(dataFile);
 
-var validator = new Validator();
+const validator = new Validator();
 const result = validator.validate(data, schema);
 if (result.errors.length > 0) {
   result.errors.forEach((error) => {
