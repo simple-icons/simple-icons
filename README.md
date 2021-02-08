@@ -50,7 +50,13 @@ The API can then be used as follows:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-console.log(simpleIcons.get('simpleicons')); // Use the filename of the SVG
+// Get a specific icon by its name as:
+simpleIcons.get('[ICON NAME]');
+
+// For example:
+const icon = simpleIcons.get('simpleicons');
+
+console.log(icon);
 
 /*
 {
@@ -68,6 +74,10 @@ Alternatively you can import the needed icons individually.
 This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
+// Import a specific icon by its name as:
+require('simple-icons/icons/[ICON NAME]');
+
+// For example:
 const icon = require('simple-icons/icons/simpleicons');
 
 console.log(icon);
@@ -131,7 +141,7 @@ Icons are also available as a [Drupal module](https://www.drupal.org/project/sim
 
 ### Flutter
 
-Icons are also available as a [Flutter package](https://pub.dev/packages/flutter_brand_icons) created by  [@muj-programmer](https://github.com/muj-programmer).
+Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by  [@jlnrrg](https://jlnrrg.github.io/).
 
 ### Home Assistant
 

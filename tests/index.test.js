@@ -1,6 +1,6 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { titleToFilename } = require("../scripts/utils.js");
+const { titleToSlug } = require("../scripts/utils.js");
 
 icons.forEach(icon => {
   const name = icon.slug || icon.title;
@@ -33,7 +33,7 @@ icons.forEach(icon => {
   });
 
   // NOTE: Icons with custom slugs have a custom slug because their title is
-  // already taken, so they should explicitly not be findable by their title.
+  // already taken, so they should not be findable by their title.
   if (icon.slug === undefined) {
     test(`${icon.title} can be found by it's title`, () => {
       const found = simpleIcons.get(icon.title);
@@ -45,8 +45,8 @@ icons.forEach(icon => {
   }
 
   test(`${icon.title} can be found by it's slug`, () => {
-    const slug = icon.slug || titleToFilename(icon.title);
-    const found = simpleIcons.get(slug);
+    const name = icon.slug || titleToSlug(icon.title);
+    const found = simpleIcons.get(name);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
     expect(found.hex).toEqual(icon.hex);
