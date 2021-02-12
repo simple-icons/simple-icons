@@ -15,7 +15,7 @@ const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
 
 // set env SI_UPDATE_IGNORE to recreate the ignore file
-const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true'
+const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
 const ignoreFile = "./.svglint-ignored.json";
 const iconIgnored = !updateIgnoreFile ? require(ignoreFile) : {};
 
@@ -224,14 +224,14 @@ module.exports = {
                   }
                 }
                 if (index > 0) {
-                  let [yPrevCoord, xPrevCoord, ...prevRest] = [...absSegments[index - 1]].reverse();
+                  let [yPrevCoord, xPrevCoord] = [...absSegments[index - 1]].reverse();
                   // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
                   if (upperDirectionCommands.includes(xPrevCoord)) {
                     xPrevCoord = undefined;
                     yPrevCoord = undefined;
                     let idx = index;
                     while (--idx > 0 && (xPrevCoord === undefined || yPrevCoord === undefined)) {
-                      let [yPrevCoordDeep, xPrevCoordDeep, ...rest] = [...absSegments[idx]].reverse();
+                      let [yPrevCoordDeep, xPrevCoordDeep] = [...absSegments[idx]].reverse();
                       // If the previous command was a horizontal movement, we need to consider the single coordinate as x
                       if (upperHorDirectionCommand === xPrevCoordDeep) {
                         xPrevCoordDeep = yPrevCoordDeep;
@@ -315,7 +315,7 @@ module.exports = {
             if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
               return;
             }
-            
+
             /**
              * Extracts collinear coordinates from SVG path straight lines
              *   (does not extracts collinear coordinates from curves).
@@ -327,14 +327,16 @@ module.exports = {
                     zCommands = 'Zz';
               let currLine = [],
                   currAbsCoord = [undefined, undefined],
+                  startPoint,
                   _inStraightLine = false,
-                  _nextInStraightLine = false;
+                  _nextInStraightLine = false,
+                  _resetStartPoint = false;
 
               for (let s = 0; s < segments.length; s++) {
                 let seg = segments[s],
                     cmd = seg[0],
                     nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
-                
+
                 if ('LM'.includes(cmd)) {
                   currAbsCoord[0] = seg[1];
                   currAbsCoord[1] = seg[2];
@@ -363,9 +365,17 @@ module.exports = {
                   currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
                 } else if (zCommands.includes(cmd)) {
                   // Overlapping in Z should be handled in another rule
-                  currAbsCoord = [undefined, undefined];
+                  currAbsCoord = [startPoint[0], startPoint[1]];
+                  _resetStartPoint = true;
                 } else {
-                  throw new Error(`"${cmd}" command not handled`)
+                  throw new Error(`"${cmd}" command not handled`);
+                }
+
+                if (startPoint === undefined) {
+                  startPoint = [currAbsCoord[0], currAbsCoord[1]];
+                } else if (_resetStartPoint) {
+                  startPoint = undefined;
+                  _resetStartPoint = false;
                 }
 
                 _nextInStraightLine = straightLineCommands.includes(nextCmd);
@@ -386,7 +396,7 @@ module.exports = {
                                                       currLine[p][0],
                                                       currLine[p][1],
                                                       currLine[p + 1][0],
-                                                      currLine[p + 1][1])
+                                                      currLine[p + 1][1]);
                       if (_collinearCoord) {
                         collinearSegments.push(segments[s - currLine.length + p + 1]);
                       }
@@ -395,7 +405,7 @@ module.exports = {
                   currLine = [];
                 }
               }
-              
+
               return collinearSegments;
             }
 
