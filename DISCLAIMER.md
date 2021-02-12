@@ -29,7 +29,7 @@ As guidelines are subject to change and, as we rely largely on our community to 
 
 ## Update of Brands
 
-If the icon in the project does not match the current icon for a brand, please [submit an issue](), and a member of the community will update the brand in due course. 
+If the icon in the project does not match the current icon for a brand, please [submit an issue](https://github.com/simple-icons/simple-icons/issues/new/choose), and a member of the community will update the brand in due course. 
 
 ## Removal of Brands
 
