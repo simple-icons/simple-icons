@@ -2,8 +2,8 @@
     "icons": [
         {
             "title": ".NET",
-            "hex": "5C2D91",
-            "source": "https://docs.microsoft.com/en-us/dotnet/images/hub/net.svg"
+            "hex": "512BD4",
+            "source": "https://github.com/dotnet/brand/"
         },
         {
             "title": "1001Tracklists",
@@ -484,6 +484,12 @@
             "title": "AnyDesk",
             "hex": "EF443B",
             "source": "https://anydesk.com/"
+        },
+        {
+            "title": "AOL",
+            "hex": "3399FF",
+            "source": "https://www.aol.com/",
+            "guidelines": "https://styleguide.aol.com/"
         },
         {
             "title": "Apache",
@@ -1452,6 +1458,11 @@
             "source": "https://cloudcannon.com/"
         },
         {
+            "title": "Cloudera",
+            "hex": "F96702",
+            "source": "https://www.cloudera.com/"
+        },
+        {
             "title": "Cloudflare",
             "hex": "F38020",
             "source": "https://www.cloudflare.com/logo/"
@@ -2142,6 +2153,11 @@
             "title": "Duolingo",
             "hex": "58CC02",
             "source": "https://www.duolingo.com/"
+        },
+        {
+            "title": "dwm",
+            "hex": "1177AA",
+            "source": "https://dwm.suckless.org"
         },
         {
             "title": "Dynamics 365",
@@ -4338,7 +4354,7 @@
         },
         {
             "title": "LinkedIn",
-            "hex": "0077B5",
+            "hex": "0A66C2",
             "source": "https://brand.linkedin.com"
         },
         {
@@ -4495,6 +4511,11 @@
             "title": "MailChimp",
             "hex": "FFE01B",
             "source": "http://mailchimp.com/about/brand-assets"
+        },
+        {
+            "title": "Major League Hacking",
+            "hex": "265A8F",
+            "source": "https://mlh.io/brand-guidelines"
         },
         {
             "title": "MakerBot",
@@ -5054,7 +5075,7 @@
         {
             "title": "New Japan Pro-Wrestling",
             "hex": "FF160B",
-            "source": "https://en.wikipedia.org/wiki/File:New_Japan_Pro_Wrestling_Logo_2.svg"
+            "source": "https://en.wikipedia.org/wiki/File:NJPW_World_Logo.svg"
         },
         {
             "title": "New Relic",
@@ -5389,7 +5410,8 @@
         {
             "title": "openSUSE",
             "hex": "73BA25",
-            "source": "https://en.opensuse.org/Portal:Artwork"
+            "source": "https://github.com/openSUSE/artwork/blob/33e94aa76837c09f03d1712705949b71a246a53b/logos/buttons/button-colour.svg",
+            "guidelines": "https://en.opensuse.org/Portal:Artwork"
         },
         {
             "title": "OpenVPN",
@@ -5465,6 +5487,12 @@
             "title": "OWASP",
             "hex": "000000",
             "source": "https://github.com/OWASP/www-event-2020-07-virtual/blob/eefbef6c1afdd1dee2af11e7f44ad005b25ad48c/assets/images/logo.svg"
+        },
+        {
+            "title": "Oxygen",
+            "hex": "3A209E",
+            "source": "https://oxygenbuilder.com/",
+            "guidelines": "https://oxygenbuilder.com/trademark-policy/"
         },
         {
             "title": "OYO",
@@ -5995,6 +6023,11 @@
             "title": "Publons",
             "hex": "336699",
             "source": "https://publons.com/about/logos"
+        },
+        {
+            "title": "PubMed",
+            "hex": "326599",
+            "source": "https://pubmed.ncbi.nlm.nih.gov/"
         },
         {
             "title": "Puppet",
@@ -7314,7 +7347,7 @@
         {
             "title": "Svelte",
             "hex": "FF3E00",
-            "source": "https://github.com/sveltejs/svelte/tree/master/site/static"
+            "source": "https://github.com/sveltejs/branding/blob/c4dfca6743572087a6aef0e109ffe3d95596e86a/svelte-logo.svg"
         },
         {
             "title": "SVG",
@@ -7500,6 +7533,11 @@
             "title": "Testing Library",
             "hex": "E33332",
             "source": "https://testing-library.com/"
+        },
+        {
+            "title": "Textpattern",
+            "hex": "FFD942",
+            "source": "https://textpattern.com/"
         },
         {
             "title": "The Conversation",
@@ -8366,6 +8404,11 @@
             "title": "Windows 95",
             "hex": "008080",
             "source": "https://en.wikipedia.org/wiki/Windows_95"
+        },
+        {
+            "title": "Windows Terminal",
+            "hex": "4D4D4D",
+            "source": "https://github.com/microsoft/terminal/blob/a90289548f8548bf5c370a4b141b4b815c22616b/res/terminal/Terminal_HC.svg"
         },
         {
             "title": "Windows XP",

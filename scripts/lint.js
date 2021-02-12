@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * @fileoverview Lints for the package that can't be implemented in the existing linters (e.g. jsonlint/svglint)
+ * @fileoverview
+ * Linters for the package that can't easily be implemented in the existing
+ * linters (e.g. jsonlint/svglint).
  */
 
 const fs = require("fs");
@@ -8,12 +10,13 @@ const path = require("path");
 
 const { diffLinesUnified } = require("jest-diff");
 
-const simpleIconsData = require("../_data/simple-icons.json");
-const simpleIconsDataFile = path.resolve(
-  __dirname, "..", "_data", "simple-icons.json");
+const UTF8 = "utf8";
+
+const dataFile = path.resolve( __dirname, "..", "_data", "simple-icons.json");
+const data = require(dataFile);
 
 /**
- * Contains our tests so they can be isolated from eachother; I don't think each test is worth its own file
+ * Contains our tests so they can be isolated from each other.
  * @type {{[k:string]: () => (string|undefined)}}
  */
 const TESTS = {
@@ -29,38 +32,38 @@ const TESTS = {
       return invalidEntries;
     };
 
-    const invalids = simpleIconsData.icons.reduce(collector, []);
+    const invalids = data.icons.reduce(collector, []);
     if (invalids.length) {
       return `Some icons aren't in alphabetical order:
         ${invalids.map(icon => icon.title).join(", ")}`;
     }
   },
 
-  /* Check the prettification of the data file */
+  /* Check the formatting of the data file */
   prettified: function() {
-    const simpleIconsDataString = fs.readFileSync(
-      simpleIconsDataFile, "utf8").replace(/\r\n/g, '\n');
-    const simpleIconsDataPretty = `${JSON.stringify(simpleIconsData, null, "    ")}\n`;
-    if (simpleIconsDataString !== simpleIconsDataPretty) {
-      const dataDiff = diffLinesUnified(simpleIconsDataString.split("\n"),
-                                        simpleIconsDataPretty.split("\n"),
-                                        {
-                                          expand: false,
-                                          omitAnnotationLines: true
-                                        });
-      return `Data file is not prettified:\n\n${dataDiff}`;
+    const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
+    const dataPretty = `${JSON.stringify(data, null, "    ")}\n`;
+    if (dataString !== dataPretty) {
+      const dataDiff = diffLinesUnified(
+        dataString.split("\n"),
+        dataPretty.split("\n"),
+        {
+          expand: false,
+          omitAnnotationLines: true
+        },
+      );
+
+      return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
   }
 };
 
-// execute all tests and log potential errors
+// execute all tests and log all errors
 const errors = Object.keys(TESTS)
   .map(k => TESTS[k]())
   .filter(Boolean);
 
-if (errors.length) {
-  errors.forEach(error => {
-    console.error(`\u001b[31m${error}\u001b[0m`);
-  });
+if (errors.length > 0) {
+  errors.forEach(error => console.error(`\u001b[31m${error}\u001b[0m`));
   process.exit(1);
 }
