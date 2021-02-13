@@ -278,6 +278,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Checkmarx` | `checkmarx` |
 | `Chef` | `chef` |
 | `Chevrolet` | `chevrolet` |
+| `China Eastern Airlines` | `chinaeasternairlines` |
 | `China Southern Airlines` | `chinasouthernairlines` |
 | `Chocolatey` | `chocolatey` |
 | `Chrysler` | `chrysler` |
@@ -1211,6 +1212,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Proxmox` | `proxmox` |
 | `Publons` | `publons` |
 | `PubMed` | `pubmed` |
+| `Pug` | `pug` |
 | `Puppet` | `puppet` |
 | `PureScript` | `purescript` |
 | `PyCharm` | `pycharm` |
@@ -1512,6 +1514,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Tesla` | `tesla` |
 | `Testin` | `testin` |
 | `Testing Library` | `testinglibrary` |
+| `Textpattern` | `textpattern` |
 | `The Conversation` | `theconversation` |
 | `The Irish Times` | `theirishtimes` |
 | `The Mighty` | `themighty` |
