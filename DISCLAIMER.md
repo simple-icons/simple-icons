@@ -4,8 +4,8 @@ Simple Icons asks that users read this disclaimer fully before including an icon
 
 ## Table of Contents
 
-* [Copyrights & Trademarks](#copyrights--trademarks)
-* [Guidelines](#guidelines)
+* [Copyrights & Trademarks](#licenses-copyrights--trademarks)
+* [Guidelines](#brand-guidelines)
 * [Update of Brands](#update-of-brands)
 * [Removal of Brands](#removal-of-brands)
 
