@@ -9,27 +9,31 @@ Simple Icons asks that users read this disclaimer fully before including an icon
 * [Update of Brands](#update-of-brands)
 * [Removal of Brands](#removal-of-brands)
 
-## Copyrights & Trademarks
+## Licenses, Copyrights & Trademarks
 
-The Simple Icons project contains a number of icons with specific requirements around their usage. Where this is the case, we aim to provide access to the proper guidelines through the `guidelines` entry in our JSON file, in our NPM package and through links on our [website].
+> NOTE: the addition of licenses to Simple Icons is an ongoing project. Hence, the absence of a licence data for a particular icon does not imply that the icon is not released under a license.
 
-Some icons are also in the project under specific `licenses`, and we will endeavour to include the relevant information in the JSON file. The lack of a license entry in the JSON does not imply there is no license, simply that we haven't catalogued it yet.
+Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed. If an icon includes a registered trademark (`®`) or trademark symbol (`™`) the recommendations outlined [in the Simple Icons Contribution Guidelines] are followed to decide whether to include the symbol or not.
 
-We ask that users of icons in the collection read the guidelines and license agreements fully and display the icons in accordance with them and, where applicable, with the necessary permissions.
+The license under which an icon is available can be found in the icon's entry in the JSON data file in the NPM and Packagist packages.
 
-If a logo or icon includes a registered trademark or trademark symbol we follow the recommendations outline [in our Contribution Guidelines](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines) to decide whether to include the symbol or not.
+As we rely largely on our community to help us keep Simple Icons up-to-date, the license data for an icon may be outdated. If you find that the license data provided is outdated, please [submit an issue] to [the Simple Icons GitHub repository].
 
 ~Simple Icons cannot be held responsible for any legal activity raised by a brand over our users' usage of their icon.~
 
-## Guidelines
+## Brand Guidelines
 
-> NOTE: the addition of guidelines to our project is an ongoing project so the absence of a `guidelines` entry for a particular icon does not imply that guidelines for that icon do not exist.
+> NOTE: the addition of guidelines to Simple Icons is an ongoing project. Hence, the absence of guidelines for a particular brand does not imply that the brand has no guidelines.
 
-As guidelines are subject to change and, as we rely largely on our community to help us keep our project updated, the guidelines included in our project for a particular icon may be outdated. Therefore we also ask that users of our project do their own due diligence in researching a brand's guidelines. Additionally, we ask you to inform us of outdated brand guidelines through the [GitHub repository].
+Simple icons provides a link to a brand's _branding guidelines_ (or similar) if the brand provides one. We ask our users to carefully read these guidelines before using the brand's icon. As guidelines are subject to change we also ask our users to regularly check if the brand guidelines of the icons they use have been updated.
+
+The brand guidelines can be found in the icon's entry in the JSON data file in the NPM and Packagist packages, or through the "Brand Guidelines" links on [the Simple Icons website].
+
+As we rely largely on our community to help us keep Simple Icons up-to-date, the guidelines link for a brand may be outdated. If you find that the guidelines are outdated, please [submit an issue] to [the Simple Icons GitHub repository].
 
 ## Update of Brands
 
-If the icon in the project does not match the current icon for a brand, please [submit an issue](https://github.com/simple-icons/simple-icons/issues/new/choose), and a member of the community will update the brand in due course. 
+Should a brand wish for their icon or data to be updated, please [submit an issue] to the Simple Icons GitHub repository. In the issue, please explain your affiliation with the company and reasons for the update. We generally release updates once a week, but can occasionally make exceptions for immediate updates of brands. 
 
 ## Removal of Brands
 
@@ -37,5 +41,7 @@ Should a brand wish for their icon to be removed from the package, please submit
 
 Urgent requests for removal can be made by contacting `removals at simpleicons dot org`.
 
-[GitHub repository]: https://github.com/simple-icons/simple-icons/issues/new/choose
-[website]: https://simpleicons.org/
+[submit an issue]: https://github.com/simple-icons/simple-icons/issues/new/choose
+[the Simple Icons Contributing Guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines
+[the Simple Icons GitHub repository]: https://github.com/simple-icons/simple-icons
+[the Simple Icons website]: https://simpleicons.org/
