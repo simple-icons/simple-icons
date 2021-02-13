@@ -13,7 +13,7 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 
 > NOTE: the addition of licenses to Simple Icons is an ongoing project. Hence, the absence of a licence data for a particular icon does not imply that the icon is not released under a license.
 
-Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed. If an icon includes a registered trademark (`®`) or trademark symbol (`™`) the recommendations outlined [in the Simple Icons Contribution Guidelines] are followed to decide whether to include the symbol or not.
+Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed. If an icon includes a registered trademark (`®`) or trademark symbol (`™`) the recommendations outlined in [the Simple Icons Contributing Guidelines] are followed to decide whether to include the symbol or not.
 
 The license under which an icon is available can be found in the icon's entry in the JSON data file in the NPM and Packagist packages.
 
