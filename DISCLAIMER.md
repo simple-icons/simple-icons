@@ -4,7 +4,7 @@ Simple Icons asks that users read this disclaimer fully before including an icon
 
 ## Table of Contents
 
-* [Copyrights & Trademarks](#licenses-copyrights--trademarks)
+* [Licenses, Copyrights & Trademarks](#licenses-copyrights--trademarks)
 * [Guidelines](#brand-guidelines)
 * [Update of Brands](#update-of-brands)
 * [Removal of Brands](#removal-of-brands)
@@ -37,7 +37,7 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 
 ## Removal of Brands
 
-Should a brand wish for their icon to be removed from the package, please submit an issue on the [GitHub repository] explaining your affiliation with the company, and reasons for removal. We generally remove icons that no longer [meet our criteria](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon) twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
+Should a brand wish for their icon to be removed from the package, please [submit an issue] on [the Simple Icons GitHub repository] explaining your affiliation with the company, and reasons for removal. We generally remove icons that no longer [meet our criteria](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon) twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
 
 Urgent requests for removal can be made by contacting `removals at simpleicons dot org`.
 
