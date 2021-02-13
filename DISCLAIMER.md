@@ -1,6 +1,6 @@
 # Disclaimer
 
-Simple Icons asks that users read this disclaimer fully before including an icon in their project.
+Simple Icons asks that its users read this disclaimer fully before including an icon in their project.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ The license under which an icon is available can be found in the icon's entry in
 
 As we rely largely on our community to help us keep Simple Icons up-to-date, the license data for an icon may be outdated. If you find that the license data provided is outdated, please [submit an issue] to [the Simple Icons GitHub repository].
 
-Simple Icons cannot be held responsible for any legal activity raised by a brand over the user of their icon through Simple Icons.
+Simple Icons cannot be held responsible for any legal activity raised by a brand over the use of their icon through Simple Icons.
 
 ## Brand Guidelines
 
