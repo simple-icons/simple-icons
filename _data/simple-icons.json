@@ -427,8 +427,8 @@
         },
         {
             "title": "Android Auto",
-            "hex": "4285F4",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+            "hex": "3DDC84",
+            "source": "https://thepartnermarketinghub.withgoogle.com/brands/android-auto/"
         },
         {
             "title": "Android Studio",
@@ -1356,6 +1356,11 @@
             "title": "Chevrolet",
             "hex": "CD9834",
             "source": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/02-pdf/2019-chevrolet-corvette-catalog.pdf"
+        },
+        {
+            "title": "China Eastern Airlines",
+            "hex": "1A2477",
+            "source": "https://uk.ceair.com/newCMS/uk/en/content/en_Footer/Support/201904/t20190404_5763.html"
         },
         {
             "title": "China Southern Airlines",
@@ -4364,8 +4369,9 @@
         },
         {
             "title": "LinkedIn",
-            "hex": "0077B5",
-            "source": "https://brand.linkedin.com"
+            "hex": "0A66C2",
+            "source": "https://brand.linkedin.com",
+            "guidelines": "https://brand.linkedin.com/policies"
         },
         {
             "title": "Linktree",
@@ -6040,6 +6046,11 @@
             "source": "https://pubmed.ncbi.nlm.nih.gov/"
         },
         {
+            "title": "Pug",
+            "hex": "A86454",
+            "source": "https://github.com/pugjs/pug-logo/blob/61429fc45b5a411b83bdb5c99a61084d3054d1e6/SVG/pug-final-logo_-mono-64.svg"
+        },
+        {
             "title": "Puppet",
             "hex": "FFAE1A",
             "source": "https://puppet.com/company/press-room/"
@@ -6452,7 +6463,7 @@
         {
             "title": "Roundcube",
             "hex": "37BEFF",
-            "source": "https://roundcube.net/images/roundcube_logo_icon.svg"
+            "source": "https://roundcube.net/"
         },
         {
             "title": "RSS",
