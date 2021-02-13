@@ -33,7 +33,7 @@ As we rely largely on our community to help us keep Simple Icons up-to-date, the
 
 ## Update of Brands
 
-Should a brand wish for their icon or data to be updated, please [submit an issue] to the Simple Icons GitHub repository. In the issue, please explain your affiliation with the company and reasons for the update. We generally release updates once a week, but can occasionally make exceptions for immediate updates of brands. 
+Should a brand wish for their icon or data to be updated, please [submit an issue] to the Simple Icons GitHub repository. In the issue, please explain your affiliation with the company and reasons for the update. We generally release updates once a week, but can occasionally make exceptions for immediate updates of brands.
 
 ## Removal of Brands
 
