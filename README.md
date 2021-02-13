@@ -28,7 +28,7 @@ Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/packa
 <img height="32" width="32" src="https://unpkg.com/simple-icons@v4/icons/[ICON NAME].svg" />
 ```
 
-Where `[ICON NAME]` is replaced by the icon name, for example:
+Where `[ICON NAME]` is replaced by the [icon slug], for example:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/simpleicons.svg" />
@@ -45,12 +45,12 @@ The icons are also available through our npm package. To install, simply run:
 $ npm install simple-icons
 ```
 
-The API can then be used as follows:
+The API can then be used as follows, where `[ICON NAME]` is replaced by the [icon slug]:
 
 ```javascript
 const simpleIcons = require('simple-icons');
 
-// Get a specific icon by its name as:
+// Get a specific icon by its slug as:
 simpleIcons.get('[ICON NAME]');
 
 // For example:
@@ -70,11 +70,11 @@ console.log(icon);
 */
 ```
 
-Alternatively you can import the needed icons individually.
+Alternatively you can import the needed icons individually, where `[ICON NAME]` is replaced by the [icon slug].
 This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
-// Import a specific icon by its name as:
+// Import a specific icon by its slug as:
 require('simple-icons/icons/[ICON NAME]');
 
 // For example:
@@ -122,12 +122,15 @@ The icons are also available through our Packagist package. To install, simply r
 $ composer require simple-icons/simple-icons
 ```
 
-The package can then be used as follows:
+The package can then be used as follows, where `[ICON NAME]` is replaced by the [icon slug]:
 
 ```php
 <?php
+// Import a specific icon by its slug as:
+echo file_get_contents('path/to/package/icons/[ICON NAME].svg');
 
-echo file_get_contents('path/to/package/icons/simple-icons.svg');
+// For example:
+echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 // <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>
 ?>
@@ -166,3 +169,5 @@ Icons are also available as a [Vue package](https://github.com/mainvest/vue-simp
 ### WordPress
 
 Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
+
+[icon slug]: ./slugs.md
