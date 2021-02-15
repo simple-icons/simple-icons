@@ -8,6 +8,6 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-    - uses: simple-icons/release-action@master
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: simple-icons/release-action@master
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
