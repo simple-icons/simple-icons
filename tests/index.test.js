@@ -1,6 +1,6 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { titleToFilename } = require("../scripts/utils.js");
+const { titleToSlug } = require("../scripts/utils.js");
 
 icons.forEach(icon => {
   const subject = simpleIcons[icon.title];
@@ -24,7 +24,7 @@ icons.forEach(icon => {
 
   test(`${icon.title} has a "path"`, () => {
     expect(typeof subject.path).toBe('string');
-    expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAae0-9-,.\s]+$/g);
+    expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/g);
   });
 
   test(`${icon.title} has a "slug"`, () => {
@@ -38,7 +38,7 @@ icons.forEach(icon => {
   });
 
   test(`${icon.title} can be found by it's slug`, () => {
-    const name = titleToFilename(icon.title);
+    const name = titleToSlug(icon.title);
     const found = simpleIcons.get(name);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
