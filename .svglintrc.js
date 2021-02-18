@@ -194,8 +194,7 @@ module.exports = {
             segments.forEach((segment) => {
               const precisionMax = Math.max(...segment.params.slice(1).map(countDecimals));
               if (precisionMax > iconMaxFloatPrecision) {
-                let errorMsg = `found ${precisionMax} decimals in segment`
-                             + ` "${iconPath.substring(segment.start, segment.end)}"`;
+                let errorMsg = `found ${precisionMax} decimals in segment "${iconPath.substring(segment.start, segment.end)}"`;
                 if (segment.chained) {
                   let readableChain = iconPath.substring(segment.chainStart, chainEnd);
                   if (readableChain.length > 20) {
