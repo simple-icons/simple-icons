@@ -198,7 +198,7 @@ module.exports = {
                 if (segment.chained) {
                   let readableChain = iconPath.substring(segment.chainStart, chainEnd);
                   if (readableChain.length > 20) {
-                    readableChain = `${readableChain}...`;
+                    readableChain = `${readableChain.substring(0, 20)}...`;
                   }
                   errorMsg += ` of chain "${readableChain}"`
                 }
