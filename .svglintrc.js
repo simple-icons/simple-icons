@@ -313,12 +313,26 @@ module.exports = {
             segments.forEach((segment, index) => {
               if (isInvalidSegment(segment.params, index)) {
                 const [command, x1, y1, ...rest] = segment.params;
-                if (curveCommands.includes(command)) {
-                  const [x2, y2, x, y] = rest;
-                };
 
                 let errorMsg = `Innefective segment "${iconPath.substring(segment.start, segment.end)}" found`,
                     resolutionTip = 'should be removed';
+
+                if (curveCommands.includes(command)) {
+                  const [x2, y2, x, y] = rest;
+
+                  if (command === lowerShorthandCurveCommand && (x2 !== 0 || y2 !== 0)) {
+                    resolutionTip = `should be "l${removeLeadingZeros(x2)} ${removeLeadingZeros(y2)}" or removed`;
+                  }
+                  if (command === upperShorthandCurveCommand) {
+                    resolutionTip = `should be "L${removeLeadingZeros(x2)} ${removeLeadingZeros(y2)}" or removed`;
+                  }
+                  if (command === lowerCurveCommand && (x !== 0 || y !== 0)) {
+                    resolutionTip = `should be "l${removeLeadingZeros(x)} ${removeLeadingZeros(y)}" or removed`;
+                  }
+                  if (command === upperCurveCommand) {
+                    resolutionTip = `should be "L${removeLeadingZeros(x)} ${removeLeadingZeros(y)}" or removed`;
+                  }
+                };
 
                 if (segment.chained) {
                   let readableChain = iconPath.substring(segment.chainStart, segment.chainEnd);
@@ -328,19 +342,6 @@ module.exports = {
                   errorMsg += ` in chain "${readableChain}"`
                 }
                 errorMsg += ` at index ${segment.start + getPathDIndex(svgFileContent)}`;
-
-                if (command === lowerShorthandCurveCommand && (x2 !== 0 || y2 !== 0)) {
-                  resolutionTip = `should be "l${removeLeadingZeros(x2)} ${removeLeadingZeros(y2)}" or removed`;
-                }
-                if (command === upperShorthandCurveCommand) {
-                  resolutionTip = `should be "L${removeLeadingZeros(x2)} ${removeLeadingZeros(y2)}" or removed`;
-                }
-                if (command === lowerCurveCommand && (x !== 0 || y !== 0)) {
-                  resolutionTip = `should be "l${removeLeadingZeros(x)} ${removeLeadingZeros(y)}" or removed`;
-                }
-                if (command === upperCurveCommand) {
-                  resolutionTip = `should be "L${removeLeadingZeros(x)} ${removeLeadingZeros(y)}" or removed`;
-                }
 
                 reporter.error(`${errorMsg} (${resolutionTip})`);
 
