@@ -5,14 +5,18 @@ Object.defineProperty(icons, "get", {
   value: function(targetName) {
     if (icons[targetName]) {
       return icons[targetName];
-    } else {
-      var normalizedName = targetName.toLowerCase();
-      for (var iconName in icons) {
-        var icon = icons[iconName];
-        if ((icon.title && icon.title.toLowerCase() === normalizedName)
-         || (icon.slug && icon.slug === normalizedName)) {
-           return icon;
-        }
+    }
+    var normalizedName = targetName.toLowerCase();
+    for (var iconName in icons) {
+      var icon = icons[iconName];
+      if (icon.slug === normalizedName) {
+        return icon;
+      }
+    }
+    for (var iconName in icons) {
+      var icon = icons[iconName];
+      if (icon.title.toLowerCase() === normalizedName) {
+        return icon;
       }
     }
   }

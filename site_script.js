@@ -11,12 +11,13 @@
 
   var queryParameter = 'q',
       orderingPreferenceIdentifier = 'ordering-preference',
-      previousQuery  = null,
+      previousQuery  = '',
       previousOrdering  = $orderByColor;
 
   // Remove the "disabled" attribute from the search input
   $searchInput.setAttribute('title', 'Search Simple Icons');
   $searchInput.removeAttribute('disabled');
+  $searchInput.focus();
 
   // include a modified debounce underscorejs helper function.
   // see
@@ -54,15 +55,29 @@
     };
   }
 
-  // Get any parameter from the URL's search section (location.search).
-  // see
+  // Get a parameter from the URL's search section (location.search). Based on:
   //   - https://davidwalsh.name/query-string-javascript
   //   - https://github.com/WebReflection/url-search-params
+  //   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Escaping
   function getUrlParameter(parameter) {
-    name = parameter.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var name = parameter.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
+  function normalizeSearchTerm(value) {
+    return value.toLowerCase()
+      .replace(/đ/g, "d")
+      .replace(/ħ/g, "h")
+      .replace(/ı/g, "i")
+      .replace(/ĸ/g, "k")
+      .replace(/ŀ/g, "l")
+      .replace(/ł/g, "l")
+      .replace(/ß/g, "ss")
+      .replace(/ŧ/g, "t")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
   function search(value) {
@@ -70,9 +85,9 @@
         queryLetters = query.split('');
 
     var matchedIcons = icons.filter(function(iconName, iconIndex) {
-      var element = $icons[iconIndex],
-          score = iconName.length - query.length;
-          index = 0;
+      var element = $icons[iconIndex];
+      var score = iconName.length - query.length;
+      var index = 0;
 
       for (var i = 0; i < queryLetters.length; i++) {
         var letter = queryLetters[i];
@@ -96,7 +111,7 @@
     $body.classList.toggle('search__active', matchedIcons.length < icons.length);
 
     if (query === '') {
-      if ($orderByRelevance.classList.contains('active')) {
+      if ($body.classList.contains('order-by-relevance')) {
         selectOrdering(previousOrdering);
       }
     } else {
@@ -176,4 +191,58 @@
   $orderByRelevance.addEventListener('click', function() {
     selectOrdering($orderByRelevance);
   });
+
+  /* Redesign */
+
+  var $banner = document.querySelector('.redesign-banner'),
+      $redirectAutomatically = document.getElementById('redirect-to-redesign'),
+      $hideOnce = document.getElementById('hide-feedback-request-once'),
+      $hideAlways = document.getElementById('hide-feedback-request');
+
+  var redesignUrl = 'https://simple-icons.github.io/simple-icons-website/',
+      hideBannerAlwaysIdentifier = 'hide-banner',
+      redirectAutomaticallyIdentifier = 'redirect-to-redesign';
+
+  $redirectAutomatically.addEventListener('click', function() {
+    var redirect = true;
+    if (localStorage) {
+      var currentVal = localStorage.getItem(redirectAutomaticallyIdentifier);
+      if (currentVal === 'true') {
+        redirect = false;
+      }
+
+      localStorage.setItem(redirectAutomaticallyIdentifier, redirect);
+    }
+
+    if (redirect) {
+      window.location.replace(redesignUrl);
+    } else {
+      $redirectAutomatically.innerHTML = "Redirect automatically";
+    }
+  });
+  $hideOnce.addEventListener('click', function () {
+    $banner.classList.add('hidden');
+  });
+  $hideAlways.addEventListener('click', function () {
+    if (localStorage) {
+      localStorage.setItem(hideBannerAlwaysIdentifier, true);
+    }
+
+    $banner.classList.add('hidden');
+  });
+
+  if (localStorage) {
+    var redirect = localStorage.getItem(redirectAutomaticallyIdentifier);
+    if (redirect === 'true') {
+      $redirectAutomatically.innerHTML = "Disable redirect";
+      if (document.referrer !== redesignUrl) {
+        window.location.replace(redesignUrl);
+      }
+    }
+
+    var hide = localStorage.getItem(hideBannerAlwaysIdentifier);
+    if (hide) {
+      $banner.classList.add('hidden');
+    }
+  }
 })( document );
