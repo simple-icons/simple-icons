@@ -185,16 +185,30 @@ Here is the svg for the Adobe Photoshop icon as an example:
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
 
-  * The `title` of the new SVG.
-  * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
-  * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
-
-Additionally, there are also optional fields that may provided for an icon:
-
-- The `guidelines` may be used to specify the URL of the brand's guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
-- The `license` may be used to record the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+* The `title` of the new SVG.
+* A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
+* The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
 Here is the object of a fictional brand as an example:
+
+```json
+{
+    "title": "A Fictional Brand",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo"
+}
+```
+
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+
+#### Optional Data
+
+Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
+
+* The `guidelines` may be used to specify the URL of the brand's guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+* The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+
+Here is the object of the fictional brand from before, but with all optional fields, as an example:
 
 ```json
 {
@@ -203,13 +217,11 @@ Here is the object of a fictional brand as an example:
     "source": "https://www.a-fictional-brand.org/logo",
     "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
     "license": {
-      "type": "CC0-1.0",
-      "url": "https://www.a-fictional-brand.org/logo/license"
+        "type": "CC0-1.0",
+        "url": "https://www.a-fictional-brand.org/logo/license"
     }
 }
 ```
-
-Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
 #### SVG Filename Convention
 
