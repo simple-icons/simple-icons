@@ -5,13 +5,13 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 ## Table of Contents
 
 * [Licenses, Copyrights & Trademarks](#licenses-copyrights--trademarks)
-* [Guidelines](#brand-guidelines)
+* [Brand Guidelines](#brand-guidelines)
 * [Update of Brands](#update-of-brands)
 * [Removal of Brands](#removal-of-brands)
 
 ## Licenses, Copyrights & Trademarks
 
-> NOTE: the addition of licenses to Simple Icons is an ongoing project. Hence, the absence of a licence data for a particular icon does not imply that the icon is not released under a license.
+> NOTE: the addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
 
 Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. Users of Simple icons are expected to request permission to use a brand's icon when necessary. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed.
 
@@ -35,7 +35,7 @@ As we rely largely on our community to help us keep Simple Icons up-to-date, the
 
 ## Update of Brands
 
-Should a brand wish for their icon or data to be updated, please [submit an issue] to the Simple Icons GitHub repository. In the issue, please explain your affiliation with the company and reasons for the update. We generally release updates once a week, but can occasionally make exceptions for immediate updates of brands.
+Should a brand wish for their icon or data to be updated, please [submit an issue] to [the Simple Icons GitHub repository]. In the issue, please explain your affiliation with the company and reasons for the update. We generally release updates once a week, but can occasionally make exceptions for immediate updates of brands.
 
 ## Removal of Brands
 
