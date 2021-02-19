@@ -488,7 +488,7 @@ module.exports = {
 
               if ("Mm".indexOf(iconPath[0]) === -1) {
                 // doesn't start with moveto
-                errorMsg += `should start with \"moveto\" command (\"M\" or \"m\"), but \"${iconPath[0]}\" found`
+                errorMsg += `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`
               } else {
                 // contains invalid characters
                 errorMsg += "unexpected characters found"
