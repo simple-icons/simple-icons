@@ -8,7 +8,7 @@ module.exports = {
    * Converts a brand title into a slug/filename.
    * @param {String} title The title to convert
    */
-  getIconSlug: (icon) => (
+  getIconSlug: icon => (
     icon.slug || icon.title.toLowerCase()
       .replace(/\+/g, "plus")
       .replace(/^\./, "dot-")
