@@ -480,7 +480,7 @@ module.exports = {
             const iconPath = $.find("path").attr("d");
 
             const validPathFormatRegex = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/;
-            if (validPathFormatRegex.test(iconPath)) {
+            if (!validPathFormatRegex.test(iconPath)) {
               let errorMsg = "Invalid path format: "
 
               if ("Mm".indexOf(iconPath[0]) === -1) {
