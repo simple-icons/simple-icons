@@ -26,7 +26,7 @@ update the script at '${__filename.replace(__dirname, "scripts")}'.
 
 data.icons.forEach(icon => {
   const brandName = icon.title;
-  const brandSlug = titleToSlug(icon.title);
+  const brandSlug = icon.slug || titleToSlug(icon.title);
   content += `| \`${brandName}\` | \`${brandSlug}\` |\n`
 });
 

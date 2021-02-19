@@ -215,6 +215,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Blazemeter` | `blazemeter` |
 | `Blazor` | `blazor` |
 | `Blender` | `blender` |
+| `Blockchain.com` | `blockchain-dot-com` |
 | `Blogger` | `blogger` |
 | `Bloglovin` | `bloglovin` |
 | `Blueprint` | `blueprint` |
@@ -274,6 +275,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Chakra UI` | `chakraui` |
 | `ChartMogul` | `chartmogul` |
 | `Chase` | `chase` |
+| `ChatBot` | `chatbot` |
 | `CheckiO` | `checkio` |
 | `Checkmarx` | `checkmarx` |
 | `Chef` | `chef` |
@@ -369,6 +371,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
 | `Cypress` | `cypress` |
+| `D-Wave Systems` | `d-wavesystems` |
 | `D3.js` | `d3-dot-js` |
 | `Dacia` | `dacia` |
 | `DAF` | `daf` |
@@ -424,6 +427,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `DLNA` | `dlna` |
 | `Docker` | `docker` |
 | `DocuSign` | `docusign` |
+| `Dogecoin` | `dogecoin` |
 | `Dolby` | `dolby` |
 | `DoorDash` | `doordash` |
 | `Douban` | `douban` |
@@ -881,6 +885,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Linktree` | `linktree` |
 | `Linode` | `linode` |
 | `Linux` | `linux` |
+| `Linux Containers` | `linuxcontainers` |
 | `Linux Foundation` | `linuxfoundation` |
 | `Linux Mint` | `linuxmint` |
 | `Litecoin` | `litecoin` |
@@ -1175,6 +1180,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Pocket` | `pocket` |
 | `Pocket Casts` | `pocketcasts` |
 | `Podcast Addict` | `podcastaddict` |
+| `Podman` | `podman` |
 | `Pokémon` | `pokemon` |
 | `Poly` | `poly` |
 | `Polymer Project` | `polymerproject` |
@@ -1196,6 +1202,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
+| `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
 | `Pro Tools` | `protools` |
 | `Probot` | `probot` |
@@ -1275,6 +1282,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Renren` | `renren` |
 | `repl.it` | `repl-dot-it` |
 | `ResearchGate` | `researchgate` |
+| `Resurrection Remix OS` | `resurrectionremixos` |
 | `RetroArch` | `retroarch` |
 | `RetroPie` | `retropie` |
 | `ReverbNation` | `reverbnation` |
@@ -1356,6 +1364,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Shikimori` | `shikimori` |
 | `Shopify` | `shopify` |
 | `Shopware` | `shopware` |
+| `Shotcut` | `shotcut` |
 | `Showpad` | `showpad` |
 | `Showtime` | `showtime` |
 | `Shutterstock` | `shutterstock` |
@@ -1510,6 +1519,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Tencent Weibo` | `tencentweibo` |
 | `TensorFlow` | `tensorflow` |
 | `Teradata` | `teradata` |
+| `teratail` | `teratail` |
 | `Terraform` | `terraform` |
 | `Tesla` | `tesla` |
 | `Testin` | `testin` |
