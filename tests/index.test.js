@@ -45,7 +45,7 @@ icons.forEach(icon => {
   }
 
   test(`${icon.title} can be found by it's slug`, () => {
-    const name = icon.slug || titleToSlug(icon.title);
+    const name = titleToSlug(icon);
     const found = simpleIcons.get(name);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);

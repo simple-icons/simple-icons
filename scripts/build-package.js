@@ -33,7 +33,7 @@ function escape(value) {
 }
 function iconToKeyValue(icon) {
   let iconName = escape(icon.title);
-  if (icon.slug !== titleToSlug(icon.title)) {
+  if (icon.slug !== titleToSlug({ title: icon.title })) {
     iconName = icon.slug;
   }
 
@@ -61,7 +61,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 // 'main'
 const icons = [];
 data.icons.forEach(icon => {
-  const filename = icon.slug || titleToSlug(icon.title);
+  const filename = titleToSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
   icon.slug = filename;
