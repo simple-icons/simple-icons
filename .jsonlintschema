@@ -14,6 +14,12 @@
             "type": "string",
             "required": true
           },
+          "slug": {
+            "description": "The brand name slug (used as filename in icons/)",
+            "type": "string",
+            "pattern": "^[a-z0-9\\-]+_[a-z0-9\\-]+$",
+            "required": false
+          },
           "hex": {
             "description": "The icons color, as HEX (without #)",
             "type": "string",
