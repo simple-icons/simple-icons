@@ -5,8 +5,8 @@
 
 module.exports = {
   /**
-   * Converts a brand title into a slug/filename.
-   * @param {String} title The title to convert
+   * Get the slug/filename for an icon.
+   * @param {String} title The icon data as it appears in _data/simple-icons.json
    */
   getIconSlug: icon => (
     icon.slug || icon.title.toLowerCase()
