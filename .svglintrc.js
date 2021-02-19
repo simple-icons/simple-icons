@@ -40,7 +40,7 @@ function sortObjectByValue(obj) {
  *   - `segments`: array of path segments as are returned by svg-path-segments.
  *   - `svgPath`: instance of svgpath object that can be manipulated easily.
  **/
-function segmentsSvgPath(iconPath) {
+function segmentsSVGPath(iconPath) {
   const segments = parsePath(iconPath);
   const SVGPath = svgpath("");
   SVGPath.segments = segments.map(segment => segment.params);
@@ -218,7 +218,7 @@ module.exports = {
               return;
             }
 
-            const { segments, SVGPath } = segmentsSvgPath(iconPath);
+            const { segments, SVGPath } = segmentsSVGPath(iconPath);
             const absSegments = SVGPath.abs().unshort().segments;
 
             const lowerMovementCommands = ['m', 'l'];
