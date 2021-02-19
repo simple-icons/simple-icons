@@ -10,6 +10,12 @@
           "description": "The name of the brand",
           "type": "string"
         },
+        "slug": {
+          "description": "The brand name slug (used as filename in icons/)",
+          "type": "string",
+          "pattern": "^[a-z0-9\\-]+_[a-z0-9\\-]+$",
+          "required": false
+        },
         "hex": {
           "description": "The brand color as a 6-character value (without #)",
           "type": "string",
