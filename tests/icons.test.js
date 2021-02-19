@@ -24,7 +24,7 @@ icons.forEach(icon => {
 
   test(`${icon.title} has a "path"`, () => {
     expect(typeof subject.path).toBe('string');
-    expect(subject.path).toMatch(/[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]/g);
+    expect(subject.path).toMatch(/^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+/);
   });
 
   test(`${icon.title} has a "slug"`, () => {
