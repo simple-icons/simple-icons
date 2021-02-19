@@ -478,9 +478,6 @@ module.exports = {
             reporter.name = "path-format";
 
             const iconPath = $.find("path").attr("d");
-            if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-              return;
-            }
 
             const validPathFormatRegex = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/;
             if (iconPath.match(validPathFormatRegex) === null) {
