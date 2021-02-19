@@ -1,6 +1,6 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { titleToSlug } = require("../scripts/utils.js");
+const { getIconSlug } = require("../scripts/utils.js");
 
 icons.forEach(icon => {
   const name = icon.slug || icon.title;
@@ -45,7 +45,7 @@ icons.forEach(icon => {
   }
 
   test(`${icon.title} can be found by it's slug`, () => {
-    const name = titleToSlug(icon);
+    const name = getIconSlug(icon);
     const found = simpleIcons.get(name);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);

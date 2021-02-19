@@ -5,7 +5,7 @@
  * icon SVG filename to standard output.
  */
 
-const { titleToSlug } = require("./utils.js");
+const { getIconSlug } = require("./utils.js");
 
 if (process.argv.length < 3) {
   console.error("Provide a brand name as argument");
@@ -14,6 +14,6 @@ if (process.argv.length < 3) {
   const brandName = process.argv.slice(3)
     .reduce((acc, arg) => `${acc} ${arg}`, process.argv[2]);
 
-  const filename = titleToSlug({ title: brandName });
+  const filename = getIconSlug({ title: brandName });
   console.log(`For '${brandName}' use the file 'icons/${filename}.svg'`);
 }

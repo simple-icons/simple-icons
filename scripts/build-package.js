@@ -25,7 +25,7 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { titleToSlug } = require("./utils.js");
+const { getIconSlug } = require("./utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -33,7 +33,7 @@ function escape(value) {
 }
 function iconToKeyValue(icon) {
   let iconName = escape(icon.title);
-  if (icon.slug !== titleToSlug({ title: icon.title })) {
+  if (icon.slug !== getIconSlug({ title: icon.title })) {
     iconName = icon.slug;
   }
 
@@ -61,7 +61,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 // 'main'
 const icons = [];
 data.icons.forEach(icon => {
-  const filename = titleToSlug(icon);
+  const filename = getIconSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
   icon.slug = filename;
