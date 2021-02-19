@@ -5,20 +5,28 @@ on:
     - cron: "0 0 * * 0"
 
 jobs:
-  release:
+  release-pr:
     runs-on: ubuntu-latest
+    outputs:
+      did-create-pr: ${{ steps.release.outputs.did-create-pr }}
+      new-version: ${{ steps.release.outputs.new-version }}
     steps:
       - uses: simple-icons/release-action@master
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+  version-bump:
+    runs-on: ubuntu-latest
+    needs: release-pr
+    if: needs.release-pr.outputs.did-create-pr == 'true'
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Version bump
-        run: node ./scripts/version-bump.js ${{ steps.release.outputs.new-version }}
+        run: node ./scripts/version-bump.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update slugs table
         run: node ./scripts/build-slugs-table.js
       - name: Commit version bump
