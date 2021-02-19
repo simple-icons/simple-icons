@@ -32,8 +32,12 @@ function escape(value) {
   return value.replace(/(?<!\\)'/g, "\\'");
 }
 function iconToKeyValue(icon) {
-  const iconTitle = escape(icon.title);
-  return `'${iconTitle}':${iconToObject(icon)}`;
+  let iconName = escape(icon.title);
+  if (icon.slug !== titleToSlug(icon.title)) {
+    iconName = icon.slug;
+  }
+
+  return `'${iconName}':${iconToObject(icon)}`;
 }
 function iconToObject(icon) {
   return util.format(iconObjectTemplate,
@@ -57,7 +61,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 // 'main'
 const icons = [];
 data.icons.forEach(icon => {
-  const filename = titleToSlug(icon.title);
+  const filename = icon.slug || titleToSlug(icon.title);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
   icon.slug = filename;

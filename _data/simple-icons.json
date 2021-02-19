@@ -401,6 +401,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:American_Express_logo.svg"
         },
         {
+            "title": "ANA",
+            "hex": "13448F",
+            "source": "https://www.ana.co.jp/en/eur/the-ana-experience/brand/"
+        },
+        {
             "title": "Anaconda",
             "hex": "44A833",
             "source": "https://www.anaconda.com"
@@ -540,6 +545,11 @@
             "title": "Apache Groovy",
             "hex": "4298B8",
             "source": "https://groovy-lang.org/"
+        },
+        {
+            "title": "Apache Hive",
+            "hex": "FDEE21",
+            "source": "https://apache.org/logos/"
         },
         {
             "title": "Apache JMeter",
@@ -1344,6 +1354,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Chase_logo_2007.svg"
         },
         {
+            "title": "ChatBot",
+            "hex": "FFD000",
+            "source": "https://chatbot.design/"
+        },
+        {
             "title": "CheckiO",
             "hex": "008DB6",
             "source": "https://py.checkio.org/blog/"
@@ -1542,6 +1557,11 @@
             "title": "Code Climate",
             "hex": "000000",
             "source": "https://codeclimate.com/"
+        },
+        {
+            "title": "Codeberg",
+            "hex": "2185D0",
+            "source": "https://codeberg.org"
         },
         {
             "title": "Codecademy",
@@ -2099,6 +2119,11 @@
             "title": "DocuSign",
             "hex": "FFCC22",
             "source": "https://github.com/simple-icons/simple-icons/issues/1098"
+        },
+        {
+            "title": "Dogecoin",
+            "hex": "C2A633",
+            "source": "https://cryptologos.cc/dogecoin"
         },
         {
             "title": "Dolby",
@@ -2980,7 +3005,10 @@
         {
             "title": "GNU",
             "hex": "A42E2B",
-            "source": "https://gnu.org"
+            "source": "https://gnu.org",
+            "license": {
+                "type": "CC-BY-SA-2.0"
+            }
         },
         {
             "title": "GNU Bash",
@@ -3005,7 +3033,10 @@
         {
             "title": "GNU social",
             "hex": "A22430",
-            "source": "https://www.gnu.org/graphics/social.html"
+            "source": "https://www.gnu.org/graphics/social.html",
+            "license": {
+                "type": "CC0-1.0"
+            }
         },
         {
             "title": "Go",
@@ -3423,6 +3454,11 @@
             "source": "https://helm.sh"
         },
         {
+            "title": "HelpDesk",
+            "hex": "FFD000",
+            "source": "https://helpdesk.design/"
+        },
+        {
             "title": "HERE",
             "hex": "00AFAA",
             "source": "https://www.here.com"
@@ -3441,6 +3477,11 @@
             "title": "HEY",
             "hex": "5522FA",
             "source": "https://hey.com/"
+        },
+        {
+            "title": "Hibernate",
+            "hex": "59666C",
+            "source": "https://hibernate.org/"
         },
         {
             "title": "Highly",
@@ -3466,6 +3507,12 @@
             "title": "Hive",
             "hex": "FF7A00",
             "source": "https://www.hivehome.com/"
+        },
+        {
+            "title": "Hive",
+            "slug": "hive_blockchain",
+            "hex": "E31337",
+            "source": "https://hive.io/brand/"
         },
         {
             "title": "HockeyApp",
@@ -3650,7 +3697,7 @@
         {
             "title": "IconJar",
             "hex": "16A5F3",
-            "source": "https://geticonjar.com/press-kit/"
+            "source": "https://geticonjar.com/"
         },
         {
             "title": "ICQ",
@@ -4389,6 +4436,11 @@
             "title": "Linux",
             "hex": "FCC624",
             "source": "http://www.linuxfoundation.org/about/about-linux"
+        },
+        {
+            "title": "Linux Containers",
+            "hex": "333333",
+            "source": "https://github.com/lxc/linuxcontainers.org/blob/29d3299ddf8718099b6de1464570fbbadbaabecb/static/img/containers.svg"
         },
         {
             "title": "Linux Foundation",
@@ -5863,6 +5915,11 @@
             "source": "https://podcastaddict.com"
         },
         {
+            "title": "Podman",
+            "hex": "892CA0",
+            "source": "https://podman.io/"
+        },
+        {
             "title": "Pokémon",
             "hex": "FFCB05",
             "source": "https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg"
@@ -5879,6 +5936,7 @@
         },
         {
             "title": "Pop!_OS",
+            "slug": "pop_os",
             "hex": "48B9C7",
             "source": "https://pop.system76.com/"
         },
@@ -5966,6 +6024,11 @@
             "title": "Prime Video",
             "hex": "1F2E3E",
             "source": "https://m.media-amazon.com/images/G/01/cooper/PV_Branding_Guidelines_Logos_Lock_Ups._CB1539191655_.pdf"
+        },
+        {
+            "title": "Prisma",
+            "hex": "2D3748",
+            "source": "https://github.com/prisma/presskit"
         },
         {
             "title": "Prismic",
@@ -6096,6 +6159,11 @@
             "title": "Qantas",
             "hex": "E40000",
             "source": "https://freight.qantas.com/"
+        },
+        {
+            "title": "Qatar Airways",
+            "hex": "5C0D34",
+            "source": "https://www.qatarairways.com/en/press-kit.html"
         },
         {
             "title": "QEMU",
@@ -6361,6 +6429,11 @@
             "title": "ResearchGate",
             "hex": "00CCBB",
             "source": "https://c5.rgstatic.net/m/428059296771819/images/favicon/favicon.svg"
+        },
+        {
+            "title": "Resurrection Remix OS",
+            "hex": "000000",
+            "source": "https://github.com/ResurrectionRemix"
         },
         {
             "title": "RetroArch",
@@ -7569,7 +7642,7 @@
         },
         {
             "title": "Textpattern",
-            "hex": "FFD942",
+            "hex": "FFDA44",
             "source": "https://textpattern.com/"
         },
         {
@@ -8322,6 +8395,11 @@
             "title": "webcomponents.org",
             "hex": "29ABE2",
             "source": "https://www.webcomponents.org/"
+        },
+        {
+            "title": "WebdriverIO",
+            "hex": "EA5906",
+            "source": "https://webdriver.io/docs/api/"
         },
         {
             "title": "Webflow",
