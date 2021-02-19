@@ -13,13 +13,15 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 
 > NOTE: the addition of licenses to Simple Icons is an ongoing project. Hence, the absence of a licence data for a particular icon does not imply that the icon is not released under a license.
 
-Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed. If an icon includes a registered trademark (`®`) or trademark symbol (`™`) the recommendations outlined in [the Simple Icons Contributing Guidelines] are followed to decide whether to include the symbol or not.
+Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. Users of Simple icons are expected to request permission to use a brand's icon when necessary. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed.
 
 The license under which an icon is available can be found in the icon's entry in the JSON data file in the NPM and Packagist packages.
 
 As we rely largely on our community to help us keep Simple Icons up-to-date, the license data for an icon may be outdated. If you find that the license data provided is outdated, please [submit an issue] to [the Simple Icons GitHub repository].
 
-Simple Icons cannot be held responsible for any legal activity raised by a brand over the use of their icon through Simple Icons, and expect our users to request permission from the brands in question when using icons.
+If an icon includes a registered trademark (`®`) or trademark symbol (`™`) the recommendations outlined in [the Simple Icons Contributing Guidelines] are followed to decide whether to include the symbol or not.
+
+Simple Icons cannot be held responsible for any legal activity raised by a brand over the use of their icon through Simple Icons.
 
 ## Brand Guidelines
 
