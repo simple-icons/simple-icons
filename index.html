@@ -55,6 +55,9 @@
     {% assign filename = filename | replace: ".", "-dot-" %}
     {% assign filename = filename | replace: "&", "-and-" %}
     {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
+    {% if icon.slug %}
+        {% assign filename = icon.slug %}
+    {% endif %}
 
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
@@ -215,6 +218,7 @@
             <li class="navbar__nav-item"><a href="https://www.npmjs.com/package/simple-icons">NPM</a></li>
             <li class="navbar__nav-item"><a href="https://packagist.org/packages/simple-icons/simple-icons">Packagist</a></li>
         </ul>
+        <p class="redesign-banner">We're redesigning the website! Please <a href="https://simple-icons.github.io/simple-icons-website/">Check it out</a> and <a href="https://github.com/simple-icons/simple-icons/discussions/4865">Share you feedback</a>. <span>Hide this message <button id="hide-feedback-request-once">Once</button> or <button id="hide-feedback-request">Always</button> | <button id="redirect-to-redesign">Redirect automatically</button></span></p>
     </header>
     <main role="main">
         <p class="hero">{{ iconCount }} Free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
