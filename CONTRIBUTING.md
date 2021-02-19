@@ -189,13 +189,23 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
   * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
-Here is the object for The Movie Database as an example:
+Additionally, there are also optional fields that may provided for an icon:
+
+- The `guidelines` may be used to specify the URL of the brand's guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+- The `license` may be used to record the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+
+Here is the object of a fictional brand as an example:
 
 ```json
 {
-    "title": "The Movie Database",
-    "hex": "01D277",
-    "source": "https://www.themoviedb.org/about/logos-attribution"
+    "title": "A Fictional Brand",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo",
+    "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
+    "license": {
+      "type": "CC0-1.0",
+      "url": "https://www.a-fictional-brand.org/logo/license"
+    }
 }
 ```
 
