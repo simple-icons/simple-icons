@@ -25,8 +25,8 @@ jobs:
         with:
           # Ensure we are checked out on the develop branch
           ref: develop
-      - name: Version bump
-        run: node ./scripts/version-bump.js "${{ needs.release-pr.outputs.new-version }}"
+      - name: Bump version
+        run: node ./scripts/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update slugs table
         run: node ./scripts/build-slugs-table.js
       - name: Commit version bump
