@@ -9,5 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: simple-icons/release-action@master
+        id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # Ensure we are checked out on the develop branch
+          ref: develop
+      - name: Version bump
+        run: node ./scripts/version-bump.js ${{ steps.release.outputs.new-version }}
+      - name: Update slugs table
+        run: node ./scripts/build-slugs-table.js
+      - name: Commit version bump
+        uses: stefanzweifel/git-auto-commit-action@v4.8.0
+        with:
+          commit_message: version bump
