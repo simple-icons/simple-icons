@@ -118,5 +118,6 @@ module.exports = {
     {name: 'removeStyleElement'},
     {name: 'removeScriptElement'},
     {name: 'removeOffCanvasPaths'},
+    {name: 'reusePaths'},
   ])
 };
