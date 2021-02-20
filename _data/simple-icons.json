@@ -401,6 +401,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:American_Express_logo.svg"
         },
         {
+            "title": "ANA",
+            "hex": "13448F",
+            "source": "https://www.ana.co.jp/en/eur/the-ana-experience/brand/"
+        },
+        {
             "title": "Anaconda",
             "hex": "44A833",
             "source": "https://www.anaconda.com"
@@ -540,6 +545,11 @@
             "title": "Apache Groovy",
             "hex": "4298B8",
             "source": "https://groovy-lang.org/"
+        },
+        {
+            "title": "Apache Hive",
+            "hex": "FDEE21",
+            "source": "https://apache.org/logos/"
         },
         {
             "title": "Apache JMeter",
@@ -1547,6 +1557,11 @@
             "title": "Code Climate",
             "hex": "000000",
             "source": "https://codeclimate.com/"
+        },
+        {
+            "title": "Codeberg",
+            "hex": "2185D0",
+            "source": "https://codeberg.org"
         },
         {
             "title": "Codecademy",
@@ -3445,6 +3460,11 @@
             "source": "https://helm.sh"
         },
         {
+            "title": "HelpDesk",
+            "hex": "FFD000",
+            "source": "https://helpdesk.design/"
+        },
+        {
             "title": "HERE",
             "hex": "00AFAA",
             "source": "https://www.here.com"
@@ -3463,6 +3483,11 @@
             "title": "HEY",
             "hex": "5522FA",
             "source": "https://hey.com/"
+        },
+        {
+            "title": "Hibernate",
+            "hex": "59666C",
+            "source": "https://hibernate.org/"
         },
         {
             "title": "Highly",
@@ -3488,6 +3513,12 @@
             "title": "Hive",
             "hex": "FF7A00",
             "source": "https://www.hivehome.com/"
+        },
+        {
+            "title": "Hive",
+            "slug": "hive_blockchain",
+            "hex": "E31337",
+            "source": "https://hive.io/brand/"
         },
         {
             "title": "HockeyApp",
@@ -5672,7 +5703,7 @@
         {
             "title": "Peugeot",
             "hex": "002355",
-            "source": "https://www.groupe-psa.com/en/brands-and-services/peugeot/"
+            "source": "https://www.stellantis.com/en/brands/peugeot"
         },
         {
             "title": "Pexels",
@@ -5911,6 +5942,7 @@
         },
         {
             "title": "Pop!_OS",
+            "slug": "pop_os",
             "hex": "48B9C7",
             "source": "https://pop.system76.com/"
         },
@@ -6133,6 +6165,11 @@
             "title": "Qantas",
             "hex": "E40000",
             "source": "https://freight.qantas.com/"
+        },
+        {
+            "title": "Qatar Airways",
+            "hex": "5C0D34",
+            "source": "https://www.qatarairways.com/en/press-kit.html"
         },
         {
             "title": "QEMU",
@@ -8364,6 +8401,11 @@
             "title": "webcomponents.org",
             "hex": "29ABE2",
             "source": "https://www.webcomponents.org/"
+        },
+        {
+            "title": "WebdriverIO",
+            "hex": "EA5906",
+            "source": "https://webdriver.io/docs/api/"
         },
         {
             "title": "Webflow",
