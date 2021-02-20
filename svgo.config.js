@@ -8,7 +8,8 @@ module.exports = {
       params: {
         // 3 decimals of precision in floating point numbers
         floatPrecision: 3,
-        // Some editors (eg. Adobe Illustrator, Sketch) does not parse flags without space wrapping
+        // Some editors (eg. Adobe Illustrator and Sketch) does not parse flags
+        // without space wrapping
         noSpaceAfterFlags: false,
       }
     },
