@@ -8,8 +8,7 @@ module.exports = {
       params: {
         // 3 decimals of precision in floating point numbers
         floatPrecision: 3,
-        // Some editors (eg. Adobe Illustrator) does not parse flags without space wrapping
-        // https://github.com/simple-icons/simple-icons/commit/5e57e8fef98cffb8363f482ab0860c954328b236
+        // Some editors (eg. Adobe Illustrator, Sketch) does not parse flags without space wrapping
         noSpaceAfterFlags: false,
       }
     },
