@@ -8,27 +8,28 @@ module.exports = {
       params: {
         // 3 decimals of precision in floating point numbers
         floatPrecision: 3,
-        // Some editors (eg. Adobe Illustrator and Sketch) does not parse flags
+        // Some editors (e.g. Adobe Illustrator and Sketch) cannot parse flags
         // without space wrapping
         noSpaceAfterFlags: false,
-      }
+      },
     },
 
-    // Sort attributes on the <SVG>
+    // Sort the attributes on the <svg> tag
     {
       name: 'sortAttrs',
       params: {
         order: ['role', 'viewBox'],
         xmlnsOrder: 'end',
-      }
+      },
     },
 
-    // Convert basic shapes (such as <circle>) to <path>, including <arc>
+    // Convert basic shapes (such as <circle>) to <path>
     {
       name: 'convertShapeToPath',
       params: {
-        convertArcs: true
-      }
+        // including <arc>
+        convertArcs: true,
+      },
     },
 
     // Compound all <path>s into one
@@ -37,7 +38,7 @@ module.exports = {
       params: {
         force: true,
         noSpaceAfterFlags: false,
-      }
+      },
     },
 
     // Keep the <title> tag
@@ -46,26 +47,27 @@ module.exports = {
       active: false,
     },
 
-    // Don't remove the role="img" attribute and automatically
-    // add it to the SVG if it's not
+    // Keep the role="img" attribute and automatically add it
+    // to the <svg> tag if it's not there already
     {
       name: 'addAttributesToSVGElement',
       params: {
         attributes: [
           {role: 'img'},
-        ]
-      }
+        ],
+      },
     },
 
-    // Keep the 'role' attribute, if is already defined
+    // Keep the 'role' attribute, if it's already defined
     {
       name: 'removeUnknownsAndDefaults',
       params: {
         keepRoleAttr: true,
-      }
+      },
     },
 
-    // Remove all attributes except 'role', 'viewBox' and 'xmlns' of <svg>s
+    // Remove all attributes except 'role', 'viewBox', and 'xmlns' from
+    // <svg> tags
     {
       name: 'removeAttrs',
       params: {
@@ -74,7 +76,7 @@ module.exports = {
           'version',
           'fill-rule',
         ],
-      }
+      },
     },
 
     // Remove paths with fill="none"
@@ -82,7 +84,7 @@ module.exports = {
       name: 'removeUselessStrokeAndFill',
       params: {
         removeNone: true,
-      }
+      },
     },
 
     // Explicitly enable everything else
@@ -120,5 +122,5 @@ module.exports = {
     'removeScriptElement',
     'removeOffCanvasPaths',
     'reusePaths',
-  ])
+  ]),
 };
