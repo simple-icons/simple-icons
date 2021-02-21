@@ -481,31 +481,31 @@ module.exports = {
 
             const validPathFormatRegex = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/;
             if (!validPathFormatRegex.test(iconPath)) {
-              let errorMsg = "Invalid path format: "
+              let errorMsg = "Invalid path format", reason;
 
-              if ("Mm".indexOf(iconPath[0]) === -1) {
+              if (!(/^[Mm]/.test(iconPath))) {
                 // doesn't start with moveto
-                errorMsg += `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`
-              } else {
-                // contains invalid characters
-                errorMsg += "unexpected characters found"
-
-                const pathDStart = '<path d="';
-
-                const validPathCharacters = "MmZzLlHhVvCcSsQqTtAaEe0123456789-,. ",
-                      invalidCharactersMsgs = [],
-                      pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length;
-
-                for (let i=1; i<iconPath.length; i++) {
-                  if (validPathCharacters.indexOf(iconPath[i]) === -1) {
-                    invalidCharactersMsgs.push(`"${iconPath[i]}" at index ${pathDIndex + i}`);
-                  }
-                }
-
-                errorMsg += ` (${invalidCharactersMsgs.join(", ")})`
+                reason = `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`;
+                reporter.error(`${errorMsg}: ${reason}`);
               }
 
-              reporter.error(errorMsg);
+              const validPathCharacters = "MmZzLlHhVvCcSsQqTtAaEe0123456789-,. ",
+                    invalidCharactersMsgs = [],
+                    pathDStart = '<path d="',
+                    pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length;
+
+              for (let i=1; i<iconPath.length; i++) {
+                if (validPathCharacters.indexOf(iconPath[i]) === -1) {
+                  invalidCharactersMsgs.push(`"${iconPath[i]}" at index ${pathDIndex + i}`);
+                }
+              }
+
+              // contains invalid characters
+              if (invalidCharactersMsgs.length) {
+                reason = `unexpected character${invalidCharactersMsgs.length > 1 ? 's' : ''} found`;
+                reason += ` (${invalidCharactersMsgs.join(", ")})`;
+                reporter.error(`${errorMsg}: ${reason}`);
+              }
             }
           }
         ]
