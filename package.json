@@ -42,7 +42,7 @@
     "test": "jest",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
-    "svgo": "svgo --config=./.svgo.yml",
+    "svgo": "svgo --config svgo.config.js",
     "get-filename": "node scripts/get-filename.js"
   },
   "engine": {
