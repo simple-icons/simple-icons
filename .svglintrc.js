@@ -501,7 +501,7 @@ module.exports = {
               }
 
               // contains invalid characters
-              if (invalidCharactersMsgs.length) {
+              if (invalidCharactersMsgs.length > 0) {
                 reason = `unexpected character${invalidCharactersMsgs.length > 1 ? 's' : ''} found`;
                 reason += ` (${invalidCharactersMsgs.join(", ")})`;
                 reporter.error(`${errorMsg}: ${reason}`);
