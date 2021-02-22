@@ -25,7 +25,7 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug } = require("./utils.js");
+const { getIconSlug, titleToSlug } = require("./utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -33,7 +33,7 @@ function escape(value) {
 }
 function iconToKeyValue(icon) {
   let iconName = escape(icon.title);
-  if (icon.slug !== getIconSlug({ title: icon.title })) {
+  if (icon.slug !== titleToSlug(icon.title)) {
     iconName = icon.slug;
   }
 
