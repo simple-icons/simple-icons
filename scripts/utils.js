@@ -6,7 +6,7 @@
 module.exports = {
   /**
    * Get the slug/filename for an icon.
-   * @param {Object} title The icon data as it appears in _data/simple-icons.json
+   * @param {Object} icon The icon data as it appears in _data/simple-icons.json
    */
   getIconSlug: icon => icon.slug || module.exports.titleToSlug(icon.title),
 
