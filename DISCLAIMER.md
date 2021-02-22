@@ -41,7 +41,7 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 
 ## Removal of Brands
 
-Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org`. Alternatively, it is also possible to [submit an issue] on [the Simple Icons GitHub repository] explaining your affiliation with the company, and reasons for removal. We generally remove icons that no longer [meet our criteria](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon) twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
+Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon) twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
 
 [submit an issue]: https://github.com/simple-icons/simple-icons/issues/new/choose
 [the Simple Icons Contributing Guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines
