@@ -494,9 +494,9 @@ module.exports = {
                     pathDStart = '<path d="',
                     pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length;
 
-              for (let i=1; i<iconPath.length; i++) {
-                if (validPathCharacters.indexOf(iconPath[i]) === -1) {
-                  invalidCharactersMsgs.push(`"${iconPath[i]}" at index ${pathDIndex + i}`);
+              for (let [i, char] of Object.entries(iconPath)) {
+                if (validPathCharacters.indexOf(char) === -1) {
+                  invalidCharactersMsgs.push(`"${char}" at index ${pathDIndex + parseInt(i)}`);
                 }
               }
 
