@@ -117,6 +117,8 @@ Using your preferred tool you should:
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
 
+If you have any problems or questions while creating the SVG, check out [the GitHub Discussions](https://github.com/simple-icons/simple-icons/discussions/categories/help-with-svgs). You may find an answer to your question there or you can ask your question if you did not find an answer.
+
 ### 3. Optimize the Icon
 
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
