@@ -189,6 +189,8 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
 * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
+The are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
+
 Here is the object of a fictional brand as an example:
 
 ```json
@@ -205,10 +207,10 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
 
-* The `guidelines` may be used to specify the URL of the brand's guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+* The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place.
 * The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
 
-Here is the object of the fictional brand from before, but with all optional fields, as an example:
+Here is the object of the fictional brand from before, but with all optional values, as an example:
 
 ```json
 {
