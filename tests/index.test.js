@@ -1,9 +1,10 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { titleToFilename } = require("../scripts/utils.js");
+const { getIconSlug } = require("../scripts/utils.js");
 
 icons.forEach(icon => {
-  const subject = simpleIcons[icon.title];
+  const name = icon.slug || icon.title;
+  const subject = simpleIcons[name];
 
   test(`${icon.title} has a "title"`, () => {
     expect(typeof subject.title).toBe('string');
@@ -31,17 +32,25 @@ icons.forEach(icon => {
     expect(typeof subject.slug).toBe('string');
   });
 
-  test(`${icon.title} can be found by it's title`, () => {
-    const found = simpleIcons.get(icon.title);
-    expect(found).toBeDefined();
-    expect(found.title).toEqual(icon.title);
-  });
+  // NOTE: Icons with custom slugs have a custom slug because their title is
+  // already taken, so they should not be findable by their title.
+  if (icon.slug === undefined) {
+    test(`${icon.title} can be found by it's title`, () => {
+      const found = simpleIcons.get(icon.title);
+      expect(found).toBeDefined();
+      expect(found.title).toEqual(icon.title);
+      expect(found.hex).toEqual(icon.hex);
+      expect(found.source).toEqual(icon.source);
+    });
+  }
 
   test(`${icon.title} can be found by it's slug`, () => {
-    const name = titleToFilename(icon.title);
+    const name = getIconSlug(icon);
     const found = simpleIcons.get(name);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
+    expect(found.hex).toEqual(icon.hex);
+    expect(found.source).toEqual(icon.source);
   });
 });
 
