@@ -1,6 +1,6 @@
 # Contributing to Simple Icons
 
-Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 1. Fork this repository
 1. (Optional) Clone the fork
@@ -16,7 +16,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
    gh repo clone simple-icons/simple-icons -- --filter=tree:0
    ```
 
-1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
+1. Create a new branch from the latest `develop`
 1. Start hacking on the new branch
 1. Commit and push to the new branch
 1. Make a pull request
@@ -117,6 +117,8 @@ Using your preferred tool you should:
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
 
+If you have any problems or questions while creating the SVG, check out [the GitHub Discussions](https://github.com/simple-icons/simple-icons/discussions/categories/help-with-svgs). You may find an answer to your question there or you can ask your question if you did not find an answer.
+
 ### 3. Optimize the Icon
 
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
@@ -189,16 +191,23 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
   * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
   * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
-There is also an optional field that may be used to specify the brand guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+Additionally, there are also optional fields that may provided for an icon:
 
-Here is the object for The Movie Database as an example:
+- The `guidelines` may be used to specify the URL of the brand's guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
+- The `license` may be used to record the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+
+Here is the object of a fictional brand as an example:
 
 ```json
 {
-    "title": "The Movie Database",
-    "hex": "01D277",
-    "source": "https://www.themoviedb.org/about/logos-attribution",
-    "guidelines": "https://www.themoviedb.org/about/logos-attribution"
+    "title": "A Fictional Brand",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo",
+    "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
+    "license": {
+      "type": "CC0-1.0",
+      "url": "https://www.a-fictional-brand.org/logo/license"
+    }
 }
 ```
 
