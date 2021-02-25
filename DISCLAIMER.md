@@ -27,7 +27,8 @@ Simple Icons cannot be held responsible for any legal activity raised by a brand
 
 ## Brand Guidelines
 
-> NOTE: the addition of guidelines to Simple Icons is an ongoing project. Hence, the absence of guidelines for a particular brand does not imply that the brand has no guidelines. Users of Simple Icons should always check at the `source` URL to see if guidance is listed there, in the absense of a specific `guidelines` page.
+> NOTE: the addition of guidelines to Simple Icons is an ongoing project. Hence, the absence of guidelines for a particular brand does not imply that the brand has no guidelines.
+Users of Simple Icons should always check at the `source` URL to see if guidance is listed there, in the absence of a specific `guidelines` page.
 
 Simple icons provides a link to a brand's _branding guidelines_ (or similar) if the brand provides one. We ask our users read these guidelines and ensure their usage of the brand's icon is in accordance with them. As guidelines are subject to change we also ask our users to regularly check if the brand guidelines of the icons they use have been updated.
 
