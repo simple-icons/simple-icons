@@ -25,8 +25,17 @@ const TESTS = {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
-        if (icon.title.localeCompare(prev.title) < 0) {
+        const compare = icon.title.localeCompare(prev.title);
+        if (compare < 0) {
           invalidEntries.push(icon);
+        }else if(compare === 0){
+          if(prev.slug){
+            if(!icon.slug){
+              invalidEntries.push(icon);
+            }else if(icon.slug.localeCompare(prev.slug) < 0){
+              invalidEntries.push(icon);
+            }
+          }
         }
       }
       return invalidEntries;
