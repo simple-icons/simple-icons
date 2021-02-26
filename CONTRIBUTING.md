@@ -1,6 +1,6 @@
 # Contributing to Simple Icons
 
-Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 1. Fork this repository
 1. (Optional) Clone the fork
@@ -16,7 +16,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
    gh repo clone simple-icons/simple-icons -- --filter=tree:0
    ```
 
-1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
+1. Create a new branch from the latest `develop`
 1. Start hacking on the new branch
 1. Commit and push to the new branch
 1. Make a pull request
@@ -116,6 +116,8 @@ Using your preferred tool you should:
 1. Export the icon as an SVG.
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
+
+If you have any problems or questions while creating the SVG, check out [the GitHub Discussions](https://github.com/simple-icons/simple-icons/discussions/categories/help-with-svgs). You may find an answer to your question there or you can ask your question if you did not find an answer.
 
 ### 3. Optimize the Icon
 
