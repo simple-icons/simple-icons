@@ -547,6 +547,40 @@ module.exports = {
                 ignoreIcon(reporter.name, iconPath, $);
               }
             }
+          },
+          function(reporter, $, ast) {
+            reporter.name = "path-format";
+
+            const iconPath = $.find("path").attr("d");
+
+            const validPathFormatRegex = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/;
+            if (!validPathFormatRegex.test(iconPath)) {
+              let errorMsg = "Invalid path format", reason;
+
+              if (!(/^[Mm]/.test(iconPath))) {
+                // doesn't start with moveto
+                reason = `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`;
+                reporter.error(`${errorMsg}: ${reason}`);
+              }
+
+              const validPathCharacters = "MmZzLlHhVvCcSsQqTtAaEe0123456789-,. ",
+                    invalidCharactersMsgs = [],
+                    pathDStart = '<path d="',
+                    pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length;
+
+              for (let [i, char] of Object.entries(iconPath)) {
+                if (validPathCharacters.indexOf(char) === -1) {
+                  invalidCharactersMsgs.push(`"${char}" at index ${pathDIndex + parseInt(i)}`);
+                }
+              }
+
+              // contains invalid characters
+              if (invalidCharactersMsgs.length > 0) {
+                reason = `unexpected character${invalidCharactersMsgs.length > 1 ? 's' : ''} found`;
+                reason += ` (${invalidCharactersMsgs.join(", ")})`;
+                reporter.error(`${errorMsg}: ${reason}`);
+              }
+            }
           }
         ]
     }
