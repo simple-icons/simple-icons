@@ -34,19 +34,6 @@ function sortObjectByValue(obj) {
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 }
 
-/**
- * Parses a SVG path using svg-path-segments library and building a svgpath
- *   instance with the result, returning a convenient object with two properties:
- *   - `segments`: array of path segments as are returned by svg-path-segments.
- *   - `svgPath`: instance of svgpath object that can be manipulated easily.
- **/
-function segmentsSVGPath(iconPath) {
-  const segments = parsePath(iconPath);
-  const SVGPath = svgpath("");
-  SVGPath.segments = segments.map(segment => segment.params);
-  return {segments, SVGPath};
-}
-
 function removeLeadingZeros(number) {
   // convert 0.03 to '.03'
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
@@ -75,8 +62,9 @@ function countDecimals(num) {
 };
 
 /**
- * Returns the index in which a SVG path starts given the content of its file.
- **/
+ * Get the index at which the first path value of an SVG starts.
+ * @param svgFileContent The raw SVG as text.
+ */
 function getPathDIndex(svgFileContent) {
   const pathDStart = '<path d="';
   return svgFileContent.indexOf(pathDStart) + pathDStart.length;
@@ -219,8 +207,8 @@ module.exports = {
               return;
             }
 
-            const { segments, SVGPath } = segmentsSVGPath(iconPath);
-            const absSegments = SVGPath.abs().unshort().segments;
+            const segments = parsePath(iconPath);
+            const absSegments = svgpath(iconPath).abs().unshort().segments;
 
             const lowerMovementCommands = ['m', 'l'];
             const lowerDirectionCommands = ['h', 'v'];
@@ -565,8 +553,7 @@ module.exports = {
 
               const validPathCharacters = "MmZzLlHhVvCcSsQqTtAaEe0123456789-,. ",
                     invalidCharactersMsgs = [],
-                    pathDStart = '<path d="',
-                    pathDIndex = $.html().indexOf(pathDStart) + pathDStart.length;
+                    pathDIndex = getPathDIndex($.html());
 
               for (let [i, char] of Object.entries(iconPath)) {
                 if (validPathCharacters.indexOf(char) === -1) {
