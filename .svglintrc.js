@@ -61,8 +61,9 @@ function collinear(x1, y1, x2, y2, x3, y3) {
 }
 
 /**
- * Returns the number of decimals that have a number.
- **/
+ * Returns the number of digits after the decimal point.
+ * @param num The number of interest.
+ */
 function countDecimals(num) {
   if (num && num % 1) {
     let [base, op, trail] = num.toExponential().split(/e([+-])/);
