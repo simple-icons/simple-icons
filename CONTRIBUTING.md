@@ -231,19 +231,19 @@ The filename of the SVG should correspond to the `title` used in the JSON file m
     filename: citroen.svg
     ```
 
-1. Replace the following symbols with their alias depending on their position in the title:
+1. Replace the following symbols with their alias:
 
-    | Symbol | Start | Middle | End  |
-    | :----: | ----- | ------ | ---- |
-    |   +    | plus  | plus   | plus |
-    |   .    | dot-  | -dot-  | -dot |
-    |   &    | and-  | -and-  | -and |
+    | Symbol | Alias |
+    | :----: | ----- |
+    |   +    | plus  |
+    |   .    | dot   |
+    |   &    | and   |
 
     for example:
 
     ```yml
     title: .Net
-    filename: dot-net.svg
+    filename: dotnet.svg
     ```
 
 #### Source Guidelines
