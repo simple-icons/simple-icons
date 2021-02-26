@@ -66,8 +66,13 @@ console.log(icon);
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
-    license: undefined || { type: '...', url: 'https://example.com/' }
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the license may be `undefined` if there is no license data for the icon.
 */
 ```
 
@@ -91,8 +96,13 @@ console.log(icon);
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
-    license: undefined || { type: '...', url: 'https://example.com/' }
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the license may be `undefined` if there is no license data for the icon.
 */
 ```
 
