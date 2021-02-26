@@ -11,9 +11,9 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 
 ## Licenses, Copyrights & Trademarks
 
-> NOTE: the addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
-
-> NOTE: Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.
+> NOTE:
+> - The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
+> - Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.
 
 Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon.  As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed.
 
@@ -41,9 +41,11 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 
 ## Removal of Brands
 
-Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon) twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
+Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria] twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
 
-[submit an issue]: https://github.com/simple-icons/simple-icons/issues/new/choose
+[meet out criteria]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon
+
+[submit an issue]: https://github.com/simple-icons/simple-icons/issues/new?labels=icon+outdated&template=icon_update.md
 [the Simple Icons Contributing Guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines
 [the Simple Icons GitHub repository]: https://github.com/simple-icons/simple-icons
 [the Simple Icons website]: https://simpleicons.org/
