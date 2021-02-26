@@ -461,7 +461,8 @@ module.exports = {
               return collinearSegments;
             }
 
-            const collinearSegments = getCollinearSegments(iconPath)
+            const collinearSegments = getCollinearSegments(iconPath),
+                  pathDIndex = getPathDIndex($.html());
             collinearSegments.forEach((segment) => {
               let errorMsg = `Collinear segment "${iconPath.substring(segment.start, segment.end)}" found`
               if (segment.chained) {
@@ -471,7 +472,7 @@ module.exports = {
                 }
                 errorMsg += ` in chain "${readableChain}"`;
               }
-              errorMsg += ` at index ${segment.start} (should be removed)`;
+              errorMsg += ` at index ${segment.start + pathDIndex} (should be removed)`;
               reporter.error(errorMsg);
             });
 
