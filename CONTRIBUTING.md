@@ -121,7 +121,7 @@ If you have any problems or questions while creating the SVG, check out [the Git
 
 ### 3. Optimize the Icon
 
-All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
+All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
   * Install dependencies
