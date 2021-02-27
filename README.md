@@ -125,34 +125,13 @@ echo file_get_contents('path/to/package/icons/simple-icons.svg');
 
 ## Third Party Extensions
 
-### Drupal <img src="./icons/drupal.svg" alt="Drupal" align=left width=24 height=24>
-
-Icons are also available as a [Drupal module](https://www.drupal.org/project/simple_icons) created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme).
-
-### Flutter <img src="./icons/flutter.svg" alt="Flutter" align=left width=24 height=24>
-
-Icons are also available as a [Flutter package](https://pub.dev/packages/flutter_brand_icons) created by  [@muj-programmer](https://github.com/muj-programmer).
-
-### Home Assistant <img src="./icons/homeassistant.svg" alt="Home Assistant" align=left width=24 height=24>
-
-Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
-
-### Kirby <img src="./icons/kirby.svg" alt="Kirby" align=left width=24 height=24>
-
-Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
-
-### React <img src="./icons/react.svg" alt="React" align=left width=24 height=24>
-
-Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
-
-### Svelte <img src="./icons/svelte.svg" alt="Svelte" align=left width=24 height=24>
-
-Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
-
-### Vue <img src="./icons/vue-dot-js.svg" alt="Vue" align=left width=24 height=24>
-
-Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by  [@noahlitvin](https://github.com/noahlitvin).
-
-### WordPress <img src="./icons/wordpress.svg" alt="WordPress" align=left width=24 height=24>
-
-Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
+| Extension | Author |
+| :--- | :--- |
+| [Drupal module](https://www.drupal.org/project/simple_icons) <img src="./icons/drupal.svg" alt="Drupal" align=left width=24 height=24> | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
+| [Flutter package](https://pub.dev/packages/flutter_brand_icons) <img src="./icons/flutter.svg" alt="Flutter" align=left width=24 height=24> | [@muj-programmer](https://github.com/muj-programmer) |
+| [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons)<img src="./icons/homeassistant.svg" alt="Home Assistant" align=left width=24 height=24> | [@vigonotion](https://github.com/vigonotion/) |
+| [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) <img src="./icons/kirby.svg" alt="Kirby" align=left width=24 height=24> | [@runxel](https://github.com/runxel) |
+| [React package](https://github.com/icons-pack/react-simple-icons) <img src="./icons/react.svg" alt="React" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
+| [Svelte package](https://github.com/icons-pack/svelte-simple-icons) <img src="./icons/svelte.svg" alt="Svelte" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
+| [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="./icons/vue-dot-js.svg" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) |
+| [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="./icons/wordpress.svg" alt="WordPress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) |
