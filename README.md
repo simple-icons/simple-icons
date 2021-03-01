@@ -72,7 +72,7 @@ console.log(icon);
     }
 }
 
-NOTE: the license may be `undefined` if there is no license data for the icon.
+NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
 
