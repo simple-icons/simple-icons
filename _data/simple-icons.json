@@ -962,6 +962,11 @@
             "source": "https://www.bankofamerica.com/"
         },
         {
+            "title": "Baremetrics",
+            "hex": "6078FF",
+            "source": "https://baremetrics.com/"
+        },
+        {
             "title": "Basecamp",
             "hex": "1D2D35",
             "source": "https://basecamp.com/about/press"
@@ -1364,6 +1369,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Caterpillar_logo.svg"
         },
         {
+            "title": "CBS",
+            "hex": "033963",
+            "source": "https://www.cbs.com/"
+        },
+        {
             "title": "CD Projekt",
             "hex": "DC0D15",
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
@@ -1456,7 +1466,7 @@
         {
             "title": "Chrysler",
             "hex": "000000",
-            "source": "https://www.mopar.com/"
+            "source": "https://www.stellantis.com/en/brands/chrysler"
         },
         {
             "title": "Chupa Chups",
@@ -2673,8 +2683,8 @@
         },
         {
             "title": "Fiat",
-            "hex": "AD0C33",
-            "source": "https://en.wikipedia.org/wiki/File:Fiat_Logo.svg"
+            "hex": "941711",
+            "source": "http://www.fcaci.com/x/FIATv15"
         },
         {
             "title": "Fido Alliance",
@@ -4042,7 +4052,7 @@
         {
             "title": "Jeep",
             "hex": "000000",
-            "source": "http://www.fcaci.com/v15-images/jeep/Jeep-Brand-Mark-Guidelines-Rev10.15.pdf"
+            "source": "http://www.fcaci.com/x/JEEPv15"
         },
         {
             "title": "Jekyll",
@@ -4213,6 +4223,11 @@
             "title": "Karlsruher Verkehrsverbund",
             "hex": "9B2321",
             "source": "https://commons.wikimedia.org/wiki/File:KVV_2010.svg"
+        },
+        {
+            "title": "Kasa Smart",
+            "hex": "4ACBD6",
+            "source": "https://www.tp-link.com/us/support/download/hs200/"
         },
         {
             "title": "Kaspersky",
@@ -5228,9 +5243,19 @@
             "source": "https://n26.com/"
         },
         {
+            "title": "Namebase",
+            "hex": "0068FF",
+            "source": "https://www.namebase.io/"
+        },
+        {
             "title": "Namecheap",
             "hex": "DE3723",
             "source": "https://www.namecheap.com/"
+        },
+        {
+            "title": "Nano",
+            "hex": "4A90E2",
+            "source": "https://nano.org/resources"
         },
         {
             "title": "NASA",
@@ -5871,8 +5896,8 @@
         },
         {
             "title": "Peugeot",
-            "hex": "002355",
-            "source": "https://www.stellantis.com/en/brands/peugeot"
+            "hex": "000000",
+            "source": "https://www.peugeot.co.uk/"
         },
         {
             "title": "Pexels",
@@ -6488,6 +6513,11 @@
             "source": "https://global.rakuten.com/corp/assets/img/site-icons/rakuten-black.svg"
         },
         {
+            "title": "Ram",
+            "hex": "000000",
+            "source": "http://www.fcaci.com/x/RAMv15"
+        },
+        {
             "title": "Rancher",
             "hex": "0075A8",
             "source": "https://rancher.com/brand-guidelines/"
@@ -6631,6 +6661,11 @@
             "title": "RetroPie",
             "hex": "CC0000",
             "source": "https://github.com/RetroPie/RetroPie-Docs/blob/c4e882bd2c9d740c591ff346e07a4a4cb536ca93/images/logo.svg"
+        },
+        {
+            "title": "reveal.js",
+            "hex": "F2E142",
+            "source": "https://revealjs.com/"
         },
         {
             "title": "ReverbNation",
@@ -7664,6 +7699,11 @@
             "source": "https://superuser.com"
         },
         {
+            "title": "SurveyMonkey",
+            "hex": "00BF6F",
+            "source": "https://www.surveymonkey.com/mp/brandassets/"
+        },
+        {
             "title": "SUSE",
             "hex": "0C322C",
             "source": "https://brand.suse.com/"
@@ -8371,6 +8411,12 @@
             "source": "https://v8.dev/logo"
         },
         {
+            "title": "Vaadin",
+            "hex": "00B4F0",
+            "source": "https://vaadin.com/trademark",
+            "guidelines": "https://vaadin.com/trademark"
+        },
+        {
             "title": "Vagrant",
             "hex": "1563FF",
             "source": "https://www.hashicorp.com/brand#vagrant"
@@ -8388,7 +8434,7 @@
         {
             "title": "Vauxhall",
             "hex": "EB001E",
-            "source": "https://www.vauxhall.co.uk/content/dam/vauxhall/Home/brochure-library/commercial-vehicles/price-guide.pdf"
+            "source": "https://www.stellantis.com/en/brands/vauxhall"
         },
         {
             "title": "vBulletin",
