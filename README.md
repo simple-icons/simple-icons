@@ -50,7 +50,13 @@ The API can then be used as follows:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-console.log(simpleIcons.get('Simple Icons'));
+// Get a specific icon by its name as:
+simpleIcons.get('[ICON NAME]');
+
+// For example:
+const icon = simpleIcons.get('simpleicons');
+
+console.log(icon);
 
 /*
 {
@@ -59,8 +65,14 @@ console.log(simpleIcons.get('Simple Icons'));
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
 
@@ -68,6 +80,10 @@ Alternatively you can import the needed icons individually.
 This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
+// Import a specific icon by its name as:
+require('simple-icons/icons/[ICON NAME]');
+
+// For example:
 const icon = require('simple-icons/icons/simpleicons');
 
 console.log(icon);
@@ -79,9 +95,27 @@ console.log(icon);
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the license may be `undefined` if there is no license data for the icon.
 */
+```
+
+Lastly, the `simpleIcons` object is also enumerable.
+This is useful if you want to do a computation on every icon:
+
+```javascript
+const simpleIcons = require('simple-icons');
+
+for (const title in simpleIcons) {
+    const icon = simpleIcons.get(title);
+    // do stuff
+}
 ```
 
 #### TypeScript Usage
@@ -119,7 +153,7 @@ Icons are also available as a [Drupal module](https://www.drupal.org/project/sim
 
 ### Flutter
 
-Icons are also available as a [Flutter package](https://pub.dev/packages/flutter_brand_icons) created by  [@muj-programmer](https://github.com/muj-programmer).
+Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by  [@jlnrrg](https://jlnrrg.github.io/).
 
 ### Home Assistant
 
