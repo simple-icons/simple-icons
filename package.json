@@ -25,9 +25,9 @@
     "npm-run-all": "4.1.5",
     "svg-path-bbox": "0.2.0",
     "svglint": "1.0.7",
-    "svgo": "2.0.3",
+    "svgo": "2.2.0",
     "svgpath": "2.3.1",
-    "uglify-js": "3.12.8"
+    "uglify-js": "3.13.0"
   },
   "scripts": {
     "build": "node scripts/build-package.js",
