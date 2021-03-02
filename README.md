@@ -28,7 +28,7 @@ Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/packa
 <img height="32" width="32" src="https://unpkg.com/simple-icons@v4/icons/[ICON SLUG].svg" />
 ```
 
-Where `[ICON SLUG]` is replaced by the [icon slug] of the icon you want to use, for example:
+Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/simpleicons.svg" />
@@ -45,7 +45,7 @@ The icons are also available through our npm package. To install, simply run:
 $ npm install simple-icons
 ```
 
-The API can then be used as follows, where `[ICON SLUG]` is replaced by an [icon slug]:
+The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```javascript
 const simpleIcons = require('simple-icons');
@@ -76,7 +76,7 @@ NOTE: the `license` entry will be `undefined` if we do not yet have license data
 */
 ```
 
-Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by an [icon slug].
+Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
@@ -134,7 +134,7 @@ The icons are also available through our Packagist package. To install, simply r
 $ composer require simple-icons/simple-icons
 ```
 
-The package can then be used as follows, where `[ICON SLUG]` is replaced by an [icon slug]:
+The package can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```php
 <?php
@@ -182,4 +182,4 @@ Icons are also available as a [Vue package](https://github.com/mainvest/vue-simp
 
 Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
 
-[icon slug]: ./slugs.md
+[slug]: ./slugs.md
