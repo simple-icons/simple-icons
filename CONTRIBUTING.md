@@ -249,10 +249,9 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 #### Optional Data
 
-If you needed to add a modifier to the icon's file name above to resolve a clash with the name of an existing icon then you will also need to add a `slug` entry to the icon's JSON and set the value to your chosen file name.
-
 Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
 
+* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an exitsing icon's name.
 * The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
 * The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
 
