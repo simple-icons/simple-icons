@@ -39,13 +39,24 @@ function iconToKeyValue(icon) {
 
   return `'${iconName}':${iconToObject(icon)}`;
 }
+function licenseToObject(license) {
+  if (license === undefined) {
+    return;
+  }
+
+  if (license.url === undefined) {
+    license.url = `https://spdx.org/licenses/${license.type}.html`;
+  }
+  return license;
+}
 function iconToObject(icon) {
   return util.format(iconObjectTemplate,
     escape(icon.title),
     escape(icon.slug),
     escape(icon.svg),
     escape(icon.source),
-    escape(icon.hex)
+    escape(icon.hex),
+    licenseToObject(icon.license),
   );
 }
 function minifyAndWrite(filepath, rawJavaScript) {

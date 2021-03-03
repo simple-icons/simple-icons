@@ -65,8 +65,14 @@ console.log(icon);
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
 
@@ -89,8 +95,14 @@ console.log(icon);
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the license may be `undefined` if there is no license data for the icon.
 */
 ```
 
