@@ -204,7 +204,7 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
 1. Replace the following symbols with their alias depending on their position in the title:
 
     | Symbol | Start | Middle | End  |
-    | :----: | ----- | ------ | ---- |
+    | :----: | :---- | :----: | ---: |
     |   +    | plus  | plus   | plus |
     |   .    | dot-  | -dot-  | -dot |
     |   &    | and-  | -and-  | -and |
