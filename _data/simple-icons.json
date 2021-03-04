@@ -4830,7 +4830,10 @@
         {
             "title": "Material Design Icons",
             "hex": "2196F3",
-            "source": "https://materialdesignicons.com/icon/vector-square"
+            "source": "https://materialdesignicons.com/icon/vector-square",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Material-UI",
