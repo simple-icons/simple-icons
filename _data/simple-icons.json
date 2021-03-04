@@ -211,6 +211,11 @@
             "source": "https://www.aerlingus.com/"
         },
         {
+            "title": "Aeroflot",
+            "hex": "02458D",
+            "source": "https://www.aeroflot.ru/ru-en/information/onboard/press"
+        },
+        {
             "title": "Aeroméxico",
             "hex": "0B2343",
             "source": "https://www.aeromexico.com/"
@@ -463,7 +468,7 @@
         {
             "title": "Android Studio",
             "hex": "3DDC84",
-            "source": "https://en.wikipedia.org/wiki/Android_Studio"
+            "source": "https://developer.android.com/studio/"
         },
         {
             "title": "AngelList",
@@ -962,6 +967,11 @@
             "source": "https://www.bankofamerica.com/"
         },
         {
+            "title": "Baremetrics",
+            "hex": "6078FF",
+            "source": "https://baremetrics.com/"
+        },
+        {
             "title": "Basecamp",
             "hex": "1D2D35",
             "source": "https://basecamp.com/about/press"
@@ -1061,6 +1071,11 @@
             "title": "Bitcoin",
             "hex": "F7931A",
             "source": "https://bitcoin.org/en"
+        },
+        {
+            "title": "Bitcoin SV",
+            "hex": "EAB300",
+            "source": "https://bitcoinsv.com/"
         },
         {
             "title": "Bitdefender",
@@ -1364,6 +1379,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Caterpillar_logo.svg"
         },
         {
+            "title": "CBS",
+            "hex": "033963",
+            "source": "https://www.cbs.com/"
+        },
+        {
             "title": "CD Projekt",
             "hex": "DC0D15",
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
@@ -1456,7 +1476,7 @@
         {
             "title": "Chrysler",
             "hex": "000000",
-            "source": "https://www.mopar.com/"
+            "source": "https://www.stellantis.com/en/brands/chrysler"
         },
         {
             "title": "Chupa Chups",
@@ -2673,8 +2693,8 @@
         },
         {
             "title": "Fiat",
-            "hex": "AD0C33",
-            "source": "https://en.wikipedia.org/wiki/File:Fiat_Logo.svg"
+            "hex": "941711",
+            "source": "http://www.fcaci.com/x/FIATv15"
         },
         {
             "title": "Fido Alliance",
@@ -3722,6 +3742,11 @@
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
         },
         {
+            "title": "Hungry Jack's",
+            "hex": "D0021B",
+            "source": "https://www.hungryjacks.com.au/"
+        },
+        {
             "title": "Hurriyetemlak",
             "hex": "E02826",
             "source": "https://ilan.hurriyetemlak.com/emlak-ilani-yayinlama-kurallari"
@@ -4042,7 +4067,7 @@
         {
             "title": "Jeep",
             "hex": "000000",
-            "source": "http://www.fcaci.com/v15-images/jeep/Jeep-Brand-Mark-Guidelines-Rev10.15.pdf"
+            "source": "http://www.fcaci.com/x/JEEPv15"
         },
         {
             "title": "Jekyll",
@@ -4213,6 +4238,11 @@
             "title": "Karlsruher Verkehrsverbund",
             "hex": "9B2321",
             "source": "https://commons.wikimedia.org/wiki/File:KVV_2010.svg"
+        },
+        {
+            "title": "Kasa Smart",
+            "hex": "4ACBD6",
+            "source": "https://www.tp-link.com/us/support/download/hs200/"
         },
         {
             "title": "Kaspersky",
@@ -4495,6 +4525,11 @@
             "title": "Liberapay",
             "hex": "F6C915",
             "source": "https://liberapay.com/assets/liberapay/icon-v2_yellow-r.svg"
+        },
+        {
+            "title": "Libraries.io",
+            "hex": "337AB7",
+            "source": "https://github.com/librariesio/libraries.io/blob/9ab0f659bb7fe137c15cf676612b6811f501a0bd/public/safari-pinned-tab.svg"
         },
         {
             "title": "LibraryThing",
@@ -5231,9 +5266,19 @@
             "source": "https://n26.com/"
         },
         {
+            "title": "Namebase",
+            "hex": "0068FF",
+            "source": "https://www.namebase.io/"
+        },
+        {
             "title": "Namecheap",
             "hex": "DE3723",
             "source": "https://www.namecheap.com/"
+        },
+        {
+            "title": "Nano",
+            "hex": "4A90E2",
+            "source": "https://nano.org/resources"
         },
         {
             "title": "NASA",
@@ -5874,8 +5919,8 @@
         },
         {
             "title": "Peugeot",
-            "hex": "002355",
-            "source": "https://www.stellantis.com/en/brands/peugeot"
+            "hex": "000000",
+            "source": "https://www.peugeot.co.uk/"
         },
         {
             "title": "Pexels",
@@ -5932,6 +5977,11 @@
             "title": "Picarto.TV",
             "hex": "1DA456",
             "source": "https://picarto.tv/site/press"
+        },
+        {
+            "title": "Picnic",
+            "hex": "E1171E",
+            "source": "https://picnic.app/nl/feestdagen/"
         },
         {
             "title": "PicPay",
@@ -6285,6 +6335,11 @@
             "source": "https://protonmail.com/media-kit"
         },
         {
+            "title": "ProtonVPN",
+            "hex": "56B366",
+            "source": "https://protonvpn.com/press"
+        },
+        {
             "title": "Proxmox",
             "hex": "E57000",
             "source": "https://www.proxmox.com/en/news/media-kit"
@@ -6374,6 +6429,11 @@
             "title": "Qiita",
             "hex": "55C500",
             "source": "https://www.qiita.com"
+        },
+        {
+            "title": "Qiskit",
+            "hex": "6929C4",
+            "source": "https://qiskit.org"
         },
         {
             "title": "QIWI",
@@ -6489,6 +6549,11 @@
             "title": "Rakuten",
             "hex": "BF0000",
             "source": "https://global.rakuten.com/corp/assets/img/site-icons/rakuten-black.svg"
+        },
+        {
+            "title": "Ram",
+            "hex": "000000",
+            "source": "http://www.fcaci.com/x/RAMv15"
         },
         {
             "title": "Rancher",
@@ -6634,6 +6699,11 @@
             "title": "RetroPie",
             "hex": "CC0000",
             "source": "https://github.com/RetroPie/RetroPie-Docs/blob/c4e882bd2c9d740c591ff346e07a4a4cb536ca93/images/logo.svg"
+        },
+        {
+            "title": "reveal.js",
+            "hex": "F2E142",
+            "source": "https://revealjs.com/"
         },
         {
             "title": "ReverbNation",
@@ -7578,8 +7648,8 @@
         },
         {
             "title": "Strapi",
-            "hex": "2E7EEA",
-            "source": "https://strapi.io/"
+            "hex": "2F2E8B",
+            "source": "https://strapi.io/newsroom"
         },
         {
             "title": "Strava",
@@ -7665,6 +7735,11 @@
             "title": "Super User",
             "hex": "38A1CE",
             "source": "https://superuser.com"
+        },
+        {
+            "title": "SurveyMonkey",
+            "hex": "00BF6F",
+            "source": "https://www.surveymonkey.com/mp/brandassets/"
         },
         {
             "title": "SUSE",
@@ -8374,6 +8449,12 @@
             "source": "https://v8.dev/logo"
         },
         {
+            "title": "Vaadin",
+            "hex": "00B4F0",
+            "source": "https://vaadin.com/trademark",
+            "guidelines": "https://vaadin.com/trademark"
+        },
+        {
             "title": "Vagrant",
             "hex": "1563FF",
             "source": "https://www.hashicorp.com/brand#vagrant"
@@ -8384,6 +8465,11 @@
             "source": "https://www.valvesoftware.com/"
         },
         {
+            "title": "Vapor",
+            "hex": "0D0D0D",
+            "source": "https://vapor.codes/"
+        },
+        {
             "title": "Vault",
             "hex": "000000",
             "source": "https://www.hashicorp.com/brand"
@@ -8391,7 +8477,7 @@
         {
             "title": "Vauxhall",
             "hex": "EB001E",
-            "source": "https://www.vauxhall.co.uk/content/dam/vauxhall/Home/brochure-library/commercial-vehicles/price-guide.pdf"
+            "source": "https://www.stellantis.com/en/brands/vauxhall"
         },
         {
             "title": "vBulletin",
@@ -8597,6 +8683,11 @@
             "title": "WALKMAN",
             "hex": "000000",
             "source": "https://en.wikipedia.org/wiki/File:Walkman_logo.svg"
+        },
+        {
+            "title": "Wappalyzer",
+            "hex": "32067C",
+            "source": "https://www.wappalyzer.com/"
         },
         {
             "title": "Warner Bros.",
