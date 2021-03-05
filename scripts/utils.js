@@ -5,6 +5,12 @@
 
 module.exports = {
   /**
+   * Get the slug/filename for an icon.
+   * @param {Object} icon The icon data as it appears in _data/simple-icons.json
+   */
+  getIconSlug: icon => icon.slug || module.exports.titleToSlug(icon.title),
+
+  /**
    * Converts a brand title into a slug/filename.
    * @param {String} title The title to convert
    */
@@ -27,7 +33,7 @@ module.exports = {
       .replace(/ŧ/g, "t")
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9_\-]/g, "")
+      .replace(/[^a-z0-9\-]/g, "")
   ),
 
   /**
