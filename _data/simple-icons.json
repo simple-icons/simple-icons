@@ -211,6 +211,11 @@
             "source": "https://www.aerlingus.com/"
         },
         {
+            "title": "Aeroflot",
+            "hex": "02458D",
+            "source": "https://www.aeroflot.ru/ru-en/information/onboard/press"
+        },
+        {
             "title": "Aeroméxico",
             "hex": "0B2343",
             "source": "https://www.aeromexico.com/"
@@ -463,7 +468,7 @@
         {
             "title": "Android Studio",
             "hex": "3DDC84",
-            "source": "https://en.wikipedia.org/wiki/Android_Studio"
+            "source": "https://developer.android.com/studio/"
         },
         {
             "title": "AngelList",
@@ -962,6 +967,11 @@
             "source": "https://www.bankofamerica.com/"
         },
         {
+            "title": "Barclays",
+            "hex": "00AEEF",
+            "source": "https://home.barclays/"
+        },
+        {
             "title": "Baremetrics",
             "hex": "6078FF",
             "source": "https://baremetrics.com/"
@@ -1066,6 +1076,16 @@
             "title": "Bitcoin",
             "hex": "F7931A",
             "source": "https://bitcoin.org/en"
+        },
+        {
+            "title": "Bitcoin Cash",
+            "hex": "F59332",
+            "source": "https://www.bitcoincash.org/graphics/"
+        },
+        {
+            "title": "Bitcoin SV",
+            "hex": "EAB300",
+            "source": "https://bitcoinsv.com/"
         },
         {
             "title": "Bitdefender",
@@ -3732,6 +3752,11 @@
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
         },
         {
+            "title": "Hungry Jack's",
+            "hex": "D0021B",
+            "source": "https://www.hungryjacks.com.au/"
+        },
+        {
             "title": "Hurriyetemlak",
             "hex": "E02826",
             "source": "https://ilan.hurriyetemlak.com/emlak-ilani-yayinlama-kurallari"
@@ -4512,6 +4537,11 @@
             "source": "https://liberapay.com/assets/liberapay/icon-v2_yellow-r.svg"
         },
         {
+            "title": "Libraries.io",
+            "hex": "337AB7",
+            "source": "https://github.com/librariesio/libraries.io/blob/9ab0f659bb7fe137c15cf676612b6811f501a0bd/public/safari-pinned-tab.svg"
+        },
+        {
             "title": "LibraryThing",
             "hex": "251A15",
             "source": "https://twitter.com/LibraryThing/status/1054466649271656448"
@@ -4805,7 +4835,10 @@
         {
             "title": "Material Design Icons",
             "hex": "2196F3",
-            "source": "https://materialdesignicons.com/icon/vector-square"
+            "source": "https://materialdesignicons.com/icon/vector-square",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Material-UI",
@@ -5870,6 +5903,11 @@
             "source": "https://github.com/Chocobozzz/PeerTube/tree/develop/client/src/assets/images"
         },
         {
+            "title": "Pegasus Airlines",
+            "hex": "FDC43E",
+            "source": "https://www.flypgs.com/en/about-pegasus/flypgscom-magazine"
+        },
+        {
             "title": "Pelican",
             "hex": "14A0C4",
             "source": "https://blog.getpelican.com/pages/gratitude.html"
@@ -5955,6 +5993,11 @@
             "title": "Picarto.TV",
             "hex": "1DA456",
             "source": "https://picarto.tv/site/press"
+        },
+        {
+            "title": "Picnic",
+            "hex": "E1171E",
+            "source": "https://picnic.app/nl/feestdagen/"
         },
         {
             "title": "PicPay",
@@ -6308,6 +6351,11 @@
             "source": "https://protonmail.com/media-kit"
         },
         {
+            "title": "ProtonVPN",
+            "hex": "56B366",
+            "source": "https://protonvpn.com/press"
+        },
+        {
             "title": "Proxmox",
             "hex": "E57000",
             "source": "https://www.proxmox.com/en/news/media-kit"
@@ -6331,6 +6379,11 @@
             "title": "Puppet",
             "hex": "FFAE1A",
             "source": "https://puppet.com/company/press-room/"
+        },
+        {
+            "title": "Puppeteer",
+            "hex": "40B5A4",
+            "source": "https://pptr.dev/"
         },
         {
             "title": "PureScript",
@@ -6399,6 +6452,11 @@
             "source": "https://www.qiita.com"
         },
         {
+            "title": "Qiskit",
+            "hex": "6929C4",
+            "source": "https://qiskit.org"
+        },
+        {
             "title": "QIWI",
             "hex": "FF8C00",
             "source": "https://qiwi.com/"
@@ -6422,6 +6480,11 @@
             "title": "Quantcast",
             "hex": "000000",
             "source": "https://www.quantcast.com/user/login"
+        },
+        {
+            "title": "QuantConnect",
+            "hex": "F5AE29",
+            "source": "https://www.quantconnect.com/docs/home/home"
         },
         {
             "title": "Quantopian",
@@ -7037,7 +7100,8 @@
         {
             "title": "Server Fault",
             "hex": "E7282D",
-            "source": "http://stackoverflow.com/company/logos"
+            "source": "http://stackoverflow.com/company/logos",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "Serverless",
@@ -7477,12 +7541,14 @@
         {
             "title": "Stack Exchange",
             "hex": "1E5397",
-            "source": "http://stackoverflow.com/company/logos"
+            "source": "http://stackoverflow.com/company/logos",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "Stack Overflow",
             "hex": "FE7A16",
-            "source": "http://stackoverflow.com"
+            "source": "http://stackoverflow.com",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "Stackbit",
@@ -7611,8 +7677,8 @@
         },
         {
             "title": "Strapi",
-            "hex": "2E7EEA",
-            "source": "https://strapi.io/"
+            "hex": "2F2E8B",
+            "source": "https://strapi.io/newsroom"
         },
         {
             "title": "Strava",
@@ -7697,7 +7763,8 @@
         {
             "title": "Super User",
             "hex": "38A1CE",
-            "source": "https://superuser.com"
+            "source": "https://superuser.com",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "SurveyMonkey",
@@ -7726,8 +7793,8 @@
         },
         {
             "title": "SVGO",
-            "hex": "14B9FF",
-            "source": "https://github.com/svg/svgo"
+            "hex": "3E7FC1",
+            "source": "https://github.com/svg/svgo/blob/93a5db197ca32990131bf41becf2e002bb0841bf/logo/isotype.svg"
         },
         {
             "title": "Swagger",
@@ -8428,6 +8495,11 @@
             "source": "https://www.valvesoftware.com/"
         },
         {
+            "title": "Vapor",
+            "hex": "0D0D0D",
+            "source": "https://vapor.codes/"
+        },
+        {
             "title": "Vault",
             "hex": "000000",
             "source": "https://www.hashicorp.com/brand"
@@ -8641,6 +8713,11 @@
             "title": "WALKMAN",
             "hex": "000000",
             "source": "https://en.wikipedia.org/wiki/File:Walkman_logo.svg"
+        },
+        {
+            "title": "Wappalyzer",
+            "hex": "32067C",
+            "source": "https://www.wappalyzer.com/"
         },
         {
             "title": "Warner Bros.",
