@@ -1596,7 +1596,8 @@
         {
             "title": "Clubhouse",
             "hex": "6515DD",
-            "source": "https://brand.clubhouse.io/"
+            "source": "https://brand.clubhouse.io/",
+            "guidelines": "https://brand.clubhouse.io/"
         },
         {
             "title": "Clyp",
@@ -1879,6 +1880,11 @@
             "title": "Crowdin",
             "hex": "2E3340",
             "source": "https://support.crowdin.com/using-logo/"
+        },
+        {
+            "title": "Crowdsource",
+            "hex": "4285F4",
+            "source": "https://crowdsource.google.com/about/"
         },
         {
             "title": "Crunchbase",
@@ -2474,7 +2480,8 @@
         {
             "title": "Epic Games",
             "hex": "313131",
-            "source": "https://www.epicgames.com/"
+            "source": "https://dev.epicgames.com/docs/services/en-US/EpicAccountServices/DesignGuidelines/index.html#epicgamesbrandguidelines",
+            "guidelines": "https://dev.epicgames.com/docs/services/en-US/EpicAccountServices/DesignGuidelines/index.html#epicgamesbrandguidelines"
         },
         {
             "title": "Epson",
@@ -6378,6 +6385,11 @@
             "title": "Puppet",
             "hex": "FFAE1A",
             "source": "https://puppet.com/company/press-room/"
+        },
+        {
+            "title": "Puppeteer",
+            "hex": "40B5A4",
+            "source": "https://pptr.dev/"
         },
         {
             "title": "PureScript",
