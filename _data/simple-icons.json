@@ -353,7 +353,7 @@
         {
             "title": "AlloCiné",
             "hex": "FECC00",
-            "source": "http://www.allocine.fr/favicon.ico"
+            "source": "http://www.allocine.fr/"
         },
         {
             "title": "Alpine Linux",
@@ -704,7 +704,8 @@
         {
             "title": "Arch Linux",
             "hex": "1793D1",
-            "source": "https://www.archlinux.org/art/"
+            "source": "https://www.archlinux.org/art/",
+            "guidelines": "https://wiki.archlinux.org/index.php/DeveloperWiki:TrademarkPolicy#Logo_Usage_Guidelines"
         },
         {
             "title": "Archicad",
@@ -1596,7 +1597,8 @@
         {
             "title": "Clubhouse",
             "hex": "6515DD",
-            "source": "https://brand.clubhouse.io/"
+            "source": "https://brand.clubhouse.io/",
+            "guidelines": "https://brand.clubhouse.io/"
         },
         {
             "title": "Clyp",
@@ -1879,6 +1881,11 @@
             "title": "Crowdin",
             "hex": "2E3340",
             "source": "https://support.crowdin.com/using-logo/"
+        },
+        {
+            "title": "Crowdsource",
+            "hex": "4285F4",
+            "source": "https://crowdsource.google.com/about/"
         },
         {
             "title": "Crunchbase",
@@ -2474,7 +2481,8 @@
         {
             "title": "Epic Games",
             "hex": "313131",
-            "source": "https://www.epicgames.com/"
+            "source": "https://dev.epicgames.com/docs/services/en-US/EpicAccountServices/DesignGuidelines/index.html#epicgamesbrandguidelines",
+            "guidelines": "https://dev.epicgames.com/docs/services/en-US/EpicAccountServices/DesignGuidelines/index.html#epicgamesbrandguidelines"
         },
         {
             "title": "Epson",
@@ -5471,6 +5479,11 @@
             "source": "https://www.nokia.com/"
         },
         {
+            "title": "Norwegian",
+            "hex": "D81939",
+            "source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
+        },
+        {
             "title": "Notepad++",
             "hex": "90E59A",
             "source": "https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/PowerEditor/misc/chameleon"
@@ -5810,7 +5823,10 @@
         {
             "title": "Packagist",
             "hex": "F28D1A",
-            "source": "https://github.com/composer/packagist"
+            "source": "https://github.com/composer/packagist/issues/1147",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Pagekit",
@@ -5950,7 +5966,8 @@
         {
             "title": "Phabricator",
             "hex": "4A5F88",
-            "source": "https://phacility.com/trademarks/"
+            "source": "https://github.com/phacility/phabricator/blob/0a3093ef9c1898913196564435346e4daa9d2538/webroot/rsrc/image/logo/light-eye.png",
+            "guidelines": "https://phacility.com/trademarks/"
         },
         {
             "title": "Philips Hue",
@@ -8216,6 +8233,11 @@
             "title": "Triller",
             "hex": "FF0089",
             "source": "https://triller.co/static/media/illustrations/logo-full-white.svg"
+        },
+        {
+            "title": "Trino",
+            "hex": "DD00A1",
+            "source": "https://github.com/trinodb/docs.trino.io/blob/653a46f6bdc64b5f67302dc9ab8a0c432ca25e70/352/_static/trino.svg"
         },
         {
             "title": "Trip.com",
