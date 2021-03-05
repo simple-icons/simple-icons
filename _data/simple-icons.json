@@ -5810,7 +5810,10 @@
         {
             "title": "Packagist",
             "hex": "F28D1A",
-            "source": "https://github.com/composer/packagist"
+            "source": "https://github.com/composer/packagist",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Pagekit",
