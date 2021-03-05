@@ -967,6 +967,11 @@
             "source": "https://www.bankofamerica.com/"
         },
         {
+            "title": "Barclays",
+            "hex": "00AEEF",
+            "source": "https://home.barclays/"
+        },
+        {
             "title": "Baremetrics",
             "hex": "6078FF",
             "source": "https://baremetrics.com/"
@@ -1071,6 +1076,11 @@
             "title": "Bitcoin",
             "hex": "F7931A",
             "source": "https://bitcoin.org/en"
+        },
+        {
+            "title": "Bitcoin Cash",
+            "hex": "F59332",
+            "source": "https://www.bitcoincash.org/graphics/"
         },
         {
             "title": "Bitcoin SV",
@@ -4825,7 +4835,10 @@
         {
             "title": "Material Design Icons",
             "hex": "2196F3",
-            "source": "https://materialdesignicons.com/icon/vector-square"
+            "source": "https://materialdesignicons.com/icon/vector-square",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Material-UI",
@@ -5890,6 +5903,11 @@
             "source": "https://github.com/Chocobozzz/PeerTube/tree/develop/client/src/assets/images"
         },
         {
+            "title": "Pegasus Airlines",
+            "hex": "FDC43E",
+            "source": "https://www.flypgs.com/en/about-pegasus/flypgscom-magazine"
+        },
+        {
             "title": "Pelican",
             "hex": "14A0C4",
             "source": "https://blog.getpelican.com/pages/gratitude.html"
@@ -6362,6 +6380,11 @@
             "source": "https://puppet.com/company/press-room/"
         },
         {
+            "title": "Puppeteer",
+            "hex": "40B5A4",
+            "source": "https://pptr.dev/"
+        },
+        {
             "title": "PureScript",
             "hex": "14161A",
             "source": "https://github.com/purescript/logo"
@@ -6456,6 +6479,11 @@
             "title": "Quantcast",
             "hex": "000000",
             "source": "https://www.quantcast.com/user/login"
+        },
+        {
+            "title": "QuantConnect",
+            "hex": "F5AE29",
+            "source": "https://www.quantconnect.com/docs/home/home"
         },
         {
             "title": "Quantopian",
@@ -7071,7 +7099,8 @@
         {
             "title": "Server Fault",
             "hex": "E7282D",
-            "source": "http://stackoverflow.com/company/logos"
+            "source": "http://stackoverflow.com/company/logos",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "Serverless",
@@ -7511,12 +7540,14 @@
         {
             "title": "Stack Exchange",
             "hex": "1E5397",
-            "source": "http://stackoverflow.com/company/logos"
+            "source": "http://stackoverflow.com/company/logos",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "Stack Overflow",
             "hex": "FE7A16",
-            "source": "http://stackoverflow.com"
+            "source": "http://stackoverflow.com",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "Stackbit",
@@ -7731,7 +7762,8 @@
         {
             "title": "Super User",
             "hex": "38A1CE",
-            "source": "https://superuser.com"
+            "source": "https://superuser.com",
+            "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
             "title": "SurveyMonkey",
@@ -7760,8 +7792,8 @@
         },
         {
             "title": "SVGO",
-            "hex": "14B9FF",
-            "source": "https://github.com/svg/svgo"
+            "hex": "3E7FC1",
+            "source": "https://github.com/svg/svgo/blob/93a5db197ca32990131bf41becf2e002bb0841bf/logo/isotype.svg"
         },
         {
             "title": "Swagger",

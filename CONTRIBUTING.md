@@ -183,7 +183,49 @@ Here is the svg for the Adobe Photoshop icon as an example:
 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Adobe Photoshop icon</title><path d="M0 .3v23.4h24V.3H0zm1 1h22v21.4H1V1.3zm4.8 4.48c0-.067.14-.116.224-.116.644-.033 1.588-.05 2.578-.05 2.772 0 3.85 1.52 3.85 3.466 0 2.54-1.842 3.63-4.102 3.63-.38 0-.51-.017-.775-.017v3.842c0 .083-.033.116-.115.116H5.916c-.083 0-.115-.03-.115-.113V5.78zm1.775 5.312c.23.016.412.016.81.016 1.17 0 2.27-.412 2.27-1.996 0-1.27-.786-1.914-2.122-1.914-.396 0-.775.016-.957.033v3.864zm8.607-1.188c-.792 0-1.056.396-1.056.726 0 .363.18.61 1.237 1.155 1.568.76 2.062 1.485 2.062 2.557 0 1.6-1.22 2.46-2.87 2.46-.876 0-1.62-.183-2.05-.43-.065-.033-.08-.082-.08-.165V14.74c0-.1.048-.133.114-.084.624.413 1.352.594 2.012.594.792 0 1.122-.33 1.122-.776 0-.363-.23-.677-1.237-1.205-1.42-.68-2.014-1.37-2.014-2.527 0-1.287 1.006-2.36 2.755-2.36.86 0 1.464.132 1.794.28.082.05.1.132.1.198v1.37c0 .083-.05.133-.15.1-.444-.264-1.1-.43-1.743-.43z"/></svg>
 ```
 
-### 6. Update the JSON Data for SimpleIcons.org
+### 6. Name the Icon
+
+The filename of the SVG should correspond to the `<title>` used in the markup file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- "Brand name"` to get the correct filename.
+
+1. Use **lowercase letters** without **whitespace**, for example:
+
+    ```yml
+    title: Adobe Photoshop
+    filename: adobephotoshop.svg
+    ```
+
+1. Only use **latin** letters, for example:
+
+    ```yml
+    title: Citroën
+    filename: citroen.svg
+    ```
+
+1. Replace the following symbols with their alias depending on their position in the title:
+
+    | Symbol | Start | Middle | End  |
+    | :----: | :---- | :----: | ---: |
+    |   +    | plus  | plus   | plus |
+    |   .    | dot-  | -dot-  | -dot |
+    |   &    | and-  | -and-  | -and |
+
+    for example:
+
+    ```yml
+    title: .Net
+    filename: dot-net.svg
+    ```
+
+1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
+
+    for example:
+
+    ```yml
+    title: Hive
+    filename: hive_blockchain.svg
+    ```
+
+### 7. Update the JSON Data for SimpleIcons.org
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
 
@@ -209,6 +251,7 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
 
+* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an exitsing icon's name.
 * The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
 * The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
 
@@ -217,6 +260,7 @@ Here is the object of the fictional brand from before, but with all optional val
 ```json
 {
     "title": "A Fictional Brand",
+    "slug": "afictionalbrand_modifier",
     "hex": "123456",
     "source": "https://www.a-fictional-brand.org/logo",
     "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
@@ -226,39 +270,6 @@ Here is the object of the fictional brand from before, but with all optional val
     }
 }
 ```
-
-#### SVG Filename Convention
-
-The filename of the SVG should correspond to the `title` used in the JSON file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
-
-1. Use **lowercase letters** without **whitespace**, for example:
-
-    ```yml
-    title: Adobe Photoshop
-    filename: adobephotoshop.svg
-    ```
-
-1. Only use **latin** letters, for example:
-
-    ```yml
-    title: Citroën
-    filename: citroen.svg
-    ```
-
-1. Replace the following symbols with their alias depending on their position in the title:
-
-    | Symbol | Start | Middle | End  |
-    | :----: | ----- | ------ | ---- |
-    |   +    | plus  | plus   | plus |
-    |   .    | dot-  | -dot-  | -dot |
-    |   &    | and-  | -and-  | -and |
-
-    for example:
-
-    ```yml
-    title: .Net
-    filename: dot-net.svg
-    ```
 
 #### Source Guidelines
 
@@ -276,7 +287,7 @@ If the SVG is sourced from:
 
 In general, make sure the URL does not contain any tracking identifiers.
 
-### 7. Create a Pull Request
+### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
