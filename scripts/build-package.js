@@ -25,15 +25,29 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { titleToSlug } = require("./utils.js");
+const { getIconSlug, titleToSlug } = require("./utils.js");
 
 // Local helper functions
 function escape(value) {
   return value.replace(/(?<!\\)'/g, "\\'");
 }
 function iconToKeyValue(icon) {
-  const iconTitle = escape(icon.title);
-  return `'${iconTitle}':${iconToObject(icon)}`;
+  let iconName = escape(icon.title);
+  if (icon.slug !== titleToSlug(icon.title)) {
+    iconName = icon.slug;
+  }
+
+  return `'${iconName}':${iconToObject(icon)}`;
+}
+function licenseToObject(license) {
+  if (license === undefined) {
+    return;
+  }
+
+  if (license.url === undefined) {
+    license.url = `https://spdx.org/licenses/${license.type}.html`;
+  }
+  return license;
 }
 function iconToObject(icon) {
   return util.format(iconObjectTemplate,
@@ -41,7 +55,8 @@ function iconToObject(icon) {
     escape(icon.slug),
     escape(icon.svg),
     escape(icon.source),
-    escape(icon.hex)
+    escape(icon.hex),
+    licenseToObject(icon.license),
   );
 }
 function minifyAndWrite(filepath, rawJavaScript) {
@@ -57,7 +72,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 // 'main'
 const icons = [];
 data.icons.forEach(icon => {
-  const filename = titleToSlug(icon.title);
+  const filename = getIconSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
   icon.slug = filename;
