@@ -24,11 +24,11 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/[ICON NAME].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v4/icons/[ICON NAME].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v4/icons/[ICON SLUG].svg" />
 ```
 
-Where `[ICON NAME]` is replaced by the icon name, for example:
+Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/simpleicons.svg" />
@@ -45,13 +45,13 @@ The icons are also available through our npm package. To install, simply run:
 $ npm install simple-icons
 ```
 
-The API can then be used as follows:
+The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```javascript
 const simpleIcons = require('simple-icons');
 
-// Get a specific icon by its name as:
-simpleIcons.get('[ICON NAME]');
+// Get a specific icon by its slug as:
+simpleIcons.get('[ICON SLUG]');
 
 // For example:
 const icon = simpleIcons.get('simpleicons');
@@ -65,17 +65,23 @@ console.log(icon);
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
 
-Alternatively you can import the needed icons individually.
+Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
-// Import a specific icon by its name as:
-require('simple-icons/icons/[ICON NAME]');
+// Import a specific icon by its slug as:
+require('simple-icons/icons/[ICON SLUG]');
 
 // For example:
 const icon = require('simple-icons/icons/simpleicons');
@@ -89,8 +95,14 @@ console.log(icon);
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the license may be `undefined` if there is no license data for the icon.
 */
 ```
 
@@ -122,12 +134,15 @@ The icons are also available through our Packagist package. To install, simply r
 $ composer require simple-icons/simple-icons
 ```
 
-The package can then be used as follows:
+The package can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```php
 <?php
+// Import a specific icon by its slug as:
+echo file_get_contents('path/to/package/icons/[ICON SLUG].svg');
 
-echo file_get_contents('path/to/package/icons/simple-icons.svg');
+// For example:
+echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 // <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>
 ?>
@@ -166,3 +181,5 @@ Icons are also available as a [Vue package](https://github.com/mainvest/vue-simp
 ### WordPress
 
 Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
+
+[slug]: ./slugs.md
