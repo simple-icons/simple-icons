@@ -738,6 +738,11 @@
             "source": "https://www.arlo.com/"
         },
         {
+            "title": "Artix Linux",
+            "hex": "10A0CC",
+            "source": "https://gitea.artixlinux.org/artix/artwork/src/commit/256432e3d06b3e9024bfd6912768e80281ea3746/icons/logo-gray.svg"
+        },
+        {
             "title": "ArtStation",
             "hex": "13AFF0",
             "source": "https://www.artstation.com/about/logo"
@@ -1736,6 +1741,11 @@
             "source": "https://github.com/codewars/branding"
         },
         {
+            "title": "Coding Ninjas",
+            "hex": "DD6620",
+            "source": "https://www.codingninjas.com/press-release"
+        },
+        {
             "title": "CodinGame",
             "hex": "F2BB13",
             "source": "https://www.codingame.com/work/press/press-kit/"
@@ -2119,6 +2129,11 @@
             "source": "https://www.bahn.de/common/view/static/v8/img/db_em_rgb_100px.svg"
         },
         {
+            "title": "Deutsche Bank",
+            "hex": "0018A8",
+            "source": "https://www.db.com/"
+        },
+        {
             "title": "dev.to",
             "hex": "0A0A0A",
             "source": "https://dev.to/"
@@ -2342,6 +2357,11 @@
             "title": "eBay",
             "hex": "E53238",
             "source": "https://go.developer.ebay.com/logos"
+        },
+        {
+            "title": "Eclipse Che",
+            "hex": "525C86",
+            "source": "https://www.eclipse.org/che/"
         },
         {
             "title": "Eclipse IDE",
@@ -3376,6 +3396,11 @@
             "title": "Google Translate",
             "hex": "4285F4",
             "source": "https://commons.wikimedia.org/wiki/File:Google_Translate_logo.svg"
+        },
+        {
+            "title": "GoToMeeting",
+            "hex": "F68D2E",
+            "source": "https://www.gotomeeting.com/"
         },
         {
             "title": "GOV.UK",
@@ -4957,6 +4982,15 @@
             "title": "Mercedes",
             "hex": "242424",
             "source": "https://www.mercedes-benz.com/"
+        },
+        {
+            "title": "Mercurial",
+            "hex": "999999",
+            "source": "https://www.mercurial-scm.org/hg-logo/",
+            "guidelines": "https://www.mercurial-scm.org/hg-logo/",
+            "license": {
+                "type": "GPL-2.0-or-later"
+            }
         },
         {
             "title": "Messenger",
@@ -6570,7 +6604,8 @@
         {
             "title": "RabbitMQ",
             "hex": "FF6600",
-            "source": "https://www.rabbitmq.com/"
+            "source": "https://www.rabbitmq.com/",
+            "guidelines": "https://www.rabbitmq.com/trademark-guidelines.html"
         },
         {
             "title": "Racket",
@@ -6814,6 +6849,12 @@
             "source": "https://roamresearch.com/assets/"
         },
         {
+            "title": "Robot Framework",
+            "hex": "000000",
+            "source": "https://github.com/robotframework/visual-identity",
+            "guidelines": "https://github.com/robotframework/visual-identity/blob/master/robot-framework-brand-guidelines.pdf"
+        },
+        {
             "title": "Rocket.Chat",
             "hex": "F5455C",
             "source": "https://rocket.chat/press",
@@ -6897,7 +6938,8 @@
         {
             "title": "Ruby on Rails",
             "hex": "CC0000",
-            "source": "http://rubyonrails.org/images/rails-logo.svg"
+            "source": "http://rubyonrails.org/",
+            "guidelines": "https://rubyonrails.org/trademarks/"
         },
         {
             "title": "RubyGems",
@@ -7464,6 +7506,12 @@
             "title": "Spark AR",
             "hex": "FF5C83",
             "source": "https://sparkar.facebook.com/"
+        },
+        {
+            "title": "Sparkasse",
+            "hex": "FF0000",
+            "source": "https://www.sparkasse.de/",
+            "guidelines": "https://www.sparkasse.de/nutzungshinweise.html"
         },
         {
             "title": "SparkFun",
