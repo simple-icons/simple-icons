@@ -1776,6 +1776,11 @@
             "source": "https://www.coinmarketcap.com/"
         },
         {
+            "title": "Commerzbank",
+            "hex": "FFCC33",
+            "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
+        },
+        {
             "title": "Common Workflow Language",
             "hex": "B5314C",
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -2042,6 +2047,12 @@
             "title": "DataStax",
             "hex": "1F2438",
             "source": "https://www.datastax.com/brand-resources"
+        },
+        {
+            "title": "DatoCMS",
+            "hex": "FF7751",
+            "source": "https://www.datocms.com/company/brand-assets",
+            "guidelines": "https://www.datocms.com/company/brand-assets"
         },
         {
             "title": "DAZN",
@@ -3225,7 +3236,7 @@
         {
             "title": "Google Ads",
             "hex": "4285F4",
-            "source": "https://designguidelines.withgoogle.com/ads-branding/google-ads/logos.html#logos-brand-logo-lockups"
+            "source": "https://ads.google.com/intl/en_GB/home/"
         },
         {
             "title": "Google AdSense",
@@ -6351,6 +6362,11 @@
             "source": "https://prismic.io/"
         },
         {
+            "title": "Private Internet Access",
+            "hex": "4BB749",
+            "source": "https://www.privateinternetaccess.com/pages/press"
+        },
+        {
             "title": "Pro Tools",
             "hex": "7ACB10",
             "source": "https://cdn-www.avid.com/Content/fonts/avidmoon.ttf"
@@ -7515,7 +7531,8 @@
         {
             "title": "SparkFun",
             "hex": "E53525",
-            "source": "https://www.sparkfun.com/brand_assets"
+            "source": "https://www.sparkfun.com/brand_assets",
+            "guidelines": "https://www.sparkfun.com/brand_assets"
         },
         {
             "title": "SparkPost",
