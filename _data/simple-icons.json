@@ -738,6 +738,11 @@
             "source": "https://www.arlo.com/"
         },
         {
+            "title": "Artix Linux",
+            "hex": "10A0CC",
+            "source": "https://gitea.artixlinux.org/artix/artwork/src/commit/256432e3d06b3e9024bfd6912768e80281ea3746/icons/logo-gray.svg"
+        },
+        {
             "title": "ArtStation",
             "hex": "13AFF0",
             "source": "https://www.artstation.com/about/logo"
@@ -1696,6 +1701,11 @@
             "source": "https://codemagic.io/"
         },
         {
+            "title": "CodeMirror",
+            "hex": "D30707",
+            "source": "https://github.com/codemirror/CodeMirror/blob/6e7aa65a8bfb64837ae9d082b674b2f5ee056d2c/doc/logo.svg"
+        },
+        {
             "title": "CodePen",
             "hex": "000000",
             "source": "https://blog.codepen.io/documentation/brand-assets/logos/"
@@ -1729,6 +1739,11 @@
             "title": "Codewars",
             "hex": "B1361E",
             "source": "https://github.com/codewars/branding"
+        },
+        {
+            "title": "Coding Ninjas",
+            "hex": "DD6620",
+            "source": "https://www.codingninjas.com/press-release"
         },
         {
             "title": "CodinGame",
@@ -2024,6 +2039,12 @@
             "source": "https://www.datastax.com/brand-resources"
         },
         {
+            "title": "DatoCMS",
+            "hex": "FF7751",
+            "source": "https://www.datocms.com/company/brand-assets",
+            "guidelines": "https://www.datocms.com/company/brand-assets"
+        },
+        {
             "title": "DAZN",
             "hex": "F8F8F5",
             "source": "https://media.dazn.com/en/assets/"
@@ -2112,6 +2133,11 @@
             "title": "Deutsche Bahn",
             "hex": "F01414",
             "source": "https://www.bahn.de/common/view/static/v8/img/db_em_rgb_100px.svg"
+        },
+        {
+            "title": "Deutsche Bank",
+            "hex": "0018A8",
+            "source": "https://www.db.com/"
         },
         {
             "title": "dev.to",
@@ -2337,6 +2363,11 @@
             "title": "eBay",
             "hex": "E53238",
             "source": "https://go.developer.ebay.com/logos"
+        },
+        {
+            "title": "Eclipse Che",
+            "hex": "525C86",
+            "source": "https://www.eclipse.org/che/"
         },
         {
             "title": "Eclipse IDE",
@@ -3195,7 +3226,7 @@
         {
             "title": "Google Ads",
             "hex": "4285F4",
-            "source": "https://designguidelines.withgoogle.com/ads-branding/google-ads/logos.html#logos-brand-logo-lockups"
+            "source": "https://ads.google.com/intl/en_GB/home/"
         },
         {
             "title": "Google AdSense",
@@ -3371,6 +3402,11 @@
             "title": "Google Translate",
             "hex": "4285F4",
             "source": "https://commons.wikimedia.org/wiki/File:Google_Translate_logo.svg"
+        },
+        {
+            "title": "GoToMeeting",
+            "hex": "F68D2E",
+            "source": "https://www.gotomeeting.com/"
         },
         {
             "title": "GOV.UK",
@@ -4954,6 +4990,15 @@
             "source": "https://www.mercedes-benz.com/"
         },
         {
+            "title": "Mercurial",
+            "hex": "999999",
+            "source": "https://www.mercurial-scm.org/hg-logo/",
+            "guidelines": "https://www.mercurial-scm.org/hg-logo/",
+            "license": {
+                "type": "GPL-2.0-or-later"
+            }
+        },
+        {
             "title": "Messenger",
             "hex": "00B2FF",
             "source": "https://en.facebookbrand.com/assets/messenger/"
@@ -6307,6 +6352,11 @@
             "source": "https://prismic.io/"
         },
         {
+            "title": "Private Internet Access",
+            "hex": "4BB749",
+            "source": "https://www.privateinternetaccess.com/pages/press"
+        },
+        {
             "title": "Pro Tools",
             "hex": "7ACB10",
             "source": "https://cdn-www.avid.com/Content/fonts/avidmoon.ttf"
@@ -6565,7 +6615,8 @@
         {
             "title": "RabbitMQ",
             "hex": "FF6600",
-            "source": "https://www.rabbitmq.com/"
+            "source": "https://www.rabbitmq.com/",
+            "guidelines": "https://www.rabbitmq.com/trademark-guidelines.html"
         },
         {
             "title": "Racket",
@@ -6809,6 +6860,12 @@
             "source": "https://roamresearch.com/assets/"
         },
         {
+            "title": "Robot Framework",
+            "hex": "000000",
+            "source": "https://github.com/robotframework/visual-identity",
+            "guidelines": "https://github.com/robotframework/visual-identity/blob/master/robot-framework-brand-guidelines.pdf"
+        },
+        {
             "title": "Roku",
             "hex": "662D91",
             "source": "https://www.roku.com/"
@@ -6886,7 +6943,8 @@
         {
             "title": "Ruby on Rails",
             "hex": "CC0000",
-            "source": "http://rubyonrails.org/images/rails-logo.svg"
+            "source": "http://rubyonrails.org/",
+            "guidelines": "https://rubyonrails.org/trademarks/"
         },
         {
             "title": "RubyGems",
@@ -7455,9 +7513,16 @@
             "source": "https://sparkar.facebook.com/"
         },
         {
+            "title": "Sparkasse",
+            "hex": "FF0000",
+            "source": "https://www.sparkasse.de/",
+            "guidelines": "https://www.sparkasse.de/nutzungshinweise.html"
+        },
+        {
             "title": "SparkFun",
             "hex": "E53525",
-            "source": "https://www.sparkfun.com/brand_assets"
+            "source": "https://www.sparkfun.com/brand_assets",
+            "guidelines": "https://www.sparkfun.com/brand_assets"
         },
         {
             "title": "SparkPost",
