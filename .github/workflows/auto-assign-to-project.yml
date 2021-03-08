@@ -12,14 +12,14 @@ jobs:
     name: Assign to Project
     steps:
     - name: Assign pull requests to "Unprioritised"
-      uses: srggrs/assign-one-project-github-action@1.2.0
+      uses: srggrs/assign-one-project-github-action@1.2.1
       if: github.event.action == 'opened'
       with:
         project: https://github.com/orgs/simple-icons/projects/2
         column_name: Unprioritised
 
     - name: Assign `icon outdated` pull requests to "Priority 1"
-      uses: srggrs/assign-one-project-github-action@1.2.0
+      uses: srggrs/assign-one-project-github-action@1.2.1
       if: contains(github.event.pull_request.labels.*.name, 'icon outdated')
       with:
         project: https://github.com/orgs/simple-icons/projects/2
