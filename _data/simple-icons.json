@@ -406,6 +406,11 @@
             "source": "https://www.amazon.com/b?node=17277626011"
         },
         {
+            "title": "Amazon S3",
+            "hex": "569A31",
+            "source": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
             "title": "AMD",
             "hex": "ED1C24",
             "source": "https://subscriptions.amd.com/greatpower/img/amd-logo-black.svg"
@@ -1653,7 +1658,7 @@
         {
             "title": "Code Climate",
             "hex": "000000",
-            "source": "https://codeclimate.com/"
+            "source": "https://codeclimate.com/github/codeclimate/python-test-reporter/badges/"
         },
         {
             "title": "Codeberg",
@@ -3079,7 +3084,10 @@
         {
             "title": "Git",
             "hex": "F05032",
-            "source": "http://git-scm.com/downloads/logos"
+            "source": "http://git-scm.com/downloads/logos",
+            "license": {
+                "type": "CC-BY-3.0"
+            }
         },
         {
             "title": "Git LFS",
@@ -3814,6 +3822,11 @@
             "title": "Husqvarna",
             "hex": "273A60",
             "source": "https://www.husqvarna.com/uk/catalogues/"
+        },
+        {
+            "title": "Hyper",
+            "hex": "000000",
+            "source": "https://hyper.is/"
         },
         {
             "title": "Hyperledger",
@@ -7742,6 +7755,11 @@
             "source": "http://www.stencyl.com/about/press/"
         },
         {
+            "title": "Stimulus",
+            "hex": "77E8B9",
+            "source": "https://stimulus.hotwire.dev/"
+        },
+        {
             "title": "Stitcher",
             "hex": "000000",
             "source": "https://partners.stitcher.com/"
@@ -9170,6 +9188,11 @@
             "title": "XSplit",
             "hex": "0095DE",
             "source": "https://www.xsplit.com/presskit"
+        },
+        {
+            "title": "XState",
+            "hex": "2C3E50",
+            "source": "https://github.com/davidkpiano/xstate/blob/544df7f00e2ef49603b5e5ff2f0d183ff6bd5e7c/docs/.vuepress/public/logo.svg"
         },
         {
             "title": "Y Combinator",
