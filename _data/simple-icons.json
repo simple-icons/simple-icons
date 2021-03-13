@@ -406,6 +406,11 @@
             "source": "https://www.amazon.com/b?node=17277626011"
         },
         {
+            "title": "Amazon S3",
+            "hex": "569A31",
+            "source": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
             "title": "AMD",
             "hex": "ED1C24",
             "source": "https://subscriptions.amd.com/greatpower/img/amd-logo-black.svg"
@@ -1653,7 +1658,7 @@
         {
             "title": "Code Climate",
             "hex": "000000",
-            "source": "https://codeclimate.com/"
+            "source": "https://codeclimate.com/github/codeclimate/python-test-reporter/badges/"
         },
         {
             "title": "Codeberg",
@@ -2505,6 +2510,11 @@
             "source": "http://www.empire.kred"
         },
         {
+            "title": "Enpass",
+            "hex": "0D47A1",
+            "source": "https://www.enpass.io/press/"
+        },
+        {
             "title": "Envato",
             "hex": "81B441",
             "source": "https://envato.com/"
@@ -2794,7 +2804,8 @@
         {
             "title": "Firefox",
             "hex": "FF7139",
-            "source": "https://mozilla.design/firefox/logos-usage/"
+            "source": "https://mozilla.design/firefox/logos-usage/",
+            "guidelines": "https://mozilla.design/firefox/logos-usage/"
         },
         {
             "title": "Firefox Browser",
@@ -5544,7 +5555,7 @@
         {
             "title": "Notepad++",
             "hex": "90E59A",
-            "source": "https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/PowerEditor/misc/chameleon"
+            "source": "https://github.com/notepad-plus-plus/notepad-plus-plus/blob/1f2c63cce173e3e1dc5922637c81a851693e2856/PowerEditor/misc/chameleon/chameleon-pencil.eps"
         },
         {
             "title": "Notion",
@@ -6247,6 +6258,11 @@
             "title": "Podman",
             "hex": "892CA0",
             "source": "https://podman.io/"
+        },
+        {
+            "title": "Pointy",
+            "hex": "009DE0",
+            "source": "https://www.pointy.com/ie/vend"
         },
         {
             "title": "Pokémon",
@@ -7640,8 +7656,8 @@
         },
         {
             "title": "Stack Overflow",
-            "hex": "FE7A16",
-            "source": "http://stackoverflow.com",
+            "hex": "F58025",
+            "source": "https://stackoverflow.design/brand/logo/",
             "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
