@@ -8599,7 +8599,11 @@
         {
             "title": "V",
             "hex": "5D87BF",
-            "source": "https://github.com/vlang/v-logo"
+            "source": "https://github.com/vlang/v-logo",
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/vlang/v-logo/blob/master/LICENSE"
+            }
         },
         {
             "title": "V8",
