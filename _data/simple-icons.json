@@ -7294,7 +7294,10 @@
         {
             "title": "Simple Icons",
             "hex": "111111",
-            "source": "https://simpleicons.org/"
+            "source": "https://simpleicons.org/",
+            "license": {
+                "type": "CC0-1.0"
+            }
         },
         {
             "title": "Sina Weibo",
