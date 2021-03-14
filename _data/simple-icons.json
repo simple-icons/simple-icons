@@ -348,7 +348,7 @@
         {
             "title": "AlliedModders",
             "hex": "1578D3",
-            "source": "https://forums.alliedmods.net/index.php"
+            "source": "https://forums.alliedmods.net/"
         },
         {
             "title": "AlloCiné",
@@ -404,6 +404,11 @@
             "title": "Amazon Prime",
             "hex": "00A8E1",
             "source": "https://www.amazon.com/b?node=17277626011"
+        },
+        {
+            "title": "Amazon S3",
+            "hex": "569A31",
+            "source": "https://aws.amazon.com/architecture/icons/"
         },
         {
             "title": "AMD",
@@ -1653,7 +1658,7 @@
         {
             "title": "Code Climate",
             "hex": "000000",
-            "source": "https://codeclimate.com/"
+            "source": "https://codeclimate.com/github/codeclimate/python-test-reporter/badges/"
         },
         {
             "title": "Codeberg",
@@ -1769,6 +1774,11 @@
             "title": "Coinbase",
             "hex": "0667D0",
             "source": "https://www.coinbase.com/press"
+        },
+        {
+            "title": "Commerzbank",
+            "hex": "FFCC33",
+            "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
         },
         {
             "title": "Common Workflow Language",
@@ -2037,6 +2047,12 @@
             "title": "DataStax",
             "hex": "1F2438",
             "source": "https://www.datastax.com/brand-resources"
+        },
+        {
+            "title": "DatoCMS",
+            "hex": "FF7751",
+            "source": "https://www.datocms.com/company/brand-assets",
+            "guidelines": "https://www.datocms.com/company/brand-assets"
         },
         {
             "title": "DAZN",
@@ -2494,6 +2510,11 @@
             "source": "http://www.empire.kred"
         },
         {
+            "title": "Enpass",
+            "hex": "0D47A1",
+            "source": "https://www.enpass.io/press/"
+        },
+        {
             "title": "Envato",
             "hex": "81B441",
             "source": "https://envato.com/"
@@ -2783,7 +2804,8 @@
         {
             "title": "Firefox",
             "hex": "FF7139",
-            "source": "https://mozilla.design/firefox/logos-usage/"
+            "source": "https://mozilla.design/firefox/logos-usage/",
+            "guidelines": "https://mozilla.design/firefox/logos-usage/"
         },
         {
             "title": "Firefox Browser",
@@ -3068,7 +3090,10 @@
         {
             "title": "Git",
             "hex": "F05032",
-            "source": "http://git-scm.com/downloads/logos"
+            "source": "http://git-scm.com/downloads/logos",
+            "license": {
+                "type": "CC-BY-3.0"
+            }
         },
         {
             "title": "Git LFS",
@@ -3220,7 +3245,7 @@
         {
             "title": "Google Ads",
             "hex": "4285F4",
-            "source": "https://designguidelines.withgoogle.com/ads-branding/google-ads/logos.html#logos-brand-logo-lockups"
+            "source": "https://ads.google.com/intl/en_GB/home/"
         },
         {
             "title": "Google AdSense",
@@ -3803,6 +3828,11 @@
             "title": "Husqvarna",
             "hex": "273A60",
             "source": "https://www.husqvarna.com/uk/catalogues/"
+        },
+        {
+            "title": "Hyper",
+            "hex": "000000",
+            "source": "https://hyper.is/"
         },
         {
             "title": "Hyperledger",
@@ -4984,6 +5014,15 @@
             "source": "https://www.mercedes-benz.com/"
         },
         {
+            "title": "Mercurial",
+            "hex": "999999",
+            "source": "https://www.mercurial-scm.org/hg-logo/",
+            "guidelines": "https://www.mercurial-scm.org/hg-logo/",
+            "license": {
+                "type": "GPL-2.0-or-later"
+            }
+        },
+        {
             "title": "Messenger",
             "hex": "00B2FF",
             "source": "https://en.facebookbrand.com/assets/messenger/"
@@ -5516,7 +5555,7 @@
         {
             "title": "Notepad++",
             "hex": "90E59A",
-            "source": "https://github.com/notepad-plus-plus/notepad-plus-plus/tree/master/PowerEditor/misc/chameleon"
+            "source": "https://github.com/notepad-plus-plus/notepad-plus-plus/blob/1f2c63cce173e3e1dc5922637c81a851693e2856/PowerEditor/misc/chameleon/chameleon-pencil.eps"
         },
         {
             "title": "Notion",
@@ -6221,6 +6260,11 @@
             "source": "https://podman.io/"
         },
         {
+            "title": "Pointy",
+            "hex": "009DE0",
+            "source": "https://www.pointy.com/ie/vend"
+        },
+        {
             "title": "Pokémon",
             "hex": "FFCB05",
             "source": "https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg"
@@ -6335,6 +6379,11 @@
             "title": "Prismic",
             "hex": "5163BA",
             "source": "https://prismic.io/"
+        },
+        {
+            "title": "Private Internet Access",
+            "hex": "4BB749",
+            "source": "https://www.privateinternetaccess.com/pages/press"
         },
         {
             "title": "Pro Tools",
@@ -7501,7 +7550,8 @@
         {
             "title": "SparkFun",
             "hex": "E53525",
-            "source": "https://www.sparkfun.com/brand_assets"
+            "source": "https://www.sparkfun.com/brand_assets",
+            "guidelines": "https://www.sparkfun.com/brand_assets"
         },
         {
             "title": "SparkPost",
@@ -7606,8 +7656,8 @@
         },
         {
             "title": "Stack Overflow",
-            "hex": "FE7A16",
-            "source": "http://stackoverflow.com",
+            "hex": "F58025",
+            "source": "https://stackoverflow.design/brand/logo/",
             "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
         },
         {
@@ -7714,6 +7764,11 @@
             "title": "Stencyl",
             "hex": "8E1C04",
             "source": "http://www.stencyl.com/about/press/"
+        },
+        {
+            "title": "Stimulus",
+            "hex": "77E8B9",
+            "source": "https://stimulus.hotwire.dev/"
         },
         {
             "title": "Stitcher",
@@ -7895,6 +7950,11 @@
             "title": "Symphony",
             "hex": "0098FF",
             "source": "https://symphony.com/"
+        },
+        {
+            "title": "SymPy",
+            "hex": "3B5526",
+            "source": "https://github.com/sympy/sympy.github.com/blob/e606a6dc2ee90b1ddaa9c36be6c92392ab300f72/media/sympy-notailtext.svg"
         },
         {
             "title": "Synology",
@@ -9139,6 +9199,11 @@
             "title": "XSplit",
             "hex": "0095DE",
             "source": "https://www.xsplit.com/presskit"
+        },
+        {
+            "title": "XState",
+            "hex": "2C3E50",
+            "source": "https://github.com/davidkpiano/xstate/blob/544df7f00e2ef49603b5e5ff2f0d183ff6bd5e7c/docs/.vuepress/public/logo.svg"
         },
         {
             "title": "Y Combinator",
