@@ -49,6 +49,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Adobe XD` | `adobexd` |
 | `AdonisJS` | `adonisjs` |
 | `Aer Lingus` | `aerlingus` |
+| `Aeroflot` | `aeroflot` |
 | `Aeroméxico` | `aeromexico` |
 | `Aerospike` | `aerospike` |
 | `Affinity` | `affinity` |
@@ -87,6 +88,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Amazon Lumberyard` | `amazonlumberyard` |
 | `Amazon Pay` | `amazonpay` |
 | `Amazon Prime` | `amazonprime` |
+| `Amazon S3` | `amazons3` |
 | `AMD` | `amd` |
 | `American Airlines` | `americanairlines` |
 | `American Express` | `americanexpress` |
@@ -153,6 +155,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Arduino` | `arduino` |
 | `ARK Ecosystem` | `arkecosystem` |
 | `Arlo` | `arlo` |
+| `Artix Linux` | `artixlinux` |
 | `ArtStation` | `artstation` |
 | `arXiv` | `arxiv` |
 | `Asana` | `asana` |
@@ -199,6 +202,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `BandLab` | `bandlab` |
 | `Bandsintown` | `bandsintown` |
 | `Bank of America` | `bankofamerica` |
+| `Barclays` | `barclays` |
 | `Baremetrics` | `baremetrics` |
 | `Basecamp` | `basecamp` |
 | `Bata` | `bata` |
@@ -220,6 +224,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Bit` | `bit` |
 | `Bitbucket` | `bitbucket` |
 | `Bitcoin` | `bitcoin` |
+| `Bitcoin Cash` | `bitcoincash` |
 | `Bitcoin SV` | `bitcoinsv` |
 | `Bitdefender` | `bitdefender` |
 | `Bitly` | `bitly` |
@@ -342,6 +347,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Codeforces` | `codeforces` |
 | `CodeIgniter` | `codeigniter` |
 | `Codemagic` | `codemagic` |
+| `CodeMirror` | `codemirror` |
 | `CodePen` | `codepen` |
 | `CodeProject` | `codeproject` |
 | `CodersRank` | `codersrank` |
@@ -349,11 +355,13 @@ update the script at 'scripts/build-slugs-table.js'.
 | `CodeSandbox` | `codesandbox` |
 | `Codeship` | `codeship` |
 | `Codewars` | `codewars` |
+| `Coding Ninjas` | `codingninjas` |
 | `CodinGame` | `codingame` |
 | `Codio` | `codio` |
 | `CoffeeScript` | `coffeescript` |
 | `Cognizant` | `cognizant` |
 | `Coinbase` | `coinbase` |
+| `Commerzbank` | `commerzbank` |
 | `Common Workflow Language` | `commonworkflowlanguage` |
 | `Composer` | `composer` |
 | `ComproPago` | `compropago` |
@@ -379,6 +387,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Creative Commons` | `creativecommons` |
 | `Crehana` | `crehana` |
 | `Crowdin` | `crowdin` |
+| `Crowdsource` | `crowdsource` |
 | `Crunchbase` | `crunchbase` |
 | `Crunchyroll` | `crunchyroll` |
 | `CRYENGINE` | `cryengine` |
@@ -406,6 +415,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `DataCamp` | `datacamp` |
 | `Datadog` | `datadog` |
 | `DataStax` | `datastax` |
+| `DatoCMS` | `datocms` |
 | `DAZN` | `dazn` |
 | `dblp` | `dblp` |
 | `DC Entertainment` | `dcentertainment` |
@@ -424,6 +434,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Der Spiegel` | `derspiegel` |
 | `Designer News` | `designernews` |
 | `Deutsche Bahn` | `deutschebahn` |
+| `Deutsche Bank` | `deutschebank` |
 | `dev.to` | `dev-dot-to` |
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
@@ -469,6 +480,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Eagle` | `eagle` |
 | `easyJet` | `easyjet` |
 | `eBay` | `ebay` |
+| `Eclipse Che` | `eclipseche` |
 | `Eclipse IDE` | `eclipseide` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevert-dot-x` |
@@ -495,6 +507,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Emirates` | `emirates` |
 | `Emlakjet` | `emlakjet` |
 | `Empire Kred` | `empirekred` |
+| `Enpass` | `enpass` |
 | `Envato` | `envato` |
 | `EPEL` | `epel` |
 | `Epic Games` | `epicgames` |
@@ -674,6 +687,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Google Street View` | `googlestreetview` |
 | `Google Tag Manager` | `googletagmanager` |
 | `Google Translate` | `googletranslate` |
+| `GoToMeeting` | `gotomeeting` |
 | `GOV.UK` | `gov-dot-uk` |
 | `Gradle` | `gradle` |
 | `Grafana` | `grafana` |
@@ -754,6 +768,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Hungry Jack's` | `hungryjacks` |
 | `Hurriyetemlak` | `hurriyetemlak` |
 | `Husqvarna` | `husqvarna` |
+| `Hyper` | `hyper` |
 | `Hyperledger` | `hyperledger` |
 | `Hypothesis` | `hypothesis` |
 | `Hyundai` | `hyundai` |
@@ -988,6 +1003,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `MEGA` | `mega` |
 | `Mendeley` | `mendeley` |
 | `Mercedes` | `mercedes` |
+| `Mercurial` | `mercurial` |
 | `Messenger` | `messenger` |
 | `MetaFilter` | `metafilter` |
 | `Meteor` | `meteor` |
@@ -1093,6 +1109,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Node.js` | `node-dot-js` |
 | `Nodemon` | `nodemon` |
 | `Nokia` | `nokia` |
+| `Norwegian` | `norwegian` |
 | `Notepad++` | `notepadplusplus` |
 | `Notion` | `notion` |
 | `Notist` | `notist` |
@@ -1179,6 +1196,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Paytm` | `paytm` |
 | `PCGamingWiki` | `pcgamingwiki` |
 | `PeerTube` | `peertube` |
+| `Pegasus Airlines` | `pegasusairlines` |
 | `Pelican` | `pelican` |
 | `Peloton` | `peloton` |
 | `Pepsi` | `pepsi` |
@@ -1196,6 +1214,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `PhpStorm` | `phpstorm` |
 | `Pi-hole` | `pi-hole` |
 | `Picarto.TV` | `picarto-dot-tv` |
+| `Picnic` | `picnic` |
 | `PicPay` | `picpay` |
 | `Pimcore` | `pimcore` |
 | `Pinboard` | `pinboard` |
@@ -1231,6 +1250,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Pocket Casts` | `pocketcasts` |
 | `Podcast Addict` | `podcastaddict` |
 | `Podman` | `podman` |
+| `Pointy` | `pointy` |
 | `Pokémon` | `pokemon` |
 | `Poly` | `poly` |
 | `Polymer Project` | `polymerproject` |
@@ -1254,6 +1274,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Prime Video` | `primevideo` |
 | `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
+| `Private Internet Access` | `privateinternetaccess` |
 | `Pro Tools` | `protools` |
 | `Probot` | `probot` |
 | `ProcessWire` | `processwire` |
@@ -1272,6 +1293,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `PubMed` | `pubmed` |
 | `Pug` | `pug` |
 | `Puppet` | `puppet` |
+| `Puppeteer` | `puppeteer` |
 | `PureScript` | `purescript` |
 | `PyCharm` | `pycharm` |
 | `PyPI` | `pypi` |
@@ -1291,6 +1313,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Qualcomm` | `qualcomm` |
 | `Qualtrics` | `qualtrics` |
 | `Quantcast` | `quantcast` |
+| `QuantConnect` | `quantconnect` |
 | `Quantopian` | `quantopian` |
 | `Quarkus` | `quarkus` |
 | `Quasar` | `quasar` |
@@ -1352,6 +1375,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Ripple` | `ripple` |
 | `Riseup` | `riseup` |
 | `Roam Research` | `roamresearch` |
+| `Robot Framework` | `robotframework` |
 | `Roku` | `roku` |
 | `Rolls-Royce` | `rolls-royce` |
 | `rollup.js` | `rollup-dot-js` |
@@ -1481,6 +1505,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Spacemacs` | `spacemacs` |
 | `SpaceX` | `spacex` |
 | `Spark AR` | `sparkar` |
+| `Sparkasse` | `sparkasse` |
 | `SparkFun` | `sparkfun` |
 | `SparkPost` | `sparkpost` |
 | `SPDX` | `spdx` |
@@ -1524,6 +1549,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Steinberg` | `steinberg` |
 | `Stellar` | `stellar` |
 | `Stencyl` | `stencyl` |
+| `Stimulus` | `stimulus` |
 | `Stitcher` | `stitcher` |
 | `STMicroelectronics` | `stmicroelectronics` |
 | `Storify` | `storify` |
@@ -1560,6 +1586,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Symantec` | `symantec` |
 | `Symfony` | `symfony` |
 | `Symphony` | `symphony` |
+| `SymPy` | `sympy` |
 | `Synology` | `synology` |
 | `T-Mobile` | `t-mobile` |
 | `Tableau` | `tableau` |
@@ -1636,6 +1663,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Trend Micro` | `trendmicro` |
 | `Treyarch` | `treyarch` |
 | `Triller` | `triller` |
+| `Trino` | `trino` |
 | `Trip.com` | `trip-dot-com` |
 | `Tripadvisor` | `tripadvisor` |
 | `Trove` | `trove` |
@@ -1807,6 +1835,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `XMPP` | `xmpp` |
 | `XRP` | `xrp` |
 | `XSplit` | `xsplit` |
+| `XState` | `xstate` |
 | `Y Combinator` | `ycombinator` |
 | `Yahoo!` | `yahoo` |
 | `Yale` | `yale` |
