@@ -1412,11 +1412,7 @@
         {
             "title": "Celery",
             "hex": "37814A",
-            "source": "https://github.com/celery/celery/blob/4d77ddddb10797011dc10dd2e4e1e7a7467b8431/docs/images/favicon.ico",
-            "license": {
-                "type": "custom",
-                "url": "https://github.com/celery/celery/blob/master/LICENSE"
-            }
+            "source": "https://github.com/celery/celery/blob/4d77ddddb10797011dc10dd2e4e1e7a7467b8431/docs/images/favicon.ico"
         },
         {
             "title": "CentOS",
@@ -1644,8 +1640,7 @@
             "hex": "EE3322",
             "source": "https://github.com/CocoaPods/shared_resources",
             "license": {
-                "type": "CC-BY-NC-SA-4.0",
-                "url": "https://github.com/CocoaPods/shared_resources/blob/master/LICENSE"
+                "type": "CC-BY-NC-SA-4.0"
             }
         },
         {
