@@ -185,7 +185,7 @@ Here is the svg for the Adobe Photoshop icon as an example:
 
 ### 6. Name the Icon
 
-The filename of the SVG should correspond to the `title` used in the JSON file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
+The filename of the SVG should correspond to the `<title>` used in the markup file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- "Brand name"` to get the correct filename.
 
 1. Use **lowercase letters** without **whitespace**, for example:
 

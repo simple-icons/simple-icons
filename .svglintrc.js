@@ -369,12 +369,20 @@ module.exports = {
                     cmd = seg[0],
                     nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
-                if ('LM'.includes(cmd)) {
+                if (cmd === 'L') {
                   currAbsCoord[0] = seg[1];
                   currAbsCoord[1] = seg[2];
-                } else if ('lm'.includes(cmd)) {
+                } else if (cmd === 'l') {
                   currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
                   currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                } else if (cmd === 'm') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                  startPoint = undefined;
+                } else if (cmd === 'M') {
+                  currAbsCoord[0] = seg[1];
+                  currAbsCoord[1] = seg[2];
+                  startPoint = undefined;
                 } else if (cmd === 'H') {
                   currAbsCoord[0] = seg[1];
                 } else if (cmd === 'h') {
