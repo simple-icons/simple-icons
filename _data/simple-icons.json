@@ -5655,7 +5655,12 @@
         {
             "title": "OCaml",
             "hex": "EC6813",
-            "source": "http://ocaml.org/img/OCaml_Sticker.svg"
+            "source": "http://ocaml.org/img/OCaml_Sticker.svg",
+            "guidelines": "https://ocaml.org/docs/logos.html",
+            "license": {
+                "type": "CC-BY-SA-4.0",
+                "url": "https://github.com/ocaml/ocaml.org/blob/master/LICENSE.md"
+            }
         },
         {
             "title": "Octave",
