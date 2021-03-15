@@ -5954,8 +5954,12 @@
         },
         {
             "title": "Passport",
-            "hex": "D4FD02",
-            "source": "http://www.passportjs.org/"
+            "hex": "34E27A",
+            "source": "http://www.passportjs.org/",
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/jaredhanson/passport/blob/master/LICENSE"
+            }
         },
         {
             "title": "Pastebin",
