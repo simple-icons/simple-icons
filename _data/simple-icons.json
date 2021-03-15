@@ -5875,7 +5875,10 @@
         {
             "title": "Oshkosh",
             "hex": "E6830F",
-            "source": "https://oshkoshdefense.com/media/photos/"
+            "source": "https://oshkoshdefense.com/media/photos/",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "OSMC",
