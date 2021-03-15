@@ -5660,7 +5660,11 @@
         {
             "title": "OCaml",
             "hex": "EC6813",
-            "source": "http://ocaml.org/img/OCaml_Sticker.svg"
+            "source": "http://ocaml.org/img/OCaml_Sticker.svg",
+            "guidelines": "https://ocaml.org/docs/logos.html",
+            "license": {
+                "type": "Unlicense"
+            }
         },
         {
             "title": "Octave",
@@ -5670,12 +5674,14 @@
         {
             "title": "Octopus Deploy",
             "hex": "2F93E0",
-            "source": "https://octopus.com/company/brand"
+            "source": "https://octopus.com/company/brand",
+            "guidelines": "https://octopus.com/company/brand"
         },
         {
             "title": "Oculus",
             "hex": "1C1E20",
-            "source": "https://www.oculus.com/en-us/press-kit"
+            "source": "https://en.facebookbrand.com/oculus/assets/oculus?audience=oculus-landing",
+            "guidelines": "https://en.facebookbrand.com/oculus/"
         },
         {
             "title": "Odnoklassniki",
@@ -5690,17 +5696,19 @@
         {
             "title": "Okta",
             "hex": "007DC1",
-            "source": "https://www.okta.com/press-room/media-assets/"
+            "source": "https://www.okta.com/press-room/media-assets/",
+            "guidelines": "https://www.okta.com/terms-of-use-for-okta-content/"
         },
         {
             "title": "OnePlus",
             "hex": "F5010C",
-            "source": "https://en.wikipedia.org/wiki/OnePlus#/media/File:OP_LU_Reg_1L_RGB_red_copy-01.svg"
+            "source": "https://www.oneplus.com/ca_en/brand/asset"
         },
         {
             "title": "OnlyFans",
             "hex": "00AFF0",
-            "source": "https://onlyfans.com/"
+            "source": "https://onlyfans.com/brand",
+            "guidelines": "https://onlyfans.com/brand"
         },
         {
             "title": "OnStar",
@@ -5745,7 +5753,8 @@
         {
             "title": "Open Source Initiative",
             "hex": "3DA639",
-            "source": "https://opensource.org/logo-usage-guidelines"
+            "source": "https://opensource.org/logo-usage-guidelines",
+            "guidelines": "https://opensource.org/logo-usage-guidelines"
         },
         {
             "title": "OpenAI",
@@ -5760,7 +5769,8 @@
         {
             "title": "OpenAPI Initiative",
             "hex": "6BA539",
-            "source": "https://www.openapis.org/faq/style-guide"
+            "source": "https://www.openapis.org/faq/style-guide",
+            "guidelines": "https://www.openapis.org/faq/style-guide"
         },
         {
             "title": "OpenBSD",
@@ -5770,7 +5780,8 @@
         {
             "title": "OpenCV",
             "hex": "5C3EE8",
-            "source": "https://opencv.org/resources/media-kit/"
+            "source": "https://opencv.org/resources/media-kit/",
+            "guidelines": "https://opencv.org/resources/media-kit/"
         },
         {
             "title": "OpenFaaS",
@@ -5800,12 +5811,14 @@
         {
             "title": "OpenStack",
             "hex": "ED1944",
-            "source": "https://www.openstack.org/brand/openstack-logo/"
+            "source": "https://www.openstack.org/brand/openstack-logo/",
+            "guidelines": "https://www.openstack.org/brand/openstack-logo/"
         },
         {
             "title": "OpenStreetMap",
             "hex": "7EBC6F",
-            "source": "https://www.openstreetmap.org"
+            "source": "https://www.openstreetmap.org",
+            "guidelines": "https://wiki.osmfoundation.org/wiki/Trademark_Policy"
         },
         {
             "title": "openSUSE",
@@ -5816,17 +5829,20 @@
         {
             "title": "OpenVPN",
             "hex": "EA7E20",
-            "source": "https://openvpn.net/wp-content/themes/openvpn/assets/images/logo.svg"
+            "source": "https://openvpn.net/wp-content/themes/openvpn/assets/images/logo.svg",
+            "guidelines": "https://openvpn.net/terms/"
         },
         {
             "title": "Opera",
             "hex": "FF1B2D",
-            "source": "https://github.com/operasoftware/logo"
+            "source": "https://brand.opera.com/1472-2/opera-logos/",
+            "guidelines": "https://brand.opera.com/"
         },
         {
             "title": "OPNSense",
             "hex": "D94F00",
-            "source": "https://github.com/opnsense/core/blob/06b1804a3d358041607ec3a963ab90b720564cc3/src/opnsense/www/themes/opnsense/build/images/icon-logo.svg"
+            "source": "https://opnsense.org/about/legal-notices/",
+            "guidelines": "https://opnsense.org/about/legal-notices/"
         },
         {
             "title": "Opsgenie",
@@ -5841,12 +5857,14 @@
         {
             "title": "Oracle",
             "hex": "F80000",
-            "source": "https://www.oracle.com/webfolder/s/brand/identity/index.html"
+            "source": "https://www.oracle.com/opn/index.html",
+            "guidelines": "https://www.oracle.com/legal/logos.html"
         },
         {
             "title": "ORCID",
             "hex": "A6CE39",
-            "source": "https://orcid.org/trademark-and-id-display-guidelines"
+            "source": "https://orcid.figshare.com/articles/figure/ORCID_iD_icon_graphics/5008697",
+            "guidelines": "https://info.orcid.org/brand-guidelines/"
         },
         {
             "title": "Origin",
@@ -5856,12 +5874,15 @@
         {
             "title": "Osano",
             "hex": "7764FA",
-            "source": "https://www.osano.com/"
+            "source": "https://www.osano.com/company/assets"
         },
         {
             "title": "Oshkosh",
             "hex": "E6830F",
-            "source": "https://oshkoshdefense.com/media/photos/"
+            "source": "https://oshkoshdefense.com/media/photos/",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "OSMC",
@@ -5881,7 +5902,7 @@
         {
             "title": "OVH",
             "hex": "123F6D",
-            "source": "https://www.ovh.com/fr/news/logo-ovh.xml"
+            "source": "https://www.ovh.com/ca/en/newsroom/"
         },
         {
             "title": "OWASP",
