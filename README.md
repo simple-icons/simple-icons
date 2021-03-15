@@ -162,6 +162,10 @@ Icons are also available as a [Flutter package](https://pub.dev/packages/simple_
 
 Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
 
+### Jetpack Compose
+
+Icons are also available as a [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) created by  [@devsrsouza](https://github.com/devsrsouza/).
+
 ### Kirby
 
 Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
