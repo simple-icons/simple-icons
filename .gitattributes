@@ -6,6 +6,7 @@
 # Don't diff machine generated files
 package-lock.json  -diff
 Gemfile.lock       -diff
+slugs.md           -diff
 
 # Treat images as binary
 *.ico              binary
