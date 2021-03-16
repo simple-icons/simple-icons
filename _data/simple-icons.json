@@ -6688,7 +6688,10 @@
         {
             "title": "R",
             "hex": "276DC3",
-            "source": "https://www.r-project.org/logo/"
+            "source": "https://www.r-project.org/logo/",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "RabbitMQ",
