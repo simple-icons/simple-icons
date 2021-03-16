@@ -7029,7 +7029,10 @@
         {
             "title": "Ruby",
             "hex": "CC342D",
-            "source": "https://www.ruby-lang.org/en/about/logo/"
+            "source": "https://www.ruby-lang.org/en/about/logo/",
+            "license": {
+                "type": "CC-BY-SA-2.5"
+            }
         },
         {
             "title": "Ruby on Rails",
