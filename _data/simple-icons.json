@@ -122,8 +122,8 @@
         },
         {
             "title": "AdGuard",
-            "hex": "66B574",
-            "source": "https://adguard.com/en/contribute.html"
+            "hex": "68BC71",
+            "source": "https://adguard.com/en/media-materials.html"
         },
         {
             "title": "Adobe",
@@ -157,7 +157,7 @@
         },
         {
             "title": "Adobe Fonts",
-            "hex": "323232",
+            "hex": "000B1D",
             "source": "https://www.adobe.com/creativecloud/services.html"
         },
         {
@@ -1041,12 +1041,12 @@
         {
             "title": "Beijing Subway",
             "hex": "004A9D",
-            "source": "https://commons.wikimedia.org/wiki/File:Beijing_Subway_logo.svg"
+            "source": "https://zh.wikipedia.org/wiki/File:Beijing_Subway_Logo.svg"
         },
         {
             "title": "Bentley",
             "hex": "333333",
-            "source": "https://en.wikipedia.org/wiki/File:Bentley_logo.svg"
+            "source": "https://en.wikipedia.org/wiki/File:Bentley_logo_2.svg"
         },
         {
             "title": "Big Cartel",
@@ -1090,7 +1090,7 @@
         },
         {
             "title": "Bitcoin Cash",
-            "hex": "F59332",
+            "hex": "0AC18E",
             "source": "https://www.bitcoincash.org/graphics/"
         },
         {
@@ -1307,7 +1307,7 @@
         {
             "title": "BuzzFeed",
             "hex": "EE3322",
-            "source": "http://www.buzzfeed.com/press/downloads"
+            "source": "https://www.buzzfeed.com/press/assets"
         },
         {
             "title": "byte",
@@ -1412,7 +1412,7 @@
         {
             "title": "Celery",
             "hex": "37814A",
-            "source": "http://www.celeryproject.org/"
+            "source": "https://github.com/celery/celery/blob/4d77ddddb10797011dc10dd2e4e1e7a7467b8431/docs/images/favicon.ico"
         },
         {
             "title": "CentOS",
@@ -1638,7 +1638,10 @@
         {
             "title": "CocoaPods",
             "hex": "EE3322",
-            "source": "https://github.com/CocoaPods/shared_resources"
+            "source": "https://github.com/CocoaPods/shared_resources",
+            "license": {
+                "type": "CC-BY-NC-4.0"
+            }
         },
         {
             "title": "Cocos",
@@ -4268,6 +4271,11 @@
             "source": "https://jwt.io/"
         },
         {
+            "title": "JSS",
+            "hex": "F7DF1E",
+            "source": "https://cssinjs.org/"
+        },
+        {
             "title": "Julia",
             "hex": "9558B2",
             "source": "https://github.com/JuliaLang/julia-logo-graphics/blob/b5551ca7946b4a25746c045c15fbb8806610f8d0/images/julia-dots.svg"
@@ -5655,7 +5663,11 @@
         {
             "title": "OCaml",
             "hex": "EC6813",
-            "source": "http://ocaml.org/img/OCaml_Sticker.svg"
+            "source": "http://ocaml.org/img/OCaml_Sticker.svg",
+            "guidelines": "https://ocaml.org/docs/logos.html",
+            "license": {
+                "type": "Unlicense"
+            }
         },
         {
             "title": "Octave",
@@ -5665,12 +5677,14 @@
         {
             "title": "Octopus Deploy",
             "hex": "2F93E0",
-            "source": "https://octopus.com/company/brand"
+            "source": "https://octopus.com/company/brand",
+            "guidelines": "https://octopus.com/company/brand"
         },
         {
             "title": "Oculus",
             "hex": "1C1E20",
-            "source": "https://www.oculus.com/en-us/press-kit"
+            "source": "https://en.facebookbrand.com/oculus/assets/oculus?audience=oculus-landing",
+            "guidelines": "https://en.facebookbrand.com/oculus/"
         },
         {
             "title": "Odnoklassniki",
@@ -5685,17 +5699,19 @@
         {
             "title": "Okta",
             "hex": "007DC1",
-            "source": "https://www.okta.com/press-room/media-assets/"
+            "source": "https://www.okta.com/press-room/media-assets/",
+            "guidelines": "https://www.okta.com/terms-of-use-for-okta-content/"
         },
         {
             "title": "OnePlus",
             "hex": "F5010C",
-            "source": "https://en.wikipedia.org/wiki/OnePlus#/media/File:OP_LU_Reg_1L_RGB_red_copy-01.svg"
+            "source": "https://www.oneplus.com/ca_en/brand/asset"
         },
         {
             "title": "OnlyFans",
             "hex": "00AFF0",
-            "source": "https://onlyfans.com/"
+            "source": "https://onlyfans.com/brand",
+            "guidelines": "https://onlyfans.com/brand"
         },
         {
             "title": "OnStar",
@@ -5740,7 +5756,8 @@
         {
             "title": "Open Source Initiative",
             "hex": "3DA639",
-            "source": "https://opensource.org/logo-usage-guidelines"
+            "source": "https://opensource.org/logo-usage-guidelines",
+            "guidelines": "https://opensource.org/logo-usage-guidelines"
         },
         {
             "title": "OpenAI",
@@ -5755,7 +5772,8 @@
         {
             "title": "OpenAPI Initiative",
             "hex": "6BA539",
-            "source": "https://www.openapis.org/faq/style-guide"
+            "source": "https://www.openapis.org/faq/style-guide",
+            "guidelines": "https://www.openapis.org/faq/style-guide"
         },
         {
             "title": "OpenBSD",
@@ -5765,7 +5783,8 @@
         {
             "title": "OpenCV",
             "hex": "5C3EE8",
-            "source": "https://opencv.org/resources/media-kit/"
+            "source": "https://opencv.org/resources/media-kit/",
+            "guidelines": "https://opencv.org/resources/media-kit/"
         },
         {
             "title": "OpenFaaS",
@@ -5795,12 +5814,14 @@
         {
             "title": "OpenStack",
             "hex": "ED1944",
-            "source": "https://www.openstack.org/brand/openstack-logo/"
+            "source": "https://www.openstack.org/brand/openstack-logo/",
+            "guidelines": "https://www.openstack.org/brand/openstack-logo/"
         },
         {
             "title": "OpenStreetMap",
             "hex": "7EBC6F",
-            "source": "https://www.openstreetmap.org"
+            "source": "https://www.openstreetmap.org",
+            "guidelines": "https://wiki.osmfoundation.org/wiki/Trademark_Policy"
         },
         {
             "title": "openSUSE",
@@ -5811,17 +5832,20 @@
         {
             "title": "OpenVPN",
             "hex": "EA7E20",
-            "source": "https://openvpn.net/wp-content/themes/openvpn/assets/images/logo.svg"
+            "source": "https://openvpn.net/wp-content/themes/openvpn/assets/images/logo.svg",
+            "guidelines": "https://openvpn.net/terms/"
         },
         {
             "title": "Opera",
             "hex": "FF1B2D",
-            "source": "https://github.com/operasoftware/logo"
+            "source": "https://brand.opera.com/1472-2/opera-logos/",
+            "guidelines": "https://brand.opera.com/"
         },
         {
             "title": "OPNSense",
             "hex": "D94F00",
-            "source": "https://github.com/opnsense/core/blob/06b1804a3d358041607ec3a963ab90b720564cc3/src/opnsense/www/themes/opnsense/build/images/icon-logo.svg"
+            "source": "https://opnsense.org/about/legal-notices/",
+            "guidelines": "https://opnsense.org/about/legal-notices/"
         },
         {
             "title": "Opsgenie",
@@ -5836,12 +5860,14 @@
         {
             "title": "Oracle",
             "hex": "F80000",
-            "source": "https://www.oracle.com/webfolder/s/brand/identity/index.html"
+            "source": "https://www.oracle.com/opn/index.html",
+            "guidelines": "https://www.oracle.com/legal/logos.html"
         },
         {
             "title": "ORCID",
             "hex": "A6CE39",
-            "source": "https://orcid.org/trademark-and-id-display-guidelines"
+            "source": "https://orcid.figshare.com/articles/figure/ORCID_iD_icon_graphics/5008697",
+            "guidelines": "https://info.orcid.org/brand-guidelines/"
         },
         {
             "title": "Origin",
@@ -5851,12 +5877,15 @@
         {
             "title": "Osano",
             "hex": "7764FA",
-            "source": "https://www.osano.com/"
+            "source": "https://www.osano.com/company/assets"
         },
         {
             "title": "Oshkosh",
             "hex": "E6830F",
-            "source": "https://oshkoshdefense.com/media/photos/"
+            "source": "https://oshkoshdefense.com/media/photos/",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "OSMC",
@@ -5876,7 +5905,7 @@
         {
             "title": "OVH",
             "hex": "123F6D",
-            "source": "https://www.ovh.com/fr/news/logo-ovh.xml"
+            "source": "https://www.ovh.com/ca/en/newsroom/"
         },
         {
             "title": "OWASP",
@@ -8614,7 +8643,10 @@
         {
             "title": "V",
             "hex": "5D87BF",
-            "source": "https://github.com/vlang/v-logo"
+            "source": "https://github.com/vlang/v-logo",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "V8",
@@ -8822,10 +8854,10 @@
             "hex": "4FC08D",
             "source": "https://github.com/vuejs/art",
             "license": {
-                "type": "CC-BY-NC-SA-4.0",
-                "url": "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/README.md"
+                "type": "custom",
+                "url": "https://github.com/vuejs/art/blob/master/README.md"
             },
-            "guidelines": "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/README.md"
+            "guidelines": "https://github.com/vuejs/art/blob/master/README.md"
         },
         {
             "title": "Vuetify",
