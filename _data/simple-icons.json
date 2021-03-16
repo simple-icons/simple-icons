@@ -6811,7 +6811,7 @@
             "title": "Redis",
             "hex": "DC382D",
             "source": "https://www.redislabs.com/brand-guidelines/",
-            "guidelines": "https://www.redislabs.com/brand-guidelines/",
+            "guidelines": "https://www.redislabs.com/brand-guidelines/"
         },
         {
             "title": "Redux",
@@ -6827,7 +6827,7 @@
             "title": "RedwoodJS",
             "hex": "BF4722",
             "source": "https://redwoodjs.com/logos/",
-            "guidelines": "https://redwoodjs.com/logos/",
+            "guidelines": "https://redwoodjs.com/logos/"
         },
         {
             "title": "Reliance Industries Limited",
@@ -7059,7 +7059,11 @@
         {
             "title": "Rust",
             "hex": "000000",
-            "source": "https://www.rust-lang.org/"
+            "source": "https://www.rust-lang.org/",
+            "guidelines": "https://www.rust-lang.org/policies/media-guide",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Ryanair",
