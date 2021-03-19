@@ -5395,7 +5395,7 @@
         {
             "title": "National Grid",
             "hex": "00148C",
-            "source": "https://www.nationalgrid.com/themes/custom/national_grid_group/logo.svg"
+            "source": "https://www.nationalgrid.com/"
         },
         {
             "title": "NativeScript",
@@ -5430,7 +5430,8 @@
         {
             "title": "Neo4j",
             "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/"
+            "source": "https://neo4j.com/style-guide/",
+            "guidelines": "https://neo4j.com/style-guide/"
         },
         {
             "title": "Neovim",
