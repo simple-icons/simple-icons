@@ -2046,7 +2046,8 @@
         {
             "title": "Datadog",
             "hex": "632CA6",
-            "source": "https://www.datadoghq.com/about/resources"
+            "source": "https://www.datadoghq.com/about/resources",
+            "guidelines": "https://www.datadoghq.com/about/resources/"
         },
         {
             "title": "DataStax",
@@ -2082,7 +2083,11 @@
         {
             "title": "Debian",
             "hex": "A81D33",
-            "source": "https://www.debian.org/logos"
+            "source": "https://www.debian.org/logos",
+            "guidelines": "https://www.debian.org/logos/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "deepin",
