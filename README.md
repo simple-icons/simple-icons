@@ -156,30 +156,34 @@ Icons are also available as a [Drupal module](https://www.drupal.org/project/sim
 
 ### Flutter
 
-Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by  [@jlnrrg](https://jlnrrg.github.io/).
+Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by [@jlnrrg](https://jlnrrg.github.io/).
 
 ### Home Assistant
 
-Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
+Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by [@vigonotion](https://github.com/vigonotion/).
+
+### Jetpack Compose
+
+Icons are also available as a [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) created by [@devsrsouza](https://github.com/devsrsouza/).
 
 ### Kirby
 
-Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
+Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by [@runxel](https://github.com/runxel).
 
 ### React
 
-Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
+Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by [@wootsbot](https://github.com/wootsbot).
 
 ### Svelte
 
-Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
+Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by [@wootsbot](https://github.com/wootsbot).
 
 ### Vue
 
-Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by  [@noahlitvin](https://github.com/noahlitvin).
+Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by [@noahlitvin](https://github.com/noahlitvin).
 
 ### WordPress
 
-Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
+Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by [@tjtaylo](https://github.com/tjtaylo).
 
 [slug]: ./slugs.md
