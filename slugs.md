@@ -439,6 +439,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
 | `devRant` | `devrant` |
+| `Dgraph` | `dgraph` |
 | `DHL` | `dhl` |
 | `diagrams.net` | `diagrams-dot-net` |
 | `Dialogflow` | `dialogflow` |
@@ -595,6 +596,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
+| `Fraunhofer-Gesellschaft` | `fraunhofer-gesellschaft` |
 | `FreeBSD` | `freebsd` |
 | `freeCodeCamp` | `freecodecamp` |
 | `freedesktop.org` | `freedesktop-dot-org` |
@@ -853,6 +855,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `JSFiddle` | `jsfiddle` |
 | `JSON` | `json` |
 | `JSON Web Tokens` | `jsonwebtokens` |
+| `JSS` | `jss` |
 | `Julia` | `julia` |
 | `Juniper Networks` | `junipernetworks` |
 | `Jupyter` | `jupyter` |
@@ -1166,6 +1169,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `OpsLevel` | `opslevel` |
 | `Oracle` | `oracle` |
 | `ORCID` | `orcid` |
+| `Org` | `org` |
 | `Origin` | `origin` |
 | `Osano` | `osano` |
 | `Oshkosh` | `oshkosh` |
@@ -1246,6 +1250,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Pluralsight` | `pluralsight` |
 | `Plurk` | `plurk` |
 | `Plus Codes` | `pluscodes` |
+| `PM2` | `pm2` |
 | `Pocket` | `pocket` |
 | `Pocket Casts` | `pocketcasts` |
 | `Podcast Addict` | `podcastaddict` |
