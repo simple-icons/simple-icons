@@ -5406,17 +5406,19 @@
         {
             "title": "Nano",
             "hex": "4A90E2",
-            "source": "https://nano.org/resources"
+            "source": "https://nano.org/resources",
+            "guidelines": "https://nano.org/resources"
         },
         {
             "title": "NASA",
             "hex": "E03C31",
-            "source": "https://commons.wikimedia.org/wiki/File:NASA_Worm_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:NASA_Worm_logo.svg",
+            "guidelines": "https://www.nasa.gov/multimedia/guidelines/index.html"
         },
         {
             "title": "National Grid",
             "hex": "00148C",
-            "source": "https://www.nationalgrid.com/themes/custom/national_grid_group/logo.svg"
+            "source": "https://www.nationalgrid.com/"
         },
         {
             "title": "NativeScript",
@@ -5451,12 +5453,16 @@
         {
             "title": "Neo4j",
             "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/"
+            "source": "https://neo4j.com/style-guide/",
+            "guidelines": "https://neo4j.com/style-guide/"
         },
         {
             "title": "Neovim",
             "hex": "57A143",
-            "source": "https://github.com/neovim/neovim.github.io/tree/7fd28f472e6ee4548bc4100dc381a8e4c70f2ee4/logos"
+            "source": "https://neovim.io/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "NestJS",
@@ -5466,17 +5472,20 @@
         {
             "title": "NetApp",
             "hex": "0067C5",
-            "source": "http://www.netapp.com/"
+            "source": "http://www.netapp.com/",
+            "guidelines": "https://www.netapp.com/company/legal/trademark-guidelines/"
         },
         {
             "title": "Netflix",
             "hex": "E50914",
-            "source": "https://brand.netflix.com/en/assets/brand-symbol"
+            "source": "https://brand.netflix.com/en/assets/brand-symbol",
+            "guidelines": "https://brand.netflix.com/en/assets/brand-symbol"
         },
         {
             "title": "Netlify",
             "hex": "00C7B7",
-            "source": "https://www.netlify.com/press/"
+            "source": "https://www.netlify.com/press/",
+            "guidelines": "https://www.netlify.com/press/"
         },
         {
             "title": "New Japan Pro-Wrestling",
@@ -5486,7 +5495,8 @@
         {
             "title": "New Relic",
             "hex": "008C99",
-            "source": "https://newrelic.com/about/media-assets"
+            "source": "https://newrelic.com/about/media-assets",
+            "guidelines": "https://newrelic.com/about/media-assets#guidelines"
         },
         {
             "title": "New York Times",
@@ -5501,22 +5511,25 @@
         {
             "title": "Nextcloud",
             "hex": "0082C9",
-            "source": "https://nextcloud.com/press/"
+            "source": "https://nextcloud.com/press/",
+            "guidelines": "https://nextcloud.com/trademarks/"
         },
         {
             "title": "Nextdoor",
             "hex": "8ED500",
-            "source": "https://nextdoor.com/newsroom/"
+            "source": "https://about.nextdoor.com/us-media/"
         },
         {
             "title": "NFC",
             "hex": "002E5F",
-            "source": "https://nfc-forum.org/our-work/nfc-branding/n-mark/guidelines-and-brand-assets/"
+            "source": "https://nfc-forum.org/our-work/nfc-branding/n-mark/guidelines-and-brand-assets/",
+            "guidelines": "https://nfc-forum.org/our-work/nfc-branding/n-mark/guidelines-and-brand-assets/"
         },
         {
             "title": "NGINX",
-            "hex": "269539",
-            "source": "https://www.nginx.com/"
+            "hex": "009639",
+            "source": "https://www.nginx.com/press/",
+            "guidelines": "https://www.nginx.com/press/"
         },
         {
             "title": "ngrok",
@@ -5551,12 +5564,12 @@
         {
             "title": "Nintendo Network",
             "hex": "FF7D00",
-            "source": "https://accounts.nintendo.com/login"
+            "source": "https://id.nintendo.net/login"
         },
         {
             "title": "Nintendo Switch",
             "hex": "E60012",
-            "source": "http://www.nintendo.co.uk/"
+            "source": "https://www.nintendo.com/switch/"
         },
         {
             "title": "Nissan",
@@ -5576,7 +5589,8 @@
         {
             "title": "Node.js",
             "hex": "339933",
-            "source": "https://nodejs.org/en/about/resources/"
+            "source": "https://nodejs.org/en/about/resources/",
+            "guidelines": "https://nodejs.org/en/about/resources/"
         },
         {
             "title": "Nodemon",
@@ -5616,7 +5630,8 @@
         {
             "title": "NPM",
             "hex": "CB3837",
-            "source": "https://github.com/npm/logos"
+            "source": "https://github.com/npm/logos",
+            "guidelines": "https://www.npmjs.com/policies/trademark"
         },
         {
             "title": "Nrwl",
@@ -5626,7 +5641,7 @@
         {
             "title": "Nubank",
             "hex": "8A05BE",
-            "source": "https://nubank.com.br/imprensa/"
+            "source": "https://nubank.com.br/en/press/"
         },
         {
             "title": "Nucleo",
@@ -5651,7 +5666,8 @@
         {
             "title": "NumPy",
             "hex": "013243",
-            "source": "https://numpy.org"
+            "source": "https://numpy.org/press-kit/",
+            "guidelines": "https://github.com/numpy/numpy/blob/main/branding/logo/logoguidelines.md"
         },
         {
             "title": "Nutanix",
@@ -5661,7 +5677,7 @@
         {
             "title": "Nuxt.js",
             "hex": "00C58E",
-            "source": "https://nuxtjs.org/"
+            "source": "https://nuxtjs.org/design"
         },
         {
             "title": "NVIDIA",
