@@ -4839,7 +4839,10 @@
         {
             "title": "MAAS",
             "hex": "E95420",
-            "source": "https://design.ubuntu.com/downloads/"
+            "source": "https://design.ubuntu.com/downloads/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "macOS",
