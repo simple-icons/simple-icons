@@ -4921,7 +4921,11 @@
         {
             "title": "Markdown",
             "hex": "000000",
-            "source": "https://github.com/dcurtis/markdown-mark"
+            "source": "https://github.com/dcurtis/markdown-mark",
+            "guidelines": "https://github.com/dcurtis/markdown-mark",
+            "license": {
+                "type": "CC0-1.0"
+            }
         },
         {
             "title": "Marketo",
