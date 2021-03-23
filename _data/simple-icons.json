@@ -2002,18 +2002,19 @@
         },
         {
             "title": "Dailymotion",
-            "hex": "0066DC",
-            "source": "http://press.dailymotion.com/?page_id=346"
+            "hex": "0D0D0D",
+            "source": "https://about.dailymotion.com/en/press/"
         },
         {
             "title": "Daimler",
             "hex": "E6E6E6",
-            "source": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype_Black_DTP"
+            "source": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype_Black_DTP",
+            "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
         },
         {
             "title": "Dark Reader",
             "hex": "141E24",
-            "source": "https://github.com/simple-icons/simple-icons/pull/3348"
+            "source": "https://github.com/simple-icons/simple-icons/pull/3348#issuecomment-667090608"
         },
         {
             "title": "Dart",
@@ -2028,7 +2029,8 @@
         {
             "title": "Dash",
             "hex": "008DE4",
-            "source": "https://www.dash.org/brand-assets/"
+            "source": "https://www.dash.org/brand-assets/",
+            "guidelines": "https://www.dash.org/brand-guidelines/"
         },
         {
             "title": "Dashlane",
@@ -2038,12 +2040,12 @@
         {
             "title": "Dassault Systèmes",
             "hex": "005386",
-            "source": "https://www.3ds.com/statics/menu/2/assets/img/logo/3ds-dark.svg"
+            "source": "https://www.3ds.com/"
         },
         {
             "title": "Databricks",
             "hex": "FF3621",
-            "source": "https://academy.databricks.com/",
+            "source": "https://www.databricks.com/",
             "guidelines": "https://brand.databricks.com/Styleguide/Guide/"
         },
         {
@@ -2054,7 +2056,8 @@
         {
             "title": "Datadog",
             "hex": "632CA6",
-            "source": "https://www.datadoghq.com/about/resources"
+            "source": "https://www.datadoghq.com/about/resources",
+            "guidelines": "https://www.datadoghq.com/about/resources/"
         },
         {
             "title": "DataStax",
@@ -2090,7 +2093,11 @@
         {
             "title": "Debian",
             "hex": "A81D33",
-            "source": "https://www.debian.org/logos"
+            "source": "https://www.debian.org/logos",
+            "guidelines": "https://www.debian.org/logos/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "deepin",
@@ -2115,12 +2122,13 @@
         {
             "title": "Deliveroo",
             "hex": "00CCBC",
-            "source": "https://www.deliveroo.design/"
+            "source": "https://deliveroo.com/"
         },
         {
             "title": "Dell",
             "hex": "007DB8",
-            "source": "https://datasecurity.dell.com/wp-content/themes/dell/images/logo-dell.svg"
+            "source": "https://www.dell.com/",
+            "guidelines": "https://brand.delltechnologies.com/logos/"
         },
         {
             "title": "Delphi",
@@ -2135,12 +2143,12 @@
         {
             "title": "Deno",
             "hex": "000000",
-            "source": "https://github.com/denoland/deno/tree/1cc02a5d9d867f1a239ee4b69f587d8afac07b02/website/images"
+            "source": "https://github.com/denoland/deno_website2/blob/892750b99cc260f8b1b2a4bcea59eab9101dd67c/public/logo.svg"
         },
         {
             "title": "Dependabot",
             "hex": "025E8C",
-            "source": "https://dependabot.com/dependabot-logo-symbol-square-mono.svg"
+            "source": "https://dependabot.com/"
         },
         {
             "title": "Der Spiegel",
@@ -2155,7 +2163,7 @@
         {
             "title": "Deutsche Bahn",
             "hex": "F01414",
-            "source": "https://www.bahn.de/common/view/static/v8/img/db_em_rgb_100px.svg"
+            "source": "https://www.bahn.de/"
         },
         {
             "title": "Deutsche Bank",
@@ -2190,7 +2198,8 @@
         {
             "title": "DHL",
             "hex": "FFCC00",
-            "source": "https://www.dpdhl-brands.com/dhl/en/guides/design-basics/logo-and-claim.html"
+            "source": "https://www.dpdhl-brands.com/dhl/en/guides/design-basics/logo-and-claim.html",
+            "guidelines": "https://www.dpdhl-brands.com/dhl/en/guides/design-basics/logo-and-claim.html"
         },
         {
             "title": "diagrams.net",
@@ -2200,7 +2209,7 @@
         {
             "title": "Dialogflow",
             "hex": "FF9800",
-            "source": "https://en.wikipedia.org/wiki/File:Dialogflow_logo.svg"
+            "source": "https://dialogflow.cloud.google.com/"
         },
         {
             "title": "Diaspora",
@@ -2210,7 +2219,7 @@
         {
             "title": "Digg",
             "hex": "000000",
-            "source": "https://en.wikipedia.org/wiki/Digg"
+            "source": "https://digg.com/"
         },
         {
             "title": "Digi-Key Electronics",
@@ -2220,7 +2229,8 @@
         {
             "title": "DigitalOcean",
             "hex": "0080FF",
-            "source": "https://www.digitalocean.com/company/logos-and-badges/"
+            "source": "https://www.digitalocean.com/press/",
+            "guidelines": "https://www.digitalocean.com/press/"
         },
         {
             "title": "Dior",
@@ -2230,7 +2240,7 @@
         {
             "title": "Directus",
             "hex": "263238",
-            "source": "https://directus.io/resources.html"
+            "source": "https://directus.io/"
         },
         {
             "title": "Discogs",
