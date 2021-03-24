@@ -5399,7 +5399,10 @@
         {
             "title": "MX Linux",
             "hex": "000000",
-            "source": "https://mxlinux.org/art/"
+            "source": "https://mxlinux.org/art/",
+            "license": {
+                "type": "GPL-3.0-only"
+            }
         },
         {
             "title": "MyAnimeList",
