@@ -4599,7 +4599,11 @@
         {
             "title": "Launchpad",
             "hex": "F8C300",
-            "source": "https://help.launchpad.net/logo/submissions"
+            "source": "https://help.launchpad.net/logo/submissions",
+            "guidelines": "https://help.launchpad.net/Legal",
+            "license": {
+                "type": "CC-BY-ND-2.0"
+            }
         },
         {
             "title": "LBRY",
