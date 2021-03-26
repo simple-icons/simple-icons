@@ -56,6 +56,7 @@ function iconToObject(icon) {
     escape(icon.svg),
     escape(icon.source),
     escape(icon.hex),
+    icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
 }
