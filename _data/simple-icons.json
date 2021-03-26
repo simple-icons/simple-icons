@@ -4640,7 +4640,11 @@
         {
             "title": "Let’s Encrypt",
             "hex": "003A70",
-            "source": "https://letsencrypt.org/trademarks/"
+            "source": "https://letsencrypt.org/trademarks/",
+            "guidelines": "https://letsencrypt.org/trademarks/",
+            "license": {
+                "type": "CC-BY-NC-4.0"
+            }
         },
         {
             "title": "Letterboxd",
