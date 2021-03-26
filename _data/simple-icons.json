@@ -4665,7 +4665,11 @@
         {
             "title": "Liberapay",
             "hex": "F6C915",
-            "source": "https://liberapay.com/assets/liberapay/icon-v2_yellow-r.svg"
+            "source": "https://en.liberapay.com/about/logos",
+            "guidelines": "https://en.liberapay.com/about/logos",
+            "license": {
+                "type": "CC0-1.0"
+            }
         },
         {
             "title": "Libraries.io",
