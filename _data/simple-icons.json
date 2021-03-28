@@ -4839,7 +4839,10 @@
         {
             "title": "MAAS",
             "hex": "E95420",
-            "source": "https://design.ubuntu.com/downloads/"
+            "source": "https://design.ubuntu.com/downloads/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "macOS",
@@ -4849,7 +4852,7 @@
         {
             "title": "Macy’s",
             "hex": "E21A2C",
-            "source": "http://www.macysinc.com/press-room/logo-photo-gallery/logos-macys-inc/default.aspx"
+            "source": "https://www.macysinc.com/news-media/media-assets"
         },
         {
             "title": "Magento",
@@ -4869,12 +4872,14 @@
         {
             "title": "MailChimp",
             "hex": "FFE01B",
-            "source": "http://mailchimp.com/about/brand-assets"
+            "source": "http://mailchimp.com/about/brand-assets",
+            "guidelines": "http://mailchimp.com/about/brand-assets"
         },
         {
             "title": "Major League Hacking",
             "hex": "265A8F",
-            "source": "https://mlh.io/brand-guidelines"
+            "source": "https://mlh.io/brand-guidelines",
+            "guidelines": "https://mlh.io/brand-guidelines"
         },
         {
             "title": "MakerBot",
@@ -4894,17 +4899,19 @@
         {
             "title": "Manjaro",
             "hex": "35BF5C",
-            "source": "https://commons.wikimedia.org/wiki/File:Manjaro-logo.svg"
+            "source": "https://manjaro.org/"
         },
         {
             "title": "Mapbox",
             "hex": "000000",
-            "source": "https://www.mapbox.com/about/press/brand-guidelines"
+            "source": "https://www.mapbox.com/about/press/brand-guidelines",
+            "guidelines": "https://www.mapbox.com/about/press/brand-guidelines"
         },
         {
             "title": "MariaDB",
             "hex": "003545",
-            "source": "https://mariadb.com/"
+            "source": "https://mariadb.com/about-us/logos/",
+            "guidelines": "https://mariadb.com/about-us/logos/"
         },
         {
             "title": "MariaDB Foundation",
@@ -4914,7 +4921,11 @@
         {
             "title": "Markdown",
             "hex": "000000",
-            "source": "https://github.com/dcurtis/markdown-mark"
+            "source": "https://github.com/dcurtis/markdown-mark",
+            "guidelines": "https://github.com/dcurtis/markdown-mark",
+            "license": {
+                "type": "CC0-1.0"
+            }
         },
         {
             "title": "Marketo",
@@ -4934,7 +4945,8 @@
         {
             "title": "MasterCard",
             "hex": "EB001B",
-            "source": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark/downloads.html"
+            "source": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark/downloads.html",
+            "guidelines": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark.html"
         },
         {
             "title": "mastercomfig",
@@ -4944,7 +4956,7 @@
         {
             "title": "Mastodon",
             "hex": "3088D4",
-            "source": "https://source.joinmastodon.org/mastodon/joinmastodon/blob/master/public/press-kit.zip"
+            "source": "https://joinmastodon.org/"
         },
         {
             "title": "Material Design",
@@ -4967,7 +4979,8 @@
         {
             "title": "Mathworks",
             "hex": "0076A8",
-            "source": "https://www.mathworks.com/brand.html"
+            "source": "https://www.mathworks.com/brand.html",
+            "guidelines": "https://www.mathworks.com/brand.html"
         },
         {
             "title": "Matomo",
@@ -4981,8 +4994,9 @@
         },
         {
             "title": "Mattermost",
-            "hex": "0072C6",
-            "source": "https://www.mattermost.org/brand-guidelines/"
+            "hex": "0058CC",
+            "source": "https://www.mattermost.org/brand-guidelines/",
+            "guidelines": "https://www.mattermost.org/brand-guidelines/"
         },
         {
             "title": "Matternet",
@@ -5012,7 +5026,7 @@
         {
             "title": "McAfee",
             "hex": "C01818",
-            "source": "https://www.mcafee.com/"
+            "source": "https://www.mcafee.com/enterprise/en-us/about/newsroom/product-images.html"
         },
         {
             "title": "McDonald's",
@@ -5032,17 +5046,19 @@
         {
             "title": "MediaFire",
             "hex": "1299F3",
-            "source": "https://www.mediafire.com/press/"
+            "source": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/",
+            "guidelines": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/"
         },
         {
             "title": "MediaTemple",
             "hex": "000000",
-            "source": "https://mediatemple.net/company/about-us"
+            "source": "https://mediatemple.net/"
         },
         {
             "title": "Medium",
-            "hex": "12100E",
-            "source": "https://medium.design/logos-and-brand-guidelines-f1a01a733592"
+            "hex": "000000",
+            "source": "https://medium.design/logos-and-brand-guidelines-f1a01a733592",
+            "guidelines": "https://medium.design/logos-and-brand-guidelines-f1a01a733592"
         },
         {
             "title": "Meetup",
@@ -5052,7 +5068,7 @@
         {
             "title": "MEGA",
             "hex": "D9272E",
-            "source": "https://en.wikipedia.org/wiki/File:01_mega_logo.svg"
+            "source": "https://mega.io/corporate"
         },
         {
             "title": "Mendeley",
@@ -5076,7 +5092,8 @@
         {
             "title": "Messenger",
             "hex": "00B2FF",
-            "source": "https://en.facebookbrand.com/assets/messenger/"
+            "source": "https://en.facebookbrand.com/facebookapp/assets/messenger/",
+            "guidelines": "https://en.facebookbrand.com/facebookapp/assets/messenger/"
         },
         {
             "title": "MetaFilter",
@@ -5141,12 +5158,12 @@
         {
             "title": "Microsoft Access",
             "hex": "A4373A",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft Azure",
             "hex": "0089D6",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg"
+            "source": "https://developer.microsoft.com"
         },
         {
             "title": "Microsoft Edge",
@@ -5156,12 +5173,12 @@
         {
             "title": "Microsoft Excel",
             "hex": "217346",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft Exchange",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft Office",
@@ -5171,12 +5188,12 @@
         {
             "title": "Microsoft OneDrive",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft OneNote",
             "hex": "7719AA",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft Outlook",
@@ -5186,37 +5203,38 @@
         {
             "title": "Microsoft PowerPoint",
             "hex": "B7472A",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft SharePoint",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft SQL Server",
             "hex": "CC2927",
-            "source": "https://de.wikipedia.org/wiki/Microsoft_SQL_Server"
+            "source": "https://de.wikipedia.org/wiki/Datei:Microsoft_SQL_Server_Logo.svg"
         },
         {
             "title": "Microsoft Teams",
             "hex": "6264A7",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft Visio",
             "hex": "3955A3",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Microsoft Word",
             "hex": "2B579A",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "MicroStrategy",
             "hex": "D9232E",
-            "source": "https://www.microstrategy.com/us/company/press-kit"
+            "source": "https://www.microstrategy.com/en/company/press-kit",
+            "guidelines": "https://www.microstrategy.com/en/company/press-kit"
         },
         {
             "title": "MIDI",
@@ -5226,7 +5244,10 @@
         {
             "title": "Minds",
             "hex": "FED12F",
-            "source": "https://www.minds.com/"
+            "source": "https://www.minds.com/branding",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Minecraft",
@@ -5245,8 +5266,8 @@
         },
         {
             "title": "Minutemailer",
-            "hex": "3ABFE6",
-            "source": "https://minutemailer.com/press"
+            "hex": "30B980",
+            "source": "https://minutemailer.com"
         },
         {
             "title": "Miro",
@@ -5266,7 +5287,8 @@
         {
             "title": "Mixcloud",
             "hex": "5000FF",
-            "source": "https://www.mixcloud.com/about"
+            "source": "https://www.mixcloud.com/about",
+            "guidelines": "https://www.mixcloud.com/about"
         },
         {
             "title": "MobX",
@@ -5306,7 +5328,7 @@
         {
             "title": "Monero",
             "hex": "FF6600",
-            "source": "https://getmonero.org"
+            "source": "https://www.getmonero.org/press-kit/"
         },
         {
             "title": "MongoDB",
@@ -5325,8 +5347,8 @@
         },
         {
             "title": "Monster",
-            "hex": "6E46AE",
-            "source": "https://www.monster.com/"
+            "hex": "6D4C9F",
+            "source": "https://www.monster.com/press/"
         },
         {
             "title": "Monzo",
@@ -5336,7 +5358,7 @@
         {
             "title": "Moo",
             "hex": "00945E",
-            "source": "https://www.moo.com/uk/about/press.html"
+            "source": "https://www.moo.com/uk/about/press"
         },
         {
             "title": "Moscow Metro",
@@ -5351,7 +5373,8 @@
         {
             "title": "Mozilla",
             "hex": "000000",
-            "source": "https://mozilla.design/mozilla/"
+            "source": "https://mozilla.design/mozilla/",
+            "guidelines": "https://mozilla.design/mozilla/"
         },
         {
             "title": "MTA",
@@ -5376,7 +5399,10 @@
         {
             "title": "MX Linux",
             "hex": "000000",
-            "source": "https://mxlinux.org/art/"
+            "source": "https://mxlinux.org/art/",
+            "license": {
+                "type": "GPL-3.0-only"
+            }
         },
         {
             "title": "MyAnimeList",
@@ -5391,12 +5417,13 @@
         {
             "title": "Myspace",
             "hex": "030303",
-            "source": "https://myspace.com/pressroom/assetslogos"
+            "source": "https://myspace.com/"
         },
         {
             "title": "MySQL",
             "hex": "4479A1",
-            "source": "https://www.mysql.com/about/legal/logos.html"
+            "source": "https://www.mysql.com/about/legal/logos.html",
+            "guidelines": "https://www.mysql.com/about/legal/logos.html"
         },
         {
             "title": "N26",
@@ -5638,9 +5665,9 @@
             "source": "https://www.lingoapp.com/6/s/oJkq3W/?v=3"
         },
         {
-            "title": "NPM",
+            "title": "npm",
             "hex": "CB3837",
-            "source": "https://github.com/npm/logos",
+            "source": "https://www.npmjs.com/",
             "guidelines": "https://www.npmjs.com/policies/trademark"
         },
         {
@@ -9363,7 +9390,7 @@
         {
             "title": "Yammer",
             "hex": "106EBE",
-            "source": "https://developer.microsoft.com/en-us/fabric#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
             "title": "Yandex",
