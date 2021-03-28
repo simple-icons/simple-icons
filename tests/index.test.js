@@ -32,6 +32,14 @@ icons.forEach(icon => {
     expect(typeof subject.slug).toBe('string');
   });
 
+  test(`${icon.title} has ${icon.guidelines ? "" : "no"} "guidelines"`, () => {
+    if (icon.guidelines) {
+      expect(typeof subject.guidelines).toBe('string');
+    } else {
+      expect(subject.guidelines).toBeUndefined();
+    }
+  });
+
   // NOTE: Icons with custom slugs have a custom slug because their title is
   // already taken, so they should not be findable by their title.
   if (icon.slug === undefined) {

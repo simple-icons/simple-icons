@@ -29,4 +29,12 @@ icons.forEach(icon => {
   test(`${icon.title} has a "slug"`, () => {
     expect(typeof subject.slug).toBe('string');
   });
+
+  test(`${icon.title} has ${icon.guidelines ? "" : "no"} "guidelines"`, () => {
+    if (icon.guidelines) {
+      expect(typeof subject.guidelines).toBe('string');
+    } else {
+      expect(subject.guidelines).toBeUndefined();
+    }
+  });
 });
