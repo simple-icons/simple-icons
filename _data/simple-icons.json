@@ -8990,7 +8990,11 @@
         {
             "title": "W3C",
             "hex": "005A9C",
-            "source": "https://www.w3.org/Consortium/Legal/logo-usage-20000308"
+            "source": "https://www.w3.org/Consortium/Legal/logo-usage-20000308",
+            "license": {
+                "type": "custom",
+                "url": "https://www.w3.org/Consortium/Legal/2002/trademark-license-20021231"
+            }
         },
         {
             "title": "Wagtail",
@@ -9000,7 +9004,8 @@
         {
             "title": "WakaTime",
             "hex": "000000",
-            "source": "https://wakatime.com/legal/logos-and-trademark-usage"
+            "source": "https://wakatime.com/legal/logos-and-trademark-usage",
+            "guidelines": "https://wakatime.com/legal/logos-and-trademark-usage"
         },
         {
             "title": "WALKMAN",
@@ -9020,7 +9025,8 @@
         {
             "title": "Wattpad",
             "hex": "FF500A",
-            "source": "https://company.wattpad.com/media-kit"
+            "source": "https://company.wattpad.com/brandguideline",
+            "guidelines": "https://company.wattpad.com/brandguideline"
         },
         {
             "title": "Waze",
@@ -9045,7 +9051,8 @@
         {
             "title": "WebAuthn",
             "hex": "3423A6",
-            "source": "https://github.com/apowers313/webauthn-logos"
+            "source": "https://github.com/webauthn-open-source/webauthn-logos",
+            "guidelines": "https://github.com/webauthn-open-source/webauthn-logos"
         },
         {
             "title": "webcomponents.org",
@@ -9065,7 +9072,8 @@
         {
             "title": "WebGL",
             "hex": "990000",
-            "source": "https://www.khronos.org/legal/trademarks/"
+            "source": "https://www.khronos.org/legal/trademarks/",
+            "guidelines": "https://www.khronos.org/legal/trademarks/"
         },
         {
             "title": "Webmin",
@@ -9085,7 +9093,7 @@
         {
             "title": "WebRTC",
             "hex": "333333",
-            "source": "https://webrtc.org/press/"
+            "source": "https://webrtc.org/"
         },
         {
             "title": "WebStorm",
@@ -9096,7 +9104,8 @@
         {
             "title": "WeChat",
             "hex": "07C160",
-            "source": "https://wechat.design/standard/download/brand"
+            "source": "https://wechat.design/standard/download/brand",
+            "guidelines": "https://wechat.design/standard/download/brand"
         },
         {
             "title": "Weights & Biases",
@@ -9116,7 +9125,8 @@
         {
             "title": "WhatsApp",
             "hex": "25D366",
-            "source": "https://www.whatsappbrand.com"
+            "source": "https://www.whatsappbrand.com",
+            "guidelines": "https://whatsappbrand.com/"
         },
         {
             "title": "When I Work",
@@ -9131,12 +9141,12 @@
         {
             "title": "Wii",
             "hex": "8B8B8B",
-            "source": "https://de.wikipedia.org/wiki/Datei:WiiU.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Wii.svg"
         },
         {
             "title": "Wii U",
             "hex": "8B8B8B",
-            "source": "https://de.wikipedia.org/wiki/Datei:WiiU.svg"
+            "source": "https://commons.wikipedia.org/wiki/File:WiiU.svg"
         },
         {
             "title": "Wikidata",
@@ -9151,7 +9161,7 @@
         {
             "title": "Wikipedia",
             "hex": "000000",
-            "source": "https://en.wikipedia.org/wiki/Logo_of_Wikipedia"
+            "source": "https://commons.wikimedia.org/wiki/File:Wikipedia-logo-v2.svg"
         },
         {
             "title": "Wikiquote",
@@ -9161,7 +9171,7 @@
         {
             "title": "Wikivoyage",
             "hex": "006699",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Wikivoyage-Logo-v3-en.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Wikivoyage-Logo-v3-en.svg"
         },
         {
             "title": "Windows",
@@ -9196,17 +9206,18 @@
         {
             "title": "Wire",
             "hex": "000000",
-            "source": "http://brand.wire.com"
+            "source": "http://brand.wire.com",
+            "guidelines": "https://brand.wire.com/"
         },
         {
             "title": "WireGuard",
             "hex": "88171A",
-            "source": "https://www.wireguard.com/img/wireguard.svg"
+            "source": "https://www.wireguard.com/"
         },
         {
             "title": "Wireshark",
             "hex": "1679A7",
-            "source": "https://gitlab.com/wanduow/wireshark/-/blob/master/image/wsicon.svg"
+            "source": "https://gitlab.com/wanduow/wireshark/-/blob/cd5539b0f76975474869984a9d2f0fce29d5c21e/image/wsicon.svg"
         },
         {
             "title": "Wish",
@@ -9216,7 +9227,8 @@
         {
             "title": "Wistia",
             "hex": "54BBFF",
-            "source": "https://wistia.com/about/assets"
+            "source": "https://wistia.com/about/assets",
+            "guidelines": "https://wistia.com/about/assets"
         },
         {
             "title": "Wix",
@@ -9246,12 +9258,14 @@
         {
             "title": "Woo",
             "hex": "96588A",
-            "source": "https://woocommerce.com/style-guide/"
+            "source": "https://woocommerce.com/style-guide/",
+            "guidelines": "https://woocommerce.com/trademark-guidelines/"
         },
         {
             "title": "WooCommerce",
             "hex": "96588A",
-            "source": "https://woocommerce.com/style-guide/"
+            "source": "https://woocommerce.com/style-guide/",
+            "guidelines": "https://woocommerce.com/trademark-guidelines/"
         },
         {
             "title": "WordPress",
@@ -9261,7 +9275,8 @@
         {
             "title": "Workplace",
             "hex": "20252D",
-            "source": "https://en.facebookbrand.com/"
+            "source": "https://en.facebookbrand.com/",
+            "guidelines": "https://en.facebookbrand.com/"
         },
         {
             "title": "World Health Organization",
@@ -9281,7 +9296,8 @@
         {
             "title": "write.as",
             "hex": "5BC4EE",
-            "source": "https://write.as/brand"
+            "source": "https://write.as/brand",
+            "guidelines": "https://write.as/brand"
         },
         {
             "title": "WWE",
