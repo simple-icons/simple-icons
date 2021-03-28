@@ -295,6 +295,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `CEVO` | `cevo` |
 | `Chainlink` | `chainlink` |
 | `Chakra UI` | `chakraui` |
+| `Chart.js` | `chart-dot-js` |
 | `ChartMogul` | `chartmogul` |
 | `Chase` | `chase` |
 | `ChatBot` | `chatbot` |
@@ -348,6 +349,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `CodeIgniter` | `codeigniter` |
 | `Codemagic` | `codemagic` |
 | `CodeMirror` | `codemirror` |
+| `CodeNewbie` | `codenewbie` |
 | `CodePen` | `codepen` |
 | `CodeProject` | `codeproject` |
 | `CodersRank` | `codersrank` |
@@ -563,6 +565,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
+| `Files` | `files` |
 | `FileZilla` | `filezilla` |
 | `Fing` | `fing` |
 | `Firebase` | `firebase` |
