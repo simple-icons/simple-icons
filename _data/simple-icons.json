@@ -2470,7 +2470,7 @@
         {
             "title": "Electron",
             "hex": "47848F",
-            "source": "https://electronjs.org/images/electron-logo.svg"
+            "source": "https://www.electronjs.org/"
         },
         {
             "title": "Element",
@@ -2515,7 +2515,8 @@
         {
             "title": "Ember.js",
             "hex": "E04E39",
-            "source": "https://emberjs.com/logos/"
+            "source": "https://emberjs.com/logos/",
+            "guidelines": "https://emberjs.com/logos/"
         },
         {
             "title": "Emby",
@@ -2576,12 +2577,13 @@
         {
             "title": "ESLGaming",
             "hex": "FFFF09",
-            "source": "https://brand.eslgaming.com/"
+            "source": "https://brand.eslgaming.com/",
+            "guidelines": "https://brand.eslgaming.com/"
         },
         {
             "title": "ESLint",
             "hex": "4B32C3",
-            "source": "https://eslint.org/img/logo.svg"
+            "source": "https://eslint.org/"
         },
         {
             "title": "ESPHome",
@@ -2596,7 +2598,7 @@
         {
             "title": "Ethereum",
             "hex": "3C3C3D",
-            "source": "https://www.ethereum.org/images/logos/Ethereum_Visual_Identity_1.0.0.pdf"
+            "source": "https://ethereum.org/en/assets/"
         },
         {
             "title": "Ethiopian Airlines",
@@ -2626,7 +2628,8 @@
         {
             "title": "Evernote",
             "hex": "00A82D",
-            "source": "https://evernote.com/press"
+            "source": "https://evernote.com/about-us",
+            "guidelines": "https://evernote.com/about-us"
         },
         {
             "title": "Everplaces",
@@ -2641,7 +2644,10 @@
         {
             "title": "Exercism",
             "hex": "009CAB",
-            "source": "https://github.com/exercism/website-icons/blob/master/exercism/logo-icon.svg"
+            "source": "https://github.com/exercism/website-icons/blob/2ad12baa465acfaa74efc5da27a6a12f8b05e3d0/exercism/logo-icon.svg",
+            "license": {
+                "type": "CC-BY-3.0"
+            }
         },
         {
             "title": "Experts Exchange",
