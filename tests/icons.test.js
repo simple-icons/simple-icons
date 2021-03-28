@@ -41,4 +41,18 @@ icons.forEach(icon => {
       expect(subject.guidelines).toBeUndefined();
     }
   });
+
+  test(`${icon.title} has ${icon.license ? "the correct" : "no"} "license"`, () => {
+    if (icon.license) {
+      expect(typeof subject.license).toBe('object');
+      expect(subject.license).toHaveProperty('type', icon.license.type);
+      if (icon.license.type === "custom") {
+        expect(subject.license).toHaveProperty('url', icon.license.url);
+      } else {
+        expect(typeof subject.license.url).toBe('string');
+      }
+    } else {
+      expect(subject.license).toBeUndefined();
+    }
+  });
 });

@@ -43,6 +43,20 @@ icons.forEach(icon => {
     }
   });
 
+  test(`${icon.title} has ${icon.license ? "the correct" : "no"} "license"`, () => {
+    if (icon.license) {
+      expect(typeof subject.license).toBe('object');
+      expect(subject.license).toHaveProperty('type', icon.license.type);
+      if (icon.license.type === "custom") {
+        expect(subject.license).toHaveProperty('url', icon.license.url);
+      } else {
+        expect(typeof subject.license.url).toBe('string');
+      }
+    } else {
+      expect(subject.license).toBeUndefined();
+    }
+  });
+
   // NOTE: Icons with custom slugs have a custom slug because their title is
   // already taken, so they should not be findable by their title.
   if (icon.slug === undefined) {
