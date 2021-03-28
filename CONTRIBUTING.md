@@ -287,6 +287,66 @@ If the SVG is sourced from:
 
 In general, make sure the URL does not contain any tracking identifiers.
 
+#### Aliases
+
+Lastly, we aim to provide aliases of three types for various reasons. Each type of alias and their motivation can be found below. If you're unsure, you can mention an alias you're considering in your Pull Request so it can be discussed.
+
+##### Also Known As
+
+We collect "also known as" names to make it easier to find brands that are known by different names or by their abbreviation/full name. To add an "also known as" name you add the following to the icon data:
+
+```json
+{
+  "title": "the original title",
+  "aliases": {
+    "aka": [
+      "tot"
+    ]
+  }
+}
+```
+
+Where the string is **different** from the original title as well as all other strings in the list.
+
+##### Duplicates
+
+We collect the name of duplicates, brands that use the same logo but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
+
+```json5
+{
+  "title": "the original title",
+  "hex": "123456",
+  "aliases": {
+    "dup": [
+      {
+        "title": "the duplicate's title",
+        "hex": "654321", // Only if different from original's color
+        "guidelines": "..." // Only if different from original's guidelines
+      }
+    ]
+  }
+}
+```
+
+Where the nested `title` is the name of the duplicate brand. The other fields, `hex` and `guidelines`, are only provided if they differ from the original.
+
+##### Localization
+
+We collect localized names to make it possible to find the brand by it's local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
+
+```json
+{
+  "title": "the original title",
+  "aliases": {
+    "loc": [
+      { "locale": "en-US", "title": "A different title" }
+    ]
+  }
+}
+```
+
+Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and `title` is a **different** title from the original title.
+
 ### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.

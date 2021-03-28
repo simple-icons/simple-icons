@@ -39,15 +39,17 @@
               "type": "array",
               "items": { "$ref": "#/definitions/duplicate" }
             },
-            "old": {
-              "description": "Old names, for backwards compatibility",
-              "type": "array",
-              "items": { "type": "string" }
-            },
             "loc": {
               "description": "Localized names of the brand",
               "type": "array",
               "items": { "$ref": "#/definitions/locale" }
+            },
+            "old": {
+              "description": "Old names, for backwards compatibility",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           "minProperties": 1,
