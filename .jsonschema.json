@@ -2,6 +2,7 @@
   "title": "Simple Icons",
   "definitions": {
     "brand": {
+      "$id": "#brand",
       "description": "A single brand",
       "type": "object",
       "required": ["title", "hex", "source"],
@@ -11,15 +12,10 @@
           "type": "string"
         },
         "slug": {
-          "description": "The brand name slug (used as filename in icons/)",
-          "type": "string",
-          "pattern": "^[a-z0-9\\-]+_[a-z0-9\\-]+$",
-          "required": false
+          "$ref": "#/definitions/slug"
         },
         "hex": {
-          "description": "The brand color as a 6-character value (without #)",
-          "type": "string",
-          "pattern": "^[0-9A-F]{6}$"
+          "$ref": "#/definitions/hex"
         },
         "source": {
           "description": "The website from which the icon was sourced",
@@ -28,6 +24,34 @@
         "guidelines": {
           "description": "The brand guidelines",
           "$ref": "#/definitions/url"
+        },
+        "aliases": {
+          "description": "The aliases for the brand",
+          "type": "object",
+          "properties": {
+            "aka": {
+              "description": "The brand is also known as (e.g. full length name or abbreviation)",
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "dup": {
+              "description": "Different brands that use the exact same icon",
+              "type": "array",
+              "items": { "$ref": "#/definitions/duplicate" }
+            },
+            "old": {
+              "description": "Old names, for backwards compatibility",
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "loc": {
+              "description": "Localized names of the brand",
+              "type": "array",
+              "items": { "$ref": "#/definitions/locale" }
+            }
+          },
+          "minProperties": 1,
+          "additionalProperties": false
         },
         "license": {
           "description": "The license for the icon",
@@ -39,7 +63,9 @@
                 "type": {
                   "description": "The license name or 'custom'",
                   "type": "string",
-                  "enum": ["custom"]
+                  "enum": [
+                    "custom"
+                  ]
                 },
                 "url": {
                   "description": "The URL to the license text by the brand",
@@ -145,10 +171,61 @@
               "additionalProperties": false
             }
           ]
-
         }
       },
       "additionalProperties": false
+    },
+    "duplicate": {
+      "$id": "#duplicate",
+      "description": "A \"dup\" brand",
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "title": {
+          "description": "The name of the brand",
+          "type": "string"
+        },
+        "slug": {
+          "$ref": "#/definitions/slug"
+        },
+        "hex": {
+          "$ref": "#/definitions/hex"
+        },
+        "guidelines": {
+          "description": "The brand guidelines",
+          "$ref": "#/definitions/url"
+        }
+      },
+      "additionalProperties": false
+    },
+    "hex": {
+      "$id": "#hex",
+      "description": "The brand color as a 6-character value (without #)",
+      "type": "string",
+      "pattern": "^[0-9A-F]{6}$"
+    },
+    "locale": {
+      "$id": "#locale",
+      "description": "A localized brand name",
+      "type": "object",
+      "required": ["title", "locale"],
+      "properties": {
+        "title": {
+          "description": "The local name of the brand",
+          "type": "string"
+        },
+        "locale": {
+          "description": "",
+          "type": "string",
+          "pattern": "^[a-z]{2}-[A-Z]{2}$"
+        }
+      }
+    },
+    "slug": {
+      "$id": "#slug",
+      "description": "The brand name slug (used as filename in icons/)",
+      "type": "string",
+      "pattern": "^[a-z0-9\\-]+_[a-z0-9\\-]+$"
     },
     "url": {
       "$id": "#url",
