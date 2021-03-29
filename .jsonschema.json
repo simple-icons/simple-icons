@@ -8,8 +8,7 @@
       "required": ["title", "hex", "source"],
       "properties": {
         "title": {
-          "description": "The name of the brand",
-          "type": "string"
+          "$ref": "#/definitions/title"
         },
         "slug": {
           "$ref": "#/definitions/slug"
@@ -182,8 +181,7 @@
       "required": ["title"],
       "properties": {
         "title": {
-          "description": "The name of the brand",
-          "type": "string"
+          "$ref": "#/definitions/title"
         },
         "slug": {
           "$ref": "#/definitions/slug"
@@ -226,6 +224,11 @@
       "description": "The brand name slug (used as filename in icons/)",
       "type": "string",
       "pattern": "^[a-z0-9\\-]+_[a-z0-9\\-]+$"
+    },
+    "title": {
+      "$id": "#title",
+      "description": "The name of the brand",
+      "type": "string"
     },
     "url": {
       "$id": "#url",
