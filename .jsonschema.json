@@ -65,9 +65,7 @@
                 "type": {
                   "description": "The license name or 'custom'",
                   "type": "string",
-                  "enum": [
-                    "custom"
-                  ]
+                  "enum": ["custom"]
                 },
                 "url": {
                   "description": "The URL to the license text by the brand",
