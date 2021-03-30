@@ -4565,7 +4565,8 @@
         {
             "title": "LabVIEW",
             "hex": "FFDB00",
-            "source": "http://download.ni.com/evaluation/2018_Partner_Cobranding_Style_Guide.pdf"
+            "source": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987",
+            "guidelines": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987"
         },
         {
             "title": "Lada",
@@ -4595,7 +4596,7 @@
         {
             "title": "Laravel Horizon",
             "hex": "405263",
-            "source": "https://horizon.laravel.com/"
+            "source": "https://github.com/laravel/horizon/blob/79ed572422d0ff789e9673a6dd9579026f14233a/public/img/horizon.svg"
         },
         {
             "title": "Laravel Nova",
@@ -4610,7 +4611,8 @@
         {
             "title": "LastPass",
             "hex": "D32D27",
-            "source": "https://lastpass.com/press-room/"
+            "source": "https://lastpass.com/press-room/",
+            "guidelines": "https://lastpass.com/press-room/"
         },
         {
             "title": "LaTeX",
@@ -4620,12 +4622,17 @@
         {
             "title": "Launchpad",
             "hex": "F8C300",
-            "source": "https://help.launchpad.net/logo/submissions"
+            "source": "https://help.launchpad.net/logo/submissions",
+            "guidelines": "https://help.launchpad.net/Legal",
+            "license": {
+                "type": "CC-BY-ND-2.0"
+            }
         },
         {
             "title": "LBRY",
             "hex": "2F9176",
-            "source": "https://lbry.com/press-kit"
+            "source": "https://lbry.com/press-kit",
+            "guidelines": "https://lbry.com/faq/acceptable-use-policy"
         },
         {
             "title": "Leaflet",
@@ -4635,7 +4642,8 @@
         {
             "title": "Leanpub",
             "hex": "FFFFFF",
-            "source": "https://leanpub.com/press"
+            "source": "https://leanpub.com/press",
+            "guidelines": "https://leanpub.com/press"
         },
         {
             "title": "LeetCode",
@@ -4655,7 +4663,11 @@
         {
             "title": "Let’s Encrypt",
             "hex": "003A70",
-            "source": "https://letsencrypt.org/trademarks/"
+            "source": "https://letsencrypt.org/trademarks/",
+            "guidelines": "https://letsencrypt.org/trademarks/",
+            "license": {
+                "type": "CC-BY-NC-4.0"
+            }
         },
         {
             "title": "Letterboxd",
@@ -4676,7 +4688,11 @@
         {
             "title": "Liberapay",
             "hex": "F6C915",
-            "source": "https://liberapay.com/assets/liberapay/icon-v2_yellow-r.svg"
+            "source": "https://en.liberapay.com/about/logos",
+            "guidelines": "https://en.liberapay.com/about/logos",
+            "license": {
+                "type": "CC0-1.0"
+            }
         },
         {
             "title": "Libraries.io",
@@ -4691,7 +4707,8 @@
         {
             "title": "LibreOffice",
             "hex": "18A303",
-            "source": "https://wiki.documentfoundation.org/Marketing/Branding"
+            "source": "https://wiki.documentfoundation.org/Marketing/Branding",
+            "guidelines": "https://wiki.documentfoundation.org/Marketing/Branding"
         },
         {
             "title": "libuv",
@@ -4711,7 +4728,8 @@
         {
             "title": "LINE",
             "hex": "00C300",
-            "source": "http://line.me/en/logo"
+            "source": "http://line.me/en/logo",
+            "guidelines": "http://line.me/en/logo"
         },
         {
             "title": "LINE WEBTOON",
@@ -4721,7 +4739,8 @@
         {
             "title": "LineageOS",
             "hex": "167C80",
-            "source": "https://www.lineageos.org/"
+            "source": "https://www.lineageos.org/",
+            "guidelines": "https://docs.google.com/presentation/d/1VmxFrVqkjtNMjZbAcrC4egp8C_So7gjJR3KuxdJfJDo/edit?usp=sharing"
         },
         {
             "title": "LinkedIn",
@@ -4742,7 +4761,7 @@
         {
             "title": "Linux",
             "hex": "FCC624",
-            "source": "http://www.linuxfoundation.org/about/about-linux"
+            "source": "https://www.linuxfoundation.org/the-linux-mark/"
         },
         {
             "title": "Linux Containers",
@@ -4751,8 +4770,9 @@
         },
         {
             "title": "Linux Foundation",
-            "hex": "003764",
-            "source": "https://www.linuxfoundation.org/"
+            "hex": "003366",
+            "source": "https://www.linuxfoundation.org/en/about/brand/",
+            "guidelines": "https://www.linuxfoundation.org/en/about/brand/"
         },
         {
             "title": "Linux Mint",
@@ -4767,12 +4787,14 @@
         {
             "title": "Litecoin",
             "hex": "A6A9AA",
-            "source": "https://litecoin-foundation.org/wp-content/uploads/2019/01/LC18-007-Brand-guidelines.pdf"
+            "source": "https://litecoin-foundation.org/litecoin-branding-guidelines/",
+            "guidelines": "https://litecoin-foundation.org/litecoin-branding-guidelines/"
         },
         {
             "title": "LiveChat",
             "hex": "FFD000",
-            "source": "https://livechat.design/"
+            "source": "https://livechat.design/",
+            "guidelines": "https://livechat.design/"
         },
         {
             "title": "LiveJournal",
@@ -4797,17 +4819,19 @@
         {
             "title": "Logitech",
             "hex": "00B8FC",
-            "source": "https://www.logitech.com/"
+            "source": "https://www.logitech.com/en-us/pr/library"
         },
         {
             "title": "LogMeIn",
             "hex": "45B6F2",
-            "source": "https://www.logmein.com/"
+            "source": "https://www.logmein.com/legal/trademark",
+            "guidelines": "https://www.logmein.com/legal/trademark"
         },
         {
             "title": "Logstash",
             "hex": "005571",
-            "source": "https://www.elastic.co/brand"
+            "source": "https://www.elastic.co/brand",
+            "guidelines": "https://www.elastic.co/brand"
         },
         {
             "title": "Looker",
@@ -4827,12 +4851,14 @@
         {
             "title": "Lospec",
             "hex": "EAEAEA",
-            "source": "https://lospec.com/brand"
+            "source": "https://lospec.com/brand",
+            "guidelines": "https://lospec.com/brand"
         },
         {
             "title": "Lua",
             "hex": "2C2D72",
-            "source": "https://www.lua.org/docs.html"
+            "source": "https://www.lua.org/images/",
+            "guidelines": "https://www.lua.org/images/"
         },
         {
             "title": "Lubuntu",
@@ -4852,7 +4878,8 @@
         {
             "title": "Lydia",
             "hex": "0180FF",
-            "source": "https://lydia-app.com/en/info/press.html"
+            "source": "https://lydia-app.com/en/info/press.html",
+            "guidelines": "https://lydia-app.com/en/info/press.html"
         },
         {
             "title": "Lyft",
