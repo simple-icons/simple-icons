@@ -6171,7 +6171,10 @@
         {
             "title": "Pelican",
             "hex": "14A0C4",
-            "source": "https://blog.getpelican.com/pages/gratitude.html"
+            "source": "https://blog.getpelican.com/pages/gratitude.html",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Peloton",
