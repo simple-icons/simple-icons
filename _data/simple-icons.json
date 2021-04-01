@@ -6241,7 +6241,10 @@
         {
             "title": "PHP",
             "hex": "777BB4",
-            "source": "http://php.net/download-logos.php"
+            "source": "http://php.net/download-logos.php",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "PhpStorm",
