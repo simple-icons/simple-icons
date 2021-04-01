@@ -6688,7 +6688,10 @@
         {
             "title": "PureScript",
             "hex": "14161A",
-            "source": "https://github.com/purescript/logo"
+            "source": "https://github.com/purescript/logo",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "PyCharm",
