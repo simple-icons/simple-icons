@@ -148,6 +148,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `AppSignal` | `appsignal` |
 | `AppVeyor` | `appveyor` |
 | `ARAL` | `aral` |
+| `ArangoDB` | `arangodb` |
 | `Arch Linux` | `archlinux` |
 | `Archicad` | `archicad` |
 | `Archive of Our Own` | `archiveofourown` |
@@ -628,6 +629,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `GIMP` | `gimp` |
 | `GIPHY` | `giphy` |
 | `Git` | `git` |
+| `Git Extensions` | `gitextensions` |
 | `Git LFS` | `gitlfs` |
 | `GitBook` | `gitbook` |
 | `Gitea` | `gitea` |
@@ -904,6 +906,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Krita` | `krita` |
 | `KTM` | `ktm` |
 | `Kubernetes` | `kubernetes` |
+| `Kubuntu` | `kubuntu` |
 | `Kyocera` | `kyocera` |
 | `LabVIEW` | `labview` |
 | `Lada` | `lada` |
@@ -1058,7 +1061,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Momenteo` | `momenteo` |
 | `Monero` | `monero` |
 | `MongoDB` | `mongodb` |
-| `Monkey tie` | `monkeytie` |
+| `monkey tie` | `monkeytie` |
 | `Monogram` | `monogram` |
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
@@ -1120,7 +1123,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Notion` | `notion` |
 | `Notist` | `notist` |
 | `Noun Project` | `nounproject` |
-| `NPM` | `npm` |
+| `npm` | `npm` |
 | `Nrwl` | `nrwl` |
 | `Nubank` | `nubank` |
 | `Nucleo` | `nucleo` |
@@ -1428,6 +1431,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Screencastify` | `screencastify` |
 | `Scribd` | `scribd` |
 | `Scrimba` | `scrimba` |
+| `Scrum Alliance` | `scrumalliance` |
 | `Scrutinizer CI` | `scrutinizerci` |
 | `Seagate` | `seagate` |
 | `SEAT` | `seat` |
@@ -1463,6 +1467,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Shutterstock` | `shutterstock` |
 | `Siemens` | `siemens` |
 | `Signal` | `signal` |
+| `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
 | `Sina Weibo` | `sinaweibo` |
 | `SingleStore` | `singlestore` |
