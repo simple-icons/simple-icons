@@ -38,6 +38,7 @@ icons.forEach(icon => {
   test(`${icon.title} has ${icon.guidelines ? "the correct" : "no"} "guidelines"`, () => {
     if (icon.guidelines) {
       expect(typeof subject.guidelines).toBe('string');
+      expect(subject.guidelines).toEqual(icon.guidelines);
     } else {
       expect(subject.guidelines).toBeUndefined();
     }
