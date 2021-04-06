@@ -52,6 +52,7 @@ icons.forEach(icon => {
         expect(subject.license).toHaveProperty('url', icon.license.url);
       } else {
         expect(typeof subject.license.url).toBe('string');
+        expect(subject.license.url).toMatch(/^https?:\/\/[^\s]+$/);
       }
     } else {
       expect(subject.license).toBeUndefined();
