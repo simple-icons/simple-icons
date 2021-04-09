@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -66,12 +66,14 @@ console.log(icon);
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
+    guidelines: 'https://simpleicons.org/styleguide',
     license: {
         type: '...',
         url: 'https://example.com/'
     }
 }
 
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
 NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
@@ -96,12 +98,14 @@ console.log(icon);
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
+    guidelines: 'https://simpleicons.org/styleguide',
     license: {
         type: '...',
         url: 'https://example.com/'
     }
 }
 
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
 NOTE: the license may be `undefined` if there is no license data for the icon.
 */
 ```

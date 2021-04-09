@@ -148,6 +148,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `AppSignal` | `appsignal` |
 | `AppVeyor` | `appveyor` |
 | `ARAL` | `aral` |
+| `ArangoDB` | `arangodb` |
 | `Arch Linux` | `archlinux` |
 | `Archicad` | `archicad` |
 | `Archive of Our Own` | `archiveofourown` |
@@ -295,6 +296,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `CEVO` | `cevo` |
 | `Chainlink` | `chainlink` |
 | `Chakra UI` | `chakraui` |
+| `Chart.js` | `chart-dot-js` |
 | `ChartMogul` | `chartmogul` |
 | `Chase` | `chase` |
 | `ChatBot` | `chatbot` |
@@ -348,6 +350,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `CodeIgniter` | `codeigniter` |
 | `Codemagic` | `codemagic` |
 | `CodeMirror` | `codemirror` |
+| `CodeNewbie` | `codenewbie` |
 | `CodePen` | `codepen` |
 | `CodeProject` | `codeproject` |
 | `CodersRank` | `codersrank` |
@@ -439,6 +442,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
 | `devRant` | `devrant` |
+| `Dgraph` | `dgraph` |
 | `DHL` | `dhl` |
 | `diagrams.net` | `diagrams-dot-net` |
 | `Dialogflow` | `dialogflow` |
@@ -562,6 +566,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
+| `Files` | `files` |
 | `FileZilla` | `filezilla` |
 | `Fing` | `fing` |
 | `Firebase` | `firebase` |
@@ -595,6 +600,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
+| `Fraunhofer-Gesellschaft` | `fraunhofer-gesellschaft` |
 | `FreeBSD` | `freebsd` |
 | `freeCodeCamp` | `freecodecamp` |
 | `freedesktop.org` | `freedesktop-dot-org` |
@@ -623,6 +629,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `GIMP` | `gimp` |
 | `GIPHY` | `giphy` |
 | `Git` | `git` |
+| `Git Extensions` | `gitextensions` |
 | `Git LFS` | `gitlfs` |
 | `GitBook` | `gitbook` |
 | `Gitea` | `gitea` |
@@ -853,6 +860,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `JSFiddle` | `jsfiddle` |
 | `JSON` | `json` |
 | `JSON Web Tokens` | `jsonwebtokens` |
+| `JSS` | `jss` |
 | `Julia` | `julia` |
 | `Juniper Networks` | `junipernetworks` |
 | `Jupyter` | `jupyter` |
@@ -898,6 +906,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Krita` | `krita` |
 | `KTM` | `ktm` |
 | `Kubernetes` | `kubernetes` |
+| `Kubuntu` | `kubuntu` |
 | `Kyocera` | `kyocera` |
 | `LabVIEW` | `labview` |
 | `Lada` | `lada` |
@@ -1052,7 +1061,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Momenteo` | `momenteo` |
 | `Monero` | `monero` |
 | `MongoDB` | `mongodb` |
-| `Monkey tie` | `monkeytie` |
+| `monkey tie` | `monkeytie` |
 | `Monogram` | `monogram` |
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
@@ -1114,7 +1123,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Notion` | `notion` |
 | `Notist` | `notist` |
 | `Noun Project` | `nounproject` |
-| `NPM` | `npm` |
+| `npm` | `npm` |
 | `Nrwl` | `nrwl` |
 | `Nubank` | `nubank` |
 | `Nucleo` | `nucleo` |
@@ -1166,6 +1175,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `OpsLevel` | `opslevel` |
 | `Oracle` | `oracle` |
 | `ORCID` | `orcid` |
+| `Org` | `org` |
 | `Origin` | `origin` |
 | `Osano` | `osano` |
 | `Oshkosh` | `oshkosh` |
@@ -1246,6 +1256,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Pluralsight` | `pluralsight` |
 | `Plurk` | `plurk` |
 | `Plus Codes` | `pluscodes` |
+| `PM2` | `pm2` |
 | `Pocket` | `pocket` |
 | `Pocket Casts` | `pocketcasts` |
 | `Podcast Addict` | `podcastaddict` |
@@ -1420,6 +1431,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Screencastify` | `screencastify` |
 | `Scribd` | `scribd` |
 | `Scrimba` | `scrimba` |
+| `Scrum Alliance` | `scrumalliance` |
 | `Scrutinizer CI` | `scrutinizerci` |
 | `Seagate` | `seagate` |
 | `SEAT` | `seat` |
@@ -1455,6 +1467,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Shutterstock` | `shutterstock` |
 | `Siemens` | `siemens` |
 | `Signal` | `signal` |
+| `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
 | `Sina Weibo` | `sinaweibo` |
 | `SingleStore` | `singlestore` |
