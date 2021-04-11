@@ -7,5 +7,6 @@
   },
   source: '%s',
   hex: '%s',
+  guidelines: %s,
   license: %s,
 }
