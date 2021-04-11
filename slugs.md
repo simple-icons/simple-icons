@@ -783,6 +783,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `iBeacon` | `ibeacon` |
 | `IBM` | `ibm` |
 | `IBM Watson` | `ibmwatson` |
+| `Icinga` | `icinga` |
 | `iCloud` | `icloud` |
 | `IcoMoon` | `icomoon` |
 | `ICON` | `icon` |
@@ -1788,6 +1789,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `WebdriverIO` | `webdriverio` |
 | `Webflow` | `webflow` |
 | `WebGL` | `webgl` |
+| `webhint` | `webhint` |
 | `Webmin` | `webmin` |
 | `WebMoney` | `webmoney` |
 | `Webpack` | `webpack` |
