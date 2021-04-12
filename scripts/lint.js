@@ -28,11 +28,9 @@ const TESTS = {
         const compare = icon.title.localeCompare(prev.title);
         if (compare < 0) {
           invalidEntries.push(icon);
-        }else if(compare === 0){
-          if(prev.slug){
-            if(!icon.slug){
-              invalidEntries.push(icon);
-            }else if(icon.slug.localeCompare(prev.slug) < 0){
+        } else if (compare === 0) {
+          if (prev.slug) {
+            if (!icon.slug || icon.slug.localeCompare(prev.slug) < 0) {
               invalidEntries.push(icon);
             }
           }
