@@ -38,11 +38,17 @@ const TESTS = {
       }
       return invalidEntries;
     };
+    const format = icon => {
+            if (icon.slug) {
+                return `${icon.title} (${icon.slug})`;
+            }
+            return icon.title;
+    };
 
     const invalids = data.icons.reduce(collector, []);
     if (invalids.length) {
       return `Some icons aren't in alphabetical order:
-        ${invalids.map(icon => icon.title).join(", ")}`;
+        ${invalids.map(icon => format(icon)).join(", ")}`;
     }
   },
 
