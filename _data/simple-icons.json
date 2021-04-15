@@ -5226,7 +5226,10 @@
         {
             "title": "GNU Privacy Guard",
             "hex": "0093DD",
-            "source": "https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=tree;f=artwork/icons"
+            "source": "https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=tree;f=artwork/icons",
+            "license": {
+                "type": "GPL-3.0-or-later"
+            }
         },
         {
             "title": "GNU social",
