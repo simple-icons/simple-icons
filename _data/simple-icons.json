@@ -3248,12 +3248,19 @@
         {
             "title": "GNU Bash",
             "hex": "4EAA25",
-            "source": "https://github.com/odb/official-bash-logo"
+            "source": "https://github.com/odb/official-bash-logo",
+            "license": {
+                "type": "custom",
+                "url": "http://artlibre.org/licence/lal/en/"
+            }
         },
         {
             "title": "GNU Emacs",
             "hex": "7F5AB6",
-            "source": "https://git.savannah.gnu.org/cgit/emacs.git/tree/etc/images/icons/hicolor/scalable/apps/emacs.svg"
+            "source": "https://git.savannah.gnu.org/cgit/emacs.git/tree/etc/images/icons/hicolor/scalable/apps/emacs.svg",
+            "license": {
+                "type": "GPL-2.0-or-later"
+            }
         },
         {
             "title": "GNU IceCat",
@@ -3263,7 +3270,10 @@
         {
             "title": "GNU Privacy Guard",
             "hex": "0093DD",
-            "source": "https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=tree;f=artwork/icons"
+            "source": "https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=tree;f=artwork/icons",
+            "license": {
+                "type": "GPL-3.0-or-later"
+            }
         },
         {
             "title": "GNU social",
