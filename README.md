@@ -174,6 +174,10 @@ Icons are also available as a [Jetpack Compose library](https://github.com/DevSr
 
 Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by [@runxel](https://github.com/runxel).
 
+### Laravel
+
+Icons are also available as a [Laravel Package](https://github.com/ublabs/blade-simple-icons) created by [@adrian-ub](https://github.com/adrian-ub)
+
 ### React
 
 Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by [@wootsbot](https://github.com/wootsbot).
