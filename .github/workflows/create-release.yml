@@ -1,4 +1,4 @@
-name: Automated releases
+name: Create Release Pull Request
 on:
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
