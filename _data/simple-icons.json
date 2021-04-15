@@ -2949,6 +2949,11 @@
             "source": "https://fontawesome.com/icons/font-awesome"
         },
         {
+            "title": "FontBase",
+            "hex": "3D03A7",
+            "source": "https://fontba.se/"
+        },
+        {
             "title": "foodpanda",
             "hex": "D70F64",
             "source": "https://www.foodpanda.com"
@@ -4855,7 +4860,7 @@
         },
         {
             "title": "Loom",
-            "hex": "FD5E60",
+            "hex": "625DF5",
             "source": "https://www.loom.com/press"
         },
         {
@@ -5450,6 +5455,12 @@
             "title": "MTR",
             "hex": "AC2E45",
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
+        },
+        {
+            "title": "Mumble",
+            "hex": "FFFFFF",
+            "source": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/icons/mumble_small.svg",
+            "guidelines": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/LICENSE"
         },
         {
             "title": "MuseScore",
@@ -8811,6 +8822,12 @@
             "source": "https://untappd.com/"
         },
         {
+            "title": "UpCloud",
+            "hex": "7B00FF",
+            "source": "https://upcloud.com/brand-assets/",
+            "guidelines": "https://upcloud.com/brand-assets/"
+        },
+        {
             "title": "UpLabs",
             "hex": "3930D8",
             "source": "https://www.uplabs.com/"
@@ -8915,6 +8932,11 @@
             "source": "https://vercel.com/design"
         },
         {
+            "title": "Verdaccio",
+            "hex": "4B5E40",
+            "source": "https://verdaccio.org/docs/en/logo"
+        },
+        {
             "title": "Veritas",
             "hex": "B1181E",
             "source": "https://my.veritas.com/cs/groups/partner/documents/styleguide/mdaw/mdq5/~edisp/tus3cpeapp3855186572.pdf"
@@ -8988,6 +9010,11 @@
             "title": "Visual Studio Code",
             "hex": "007ACC",
             "source": "https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
+        },
+        {
+            "title": "Vite",
+            "hex": "646CFF",
+            "source": "https://vitejs.dev/"
         },
         {
             "title": "Vivaldi",
