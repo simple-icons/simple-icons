@@ -1,4 +1,4 @@
-name: Publish
+name: Publish Releases
 on:
   push:
     branches:

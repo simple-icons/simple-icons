@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -173,6 +173,10 @@ Icons are also available as a [Jetpack Compose library](https://github.com/DevSr
 ### Kirby
 
 Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by [@runxel](https://github.com/runxel).
+
+### Laravel
+
+Icons are also available as a [Laravel Package](https://github.com/ublabs/blade-simple-icons) created by [@adrian-ub](https://github.com/adrian-ub)
 
 ### React
 
