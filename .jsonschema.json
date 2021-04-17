@@ -40,8 +40,7 @@
             },
             "loc": {
               "description": "Localized names of the brand",
-              "type": "array",
-              "items": { "$ref": "#/definitions/locale" }
+              "$ref": "#/definitions/locale"
             },
             "old": {
               "description": "Old names, for backwards compatibility",
@@ -206,18 +205,14 @@
       "$id": "#locale",
       "description": "A localized brand name",
       "type": "object",
-      "required": ["title", "locale"],
-      "properties": {
-        "title": {
-          "description": "The local name of the brand",
-          "type": "string"
-        },
-        "locale": {
-          "description": "",
+      "patternProperties": {
+        "^[a-z]{2}-[A-Z]{2}$": {
           "type": "string",
-          "pattern": "^[a-z]{2}-[A-Z]{2}$"
+          "description": "The local name of the brand"
         }
-      }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
     },
     "slug": {
       "$id": "#slug",
