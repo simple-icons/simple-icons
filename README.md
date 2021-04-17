@@ -162,6 +162,10 @@ Icons are also available as a [Drupal module](https://www.drupal.org/project/sim
 
 Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by [@jlnrrg](https://jlnrrg.github.io/).
 
+### Hexo
+
+Icons are also available as a [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) created by [@nidbCN](https://github.com/nidbCN/).
+
 ### Home Assistant
 
 Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by [@vigonotion](https://github.com/vigonotion/).
