@@ -6477,6 +6477,11 @@
             "source": "https://pm2.keymetrics.io/"
         },
         {
+            "title": "pnpm",
+            "hex": "F69220",
+            "source": "https://pnpm.io/logos"
+        },
+        {
             "title": "Pocket",
             "hex": "EF3F56",
             "source": "https://getpocket.com/blog/press/"
@@ -6535,7 +6540,8 @@
         {
             "title": "PostgreSQL",
             "hex": "336791",
-            "source": "https://wiki.postgresql.org/wiki/Logo"
+            "source": "https://wiki.postgresql.org/wiki/Logo",
+            "guidelines": "https://www.postgresql.org/about/policies/trademarks/"
         },
         {
             "title": "Postman",
