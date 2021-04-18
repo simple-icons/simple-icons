@@ -4272,7 +4272,11 @@
         {
             "title": "Jenkins",
             "hex": "D24939",
-            "source": "https://wiki.jenkins-ci.org/display/JENKINS/Logo"
+            "source": "https://get.jenkins.io/art/",
+            "guidelines": "https://www.jenkins.io/press/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Jenkins X",
