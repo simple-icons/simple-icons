@@ -4233,7 +4233,10 @@
         {
             "title": "JavaScript",
             "hex": "F7DF1E",
-            "source": "https://github.com/voodootikigod/logo.js"
+            "source": "https://github.com/voodootikigod/logo.js",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "JBL",
