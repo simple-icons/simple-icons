@@ -4257,7 +4257,11 @@
         {
             "title": "Jekyll",
             "hex": "CC0000",
-            "source": "https://github.com/jekyll/brand"
+            "source": "https://github.com/jekyll/brand/blob/8302ad3ecf045054a095020729a8d2cc7005faf8/jekyll-logo-black.svg",
+            "guidelines": "https://github.com/jekyll/brand",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Jellyfin",
