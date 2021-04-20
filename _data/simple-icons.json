@@ -361,6 +361,12 @@
             "source": "https://alpinelinux.org/"
         },
         {
+            "title": "Alteryx",
+            "hex": "0089BC",
+            "source": "https://drive.google.com/file/d/1X18qbNGG5PH8M8bRsX2LD9PZmcjjGxi_/view?usp=sharing",
+            "guidelines": "https://www.alteryx.com/company/news/press-kit"
+        },
+        {
             "title": "Altium Designer",
             "hex": "A5915F",
             "source": "https://www.altium.com/altium-designer/"
@@ -2092,6 +2098,12 @@
             "title": "dblp",
             "hex": "004F9F",
             "source": "https://dblp.org/"
+        },
+        {
+            "title": "dbt",
+            "hex": "FF694B",
+            "source": "https://raw.githubusercontent.com/fishtown-analytics/dbt-styleguide/master/_includes/icons/dbt-logo-full-white.svg",
+            "guidelines": "https://github.com/fishtown-analytics/dbt-styleguide/tree/master/_includes/icons",
         },
         {
             "title": "DC Entertainment",
