@@ -2970,6 +2970,11 @@
             "source": "https://www.ford.com/"
         },
         {
+            "title": "Forestry",
+            "hex": "343A40",
+            "source": "https://forestry.io/"
+        },
+        {
             "title": "Formstack",
             "hex": "21B573",
             "source": "https://www.formstack.com/brand/guidelines"
@@ -4456,6 +4461,11 @@
             "source": "https://www.tp-link.com/us/support/download/hs200/"
         },
         {
+            "title": "KashFlow",
+            "hex": "E5426E",
+            "source": "https://www.kashflow.com/"
+        },
+        {
             "title": "Kaspersky",
             "hex": "006D5C",
             "source": "https://www.kaspersky.com"
@@ -4474,6 +4484,12 @@
             "title": "KDE",
             "hex": "1D99F3",
             "source": "https://kde.org/stuff/clipart/"
+        },
+        {
+            "title": "Kdenlive",
+            "hex": "527EB2",
+            "source": "https://kdenlive.org/en/logo/",
+            "guidelines": "https://kdenlive.org/en/logo/"
         },
         {
             "title": "KeePassXC",
@@ -6501,8 +6517,8 @@
         },
         {
             "title": "Plus Codes",
-            "hex": "57C4D2",
-            "source": "https://plus.codes/"
+            "hex": "4285F4",
+            "source": "https://maps.google.com/pluscodes/"
         },
         {
             "title": "PM2",
@@ -6914,7 +6930,10 @@
         {
             "title": "R",
             "hex": "276DC3",
-            "source": "https://www.r-project.org/logo/"
+            "source": "https://www.r-project.org/logo/",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "RabbitMQ",
