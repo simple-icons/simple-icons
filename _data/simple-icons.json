@@ -4192,7 +4192,11 @@
         {
             "title": "Jabber",
             "hex": "CC0000",
-            "source": "https://commons.wikimedia.org/wiki/File:Jabber-bulb.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Jabber-bulb.svg",
+            "guidelines": "http://www.jabber.org/faq.html#logo",
+            "license": {
+                "type": "CC-BY-2.5"
+            }
         },
         {
             "title": "Jaguar",
@@ -4202,7 +4206,8 @@
         {
             "title": "Jamboard",
             "hex": "F37C20",
-            "source": "https://cdn2.hubspot.net/hubfs/159104/ECS/Jamboard/Approved%20Jamboard%20Brand%20Book.pdf"
+            "source": "https://cdn2.hubspot.net/hubfs/159104/ECS/Jamboard/Approved%20Jamboard%20Brand%20Book.pdf",
+            "guidelines": "https://cdn2.hubspot.net/hubfs/159104/ECS/Jamboard/Approved%20Jamboard%20Brand%20Book.pdf"
         },
         {
             "title": "Jameson",
@@ -4222,12 +4227,16 @@
         {
             "title": "Java",
             "hex": "007396",
-            "source": "https://www.oracle.com/legal/logos.html"
+            "source": "https://www.oracle.com/legal/logos.html",
+            "guidelines": "https://www.oracle.com/legal/logos.html"
         },
         {
             "title": "JavaScript",
             "hex": "F7DF1E",
-            "source": "https://github.com/voodootikigod/logo.js"
+            "source": "https://github.com/voodootikigod/logo.js",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "JBL",
@@ -4242,22 +4251,32 @@
         {
             "title": "Jeep",
             "hex": "000000",
-            "source": "http://www.fcaci.com/x/JEEPv15"
+            "source": "http://www.fcaci.com/x/JEEPv15",
+            "guidelines": "http://www.fcaci.com/x/JEEPv15"
         },
         {
             "title": "Jekyll",
             "hex": "CC0000",
-            "source": "https://github.com/jekyll/brand"
+            "source": "https://github.com/jekyll/brand/blob/8302ad3ecf045054a095020729a8d2cc7005faf8/jekyll-logo-black.svg",
+            "guidelines": "https://github.com/jekyll/brand",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Jellyfin",
             "hex": "00A4DC",
-            "source": "https://jellyfin.org/docs/general/contributing/branding.html#theme"
+            "source": "https://jellyfin.org/docs/general/contributing/branding.html",
+            "guidelines": "https://jellyfin.org/docs/general/contributing/branding.html"
         },
         {
             "title": "Jenkins",
             "hex": "D24939",
-            "source": "https://wiki.jenkins-ci.org/display/JENKINS/Logo"
+            "source": "https://get.jenkins.io/art/",
+            "guidelines": "https://www.jenkins.io/press/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Jenkins X",
@@ -4277,12 +4296,14 @@
         {
             "title": "JetBrains",
             "hex": "000000",
-            "source": "https://www.jetbrains.com/company/brand/"
+            "source": "https://www.jetbrains.com/company/brand/logos/",
+            "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
             "title": "JFrog",
             "hex": "41BF47",
-            "source": "https://jfrog.com/brand-guidelines/"
+            "source": "https://jfrog.com/brand-guidelines/",
+            "guidelines": "https://jfrog.com/brand-guidelines/"
         },
         {
             "title": "JFrog Bintray",
@@ -4297,27 +4318,31 @@
         {
             "title": "Jira",
             "hex": "0052CC",
-            "source": "https://atlassian.design/guidelines/marketing/resources/logo-files"
+            "source": "https://atlassian.design/resources/logo-library",
+            "guidelines": "https://atlassian.design/foundations/logos/"
         },
         {
             "title": "Jira Software",
             "hex": "0052CC",
-            "source": "https://www.atlassian.com/company/news/press-kit"
+            "source": "https://www.atlassian.com/company/news/press-kit",
+            "guidelines": "https://atlassian.design/foundations/logos/"
         },
         {
             "title": "Jitsi",
             "hex": "97979A",
-            "source": "https://github.com/jitsi/jitsi/blob/1387ed6a768a1ecae2ddd82236d1de3119e8957f/resources/images/logo/sc_logo.svg"
+            "source": "https://github.com/jitsi/jitsi-meet/blob/f8a41aea9c32796646c0fea11064775a4e5c3523/images/watermark.svg"
         },
         {
             "title": "John Deere",
             "hex": "367C2B",
-            "source": "https://en.wikipedia.org/wiki/File:John_Deere_logo.svg"
+            "source": "https://en.wikipedia.org/wiki/File:John_Deere_logo.svg",
+            "guidelines": "https://johndeere.widencollective.com/portals/arrshkzc/MyPortalFeb23,2021"
         },
         {
             "title": "Joomla",
             "hex": "5091CD",
-            "source": "https://docs.joomla.org/Joomla:Brand_Identity_Elements"
+            "source": "https://docs.joomla.org/Joomla:Brand_Identity_Elements/Official_Logo",
+            "guidelines": "https://docs.joomla.org/Joomla:Brand_Identity_Elements"
         },
         {
             "title": "JPEG",
@@ -4327,7 +4352,8 @@
         {
             "title": "jQuery",
             "hex": "0769AD",
-            "source": "https://brand.jquery.org/logos/"
+            "source": "https://brand.jquery.org/logos/",
+            "guidelines": "https://brand.jquery.org/logos/"
         },
         {
             "title": "JR Group",
@@ -4367,17 +4393,19 @@
         {
             "title": "Juniper Networks",
             "hex": "84B135",
-            "source": "https://www.juniper.net/us/en/company/press-center/images/image-library/logos/"
+            "source": "https://www.juniper.net/us/en/company/press-center/images/image-library/logos/",
+            "guidelines": "https://www.juniper.net/us/en/company/press-center/images/image-library/logos/"
         },
         {
             "title": "Jupyter",
             "hex": "F37626",
-            "source": "https://github.com/jupyter/design"
+            "source": "https://github.com/jupyter/design/blob/80716ee75dd7b2a6ec6abcd89922d020483589b1/logos/Logo%20Mark/logomark-whitebody-whitemoons/logomark-whitebody-whitemoons.svg",
+            "guidelines": "https://github.com/jupyter/design"
         },
         {
             "title": "Just Eat",
             "hex": "F36D00",
-            "source": "https://www.just-eat.ie/"
+            "source": "https://www.justeattakeaway.com/media/media-kit/"
         },
         {
             "title": "JustGiving",
@@ -5195,6 +5223,11 @@
             "hex": "00B2FF",
             "source": "https://en.facebookbrand.com/facebookapp/assets/messenger/",
             "guidelines": "https://en.facebookbrand.com/facebookapp/assets/messenger/"
+        },
+        {
+            "title": "Metabase",
+            "hex": "509EE3",
+            "source": "https://www.metabase.com/"
         },
         {
             "title": "MetaFilter",
