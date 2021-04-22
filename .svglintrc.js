@@ -132,8 +132,8 @@ module.exports = {
 
             const iconTitleText = $.find("title").text();
             const iconName = htmlFriendlyToTitle(iconTitleText);
-            const icon = data.icons.find(icon => icon.title === iconName);
-            if (icon === undefined) {
+            const iconExists = data.icons.some(icon => icon.title === iconName);
+            if (!iconExists) {
               reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
             }
           },
