@@ -289,20 +289,21 @@ In general, make sure the URL does not contain any tracking identifiers.
 
 #### Aliases
 
-Lastly, we aim to provide aliases of three types for various reasons. Each type of alias and their motivation can be found below. If you're unsure, you can mention an alias you're considering in your Pull Request so it can be discussed.
+Lastly, we aim to provide aliases of three types for various reasons. Each type of alias and its purpose can be found below. If you're unsure, you can mention an alias you're considering in your Pull Request so it can be discussed.
 
 ##### Also Known As
 
-We collect "also known as" names to make it easier to find brands that are known by different names or by their abbreviation/full name. To add an "also known as" name you add the following to the icon data:
+We collect "also known as" names to make it easier to find brands that are known by different names or by their abbreviation/full name. This does not include localized names, which are recorded separately. To add an "also known as" name you add the following to the icon data:
 
 ```json
 {
-  "title": "the original title",
-  "aliases": {
-    "aka": [
-      "tot"
-    ]
-  }
+    "title": "the original title",
+    "aliases": {
+        "aka": [
+            "tot",
+            "thetitle"
+        ]
+    }
 }
 ```
 
@@ -310,21 +311,21 @@ Where the string is **different** from the original title as well as all other s
 
 ##### Duplicates
 
-We collect the name of duplicates, brands that use the same logo but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
+We collect the names of duplicates, brands that use the same icon but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
 
 ```json5
 {
-  "title": "the original title",
-  "hex": "123456",
-  "aliases": {
-    "dup": [
-      {
-        "title": "the duplicate's title",
-        "hex": "654321", // Only if different from original's color
-        "guidelines": "..." // Only if different from original's guidelines
-      }
-    ]
-  }
+    "title": "the original title",
+    "hex": "123456",
+    "aliases": {
+        "dup": [
+            {
+                "title": "the duplicate's title",
+                "hex": "654321", // Only if different from original's color
+                "guidelines": "..." // Only if different from original's guidelines
+            }
+        ]
+    }
 }
 ```
 

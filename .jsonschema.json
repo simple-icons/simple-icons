@@ -14,6 +14,7 @@
           "$ref": "#/definitions/slug"
         },
         "hex": {
+          "description": "The brand color",
           "$ref": "#/definitions/hex"
         },
         "source": {
@@ -45,9 +46,7 @@
             "old": {
               "description": "Old names, for backwards compatibility",
               "type": "array",
-              "items": {
-                "type": "string"
-              }
+              "items": { "type": "string" }
             }
           },
           "minProperties": 1,
@@ -186,10 +185,15 @@
           "$ref": "#/definitions/slug"
         },
         "hex": {
+          "description": "The brand color, if different from the original",
           "$ref": "#/definitions/hex"
         },
+        "source": {
+          "description": "The website from which the duplicate's hex was sourced, if different from the original",
+          "$ref": "#/definitions/url"
+        },
         "guidelines": {
-          "description": "The brand guidelines",
+          "description": "The brand guidelines, if different from the original",
           "$ref": "#/definitions/url"
         }
       },
@@ -197,7 +201,7 @@
     },
     "hex": {
       "$id": "#hex",
-      "description": "The brand color as a 6-character value (without #)",
+      "description": "A 6-character hexadecimal color value (without #)",
       "type": "string",
       "pattern": "^[0-9A-F]{6}$"
     },
