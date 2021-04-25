@@ -14,24 +14,24 @@ const path = require("path");
 const getMajorVersion = require("semver/functions/major");
 
 const rootDir = path.resolve(__dirname, "..");
-const PACKAGE_JSON_FILE = path.resolve(rootDir, "package.json");
-const README_FILE = path.resolve(rootDir, "README.md");
+const packageFileJson = path.resolve(rootDir, "package.json");
+const readmeFile = path.resolve(rootDir, "README.md");
 
 function getManifest() {
-  const manifestRaw = fs.readFileSync(PACKAGE_JSON_FILE).toString();
+  const manifestRaw = fs.readFileSync(packageFileJson).toString();
   const manifestJson = JSON.parse(manifestRaw);
   return manifestJson;
 }
 
 function updateVersionInReadmeIfNecessary(majorVersion) {
-  let content = fs.readFileSync(README_FILE).toString();
+  let content = fs.readFileSync(readmeFile).toString();
 
   content = content.replace(
     new RegExp(`simple-icons@v${majorVersion - 1}`, "g"),
     `simple-icons@v${majorVersion}`,
   );
 
-  fs.writeFileSync(README_FILE, content);
+  fs.writeFileSync(readmeFile, content);
 }
 
 function main() {
