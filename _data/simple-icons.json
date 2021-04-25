@@ -2951,12 +2951,16 @@
         {
             "title": "Fluentd",
             "hex": "0E83C8",
-            "source": "https://docs.fluentd.org/quickstart/logo"
+            "source": "https://docs.fluentd.org/quickstart/logo",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Flutter",
             "hex": "02569B",
-            "source": "https://flutter.dev/brand"
+            "source": "https://flutter.dev/brand",
+            "guidelines": "https://flutter.dev/brand"
         },
         {
             "title": "Fnac",
