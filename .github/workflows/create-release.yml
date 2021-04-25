@@ -28,7 +28,7 @@ jobs:
       - name: Bump version
         run: node ./scripts/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update slugs table
-        run: node ./scripts/build-slugs-table.js
+        run: node ./scripts/build/slugs-table.js
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v4.10.0
         with:

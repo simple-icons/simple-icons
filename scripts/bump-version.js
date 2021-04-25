@@ -4,12 +4,12 @@
  * Updates the version of this package to the CLI specified version.
  */
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const PACKAGE_JSON_FILE = path.resolve(__dirname, '..', 'package.json');
-const PACKAGE_LOCK_FILE = path.resolve(__dirname, '..', 'package-lock.json');
+const rootDir = path.resolve(__dirname, '..');
+const PACKAGE_JSON_FILE = path.resolve(rootDir, 'package.json');
+const PACKAGE_LOCK_FILE = path.resolve(rootDir, 'package-lock.json');
 
 function readManifest(file) {
   const manifestRaw = fs.readFileSync(file).toString();

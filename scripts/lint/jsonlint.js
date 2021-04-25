@@ -1,8 +1,9 @@
 const path = require("path");
 const Validator = require("jsonschema").Validator;
 
-const schemaFile = path.resolve(__dirname, "..", ".jsonschema.json");
-const dataFile = path.resolve(__dirname, "..", "_data", "simple-icons.json");
+const rootDir = path.resolve(__dirname, "..", "..");
+const schemaFile = path.resolve(rootDir, ".jsonschema.json");
+const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
 
 const schema = require(schemaFile);
 const data = require(dataFile);
