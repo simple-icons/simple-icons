@@ -182,6 +182,10 @@ Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-si
 
 Icons are also available as a [Laravel Package](https://github.com/ublabs/blade-simple-icons) created by [@adrian-ub](https://github.com/adrian-ub)
 
+### Python
+
+Icons are also available as a [Python package](https://github.com/xCloudzx/simpleicons) created by [@xCloudzx](https://github.com/xCloudzx).
+
 ### React
 
 Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by [@wootsbot](https://github.com/wootsbot).
