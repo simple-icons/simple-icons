@@ -48,5 +48,8 @@
   },
   "engine": {
     "node": ">=0.12.18"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
