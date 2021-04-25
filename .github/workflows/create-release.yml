@@ -28,7 +28,7 @@ jobs:
       - name: Bump version
         run: node ./scripts/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update CDN version in README.md
-        run: node ./scripts/bump-cdn-version.js
+        run: node ./scripts/update-cdn-urls.js
       - name: Update slugs table
         run: node ./scripts/build-slugs-table.js
       - name: Commit version bump
