@@ -2826,7 +2826,11 @@
         {
             "title": "Fido Alliance",
             "hex": "FFBF3B",
-            "source": "https://fidoalliance.org/overview/legal/logo-usage/"
+            "source": "https://fidoalliance.org/overview/legal/logo-usage/",
+            "license": {
+                "type": "custom",
+                "url": "https://fidoalliance.org/overview/legal/fido-trademark-and-service-mark-usage-agreement-for-websites/"
+            }
         },
         {
             "title": "FIFA",
