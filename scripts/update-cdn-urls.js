@@ -14,11 +14,11 @@ const path = require("path");
 const getMajorVersion = require("semver/functions/major");
 
 const rootDir = path.resolve(__dirname, "..");
-const packageFileJson = path.resolve(rootDir, "package.json");
+const packageJsonFile = path.resolve(rootDir, "package.json");
 const readmeFile = path.resolve(rootDir, "README.md");
 
 function getManifest() {
-  const manifestRaw = fs.readFileSync(packageFileJson).toString();
+  const manifestRaw = fs.readFileSync(packageJsonFile).toString();
   const manifestJson = JSON.parse(manifestRaw);
   return manifestJson;
 }
