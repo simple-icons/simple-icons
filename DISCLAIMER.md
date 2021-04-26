@@ -12,6 +12,7 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 ## Licenses, Copyrights & Trademarks
 
 > NOTE: The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
+
 > NOTE: Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.
 
 Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed.
