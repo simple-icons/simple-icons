@@ -54,7 +54,10 @@
     {% assign filename = filename | replace: "+", "plus" %}
     {% assign filename = filename | replace: ".", "-dot-" %}
     {% assign filename = filename | replace: "&", "-and-" %}
-    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
+    {% assign filename = filename | replace: " ", "" | replace: "_", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
+    {% if icon.slug %}
+        {% assign filename = icon.slug %}
+    {% endif %}
 
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
@@ -186,7 +189,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Simple Icons">
     <meta name="twitter:description" content="{{ iconCount }} Free SVG icons for popular brands.">
-    <meta name="twitter:site" content="@bathtype">
     <meta name="twitter:domain" content="Simple Icons">
     <meta name="twitter:image:src" content="https://simpleicons.org/images/og.png">
     <link rel="icon" type="image/x-icon" href="https://simpleicons.org/images/favicon.ico">
@@ -215,7 +217,7 @@
             <li class="navbar__nav-item"><a href="https://www.npmjs.com/package/simple-icons">NPM</a></li>
             <li class="navbar__nav-item"><a href="https://packagist.org/packages/simple-icons/simple-icons">Packagist</a></li>
         </ul>
-        <p class="redesign-banner">We're redesigning the website! Please <a href="https://simple-icons.github.io/simple-icons-website/">Check it out</a> and <a href="https://github.com/simple-icons/simple-icons/discussions/4865">Share you feedback</a>. <span>Hide this message <button id="hide-feedback-request-once">Once</button> or <button id="hide-feedback-request">Always</button> | <button id="redirect-to-redesign">Redirect automatically</button></span></p>
+        <p class="redesign-banner">We're redesigning the website! Please <a href="https://simple-icons.github.io/simple-icons-website/">Check it out</a> and <a href="https://github.com/simple-icons/simple-icons/discussions/4865">Share your feedback</a>. <span>Hide this message <button id="hide-feedback-request-once">Once</button> or <button id="hide-feedback-request">Always</button> | <button id="redirect-to-redesign">Redirect automatically</button></span></p>
     </header>
     <main role="main">
         <p class="hero">{{ iconCount }} Free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
@@ -274,7 +276,7 @@
     <footer class="footer" role="contentinfo">
         <p>A <a href="https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md">CC0</a> project maintained by the <a href="https://github.com/simple-icons/simple-icons/graphs/contributors">Simple&nbsp;Icons&nbsp;Contributors</a>.<br>
             Use <a href="https://github.com/simple-icons/simple-icons">GitHub</a> for requests, corrections and contributions.</p>
-        <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&via=bathtype&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
+        <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
     </footer>
     <script type="text/javascript" src="site_script.js"></script>
 </body>
