@@ -1359,6 +1359,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Qwiklabs` | `qwiklabs` |
 | `Qzone` | `qzone` |
 | `R` | `r` |
+| `R3` | `r3` |
 | `RabbitMQ` | `rabbitmq` |
 | `Racket` | `racket` |
 | `Radar` | `radar` |
