@@ -182,6 +182,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Autodesk` | `autodesk` |
 | `AutoHotkey` | `autohotkey` |
 | `Automatic` | `automatic` |
+| `Automattic` | `automattic` |
 | `Autotask` | `autotask` |
 | `Aventrix` | `aventrix` |
 | `Awesome Lists` | `awesomelists` |
@@ -319,6 +320,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `CiviCRM` | `civicrm` |
 | `Claris` | `claris` |
 | `ClickUp` | `clickup` |
+| `CLion` | `clion` |
 | `Cliqz` | `cliqz` |
 | `Clockify` | `clockify` |
 | `Clojure` | `clojure` |
@@ -419,6 +421,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Datadog` | `datadog` |
 | `DataStax` | `datastax` |
 | `DatoCMS` | `datocms` |
+| `Datto` | `datto` |
 | `DAZN` | `dazn` |
 | `dblp` | `dblp` |
 | `DC Entertainment` | `dcentertainment` |
@@ -488,6 +491,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Eclipse IDE` | `eclipseide` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevert-dot-x` |
+| `EditorConfig` | `editorconfig` |
 | `edX` | `edx` |
 | `egghead` | `egghead` |
 | `Egnyte` | `egnyte` |
@@ -544,6 +548,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `FACEIT` | `faceit` |
 | `Facepunch` | `facepunch` |
 | `Falcon` | `falcon` |
+| `FamPay` | `fampay` |
 | `Fandango` | `fandango` |
 | `Fandom` | `fandom` |
 | `Farfetch` | `farfetch` |
@@ -589,8 +594,10 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Fnac` | `fnac` |
 | `Folium` | `folium` |
 | `Font Awesome` | `fontawesome` |
+| `FontBase` | `fontbase` |
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
+| `Forestry` | `forestry` |
 | `Formstack` | `formstack` |
 | `Fortinet` | `fortinet` |
 | `Fortran` | `fortran` |
@@ -723,12 +730,13 @@ update the script at 'scripts/build-slugs-table.js'.
 | `HackerRank` | `hackerrank` |
 | `HackHands` | `hackhands` |
 | `Hackster` | `hackster` |
-| `Handshake` | `handshake_protocol` |
 | `Handshake` | `handshake` |
+| `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
 | `Harbor` | `harbor` |
 | `Hashnode` | `hashnode` |
 | `Haskell` | `haskell` |
+| `Hasura` | `hasura` |
 | `Hatena Bookmark` | `hatenabookmark` |
 | `haveibeenpwned` | `haveibeenpwned` |
 | `Haxe` | `haxe` |
@@ -800,6 +808,8 @@ update the script at 'scripts/build-slugs-table.js'.
 | `IKEA` | `ikea` |
 | `IMDb` | `imdb` |
 | `Imgur` | `imgur` |
+| `Immer` | `immer` |
+| `Imou` | `imou` |
 | `Indeed` | `indeed` |
 | `Infiniti` | `infiniti` |
 | `InfluxDB` | `influxdb` |
@@ -875,10 +885,12 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Kali Linux` | `kalilinux` |
 | `Karlsruher Verkehrsverbund` | `karlsruherverkehrsverbund` |
 | `Kasa Smart` | `kasasmart` |
+| `KashFlow` | `kashflow` |
 | `Kaspersky` | `kaspersky` |
 | `Katacoda` | `katacoda` |
 | `Katana` | `katana` |
 | `KDE` | `kde` |
+| `Kdenlive` | `kdenlive` |
 | `KeePassXC` | `keepassxc` |
 | `Kentico` | `kentico` |
 | `Keras` | `keras` |
@@ -892,6 +904,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Kik` | `kik` |
 | `Kirby` | `kirby` |
 | `Kitsu` | `kitsu` |
+| `Klarna` | `klarna` |
 | `KLM` | `klm` |
 | `Klook` | `klook` |
 | `Klout` | `klout` |
@@ -937,6 +950,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `LibreOffice` | `libreoffice` |
 | `libuv` | `libuv` |
 | `Lichess` | `lichess` |
+| `LIFX` | `lifx` |
 | `Lighthouse` | `lighthouse` |
 | `LINE` | `line` |
 | `LINE WEBTOON` | `linewebtoon` |
@@ -1007,6 +1021,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `McLaren` | `mclaren` |
 | `MDN Web Docs` | `mdnwebdocs` |
 | `MediaFire` | `mediafire` |
+| `MediaTek` | `mediatek` |
 | `MediaTemple` | `mediatemple` |
 | `Medium` | `medium` |
 | `Meetup` | `meetup` |
@@ -1015,6 +1030,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Mercedes` | `mercedes` |
 | `Mercurial` | `mercurial` |
 | `Messenger` | `messenger` |
+| `Metabase` | `metabase` |
 | `MetaFilter` | `metafilter` |
 | `Meteor` | `meteor` |
 | `Metro` | `metro` |
@@ -1072,6 +1088,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Mozilla` | `mozilla` |
 | `MTA` | `mta` |
 | `MTR` | `mtr` |
+| `Mumble` | `mumble` |
 | `MuseScore` | `musescore` |
 | `MusicBrainz` | `musicbrainz` |
 | `MX Linux` | `mxlinux` |
@@ -1200,6 +1217,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Pantheon` | `pantheon` |
 | `Parity Substrate` | `paritysubstrate` |
 | `Parse.ly` | `parse-dot-ly` |
+| `Passport` | `passport` |
 | `Pastebin` | `pastebin` |
 | `Patreon` | `patreon` |
 | `Payoneer` | `payoneer` |
@@ -1221,6 +1239,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `PhonePe` | `phonepe` |
 | `Photobucket` | `photobucket` |
 | `Photocrowd` | `photocrowd` |
+| `Photopea` | `photopea` |
 | `PHP` | `php` |
 | `PhpStorm` | `phpstorm` |
 | `Pi-hole` | `pi-hole` |
@@ -1258,6 +1277,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Plurk` | `plurk` |
 | `Plus Codes` | `pluscodes` |
 | `PM2` | `pm2` |
+| `pnpm` | `pnpm` |
 | `Pocket` | `pocket` |
 | `Pocket Casts` | `pocketcasts` |
 | `Podcast Addict` | `podcastaddict` |
@@ -1307,6 +1327,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Puppet` | `puppet` |
 | `Puppeteer` | `puppeteer` |
 | `PureScript` | `purescript` |
+| `PurgeCSS` | `purgecss` |
 | `PyCharm` | `pycharm` |
 | `PyPI` | `pypi` |
 | `PyPy` | `pypy` |
@@ -1457,6 +1478,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `sharp` | `sharp` |
 | `Shazam` | `shazam` |
 | `Shell` | `shell` |
+| `Shelly` | `shelly` |
 | `Shenzhen Metro` | `shenzhenmetro` |
 | `Shields.io` | `shields-dot-io` |
 | `Shikimori` | `shikimori` |
@@ -1567,6 +1589,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Stitcher` | `stitcher` |
 | `STMicroelectronics` | `stmicroelectronics` |
 | `Storify` | `storify` |
+| `Storyblok` | `storyblok` |
 | `Storybook` | `storybook` |
 | `Strapi` | `strapi` |
 | `Strava` | `strava` |
@@ -1723,6 +1746,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Unsplash` | `unsplash` |
 | `Untangle` | `untangle` |
 | `Untappd` | `untappd` |
+| `UpCloud` | `upcloud` |
 | `UpLabs` | `uplabs` |
 | `Uploaded` | `uploaded` |
 | `UPS` | `ups` |
@@ -1743,6 +1767,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Veepee` | `veepee` |
 | `Venmo` | `venmo` |
 | `Vercel` | `vercel` |
+| `Verdaccio` | `verdaccio` |
 | `Veritas` | `veritas` |
 | `Verizon` | `verizon` |
 | `vFairs` | `vfairs` |
@@ -1758,6 +1783,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Visa` | `visa` |
 | `Visual Studio` | `visualstudio` |
 | `Visual Studio Code` | `visualstudiocode` |
+| `Vite` | `vite` |
 | `Vivaldi` | `vivaldi` |
 | `Vivino` | `vivino` |
 | `VK` | `vk` |
