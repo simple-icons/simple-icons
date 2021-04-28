@@ -11,9 +11,9 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 
 ## Licenses, Copyrights & Trademarks
 
-> NOTE: The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
+> :information_source: NOTE: The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
 
-> NOTE: Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.
+> :information_source: NOTE: Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.
 
 Simple Icons provides data on the license under which icons are available. We ask users to carefully consider this when using an icon. As licenses are subject to change we also ask our users to regularly check if the license of the icons they use have been changed.
 
@@ -27,7 +27,7 @@ Simple Icons cannot be held responsible for any legal activity raised by a brand
 
 ## Brand Guidelines
 
-> NOTE: the addition of guidelines to Simple Icons is an ongoing project. In the meantime, users of Simple Icons are instead encouraged to check the `source` URL as, in some cases, the icon will have been sourced from official guidelines. The lack of a `guidelines` entry for a particular brand does not imply that the brand has no guidelines.
+> :information_source: NOTE: the addition of guidelines to Simple Icons is an ongoing project. In the meantime, users of Simple Icons are instead encouraged to check the `source` URL as, in some cases, the icon will have been sourced from official guidelines. The lack of a `guidelines` entry for a particular brand does not imply that the brand has no guidelines.
 
 Simple Icons provides a link to a brand's _branding guidelines_ (or similar) if the brand provides one. We ask our users read these guidelines and ensure their usage of the brand's icon is in accordance with them. As guidelines are subject to change we also ask our users to regularly check if the brand guidelines of the icons they use have been updated.
 
@@ -44,7 +44,6 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria] twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
 
 [meet our criteria]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon
-
 [submit an issue]: https://github.com/simple-icons/simple-icons/issues/new?labels=icon+outdated&template=icon_update.md
 [the Simple Icons Contributing Guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines
 [the Simple Icons GitHub repository]: https://github.com/simple-icons/simple-icons
