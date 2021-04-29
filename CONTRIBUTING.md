@@ -233,7 +233,7 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
 * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
-The are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
+There are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
 
 Here is the object of a fictional brand as an example:
 
