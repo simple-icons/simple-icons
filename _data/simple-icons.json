@@ -3158,7 +3158,11 @@
         {
             "title": "Gentoo",
             "hex": "54487A",
-            "source": "https://wiki.gentoo.org/wiki/Project:Artwork/Artwork#Variations_of_the_.22g.22_logo"
+            "source": "https://wiki.gentoo.org/wiki/Project:Artwork/Artwork#Variations_of_the_.22g.22_logo",
+            "guidelines": "https://www.gentoo.org/inside-gentoo/foundation/name-logo-guidelines.html",
+            "license": {
+                "type": "CC-BY-SA-2.5"
+            }
         },
         {
             "title": "Geocaching",
