@@ -3190,7 +3190,10 @@
         {
             "title": "GIMP",
             "hex": "5C5543",
-            "source": "https://www.gimp.org/about/linking.html#wilber-the-gimp-mascot"
+            "source": "https://www.gimp.org/about/linking.html#wilber-the-gimp-mascot",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "GIPHY",
