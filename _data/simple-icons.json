@@ -3382,7 +3382,7 @@
         {
             "title": "Google Ads",
             "hex": "4285F4",
-            "source": "https://ads.google.com/intl/en_GB/home/"
+            "source": "https://ads.google.com/home/"
         },
         {
             "title": "Google AdSense",
@@ -3412,7 +3412,7 @@
         {
             "title": "Google Cast",
             "hex": "1BB6F6",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands"
+            "source": "https://www.google.com/intl/en_us/chromecast/built-in/"
         },
         {
             "title": "Google Chat",
@@ -3422,7 +3422,7 @@
         {
             "title": "Google Chrome",
             "hex": "4285F4",
-            "source": "https://thepartnermarketinghub.withgoogle.com/brands/chromebook/visual-identity/visual-identity/logos-and-badges/"
+            "source": "https://www.google.com/chrome/"
         },
         {
             "title": "Google Classroom",
@@ -3457,12 +3457,12 @@
         {
             "title": "Google Fit",
             "hex": "4285F4",
-            "source": "https://partnermarketinghub.withgoogle.com/"
+            "source": "https://partnermarketinghub.withgoogle.com/brands/google-fit/"
         },
         {
             "title": "Google Hangouts",
             "hex": "0C9D58",
-            "source": "https://material.google.com/resources/sticker-sheets-icons.html#sticker-sheets-icons-components"
+            "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hangouts_icon.svg"
         },
         {
             "title": "Google Keep",
@@ -3472,7 +3472,7 @@
         {
             "title": "Google Lens",
             "hex": "4285F4",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+            "source": "https://lens.google.com/"
         },
         {
             "title": "Google Maps",
@@ -3502,7 +3502,8 @@
         {
             "title": "Google News",
             "hex": "174EA6",
-            "source": "https://thepartnermarketinghub.withgoogle.com/brands/google-news/"
+            "source": "https://partnermarketinghub.withgoogle.com/brands/google-news/",
+            "guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-news/legal-and-trademarks/legal-requirements/"
         },
         {
             "title": "Google Optimize",
@@ -3512,17 +3513,19 @@
         {
             "title": "Google Pay",
             "hex": "4285F4",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+            "source": "https://pay.google.com/intl/en_us/about/"
         },
         {
             "title": "Google Photos",
             "hex": "4285F4",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+            "source": "https://partnermarketinghub.withgoogle.com/brands/google-photos/visual-identity/visual-identity/icon/",
+            "guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-photos/visual-identity/visual-identity/icon/"
         },
         {
             "title": "Google Play",
             "hex": "414141",
-            "source": "https://thepartnermarketinghub.withgoogle.com/brands/google-play/"
+            "source": "https://partnermarketinghub.withgoogle.com/brands/google-play/visual-identity/primary-logos/",
+            "guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-play/visual-identity/primary-logos/"
         },
         {
             "title": "Google Podcasts",
@@ -3547,7 +3550,8 @@
         {
             "title": "Google Street View",
             "hex": "FEC111",
-            "source": "https://developers.google.com/streetview/ready/branding"
+            "source": "https://developers.google.com/streetview/ready/branding",
+            "guidelines": "https://developers.google.com/streetview/ready/branding"
         },
         {
             "title": "Google Tag Manager",
