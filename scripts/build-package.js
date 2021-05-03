@@ -45,7 +45,7 @@ function licenseToObject(license) {
   }
 
   if (license.url === undefined) {
-    license.url = `https://spdx.org/licenses/${license.type}.html`;
+    license.url = `https://spdx.org/licenses/${license.type}`;
   }
   return license;
 }
@@ -56,6 +56,7 @@ function iconToObject(icon) {
     escape(icon.svg),
     escape(icon.source),
     escape(icon.hex),
+    icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
 }
