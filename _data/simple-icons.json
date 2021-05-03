@@ -3347,7 +3347,11 @@
         {
             "title": "Godot Engine",
             "hex": "478CBF",
-            "source": "https://godotengine.org/themes/godotengine/assets/download/godot_logo.svg"
+            "source": "https://godotengine.org/press",
+            "guidelines": "https://godotengine.org/press",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "GoFundMe",
