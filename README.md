@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -66,12 +66,14 @@ console.log(icon);
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
+    guidelines: 'https://simpleicons.org/styleguide',
     license: {
         type: '...',
         url: 'https://example.com/'
     }
 }
 
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
 NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
@@ -96,12 +98,14 @@ console.log(icon);
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
+    guidelines: 'https://simpleicons.org/styleguide',
     license: {
         type: '...',
         url: 'https://example.com/'
     }
 }
 
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
 NOTE: the license may be `undefined` if there is no license data for the icon.
 */
 ```
@@ -150,36 +154,19 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 ## Third Party Extensions
 
-### Drupal
-
-Icons are also available as a [Drupal module](https://www.drupal.org/project/simple_icons) created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme).
-
-### Flutter
-
-Icons are also available as a [Flutter package](https://pub.dev/packages/simple_icons) created by  [@jlnrrg](https://jlnrrg.github.io/).
-
-### Home Assistant
-
-Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
-
-### Kirby
-
-Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
-
-### React
-
-Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
-
-### Svelte
-
-Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
-
-### Vue
-
-Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by  [@noahlitvin](https://github.com/noahlitvin).
-
-### WordPress
-
-Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
+| Extension | Author |
+| :--- | :--- |
+| [Drupal module](https://www.drupal.org/project/simple_icons) | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
+| [Flutter package](https://pub.dev/packages/simple_icons) | [@jlnrrg](https://jlnrrg.github.io/) |
+| [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) | [@nidbCN](https://github.com/nidbCN/) |
+| [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) | [@vigonotion](https://github.com/vigonotion/) |
+| [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
+| [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
+| [Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
+| [Python package](https://github.com/xCloudzx/simpleicons) | [@xCloudzx](https://github.com/xCloudzx) |
+| [React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| [Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
+| [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
 [slug]: ./slugs.md
