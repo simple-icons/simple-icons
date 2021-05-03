@@ -163,6 +163,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Asciidoctor` | `asciidoctor` |
 | `asciinema` | `asciinema` |
 | `Aseprite` | `aseprite` |
+| `Ask Ubuntu` | `askubuntu` |
 | `ASKfm` | `askfm` |
 | `AssemblyScript` | `assemblyscript` |
 | `ASUS` | `asus` |
@@ -1408,7 +1409,9 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Ripple` | `ripple` |
 | `Riseup` | `riseup` |
 | `Roam Research` | `roamresearch` |
+| `Roblox` | `roblox` |
 | `Robot Framework` | `robotframework` |
+| `Rocket.Chat` | `rocket-dot-chat` |
 | `Roku` | `roku` |
 | `Rolls-Royce` | `rolls-royce` |
 | `rollup.js` | `rollup-dot-js` |
@@ -1453,6 +1456,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Screencastify` | `screencastify` |
 | `Scribd` | `scribd` |
 | `Scrimba` | `scrimba` |
+| `ScrollReveal` | `scrollreveal` |
 | `Scrum Alliance` | `scrumalliance` |
 | `Scrutinizer CI` | `scrutinizerci` |
 | `Seagate` | `seagate` |
@@ -1642,6 +1646,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `TeamViewer` | `teamviewer` |
 | `TED` | `ted` |
 | `Teespring` | `teespring` |
+| `Tekton` | `tekton` |
 | `TELE5` | `tele5` |
 | `Telegram` | `telegram` |
 | `Tencent QQ` | `tencentqq` |
