@@ -3654,7 +3654,8 @@
         {
             "title": "Hack The Box",
             "hex": "9FEF00",
-            "source": "https://www.hackthebox.eu/docs/Hack_The_Box_Brand_Assets_Guide.pdf"
+            "source": "https://www.hackthebox.eu/docs/Hack_The_Box_Brand_Assets_Guide.pdf",
+            "guidelines": "https://www.hackthebox.eu/docs/Hack_The_Box_Brand_Assets_Guide.pdf"
         },
         {
             "title": "Hackaday",
@@ -3679,17 +3680,19 @@
         {
             "title": "HackHands",
             "hex": "00ACBD",
-            "source": "https://hackhands.com/"
+            "source": "https://www.pluralsight.com/hackhands"
         },
         {
             "title": "Hackster",
-            "hex": "1BACF7",
-            "source": "https://drive.google.com/file/d/0B3aqzR8LzoqdT1p4ZUlWVnJ1elk/view?usp=sharing"
+            "hex": "2E9FE6",
+            "source": "https://www.hackster.io/branding#logos",
+            "guidelines": "https://www.hackster.io/branding"
         },
         {
             "title": "Handshake",
             "hex": "FF2F1C",
-            "source": "https://learn.joinhandshake.com/marketing-toolkit/"
+            "source": "https://joinhandshake.com/career-centers/marketing-toolkit/",
+            "guidelines": "https://joinhandshake.com/career-centers/marketing-toolkit/"
         },
         {
             "title": "Handshake",
@@ -3704,8 +3707,8 @@
         },
         {
             "title": "Harbor",
-            "hex": "4A00D8",
-            "source": "https://github.com/goharbor/harbor/blob/13686cbe83d22259216da7658612e86201070e94/src/portal/src/images/harbor-logo.svg"
+            "hex": "60B932",
+            "source": "https://branding.cncf.io/projects/harbor/"
         },
         {
             "title": "Hashnode",
@@ -3715,7 +3718,7 @@
         {
             "title": "Haskell",
             "hex": "5D4F85",
-            "source": "https://commons.wikimedia.org/wiki/File:Haskell-Logo.svg"
+            "source": "https://wiki.haskell.org/Thompson-Wheeler_logo"
         },
         {
             "title": "Hasura",
@@ -3735,7 +3738,8 @@
         {
             "title": "Haxe",
             "hex": "EA8220",
-            "source": "https://haxe.org/foundation/branding.html"
+            "source": "https://haxe.org/foundation/branding.html",
+            "guidelines": "https://haxe.org/foundation/branding.html"
         },
         {
             "title": "HBO",
@@ -3745,7 +3749,8 @@
         {
             "title": "HCL",
             "hex": "006BB6",
-            "source": "https://www.hcl.com/brand-guidelines"
+            "source": "https://www.hcl.com/brand-guidelines",
+            "guidelines": "https://www.hcl.com/brand-guidelines"
         },
         {
             "title": "Headspace",
@@ -3770,17 +3775,19 @@
         {
             "title": "HelpDesk",
             "hex": "FFD000",
-            "source": "https://helpdesk.design/"
+            "source": "https://helpdesk.design/",
+            "guidelines": "https://helpdesk.design/"
         },
         {
             "title": "HERE",
             "hex": "00AFAA",
-            "source": "https://www.here.com"
+            "source": "https://www.here.com/company/media-assets"
         },
         {
             "title": "Heroku",
             "hex": "430098",
-            "source": "https://www.heroku.com"
+            "source": "https://brand.heroku.com/",
+            "guidelines": "https://brand.heroku.com/"
         },
         {
             "title": "Hexo",
@@ -3805,7 +3812,7 @@
         {
             "title": "Hilton",
             "hex": "124D97",
-            "source": "https://www.hilton.com/en/"
+            "source": "https://newsroom.hilton.com/hhr/page/logos"
         },
         {
             "title": "HipChat",
@@ -3831,12 +3838,16 @@
         {
             "title": "HockeyApp",
             "hex": "009EE1",
-            "source": "https://hockeyapp.net/brand-guidelines/"
+            "source": "https://hockeyapp.net/brand-guidelines/",
+            "guidelines": "https://hockeyapp.net/brand-guidelines/"
         },
         {
             "title": "Home Assistant",
             "hex": "41BDF5",
-            "source": "https://github.com/home-assistant/home-assistant-assets"
+            "source": "https://github.com/home-assistant/assets/blob/1e19f0dca208f0876b274c68345fcf989de7377a/logo/logo-small.png",
+            "license": {
+                "type": "CC-BY-NC-SA-4.0"
+            }
         },
         {
             "title": "Home Assistant Community Store",
@@ -3846,7 +3857,7 @@
         {
             "title": "HomeAdvisor",
             "hex": "F68315",
-            "source": "https://www.abouthomeadvisor.com/media-room/press-resources/"
+            "source": "https://www.homeadvisor.com/"
         },
         {
             "title": "Homebrew",
@@ -3870,8 +3881,9 @@
         },
         {
             "title": "Hootsuite",
-            "hex": "000000",
-            "source": "https://hootsuite.com/en-gb/about/media-kit"
+            "hex": "143059",
+            "source": "https://hootsuite.widencollective.com/portals/bafpk5oo/MediaKitAssets/c/b9e3a7bb-aca7-48d7-90ed-cff5898aafd0",
+            "guidelines": "https://hootsuite.widencollective.com/portals/bafpk5oo/MediaKitAssets"
         },
         {
             "title": "Hoppscotch",
@@ -3896,7 +3908,8 @@
         {
             "title": "Houzz",
             "hex": "4DBC15",
-            "source": "https://www.houzz.com/logoGuidelines"
+            "source": "https://www.houzz.com/logoGuidelines",
+            "guidelines": "https://www.houzz.com/logoGuidelines"
         },
         {
             "title": "HP",
@@ -3916,12 +3929,14 @@
         {
             "title": "Huawei",
             "hex": "FF0000",
-            "source": "https://en.wikipedia.org/wiki/File:Huawei.svg"
+            "source": "https://e.huawei.com/ph/material/partner/0a72728b864949c48b22106454352483",
+            "guidelines": "https://e.huawei.com/ph/material/partner/0a72728b864949c48b22106454352483"
         },
         {
             "title": "HubSpot",
             "hex": "FF7A59",
-            "source": "https://www.hubspot.com/style-guide"
+            "source": "https://www.hubspot.com/style-guide",
+            "guidelines": "https://www.hubspot.com/style-guide"
         },
         {
             "title": "Hugo",
@@ -3930,8 +3945,9 @@
         },
         {
             "title": "Hulu",
-            "hex": "3DBB3D",
-            "source": "https://www.hulu.com/press/brand-assets/"
+            "hex": "1CE783",
+            "source": "https://press.hulu.com/branding/",
+            "guidelines": "https://press.hulu.com/branding/"
         },
         {
             "title": "Humble Bundle",
@@ -3966,12 +3982,13 @@
         {
             "title": "Hypothesis",
             "hex": "BD1C2B",
-            "source": "https://web.hypothes.is/"
+            "source": "https://web.hypothes.is/brand/"
         },
         {
             "title": "Hyundai",
             "hex": "002C5F",
-            "source": "https://en.wikipedia.org/wiki/File:Hyundai_Motor_Company_logo.svg"
+            "source": "https://en.wikipedia.org/wiki/File:Hyundai_Motor_Company_logo.svg",
+            "guidelines": "https://www.hyundai.pl/fileadmin/user_upload/media/logo/201607_HYU_Guideline_ENG_small.pdf"
         },
         {
             "title": "Iata",
