@@ -9816,7 +9816,10 @@
         {
             "title": "Zig",
             "hex": "F7A41D",
-            "source": "https://github.com/ziglang/logo"
+            "source": "https://github.com/ziglang/logo",
+            "license": {
+            	"type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Zigbee",
