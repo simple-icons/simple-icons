@@ -163,6 +163,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Asciidoctor` | `asciidoctor` |
 | `asciinema` | `asciinema` |
 | `Aseprite` | `aseprite` |
+| `Ask Ubuntu` | `askubuntu` |
 | `ASKfm` | `askfm` |
 | `AssemblyScript` | `assemblyscript` |
 | `ASUS` | `asus` |
@@ -182,6 +183,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Autodesk` | `autodesk` |
 | `AutoHotkey` | `autohotkey` |
 | `Automatic` | `automatic` |
+| `Automattic` | `automattic` |
 | `Autotask` | `autotask` |
 | `Aventrix` | `aventrix` |
 | `Awesome Lists` | `awesomelists` |
@@ -420,6 +422,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Datadog` | `datadog` |
 | `DataStax` | `datastax` |
 | `DatoCMS` | `datocms` |
+| `Datto` | `datto` |
 | `DAZN` | `dazn` |
 | `dblp` | `dblp` |
 | `DC Entertainment` | `dcentertainment` |
@@ -546,6 +549,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `FACEIT` | `faceit` |
 | `Facepunch` | `facepunch` |
 | `Falcon` | `falcon` |
+| `FamPay` | `fampay` |
 | `Fandango` | `fandango` |
 | `Fandom` | `fandom` |
 | `Farfetch` | `farfetch` |
@@ -594,6 +598,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `FontBase` | `fontbase` |
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
+| `Forestry` | `forestry` |
 | `Formstack` | `formstack` |
 | `Fortinet` | `fortinet` |
 | `Fortran` | `fortran` |
@@ -804,6 +809,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `IKEA` | `ikea` |
 | `IMDb` | `imdb` |
 | `Imgur` | `imgur` |
+| `Immer` | `immer` |
 | `Imou` | `imou` |
 | `Indeed` | `indeed` |
 | `Infiniti` | `infiniti` |
@@ -880,10 +886,12 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Kali Linux` | `kalilinux` |
 | `Karlsruher Verkehrsverbund` | `karlsruherverkehrsverbund` |
 | `Kasa Smart` | `kasasmart` |
+| `KashFlow` | `kashflow` |
 | `Kaspersky` | `kaspersky` |
 | `Katacoda` | `katacoda` |
 | `Katana` | `katana` |
 | `KDE` | `kde` |
+| `Kdenlive` | `kdenlive` |
 | `KeePassXC` | `keepassxc` |
 | `Kentico` | `kentico` |
 | `Keras` | `keras` |
@@ -943,6 +951,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `LibreOffice` | `libreoffice` |
 | `libuv` | `libuv` |
 | `Lichess` | `lichess` |
+| `LIFX` | `lifx` |
 | `Lighthouse` | `lighthouse` |
 | `LINE` | `line` |
 | `LINE WEBTOON` | `linewebtoon` |
@@ -1022,6 +1031,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Mercedes` | `mercedes` |
 | `Mercurial` | `mercurial` |
 | `Messenger` | `messenger` |
+| `Metabase` | `metabase` |
 | `MetaFilter` | `metafilter` |
 | `Meteor` | `meteor` |
 | `Metro` | `metro` |
@@ -1230,6 +1240,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `PhonePe` | `phonepe` |
 | `Photobucket` | `photobucket` |
 | `Photocrowd` | `photocrowd` |
+| `Photopea` | `photopea` |
 | `PHP` | `php` |
 | `PhpStorm` | `phpstorm` |
 | `Pi-hole` | `pi-hole` |
@@ -1267,6 +1278,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Plurk` | `plurk` |
 | `Plus Codes` | `pluscodes` |
 | `PM2` | `pm2` |
+| `pnpm` | `pnpm` |
 | `Pocket` | `pocket` |
 | `Pocket Casts` | `pocketcasts` |
 | `Podcast Addict` | `podcastaddict` |
@@ -1397,7 +1409,9 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Ripple` | `ripple` |
 | `Riseup` | `riseup` |
 | `Roam Research` | `roamresearch` |
+| `Roblox` | `roblox` |
 | `Robot Framework` | `robotframework` |
+| `Rocket.Chat` | `rocket-dot-chat` |
 | `Roku` | `roku` |
 | `Rolls-Royce` | `rolls-royce` |
 | `rollup.js` | `rollup-dot-js` |
@@ -1442,6 +1456,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `Screencastify` | `screencastify` |
 | `Scribd` | `scribd` |
 | `Scrimba` | `scrimba` |
+| `ScrollReveal` | `scrollreveal` |
 | `Scrum Alliance` | `scrumalliance` |
 | `Scrutinizer CI` | `scrutinizerci` |
 | `Seagate` | `seagate` |
@@ -1631,6 +1646,7 @@ update the script at 'scripts/build-slugs-table.js'.
 | `TeamViewer` | `teamviewer` |
 | `TED` | `ted` |
 | `Teespring` | `teespring` |
+| `Tekton` | `tekton` |
 | `TELE5` | `tele5` |
 | `Telegram` | `telegram` |
 | `Tencent QQ` | `tencentqq` |
