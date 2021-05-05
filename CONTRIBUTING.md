@@ -201,19 +201,19 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: citroen.svg
     ```
 
-1. Replace the following symbols with their alias depending on their position in the title:
+1. Replace the following symbols with their alias:
 
-    | Symbol | Start | Middle | End  |
-    | :----: | :---- | :----: | ---: |
-    |   +    | plus  | plus   | plus |
-    |   .    | dot-  | -dot-  | -dot |
-    |   &    | and-  | -and-  | -and |
+    | Symbol | Alias |
+    | :----: | ----- |
+    |   +    | plus  |
+    |   .    | dot   |
+    |   &    | and   |
 
     for example:
 
     ```yml
     title: .Net
-    filename: dot-net.svg
+    filename: dotnet.svg
     ```
 
 1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
