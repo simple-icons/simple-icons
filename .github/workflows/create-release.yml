@@ -1,4 +1,4 @@
-name: Automated releases
+name: Create Release Pull Request
 on:
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
@@ -30,7 +30,7 @@ jobs:
       - name: Update slugs table
         run: node ./scripts/build-slugs-table.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.9.2
+        uses: stefanzweifel/git-auto-commit-action@v4.11.0
         with:
           commit_message: version bump
           commit_user_name: GitHub Actions
