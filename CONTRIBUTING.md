@@ -200,19 +200,19 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: citroen.svg
     ```
 
-1. Replace the following symbols with their alias depending on their position in the title:
+1. Replace the following symbols with their alias:
 
-    | Symbol | Start | Middle | End  |
-    | :----: | :---- | :----: | ---: |
-    |   +    | plus  | plus   | plus |
-    |   .    | dot-  | -dot-  | -dot |
-    |   &    | and-  | -and-  | -and |
+    | Symbol | Alias |
+    | :----: | ----- |
+    |   +    | plus  |
+    |   .    | dot   |
+    |   &    | and   |
 
     for example:
 
     ```yml
     title: .Net
-    filename: dot-net.svg
+    filename: dotnet.svg
     ```
 
 1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
@@ -232,7 +232,7 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
 * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
-The are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
+There are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
 
 Here is the object of a fictional brand as an example:
 
