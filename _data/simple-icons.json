@@ -5813,7 +5813,22 @@
             "title": "New Japan Pro-Wrestling",
             "slug": "newjapanpro-wrestling",
             "hex": "FF160B",
-            "source": "https://en.wikipedia.org/wiki/File:NJPW_World_Logo.svg"
+            "source": "https://en.wikipedia.org/wiki/File:NJPW_World_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "NJPW"
+                ],
+                "dup": [
+                    {
+                        "title": "NJPW World",
+                        "hex": "B79C65",
+                        "source": "https://njpwworld.com/"
+                    }
+                ],
+                "loc": {
+                    "ja-JP": "新日本プロレスリング"
+                }
+            }
         },
         {
             "title": "New Relic",
