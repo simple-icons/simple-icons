@@ -26,9 +26,9 @@ jobs:
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Bump version
-        run: node ./scripts/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
+        run: node ./scripts/release/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update major version in CDN URLs
-        run: node ./scripts/update-cdn-urls.js
+        run: node ./scripts/release/update-cdn-urls.js
       - name: Update slugs table
         run: node ./scripts/build/slugs-table.js
       - name: Commit version bump
