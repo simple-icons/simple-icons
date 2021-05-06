@@ -30,7 +30,7 @@ jobs:
       - name: Update major version in CDN URLs
         run: node ./scripts/release/update-cdn-urls.js
       - name: Update slugs table
-        run: node ./scripts/build/slugs-table.js
+        run: node ./scripts/release/update-slugs-table.js
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v4.11.0
         with:
