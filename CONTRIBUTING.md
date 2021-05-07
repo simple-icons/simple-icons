@@ -339,9 +339,9 @@ We collect localized names to make it possible to find the brand by it's local n
 {
     "title": "the original title",
     "aliases": {
-        "loc": [
-            { "locale": "en-US", "title": "A different title" }
-        ]
+        "loc": {
+            "en-US": "A different title"
+        }
     }
 }
 ```
