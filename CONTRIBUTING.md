@@ -1,6 +1,6 @@
 # Contributing to Simple Icons
 
-Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please do the following:
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 1. Fork this repository
 1. (Optional) Clone the fork
@@ -16,7 +16,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
    gh repo clone simple-icons/simple-icons -- --filter=tree:0
    ```
 
-1. Create a new branch from the latest `develop` (read more [here](https://guides.github.com/introduction/flow/))
+1. Create a new branch from the latest `develop`
 1. Start hacking on the new branch
 1. Commit and push to the new branch
 1. Make a pull request
@@ -117,9 +117,11 @@ Using your preferred tool you should:
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations a different gap may be required, but that will be determined on a per-case basis.
 
+If you have any problems or questions while creating the SVG, check out [the GitHub Discussions](https://github.com/simple-icons/simple-icons/discussions/categories/help-with-svgs). You may find an answer to your question there or you can ask your question if you did not find an answer.
+
 ### 3. Optimize the Icon
 
-All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of two ways:
+All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
   * Install dependencies
@@ -181,32 +183,9 @@ Here is the svg for the Adobe Photoshop icon as an example:
 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Adobe Photoshop icon</title><path d="M0 .3v23.4h24V.3H0zm1 1h22v21.4H1V1.3zm4.8 4.48c0-.067.14-.116.224-.116.644-.033 1.588-.05 2.578-.05 2.772 0 3.85 1.52 3.85 3.466 0 2.54-1.842 3.63-4.102 3.63-.38 0-.51-.017-.775-.017v3.842c0 .083-.033.116-.115.116H5.916c-.083 0-.115-.03-.115-.113V5.78zm1.775 5.312c.23.016.412.016.81.016 1.17 0 2.27-.412 2.27-1.996 0-1.27-.786-1.914-2.122-1.914-.396 0-.775.016-.957.033v3.864zm8.607-1.188c-.792 0-1.056.396-1.056.726 0 .363.18.61 1.237 1.155 1.568.76 2.062 1.485 2.062 2.557 0 1.6-1.22 2.46-2.87 2.46-.876 0-1.62-.183-2.05-.43-.065-.033-.08-.082-.08-.165V14.74c0-.1.048-.133.114-.084.624.413 1.352.594 2.012.594.792 0 1.122-.33 1.122-.776 0-.363-.23-.677-1.237-1.205-1.42-.68-2.014-1.37-2.014-2.527 0-1.287 1.006-2.36 2.755-2.36.86 0 1.464.132 1.794.28.082.05.1.132.1.198v1.37c0 .083-.05.133-.15.1-.444-.264-1.1-.43-1.743-.43z"/></svg>
 ```
 
-### 6. Update the JSON Data for SimpleIcons.org
+### 6. Name the Icon
 
-Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
-
-  * The `title` of the new SVG.
-  * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` pound symbol.)
-  * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
-
-There is also an optional field that may be used to specify the brand guidelines/presskit/etc. This is useful if the SVG file was sourced from a different place.
-
-Here is the object for The Movie Database as an example:
-
-```json
-{
-    "title": "The Movie Database",
-    "hex": "01D277",
-    "source": "https://www.themoviedb.org/about/logos-attribution",
-    "guidelines": "https://www.themoviedb.org/about/logos-attribution"
-}
-```
-
-Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
-
-#### SVG Filename Convention
-
-The filename of the SVG should correspond to the `title` used in the JSON file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- Brand name` to get the correct filename.
+The filename of the SVG should correspond to the `<title>` used in the markup file mentioned above, and it should follow the rules below. If you're in doubt, you can always run `npm run get-filename -- "Brand name"` to get the correct filename.
 
 1. Use **lowercase letters** without **whitespace**, for example:
 
@@ -222,20 +201,75 @@ The filename of the SVG should correspond to the `title` used in the JSON file m
     filename: citroen.svg
     ```
 
-1. Replace the following symbols with their alias depending on their position in the title:
+1. Replace the following symbols with their alias:
 
-    | Symbol | Start | Middle | End  |
-    | :----: | ----- | ------ | ---- |
-    |   +    | plus  | plus   | plus |
-    |   .    | dot-  | -dot-  | -dot |
-    |   &    | and-  | -and-  | -and |
+    | Symbol | Alias |
+    | :----: | ----- |
+    |   +    | plus  |
+    |   .    | dot   |
+    |   &    | and   |
 
     for example:
 
     ```yml
     title: .Net
-    filename: dot-net.svg
+    filename: dotnet.svg
     ```
+
+1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
+
+    for example:
+
+    ```yml
+    title: Hive
+    filename: hive_blockchain.svg
+    ```
+
+### 7. Update the JSON Data for SimpleIcons.org
+
+Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
+
+* The `title` of the new SVG.
+* A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
+* The `source` URL of the logo being used. There are [more details below](#source-guidelines).
+
+There are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
+
+Here is the object of a fictional brand as an example:
+
+```json
+{
+    "title": "A Fictional Brand",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo"
+}
+```
+
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+
+#### Optional Data
+
+Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
+
+* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an exitsing icon's name.
+* The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
+* The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+
+Here is the object of the fictional brand from before, but with all optional values, as an example:
+
+```json
+{
+    "title": "A Fictional Brand",
+    "slug": "afictionalbrand_modifier",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo",
+    "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
+    "license": {
+        "type": "CC0-1.0",
+        "url": "https://www.a-fictional-brand.org/logo/license"
+    }
+}
+```
 
 #### Source Guidelines
 
@@ -253,7 +287,68 @@ If the SVG is sourced from:
 
 In general, make sure the URL does not contain any tracking identifiers.
 
-### 7. Create a Pull Request
+#### Aliases
+
+Lastly, we aim to provide aliases of three types for various reasons. Each type of alias and its purpose can be found below. If you're unsure, you can mention an alias you're considering in your Pull Request so it can be discussed.
+
+##### Also Known As
+
+We collect "also known as" names to make it easier to find brands that are known by different names or by their abbreviation/full name. This does not include localized names, which are recorded separately. To add an "also known as" name you add the following to the icon data:
+
+```json
+{
+    "title": "the original title",
+    "aliases": {
+        "aka": [
+            "tot",
+            "thetitle"
+        ]
+    }
+}
+```
+
+Where the string is **different** from the original title as well as all other strings in the list.
+
+##### Duplicates
+
+We collect the names of duplicates, brands that use the same icon but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
+
+```json5
+{
+    "title": "the original title",
+    "hex": "123456",
+    "aliases": {
+        "dup": [
+            {
+                "title": "the duplicate's title",
+                "hex": "654321", // Only if different from original's color
+                "guidelines": "..." // Only if different from original's guidelines
+            }
+        ]
+    }
+}
+```
+
+Where the nested `title` is the name of the duplicate brand. The other fields, `hex` and `guidelines`, are only provided if they differ from the original.
+
+##### Localization
+
+We collect localized names to make it possible to find the brand by it's local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
+
+```json
+{
+    "title": "the original title",
+    "aliases": {
+        "loc": {
+            "en-US": "A different title"
+        }
+    }
+}
+```
+
+Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and `title` is a **different** title from the original title.
+
+### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
