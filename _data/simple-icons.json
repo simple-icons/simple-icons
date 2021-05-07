@@ -5769,7 +5769,16 @@
             "title": "Netlify",
             "hex": "00C7B7",
             "source": "https://www.netlify.com/press/",
-            "guidelines": "https://www.netlify.com/press/"
+            "guidelines": "https://www.netlify.com/press/",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Netlify CMS",
+                        "hex": "C9FA4B",
+                        "source": "https://www.netlifycms.org/"
+                    }
+                ]
+            }
         },
         {
             "title": "New Japan Pro-Wrestling",
@@ -6040,6 +6049,11 @@
             "hex": "00AFF0",
             "source": "https://onlyfans.com/brand",
             "guidelines": "https://onlyfans.com/brand"
+        },
+        {
+            "title": "ONNX",
+            "hex": "005CED",
+            "source": "https://github.com/onnx/onnx.github.io/blob/382e7036b616ce1555499ac41730245a2478513c/images/ONNX-ICON.svg"
         },
         {
             "title": "OnStar",
@@ -6920,6 +6934,11 @@
             "title": "PurgeCSS",
             "hex": "14161A",
             "source": "https://github.com/FullHuman/purgecss/blob/4e2bf58e218119cc9faf9faa615d62a059bf9d9a/docs/.vuepress/public/safari-pinned-tab.svg"
+        },
+        {
+            "title": "Purism",
+            "hex": "2D2D2D",
+            "source": "https://puri.sm/pr/images/"
         },
         {
             "title": "Pusher",
@@ -8410,7 +8429,16 @@
         {
             "title": "Svelte",
             "hex": "FF3E00",
-            "source": "https://github.com/sveltejs/branding/blob/c4dfca6743572087a6aef0e109ffe3d95596e86a/svelte-logo.svg"
+            "source": "https://github.com/sveltejs/branding/blob/c4dfca6743572087a6aef0e109ffe3d95596e86a/svelte-logo.svg",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Sapper",
+                        "hex": "159497",
+                        "source": "https://sapper.svelte.dev/"
+                    }
+                ]
+            }
         },
         {
             "title": "SVG",
@@ -8827,13 +8855,13 @@
         },
         {
             "title": "Transport for Ireland",
-            "hex": "113B92",
-            "source": "https://tfl.gov.uk/"
+            "hex": "00B274",
+            "source": "https://www.transportforireland.ie/"
         },
         {
             "title": "Transport for London",
-            "hex": "00B274",
-            "source": "https://www.transportforireland.ie/"
+            "hex": "113B92",
+            "source": "https://tfl.gov.uk/"
         },
         {
             "title": "Travis CI",
