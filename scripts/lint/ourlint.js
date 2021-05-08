@@ -12,7 +12,8 @@ const { diffLinesUnified } = require("jest-diff");
 
 const UTF8 = "utf8";
 
-const dataFile = path.resolve( __dirname, "..", "_data", "simple-icons.json");
+const rootDir = path.resolve(__dirname, "..", "..");
+const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
 const data = require(dataFile);
 
 /**
