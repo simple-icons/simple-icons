@@ -1,6 +1,6 @@
 ---
 name: Documentation
-about: Issues and improvements for the documentation
+about: Report problems and suggest ideas for the documentation
 labels: docs
 ---
 

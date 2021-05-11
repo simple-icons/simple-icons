@@ -1,6 +1,6 @@
 ---
 name: Website
-about: Issues and improvements for the website
+about: Report problems and suggest ideas for the website
 labels: website
 ---
 
