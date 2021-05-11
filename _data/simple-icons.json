@@ -2805,7 +2805,7 @@
             "source": "https://fandomdesignsystem.com/identity/assets"
         },
         {
-            "title": "Farfetch",
+            "title": "FARFETCH",
             "hex": "000000",
             "source": "https://www.farfetch.com/"
         },
@@ -2862,7 +2862,7 @@
         {
             "title": "Feedly",
             "hex": "2BB24C",
-            "source": "https://blog.feedly.com/wp-content/themes/feedly-2017-v1.19.3/assets/images/logos/logo.svg"
+            "source": "https://blog.feedly.com/"
         },
         {
             "title": "Ferrari",
@@ -2888,7 +2888,8 @@
         {
             "title": "Fido Alliance",
             "hex": "FFBF3B",
-            "source": "https://fidoalliance.org/overview/legal/logo-usage/"
+            "source": "https://fidoalliance.org/overview/legal/logo-usage/",
+            "guidelines": "https://fidoalliance.org/overview/legal/fido-trademark-and-service-mark-usage-agreement-for-websites/"
         },
         {
             "title": "FIFA",
@@ -2918,7 +2919,7 @@
         {
             "title": "FileZilla",
             "hex": "BF0000",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:FileZilla_logo.svg"
         },
         {
             "title": "Fing",
@@ -2965,7 +2966,11 @@
         {
             "title": "Flask",
             "hex": "000000",
-            "source": "http://flask.pocoo.org/community/logos/"
+            "source": "https://github.com/pallets/flask/blob/e6e75e55470a0682ee8370e6d68062e515a248b9/artwork/logo-full.svg",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/pallets/flask/blob/master/artwork/LICENSE.rst"
+            }
         },
         {
             "title": "Flathub",
@@ -3005,12 +3010,16 @@
         {
             "title": "Fluentd",
             "hex": "0E83C8",
-            "source": "https://docs.fluentd.org/quickstart/logo"
+            "source": "https://docs.fluentd.org/quickstart/logo",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Flutter",
             "hex": "02569B",
-            "source": "https://flutter.dev/brand"
+            "source": "https://flutter.dev/brand",
+            "guidelines": "https://flutter.dev/brand"
         },
         {
             "title": "Fnac",
