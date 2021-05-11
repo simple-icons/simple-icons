@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "4.22.0",
+  "version": "4.23.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -28,14 +28,14 @@
     "svglint": "1.0.7",
     "svgo": "2.3.0",
     "svgpath": "2.3.1",
-    "uglify-js": "3.13.4"
+    "uglify-js": "3.13.5"
   },
   "scripts": {
-    "build": "node scripts/build-package.js",
+    "build": "node scripts/build/package.js",
     "clean": "rm -f icons/*.js index.js",
     "lint": "run-s our-lint jsonlint svglint wslint",
-    "our-lint": "node scripts/lint.js",
-    "jsonlint": "node scripts/jsonlint.js",
+    "our-lint": "node scripts/lint/ourlint.js",
+    "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint icons/*.svg --ci",
     "wslint": "editorconfig-checker -exclude \\.svg$",
     "prepublishOnly": "npm run build",

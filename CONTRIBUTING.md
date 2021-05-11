@@ -201,19 +201,19 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: citroen.svg
     ```
 
-1. Replace the following symbols with their alias depending on their position in the title:
+1. Replace the following symbols with their alias:
 
-    | Symbol | Start | Middle | End  |
-    | :----: | :---- | :----: | ---: |
-    |   +    | plus  | plus   | plus |
-    |   .    | dot-  | -dot-  | -dot |
-    |   &    | and-  | -and-  | -and |
+    | Symbol | Alias |
+    | :----: | ----- |
+    |   +    | plus  |
+    |   .    | dot   |
+    |   &    | and   |
 
     for example:
 
     ```yml
     title: .Net
-    filename: dot-net.svg
+    filename: dotnet.svg
     ```
 
 1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
@@ -233,7 +233,7 @@ Icon metadata should be added to the `_data/simple-icons.json` file. Each icon i
 * A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
 * The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
-The are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
+There are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
 
 Here is the object of a fictional brand as an example:
 
@@ -286,6 +286,67 @@ If the SVG is sourced from:
 - **Wikipedia**: For an SVG from Wikipedia/Wikimedia the source URL should link to the logo file's page on the relevant site, and not the brand's Wikipedia pages. For example, [this is the link for AmericanExpress](https://commons.wikimedia.org/wiki/File:American_Express_logo.svg).
 
 In general, make sure the URL does not contain any tracking identifiers.
+
+#### Aliases
+
+Lastly, we aim to provide aliases of three types for various reasons. Each type of alias and its purpose can be found below. If you're unsure, you can mention an alias you're considering in your Pull Request so it can be discussed.
+
+##### Also Known As
+
+We collect "also known as" names to make it easier to find brands that are known by different names or by their abbreviation/full name. This does not include localized names, which are recorded separately. To add an "also known as" name you add the following to the icon data:
+
+```json
+{
+    "title": "the original title",
+    "aliases": {
+        "aka": [
+            "tot",
+            "thetitle"
+        ]
+    }
+}
+```
+
+Where the string is **different** from the original title as well as all other strings in the list.
+
+##### Duplicates
+
+We collect the names of duplicates, brands that use the same icon but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
+
+```json5
+{
+    "title": "the original title",
+    "hex": "123456",
+    "aliases": {
+        "dup": [
+            {
+                "title": "the duplicate's title",
+                "hex": "654321", // Only if different from original's color
+                "guidelines": "..." // Only if different from original's guidelines
+            }
+        ]
+    }
+}
+```
+
+Where the nested `title` is the name of the duplicate brand. The other fields, `hex` and `guidelines`, are only provided if they differ from the original.
+
+##### Localization
+
+We collect localized names to make it possible to find the brand by it's local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
+
+```json
+{
+    "title": "the original title",
+    "aliases": {
+        "loc": {
+            "en-US": "A different title"
+        }
+    }
+}
+```
+
+Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and `title` is a **different** title from the original title.
 
 ### 8. Create a Pull Request
 
