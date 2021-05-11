@@ -4,12 +4,12 @@
  * Updates the version of this package to the CLI specified version.
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const PACKAGE_JSON_FILE = path.resolve(__dirname, '..', 'package.json');
-const PACKAGE_LOCK_FILE = path.resolve(__dirname, '..', 'package-lock.json');
+const rootDir = path.resolve(__dirname, "..", "..");
+const packageJsonFile = path.resolve(rootDir, "package.json");
+const packageLockFile = path.resolve(rootDir, "package-lock.json");
 
 function readManifest(file) {
   const manifestRaw = fs.readFileSync(file).toString();
@@ -18,20 +18,20 @@ function readManifest(file) {
 }
 
 function writeManifest(file, json) {
-  const manifestRaw = JSON.stringify(json, null, 2) + '\n';
+  const manifestRaw = JSON.stringify(json, null, 2) + "\n";
   fs.writeFileSync(file, manifestRaw);
 }
 
 function main(newVersion) {
   try {
-    const manifest = readManifest(PACKAGE_JSON_FILE);
-    const manifestLock = readManifest(PACKAGE_LOCK_FILE);
+    const manifest = readManifest(packageJsonFile);
+    const manifestLock = readManifest(packageLockFile);
 
     manifest.version = newVersion
     manifestLock.version = newVersion
 
-    writeManifest(PACKAGE_JSON_FILE, manifest);
-    writeManifest(PACKAGE_LOCK_FILE, manifestLock);
+    writeManifest(packageJsonFile, manifest);
+    writeManifest(packageLockFile, manifestLock);
   } catch (error) {
     console.error(`Failed to bump package version to ${newVersion}:`, error);
     process.exit(1);
