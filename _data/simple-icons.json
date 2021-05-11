@@ -366,6 +366,11 @@
             "source": "https://alpinelinux.org/"
         },
         {
+            "title": "Alpine.js",
+            "hex": "8BC0D0",
+            "source": "https://github.com/simple-icons/simple-icons/issues/5583#issuecomment-832770167"
+        },
+        {
             "title": "Altium Designer",
             "hex": "A5915F",
             "source": "https://www.altium.com/altium-designer/"
@@ -4246,6 +4251,15 @@
             "title": "iOS",
             "hex": "000000",
             "source": "https://en.wikipedia.org/wiki/IOS"
+        },
+        {
+            "title": "IOTA",
+            "hex": "131F37",
+            "source": "https://www.iota.org/connect/brand",
+            "guidelines": "https://www.iota.org/connect/brand",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "IPFS",
