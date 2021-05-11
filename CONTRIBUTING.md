@@ -84,7 +84,8 @@ Working with an SVG version of the logo is best. In the absence of an SVG versio
 If the icon includes a (registered) trademark icon we follow the guidelines below to decide whether to include the symbol or not:
 
 * If brand guidelines explicitly require including the symbol, it must be included.
-* If the symbol is incorporated into the design of the logo (e.g. [Intel](https://github.com/simple-icons/simple-icons/blob/develop/icons/intel.svg)), it must be included.
+* If the the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
+* If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups](https://github.com/simple-icons/simple-icons/blob/develop/icons/chupachups.svg)), it must be included.
 * If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
 * If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
 * If there is no explicit requirement that a symbol must be included, it must not be included.
