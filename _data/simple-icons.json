@@ -3660,7 +3660,16 @@
         {
             "title": "GoToMeeting",
             "hex": "F68D2E",
-            "source": "https://www.gotomeeting.com/"
+            "source": "https://www.gotomeeting.com/",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "GoToWebinar",
+                        "hex": "00C0F3",
+                        "source": "https://www.gotomeeting.com/en-ie/webinar"
+                    }
+                ]
+            }
         },
         {
             "title": "GOV.UK",
