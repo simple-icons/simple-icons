@@ -152,7 +152,7 @@ Each icon in Simple Icons has been annotated with a number of attributes and ele
     * `viewBox="0 0 24 24"`
   * The svg namespace.
     * `xmlns="http://www.w3.org/2000/svg"`
-* A title element (Note the format).
+* A title element containing the brand name.
   * `<title>Adobe Photoshop</title>`
 
 Here is _part of_ the svg for the Adobe Photoshop icon as an example:
