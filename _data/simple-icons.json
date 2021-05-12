@@ -2197,9 +2197,15 @@
             "source": "https://deezerbrand.com/"
         },
         {
-            "title": "Delicious",
+            "title": "del.icio.us",
+            "slug": "delicious",
             "hex": "0000FF",
-            "source": "http://del.icio.us/"
+            "source": "http://del.icio.us/",
+            "aliases": {
+                "aka": [
+                    "Delicious"
+                ]
+            }
         },
         {
             "title": "Deliveroo",
@@ -2872,7 +2878,12 @@
         {
             "title": "Fedora",
             "hex": "294172",
-            "source": "https://fedoraproject.org/wiki/Logo/UsageGuidelines"
+            "source": "https://fedoraproject.org/wiki/Logo/UsageGuidelines",
+            "guidelines": "https://fedoraproject.org/wiki/Logo/UsageGuidelines",
+            "license": {
+                "type": "custom",
+                "url": "https://fedoraproject.org/wiki/Legal:Trademark_guidelines"
+            }
         },
         {
             "title": "FedRAMP",
@@ -3649,7 +3660,16 @@
         {
             "title": "GoToMeeting",
             "hex": "F68D2E",
-            "source": "https://www.gotomeeting.com/"
+            "source": "https://www.gotomeeting.com/",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "GoToWebinar",
+                        "hex": "00C0F3",
+                        "source": "https://www.gotomeeting.com/en-ie/webinar"
+                    }
+                ]
+            }
         },
         {
             "title": "GOV.UK",
@@ -7683,6 +7703,11 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
+        },
+        {
+            "title": "RxDB",
+            "hex": "8D1F89",
+            "source": "https://github.com/pubkey/rxdb/blob/0c554dbcf7a4e6c48cd581ec1e3b130a4b5ab7d6/docs/files/logo/logo.svg"
         },
         {
             "title": "Ryanair",
