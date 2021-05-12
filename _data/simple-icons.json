@@ -2202,9 +2202,7 @@
             "hex": "0000FF",
             "source": "http://del.icio.us/",
             "aliases": {
-                "aka": [
-                    "Delicious"
-                ]
+                "aka": ["Delicious"]
             }
         },
         {
@@ -5938,9 +5936,7 @@
             "hex": "FF160B",
             "source": "https://en.wikipedia.org/wiki/File:NJPW_World_Logo.svg",
             "aliases": {
-                "aka": [
-                    "NJPW"
-                ],
+                "aka": ["NJPW"],
                 "dup": [
                     {
                         "title": "NJPW World",
@@ -7070,6 +7066,11 @@
             "title": "ProtonVPN",
             "hex": "56B366",
             "source": "https://protonvpn.com/press"
+        },
+        {
+            "title": "Protractor",
+            "hex": "ed163a",
+            "source": "https://github.com/angular/protractor"
         },
         {
             "title": "Proxmox",
