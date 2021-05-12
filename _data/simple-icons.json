@@ -2197,9 +2197,15 @@
             "source": "https://deezerbrand.com/"
         },
         {
-            "title": "Delicious",
+            "title": "del.icio.us",
+            "slug": "delicious",
             "hex": "0000FF",
-            "source": "http://del.icio.us/"
+            "source": "http://del.icio.us/",
+            "aliases": {
+                "aka": [
+                    "Delicious"
+                ]
+            }
         },
         {
             "title": "Deliveroo",
