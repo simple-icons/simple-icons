@@ -69,7 +69,7 @@ require('simple-icons/icons/[ICON SLUG]');
 const icon = require('simple-icons/icons/simpleicons');
 ```
 
-Either method will return an icon:
+Either method will return an icon object:
 
 ```javascript
 
