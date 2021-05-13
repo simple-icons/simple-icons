@@ -9778,7 +9778,12 @@
         {
             "title": "WEBTOON",
             "hex": "00D564",
-            "source": "http://webtoons.com/"
+            "source": "http://webtoons.com/",
+            "aliases": {
+                "old": [
+                    "LINE WEBTOON"
+                ]
+            }
         },
         {
             "title": "WeChat",
