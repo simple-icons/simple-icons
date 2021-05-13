@@ -90,7 +90,7 @@ console.log(icon);
     }
 }
 
-NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines for the icon.
 NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
