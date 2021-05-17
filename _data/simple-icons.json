@@ -2118,6 +2118,16 @@
             "source": "https://www.3ds.com/"
         },
         {
+            "title": "Data Version Control",
+            "aliases": {
+                "aka": [
+                    "DVC"
+                ]
+            },
+            "hex": "945DD6",
+            "source": "https://static.iterative.ai/logo/dvc.svg"
+        },
+        {
             "title": "Databricks",
             "hex": "FF3621",
             "source": "https://www.databricks.com/",
@@ -7028,6 +7038,11 @@
             "title": "Probot",
             "hex": "00B0D8",
             "source": "https://github.com/probot/probot/blob/5d29945dd2116618d63aba9d7a4460b940a85f5d/static/robot.svg"
+        },
+        {
+            "title": "Processing Foundation",
+            "hex": "006699",
+            "source": "https://processingfoundation.org/"
         },
         {
             "title": "ProcessWire",
