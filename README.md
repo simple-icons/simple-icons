@@ -51,7 +51,7 @@ The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]
 const simpleIcons = require('simple-icons');
 
 // Get a specific icon by its slug as:
-simpleIcons.get('[ICON SLUG]');
+// simpleIcons.get('[ICON SLUG]');
 
 // For example:
 const icon = simpleIcons.get('simpleicons');
@@ -63,7 +63,7 @@ This is useful if you are e.g. compiling your code with [webpack](https://webpac
 
 ```javascript
 // Import a specific icon by its slug as:
-require('simple-icons/icons/[ICON SLUG]');
+// require('simple-icons/icons/[ICON SLUG]');
 
 // For example:
 const icon = require('simple-icons/icons/simpleicons');
