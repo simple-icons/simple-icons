@@ -41,8 +41,8 @@ These examples use the latest major version. This means you won't receive any up
 
 The icons are also available through our npm package. To install, simply run:
 
-```
-$ npm install simple-icons
+```shell
+npm install simple-icons
 ```
 
 The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
@@ -72,7 +72,6 @@ const icon = require('simple-icons/icons/simpleicons');
 Either method will return an icon object:
 
 ```javascript
-
 console.log(icon);
 
 /*
@@ -111,16 +110,16 @@ for (const title in simpleIcons) {
 
 There are also TypeScript type definitions for the Node package. To use them, simply run:
 
-```
-$ npm install @types/simple-icons
+```shell
+npm install @types/simple-icons
 ```
 
 ### PHP Usage
 
 The icons are also available through our Packagist package. To install, simply run:
 
-```
-$ composer require simple-icons/simple-icons
+```shell
+composer require simple-icons/simple-icons
 ```
 
 The package can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
