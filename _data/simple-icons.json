@@ -3075,6 +3075,12 @@
             "guidelines": "https://flutter.dev/brand"
         },
         {
+            "title": "FMOD",
+            "hex": "000000",
+            "source": "https://www.fmod.com/attribution",
+            "guidelines": "https://www.fmod.com/attribution"
+        },
+        {
             "title": "Fnac",
             "hex": "E1A925",
             "source": "http://www.fnac.com/"
@@ -3247,7 +3253,7 @@
         },
         {
             "title": "GeeksforGeeks",
-            "hex": "0F9D58",
+            "hex": "2F8D46",
             "source": "https://www.geeksforgeeks.org/"
         },
         {
@@ -4376,6 +4382,11 @@
             "title": "Internet Explorer",
             "hex": "0076D6",
             "source": "https://compass-ssl.microsoft.com/assets/c8/67/c867db4c-f328-45b8-817c-33834c70aae6.svg?n=IE.svg"
+        },
+        {
+            "title": "Intigriti",
+            "hex": "161A36",
+            "source": "https://www.intigriti.com/"
         },
         {
             "title": "InVision",
@@ -6630,6 +6641,11 @@
             "hex": "2151A1",
             "source": "http://gillettepepsicola.com/promotions-media/media-kit/",
             "guidelines": "http://gillettepepsicola.com/promotions-media/media-kit/"
+        },
+        {
+            "title": "Perforce",
+            "hex": "404040",
+            "source": "https://www.perforce.com"
         },
         {
             "title": "Periscope",
@@ -9127,6 +9143,11 @@
             "source": "https://www.tp-link.com/"
         },
         {
+            "title": "tqdm",
+            "hex": "FFC107",
+            "source": "https://github.com/tqdm/img/blob/0dd23d9336af67976f88f9988ea660cde78c54d4/logo.svg"
+        },
+        {
             "title": "TrainerRoad",
             "hex": "E12726",
             "source": "https://www.trainerroad.com/"
@@ -9796,6 +9817,14 @@
             "source": "https://github.com/webhintio/webhint.io/blob/5c9f10a33a6d68e1f0d2b1eff0829685b9123433/src/webhint-theme/source/images/webhint-logo.svg"
         },
         {
+            "title": "Weblate",
+            "hex": "2ECCAA",
+            "source": "https://github.com/WeblateOrg/graphics/blob/669e4f910abd9ec36fda172d2ea6f2f424a32ace/logo/weblate-black.svg",
+            "license": {
+                "type": "GPL-3.0-only"
+            }
+        },
+        {
             "title": "Webmin",
             "hex": "7DA0D0",
             "source": "https://github.com/webmin/webmin/blob/84d2d3d17f638a43939220f78b83bfefbae37f76/images/webmin-blue.svg"
@@ -10025,6 +10054,12 @@
             "title": "WWE",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:WWE_Network_logo.svg"
+        },
+        {
+            "title": "Wwise",
+            "hex": "00549F",
+            "source": "https://www.audiokinetic.com/resources/credits/",
+            "guidelines": "https://www.audiokinetic.com/resources/credits/"
         },
         {
             "title": "X-Pack",
