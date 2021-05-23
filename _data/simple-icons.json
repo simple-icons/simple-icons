@@ -963,7 +963,7 @@
         {
             "title": "Azure Pipelines",
             "hex": "2560E0",
-            "source": "https://github.com/vscode-icons/vscode-icons/pull/1741"
+            "source": "https://github.com/vscode-icons/vscode-icons/blob/dc7872262c9b059c574bd16fc4cfedbb6bdf156e/icons/file_type_azurepipelines.svg"
         },
         {
             "title": "B&R Automation",
@@ -1092,6 +1092,11 @@
             "title": "Bentley",
             "hex": "333333",
             "source": "https://en.wikipedia.org/wiki/File:Bentley_logo_2.svg"
+        },
+        {
+            "title": "Betfair",
+            "hex": "FFB80B",
+            "source": "https://partnerships.betfair.com/"
         },
         {
             "title": "Big Cartel",
@@ -1492,6 +1497,11 @@
             "source": "https://cevo.com/"
         },
         {
+            "title": "Chai",
+            "hex": "A30701",
+            "source": "https://github.com/simple-icons/simple-icons/issues/4983#issuecomment-796736373"
+        },
+        {
             "title": "Chainlink",
             "hex": "375BD2",
             "source": "https://chain.link/brand-assets"
@@ -1855,7 +1865,7 @@
         },
         {
             "title": "Coinbase",
-            "hex": "0667D0",
+            "hex": "0052FF",
             "source": "https://www.coinbase.com/press"
         },
         {
@@ -3070,6 +3080,12 @@
             "guidelines": "https://flutter.dev/brand"
         },
         {
+            "title": "FMOD",
+            "hex": "000000",
+            "source": "https://www.fmod.com/attribution",
+            "guidelines": "https://www.fmod.com/attribution"
+        },
+        {
             "title": "Fnac",
             "hex": "E1A925",
             "source": "http://www.fnac.com/"
@@ -3242,7 +3258,7 @@
         },
         {
             "title": "GeeksforGeeks",
-            "hex": "0F9D58",
+            "hex": "2F8D46",
             "source": "https://www.geeksforgeeks.org/"
         },
         {
@@ -3283,7 +3299,7 @@
         {
             "title": "Ghost",
             "hex": "15171A",
-            "source": "https://ghost.org/docs/logos/",
+            "source": "https://github.com/TryGhost/Admin/blob/e3e1fa3353767c3729b1658ad42cc35f883470c5/public/assets/icons/icon.svg",
             "guidelines": "https://ghost.org/docs/logos/"
         },
         {
@@ -3799,8 +3815,8 @@
         },
         {
             "title": "Habr",
-            "hex": "77A2B6",
-            "source": "https://habr.com/"
+            "hex": "65A3BE",
+            "source": "https://kiosk.habr.com/"
         },
         {
             "title": "Hack Club",
@@ -4249,6 +4265,11 @@
             "source": "https://www.ikea.com/"
         },
         {
+            "title": "ImageJ",
+            "hex": "00D8E0",
+            "source": "https://github.com/imagej/imagej/blob/0667395bcac20e5d7a371ac9f468522c74367d59/logo/inkscape_image_logo_src.svg"
+        },
+        {
             "title": "IMDb",
             "hex": "F5C518",
             "source": "https://brand.imdb.com/imdb",
@@ -4366,6 +4387,11 @@
             "title": "Internet Explorer",
             "hex": "0076D6",
             "source": "https://compass-ssl.microsoft.com/assets/c8/67/c867db4c-f328-45b8-817c-33834c70aae6.svg?n=IE.svg"
+        },
+        {
+            "title": "Intigriti",
+            "hex": "161A36",
+            "source": "https://www.intigriti.com/"
         },
         {
             "title": "InVision",
@@ -5560,6 +5586,11 @@
             "source": "http://microgenetics.co.uk/"
         },
         {
+            "title": "MicroPython",
+            "hex": "2B2728",
+            "source": "https://commons.wikimedia.org/wiki/File:MicroPython_new_logo.svg"
+        },
+        {
             "title": "Microsoft",
             "hex": "5E5E5E",
             "source": "https://developer.microsoft.com"
@@ -6126,7 +6157,7 @@
         },
         {
             "title": "Nubank",
-            "hex": "8A05BE",
+            "hex": "820AD1",
             "source": "https://nubank.com.br/en/press/"
         },
         {
@@ -6617,6 +6648,11 @@
             "guidelines": "http://gillettepepsicola.com/promotions-media/media-kit/"
         },
         {
+            "title": "Perforce",
+            "hex": "404040",
+            "source": "https://www.perforce.com"
+        },
+        {
             "title": "Periscope",
             "hex": "40A4C4",
             "source": "https://www.periscope.tv/"
@@ -6936,7 +6972,7 @@
         },
         {
             "title": "PostgreSQL",
-            "hex": "336791",
+            "hex": "4169E1",
             "source": "https://wiki.postgresql.org/wiki/Logo",
             "guidelines": "https://www.postgresql.org/about/policies/trademarks/"
         },
@@ -8401,6 +8437,11 @@
             "source": "https://spring.io/trademarks"
         },
         {
+            "title": "Spring Boot",
+            "hex": "6DB33F",
+            "source": "https://spring.io/projects"
+        },
+        {
             "title": "Sprint",
             "hex": "FFCE0A",
             "source": "https://www.sprint.com/"
@@ -9107,6 +9148,11 @@
             "source": "https://www.tp-link.com/"
         },
         {
+            "title": "tqdm",
+            "hex": "FFC107",
+            "source": "https://github.com/tqdm/img/blob/0dd23d9336af67976f88f9988ea660cde78c54d4/logo.svg"
+        },
+        {
             "title": "TrainerRoad",
             "hex": "E12726",
             "source": "https://www.trainerroad.com/"
@@ -9536,8 +9582,8 @@
         },
         {
             "title": "Viadeo",
-            "hex": "F88D2D",
-            "source": "http://corporate.viadeo.com/en/media/resources"
+            "hex": "F07355",
+            "source": "https://viadeo.journaldunet.com/"
         },
         {
             "title": "Viber",
@@ -9776,6 +9822,14 @@
             "source": "https://github.com/webhintio/webhint.io/blob/5c9f10a33a6d68e1f0d2b1eff0829685b9123433/src/webhint-theme/source/images/webhint-logo.svg"
         },
         {
+            "title": "Weblate",
+            "hex": "2ECCAA",
+            "source": "https://github.com/WeblateOrg/graphics/blob/669e4f910abd9ec36fda172d2ea6f2f424a32ace/logo/weblate-black.svg",
+            "license": {
+                "type": "GPL-3.0-only"
+            }
+        },
+        {
             "title": "Webmin",
             "hex": "7DA0D0",
             "source": "https://github.com/webmin/webmin/blob/84d2d3d17f638a43939220f78b83bfefbae37f76/images/webmin-blue.svg"
@@ -10005,6 +10059,12 @@
             "title": "WWE",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:WWE_Network_logo.svg"
+        },
+        {
+            "title": "Wwise",
+            "hex": "00549F",
+            "source": "https://www.audiokinetic.com/resources/credits/",
+            "guidelines": "https://www.audiokinetic.com/resources/credits/"
         },
         {
             "title": "X-Pack",
