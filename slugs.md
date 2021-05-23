@@ -223,6 +223,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Behance` | `behance` |
 | `Beijing Subway` | `beijingsubway` |
 | `Bentley` | `bentley` |
+| `Betfair` | `betfair` |
 | `Big Cartel` | `bigcartel` |
 | `bigbasket` | `bigbasket` |
 | `BigCommerce` | `bigcommerce` |
@@ -302,6 +303,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ceph` | `ceph` |
 | `Cesium` | `cesium` |
 | `CEVO` | `cevo` |
+| `Chai` | `chai` |
 | `Chainlink` | `chainlink` |
 | `Chakra UI` | `chakraui` |
 | `Chart.js` | `chart-dot-js` |
@@ -603,6 +605,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flood` | `flood` |
 | `Fluentd` | `fluentd` |
 | `Flutter` | `flutter` |
+| `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
 | `Folium` | `folium` |
 | `Font Awesome` | `fontawesome` |
@@ -820,6 +823,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IFTTT` | `ifttt` |
 | `iHeartRadio` | `iheartradio` |
 | `IKEA` | `ikea` |
+| `ImageJ` | `imagej` |
 | `IMDb` | `imdb` |
 | `Imgur` | `imgur` |
 | `Immer` | `immer` |
@@ -842,6 +846,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Intercom` | `intercom` |
 | `Internet Archive` | `internetarchive` |
 | `Internet Explorer` | `internetexplorer` |
+| `Intigriti` | `intigriti` |
 | `InVision` | `invision` |
 | `Invoice Ninja` | `invoiceninja` |
 | `ioBroker` | `iobroker` |
@@ -1059,6 +1064,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `micro:bit` | `microbit` |
 | `Micro.blog` | `micro-dot-blog` |
 | `Microgenetics` | `microgenetics` |
+| `MicroPython` | `micropython` |
 | `Microsoft` | `microsoft` |
 | `Microsoft Academic` | `microsoftacademic` |
 | `Microsoft Access` | `microsoftaccess` |
@@ -1251,6 +1257,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pelican` | `pelican` |
 | `Peloton` | `peloton` |
 | `Pepsi` | `pepsi` |
+| `Perforce` | `perforce` |
 | `Periscope` | `periscope` |
 | `Perl` | `perl` |
 | `Peugeot` | `peugeot` |
@@ -1587,6 +1594,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Spotlight` | `spotlight` |
 | `Spreaker` | `spreaker` |
 | `Spring` | `spring` |
+| `Spring Boot` | `springboot` |
 | `Sprint` | `sprint` |
 | `Spyder IDE` | `spyderide` |
 | `SQLite` | `sqlite` |
@@ -1724,6 +1732,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Toshiba` | `toshiba` |
 | `Toyota` | `toyota` |
 | `TP-Link` | `tp-link` |
+| `tqdm` | `tqdm` |
 | `TrainerRoad` | `trainerroad` |
 | `Trakt` | `trakt` |
 | `TransferWise` | `transferwise` |
@@ -1852,6 +1861,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Webflow` | `webflow` |
 | `WebGL` | `webgl` |
 | `webhint` | `webhint` |
+| `Weblate` | `weblate` |
 | `Webmin` | `webmin` |
 | `WebMoney` | `webmoney` |
 | `Webpack` | `webpack` |
@@ -1896,6 +1906,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WP Rocket` | `wprocket` |
 | `write.as` | `write-dot-as` |
 | `WWE` | `wwe` |
+| `Wwise` | `wwise` |
 | `X-Pack` | `x-pack` |
 | `X.Org` | `x-dot-org` |
 | `Xamarin` | `xamarin` |
