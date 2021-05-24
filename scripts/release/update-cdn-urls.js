@@ -8,7 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const rootDir = path.resolve(__dirname, "..");
+const rootDir = path.resolve(__dirname, "..", "..");
 const packageJsonFile = path.resolve(rootDir, "package.json");
 const readmeFile = path.resolve(rootDir, "README.md");
 
