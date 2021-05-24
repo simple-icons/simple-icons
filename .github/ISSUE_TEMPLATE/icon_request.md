@@ -14,7 +14,7 @@ labels: new icon
 
   When requesting a new icon please provide the following information:
 -->
-**Name:**
+**Brand Name:**
 **Website:**
 **Alexa rank:**
   <!-- The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/
