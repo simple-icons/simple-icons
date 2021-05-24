@@ -1,4 +1,4 @@
-name: Automated releases
+name: Create Release Pull Request
 on:
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
@@ -26,11 +26,13 @@ jobs:
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Bump version
-        run: node ./scripts/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
+        run: node ./scripts/release/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
+      - name: Update major version in CDN URLs
+        run: node ./scripts/release/update-cdn-urls.js
       - name: Update slugs table
-        run: node ./scripts/build-slugs-table.js
+        run: node ./scripts/release/update-slugs-table.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.9.2
+        uses: stefanzweifel/git-auto-commit-action@v4.11.0
         with:
           commit_message: version bump
           commit_user_name: GitHub Actions

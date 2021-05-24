@@ -14,18 +14,20 @@ const minify = require("uglify-js").minify;
 
 const UTF8 = "utf8";
 
-const dataFile = path.resolve(__dirname, "..", "_data", "simple-icons.json");
-const indexFile = path.resolve(__dirname, "..", "index.js");
-const iconsDir = path.resolve(__dirname, "..", "icons");
+const rootDir = path.resolve(__dirname, "..", "..");
+const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
+const indexFile = path.resolve(rootDir, "index.js");
+const iconsDir = path.resolve(rootDir, "icons");
 
-const indexTemplateFile = path.resolve(__dirname, "templates", "index.js");
-const iconObjectTemplateFile = path.resolve(__dirname, "templates", "icon-object.js");
+const templatesDir = path.resolve(__dirname, "templates");
+const indexTemplateFile = path.resolve(templatesDir, "index.js");
+const iconObjectTemplateFile = path.resolve(templatesDir, "icon-object.js");
 
 const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, titleToSlug } = require("./utils.js");
+const { getIconSlug, titleToSlug } = require("../utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -45,7 +47,7 @@ function licenseToObject(license) {
   }
 
   if (license.url === undefined) {
-    license.url = `https://spdx.org/licenses/${license.type}.html`;
+    license.url = `https://spdx.org/licenses/${license.type}`;
   }
   return license;
 }
@@ -56,6 +58,7 @@ function iconToObject(icon) {
     escape(icon.svg),
     escape(icon.source),
     escape(icon.hex),
+    icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
 }
