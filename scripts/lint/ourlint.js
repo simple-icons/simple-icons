@@ -12,7 +12,8 @@ const { diffLinesUnified } = require("jest-diff");
 
 const UTF8 = "utf8";
 
-const dataFile = path.resolve( __dirname, "..", "_data", "simple-icons.json");
+const rootDir = path.resolve(__dirname, "..", "..");
+const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
 const data = require(dataFile);
 
 /**
@@ -25,17 +26,30 @@ const TESTS = {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
-        if (icon.title.localeCompare(prev.title) < 0) {
+        const compare = icon.title.localeCompare(prev.title);
+        if (compare < 0) {
           invalidEntries.push(icon);
+        } else if (compare === 0) {
+          if (prev.slug) {
+            if (!icon.slug || icon.slug.localeCompare(prev.slug) < 0) {
+              invalidEntries.push(icon);
+            }
+          }
         }
       }
       return invalidEntries;
+    };
+    const format = icon => {
+      if (icon.slug) {
+        return `${icon.title} (${icon.slug})`;
+      }
+      return icon.title;
     };
 
     const invalids = data.icons.reduce(collector, []);
     if (invalids.length) {
       return `Some icons aren't in alphabetical order:
-        ${invalids.map(icon => icon.title).join(", ")}`;
+        ${invalids.map(icon => format(icon)).join(", ")}`;
     }
   },
 
