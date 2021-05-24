@@ -9,25 +9,6 @@
 
     {% assign filename = icon.title %}
 
-    {% comment %} Replace a period by 'dot' {% endcomment %}
-    {% assign _splitFilename = filename | split: "" %}
-    {% if _splitFilename.first == "." %}
-        {% assign filename = filename | replace_first: ".", "dot-" %}
-    {% endif %}
-    {% if _splitFilename.last == "." %}
-        {% assign _filenameLenMin1 = filename | size | minus: 1 %}
-        {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-dot" %}
-    {% endif %}
-
-    {% comment %} Replace an ampersand by 'and' {% endcomment %}
-    {% if _splitFilename.first == "&" %}
-        {% assign filename = filename | replace_first: "&", "and-" %}
-    {% endif %}
-    {% if _splitFilename.last == "&" %}
-        {% assign _filenameLenMin1 = filename | size | minus: 1 %}
-        {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-and" %}
-    {% endif %}
-
     {% assign filename = filename | downcase %}
     {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" | replace: "ā", "a" | replace: "ă", "a" | replace: "ą", "a" %}
     {% assign filename = filename | replace: "ç", "c" | replace: "ć", "c" | replace: "ĉ", "c" | replace: "ċ", "c" | replace: "č", "c" %}
@@ -52,8 +33,8 @@
 
     {% assign searchTerm = filename %}
     {% assign filename = filename | replace: "+", "plus" %}
-    {% assign filename = filename | replace: ".", "-dot-" %}
-    {% assign filename = filename | replace: "&", "-and-" %}
+    {% assign filename = filename | replace: ".", "dot" %}
+    {% assign filename = filename | replace: "&", "and" %}
     {% assign filename = filename | replace: " ", "" | replace: "_", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
     {% if icon.slug %}
         {% assign filename = icon.slug %}
@@ -189,7 +170,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Simple Icons">
     <meta name="twitter:description" content="{{ iconCount }} Free SVG icons for popular brands.">
-    <meta name="twitter:site" content="@bathtype">
     <meta name="twitter:domain" content="Simple Icons">
     <meta name="twitter:image:src" content="https://simpleicons.org/images/og.png">
     <link rel="icon" type="image/x-icon" href="https://simpleicons.org/images/favicon.ico">
@@ -277,7 +257,7 @@
     <footer class="footer" role="contentinfo">
         <p>A <a href="https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md">CC0</a> project maintained by the <a href="https://github.com/simple-icons/simple-icons/graphs/contributors">Simple&nbsp;Icons&nbsp;Contributors</a>.<br>
             Use <a href="https://github.com/simple-icons/simple-icons">GitHub</a> for requests, corrections and contributions.</p>
-        <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&via=bathtype&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
+        <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
     </footer>
     <script type="text/javascript" src="site_script.js"></script>
 </body>
