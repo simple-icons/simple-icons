@@ -906,11 +906,6 @@
             "source": "https://www.autohotkey.com/"
         },
         {
-            "title": "Automatic",
-            "hex": "7D8084",
-            "source": "https://www.automatic.com/press"
-        },
-        {
             "title": "Automattic",
             "hex": "3499CD",
             "source": "https://automattic.com/press/brand-materials/"
@@ -1094,6 +1089,11 @@
             "source": "https://en.wikipedia.org/wiki/File:Bentley_logo_2.svg"
         },
         {
+            "title": "Betfair",
+            "hex": "FFB80B",
+            "source": "https://partnerships.betfair.com/"
+        },
+        {
             "title": "Big Cartel",
             "hex": "222222",
             "source": "https://www.bigcartel.com"
@@ -1112,11 +1112,6 @@
             "title": "Bilibili",
             "hex": "00A1D6",
             "source": "https://www.bilibili.com/"
-        },
-        {
-            "title": "Bing",
-            "hex": "258FFA",
-            "source": "https://www.bing.com/covid/"
         },
         {
             "title": "Bit",
@@ -1485,11 +1480,6 @@
             "title": "Cesium",
             "hex": "6CADDF",
             "source": "https://cesium.com/press/"
-        },
-        {
-            "title": "CEVO",
-            "hex": "1EABE2",
-            "source": "https://cevo.com/"
         },
         {
             "title": "Chai",
@@ -2908,11 +2898,6 @@
             }
         },
         {
-            "title": "FedRAMP",
-            "hex": "112E51",
-            "source": "https://www.fedramp.gov/assets/resources/documents/FedRAMP_Branding_Guidance.pdf"
-        },
-        {
             "title": "Feedly",
             "hex": "2BB24C",
             "source": "https://blog.feedly.com/"
@@ -3294,7 +3279,7 @@
         {
             "title": "Ghost",
             "hex": "15171A",
-            "source": "https://ghost.org/docs/logos/",
+            "source": "https://github.com/TryGhost/Admin/blob/e3e1fa3353767c3729b1658ad42cc35f883470c5/public/assets/icons/icon.svg",
             "guidelines": "https://ghost.org/docs/logos/"
         },
         {
@@ -3845,11 +3830,6 @@
             "source": "https://www.hackerrank.com/about-us/"
         },
         {
-            "title": "HackHands",
-            "hex": "00ACBD",
-            "source": "https://www.pluralsight.com/hackhands"
-        },
-        {
             "title": "Hackster",
             "hex": "2E9FE6",
             "source": "https://www.hackster.io/branding#logos",
@@ -4001,12 +3981,6 @@
             "slug": "hive_blockchain",
             "hex": "E31337",
             "source": "https://hive.io/brand/"
-        },
-        {
-            "title": "HockeyApp",
-            "hex": "009EE1",
-            "source": "https://hockeyapp.net/brand-guidelines/",
-            "guidelines": "https://hockeyapp.net/brand-guidelines/"
         },
         {
             "title": "Home Assistant",
@@ -4218,12 +4192,6 @@
             "title": "ICQ",
             "hex": "24FF00",
             "source": "https://commons.wikimedia.org/wiki/File:ICQNewlogo.svg"
-        },
-        {
-            "title": "iDEAL",
-            "hex": "CC0066",
-            "source": "https://www.ideal.nl/cms/files/Manual_iDEAL_logo.pdf",
-            "guidelines": "https://www.ideal.nl/cms/files/Manual_iDEAL_logo.pdf"
         },
         {
             "title": "IEEE",
@@ -5606,6 +5574,11 @@
             "source": "https://developer.microsoft.com"
         },
         {
+            "title": "Microsoft Bing",
+            "hex": "258FFA",
+            "source": "https://www.bing.com/covid/"
+        },
+        {
             "title": "Microsoft Edge",
             "hex": "0078D7",
             "source": "https://support.microsoft.com/en-us/help/17171/microsoft-edge-get-to-know"
@@ -6152,7 +6125,7 @@
         },
         {
             "title": "Nubank",
-            "hex": "8A05BE",
+            "hex": "820AD1",
             "source": "https://nubank.com.br/en/press/"
         },
         {
@@ -6951,7 +6924,6 @@
         },
         {
             "title": "Pop!_OS",
-            "slug": "pop_os",
             "hex": "48B9C7",
             "source": "https://pop.system76.com/"
         },
@@ -7546,8 +7518,7 @@
             "source": "https://seeklogo.com/vector-logo/184137/renren-inc"
         },
         {
-            "title": "repl.it",
-            "slug": "repl-dot-it",
+            "title": "Replit",
             "hex": "667881",
             "source": "https://repl.it/"
         },
@@ -8214,6 +8185,12 @@
             "source": "https://www.smartthings.com/press-kit"
         },
         {
+            "title": "smash.gg",
+            "hex": "CB333B",
+            "source": "https://help.smash.gg/en/articles/1716774-smash-gg-brand-guidelines",
+            "guidelines": "https://help.smash.gg/en/articles/1716774-smash-gg-brand-guidelines"
+        },
+        {
             "title": "Smashing Magazine",
             "hex": "E85C33",
             "source": "https://www.smashingmagazine.com/"
@@ -8435,11 +8412,6 @@
             "title": "Spring Boot",
             "hex": "6DB33F",
             "source": "https://spring.io/projects"
-        },
-        {
-            "title": "Sprint",
-            "hex": "FFCE0A",
-            "source": "https://www.sprint.com/"
         },
         {
             "title": "Spyder IDE",
@@ -9056,6 +9028,11 @@
             "source": "https://www.tide.co/newsroom/"
         },
         {
+            "title": "TietoEVRY",
+            "hex": "063752",
+            "source": "https://www.tietoevry.com/en/about-us/our-company/"
+        },
+        {
             "title": "TikTok",
             "hex": "000000",
             "source": "https://tiktok.com"
@@ -9577,8 +9554,8 @@
         },
         {
             "title": "Viadeo",
-            "hex": "F88D2D",
-            "source": "http://corporate.viadeo.com/en/media/resources"
+            "hex": "F07355",
+            "source": "https://viadeo.journaldunet.com/"
         },
         {
             "title": "Viber",
@@ -10177,11 +10154,6 @@
             "title": "Yammer",
             "hex": "106EBE",
             "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
-        },
-        {
-            "title": "Yandex",
-            "hex": "FF0000",
-            "source": "https://yandex.com/company/general_info/logotype_rules"
         },
         {
             "title": "Yarn",
