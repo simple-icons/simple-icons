@@ -9,42 +9,36 @@
 
     {% assign filename = icon.title %}
 
-    {% comment %} Replace a period by 'dot' {% endcomment %}
-    {% assign _splitFilename = filename | split: "" %}
-    {% if _splitFilename.first == "." %}
-        {% assign filename = filename | replace_first: ".", "dot-" %}
-    {% endif %}
-    {% if _splitFilename.last == "." %}
-        {% assign _filenameLenMin1 = filename | size | minus: 1 %}
-        {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-dot" %}
-    {% endif %}
-
-    {% comment %} Replace an ampersand by 'and' {% endcomment %}
-    {% if _splitFilename.first == "&" %}
-        {% assign filename = filename | replace_first: "&", "and-" %}
-    {% endif %}
-    {% if _splitFilename.last == "&" %}
-        {% assign _filenameLenMin1 = filename | size | minus: 1 %}
-        {% assign filename = filename | slice: 0, _filenameLenMin1 | append: "-and" %}
-    {% endif %}
-
     {% assign filename = filename | downcase %}
-    {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" %}
-    {% assign filename = filename | replace: "ç", "c" | replace: "č", "c" | replace: "ć", "c" %}
-    {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" %}
-    {% assign filename = filename | replace: "ì", "i" | replace: "í", "i" | replace: "î", "i" | replace: "ï", "i" %}
-    {% assign filename = filename | replace: "ñ", "n" | replace: "ň", "n" | replace: "ń", "n" %}
-    {% assign filename = filename | replace: "ò", "o" | replace: "ó", "o" | replace: "ô", "o" | replace: "õ", "o" | replace: "ö", "o" %}
-    {% assign filename = filename | replace: "š", "s" | replace: "ś", "s" %}
-    {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" %}
-    {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" %}
-    {% assign filename = filename | replace: "ž", "z" | replace: "ź", "z" %}
+    {% assign filename = filename | replace: "à", "a" | replace: "á", "a" | replace: "â", "a" | replace: "ã", "a" | replace: "ä", "a" | replace: "ā", "a" | replace: "ă", "a" | replace: "ą", "a" %}
+    {% assign filename = filename | replace: "ç", "c" | replace: "ć", "c" | replace: "ĉ", "c" | replace: "ċ", "c" | replace: "č", "c" %}
+    {% assign filename = filename | replace: "ď", "d" | replace: "đ", "d" %}
+    {% assign filename = filename | replace: "è", "e" | replace: "é", "e" | replace: "ê", "e" | replace: "ë", "e" | replace: "ē", "e" | replace: "ĕ", "e" | replace: "ė", "e" | replace: "ę", "e" | replace: "ě", "e" %}
+    {% assign filename = filename | replace: "ĝ", "g" | replace: "ğ", "g" | replace: "ġ", "g" | replace: "ģ", "g" %}
+    {% assign filename = filename | replace: "ĥ", "h" | replace: "ħ", "h" %}
+    {% assign filename = filename | replace: "ì", "i" | replace: "í", "i" | replace: "î", "i" | replace: "ï", "i" | replace: "ĩ", "i" | replace: "ī", "i" | replace: "ĭ", "i" | replace: "į", "i" | replace: "ı", "i" %}
+    {% assign filename = filename | replace: "ĵ", "j" %}
+    {% assign filename = filename | replace: "ķ", "k" | replace: "ĸ", "k" %}
+    {% assign filename = filename | replace: "ĺ", "l" | replace: "ļ", "l" | replace: "ľ", "l" | replace: "ŀ", "l" | replace: "ł", "l" %}
+    {% assign filename = filename | replace: "ñ", "n" | replace: "ń", "n" | replace: "ņ", "n" | replace: "ň", "n" %}
+    {% assign filename = filename | replace: "ò", "o" | replace: "ó", "o" | replace: "ô", "o" | replace: "õ", "o" | replace: "ö", "o" | replace: "ō", "o" | replace: "ŏ", "o" | replace: "ő", "o" %}
+    {% assign filename = filename | replace: "ŕ", "r" | replace: "ŗ", "r" | replace: "ř", "r" %}
+    {% assign filename = filename | replace: "ś", "s" | replace: "ŝ", "s" | replace: "ş", "s" | replace: "š", "s" %}
+    {% assign filename = filename | replace: "ß", "ss" %}
+    {% assign filename = filename | replace: "ţ", "t" | replace: "ť", "t" | replace: "ŧ", "t" %}
+    {% assign filename = filename | replace: "ù", "u" | replace: "ú", "u" | replace: "û", "u" | replace: "ü", "u" | replace: "ũ", "u" | replace: "ū", "u" | replace: "ŭ", "u" | replace: "ů", "u" | replace: "ű", "u" | replace: "ų", "u" %}
+    {% assign filename = filename | replace: "ŵ", "w" %}
+    {% assign filename = filename | replace: "ý", "y" | replace: "ÿ", "y" | replace: "ŷ", "y" %}
+    {% assign filename = filename | replace: "ź", "z" | replace: "ż", "z" | replace: "ž", "z" %}
 
     {% assign searchTerm = filename %}
     {% assign filename = filename | replace: "+", "plus" %}
-    {% assign filename = filename | replace: ".", "-dot-" %}
-    {% assign filename = filename | replace: "&", "-and-" %}
-    {% assign filename = filename | replace: " ", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
+    {% assign filename = filename | replace: ".", "dot" %}
+    {% assign filename = filename | replace: "&", "and" %}
+    {% assign filename = filename | replace: " ", "" | replace: "_", "" | replace: "!", "" | replace: ":", "" | replace: "’", "" | replace: "'", "" | replace: "°", "" %}
+    {% if icon.slug %}
+        {% assign filename = icon.slug %}
+    {% endif %}
 
     {% assign hex = icon.hex %}
     {% assign hexCharacter1 = hex | slice: 0, 1 %}
@@ -176,7 +170,6 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Simple Icons">
     <meta name="twitter:description" content="{{ iconCount }} Free SVG icons for popular brands.">
-    <meta name="twitter:site" content="@bathtype">
     <meta name="twitter:domain" content="Simple Icons">
     <meta name="twitter:image:src" content="https://simpleicons.org/images/og.png">
     <link rel="icon" type="image/x-icon" href="https://simpleicons.org/images/favicon.ico">
@@ -185,15 +178,15 @@
     <link rel="mask-icon" href="https://simpleicons.org/images/logo.svg" color="#111111">
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-100751516-2', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-100751516-2', 'auto');
+        ga('send', 'pageview');
 
-      var icons = [{{ allIconNames }}];
+        var icons = [{{ allIconNames }}];
     </script>
 </head>
 <body class="order-by-color">
@@ -205,6 +198,7 @@
             <li class="navbar__nav-item"><a href="https://www.npmjs.com/package/simple-icons">NPM</a></li>
             <li class="navbar__nav-item"><a href="https://packagist.org/packages/simple-icons/simple-icons">Packagist</a></li>
         </ul>
+        <p class="redesign-banner">We're redesigning the website! Please <a href="https://simple-icons.github.io/simple-icons-website/">Check it out</a> and <a href="https://github.com/simple-icons/simple-icons/discussions/4865">Share your feedback</a>. <span>Hide this message <button id="hide-feedback-request-once">Once</button> or <button id="hide-feedback-request">Always</button> | <button id="redirect-to-redesign">Redirect automatically</button></span></p>
     </header>
     <main role="main">
         <p class="hero">{{ iconCount }} Free <abbr title="Scalable Vector Graphic">SVG</abbr> icons for popular&nbsp;brands</p>
@@ -263,7 +257,7 @@
     <footer class="footer" role="contentinfo">
         <p>A <a href="https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md">CC0</a> project maintained by the <a href="https://github.com/simple-icons/simple-icons/graphs/contributors">Simple&nbsp;Icons&nbsp;Contributors</a>.<br>
             Use <a href="https://github.com/simple-icons/simple-icons">GitHub</a> for requests, corrections and contributions.</p>
-        <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&via=bathtype&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
+        <a class="share-button" href="https://twitter.com/share?url=https%3A%2F%2Fsimpleicons.org&text=Simple%20Icons%3A%20free%20SVG%20icons%20for%20popular%20brands.">Share this on Twitter!</a>
     </footer>
     <script type="text/javascript" src="site_script.js"></script>
 </body>
