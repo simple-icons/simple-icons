@@ -6,6 +6,7 @@
 # Don't diff machine generated files
 package-lock.json  -diff
 Gemfile.lock       -diff
+slugs.md           -diff
 
 # Treat images as binary
 *.ico              binary
@@ -14,5 +15,4 @@ Gemfile.lock       -diff
 # Don't export/archive these files
 .github            export-ignore
 .gitpod.yml        export-ignore
-.travis.yml        export-ignore
 CNAME              export-ignore

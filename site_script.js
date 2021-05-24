@@ -68,16 +68,16 @@
 
   function normalizeSearchTerm(value) {
     return value.toLowerCase()
-      .replace(/à|á|â|ã|ä/g, "a")
-      .replace(/ç|č|ć/g, "c")
-      .replace(/è|é|ê|ë/g, "e")
-      .replace(/ì|í|î|ï/g, "i")
-      .replace(/ñ|ň|ń/g, "n")
-      .replace(/ò|ó|ô|õ|ö/g, "o")
-      .replace(/š|ś/g, "s")
-      .replace(/ù|ú|û|ü/g, "u")
-      .replace(/ý|ÿ/g, "y")
-      .replace(/ž|ź/g, "z");
+      .replace(/đ/g, "d")
+      .replace(/ħ/g, "h")
+      .replace(/ı/g, "i")
+      .replace(/ĸ/g, "k")
+      .replace(/ŀ/g, "l")
+      .replace(/ł/g, "l")
+      .replace(/ß/g, "ss")
+      .replace(/ŧ/g, "t")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
   }
 
   function search(value) {
@@ -191,4 +191,59 @@
   $orderByRelevance.addEventListener('click', function() {
     selectOrdering($orderByRelevance);
   });
+
+  /* Redesign */
+
+  var $banner = document.querySelector('.redesign-banner'),
+      $redirectAutomatically = document.getElementById('redirect-to-redesign'),
+      $hideOnce = document.getElementById('hide-feedback-request-once'),
+      $hideAlways = document.getElementById('hide-feedback-request');
+
+  var redesignUrl = 'https://simple-icons.github.io/simple-icons-website/',
+      redesignRootDomain = 'simple-icons.github.io',
+      hideBannerAlwaysIdentifier = 'hide-banner',
+      redirectAutomaticallyIdentifier = 'redirect-to-redesign';
+
+  $redirectAutomatically.addEventListener('click', function() {
+    var redirect = true;
+    if (localStorage) {
+      var currentVal = localStorage.getItem(redirectAutomaticallyIdentifier);
+      if (currentVal === 'true') {
+        redirect = false;
+      }
+
+      localStorage.setItem(redirectAutomaticallyIdentifier, redirect);
+    }
+
+    if (redirect) {
+      window.location.replace(redesignUrl);
+    } else {
+      $redirectAutomatically.innerHTML = "Redirect automatically";
+    }
+  });
+  $hideOnce.addEventListener('click', function () {
+    $banner.classList.add('hidden');
+  });
+  $hideAlways.addEventListener('click', function () {
+    if (localStorage) {
+      localStorage.setItem(hideBannerAlwaysIdentifier, true);
+    }
+
+    $banner.classList.add('hidden');
+  });
+
+  if (localStorage) {
+    var redirect = localStorage.getItem(redirectAutomaticallyIdentifier);
+    if (redirect === 'true') {
+      $redirectAutomatically.innerHTML = "Disable redirect";
+      if (document.referrer.split('/')[2] !== redesignRootDomain) {
+        window.location.replace(redesignUrl);
+      }
+    }
+
+    var hide = localStorage.getItem(hideBannerAlwaysIdentifier);
+    if (hide) {
+      $banner.classList.add('hidden');
+    }
+  }
 })( document );
