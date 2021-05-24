@@ -1,4 +1,4 @@
-name: Remove Outdated Labels
+name: Remove outdated labels
 on:
   pull_request_target:
     types:
@@ -25,6 +25,7 @@ jobs:
             out of scope
             pending
             won't add
+
   remove-closed-pr-labels:
     name: Remove closed pull request labels
     if: github.event_name == 'pull_request_target' && (! github.event.pull_request.merged)
@@ -36,6 +37,7 @@ jobs:
           labels: |
             in discussion
             pending
+
   remove-closed-issue-labels:
     name: Remove closed issue labels
     if: github.event.issue.state == 'closed'
