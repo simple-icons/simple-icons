@@ -7,19 +7,19 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
    - Using SSH
 
-     ```bash
+     ```shell
      git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
      ```
 
    - Using HTTPS
 
-     ```bash
+     ```shell
      git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
      ```
 
    - Using GitHub CLI
 
-     ```bash
+     ```shell
      gh repo clone simple-icons/simple-icons -- --filter=tree:0
      ```
 
@@ -387,29 +387,36 @@ Alternatively, you can build and run the website in a readily configured online 
 
 ## Using Docker
 
-You can build a Docker image for this project from the Dockerfile by running:
+You can build a Docker image for this project which can be used as a development environment and allows you to run SVGO safely. First, build the Docker image for simple-icons (if you haven't yet):
 
-```bash
-# Build the Docker image for simple-icons (if you haven't yet)
-$ docker build . -t simple-icons
+```shell
+docker build . -t simple-icons
+```
 
-# Start a Docker container for simple-icons and attach to it
-$ docker run -it --rm --entrypoint "/bin/ash" simple-icons
+Then, start a Docker container for simple-icons and attach to it:
+
+```shell
+docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
 
 ### Jekyll Server using Docker
 
-To use a Docker container to run the Jekyll server for the website, run:
+You can use a Docker container to run the Jekyll server for the website. To do this, simply start a container running `jekyll serve` in the background:
 
-```bash
-# Start a container running `jekyll serve` in the background
-$ docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
+```shell
+docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
+```
 
-# Inspect the server logs
-$ docker logs simple-icons-server
+It may take a while for the server to start. You can inspect the server logs by running:
 
-# Stop the server (and delete the container)
-$ docker stop simple-icons-server
+```shell
+docker logs simple-icons-server
+```
+
+To stop the server simply stop the docker container using:
+
+```shell
+docker stop simple-icons-server
 ```
 
 ---
