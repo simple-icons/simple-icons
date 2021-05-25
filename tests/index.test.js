@@ -60,7 +60,7 @@ icons.forEach(icon => {
   });
 
   test(`${icon.title} can be found by it's slug`, () => {
-    const found = simpleIcons.get(slug);
+    const found = simpleIcons.Get(slug);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
     expect(found.hex).toEqual(icon.hex);
