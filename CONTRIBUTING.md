@@ -34,6 +34,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
 * Is of a _popular_ brand:
     - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
+        - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
     - For GitHub projects, the amount of "stars" should be above 5k.
     - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
@@ -83,7 +84,8 @@ Working with an SVG version of the logo is best. In the absence of an SVG versio
 If the icon includes a (registered) trademark icon we follow the guidelines below to decide whether to include the symbol or not:
 
 * If brand guidelines explicitly require including the symbol, it must be included.
-* If the symbol is incorporated into the design of the logo (e.g. [Intel](https://github.com/simple-icons/simple-icons/blob/develop/icons/intel.svg)), it must be included.
+* If the the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
+* If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups](https://github.com/simple-icons/simple-icons/blob/develop/icons/chupachups.svg)), it must be included.
 * If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
 * If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
 * If there is no explicit requirement that a symbol must be included, it must not be included.
@@ -285,6 +287,67 @@ If the SVG is sourced from:
 - **Wikipedia**: For an SVG from Wikipedia/Wikimedia the source URL should link to the logo file's page on the relevant site, and not the brand's Wikipedia pages. For example, [this is the link for AmericanExpress](https://commons.wikimedia.org/wiki/File:American_Express_logo.svg).
 
 In general, make sure the URL does not contain any tracking identifiers.
+
+#### Aliases
+
+Lastly, we aim to provide aliases of three types for various reasons. Each type of alias and its purpose can be found below. If you're unsure, you can mention an alias you're considering in your Pull Request so it can be discussed.
+
+##### Also Known As
+
+We collect "also known as" names to make it easier to find brands that are known by different names or by their abbreviation/full name. This does not include localized names, which are recorded separately. To add an "also known as" name you add the following to the icon data:
+
+```json
+{
+    "title": "the original title",
+    "aliases": {
+        "aka": [
+            "tot",
+            "thetitle"
+        ]
+    }
+}
+```
+
+Where the string is **different** from the original title as well as all other strings in the list.
+
+##### Duplicates
+
+We collect the names of duplicates, brands that use the same icon but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
+
+```json5
+{
+    "title": "the original title",
+    "hex": "123456",
+    "aliases": {
+        "dup": [
+            {
+                "title": "the duplicate's title",
+                "hex": "654321", // Only if different from original's color
+                "guidelines": "..." // Only if different from original's guidelines
+            }
+        ]
+    }
+}
+```
+
+Where the nested `title` is the name of the duplicate brand. The other fields, `hex` and `guidelines`, are only provided if they differ from the original.
+
+##### Localization
+
+We collect localized names to make it possible to find the brand by it's local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
+
+```json
+{
+    "title": "the original title",
+    "aliases": {
+        "loc": {
+            "en-US": "A different title"
+        }
+    }
+}
+```
+
+Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and `title` is a **different** title from the original title.
 
 ### 8. Create a Pull Request
 
