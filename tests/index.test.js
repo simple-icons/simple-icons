@@ -59,8 +59,16 @@ icons.forEach(icon => {
     }
   });
 
-  test(`${icon.title} can be found by it's slug`, () => {
+  test(`${icon.title} can be 'Get' by it's slug`, () => {
     const found = simpleIcons.Get(slug);
+    expect(found).toBeDefined();
+    expect(found.title).toEqual(icon.title);
+    expect(found.hex).toEqual(icon.hex);
+    expect(found.source).toEqual(icon.source);
+  });
+
+  test(`${icon.title} can be 'get' by it's slug`, () => {
+    const found = simpleIcons.get(slug);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
     expect(found.hex).toEqual(icon.hex);
