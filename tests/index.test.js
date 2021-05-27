@@ -59,7 +59,7 @@ icons.forEach(icon => {
     }
   });
 
-  test(`${icon.title} can be 'Get' by it's slug`, () => {
+  test(`'Get' ${icon.title} by its slug`, () => {
     const found = simpleIcons.Get(slug);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
@@ -67,7 +67,7 @@ icons.forEach(icon => {
     expect(found.source).toEqual(icon.source);
   });
 
-  test(`${icon.title} can be 'get' by it's slug`, () => {
+  test(`'get' ${icon.title} by its slug`, () => {
     const found = simpleIcons.get(slug);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
