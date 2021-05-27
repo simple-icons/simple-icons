@@ -200,6 +200,7 @@
       $hideAlways = document.getElementById('hide-feedback-request');
 
   var redesignUrl = 'https://simple-icons.github.io/simple-icons-website/',
+      redesignRootDomain = 'simple-icons.github.io',
       hideBannerAlwaysIdentifier = 'hide-banner',
       redirectAutomaticallyIdentifier = 'redirect-to-redesign';
 
@@ -235,7 +236,7 @@
     var redirect = localStorage.getItem(redirectAutomaticallyIdentifier);
     if (redirect === 'true') {
       $redirectAutomatically.innerHTML = "Disable redirect";
-      if (document.referrer !== redesignUrl) {
+      if (document.referrer.split('/')[2] !== redesignRootDomain) {
         window.location.replace(redesignUrl);
       }
     }
