@@ -351,6 +351,31 @@ a.share-button {
   padding: 1.5rem 0 1.5rem 1.5rem;
 }
 
+.redesign-banner {
+  background-color: #565f63;
+  color: #FFF;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+}
+.redesign-banner a {
+  color: #0096ee;
+}
+.redesign-banner a:focus, .redesign-banner a:hover,
+.redesign-banner button:focus, .redesign-banner button:hover {
+  text-decoration: underline;
+}
+.redesign-banner span {
+  float: right
+}
+.redesign-banner button {
+  border: none;
+  background-color: transparent;
+  color: #0096ee;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
 .hidden {
   display: none;
 }
