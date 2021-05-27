@@ -1,4 +1,4 @@
-name: Publish
+name: Publish Releases
 on:
   push:
     branches:
@@ -47,10 +47,9 @@ jobs:
       - name: Get release title and body
         id: release
         run: |
-          COMMIT_MSG="$(printf "${{ steps.commit.outputs.git-message }}")"
-          RELEASE_TITLE="$(printf "$COMMIT_MSG" | head -n 1)"
+          RELEASE_TITLE=$(echo "${{ steps.commit.outputs.git-message }}" | head -n 1)
           echo "::set-output name=title::$RELEASE_TITLE"
-          RELEASE_BODY="$(printf "$COMMIT_MSG" | tail -n +3)"
+          RELEASE_BODY=$(echo "${{ steps.commit.outputs.git-message }}" | tail -n $(expr $(echo "${{ steps.commit.outputs.git-message }}" | wc -l) - 1))
           echo "::set-output name=body::$RELEASE_BODY"
       - name: Get release version
         id: get-version
@@ -78,6 +77,17 @@ jobs:
       - name: Trigger simple-icons-font release
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.SIMPLE_ICONS_FONT_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
+  website:
+    name: Trigger simple-icons-website update
+    needs: npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger simple-icons-website update
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -d '{"ref":"master"}' \
+            https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches
