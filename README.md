@@ -53,10 +53,10 @@ The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]
 const simpleIcons = require('simple-icons');
 
 // Get a specific icon by its slug as:
-simpleIcons.get('[ICON SLUG]');
+simpleIcons.Get('[ICON SLUG]');
 
 // For example:
-const icon = simpleIcons.get('simpleicons');
+const icon = simpleIcons.Get('simpleicons');
 
 ```
 
@@ -104,7 +104,7 @@ This is useful if you want to do a computation on every icon:
 const simpleIcons = require('simple-icons');
 
 for (const title in simpleIcons) {
-    const icon = simpleIcons.get(title);
+    const icon = simpleIcons.Get(title);
     // do stuff
 }
 ```
