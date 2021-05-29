@@ -15,6 +15,8 @@ Over 1500 Free SVG icons for popular brands. See them all on one page at <a href
 
 ## Usage
 
+> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
+
 ### General Usage
 
 Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the icon you want, and the download should start automatically.
@@ -51,10 +53,10 @@ The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]
 const simpleIcons = require('simple-icons');
 
 // Get a specific icon by its slug as:
-// simpleIcons.get('[ICON SLUG]');
+// simpleIcons.Get('[ICON SLUG]');
 
 // For example:
-const icon = simpleIcons.get('simpleicons');
+const icon = simpleIcons.Get('simpleicons');
 
 ```
 
@@ -101,7 +103,7 @@ This is useful if you want to do a computation on every icon:
 const simpleIcons = require('simple-icons');
 
 for (const title in simpleIcons) {
-    const icon = simpleIcons.get(title);
+    const icon = simpleIcons.Get(title);
     // do stuff
 }
 ```
