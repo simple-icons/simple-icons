@@ -27,7 +27,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
-* [Building the Website](#building-locally)
 * [Using Docker](#using-docker)
 
 ## Requesting an Icon
@@ -358,27 +357,12 @@ Once you've completed the previous steps, create a pull request to merge your ed
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
-## Building Website Locally
-
-* Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Bundler](https://bundler.io/) installed (using `$ gem install bundler`).
-* Set your local gems installation location for the simple-icons website using `$ bundle config set path 'vendor/bundle'`.
-* Install dependencies using `$ bundle install`.
-* Build and run the website locally using `$ bundle exec jekyll serve`.
-* Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
-
 ## Testing Package Locally
 
 * Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
 * Install the dependencies using `$ npm install`.
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
-
-## Building in Your Browser
-
-Alternatively, you can build and run the website in a readily configured online workspace:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
 
 ## Using Docker
 
@@ -390,21 +374,6 @@ $ docker build . -t simple-icons
 
 # Start a Docker container for simple-icons and attach to it
 $ docker run -it --rm --entrypoint "/bin/ash" simple-icons
-```
-
-### Jekyll Server using Docker
-
-To use a Docker container to run the Jekyll server for the website, run:
-
-```bash
-# Start a container running `jekyll serve` in the background
-$ docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
-
-# Inspect the server logs
-$ docker logs simple-icons-server
-
-# Stop the server (and delete the container)
-$ docker stop simple-icons-server
 ```
 
 ---
