@@ -4000,8 +4000,8 @@
         {
             "title": "Hulu",
             "hex": "1CE783",
-            "source": "https://press.hulu.com/branding/",
-            "guidelines": "https://press.hulu.com/branding/"
+            "source": "https://thisis.hulu.com/",
+            "guidelines": "https://thisis.hulu.com/"
         },
         {
             "title": "Humble Bundle",
@@ -5458,8 +5458,8 @@
         },
         {
             "title": "Microsoft Azure",
-            "hex": "0089D6",
-            "source": "https://developer.microsoft.com"
+            "hex": "0078D4",
+            "source": "https://github.com/microsoft/vscode-azureresourcegroups/blob/0a06362e82170fd7f8dc2496286825b1a69cc42b/resources/azure.svg"
         },
         {
             "title": "Microsoft Bing",
@@ -9566,6 +9566,11 @@
             "title": "Weasyl",
             "hex": "990000",
             "source": "https://www.weasyl.com/"
+        },
+        {
+            "title": "Web3.js",
+            "hex": "F16822",
+            "source": "https://github.com/ChainSafe/web3.js/blob/fdbda4958cbdbaebe8ed5ea59183582b07fac254/assets/logo/web3js.svg"
         },
         {
             "title": "WebAssembly",
