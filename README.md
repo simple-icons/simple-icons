@@ -15,6 +15,8 @@ Over 1500 Free SVG icons for popular brands. See them all on one page at <a href
 
 ## Usage
 
+> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
+
 ### General Usage
 
 Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the icon you want, and the download should start automatically.
