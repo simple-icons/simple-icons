@@ -7,16 +7,23 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 1. Fork this repository
 1. (Optional) Clone the fork
 
-   ```bash
-   # Using SSH
-   git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+   - Using SSH
 
-   # Using HTTPS
-   git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+     ```shell
+     git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+     ```
 
-   # Using GitHub CLI
-   gh repo clone simple-icons/simple-icons -- --filter=tree:0
-   ```
+   - Using HTTPS
+
+     ```shell
+     git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+     ```
+
+   - Using GitHub CLI
+
+     ```shell
+     gh repo clone simple-icons/simple-icons -- --filter=tree:0
+     ```
 
 1. Create a new branch from the latest `develop`
 1. Start hacking on the new branch
@@ -366,14 +373,16 @@ If you have an affiliation to the brand you contributing that allows you to spea
 
 ## Using Docker
 
-You can build a Docker image for this project from the Dockerfile by running:
+You can build a Docker image for this project which can be used as a development environment and allows you to run SVGO safely. First, build the Docker image for simple-icons (if you haven't yet):
 
-```bash
-# Build the Docker image for simple-icons (if you haven't yet)
-$ docker build . -t simple-icons
+```shell
+docker build . -t simple-icons
+```
 
-# Start a Docker container for simple-icons and attach to it
-$ docker run -it --rm --entrypoint "/bin/ash" simple-icons
+Then, start a Docker container for simple-icons and attach to it:
+
+```shell
+docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
 
 ---
