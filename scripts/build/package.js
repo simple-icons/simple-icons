@@ -34,12 +34,7 @@ function escape(value) {
   return value.replace(/(?<!\\)'/g, "\\'");
 }
 function iconToKeyValue(icon) {
-  let iconName = escape(icon.title);
-  if (icon.slug !== titleToSlug(icon.title)) {
-    iconName = icon.slug;
-  }
-
-  return `'${iconName}':${iconToObject(icon)}`;
+  return `'${icon.slug}':${iconToObject(icon)}`;
 }
 function licenseToObject(license) {
   if (license === undefined) {

@@ -51,31 +51,11 @@ The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]
 const simpleIcons = require('simple-icons');
 
 // Get a specific icon by its slug as:
-simpleIcons.get('[ICON SLUG]');
+simpleIcons.Get('[ICON SLUG]');
 
 // For example:
-const icon = simpleIcons.get('simpleicons');
+const icon = simpleIcons.Get('simpleicons');
 
-console.log(icon);
-
-/*
-{
-    title: 'Simple Icons',
-    slug: 'simpleicons',
-    hex: '111111',
-    source: 'https://simpleicons.org/',
-    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...',
-    guidelines: 'https://simpleicons.org/styleguide',
-    license: {
-        type: '...',
-        url: 'https://example.com/'
-    }
-}
-
-NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
-NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
-*/
 ```
 
 Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
@@ -87,6 +67,11 @@ require('simple-icons/icons/[ICON SLUG]');
 
 // For example:
 const icon = require('simple-icons/icons/simpleicons');
+```
+
+Either method will return an icon object:
+
+```javascript
 
 console.log(icon);
 
@@ -105,8 +90,8 @@ console.log(icon);
     }
 }
 
-NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines data for the icon.
-NOTE: the license may be `undefined` if there is no license data for the icon.
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines for the icon.
+NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
 
@@ -117,7 +102,7 @@ This is useful if you want to do a computation on every icon:
 const simpleIcons = require('simple-icons');
 
 for (const title in simpleIcons) {
-    const icon = simpleIcons.get(title);
+    const icon = simpleIcons.Get(title);
     // do stuff
 }
 ```
