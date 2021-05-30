@@ -6,7 +6,6 @@ const svgpath = require("svgpath");
 const { svgPathBbox } = require("svg-path-bbox");
 const parsePath = require("svg-path-segments");
 
-const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
@@ -95,7 +94,7 @@ function ignoreIcon(linterName, path, $) {
     iconIgnored[linterName] = {};
   }
 
-  const title = $.find("title").text().replace(/(.*) icon/, '$1');
+  const title = $.find("title").text();
   const iconName = htmlFriendlyToTitle(title);
 
   iconIgnored[linterName][path] = iconName;
@@ -132,17 +131,10 @@ module.exports = {
             reporter.name = "icon-title";
 
             const iconTitleText = $.find("title").text();
-            if (!titleRegexp.test(iconTitleText)) {
-              reporter.error("<title> should follow the format \"[ICON_NAME] icon\"");
-            } else {
-              const titleMatch = iconTitleText.match(titleRegexp);
-              // titleMatch = [ "[ICON_NAME] icon", "[ICON_NAME]" ]
-              const rawIconName = titleMatch[1];
-              const iconName = htmlFriendlyToTitle(rawIconName);
-              const icon = data.icons.find(icon => icon.title === iconName);
-              if (icon === undefined) {
-                reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
-              }
+            const iconName = htmlFriendlyToTitle(iconTitleText);
+            const iconExists = data.icons.some(icon => icon.title === iconName);
+            if (!iconExists) {
+              reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
             }
           },
           function(reporter, $, ast) {
@@ -369,12 +361,20 @@ module.exports = {
                     cmd = seg[0],
                     nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
-                if ('LM'.includes(cmd)) {
+                if (cmd === 'L') {
                   currAbsCoord[0] = seg[1];
                   currAbsCoord[1] = seg[2];
-                } else if ('lm'.includes(cmd)) {
+                } else if (cmd === 'l') {
                   currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
                   currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                } else if (cmd === 'm') {
+                  currAbsCoord[0] = (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  currAbsCoord[1] = (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                  startPoint = undefined;
+                } else if (cmd === 'M') {
+                  currAbsCoord[0] = seg[1];
+                  currAbsCoord[1] = seg[2];
+                  startPoint = undefined;
                 } else if (cmd === 'H') {
                   currAbsCoord[0] = seg[1];
                 } else if (cmd === 'h') {
