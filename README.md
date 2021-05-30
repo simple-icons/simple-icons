@@ -102,8 +102,8 @@ This is useful if you want to do a computation on every icon:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-for (const title in simpleIcons) {
-    const icon = simpleIcons.Get(title);
+for (const iconSlug in simpleIcons) {
+    const icon = simpleIcons.Get(iconSlug);
     // do stuff
 }
 ```
