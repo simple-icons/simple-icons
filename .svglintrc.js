@@ -3,7 +3,7 @@ const fs = require('fs');
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 const svgpath = require("svgpath");
-const { svgPathBbox } = require("svg-path-bbox");
+const svgPathBbox = require("svg-path-bbox");
 const parsePath = require("svg-path-segments");
 
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
