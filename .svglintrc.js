@@ -177,7 +177,7 @@ module.exports = {
               if (precisionMax > iconMaxFloatPrecision) {
                 let errorMsg = `found ${precisionMax} decimals in segment "${iconPath.substring(segment.start, segment.end)}"`;
                 if (segment.chained) {
-                  let readableChain = iconPath.substring(segment.chainStart, chainEnd);
+                  let readableChain = iconPath.substring(segment.chainStart, segment.chainEnd);
                   if (readableChain.length > 20) {
                     readableChain = `${readableChain.substring(0, 20)}...`;
                   }
