@@ -2408,7 +2408,12 @@
         {
             "title": "Dungeons & Dragons",
             "hex": "ed1c24",
-            "source": "https://dnd.wizards.com/articles/features/basicrules"
+            "source": "https://dnd.wizards.com/articles/features/basicrules",
+            "aliases": {
+                "aka": [
+                    "D&D"
+                ]
+            }
         },
         {
             "title": "Dunked",
