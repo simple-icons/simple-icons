@@ -327,6 +327,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clockify` | `clockify` |
 | `Clojure` | `clojure` |
 | `Cloud 66` | `cloud66` |
+| `Cloud Foundry` | `cf` |
 | `CloudBees` | `cloudbees` |
 | `CloudCannon` | `cloudcannon` |
 | `Cloudera` | `cloudera` |
