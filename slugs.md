@@ -375,6 +375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Conda-Forge` | `condaforge` |
 | `Conekta` | `conekta` |
 | `Confluence` | `confluence` |
+| `Construct 3` | `construct3` |
 | `Consul` | `consul` |
 | `Contactless Payment` | `contactlesspayment` |
 | `Contentful` | `contentful` |
@@ -1211,6 +1212,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OYO` | `oyo` |
 | `p5.js` | `p5dotjs` |
 | `Packagist` | `packagist` |
+| `Paddy Power` | `paddypower` |
 | `Pagekit` | `pagekit` |
 | `PagerDuty` | `pagerduty` |
 | `PageSpeed Insights` | `pagespeedinsights` |
