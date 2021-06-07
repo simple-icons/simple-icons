@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -23,7 +23,7 @@
     "jest-diff": "26.6.2",
     "jsonschema": "1.4.0",
     "npm-run-all": "4.1.5",
-    "svg-path-bbox": "0.2.0",
+    "svg-path-bbox": "1.0.0",
     "svg-path-segments": "0.1.8",
     "svglint": "1.0.7",
     "svgo": "2.3.0",
