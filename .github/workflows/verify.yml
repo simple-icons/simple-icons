@@ -49,7 +49,8 @@ jobs:
         run: |
           echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
         shell: bash
-      - uses: actions/cache@v2
+      - name: Cache Jest's cache
+        uses: actions/cache@v2
         with:
           path: .jestcache
           key: jest-${{ steps.get-date.outputs.date }}-${{ hashFiles('package-lock.json') }}
