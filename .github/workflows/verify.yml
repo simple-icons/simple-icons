@@ -44,10 +44,15 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+      - name: Get Date
+        id: get-date
+        run: |
+          echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
+        shell: bash
       - uses: actions/cache@v2
         with:
           path: .jestcache
-          key: jest-${{ hashFiles('package-lock.json') }}
+          key: jest-${{ steps.get-date.outputs.date }}-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
         run: npm ci
       - name: Run tests
