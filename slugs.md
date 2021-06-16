@@ -221,6 +221,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Betfair` | `betfair` |
 | `Big Cartel` | `bigcartel` |
 | `bigbasket` | `bigbasket` |
+| `BigBlueButton` | `bigbluebutton` |
 | `BigCommerce` | `bigcommerce` |
 | `Bilibili` | `bilibili` |
 | `Bit` | `bit` |
@@ -375,6 +376,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Conda-Forge` | `condaforge` |
 | `Conekta` | `conekta` |
 | `Confluence` | `confluence` |
+| `Construct 3` | `construct3` |
 | `Consul` | `consul` |
 | `Contactless Payment` | `contactlesspayment` |
 | `Contentful` | `contentful` |
@@ -891,6 +893,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kaspersky` | `kaspersky` |
 | `Katacoda` | `katacoda` |
 | `Katana` | `katana` |
+| `Kaufland` | `kaufland` |
 | `KDE` | `kde` |
 | `Kdenlive` | `kdenlive` |
 | `KeePassXC` | `keepassxc` |
@@ -1211,6 +1214,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OYO` | `oyo` |
 | `p5.js` | `p5dotjs` |
 | `Packagist` | `packagist` |
+| `Paddy Power` | `paddypower` |
 | `Pagekit` | `pagekit` |
 | `PagerDuty` | `pagerduty` |
 | `PageSpeed Insights` | `pagespeedinsights` |
@@ -1263,6 +1267,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PJSIP` | `pjsip` |
 | `Planet` | `planet` |
 | `PlanGrid` | `plangrid` |
+| `Platform.sh` | `platformdotsh` |
 | `Platzi` | `platzi` |
 | `PlayCanvas` | `playcanvas` |
 | `Player FM` | `playerfm` |
@@ -1912,6 +1917,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube TV` | `youtubetv` |
 | `Z-Wave` | `zwave` |
 | `Zalando` | `zalando` |
+| `Zalo` | `zalo` |
 | `Zapier` | `zapier` |
 | `ZDF` | `zdf` |
 | `Zelle` | `zelle` |
