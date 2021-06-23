@@ -131,6 +131,11 @@
             "source": "https://adguard.com/en/media-materials.html"
         },
         {
+            "title": "Adidas",
+            "hex": "000000",
+            "source": "https://www.adidas.com"
+        },
+        {
             "title": "Adobe",
             "hex": "FF0000",
             "source": "https://www.adobe.com/"
@@ -672,6 +677,11 @@
             "source": "https://github.com/apostrophecms/apostrophe/blob/a7fcc6b13831302e27f79a6fcaaf58e3a40517df/logo.svg"
         },
         {
+            "title": "App Annie",
+            "hex": "0F2346",
+            "source": "https://www.appannie.com/en/about/press/"
+        },
+        {
             "title": "App Store",
             "hex": "0D96F6",
             "source": "https://developer.apple.com/app-store/"
@@ -1016,8 +1026,8 @@
         },
         {
             "title": "Battle.net",
-            "hex": "00AEFF",
-            "source": "https://www.blizzard.com/en-gb/"
+            "hex": "148EFF",
+            "source": "https://eu.shop.battle.net/en-gb"
         },
         {
             "title": "BBC",
@@ -1032,8 +1042,9 @@
         },
         {
             "title": "Beatport",
-            "hex": "A8E00F",
-            "source": "https://support.beatport.com/hc/en-us/articles/200353255-Beatport-Logos-and-Images"
+            "hex": "01FF95",
+            "source": "https://brand.beatport.com/",
+            "guidelines": "https://support.beatport.com/hc/en-us/articles/200353255-Beatport-Logos-and-Images"
         },
         {
             "title": "Beats",
@@ -1090,6 +1101,11 @@
             "title": "Bilibili",
             "hex": "00A1D6",
             "source": "https://www.bilibili.com/"
+        },
+        {
+            "title": "Binance",
+            "hex": "F0B90B",
+            "source": "https://binance.com/"
         },
         {
             "title": "Bit",
@@ -1336,6 +1352,11 @@
             "title": "byte",
             "hex": "551DEF",
             "source": "https://byte.co/byte"
+        },
+        {
+            "title": "ByteDance",
+            "hex": "3C8CFF",
+            "source": "https://www.bytedance.com/"
         },
         {
             "title": "C",
@@ -1612,6 +1633,12 @@
             "title": "Cloud 66",
             "hex": "3C72B9",
             "source": "https://www.cloud66.com/"
+        },
+        {
+            "title": "Cloud Foundry",
+            "hex": "0C9ED5",
+            "source": "https://www.cloudfoundry.org/",
+            "guidelines": "https://www.cloudfoundry.org/logo/"
         },
         {
             "title": "CloudBees",
@@ -2132,6 +2159,11 @@
             "title": "dblp",
             "hex": "004F9F",
             "source": "https://dblp.org/"
+        },
+        {
+            "title": "dbt",
+            "hex": "FF694B",
+            "source": "https://github.com/fishtown-analytics/dbt-styleguide/blob/a2895e005457eda531880dfde62f31959d42f18b/_includes/icons/logo.svg"
         },
         {
             "title": "DC Entertainment",
@@ -3075,6 +3107,12 @@
         },
         {
             "title": "Foursquare",
+            "hex": "3333FF",
+            "source": "https://foursquare.com/brand/",
+            "guidelines": "https://foursquare.com/brand/"
+        },
+        {
+            "title": "Foursquare City Guide",
             "hex": "F94877",
             "source": "https://foursquare.com/about/logos"
         },
@@ -3122,6 +3160,11 @@
             "title": "FreeNAS",
             "hex": "343434",
             "source": "https://github.com/freenas/webui/blob/fd668f4c5920fe864fd98fa98e20fd333336c609/src/assets/images/logo.svg"
+        },
+        {
+            "title": "Frontend Mentor",
+            "hex": "3F54A3",
+            "source": "https://www.frontendmentor.io"
         },
         {
             "title": "Fujifilm",
@@ -4113,6 +4156,11 @@
             "source": "https://geticonjar.com/"
         },
         {
+            "title": "Icons8",
+            "hex": "1FB141",
+            "source": "https://icons8.com/"
+        },
+        {
             "title": "ICQ",
             "hex": "24FF00",
             "source": "https://commons.wikimedia.org/wiki/File:ICQNewlogo.svg"
@@ -4496,6 +4544,11 @@
             "hex": "5091CD",
             "source": "https://docs.joomla.org/Joomla:Brand_Identity_Elements/Official_Logo",
             "guidelines": "https://docs.joomla.org/Joomla:Brand_Identity_Elements"
+        },
+        {
+            "title": "Jordan",
+            "hex": "000000",
+            "source": "https://www.nike.com/jordan"
         },
         {
             "title": "JPEG",
@@ -5848,6 +5901,12 @@
             }
         },
         {
+            "title": "Nette",
+            "hex": "3484D2",
+            "source": "https://nette.org/en/logo",
+            "guidelines": "https://nette.org/en/logo"
+        },
+        {
             "title": "New Japan Pro-Wrestling",
             "hex": "FF160B",
             "source": "https://en.wikipedia.org/wiki/File:NJPW_World_Logo.svg",
@@ -5917,6 +5976,11 @@
             "source": "https://www.nicovideo.jp/"
         },
         {
+            "title": "Nike",
+            "hex": "111111",
+            "source": "https://www.nike.com/"
+        },
+        {
             "title": "Nim",
             "hex": "FFE953",
             "source": "https://nim-lang.org"
@@ -5976,6 +6040,12 @@
             "title": "Nokia",
             "hex": "124191",
             "source": "https://www.nokia.com/"
+        },
+        {
+            "title": "NordVPN",
+            "hex": "4687FF",
+            "source": "https://nordvpn.com/press-area/",
+            "guidelines": "https://nordvpn.com/press-area/"
         },
         {
             "title": "Norwegian",
@@ -6807,6 +6877,11 @@
             "source": "https://github.com/Polymer/polymer-project.org/blob/3d3e967446858b49a7796676714865ac9b2a5275/app/images/logos/p-logo.svg"
         },
         {
+            "title": "Polywork",
+            "hex": "543DE0",
+            "source": "https://www.polywork.com/"
+        },
+        {
             "title": "Pop!_OS",
             "hex": "48B9C7",
             "source": "https://pop.system76.com/"
@@ -6815,6 +6890,11 @@
             "title": "Porsche",
             "hex": "B12B28",
             "source": "https://www.porsche.com/"
+        },
+        {
+            "title": "Portainer",
+            "hex": "13BEF9",
+            "source": "https://www.portainer.io/"
         },
         {
             "title": "PostCSS",
@@ -7059,6 +7139,11 @@
             "source": "https://www.pypy.org/images/pypy-logo.svg"
         },
         {
+            "title": "Pytest",
+            "hex": "0A9EDC",
+            "source": "https://github.com/pytest-dev/design/blob/081f06cd2d6cd742e68f593560a2e8c1802feb7c/pytest_logo/pytest_logo.svg"
+        },
+        {
             "title": "Python",
             "hex": "3776AB",
             "source": "https://www.python.org/community/logos/",
@@ -7239,6 +7324,11 @@
             "title": "RadioPublic",
             "hex": "CE262F",
             "source": "https://help.radiopublic.com/hc/en-us/articles/360002546754-RadioPublic-logos"
+        },
+        {
+            "title": "Railway",
+            "hex": "0B0D0E",
+            "source": "https://railway.app/"
         },
         {
             "title": "Rainmeter",
@@ -8355,6 +8445,12 @@
             "title": "Star Trek",
             "hex": "FFE200",
             "source": "https://intl.startrek.com/"
+        },
+        {
+            "title": "Starbucks",
+            "hex": "006241",
+            "source": "https://starbucks.com/",
+            "guidelines": "https://creative.starbucks.com/"
         },
         {
             "title": "Starling Bank",
@@ -9563,6 +9659,11 @@
             "source": "https://en.wikipedia.org/wiki/File:Walkman_logo.svg"
         },
         {
+            "title": "Wallabag",
+            "hex": "3F6184",
+            "source": "https://github.com/wallabag/logo/blob/f670395da2d85c3bbcb8dcfa8d2a339d8af5abb0/_default/icon/svg/logo-icon-black-no-bg.svg"
+        },
+        {
             "title": "Wappalyzer",
             "hex": "32067C",
             "source": "https://www.wappalyzer.com/"
@@ -10108,6 +10209,14 @@
             "title": "Zhihu",
             "hex": "0084FF",
             "source": "https://www.zhihu.com/"
+        },
+        {
+            "title": "Zig",
+            "hex": "F7A41D",
+            "source": "https://github.com/ziglang/logo",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Zigbee",
