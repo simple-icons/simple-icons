@@ -3102,6 +3102,12 @@
         },
         {
             "title": "Foursquare",
+            "hex": "3333FF",
+            "source": "https://foursquare.com/brand/",
+            "guidelines": "https://foursquare.com/brand/"
+        },
+        {
+            "title": "Foursquare City Guide",
             "hex": "F94877",
             "source": "https://foursquare.com/about/logos"
         },
@@ -6839,6 +6845,11 @@
             "source": "https://github.com/Polymer/polymer-project.org/blob/3d3e967446858b49a7796676714865ac9b2a5275/app/images/logos/p-logo.svg"
         },
         {
+            "title": "Polywork",
+            "hex": "543DE0",
+            "source": "https://www.polywork.com/"
+        },
+        {
             "title": "Pop!_OS",
             "hex": "48B9C7",
             "source": "https://pop.system76.com/"
@@ -10155,6 +10166,14 @@
             "title": "Zhihu",
             "hex": "0084FF",
             "source": "https://www.zhihu.com/"
+        },
+        {
+            "title": "Zig",
+            "hex": "F7A41D",
+            "source": "https://github.com/ziglang/logo",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Zigbee",
