@@ -384,15 +384,3 @@ Then, start a Docker container for simple-icons and attach to it:
 ```shell
 docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
-
----
-
-# Versioning
-
-We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
-
-| Version number | Kinds of changes |
-| :---- | :---- |
-| _Major_ | Removed icons; Renamed icons; Breaking API changes |
-| _Minor_ | New icons; API changes |
-| _Patch_ | Updated SVGs; Updated metadata |
