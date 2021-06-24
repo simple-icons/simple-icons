@@ -1,3 +1,3 @@
 module.exports = {
-    cacheDirectory: "./.jestcache",
+  cacheDirectory: "./.cache/jest",
 };

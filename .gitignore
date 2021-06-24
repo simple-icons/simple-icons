@@ -6,6 +6,9 @@ icons/*
 # Except SVG files
 !icons/*.svg
 
+# Caches
+.cache/
+
 
 ### NodeJS ###
 # Logs
@@ -18,9 +21,6 @@ lerna-debug.log*
 
 # Dependency directories
 node_modules/
-
-# Jest
-.jestcache
 
 
 ### macOS ###
