@@ -1,6 +1,6 @@
 ---
 name: Packages
-about: Issues and improvements for the packages
+about: Report problems and suggest ideas for the packages
 labels: package
 ---
 
