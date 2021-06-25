@@ -7420,7 +7420,15 @@
         {
             "title": "ReactiveX",
             "hex": "B7178C",
-            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg"
+            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "RxJS",
+                        "hex": "C2185B"
+                    }
+                ]
+            }
         },
         {
             "title": "ReactOS",
