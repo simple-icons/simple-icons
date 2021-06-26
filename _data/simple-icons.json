@@ -2783,6 +2783,12 @@
             "source": "https://github.com/openjs-foundation/artwork/blob/ac43961d1157f973c54f210cf5e0c9c45e3d3f10/projects/express/express-icon-black.svg"
         },
         {
+            "title": "ExpressVPN",
+            "hex": "DA3940",
+            "source": "https://www.expressvpn.com/press",
+            "guidelines": "https://www.expressvpn.com/press"
+        },
+        {
             "title": "EyeEm",
             "hex": "000000",
             "source": "https://www.eyeem.com/"
@@ -4748,6 +4754,16 @@
             "source": "https://www.keycdn.com/logos"
         },
         {
+            "title": "KFC",
+            "hex": "F40027",
+            "source": "https://global.kfc.com/asset-library/",
+            "aliases": {
+                "aka": [
+                    "Kentucky Fried Chicken"
+                ]
+            }
+        },
+        {
             "title": "Khan Academy",
             "hex": "14BF96",
             "source": "https://khanacademy.zendesk.com/hc/en-us/articles/202483630-Press-room",
@@ -4846,6 +4862,11 @@
             "title": "Kongregate",
             "hex": "990000",
             "source": "https://www.kongregate.com/pages/logos-and-branding"
+        },
+        {
+            "title": "Konva",
+            "hex": "0D83CD",
+            "source": "https://github.com/konvajs/konvajs.github.io/blob/2cfe67461dfe32076ba56c88a75fe8e99d068130/icon.png"
         },
         {
             "title": "Kotlin",
@@ -7425,7 +7446,15 @@
         {
             "title": "ReactiveX",
             "hex": "B7178C",
-            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg"
+            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "RxJS",
+                        "hex": "D81B60"
+                    }
+                ]
+            }
         },
         {
             "title": "ReactOS",
@@ -8393,6 +8422,11 @@
             "title": "Splunk",
             "hex": "000000",
             "source": "https://www.splunk.com/"
+        },
+        {
+            "title": "Spond",
+            "hex": "EE4353",
+            "source": "https://spond.com/"
         },
         {
             "title": "Spotify",
