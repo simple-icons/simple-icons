@@ -1,8 +1,17 @@
 name: Create Release Pull Request
 on:
+  workflow_dispatch:
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
     - cron: "0 0 * * 0"
+
+# This Workflow can be triggered manually through the GitHub UI or API. For the
+# API use the following request:
+#   curl -X POST \
+#        -H "Authorization: Bearer <token>" \
+#        -d '{"ref":"develop"}' \
+#        https://api.github.com/repos/simple-icons/simple-icons/actions/workflows/create-release.yml/dispatches
+# Replacing <token> by a personal access token with scope `public_repo`
 
 jobs:
   release-pr:
@@ -35,6 +44,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4.11.0
         with:
           commit_message: version bump
-          commit_user_name: GitHub Actions
-          commit_user_email: actions@github.com
-          commit_author: GitHub Actions <actions@github.com>
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
