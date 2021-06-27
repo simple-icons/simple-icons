@@ -54,10 +54,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
-      - name: Get Date
-        id: get-date
-        shell: bash
-        run: echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -69,7 +65,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: .cache/jest
-          key: ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-${{ steps.get-date.outputs.date }}
+          key: ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-${{ github.run_number }}
           restore-keys: |
             ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-
             ${{ runner.os }}-jest-
