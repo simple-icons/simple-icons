@@ -231,6 +231,16 @@
             "source": "http://pages.aerospike.com/rs/aerospike/images/Acid_Whitepaper.pdf"
         },
         {
+            "title": "AEW",
+            "aliases": {
+                "aka": [
+                    "All Elite Wrestling"
+                ]
+            },
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:AEW_Logo_(simplified).svg"
+        },
+        {
             "title": "Affinity",
             "hex": "222324",
             "source": "https://affinity.serif.com/"
@@ -2768,6 +2778,12 @@
             "source": "https://github.com/openjs-foundation/artwork/blob/ac43961d1157f973c54f210cf5e0c9c45e3d3f10/projects/express/express-icon-black.svg"
         },
         {
+            "title": "ExpressVPN",
+            "hex": "DA3940",
+            "source": "https://www.expressvpn.com/press",
+            "guidelines": "https://www.expressvpn.com/press"
+        },
+        {
             "title": "EyeEm",
             "hex": "000000",
             "source": "https://www.eyeem.com/"
@@ -4733,6 +4749,16 @@
             "source": "https://www.keycdn.com/logos"
         },
         {
+            "title": "KFC",
+            "hex": "F40027",
+            "source": "https://global.kfc.com/asset-library/",
+            "aliases": {
+                "aka": [
+                    "Kentucky Fried Chicken"
+                ]
+            }
+        },
+        {
             "title": "Khan Academy",
             "hex": "14BF96",
             "source": "https://khanacademy.zendesk.com/hc/en-us/articles/202483630-Press-room",
@@ -4831,6 +4857,11 @@
             "title": "Kongregate",
             "hex": "990000",
             "source": "https://www.kongregate.com/pages/logos-and-branding"
+        },
+        {
+            "title": "Konva",
+            "hex": "0D83CD",
+            "source": "https://github.com/konvajs/konvajs.github.io/blob/2cfe67461dfe32076ba56c88a75fe8e99d068130/icon.png"
         },
         {
             "title": "Kotlin",
@@ -7154,6 +7185,11 @@
             "source": "https://www.pypy.org/images/pypy-logo.svg"
         },
         {
+            "title": "PyScaffold",
+            "hex": "005CA0",
+            "source": "https://github.com/pyscaffold/pyscaffold/blob/3f72bf7894fc73b34af06a90bb5d43aae410ce5d/docs/gfx/logo.svg"
+        },
+        {
             "title": "Pytest",
             "hex": "0A9EDC",
             "source": "https://github.com/pytest-dev/design/blob/081f06cd2d6cd742e68f593560a2e8c1802feb7c/pytest_logo/pytest_logo.svg"
@@ -7398,9 +7434,22 @@
             "source": "https://github.com/ReactTraining/react-router/blob/c94bcd8cef0c811f80b02777ec26fee3618f8e86/website/static/safari-pinned-tab.svg"
         },
         {
+            "title": "React Table",
+            "hex": "FF4154",
+            "source": "https://github.com/tannerlinsley/react-table/blob/8c77b4ad97353a0b1f0746be5b919868862a9dcc/docs/src/images/emblem-light.svg"
+        },
+        {
             "title": "ReactiveX",
             "hex": "B7178C",
-            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg"
+            "source": "https://github.com/ReactiveX/rxjs/blob/master/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "RxJS",
+                        "hex": "D81B60"
+                    }
+                ]
+            }
         },
         {
             "title": "ReactOS",
@@ -8368,6 +8417,11 @@
             "title": "Splunk",
             "hex": "000000",
             "source": "https://www.splunk.com/"
+        },
+        {
+            "title": "Spond",
+            "hex": "EE4353",
+            "source": "https://spond.com/"
         },
         {
             "title": "Spotify",
