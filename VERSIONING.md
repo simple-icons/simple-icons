@@ -1,6 +1,6 @@
 # Versioning
 
-We use [Semantic Versioning](https://semver.org/) to version Simple Icons. In short, this means that version number are structured as `MAJOR.MINOR.PATCH`. For example, version `3.1.4` is major version `3`, minor version `1`, and patch `4`. Increasing each of this numbers implies certain kinds of changes.
+We use [Semantic Versioning](https://semver.org/) to version Simple Icons. In short, this means that version numbers are structured as `MAJOR.MINOR.PATCH`. For example, version `3.1.4` is major version `3`, minor version `1`, and patch `4`. Increasing each of these numbers implies certain kinds of changes.
 
 For Simple Icons, given a change to the version number you can expect the following kinds of changes:
 
@@ -12,6 +12,6 @@ For Simple Icons, given a change to the version number you can expect the follow
 
 ## Release Schedule
 
-_Minor_ releases and _patches_ are scheduled on a weekly basis and are generally release on Sundays.
+_Minor_ releases and _patches_ are scheduled on a weekly basis and are generally released on a Sunday.
 
-_Major_ releases are scheduled on a half-year basis, mainly to remove old SVGs. That is, approximately every 6 months a normal Sunday release is a major release instead of a _minor_ release or _patch_.
+_Major_ releases are scheduled on a half-year basis, mainly to remove old SVGs. That is, approximately every 6 months a normal Sunday release is a _major_ release instead of a _minor_ release or _patch_.
