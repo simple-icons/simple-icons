@@ -5605,8 +5605,13 @@
         },
         {
             "title": "MLB",
-            "hex": "051E42",
-            "source": "https://www.mlb.com/"
+            "hex": "041E42",
+            "source": "https://www.mlb.com/",
+            "aliases": {
+                "aka": [
+                    "Major League Baseball"
+                ]
+            }
         },
         {
             "title": "MobX",
