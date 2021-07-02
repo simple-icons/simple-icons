@@ -6,6 +6,9 @@ icons/*
 # Except SVG files
 !icons/*.svg
 
+# Caches
+.cache/
+
 
 ### NodeJS ###
 # Logs
