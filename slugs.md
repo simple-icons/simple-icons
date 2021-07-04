@@ -1407,6 +1407,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rancher` | `rancher` |
 | `Raspberry Pi` | `raspberrypi` |
 | `Razer` | `razer` |
+| `Razorpay` | `razorpay` |
 | `React` | `react` |
 | `React Router` | `reactrouter` |
 | `React Table` | `reacttable` |
