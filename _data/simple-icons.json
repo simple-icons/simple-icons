@@ -8445,6 +8445,20 @@
             "source": "https://www.spotlight.com/"
         },
         {
+            "title": "Spreadshirt",
+            "hex": "00B2A5",
+            "source": "https://www.spreadshirt.ie/",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Spreadshop",
+                        "hex": "FF9343",
+                        "source": "https://www.spreadshop.com/"
+                    }
+                ]
+            }
+        },
+        {
             "title": "Spreaker",
             "hex": "F5C300",
             "source": "http://www.spreaker.com/press"
