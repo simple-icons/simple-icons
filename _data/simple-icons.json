@@ -2362,8 +2362,8 @@
         {
             "title": "Discord",
             "hex": "5865F2",
-            "source": "https://discord.com/brand-new/branding",
-            "guidelines": "https://discord.com/brand-new/branding"
+            "source": "https://discord.com/branding",
+            "guidelines": "https://discord.com/branding"
         },
         {
             "title": "Discourse",
@@ -3818,6 +3818,11 @@
             "title": "Hackaday",
             "hex": "1A1A1A",
             "source": "https://hackaday.com/"
+        },
+        {
+            "title": "Hacker Noon",
+            "hex": "00FE00",
+            "source": "https://sponsor.hackernoon.com/#brandasauthor"
         },
         {
             "title": "HackerEarth",
@@ -8444,6 +8449,20 @@
             "title": "Spotlight",
             "hex": "352A71",
             "source": "https://www.spotlight.com/"
+        },
+        {
+            "title": "Spreadshirt",
+            "hex": "00B2A5",
+            "source": "https://www.spreadshirt.ie/",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Spreadshop",
+                        "hex": "FF9343",
+                        "source": "https://www.spreadshop.com/"
+                    }
+                ]
+            }
         },
         {
             "title": "Spreaker",
