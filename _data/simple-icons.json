@@ -6,6 +6,11 @@
             "source": "https://github.com/dotnet/brand/"
         },
         {
+            "title": "/e/",
+            "hex": "000000",
+            "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
+        },
+        {
             "title": "1001Tracklists",
             "hex": "40AEF0",
             "source": "https://www.1001tracklists.com/"
@@ -1224,6 +1229,11 @@
             "source": "https://www.bmw.de/"
         },
         {
+            "title": "Boehringer Ingelheim",
+            "hex": "003366",
+            "source": "https://cd.boehringer-ingelheim.com"
+        },
+        {
             "title": "Boeing",
             "hex": "1D439C",
             "source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
@@ -2356,8 +2366,8 @@
         {
             "title": "Discord",
             "hex": "5865F2",
-            "source": "https://discord.com/brand-new/branding",
-            "guidelines": "https://discord.com/brand-new/branding"
+            "source": "https://discord.com/branding",
+            "guidelines": "https://discord.com/branding"
         },
         {
             "title": "Discourse",
@@ -3812,6 +3822,11 @@
             "title": "Hackaday",
             "hex": "1A1A1A",
             "source": "https://hackaday.com/"
+        },
+        {
+            "title": "Hacker Noon",
+            "hex": "00FE00",
+            "source": "https://sponsor.hackernoon.com/#brandasauthor"
         },
         {
             "title": "HackerEarth",
@@ -8438,6 +8453,20 @@
             "title": "Spotlight",
             "hex": "352A71",
             "source": "https://www.spotlight.com/"
+        },
+        {
+            "title": "Spreadshirt",
+            "hex": "00B2A5",
+            "source": "https://www.spreadshirt.ie/",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Spreadshop",
+                        "hex": "FF9343",
+                        "source": "https://www.spreadshop.com/"
+                    }
+                ]
+            }
         },
         {
             "title": "Spreaker",
