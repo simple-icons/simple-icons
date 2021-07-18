@@ -2434,13 +2434,19 @@
             "title": "Douban",
             "hex": "007722",
             "source": "https://zh.wikipedia.org/wiki/Douban",
-            "guidelines": "https://www.douban.com/about/legal#info_data"
+            "license": {
+                "type": "custom",
+                "url": "https://www.douban.com/about/legal#info_data"
+            }
         },
         {
             "title": "Douban Read",
             "hex": "389EAC",
             "source": "https://read.douban.com",
-            "guidelines": "https://www.douban.com/about/legal#info_data"
+            "license": {
+                "type": "custom",
+                "url": "https://www.douban.com/about/legal#info_data"
+            }
         },
         {
             "title": "Draugiem.lv",
