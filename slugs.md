@@ -8,6 +8,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | Brand name | Brand slug |
 | :--- | :--- |
 | `.NET` | `dotnet` |
+| `/e/` | `e` |
 | `1001Tracklists` | `1001tracklists` |
 | `1Password` | `1password` |
 | `3M` | `3m` |
@@ -249,6 +250,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bluetooth` | `bluetooth` |
 | `BMC Software` | `bmcsoftware` |
 | `BMW` | `bmw` |
+| `Boehringer Ingelheim` | `boehringeringelheim` |
 | `Boeing` | `boeing` |
 | `BookBub` | `bookbub` |
 | `Bookmeter` | `bookmeter` |
@@ -325,6 +327,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Citrix` | `citrix` |
 | `Citroën` | `citroen` |
 | `CiviCRM` | `civicrm` |
+| `Civo` | `civo` |
 | `CKEditor 4` | `ckeditor4` |
 | `Claris` | `claris` |
 | `ClickUp` | `clickup` |
@@ -481,6 +484,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dolby` | `dolby` |
 | `DoorDash` | `doordash` |
 | `Douban` | `douban` |
+| `Douban Read` | `doubanread` |
 | `Draugiem.lv` | `draugiemdotlv` |
 | `Dribbble` | `dribbble` |
 | `Drone` | `drone` |
@@ -741,6 +745,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hack Club` | `hackclub` |
 | `Hack The Box` | `hackthebox` |
 | `Hackaday` | `hackaday` |
+| `Hacker Noon` | `hackernoon` |
 | `HackerEarth` | `hackerearth` |
 | `HackerOne` | `hackerone` |
 | `HackerRank` | `hackerrank` |
@@ -1287,6 +1292,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PlanGrid` | `plangrid` |
 | `Platform.sh` | `platformdotsh` |
 | `Platzi` | `platzi` |
+| `Plausible Analytics` | `plausibleanalytics` |
 | `PlayCanvas` | `playcanvas` |
 | `Player FM` | `playerfm` |
 | `Player.me` | `playerdotme` |
@@ -1602,6 +1608,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Spond` | `spond` |
 | `Spotify` | `spotify` |
 | `Spotlight` | `spotlight` |
+| `Spreadshirt` | `spreadshirt` |
 | `Spreaker` | `spreaker` |
 | `Spring` | `spring` |
 | `Spring Boot` | `springboot` |
