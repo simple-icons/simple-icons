@@ -327,6 +327,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Citrix` | `citrix` |
 | `Citroën` | `citroen` |
 | `CiviCRM` | `civicrm` |
+| `Civo` | `civo` |
 | `CKEditor 4` | `ckeditor4` |
 | `Claris` | `claris` |
 | `ClickUp` | `clickup` |
@@ -483,6 +484,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dolby` | `dolby` |
 | `DoorDash` | `doordash` |
 | `Douban` | `douban` |
+| `Douban Read` | `doubanread` |
 | `Draugiem.lv` | `draugiemdotlv` |
 | `Dribbble` | `dribbble` |
 | `Drone` | `drone` |
@@ -1290,6 +1292,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PlanGrid` | `plangrid` |
 | `Platform.sh` | `platformdotsh` |
 | `Platzi` | `platzi` |
+| `Plausible Analytics` | `plausibleanalytics` |
 | `PlayCanvas` | `playcanvas` |
 | `Player FM` | `playerfm` |
 | `Player.me` | `playerdotme` |

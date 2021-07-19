@@ -1614,6 +1614,12 @@
             "source": "https://civicrm.org/trademark"
         },
         {
+            "title": "Civo",
+            "hex": "239DFF",
+            "source": "https://www.civo.com/brand-assets",
+            "guidelines": "https://www.civo.com/brand-assets"
+        },
+        {
             "title": "CKEditor 4",
             "hex": "0287D0",
             "source": "https://github.com/ckeditor/ckeditor4/blob/7d8305ce4d12683853a563b9d6ea54e0d4686a2f/samples/img/logo.svg"
@@ -2427,7 +2433,20 @@
         {
             "title": "Douban",
             "hex": "007722",
-            "source": "https://zh.wikipedia.org/wiki/Douban"
+            "source": "https://zh.wikipedia.org/wiki/Douban",
+            "license": {
+                "type": "custom",
+                "url": "https://www.douban.com/about/legal#info_data"
+            }
+        },
+        {
+            "title": "Douban Read",
+            "hex": "389EAC",
+            "source": "https://read.douban.com",
+            "license": {
+                "type": "custom",
+                "url": "https://www.douban.com/about/legal#info_data"
+            }
         },
         {
             "title": "Draugiem.lv",
@@ -3705,6 +3724,11 @@
             }
         },
         {
+            "title": "Grab",
+            "hex": "00B14F",
+            "source": "https://en.wikipedia.org/wiki/File:Grab_(application)_logo.svg"
+        },
+        {
             "title": "Gradle",
             "hex": "02303A",
             "source": "https://gradle.com/brand",
@@ -4409,6 +4433,11 @@
             "hex": "F36D5D",
             "source": "https://issuu.com/press",
             "guidelines": "https://issuu.com/press"
+        },
+        {
+            "title": "Istio",
+            "hex": "466BB0",
+            "source": "https://github.com/istio/istio/blob/5a047251817eb2523af297607b7614120812e47a/logo/istio-bluelogo-whitebackground-unframed.svg"
         },
         {
             "title": "Itch.io",
@@ -6793,6 +6822,11 @@
             "title": "Platzi",
             "hex": "98CA3F",
             "source": "https://github.com/PlatziDev/oss/blob/932bd83d43e061e1c38fbc116db31aa6d0145be6/static/logo.svg"
+        },
+        {
+            "title": "Plausible Analytics",
+            "hex": "5850EC",
+            "source": "https://github.com/plausible/docs/blob/be5c935484e075f1e0caf3c9b3351ddd62348139/static/img/logo.svg"
         },
         {
             "title": "PlayCanvas",
