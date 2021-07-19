@@ -1,7 +1,7 @@
 ---
-name: Website
-about: Issues and improvements for the website
-labels: website
+name: Documentation
+about: Report problems and suggest ideas for the documentation
+labels: docs
 ---
 
 <!-- Before opening a new issue search for duplicate or closed issues -->
@@ -9,7 +9,7 @@ labels: website
 
 ### Kind of issue <!-- Change the one that applies to `[x]`  -->
   - [ ] Improvement
-  - [ ] Bug
+  - [ ] Mistake
   - [ ] Other, namely:
 
 ### Description
@@ -17,8 +17,7 @@ labels: website
 
 <!--
 Anything relevant, for example:
-  - For bugs: "Steps to reproduce" and "Expected behavior"
-  - For improvements: An example of a use case
-  - Website issues: What browser do you use
-  - etc.
+  - A (perma)link to the documentation
+  - For improvements: Suggested for how to improve
+  - For mistakes: Suggested fixes
 -->
