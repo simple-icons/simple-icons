@@ -8865,7 +8865,11 @@
         {
             "title": "SVG",
             "hex": "FFB13B",
-            "source": "https://www.w3.org/2009/08/svg-logos.html"
+            "source": "https://www.w3.org/2009/08/svg-logos.html",
+            "guidelines": "https://www.w3.org/2009/08/svg-logos.html",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "SVGO",
