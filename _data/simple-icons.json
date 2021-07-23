@@ -238,9 +238,7 @@
         {
             "title": "AEW",
             "aliases": {
-                "aka": [
-                    "All Elite Wrestling"
-                ]
+                "aka": ["All Elite Wrestling"]
             },
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:AEW_Logo_(simplified).svg"
@@ -2139,9 +2137,7 @@
         {
             "title": "Data Version Control",
             "aliases": {
-                "aka": [
-                    "DVC"
-                ]
+                "aka": ["DVC"]
             },
             "hex": "945DD6",
             "source": "https://static.iterative.ai/logo/dvc.svg"
@@ -2236,9 +2232,7 @@
             "hex": "0000FF",
             "source": "http://del.icio.us/",
             "aliases": {
-                "aka": [
-                    "Delicious"
-                ]
+                "aka": ["Delicious"]
             }
         },
         {
@@ -4797,9 +4791,7 @@
             "hex": "F40027",
             "source": "https://global.kfc.com/asset-library/",
             "aliases": {
-                "aka": [
-                    "Kentucky Fried Chicken"
-                ]
+                "aka": ["Kentucky Fried Chicken"]
             }
         },
         {
@@ -5991,9 +5983,7 @@
             "hex": "FF160B",
             "source": "https://en.wikipedia.org/wiki/File:NJPW_World_Logo.svg",
             "aliases": {
-                "aka": [
-                    "NJPW"
-                ],
+                "aka": ["NJPW"],
                 "dup": [
                     {
                         "title": "NJPW World",
@@ -6414,6 +6404,12 @@
             "hex": "00B5E2",
             "source": "https://openwrt.org/docs/guide-graphic-designer/openwrt-logo",
             "guidelines": "https://openwrt.org/docs/guide-graphic-designer/openwrt-logo"
+        },
+        {
+            "title": "OpenSea",
+            "hex": "2081E2",
+            "source": "https://docs.opensea.io/docs/logos",
+            "guidelines": "https://docs.opensea.io/docs/logos"
         },
         {
             "title": "Opera",
