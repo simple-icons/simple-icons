@@ -2449,6 +2449,11 @@
             }
         },
         {
+            "title": "DPD",
+            "hex": "DC0032",
+            "source": "https://www.dpd.com/"
+        },
+        {
             "title": "Draugiem.lv",
             "hex": "FF6600",
             "source": "https://www.frype.com/applications/dev/docs/logos/"
@@ -2492,6 +2497,17 @@
             "title": "DuckDuckGo",
             "hex": "DE5833",
             "source": "https://duckduckgo.com/"
+        },
+        {
+            "title": "Dungeons & Dragons",
+            "hex": "ED1C24",
+            "source": "https://dnd.wizards.com/articles/features/basicrules",
+            "guidelines": "https://dnd.wizards.com/articles/features/fan-site-kit",
+            "aliases": {
+                "aka": [
+                    "D&D"
+                ]
+            }
         },
         {
             "title": "Dunked",
