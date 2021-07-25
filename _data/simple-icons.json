@@ -2433,12 +2433,25 @@
         {
             "title": "Douban",
             "hex": "007722",
-            "source": "https://zh.wikipedia.org/wiki/Douban"
+            "source": "https://zh.wikipedia.org/wiki/Douban",
+            "license": {
+                "type": "custom",
+                "url": "https://www.douban.com/about/legal#info_data"
+            }
         },
         {
             "title": "Douban Read",
             "hex": "389EAC",
-            "source": "https://read.douban.com"
+            "source": "https://read.douban.com",
+            "license": {
+                "type": "custom",
+                "url": "https://www.douban.com/about/legal#info_data"
+            }
+        },
+        {
+            "title": "DPD",
+            "hex": "DC0032",
+            "source": "https://www.dpd.com/"
         },
         {
             "title": "Draugiem.lv",
@@ -2484,6 +2497,17 @@
             "title": "DuckDuckGo",
             "hex": "DE5833",
             "source": "https://duckduckgo.com/"
+        },
+        {
+            "title": "Dungeons & Dragons",
+            "hex": "ED1C24",
+            "source": "https://dnd.wizards.com/articles/features/basicrules",
+            "guidelines": "https://dnd.wizards.com/articles/features/fan-site-kit",
+            "aliases": {
+                "aka": [
+                    "D&D"
+                ]
+            }
         },
         {
             "title": "Dunked",
@@ -3716,6 +3740,11 @@
             }
         },
         {
+            "title": "Grab",
+            "hex": "00B14F",
+            "source": "https://en.wikipedia.org/wiki/File:Grab_(application)_logo.svg"
+        },
+        {
             "title": "Gradle",
             "hex": "02303A",
             "source": "https://gradle.com/brand",
@@ -4420,6 +4449,11 @@
             "hex": "F36D5D",
             "source": "https://issuu.com/press",
             "guidelines": "https://issuu.com/press"
+        },
+        {
+            "title": "Istio",
+            "hex": "466BB0",
+            "source": "https://github.com/istio/istio/blob/5a047251817eb2523af297607b7614120812e47a/logo/istio-bluelogo-whitebackground-unframed.svg"
         },
         {
             "title": "Itch.io",
@@ -6510,6 +6544,12 @@
             }
         },
         {
+            "title": "Packer",
+            "hex": "02A8EF",
+            "source": "https://www.hashicorp.com/brand",
+            "guidelines": "https://www.hashicorp.com/brand"
+        },
+        {
             "title": "Paddy Power",
             "hex": "004833",
             "source": "https://www.paddypower.com/"
@@ -7822,8 +7862,9 @@
         },
         {
             "title": "S7 Airlines",
-            "hex": "BED600",
-            "source": "https://www.s7.ru/"
+            "hex": "C4D600",
+            "source": "https://www.s7.ru/en/info/s7-airlines/brand/",
+            "guidelines": "https://www.s7.ru/en/info/s7-airlines/brand/"
         },
         {
             "title": "Safari",
@@ -7838,7 +7879,8 @@
         {
             "title": "Salesforce",
             "hex": "00A1E0",
-            "source": "https://www.salesforce.com/styleguide/elements/logos"
+            "source": "https://brand.salesforce.com/content/logo-guidelines",
+            "guidelines": "https://brand.salesforce.com/content/logo-guidelines"
         },
         {
             "title": "SaltStack",
@@ -7848,12 +7890,14 @@
         {
             "title": "Samsung",
             "hex": "1428A0",
-            "source": "https://www.samsung.com/us"
+            "source": "https://www.samsung.com/us/about-us/brand-identity/logo/",
+            "guidelines": "https://www.samsung.com/us/about-us/brand-identity/logo/"
         },
         {
             "title": "Samsung Pay",
             "hex": "1428A0",
-            "source": "https://pay.samsung.com/developers/resource/brand"
+            "source": "https://pay.samsung.com/developers/resource/brand",
+            "guidelines": "https://pay.samsung.com/developers/resource/brand"
         },
         {
             "title": "San Francisco Municipal Railway",
@@ -7873,7 +7917,11 @@
         {
             "title": "Sass",
             "hex": "CC6699",
-            "source": "http://sass-lang.com/styleguide/brand"
+            "source": "http://sass-lang.com/styleguide/brand",
+            "guidelines": "http://sass-lang.com/styleguide/brand",
+            "license": {
+                "type": "CC-BY-NC-SA-3.0"
+            }
         },
         {
             "title": "Sat.1",
@@ -7894,12 +7942,14 @@
         {
             "title": "Scaleway",
             "hex": "4F0599",
-            "source": "https://www.scaleway.com"
+            "source": "https://www.scaleway.com/en/design-resources/",
+            "guidelines": "https://www.scaleway.com/en/design-resources/"
         },
         {
             "title": "Scania",
             "hex": "041E42",
-            "source": "https://www.scania.com/"
+            "source": "https://digitaldesign.scania.com/resources/brand/logotype",
+            "guidelines": "https://digitaldesign.scania.com/resources/brand/logotype"
         },
         {
             "title": "scikit-learn",
@@ -7928,8 +7978,9 @@
         },
         {
             "title": "Scribd",
-            "hex": "1A7BBA",
-            "source": "https://www.scribd.com"
+            "hex": "1E7B85",
+            "source": "https://scribdbrand.frontify.com/d/eqGJ2WET8x3A/scribd-brand-style-guide#/other/media-press-kit/download-horizontal-vertical-logos-for-small-applications",
+            "guidelines": "https://scribdbrand.frontify.com/d/eqGJ2WET8x3A/scribd-brand-style-guide#/basics/logo-usage-guidelines-1576192924"
         },
         {
             "title": "Scrimba",
@@ -8010,7 +8061,8 @@
         {
             "title": "Sencha",
             "hex": "86BC40",
-            "source": "http://design.sencha.com/"
+            "source": "http://design.sencha.com/",
+            "guidelines": "http://design.sencha.com/productlogo.html"
         },
         {
             "title": "Sennheiser",
@@ -8030,7 +8082,8 @@
         {
             "title": "SEPA",
             "hex": "2350A9",
-            "source": "https://www.europeanpaymentscouncil.eu/document-library/other/sepa-logo-vector-format"
+            "source": "https://www.europeanpaymentscouncil.eu/document-library/other/sepa-logo-vector-format",
+            "guidelines": "https://www.europeanpaymentscouncil.eu/document-library/other/sepa-logo-visual-identity-guidelines"
         },
         {
             "title": "Sequelize",
@@ -8066,7 +8119,7 @@
         {
             "title": "Shazam",
             "hex": "0088FF",
-            "source": "https://brandfolder.com/shazam"
+            "source": "https://www.shazam.com/"
         },
         {
             "title": "Shell",
@@ -8096,7 +8149,8 @@
         {
             "title": "Shopify",
             "hex": "7AB55C",
-            "source": "https://press.shopify.com/brand"
+            "source": "https://www.shopify.com/brand-assets",
+            "guidelines": "https://www.shopify.com/brand-assets"
         },
         {
             "title": "Shopware",
@@ -8121,7 +8175,8 @@
         {
             "title": "Shutterstock",
             "hex": "EE2B24",
-            "source": "https://www.shutterstock.com/press/media"
+            "source": "https://www.shutterstock.com/press/media",
+            "guidelines": "https://www.shutterstock.com/press/media"
         },
         {
             "title": "Siemens",
@@ -8170,7 +8225,8 @@
         {
             "title": "Sketch",
             "hex": "F7B500",
-            "source": "https://www.sketch.com/press/"
+            "source": "https://www.sketch.com/about-us/#press",
+            "guidelines": "https://www.sketch.com/about-us/#press"
         },
         {
             "title": "Sketchfab",
@@ -8215,7 +8271,8 @@
         {
             "title": "Slack",
             "hex": "4A154B",
-            "source": "https://slack.com/brand-guidelines"
+            "source": "https://slack.com/brand-guidelines",
+            "guidelines": "https://slack.com/brand-guidelines"
         },
         {
             "title": "Slackware",
@@ -8250,7 +8307,8 @@
         {
             "title": "SmartThings",
             "hex": "15BFFF",
-            "source": "https://www.smartthings.com/press-kit"
+            "source": "https://www.smartthings.com/press-kit",
+            "guidelines": "https://www.smartthings.com/press-kit"
         },
         {
             "title": "smash.gg",
@@ -8276,17 +8334,22 @@
         {
             "title": "Snapchat",
             "hex": "FFFC00",
-            "source": "https://www.snapchat.com/brand-guidelines"
+            "source": "https://www.snapchat.com/brand-guidelines",
+            "guidelines": "https://www.snapchat.com/brand-guidelines"
         },
         {
             "title": "Snapcraft",
             "hex": "82BEA0",
-            "source": "https://github.com/snapcore/snap-store-badges"
+            "source": "https://github.com/snapcore/snap-store-badges",
+            "license": {
+                "type": "CC-BY-ND-2.0"
+            }
         },
         {
             "title": "Snowflake",
-            "hex": "56B9EB",
-            "source": "https://www.snowflake.com/about/press-and-news/"
+            "hex": "29B5E8",
+            "source": "https://www.snowflake.com/brand-guidelines/",
+            "guidelines": "https://www.snowflake.com/brand-guidelines/"
         },
         {
             "title": "Snyk",
@@ -8311,7 +8374,11 @@
         {
             "title": "Solidity",
             "hex": "363636",
-            "source": "https://docs.soliditylang.org/en/v0.7.4/brand-guide.html"
+            "source": "https://docs.soliditylang.org/en/v0.8.6/brand-guide.html",
+            "guidelines": "https://docs.soliditylang.org/en/v0.8.6/brand-guide.html",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "SoloLearn",
@@ -8331,27 +8398,32 @@
         {
             "title": "SonarLint",
             "hex": "CB2029",
-            "source": "https://www.sonarsource.com"
+            "source": "https://www.sonarlint.org/logos/",
+            "guidelines": "https://www.sonarlint.org/logos/"
         },
         {
             "title": "SonarQube",
             "hex": "4E9BCD",
-            "source": "https://www.sonarqube.org/logos/"
+            "source": "https://www.sonarqube.org/logos/",
+            "guidelines": "https://www.sonarqube.org/logos/"
         },
         {
             "title": "SonarSource",
             "hex": "CB3032",
-            "source": "https://www.sonarsource.com/"
+            "source": "https://www.sonarsource.com/logos/",
+            "guidelines": "https://www.sonarsource.com/logos/"
         },
         {
             "title": "Songkick",
             "hex": "F80046",
-            "source": "http://blog.songkick.com/media-assets"
+            "source": "https://www.songkick.com/style-guide/design",
+            "guidelines": "https://www.songkick.com/style-guide/design"
         },
         {
             "title": "Songoda",
             "hex": "FC494A",
-            "source": "https://songoda.com/branding"
+            "source": "https://songoda.com/branding",
+            "guidelines": "https://songoda.com/branding"
         },
         {
             "title": "SonicWall",
@@ -8380,8 +8452,9 @@
         },
         {
             "title": "Sourcegraph",
-            "hex": "00B4F2",
-            "source": "https://sourcegraph.com/.assets/img"
+            "hex": "00CBEC",
+            "source": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines",
+            "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
         },
         {
             "title": "Southwest Airlines",
@@ -8391,7 +8464,10 @@
         {
             "title": "Spacemacs",
             "hex": "9266CC",
-            "source": "http://spacemacs.org/"
+            "source": "http://spacemacs.org/",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "SpaceX",
@@ -8418,7 +8494,8 @@
         {
             "title": "SparkPost",
             "hex": "FA6423",
-            "source": "https://www.sparkpost.com/"
+            "source": "https://www.sparkpost.com/press-kit/",
+            "guidelines": "https://www.sparkpost.com/press-kit/"
         },
         {
             "title": "SPDX",
@@ -8462,8 +8539,9 @@
         },
         {
             "title": "Spotify",
-            "hex": "1ED760",
-            "source": "https://developer.spotify.com/design"
+            "hex": "1DB954",
+            "source": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo",
+            "guidelines": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo"
         },
         {
             "title": "Spotlight",
@@ -8487,7 +8565,7 @@
         {
             "title": "Spreaker",
             "hex": "F5C300",
-            "source": "http://www.spreaker.com/press"
+            "source": "https://www.spreaker.com/"
         },
         {
             "title": "Spring",
@@ -8522,7 +8600,8 @@
         {
             "title": "Squarespace",
             "hex": "000000",
-            "source": "http://squarespace.com/brand-guidelines"
+            "source": "https://www.squarespace.com/logo-guidelines",
+            "guidelines": "http://www.squarespace.com/brand-guidelines"
         },
         {
             "title": "SSRN",
@@ -8544,12 +8623,14 @@
         {
             "title": "Stackbit",
             "hex": "207BEA",
-            "source": "https://www.stackbit.com/branding-guidelines/"
+            "source": "https://www.stackbit.com/branding-guidelines/",
+            "guidelines": "https://www.stackbit.com/branding-guidelines/"
         },
         {
             "title": "StackPath",
             "hex": "000000",
-            "source": "https://www.stackpath.com/company/logo-and-branding/"
+            "source": "https://www.stackpath.com/company/logo-and-branding/",
+            "guidelines": "https://www.stackpath.com/company/logo-and-branding/"
         },
         {
             "title": "StackShare",
@@ -8579,7 +8660,7 @@
         },
         {
             "title": "Starling Bank",
-            "hex": "7433FF",
+            "hex": "6935D3",
             "source": "https://www.starlingbank.com/media/"
         },
         {
@@ -8590,12 +8671,13 @@
         {
             "title": "STARZ",
             "hex": "000000",
-            "source": "https://www.starz.com/StaticContent/Prod/guides/starzlibrary/"
+            "source": "https://www.starz.com/guides/starzlibrary/"
         },
         {
             "title": "Statamic",
             "hex": "FF269E",
-            "source": "https://statamic.com/branding"
+            "source": "https://statamic.com/branding",
+            "guidelines": "https://statamic.com/branding"
         },
         {
             "title": "Statuspage",
@@ -8610,7 +8692,8 @@
         {
             "title": "Steam",
             "hex": "000000",
-            "source": "https://partner.steamgames.com/public/marketing/Steam_Guidelines_02102016.pdf"
+            "source": "https://partner.steamgames.com/doc/marketing/branding",
+            "guidelines": "https://partner.steamgames.com/doc/marketing/branding"
         },
         {
             "title": "SteamDB",
@@ -8635,12 +8718,12 @@
         {
             "title": "Steinberg",
             "hex": "C90827",
-            "source": "https://www.steinberg.net/en/company/press.html"
+            "source": "https://new.steinberg.net/press/"
         },
         {
             "title": "Stellar",
             "hex": "7D00FF",
-            "source": "https://www.stellar.org/blog/announcing-the-new-stellar-logo"
+            "source": "https://www.stellar.org/press"
         },
         {
             "title": "Stencyl",
@@ -8686,7 +8769,8 @@
         {
             "title": "Streamlit",
             "hex": "FF4B4B",
-            "source": "https://www.streamlit.io/brand"
+            "source": "https://www.streamlit.io/brand",
+            "guidelines": "https://www.streamlit.io/brand"
         },
         {
             "title": "Stripe",
@@ -8721,7 +8805,7 @@
         {
             "title": "Stylus",
             "hex": "333333",
-            "source": "http://stylus-lang.com/img/stylus-logo.svg"
+            "source": "https://github.com/stylus/stylus-lang.com/blob/c833bf697e39e1174c7c6e679e0e5a23d0baeb90/img/stylus-logo.svg"
         },
         {
             "title": "Subaru",
@@ -8731,7 +8815,7 @@
         {
             "title": "Sublime Text",
             "hex": "FF9800",
-            "source": "https://www.sublimetext.com/images/logo.svg"
+            "source": "https://www.sublimetext.com/"
         },
         {
             "title": "Substack",
@@ -8751,7 +8835,8 @@
         {
             "title": "Sumo Logic",
             "hex": "000099",
-            "source": "https://sites.google.com/sumologic.com/sumo-logic-brand/home"
+            "source": "https://sites.google.com/sumologic.com/sumo-logic-brand/home",
+            "guidelines": "https://sites.google.com/sumologic.com/sumo-logic-brand/home"
         },
         {
             "title": "Supabase",
@@ -8767,12 +8852,14 @@
         {
             "title": "SurveyMonkey",
             "hex": "00BF6F",
-            "source": "https://www.surveymonkey.com/mp/brandassets/"
+            "source": "https://www.surveymonkey.com/mp/brandassets/",
+            "guidelines": "https://www.surveymonkey.com/mp/brandassets/"
         },
         {
             "title": "SUSE",
             "hex": "0C322C",
-            "source": "https://brand.suse.com/"
+            "source": "https://brand.suse.com/",
+            "guidelines": "https://brand.suse.com/"
         },
         {
             "title": "Suzuki",
@@ -8796,7 +8883,11 @@
         {
             "title": "SVG",
             "hex": "FFB13B",
-            "source": "https://www.w3.org/2009/08/svg-logos.html"
+            "source": "https://www.w3.org/2009/08/svg-logos.html",
+            "guidelines": "https://www.w3.org/2009/08/svg-logos.html",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "SVGO",
@@ -8836,7 +8927,8 @@
         {
             "title": "Symfony",
             "hex": "000000",
-            "source": "https://symfony.com/logo"
+            "source": "https://symfony.com/logo",
+            "guidelines": "https://symfony.com/trademark"
         },
         {
             "title": "Symphony",
@@ -8851,7 +8943,8 @@
         {
             "title": "Synology",
             "hex": "B5B5B6",
-            "source": "https://www.synology.com/en-global/company/branding"
+            "source": "https://www.synology.com/en-global/company/branding",
+            "guidelines": "https://www.synology.com/en-global/company/branding"
         },
         {
             "title": "T-Mobile",
@@ -9972,6 +10065,11 @@
             "title": "Wikivoyage",
             "hex": "006699",
             "source": "https://commons.wikimedia.org/wiki/File:Wikivoyage-Logo-v3-en.svg"
+        },
+        {
+            "title": "Windi CSS",
+            "hex": "48B0F1",
+            "source": "https://github.com/windicss/docs/blob/d7a01df515c4fa30dbb33ede7c46392e21fbf2cb/public/assets/logo.svg"
         },
         {
             "title": "Windows",
