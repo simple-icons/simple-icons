@@ -44,6 +44,14 @@ jobs:
         run: npm ci
       - name: Run linter
         run: npm run lint
+      - name: Verify file permissions
+        run: |
+          EXE_FILES=$(find icons/ -type f -executable)
+          if test -n "${EXE_FILES-}"
+          then
+            echo "${EXE_FILES}"
+            exit 1
+          fi
   test:
     name: Test package
     runs-on: ubuntu-latest
