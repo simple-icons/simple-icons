@@ -485,6 +485,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DoorDash` | `doordash` |
 | `Douban` | `douban` |
 | `Douban Read` | `doubanread` |
+| `DPD` | `dpd` |
 | `Draugiem.lv` | `draugiemdotlv` |
 | `Dribbble` | `dribbble` |
 | `Drone` | `drone` |
@@ -494,6 +495,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DS Automobiles` | `dsautomobiles` |
 | `DTube` | `dtube` |
 | `DuckDuckGo` | `duckduckgo` |
+| `Dungeons & Dragons` | `dungeonsanddragons` |
 | `Dunked` | `dunked` |
 | `Duolingo` | `duolingo` |
 | `dwm` | `dwm` |
@@ -723,6 +725,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Tag Manager` | `googletagmanager` |
 | `Google Translate` | `googletranslate` |
 | `GoToMeeting` | `gotomeeting` |
+| `Grab` | `grab` |
 | `Gradle` | `gradle` |
 | `Grafana` | `grafana` |
 | `Grammarly` | `grammarly` |
@@ -855,6 +858,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IOTA` | `iota` |
 | `IPFS` | `ipfs` |
 | `Issuu` | `issuu` |
+| `Istio` | `istio` |
 | `Itch.io` | `itchdotio` |
 | `iTunes` | `itunes` |
 | `IVECO` | `iveco` |
@@ -1237,6 +1241,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OYO` | `oyo` |
 | `p5.js` | `p5dotjs` |
 | `Packagist` | `packagist` |
+| `Packer` | `packer` |
 | `Paddy Power` | `paddypower` |
 | `Pagekit` | `pagekit` |
 | `PagerDuty` | `pagerduty` |
@@ -1897,6 +1902,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wikipedia` | `wikipedia` |
 | `Wikiquote` | `wikiquote` |
 | `Wikivoyage` | `wikivoyage` |
+| `Windi CSS` | `windicss` |
 | `Windows` | `windows` |
 | `Windows 95` | `windows95` |
 | `Windows Terminal` | `windowsterminal` |
