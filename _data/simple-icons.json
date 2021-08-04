@@ -2763,6 +2763,11 @@
             "source": "https://www.espressif.com/"
         },
         {
+            "title": "etcd",
+            "hex": "419EDA",
+            "source": "https://cncf-branding.netlify.app/projects/etcd/"
+        },
+        {
             "title": "Ethereum",
             "hex": "3C3C3D",
             "source": "https://ethereum.org/en/assets/"
@@ -10417,6 +10422,12 @@
             "title": "Zenn",
             "hex": "3EA8FF",
             "source": "https://zenn.dev/mediakit"
+        },
+        {
+            "title": "Zenodo",
+            "hex": "1682D4",
+            "source": "https://about.zenodo.org",
+            "guidelines": "https://about.zenodo.org"
         },
         {
             "title": "Zerodha",
