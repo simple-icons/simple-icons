@@ -1928,6 +1928,11 @@
             "source": "https://en.wikipedia.org/wiki/Contactless_payment"
         },
         {
+            "title": "containerd",
+            "hex": "575757",
+            "source": "https://cncf-branding.netlify.app/projects/containerd/"
+        },
+        {
             "title": "Contentful",
             "hex": "2478CC",
             "source": "https://press.contentful.com/media_kits"
@@ -2727,6 +2732,11 @@
             "source": "https://global.epson.com/IR/library/"
         },
         {
+            "title": "Equinix Metal",
+            "hex": "ED2224",
+            "source": "https://metal.equinix.com/"
+        },
+        {
             "title": "Erlang",
             "hex": "A90533",
             "source": "https://github.com/erlang/erlide_eclipse/blob/99d1d61fde8e32ef1630ca0e1b05a6822b3d6489/meta/media/erlang-logo.svg"
@@ -2756,6 +2766,11 @@
             "title": "Espressif",
             "hex": "E7352C",
             "source": "https://www.espressif.com/"
+        },
+        {
+            "title": "etcd",
+            "hex": "419EDA",
+            "source": "https://cncf-branding.netlify.app/projects/etcd/"
         },
         {
             "title": "Ethereum",
@@ -10412,6 +10427,12 @@
             "title": "Zenn",
             "hex": "3EA8FF",
             "source": "https://zenn.dev/mediakit"
+        },
+        {
+            "title": "Zenodo",
+            "hex": "1682D4",
+            "source": "https://about.zenodo.org",
+            "guidelines": "https://about.zenodo.org"
         },
         {
             "title": "Zerodha",
