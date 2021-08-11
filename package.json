@@ -8,6 +8,10 @@
     "icons"
   ],
   "main": "index.js",
+  "exports": {
+    "./icons": "./icons/index.mjs"
+  },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/simple-icons/simple-icons.git"

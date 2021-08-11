@@ -18,6 +18,7 @@ const rootDir = path.resolve(__dirname, "..", "..");
 const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
 const indexFile = path.resolve(rootDir, "index.js");
 const iconsDir = path.resolve(rootDir, "icons");
+const iconsIndexFile = path.resolve(iconsDir, "index.mjs");
 
 const templatesDir = path.resolve(__dirname, "templates");
 const indexTemplateFile = path.resolve(templatesDir, "index.js");
@@ -68,6 +69,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 }
 
 // 'main'
+const iconsBarrel = [];
 const icons = [];
 data.icons.forEach(icon => {
   const filename = getIconSlug(icon);
@@ -79,8 +81,18 @@ data.icons.forEach(icon => {
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
   minifyAndWrite(jsFilepath, `module.exports=${iconToObject(icon)};`);
+
+  // add export to the barrel file
+  const firstLetter = icon.slug[0].toUpperCase();
+  const rest = icon.slug.slice(1);
+  const iconExportName = `icon${firstLetter}${rest}`;
+  iconsBarrel.push(`export { default as ${iconExportName} } from "./${filename}.js";`);
 });
 
 // write our generic index.js
 const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','));
 minifyAndWrite(indexFile, rawIndexJs);
+
+// write to our file containing the exports of all icons
+const iconsIndexJs = iconsBarrel.join('');
+minifyAndWrite(iconsIndexFile, iconsIndexJs);
