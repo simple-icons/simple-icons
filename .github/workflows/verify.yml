@@ -12,6 +12,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
       - name: Build NodeJS package
@@ -26,14 +33,35 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
       - name: Run linter
+        run: npm run lint
+      - name: Verify file permissions
         run: |
-          npm run jsonlint
-          npm run svglint
-          npm run wslint
-          npm run our-lint
+          CHECK_DIRS="icons/ _data/"
+          echo "Searching the following directories for executable files:"
+          echo "${CHECK_DIRS}"
+          echo ""
+          EXE_FILES=$(find ${CHECK_DIRS} -type f -executable)
+          if test -n "${EXE_FILES-}"
+          then
+            echo "Some files were detected to have their executable bit set."
+            echo "To fix this, you can use 'chmod -x PATH/TO/FILE' on the following files:"
+            echo ""
+            echo "${EXE_FILES}"
+            exit 1
+          else
+            echo "All clear."
+            exit 0
+          fi
   test:
     name: Test package
     runs-on: ubuntu-latest
@@ -44,6 +72,21 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Cache Jest
+        uses: actions/cache@v2
+        with:
+          path: .cache/jest
+          key: ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-${{ github.run_number }}
+          restore-keys: |
+            ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-
+            ${{ runner.os }}-jest-
       - name: Install dependencies
         run: npm ci
       - name: Run tests
