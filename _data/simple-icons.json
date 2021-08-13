@@ -2303,6 +2303,11 @@
             "source": "https://dev.to/"
         },
         {
+            "title": "DevExpress",
+            "hex": "FF7200",
+            "source": "https://www.devexpress.com/aboutus/"
+        },
+        {
             "title": "DeviantArt",
             "hex": "05CC47",
             "source": "http://help.deviantart.com/21"
@@ -5128,6 +5133,11 @@
             "source": "https://lichess.org/about"
         },
         {
+            "title": "Lidl",
+            "hex": "0050AA",
+            "source": "https://www.lidl.de/"
+        },
+        {
             "title": "LIFX",
             "hex": "000000",
             "source": "https://www.lifx.com/pages/press-enquiries",
@@ -5768,6 +5778,16 @@
             "guidelines": "https://www.mixcloud.com/about"
         },
         {
+            "title": "MLB",
+            "hex": "041E42",
+            "source": "https://www.mlb.com/",
+            "aliases": {
+                "aka": [
+                    "Major League Baseball"
+                ]
+            }
+        },
+        {
             "title": "MobX",
             "hex": "FF9955",
             "source": "https://github.com/mobxjs/mobx/blob/248e25e37af31c2e71ff452bc662a85816fa40d8/docs/assets/mobservable.svg"
@@ -6016,6 +6036,11 @@
             "hex": "3484D2",
             "source": "https://nette.org/en/logo",
             "guidelines": "https://nette.org/en/logo"
+        },
+        {
+            "title": "New Balance",
+            "hex": "CF0A2C",
+            "source": "https://www.newbalance.com"
         },
         {
             "title": "New Japan Pro-Wrestling",
@@ -7709,6 +7734,12 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "Rimac Automobili",
+            "hex": "0A222E",
+            "source": "https://www.rimac-automobili.com/media/",
+            "guidelines": "https://www.rimac-automobili.com/media/"
+        },
+        {
             "title": "Ring",
             "hex": "1C9AD6",
             "source": "https://store.ring.com/press"
@@ -9012,6 +9043,11 @@
             "source": "https://tapas.io/site/about#media"
         },
         {
+            "title": "Target",
+            "hex": "CC0000",
+            "source": "https://www.target.com/"
+        },
+        {
             "title": "Tasmota",
             "hex": "1FA3EC",
             "source": "https://tasmota.github.io/docs/"
@@ -9551,6 +9587,11 @@
             "title": "Unacademy",
             "hex": "08BD80",
             "source": "https://unacademy.com/"
+        },
+        {
+            "title": "Under Armour",
+            "hex": "1D1D1D",
+            "source": "https://www.underarmour.com/en-us/"
         },
         {
             "title": "Undertale",
