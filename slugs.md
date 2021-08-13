@@ -388,6 +388,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Construct 3` | `construct3` |
 | `Consul` | `consul` |
 | `Contactless Payment` | `contactlesspayment` |
+| `containerd` | `containerd` |
 | `Contentful` | `contentful` |
 | `Convertio` | `convertio` |
 | `Cookiecutter` | `cookiecutter` |
@@ -539,12 +540,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `EPEL` | `epel` |
 | `Epic Games` | `epicgames` |
 | `Epson` | `epson` |
+| `Equinix Metal` | `equinixmetal` |
 | `Erlang` | `erlang` |
 | `ESEA` | `esea` |
 | `ESLGaming` | `eslgaming` |
 | `ESLint` | `eslint` |
 | `ESPHome` | `esphome` |
 | `Espressif` | `espressif` |
+| `etcd` | `etcd` |
 | `Ethereum` | `ethereum` |
 | `Ethiopian Airlines` | `ethiopianairlines` |
 | `Etihad Airways` | `etihadairways` |
@@ -1970,6 +1973,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zend Framework` | `zendframework` |
 | `Zendesk` | `zendesk` |
 | `Zenn` | `zenn` |
+| `Zenodo` | `zenodo` |
 | `Zerodha` | `zerodha` |
 | `ZeroMQ` | `zeromq` |
 | `Zerply` | `zerply` |
