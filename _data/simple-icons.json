@@ -8158,6 +8158,11 @@
             "source": "https://www.sfml-dev.org/download/goodies/"
         },
         {
+            "title": "Shadow",
+            "hex": "0A0C0D",
+            "source": "https://shadow.tech/"
+        },
+        {
             "title": "Shanghai Metro",
             "hex": "EC1C24",
             "source": "https://en.wikipedia.org/wiki/File:Shanghai_Metro_Full_Logo.svg"
@@ -8801,6 +8806,14 @@
             "title": "STMicroelectronics",
             "hex": "03234B",
             "source": "https://www.st.com/"
+        },
+        {
+            "title": "StopStalk",
+            "hex": "536DFE",
+            "source": "https://github.com/stopstalk/media-resources/blob/265b728c26ba597b957e72134a3b49a10dc0c91d/stopstalk-small-black.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Storyblok",
