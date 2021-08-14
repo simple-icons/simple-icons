@@ -30,10 +30,10 @@ body:
     attributes:
       label: Description
       description: |
-        "Anything relevant, for example:
+        Anything relevant, for example:
         - A (perma)link to the documentation
         - For improvements: Suggested for how to improve
-        - For mistakes: Suggested fixes"
+        - For mistakes: Suggested fixes
       render: markdown
     validations:
       required: true

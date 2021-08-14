@@ -30,13 +30,13 @@ body:
     attributes:
       label: Description
       description: |
-        "Anything relevant, for example:
+        Anything relevant, for example:
         - For bugs: "Steps to reproduce" and "Expected behavior"
         - For improvements: An example of a use case
         - Package issues: Version information
           - For JavaScript/NodeJS: $ node --version
           - For PHP/Packagist: $ composer --version
-        - etc."
+        - etc.
       render: markdown
     validations:
       required: true
