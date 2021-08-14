@@ -34,6 +34,5 @@ body:
         - A (perma)link to the documentation
         - For improvements: Suggested for how to improve
         - For mistakes: Suggested fixes
-      render: markdown
     validations:
       required: true

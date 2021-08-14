@@ -37,6 +37,5 @@ body:
           - For JavaScript/NodeJS: $ node --version
           - For PHP/Packagist: $ composer --version
         - etc.
-      render: markdown
     validations:
       required: true
