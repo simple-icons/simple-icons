@@ -98,9 +98,9 @@ data.icons.forEach(icon => {
 const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','));
 minifyAndWrite(indexFile, rawIndexJs);
 
-// write to our file containing the exports of all icons
-const iconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
-fs.writeFileSync(iconsJsFile, iconsJs);
-
-const iconsMjs = iconsBarrelMjs.join('');
-fs.writeFileSync(iconsMjsFile, iconsMjs);
+// write our file containing the exports of all icons in CommonJS ...
+const rawIconsJs = `module.exports={${iconsBarrelJs.join("")}};`;
+minifyAndWrite(rawIconsJs, iconsJs);
+// and ESM
+const rawIconsMjs = iconsBarrelMjs.join("");
+minifyAndWrite(iconsMjsFile, rawIconsMjs);
