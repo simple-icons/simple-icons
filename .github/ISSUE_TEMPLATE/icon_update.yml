@@ -20,3 +20,8 @@ body:
         Media kits, brand guidelines, SVG files, etc. For more details on our
         processes please see our contributing guidelines, which can be found at
         https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md.
+
+  - type: textarea
+    attributes:
+      label: Additional Comments
+      description: Is there anything else that should be taken into consideration for this icon?
