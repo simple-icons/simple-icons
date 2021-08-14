@@ -18,7 +18,8 @@ const rootDir = path.resolve(__dirname, "..", "..");
 const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
 const indexFile = path.resolve(rootDir, "index.js");
 const iconsDir = path.resolve(rootDir, "icons");
-const iconsIndexFile = path.resolve(iconsDir, "index.mjs");
+const iconsJsFile = path.resolve(rootDir, "icons.js");
+const iconsMjsFile = path.resolve(rootDir, "icons.mjs");
 
 const templatesDir = path.resolve(__dirname, "templates");
 const indexTemplateFile = path.resolve(templatesDir, "index.js");
@@ -69,7 +70,8 @@ function minifyAndWrite(filepath, rawJavaScript) {
 }
 
 // 'main'
-const iconsBarrel = [];
+const iconsBarrelMjs = [];
+const iconsBarrelJs = [];
 const icons = [];
 data.icons.forEach(icon => {
   const filename = getIconSlug(icon);
@@ -86,7 +88,10 @@ data.icons.forEach(icon => {
   const firstLetter = icon.slug[0].toUpperCase();
   const rest = icon.slug.slice(1);
   const iconExportName = `icon${firstLetter}${rest}`;
-  iconsBarrel.push(`export { default as ${iconExportName} } from "./${filename}.js";`);
+  const iconJsFilepath = `./icons/${filename}.js`;
+
+  iconsBarrelJs.push(`${iconExportName}:require("${iconJsFilepath}"),`);
+  iconsBarrelMjs.push(`export{default as ${iconExportName}}from"${iconJsFilepath}";`);
 });
 
 // write our generic index.js
@@ -94,5 +99,8 @@ const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','
 minifyAndWrite(indexFile, rawIndexJs);
 
 // write to our file containing the exports of all icons
-const iconsIndexJs = iconsBarrel.join('');
-minifyAndWrite(iconsIndexFile, iconsIndexJs);
+const iconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
+fs.writeFileSync(iconsJsFile, iconsJs);
+
+const iconsMjs = iconsBarrelMjs.join('');
+fs.writeFileSync(iconsMjsFile, iconsMjs);

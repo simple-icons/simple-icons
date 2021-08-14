@@ -9,7 +9,16 @@
   ],
   "main": "index.js",
   "exports": {
-    "./icons": "./icons/index.mjs"
+    ".": {
+      "module": "./index.js",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./icons": {
+      "module": "./icons.mjs",
+      "import": "./icons.mjs",
+      "default": "./icons.js"
+    }
   },
   "sideEffects": false,
   "repository": {
@@ -36,7 +45,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rm -f icons/*.js index.js",
+    "clean": "rm -f icons/*.js index.js icons.js icons.mjs",
     "lint": "run-s our-lint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
     "jsonlint": "node scripts/lint/jsonlint.js",
