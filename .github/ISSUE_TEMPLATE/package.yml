@@ -1,0 +1,42 @@
+name: Packages
+description: Report problems and suggest ideas for the packages
+labels: [package]
+
+body:
+  - type: markdown
+    attributes:
+      value: Before opening a new issue search for duplicate or closed issues
+
+  - type: dropdown
+    attributes:
+      label: Kind of issue
+      description: Skip to "other" if you do not see your issue type here.
+      options: [improvement, bug]
+
+  - type: input
+    attributes:
+      label: Kind of issue (other)
+      description: Only fill out if your issue type is not in the dropdown above.
+
+  - type: dropdown
+    attributes:
+      label: Which package does this issue concern?
+      options: [NPM, Packagist]
+      multiple: true
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        "Anything relevant, for example:
+        - For bugs: "Steps to reproduce" and "Expected behavior"
+        - For improvements: An example of a use case
+        - Package issues: Version information
+          - For JavaScript/NodeJS: $ node --version
+          - For PHP/Packagist: $ composer --version
+        - etc."
+      render: markdown
+    validations:
+      required: true
