@@ -1,0 +1,22 @@
+name: Icon update
+description: Help us improve by reporting outdated icons
+labels: [icon outdated]
+
+body:
+  - type: markdown
+    attributes:
+      value: Before opening a new issue search for duplicate or closed issues.
+
+  - type: input
+    attributes:
+      label: Brand Name
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Official resources for icon and color
+      description: >-
+        Media kits, brand guidelines, SVG files, etc. For more details on our
+        processes please see our contributing guidelines, which can be found at
+        https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md.
