@@ -5,7 +5,7 @@ labels: [docs]
 body:
   - type: markdown
     attributes:
-      value: Before opening a new issue search for duplicate or closed issues
+      value: Before opening a new issue search for duplicate or closed issues.
 
   - type: dropdown
     attributes:
