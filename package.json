@@ -10,11 +10,7 @@
   "type": "commonjs",
   "main": "index.js",
   "exports": {
-    ".": {
-      "module": "./index.js",
-      "import": "./index.js",
-      "default": "./index.js"
-    },
+    ".": "./index.js",
     "./icons": {
       "module": "./icons.mjs",
       "import": "./icons.mjs",
