@@ -39,3 +39,12 @@ body:
         - Is the icon licensed?
         - If the brand isn't popular enough by the default criteria, how can we assess the popularity instead?
         - If you think the brand might not be accepted for other reasons, why do you think it should be considered?
+
+  - type: checkboxes
+    attributes:
+      label: Contributing
+      description: >-
+        It takes a lot of work to maintain `simple-icons`, so we welcome any
+        contributions!
+      options:
+        - label: I'm willing to submit a PR for this

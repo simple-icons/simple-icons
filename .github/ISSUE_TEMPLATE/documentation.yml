@@ -26,3 +26,12 @@ body:
         - Suggestions for how to change the docs
     validations:
       required: true
+
+  - type: checkboxes
+    attributes:
+      label: Contributing
+      description: >-
+        It takes a lot of work to maintain `simple-icons`, so we welcome any
+        contributions!
+      options:
+        - label: I'm willing to submit a PR for this
