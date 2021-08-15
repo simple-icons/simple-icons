@@ -24,6 +24,8 @@ body:
   - type: input
     attributes:
       label: Website
+      description: >-
+        For non-web brands you can add a relevant link or simply "None" if you don't think there's a website.
     validations:
       required: true
 
