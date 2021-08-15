@@ -11,20 +11,12 @@ body:
     attributes:
       label: Kind of issue
       description: Skip to "other" if you do not see your issue type here.
-      options: [improvement, bug]
+      options: [improvement, mistake]
 
   - type: input
     attributes:
       label: Kind of issue (other)
       description: Only fill out if your issue type is not in the dropdown above.
-
-  - type: dropdown
-    attributes:
-      label: Which package does this issue concern?
-      options: [NPM, Packagist]
-      multiple: true
-    validations:
-      required: true
 
   - type: textarea
     attributes:
