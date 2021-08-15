@@ -14,6 +14,8 @@ body:
         Select "other" if you don't see your issue kind here. If you do, please
         explain why in the "Description" field below.
       options: [improvement, bug, other]
+    validations:
+      required: true
 
   - type: dropdown
     attributes:
