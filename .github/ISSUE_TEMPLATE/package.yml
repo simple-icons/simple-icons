@@ -11,8 +11,8 @@ body:
     attributes:
       label: Kind of issue
       description: >-
-        Select "other" if you don't see your issue kind here. If you do, please
-        explain why in the "Description" field below.
+        If you don't see your issue type here, select "other" and explain in the
+        "Description" field below.
       options: [improvement, bug, other]
     validations:
       required: true
@@ -33,8 +33,8 @@ body:
         - For bugs: "Steps to reproduce" and "Expected behavior"
         - For improvements: An example of a use case
         - Package issues: Version information
-          - For JavaScript/NodeJS: $ node --version
-          - For PHP/Packagist: $ composer --version
+          - For JavaScript/NodeJS: `node --version`
+          - For PHP/Packagist: `composer --version`
         - etc.
     validations:
       required: true

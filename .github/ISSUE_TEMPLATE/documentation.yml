@@ -11,8 +11,8 @@ body:
     attributes:
       label: Kind of issue
       description: >-
-        Select "other" if you don't see your issue kind here. If you do, please
-        explain why in the "Description" field below.
+        If you don't see your issue type here, select "other" and explain in the
+        "Description" field below.
       options: [improvement, mistake, other]
     validations:
       required: true
