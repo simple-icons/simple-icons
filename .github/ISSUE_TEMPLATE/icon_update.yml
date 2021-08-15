@@ -26,7 +26,7 @@ body:
       description: >-
         Media kits, brand guidelines, SVG files, etc. We strongly encourage you to do
         some research here as it will help implement your request faster, although you
-        can set this to none if you are unable to find any resources.
+        can put "None" if you are unable to find any resources.
     validations:
       required: true
 
@@ -37,5 +37,5 @@ body:
         Is there anything else we should know about the brand? For example:
         - Are there multiple options for the logo and/or color?
         - Is the icon licensed?
-        - If the brand isn't popular enough by the default criteria, how can we asses the popularity instead?
+        - If the brand isn't popular enough by the default criteria, how can we assess the popularity instead?
         - If you think the brand might not be accepted for other reasons, why do you think it should be considered?

@@ -25,7 +25,7 @@ body:
     attributes:
       label: Website
       description: >-
-        For non-web brands you can add a relevant link or simply "None" if you don't
+        For non-web brands you can add a relevant link or simply put "None" if you don't
         think there's a website.
 
     validations:
@@ -35,7 +35,10 @@ body:
     attributes:
       label: Alexa Rank
       description: >-
-        The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/.
+        Provide either an [Alexa rank](https://www.alexa.com/siteinfo) or the number
+        of GitHub stars. If these are not available or insufficient you can still open
+        the issue. Please provide any information regarding the brand's popularity you
+        think is relevant in the description below.
     validations:
       required: true
 
@@ -56,5 +59,5 @@ body:
         Is there anything else we should know about the brand? For example:
         - Are there multiple options for the logo and/or color?
         - Is the icon licensed?
-        - If the brand isn't popular enough by the default criteria, how can we asses the popularity instead?
+        - If the brand isn't popular enough by the default criteria, how can we assess the popularity instead?
         - If you think the brand might not be accepted for other reasons, why do you think it should be considered?
