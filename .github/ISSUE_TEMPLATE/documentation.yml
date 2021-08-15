@@ -10,9 +10,9 @@ body:
   - type: dropdown
     attributes:
       label: Kind of issue
-      description: |
-        Select "other" if you don't see your issue kind here. If you do, please explain
-        why in the description below.
+      description: >-
+        Select "other" if you don't see your issue kind here. If you do, please
+        explain why in the "Description" field below.
       options: [improvement, mistake, other]
 
   - type: textarea

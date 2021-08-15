@@ -10,13 +10,10 @@ body:
   - type: dropdown
     attributes:
       label: Kind of issue
-      description: Skip to "other" if you do not see your issue type here.
-      options: [improvement, bug]
-
-  - type: input
-    attributes:
-      label: Kind of issue (other)
-      description: Only fill out if your issue type is not in the dropdown above.
+      description: >-
+        Select "other" if you don't see your issue kind here. If you do, please
+        explain why in the "Description" field below.
+      options: [improvement, bug, other]
 
   - type: dropdown
     attributes:
