@@ -6,7 +6,13 @@ labels: [icon outdated]
 body:
   - type: markdown
     attributes:
-      value: Before opening a new issue, please search for duplicate or closed issues.
+      value: >-
+        Before opening a new issue, please
+        search for duplicate or closed issues or PRs. If you find one for the brand
+        you're reporting then leave a comment on it or add a reaction to the original
+        post. Also take a look at our [contributing guidelines]
+        (https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
+        for more details.
 
   - type: input
     attributes:
@@ -18,9 +24,11 @@ body:
     attributes:
       label: Official resources for icon and color
       description: >-
-        Media kits, brand guidelines, SVG files, etc. For more details on our
-        processes please see our contributing guidelines, which can be found at
-        https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md.
+        Media kits, brand guidelines, SVG files, etc. We strongly encourage you to do
+        some research here as it will help implement your request faster, although you
+        can set this to none if you are unable to find any resources.
+    validations:
+      required: true
 
   - type: textarea
     attributes:

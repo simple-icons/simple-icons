@@ -11,7 +11,9 @@ body:
         doubt, open an issue and we'll have a look. Before opening a new issue, please
         search for duplicate or closed issues or PRs. If you find one for the brand
         you're requesting then leave a comment on it or add a reaction to the original
-        post.
+        post. Also take a look at our [contributing guidelines]
+        (https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
+        for more details.
 
   - type: input
     attributes:
@@ -29,9 +31,7 @@ body:
     attributes:
       label: Alexa Rank
       description: >-
-        The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/. Please see
-        our contributing guidelines for more details on how we assess a brand's
-        popularity.
+        The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/.
     validations:
       required: true
 
@@ -39,9 +39,11 @@ body:
     attributes:
       label: Official resources for icon and color
       description: >-
-        Media kits, brand guidelines, SVG files, etc. For more details on our
-        processes please see our contributing guidelines, which can be found at
-        https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md.
+        Media kits, brand guidelines, SVG files, etc. We strongly encourage you to do
+        some research here as it will help implement your request faster, although you
+        can set this to none if you are unable to find any resources.
+    validations:
+      required: true
 
   - type: textarea
     attributes:
