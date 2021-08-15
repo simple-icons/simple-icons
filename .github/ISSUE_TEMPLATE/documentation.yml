@@ -11,7 +11,7 @@ body:
     attributes:
       label: Kind of issue
       description: >-
-        If you don't see your issue type here, select "other" and explain in the
+        If your issue type is not here, select "other" and explain in the
         "Description" field below.
       options: [improvement, mistake, other]
     validations:
