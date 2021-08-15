@@ -19,9 +19,8 @@ body:
     attributes:
       label: Description
       description: |
-        Anything relevant, for example:
-        - A (perma)link to the documentation
-        - For improvements: Suggested for how to improve
-        - For mistakes: Suggested fixes
+        Include as much detail as possible, for example:
+        - A (perma)link to the documentation in question
+        - Suggestions for how to change the docs
     validations:
       required: true
