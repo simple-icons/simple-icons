@@ -2303,6 +2303,11 @@
             "source": "https://dev.to/"
         },
         {
+            "title": "DevExpress",
+            "hex": "FF7200",
+            "source": "https://www.devexpress.com/aboutus/"
+        },
+        {
             "title": "DeviantArt",
             "hex": "05CC47",
             "source": "http://help.deviantart.com/21"
@@ -5128,6 +5133,11 @@
             "source": "https://lichess.org/about"
         },
         {
+            "title": "Lidl",
+            "hex": "0050AA",
+            "source": "https://www.lidl.de/"
+        },
+        {
             "title": "LIFX",
             "hex": "000000",
             "source": "https://www.lifx.com/pages/press-enquiries",
@@ -5768,6 +5778,16 @@
             "guidelines": "https://www.mixcloud.com/about"
         },
         {
+            "title": "MLB",
+            "hex": "041E42",
+            "source": "https://www.mlb.com/",
+            "aliases": {
+                "aka": [
+                    "Major League Baseball"
+                ]
+            }
+        },
+        {
             "title": "MobX",
             "hex": "FF9955",
             "source": "https://github.com/mobxjs/mobx/blob/248e25e37af31c2e71ff452bc662a85816fa40d8/docs/assets/mobservable.svg"
@@ -6016,6 +6036,11 @@
             "hex": "3484D2",
             "source": "https://nette.org/en/logo",
             "guidelines": "https://nette.org/en/logo"
+        },
+        {
+            "title": "New Balance",
+            "hex": "CF0A2C",
+            "source": "https://www.newbalance.com"
         },
         {
             "title": "New Japan Pro-Wrestling",
@@ -7709,6 +7734,12 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "Rimac Automobili",
+            "hex": "0A222E",
+            "source": "https://www.rimac-automobili.com/media/",
+            "guidelines": "https://www.rimac-automobili.com/media/"
+        },
+        {
             "title": "Ring",
             "hex": "1C9AD6",
             "source": "https://store.ring.com/press"
@@ -8122,6 +8153,11 @@
             "source": "https://www.sfml-dev.org/download/goodies/"
         },
         {
+            "title": "Shadow",
+            "hex": "0A0C0D",
+            "source": "https://shadow.tech/"
+        },
+        {
             "title": "Shanghai Metro",
             "hex": "EC1C24",
             "source": "https://en.wikipedia.org/wiki/File:Shanghai_Metro_Full_Logo.svg"
@@ -8200,8 +8236,8 @@
         },
         {
             "title": "Signal",
-            "hex": "2592E9",
-            "source": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
+            "hex": "3A76F0",
+            "source": "https://github.com/signalapp/Signal-Desktop/blob/9db8765b6cf270195e45a7f251374d4e53d54c95/images/signal-logo.svg"
         },
         {
             "title": "Simkl",
@@ -8588,6 +8624,12 @@
             "source": "https://spring.io/trademarks"
         },
         {
+            "title": "Spring",
+            "slug": "spring_creators",
+            "hex": "000000",
+            "source": "https://www.spri.ng/"
+        },
+        {
             "title": "Spring Boot",
             "hex": "6DB33F",
             "source": "https://spring.io/projects"
@@ -8759,6 +8801,14 @@
             "title": "STMicroelectronics",
             "hex": "03234B",
             "source": "https://www.st.com/"
+        },
+        {
+            "title": "StopStalk",
+            "hex": "536DFE",
+            "source": "https://github.com/stopstalk/media-resources/blob/265b728c26ba597b957e72134a3b49a10dc0c91d/stopstalk-small-black.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Storyblok",
@@ -9005,6 +9055,11 @@
             "title": "Tapas",
             "hex": "FFCE00",
             "source": "https://tapas.io/site/about#media"
+        },
+        {
+            "title": "Target",
+            "hex": "CC0000",
+            "source": "https://www.target.com/"
         },
         {
             "title": "Tasmota",
@@ -9307,8 +9362,9 @@
         },
         {
             "title": "TrainerRoad",
-            "hex": "E12726",
-            "source": "https://www.trainerroad.com/"
+            "hex": "DA291C",
+            "source": "https://www.trainerroad.com/press/",
+            "guidelines": "https://www.trainerroad.com/press/"
         },
         {
             "title": "Trakt",
@@ -9546,6 +9602,11 @@
             "title": "Unacademy",
             "hex": "08BD80",
             "source": "https://unacademy.com/"
+        },
+        {
+            "title": "Under Armour",
+            "hex": "1D1D1D",
+            "source": "https://www.underarmour.com/en-us/"
         },
         {
             "title": "Undertale",
