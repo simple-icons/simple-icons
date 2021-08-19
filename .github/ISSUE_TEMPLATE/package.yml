@@ -5,7 +5,11 @@ labels: [package]
 body:
   - type: markdown
     attributes:
-      value: Before opening a new issue, please search for duplicate or closed issues.
+      value: >-
+        Before opening a new issue, make sure it isn't covered by an existing issue.
+        Please search for [issues with the `package`
+        label](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Apackage+is%3Aopen)
+        (including closed issues) before you continue.
 
   - type: dropdown
     attributes:
