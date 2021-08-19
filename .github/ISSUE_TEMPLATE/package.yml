@@ -39,11 +39,12 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     attributes:
       label: Contributing
       description: >-
-        It takes a lot of work to maintain `simple-icons`, so we welcome any
-        contributions!
+        This is an open source project and we welcome contributions. Do you want help
+        implement this?
       options:
-        - label: I'm willing to submit a PR for this
+        - "Yes"
+        - "No"
