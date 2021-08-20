@@ -1421,7 +1421,11 @@
         {
             "title": "Canonical",
             "hex": "77216F",
-            "source": "https://design.ubuntu.com/downloads/"
+            "source": "https://design.ubuntu.com/downloads/",
+            "guidelines": "https://design.ubuntu.com/brand/canonical-logo/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Canva",
@@ -8241,8 +8245,8 @@
         },
         {
             "title": "Signal",
-            "hex": "2592E9",
-            "source": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
+            "hex": "3A76F0",
+            "source": "https://github.com/signalapp/Signal-Desktop/blob/9db8765b6cf270195e45a7f251374d4e53d54c95/images/signal-logo.svg"
         },
         {
             "title": "Simkl",
@@ -9367,8 +9371,9 @@
         },
         {
             "title": "TrainerRoad",
-            "hex": "E12726",
-            "source": "https://www.trainerroad.com/"
+            "hex": "DA291C",
+            "source": "https://www.trainerroad.com/press/",
+            "guidelines": "https://www.trainerroad.com/press/"
         },
         {
             "title": "Trakt",
@@ -9644,7 +9649,7 @@
         },
         {
             "title": "Unreal Engine",
-            "hex": "313131",
+            "hex": "0E1128",
             "source": "https://www.unrealengine.com/en-US/branding",
             "guidelines": "https://www.unrealengine.com/en-US/branding"
         },
