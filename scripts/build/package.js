@@ -80,18 +80,19 @@ data.icons.forEach(icon => {
   icon.slug = filename;
   icons.push(icon);
 
+  const iconObject = iconToObject(icon)
+
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  minifyAndWrite(jsFilepath, `module.exports=${iconToObject(icon)};`);
+  minifyAndWrite(jsFilepath, `module.exports=${iconObject};`);
 
   // add export to the barrel file
   const firstLetter = icon.slug[0].toUpperCase();
   const rest = icon.slug.slice(1);
   const iconExportName = `icon${firstLetter}${rest}`;
-  const iconJsFilepath = `./icons/${filename}.js`;
 
-  iconsBarrelJs.push(`${iconExportName}:require("${iconJsFilepath}"),`);
-  iconsBarrelMjs.push(`export{default as ${iconExportName}}from"${iconJsFilepath}";`);
+  iconsBarrelJs.push(`${iconExportName}: ${iconObject},`);
+  iconsBarrelMjs.push(`export const ${iconExportName} = ${iconObject}`);
 });
 
 // write our generic index.js
