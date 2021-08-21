@@ -69,8 +69,10 @@ body:
     attributes:
       label: Contributing
       description: >-
-        This is an open source project and we welcome contributions. Do you want help
-        implement this?
+        This is an open source project and we welcome contributions. Do you want to
+        work on this issue?
       options:
         - "Yes"
         - "No"
+    validations:
+      required: true
