@@ -37,7 +37,7 @@ body:
 
   - type: input
     attributes:
-      label: Alexa Rank
+      label: Popularity Metric
       description: >-
         Provide either an [Alexa rank](https://www.alexa.com/siteinfo) or the number
         of GitHub stars. If these are not available or insufficient you can still open
