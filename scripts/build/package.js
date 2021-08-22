@@ -91,8 +91,8 @@ data.icons.forEach(icon => {
   const rest = icon.slug.slice(1);
   const iconExportName = `icon${firstLetter}${rest}`;
 
-  iconsBarrelJs.push(`${iconExportName}: ${iconObject},`);
-  iconsBarrelMjs.push(`export const ${iconExportName} = ${iconObject}`);
+  iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
+  iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
 });
 
 // write our generic index.js
