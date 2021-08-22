@@ -29,7 +29,7 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, slugToVariableName } = require("../utils.js");
+const { getIconSlug } = require("../utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -58,6 +58,11 @@ function iconToObject(icon) {
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
+}
+function slugToVariableName(slug) {
+  const slugFirstLetter = slug[0].toUpperCase();
+  const slugRest = slug.slice(1);
+  return `si${slugFirstLetter}${slugRest}`;
 }
 function minifyAndWrite(filepath, rawJavaScript) {
   const { error, code } = minify(rawJavaScript);
