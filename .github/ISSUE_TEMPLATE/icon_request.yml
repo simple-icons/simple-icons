@@ -6,7 +6,7 @@ labels: [new icon]
 body:
   - type: markdown
     attributes:
-      value: |
+      value: >-
         We won't add non-brand icons or anything related to illegal services. If in
         doubt, open an issue and we'll have a look. For more details see the
         [Contributing Guidelines][contributing-guidelines].
