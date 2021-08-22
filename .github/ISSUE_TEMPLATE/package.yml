@@ -26,9 +26,27 @@ body:
 
   - type: dropdown
     attributes:
-      label: Which package does this issue concern?
+      label: Which packages do this issue concern?
       options: [NPM, Packagist]
       multiple: true
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Simple Icons Version
+      placeholder: "Example: 5.11.0"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Other Versions
+      description: Software versions (Node.js & NPM, PHP & Packagist, Browser). If you are unsure, enter "None."
+      placeholder: |
+        Example:
+        Node.js v16
+        Chrome
     validations:
       required: true
 
@@ -39,10 +57,6 @@ body:
         Anything relevant, for example:
         - For bugs: "Steps to reproduce" and "Expected behavior"
         - For improvements: An example of a use case
-        - Package issues: Version information
-          - For JavaScript/NodeJS: `node --version`
-          - For PHP/Packagist: `composer --version`
-        - etc.
       placeholder: "Example: The NPM package does not work for my use case..."
     validations:
       required: true
