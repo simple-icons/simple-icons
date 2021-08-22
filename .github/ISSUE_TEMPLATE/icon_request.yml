@@ -8,15 +8,18 @@ body:
     attributes:
       value: >-
         We won't add non-brand icons or anything related to illegal services. If in
-        doubt, open an issue and we'll have a look. Before opening a new issue, make
-        sure it isn't covered by an existing issue. Please search for [issues with the
-        `new icon`
-        label](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22+is%3Aopen)
+        doubt, open an issue and we'll have a look. For more details see the
+        [Contributing Guidelines][contributing-guidelines].
+
+        Before opening a new issue, make sure it isn't covered by an existing issue.
+        Please search for [issues with the `new icon` label][new-icon-issues]
         (including closed issues) before you continue. If you find one for the brand
-        you're requesting then leave a comment on it or add a reaction to the original
-        post. Also take a look at our [contributing
-        guidelines](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
-        for more details.
+        you're requesting then leave a comment on it or add a reaction.
+
+        [contributing-guidelines]:
+        https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
+        [new-icon-issues]:
+        https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22+is%3Aopen
 
   - type: input
     attributes:
