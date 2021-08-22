@@ -47,8 +47,8 @@ module.exports = {
    * @param {String} slug
    */
   slugToVariableName(slug) {
-    const slugFirstLetter = icon.slug[0].toUpperCase();
-    const slugRest = icon.slug.slice(1);
+    const slugFirstLetter = slug[0].toUpperCase();
+    const slugRest = slug.slice(1);
     return `icon${slugFirstLetter}${slugRest}`;
   }
 }
