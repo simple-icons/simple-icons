@@ -49,6 +49,6 @@ module.exports = {
   slugToVariableName(slug) {
     const slugFirstLetter = slug[0].toUpperCase();
     const slugRest = slug.slice(1);
-    return `icon${slugFirstLetter}${slugRest}`;
+    return `si${slugFirstLetter}${slugRest}`;
   }
 }
