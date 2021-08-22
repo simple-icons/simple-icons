@@ -27,7 +27,7 @@ body:
       label: Official resources for icon and color
       description: >-
         Media kits, brand guidelines, SVG files, etc. You can set
-        this to none if you are unable to find any resources.
+        this to "None" if you are unable to find any resources.
       placeholder: |
         Example:
         svg source: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
