@@ -42,8 +42,8 @@ body:
     attributes:
       label: Other Software
       description: >-
-        Software with versions if known (Node.js & NPM, PHP & Packagist,
-        Browser). If you are unsure, enter "None."
+        The software that you are using the package with (Node.js & NPM, PHP & Packagist,
+        Browser(s), other) and their versions. You can put "None" if you are unsure.
       placeholder: |
         Example:
         Node.js v16
