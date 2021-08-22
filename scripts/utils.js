@@ -41,4 +41,14 @@ module.exports = {
       .replace(/&apos;/g, "’")
       .replace(/&amp;/g, "&")
   ),
+
+  /**
+   * Converts a slug into a valid variable name.
+   * @param {String} slug
+   */
+  slugToVariableName(slug) {
+    const slugFirstLetter = icon.slug[0].toUpperCase();
+    const slugRest = icon.slug.slice(1);
+    return `icon${slugFirstLetter}${slugRest}`;
+  }
 }

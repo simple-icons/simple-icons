@@ -29,7 +29,7 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, titleToSlug } = require("../utils.js");
+const { getIconSlug, slugToVariableName } = require("../utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -86,11 +86,8 @@ data.icons.forEach(icon => {
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
   minifyAndWrite(jsFilepath, `module.exports=${iconObject};`);
 
-  // add export to the barrel file
-  const firstLetter = icon.slug[0].toUpperCase();
-  const rest = icon.slug.slice(1);
-  const iconExportName = `icon${firstLetter}${rest}`;
-
+  // add object to the barrel file
+  const iconExportName = slugToVariableName(icon.slug);
   iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
   iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
 });
