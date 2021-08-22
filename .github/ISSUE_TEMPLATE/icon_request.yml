@@ -57,7 +57,7 @@ body:
       placeholder: |
         Example:
         svg source: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
-        color: #111111 from website header
+        color: `#111111`, from the website header
     validations:
       required: true
 
