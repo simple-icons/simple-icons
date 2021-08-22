@@ -35,7 +35,7 @@ body:
     attributes:
       label: Website
       description: >-
-        For non-web brands you can add a relevant link or simply put "None" if you don't
+        For non-web brands you can add a relevant link. You can put "None" if you don't
         think there's a website.
       placeholder: "Example: https://simpleicons.org"
     validations:
