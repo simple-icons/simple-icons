@@ -35,14 +35,14 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: textarea
     attributes:
       label: Popularity Metric
       description: >-
         Provide either an [Alexa rank](https://www.alexa.com/siteinfo) or the number
         of GitHub stars. If these are not available or too low you can still open
         the issue. Please provide any information regarding the brand's popularity you
-        think is relevant in the description below.
+        think is relevant below.
       placeholder: "Example: 249,089"
     validations:
       required: true
