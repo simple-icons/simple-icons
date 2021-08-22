@@ -9,7 +9,7 @@ body:
       value: >-
         We won't add non-brand icons or anything related to illegal services. If in
         doubt, open an issue and we'll have a look. For more details see the
-        [Contributing Guidelines][contributing-guidelines].
+        [Contributing Guidelines].
 
 
         Before opening a new issue, make sure it isn't covered by an existing issue.
@@ -18,7 +18,7 @@ body:
         you're requesting then leave a comment on it or add a reaction.
 
 
-        [contributing-guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
+        [contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
         [new-icon-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22+is%3Aopen
 
   - type: input
@@ -42,13 +42,13 @@ body:
     attributes:
       label: Popularity Metric
       description: >-
-        Provide either an [Alexa rank][alexa-site-info] or the number of GitHub stars.
+        Provide either an [Alexa rank] or the number of GitHub stars.
         If these are not available or too low you can still open the issue. Please
         provide any information regarding the brand's popularity you think is relevant
         below.
 
 
-        [alexa-site-info]: https://www.alexa.com/siteinfo
+        [alexa rank]: https://www.alexa.com/siteinfo
       placeholder: "Example: 249,089"
     validations:
       required: true
