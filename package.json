@@ -46,7 +46,7 @@
     "svgo": "svgo --config svgo.config.js",
     "get-filename": "node scripts/get-filename.js"
   },
-  "engine": {
+  "engines": {
     "node": ">=0.12.18"
   }
 }
