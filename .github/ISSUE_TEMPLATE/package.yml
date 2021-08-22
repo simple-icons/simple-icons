@@ -33,7 +33,7 @@ body:
 
   - type: input
     attributes:
-      label: Simple Icons Version
+      label: Package Version
       placeholder: "Example: 5.11.0"
     validations:
       required: true
