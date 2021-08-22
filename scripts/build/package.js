@@ -80,7 +80,7 @@ data.icons.forEach(icon => {
   icon.slug = filename;
   icons.push(icon);
 
-  const iconObject = iconToObject(icon)
+  const iconObject = iconToObject(icon);
 
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
