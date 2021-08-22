@@ -341,6 +341,11 @@
             "source": "http://www.fcaci.com/x/Alfa"
         },
         {
+            "title": "Alfred",
+            "hex": "5C1F87",
+            "source": "https://www.alfredapp.com/"
+        },
+        {
             "title": "Algolia",
             "hex": "5468FF",
             "source": "https://www.algolia.com/press/?section=brand-guidelines"
@@ -1416,7 +1421,11 @@
         {
             "title": "Canonical",
             "hex": "77216F",
-            "source": "https://design.ubuntu.com/downloads/"
+            "source": "https://design.ubuntu.com/downloads/",
+            "guidelines": "https://design.ubuntu.com/brand/canonical-logo/",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Canva",
@@ -4009,6 +4018,11 @@
             "hex": "430098",
             "source": "https://brand.heroku.com/",
             "guidelines": "https://brand.heroku.com/"
+        },
+        {
+            "title": "Hetzner",
+            "hex": "D50C2D",
+            "source": "https://www.hetzner.com/"
         },
         {
             "title": "Hexo",
@@ -8236,8 +8250,8 @@
         },
         {
             "title": "Signal",
-            "hex": "2592E9",
-            "source": "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms"
+            "hex": "3A76F0",
+            "source": "https://github.com/signalapp/Signal-Desktop/blob/9db8765b6cf270195e45a7f251374d4e53d54c95/images/signal-logo.svg"
         },
         {
             "title": "Simkl",
@@ -9362,8 +9376,9 @@
         },
         {
             "title": "TrainerRoad",
-            "hex": "E12726",
-            "source": "https://www.trainerroad.com/"
+            "hex": "DA291C",
+            "source": "https://www.trainerroad.com/press/",
+            "guidelines": "https://www.trainerroad.com/press/"
         },
         {
             "title": "Trakt",
@@ -9639,7 +9654,7 @@
         },
         {
             "title": "Unreal Engine",
-            "hex": "313131",
+            "hex": "0E1128",
             "source": "https://www.unrealengine.com/en-US/branding",
             "guidelines": "https://www.unrealengine.com/en-US/branding"
         },
