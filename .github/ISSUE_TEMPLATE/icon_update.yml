@@ -43,8 +43,6 @@ body:
         Is there anything else we should know about the brand? For example:
         - Are there multiple options for the logo and/or color?
         - Is the icon released under a license?
-        - If the brand isn't popular enough by the default criteria, how can we assess the popularity instead?
-        - If you think the brand might not be accepted for other reasons, why do you think it should be considered?
       placeholder: "Example: There are two variants of this icon..."
 
   - type: dropdown
