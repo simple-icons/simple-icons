@@ -74,6 +74,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Airtable` | `airtable` |
 | `Alacritty` | `alacritty` |
 | `Alfa Romeo` | `alfaromeo` |
+| `Alfred` | `alfred` |
 | `Algolia` | `algolia` |
 | `Alibaba Cloud` | `alibabacloud` |
 | `Alibaba.com` | `alibabadotcom` |
