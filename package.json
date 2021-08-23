@@ -26,9 +26,9 @@
     "svg-path-bbox": "1.0.1",
     "svg-path-segments": "1.0.0",
     "svglint": "1.0.8",
-    "svgo": "2.3.1",
+    "svgo": "2.4.0",
     "svgpath": "2.3.1",
-    "uglify-js": "3.14.0"
+    "uglify-js": "3.14.1"
   },
   "scripts": {
     "build": "node scripts/build/package.js",
