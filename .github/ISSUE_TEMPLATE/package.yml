@@ -25,8 +25,8 @@ body:
 
   - type: dropdown
     attributes:
-      label: Which packages do this issue concern?
-      options: [NPM, Packagist]
+      label: This issue concerns the...
+      options: [NPM package, Packagist package]
       multiple: true
     validations:
       required: true
