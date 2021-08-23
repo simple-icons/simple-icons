@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "5.9.0",
+  "version": "5.11.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -46,7 +46,7 @@
     "svgo": "svgo --config svgo.config.js",
     "get-filename": "node scripts/get-filename.js"
   },
-  "engine": {
+  "engines": {
     "node": ">=0.12.18"
   }
 }
