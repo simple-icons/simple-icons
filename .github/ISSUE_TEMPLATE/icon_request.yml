@@ -50,7 +50,7 @@ body:
 
 
         [alexa rank]: https://www.alexa.com/siteinfo
-      placeholder: "Example: 249,089"
+      placeholder: "Example: The Alexa rank is 249,089. See https://www.alexa.com/siteinfo/simpleicons.org"
     validations:
       required: true
 
@@ -62,7 +62,7 @@ body:
         this to "None" if you are unable to find any resources.
       placeholder: |
         Example:
-        svg source: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
+        svg: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
         color: `#111111`, from the website header
     validations:
       required: true
