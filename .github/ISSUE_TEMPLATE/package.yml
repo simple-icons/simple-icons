@@ -19,7 +19,7 @@ body:
       description: >-
         If your issue type is not here, select "other" and explain in the
         "Description" field below.
-      options: [Improvement, Bug, Other]
+      options: [Bug, Feature, Improvement, Other]
     validations:
       required: true
 
@@ -57,7 +57,8 @@ body:
       description: |
         Anything relevant, for example:
         - For bugs: "Steps to reproduce" and "Expected behavior"
-        - For improvements: An example of a use case
+        - For feature requests: An example of a use case
+        - For performance: An example where performance is poor
       placeholder: "Example: The NPM package does not work for my use case..."
     validations:
       required: true
