@@ -3239,7 +3239,12 @@
         {
             "title": "freeCodeCamp",
             "hex": "0A0A23",
-            "source": "https://design-style-guide.freecodecamp.org/"
+            "source": "https://design-style-guide.freecodecamp.org/",
+            "guidelines": "https://design-style-guide.freecodecamp.org/",
+            "license": {
+                "type": "CC-BY-SA-4.0",
+                "url": "https://github.com/freeCodeCamp/design-style-guide/blob/cc950c311c61574b6ecbd9e724b6631026e14bfa/LICENSE"
+            }
         },
         {
             "title": "freedesktop.org",
@@ -4661,6 +4666,11 @@
             "guidelines": "https://docs.joomla.org/Joomla:Brand_Identity_Elements"
         },
         {
+            "title": "Joplin",
+            "hex": "1071D3",
+            "source": "https://github.com/laurent22/joplin/blob/45e35576bd8b1bb0ffe958309cc1ab3736cc266b/Assets/JoplinLetter.svg"
+        },
+        {
             "title": "Jordan",
             "hex": "000000",
             "source": "https://www.nike.com/jordan"
@@ -4883,6 +4893,16 @@
             "title": "Kik",
             "hex": "82BC23",
             "source": "https://www.kik.com/news/"
+        },
+        {
+            "title": "KinoPoisk",
+            "hex": "FF6600",
+            "source": "https://www.kinopoisk.ru/",
+            "aliases": {
+                "loc": {
+                    "ru-RU": "КиноПоиск"
+                }
+            }
         },
         {
             "title": "Kirby",
