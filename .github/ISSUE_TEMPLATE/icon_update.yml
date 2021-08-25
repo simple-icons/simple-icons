@@ -24,15 +24,14 @@ body:
 
   - type: textarea
     attributes:
-      label: Official resources for icon and color
+      label: Official Resources for Icon and Color
       description: >-
         Media kits, brand guidelines, SVG files, etc. You can set
         this to "None" if you are unable to find any resources.
       placeholder: |
         Example:
-        svg source: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
-        color: #111111 from website header
-
+        svg: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
+        color: `#111111`, from the website header
     validations:
       required: true
 
