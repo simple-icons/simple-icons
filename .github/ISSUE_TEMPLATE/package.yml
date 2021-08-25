@@ -19,7 +19,7 @@ body:
       description: >-
         If your issue type is not here, select "other" and explain in the
         "Description" field below.
-      options: [Bug, Feature, Improvement, Other]
+      options: [Bug, Feature, Performance, Other]
     validations:
       required: true
 
