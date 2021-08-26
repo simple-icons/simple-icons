@@ -290,7 +290,7 @@ If the SVG is sourced from:
 - **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
 - **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
 
-  In both cases above (**Branding page** and **Company website**), pay attention to link to a **page** that includes file instead of link to direct files. This way, if the file name or path changes, the link will still be working.
+  For **Branding page** and **Company website**, link to a page that includes the source image and not the source image itself. Such a link is less likely to become invalid.
 
 - **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself.
 
