@@ -1,0 +1,57 @@
+name: Icon update
+description: Help us improve by reporting outdated icons
+title: "Update: "
+labels: [icon outdated]
+
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Before opening a new issue, make sure it isn't covered by an existing issue.
+        Please search for [issues with the `icon outdated` label][icon-outdated-issues]
+        (including closed issues) before you continue. If you find one for the brand
+        you're reporting then leave a comment on it or add a reaction.
+
+
+        [icon-outdated-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22icon+outdated%22+is%3Aopen
+
+  - type: input
+    attributes:
+      label: Brand Name
+      placeholder: "Example: Simple Icons"
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Official Resources for Icon and Color
+      description: >-
+        Media kits, brand guidelines, SVG files, etc. You can set
+        this to "None" if you are unable to find any resources.
+      placeholder: |
+        Example:
+        svg: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
+        color: `#111111`, from the website header
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional Comments
+      description: |
+        Is there anything else we should know about the brand? Remember that not everyone knows the brand as well as you do. For example:
+        - Are there multiple options for the logo and/or color?
+        - Is the icon released under a license?
+      placeholder: "Example: There are two variants of this icon..."
+
+  - type: dropdown
+    attributes:
+      label: Contributing
+      description: >-
+        This is an open source project and we welcome contributions. Do you want to
+        update this icon?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true

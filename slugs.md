@@ -74,6 +74,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Airtable` | `airtable` |
 | `Alacritty` | `alacritty` |
 | `Alfa Romeo` | `alfaromeo` |
+| `Alfred` | `alfred` |
 | `Algolia` | `algolia` |
 | `Alibaba Cloud` | `alibabacloud` |
 | `Alibaba.com` | `alibabadotcom` |
@@ -388,6 +389,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Construct 3` | `construct3` |
 | `Consul` | `consul` |
 | `Contactless Payment` | `contactlesspayment` |
+| `containerd` | `containerd` |
 | `Contentful` | `contentful` |
 | `Convertio` | `convertio` |
 | `Cookiecutter` | `cookiecutter` |
@@ -457,6 +459,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Bahn` | `deutschebahn` |
 | `Deutsche Bank` | `deutschebank` |
 | `dev.to` | `devdotto` |
+| `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
 | `devRant` | `devrant` |
@@ -539,12 +542,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `EPEL` | `epel` |
 | `Epic Games` | `epicgames` |
 | `Epson` | `epson` |
+| `Equinix Metal` | `equinixmetal` |
 | `Erlang` | `erlang` |
 | `ESEA` | `esea` |
 | `ESLGaming` | `eslgaming` |
 | `ESLint` | `eslint` |
 | `ESPHome` | `esphome` |
 | `Espressif` | `espressif` |
+| `etcd` | `etcd` |
 | `Ethereum` | `ethereum` |
 | `Ethiopian Airlines` | `ethiopianairlines` |
 | `Etihad Airways` | `etihadairways` |
@@ -978,6 +983,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LibreOffice` | `libreoffice` |
 | `libuv` | `libuv` |
 | `Lichess` | `lichess` |
+| `Lidl` | `lidl` |
 | `LIFX` | `lifx` |
 | `Lighthouse` | `lighthouse` |
 | `LINE` | `line` |
@@ -1098,6 +1104,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mitsubishi` | `mitsubishi` |
 | `Mix` | `mix` |
 | `Mixcloud` | `mixcloud` |
+| `MLB` | `mlb` |
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
@@ -1143,6 +1150,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Netflix` | `netflix` |
 | `Netlify` | `netlify` |
 | `Nette` | `nette` |
+| `New Balance` | `newbalance` |
 | `New Japan Pro-Wrestling` | `newjapanprowrestling` |
 | `New Relic` | `newrelic` |
 | `New York Times` | `newyorktimes` |
@@ -1455,6 +1463,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rezgo` | `rezgo` |
 | `Rhinoceros` | `rhinoceros` |
 | `Rider` | `rider` |
+| `Rimac Automobili` | `rimacautomobili` |
 | `Ring` | `ring` |
 | `Riot Games` | `riotgames` |
 | `Ripple` | `ripple` |
@@ -1531,6 +1540,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Server Fault` | `serverfault` |
 | `Serverless` | `serverless` |
 | `SFML` | `sfml` |
+| `Shadow` | `shadow` |
 | `Shanghai Metro` | `shanghaimetro` |
 | `sharp` | `sharp` |
 | `Shazam` | `shazam` |
@@ -1616,6 +1626,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Spreadshirt` | `spreadshirt` |
 | `Spreaker` | `spreaker` |
 | `Spring` | `spring` |
+| `Spring` | `spring_creators` |
 | `Spring Boot` | `springboot` |
 | `Spyder IDE` | `spyderide` |
 | `SQLite` | `sqlite` |
@@ -1649,6 +1660,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stimulus` | `stimulus` |
 | `Stitcher` | `stitcher` |
 | `STMicroelectronics` | `stmicroelectronics` |
+| `StopStalk` | `stopstalk` |
 | `Storyblok` | `storyblok` |
 | `Storybook` | `storybook` |
 | `Strapi` | `strapi` |
@@ -1694,6 +1706,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tampermonkey` | `tampermonkey` |
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
+| `Target` | `target` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
 | `TaxBuzz` | `taxbuzz` |
@@ -1801,6 +1814,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ulule` | `ulule` |
 | `Umbraco` | `umbraco` |
 | `Unacademy` | `unacademy` |
+| `Under Armour` | `underarmour` |
 | `Undertale` | `undertale` |
 | `Unicode` | `unicode` |
 | `Unilever` | `unilever` |
@@ -1970,6 +1984,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zend Framework` | `zendframework` |
 | `Zendesk` | `zendesk` |
 | `Zenn` | `zenn` |
+| `Zenodo` | `zenodo` |
 | `Zerodha` | `zerodha` |
 | `ZeroMQ` | `zeromq` |
 | `Zerply` | `zerply` |
