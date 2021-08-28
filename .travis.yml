@@ -1,4 +1,9 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: node_js
+
+node_js:
+  - node
+
+script:
+  - npm test 
+  - npm install --save-dev typescript-coverage-report
+  - npm run ts-coverage
