@@ -287,8 +287,8 @@ We use the source URL as a reference for the current SVG in our repository and a
 
 If the SVG is sourced from:
 
-- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
-- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
+- **Branding page**: For an SVG from a branding page the source URL should link to the branding page and not the image, PDF, or archive (such as `.zip`) file.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source image and not the image file itself.
 
   For **Branding page** and **Company website**, link to a page that includes the source image and not the source image itself. Such a link is less likely to become invalid.
 
