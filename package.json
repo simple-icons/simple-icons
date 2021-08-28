@@ -28,6 +28,7 @@
     "svglint": "1.0.8",
     "svgo": "2.4.0",
     "svgpath": "2.3.1",
+    "typescript-coverage-report": "^0.6.0",
     "uglify-js": "3.14.1"
   },
   "scripts": {
@@ -44,7 +45,9 @@
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
     "svgo": "svgo --config svgo.config.js",
-    "get-filename": "node scripts/get-filename.js"
+    "get-filename": "node scripts/get-filename.js",
+    "ts-coverage": "typescript-coverage-report",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "engines": {
     "node": ">=0.12.18"
