@@ -4,6 +4,6 @@ node_js:
   - node
 
 script:
+  - npm install coveralls --save-dev
+  - npm install mocha-lcov-reporter --save-dev
   - npm test 
-  - npm install --save-dev typescript-coverage-report
-  - npm run ts-coverage
