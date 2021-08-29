@@ -45,8 +45,8 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
         - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
     - For GitHub projects, the amount of "stars" should be above 5k.
+    - Is a well known or widely accepted de facto standard logo. The relevance of the icon will be assesed on a case-by-case basis. For example, Javascript falls in this category.
     - For anything else, popularity will be judged on a case-by-case basis.
-* Is a well known or widely accepted de facto standard logo. The relevance of the icon will be assesed on a case-by-case basis. For example, Javascript falls in this category.
 * Doesn't fall into one of the following categories:
     - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
     - Governmental agencies, programs, departments
