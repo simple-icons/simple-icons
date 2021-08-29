@@ -32,43 +32,42 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 ## Table of contents
 
-- [Requesting an Icon](#requesting-an-icon)
-- [Adding or Updating an Icon](#adding-or-updating-an-icon)
-- [Using Docker](#using-docker)
+* [Requesting an Icon](#requesting-an-icon)
+* [Adding or Updating an Icon](#adding-or-updating-an-icon)
+* [Using Docker](#using-docker)
 
 ## Requesting an Icon
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
-- Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-- Is of a _popular_ brand:
-  - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
-    - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
-  - For GitHub projects, the amount of "stars" should be above 5k.
-  - For anything else, popularity will be judged on a case-by-case basis.
-- Is a well known or widely accepted de facto standard logo. The relevance of the icon will be assesed on a case-by-case basis. For example, Javascript falls in this category.
-- Doesn't fall into one of the following categories:
-  - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
-  - Governmental agencies, programs, departments
-    - Allowed: International organizations and NGOs with supranational interests
-    - Allowed: Space agencies
-  - Symbols, including flags and banners
-  - Sport clubs
-    - Allowed: Sport organizations
-  - Yearly releases
-  - Universities or other educational institutions
-  - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
+* Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
+* Is of a _popular_ brand:
+    - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
+        - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
+    - For GitHub projects, the amount of "stars" should be above 5k.
+    - For anything else, popularity will be judged on a case-by-case basis.
+* Is a well known or widely accepted de facto standard logo. The relevance of the icon will be assesed on a case-by-case basis. For example, Javascript falls in this category.
+* Doesn't fall into one of the following categories:
+    - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
+    - Governmental agencies, programs, departments
+       - Allowed: International organizations and NGOs with supranational interests
+       - Allowed: Space agencies
+    - Symbols, including flags and banners
+    - Sport clubs
+       - Allowed: Sport organizations
+    - Yearly releases
+    - Universities or other educational institutions
+    - Any brands representing individuals rather than an organization, company or product. This includes musicians, bands, and social media personalities.
 
 If you are in doubt, feel free to submit it and we'll have a look.
 
 When submitting a request for a new or updated icon include helpful information such as:
 
-- **Issue Title:** The brand name. For example:
+* **Issue Title:** The brand name. For example:
+  * New Icons: `Request: GitHub Icon`
+  * Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
-  - New Icons: `Request: GitHub Icon`
-  - Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
-
-- **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files etc.)
+* **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files etc.)
 
 If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
@@ -94,12 +93,12 @@ Working with an SVG version of the logo is best. In the absence of an SVG versio
 
 If the icon includes a (registered) trademark icon we follow the guidelines below to decide whether to include the symbol or not:
 
-- If brand guidelines explicitly require including the symbol, it must be included.
-- If the the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
-- If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups](https://github.com/simple-icons/simple-icons/blob/develop/icons/chupachups.svg)), it must be included.
-- If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
-- If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
-- If there is no explicit requirement that a symbol must be included, it must not be included.
+* If brand guidelines explicitly require including the symbol, it must be included.
+* If the the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
+* If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups](https://github.com/simple-icons/simple-icons/blob/develop/icons/chupachups.svg)), it must be included.
+* If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
+* If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
+* If there is no explicit requirement that a symbol must be included, it must not be included.
 
 #### Color Guidelines
 
@@ -109,12 +108,12 @@ For color, the brand's primary color should be used. The official color of a bra
 
 There are many different tools for editing SVG files, some options include:
 
-| Name                                                                 | Description                  |      Platform       |  Price  |
-| :------------------------------------------------------------------- | :--------------------------- | :-----------------: | :-----: |
-| [Inkscape](https://inkscape.org/)                                    | Vector Graphics Editor       | Windows, Mac, Linux |  Free   |
-| [Affinity Designer](https://affinity.serif.com/designer/)            | Vector Graphics Editor       |    Windows, Mac     |    $    |
-| [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor       |    Windows, Mac     | $ - $$$ |
-| [IcoMoon](https://icomoon.io/)                                       | Icon Editing/Management Tool |       Online        |  Free   |
+| Name | Description | Platform | Price |
+| :---- | :---- | :----: | :----: |
+| [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
+| [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
+| [IcoMoon](https://icomoon.io/) | Icon Editing/Management Tool | Online | Free |
 
 Using your preferred tool you should:
 
@@ -135,20 +134,20 @@ If you have any problems or questions while creating the SVG, check out [the Git
 
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
 
-- The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  - Install dependencies
-    - With npm: `npm install` from the root of this repository
-  - Run the following command `npm run svgo -- icons/file-to-optimize.svg`
-  - Check if there is a loss of quality in the output, if so increase the precision.
-- The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
-  - Click "Open SVG" and select an SVG file.
-  - Set the precision to about 3, depending on if there is a loss of quality.
-  - Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
-  - Click the download button.
-- The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
-  - If none of the options above work for you, it is possible to build a Docker image for compressing the images.
-  - Build: `docker build . -t simple-icons`
-  - Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
+* The [SVGO Command Line Tool](https://github.com/svg/svgo)
+  * Install dependencies
+    * With npm: `npm install` from the root of this repository
+  * Run the following command `npm run svgo -- icons/file-to-optimize.svg`
+  * Check if there is a loss of quality in the output, if so increase the precision.
+* The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
+  * Click "Open SVG" and select an SVG file.
+  * Set the precision to about 3, depending on if there is a loss of quality.
+  * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
+  * Click the download button.
+* The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
+  * If none of the options above work for you, it is possible to build a Docker image for compressing the images.
+  * Build: `docker build . -t simple-icons`
+  * Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
 
 After optimizing the icon, double-check it against your original version to ensure no visual imperfections have crept in. Also make sure that the dimensions of the path have not been changed so that the icon no longer fits exactly within the canvas. We currently check the dimensions up to a precision of 3 decimal points.
 
@@ -156,15 +155,15 @@ After optimizing the icon, double-check it against your original version to ensu
 
 Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
 
-- An svg element with:
-  - An img role attribute.
-    - `role="img"`
-  - A 24x24 viewbox.
-    - `viewBox="0 0 24 24"`
-  - The svg namespace.
-    - `xmlns="http://www.w3.org/2000/svg"`
-- A title element containing the brand name.
-  - `<title>Adobe Photoshop</title>`
+* An svg element with:
+  * An img role attribute.
+    * `role="img"`
+  * A 24x24 viewbox.
+    * `viewBox="0 0 24 24"`
+  * The svg namespace.
+    * `xmlns="http://www.w3.org/2000/svg"`
+* A title element containing the brand name.
+  * `<title>Adobe Photoshop</title>`
 
 Here is _part of_ the svg for the Adobe Photoshop icon as an example:
 
@@ -176,18 +175,18 @@ Here is _part of_ the svg for the Adobe Photoshop icon as an example:
 
 The final icon should:
 
-- Be properly annotated [as discussed above](#4-annotate-the-icon).
-- Be monochromatic.
-  - Remove all fill colors so that icon defaults to black.
-- Be scaled to fit the viewbox, while preserving the icon's original proportions.
-  - This means the icon should be touching at least two sides of the viewbox.
-- Be vertically and horizontally centered.
-- Be minified to a single line with no formatting.
-- Contain only a single `path` element.
-- Not contain extraneous elements.
-  - This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
-- Not contain extraneous attributes.
-  - This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
+* Be properly annotated [as discussed above](#4-annotate-the-icon).
+* Be monochromatic.
+  * Remove all fill colors so that icon defaults to black.
+* Be scaled to fit the viewbox, while preserving the icon's original proportions.
+  * This means the icon should be touching at least two sides of the viewbox.
+* Be vertically and horizontally centered.
+* Be minified to a single line with no formatting.
+* Contain only a single `path` element.
+* Not contain extraneous elements.
+  * This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
+* Not contain extraneous attributes.
+  * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
 Here is the svg for the Adobe Photoshop icon as an example:
 
@@ -201,49 +200,49 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
 
 1. Use **lowercase letters** without **whitespace**, for example:
 
-   ```yml
-   title: Adobe Photoshop
-   filename: adobephotoshop.svg
-   ```
+    ```yml
+    title: Adobe Photoshop
+    filename: adobephotoshop.svg
+    ```
 
 1. Only use **latin** letters, for example:
 
-   ```yml
-   title: Citroën
-   filename: citroen.svg
-   ```
+    ```yml
+    title: Citroën
+    filename: citroen.svg
+    ```
 
 1. Replace the following symbols with their alias:
 
-   | Symbol | Alias |
-   | :----: | ----- |
-   |   +    | plus  |
-   |   .    | dot   |
-   |   &    | and   |
+    | Symbol | Alias |
+    | :----: | ----- |
+    |   +    | plus  |
+    |   .    | dot   |
+    |   &    | and   |
 
-   for example:
+    for example:
 
-   ```yml
-   title: .Net
-   filename: dotnet.svg
-   ```
+    ```yml
+    title: .Net
+    filename: dotnet.svg
+    ```
 
 1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
 
-   for example:
+    for example:
 
-   ```yml
-   title: Hive
-   filename: hive_blockchain.svg
-   ```
+    ```yml
+    title: Hive
+    filename: hive_blockchain.svg
+    ```
 
 ### 7. Update the JSON Data for SimpleIcons.org
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
 
-- The `title` of the new SVG.
-- A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
-- The `source` URL of the logo being used. There are [more details below](#source-guidelines).
+* The `title` of the new SVG.
+* A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
+* The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
 There are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
 
@@ -251,9 +250,9 @@ Here is the object of a fictional brand as an example:
 
 ```json
 {
-  "title": "A Fictional Brand",
-  "hex": "123456",
-  "source": "https://www.a-fictional-brand.org/logo"
+    "title": "A Fictional Brand",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo"
 }
 ```
 
@@ -263,23 +262,23 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
 
-- The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an exitsing icon's name.
-- The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
-- The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an exitsing icon's name.
+* The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
+* The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
 
 Here is the object of the fictional brand from before, but with all optional values, as an example:
 
 ```json
 {
-  "title": "A Fictional Brand",
-  "slug": "afictionalbrand_modifier",
-  "hex": "123456",
-  "source": "https://www.a-fictional-brand.org/logo",
-  "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
-  "license": {
-    "type": "CC0-1.0",
-    "url": "https://www.a-fictional-brand.org/logo/license"
-  }
+    "title": "A Fictional Brand",
+    "slug": "afictionalbrand_modifier",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo",
+    "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
+    "license": {
+        "type": "CC0-1.0",
+        "url": "https://www.a-fictional-brand.org/logo/license"
+    }
 }
 ```
 
@@ -309,10 +308,13 @@ We collect "also known as" names to make it easier to find brands that are known
 
 ```json
 {
-  "title": "the original title",
-  "aliases": {
-    "aka": ["tot", "thetitle"]
-  }
+    "title": "the original title",
+    "aliases": {
+        "aka": [
+            "tot",
+            "thetitle"
+        ]
+    }
 }
 ```
 
@@ -324,17 +326,17 @@ We collect the names of duplicates, brands that use the same icon but have a dif
 
 ```json5
 {
-  title: "the original title",
-  hex: "123456",
-  aliases: {
-    dup: [
-      {
-        title: "the duplicate's title",
-        hex: "654321", // Only if different from original's color
-        guidelines: "...", // Only if different from original's guidelines
-      },
-    ],
-  },
+    "title": "the original title",
+    "hex": "123456",
+    "aliases": {
+        "dup": [
+            {
+                "title": "the duplicate's title",
+                "hex": "654321", // Only if different from original's color
+                "guidelines": "..." // Only if different from original's guidelines
+            }
+        ]
+    }
 }
 ```
 
@@ -346,12 +348,12 @@ We collect localized names to make it possible to find the brand by it's local n
 
 ```json
 {
-  "title": "the original title",
-  "aliases": {
-    "loc": {
-      "en-US": "A different title"
+    "title": "the original title",
+    "aliases": {
+        "loc": {
+            "en-US": "A different title"
+        }
     }
-  }
 }
 ```
 
@@ -359,16 +361,16 @@ Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_
 
 ### 8. Create a Pull Request
 
-Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
+Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
 ## Testing Package Locally
 
-- Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
-- Install the dependencies using `$ npm install`.
-- Build and test the package using `$ npm test`.
-- Run the project linting process using `$ npm run lint`.
+* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
+* Install the dependencies using `$ npm install`.
+* Build and test the package using `$ npm test`.
+* Run the project linting process using `$ npm run lint`.
 
 ## Using Docker
 
@@ -390,8 +392,8 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
 
-| Version number | Kinds of changes                                   |
-| :------------- | :------------------------------------------------- |
-| _Major_        | Removed icons; Renamed icons; Breaking API changes |
-| _Minor_        | New icons; API changes                             |
-| _Patch_        | Updated SVGs; Updated metadata                     |
+| Version number | Kinds of changes |
+| :---- | :---- |
+| _Major_ | Removed icons; Renamed icons; Breaking API changes |
+| _Minor_ | New icons; API changes |
+| _Patch_ | Updated SVGs; Updated metadata |
