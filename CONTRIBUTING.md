@@ -45,7 +45,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
         - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
     - For GitHub projects, the amount of "stars" should be above 5k.
-    - Is a well known or widely accepted de facto standard logo. The relevance of the icon will be assesed on a case-by-case basis. For example, Javascript falls in this category.
+    - For a well known or widely accepted de facto standard logo (where official sources don't exist), popularity will be assesed on a case-by-case basis by maintainers. For example, Javascript falls in this category.
     - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
     - Illegal service (e.g. piracy, malware, threatening material, spam etc.)
@@ -86,6 +86,9 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Favicons
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
+
+It may be the case that official sources simply do not exist, but an unofficial icon has gained widespread acceptance and popularity. These icons can also be included, after being reviewed and accepted by maintainers on a case-by-base basis. Javascript is the prime example of this situation. 
+Notice that an unofficial icon won't replace or supersede an official one, even if it more popular. An unofficial icon will only be accepted if official options do not exist.
 
 #### Icon Guidelines
 
