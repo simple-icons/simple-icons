@@ -9,6 +9,7 @@ const path = require("path");
 
 const rootDir = path.resolve(__dirname, "..", "..");
 const packageJsonFile = path.resolve(rootDir, "package.json");
+const packageLockFile = path.resolve(rootDir, "package-lock.json");
 
 function readManifest(file) {
   const manifestRaw = fs.readFileSync(file).toString();
@@ -24,10 +25,13 @@ function writeManifest(file, json) {
 function main(newVersion) {
   try {
     const manifest = readManifest(packageJsonFile);
+    const manifestLock = readManifest(packageLockFile);
 
     manifest.version = newVersion
+    manifestLock.version = newVersion
 
     writeManifest(packageJsonFile, manifest);
+    writeManifest(packageLockFile, manifestLock);
   } catch (error) {
     console.error(`Failed to bump package version to ${newVersion}:`, error);
     process.exit(1);

@@ -287,8 +287,8 @@ We use the source URL as a reference for the current SVG in our repository and a
 
 If the SVG is sourced from:
 
-- **Branding page**: For an SVG from a branding page the source URL should link to the branding page and not the image, PDF, or archive (such as `.zip`) file.
-- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source image and not the image file itself.
+- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
 - **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself.
 
   In any case the commit hash should be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files).

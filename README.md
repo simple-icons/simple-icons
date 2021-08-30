@@ -102,8 +102,8 @@ This is useful if you want to do a computation on every icon:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-for (const iconSlug in simpleIcons) {
-    const icon = simpleIcons.Get(iconSlug);
+for (const title in simpleIcons) {
+    const icon = simpleIcons.Get(title);
     // do stuff
 }
 ```
@@ -113,7 +113,7 @@ for (const iconSlug in simpleIcons) {
 There are also TypeScript type definitions for the Node package. To use them, simply run:
 
 ```shell
-npm install --save-dev @types/simple-icons
+npm install @types/simple-icons
 ```
 
 ### PHP Usage
@@ -149,7 +149,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
 | [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
 | [Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
-| [Python package](https://github.com/sachinraja/simpleicons) | [@sachinraja](https://github.com/sachinraja) |
+| [Python package](https://github.com/xCloudzx/simpleicons) | [@xCloudzx](https://github.com/xCloudzx) |
 | [React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | [Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
