@@ -87,7 +87,7 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
 
-It may be the case that official sources simply do not exist, but an unofficial icon has gained widespread acceptance and popularity. These icons can also be included, after being reviewed and accepted by maintainers on a case-by-base basis. Javascript is the prime example of this situation.
+It may be the case that no official source exist, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-base basis. The JavaScript icon is an example of this
 Notice that an unofficial icon won't replace or supersede an official one, even if it more popular. An unofficial icon will only be accepted if official options do not exist.
 
 #### Icon Guidelines
