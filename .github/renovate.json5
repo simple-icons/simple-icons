@@ -6,6 +6,9 @@
     "group:all",
   ],
 
+  // Disable dependency dashboard
+  dependencyDashboard: false,
+
   // Use our labelling system
   labels: ["dependencies"],
 
