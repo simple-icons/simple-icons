@@ -14,4 +14,4 @@ For Simple Icons, given a change to the version number you can expect the follow
 
 _Minor_ releases and _patches_ are scheduled on a weekly basis and are generally released on a Sunday.
 
-_Major_ releases are scheduled on a half-year basis, mainly to remove old SVGs. That is, approximately every 6 months a normal Sunday release is a _major_ release instead of a _minor_ release or _patch_.
+_Major_ releases are scheduled on a half-year basis, mainly to remove old SVGs. That is, approximately every 6 months a normal Sunday release is a _major_ release instead of a _minor_ release or _patch_. Approximately 3 months after a _major_ release, the _major_ release preceding it will be deprecated.
