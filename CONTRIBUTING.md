@@ -86,6 +86,9 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
 
+It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this.
+Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
+
 #### Icon Guidelines
 
 Working with an SVG version of the logo is best. In the absence of an SVG version, other vector filetypes may work as well (e.g. EPS, AI, PDF). In the absence of vector logos, a vector can be created from a high quality rasterized image, however this is much more labor intensive.
