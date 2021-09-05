@@ -3946,6 +3946,11 @@
             "guidelines": "https://www.hackster.io/branding"
         },
         {
+            "title": "Handlebars.js",
+            "hex": "000000",
+            "source": "https://raw.githubusercontent.com/handlebars-lang/docs/master/src/.vuepress/public/icons/handlebarsjs-icon.svg"
+        },
+        {
             "title": "Handshake",
             "hex": "FF2F1C",
             "source": "https://joinhandshake.com/career-centers/marketing-toolkit/",
@@ -9605,7 +9610,8 @@
         {
             "title": "TypeScript",
             "hex": "3178C6",
-            "source": "https://www.staging-typescript.org/branding"
+            "source": "https://www.typescriptlang.org/branding",
+            "guidelines": "https://www.typescriptlang.org/branding"
         },
         {
             "title": "TYPO3",
