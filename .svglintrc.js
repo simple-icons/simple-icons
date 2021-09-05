@@ -3,10 +3,9 @@ const fs = require('fs');
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
 const svgpath = require("svgpath");
-const { svgPathBbox } = require("svg-path-bbox");
+const svgPathBbox = require("svg-path-bbox");
 const parsePath = require("svg-path-segments");
 
-const titleRegexp = /(.+) icon$/;
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
@@ -95,7 +94,7 @@ function ignoreIcon(linterName, path, $) {
     iconIgnored[linterName] = {};
   }
 
-  const title = $.find("title").text().replace(/(.*) icon/, '$1');
+  const title = $.find("title").text();
   const iconName = htmlFriendlyToTitle(title);
 
   iconIgnored[linterName][path] = iconName;
@@ -132,17 +131,10 @@ module.exports = {
             reporter.name = "icon-title";
 
             const iconTitleText = $.find("title").text();
-            if (!titleRegexp.test(iconTitleText)) {
-              reporter.error("<title> should follow the format \"[ICON_NAME] icon\"");
-            } else {
-              const titleMatch = iconTitleText.match(titleRegexp);
-              // titleMatch = [ "[ICON_NAME] icon", "[ICON_NAME]" ]
-              const rawIconName = titleMatch[1];
-              const iconName = htmlFriendlyToTitle(rawIconName);
-              const icon = data.icons.find(icon => icon.title === iconName);
-              if (icon === undefined) {
-                reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
-              }
+            const iconName = htmlFriendlyToTitle(iconTitleText);
+            const iconExists = data.icons.some(icon => icon.title === iconName);
+            if (!iconExists) {
+              reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
             }
           },
           function(reporter, $, ast) {
@@ -185,7 +177,7 @@ module.exports = {
               if (precisionMax > iconMaxFloatPrecision) {
                 let errorMsg = `found ${precisionMax} decimals in segment "${iconPath.substring(segment.start, segment.end)}"`;
                 if (segment.chained) {
-                  let readableChain = iconPath.substring(segment.chainStart, chainEnd);
+                  let readableChain = iconPath.substring(segment.chainStart, segment.chainEnd);
                   if (readableChain.length > 20) {
                     readableChain = `${readableChain.substring(0, 20)}...`;
                   }
