@@ -277,6 +277,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Buildkite` | `buildkite` |
 | `Bulma` | `bulma` |
 | `bunq` | `bunq` |
+| `Burger King` | `burgerking` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
 | `byte` | `byte` |
@@ -746,6 +747,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
 | `Guangzhou Metro` | `guangzhoumetro` |
+| `Guilded` | `guilded` |
 | `gulp` | `gulp` |
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
@@ -759,6 +761,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HackerOne` | `hackerone` |
 | `HackerRank` | `hackerrank` |
 | `Hackster` | `hackster` |
+| `Handlebars.js` | `handlebarsdotjs` |
 | `Handshake` | `handshake` |
 | `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
@@ -867,6 +870,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Issuu` | `issuu` |
 | `Istio` | `istio` |
 | `Itch.io` | `itchdotio` |
+| `iTerm2` | `iterm2` |
 | `iTunes` | `itunes` |
 | `IVECO` | `iveco` |
 | `Jabber` | `jabber` |
@@ -1887,6 +1891,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WakaTime` | `wakatime` |
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |
+| `Walmart` | `walmart` |
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Wattpad` | `wattpad` |
