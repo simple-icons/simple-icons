@@ -3941,6 +3941,11 @@
             "guidelines": "https://www.hackster.io/branding"
         },
         {
+            "title": "Handlebars.js",
+            "hex": "000000",
+            "source": "https://raw.githubusercontent.com/handlebars-lang/docs/master/src/.vuepress/public/icons/handlebarsjs-icon.svg"
+        },
+        {
             "title": "Handshake",
             "hex": "FF2F1C",
             "source": "https://joinhandshake.com/career-centers/marketing-toolkit/",
@@ -5292,6 +5297,11 @@
             "title": "LMMS",
             "hex": "10B146",
             "source": "https://lmms.io/branding"
+        },
+        {
+            "title": "Lodash",
+            "hex": "3492FF",
+            "source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
         },
         {
             "title": "Logitech",
@@ -9605,7 +9615,8 @@
         {
             "title": "TypeScript",
             "hex": "3178C6",
-            "source": "https://www.staging-typescript.org/branding"
+            "source": "https://www.typescriptlang.org/branding",
+            "guidelines": "https://www.typescriptlang.org/branding"
         },
         {
             "title": "TYPO3",
