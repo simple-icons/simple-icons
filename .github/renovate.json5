@@ -6,18 +6,8 @@
     "group:all",
   ],
 
-  lockFileMaintenance: {
-    extends: [
-      // Make sure we get a single PR combining all updates
-      "group:all",
-    ],
-
-    // Explicitly enable lockfile maintenance
-    enabled: true,
-
-    // This schedule should be the same as the general schedule!
-    schedule: "on the 2nd and 4th day instance on sunday after 11pm",
-  },
+  // Disable dependency dashboard
+  dependencyDashboard: false,
 
   // Use our labelling system
   labels: ["dependencies"],

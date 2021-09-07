@@ -277,6 +277,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Buildkite` | `buildkite` |
 | `Bulma` | `bulma` |
 | `bunq` | `bunq` |
+| `Burger King` | `burgerking` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
 | `byte` | `byte` |
@@ -504,6 +505,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `dwm` | `dwm` |
 | `Dynamics 365` | `dynamics365` |
 | `Dynatrace` | `dynatrace` |
+| `E.Leclerc` | `edotleclerc` |
 | `EA` | `ea` |
 | `Eagle` | `eagle` |
 | `easyJet` | `easyjet` |
@@ -745,6 +747,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
 | `Guangzhou Metro` | `guangzhoumetro` |
+| `Guilded` | `guilded` |
 | `gulp` | `gulp` |
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
@@ -758,6 +761,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HackerOne` | `hackerone` |
 | `HackerRank` | `hackerrank` |
 | `Hackster` | `hackster` |
+| `Handlebars.js` | `handlebarsdotjs` |
 | `Handshake` | `handshake` |
 | `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
@@ -777,6 +781,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HelpDesk` | `helpdesk` |
 | `HERE` | `here` |
 | `Heroku` | `heroku` |
+| `Hetzner` | `hetzner` |
 | `Hexo` | `hexo` |
 | `HEY` | `hey` |
 | `Hibernate` | `hibernate` |
@@ -865,6 +870,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Issuu` | `issuu` |
 | `Istio` | `istio` |
 | `Itch.io` | `itchdotio` |
+| `iTerm2` | `iterm2` |
 | `iTunes` | `itunes` |
 | `IVECO` | `iveco` |
 | `Jabber` | `jabber` |
@@ -893,6 +899,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jitsi` | `jitsi` |
 | `John Deere` | `johndeere` |
 | `Joomla` | `joomla` |
+| `Joplin` | `joplin` |
 | `Jordan` | `jordan` |
 | `JPEG` | `jpeg` |
 | `jQuery` | `jquery` |
@@ -935,6 +942,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kibana` | `kibana` |
 | `Kickstarter` | `kickstarter` |
 | `Kik` | `kik` |
+| `KinoPoisk` | `kinopoisk` |
 | `Kirby` | `kirby` |
 | `Kitsu` | `kitsu` |
 | `Klarna` | `klarna` |
@@ -1025,6 +1033,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MailChimp` | `mailchimp` |
 | `Major League Hacking` | `majorleaguehacking` |
 | `MakerBot` | `makerbot` |
+| `MAMP` | `mamp` |
 | `MAN` | `man` |
 | `ManageIQ` | `manageiq` |
 | `Manjaro` | `manjaro` |
@@ -1222,6 +1231,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenGL` | `opengl` |
 | `OpenID` | `openid` |
 | `Openlayers` | `openlayers` |
+| `OpenMined` | `openmined` |
 | `OpenNebula` | `opennebula` |
 | `OpenSSL` | `openssl` |
 | `OpenStack` | `openstack` |
@@ -1881,6 +1891,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WakaTime` | `wakatime` |
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |
+| `Walmart` | `walmart` |
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Wattpad` | `wattpad` |
