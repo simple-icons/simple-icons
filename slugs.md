@@ -1502,6 +1502,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Runkeeper` | `runkeeper` |
 | `RunKit` | `runkit` |
 | `Rust` | `rust` |
+| `RustDocs` | `rustdocs` |
 | `RxDB` | `rxdb` |
 | `Ryanair` | `ryanair` |
 | `S7 Airlines` | `s7airlines` |
