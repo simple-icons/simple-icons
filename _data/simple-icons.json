@@ -525,7 +525,10 @@
             "title": "Angular",
             "hex": "DD0031",
             "source": "https://angular.io/presskit",
-            "guidelines": "https://angular.io/presskit"
+            "guidelines": "https://angular.io/presskit",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Angular Universal",
