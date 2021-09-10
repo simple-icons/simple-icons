@@ -11,6 +11,12 @@ module.exports = {
   getIconSlug: icon => icon.slug || module.exports.titleToSlug(icon.title),
 
   /**
+   * Extract the path from an icon SVG content.
+   * @param {Object} svg The icon SVG content.
+   **/
+  svgToPath: svg => svg.match(/<path\s+d="([^"]*)/)[1],
+
+  /**
    * Converts a brand title into a slug/filename.
    * @param {String} title The title to convert
    */
