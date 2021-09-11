@@ -34,7 +34,7 @@ icons.forEach(icon => {
         titleToHtmlFriendly(subject.title),
         subject.path,
       )
-    );
+    )
   });
 
   test(`${icon.title} has a valid "path" value`, () => {
