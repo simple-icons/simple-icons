@@ -1,5 +1,5 @@
 const { icons } = require('../_data/simple-icons.json');
-const { titleToHtmlFriendly, getIconSlug } = require('../scripts/utils.js');
+const { getIconSlug } = require('../scripts/utils.js');
 
 icons.forEach(icon => {
   const filename = getIconSlug(icon);
@@ -7,7 +7,7 @@ icons.forEach(icon => {
 
   test(`${icon.title} has the correct "title"`, () => {
     expect(typeof subject.title).toBe('string');
-    expect(subject.title).toEqual(titleToHtmlFriendly(icon.title));
+    expect(subject.title).toEqual(icon.title);
   });
 
   test(`${icon.title} has the correct "slug"`, () => {

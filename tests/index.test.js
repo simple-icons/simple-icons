@@ -1,6 +1,6 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { titleToHtmlFriendly, getIconSlug } = require("../scripts/utils.js");
+const { getIconSlug } = require("../scripts/utils.js");
 
 icons.forEach(icon => {
   const slug = getIconSlug(icon);
@@ -8,7 +8,7 @@ icons.forEach(icon => {
 
   test(`${icon.title} has the correct "title"`, () => {
     expect(typeof subject.title).toBe('string');
-    expect(subject.title).toEqual(titleToHtmlFriendly(icon.title));
+    expect(subject.title).toEqual(icon.title);
   });
 
   test(`${icon.title} has the correct "slug"`, () => {
@@ -62,7 +62,7 @@ icons.forEach(icon => {
   test(`'Get' ${icon.title} by its slug`, () => {
     const found = simpleIcons.Get(slug);
     expect(found).toBeDefined();
-    expect(found.title).toEqual(titleToHtmlFriendly(icon.title));
+    expect(found.title).toEqual(icon.title);
     expect(found.hex).toEqual(icon.hex);
     expect(found.source).toEqual(icon.source);
   });
@@ -70,7 +70,7 @@ icons.forEach(icon => {
   test(`'get' ${icon.title} by its slug`, () => {
     const found = simpleIcons.get(slug);
     expect(found).toBeDefined();
-    expect(found.title).toEqual(titleToHtmlFriendly(icon.title));
+    expect(found.title).toEqual(icon.title);
     expect(found.hex).toEqual(icon.hex);
     expect(found.source).toEqual(icon.source);
   });
