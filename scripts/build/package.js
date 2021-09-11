@@ -27,7 +27,9 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, svgToPath, titleToSlug } = require("../utils.js");
+const {
+  getIconSlug, svgToPath, titleToHtmlFriendly, titleToSlug
+} = require("../utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -47,7 +49,7 @@ function licenseToObject(license) {
   return license;
 }
 function iconToObject(icon) {
-  const escapedIconTitle = escape(icon.title);
+  const escapedIconTitle = escape(titleToHtmlFriendly(icon.title));
   return util.format(iconObjectTemplate,
     escapedIconTitle,
     escape(icon.slug),

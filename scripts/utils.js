@@ -12,7 +12,7 @@ module.exports = {
 
   /**
    * Extract the path from an icon SVG content.
-   * @param {Object} svg The icon SVG content.
+   * @param {Object} svg The icon SVG content
    **/
   svgToPath: svg => svg.match(/<path\s+d="([^"]*)/)[1],
 
@@ -46,5 +46,16 @@ module.exports = {
     htmlFriendlyTitle
       .replace(/&apos;/g, "’")
       .replace(/&amp;/g, "&")
+  ),
+
+  /**
+   * Converts a brand title (as it is seen in simple-icons.json) into a brand
+   * title in HTML/SVG friendly format.
+   * @param {String} brandTitle The title to convert
+   */
+  titleToHtmlFriendly: brandTitle => (
+    brandTitle
+      .replace(/’/g, "&apos;")
+      .replace(/&/g, "&amp;")
   ),
 }
