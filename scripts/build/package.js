@@ -47,10 +47,11 @@ function licenseToObject(license) {
   return license;
 }
 function iconToObject(icon) {
+  const escapedIconTitle = escape(icon.title);
   return util.format(iconObjectTemplate,
-    escape(icon.title),
+    escapedIconTitle,
     escape(icon.slug),
-    escape(icon.title),
+    escapedIconTitle,
     escape(icon.path),
     escape(icon.source),
     escape(icon.hex),
