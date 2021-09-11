@@ -1,5 +1,5 @@
 const { icons } = require('../_data/simple-icons.json');
-const { getIconSlug } = require('../scripts/utils.js');
+const { titleToHtmlFriendly, getIconSlug } = require('../scripts/utils.js');
 
 icons.forEach(icon => {
   const filename = getIconSlug(icon);
@@ -27,6 +27,11 @@ icons.forEach(icon => {
 
   test(`${icon.title} has an "svg" value`, () => {
     expect(typeof subject.svg).toBe('string');
+    expect(subject.svg).toEqual(
+      '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">'
+      + `<title>${titleToHtmlFriendly(subject.title)}</title>`
+      + `<path d="${subject.path}"/></svg>`
+    );
   });
 
   test(`${icon.title} has a valid "path" value`, () => {
