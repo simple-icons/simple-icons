@@ -1,11 +1,15 @@
-const util = require('util');
+const path = require('path');
+const fs = require('fs');
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
 const { titleToHtmlFriendly, getIconSlug, iconSvgTemplate } = require("../scripts/utils.js");
 
+const iconsDir = path.resolve(__dirname, '..', 'icons')
+
 icons.forEach(icon => {
   const slug = getIconSlug(icon);
   const subject = simpleIcons[slug];
+  const svgPath = path.resolve(iconsDir, `${slug}.svg`)
 
   test(`${icon.title} has the correct "title"`, () => {
     expect(typeof subject.title).toBe('string');
@@ -29,12 +33,8 @@ icons.forEach(icon => {
 
   test(`${icon.title} has an "svg" value`, () => {
     expect(typeof subject.svg).toBe('string');
-    expect(subject.svg).toEqual(
-      util.format(iconSvgTemplate,
-        titleToHtmlFriendly(subject.title),
-        subject.path,
-      )
-    )
+    const svgFileContents = fs.readFileSync(svgPath, 'utf8');
+    expect(subject.svg).toEqual(svgFileContents);
   });
 
   test(`${icon.title} has a valid "path" value`, () => {
