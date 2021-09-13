@@ -589,7 +589,7 @@ module.exports = {
             }
 
             spacedImplicitClosingTagIndexes.forEach((index) => {
-              const reason = `found space before implicit closing tag at index ${index}.`
+              const reason = `found space(s) before implicit closing tag at index ${index}.`
                           + ' The syntax \' />\' should be replaced by \'/>\'.';
               reporter.error(`Invalid SVG content format: ${reason}`);
             });
