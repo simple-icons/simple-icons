@@ -30,10 +30,19 @@ icons.forEach(icon => {
     expect(subject.source).toEqual(icon.source);
   });
 
-  test(`${icon.title} has an "svg" value`, (done) => {
+  test(`${icon.title} has an "svg" value`, () => {
     expect(typeof subject.svg).toBe('string');
-    const svgFileContents = fs.readFileSync(svgPath, 'utf8');
-    expect(subject.svg).toEqual(svgFileContents);
+    const svgFileContents = fs.readFileSync(svgPath, 'utf8')
+      .replace('" />', '"/>')
+      .replace(/\r?\n/, '')
+      .replace('></path>', '/>')
+      .replace(
+        'xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">',
+        'viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">')
+      .replace(
+        /<title>([^<]+)<\/title>/,
+        `<title>${titleToHtmlFriendly(subject.title)}</title>`);
+      expect(subject.svg).toEqual(svgFileContents);
   });
 
   test(`${icon.title} has a valid "path" value`, () => {
