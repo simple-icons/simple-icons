@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { icons } = require('../_data/simple-icons.json');
-const { titleToHtmlFriendly, getIconSlug, iconSvgTemplate } = require('../scripts/utils.js');
+const { titleToHtmlFriendly, getIconSlug } = require('../scripts/utils.js');
 
 const iconsDir = path.resolve(__dirname, '..', 'icons')
 
