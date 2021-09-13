@@ -574,10 +574,9 @@ module.exports = {
             reporter.name = 'svg-format';
 
             // Don't allow explicit '</path>' closing tag
-            const pathClosingTagIndex = ast.source.indexOf('</path>');
-            if (pathClosingTagIndex > -1) {
-              const reason = `found a closing "path" tag at index ${explicitClosingPathIndex}.`
-                          + ' The path should be self-closing, use  \'/>\' instead of \'></path>\'.';
+            if (ast.source.includes('</path>')) {
+              const reason = `found a closing "path" tag at index ${ast.source.indexOf('</path>')}.`
+                          + ' The path should be self-closing, use \'/>\' instead of \'></path>\'.';
               reporter.error(`Invalid SVG content format: ${reason}`);
             }
 
