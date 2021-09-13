@@ -3624,7 +3624,12 @@
         {
             "title": "Google Cast",
             "hex": "999999",
-            "source": "https://www.google.com/intl/en_us/chromecast/built-in/"
+            "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
+            "aliases": {
+                "aka": [
+                    "Chromecast"
+                ]
+            }
         },
         {
             "title": "Google Chat",
