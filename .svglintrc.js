@@ -569,6 +569,31 @@ module.exports = {
                 reporter.error(`${errorMsg}: ${reason}`);
               }
             }
+          },
+          function(reporter, $, ast) {
+            reporter.name = 'svg-format';
+
+            // Don't allow explicit '</path>' closing tag
+            const explicitClosingPathIndex = ast.source.indexOf('</path>');
+            if (explicitClosingPathIndex > -1) {
+              const reason = `found explicit closing "path" tag at index ${explicitClosingPathIndex}.`
+                          + ' The syntax \'></path>\' should be replaced by \'/>\'.';
+              reporter.error(`Invalid SVG content format: ${reason}`);
+            }
+
+            // Don't allow spaces before implicit closing tags
+            const spacedImplicitClosingTagIndexes = [];
+            let index = ast.source.indexOf(' />', -1);
+            while (index > -1) {
+              spacedImplicitClosingTagIndexes.push(index);
+              index = ast.source.indexOf(' />', index + 1);
+            }
+
+            spacedImplicitClosingTagIndexes.forEach((index) => {
+              const reason = `found space before implicit closing tag at index ${index}.`
+                          + ' The syntax \' />\' should be replaced by \'/>\'.';
+              reporter.error(`Invalid SVG content format: ${reason}`);
+            });
           }
         ]
     }
