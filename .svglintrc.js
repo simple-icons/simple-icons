@@ -485,7 +485,7 @@ module.exports = {
           function(reporter, $, ast) {
             reporter.name = "extraneous";
 
-            if (!svgRegexp.test($.html())) {
+            if (!svgRegexp.test(ast.source)) {
               reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
             }
           },
@@ -579,20 +579,6 @@ module.exports = {
                           + ' The path should be self-closing, use \'/>\' instead of \'></path>\'.';
               reporter.error(`Invalid SVG content format: ${reason}`);
             }
-
-            // Don't allow spaces before implicit closing tags
-            const spacedImplicitClosingTagIndexes = [];
-            let index = ast.source.indexOf(' />', -1);
-            while (index > -1) {
-              spacedImplicitClosingTagIndexes.push(index);
-              index = ast.source.indexOf(' />', index + 1);
-            }
-
-            spacedImplicitClosingTagIndexes.forEach((index) => {
-              const reason = `found space(s) before implicit closing tag at index ${index}.`
-                          + ' The syntax \' />\' should be replaced by \'/>\'.';
-              reporter.error(`Invalid SVG content format: ${reason}`);
-            });
           }
         ]
     }
