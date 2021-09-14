@@ -260,6 +260,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bootstrap` | `bootstrap` |
 | `Bosch` | `bosch` |
 | `Bose` | `bose` |
+| `boulanger` | `boulanger` |
 | `Bower` | `bower` |
 | `Box` | `box` |
 | `Brandfolder` | `brandfolder` |
@@ -293,6 +294,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Canva` | `canva` |
 | `Capacitor` | `capacitor` |
 | `Car Throttle` | `carthrottle` |
+| `Carrefour` | `carrefour` |
 | `Carto` | `carto` |
 | `Cash App` | `cashapp` |
 | `Castbox` | `castbox` |
@@ -1010,6 +1012,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LiveJournal` | `livejournal` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
 | `LogMeIn` | `logmein` |
 | `Logstash` | `logstash` |
