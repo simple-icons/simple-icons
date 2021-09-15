@@ -34,9 +34,7 @@ icons.forEach(icon => {
   test(`${icon.title} has an "svg" value`, () => {
     expect(typeof subject.svg).toBe('string');
     const svgFileContents = fs.readFileSync(svgPath, 'utf8')
-      .replace('" />', '"/>')
       .replace(/\r?\n/, '')
-      .replace('></path>', '/>')
       .replace(
         'xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\">',
         'viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\">')
