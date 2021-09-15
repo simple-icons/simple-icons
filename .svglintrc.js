@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
+const htmlNamedEntities = require("./scripts/html-named-entities.json");
 const svgpath = require("svgpath");
 const svgPathBbox = require("svg-path-bbox");
 const parsePath = require("svg-path-segments");
@@ -69,6 +70,29 @@ function getPathDIndex(svgFileContent) {
   return svgFileContent.indexOf(pathDStart) + pathDStart.length;
 }
 
+/**
+ * Get the index at which the text of the first `<title></title>` tag starts.
+ * @param svgFileContent The raw SVG as text.
+ **/
+function getTitleTextIndex(svgFileContent) {
+  const titleStart = '<title>';
+  return svgFileContent.indexOf(titleStart) + titleStart.length;
+}
+
+/**
+ * Convert a hexadecimal number passed as string to decimal number as integer.
+ * @param hex The hexadecimal number representation to convert.
+ **/
+function hexadecimalToDecimal(hex) {
+  let result = 0, digitValue;
+  hex = hex.toLowerCase();
+  for (var i = 0; i < hex.length; i++) {
+    digitValue = '0123456789abcdefgh'.indexOf(hex[i]);
+    result = result * 16 + digitValue;
+  }
+  return result;
+}
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -131,10 +155,122 @@ module.exports = {
             reporter.name = "icon-title";
 
             const iconTitleText = $.find("title").text();
-            const iconName = htmlFriendlyToTitle(iconTitleText);
-            const iconExists = data.icons.some(icon => icon.title === iconName);
-            if (!iconExists) {
-              reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
+
+            // all titles are encoded using character's code points by their decimal
+            // representation with `&#`, so avoid to use named entities or their
+            // hexadecimal representation https://www.w3.org/TR/REC-xml/#NT-Char
+
+            const xmlNamedEntitiesCodepoints = [34, 38, 39, 60, 62],
+              xmlNamedEntities = ["quot", "amp", "apos", "lt", "gt"];
+            let _validCodepointsRepr = true;
+
+            // avoid character codepoints as hexadecimal representation
+            const hexadecimalCodepoints = Array.from(
+              iconTitleText.matchAll(/&#x([A-Za-z0-9]{1,8});/g)
+            );
+            if (hexadecimalCodepoints.length > 0) {
+              _validCodepointsRepr = false;
+
+              hexadecimalCodepoints.forEach(match => {
+                const charHexReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
+                const charDecRepr = `&#${hexadecimalToDecimal(match[1])};`;
+                reporter.error(
+                  `Hexadecimal representation of escaped character "${match[0]}" found at index ${charHexReprIndex}:`
+                  + ` replace it with "${charDecRepr}".`
+                );
+              })
+            }
+
+            // avoid character codepoints as named entities
+            const namedEntitiesCodepoints = Array.from(
+              iconTitleText.matchAll(/&([A-Za-z0-9]{1,});/g)
+            );
+            if (namedEntitiesCodepoints.length > 0) {
+              _validCodepointsRepr = false;
+
+              namedEntitiesCodepoints.forEach(match => {
+                const namedEntiyReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
+
+                let replacement;
+                if (xmlNamedEntities.includes(match[1].toLowerCase())) {
+                  const namedEntityCodepoint = xmlNamedEntitiesCodepoints[
+                    xmlNamedEntities.indexOf(match[1].toLowerCase())
+                  ];
+                  replacement = `"&#${namedEntityCodepoint};"`;
+                } else {
+                  const namedEntityJsRepr = htmlNamedEntities[match[1]];
+                  replacement = namedEntityJsRepr === undefined ?
+                    'its decimal or literal representation' : `"${namedEntityJsRepr}"`;
+                }
+
+                reporter.error(
+                  `Named entity representation of escaped character "${match[0]}" found at index ${namedEntiyReprIndex}.`
+                  + ` Replace it with ${replacement}.`
+                );
+              })
+            }
+
+            // no other encoded codepoints representation in title
+            if (_validCodepointsRepr) {
+              // check if the title is properly encoded
+              const encodedBuf = [],
+                decimalCodepoints = Array.from(iconTitleText.matchAll(/&#([0-9]{1,});/g));
+
+              const _indexesToIgnore = [];
+              for (let m = 0; m < decimalCodepoints.length; m++) {
+                let index = decimalCodepoints[m].index;
+                for (let r = index; r < index + decimalCodepoints[m][0].length; r++ ) {
+                  _indexesToIgnore.push(r)
+                }
+              }
+
+              for (let i = iconTitleText.length - 1; i >= 0; i--) {
+                if (_indexesToIgnore.includes(i)) {
+                  encodedBuf.unshift(iconTitleText[i]);
+                } else {
+                  let charDecimalCode = iconTitleText.charCodeAt(i);
+                  // encode all non ascii characters plus "'&<> (XML named entities)
+                  if (charDecimalCode > 127 || xmlNamedEntitiesCodepoints.includes(charDecimalCode)) {
+                    encodedBuf.unshift(['&#', charDecimalCode, ';'].join(''));
+                  } else {
+                    encodedBuf.unshift(iconTitleText[i]);
+                  }
+                }
+              }
+
+              // compare encoded title with original title and report main error
+              const encodedIconTitleText = encodedBuf.join('');
+              if (encodedIconTitleText !== iconTitleText) {
+                _validCodepointsRepr = false;
+
+                reporter.error(
+                  `Unencoded unicode characters found in title "${iconTitleText}":`
+                  + ` replace it with "${encodedIconTitleText}".`
+                );
+              }
+
+              // check if there some other escaped characters in decimal notation
+              // which shouldn't be encoded
+              decimalCodepoints.forEach(match => {
+                const decimalNumber = parseInt(match[1]);
+                if (decimalNumber < 128 && ! [38, 60, 62].includes(decimalNumber)) {
+                  _validCodepointsRepr = false;
+
+                  const decimalCodepointCharIndex = getTitleTextIndex(ast.source) + match.index + 1;
+                  reporter.error(
+                    `Unnecessary encoded character "${match[0]}" found at index ${decimalCodepointCharIndex}:`
+                    + ` replace it with "${String.fromCharCode(decimalNumber)}".`
+                  );
+                }
+              });
+
+              if (_validCodepointsRepr) {
+                const iconName = htmlFriendlyToTitle(iconTitleText);
+                const iconExists = data.icons.some(icon => icon.title === iconName);
+                if (!iconExists) {
+                  reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
+                }
+              }
             }
           },
           function(reporter, $, ast) {

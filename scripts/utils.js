@@ -37,8 +37,9 @@ module.exports = {
    * @param {String} htmlFriendlyTitle The title to convert
    */
   htmlFriendlyToTitle: htmlFriendlyTitle => (
-    htmlFriendlyTitle
-      .replace(/&apos;/g, "’")
-      .replace(/&amp;/g, "&")
+    htmlFriendlyTitle.replace(
+      /&#([0-9]{1,});/g,
+      (_, num) => String.fromCharCode(parseInt(num))
+    )
   ),
 }
