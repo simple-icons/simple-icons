@@ -485,7 +485,7 @@ module.exports = {
           function(reporter, $, ast) {
             reporter.name = "extraneous";
 
-            if (!svgRegexp.test($.html())) {
+            if (!svgRegexp.test(ast.source)) {
               reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
             }
           },
@@ -568,6 +568,16 @@ module.exports = {
                 reason += ` (${invalidCharactersMsgs.join(", ")})`;
                 reporter.error(`${errorMsg}: ${reason}`);
               }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = 'svg-format';
+
+            // Don't allow explicit '</path>' closing tag
+            if (ast.source.includes('</path>')) {
+              const reason = `found a closing "path" tag at index ${ast.source.indexOf('</path>')}.`
+                          + ' The path should be self-closing, use \'/>\' instead of \'></path>\'.';
+              reporter.error(`Invalid SVG content format: ${reason}`);
             }
           }
         ]
