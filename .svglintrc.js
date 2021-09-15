@@ -253,7 +253,7 @@ module.exports = {
               // which shouldn't be encoded
               decimalCodepoints.forEach(match => {
                 const decimalNumber = parseInt(match[1]);
-                if (decimalNumber < 128 && ! [38, 60, 62].includes(decimalNumber)) {
+                if (decimalNumber < 128 && !xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
                   _validCodepointsRepr = false;
 
                   const decimalCodepointCharIndex = getTitleTextIndex(ast.source) + match.index + 1;
