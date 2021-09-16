@@ -930,6 +930,11 @@
             "source": "https://automattic.com/press/brand-materials/"
         },
         {
+            "title": "Autoprefixer",
+            "hex": "DD3735",
+            "source": "https://github.com/postcss/autoprefixer/blob/1341747bc8142a147342f55eea5ed4286a3ca318/logo.svg"
+        },
+        {
             "title": "Awesome Lists",
             "hex": "FC60A8",
             "source": "https://github.com/sindresorhus/awesome/tree/master/media"
@@ -1279,6 +1284,11 @@
             "source": "https://developer.bose.com/sites/default/files/Bose%20AR%20Design%20Guidelines%20v1.0.pdf"
         },
         {
+            "title": "boulanger",
+            "hex": "FD5300",
+            "source": "https://www.boulanger.com/"
+        },
+        {
             "title": "Bower",
             "hex": "EF5734",
             "source": "https://bower.io/docs/about/#brand"
@@ -1364,6 +1374,12 @@
             "source": "https://www.bunq.com/press/"
         },
         {
+            "title": "Burger King",
+            "hex": "D62300",
+            "source": "https://www.bk.com/",
+            "guidelines": "https://www.bk.com/trademarks"
+        },
+        {
             "title": "Buy Me A Coffee",
             "hex": "FFDD00",
             "source": "https://www.buymeacoffee.com/brand"
@@ -1441,6 +1457,11 @@
             "title": "Car Throttle",
             "hex": "FF9C42",
             "source": "https://www.carthrottle.com/"
+        },
+        {
+            "title": "Carrefour",
+            "hex": "004E9F",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Carrefour_logo.svg"
         },
         {
             "title": "Carto",
@@ -2554,6 +2575,11 @@
             "source": "https://www.dynatrace.com/company/press-kit/"
         },
         {
+            "title": "E.Leclerc",
+            "hex": "0066CC",
+            "source": "https://www.e.leclerc/assets/images/sue-logo.svg"
+        },
+        {
             "title": "EA",
             "hex": "000000",
             "source": "https://www.ea.com"
@@ -3530,6 +3556,12 @@
             "guidelines": "https://blog.golang.org/go-brand"
         },
         {
+            "title": "GoCD",
+            "hex": "94399E",
+            "source": "https://www.gocd.org/",
+            "guidelines": "https://www.gocd.org/"
+        },
+        {
             "title": "GoDaddy",
             "hex": "1BDBDB",
             "source": "https://godaddy.design/the-go/",
@@ -3796,9 +3828,9 @@
         },
         {
             "title": "GraphQL",
-            "hex": "E434AA",
-            "source": "https://github.com/graphql/artwork/blob/ac6ee2ac1cf31ba1be1b8fbc40910f0c70c98a1e/GraphQL/icon/GraphQL-mark-black.svg",
-            "guidelines": "https://github.com/graphql/artwork"
+            "hex": "E10098",
+            "source": "https://graphql.org/brand",
+            "guidelines": "https://graphql.org/brand"
         },
         {
             "title": "Grav",
@@ -3851,6 +3883,12 @@
             "title": "Guangzhou Metro",
             "hex": "C51935",
             "source": "https://commons.wikimedia.org/wiki/File:Guangzhou_Metro_logo.svg"
+        },
+        {
+            "title": "Guilded",
+            "hex": "F5C400",
+            "source": "https://www.guilded.gg/brand",
+            "guidelines": "https://www.guilded.gg/brand"
         },
         {
             "title": "gulp",
@@ -3922,6 +3960,11 @@
             "hex": "2E9FE6",
             "source": "https://www.hackster.io/branding#logos",
             "guidelines": "https://www.hackster.io/branding"
+        },
+        {
+            "title": "Handlebars.js",
+            "hex": "000000",
+            "source": "https://raw.githubusercontent.com/handlebars-lang/docs/master/src/.vuepress/public/icons/handlebarsjs-icon.svg"
         },
         {
             "title": "Handshake",
@@ -4501,6 +4544,11 @@
             "guidelines": "https://itch.io/press-kit"
         },
         {
+            "title": "iTerm2",
+            "hex": "000000",
+            "source": "https://github.com/gnachman/iTerm2/blob/6a857f3f5872eb1465ddc0dd83412015991e79ae/images/AppIcon/iTermIcon.sketch"
+        },
+        {
             "title": "iTunes",
             "hex": "FB5BC5",
             "source": "https://upload.wikimedia.org/wikipedia/commons/d/df/ITunes_logo.svg"
@@ -4678,7 +4726,10 @@
         {
             "title": "JPEG",
             "hex": "8A8A8A",
-            "source": "https://jpeg.org/contact.html"
+            "source": "https://jpeg.org/contact.html",
+            "license": {
+                "type": "CC-BY-ND-4.0"
+            }
         },
         {
             "title": "jQuery",
@@ -5269,6 +5320,11 @@
             "source": "https://lmms.io/branding"
         },
         {
+            "title": "Lodash",
+            "hex": "3492FF",
+            "source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
+        },
+        {
             "title": "Logitech",
             "hex": "00B8FC",
             "source": "https://www.logitech.com/en-us/pr/library"
@@ -5392,6 +5448,11 @@
             "title": "MakerBot",
             "hex": "FF1E0D",
             "source": "http://www.makerbot.com/makerbot-press-assets"
+        },
+        {
+            "title": "MAMP",
+            "hex": "02749C",
+            "source": "https://www.mamp.info/en/mamp/mac/"
         },
         {
             "title": "MAN",
@@ -6291,8 +6352,9 @@
         },
         {
             "title": "Nuxt.js",
-            "hex": "00C58E",
-            "source": "https://nuxtjs.org/design"
+            "hex": "00DC82",
+            "source": "https://nuxtjs.org/design",
+            "guidelines": "https://nuxtjs.org/design"
         },
         {
             "title": "NVIDIA",
@@ -6464,6 +6526,12 @@
             "title": "Openlayers",
             "hex": "1F6B75",
             "source": "https://github.com/openlayers/openlayers.github.io/blob/5b93e18b8d302eb49a812fb96abb529895ceb7a2/assets/logo.svg"
+        },
+        {
+            "title": "OpenMined",
+            "hex": "ED986C",
+            "source": "https://www.openmined.org/",
+            "guidelines": "https://www.openmined.org/"
         },
         {
             "title": "OpenNebula",
@@ -9129,8 +9197,8 @@
         },
         {
             "title": "TeamViewer",
-            "hex": "0E8EE9",
-            "source": "https://www.teamviewer.com/resources/images/logos/teamviewer-logo-big.svg"
+            "hex": "004680",
+            "source": "https://www.teamviewer.com/en-us/"
         },
         {
             "title": "TED",
@@ -9570,7 +9638,8 @@
         {
             "title": "TypeScript",
             "hex": "3178C6",
-            "source": "https://www.staging-typescript.org/branding"
+            "source": "https://www.typescriptlang.org/branding",
+            "guidelines": "https://www.typescriptlang.org/branding"
         },
         {
             "title": "TYPO3",
@@ -9996,6 +10065,12 @@
             "title": "Wallabag",
             "hex": "3F6184",
             "source": "https://github.com/wallabag/logo/blob/f670395da2d85c3bbcb8dcfa8d2a339d8af5abb0/_default/icon/svg/logo-icon-black-no-bg.svg"
+        },
+        {
+            "title": "Walmart",
+            "hex": "0071CE",
+            "source": "https://corporate.walmart.com",
+            "guidelines": "https://one.walmart.com/content/people-experience/associate-brand-center.html"
         },
         {
             "title": "Wappalyzer",
