@@ -1,7 +1,7 @@
 name: Icon removal
 description: Report an icon for removal
 title: "Remove: "
-labels: [removal request]
+labels: [removal request, breaking change]
 
 body:
   - type: markdown
