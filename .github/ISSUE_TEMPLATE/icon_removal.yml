@@ -25,6 +25,12 @@ body:
   - type: textarea
     attributes:
       label: Reason for Removal
-      placeholder: "Example: Brand no longer exists..."
+      description: |
+        Include all relevant links, for example:
+        - The website announcing the company was closed
+        - A blogpost announcing the brand has been discontinued
+      placeholder: >-
+        Example: [this blogpost](https://example.com) announced the brand has been
+        discontinued...
     validations:
       required: true
