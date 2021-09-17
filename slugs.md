@@ -260,6 +260,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bootstrap` | `bootstrap` |
 | `Bosch` | `bosch` |
 | `Bose` | `bose` |
+| `boulanger` | `boulanger` |
 | `Bower` | `bower` |
 | `Box` | `box` |
 | `Brandfolder` | `brandfolder` |
@@ -277,6 +278,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Buildkite` | `buildkite` |
 | `Bulma` | `bulma` |
 | `bunq` | `bunq` |
+| `Burger King` | `burgerking` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
 | `byte` | `byte` |
@@ -292,6 +294,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Canva` | `canva` |
 | `Capacitor` | `capacitor` |
 | `Car Throttle` | `carthrottle` |
+| `Carrefour` | `carrefour` |
 | `Carto` | `carto` |
 | `Cash App` | `cashapp` |
 | `Castbox` | `castbox` |
@@ -746,6 +749,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
 | `Guangzhou Metro` | `guangzhoumetro` |
+| `Guilded` | `guilded` |
 | `gulp` | `gulp` |
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
@@ -759,6 +763,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HackerOne` | `hackerone` |
 | `HackerRank` | `hackerrank` |
 | `Hackster` | `hackster` |
+| `Handlebars.js` | `handlebarsdotjs` |
 | `Handshake` | `handshake` |
 | `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
@@ -867,6 +872,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Issuu` | `issuu` |
 | `Istio` | `istio` |
 | `Itch.io` | `itchdotio` |
+| `iTerm2` | `iterm2` |
 | `iTunes` | `itunes` |
 | `IVECO` | `iveco` |
 | `Jabber` | `jabber` |
@@ -1006,6 +1012,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LiveJournal` | `livejournal` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
 | `LogMeIn` | `logmein` |
 | `Logstash` | `logstash` |
@@ -1887,6 +1894,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WakaTime` | `wakatime` |
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |
+| `Walmart` | `walmart` |
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Wattpad` | `wattpad` |

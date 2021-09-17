@@ -930,6 +930,11 @@
             "source": "https://automattic.com/press/brand-materials/"
         },
         {
+            "title": "Autoprefixer",
+            "hex": "DD3735",
+            "source": "https://github.com/postcss/autoprefixer/blob/1341747bc8142a147342f55eea5ed4286a3ca318/logo.svg"
+        },
+        {
             "title": "Awesome Lists",
             "hex": "FC60A8",
             "source": "https://github.com/sindresorhus/awesome/tree/master/media"
@@ -1279,6 +1284,11 @@
             "source": "https://developer.bose.com/sites/default/files/Bose%20AR%20Design%20Guidelines%20v1.0.pdf"
         },
         {
+            "title": "boulanger",
+            "hex": "FD5300",
+            "source": "https://www.boulanger.com/"
+        },
+        {
             "title": "Bower",
             "hex": "EF5734",
             "source": "https://bower.io/docs/about/#brand"
@@ -1447,6 +1457,11 @@
             "title": "Car Throttle",
             "hex": "FF9C42",
             "source": "https://www.carthrottle.com/"
+        },
+        {
+            "title": "Carrefour",
+            "hex": "004E9F",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Carrefour_logo.svg"
         },
         {
             "title": "Carto",
@@ -3541,6 +3556,12 @@
             "guidelines": "https://blog.golang.org/go-brand"
         },
         {
+            "title": "GoCD",
+            "hex": "94399E",
+            "source": "https://www.gocd.org/",
+            "guidelines": "https://www.gocd.org/"
+        },
+        {
             "title": "GoDaddy",
             "hex": "1BDBDB",
             "source": "https://godaddy.design/the-go/",
@@ -3939,6 +3960,11 @@
             "hex": "2E9FE6",
             "source": "https://www.hackster.io/branding#logos",
             "guidelines": "https://www.hackster.io/branding"
+        },
+        {
+            "title": "Handlebars.js",
+            "hex": "000000",
+            "source": "https://raw.githubusercontent.com/handlebars-lang/docs/master/src/.vuepress/public/icons/handlebarsjs-icon.svg"
         },
         {
             "title": "Handshake",
@@ -5294,6 +5320,11 @@
             "source": "https://lmms.io/branding"
         },
         {
+            "title": "Lodash",
+            "hex": "3492FF",
+            "source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
+        },
+        {
             "title": "Logitech",
             "hex": "00B8FC",
             "source": "https://www.logitech.com/en-us/pr/library"
@@ -6321,8 +6352,9 @@
         },
         {
             "title": "Nuxt.js",
-            "hex": "00C58E",
-            "source": "https://nuxtjs.org/design"
+            "hex": "00DC82",
+            "source": "https://nuxtjs.org/design",
+            "guidelines": "https://nuxtjs.org/design"
         },
         {
             "title": "NVIDIA",
@@ -9605,7 +9637,8 @@
         {
             "title": "TypeScript",
             "hex": "3178C6",
-            "source": "https://www.staging-typescript.org/branding"
+            "source": "https://www.typescriptlang.org/branding",
+            "guidelines": "https://www.typescriptlang.org/branding"
         },
         {
             "title": "TYPO3",
