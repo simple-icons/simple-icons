@@ -101,6 +101,17 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
+  pdf:
+    name: Trigger simple-icons-pdf release
+    needs: npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger simple-icons-pdf release
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -d '{"ref":"develop"}' \
+            https://api.github.com/repos/simple-icons/simple-icons-pdf/actions/workflows/auto-release.yml/dispatches
   website:
     name: Trigger simple-icons-website update
     needs: npm
