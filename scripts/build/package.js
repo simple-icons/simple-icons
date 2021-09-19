@@ -18,6 +18,8 @@ const rootDir = path.resolve(__dirname, "..", "..");
 const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
 const indexFile = path.resolve(rootDir, "index.js");
 const iconsDir = path.resolve(rootDir, "icons");
+const iconsJsFile = path.resolve(rootDir, "icons.js");
+const iconsMjsFile = path.resolve(rootDir, "icons.mjs");
 
 const templatesDir = path.resolve(__dirname, "templates");
 const indexTemplateFile = path.resolve(templatesDir, "index.js");
@@ -27,7 +29,7 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, titleToSlug } = require("../utils.js");
+const { getIconSlug } = require("../utils.js");
 
 // Local helper functions
 function escape(value) {
@@ -57,6 +59,11 @@ function iconToObject(icon) {
     licenseToObject(icon.license),
   );
 }
+function slugToVariableName(slug) {
+  const slugFirstLetter = slug[0].toUpperCase();
+  const slugRest = slug.slice(1);
+  return `si${slugFirstLetter}${slugRest}`;
+}
 function minifyAndWrite(filepath, rawJavaScript) {
   const { error, code } = minify(rawJavaScript);
   if (error) {
@@ -68,6 +75,8 @@ function minifyAndWrite(filepath, rawJavaScript) {
 }
 
 // 'main'
+const iconsBarrelMjs = [];
+const iconsBarrelJs = [];
 const icons = [];
 data.icons.forEach(icon => {
   const filename = getIconSlug(icon);
@@ -76,11 +85,25 @@ data.icons.forEach(icon => {
   icon.slug = filename;
   icons.push(icon);
 
+  const iconObject = iconToObject(icon);
+
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  minifyAndWrite(jsFilepath, `module.exports=${iconToObject(icon)};`);
+  minifyAndWrite(jsFilepath, `module.exports=${iconObject};`);
+
+  // add object to the barrel file
+  const iconExportName = slugToVariableName(icon.slug);
+  iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
+  iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
 });
 
 // write our generic index.js
 const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','));
 minifyAndWrite(indexFile, rawIndexJs);
+
+// write our file containing the exports of all icons in CommonJS ...
+const rawIconsJs = `module.exports={${iconsBarrelJs.join("")}};`;
+minifyAndWrite(iconsJsFile, rawIconsJs);
+// and ESM
+const rawIconsMjs = iconsBarrelMjs.join("");
+minifyAndWrite(iconsMjsFile, rawIconsMjs);
