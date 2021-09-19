@@ -114,7 +114,7 @@ jobs:
             https://api.github.com/repos/simple-icons/simple-icons-pdf/actions/workflows/auto-release.yml/dispatches
   website:
     name: Trigger simple-icons-website update
-    needs: npm
+    needs: [npm, pdf]
     runs-on: ubuntu-latest
     steps:
       - name: Trigger simple-icons-website update
