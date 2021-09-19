@@ -103,7 +103,7 @@ jobs:
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
   pdf:
     name: Trigger simple-icons-pdf release
-    needs: npm
+    needs: sanity-check
     runs-on: ubuntu-latest
     steps:
       - name: Trigger simple-icons-pdf release
