@@ -110,7 +110,7 @@ jobs:
         run: |
           curl -X POST \
             -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
-            -d '{"ref":"develop"}' \
+            -d '{"ref":"master"}' \
             https://api.github.com/repos/simple-icons/simple-icons-pdf/actions/workflows/auto-release.yml/dispatches
   website:
     name: Trigger simple-icons-website update
