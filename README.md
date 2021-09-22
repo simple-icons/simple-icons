@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/develop/simpleiconsbordered.svg">
+<a href="https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/develop/simple">
 <img style="filter:invert(50%)" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg" alt="Simple Icons" width=64 height=64>
 </a>
 <h3 align="center">Simple Icons</h3>
