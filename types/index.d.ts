@@ -19,6 +19,4 @@ declare const icons: Record<string, SimpleIcon> & {
   Get(name: string): SimpleIcon;
 };
 
-declare module "simple-icons" {
-  export = icons;
-}
+export default icons;
