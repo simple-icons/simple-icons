@@ -1,6 +1,6 @@
 <p align="center">
 
-<img style="filter:invert(50%)" src="https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/develop/simple" alt="Simple Icons" width=64 height=64>
+<img src="https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/develop/simple.svg" alt="Simple Icons" width=64 height=64>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
