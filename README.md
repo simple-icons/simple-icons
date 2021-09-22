@@ -1,7 +1,7 @@
 <p align="center">
-<a href="https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/develop/simple">
-<img style="filter:invert(50%)" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg" alt="Simple Icons" width=64 height=64>
-</a>
+
+<img style="filter:invert(50%)" src="https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/develop/simple" alt="Simple Icons" width=64 height=64>
+
 <h3 align="center">Simple Icons</h3>
 <p align="center">
 Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
