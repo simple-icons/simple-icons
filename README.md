@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://simpleicons.org/">
-<img src="simpleiconsbordered" alt="Simple Icons" width=64 height=64>
+<img src="simpleiconsbordered.svg" alt="Simple Icons" width=64 height=64>
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
