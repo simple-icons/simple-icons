@@ -9,6 +9,7 @@
   ],
   "type": "commonjs",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "exports": {
     ".": "./index.js",
     "./icons": {
@@ -16,7 +17,8 @@
       "import": "./icons.mjs",
       "require": "./icons.js",
       "default": "./icons.js"
-    }
+    },
+    "./icons/*": "./icons/*.js"
   },
   "sideEffects": false,
   "repository": {
@@ -44,7 +46,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rimraf icons/*.js index.js icons.js icons.mjs",
+    "clean": "rimraf icons/*.js icons/*.d.ts index.js icons.js icons.mjs icons.d.ts",
     "lint": "run-s our-lint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
     "jsonlint": "node scripts/lint/jsonlint.js",
