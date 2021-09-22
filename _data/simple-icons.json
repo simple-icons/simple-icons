@@ -2199,6 +2199,11 @@
             "guidelines": "https://www.datadoghq.com/about/resources/"
         },
         {
+            "title": "Dataiku",
+            "hex": "2AB1AC",
+            "source": "https://www.dataiku.com/company/media-kit/"
+        },
+        {
             "title": "DataStax",
             "hex": "3A3A42",
             "source": "https://www.datastax.com/brand-resources",
@@ -3251,6 +3256,11 @@
             "title": "Framer",
             "hex": "0055FF",
             "source": "https://framer.com"
+        },
+        {
+            "title": "Franprix",
+            "hex": "EC6237",
+            "source": "https://www.franprix.fr/"
         },
         {
             "title": "Fraunhofer-Gesellschaft",
@@ -5030,8 +5040,8 @@
         },
         {
             "title": "Kotlin",
-            "hex": "0095D5",
-            "source": "https://resources.jetbrains.com/storage/products/kotlin/docs/kotlin_logos.zip",
+            "hex": "7F52FF",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
@@ -6886,6 +6896,11 @@
             }
         },
         {
+            "title": "phpMyAdmin",
+            "hex": "6C78AF",
+            "source": "https://github.com/phpmyadmin/data/blob/b7d3bdb9bb973beff4726541b87d3a4c8a950b4b/brand/phpMyAdmin-Logo-Symbol.svg"
+        },
+        {
             "title": "PhpStorm",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
@@ -8737,6 +8752,11 @@
             "source": "https://spring.io/projects"
         },
         {
+            "title": "Spring Security",
+            "hex": "6DB33F",
+            "source": "https://spring.io/projects"
+        },
+        {
             "title": "Spyder IDE",
             "hex": "FF0000",
             "source": "https://www.spyder-ide.org/"
@@ -9135,13 +9155,14 @@
         },
         {
             "title": "Tailwind CSS",
-            "hex": "38B2AC",
-            "source": "https://tailwindcss.com/"
+            "hex": "06B6D4",
+            "source": "https://tailwindcss.com/brand",
+            "guidelines": "https://tailwindcss.com/brand"
         },
         {
             "title": "Talend",
-            "hex": "1675BC",
-            "source": "https://www.talend.com/"
+            "hex": "FF6D70",
+            "source": "https://www.talend.com/blog/"
         },
         {
             "title": "Tampermonkey",
@@ -9250,6 +9271,11 @@
             "hex": "7B42BC",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
+        },
+        {
+            "title": "Tesco",
+            "hex": "00539F",
+            "source": "https://www.tesco.com"
         },
         {
             "title": "Tesla",
@@ -9576,8 +9602,9 @@
         },
         {
             "title": "TUI",
-            "hex": "70CBF4",
-            "source": "https://www.tuiholidays.ie/"
+            "hex": "D40E14",
+            "source": "https://www.design.tui/brand/logos/",
+            "guidelines": "https://www.design.tui/brand/"
         },
         {
             "title": "Tumblr",
@@ -10567,6 +10594,17 @@
             "title": "Zapier",
             "hex": "FF4A00",
             "source": "https://zapier.com/about/brand"
+        },
+        {
+            "title": "Zcash",
+            "aliases": {
+                "aka": [
+                    "ZEC"
+                ]
+            },
+            "hex": "F4B728",
+            "source": "https://z.cash/press/",
+            "guidelines": "https://www.zfnd.org/about/trademark-policy/"
         },
         {
             "title": "ZDF",
