@@ -7296,17 +7296,6 @@
             "guidelines": "https://www.progress.com/legal/trademarks/trademarks-use-policy"
         },
         {
-            "title": "Progressive Web Application",
-            "hex": "5A0FC8",
-            "source": "https://github.com/webmaxru/progressive-web-apps-logo/blob/77744cd5c0a4d484bb3d082c6ac458c44202da03/pwalogo-white.svg",
-            "guidelines": "https://github.com/webmaxru/progressive-web-apps-logo#readme",
-            "aliases": {
-                "aka": [
-                    "pwa"
-                ]
-            }
-        },
-        {
             "title": "Prometheus",
             "hex": "E6522C",
             "source": "https://prometheus.io/"
@@ -7406,6 +7395,17 @@
             "title": "Pusher",
             "hex": "300D4F",
             "source": "https://pusher.com/"
+        },
+        {
+            "title": "PWA",
+            "hex": "5A0FC8",
+            "source": "https://github.com/webmaxru/progressive-web-apps-logo/blob/77744cd5c0a4d484bb3d082c6ac458c44202da03/pwalogo-white.svg",
+            "guidelines": "https://github.com/webmaxru/progressive-web-apps-logo#readme",
+            "aliases": {
+                "aka": [
+                    "Progressive Web Application"
+                ]
+            }
         },
         {
             "title": "PyCharm",
