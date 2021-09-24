@@ -12,12 +12,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           label: potential duplicate
           exclude: |
+            adding
+            add
+            creating
+            create
             icons
             icon
             logos
             logo
-            adding
-            add
+            missing
+            miss
+            needing
+            need
+            please
             requesting
             request
           state: all
