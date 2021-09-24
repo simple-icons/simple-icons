@@ -1,22 +1,19 @@
 #!/usr/bin/env node
 /**
  * @fileoverview
- * Takes a brand name as argument and outputs the corresonding filename to
- * standard output.
+ * Script that takes a brand name as argument and outputs the corresponding
+ * icon SVG filename to standard output.
  */
 
-const utils = require('./utils.js');
+const { titleToSlug } = require("./utils.js");
 
 if (process.argv.length < 3) {
-  console.error("Provide a brand name as argument")
+  console.error("Provide a brand name as argument");
+  process.exit(1);
 } else {
-  let brandName = "";
-  for (let i = 2; i < process.argv.length; i++) {
-    brandName += ` ${process.argv[i]}`;
-  }
+  const brandName = process.argv.slice(3)
+    .reduce((acc, arg) => `${acc} ${arg}`, process.argv[2]);
 
-  brandName = brandName.substring(1);
-
-  const filename = utils.titleToFilename(brandName);
-  console.log(`For '${brandName}' use the filename '${filename}.svg'`);
+  const filename = titleToSlug(brandName);
+  console.log(`For '${brandName}' use the file 'icons/${filename}.svg'`);
 }

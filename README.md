@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub. Started by <a href="https://twitter.com/bathtype">Dan Leech</a>.</p>
+Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -15,6 +15,8 @@ Over 1500 Free SVG icons for popular brands. See them all on one page at <a href
 
 ## Usage
 
+> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
+
 ### General Usage
 
 Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the icon you want, and the download should start automatically.
@@ -24,15 +26,15 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/[ICON NAME].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v4/icons/[ICON NAME].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v5/icons/[ICON SLUG].svg" />
 ```
 
-Where `[ICON NAME]` is replaced by the icon name, for example:
+Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/simpleicons.svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v4/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v5/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -41,35 +43,37 @@ These examples use the latest major version. This means you won't receive any up
 
 The icons are also available through our npm package. To install, simply run:
 
-```
-$ npm install simple-icons
+```shell
+npm install simple-icons
 ```
 
-The API can then be used as follows:
+The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```javascript
 const simpleIcons = require('simple-icons');
 
-console.log(simpleIcons.get('Simple Icons'));
+// Get a specific icon by its slug as:
+// simpleIcons.Get('[ICON SLUG]');
 
-/*
-{
-    title: 'Simple Icons',
-    slug: 'simpleicons',
-    hex: '111111',
-    source: 'https://simpleicons.org/',
-    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
-}
-*/
+// For example:
+const icon = simpleIcons.Get('simpleicons');
+
 ```
 
-Alternatively you can import the needed icons individually.
+Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
 
 ```javascript
-const icon = require('simple-icons/icons/simpleicons');
+// Import a specific icon by its slug as:
+// require('simple-icons/icons/[ICON SLUG]');
 
+// For example:
+const icon = require('simple-icons/icons/simpleicons');
+```
+
+Either method will return an icon object:
+
+```javascript
 console.log(icon);
 
 /*
@@ -79,8 +83,16 @@ console.log(icon);
     hex: '111111',
     source: 'https://simpleicons.org/',
     svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
-    path: 'M12 12v-1.5c-2.484 ...'
+    path: 'M12 12v-1.5c-2.484 ...',
+    guidelines: 'https://simpleicons.org/styleguide',
+    license: {
+        type: '...',
+        url: 'https://example.com/'
+    }
 }
+
+NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines for the icon.
+NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
 ```
 
@@ -90,8 +102,8 @@ This is useful if you want to do a computation on every icon:
 ```javascript
 const simpleIcons = require('simple-icons');
 
-for (const title in simpleIcons) {
-    const icon = simpleIcons.get(title);
+for (const iconSlug in simpleIcons) {
+    const icon = simpleIcons.Get(iconSlug);
     // do stuff
 }
 ```
@@ -100,24 +112,27 @@ for (const title in simpleIcons) {
 
 There are also TypeScript type definitions for the Node package. To use them, simply run:
 
-```
-$ npm install @types/simple-icons
+```shell
+npm install --save-dev @types/simple-icons
 ```
 
 ### PHP Usage
 
 The icons are also available through our Packagist package. To install, simply run:
 
-```
-$ composer require simple-icons/simple-icons
+```shell
+composer require simple-icons/simple-icons
 ```
 
-The package can then be used as follows:
+The package can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```php
 <?php
+// Import a specific icon by its slug as:
+echo file_get_contents('path/to/package/icons/[ICON SLUG].svg');
 
-echo file_get_contents('path/to/package/icons/simple-icons.svg');
+// For example:
+echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 // <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>
 ?>
@@ -125,34 +140,19 @@ echo file_get_contents('path/to/package/icons/simple-icons.svg');
 
 ## Third Party Extensions
 
-### Drupal
+| Extension | Author |
+| :--- | :--- |
+| [Drupal module](https://www.drupal.org/project/simple_icons) | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
+| [Flutter package](https://pub.dev/packages/simple_icons) | [@jlnrrg](https://jlnrrg.github.io/) |
+| [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) | [@nidbCN](https://github.com/nidbCN/) |
+| [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) | [@vigonotion](https://github.com/vigonotion/) |
+| [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
+| [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
+| [Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
+| [Python package](https://github.com/sachinraja/simpleicons) | [@sachinraja](https://github.com/sachinraja) |
+| [React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| [Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
+| [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
-Icons are also available as a [Drupal module](https://www.drupal.org/project/simple_icons) created by [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme).
-
-### Flutter
-
-Icons are also available as a [Flutter package](https://pub.dev/packages/flutter_brand_icons) created by  [@muj-programmer](https://github.com/muj-programmer).
-
-### Home Assistant
-
-Icons are also available as a [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) created by  [@vigonotion](https://github.com/vigonotion/).
-
-### Kirby
-
-Icons are also available as a [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) created by  [@runxel](https://github.com/runxel).
-
-### React
-
-Icons are also available as a [React package](https://github.com/icons-pack/react-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
-
-### Svelte
-
-Icons are also available as a [Svelte package](https://github.com/icons-pack/svelte-simple-icons) created by  [@wootsbot](https://github.com/wootsbot).
-
-### Vue
-
-Icons are also available as a [Vue package](https://github.com/mainvest/vue-simple-icons) created by  [@noahlitvin](https://github.com/noahlitvin).
-
-### WordPress
-
-Icons are also available as a [WordPress plugin](https://wordpress.org/plugins/simple-icons/) created by  [@tjtaylo](https://github.com/tjtaylo).
+[slug]: ./slugs.md
