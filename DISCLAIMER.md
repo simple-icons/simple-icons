@@ -19,7 +19,7 @@ Simple Icons provides data on the license under which icons are available. We as
 
 The license under which an icon is available can be found in the icon's entry in the JSON data file in the NPM and Packagist packages, or through the license link on the icon's card on [the Simple Icons website].
 
-As we rely largely on our community to help us keep Simple Icons up-to-date, the license data for an icon may be outdated. If you find that the license data provided is outdated, please [submit an issue] to [the Simple Icons GitHub repository].
+As we rely largely on our community to help us keep Simple Icons up-to-date, the license data for an icon may be outdated. If you find that the license data provided is outdated, please [submit an issue][icon-outdated-issues] to [the Simple Icons GitHub repository].
 
 If an icon includes a registered trademark (`®`) or trademark symbol (`™`) the recommendations outlined in [the Simple Icons Contributing Guidelines] are followed to decide whether to include the symbol or not.
 
@@ -44,7 +44,6 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue][removal-issues] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria] twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
 
 [meet our criteria]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon
-[submit an issue]: https://github.com/simple-icons/simple-icons/issues/new/choose
 [icon-outdated-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=icon+outdated&template=icon_update.yml&title=Update%3A+
 [removal-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=removal+request&template=icon_removal.yml&title=Remove%3A+
 [the simple icons contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines
