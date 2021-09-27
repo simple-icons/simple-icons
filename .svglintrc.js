@@ -220,7 +220,7 @@ module.exports = {
             }
 
             if (_validCodepointsRepr) {
-              // check if the title is properly encoded
+              // compare encoded title with original title and report error if not equal
               const encodingMatches = Array.from(iconTitleText.matchAll(/&(#([0-9]+)|(amp|quot|lt|gt));/g)),
                 encodedBuf = [];
 
@@ -236,8 +236,9 @@ module.exports = {
                 if (_indexesToIgnore.includes(i)) {
                   encodedBuf.unshift(iconTitleText[i]);
                 } else {
-                  let charDecimalCode = iconTitleText.charCodeAt(i);
                   // encode all non ascii characters plus "'&<> (XML named entities)
+                  let charDecimalCode = iconTitleText.charCodeAt(i);
+
                   if (charDecimalCode > 127 || charDecimalCode === 39) {
                     encodedBuf.unshift(`&#${charDecimalCode};`);
                   } else if (xmlNamedEntitiesCodepoints.includes(charDecimalCode)) {
@@ -249,7 +250,6 @@ module.exports = {
                   }
                 }
               }
-              // compare encoded title with original title and report main error
               const encodedIconTitleText = encodedBuf.join('');
               if (encodedIconTitleText !== iconTitleText) {
                 _validCodepointsRepr = false;
@@ -260,14 +260,11 @@ module.exports = {
                 );
               }
 
-              // check if there some other escaped characters in decimal notation
+              // check if there are some other escaped characters in decimal notation
               // which shouldn't be encoded
               encodingMatches.filter(m => !isNaN(m[2])).forEach(match => {
                 const decimalNumber = parseInt(match[2]);
-                if (
-                  decimalNumber < 128
-                  && decimalNumber != 39
-                ) {
+                if (decimalNumber < 128 && decimalNumber != 39) {
                   _validCodepointsRepr = false;
 
                   const decimalCodepointCharIndex = getTitleTextIndex(ast.source) + match.index + 1;
