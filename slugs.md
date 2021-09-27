@@ -439,6 +439,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Databricks` | `databricks` |
 | `DataCamp` | `datacamp` |
 | `Datadog` | `datadog` |
+| `Dataiku` | `dataiku` |
 | `DataStax` | `datastax` |
 | `DatoCMS` | `datocms` |
 | `Datto` | `datto` |
@@ -1069,6 +1070,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `McLaren` | `mclaren` |
 | `MDN Web Docs` | `mdnwebdocs` |
 | `MediaFire` | `mediafire` |
+| `MediaMarkt` | `mediamarkt` |
 | `MediaTek` | `mediatek` |
 | `MediaTemple` | `mediatemple` |
 | `Medium` | `medium` |
@@ -1302,6 +1304,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Photocrowd` | `photocrowd` |
 | `Photopea` | `photopea` |
 | `PHP` | `php` |
+| `phpMyAdmin` | `phpmyadmin` |
 | `PhpStorm` | `phpstorm` |
 | `Pi-hole` | `pihole` |
 | `Picarto.TV` | `picartodottv` |
@@ -1390,6 +1393,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Publons` | `publons` |
 | `PubMed` | `pubmed` |
 | `Pug` | `pug` |
+| `Pulumi` | `pulumi` |
 | `Puma` | `puma` |
 | `Puppet` | `puppet` |
 | `Puppeteer` | `puppeteer` |
@@ -1397,6 +1401,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PurgeCSS` | `purgecss` |
 | `Purism` | `purism` |
 | `Pusher` | `pusher` |
+| `PWA` | `pwa` |
 | `PyCharm` | `pycharm` |
 | `PyPI` | `pypi` |
 | `PyPy` | `pypy` |
@@ -1586,6 +1591,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ŠKODA` | `skoda` |
 | `Sky` | `sky` |
 | `Skyliner` | `skyliner` |
+| `Skynet` | `skynet` |
 | `Skype` | `skype` |
 | `Skype for Business` | `skypeforbusiness` |
 | `Slack` | `slack` |
@@ -1997,6 +2003,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zalando` | `zalando` |
 | `Zalo` | `zalo` |
 | `Zapier` | `zapier` |
+| `Zcash` | `zcash` |
 | `ZDF` | `zdf` |
 | `Zelle` | `zelle` |
 | `Zend` | `zend` |
@@ -2019,3 +2026,4 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zorin` | `zorin` |
 | `Zotero` | `zotero` |
 | `Zulip` | `zulip` |
+| `Zyte` | `zyte` |
