@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
-const htmlNamedEntities = require("./scripts/html-named-entities.json");
+const htmlNamedEntities = require("named-html-entities-json");
 const svgpath = require("svgpath");
 const svgPathBbox = require("svg-path-bbox");
 const parsePath = require("svg-path-segments");
@@ -154,72 +154,80 @@ module.exports = {
           function(reporter, $, ast) {
             reporter.name = "icon-title";
 
-            const iconTitleText = $.find("title").text();
-
-            // all titles are encoded using character's code points by their decimal
-            // representation with `&#`, so avoid to use named entities or their
-            // hexadecimal representation https://www.w3.org/TR/REC-xml/#NT-Char
-
-            const xmlNamedEntitiesCodepoints = [34, 38, 39, 60, 62],
-              xmlNamedEntities = ["quot", "amp", "apos", "lt", "gt"];
+            const iconTitleText = $.find("title").text(),
+              xmlNamedEntitiesCodepoints = [34, 38, 60, 62],
+              xmlNamedEntities = ["quot", "amp", "lt", "gt"];
             let _validCodepointsRepr = true;
 
             // avoid character codepoints as hexadecimal representation
             const hexadecimalCodepoints = Array.from(
-              iconTitleText.matchAll(/&#x([A-Za-z0-9]{1,8});/g)
+              iconTitleText.matchAll(/&#x([A-Fa-f0-9]+);/g)
             );
             if (hexadecimalCodepoints.length > 0) {
               _validCodepointsRepr = false;
 
               hexadecimalCodepoints.forEach(match => {
                 const charHexReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
-                const charDecRepr = `&#${hexadecimalToDecimal(match[1])};`;
+                const charDec = hexadecimalToDecimal(match[1]);
+
+                let charRepr;
+                if (xmlNamedEntitiesCodepoints.includes(charDec)) {
+                  charRepr = `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(charDec)]};`;
+                } else if (charDec < 128 && charDec != 39) {
+                  charRepr = String.fromCodePoint(charDec);
+                } else {
+                  charRepr = `&#${charDec};`;
+                }
+
                 reporter.error(
                   `Hexadecimal representation of escaped character "${match[0]}" found at index ${charHexReprIndex}:`
-                  + ` replace it with "${charDecRepr}".`
+                  + ` replace it with "${charRepr}".`
                 );
               })
             }
 
             // avoid character codepoints as named entities
             const namedEntitiesCodepoints = Array.from(
-              iconTitleText.matchAll(/&([A-Za-z0-9]{1,});/g)
+              iconTitleText.matchAll(/&([A-Za-z0-9]+);/g)
             );
             if (namedEntitiesCodepoints.length > 0) {
-              _validCodepointsRepr = false;
 
               namedEntitiesCodepoints.forEach(match => {
                 const namedEntiyReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
 
-                let replacement;
-                if (xmlNamedEntities.includes(match[1].toLowerCase())) {
-                  const namedEntityCodepoint = xmlNamedEntitiesCodepoints[
-                    xmlNamedEntities.indexOf(match[1].toLowerCase())
-                  ];
-                  replacement = `"&#${namedEntityCodepoint};"`;
-                } else {
+                if (!xmlNamedEntities.includes(match[1].toLowerCase())) {
+                  _validCodepointsRepr = false;
                   const namedEntityJsRepr = htmlNamedEntities[match[1]];
-                  replacement = namedEntityJsRepr === undefined ?
-                    'its decimal or literal representation' : `"${namedEntityJsRepr}"`;
-                }
+                  let replacement;
 
-                reporter.error(
-                  `Named entity representation of escaped character "${match[0]}" found at index ${namedEntiyReprIndex}.`
-                  + ` Replace it with ${replacement}.`
-                );
+                  if (namedEntityJsRepr === undefined || namedEntityJsRepr.length != 1) {
+                    replacement = 'its decimal or literal representation';
+                  } else {
+                    const namedEntityDec = namedEntityJsRepr.codePointAt(0);
+                    if (namedEntityDec < 128 && namedEntityDec != 39) {
+                      replacement = `"${namedEntityJsRepr}"`;
+                    } else {
+                      replacement = `"&#${namedEntityDec};"`;
+                    }
+                  }
+
+                  reporter.error(
+                    `Named entity representation of escaped character "${match[0]}" found at index ${namedEntiyReprIndex}.`
+                    + ` Replace it with ${replacement}.`
+                  );
+                }
               })
             }
 
-            // no other encoded codepoints representation in title
             if (_validCodepointsRepr) {
               // check if the title is properly encoded
-              const encodedBuf = [],
-                decimalCodepoints = Array.from(iconTitleText.matchAll(/&#([0-9]{1,});/g));
+              const encodingMatches = Array.from(iconTitleText.matchAll(/&(#([0-9]+)|(amp|quot|lt|gt));/g)),
+                encodedBuf = [];
 
               const _indexesToIgnore = [];
-              for (let m = 0; m < decimalCodepoints.length; m++) {
-                let index = decimalCodepoints[m].index;
-                for (let r = index; r < index + decimalCodepoints[m][0].length; r++ ) {
+              for (let m = 0; m < encodingMatches.length; m++) {
+                let index = encodingMatches[m].index;
+                for (let r = index; r < index + encodingMatches[m][0].length; r++ ) {
                   _indexesToIgnore.push(r)
                 }
               }
@@ -230,14 +238,17 @@ module.exports = {
                 } else {
                   let charDecimalCode = iconTitleText.charCodeAt(i);
                   // encode all non ascii characters plus "'&<> (XML named entities)
-                  if (charDecimalCode > 127 || xmlNamedEntitiesCodepoints.includes(charDecimalCode)) {
-                    encodedBuf.unshift(['&#', charDecimalCode, ';'].join(''));
+                  if (charDecimalCode > 127 || charDecimalCode === 39) {
+                    encodedBuf.unshift(`&#${charDecimalCode};`);
+                  } else if (xmlNamedEntitiesCodepoints.includes(charDecimalCode)) {
+                    encodedBuf.unshift(
+                      `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(charDecimalCode)]};`
+                    );
                   } else {
                     encodedBuf.unshift(iconTitleText[i]);
                   }
                 }
               }
-
               // compare encoded title with original title and report main error
               const encodedIconTitleText = encodedBuf.join('');
               if (encodedIconTitleText !== iconTitleText) {
@@ -245,21 +256,30 @@ module.exports = {
 
                 reporter.error(
                   `Unencoded unicode characters found in title "${iconTitleText}":`
-                  + ` replace it with "${encodedIconTitleText}".`
+                  + ` rewrite it as "${encodedIconTitleText}".`
                 );
               }
 
               // check if there some other escaped characters in decimal notation
               // which shouldn't be encoded
-              decimalCodepoints.forEach(match => {
-                const decimalNumber = parseInt(match[1]);
-                if (decimalNumber < 128 && !xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
+              encodingMatches.filter(m => !isNaN(m[2])).forEach(match => {
+                const decimalNumber = parseInt(match[2]);
+                if (
+                  decimalNumber < 128
+                  && decimalNumber != 39
+                ) {
                   _validCodepointsRepr = false;
 
                   const decimalCodepointCharIndex = getTitleTextIndex(ast.source) + match.index + 1;
+                  if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
+                    replacement = `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(decimalNumber)]};`;
+                  } else {
+                    replacement = String.fromCharCode(decimalNumber);
+                  }
+
                   reporter.error(
                     `Unnecessary encoded character "${match[0]}" found at index ${decimalCodepointCharIndex}:`
-                    + ` replace it with "${String.fromCharCode(decimalNumber)}".`
+                    + ` replace it with "${replacement}".`
                   );
                 }
               });
