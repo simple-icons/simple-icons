@@ -191,7 +191,6 @@ module.exports = {
               iconTitleText.matchAll(/&([A-Za-z0-9]+);/g)
             );
             if (namedEntitiesCodepoints.length > 0) {
-
               namedEntitiesCodepoints.forEach(match => {
                 const namedEntiyReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
 
@@ -227,7 +226,7 @@ module.exports = {
               const _indexesToIgnore = [];
               for (let m = 0; m < encodingMatches.length; m++) {
                 let index = encodingMatches[m].index;
-                for (let r = index; r < index + encodingMatches[m][0].length; r++ ) {
+                for (let r = index; r < index + encodingMatches[m][0].length; r++) {
                   _indexesToIgnore.push(r)
                 }
               }
