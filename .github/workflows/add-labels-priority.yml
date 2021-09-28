@@ -18,7 +18,6 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
-    steps:
       - id: get-labels
         name: Get labels
         run: |
