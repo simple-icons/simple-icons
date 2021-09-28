@@ -33,7 +33,9 @@ jobs:
 
       - id: get-linked-issues
         name: Get linked issue numbers
-        uses: mondeja/pr-linked-issues-action@v1
+        uses: mondeja/pr-linked-issues-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: priority-1
         name: Assign `icon outdated` pull requests to "Priority 1"
