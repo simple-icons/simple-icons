@@ -155,8 +155,8 @@ module.exports = {
             reporter.name = "icon-title";
 
             const iconTitleText = $.find("title").text(),
-              xmlNamedEntitiesCodepoints = [34, 38, 60, 62],
-              xmlNamedEntities = ["quot", "amp", "lt", "gt"];
+              xmlNamedEntitiesCodepoints = [38, 60, 62],
+              xmlNamedEntities = ["amp", "lt", "gt"];
             let _validCodepointsRepr = true;
 
             // avoid character codepoints as hexadecimal representation
@@ -173,7 +173,7 @@ module.exports = {
                 let charRepr;
                 if (xmlNamedEntitiesCodepoints.includes(charDec)) {
                   charRepr = `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(charDec)]};`;
-                } else if (charDec < 128 && charDec != 39) {
+                } else if (charDec < 128) {
                   charRepr = String.fromCodePoint(charDec);
                 } else {
                   charRepr = `&#${charDec};`;
@@ -203,7 +203,7 @@ module.exports = {
                     replacement = 'its decimal or literal representation';
                   } else {
                     const namedEntityDec = namedEntityJsRepr.codePointAt(0);
-                    if (namedEntityDec < 128 && namedEntityDec != 39) {
+                    if (namedEntityDec < 128) {
                       replacement = `"${namedEntityJsRepr}"`;
                     } else {
                       replacement = `"&#${namedEntityDec};"`;
@@ -238,7 +238,7 @@ module.exports = {
                   // encode all non ascii characters plus "'&<> (XML named entities)
                   let charDecimalCode = iconTitleText.charCodeAt(i);
 
-                  if (charDecimalCode > 127 || charDecimalCode === 39) {
+                  if (charDecimalCode > 127) {
                     encodedBuf.unshift(`&#${charDecimalCode};`);
                   } else if (xmlNamedEntitiesCodepoints.includes(charDecimalCode)) {
                     encodedBuf.unshift(
@@ -263,19 +263,20 @@ module.exports = {
               // which shouldn't be encoded
               encodingMatches.filter(m => !isNaN(m[2])).forEach(match => {
                 const decimalNumber = parseInt(match[2]);
-                if (decimalNumber < 128 && decimalNumber != 39) {
+                if (decimalNumber < 128) {
                   _validCodepointsRepr = false;
 
                   const decimalCodepointCharIndex = getTitleTextIndex(ast.source) + match.index + 1;
                   if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
-                    replacement = `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(decimalNumber)]};`;
+                    replacement = `"&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(decimalNumber)]};"`;
                   } else {
                     replacement = String.fromCharCode(decimalNumber);
+                    replacement = replacement == '"' ? `'"'` : `"${replacement}"`;
                   }
 
                   reporter.error(
                     `Unnecessary encoded character "${match[0]}" found at index ${decimalCodepointCharIndex}:`
-                    + ` replace it with "${replacement}".`
+                    + ` replace it with ${replacement}.`
                   );
                 }
               });
