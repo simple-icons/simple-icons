@@ -180,7 +180,7 @@ module.exports = {
                 }
 
                 reporter.error(
-                  `Hexadecimal representation of escaped character "${match[0]}" found at index ${charHexReprIndex}:`
+                  `Hexadecimal representation of encoded character "${match[0]}" found at index ${charHexReprIndex}:`
                   + ` replace it with "${charRepr}".`
                 );
               })
@@ -211,7 +211,7 @@ module.exports = {
                   }
 
                   reporter.error(
-                    `Named entity representation of escaped character "${match[0]}" found at index ${namedEntiyReprIndex}.`
+                    `Named entity representation of encoded character "${match[0]}" found at index ${namedEntiyReprIndex}.`
                     + ` Replace it with ${replacement}.`
                   );
                 }
@@ -259,7 +259,7 @@ module.exports = {
                 );
               }
 
-              // check if there are some other escaped characters in decimal notation
+              // check if there are some other encoded characters in decimal notation
               // which shouldn't be encoded
               encodingMatches.filter(m => !isNaN(m[2])).forEach(match => {
                 const decimalNumber = parseInt(match[2]);
