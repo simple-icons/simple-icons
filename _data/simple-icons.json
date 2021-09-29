@@ -5040,8 +5040,8 @@
         },
         {
             "title": "Kotlin",
-            "hex": "0095D5",
-            "source": "https://resources.jetbrains.com/storage/products/kotlin/docs/kotlin_logos.zip",
+            "hex": "7F52FF",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
@@ -5620,6 +5620,11 @@
             "hex": "1299F3",
             "source": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/",
             "guidelines": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/"
+        },
+        {
+            "title": "MediaMarkt",
+            "hex": "DF0000",
+            "source": "https://www.mediamarkt.de/"
         },
         {
             "title": "MediaTek",
@@ -6896,6 +6901,11 @@
             }
         },
         {
+            "title": "phpMyAdmin",
+            "hex": "6C78AF",
+            "source": "https://github.com/phpmyadmin/data/blob/b7d3bdb9bb973beff4726541b87d3a4c8a950b4b/brand/phpMyAdmin-Logo-Symbol.svg"
+        },
+        {
             "title": "PhpStorm",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
@@ -7354,6 +7364,12 @@
             "source": "https://github.com/pugjs/pug-logo/blob/61429fc45b5a411b83bdb5c99a61084d3054d1e6/SVG/pug-final-logo_-mono-64.svg"
         },
         {
+            "title": "Pulumi",
+            "hex": "8A3391",
+            "source": "https://www.pulumi.com/",
+            "guidelines": "https://www.pulumi.com/brand/"
+        },
+        {
             "title": "Puma",
             "hex": "242B2F",
             "source": "https://us.puma.com/"
@@ -7390,6 +7406,17 @@
             "title": "Pusher",
             "hex": "300D4F",
             "source": "https://pusher.com/"
+        },
+        {
+            "title": "PWA",
+            "hex": "5A0FC8",
+            "source": "https://github.com/webmaxru/progressive-web-apps-logo/blob/77744cd5c0a4d484bb3d082c6ac458c44202da03/pwalogo-white.svg",
+            "guidelines": "https://github.com/webmaxru/progressive-web-apps-logo#readme",
+            "aliases": {
+                "aka": [
+                    "Progressive Web Application"
+                ]
+            }
         },
         {
             "title": "PyCharm",
@@ -8422,6 +8449,12 @@
             "source": "https://www.skyliner.io/help"
         },
         {
+            "title": "Skynet",
+            "hex": "00C65E",
+            "source": "https://support.siasky.net/key-concepts/skynet-brand-guidelines",
+            "guidelines": "https://support.siasky.net/key-concepts/skynet-brand-guidelines"
+        },
+        {
             "title": "Skype",
             "hex": "00AFF0",
             "source": "http://blogs.skype.com/?attachment_id=56273"
@@ -9156,8 +9189,8 @@
         },
         {
             "title": "Talend",
-            "hex": "1675BC",
-            "source": "https://www.talend.com/"
+            "hex": "FF6D70",
+            "source": "https://www.talend.com/blog/"
         },
         {
             "title": "Tampermonkey",
@@ -9187,7 +9220,8 @@
         {
             "title": "Tata",
             "hex": "486AAE",
-            "source": "https://www.tata.com/"
+            "source": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/",
+            "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
         },
         {
             "title": "TaxBuzz",
@@ -9275,7 +9309,7 @@
         {
             "title": "Tesla",
             "hex": "CC0000",
-            "source": "http://www.teslamotors.com/en_GB/about"
+            "source": "https://www.tesla.com/tesla-gallery"
         },
         {
             "title": "Testin",
@@ -9370,12 +9404,12 @@
         {
             "title": "Thunderbird",
             "hex": "0A84FF",
-            "source": "https://demo.identihub.co/thunderbird"
+            "source": "https://github.com/thundernest/thunderbird-website/blob/d7446f3eee14b38f02ee60da7d4b4fb8c9ef20e3/media/svg/logo.svg"
         },
         {
             "title": "Thymeleaf",
             "hex": "005F0F",
-            "source": "https://github.com/thymeleaf/thymeleaf-dist/tree/master/src/artwork/thymeleaf%202016"
+            "source": "https://github.com/thymeleaf/thymeleaf-org/blob/0427d4d4c6f08d3a1fbed3bc90ceeebcf094b532/artwork/thymeleaf%202016/thymeleaf.svg"
         },
         {
             "title": "Ticketmaster",
@@ -9420,7 +9454,7 @@
         {
             "title": "TinyLetter",
             "hex": "ED1C24",
-            "source": "https://tinyletter.com/site/press"
+            "source": "https://tinyletter.com/site/press/"
         },
         {
             "title": "tmux",
@@ -9450,7 +9484,8 @@
         {
             "title": "Topcoder",
             "hex": "29A7DF",
-            "source": "http://topcoder.com/"
+            "source": "https://www.topcoder.com/thrive/articles/How%20to%20use%20the%20Topcoder%20GUI%20KIT",
+            "guidelines": "https://www.topcoder.com/thrive/articles/How%20to%20use%20the%20Topcoder%20GUI%20KIT"
         },
         {
             "title": "Toptal",
@@ -9619,7 +9654,8 @@
         {
             "title": "TurboSquid",
             "hex": "FF8135",
-            "source": "https://www.brand.turbosquid.com/"
+            "source": "https://www.brand.turbosquid.com/turbosquidicons",
+            "guidelines": "https://www.brand.turbosquid.com/"
         },
         {
             "title": "Turkish Airlines",
@@ -10719,6 +10755,11 @@
             "title": "Zulip",
             "hex": "FFFFFF",
             "source": "https://github.com/zulip/zulip/blob/df9e40491dc77b658d943cff36a816d46e32ce1b/static/images/logo/zulip-org-logo.svg"
+        },
+        {
+            "title": "Zyte",
+            "hex": "B02CCE",
+            "source": "https://www.zyte.com/"
         }
     ]
 }
