@@ -21,7 +21,7 @@ The `awaiting reply` label is used to indicate that an issue or Pull Request is 
 
 #### Missing Information
 
-We wait **7 days** after the `awaiting reply` label is assigned to an issue or Pull Request with insufficient information before closing it. The issue or Pull Request can be re-opened after a response has been provided.
+We wait **7 days** after the `awaiting reply` label is assigned to an issue or Pull Request with insufficient information before closing it and adding the `incomplete` label. The issue or Pull Request can be re-opened after a response has been provided.
 
 #### Third Party
 
