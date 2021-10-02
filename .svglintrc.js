@@ -696,9 +696,8 @@ module.exports = {
             const iconPath = $.find("path").attr("d");
 
             const validPathFormatRegex = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/;
+            let errorMsg = "Invalid path format", reason;
             if (!validPathFormatRegex.test(iconPath)) {
-              let errorMsg = "Invalid path format", reason;
-
               if (!(/^[Mm]/.test(iconPath))) {
                 // doesn't start with moveto
                 reason = `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`;
@@ -721,6 +720,12 @@ module.exports = {
                 reason += ` (${invalidCharactersMsgs.join(", ")})`;
                 reporter.error(`${errorMsg}: ${reason}`);
               }
+            }
+
+            const lastPathChar = iconPath[iconPath.length - 1];
+            if (['Z', 'z'].includes(lastPathChar)) {
+              reason = `last character should not be "${lastPathChar}" (remove it)`
+              reporter.error(`${errorMsg}: ${reason}`);
             }
           },
           function(reporter, $, ast) {
