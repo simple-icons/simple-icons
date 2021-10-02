@@ -46,3 +46,19 @@ The `changes requested` label indicates that a Pull Request needs to be updated 
 **14 days** after major changes were requested, anyone can comment on the Pull Request reminding the contributor to update their contribution.
 
 **14 days** after the reminder comment, the Pull Request will be closed and marked as `abandoned`. At this point, the work can be picked up by anyone to make a new contribution (we ask you to give credit to the original contributor).
+
+### Pending
+
+The `pending` label is used in various cases.
+
+#### Inclusion Threshold Not Met
+
+**1 month** after the `pending` label is assigned to an issue (that doesn't meet the inclusion threshold) the issue will be closed (if the threshold is not met).
+
+#### Breaking changes
+
+Breaking changes are `pending` until the next major release.
+
+#### All Other Cases
+
+In all other cases, the expiring time of the `pending` label should be defined in a comment.
