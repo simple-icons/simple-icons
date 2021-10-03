@@ -191,6 +191,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Autodesk` | `autodesk` |
 | `AutoHotkey` | `autohotkey` |
 | `Automattic` | `automattic` |
+| `Autoprefixer` | `autoprefixer` |
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
 | `AWS Amplify` | `awsamplify` |
@@ -260,6 +261,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bootstrap` | `bootstrap` |
 | `Bosch` | `bosch` |
 | `Bose` | `bose` |
+| `boulanger` | `boulanger` |
 | `Bower` | `bower` |
 | `Box` | `box` |
 | `Brandfolder` | `brandfolder` |
@@ -293,6 +295,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Canva` | `canva` |
 | `Capacitor` | `capacitor` |
 | `Car Throttle` | `carthrottle` |
+| `Carrefour` | `carrefour` |
 | `Carto` | `carto` |
 | `Cash App` | `cashapp` |
 | `Castbox` | `castbox` |
@@ -635,6 +638,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
+| `Franprix` | `franprix` |
 | `Fraunhofer-Gesellschaft` | `fraunhofergesellschaft` |
 | `FreeBSD` | `freebsd` |
 | `freeCodeCamp` | `freecodecamp` |
@@ -687,6 +691,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GNU Privacy Guard` | `gnuprivacyguard` |
 | `GNU social` | `gnusocial` |
 | `Go` | `go` |
+| `GoCD` | `gocd` |
 | `GoDaddy` | `godaddy` |
 | `Godot Engine` | `godotengine` |
 | `GoFundMe` | `gofundme` |
@@ -1010,6 +1015,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LiveJournal` | `livejournal` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
 | `LogMeIn` | `logmein` |
 | `Logstash` | `logstash` |
@@ -1638,6 +1644,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Spring` | `spring` |
 | `Spring` | `spring_creators` |
 | `Spring Boot` | `springboot` |
+| `Spring Security` | `springsecurity` |
 | `Spyder IDE` | `spyderide` |
 | `SQLite` | `sqlite` |
 | `Square` | `square` |
@@ -1734,6 +1741,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Teradata` | `teradata` |
 | `teratail` | `teratail` |
 | `Terraform` | `terraform` |
+| `Tesco` | `tesco` |
 | `Tesla` | `tesla` |
 | `Testin` | `testin` |
 | `Testing Library` | `testinglibrary` |
