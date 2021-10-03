@@ -1,5 +1,7 @@
 name: Create Release Pull Request
 on:
+  # THIS WORKFLOW SHOULD NEVER BE TRIGGERED ON A PUSH EVENT. IF TRIGGERED ON A
+  # PUSH EVENT IT MAY CREATE AN ENDLESS STREAM OF 'version bump' COMMITS.
   workflow_dispatch:
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
