@@ -1757,6 +1757,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Mighty` | `themighty` |
 | `The Models Resource` | `themodelsresource` |
 | `The Movie Database` | `themoviedatabase` |
+| `The North Face` | `thenorthface` |
 | `The Register` | `theregister` |
 | `The Sounds Resource` | `thesoundsresource` |
 | `The Spriters Resource` | `thespritersresource` |
