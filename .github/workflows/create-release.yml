@@ -32,6 +32,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
+          token: ${{ secrets.RELEASE_TOKEN }}
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Bump version
