@@ -231,6 +231,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BigCommerce` | `bigcommerce` |
 | `Bilibili` | `bilibili` |
 | `Binance` | `binance` |
+| `Bio Link` | `biolink` |
 | `Bit` | `bit` |
 | `Bitbucket` | `bitbucket` |
 | `Bitcoin` | `bitcoin` |
@@ -697,6 +698,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Godot Engine` | `godotengine` |
 | `GoFundMe` | `gofundme` |
 | `GOG.com` | `gogdotcom` |
+| `GoLand` | `goland` |
 | `GoldenLine` | `goldenline` |
 | `Goodreads` | `goodreads` |
 | `Google` | `google` |
@@ -957,6 +959,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `KnowledgeBase` | `knowledgebase` |
 | `Known` | `known` |
 | `Ko-fi` | `kofi` |
+| `Koc` | `koc` |
 | `Kodi` | `kodi` |
 | `Koding` | `koding` |
 | `Kofax` | `kofax` |
@@ -1757,6 +1760,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Mighty` | `themighty` |
 | `The Models Resource` | `themodelsresource` |
 | `The Movie Database` | `themoviedatabase` |
+| `The North Face` | `thenorthface` |
 | `The Register` | `theregister` |
 | `The Sounds Resource` | `thesoundsresource` |
 | `The Spriters Resource` | `thespritersresource` |
