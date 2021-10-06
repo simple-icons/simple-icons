@@ -336,6 +336,11 @@
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg"
         },
         {
+            "title": "Aldi Nord",
+            "hex": "2490D7",
+            "source": "https://commons.wikimedia.org/wiki/File:Aldi_Nord_201x_logo.svg"
+        },
+        {
             "title": "Alfa Romeo",
             "hex": "981E32",
             "source": "http://www.fcaci.com/x/Alfa"
@@ -1131,6 +1136,11 @@
             "title": "Binance",
             "hex": "F0B90B",
             "source": "https://binance.com/"
+        },
+        {
+            "title": "Bio Link",
+            "hex": "000000",
+            "source": "https://bio.link/"
         },
         {
             "title": "Bit",
@@ -3597,6 +3607,12 @@
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
         },
         {
+            "title": "GoLand",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/#logos-and-icons-jetbrains-logos",
+            "guidelines": "https://www.jetbrains.com/company/brand/#brand-guidelines"
+        },
+        {
             "title": "GoldenLine",
             "hex": "FFE005",
             "source": "http://www.goldenline.pl"
@@ -5008,6 +5024,11 @@
             "guidelines": "https://more.ko-fi.com/brand-assets"
         },
         {
+            "title": "Koc",
+            "hex": "F9423A",
+            "source": "https://www.koc.com.tr/en"
+        },
+        {
             "title": "Kodi",
             "hex": "17B2E7",
             "source": "https://kodi.tv/"
@@ -5620,6 +5641,11 @@
             "hex": "1299F3",
             "source": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/",
             "guidelines": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/"
+        },
+        {
+            "title": "MediaMarkt",
+            "hex": "DF0000",
+            "source": "https://www.mediamarkt.de/"
         },
         {
             "title": "MediaTek",
@@ -6803,6 +6829,11 @@
             "source": "https://www.pcgamingwiki.com/wiki/Home"
         },
         {
+            "title": "Peak Design",
+            "hex": "1C1B1C",
+            "source": "https://www.peakdesign.com/"
+        },
+        {
             "title": "PeerTube",
             "hex": "F1680D",
             "source": "https://joinpeertube.org/"
@@ -7401,6 +7432,17 @@
             "title": "Pusher",
             "hex": "300D4F",
             "source": "https://pusher.com/"
+        },
+        {
+            "title": "PWA",
+            "hex": "5A0FC8",
+            "source": "https://github.com/webmaxru/progressive-web-apps-logo/blob/77744cd5c0a4d484bb3d082c6ac458c44202da03/pwalogo-white.svg",
+            "guidelines": "https://github.com/webmaxru/progressive-web-apps-logo#readme",
+            "aliases": {
+                "aka": [
+                    "Progressive Web Application"
+                ]
+            }
         },
         {
             "title": "PyCharm",
@@ -8442,6 +8484,12 @@
             "source": "https://www.skyliner.io/help"
         },
         {
+            "title": "Skynet",
+            "hex": "00C65E",
+            "source": "https://support.siasky.net/key-concepts/skynet-brand-guidelines",
+            "guidelines": "https://support.siasky.net/key-concepts/skynet-brand-guidelines"
+        },
+        {
             "title": "Skype",
             "hex": "00AFF0",
             "source": "http://blogs.skype.com/?attachment_id=56273"
@@ -8855,7 +8903,8 @@
         {
             "title": "Starling Bank",
             "hex": "6935D3",
-            "source": "https://www.starlingbank.com/media/"
+            "source": "https://www.starlingbank.com/media/",
+            "guidelines": "https://www.starlingbank.com/docs/brand/starling-bank-brand-guidelines.pdf"
         },
         {
             "title": "Starship",
@@ -9299,6 +9348,11 @@
             "source": "https://www.tesla.com/tesla-gallery"
         },
         {
+            "title": "TestCafe",
+            "hex": "36B6E5",
+            "source": "https://github.com/DevExpress/testcafe/blob/dd174b6682b5f2675ac90e305d3d893c36a1d814/media/logos/svg/TestCafe-logo-600.svg"
+        },
+        {
             "title": "Testin",
             "hex": "007DD7",
             "source": "https://www.testin.cn/"
@@ -9337,6 +9391,11 @@
             "title": "The Movie Database",
             "hex": "01D277",
             "source": "https://www.themoviedb.org/about/logos-attribution"
+        },
+        {
+            "title": "The North Face",
+            "hex": "000000",
+            "source": "https://www.thenorthface.com/"
         },
         {
             "title": "The Register",
@@ -10234,6 +10293,16 @@
             "title": "Weights & Biases",
             "hex": "FFBE00",
             "source": "https://wandb.ai/"
+        },
+        {
+            "title": "Welcome to the Jungle",
+            "aliases": {
+                "aka": [
+                    "WTTJ"
+                ]
+            },
+            "hex": "FFCD00",
+            "source": "https://www.welcometothejungle.com/"
         },
         {
             "title": "WEMO",
