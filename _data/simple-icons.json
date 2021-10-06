@@ -799,6 +799,11 @@
             "source": "https://www.arlo.com/"
         },
         {
+            "title": "Artifact Hub",
+            "hex": "417598",
+            "source": "https://raw.githubusercontent.com/artifacthub/hub/87a1fed/web/public/static/media/logo/artifacthub-brand-white.svg"
+        },
+        {
             "title": "Artix Linux",
             "hex": "10A0CC",
             "source": "https://gitea.artixlinux.org/artix/artwork/src/commit/256432e3d06b3e9024bfd6912768e80281ea3746/icons/logo-gray.svg"
@@ -6829,6 +6834,11 @@
             "source": "https://www.pcgamingwiki.com/wiki/Home"
         },
         {
+            "title": "Peak Design",
+            "hex": "1C1B1C",
+            "source": "https://www.peakdesign.com/"
+        },
+        {
             "title": "PeerTube",
             "hex": "F1680D",
             "source": "https://joinpeertube.org/"
@@ -7780,6 +7790,15 @@
             "hex": "DC382D",
             "source": "https://www.redislabs.com/brand-guidelines/",
             "guidelines": "https://www.redislabs.com/brand-guidelines/"
+        },
+        {
+            "title": "Redmine",
+            "hex": "B32024",
+            "source": "https://www.redmine.org/projects/redmine/wiki/logo",
+            "license": {
+                "type": "CC-BY-SA-2.5",
+                "url": "https://github.com/edavis10/redmine_logo/blob/2afe855c4e9cd955b648972d09cc20d76dabbf4c/COPYRIGHT"
+            }
         },
         {
             "title": "Redux",
@@ -9334,6 +9353,11 @@
             "source": "https://www.tesla.com/tesla-gallery"
         },
         {
+            "title": "TestCafe",
+            "hex": "36B6E5",
+            "source": "https://github.com/DevExpress/testcafe/blob/dd174b6682b5f2675ac90e305d3d893c36a1d814/media/logos/svg/TestCafe-logo-600.svg"
+        },
+        {
             "title": "Testin",
             "hex": "007DD7",
             "source": "https://www.testin.cn/"
@@ -10274,6 +10298,16 @@
             "title": "Weights & Biases",
             "hex": "FFBE00",
             "source": "https://wandb.ai/"
+        },
+        {
+            "title": "Welcome to the Jungle",
+            "aliases": {
+                "aka": [
+                    "WTTJ"
+                ]
+            },
+            "hex": "FFCD00",
+            "source": "https://www.welcometothejungle.com/"
         },
         {
             "title": "WEMO",
