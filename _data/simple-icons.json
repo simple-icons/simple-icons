@@ -336,6 +336,11 @@
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg"
         },
         {
+            "title": "Aldi Nord",
+            "hex": "2490D7",
+            "source": "https://commons.wikimedia.org/wiki/File:Aldi_Nord_201x_logo.svg"
+        },
+        {
             "title": "Alfa Romeo",
             "hex": "981E32",
             "source": "http://www.fcaci.com/x/Alfa"
@@ -799,6 +804,11 @@
             "source": "https://www.arlo.com/"
         },
         {
+            "title": "Artifact Hub",
+            "hex": "417598",
+            "source": "https://raw.githubusercontent.com/artifacthub/hub/87a1fed/web/public/static/media/logo/artifacthub-brand-white.svg"
+        },
+        {
             "title": "Artix Linux",
             "hex": "10A0CC",
             "source": "https://gitea.artixlinux.org/artix/artwork/src/commit/256432e3d06b3e9024bfd6912768e80281ea3746/icons/logo-gray.svg"
@@ -848,6 +858,11 @@
             "title": "AssemblyScript",
             "hex": "007AAC",
             "source": "https://www.assemblyscript.org/"
+        },
+        {
+            "title": "Aston Martin",
+            "hex": "000000",
+            "source": "https://www.astonmartin.com/"
         },
         {
             "title": "ASUS",
@@ -1136,6 +1151,11 @@
             "title": "Binance",
             "hex": "F0B90B",
             "source": "https://binance.com/"
+        },
+        {
+            "title": "Bio Link",
+            "hex": "000000",
+            "source": "https://bio.link/"
         },
         {
             "title": "Bit",
@@ -3472,6 +3492,11 @@
             "source": "https://github.com/features/actions"
         },
         {
+            "title": "GitHub Pages",
+            "hex": "222222",
+            "source": "https://pages.github.com/"
+        },
+        {
             "title": "GitHub Sponsors",
             "hex": "EA4AAA",
             "source": "https://github.com/sponsors"
@@ -3600,6 +3625,12 @@
             "title": "GOG.com",
             "hex": "86328A",
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
+        },
+        {
+            "title": "GoLand",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/#logos-and-icons-jetbrains-logos",
+            "guidelines": "https://www.jetbrains.com/company/brand/#brand-guidelines"
         },
         {
             "title": "GoldenLine",
@@ -5013,6 +5044,11 @@
             "guidelines": "https://more.ko-fi.com/brand-assets"
         },
         {
+            "title": "Koc",
+            "hex": "F9423A",
+            "source": "https://www.koc.com.tr/en"
+        },
+        {
             "title": "Kodi",
             "hex": "17B2E7",
             "source": "https://kodi.tv/"
@@ -5323,6 +5359,11 @@
             "title": "LiveJournal",
             "hex": "00B0EA",
             "source": "http://www.livejournal.com"
+        },
+        {
+            "title": "Livewire",
+            "hex": "4E56A6",
+            "source": "https://laravel-livewire.com/"
         },
         {
             "title": "LLVM",
@@ -6324,6 +6365,11 @@
             "source": "https://www.lingoapp.com/6/s/oJkq3W/?v=3"
         },
         {
+            "title": "NOW",
+            "hex": "001211",
+            "source": "https://www.nowtv.com/"
+        },
+        {
             "title": "npm",
             "hex": "CB3837",
             "source": "https://www.npmjs.com/",
@@ -6385,6 +6431,12 @@
             "title": "Nx",
             "hex": "143055",
             "source": "https://nx.dev/"
+        },
+        {
+            "title": "NZXT",
+            "hex": "000000",
+            "source": "https://nzxt.com/",
+            "guidelines": "https://nzxt.com/about/brand-guidelines"
         },
         {
             "title": "OBS Studio",
@@ -6811,6 +6863,11 @@
             "title": "PCGamingWiki",
             "hex": "556DB3",
             "source": "https://www.pcgamingwiki.com/wiki/Home"
+        },
+        {
+            "title": "Peak Design",
+            "hex": "1C1B1C",
+            "source": "https://www.peakdesign.com/"
         },
         {
             "title": "PeerTube",
@@ -7766,6 +7823,15 @@
             "guidelines": "https://www.redislabs.com/brand-guidelines/"
         },
         {
+            "title": "Redmine",
+            "hex": "B32024",
+            "source": "https://www.redmine.org/projects/redmine/wiki/logo",
+            "license": {
+                "type": "CC-BY-SA-2.5",
+                "url": "https://github.com/edavis10/redmine_logo/blob/2afe855c4e9cd955b648972d09cc20d76dabbf4c/COPYRIGHT"
+            }
+        },
+        {
             "title": "Redux",
             "hex": "764ABC",
             "source": "https://github.com/reactjs/redux/tree/master/logo"
@@ -7942,6 +8008,15 @@
             "title": "rollup.js",
             "hex": "EC4A3F",
             "source": "https://rollupjs.org/"
+        },
+        {
+            "title": "Rome",
+            "hex": "27272A",
+            "source": "https://github.com/rome/tools/blob/261c3f3bdc21439777f78b6551f707cce0c8d04a/assets/SVG/logomark_black.svg",
+            "guidelines": "https://github.com/rome/tools/tree/main/assets",
+            "license": {
+                "type": "CC-BY-NC-SA-4.0"
+            }
         },
         {
             "title": "Roots",
@@ -8553,6 +8628,11 @@
             "guidelines": "https://www.snowflake.com/brand-guidelines/"
         },
         {
+            "title": "Snowpack",
+            "hex": "2E5E82",
+            "source": "https://www.snowpack.dev/"
+        },
+        {
             "title": "Snyk",
             "hex": "4C4A73",
             "source": "https://snyk.io/press-kit"
@@ -8873,7 +8953,8 @@
         {
             "title": "Starling Bank",
             "hex": "6935D3",
-            "source": "https://www.starlingbank.com/media/"
+            "source": "https://www.starlingbank.com/media/",
+            "guidelines": "https://www.starlingbank.com/docs/brand/starling-bank-brand-guidelines.pdf"
         },
         {
             "title": "Starship",
@@ -9317,6 +9398,11 @@
             "source": "https://www.tesla.com/tesla-gallery"
         },
         {
+            "title": "TestCafe",
+            "hex": "36B6E5",
+            "source": "https://github.com/DevExpress/testcafe/blob/dd174b6682b5f2675ac90e305d3d893c36a1d814/media/logos/svg/TestCafe-logo-600.svg"
+        },
+        {
             "title": "Testin",
             "hex": "007DD7",
             "source": "https://www.testin.cn/"
@@ -9355,6 +9441,11 @@
             "title": "The Movie Database",
             "hex": "01D277",
             "source": "https://www.themoviedb.org/about/logos-attribution"
+        },
+        {
+            "title": "The North Face",
+            "hex": "000000",
+            "source": "https://www.thenorthface.com/"
         },
         {
             "title": "The Register",
@@ -10252,6 +10343,16 @@
             "title": "Weights & Biases",
             "hex": "FFBE00",
             "source": "https://wandb.ai/"
+        },
+        {
+            "title": "Welcome to the Jungle",
+            "aliases": {
+                "aka": [
+                    "WTTJ"
+                ]
+            },
+            "hex": "FFCD00",
+            "source": "https://www.welcometothejungle.com/"
         },
         {
             "title": "WEMO",
