@@ -2,8 +2,9 @@ const fs = require('fs');
 
 const data = require("./_data/simple-icons.json");
 const { htmlFriendlyToTitle } = require("./scripts/utils.js");
+const htmlNamedEntities = require("named-html-entities-json");
 const svgpath = require("svgpath");
-const { svgPathBbox } = require("svg-path-bbox");
+const svgPathBbox = require("svg-path-bbox");
 const parsePath = require("svg-path-segments");
 
 const svgRegexp = /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
@@ -69,6 +70,29 @@ function getPathDIndex(svgFileContent) {
   return svgFileContent.indexOf(pathDStart) + pathDStart.length;
 }
 
+/**
+ * Get the index at which the text of the first `<title></title>` tag starts.
+ * @param svgFileContent The raw SVG as text.
+ **/
+function getTitleTextIndex(svgFileContent) {
+  const titleStart = '<title>';
+  return svgFileContent.indexOf(titleStart) + titleStart.length;
+}
+
+/**
+ * Convert a hexadecimal number passed as string to decimal number as integer.
+ * @param hex The hexadecimal number representation to convert.
+ **/
+function hexadecimalToDecimal(hex) {
+  let result = 0, digitValue;
+  hex = hex.toLowerCase();
+  for (var i = 0; i < hex.length; i++) {
+    digitValue = '0123456789abcdefgh'.indexOf(hex[i]);
+    result = result * 16 + digitValue;
+  }
+  return result;
+}
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -130,11 +154,140 @@ module.exports = {
           function(reporter, $, ast) {
             reporter.name = "icon-title";
 
-            const iconTitleText = $.find("title").text();
-            const iconName = htmlFriendlyToTitle(iconTitleText);
-            const iconExists = data.icons.some(icon => icon.title === iconName);
-            if (!iconExists) {
-              reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
+            const iconTitleText = $.find("title").text(),
+              xmlNamedEntitiesCodepoints = [38, 60, 62],
+              xmlNamedEntities = ["amp", "lt", "gt"];
+            let _validCodepointsRepr = true;
+
+            // avoid character codepoints as hexadecimal representation
+            const hexadecimalCodepoints = Array.from(
+              iconTitleText.matchAll(/&#x([A-Fa-f0-9]+);/g)
+            );
+            if (hexadecimalCodepoints.length > 0) {
+              _validCodepointsRepr = false;
+
+              hexadecimalCodepoints.forEach(match => {
+                const charHexReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
+                const charDec = hexadecimalToDecimal(match[1]);
+
+                let charRepr;
+                if (xmlNamedEntitiesCodepoints.includes(charDec)) {
+                  charRepr = `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(charDec)]};`;
+                } else if (charDec < 128) {
+                  charRepr = String.fromCodePoint(charDec);
+                } else {
+                  charRepr = `&#${charDec};`;
+                }
+
+                reporter.error(
+                  `Hexadecimal representation of encoded character "${match[0]}" found at index ${charHexReprIndex}:`
+                  + ` replace it with "${charRepr}".`
+                );
+              })
+            }
+
+            // avoid character codepoints as named entities
+            const namedEntitiesCodepoints = Array.from(
+              iconTitleText.matchAll(/&([A-Za-z0-9]+);/g)
+            );
+            if (namedEntitiesCodepoints.length > 0) {
+              namedEntitiesCodepoints.forEach(match => {
+                const namedEntiyReprIndex = getTitleTextIndex(ast.source) + match.index + 1;
+
+                if (!xmlNamedEntities.includes(match[1].toLowerCase())) {
+                  _validCodepointsRepr = false;
+                  const namedEntityJsRepr = htmlNamedEntities[match[1]];
+                  let replacement;
+
+                  if (namedEntityJsRepr === undefined || namedEntityJsRepr.length != 1) {
+                    replacement = 'its decimal or literal representation';
+                  } else {
+                    const namedEntityDec = namedEntityJsRepr.codePointAt(0);
+                    if (namedEntityDec < 128) {
+                      replacement = `"${namedEntityJsRepr}"`;
+                    } else {
+                      replacement = `"&#${namedEntityDec};"`;
+                    }
+                  }
+
+                  reporter.error(
+                    `Named entity representation of encoded character "${match[0]}" found at index ${namedEntiyReprIndex}.`
+                    + ` Replace it with ${replacement}.`
+                  );
+                }
+              })
+            }
+
+            if (_validCodepointsRepr) {
+              // compare encoded title with original title and report error if not equal
+              const encodingMatches = Array.from(iconTitleText.matchAll(/&(#([0-9]+)|(amp|quot|lt|gt));/g)),
+                encodedBuf = [];
+
+              const _indexesToIgnore = [];
+              for (let m = 0; m < encodingMatches.length; m++) {
+                let index = encodingMatches[m].index;
+                for (let r = index; r < index + encodingMatches[m][0].length; r++) {
+                  _indexesToIgnore.push(r)
+                }
+              }
+
+              for (let i = iconTitleText.length - 1; i >= 0; i--) {
+                if (_indexesToIgnore.includes(i)) {
+                  encodedBuf.unshift(iconTitleText[i]);
+                } else {
+                  // encode all non ascii characters plus "'&<> (XML named entities)
+                  let charDecimalCode = iconTitleText.charCodeAt(i);
+
+                  if (charDecimalCode > 127) {
+                    encodedBuf.unshift(`&#${charDecimalCode};`);
+                  } else if (xmlNamedEntitiesCodepoints.includes(charDecimalCode)) {
+                    encodedBuf.unshift(
+                      `&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(charDecimalCode)]};`
+                    );
+                  } else {
+                    encodedBuf.unshift(iconTitleText[i]);
+                  }
+                }
+              }
+              const encodedIconTitleText = encodedBuf.join('');
+              if (encodedIconTitleText !== iconTitleText) {
+                _validCodepointsRepr = false;
+
+                reporter.error(
+                  `Unencoded unicode characters found in title "${iconTitleText}":`
+                  + ` rewrite it as "${encodedIconTitleText}".`
+                );
+              }
+
+              // check if there are some other encoded characters in decimal notation
+              // which shouldn't be encoded
+              encodingMatches.filter(m => !isNaN(m[2])).forEach(match => {
+                const decimalNumber = parseInt(match[2]);
+                if (decimalNumber < 128) {
+                  _validCodepointsRepr = false;
+
+                  const decimalCodepointCharIndex = getTitleTextIndex(ast.source) + match.index + 1;
+                  if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
+                    replacement = `"&${xmlNamedEntities[xmlNamedEntitiesCodepoints.indexOf(decimalNumber)]};"`;
+                  } else {
+                    replacement = String.fromCharCode(decimalNumber);
+                    replacement = replacement == '"' ? `'"'` : `"${replacement}"`;
+                  }
+
+                  reporter.error(
+                    `Unnecessary encoded character "${match[0]}" found at index ${decimalCodepointCharIndex}:`
+                    + ` replace it with ${replacement}.`
+                  );
+                }
+              });
+
+              if (_validCodepointsRepr) {
+                const iconName = htmlFriendlyToTitle(iconTitleText);
+                const iconExists = data.icons.some(icon => icon.title === iconName);
+                if (!iconExists) {
+                  reporter.error(`No icon with title "${iconName}" found in simple-icons.json`);
+                }
+              }
             }
           },
           function(reporter, $, ast) {
@@ -177,7 +330,7 @@ module.exports = {
               if (precisionMax > iconMaxFloatPrecision) {
                 let errorMsg = `found ${precisionMax} decimals in segment "${iconPath.substring(segment.start, segment.end)}"`;
                 if (segment.chained) {
-                  let readableChain = iconPath.substring(segment.chainStart, chainEnd);
+                  let readableChain = iconPath.substring(segment.chainStart, segment.chainEnd);
                   if (readableChain.length > 20) {
                     readableChain = `${readableChain.substring(0, 20)}...`;
                   }
@@ -485,7 +638,7 @@ module.exports = {
           function(reporter, $, ast) {
             reporter.name = "extraneous";
 
-            if (!svgRegexp.test($.html())) {
+            if (!svgRegexp.test(ast.source)) {
               reporter.error("Unexpected character(s), most likely extraneous whitespace, detected in SVG markup");
             }
           },
@@ -568,6 +721,16 @@ module.exports = {
                 reason += ` (${invalidCharactersMsgs.join(", ")})`;
                 reporter.error(`${errorMsg}: ${reason}`);
               }
+            }
+          },
+          function(reporter, $, ast) {
+            reporter.name = 'svg-format';
+
+            // Don't allow explicit '</path>' closing tag
+            if (ast.source.includes('</path>')) {
+              const reason = `found a closing "path" tag at index ${ast.source.indexOf('</path>')}.`
+                          + ' The path should be self-closing, use \'/>\' instead of \'></path>\'.';
+              reporter.error(`Invalid SVG content format: ${reason}`);
             }
           }
         ]

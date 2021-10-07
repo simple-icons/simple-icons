@@ -2,6 +2,27 @@ name: Verify Source
 on: [pull_request, push]
 
 jobs:
+  build:
+    name: Build package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Build NodeJS package
+        run: npm run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -12,28 +33,35 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
-      - name: Install dependencies
-        run: npm ci
-      - name: Run linter
-        run: |
-          npm run jsonlint
-          npm run svglint
-          npm run wslint
-          npm run our-lint
-  build:
-    name: Build website
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Use Ruby 2.7
-        uses: ruby/setup-ruby@v1
+      - name: Cache dependencies
+        uses: actions/cache@v2
         with:
-          ruby-version: 2.7
-          # https://github.com/ruby/setup-ruby/blob/master/README.md#caching-bundle-install-automatically
-          bundler-cache: true
-      - name: Build website
-        run: bundle exec jekyll build
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Run linter
+        run: npm run lint
+      - name: Verify file permissions
+        run: |
+          CHECK_DIRS="icons/ _data/"
+          echo "Searching the following directories for executable files:"
+          echo "${CHECK_DIRS}"
+          echo ""
+          EXE_FILES=$(find ${CHECK_DIRS} -type f -executable)
+          if test -n "${EXE_FILES-}"
+          then
+            echo "Some files were detected to have their executable bit set."
+            echo "To fix this, you can use 'chmod -x PATH/TO/FILE' on the following files:"
+            echo ""
+            echo "${EXE_FILES}"
+            exit 1
+          else
+            echo "All clear."
+            exit 0
+          fi
   test:
     name: Test package
     runs-on: ubuntu-latest
@@ -44,7 +72,22 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Cache Jest
+        uses: actions/cache@v2
+        with:
+          path: .cache/jest
+          key: ${{ runner.os }}-jest-${{ hashFiles('package.json') }}-${{ github.run_number }}
+          restore-keys: |
+            ${{ runner.os }}-jest-${{ hashFiles('package.json') }}-
+            ${{ runner.os }}-jest-
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Run tests
         run: npm run test
