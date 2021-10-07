@@ -1,0 +1,67 @@
+name: Add Pull Request Labels and Assign to Project
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ericcornelissen/labeler@label-based-on-status
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  assign-to-project:
+    runs-on: ubuntu-latest
+    name: Assign to Project
+    needs: triage
+    env:
+      MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
+    steps:
+      - id: get-labels
+        name: Get labels
+        run: |
+          labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/pulls/${{ github.event.pull_request.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
+          echo "::set-output name=labels::$labels"
+
+      - id: get-si-members
+        name: Get simple-icons members
+        run: |
+          members="$(curl --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
+          echo "::set-output name=members::$members"
+
+      - id: get-linked-issues
+        name: Get linked issue numbers
+        uses: mondeja/pr-linked-issues-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - id: priority-1
+        name: Assign `icon outdated` pull requests to "Priority 1"
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        if: contains(steps.get-labels.outputs.labels, 'icon outdated')
+        with:
+          project: https://github.com/orgs/simple-icons/projects/2
+          column_name: Priority 1
+
+      - id: priority-2
+        name: Assign `new icon` pull requests to "Priority 2"
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        # the PR has the `new icon` label along with a linked issue and
+        # the opener is not a member of simple-icons organization
+        if: |
+          contains(steps.get-labels.outputs.labels, 'new icon') &&
+          join(steps.get-linked-issues.outputs.issues) != '' &&
+          contains(steps.get-si-members.outputs.members, github.event.actor.login) == false
+        with:
+          project: https://github.com/orgs/simple-icons/projects/2
+          column_name: Priority 2
+
+      - name: Assign pull requests to "Unprioritised"
+        uses: srggrs/assign-one-project-github-action@1.2.1
+        if: |
+          steps.priority-1.conclusion == 'skipped' &&
+          steps.priority-2.conclusion == 'skipped'
+        with:
+          project: https://github.com/orgs/simple-icons/projects/2
+          column_name: Unprioritised
