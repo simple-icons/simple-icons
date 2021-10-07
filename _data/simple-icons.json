@@ -752,6 +752,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Appveyor_logo.svg"
         },
         {
+            "title": "Appwrite",
+            "hex": "F02E65",
+            "source": "https://github.com/appwrite/appwrite/blob/c961382fb7a59ce908b4982a572e02e6e0feacd5/public/images/appwrite.svg"
+        },
+        {
             "title": "ARAL",
             "hex": "0063CB",
             "source": "https://upload.wikimedia.org/wikipedia/commons/6/60/Aral_Logo.svg"
@@ -855,6 +860,11 @@
             "source": "https://www.assemblyscript.org/"
         },
         {
+            "title": "Aston Martin",
+            "hex": "000000",
+            "source": "https://www.astonmartin.com/"
+        },
+        {
             "title": "ASUS",
             "hex": "000000",
             "source": "https://www.asus.com/"
@@ -943,6 +953,12 @@
             "title": "Autoprefixer",
             "hex": "DD3735",
             "source": "https://github.com/postcss/autoprefixer/blob/1341747bc8142a147342f55eea5ed4286a3ca318/logo.svg"
+        },
+        {
+            "title": "Avast",
+            "hex": "FF7800",
+            "source": "https://www.avast.com/",
+            "guidelines": "https://press.avast.com/media-materials"
         },
         {
             "title": "Awesome Lists",
@@ -1922,6 +1938,12 @@
             "source": "https://www.cognizant.com/"
         },
         {
+            "title": "Coil",
+            "hex": "000000",
+            "source": "https://coil.com/press/brand-guidelines",
+            "guidelines": "https://coil.com/press/brand-guidelines"
+        },
+        {
             "title": "Coinbase",
             "hex": "0052FF",
             "source": "https://www.coinbase.com/press"
@@ -2218,6 +2240,12 @@
             "hex": "632CA6",
             "source": "https://www.datadoghq.com/about/resources",
             "guidelines": "https://www.datadoghq.com/about/resources/"
+        },
+        {
+            "title": "DataGrip",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
+            "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
             "title": "Dataiku",
@@ -3279,6 +3307,11 @@
             "source": "https://framer.com"
         },
         {
+            "title": "Framework7",
+            "hex": "EE350F",
+            "source": "https://github.com/framework7io/framework7-website/blob/2a1e32290c795c2070ffc7019ba7276614e00de0/public/i/logo.svg"
+        },
+        {
             "title": "Franprix",
             "hex": "EC6237",
             "source": "https://www.franprix.fr/"
@@ -3486,6 +3519,11 @@
             "title": "GitHub Actions",
             "hex": "2088FF",
             "source": "https://github.com/features/actions"
+        },
+        {
+            "title": "GitHub Pages",
+            "hex": "222222",
+            "source": "https://pages.github.com/"
         },
         {
             "title": "GitHub Sponsors",
@@ -5035,6 +5073,11 @@
             "guidelines": "https://more.ko-fi.com/brand-assets"
         },
         {
+            "title": "Koa",
+            "hex": "33333D",
+            "source": "https://koajs.com/"
+        },
+        {
             "title": "Koc",
             "hex": "F9423A",
             "source": "https://www.koc.com.tr/en"
@@ -5350,6 +5393,11 @@
             "title": "LiveJournal",
             "hex": "00B0EA",
             "source": "http://www.livejournal.com"
+        },
+        {
+            "title": "Livewire",
+            "hex": "4E56A6",
+            "source": "https://laravel-livewire.com/"
         },
         {
             "title": "LLVM",
@@ -6351,6 +6399,11 @@
             "source": "https://www.lingoapp.com/6/s/oJkq3W/?v=3"
         },
         {
+            "title": "NOW",
+            "hex": "001211",
+            "source": "https://www.nowtv.com/"
+        },
+        {
             "title": "npm",
             "hex": "CB3837",
             "source": "https://www.npmjs.com/",
@@ -6412,6 +6465,12 @@
             "title": "Nx",
             "hex": "143055",
             "source": "https://nx.dev/"
+        },
+        {
+            "title": "NZXT",
+            "hex": "000000",
+            "source": "https://nzxt.com/",
+            "guidelines": "https://nzxt.com/about/brand-guidelines"
         },
         {
             "title": "OBS Studio",
@@ -7969,6 +8028,14 @@
             "guidelines": "https://docs.rocket.chat/guides/brand-and-visual-guidelines/logo"
         },
         {
+            "title": "Rocky Linux",
+            "hex": "10B981",
+            "source": "https://github.com/rocky-linux/branding/blob/94e97dd30b87d909cc4f6a6838a2926f77f9ac47/logo/src/icon-black.svg",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
+        },
+        {
             "title": "Roku",
             "hex": "662D91",
             "source": "https://www.roku.com/",
@@ -7983,6 +8050,15 @@
             "title": "rollup.js",
             "hex": "EC4A3F",
             "source": "https://rollupjs.org/"
+        },
+        {
+            "title": "Rome",
+            "hex": "27272A",
+            "source": "https://github.com/rome/tools/blob/261c3f3bdc21439777f78b6551f707cce0c8d04a/assets/SVG/logomark_black.svg",
+            "guidelines": "https://github.com/rome/tools/tree/main/assets",
+            "license": {
+                "type": "CC-BY-NC-SA-4.0"
+            }
         },
         {
             "title": "Roots",
@@ -8592,6 +8668,11 @@
             "hex": "29B5E8",
             "source": "https://www.snowflake.com/brand-guidelines/",
             "guidelines": "https://www.snowflake.com/brand-guidelines/"
+        },
+        {
+            "title": "Snowpack",
+            "hex": "2E5E82",
+            "source": "https://www.snowpack.dev/"
         },
         {
             "title": "Snyk",
