@@ -64,7 +64,7 @@ module.exports = {
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(
-        /[^"&<>]/g,
+        /./g,
         char => {
           const charCode = char.charCodeAt(0);
           return charCode > 127 ? `&#${charCode};` : char;
