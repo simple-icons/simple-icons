@@ -59,7 +59,16 @@ module.exports = {
    */
   titleToHtmlFriendly: brandTitle => (
     brandTitle
-      .replace(/’/g, "&apos;")
+      .replace(/"/g, "&quot;")
       .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(
+        /[^"&<>]/g,
+        char => {
+          const charCode = char.charCodeAt(0);
+          return charCode > 127 ? `&#${charCode};` : char;
+        }
+      )
   ),
 }
