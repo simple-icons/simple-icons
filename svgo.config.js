@@ -1,10 +1,10 @@
-const { extendDefaultPlugins } = require('svgo');
+const { extendDefaultPlugins } = require("svgo");
 
 module.exports = {
   multipass: true,
   plugins: extendDefaultPlugins([
     {
-      name: 'convertPathData',
+      name: "convertPathData",
       params: {
         // 3 decimals of precision in floating point numbers
         floatPrecision: 3,
@@ -16,16 +16,16 @@ module.exports = {
 
     // Sort the attributes on the <svg> tag
     {
-      name: 'sortAttrs',
+      name: "sortAttrs",
       params: {
-        order: ['role', 'viewBox'],
-        xmlnsOrder: 'end',
+        order: ["role", "viewBox"],
+        xmlnsOrder: "end",
       },
     },
 
     // Convert basic shapes (such as <circle>) to <path>
     {
-      name: 'convertShapeToPath',
+      name: "convertShapeToPath",
       params: {
         // including <arc>
         convertArcs: true,
@@ -34,7 +34,7 @@ module.exports = {
 
     // Compound all <path>s into one
     {
-      name: 'mergePaths',
+      name: "mergePaths",
       params: {
         force: true,
         noSpaceAfterFlags: false,
@@ -43,24 +43,22 @@ module.exports = {
 
     // Keep the <title> tag
     {
-      name: 'removeTitle',
+      name: "removeTitle",
       active: false,
     },
 
     // Keep the role="img" attribute and automatically add it
     // to the <svg> tag if it's not there already
     {
-      name: 'addAttributesToSVGElement',
+      name: "addAttributesToSVGElement",
       params: {
-        attributes: [
-          {role: 'img'},
-        ],
+        attributes: [{ role: "img" }],
       },
     },
 
     // Keep the 'role' attribute, if it's already defined
     {
-      name: 'removeUnknownsAndDefaults',
+      name: "removeUnknownsAndDefaults",
       params: {
         keepRoleAttr: true,
       },
@@ -69,58 +67,54 @@ module.exports = {
     // Remove all attributes except 'role', 'viewBox', and 'xmlns' from
     // <svg> tags
     {
-      name: 'removeAttrs',
+      name: "removeAttrs",
       params: {
-        attrs: [
-          'baseProfile',
-          'version',
-          'fill-rule',
-        ],
+        attrs: ["baseProfile", "version", "fill-rule"],
       },
     },
 
     // Remove paths with fill="none"
     {
-      name: 'removeUselessStrokeAndFill',
+      name: "removeUselessStrokeAndFill",
       params: {
         removeNone: true,
       },
     },
 
     // Explicitly enable everything else
-    'removeDoctype',
-    'removeXMLProcInst',
-    'removeComments',
-    'removeMetadata',
-    'removeEditorsNSData',
-    'cleanupAttrs',
-    'inlineStyles',
-    'minifyStyles',
-    'convertStyleToAttrs',
-    'cleanupIDs',
-    'prefixIds',
-    'removeRasterImages',
-    'removeUselessDefs',
-    'cleanupNumericValues',
-    'cleanupListOfValues',
-    'convertColors',
-    'removeNonInheritableGroupAttrs',
-    'removeViewBox',
-    'cleanupEnableBackground',
-    'removeHiddenElems',
-    'removeEmptyText',
-    'moveElemsAttrsToGroup',
-    'moveGroupAttrsToElems',
-    'collapseGroups',
-    'convertTransform',
-    'removeEmptyAttrs',
-    'removeEmptyContainers',
-    'removeUnusedNS',
-    'removeDesc',
-    'removeDimensions',
-    'removeStyleElement',
-    'removeScriptElement',
-    'removeOffCanvasPaths',
-    'reusePaths',
+    "removeDoctype",
+    "removeXMLProcInst",
+    "removeComments",
+    "removeMetadata",
+    "removeEditorsNSData",
+    "cleanupAttrs",
+    "inlineStyles",
+    "minifyStyles",
+    "convertStyleToAttrs",
+    "cleanupIDs",
+    "prefixIds",
+    "removeRasterImages",
+    "removeUselessDefs",
+    "cleanupNumericValues",
+    "cleanupListOfValues",
+    "convertColors",
+    "removeNonInheritableGroupAttrs",
+    "removeViewBox",
+    "cleanupEnableBackground",
+    "removeHiddenElems",
+    "removeEmptyText",
+    "moveElemsAttrsToGroup",
+    "moveGroupAttrsToElems",
+    "collapseGroups",
+    "convertTransform",
+    "removeEmptyAttrs",
+    "removeEmptyContainers",
+    "removeUnusedNS",
+    "removeDesc",
+    "removeDimensions",
+    "removeStyleElement",
+    "removeScriptElement",
+    "removeOffCanvasPaths",
+    "reusePaths",
   ]),
 };
