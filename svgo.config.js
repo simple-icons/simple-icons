@@ -53,7 +53,7 @@ module.exports = {
       name: 'addAttributesToSVGElement',
       params: {
         attributes: [
-          { role: 'img' }
+          {role: 'img'},
         ],
       },
     },
@@ -74,7 +74,7 @@ module.exports = {
         attrs: [
           'baseProfile',
           'version',
-          'fill-rule'
+          'fill-rule',
         ],
       },
     },
