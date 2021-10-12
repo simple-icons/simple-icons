@@ -47,12 +47,14 @@ module.exports = {
       active: false,
     },
 
-    // Keep the role='img' attribute and automatically add it
+    // Keep the role="img" attribute and automatically add it
     // to the <svg> tag if it's not there already
     {
       name: 'addAttributesToSVGElement',
       params: {
-        attributes: [{ role: 'img' }],
+        attributes: [
+          { role: 'img' }
+        ],
       },
     },
 
@@ -69,11 +71,15 @@ module.exports = {
     {
       name: 'removeAttrs',
       params: {
-        attrs: ['baseProfile', 'version', 'fill-rule'],
+        attrs: [
+          'baseProfile',
+          'version',
+          'fill-rule'
+        ],
       },
     },
 
-    // Remove paths with fill='none'
+    // Remove paths with fill="none"
     {
       name: 'removeUselessStrokeAndFill',
       params: {
