@@ -5822,11 +5822,6 @@
             "source": "https://mewe.com"
         },
         {
-            "title": "Micro-Star International",
-            "hex": "FF0000",
-            "source": "https://www.msi.com/page/brochure"
-        },
-        {
             "title": "micro:bit",
             "hex": "00ED00",
             "source": "https://microbit.org/"
@@ -6086,6 +6081,16 @@
             "hex": "000000",
             "source": "https://mozilla.design/mozilla/",
             "guidelines": "https://mozilla.design/mozilla/"
+        },
+        {
+            "title": "MSI",
+            "aliases": {
+                "aka": [
+                    "Micro-Star International"
+                ]
+            },
+            "hex": "FF0000",
+            "source": "https://www.msi.com/page/brochure"
         },
         {
             "title": "MTA",
