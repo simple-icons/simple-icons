@@ -159,6 +159,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AppSignal` | `appsignal` |
 | `AppVeyor` | `appveyor` |
 | `Appwrite` | `appwrite` |
+| `Aqua` | `aqua` |
 | `ARAL` | `aral` |
 | `ArangoDB` | `arangodb` |
 | `Arch Linux` | `archlinux` |
@@ -209,6 +210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Azure Pipelines` | `azurepipelines` |
 | `B&R Automation` | `bandrautomation` |
 | `Babel` | `babel` |
+| `Backbone.js` | `backbonedotjs` |
 | `Badgr` | `badgr` |
 | `Badoo` | `badoo` |
 | `Baidu` | `baidu` |
@@ -773,6 +775,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `gulp` | `gulp` |
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
+| `Gunicorn` | `gunicorn` |
 | `Gutenberg` | `gutenberg` |
 | `Habr` | `habr` |
 | `Hack Club` | `hackclub` |
@@ -1158,6 +1161,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Moscow Metro` | `moscowmetro` |
 | `Motorola` | `motorola` |
 | `Mozilla` | `mozilla` |
+| `MSI` | `msi` |
 | `MTA` | `mta` |
 | `MTR` | `mtr` |
 | `Mumble` | `mumble` |
@@ -1317,8 +1321,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Peloton` | `peloton` |
 | `Penny` | `penny` |
 | `Pepsi` | `pepsi` |
+| `Percy` | `percy` |
 | `Perforce` | `perforce` |
 | `Perl` | `perl` |
+| `Personio` | `personio` |
 | `Peugeot` | `peugeot` |
 | `Pexels` | `pexels` |
 | `pfSense` | `pfsense` |
@@ -1659,6 +1665,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Source Engine` | `sourceengine` |
 | `SourceForge` | `sourceforge` |
 | `Sourcegraph` | `sourcegraph` |
+| `Sourcetree` | `sourcetree` |
 | `Southwest Airlines` | `southwestairlines` |
 | `Spacemacs` | `spacemacs` |
 | `SpaceX` | `spacex` |
@@ -1706,6 +1713,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Steam` | `steam` |
 | `SteamDB` | `steamdb` |
 | `Steamworks` | `steamworks` |
+| `Steelseries` | `steelseries` |
 | `Steem` | `steem` |
 | `Steemit` | `steemit` |
 | `Steinberg` | `steinberg` |
@@ -1886,6 +1894,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `UpLabs` | `uplabs` |
 | `Uploaded` | `uploaded` |
 | `UPS` | `ups` |
+| `Uptobox` | `uptobox` |
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
 | `V` | `v` |

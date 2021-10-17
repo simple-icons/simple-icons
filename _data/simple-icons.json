@@ -767,6 +767,12 @@
             "source": "https://github.com/appwrite/appwrite/blob/c961382fb7a59ce908b4982a572e02e6e0feacd5/public/images/appwrite.svg"
         },
         {
+            "title": "Aqua",
+            "hex": "1904DA",
+            "source": "https://www.aquasec.com/brand/",
+            "guidelines": "https://www.aquasec.com/brand/"
+        },
+        {
             "title": "ARAL",
             "hex": "0063CB",
             "source": "https://upload.wikimedia.org/wikipedia/commons/6/60/Aral_Logo.svg"
@@ -1019,6 +1025,15 @@
             "title": "Babel",
             "hex": "F9DC3E",
             "source": "https://github.com/babel/website/blob/93330158b6ecca1ab88d3be8dbf661f5c2da6c76/website/static/img/babel-black.svg"
+        },
+        {
+            "title": "Backbone.js",
+            "hex": "0071B5",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Backbone.js_logo.svg",
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/jashkenas/backbone/blob/master/LICENSE"
+            }
         },
         {
             "title": "Badgr",
@@ -4004,6 +4019,11 @@
             "source": "https://www.gumtree.com"
         },
         {
+            "title": "Gunicorn",
+            "hex": "499848",
+            "source": "https://github.com/benoitc/gunicorn/blob/ff58e0c6da83d5520916bc4cc109a529258d76e1/docs/logo/gunicorn.svg"
+        },
+        {
             "title": "Gutenberg",
             "hex": "000000",
             "source": "https://github.com/WordPress/gutenberg/blob/master/docs/final-g-wapuu-black.svg"
@@ -6083,6 +6103,16 @@
             "guidelines": "https://mozilla.design/mozilla/"
         },
         {
+            "title": "MSI",
+            "aliases": {
+                "aka": [
+                    "Micro-Star International"
+                ]
+            },
+            "hex": "FF0000",
+            "source": "https://www.msi.com/page/brochure"
+        },
+        {
             "title": "MTA",
             "hex": "0039A6",
             "source": "https://mta.info/"
@@ -6968,6 +6998,11 @@
             "guidelines": "http://gillettepepsicola.com/promotions-media/media-kit/"
         },
         {
+            "title": "Percy",
+            "hex": "9E66BF",
+            "source": "https://percy.io/"
+        },
+        {
             "title": "Perforce",
             "hex": "404040",
             "source": "https://www.perforce.com"
@@ -6976,6 +7011,11 @@
             "title": "Perl",
             "hex": "39457E",
             "source": "https://github.com/tpf/marketing-materials/blob/6765c6fd71bc5b123d6c1a77b86e08cdd6376078/images/onion-logo/tpf-logo-onion.svg"
+        },
+        {
+            "title": "Personio",
+            "hex": "FFFFFF",
+            "source": "https://www.personio.com/"
         },
         {
             "title": "Peugeot",
@@ -8825,6 +8865,12 @@
             "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
         },
         {
+            "title": "Sourcetree",
+            "hex": "0052CC",
+            "source": "https://atlassian.design/resources/logo-library",
+            "guidelines": "https://atlassian.design/foundations/logos/"
+        },
+        {
             "title": "Southwest Airlines",
             "hex": "304CB2",
             "source": "https://www.southwest.com/"
@@ -9084,6 +9130,11 @@
             "title": "Steamworks",
             "hex": "1E1E1E",
             "source": "https://partner.steamgames.com/"
+        },
+        {
+            "title": "Steelseries",
+            "hex": "FF5200",
+            "source": "https://techblog.steelseries.com/ux-guide/index.html"
         },
         {
             "title": "Steem",
@@ -10024,6 +10075,11 @@
             "title": "UPS",
             "hex": "150400",
             "source": "https://www.ups.com/"
+        },
+        {
+            "title": "Uptobox",
+            "hex": "5CE1E6",
+            "source": "https://uptoboxpremium.org/"
         },
         {
             "title": "Upwork",
