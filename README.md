@@ -156,3 +156,9 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
 [slug]: ./slugs.md
+
+## Contribute
+
+Information describing how to contribute can be found here:
+
+https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
