@@ -820,6 +820,12 @@
             "source": "https://www.arlo.com/"
         },
         {
+            "title": "Arm",
+            "hex": "0091BD",
+            "source": "https://www.arm.com/",
+            "guidelines": "https://www.arm.com/company/policies/trademarks/guidelines-corporate-logo"
+        },
+        {
             "title": "Artifact Hub",
             "hex": "417598",
             "source": "https://raw.githubusercontent.com/artifacthub/hub/87a1fed/web/public/static/media/logo/artifacthub-brand-white.svg"
@@ -9549,6 +9555,17 @@
             "title": "Testing Library",
             "hex": "E33332",
             "source": "https://testing-library.com/"
+        },
+        {
+            "title": "Tether",
+            "hex": "50AF95",
+            "aliases": {
+                "aka": [
+                    "USDt"
+                ]
+            },
+            "source": "https://tether.to/branding/",
+            "guidelines": "https://tether.to/branding/"
         },
         {
             "title": "Textpattern",
