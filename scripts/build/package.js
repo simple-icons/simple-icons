@@ -50,15 +50,14 @@ function licenseToObject(license) {
   return license;
 }
 function iconToObject(icon) {
-  return util.format(
-    iconObjectTemplate,
+  return util.format(iconObjectTemplate,
     escape(icon.title),
     escape(icon.slug),
     escape(icon.svg),
     escape(icon.source),
     escape(icon.hex),
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
-    licenseToObject(icon.license)
+    licenseToObject(icon.license),
   );
 }
 function slugToVariableName(slug) {
@@ -81,10 +80,10 @@ const iconsBarrelMjs = [];
 const iconsBarrelJs = [];
 const iconsBarrelDts = [];
 const icons = [];
-data.icons.forEach((icon) => {
+data.icons.forEach(icon => {
   const filename = getIconSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
-  icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, "");
+  icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
   icon.slug = filename;
   icons.push(icon);
 
@@ -95,10 +94,7 @@ data.icons.forEach((icon) => {
   minifyAndWrite(jsFilepath, `module.exports=${iconObject};`);
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
-  fs.writeFileSync(
-    dtsFilepath,
-    `declare const i:import("..").I;export default i;`
-  );
+  fs.writeFileSync(dtsFilepath, `declare const i:import("..").I;export default i;`);
 
   // add object to the barrel file
   const iconExportName = slugToVariableName(icon.slug);
@@ -108,10 +104,7 @@ data.icons.forEach((icon) => {
 });
 
 // write our generic index.js
-const rawIndexJs = util.format(
-  indexTemplate,
-  icons.map(iconToKeyValue).join(",")
-);
+const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(","));
 minifyAndWrite(indexFile, rawIndexJs);
 
 // write our file containing the exports of all icons in CommonJS ...
