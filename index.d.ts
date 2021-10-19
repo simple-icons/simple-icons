@@ -14,6 +14,8 @@ export interface SimpleIcon {
     | undefined;
 }
 
+export type I = SimpleIcon;
+
 declare const icons: Record<string, SimpleIcon> & {
   get(name: string): SimpleIcon;
   Get(name: string): SimpleIcon;
