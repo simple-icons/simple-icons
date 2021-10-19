@@ -3,12 +3,12 @@
 # Except the ones we want to publish
 !_data/
 !icons/
-!types/
 !package.json
 !DISCLAIMER.md
 !README.md
 !LICENSE.md
 !index.js
+!index.d.ts
 !icons.js
 !icons.mjs
 !icons.d.ts

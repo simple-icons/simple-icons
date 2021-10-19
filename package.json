@@ -9,7 +9,7 @@
   ],
   "type": "commonjs",
   "main": "index.js",
-  "types": "types/index.d.ts",
+  "types": "index.d.ts",
   "exports": {
     ".": "./index.js",
     "./icons": {
