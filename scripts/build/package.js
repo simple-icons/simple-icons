@@ -104,7 +104,7 @@ data.icons.forEach(icon => {
 });
 
 // write our generic index.js
-const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(","));
+const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','));
 minifyAndWrite(indexFile, rawIndexJs);
 
 // write our file containing the exports of all icons in CommonJS ...
