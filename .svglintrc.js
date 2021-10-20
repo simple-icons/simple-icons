@@ -156,7 +156,7 @@ module.exports = {
       },
     ],
     custom: [
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'icon-title';
 
         const iconTitleText = $.find('title').text(),
@@ -319,7 +319,7 @@ module.exports = {
           }
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'icon-size';
 
         const iconPath = $.find('path').attr('d');
@@ -347,7 +347,7 @@ module.exports = {
           }
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'icon-precision';
 
         const iconPath = $.find('path').attr('d');
@@ -389,7 +389,7 @@ module.exports = {
           }
         });
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'ineffective-segments';
 
         const iconPath = $.find('path').attr('d');
@@ -606,7 +606,7 @@ module.exports = {
           }
         });
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'collinear-segments';
 
         const iconPath = $.find('path').attr('d');
@@ -783,7 +783,7 @@ module.exports = {
           }
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'extraneous';
 
         if (!svgRegexp.test(ast.source)) {
@@ -792,7 +792,7 @@ module.exports = {
           );
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'negative-zeros';
 
         const iconPath = $.find('path').attr('d');
@@ -821,7 +821,7 @@ module.exports = {
           });
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'icon-centered';
 
         const iconPath = $.find('path').attr('d');
@@ -848,7 +848,7 @@ module.exports = {
           }
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'path-format';
 
         const iconPath = $.find('path').attr('d');
@@ -886,7 +886,7 @@ module.exports = {
           }
         }
       },
-      function (reporter, $, ast) {
+      (reporter, $, ast) => {
         reporter.name = 'svg-format';
 
         // Don't allow explicit '</path>' closing tag

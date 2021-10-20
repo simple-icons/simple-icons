@@ -22,7 +22,7 @@ const data = require(dataFile);
  */
 const TESTS = {
   /* Tests whether our icons are in alphabetical order */
-  alphabetical: function () {
+  alphabetical: () => {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
@@ -54,7 +54,7 @@ const TESTS = {
   },
 
   /* Check the formatting of the data file */
-  prettified: function () {
+  prettified: () => {
     const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
     const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
     if (dataString !== dataPretty) {
