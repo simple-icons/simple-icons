@@ -5,12 +5,12 @@
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const packageJsonFile = path.resolve(rootDir, "package.json");
-const readmeFile = path.resolve(rootDir, "README.md");
+const rootDir = path.resolve(__dirname, '..', '..');
+const packageJsonFile = path.resolve(rootDir, 'package.json');
+const readmeFile = path.resolve(rootDir, 'README.md');
 
 function getMajorVersion(semVerVersion) {
   const majorVersionAsString = semVerVersion.split('.')[0];
@@ -39,7 +39,7 @@ function main() {
     const majorVersion = getMajorVersion(manifest.version);
     updateVersionInReadmeIfNecessary(majorVersion);
   } catch (error) {
-    console.error("Failed to update CDN version number:", error);
+    console.error('Failed to update CDN version number:', error);
     process.exit(1);
   }
 }

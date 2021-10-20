@@ -7,27 +7,27 @@
  * tree-shakeable
  */
 
-const fs = require("fs");
-const path = require("path");
-const util = require("util");
-const minify = require("uglify-js").minify;
+const fs = require('fs');
+const path = require('path');
+const util = require('util');
+const minify = require('uglify-js').minify;
 
-const UTF8 = "utf8";
+const UTF8 = 'utf8';
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
-const indexFile = path.resolve(rootDir, "index.js");
-const iconsDir = path.resolve(rootDir, "icons");
+const rootDir = path.resolve(__dirname, '..', '..');
+const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
+const indexFile = path.resolve(rootDir, 'index.js');
+const iconsDir = path.resolve(rootDir, 'icons');
 
-const templatesDir = path.resolve(__dirname, "templates");
-const indexTemplateFile = path.resolve(templatesDir, "index.js");
-const iconObjectTemplateFile = path.resolve(templatesDir, "icon-object.js");
+const templatesDir = path.resolve(__dirname, 'templates');
+const indexTemplateFile = path.resolve(templatesDir, 'index.js');
+const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, titleToSlug } = require("../utils.js");
+const { getIconSlug } = require('../utils.js');
 
 // Local helper functions
 function escape(value) {
@@ -47,7 +47,8 @@ function licenseToObject(license) {
   return license;
 }
 function iconToObject(icon) {
-  return util.format(iconObjectTemplate,
+  return util.format(
+    iconObjectTemplate,
     escape(icon.title),
     escape(icon.slug),
     escape(icon.svg),
@@ -69,7 +70,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 
 // 'main'
 const icons = [];
-data.icons.forEach(icon => {
+data.icons.forEach((icon) => {
   const filename = getIconSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
@@ -82,5 +83,8 @@ data.icons.forEach(icon => {
 });
 
 // write our generic index.js
-const rawIndexJs = util.format(indexTemplate, icons.map(iconToKeyValue).join(','));
+const rawIndexJs = util.format(
+  indexTemplate,
+  icons.map(iconToKeyValue).join(','),
+);
 minifyAndWrite(indexFile, rawIndexJs);
