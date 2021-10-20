@@ -36,6 +36,7 @@
   "scripts": {
     "build": "node scripts/build/package.js",
     "clean": "rimraf icons/*.js index.js",
+    "format": "prettier --write --single-quote --trailing-comma all .",
     "lint": "run-s our-lint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
     "jsonlint": "node scripts/lint/jsonlint.js",
