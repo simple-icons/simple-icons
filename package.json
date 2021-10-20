@@ -19,6 +19,8 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "editorconfig-checker": "4.0.2",
+    "husky": "7.0.2",
+    "is-ci": "3.0.0",
     "jest": "27.2.5",
     "jest-diff": "27.2.5",
     "jsonschema": "1.4.0",
@@ -43,6 +45,7 @@
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint icons/*.svg --ci",
     "wslint": "editorconfig-checker -exclude \\.svg$",
+    "postinstall": "is-ci || husky install",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
     "test": "jest",
