@@ -60,7 +60,7 @@ const icon = simpleIcons.Get('simpleicons');
 
 ```
 
-Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a [slug]. Note that the first letter of the slug is capitalized here. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
 ```javascript
 // Import a specific icon by its slug as:
 // import { si[ICON SLUG] } from 'simple-icons/icons'
