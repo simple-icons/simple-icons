@@ -21,36 +21,36 @@ const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
 const ignoreFile = './.svglint-ignored.json';
 const iconIgnored = !updateIgnoreFile ? require(ignoreFile) : {};
 
-function sortObjectByKey(obj) {
+const sortObjectByKey = (obj) => {
   return Object.keys(obj)
     .sort()
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
-}
+};
 
-function sortObjectByValue(obj) {
+const sortObjectByValue = (obj) => {
   return Object.keys(obj)
     .sort((a, b) => ('' + obj[a]).localeCompare(obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
-}
+};
 
-function removeLeadingZeros(number) {
+const removeLeadingZeros = (number) => {
   // convert 0.03 to '.03'
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
-}
+};
 
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
  **/
-function collinear(x1, y1, x2, y2, x3, y3) {
+const collinear = (x1, y1, x2, y2, x3, y3) => {
   return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
-}
+};
 
 /**
  * Returns the number of digits after the decimal point.
  * @param num The number of interest.
  */
-function countDecimals(num) {
+const countDecimals = (num) => {
   if (num && num % 1) {
     let [base, op, trail] = num.toExponential().split(/e([+-])/);
     let elen = parseInt(trail, 10);
@@ -60,31 +60,31 @@ function countDecimals(num) {
       : base.length - idx - 1 + (op === '+' ? -elen : elen);
   }
   return 0;
-}
+};
 
 /**
  * Get the index at which the first path value of an SVG starts.
  * @param svgFileContent The raw SVG as text.
  */
-function getPathDIndex(svgFileContent) {
+const getPathDIndex = (svgFileContent) => {
   const pathDStart = '<path d="';
   return svgFileContent.indexOf(pathDStart) + pathDStart.length;
-}
+};
 
 /**
  * Get the index at which the text of the first `<title></title>` tag starts.
  * @param svgFileContent The raw SVG as text.
  **/
-function getTitleTextIndex(svgFileContent) {
+const getTitleTextIndex = (svgFileContent) => {
   const titleStart = '<title>';
   return svgFileContent.indexOf(titleStart) + titleStart.length;
-}
+};
 
 /**
  * Convert a hexadecimal number passed as string to decimal number as integer.
  * @param hex The hexadecimal number representation to convert.
  **/
-function hexadecimalToDecimal(hex) {
+const hexadecimalToDecimal = (hex) => {
   let result = 0,
     digitValue;
   hex = hex.toLowerCase();
@@ -93,7 +93,7 @@ function hexadecimalToDecimal(hex) {
     result = result * 16 + digitValue;
   }
   return result;
-}
+};
 
 if (updateIgnoreFile) {
   process.on('exit', () => {
@@ -109,13 +109,13 @@ if (updateIgnoreFile) {
   });
 }
 
-function isIgnored(linterName, path) {
+const isIgnored = (linterName, path) => {
   return (
     iconIgnored[linterName] && iconIgnored[linterName].hasOwnProperty(path)
   );
-}
+};
 
-function ignoreIcon(linterName, path, $) {
+const ignoreIcon = (linterName, path, $) => {
   if (!iconIgnored[linterName]) {
     iconIgnored[linterName] = {};
   }
@@ -124,7 +124,7 @@ function ignoreIcon(linterName, path, $) {
   const iconName = htmlFriendlyToTitle(title);
 
   iconIgnored[linterName][path] = iconName;
-}
+};
 
 module.exports = {
   rules: {

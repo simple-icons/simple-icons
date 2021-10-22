@@ -30,13 +30,13 @@ const data = require(dataFile);
 const { getIconSlug } = require('../utils.js');
 
 // Local helper functions
-function escape(value) {
+const escape = (value) => {
   return value.replace(/(?<!\\)'/g, "\\'");
-}
-function iconToKeyValue(icon) {
+};
+const iconToKeyValue = (icon) => {
   return `'${icon.slug}':${iconToObject(icon)}`;
-}
-function licenseToObject(license) {
+};
+const licenseToObject = (license) => {
   if (license === undefined) {
     return;
   }
@@ -45,8 +45,8 @@ function licenseToObject(license) {
     license.url = `https://spdx.org/licenses/${license.type}`;
   }
   return license;
-}
-function iconToObject(icon) {
+};
+const iconToObject = (icon) => {
   return util.format(
     iconObjectTemplate,
     escape(icon.title),
@@ -57,8 +57,8 @@ function iconToObject(icon) {
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
-}
-function minifyAndWrite(filepath, rawJavaScript) {
+};
+const minifyAndWrite = (filepath, rawJavaScript) => {
   const { error, code } = minify(rawJavaScript);
   if (error) {
     console.error(error);
@@ -66,7 +66,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
   } else {
     fs.writeFileSync(filepath, code);
   }
-}
+};
 
 // 'main'
 const icons = [];
