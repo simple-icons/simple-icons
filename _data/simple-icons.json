@@ -31,6 +31,11 @@
             "source": "https://www.42.fr/"
         },
         {
+            "title": "4chan",
+            "hex": "006600",
+            "source": "https://www.4chan.org/"
+        },
+        {
             "title": "4D",
             "hex": "004088",
             "source": "https://www.4d.com/"
@@ -823,6 +828,12 @@
             "title": "Arlo",
             "hex": "49B48A",
             "source": "https://www.arlo.com/"
+        },
+        {
+            "title": "Arm",
+            "hex": "0091BD",
+            "source": "https://www.arm.com/",
+            "guidelines": "https://www.arm.com/company/policies/trademarks/guidelines-corporate-logo"
         },
         {
             "title": "Artifact Hub",
@@ -2095,6 +2106,11 @@
             "title": "Craft CMS",
             "hex": "E5422B",
             "source": "https://craftcms.com/brand-resources"
+        },
+        {
+            "title": "Create React App",
+            "hex": "09D3AC",
+            "source": "https://github.com/facebook/create-react-app/blob/9d0369b1fe3260e620b08effcf85f1edefc5d1ea/docusaurus/website/static/img/logo.svg"
         },
         {
             "title": "Creative Commons",
@@ -4375,6 +4391,11 @@
             "hex": "002C5F",
             "source": "https://en.wikipedia.org/wiki/File:Hyundai_Motor_Company_logo.svg",
             "guidelines": "https://www.hyundai.pl/fileadmin/user_upload/media/logo/201607_HYU_Guideline_ENG_small.pdf"
+        },
+        {
+            "title": "i18next",
+            "hex": "26A69A",
+            "source": "https://github.com/i18next/i18next-gitbook/blob/32efcfd9c59ae55cc63a60e633dbc1651c7950ad/assets/img/logo.svg"
         },
         {
             "title": "Iata",
@@ -8166,6 +8187,12 @@
             "hex": "22314E",
             "source": "https://www.ros.org/press-kit/",
             "guidelines": "https://www.ros.org/press-kit/"
+        },
+        {
+            "title": "Rotary International",
+            "hex": "F7A81B",
+            "source": "https://www.rotary.org/en",
+            "guidelines": "https://my-cms.rotary.org/en/document/tell-rotarys-story-voice-and-visual-identity-guidelines-rotarians"
         },
         {
             "title": "Rotten Tomatoes",
