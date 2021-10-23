@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 2000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -142,7 +142,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 ?>
 ```
 
-## Third Party Extensions
+## Third-Party Extensions
 
 | Extension | Author |
 | :--- | :--- |
@@ -153,10 +153,16 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
 | [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
 | [Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
-| [Python package](https://github.com/sachinraja/simpleicons) | [@sachinraja](https://github.com/sachinraja) |
+| [Python package](https://github.com/sachinraja/simple-icons-py) | [@sachinraja](https://github.com/sachinraja) |
 | [React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | [Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
 [slug]: ./slugs.md
+
+## Contribute
+
+Information describing how to contribute can be found here:
+
+https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
