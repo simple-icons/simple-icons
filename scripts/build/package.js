@@ -20,6 +20,7 @@ const indexFile = path.resolve(rootDir, "index.js");
 const iconsDir = path.resolve(rootDir, "icons");
 const iconsJsFile = path.resolve(rootDir, "icons.js");
 const iconsMjsFile = path.resolve(rootDir, "icons.mjs");
+const iconsDtsFile = path.resolve(rootDir, "icons.d.ts");
 
 const templatesDir = path.resolve(__dirname, "templates");
 const indexTemplateFile = path.resolve(templatesDir, "index.js");
@@ -77,6 +78,7 @@ function minifyAndWrite(filepath, rawJavaScript) {
 // 'main'
 const iconsBarrelMjs = [];
 const iconsBarrelJs = [];
+const iconsBarrelDts = [];
 const icons = [];
 data.icons.forEach(icon => {
   const filename = getIconSlug(icon);
@@ -91,10 +93,14 @@ data.icons.forEach(icon => {
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
   minifyAndWrite(jsFilepath, `module.exports=${iconObject};`);
 
+  const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
+  fs.writeFileSync(dtsFilepath, `declare const i:import("../alias").I;export default i;`);
+
   // add object to the barrel file
   const iconExportName = slugToVariableName(icon.slug);
   iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
   iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
+  iconsBarrelDts.push(`export const ${iconExportName}:I;`);
 });
 
 // write our generic index.js
@@ -107,3 +113,6 @@ minifyAndWrite(iconsJsFile, rawIconsJs);
 // and ESM
 const rawIconsMjs = iconsBarrelMjs.join("");
 minifyAndWrite(iconsMjsFile, rawIconsMjs);
+// and create a type declaration file
+const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join("")}`;
+fs.writeFileSync(iconsDtsFile, rawIconsDts);

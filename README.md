@@ -60,9 +60,17 @@ const icon = simpleIcons.Get('simpleicons');
 
 ```
 
-Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
-This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
+Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+```javascript
+// Import a specific icon by its slug as:
+// import { si[ICON SLUG] } from 'simple-icons/icons'
 
+// For example:
+// use import/esm to allow tree shaking
+import { siSimpleicons } from 'simple-icons/icons'
+```
+
+You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 ```javascript
 // Import a specific icon by its slug as:
 // require('simple-icons/icons/[ICON SLUG]');
@@ -110,11 +118,7 @@ for (const iconSlug in simpleIcons) {
 
 #### TypeScript Usage
 
-There are also TypeScript type definitions for the Node package. To use them, simply run:
-
-```shell
-npm install --save-dev @types/simple-icons
-```
+Type definitions are now bundled with the package.
 
 ### PHP Usage
 
