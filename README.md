@@ -118,11 +118,7 @@ for (const iconSlug in simpleIcons) {
 
 #### TypeScript Usage
 
-There are also TypeScript type definitions for the Node package. To use them, simply run:
-
-```shell
-npm install --save-dev @types/simple-icons
-```
+Type definitions are now bundled with the package.
 
 ### PHP Usage
 
