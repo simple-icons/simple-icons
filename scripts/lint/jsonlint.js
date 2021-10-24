@@ -1,5 +1,5 @@
 const path = require('path');
-const Validator = require('jsonschema').Validator;
+const { Validator } = require('jsonschema');
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const schemaFile = path.resolve(rootDir, '.jsonschema.json');

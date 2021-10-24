@@ -10,7 +10,7 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const minify = require('uglify-js').minify;
+const { minify } = require('uglify-js');
 
 const UTF8 = 'utf8';
 
