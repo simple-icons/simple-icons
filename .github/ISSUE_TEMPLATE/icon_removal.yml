@@ -1,0 +1,35 @@
+name: Icon removal
+description: Report an icon for removal
+title: 'Remove: '
+labels: [removal request]
+
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Before opening a new issue, make sure it isn't covered by an existing issue.
+        Please search for [issues with the `removal request` or `breaking change` label][removal-issues]
+        (including closed issues) before you continue. If you find one for the brand
+        you're reporting then leave a comment on it or add a reaction.
+
+
+        [removal-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22removal+request%22%2C%22breaking+change%22+is%3Aopen+
+
+  - type: input
+    attributes:
+      label: Brand Name
+      placeholder: 'Example: Simple Icons'
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Reason for Removal
+      description: |
+        - If the brand no longer exists, include a link supporting that claim.
+        - If the brand should be removed for another reason, explain why.
+      placeholder: >-
+        Example: [this blogpost](https://example.com) announced the brand has been
+        discontinued...
+    validations:
+      required: true
