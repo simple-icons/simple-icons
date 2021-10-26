@@ -1,6 +1,6 @@
 name: Icon request
 description: Request a new icon for Simple Icons
-title: "Request: "
+title: 'Request: '
 labels: [new icon]
 
 body:
@@ -25,7 +25,7 @@ body:
   - type: input
     attributes:
       label: Brand Name
-      placeholder: "Example: Simple Icons"
+      placeholder: 'Example: Simple Icons'
     validations:
       required: true
 
@@ -35,7 +35,7 @@ body:
       description: >-
         For non-web brands you can add a relevant link. You can put "None" if you don't
         think there's a website.
-      placeholder: "Example: https://simpleicons.org"
+      placeholder: 'Example: https://simpleicons.org'
     validations:
       required: true
 
@@ -50,7 +50,7 @@ body:
 
 
         [alexa rank]: https://www.alexa.com/siteinfo
-      placeholder: "Example: The Alexa rank is 249,089. See https://www.alexa.com/siteinfo/simpleicons.org"
+      placeholder: 'Example: The Alexa rank is 249,089. See https://www.alexa.com/siteinfo/simpleicons.org'
     validations:
       required: true
 
@@ -75,7 +75,7 @@ body:
         - Are there multiple options for the logo and/or color?
         - Is the icon released under a license?
         - If you think the brand might not be accepted, why do you think it should be considered?
-      placeholder: "Example: There are two variants of this icon..."
+      placeholder: 'Example: There are two variants of this icon...'
 
   - type: dropdown
     attributes:
@@ -84,7 +84,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         add this icon?
       options:
-        - "Yes"
-        - "No"
+        - Yes
+        - No
     validations:
       required: true

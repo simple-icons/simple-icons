@@ -1,6 +1,6 @@
 name: Icon removal
 description: Report an icon for removal
-title: "Remove: "
+title: 'Remove: '
 labels: [removal request]
 
 body:
@@ -18,7 +18,7 @@ body:
   - type: input
     attributes:
       label: Brand Name
-      placeholder: "Example: Simple Icons"
+      placeholder: 'Example: Simple Icons'
     validations:
       required: true
 

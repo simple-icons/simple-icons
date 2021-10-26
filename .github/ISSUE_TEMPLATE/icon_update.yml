@@ -1,6 +1,6 @@
 name: Icon update
 description: Help us improve by reporting outdated icons
-title: "Update: "
+title: 'Update: '
 labels: [icon outdated]
 
 body:
@@ -18,7 +18,7 @@ body:
   - type: input
     attributes:
       label: Brand Name
-      placeholder: "Example: Simple Icons"
+      placeholder: 'Example: Simple Icons'
     validations:
       required: true
 
@@ -42,7 +42,7 @@ body:
         Is there anything else we should know about the brand? Remember that not everyone knows the brand as well as you do. For example:
         - Are there multiple options for the logo and/or color?
         - Is the icon released under a license?
-      placeholder: "Example: There are two variants of this icon..."
+      placeholder: 'Example: There are two variants of this icon...'
 
   - type: dropdown
     attributes:
@@ -51,7 +51,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         update this icon?
       options:
-        - "Yes"
-        - "No"
+        - Yes
+        - No
     validations:
       required: true
