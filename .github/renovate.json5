@@ -1,19 +1,19 @@
 {
   extends: [
-    "config:base",
+    'config:base',
 
     // Make sure we get a single PR combining all updates
-    "group:all",
+    'group:all',
   ],
 
   // Disable dependency dashboard
   dependencyDashboard: false,
 
   // Use our labelling system
-  labels: ["dependencies"],
+  labels: ['dependencies'],
 
   // Schedule the PRs to interleave with our release schedule
-  schedule: "on the 2nd and 4th day instance on sunday after 11pm",
+  schedule: 'on the 2nd and 4th day instance on sunday after 11pm',
 
   // We generally always want the major version
   separateMajorMinor: false,
