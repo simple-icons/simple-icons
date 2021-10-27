@@ -38,9 +38,7 @@ module.exports = {
           // Keep the role="img" attribute and automatically add it
           // to the <svg> tag if it's not there already
           addAttributesToSVGElement: {
-            attributes: [
-              {role: 'img'},
-            ],
+            attributes: [{ role: 'img' }],
           },
 
           // Keep the 'role' attribute, if it's already defined
@@ -51,11 +49,7 @@ module.exports = {
           // Remove all attributes except 'role', 'viewBox', and 'xmlns' from
           // <svg> tags
           removeAttrs: {
-            attrs: [
-              'baseProfile',
-              'version',
-              'fill-rule',
-            ],
+            attrs: ['baseProfile', 'version', 'fill-rule'],
           },
 
           // Remove paths with fill="none"
