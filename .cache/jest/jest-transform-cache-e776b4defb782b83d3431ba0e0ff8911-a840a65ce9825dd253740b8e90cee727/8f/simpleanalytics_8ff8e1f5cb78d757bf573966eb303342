@@ -1,0 +1,16 @@
+b5783d3e437615f29b928fbb06f22ac4
+module.exports = {
+  title: "Simple Analytics",
+  slug: "simpleanalytics",
+  svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Simple Analytics</title><path d="M1.019 13.019h3.849V24h-3.85zm8.943-6.68h3.85V24h-3.85zM19.132 0h3.85v24h-3.85z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://simpleanalytics.com/",
+  hex: "FF4F64",
+  guidelines: "https://simpleanalytics.com/press",
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNpbXBsZWFuYWx5dGljcy5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwidGl0bGUiLCJzbHVnIiwic3ZnIiwicGF0aCIsIm1hdGNoIiwic291cmNlIiwiaGV4IiwiZ3VpZGVsaW5lcyIsImxpY2Vuc2UiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBZTtBQUFDQyxFQUFBQSxLQUFLLEVBQUMsa0JBQVA7QUFBMEJDLEVBQUFBLElBQUksRUFBQyxpQkFBL0I7QUFBaURDLEVBQUFBLEdBQUcsRUFBQyx5TUFBckQ7O0FBQStQLE1BQUlDLElBQUosR0FBVTtBQUFDLFdBQU8sS0FBS0QsR0FBTCxDQUFTRSxLQUFULENBQWUsb0JBQWYsRUFBcUMsQ0FBckMsQ0FBUDtBQUErQyxHQUF6VDs7QUFBMFRDLEVBQUFBLE1BQU0sRUFBQyw4QkFBalU7QUFBZ1dDLEVBQUFBLEdBQUcsRUFBQyxRQUFwVztBQUE2V0MsRUFBQUEsVUFBVSxFQUFDLG1DQUF4WDtBQUE0WkMsRUFBQUEsT0FBTyxFQUFDLEtBQUs7QUFBemEsQ0FBZiIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzPXt0aXRsZTpcIlNpbXBsZSBBbmFseXRpY3NcIixzbHVnOlwic2ltcGxlYW5hbHl0aWNzXCIsc3ZnOic8c3ZnIHJvbGU9XCJpbWdcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiPjx0aXRsZT5TaW1wbGUgQW5hbHl0aWNzPC90aXRsZT48cGF0aCBkPVwiTTEuMDE5IDEzLjAxOWgzLjg0OVYyNGgtMy44NXptOC45NDMtNi42OGgzLjg1VjI0aC0zLjg1ek0xOS4xMzIgMGgzLjg1djI0aC0zLjg1elwiLz48L3N2Zz4nLGdldCBwYXRoKCl7cmV0dXJuIHRoaXMuc3ZnLm1hdGNoKC88cGF0aFxccytkPVwiKFteXCJdKikvKVsxXX0sc291cmNlOlwiaHR0cHM6Ly9zaW1wbGVhbmFseXRpY3MuY29tL1wiLGhleDpcIkZGNEY2NFwiLGd1aWRlbGluZXM6XCJodHRwczovL3NpbXBsZWFuYWx5dGljcy5jb20vcHJlc3NcIixsaWNlbnNlOnZvaWQgMH07Il19

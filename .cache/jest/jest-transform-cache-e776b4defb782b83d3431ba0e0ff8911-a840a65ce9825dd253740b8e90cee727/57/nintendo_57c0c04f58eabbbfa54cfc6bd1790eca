@@ -1,0 +1,16 @@
+d73a55663a403d7714238cafae2519fe
+module.exports = {
+  title: "Nintendo",
+  slug: "nintendo",
+  svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Nintendo</title><path d="M0 .6h7.1l9.85 15.9V.6H24v22.8h-7.04L7.06 7.5v15.9H0V.6"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://en.wikipedia.org/wiki/Nintendo#/media/File:Nintendo.svg",
+  hex: "8F8F8F",
+  guidelines: void 0,
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5pbnRlbmRvLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJ0aXRsZSIsInNsdWciLCJzdmciLCJwYXRoIiwibWF0Y2giLCJzb3VyY2UiLCJoZXgiLCJndWlkZWxpbmVzIiwibGljZW5zZSJdLCJtYXBwaW5ncyI6IkFBQUFBLE1BQU0sQ0FBQ0MsT0FBUCxHQUFlO0FBQUNDLEVBQUFBLEtBQUssRUFBQyxVQUFQO0FBQWtCQyxFQUFBQSxJQUFJLEVBQUMsVUFBdkI7QUFBa0NDLEVBQUFBLEdBQUcsRUFBQyx5S0FBdEM7O0FBQWdOLE1BQUlDLElBQUosR0FBVTtBQUFDLFdBQU8sS0FBS0QsR0FBTCxDQUFTRSxLQUFULENBQWUsb0JBQWYsRUFBcUMsQ0FBckMsQ0FBUDtBQUErQyxHQUExUTs7QUFBMlFDLEVBQUFBLE1BQU0sRUFBQyxpRUFBbFI7QUFBb1ZDLEVBQUFBLEdBQUcsRUFBQyxRQUF4VjtBQUFpV0MsRUFBQUEsVUFBVSxFQUFDLEtBQUssQ0FBalg7QUFBbVhDLEVBQUFBLE9BQU8sRUFBQyxLQUFLO0FBQWhZLENBQWYiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cz17dGl0bGU6XCJOaW50ZW5kb1wiLHNsdWc6XCJuaW50ZW5kb1wiLHN2ZzonPHN2ZyByb2xlPVwiaW1nXCIgdmlld0JveD1cIjAgMCAyNCAyNFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIj48dGl0bGU+TmludGVuZG88L3RpdGxlPjxwYXRoIGQ9XCJNMCAuNmg3LjFsOS44NSAxNS45Vi42SDI0djIyLjhoLTcuMDRMNy4wNiA3LjV2MTUuOUgwVi42XCIvPjwvc3ZnPicsZ2V0IHBhdGgoKXtyZXR1cm4gdGhpcy5zdmcubWF0Y2goLzxwYXRoXFxzK2Q9XCIoW15cIl0qKS8pWzFdfSxzb3VyY2U6XCJodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9OaW50ZW5kbyMvbWVkaWEvRmlsZTpOaW50ZW5kby5zdmdcIixoZXg6XCI4RjhGOEZcIixndWlkZWxpbmVzOnZvaWQgMCxsaWNlbnNlOnZvaWQgMH07Il19
