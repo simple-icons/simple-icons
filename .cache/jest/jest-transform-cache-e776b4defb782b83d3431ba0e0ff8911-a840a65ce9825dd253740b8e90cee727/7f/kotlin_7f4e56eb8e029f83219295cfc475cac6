@@ -1,0 +1,16 @@
+9cdf3b9f33d1318f783d4bb55c2eb4e5
+module.exports = {
+  title: "Kotlin",
+  slug: "kotlin",
+  svg: '<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Kotlin</title><path d="M24 24H0V0h24L12 12Z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://www.jetbrains.com/company/brand/logos/",
+  hex: "7F52FF",
+  guidelines: "https://www.jetbrains.com/company/brand/",
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImtvdGxpbi5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwidGl0bGUiLCJzbHVnIiwic3ZnIiwicGF0aCIsIm1hdGNoIiwic291cmNlIiwiaGV4IiwiZ3VpZGVsaW5lcyIsImxpY2Vuc2UiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBZTtBQUFDQyxFQUFBQSxLQUFLLEVBQUMsUUFBUDtBQUFnQkMsRUFBQUEsSUFBSSxFQUFDLFFBQXJCO0FBQThCQyxFQUFBQSxHQUFHLEVBQUMsb0lBQWxDOztBQUF1SyxNQUFJQyxJQUFKLEdBQVU7QUFBQyxXQUFPLEtBQUtELEdBQUwsQ0FBU0UsS0FBVCxDQUFlLG9CQUFmLEVBQXFDLENBQXJDLENBQVA7QUFBK0MsR0FBak87O0FBQWtPQyxFQUFBQSxNQUFNLEVBQUMsZ0RBQXpPO0FBQTBSQyxFQUFBQSxHQUFHLEVBQUMsUUFBOVI7QUFBdVNDLEVBQUFBLFVBQVUsRUFBQywwQ0FBbFQ7QUFBNlZDLEVBQUFBLE9BQU8sRUFBQyxLQUFLO0FBQTFXLENBQWYiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cz17dGl0bGU6XCJLb3RsaW5cIixzbHVnOlwia290bGluXCIsc3ZnOic8c3ZnIHJvbGU9XCJpbWdcIiB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgdmlld0JveD1cIjAgMCAyNCAyNFwiPjx0aXRsZT5Lb3RsaW48L3RpdGxlPjxwYXRoIGQ9XCJNMjQgMjRIMFYwaDI0TDEyIDEyWlwiLz48L3N2Zz4nLGdldCBwYXRoKCl7cmV0dXJuIHRoaXMuc3ZnLm1hdGNoKC88cGF0aFxccytkPVwiKFteXCJdKikvKVsxXX0sc291cmNlOlwiaHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS9jb21wYW55L2JyYW5kL2xvZ29zL1wiLGhleDpcIjdGNTJGRlwiLGd1aWRlbGluZXM6XCJodHRwczovL3d3dy5qZXRicmFpbnMuY29tL2NvbXBhbnkvYnJhbmQvXCIsbGljZW5zZTp2b2lkIDB9OyJdfQ==

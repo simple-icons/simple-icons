@@ -1,0 +1,16 @@
+a40f3d80cb632b69d79eb9571c48a455
+module.exports = {
+  title: "Flipboard",
+  slug: "flipboard",
+  svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Flipboard</title><path d="M0 0v24h24V0H0zm19.2 9.6h-4.8v4.8H9.6v4.8H4.8V4.8h14.4v4.8z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://about.flipboard.com/brand-guidelines",
+  hex: "E12828",
+  guidelines: void 0,
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZsaXBib2FyZC5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwidGl0bGUiLCJzbHVnIiwic3ZnIiwicGF0aCIsIm1hdGNoIiwic291cmNlIiwiaGV4IiwiZ3VpZGVsaW5lcyIsImxpY2Vuc2UiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBZTtBQUFDQyxFQUFBQSxLQUFLLEVBQUMsV0FBUDtBQUFtQkMsRUFBQUEsSUFBSSxFQUFDLFdBQXhCO0FBQW9DQyxFQUFBQSxHQUFHLEVBQUMsOEtBQXhDOztBQUF1TixNQUFJQyxJQUFKLEdBQVU7QUFBQyxXQUFPLEtBQUtELEdBQUwsQ0FBU0UsS0FBVCxDQUFlLG9CQUFmLEVBQXFDLENBQXJDLENBQVA7QUFBK0MsR0FBalI7O0FBQWtSQyxFQUFBQSxNQUFNLEVBQUMsOENBQXpSO0FBQXdVQyxFQUFBQSxHQUFHLEVBQUMsUUFBNVU7QUFBcVZDLEVBQUFBLFVBQVUsRUFBQyxLQUFLLENBQXJXO0FBQXVXQyxFQUFBQSxPQUFPLEVBQUMsS0FBSztBQUFwWCxDQUFmIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHM9e3RpdGxlOlwiRmxpcGJvYXJkXCIsc2x1ZzpcImZsaXBib2FyZFwiLHN2ZzonPHN2ZyByb2xlPVwiaW1nXCIgdmlld0JveD1cIjAgMCAyNCAyNFwiIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIj48dGl0bGU+RmxpcGJvYXJkPC90aXRsZT48cGF0aCBkPVwiTTAgMHYyNGgyNFYwSDB6bTE5LjIgOS42aC00Ljh2NC44SDkuNnY0LjhINC44VjQuOGgxNC40djQuOHpcIi8+PC9zdmc+JyxnZXQgcGF0aCgpe3JldHVybiB0aGlzLnN2Zy5tYXRjaCgvPHBhdGhcXHMrZD1cIihbXlwiXSopLylbMV19LHNvdXJjZTpcImh0dHBzOi8vYWJvdXQuZmxpcGJvYXJkLmNvbS9icmFuZC1ndWlkZWxpbmVzXCIsaGV4OlwiRTEyODI4XCIsZ3VpZGVsaW5lczp2b2lkIDAsbGljZW5zZTp2b2lkIDB9OyJdfQ==

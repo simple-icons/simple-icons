@@ -1,0 +1,16 @@
+89b66dc8bfb3c95f5f87db9c269ef46e
+module.exports = {
+  title: "MicroStrategy",
+  slug: "microstrategy",
+  svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>MicroStrategy</title><path d="M9.095 2.572h5.827v18.856H9.096zM0 2.572h5.825v18.856H.001zm18.174 0v18.854H24V8.33z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://www.microstrategy.com/en/company/press-kit",
+  hex: "D9232E",
+  guidelines: "https://www.microstrategy.com/en/company/press-kit",
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1pY3Jvc3RyYXRlZ3kuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInRpdGxlIiwic2x1ZyIsInN2ZyIsInBhdGgiLCJtYXRjaCIsInNvdXJjZSIsImhleCIsImd1aWRlbGluZXMiLCJsaWNlbnNlIl0sIm1hcHBpbmdzIjoiQUFBQUEsTUFBTSxDQUFDQyxPQUFQLEdBQWU7QUFBQ0MsRUFBQUEsS0FBSyxFQUFDLGVBQVA7QUFBdUJDLEVBQUFBLElBQUksRUFBQyxlQUE1QjtBQUE0Q0MsRUFBQUEsR0FBRyxFQUFDLDJNQUFoRDs7QUFBNFAsTUFBSUMsSUFBSixHQUFVO0FBQUMsV0FBTyxLQUFLRCxHQUFMLENBQVNFLEtBQVQsQ0FBZSxvQkFBZixFQUFxQyxDQUFyQyxDQUFQO0FBQStDLEdBQXRUOztBQUF1VEMsRUFBQUEsTUFBTSxFQUFDLG9EQUE5VDtBQUFtWEMsRUFBQUEsR0FBRyxFQUFDLFFBQXZYO0FBQWdZQyxFQUFBQSxVQUFVLEVBQUMsb0RBQTNZO0FBQWdjQyxFQUFBQSxPQUFPLEVBQUMsS0FBSztBQUE3YyxDQUFmIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHM9e3RpdGxlOlwiTWljcm9TdHJhdGVneVwiLHNsdWc6XCJtaWNyb3N0cmF0ZWd5XCIsc3ZnOic8c3ZnIHJvbGU9XCJpbWdcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiPjx0aXRsZT5NaWNyb1N0cmF0ZWd5PC90aXRsZT48cGF0aCBkPVwiTTkuMDk1IDIuNTcyaDUuODI3djE4Ljg1Nkg5LjA5NnpNMCAyLjU3Mmg1LjgyNXYxOC44NTZILjAwMXptMTguMTc0IDB2MTguODU0SDI0VjguMzN6XCIvPjwvc3ZnPicsZ2V0IHBhdGgoKXtyZXR1cm4gdGhpcy5zdmcubWF0Y2goLzxwYXRoXFxzK2Q9XCIoW15cIl0qKS8pWzFdfSxzb3VyY2U6XCJodHRwczovL3d3dy5taWNyb3N0cmF0ZWd5LmNvbS9lbi9jb21wYW55L3ByZXNzLWtpdFwiLGhleDpcIkQ5MjMyRVwiLGd1aWRlbGluZXM6XCJodHRwczovL3d3dy5taWNyb3N0cmF0ZWd5LmNvbS9lbi9jb21wYW55L3ByZXNzLWtpdFwiLGxpY2Vuc2U6dm9pZCAwfTsiXX0=

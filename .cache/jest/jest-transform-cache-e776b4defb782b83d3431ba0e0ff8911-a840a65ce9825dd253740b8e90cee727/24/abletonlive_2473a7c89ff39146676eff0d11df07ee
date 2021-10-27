@@ -1,0 +1,16 @@
+ed6a82c783a2bf4d1afbfeaeca129bf7
+module.exports = {
+  title: "Ableton Live",
+  slug: "abletonlive",
+  svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Ableton Live</title><path d="M0 6.4v11.2h1.6V6.4zm3.2 0v11.2h1.6V6.4zm3.2 0v11.2H8V6.4zm3.2 0v11.2h1.6V6.4zm3.2 0V8H24V6.4zm0 3.2v1.6H24V9.6zm0 3.2v1.6H24v-1.6zm0 3.2v1.6H24V16z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://www.ableton.com/en/legal/branding-trademark-guidelines/",
+  hex: "000000",
+  guidelines: void 0,
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFibGV0b25saXZlLmpzIl0sIm5hbWVzIjpbIm1vZHVsZSIsImV4cG9ydHMiLCJ0aXRsZSIsInNsdWciLCJzdmciLCJwYXRoIiwibWF0Y2giLCJzb3VyY2UiLCJoZXgiLCJndWlkZWxpbmVzIiwibGljZW5zZSJdLCJtYXBwaW5ncyI6IkFBQUFBLE1BQU0sQ0FBQ0MsT0FBUCxHQUFlO0FBQUNDLEVBQUFBLEtBQUssRUFBQyxjQUFQO0FBQXNCQyxFQUFBQSxJQUFJLEVBQUMsYUFBM0I7QUFBeUNDLEVBQUFBLEdBQUcsRUFBQywwUUFBN0M7O0FBQXdULE1BQUlDLElBQUosR0FBVTtBQUFDLFdBQU8sS0FBS0QsR0FBTCxDQUFTRSxLQUFULENBQWUsb0JBQWYsRUFBcUMsQ0FBckMsQ0FBUDtBQUErQyxHQUFsWDs7QUFBbVhDLEVBQUFBLE1BQU0sRUFBQyxpRUFBMVg7QUFBNGJDLEVBQUFBLEdBQUcsRUFBQyxRQUFoYztBQUF5Y0MsRUFBQUEsVUFBVSxFQUFDLEtBQUssQ0FBemQ7QUFBMmRDLEVBQUFBLE9BQU8sRUFBQyxLQUFLO0FBQXhlLENBQWYiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cz17dGl0bGU6XCJBYmxldG9uIExpdmVcIixzbHVnOlwiYWJsZXRvbmxpdmVcIixzdmc6Jzxzdmcgcm9sZT1cImltZ1wiIHZpZXdCb3g9XCIwIDAgMjQgMjRcIiB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCI+PHRpdGxlPkFibGV0b24gTGl2ZTwvdGl0bGU+PHBhdGggZD1cIk0wIDYuNHYxMS4yaDEuNlY2LjR6bTMuMiAwdjExLjJoMS42VjYuNHptMy4yIDB2MTEuMkg4VjYuNHptMy4yIDB2MTEuMmgxLjZWNi40em0zLjIgMFY4SDI0VjYuNHptMCAzLjJ2MS42SDI0VjkuNnptMCAzLjJ2MS42SDI0di0xLjZ6bTAgMy4ydjEuNkgyNFYxNnpcIi8+PC9zdmc+JyxnZXQgcGF0aCgpe3JldHVybiB0aGlzLnN2Zy5tYXRjaCgvPHBhdGhcXHMrZD1cIihbXlwiXSopLylbMV19LHNvdXJjZTpcImh0dHBzOi8vd3d3LmFibGV0b24uY29tL2VuL2xlZ2FsL2JyYW5kaW5nLXRyYWRlbWFyay1ndWlkZWxpbmVzL1wiLGhleDpcIjAwMDAwMFwiLGd1aWRlbGluZXM6dm9pZCAwLGxpY2Vuc2U6dm9pZCAwfTsiXX0=

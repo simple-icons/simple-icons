@@ -1,0 +1,16 @@
+5daefa647ef590c7b8e7584c7c37c59a
+module.exports = {
+  title: "Linux Foundation",
+  slug: "linuxfoundation",
+  svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Linux Foundation</title><path d="M4.8 19.2h9.6V24H0V9.6h4.8v9.6zM0 0v7.2h4.8V4.822h14.4V19.2h-2.4V24H24V0H0z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://www.linuxfoundation.org/en/about/brand/",
+  hex: "003366",
+  guidelines: "https://www.linuxfoundation.org/en/about/brand/",
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxpbnV4Zm91bmRhdGlvbi5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIiwidGl0bGUiLCJzbHVnIiwic3ZnIiwicGF0aCIsIm1hdGNoIiwic291cmNlIiwiaGV4IiwiZ3VpZGVsaW5lcyIsImxpY2Vuc2UiXSwibWFwcGluZ3MiOiJBQUFBQSxNQUFNLENBQUNDLE9BQVAsR0FBZTtBQUFDQyxFQUFBQSxLQUFLLEVBQUMsa0JBQVA7QUFBMEJDLEVBQUFBLElBQUksRUFBQyxpQkFBL0I7QUFBaURDLEVBQUFBLEdBQUcsRUFBQyxxTUFBckQ7O0FBQTJQLE1BQUlDLElBQUosR0FBVTtBQUFDLFdBQU8sS0FBS0QsR0FBTCxDQUFTRSxLQUFULENBQWUsb0JBQWYsRUFBcUMsQ0FBckMsQ0FBUDtBQUErQyxHQUFyVDs7QUFBc1RDLEVBQUFBLE1BQU0sRUFBQyxpREFBN1Q7QUFBK1dDLEVBQUFBLEdBQUcsRUFBQyxRQUFuWDtBQUE0WEMsRUFBQUEsVUFBVSxFQUFDLGlEQUF2WTtBQUF5YkMsRUFBQUEsT0FBTyxFQUFDLEtBQUs7QUFBdGMsQ0FBZiIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzPXt0aXRsZTpcIkxpbnV4IEZvdW5kYXRpb25cIixzbHVnOlwibGludXhmb3VuZGF0aW9uXCIsc3ZnOic8c3ZnIHJvbGU9XCJpbWdcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiPjx0aXRsZT5MaW51eCBGb3VuZGF0aW9uPC90aXRsZT48cGF0aCBkPVwiTTQuOCAxOS4yaDkuNlYyNEgwVjkuNmg0Ljh2OS42ek0wIDB2Ny4yaDQuOFY0LjgyMmgxNC40VjE5LjJoLTIuNFYyNEgyNFYwSDB6XCIvPjwvc3ZnPicsZ2V0IHBhdGgoKXtyZXR1cm4gdGhpcy5zdmcubWF0Y2goLzxwYXRoXFxzK2Q9XCIoW15cIl0qKS8pWzFdfSxzb3VyY2U6XCJodHRwczovL3d3dy5saW51eGZvdW5kYXRpb24ub3JnL2VuL2Fib3V0L2JyYW5kL1wiLGhleDpcIjAwMzM2NlwiLGd1aWRlbGluZXM6XCJodHRwczovL3d3dy5saW51eGZvdW5kYXRpb24ub3JnL2VuL2Fib3V0L2JyYW5kL1wiLGxpY2Vuc2U6dm9pZCAwfTsiXX0=
