@@ -7,7 +7,20 @@
     "svg",
     "icons"
   ],
+  "type": "commonjs",
   "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.js",
+    "./icons": {
+      "module": "./icons.mjs",
+      "import": "./icons.mjs",
+      "require": "./icons.js",
+      "default": "./icons.js"
+    },
+    "./icons/*": "./icons/*.js"
+  },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/simple-icons/simple-icons.git"
@@ -37,7 +50,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rimraf icons/*.js index.js",
+    "clean": "rimraf icons/*.js icons/*.d.ts index.js icons.js icons.mjs icons.d.ts",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
