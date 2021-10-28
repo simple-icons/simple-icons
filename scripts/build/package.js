@@ -97,7 +97,7 @@ data.icons.forEach((icon) => {
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
   fs.writeFileSync(
     dtsFilepath,
-    `declare const i:import("../alias").I;export default i;`,
+    'declare const i:import("../alias").I;export default i;',
   );
 
   // add object to the barrel file

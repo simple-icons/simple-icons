@@ -118,7 +118,7 @@ for (const iconSlug in simpleIcons) {
 
 #### TypeScript Usage
 
-Type definitions are now bundled with the package.
+Type definitions are bundled with the package.
 
 ### PHP Usage
 
