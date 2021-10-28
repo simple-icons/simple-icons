@@ -41,7 +41,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         work on this issue?
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
     validations:
       required: true
