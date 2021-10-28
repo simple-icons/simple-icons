@@ -66,7 +66,7 @@ const slugToVariableName = (slug) => {
   const slugRest = slug.slice(1);
   return `si${slugFirstLetter}${slugRest}`;
 };
-const minifyAndWrite = (filepath, rawJavaScript) => {
+const writeJs = (filepath, rawJavaScript) => {
   const { error, code } = minify(rawJavaScript);
   if (error) {
     console.error(error);
@@ -74,6 +74,9 @@ const minifyAndWrite = (filepath, rawJavaScript) => {
   } else {
     fs.writeFileSync(filepath, code);
   }
+};
+const writeTs = (filepath, rawTypeScript) => {
+  fs.writeFileSync(filepath, rawTypeScript);
 };
 
 // 'main'
@@ -92,10 +95,10 @@ data.icons.forEach((icon) => {
 
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  minifyAndWrite(jsFilepath, `module.exports=${iconObject};`);
+  writeJs(jsFilepath, `module.exports=${iconObject};`);
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
-  fs.writeFileSync(
+  writeTs(
     dtsFilepath,
     'declare const i:import("../alias").I;export default i;',
   );
@@ -112,14 +115,14 @@ const rawIndexJs = util.format(
   indexTemplate,
   icons.map(iconToKeyValue).join(','),
 );
-minifyAndWrite(indexFile, rawIndexJs);
+writeJs(indexFile, rawIndexJs);
 
 // write our file containing the exports of all icons in CommonJS ...
 const rawIconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
-minifyAndWrite(iconsJsFile, rawIconsJs);
+writeJs(iconsJsFile, rawIconsJs);
 // and ESM
 const rawIconsMjs = iconsBarrelMjs.join('');
-minifyAndWrite(iconsMjsFile, rawIconsMjs);
+writeJs(iconsMjsFile, rawIconsMjs);
 // and create a type declaration file
 const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join('')}`;
-fs.writeFileSync(iconsDtsFile, rawIconsDts);
+writeTs(iconsDtsFile, rawIconsDts);
