@@ -17,8 +17,7 @@
       "import": "./icons.mjs",
       "require": "./icons.js",
       "default": "./icons.js"
-    },
-    "./icons/*": "./icons/*.js"
+    }
   },
   "sideEffects": false,
   "repository": {

@@ -93,16 +93,6 @@ data.icons.forEach((icon) => {
 
   const iconObject = iconToObject(icon);
 
-  // write the static .js file for the icon
-  const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  writeJs(jsFilepath, `module.exports=${iconObject};`);
-
-  const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
-  writeTs(
-    dtsFilepath,
-    'declare const i:import("../alias").I;export default i;',
-  );
-
   // add object to the barrel file
   const iconExportName = slugToVariableName(icon.slug);
   iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
@@ -124,5 +114,7 @@ writeJs(iconsJsFile, rawIconsJs);
 const rawIconsMjs = iconsBarrelMjs.join('');
 writeJs(iconsMjsFile, rawIconsMjs);
 // and create a type declaration file
-const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join('')}`;
+const rawIconsDts = `import {SimpleIcon} from ".";type I=SimpleIcon;${iconsBarrelDts.join(
+  '',
+)}`;
 writeTs(iconsDtsFile, rawIconsDts);
