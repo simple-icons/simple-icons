@@ -83,7 +83,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         add this icon?
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
     validations:
       required: true
