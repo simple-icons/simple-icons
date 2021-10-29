@@ -16,17 +16,14 @@ const UTF8 = 'utf8';
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
-const indexFile = path.resolve(rootDir, 'index.js');
 const iconsDir = path.resolve(rootDir, 'icons');
-const iconsJsFile = path.resolve(rootDir, 'icons.js');
-const iconsMjsFile = path.resolve(rootDir, 'icons.mjs');
-const iconsDtsFile = path.resolve(rootDir, 'icons.d.ts');
+const indexJsFile = path.resolve(rootDir, 'index.js');
+const indexMjsFile = path.resolve(rootDir, 'index.mjs');
+const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
-const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
-const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
@@ -110,19 +107,14 @@ data.icons.forEach((icon) => {
   iconsBarrelDts.push(`export const ${iconExportName}:I;`);
 });
 
-// write our generic index.js
-const rawIndexJs = util.format(
-  indexTemplate,
-  icons.map(iconToKeyValue).join(','),
-);
-writeJs(indexFile, rawIndexJs);
-
 // write our file containing the exports of all icons in CommonJS ...
-const rawIconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
-writeJs(iconsJsFile, rawIconsJs);
+const rawIndexJs = `module.exports={${iconsBarrelJs.join('')}};`;
+writeJs(indexJsFile, rawIndexJs);
 // and ESM
-const rawIconsMjs = iconsBarrelMjs.join('');
-writeJs(iconsMjsFile, rawIconsMjs);
+const rawIndexMjs = iconsBarrelMjs.join('');
+writeJs(indexMjsFile, rawIndexMjs);
 // and create a type declaration file
-const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join('')}`;
-writeTs(iconsDtsFile, rawIconsDts);
+const rawIndexDts = `import {SimpleIcon} from "./types";export {SimpleIcon};type I=SimpleIcon;${iconsBarrelDts.join(
+  '',
+)}`;
+writeTs(indexDtsFile, rawIndexDts);

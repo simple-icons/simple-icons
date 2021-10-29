@@ -13,13 +13,3 @@ export interface SimpleIcon {
       }
     | undefined;
 }
-
-declare const icons: Record<string, SimpleIcon> & {
-  /**
-   * @deprecated use .Get instead
-   */
-  get(name: string): SimpleIcon;
-  Get(name: string): SimpleIcon;
-};
-
-export default icons;

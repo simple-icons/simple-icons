@@ -11,12 +11,11 @@
   "main": "index.js",
   "types": "index.d.ts",
   "exports": {
-    ".": "./index.js",
-    "./icons": {
-      "module": "./icons.mjs",
-      "import": "./icons.mjs",
-      "require": "./icons.js",
-      "default": "./icons.js"
+    ".": {
+      "module": "./index.mjs",
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
     },
     "./icons/*": "./icons/*.js"
   },

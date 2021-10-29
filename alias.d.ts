@@ -1,4 +1,4 @@
-import { SimpleIcon } from '.';
+import { SimpleIcon } from './types';
 
 /**
  * @internal
