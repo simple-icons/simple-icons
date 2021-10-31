@@ -58,6 +58,7 @@
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint icons/*.svg --ci",
     "wslint": "editorconfig-checker -exclude \\.svg$",
+    "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
     "test": "jest",
