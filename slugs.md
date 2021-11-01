@@ -641,6 +641,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
 | `Folium` | `folium` |
+| `Fonoma` | `fonoma` |
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
 | `foodpanda` | `foodpanda` |
@@ -881,6 +882,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Instacart` | `instacart` |
 | `Instagram` | `instagram` |
 | `Instapaper` | `instapaper` |
+| `Instatus` | `instatus` |
 | `Instructables` | `instructables` |
 | `Integromat` | `integromat` |
 | `Intel` | `intel` |
@@ -1457,6 +1459,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qt` | `qt` |
 | `Qualcomm` | `qualcomm` |
 | `Qualtrics` | `qualtrics` |
+| `Qualys` | `qualys` |
 | `Quantcast` | `quantcast` |
 | `QuantConnect` | `quantconnect` |
 | `Quarkus` | `quarkus` |
