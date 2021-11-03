@@ -15,6 +15,7 @@ const iconSize = 24;
 const iconFloatPrecision = 3;
 const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
+const segmentProximityThreshold = 0.005;
 
 // set env SI_UPDATE_IGNORE to recreate the ignore file
 const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
@@ -434,16 +435,19 @@ module.exports = {
           index,
         ) => {
           if (commands.includes(command)) {
-            // Relative directions (h or v) having a length of 0
-            if (lowerDirectionCommands.includes(command) && x1Coord === 0) {
+            // Relative directions (h or v) having a length smaller than defined threshold
+            if (
+              lowerDirectionCommands.includes(command) &&
+              Math.abs(x1Coord) <= segmentProximityThreshold
+            ) {
               return true;
             }
-            // Relative movement (m or l) having a distance of 0
+            // Relative movement (m or l) having a distance smaller than defined threshold
             if (
               index > 0 &&
               lowerMovementCommands.includes(command) &&
-              x1Coord === 0 &&
-              y1Coord === 0
+              Math.abs(x1Coord) <= segmentProximityThreshold &&
+              Math.abs(y1Coord) <= segmentProximityThreshold
             ) {
               return true;
             }
@@ -529,16 +533,18 @@ module.exports = {
               }
 
               return (
-                // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                // Absolute horizontal direction (H) having x coordinate too close of the previous segment
                 (upperHorDirectionCommand === command &&
-                  x1Coord === xPrevCoord) ||
-                // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                  Math.abs(x1Coord - xPrevCoord) <=
+                    segmentProximityThreshold) ||
+                // Absolute vertical direction (V) having y coordinate too close of the previous segment
                 (upperVerDirectionCommand === command &&
-                  x1Coord === yPrevCoord) ||
-                // Absolute movement (M or L) having the same coordinate as the previous segment
+                  Math.abs(x1Coord - yPrevCoord) <=
+                    segmentProximityThreshold) ||
+                // Absolute movement (M or L) having coordinate too close of the previous segment
                 (upperMovementCommands.includes(command) &&
-                  x1Coord === xPrevCoord &&
-                  y1Coord === yPrevCoord)
+                  Math.abs(x1Coord - xPrevCoord) <= segmentProximityThreshold &&
+                  Math.abs(y1Coord - yPrevCoord) <= segmentProximityThreshold)
               );
             }
           }
@@ -590,7 +596,7 @@ module.exports = {
                 segment.chainEnd,
               );
               if (readableChain.length > 20) {
-                readableChain = `${chain.substring(0, 20)}...`;
+                readableChain = `${readableChain.substring(0, 20)}...`;
               }
               errorMsg += ` in chain "${readableChain}"`;
             }
