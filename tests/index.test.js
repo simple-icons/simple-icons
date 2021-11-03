@@ -1,8 +1,8 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { getIconSlug } = require("../scripts/utils.js");
+const { getIconSlug } = require('../scripts/utils.js');
 
-icons.forEach(icon => {
+icons.forEach((icon) => {
   const slug = getIconSlug(icon);
   const subject = simpleIcons[slug];
 
@@ -35,7 +35,9 @@ icons.forEach(icon => {
     expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/g);
   });
 
-  test(`${icon.title} has ${icon.guidelines ? "the correct" : "no"} "guidelines"`, () => {
+  test(`${icon.title} has ${
+    icon.guidelines ? 'the correct' : 'no'
+  } "guidelines"`, () => {
     if (icon.guidelines) {
       expect(typeof subject.guidelines).toBe('string');
       expect(subject.guidelines).toEqual(icon.guidelines);
@@ -44,11 +46,13 @@ icons.forEach(icon => {
     }
   });
 
-  test(`${icon.title} has ${icon.license ? "the correct" : "no"} "license"`, () => {
+  test(`${icon.title} has ${
+    icon.license ? 'the correct' : 'no'
+  } "license"`, () => {
     if (icon.license) {
       expect(typeof subject.license).toBe('object');
       expect(subject.license).toHaveProperty('type', icon.license.type);
-      if (icon.license.type === "custom") {
+      if (icon.license.type === 'custom') {
         expect(subject.license).toHaveProperty('url', icon.license.url);
       } else {
         expect(typeof subject.license.url).toBe('string');
@@ -59,7 +63,15 @@ icons.forEach(icon => {
     }
   });
 
-  test(`${icon.title} can be found by it's slug`, () => {
+  test(`'Get' ${icon.title} by its slug`, () => {
+    const found = simpleIcons.Get(slug);
+    expect(found).toBeDefined();
+    expect(found.title).toEqual(icon.title);
+    expect(found.hex).toEqual(icon.hex);
+    expect(found.source).toEqual(icon.source);
+  });
+
+  test(`'get' ${icon.title} by its slug`, () => {
     const found = simpleIcons.get(slug);
     expect(found).toBeDefined();
     expect(found.title).toEqual(icon.title);
