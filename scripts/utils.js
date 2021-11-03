@@ -14,7 +14,7 @@ module.exports = {
    * Extract the path from an icon SVG content.
    * @param {Object} svg The icon SVG content
    **/
-  svgToPath: svg => svg.match(/<path\s+d="([^"]*)/)[1],
+  svgToPath: (svg) => svg.match(/<path\s+d="([^"]*)/)[1],
 
   /**
    * Converts a brand title into a slug/filename.
@@ -43,32 +43,27 @@ module.exports = {
    * @param {String} htmlFriendlyTitle The title to convert
    */
 
-  htmlFriendlyToTitle: htmlFriendlyTitle => (
+  htmlFriendlyToTitle: (htmlFriendlyTitle) =>
     htmlFriendlyTitle
       .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))
       .replace(
         /&(quot|amp|lt|gt);/g,
         (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
       ),
-  ),
 
   /**
    * Converts a brand title (as it is seen in simple-icons.json) into a brand
    * title in HTML/SVG friendly format.
    * @param {String} brandTitle The title to convert
    */
-  titleToHtmlFriendly: brandTitle => (
+  titleToHtmlFriendly: (brandTitle) =>
     brandTitle
-      .replace(/"/g, "&quot;")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(
-        /./g,
-        char => {
-          const charCode = char.charCodeAt(0);
-          return charCode > 127 ? `&#${charCode};` : char;
-        }
-      )
-  ),
-}
+      .replace(/"/g, '&quot;')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/./g, (char) => {
+        const charCode = char.charCodeAt(0);
+        return charCode > 127 ? `&#${charCode};` : char;
+      }),
+};

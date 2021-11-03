@@ -3,12 +3,12 @@ const path = require('path');
 const { icons } = require('../_data/simple-icons.json');
 const { getIconSlug } = require('../scripts/utils.js');
 
-const iconsDir = path.resolve(__dirname, '..', 'icons')
+const iconsDir = path.resolve(__dirname, '..', 'icons');
 
 icons.forEach((icon) => {
   const filename = getIconSlug(icon);
   const subject = require(`../icons/${filename}.js`);
-  const svgPath = path.resolve(iconsDir, `${filename}.svg`)
+  const svgPath = path.resolve(iconsDir, `${filename}.svg`);
 
   test(`${icon.title} has the correct "title"`, () => {
     expect(typeof subject.title).toBe('string');
@@ -32,12 +32,11 @@ icons.forEach((icon) => {
 
   test(`${icon.title} has a valid "svg" value`, () => {
     expect(typeof subject.svg).toBe('string');
-    const svgFileContents = fs.readFileSync(svgPath, 'utf8')
-      .replace(/\r?\n/, '')
-    expect(
-      subject.svg.substring(subject.svg.indexOf("<title>"))
-    ).toEqual(
-      svgFileContents.substring(svgFileContents.indexOf("<title>"))
+    const svgFileContents = fs
+      .readFileSync(svgPath, 'utf8')
+      .replace(/\r?\n/, '');
+    expect(subject.svg.substring(subject.svg.indexOf('<title>'))).toEqual(
+      svgFileContents.substring(svgFileContents.indexOf('<title>')),
     );
   });
 
