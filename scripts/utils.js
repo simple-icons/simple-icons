@@ -58,8 +58,8 @@ module.exports = {
    */
   titleToHtmlFriendly: (brandTitle) =>
     brandTitle
-      .replace(/"/g, '&quot;')
       .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/./g, (char) => {

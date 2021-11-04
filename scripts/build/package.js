@@ -50,12 +50,11 @@ const licenseToObject = (license) => {
   return license;
 };
 function iconToObject(icon) {
-  const escapedIconTitle = escape(icon.title);
   return util.format(
     iconObjectTemplate,
-    escapedIconTitle,
+    escape(icon.title),
     escape(icon.slug),
-    titleToHtmlFriendly(escapedIconTitle),
+    escape(titleToHtmlFriendly(icon.title)),
     escape(icon.path),
     escape(icon.source),
     escape(icon.hex),
