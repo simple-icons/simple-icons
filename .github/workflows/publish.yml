@@ -24,10 +24,10 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm i
-      - name: Build NodeJS package
-        run: npm run build
       - name: Run linters
         run: npm run lint
+      - name: Build NodeJS package
+        run: npm run build
       - name: Run tests
         run: npm run test
   npm:
