@@ -42,7 +42,6 @@ module.exports = {
    * it is seen in simple-icons.json)
    * @param {String} htmlFriendlyTitle The title to convert
    */
-
   htmlFriendlyToTitle: (htmlFriendlyTitle) =>
     htmlFriendlyTitle
       .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))

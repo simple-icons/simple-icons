@@ -49,7 +49,7 @@ const licenseToObject = (license) => {
   }
   return license;
 };
-function iconToObject(icon) {
+const iconToObject = (icon) => {
   return util.format(
     iconObjectTemplate,
     escape(icon.title),
@@ -61,7 +61,7 @@ function iconToObject(icon) {
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
-}
+};
 const slugToVariableName = (slug) => {
   const slugFirstLetter = slug[0].toUpperCase();
   const slugRest = slug.slice(1);
