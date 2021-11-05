@@ -1,6 +1,5 @@
 name: Icon request
 description: Request a new icon for Simple Icons
-title: 'Request: '
 labels: [new icon]
 
 body:
@@ -84,7 +83,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         add this icon?
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
     validations:
       required: true

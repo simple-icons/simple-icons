@@ -56,6 +56,11 @@
             "source": "https://new.abb.com/products/robotics/en/robotstudio/downloads"
         },
         {
+            "title": "Abbott",
+            "hex": "008FC7",
+            "source": "https://commons.wikimedia.org/wiki/File:Logo_Abbott_Laboratories.svg"
+        },
+        {
             "title": "Abbvie",
             "hex": "071D49",
             "source": "https://www.abbvie.com/"
@@ -219,6 +224,12 @@
             "title": "AdonisJS",
             "hex": "220052",
             "source": "https://adonisjs.com/"
+        },
+        {
+            "title": "Adyen",
+            "hex": "0ABF53",
+            "source": "https://www.adyen.com/press-and-media/presskit",
+            "guidelines": "https://www.adyen.com/press-and-media/presskit"
         },
         {
             "title": "Aer Lingus",
@@ -1429,6 +1440,12 @@
             "title": "Buildkite",
             "hex": "14CC80",
             "source": "https://buildkite.com/brand-assets"
+        },
+        {
+            "title": "Bukalapak",
+            "hex": "E31E52",
+            "source": "https://assets.bukalapak.com/sigil/bukalapak-logo-icon.svg",
+            "guidelines": "https://brand.bukalapak.design/brand-elements#logo-overview"
         },
         {
             "title": "Bulma",
@@ -3281,6 +3298,11 @@
             "source": "https://python-visualization.github.io/folium/"
         },
         {
+            "title": "Fonoma",
+            "hex": "02B78F",
+            "source": "https://en.fonoma.com/"
+        },
+        {
             "title": "Font Awesome",
             "hex": "339AF0",
             "source": "https://fontawesome.com/icons/font-awesome"
@@ -4583,6 +4605,11 @@
             "title": "Instapaper",
             "hex": "1F1F1F",
             "source": "https://www.instapaper.com/"
+        },
+        {
+            "title": "Instatus",
+            "hex": "4EE3C2",
+            "source": "https://www.instatus.com/"
         },
         {
             "title": "Instructables",
@@ -7724,6 +7751,12 @@
             "guidelines": "https://www.qualtrics.com/brand-book/"
         },
         {
+            "title": "Qualys",
+            "hex": "ED2E26",
+            "source": "https://www.qualys.com/",
+            "guidelines": "https://www.qualys.com/docs/qualys-logo-guidelines.pdf"
+        },
+        {
             "title": "Quantcast",
             "hex": "000000",
             "source": "https://www.quantcast.com/"
@@ -9966,6 +9999,11 @@
             "source": "http://www.twoo.com/about/press"
         },
         {
+            "title": "Typeform",
+            "hex": "262627",
+            "source": "https://www.typeform.com"
+        },
+        {
             "title": "TypeScript",
             "hex": "3178C6",
             "source": "https://www.typescriptlang.org/branding",
@@ -10303,8 +10341,9 @@
         },
         {
             "title": "VK",
-            "hex": "4680C2",
-            "source": "https://vk.com/brand"
+            "hex": "0077FF",
+            "source": "https://vk.com/brand",
+            "guidelines": "https://vk.com/brand"
         },
         {
             "title": "VLC media player",
