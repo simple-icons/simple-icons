@@ -17,6 +17,7 @@ simpleIconsData.icons.forEach((icon) => {
   testIcon(icon, subject, slug);
 
   const svgPath = path.resolve(iconsDir, `${slug}.svg`);
+
   test(`${icon.title} has a valid svg value`, () => {
     const svgFileContents = fs
       .readFileSync(svgPath, 'utf8')
@@ -26,12 +27,4 @@ simpleIconsData.icons.forEach((icon) => {
       svgFileContents.substring(svgFileContents.indexOf('<title>')),
     );
   });
-});
-
-test(`Iterating over simpleIcons only exposes icons`, () => {
-  const iconArray = Object.values(simpleIcons);
-  for (let icon of iconArray) {
-    expect(icon).toBeDefined();
-    expect(typeof icon).toBe('object');
-  }
 });
