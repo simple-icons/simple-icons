@@ -43,4 +43,15 @@ module.exports = {
         /&(quot|amp|lt|gt);/g,
         (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
       ),
+
+  /**
+   * Converts a slug into a variable name that can be exported.
+   * @param {String} slug The slug to convert
+   * @returns
+   */
+  slugToVariableName: (slug) => {
+    const slugFirstLetter = slug[0].toUpperCase();
+    const slugRest = slug.slice(1);
+    return `si${slugFirstLetter}${slugRest}`;
+  },
 };
