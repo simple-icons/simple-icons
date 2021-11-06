@@ -8,3 +8,11 @@ _data/simple-icons.json
 
 # JavaScript templates are invalid JavaScript so cannot be formatted.
 scripts/build/templates/*.js
+
+# Generated JavaScript files don't need to be formatted
+icons/*.js
+icons/*.d.ts
+icons.d.ts
+icons.js
+icons.mjs
+index.js
