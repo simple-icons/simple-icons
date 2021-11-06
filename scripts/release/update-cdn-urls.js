@@ -5,24 +5,24 @@
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const packageJsonFile = path.resolve(rootDir, "package.json");
-const readmeFile = path.resolve(rootDir, "README.md");
+const rootDir = path.resolve(__dirname, '..', '..');
+const packageJsonFile = path.resolve(rootDir, 'package.json');
+const readmeFile = path.resolve(rootDir, 'README.md');
 
-function getMajorVersion(semVerVersion) {
+const getMajorVersion = (semVerVersion) => {
   const majorVersionAsString = semVerVersion.split('.')[0];
   return parseInt(majorVersionAsString);
-}
+};
 
-function getManifest() {
+const getManifest = () => {
   const manifestRaw = fs.readFileSync(packageJsonFile).toString();
   return JSON.parse(manifestRaw);
-}
+};
 
-function updateVersionInReadmeIfNecessary(majorVersion) {
+const updateVersionInReadmeIfNecessary = (majorVersion) => {
   let content = fs.readFileSync(readmeFile).toString();
 
   content = content.replace(
@@ -31,17 +31,17 @@ function updateVersionInReadmeIfNecessary(majorVersion) {
   );
 
   fs.writeFileSync(readmeFile, content);
-}
+};
 
-function main() {
+const main = () => {
   try {
     const manifest = getManifest();
     const majorVersion = getMajorVersion(manifest.version);
     updateVersionInReadmeIfNecessary(majorVersion);
   } catch (error) {
-    console.error("Failed to update CDN version number:", error);
+    console.error('Failed to update CDN version number:', error);
     process.exit(1);
   }
-}
+};
 
 main();
