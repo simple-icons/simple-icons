@@ -18,7 +18,6 @@ simpleIconsData.icons.forEach((icon) => {
 
   const svgPath = path.resolve(iconsDir, `${slug}.svg`);
   test(`${icon.title} has a valid svg value`, () => {
-    expect(typeof subject.svg).toBe('string');
     const svgFileContents = fs
       .readFileSync(svgPath, 'utf8')
       .replace(/\r?\n/, '');
