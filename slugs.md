@@ -18,6 +18,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `500px` | `500px` |
 | `A-Frame` | `aframe` |
 | `ABB RobotStudio` | `abbrobotstudio` |
+| `Abbott` | `abbott` |
 | `Abbvie` | `abbvie` |
 | `Ableton Live` | `abletonlive` |
 | `About.me` | `aboutdotme` |
@@ -51,6 +52,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Adobe Premiere Pro` | `adobepremierepro` |
 | `Adobe XD` | `adobexd` |
 | `AdonisJS` | `adonisjs` |
+| `Adyen` | `adyen` |
 | `Aer Lingus` | `aerlingus` |
 | `Aeroflot` | `aeroflot` |
 | `Aeroméxico` | `aeromexico` |
@@ -103,6 +105,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AMD` | `amd` |
 | `American Airlines` | `americanairlines` |
 | `American Express` | `americanexpress` |
+| `AMG` | `amg` |
 | `AMP` | `amp` |
 | `Amul` | `amul` |
 | `ANA` | `ana` |
@@ -289,6 +292,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bugcrowd` | `bugcrowd` |
 | `Bugsnag` | `bugsnag` |
 | `Buildkite` | `buildkite` |
+| `Bukalapak` | `bukalapak` |
 | `Bulma` | `bulma` |
 | `bunq` | `bunq` |
 | `Burger King` | `burgerking` |
@@ -371,6 +375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Coda` | `coda` |
 | `Codacy` | `codacy` |
 | `Code Climate` | `codeclimate` |
+| `Code Review` | `codereview` |
 | `Codeberg` | `codeberg` |
 | `Codecademy` | `codecademy` |
 | `CodeceptJS` | `codeceptjs` |
@@ -399,6 +404,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Commerzbank` | `commerzbank` |
 | `Common Workflow Language` | `commonworkflowlanguage` |
 | `Composer` | `composer` |
+| `Comsol` | `comsol` |
 | `Concourse` | `concourse` |
 | `Conda-Forge` | `condaforge` |
 | `Conekta` | `conekta` |
@@ -535,6 +541,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eclipse Jetty` | `eclipsejetty` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevertdotx` |
+| `EDEKA` | `edeka` |
 | `EditorConfig` | `editorconfig` |
 | `edX` | `edx` |
 | `egghead` | `egghead` |
@@ -566,6 +573,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Epson` | `epson` |
 | `Equinix Metal` | `equinixmetal` |
 | `Erlang` | `erlang` |
+| `esbuild` | `esbuild` |
 | `ESEA` | `esea` |
 | `ESLGaming` | `eslgaming` |
 | `ESLint` | `eslint` |
@@ -642,6 +650,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
 | `Folium` | `folium` |
+| `Fonoma` | `fonoma` |
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
 | `foodpanda` | `foodpanda` |
@@ -882,6 +891,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Instacart` | `instacart` |
 | `Instagram` | `instagram` |
 | `Instapaper` | `instapaper` |
+| `Instatus` | `instatus` |
 | `Instructables` | `instructables` |
 | `Integromat` | `integromat` |
 | `Intel` | `intel` |
@@ -1243,6 +1253,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `O'Reilly` | `oreilly` |
 | `OBS Studio` | `obsstudio` |
 | `Observable` | `observable` |
+| `Obsidian` | `obsidian` |
 | `OCaml` | `ocaml` |
 | `Octave` | `octave` |
 | `Octopus Deploy` | `octopusdeploy` |
@@ -1458,6 +1469,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qt` | `qt` |
 | `Qualcomm` | `qualcomm` |
 | `Qualtrics` | `qualtrics` |
+| `Qualys` | `qualys` |
 | `Quantcast` | `quantcast` |
 | `QuantConnect` | `quantconnect` |
 | `Quarkus` | `quarkus` |
@@ -1557,6 +1569,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RxDB` | `rxdb` |
 | `Ryanair` | `ryanair` |
 | `S7 Airlines` | `s7airlines` |
+| `Sabanci` | `sabanci` |
 | `Safari` | `safari` |
 | `Sahibinden` | `sahibinden` |
 | `Salesforce` | `salesforce` |
@@ -1871,6 +1884,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Twitch` | `twitch` |
 | `Twitter` | `twitter` |
 | `Twoo` | `twoo` |
+| `Typeform` | `typeform` |
 | `TypeScript` | `typescript` |
 | `TYPO3` | `typo3` |
 | `Uber` | `uber` |
@@ -1887,6 +1901,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Umbraco` | `umbraco` |
 | `Unacademy` | `unacademy` |
 | `Under Armour` | `underarmour` |
+| `Underscore.js` | `underscoredotjs` |
 | `Undertale` | `undertale` |
 | `Unicode` | `unicode` |
 | `Unilever` | `unilever` |
