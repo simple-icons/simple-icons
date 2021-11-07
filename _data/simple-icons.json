@@ -8926,9 +8926,14 @@
             }
         },
         {
-            "title": "SoloLearn",
-            "hex": "1ABC9C",
-            "source": "https://www.sololearn.com/"
+            "title": "Sololearn",
+            "hex": "149EF2",
+            "source": "https://www.sololearn.com/",
+            "aliases": {
+                "aka": [
+                    "SoloLearn"
+                ]
+            }
         },
         {
             "title": "Solus",
@@ -9726,7 +9731,12 @@
         },
         {
             "title": "The Movie Database",
-            "hex": "01D277",
+            "aliases": {
+                "aka": [
+                    "TMDB"
+                ]
+            },
+            "hex": "01B4E4",
             "source": "https://www.themoviedb.org/about/logos-attribution"
         },
         {
@@ -9975,8 +9985,9 @@
         },
         {
             "title": "Trove",
-            "hex": "609540",
-            "source": "https://trove.nla.gov.au/"
+            "hex": "2D004B",
+            "source": "https://trove.nla.gov.au/about/who-we-are/our-logo",
+            "guidelines": "https://trove.nla.gov.au/about/who-we-are/trove-brand-guidelines"
         },
         {
             "title": "TrueNAS",
