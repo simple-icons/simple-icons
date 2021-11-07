@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "5.21.1",
+  "version": "5.22.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -58,6 +58,7 @@
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint icons/*.svg --ci",
     "wslint": "editorconfig-checker -exclude \\.svg$",
+    "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
     "test": "jest",
