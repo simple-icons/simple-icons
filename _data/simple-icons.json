@@ -1176,6 +1176,11 @@
             "source": "https://zh.wikipedia.org/wiki/File:Beijing_Subway_Logo.svg"
         },
         {
+            "title": "BEM",
+            "hex": "000000",
+            "source": "https://en.bem.info/"
+        },
+        {
             "title": "Bentley",
             "hex": "333333",
             "source": "https://en.wikipedia.org/wiki/File:Bentley_logo_2.svg"
@@ -1848,6 +1853,11 @@
             "source": "http://www.co-operative.coop/corporate/press/logos/"
         },
         {
+            "title": "Cockpit",
+            "hex": "0066CC",
+            "source": "https://github.com/cockpit-project/cockpit-project.github.io/blob/b851b3477d90017961ac9b252401c9a6cb6239f1/images/site/cockpit-logo.svg"
+        },
+        {
             "title": "Cockroach Labs",
             "hex": "6933FF",
             "source": "https://www.cockroachlabs.com/"
@@ -2227,6 +2237,11 @@
             "source": "https://github.com/cytoscape/cytoscape.js/blob/97c27700feefe2f7b79fca248763049e9a0b38c6/documentation/img/cytoscape-logo.svg"
         },
         {
+            "title": "D-EDGE",
+            "hex": "432975",
+            "source": "https://github.com/d-edge/JoinUs/blob/main/d-edge.svg"
+        },
+        {
             "title": "D-Wave Systems",
             "hex": "008CD7",
             "source": "https://www.dwavesys.com/"
@@ -2567,6 +2582,11 @@
             "title": "Django",
             "hex": "092E20",
             "source": "https://www.djangoproject.com/community/logos/"
+        },
+        {
+            "title": "Dlib",
+            "hex": "008000",
+            "source": "https://github.com/davisking/dlib/blob/8a2c7442074339ac9ffceff6ef5a49e0114222b9/docs/docs/dlib-logo-and-icons.svg"
         },
         {
             "title": "DLNA",
@@ -5259,6 +5279,12 @@
             "source": "https://ktm.com"
         },
         {
+            "title": "Kuaishou",
+            "hex": "FF4906",
+            "source": "https://www.kuaishou.com/official/material-lib",
+            "guidelines": "https://www.kuaishou.com/official/material-lib"
+        },
+        {
             "title": "Kubernetes",
             "hex": "326CE5",
             "source": "https://github.com/kubernetes/kubernetes/tree/master/logo"
@@ -5870,6 +5896,11 @@
             "title": "Mercedes",
             "hex": "242424",
             "source": "https://www.mercedes-benz.com/"
+        },
+        {
+            "title": "Merck",
+            "hex": "007A73",
+            "source": "https://www.merck.com/"
         },
         {
             "title": "Mercurial",
