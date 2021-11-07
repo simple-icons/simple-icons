@@ -1,11 +1,18 @@
+const fs = require('fs');
+const path = require('path');
+
+const iconsDir = path.resolve(process.cwd(), 'icons');
+
 /**
  * Checks if icon data matches a subject icon.
- * @param {import('../index').SimpleIcon} icon Icon data
- * @param {import('../index').SimpleIcon} subject Icon to check against icon data
+ * @param {import('..').SimpleIcon} icon Icon data
+ * @param {import('..').SimpleIcon} subject Icon to check against icon data
  * @param {String} slug Icon data slug
  */
 const testIcon = (icon, subject, slug) => {
   describe(icon.title, () => {
+    const svgPath = path.resolve(iconsDir, `${slug}.svg`);
+
     it('has the correct "title"', () => {
       expect(subject.title).toStrictEqual(icon.title);
     });
@@ -49,6 +56,16 @@ const testIcon = (icon, subject, slug) => {
       } else {
         expect(subject.license).toBeUndefined();
       }
+    });
+
+    it('has a valid svg value', () => {
+      const svgFileContents = fs
+        .readFileSync(svgPath, 'utf8')
+        .replace(/\r?\n/, '');
+
+      expect(subject.svg.substring(subject.svg.indexOf('<title>'))).toEqual(
+        svgFileContents.substring(svgFileContents.indexOf('<title>')),
+      );
     });
   });
 };
