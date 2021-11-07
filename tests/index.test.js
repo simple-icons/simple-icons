@@ -1,10 +1,15 @@
+const path = require('path');
+const fs = require('fs');
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { getIconSlug } = require("../scripts/utils.js");
+const { getIconSlug } = require('../scripts/utils.js');
 
-icons.forEach(icon => {
+const iconsDir = path.resolve(__dirname, '..', 'icons');
+
+icons.forEach((icon) => {
   const slug = getIconSlug(icon);
   const subject = simpleIcons[slug];
+  const svgPath = path.resolve(iconsDir, `${slug}.svg`);
 
   test(`${icon.title} has the correct "title"`, () => {
     expect(typeof subject.title).toBe('string');
@@ -26,8 +31,14 @@ icons.forEach(icon => {
     expect(subject.source).toEqual(icon.source);
   });
 
-  test(`${icon.title} has an "svg" value`, () => {
+  test(`${icon.title} has a valid "svg" value`, () => {
     expect(typeof subject.svg).toBe('string');
+    const svgFileContents = fs
+      .readFileSync(svgPath, 'utf8')
+      .replace(/\r?\n/, '');
+    expect(subject.svg.substring(subject.svg.indexOf('<title>'))).toEqual(
+      svgFileContents.substring(svgFileContents.indexOf('<title>')),
+    );
   });
 
   test(`${icon.title} has a valid "path" value`, () => {
@@ -35,7 +46,9 @@ icons.forEach(icon => {
     expect(subject.path).toMatch(/^[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/g);
   });
 
-  test(`${icon.title} has ${icon.guidelines ? "the correct" : "no"} "guidelines"`, () => {
+  test(`${icon.title} has ${
+    icon.guidelines ? 'the correct' : 'no'
+  } "guidelines"`, () => {
     if (icon.guidelines) {
       expect(typeof subject.guidelines).toBe('string');
       expect(subject.guidelines).toEqual(icon.guidelines);
@@ -44,11 +57,13 @@ icons.forEach(icon => {
     }
   });
 
-  test(`${icon.title} has ${icon.license ? "the correct" : "no"} "license"`, () => {
+  test(`${icon.title} has ${
+    icon.license ? 'the correct' : 'no'
+  } "license"`, () => {
     if (icon.license) {
       expect(typeof subject.license).toBe('object');
       expect(subject.license).toHaveProperty('type', icon.license.type);
-      if (icon.license.type === "custom") {
+      if (icon.license.type === 'custom') {
         expect(subject.license).toHaveProperty('url', icon.license.url);
       } else {
         expect(typeof subject.license.url).toBe('string');
