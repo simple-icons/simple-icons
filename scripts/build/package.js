@@ -30,7 +30,7 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug } = require('../utils.js');
+const { getIconSlug, svgToPath, titleToHtmlFriendly } = require('../utils.js');
 
 // Local helper functions
 const escape = (value) => {
@@ -54,7 +54,8 @@ const iconToObject = (icon) => {
     iconObjectTemplate,
     escape(icon.title),
     escape(icon.slug),
-    escape(icon.svg),
+    escape(titleToHtmlFriendly(icon.title)),
+    escape(icon.path),
     escape(icon.source),
     escape(icon.hex),
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
@@ -88,6 +89,7 @@ data.icons.forEach((icon) => {
   const filename = getIconSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
+  icon.path = svgToPath(icon.svg);
   icon.slug = filename;
   icons.push(icon);
 
