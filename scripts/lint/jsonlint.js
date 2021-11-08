@@ -1,9 +1,15 @@
-const path = require("path");
-const Validator = require("jsonschema").Validator;
+#!/usr/bin/env node
+/**
+ * @fileoverview
+ * CLI tool to run jsonschema on the simple-icons.json data file.
+ */
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const schemaFile = path.resolve(rootDir, ".jsonschema.json");
-const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
+const path = require('path');
+const { Validator } = require('jsonschema');
+
+const rootDir = path.resolve(__dirname, '..', '..');
+const schemaFile = path.resolve(rootDir, '.jsonschema.json');
+const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
 
 const schema = require(schemaFile);
 const data = require(dataFile);
