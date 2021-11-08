@@ -4493,6 +4493,11 @@
             "source": "https://www.ibm.com/brand/systems/watson/brand/"
         },
         {
+            "title": "Iceland",
+            "hex": "CC092F",
+            "source": "https://www.iceland.co.uk/"
+        },
+        {
             "title": "Icinga",
             "hex": "06062C",
             "source": "https://github.com/Icinga/icingaweb2/blob/293021b2000e9d459387153ca5690f97e0184aaa/public/img/icinga-logo-compact.svg"
@@ -6698,6 +6703,11 @@
             "title": "Odysee",
             "hex": "EF1970",
             "source": "https://odysee.com/@OdyseeHelp:b/odyseepresskit:b"
+        },
+        {
+            "title": "Oh Dear",
+            "hex": "FFFFFF",
+            "source": "https://ohdear.app/logos"
         },
         {
             "title": "okcupid",
@@ -8927,9 +8937,14 @@
             }
         },
         {
-            "title": "SoloLearn",
-            "hex": "1ABC9C",
-            "source": "https://www.sololearn.com/"
+            "title": "Sololearn",
+            "hex": "149EF2",
+            "source": "https://www.sololearn.com/",
+            "aliases": {
+                "aka": [
+                    "SoloLearn"
+                ]
+            }
         },
         {
             "title": "Solus",
@@ -9727,7 +9742,12 @@
         },
         {
             "title": "The Movie Database",
-            "hex": "01D277",
+            "aliases": {
+                "aka": [
+                    "TMDB"
+                ]
+            },
+            "hex": "01B4E4",
             "source": "https://www.themoviedb.org/about/logos-attribution"
         },
         {
@@ -9976,8 +9996,9 @@
         },
         {
             "title": "Trove",
-            "hex": "609540",
-            "source": "https://trove.nla.gov.au/"
+            "hex": "2D004B",
+            "source": "https://trove.nla.gov.au/about/who-we-are/our-logo",
+            "guidelines": "https://trove.nla.gov.au/about/who-we-are/trove-brand-guidelines"
         },
         {
             "title": "TrueNAS",
