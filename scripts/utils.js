@@ -51,6 +51,16 @@ module.exports = {
       ),
 
   /**
+   * Converts a slug into a variable name that can be exported.
+   * @param {String} slug The slug to convert
+   */
+  slugToVariableName: (slug) => {
+    const slugFirstLetter = slug[0].toUpperCase();
+    const slugRest = slug.slice(1);
+    return `si${slugFirstLetter}${slugRest}`;
+  },
+
+  /**
    * Converts a brand title (as it is seen in simple-icons.json) into a brand
    * title in HTML/SVG friendly format.
    * @param {String} brandTitle The title to convert
