@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 1500 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 2000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -60,9 +60,17 @@ const icon = simpleIcons.Get('simpleicons');
 
 ```
 
-Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
-This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
+Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+```javascript
+// Import a specific icon by its slug as:
+// import { si[ICON SLUG] } from 'simple-icons/icons'
 
+// For example:
+// use import/esm to allow tree shaking
+import { siSimpleicons } from 'simple-icons/icons'
+```
+
+You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 ```javascript
 // Import a specific icon by its slug as:
 // require('simple-icons/icons/[ICON SLUG]');
@@ -110,11 +118,7 @@ for (const iconSlug in simpleIcons) {
 
 #### TypeScript Usage
 
-There are also TypeScript type definitions for the Node package. To use them, simply run:
-
-```shell
-npm install --save-dev @types/simple-icons
-```
+Type definitions are bundled with the package.
 
 ### PHP Usage
 
@@ -138,10 +142,12 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 ?>
 ```
 
-## Third Party Extensions
+## Third-Party Extensions
 
 | Extension | Author |
 | :--- | :--- |
+| [Blender add-on](https://github.com/mondeja/simple-icons-blender) | [@mondeja](https://github.com/mondeja) |
+| [Drawio library](https://github.com/mondeja/simple-icons-drawio) | [@mondeja](https://github.com/mondeja) |
 | [Drupal module](https://www.drupal.org/project/simple_icons) | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
 | [Flutter package](https://pub.dev/packages/simple_icons) | [@jlnrrg](https://jlnrrg.github.io/) |
 | [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) | [@nidbCN](https://github.com/nidbCN/) |
@@ -149,10 +155,16 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
 | [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
 | [Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
-| [Python package](https://github.com/sachinraja/simpleicons) | [@sachinraja](https://github.com/sachinraja) |
+| [Python package](https://github.com/sachinraja/simple-icons-py) | [@sachinraja](https://github.com/sachinraja) |
 | [React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | [Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
 [slug]: ./slugs.md
+
+## Contribute
+
+Information describing how to contribute can be found here:
+
+https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
