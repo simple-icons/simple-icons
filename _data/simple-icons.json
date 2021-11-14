@@ -6963,6 +6963,21 @@
             "guidelines": "https://en.opensuse.org/Portal:Artwork"
         },
         {
+            "title": "OpenTelemetry",
+            "hex": "F5A800",
+            "source": "https://cncf-branding.netlify.app/projects/opentelemetry/",
+            "guidelines": "https://cncf-branding.netlify.app/projects/opentelemetry/",
+            "license": {
+                "type": "CC-BY-4.0",
+                "url": "https://www.linuxfoundation.org/trademark-usage/"
+            },
+            "aliases": {
+                "aka": [
+                    "otel"
+                ]
+            }
+        },
+        {
             "title": "OpenVPN",
             "hex": "EA7E20",
             "source": "https://openvpn.net/wp-content/themes/openvpn/assets/images/logo.svg",
