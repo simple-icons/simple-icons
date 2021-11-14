@@ -30,7 +30,12 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug, svgToPath, titleToHtmlFriendly } = require('../utils.js');
+const {
+  getIconSlug,
+  svgToPath,
+  titleToHtmlFriendly,
+  slugToVariableName,
+} = require('../utils.js');
 
 // Local helper functions
 const escape = (value) => {
@@ -61,11 +66,6 @@ const iconToObject = (icon) => {
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
-};
-const slugToVariableName = (slug) => {
-  const slugFirstLetter = slug[0].toUpperCase();
-  const slugRest = slug.slice(1);
-  return `si${slugFirstLetter}${slugRest}`;
 };
 const writeJs = (filepath, rawJavaScript) => {
   const { error, code } = minify(rawJavaScript);

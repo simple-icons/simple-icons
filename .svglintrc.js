@@ -590,7 +590,7 @@ module.exports = {
                 segment.chainEnd,
               );
               if (readableChain.length > 20) {
-                readableChain = `${chain.substring(0, 20)}...`;
+                readableChain = `${readableChain.substring(0, 20)}...`;
               }
               errorMsg += ` in chain "${readableChain}"`;
             }
