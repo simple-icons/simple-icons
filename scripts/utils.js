@@ -11,6 +11,12 @@ module.exports = {
   getIconSlug: (icon) => icon.slug || module.exports.titleToSlug(icon.title),
 
   /**
+   * Extract the path from an icon SVG content.
+   * @param {Object} svg The icon SVG content
+   **/
+  svgToPath: (svg) => svg.match(/<path\s+d="([^"]*)/)[1],
+
+  /**
    * Converts a brand title into a slug/filename.
    * @param {String} title The title to convert
    */
@@ -43,4 +49,30 @@ module.exports = {
         /&(quot|amp|lt|gt);/g,
         (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
       ),
+
+  /**
+   * Converts a slug into a variable name that can be exported.
+   * @param {String} slug The slug to convert
+   */
+  slugToVariableName: (slug) => {
+    const slugFirstLetter = slug[0].toUpperCase();
+    const slugRest = slug.slice(1);
+    return `si${slugFirstLetter}${slugRest}`;
+  },
+
+  /**
+   * Converts a brand title (as it is seen in simple-icons.json) into a brand
+   * title in HTML/SVG friendly format.
+   * @param {String} brandTitle The title to convert
+   */
+  titleToHtmlFriendly: (brandTitle) =>
+    brandTitle
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/./g, (char) => {
+        const charCode = char.charCodeAt(0);
+        return charCode > 127 ? `&#${charCode};` : char;
+      }),
 };
