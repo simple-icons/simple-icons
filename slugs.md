@@ -124,6 +124,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ansible` | `ansible` |
 | `Ansys` | `ansys` |
 | `Ant Design` | `antdesign` |
+| `Anta` | `anta` |
 | `Antena 3` | `antena3` |
 | `AnyDesk` | `anydesk` |
 | `AOL` | `aol` |
@@ -641,6 +642,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FiveM` | `fivem` |
 | `Fiverr` | `fiverr` |
 | `Flask` | `flask` |
+| `Flat` | `flat` |
 | `Flathub` | `flathub` |
 | `Flattr` | `flattr` |
 | `Flickr` | `flickr` |
@@ -1032,6 +1034,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Leaflet` | `leaflet` |
 | `Leanpub` | `leanpub` |
 | `LeetCode` | `leetcode` |
+| `Lemmy` | `lemmy` |
 | `Lenovo` | `lenovo` |
 | `Less` | `less` |
 | `Let’s Encrypt` | `letsencrypt` |
@@ -1410,6 +1413,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Podman` | `podman` |
 | `Pointy` | `pointy` |
 | `Pokémon` | `pokemon` |
+| `Polkadot` | `polkadot` |
 | `Poly` | `poly` |
 | `Polymer Project` | `polymerproject` |
 | `Polywork` | `polywork` |
@@ -1601,6 +1605,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Scala` | `scala` |
 | `Scaleway` | `scaleway` |
 | `Scania` | `scania` |
+| `Schneider Electric` | `schneiderelectric` |
 | `scikit-learn` | `scikitlearn` |
 | `SciPy` | `scipy` |
 | `Scopus` | `scopus` |
@@ -1891,6 +1896,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Try It Online` | `tryitonline` |
 | `TryHackMe` | `tryhackme` |
 | `ts-node` | `tsnode` |
+| `Tubi` | `tubi` |
 | `TUI` | `tui` |
 | `Tumblr` | `tumblr` |
 | `TuneIn` | `tunein` |
