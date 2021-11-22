@@ -1,20 +1,29 @@
 # Contributing to Simple Icons
 
+> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
+
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 1. Fork this repository
 1. (Optional) Clone the fork
 
-   ```bash
-   # Using SSH
-   git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+   - Using SSH
 
-   # Using HTTPS
-   git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+     ```shell
+     git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+     ```
 
-   # Using GitHub CLI
-   gh repo clone simple-icons/simple-icons -- --filter=tree:0
-   ```
+   - Using HTTPS
+
+     ```shell
+     git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+     ```
+
+   - Using GitHub CLI
+
+     ```shell
+     gh repo clone simple-icons/simple-icons -- --filter=tree:0
+     ```
 
 1. Create a new branch from the latest `develop`
 1. Start hacking on the new branch
@@ -25,7 +34,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
-* [Building the Website](#building-locally)
 * [Using Docker](#using-docker)
 
 ## Requesting an Icon
@@ -35,6 +43,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
 * Is of a _popular_ brand:
     - For websites, the [Alexa rank](https://www.alexa.com/siteinfo) should be less than 500k.
+        - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
     - For GitHub projects, the amount of "stars" should be above 5k.
     - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
@@ -76,6 +85,9 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Favicons
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
+
+It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this.
+Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
 
 #### Icon Guidelines
 
@@ -152,13 +164,13 @@ Each icon in Simple Icons has been annotated with a number of attributes and ele
     * `viewBox="0 0 24 24"`
   * The svg namespace.
     * `xmlns="http://www.w3.org/2000/svg"`
-* A title element (Note the format).
-  * `<title>Adobe Photoshop icon</title>`
+* A title element containing the brand name.
+  * `<title>Adobe Photoshop</title>`
 
 Here is _part of_ the svg for the Adobe Photoshop icon as an example:
 
 ```svg
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Adobe Photoshop icon</title>...</svg>
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Adobe Photoshop</title>...</svg>
 ```
 
 ### 5. Check the Icon
@@ -181,7 +193,7 @@ The final icon should:
 Here is the svg for the Adobe Photoshop icon as an example:
 
 ```svg
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Adobe Photoshop icon</title><path d="M0 .3v23.4h24V.3H0zm1 1h22v21.4H1V1.3zm4.8 4.48c0-.067.14-.116.224-.116.644-.033 1.588-.05 2.578-.05 2.772 0 3.85 1.52 3.85 3.466 0 2.54-1.842 3.63-4.102 3.63-.38 0-.51-.017-.775-.017v3.842c0 .083-.033.116-.115.116H5.916c-.083 0-.115-.03-.115-.113V5.78zm1.775 5.312c.23.016.412.016.81.016 1.17 0 2.27-.412 2.27-1.996 0-1.27-.786-1.914-2.122-1.914-.396 0-.775.016-.957.033v3.864zm8.607-1.188c-.792 0-1.056.396-1.056.726 0 .363.18.61 1.237 1.155 1.568.76 2.062 1.485 2.062 2.557 0 1.6-1.22 2.46-2.87 2.46-.876 0-1.62-.183-2.05-.43-.065-.033-.08-.082-.08-.165V14.74c0-.1.048-.133.114-.084.624.413 1.352.594 2.012.594.792 0 1.122-.33 1.122-.776 0-.363-.23-.677-1.237-1.205-1.42-.68-2.014-1.37-2.014-2.527 0-1.287 1.006-2.36 2.755-2.36.86 0 1.464.132 1.794.28.082.05.1.132.1.198v1.37c0 .083-.05.133-.15.1-.444-.264-1.1-.43-1.743-.43z"/></svg>
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Adobe Photoshop</title><path d="M0 .3v23.4h24V.3H0zm1 1h22v21.4H1V1.3zm4.8 4.48c0-.067.14-.116.224-.116.644-.033 1.588-.05 2.578-.05 2.772 0 3.85 1.52 3.85 3.466 0 2.54-1.842 3.63-4.102 3.63-.38 0-.51-.017-.775-.017v3.842c0 .083-.033.116-.115.116H5.916c-.083 0-.115-.03-.115-.113V5.78zm1.775 5.312c.23.016.412.016.81.016 1.17 0 2.27-.412 2.27-1.996 0-1.27-.786-1.914-2.122-1.914-.396 0-.775.016-.957.033v3.864zm8.607-1.188c-.792 0-1.056.396-1.056.726 0 .363.18.61 1.237 1.155 1.568.76 2.062 1.485 2.062 2.557 0 1.6-1.22 2.46-2.87 2.46-.876 0-1.62-.183-2.05-.43-.065-.033-.08-.082-.08-.165V14.74c0-.1.048-.133.114-.084.624.413 1.352.594 2.012.594.792 0 1.122-.33 1.122-.776 0-.363-.23-.677-1.237-1.205-1.42-.68-2.014-1.37-2.014-2.527 0-1.287 1.006-2.36 2.755-2.36.86 0 1.464.132 1.794.28.082.05.1.132.1.198v1.37c0 .083-.05.133-.15.1-.444-.264-1.1-.43-1.743-.43z"/></svg>
 ```
 
 ### 6. Name the Icon
@@ -278,8 +290,8 @@ We use the source URL as a reference for the current SVG in our repository and a
 
 If the SVG is sourced from:
 
-- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
-- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
+- **Branding page**: For an SVG from a branding page the source URL should link to the branding page and not the image, PDF, or archive (such as `.zip`) file.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source image and not the image file itself.
 - **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself.
 
   In any case the commit hash should be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files).
@@ -355,15 +367,6 @@ Once you've completed the previous steps, create a pull request to merge your ed
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
-## Building Website Locally
-
-* Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Bundler](https://bundler.io/) installed (using `$ gem install bundler`).
-* Set your local gems installation location for the simple-icons website using `$ bundle config set path 'vendor/bundle'`.
-* Install dependencies using `$ bundle install`.
-* Build and run the website locally using `$ bundle exec jekyll serve`.
-* Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
-
 ## Testing Package Locally
 
 * Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
@@ -371,47 +374,16 @@ If you have an affiliation to the brand you contributing that allows you to spea
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
 
-## Building in Your Browser
-
-Alternatively, you can build and run the website in a readily configured online workspace:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
-
 ## Using Docker
 
-You can build a Docker image for this project from the Dockerfile by running:
+You can build a Docker image for this project which can be used as a development environment and allows you to run SVGO safely. First, build the Docker image for simple-icons (if you haven't yet):
 
-```bash
-# Build the Docker image for simple-icons (if you haven't yet)
-$ docker build . -t simple-icons
-
-# Start a Docker container for simple-icons and attach to it
-$ docker run -it --rm --entrypoint "/bin/ash" simple-icons
+```shell
+docker build . -t simple-icons
 ```
 
-### Jekyll Server using Docker
+Then, start a Docker container for simple-icons and attach to it:
 
-To use a Docker container to run the Jekyll server for the website, run:
-
-```bash
-# Start a container running `jekyll serve` in the background
-$ docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
-
-# Inspect the server logs
-$ docker logs simple-icons-server
-
-# Stop the server (and delete the container)
-$ docker stop simple-icons-server
+```shell
+docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
-
----
-
-# Versioning
-
-We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
-
-| Version number | Kinds of changes |
-| :---- | :---- |
-| _Major_ | Removed icons; Renamed icons; Breaking API changes |
-| _Minor_ | New icons; API changes |
-| _Patch_ | Updated SVGs; Updated metadata |
