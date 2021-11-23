@@ -30,7 +30,12 @@ const indexTemplate = fs.readFileSync(indexTemplateFile, UTF8);
 const iconObjectTemplate = fs.readFileSync(iconObjectTemplateFile, UTF8);
 
 const data = require(dataFile);
-const { getIconSlug } = require('../utils.js');
+const {
+  getIconSlug,
+  svgToPath,
+  titleToHtmlFriendly,
+  slugToVariableName,
+} = require('../utils.js');
 
 // Local helper functions
 const escape = (value) => {
@@ -54,17 +59,13 @@ const iconToObject = (icon) => {
     iconObjectTemplate,
     escape(icon.title),
     escape(icon.slug),
-    escape(icon.svg),
+    escape(titleToHtmlFriendly(icon.title)),
+    escape(icon.path),
     escape(icon.source),
     escape(icon.hex),
     icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
     licenseToObject(icon.license),
   );
-};
-const slugToVariableName = (slug) => {
-  const slugFirstLetter = slug[0].toUpperCase();
-  const slugRest = slug.slice(1);
-  return `si${slugFirstLetter}${slugRest}`;
 };
 const writeJs = (filepath, rawJavaScript) => {
   const { error, code } = minify(rawJavaScript);
@@ -88,23 +89,31 @@ data.icons.forEach((icon) => {
   const filename = getIconSlug(icon);
   const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
   icon.svg = fs.readFileSync(svgFilepath, UTF8).replace(/\r?\n/, '');
+  icon.path = svgToPath(icon.svg);
   icon.slug = filename;
   icons.push(icon);
 
   const iconObject = iconToObject(icon);
+  const iconExportName = slugToVariableName(icon.slug);
 
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  writeJs(jsFilepath, `module.exports=${iconObject};`);
+  const newImportMessage = `use "const { ${iconExportName} } = require('simple-icons/icons');" instead`;
+  const message = JSON.stringify(
+    `Imports like "const ${icon.slug} = require('simple-icons/icons/${icon.slug}');" have been deprecated in v6.0.0 and will no longer work from v7.0.0, ${newImportMessage}`,
+  );
+  writeJs(
+    jsFilepath,
+    `console.warn("warn -", ${message});module.exports=${iconObject};`,
+  );
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
   writeTs(
     dtsFilepath,
-    'declare const i:import("../alias").I;export default i;',
+    `/**@deprecated ${newImportMessage}*/declare const i:import("../alias").I;export default i;`,
   );
 
   // add object to the barrel file
-  const iconExportName = slugToVariableName(icon.slug);
   iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
   iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
   iconsBarrelDts.push(`export const ${iconExportName}:I;`);
