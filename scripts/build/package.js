@@ -98,7 +98,7 @@ data.icons.forEach((icon) => {
 
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  const newImportMessage = `use "const { ${iconExportName} } = require('simple-icons/icons');" instead`;
+  const newImportMessage = `"const { ${iconExportName} } = require('simple-icons/icons');" instead`;
   const message = JSON.stringify(
     `Imports like "const ${icon.slug} = require('simple-icons/icons/${icon.slug}');" have been deprecated in v6.0.0 and will no longer work from v7.0.0, use ${newImportMessage}`,
   );
