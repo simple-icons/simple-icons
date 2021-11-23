@@ -75,7 +75,7 @@ const { siSimpleicons } = require('simple-icons/icons')
 It will return an icon object:
 
 ```javascript
-console.log(icon);
+console.log(siSimpleicons);
 
 /*
 {
