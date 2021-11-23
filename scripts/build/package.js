@@ -100,9 +100,20 @@ data.icons.forEach((icon) => {
   writeJs(jsFilepath, `module.exports=${iconObject};`);
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
+  const base64IconPath = Buffer.from(
+    `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="50" height="50"><path d="${icon.path}" /></svg>`,
+  ).toString('base64');
+  // console.log(
+  //   `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="${icon.path}" /></svg>`,
+  // );
+
+  const previewImage = `![${icon.title}](data:image/svg+xml;base64,${base64IconPath})`;
   writeTs(
     dtsFilepath,
-    'declare const i:import("../alias").I;export default i;',
+    `/**
+* ${previewImage}
+*/
+declare const i:import("../alias").I;export default i;`,
   );
 
   // add object to the barrel file
