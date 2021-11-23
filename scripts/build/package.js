@@ -13,6 +13,8 @@ const util = require('util');
 const { minify } = require('uglify-js');
 
 const UTF8 = 'utf8';
+// yellow and bold
+const WARN = '\\x1b[33m\\x1b[1mwarn\\x1b[22m\\x1b[39m';
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
@@ -94,10 +96,15 @@ data.icons.forEach((icon) => {
   icons.push(icon);
 
   const iconObject = iconToObject(icon);
+  const iconExportName = slugToVariableName(icon.slug);
 
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  writeJs(jsFilepath, `module.exports=${iconObject};`);
+  const message = `This import is deprecated, use \\"const {${iconExportName}} = require('simple-icons/icons')\\" instead`;
+  writeJs(
+    jsFilepath,
+    `console.warn("${WARN} ${message}");module.exports=${iconObject};`,
+  );
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
   writeTs(
@@ -106,7 +113,6 @@ data.icons.forEach((icon) => {
   );
 
   // add object to the barrel file
-  const iconExportName = slugToVariableName(icon.slug);
   iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
   iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
   iconsBarrelDts.push(`export const ${iconExportName}:I;`);
