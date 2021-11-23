@@ -94,19 +94,26 @@ data.icons.forEach((icon) => {
   icons.push(icon);
 
   const iconObject = iconToObject(icon);
+  const iconExportName = slugToVariableName(icon.slug);
 
   // write the static .js file for the icon
   const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-  writeJs(jsFilepath, `module.exports=${iconObject};`);
+  const newImportMessage = `use "const { ${iconExportName} } = require('simple-icons/icons');" instead`;
+  const message = JSON.stringify(
+    `Imports like "const ${icon.slug} = require('simple-icons/icons/${icon.slug}');" have been deprecated in v6.0.0 and will no longer work from v7.0.0, ${newImportMessage}`,
+  );
+  writeJs(
+    jsFilepath,
+    `console.warn("warn -", ${message});module.exports=${iconObject};`,
+  );
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
   writeTs(
     dtsFilepath,
-    'declare const i:import("../alias").I;export default i;',
+    `/**@deprecated ${newImportMessage}*/declare const i:import("../alias").I;export default i;`,
   );
 
   // add object to the barrel file
-  const iconExportName = slugToVariableName(icon.slug);
   iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
   iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
   iconsBarrelDts.push(`export const ${iconExportName}:I;`);
