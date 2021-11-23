@@ -110,8 +110,7 @@ data.icons.forEach((icon) => {
   const previewImage = `![${icon.title}](data:image/svg+xml;base64,${base64IconPath})`;
   writeTs(
     dtsFilepath,
-    `/**${previewImage}*/
-declare const i:import("../alias").I;export default i;`,
+    `/**${previewImage}*/declare const i:import("../alias").I;export default i;`,
   );
 
   // add object to the barrel file
