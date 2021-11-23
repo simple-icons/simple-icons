@@ -3848,9 +3848,12 @@
             "source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
         },
         {
-            "title": "Google Cast",
+            "title": "Chromecast",
             "hex": "1BB6F6",
-            "source": "https://www.google.com/intl/en_us/chromecast/built-in/"
+            "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
+            "aliases": {
+                "aka": ["Google Cast"]
+            }
         },
         {
             "title": "Google Chat",
