@@ -15,10 +15,6 @@ export interface SimpleIcon {
 }
 
 declare const icons: Record<string, SimpleIcon> & {
-  /**
-   * @deprecated use .Get instead
-   */
-  get(name: string): SimpleIcon;
   Get(name: string): SimpleIcon;
 };
 

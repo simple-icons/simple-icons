@@ -7,11 +7,4 @@ Object.defineProperty(icons, "Get", {
   }
 });
 
-Object.defineProperty(icons, "get", {
-  enumerable: false,
-  value: function(targetName) {
-    return this.Get(targetName);
-  }
-});
-
 module.exports = icons;
