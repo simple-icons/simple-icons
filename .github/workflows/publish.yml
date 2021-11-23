@@ -1,0 +1,106 @@
+name: Publish Releases
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  sanity-check:
+    name: Pre-publish checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Run linters
+        run: npm run lint
+      - name: Build NodeJS package
+        run: npm run build
+      - name: Run tests
+        run: npm run test
+  npm:
+    name: NPM Package
+    needs: sanity-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.x
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Deploy to NPM
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+  github:
+    name: GitHub release
+    needs: sanity-check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get commit message (for release title and body)
+        id: commit
+        uses: kceb/git-message-action@v1
+      - name: Get release version
+        id: get-version
+        run: |
+          export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
+          echo "::set-output name=version::$PACKAGE_VERSION"
+      - name: Create and push git tag
+        uses: actions-ecosystem/action-push-tag@v1
+        with:
+          tag: ${{ steps.get-version.outputs.version }}
+          message: ${{ steps.commit.outputs.git-message }}
+      - name: Create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.get-version.outputs.version }}
+          release_name: ${{ steps.commit.outputs.title }}
+          body: ${{ steps.commit.outputs.body }}
+  font:
+    name: Trigger simple-icons-font release
+    needs: npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger simple-icons-font release
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -d '{"ref":"develop"}' \
+            https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
+  website:
+    name: Trigger simple-icons-website update
+    needs: npm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger simple-icons-website update
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -d '{"ref":"master"}' \
+            https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches

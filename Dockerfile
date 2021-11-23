@@ -1,6 +1,7 @@
-FROM alpine:3.12
+FROM node:16-alpine
 
-RUN apk add --update nodejs npm
+RUN apk add --no-cache \
+  git
 
 WORKDIR /simple-icons
 COPY package*.json /simple-icons/
