@@ -7,7 +7,7 @@
  * tree-shakeable
  */
 
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const util = require('util');
 const { transform: esbuildTransform } = require('esbuild');
@@ -35,11 +35,8 @@ const {
 } = require('../utils.js');
 
 const build = async () => {
-  const indexTemplate = await fs.promises.readFile(indexTemplateFile, UTF8);
-  const iconObjectTemplate = await fs.promises.readFile(
-    iconObjectTemplateFile,
-    UTF8,
-  );
+  const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
+  const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
   // Local helper functions
   const escape = (value) => {
@@ -75,10 +72,10 @@ const build = async () => {
     const { code } = await esbuildTransform(rawJavaScript, {
       minify: true,
     });
-    await fs.promises.writeFile(filepath, code);
+    await fs.writeFile(filepath, code);
   };
   const writeTs = async (filepath, rawTypeScript) => {
-    await fs.promises.writeFile(filepath, rawTypeScript);
+    await fs.writeFile(filepath, rawTypeScript);
   };
 
   // 'main'
@@ -91,10 +88,7 @@ const build = async () => {
     data.icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
-      icon.svg = (await fs.promises.readFile(svgFilepath, UTF8)).replace(
-        /\r?\n/,
-        '',
-      );
+      icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
       icons.push(icon);
