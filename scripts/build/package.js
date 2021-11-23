@@ -13,8 +13,6 @@ const util = require('util');
 const { minify } = require('uglify-js');
 
 const UTF8 = 'utf8';
-// yellow and bold
-const WARN = '\\x1b[33m\\x1b[1mwarn\\x1b[22m\\x1b[39m';
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
@@ -103,7 +101,7 @@ data.icons.forEach((icon) => {
   const message = `This way of importing icons has been deprecated in v6.0.0 and will no longer work from v7.0.0, use \\"const {${iconExportName}} = require('simple-icons/icons')\\" instead`;
   writeJs(
     jsFilepath,
-    `console.warn("${WARN} ${message}");module.exports=${iconObject};`,
+    `console.warn("warn - ${message}");module.exports=${iconObject};`,
   );
 
   const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
