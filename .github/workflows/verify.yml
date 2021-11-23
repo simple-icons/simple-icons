@@ -16,11 +16,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Build NodeJS package
         run: npm run build
   lint:
@@ -37,13 +37,31 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Run linter
         run: npm run lint
+      - name: Verify file permissions
+        run: |
+          CHECK_DIRS="icons/ _data/"
+          echo "Searching the following directories for executable files:"
+          echo "${CHECK_DIRS}"
+          echo ""
+          EXE_FILES=$(find ${CHECK_DIRS} -type f -executable)
+          if test -n "${EXE_FILES-}"
+          then
+            echo "Some files were detected to have their executable bit set."
+            echo "To fix this, you can use 'chmod -x PATH/TO/FILE' on the following files:"
+            echo ""
+            echo "${EXE_FILES}"
+            exit 1
+          else
+            echo "All clear."
+            exit 0
+          fi
   test:
     name: Test package
     runs-on: ubuntu-latest
@@ -58,18 +76,10 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Cache Jest
-        uses: actions/cache@v2
-        with:
-          path: .cache/jest
-          key: ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-${{ github.run_number }}
-          restore-keys: |
-            ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-
-            ${{ runner.os }}-jest-
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Run tests
         run: npm run test
