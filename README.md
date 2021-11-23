@@ -68,18 +68,11 @@ Alternatively, you can also import all icons from a single file, where `[ICON SL
 // For example:
 // use import/esm to allow tree shaking
 import { siSimpleicons } from 'simple-icons/icons'
+// or with require/cjs
+const { siSimpleicons } = require('simple-icons/icons')
 ```
 
-You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
-```javascript
-// Import a specific icon by its slug as:
-// require('simple-icons/icons/[ICON SLUG]');
-
-// For example:
-const icon = require('simple-icons/icons/simpleicons');
-```
-
-Either method will return an icon object:
+It will return an icon object:
 
 ```javascript
 console.log(icon);
