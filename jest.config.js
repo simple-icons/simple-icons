@@ -1,3 +1,4 @@
 module.exports = {
-  cacheDirectory: "./.cache/jest",
+  testMatch: ['**/tests/**/*.test.?(m)js'],
+  moduleFileExtensions: ['js', 'mjs', 'json'],
 };
