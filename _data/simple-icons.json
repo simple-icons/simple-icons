@@ -592,6 +592,11 @@
             "source": "https://ant.design/components/icon/"
         },
         {
+            "title": "Anta",
+            "hex": "D70010",
+            "source": "https://www.anta.com/"
+        },
+        {
             "title": "Antena 3",
             "hex": "FF7328",
             "source": "https://www.antena3.com/"
@@ -1095,7 +1100,7 @@
         },
         {
             "title": "BandLab",
-            "hex": "DC3710",
+            "hex": "F12C18",
             "source": "https://blog.bandlab.com/press/"
         },
         {
@@ -2443,7 +2448,10 @@
         {
             "title": "Deno",
             "hex": "000000",
-            "source": "https://github.com/denoland/deno_website2/blob/892750b99cc260f8b1b2a4bcea59eab9101dd67c/public/logo.svg"
+            "source": "https://github.com/denoland/dotland/blob/f1ba74327b401b47de678f30d768ff9bf54494b6/public/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Dependabot",
@@ -3147,16 +3155,6 @@
             "source": "https://newsroom.fedex.com/"
         },
         {
-            "title": "Fedora",
-            "hex": "294172",
-            "source": "https://fedoraproject.org/wiki/Logo/UsageGuidelines",
-            "guidelines": "https://fedoraproject.org/wiki/Logo/UsageGuidelines",
-            "license": {
-                "type": "custom",
-                "url": "https://fedoraproject.org/wiki/Legal:Trademark_guidelines"
-            }
-        },
-        {
             "title": "Feedly",
             "hex": "2BB24C",
             "source": "https://blog.feedly.com/"
@@ -3273,6 +3271,11 @@
                 "type": "custom",
                 "url": "https://github.com/pallets/flask/blob/master/artwork/LICENSE.rst"
             }
+        },
+        {
+            "title": "Flat",
+            "hex": "3481FE",
+            "source": "https://github.com/netless-io/flat/blob/525b2247f36e96ae2f9e6a39b4fe0967152305f2/desktop/renderer-app/src/assets/image/logo.svg"
         },
         {
             "title": "Flathub",
@@ -5263,11 +5266,6 @@
             "source": "https://kodi.tv/"
         },
         {
-            "title": "Koding",
-            "hex": "00B057",
-            "source": "https://koding.com/About"
-        },
-        {
             "title": "Kofax",
             "hex": "00558C",
             "source": "https://www.kofax.com/"
@@ -5412,6 +5410,11 @@
             "title": "LeetCode",
             "hex": "FFA116",
             "source": "https://leetcode.com/store"
+        },
+        {
+            "title": "Lemmy",
+            "hex": "FFFFFF",
+            "source": "https://join-lemmy.org"
         },
         {
             "title": "Lenovo",
@@ -5809,11 +5812,6 @@
             "license": {
                 "type": "Apache-2.0"
             }
-        },
-        {
-            "title": "Material-UI",
-            "hex": "0081CB",
-            "source": "https://material-ui.com/"
         },
         {
             "title": "Matomo",
@@ -6263,6 +6261,16 @@
             "title": "MTR",
             "hex": "AC2E45",
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
+        },
+        {
+            "title": "MUI",
+            "aliases": {
+                "aka": [
+                    "Material-UI"
+                ]
+            },
+            "hex": "007FFF",
+            "source": "https://github.com/mui-org/material-ui/blob/353cecb5391571163eb6bd8cbf36d2dd299aaf56/docs/src/icons/SvgMuiLogo.tsx"
         },
         {
             "title": "Mulesoft",
@@ -7315,11 +7323,6 @@
             "hex": "0096FA",
             "source": "https://policies.pixiv.net/en.html#brand",
             "guidelines": "https://policies.pixiv.net/en.html#brand"
-        },
-        {
-            "title": "PJSIP",
-            "hex": "F86001",
-            "source": "https://www.pjsip.org/"
         },
         {
             "title": "Planet",
@@ -8466,9 +8469,13 @@
             "guidelines": "https://brand.salesforce.com/content/logo-guidelines"
         },
         {
-            "title": "SaltStack",
-            "hex": "00EACE",
-            "source": "https://www.saltstack.com/resources/brand/"
+            "title": "Salt Project",
+            "hex": "57BCAD",
+            "source": "https://saltproject.io/",
+            "guidelines": "https://gitlab.com/saltstack/open/salt-branding-guide/-/blob/37bbc3a8577be2f44895310c092439472491a8f4/README.md",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Samsung",
@@ -8850,11 +8857,6 @@
             "title": "Sky",
             "hex": "0072C9",
             "source": "https://www.skysports.com/"
-        },
-        {
-            "title": "Skyliner",
-            "hex": "2FCEA0",
-            "source": "https://www.skyliner.io/help"
         },
         {
             "title": "Skynet",
@@ -10098,6 +10100,11 @@
             "title": "ts-node",
             "hex": "3178C6",
             "source": "https://typestrong.org/ts-node/"
+        },
+        {
+            "title": "Tubi",
+            "hex": "000000",
+            "source": "https://corporate.tubitv.com/press-releases/"
         },
         {
             "title": "TUI",
