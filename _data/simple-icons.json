@@ -5806,11 +5806,6 @@
             }
         },
         {
-            "title": "Material-UI",
-            "hex": "0081CB",
-            "source": "https://material-ui.com/"
-        },
-        {
             "title": "Matomo",
             "hex": "3152A0",
             "source": "https://matomo.org/media/"
@@ -6258,6 +6253,16 @@
             "title": "MTR",
             "hex": "AC2E45",
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
+        },
+        {
+            "title": "MUI",
+            "aliases": {
+                "aka": [
+                    "Material-UI"
+                ]
+            },
+            "hex": "007FFF",
+            "source": "https://github.com/mui-org/material-ui/blob/353cecb5391571163eb6bd8cbf36d2dd299aaf56/docs/src/icons/SvgMuiLogo.tsx"
         },
         {
             "title": "Mulesoft",
