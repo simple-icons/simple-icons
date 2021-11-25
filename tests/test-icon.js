@@ -32,7 +32,7 @@ const testIcon = (icon, subject, slug) => {
   });
 
   test('has an "svg" value', () => {
-    assert.is(typeof subject.svg, 'string');
+    assert.type(subject.svg, 'string');
   });
 
   test('has a valid "path" value', () => {

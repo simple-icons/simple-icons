@@ -20,7 +20,7 @@ test(`Iterating over simpleIcons only exposes icons`, () => {
   const iconArray = Object.values(simpleIcons);
   for (let icon of iconArray) {
     assert.ok(icon);
-    assert.is(typeof icon, 'object');
+    assert.type(icon, 'object');
   }
 });
 
