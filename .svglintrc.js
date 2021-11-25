@@ -8,7 +8,7 @@ const svgPathBbox = require('svg-path-bbox');
 const parsePath = require('svg-path-segments');
 
 const svgRegexp =
-  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\r?\n?$/;
+  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\n?$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
 const iconSize = 24;

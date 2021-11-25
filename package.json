@@ -57,7 +57,7 @@
     "jslint": "prettier --check .",
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint icons/*.svg --ci",
-    "wslint": "editorconfig-checker -exclude \\.svg$",
+    "wslint": "editorconfig-checker",
     "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
