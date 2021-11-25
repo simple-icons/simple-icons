@@ -1,6 +1,7 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
 const { getIconSlug } = require('../scripts/utils');
+const { test } = require('uvu');
 
 icons.forEach((icon) => {
   const slug = getIconSlug(icon);
