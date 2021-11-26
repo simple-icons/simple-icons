@@ -12,14 +12,6 @@ icons.forEach((icon) => {
     expect(found.hex).toEqual(icon.hex);
     expect(found.source).toEqual(icon.source);
   });
-
-  test(`'get' ${icon.title} by its slug`, () => {
-    const found = simpleIcons.get(slug);
-    expect(found).toBeDefined();
-    expect(found.title).toEqual(icon.title);
-    expect(found.hex).toEqual(icon.hex);
-    expect(found.source).toEqual(icon.source);
-  });
 });
 
 test(`Iterating over simpleIcons only exposes icons`, () => {
