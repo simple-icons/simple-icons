@@ -58,7 +58,7 @@ const TESTS = {
     const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
     const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
     if (dataString !== dataPretty) {
-      const dataDiff = diff(dataString.split('\n'), dataPretty.split('\n'));
+      const dataDiff = diff(dataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
   },
