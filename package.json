@@ -33,6 +33,7 @@
   "devDependencies": {
     "editorconfig-checker": "4.0.2",
     "esbuild": "0.13.15",
+    "fake-diff": "1.0.0",
     "husky": "7.0.2",
     "is-ci": "3.0.0",
     "jsonschema": "1.4.0",

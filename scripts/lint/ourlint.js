@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { compare: diff } = require('uvu/diff');
+const fakeDiff = require('fake-diff');
 
 const UTF8 = 'utf8';
 
@@ -58,7 +58,7 @@ const TESTS = {
     const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
     const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
     if (dataString !== dataPretty) {
-      const dataDiff = diff(dataString, dataPretty);
+      const dataDiff = fakeDiff(dataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
   },
