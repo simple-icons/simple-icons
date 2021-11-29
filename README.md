@@ -1,6 +1,6 @@
 <p align="center">
 
-<img src="https://i.imgur.com/zP639cY.png" alt="Simple Icons" width=64 height=64>
+<img src="https://i.imgur.com/zP639cY.png" alt="Simple Icons" width=240 height=240>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
