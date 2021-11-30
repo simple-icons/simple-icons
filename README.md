@@ -1,7 +1,8 @@
 
 <p align="center">
 
-<img src="https://i.imgur.com/OSEgQNi.png" alt="Simple Icons" width=45 height=72>
+<img src="./readme-icons/simpleicons.svg" alt="Simple Icons" width=45 height=72>
+<img src="./readme-icons/simpleicons-white.svg" alt="Simple Icons" width=45 height=72>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
