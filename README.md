@@ -1,8 +1,8 @@
 
 <p align="center">
 
-<img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=45 height=72>
-<img src="./readme-icons/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=45 height=72>
+<img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=50 height=80>
+<img src="./readme-icons/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=50 height=80>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
