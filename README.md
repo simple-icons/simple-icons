@@ -41,9 +41,7 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-### Node Usage 
-<img src="./readme-icons/nodedotjs-white.svg#gh-dark-mode-only" alt="Node" align=left width=24>
-<img src="./readme-icons/nodedotjs.svg#gh-light-mode-only" alt="Node" align=left width=24>
+### Node Usage <img src="./readme-icons/nodedotjs-white.svg#gh-dark-mode-only" alt="Node" align=left width=24><img src="./readme-icons/nodedotjs.svg#gh-light-mode-only" alt="Node" align=left width=24>
 
 The icons are also available through our npm package. To install, simply run:
 
