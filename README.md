@@ -156,20 +156,13 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) | [@nidbCN](https://github.com/nidbCN/) |
 | <img src="./readme-icons/homeassistant-white.svg#gh-dark-mode-only" alt="Home Assistant" align=left width=24 height=24><img src="./readme-icons/homeassistant.svg#gh-light-mode-only" alt="Home Assistant" align=left width=24 height=24>[Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) | [@vigonotion](https://github.com/vigonotion/) |
 | [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
-| <img src="./readme-icons/kirby-white.svg#gh-dark-mode-only" alt="Kirby" align=left width=24 height=24>
-<img src="./readme-icons/kirby.svg#gh-light-mode-only" alt="Kirby" align=left width=24 height=24>[Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
-| <img src="./readme-icons/laravel-white.svg#gh-dark-mode-only" alt="Laravel" align=left width=24 height=24>
-<img src="./readme-icons/laravel.svg#gh-light-mode-only" alt="Laravel" align=left width=24 height=24>[Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
-| <img src="./readme-icons/python-white.svg#gh-dark-mode-only" alt="Python" align=left width=24 height=24>
-<img src="./readme-icons/python.svg#gh-light-mode-only" alt="Python" align=left width=24 height=24>[Python package](https://github.com/sachinraja/simple-icons-py) | [@sachinraja](https://github.com/sachinraja) |
-| <img src="./readme-icons/react-white.svg#gh-dark-mode-only" alt="React" align=left width=24 height=24>
-<img src="./readme-icons/react.svg#gh-light-mode-only" alt="React" align=left width=24 height=24>[React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
-| <img src="./readme-icons/svelte-white.svg#gh-dark-mode-only" alt="Svelte" align=left width=24 height=24>
-<img src="./readme-icons/svelte.svg#gh-light-mode-only" alt="Svelte" align=left width=24 height=24>[Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
-| <img src="./readme-icons/vue-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24>
-<img src="./readme-icons/vue.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24>[Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
-| <img src="./readme-icons/wordpress-white.svg#gh-dark-mode-only" alt="Wordpress" align=left width=24 height=24>
-<img src="./readme-icons/wordpress.svg#gh-light-mode-only" alt="Wordpress" align=left width=24 height=24>[WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
+| <img src="./readme-icons/kirby-white.svg#gh-dark-mode-only" alt="Kirby" align=left width=24 height=24><img src="./readme-icons/kirby.svg#gh-light-mode-only" alt="Kirby" align=left width=24 height=24>[Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
+| <img src="./readme-icons/laravel-white.svg#gh-dark-mode-only" alt="Laravel" align=left width=24 height=24><img src="./readme-icons/laravel.svg#gh-light-mode-only" alt="Laravel" align=left width=24 height=24>[Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
+| <img src="./readme-icons/python-white.svg#gh-dark-mode-only" alt="Python" align=left width=24 height=24><img src="./readme-icons/python.svg#gh-light-mode-only" alt="Python" align=left width=24 height=24>[Python package](https://github.com/sachinraja/simple-icons-py) | [@sachinraja](https://github.com/sachinraja) |
+| <img src="./readme-icons/react-white.svg#gh-dark-mode-only" alt="React" align=left width=24 height=24><img src="./readme-icons/react.svg#gh-light-mode-only" alt="React" align=left width=24 height=24>[React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| <img src="./readme-icons/svelte-white.svg#gh-dark-mode-only" alt="Svelte" align=left width=24 height=24><img src="./readme-icons/svelte.svg#gh-light-mode-only" alt="Svelte" align=left width=24 height=24>[Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| <img src="./readme-icons/vue-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24><img src="./readme-icons/vue.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24>[Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
+| <img src="./readme-icons/wordpress-white.svg#gh-dark-mode-only" alt="Wordpress" align=left width=24 height=24><img src="./readme-icons/wordpress.svg#gh-light-mode-only" alt="Wordpress" align=left width=24 height=24>[WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
 [slug]: ./slugs.md
 
