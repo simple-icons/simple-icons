@@ -1,7 +1,7 @@
 
 <p align="center">
 
-<img src="./readme-icons/simpleicons.svg" alt="Simple Icons" width=45 height=72>
+<img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=45 height=72>
 <img src="./readme-icons/simpleicons-white.svg" alt="Simple Icons" width=45 height=72>
 
 <h3 align="center">Simple Icons</h3>
