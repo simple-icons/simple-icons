@@ -1,8 +1,8 @@
 
 <p align="center">
 
-<img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=50 height=80>
-<img src="./readme-icons/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=50 height=80>
+<img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
+<img src="./readme-icons/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
@@ -42,8 +42,8 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
 ### Node Usage 
-<img src="./readme-icons/nodedotjs.svg#gh-dark-mode-only" alt="Node" align=left width=24 height=24>
-<img src="./readme-icons/nodedotjs-white.svg#gh-light-mode-only" alt="Node" align=left width=24 height=24>
+<img src="./readme-icons/nodedotjs-white.svg#gh-dark-mode-only" alt="Node" align=left width=24>
+<img src="./readme-icons/nodedotjs.svg#gh-light-mode-only" alt="Node" align=left width=24>
 
 The icons are also available through our npm package. To install, simply run:
 
