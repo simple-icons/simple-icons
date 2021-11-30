@@ -1,3 +1,17 @@
+<style type="text/css">
+    img[src~="gh-dark-mode-only"] {
+    fill:white;
+        align:left;
+        width:24px;
+        height:24px;
+    },
+    img[src~="gh-light-mode-only"] {
+        align:left;
+        width:24px;
+        height:24px;
+    }
+</style>
+
 <p align="center">
 
 <img src="https://i.imgur.com/OSEgQNi.png" alt="Simple Icons" width=45 height=72>
@@ -39,7 +53,8 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-### Node Usage
+### Node Usage ![node-dark](https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/63bc2c9ed0cf4205781198adae38671bf462e3ae/icons/nodedotjs.svg#gh-dark-mode-only dark-icon)
+![node-light](https://raw.githubusercontent.com/jorgeamadosoria/simple-icons/63bc2c9ed0cf4205781198adae38671bf462e3ae/icons/nodedotjs.svg#gh-light-mode-only light-icon)
 
 The icons are also available through our npm package. To install, simply run:
 
