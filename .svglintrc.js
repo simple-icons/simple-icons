@@ -136,12 +136,13 @@ module.exports = {
     },
     attr: [
       {
-        // ensure that the SVG elm has the appropriate attrs
+        // ensure that the SVG elm has the appropriate attrs alphabetically ordered
         role: 'img',
         viewBox: `0 0 ${iconSize} ${iconSize}`,
         xmlns: 'http://www.w3.org/2000/svg',
         'rule::selector': 'svg',
         'rule::whitelist': true,
+        'rule::order': true,
       },
       {
         // ensure that the title elm has the appropriate attr

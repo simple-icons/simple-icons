@@ -64,11 +64,7 @@ const testIcon = (icon, subject, slug) => {
     const svgFileContents = fs
       .readFileSync(svgPath, 'utf8')
       .replace(/\r?\n/, '');
-
-    assert.is(
-      subject.svg.substring(subject.svg.indexOf('<title>')),
-      svgFileContents.substring(svgFileContents.indexOf('<title>')),
-    );
+    assert.is(subject.svg, svgFileContents);
   });
 
   test.run();
