@@ -893,6 +893,11 @@
             "source": "https://github.com/asciinema/asciinema-logo"
         },
         {
+            "title": "ASDA",
+            "hex": "68A51C",
+            "source": "https://www.asda.com/"
+        },
+        {
             "title": "Aseprite",
             "hex": "7D929E",
             "source": "https://www.aseprite.org/"
@@ -1368,6 +1373,11 @@
             "source": "https://www.boostmobile.com/"
         },
         {
+            "title": "Boots",
+            "hex": "05054B",
+            "source": "https://www.boots-uk.com/css/images/Boots_logo.svg"
+        },
+        {
             "title": "Bootstrap",
             "hex": "7952B3",
             "source": "http://getbootstrap.com/about"
@@ -1697,6 +1707,16 @@
             "title": "Chocolatey",
             "hex": "80B5E3",
             "source": "https://chocolatey.org/media-kit"
+        },
+        {
+            "title": "Chromecast",
+            "hex": "1BB6F6",
+            "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
+            "aliases": {
+                "aka": [
+                    "Google Cast"
+                ]
+            }
         },
         {
             "title": "Chrysler",
@@ -3516,6 +3536,11 @@
             "guidelines": "https://www.g2a.co/documents/"
         },
         {
+            "title": "Game & Watch",
+            "hex": "000000",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Game_and_watch_logo.svg"
+        },
+        {
             "title": "Game Jolt",
             "hex": "CCFF00",
             "source": "https://gamejolt.com/about",
@@ -3849,11 +3874,6 @@
             "title": "Google Cardboard",
             "hex": "FF7143",
             "source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
-        },
-        {
-            "title": "Google Cast",
-            "hex": "1BB6F6",
-            "source": "https://www.google.com/intl/en_us/chromecast/built-in/"
         },
         {
             "title": "Google Chat",
@@ -5415,6 +5435,11 @@
             "title": "Lenovo",
             "hex": "E2231A",
             "source": "https://news.lenovo.com/press-kits/"
+        },
+        {
+            "title": "Lerna",
+            "hex": "2F0268",
+            "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
         },
         {
             "title": "Less",
@@ -7926,6 +7951,11 @@
             "guidelines": "https://designsystem.quickbooks.com/visual-assets/logos/"
         },
         {
+            "title": "QuickLook",
+            "hex": "22A2E3",
+            "source": "https://github.com/QL-Win/QuickLook/"
+        },
+        {
             "title": "QuickTime",
             "hex": "1C69F0",
             "source": "https://support.apple.com/quicktime"
@@ -8993,6 +9023,11 @@
             "source": "https://www.sogou.com/"
         },
         {
+            "title": "Solid",
+            "hex": "2C4F7C",
+            "source": "https://www.solidjs.com/media"
+        },
+        {
             "title": "Solidity",
             "hex": "363636",
             "source": "https://docs.soliditylang.org/en/v0.8.6/brand-guide.html",
@@ -9789,6 +9824,11 @@
             "title": "Textpattern",
             "hex": "FFDA44",
             "source": "https://textpattern.com/"
+        },
+        {
+            "title": "The Algorithms",
+            "hex": "00BCB4",
+            "source": "https://github.com/TheAlgorithms/website/blob/f4e439578c88fed3b21c70898605238602975d2d/public/logo_t.svg"
         },
         {
             "title": "The Conversation",
