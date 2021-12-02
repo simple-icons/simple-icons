@@ -898,6 +898,11 @@
             "source": "https://github.com/asciinema/asciinema-logo"
         },
         {
+            "title": "ASDA",
+            "hex": "68A51C",
+            "source": "https://www.asda.com/"
+        },
+        {
             "title": "Aseprite",
             "hex": "7D929E",
             "source": "https://www.aseprite.org/"
@@ -1373,6 +1378,11 @@
             "source": "https://www.boostmobile.com/"
         },
         {
+            "title": "Boots",
+            "hex": "05054B",
+            "source": "https://www.boots-uk.com/css/images/Boots_logo.svg"
+        },
+        {
             "title": "Bootstrap",
             "hex": "7952B3",
             "source": "http://getbootstrap.com/about"
@@ -1702,6 +1712,16 @@
             "title": "Chocolatey",
             "hex": "80B5E3",
             "source": "https://chocolatey.org/media-kit"
+        },
+        {
+            "title": "Chromecast",
+            "hex": "1BB6F6",
+            "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
+            "aliases": {
+                "aka": [
+                    "Google Cast"
+                ]
+            }
         },
         {
             "title": "Chrysler",
@@ -2453,7 +2473,10 @@
         {
             "title": "Deno",
             "hex": "000000",
-            "source": "https://github.com/denoland/deno_website2/blob/892750b99cc260f8b1b2a4bcea59eab9101dd67c/public/logo.svg"
+            "source": "https://github.com/denoland/dotland/blob/f1ba74327b401b47de678f30d768ff9bf54494b6/public/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Dependabot",
@@ -3518,6 +3541,11 @@
             "guidelines": "https://www.g2a.co/documents/"
         },
         {
+            "title": "Game & Watch",
+            "hex": "000000",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Game_and_watch_logo.svg"
+        },
+        {
             "title": "Game Jolt",
             "hex": "CCFF00",
             "source": "https://gamejolt.com/about",
@@ -3851,11 +3879,6 @@
             "title": "Google Cardboard",
             "hex": "FF7143",
             "source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
-        },
-        {
-            "title": "Google Cast",
-            "hex": "1BB6F6",
-            "source": "https://www.google.com/intl/en_us/chromecast/built-in/"
         },
         {
             "title": "Google Chat",
@@ -5263,11 +5286,6 @@
             "source": "https://kodi.tv/"
         },
         {
-            "title": "Koding",
-            "hex": "00B057",
-            "source": "https://koding.com/About"
-        },
-        {
             "title": "Kofax",
             "hex": "00558C",
             "source": "https://www.kofax.com/"
@@ -5422,6 +5440,11 @@
             "title": "Lenovo",
             "hex": "E2231A",
             "source": "https://news.lenovo.com/press-kits/"
+        },
+        {
+            "title": "Lerna",
+            "hex": "2F0268",
+            "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
         },
         {
             "title": "Less",
@@ -5814,11 +5837,6 @@
             "license": {
                 "type": "Apache-2.0"
             }
-        },
-        {
-            "title": "Material-UI",
-            "hex": "0081CB",
-            "source": "https://material-ui.com/"
         },
         {
             "title": "Matomo",
@@ -6270,6 +6288,16 @@
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
         },
         {
+            "title": "MUI",
+            "aliases": {
+                "aka": [
+                    "Material-UI"
+                ]
+            },
+            "hex": "007FFF",
+            "source": "https://github.com/mui-org/material-ui/blob/353cecb5391571163eb6bd8cbf36d2dd299aaf56/docs/src/icons/SvgMuiLogo.tsx"
+        },
+        {
             "title": "Mulesoft",
             "hex": "00A0DF",
             "source": "https://www.mulesoft.com/brand",
@@ -6712,6 +6740,16 @@
             "guidelines": "https://ocaml.org/docs/logos.html",
             "license": {
                 "type": "Unlicense"
+            }
+        },
+        {
+            "title": "Octane Render",
+            "hex": "000000",
+            "source": "https://render.otoy.com/forum/viewtopic.php?f=9&t=359",
+            "aliases": {
+                "aka": [
+                    "otoy"
+                ]
             }
         },
         {
@@ -7918,6 +7956,11 @@
             "guidelines": "https://designsystem.quickbooks.com/visual-assets/logos/"
         },
         {
+            "title": "QuickLook",
+            "hex": "22A2E3",
+            "source": "https://github.com/QL-Win/QuickLook/"
+        },
+        {
             "title": "QuickTime",
             "hex": "1C69F0",
             "source": "https://support.apple.com/quicktime"
@@ -8985,6 +9028,11 @@
             "source": "https://www.sogou.com/"
         },
         {
+            "title": "Solid",
+            "hex": "2C4F7C",
+            "source": "https://www.solidjs.com/media"
+        },
+        {
             "title": "Solidity",
             "hex": "363636",
             "source": "https://docs.soliditylang.org/en/v0.8.6/brand-guide.html",
@@ -9781,6 +9829,11 @@
             "title": "Textpattern",
             "hex": "FFDA44",
             "source": "https://textpattern.com/"
+        },
+        {
+            "title": "The Algorithms",
+            "hex": "00BCB4",
+            "source": "https://github.com/TheAlgorithms/website/blob/f4e439578c88fed3b21c70898605238602975d2d/public/logo_t.svg"
         },
         {
             "title": "The Conversation",
