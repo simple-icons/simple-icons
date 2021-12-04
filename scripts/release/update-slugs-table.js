@@ -4,12 +4,10 @@
  * Generates a MarkDown file that lists every brand name and their slug.
  */
 
-import fsSync from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { getIconData, getIconSlug } from '../utils.js';
-
-const fs = fsSync.promises;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

@@ -7,7 +7,7 @@
  * tree-shakeable
  */
 
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 import util from 'util';
 import { transform as esbuildTransform } from 'esbuild';
@@ -20,7 +20,6 @@ import {
   getIconData,
 } from '../utils.js';
 
-const fs = fsSync.promises;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const UTF8 = 'utf8';

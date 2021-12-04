@@ -4,13 +4,11 @@
  * CLI tool to run jsonschema on the simple-icons.json data file.
  */
 
-import fsSync from 'fs';
+import { promises as fs } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import { Validator } from 'jsonschema';
 import { getIconData } from '../utils.js';
-
-const fs = fsSync.promises;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
