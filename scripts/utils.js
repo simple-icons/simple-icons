@@ -4,10 +4,10 @@
  */
 
 import path from 'path';
-import syncFs from 'fs';
+import fsSync from 'fs';
 import { fileURLToPath } from 'url';
 
-const fs = syncFs.promises;
+const fs = fsSync.promises;
 
 /**
  * Get the slug/filename for an icon.
