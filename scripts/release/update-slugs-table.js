@@ -4,13 +4,15 @@
  * Generates a MarkDown file that lists every brand name and their slug.
  */
 
-import fs from 'fs';
+import fsSync from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import data from '../../_data/simple-icons.json';
-import { getIconSlug } from '../utils.js';
+import { getIconData, getIconSlug } from '../utils.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const fs = fsSync.promises;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const slugsFile = path.resolve(rootDir, 'slugs.md');
@@ -26,10 +28,14 @@ update the script at '${path.relative(rootDir, __filename)}'.
 | :--- | :--- |
 `;
 
-data.icons.forEach((icon) => {
-  const brandName = icon.title;
-  const brandSlug = getIconSlug(icon);
-  content += `| \`${brandName}\` | \`${brandSlug}\` |\n`;
-});
+(async () => {
+  const icons = await getIconData();
 
-fs.writeFileSync(slugsFile, content);
+  icons.forEach((icon) => {
+    const brandName = icon.title;
+    const brandSlug = getIconSlug(icon);
+    content += `| \`${brandName}\` | \`${brandSlug}\` |\n`;
+  });
+
+  await fs.writeFile(slugsFile, content);
+})();

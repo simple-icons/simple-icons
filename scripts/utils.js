@@ -69,15 +69,19 @@ export const titleToHtmlFriendly = (brandTitle) =>
     });
 
 /**
- * Get icon data from _data/simple-icons.json.
- * @param {boolean} raw If true, return the raw string, otherwise, return an object
+ * Get contents of _data/simple-icons.json.
  */
-export const getIconData = async (raw = false) => {
+export const getIconDataString = () => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const rootDir = path.resolve(__dirname, '..');
   const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
-  const rawFile = await fs.readFile(iconDataPath, 'utf8');
+  return fs.readFile(iconDataPath, 'utf8');
+};
 
-  if (raw) return rawFile;
-  else return JSON.parse(rawFile).icons;
+/**
+ * Get icon data as object from _data/simple-icons.json.
+ */
+export const getIconData = async () => {
+  const fileContents = await getIconDataString();
+  return JSON.parse(fileContents).icons;
 };

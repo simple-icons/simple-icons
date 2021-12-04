@@ -5,17 +5,8 @@
  * linters (e.g. jsonlint/svglint).
  */
 
-import fs from 'fs';
-import path from 'path';
 import fakeDiff from 'fake-diff';
-import data from '../../_data/simple-icons.json';
-import { fileURLToPath } from 'url';
-
-const UTF8 = 'utf8';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const rootDir = path.resolve(__dirname, '..', '..');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
+import { getIconDataString } from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -23,7 +14,7 @@ const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
  */
 const TESTS = {
   /* Tests whether our icons are in alphabetical order */
-  alphabetical: () => {
+  alphabetical: (data) => {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
@@ -55,22 +46,30 @@ const TESTS = {
   },
 
   /* Check the formatting of the data file */
-  prettified: () => {
-    const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
+  prettified: async (data, dataString) => {
+    const normalizedDataString = dataString.replace(/\r\n/g, '\n');
     const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
-    if (dataString !== dataPretty) {
-      const dataDiff = fakeDiff(dataString, dataPretty);
+
+    if (normalizedDataString !== dataPretty) {
+      const dataDiff = fakeDiff(normalizedDataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
   },
 };
 
 // execute all tests and log all errors
-const errors = Object.keys(TESTS)
-  .map((k) => TESTS[k]())
-  .filter(Boolean);
+(async () => {
+  const dataString = await getIconDataString();
+  const data = JSON.parse(dataString);
 
-if (errors.length > 0) {
-  errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
-  process.exit(1);
-}
+  const errors = (
+    await Promise.all(
+      Object.keys(TESTS).map((test) => TESTS[test](data, dataString)),
+    )
+  ).filter(Boolean);
+
+  if (errors.length > 0) {
+    errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
+    process.exit(1);
+  }
+})();
