@@ -7,7 +7,7 @@
  * tree-shakeable
  */
 
-import fsSync from 'fs';
+import {promises as fs} from 'fs';
 import path from 'path';
 import util from 'util';
 import { transform as esbuildTransform } from 'esbuild';
