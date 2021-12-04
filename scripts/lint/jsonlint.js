@@ -6,15 +6,20 @@
 
 import { Validator } from 'jsonschema';
 import schema from '../../.jsonschema.json';
-import data from '../../_data/simple-icons.json';
+import { getIconData } from '../utils.js';
 
-const validator = new Validator();
-const result = validator.validate(data, schema);
-if (result.errors.length > 0) {
-  result.errors.forEach((error) => {
-    console.error(error);
-  });
+(async () => {
+  const data = getIconData();
+  const validator = new Validator();
+  const result = validator.validate(data, schema);
+  if (result.errors.length > 0) {
+    result.errors.forEach((error) => {
+      console.error(error);
+    });
 
-  console.error(`Found ${result.errors.length} error(s) in simple-icons.json`);
-  process.exit(1);
-}
+    console.error(
+      `Found ${result.errors.length} error(s) in simple-icons.json`,
+    );
+    process.exit(1);
+  }
+})();

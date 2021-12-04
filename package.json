@@ -49,7 +49,7 @@
     "uvu": "0.5.2"
   },
   "scripts": {
-    "build": "node --experimental-specifier-resolution=node scripts/build/package.js",
+    "build": "node scripts/build/package.js",
     "clean": "rimraf icons/*.js icons/*.d.ts index.js icons.js icons.mjs icons.d.ts",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
@@ -61,7 +61,7 @@
     "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
-    "test": "node --experimental-specifier-resolution=node node_modules/uvu/bin.js",
+    "test": "uvu",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
     "svgo": "svgo --config svgo.config.js",

@@ -12,6 +12,13 @@ import path from 'path';
 import util from 'util';
 import { transform as esbuildTransform } from 'esbuild';
 import { fileURLToPath } from 'url';
+import {
+  getIconSlug,
+  svgToPath,
+  titleToHtmlFriendly,
+  slugToVariableName,
+  getIconData,
+} from '../utils.js';
 
 const fs = syncFs.promises;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -29,12 +36,8 @@ const templatesDir = path.resolve(__dirname, 'templates');
 const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
-import data from '../../_data/simple-icons.json';
-import utils from '../utils.cjs';
-const { getIconSlug, svgToPath, titleToHtmlFriendly, slugToVariableName } =
-  utils;
-
 const build = async () => {
+  const data = await getIconData();
   const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
@@ -85,7 +88,7 @@ const build = async () => {
   const icons = [];
 
   await Promise.all(
-    data.icons.map(async (icon) => {
+    data.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
       icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');

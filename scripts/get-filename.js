@@ -5,7 +5,7 @@
  * icon SVG filename to standard output.
  */
 
-import { titleToSlug } from './utils.cjs';
+import { titleToSlug } from './utils.js';
 
 if (process.argv.length < 3) {
   console.error('Provide a brand name as argument');

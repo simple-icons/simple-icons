@@ -8,7 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import data from '../../_data/simple-icons.json';
-import { getIconSlug } from '../utils.cjs';
+import { getIconSlug } from '../utils.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
