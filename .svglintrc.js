@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const data = require('./_data/simple-icons.json');
-const { htmlFriendlyToTitle } = require('./scripts/utils.js');
+const { htmlFriendlyToTitle } = require('./scripts/utils.cjs');
 const htmlNamedEntities = require('named-html-entities-json');
 const svgpath = require('svgpath');
 const svgPathBbox = require('svg-path-bbox');

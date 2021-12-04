@@ -3,11 +3,11 @@
  * Some common utilities for scripts.
  */
 
+/**
+ * Get the slug/filename for an icon.
+ * @param {Object} icon The icon data as it appears in _data/simple-icons.json
+ */
 module.exports = {
-  /**
-   * Get the slug/filename for an icon.
-   * @param {Object} icon The icon data as it appears in _data/simple-icons.json
-   */
   getIconSlug: (icon) => icon.slug || module.exports.titleToSlug(icon.title),
 
   /**

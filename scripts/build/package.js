@@ -7,15 +7,18 @@
  * tree-shakeable
  */
 
-const fs = require('fs').promises;
-const path = require('path');
-const util = require('util');
-const { transform: esbuildTransform } = require('esbuild');
+import syncFs from 'fs';
+import path from 'path';
+import util from 'util';
+import { transform as esbuildTransform } from 'esbuild';
+import { fileURLToPath } from 'url';
+
+const fs = syncFs.promises;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const UTF8 = 'utf8';
 
 const rootDir = path.resolve(__dirname, '..', '..');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
 const indexFile = path.resolve(rootDir, 'index.js');
 const iconsDir = path.resolve(rootDir, 'icons');
 const iconsJsFile = path.resolve(rootDir, 'icons.js');
@@ -26,13 +29,13 @@ const templatesDir = path.resolve(__dirname, 'templates');
 const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
-const data = require(dataFile);
-const {
+import data from '../../_data/simple-icons.json';
+import {
   getIconSlug,
   svgToPath,
   titleToHtmlFriendly,
   slugToVariableName,
-} = require('../utils.js');
+} from '../utils.cjs';
 
 const build = async () => {
   const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);

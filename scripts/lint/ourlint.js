@@ -5,16 +5,17 @@
  * linters (e.g. jsonlint/svglint).
  */
 
-const fs = require('fs');
-const path = require('path');
-
-const fakeDiff = require('fake-diff');
+import fs from 'fs';
+import path from 'path';
+import fakeDiff from 'fake-diff';
+import data from '../../_data/simple-icons.json';
+import { fileURLToPath } from 'url';
 
 const UTF8 = 'utf8';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
-const data = require(dataFile);
 
 /**
  * Contains our tests so they can be isolated from each other.
