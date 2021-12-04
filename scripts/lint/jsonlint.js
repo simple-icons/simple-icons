@@ -4,13 +4,9 @@
  * CLI tool to run jsonschema on the simple-icons.json data file.
  */
 
-import path from 'path';
 import { Validator } from 'jsonschema';
-import { fileURLToPath } from 'url';
 import schema from '../../.jsonschema.json';
 import data from '../../_data/simple-icons.json';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const validator = new Validator();
 const result = validator.validate(data, schema);

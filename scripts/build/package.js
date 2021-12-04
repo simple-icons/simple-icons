@@ -30,12 +30,9 @@ const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 import data from '../../_data/simple-icons.json';
-import {
-  getIconSlug,
-  svgToPath,
-  titleToHtmlFriendly,
-  slugToVariableName,
-} from '../utils.cjs';
+import utils from '../utils.cjs';
+const { getIconSlug, svgToPath, titleToHtmlFriendly, slugToVariableName } =
+  utils;
 
 const build = async () => {
   const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);

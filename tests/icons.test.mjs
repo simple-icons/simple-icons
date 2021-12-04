@@ -1,5 +1,5 @@
 import simpleIconsData from '../_data/simple-icons.json';
-import utils from '../scripts/utils.js';
+import utils from '../scripts/utils.cjs';
 import * as simpleIcons from '../icons.mjs';
 import testIcon from './test-icon.js';
 

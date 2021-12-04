@@ -1,5 +1,5 @@
 const { icons } = require('../_data/simple-icons.json');
-const { getIconSlug } = require('../scripts/utils.js');
+const { getIconSlug } = require('../scripts/utils.cjs');
 const testIcon = require('./test-icon.js');
 
 console.warn = () => {};

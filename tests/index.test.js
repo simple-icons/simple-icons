@@ -1,6 +1,6 @@
 const { icons } = require('../_data/simple-icons.json');
 const simpleIcons = require('../index.js');
-const { getIconSlug } = require('../scripts/utils');
+const { getIconSlug } = require('../scripts/utils.cjs');
 const { test } = require('uvu');
 const assert = require('uvu/assert');
 
