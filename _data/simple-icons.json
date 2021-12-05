@@ -893,6 +893,11 @@
             "source": "https://github.com/asciinema/asciinema-logo"
         },
         {
+            "title": "ASDA",
+            "hex": "68A51C",
+            "source": "https://www.asda.com/"
+        },
+        {
             "title": "Aseprite",
             "hex": "7D929E",
             "source": "https://www.aseprite.org/"
@@ -1366,6 +1371,11 @@
             "title": "Boost",
             "hex": "F7901E",
             "source": "https://www.boostmobile.com/"
+        },
+        {
+            "title": "Boots",
+            "hex": "05054B",
+            "source": "https://www.boots-uk.com/css/images/Boots_logo.svg"
         },
         {
             "title": "Bootstrap",
@@ -6092,6 +6102,11 @@
             "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
         },
         {
+            "title": "Microsoft Translator",
+            "hex": "057B00",
+            "source": "https://translator.microsoft.com"
+        },
+        {
             "title": "Microsoft Visio",
             "hex": "3955A3",
             "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
@@ -6725,6 +6740,16 @@
             "guidelines": "https://ocaml.org/docs/logos.html",
             "license": {
                 "type": "Unlicense"
+            }
+        },
+        {
+            "title": "Octane Render",
+            "hex": "000000",
+            "source": "https://render.otoy.com/forum/viewtopic.php?f=9&t=359",
+            "aliases": {
+                "aka": [
+                    "otoy"
+                ]
             }
         },
         {
@@ -9003,6 +9028,11 @@
             "source": "https://www.sogou.com/"
         },
         {
+            "title": "Solid",
+            "hex": "2C4F7C",
+            "source": "https://www.solidjs.com/media"
+        },
+        {
             "title": "Solidity",
             "hex": "363636",
             "source": "https://docs.soliditylang.org/en/v0.8.6/brand-guide.html",
@@ -9649,6 +9679,11 @@
             "title": "Talend",
             "hex": "FF6D70",
             "source": "https://www.talend.com/blog/"
+        },
+        {
+            "title": "Talenthouse",
+            "hex": "FFFFFF",
+            "source": "https://www.talenthouse.com/"
         },
         {
             "title": "Tampermonkey",
