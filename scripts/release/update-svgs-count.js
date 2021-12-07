@@ -29,7 +29,7 @@ try {
 }
 
 const nIcons = require(dataFile).icons.length;
-if (nIcons <= overNIconsInReadme + 500) {
+if (nIcons <= overNIconsInReadme + updateRange) {
     process.exit(0);
 }
 
