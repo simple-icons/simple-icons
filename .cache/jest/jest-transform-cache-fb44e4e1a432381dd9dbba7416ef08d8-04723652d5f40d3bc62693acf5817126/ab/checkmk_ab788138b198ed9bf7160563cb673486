@@ -1,0 +1,16 @@
+40a0604c2133f3f0840c552a4679be31
+module.exports = {
+  title: "Checkmk",
+  slug: "checkmk",
+  svg: '<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24" xml:space="preserve"><title>Checkmk</title><path d="M5.2 8.7v4l4.9-3.2v8.2l1.9 1.1 1.9-1.1V9.6l4.9 3.2v-4L12 4.5 5.2 8.7zM12 0l10.4 6v12L12 24 1.6 18V6L12 0z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://github.com/animesh-anand/Checkmk-Logo/blob/main/checkmk.svg",
+  hex: "#13d389",
+  guidelines: "https://checkmk.com/company/brand-assets",
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNoZWNrbWsuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInRpdGxlIiwic2x1ZyIsInN2ZyIsInBhdGgiLCJtYXRjaCIsInNvdXJjZSIsImhleCIsImd1aWRlbGluZXMiLCJsaWNlbnNlIl0sIm1hcHBpbmdzIjoiQUFBQUEsTUFBTSxDQUFDQyxPQUFQLEdBQWU7QUFBQ0MsRUFBQUEsS0FBSyxFQUFDLFNBQVA7QUFBaUJDLEVBQUFBLElBQUksRUFBQyxTQUF0QjtBQUFnQ0MsRUFBQUEsR0FBRyxFQUFDLHVSQUFwQzs7QUFBNFQsTUFBSUMsSUFBSixHQUFVO0FBQUMsV0FBTyxLQUFLRCxHQUFMLENBQVNFLEtBQVQsQ0FBZSxvQkFBZixFQUFxQyxDQUFyQyxDQUFQO0FBQStDLEdBQXRYOztBQUF1WEMsRUFBQUEsTUFBTSxFQUFDLHFFQUE5WDtBQUFvY0MsRUFBQUEsR0FBRyxFQUFDLFNBQXhjO0FBQWtkQyxFQUFBQSxVQUFVLEVBQUMsMENBQTdkO0FBQXdnQkMsRUFBQUEsT0FBTyxFQUFDLEtBQUs7QUFBcmhCLENBQWYiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cz17dGl0bGU6XCJDaGVja21rXCIsc2x1ZzpcImNoZWNrbWtcIixzdmc6JzxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHJvbGU9XCJpbWdcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCIgc3R5bGU9XCJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI0IDI0XCIgeG1sOnNwYWNlPVwicHJlc2VydmVcIj48dGl0bGU+Q2hlY2ttazwvdGl0bGU+PHBhdGggZD1cIk01LjIgOC43djRsNC45LTMuMnY4LjJsMS45IDEuMSAxLjktMS4xVjkuNmw0LjkgMy4ydi00TDEyIDQuNSA1LjIgOC43ek0xMiAwbDEwLjQgNnYxMkwxMiAyNCAxLjYgMThWNkwxMiAwelwiLz48L3N2Zz4nLGdldCBwYXRoKCl7cmV0dXJuIHRoaXMuc3ZnLm1hdGNoKC88cGF0aFxccytkPVwiKFteXCJdKikvKVsxXX0sc291cmNlOlwiaHR0cHM6Ly9naXRodWIuY29tL2FuaW1lc2gtYW5hbmQvQ2hlY2ttay1Mb2dvL2Jsb2IvbWFpbi9jaGVja21rLnN2Z1wiLGhleDpcIiMxM2QzODlcIixndWlkZWxpbmVzOlwiaHR0cHM6Ly9jaGVja21rLmNvbS9jb21wYW55L2JyYW5kLWFzc2V0c1wiLGxpY2Vuc2U6dm9pZCAwfTsiXX0=

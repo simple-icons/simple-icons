@@ -1,0 +1,16 @@
+094abff07f0e06eb3d71e36f0458af92
+module.exports = {
+  title: "Checkmk",
+  slug: "checkmk",
+  svg: '<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Checkmk</title><path d="M5.2,8.7v4l4.9-3.2v8.2L12,18.8l1.9-1.1V9.6l4.9,3.2v-4L12,4.5ZM12,0,22.4,6V18L12,24,1.6,18V6Z"/></svg>',
+
+  get path() {
+    return this.svg.match(/<path\s+d="([^"]*)/)[1];
+  },
+
+  source: "https://github.com/animesh-anand/Checkmk-Logo/blob/main/checkmk.svg",
+  hex: "13D389",
+  guidelines: "https://checkmk.com/company/brand-assets",
+  license: void 0
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNoZWNrbWsuanMiXSwibmFtZXMiOlsibW9kdWxlIiwiZXhwb3J0cyIsInRpdGxlIiwic2x1ZyIsInN2ZyIsInBhdGgiLCJtYXRjaCIsInNvdXJjZSIsImhleCIsImd1aWRlbGluZXMiLCJsaWNlbnNlIl0sIm1hcHBpbmdzIjoiQUFBQUEsTUFBTSxDQUFDQyxPQUFQLEdBQWU7QUFBQ0MsRUFBQUEsS0FBSyxFQUFDLFNBQVA7QUFBaUJDLEVBQUFBLElBQUksRUFBQyxTQUF0QjtBQUFnQ0MsRUFBQUEsR0FBRyxFQUFDLDZNQUFwQzs7QUFBa1AsTUFBSUMsSUFBSixHQUFVO0FBQUMsV0FBTyxLQUFLRCxHQUFMLENBQVNFLEtBQVQsQ0FBZSxvQkFBZixFQUFxQyxDQUFyQyxDQUFQO0FBQStDLEdBQTVTOztBQUE2U0MsRUFBQUEsTUFBTSxFQUFDLHFFQUFwVDtBQUEwWEMsRUFBQUEsR0FBRyxFQUFDLFFBQTlYO0FBQXVZQyxFQUFBQSxVQUFVLEVBQUMsMENBQWxaO0FBQTZiQyxFQUFBQSxPQUFPLEVBQUMsS0FBSztBQUExYyxDQUFmIiwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHM9e3RpdGxlOlwiQ2hlY2tta1wiLHNsdWc6XCJjaGVja21rXCIsc3ZnOic8c3ZnIHJvbGU9XCJpbWdcIiB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgdmlld0JveD1cIjAgMCAyNCAyNFwiPjx0aXRsZT5DaGVja21rPC90aXRsZT48cGF0aCBkPVwiTTUuMiw4Ljd2NGw0LjktMy4ydjguMkwxMiwxOC44bDEuOS0xLjFWOS42bDQuOSwzLjJ2LTRMMTIsNC41Wk0xMiwwLDIyLjQsNlYxOEwxMiwyNCwxLjYsMThWNlpcIi8+PC9zdmc+JyxnZXQgcGF0aCgpe3JldHVybiB0aGlzLnN2Zy5tYXRjaCgvPHBhdGhcXHMrZD1cIihbXlwiXSopLylbMV19LHNvdXJjZTpcImh0dHBzOi8vZ2l0aHViLmNvbS9hbmltZXNoLWFuYW5kL0NoZWNrbWstTG9nby9ibG9iL21haW4vY2hlY2ttay5zdmdcIixoZXg6XCIxM0QzODlcIixndWlkZWxpbmVzOlwiaHR0cHM6Ly9jaGVja21rLmNvbS9jb21wYW55L2JyYW5kLWFzc2V0c1wiLGxpY2Vuc2U6dm9pZCAwfTsiXX0=
