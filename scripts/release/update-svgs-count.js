@@ -21,7 +21,7 @@ let overNIconsInReadme;
 try {
   overNIconsInReadme = parseInt(regexMatcher.exec(readmeContent)[1]);
 } catch (err) {
-  console.err(
+  console.error(
     'Failed to obtain number of SVG icons of current milestone in README:',
     err,
   );
