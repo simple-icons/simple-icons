@@ -34,6 +34,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
+* [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
 
 ## Requesting an Icon
