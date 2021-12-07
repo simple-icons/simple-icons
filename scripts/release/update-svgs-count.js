@@ -22,8 +22,8 @@ try {
   overNIconsInReadme = parseInt(regexMatcher.exec(readmeContent)[1]);
 } catch (err) {
   console.err(
-      'Failed to obtain number of SVG icons of current milestone in README:',
-      err,
+    'Failed to obtain number of SVG icons of current milestone in README:',
+    err,
   );
   process.exit(1);
 }
@@ -31,7 +31,7 @@ try {
 const nIcons = require(dataFile).icons.length,
   newNIcons = overNIconsInReadme + updateRange;
 if (nIcons <= newNIcons) {
-    process.exit(0);
+  process.exit(0);
 }
 
 const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
