@@ -29,11 +29,12 @@ try {
 }
 
 const nIcons = require(dataFile).icons.length;
-if (nIcons <= overNIconsInReadme + updateRange) {
+const newNIcons = overNIconsInReadme + updateRange;
+if (nIcons <= newNIcons) {
     process.exit(0);
 }
 
 const newContent = readmeContent.replace(
-  regexMatcher, `Over ${overNIconsInReadme + updateRange} `,
+  regexMatcher, `Over ${newNIcons} `,
 );
 fs.writeFileSync(readmeFile, newContent);
