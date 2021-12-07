@@ -28,13 +28,11 @@ try {
   process.exit(1);
 }
 
-const nIcons = require(dataFile).icons.length;
-const newNIcons = overNIconsInReadme + updateRange;
+const nIcons = require(dataFile).icons.length,
+  newNIcons = overNIconsInReadme + updateRange;
 if (nIcons <= newNIcons) {
     process.exit(0);
 }
 
-const newContent = readmeContent.replace(
-  regexMatcher, `Over ${newNIcons} `,
-);
+const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
 fs.writeFileSync(readmeFile, newContent);
