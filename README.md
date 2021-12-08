@@ -27,31 +27,15 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img
-  height="32"
-  width="32"
-  src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/[ICON SLUG].svg"
-/>
-<img
-  height="32"
-  width="32"
-  src="https://unpkg.com/simple-icons@v6/icons/[ICON SLUG].svg"
-/>
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/[ICON SLUG].svg" />
 ```
 
 Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img
-  height="32"
-  width="32"
-  src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/simpleicons.svg"
-/>
-<img
-  height="32"
-  width="32"
-  src="https://unpkg.com/simple-icons@v6/icons/simpleicons.svg"
-/>
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -73,11 +57,21 @@ const simpleIcons = require("simple-icons");
 // simpleIcons.Get('[ICON SLUG]');
 
 // For example:
-const icon = simpleIcons.Get("simpleicons");
+const icon = simpleIcons.Get('simpleicons');
+
 ```
 
 Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+```javascript
+// Import a specific icon by its slug as:
+// import { si[ICON SLUG] } from 'simple-icons/icons'
 
+// For example:
+// use import/esm to allow tree shaking
+import { siSimpleicons } from 'simple-icons/icons'
+```
+
+You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 ```javascript
 // Import a specific icon by its slug as:
 // import { si[ICON SLUG] } from 'simple-icons/icons'
@@ -178,6 +172,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | <img src="./readme-icons/svelte-white.svg#gh-dark-mode-only" alt="Svelte" align=left width=24 height=24><img src="./readme-icons/svelte.svg#gh-light-mode-only" alt="Svelte" align=left width=24 height=24>[Svelte package](https://github.com/icons-pack/svelte-simple-icons)                                   | [@wootsbot](https://github.com/wootsbot)                        |
 | <img src="./readme-icons/vuedotjs-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24><img src="./readme-icons/vuedotjs.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24>[Vue package](https://github.com/mainvest/vue-simple-icons)                                             | [@noahlitvin](https://github.com/noahlitvin)                    |
 | <img src="./readme-icons/wordpress-white.svg#gh-dark-mode-only" alt="Wordpress" align=left width=24 height=24><img src="./readme-icons/wordpress.svg#gh-light-mode-only" alt="Wordpress" align=left width=24 height=24>[WordPress plugin](https://wordpress.org/plugins/simple-icons/)                           | [@tjtaylo](https://github.com/tjtaylo)                          |
+
 
 [slug]: ./slugs.md
 
