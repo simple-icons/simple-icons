@@ -10,12 +10,12 @@ const fs = require('fs');
 const path = require('path');
 
 const regexMatcher = /Over\s(\d+)\s/;
-const updateRange = 500;
+const updateRange = 100;
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
 const readmeFile = path.resolve(rootDir, 'README.md');
-const readmeContent = fs.readFileSync(readmeFile).toString();
+const readmeContent = fs.readFileSync(readmeFile, 'utf-8');
 
 let overNIconsInReadme;
 try {
