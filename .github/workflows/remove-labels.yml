@@ -1,4 +1,4 @@
-name: Remove outdated labels
+name: Remove Outdated Labels
 on:
   pull_request_target:
     types:
