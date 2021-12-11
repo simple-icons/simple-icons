@@ -84,7 +84,7 @@ const build = async () => {
   const iconsBarrelMjs = [];
   const iconsBarrelJs = [];
   const iconsBarrelDts = [];
-  const icons = [];
+  const buildIcons = [];
 
   await Promise.all(
     icons.map(async (icon) => {
@@ -93,7 +93,7 @@ const build = async () => {
       icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
-      icons.push(icon);
+      buildIcons.push(icon);
 
       const iconObject = iconToObject(icon);
 
@@ -128,7 +128,7 @@ const build = async () => {
   // write our generic index.js
   const rawIndexJs = util.format(
     indexTemplate,
-    icons.map(iconToKeyValue).join(','),
+    buildIcons.map(iconToKeyValue).join(','),
   );
   await writeJs(indexFile, rawIndexJs);
 
