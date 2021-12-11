@@ -16,11 +16,11 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const schemaFile = path.resolve(rootDir, '.jsonschema.json');
 
 (async () => {
-  const data = getIconData();
+  const icons = await getIconData();
   const schema = JSON.parse(await fs.readFile(schemaFile, 'utf8'));
 
   const validator = new Validator();
-  const result = validator.validate(data, schema);
+  const result = validator.validate({ icons }, schema);
   if (result.errors.length > 0) {
     result.errors.forEach((error) => {
       console.error(error);

@@ -36,7 +36,7 @@ const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const build = async () => {
-  const data = await getIconData();
+  const icons = await getIconData();
   const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
@@ -87,7 +87,7 @@ const build = async () => {
   const icons = [];
 
   await Promise.all(
-    data.map(async (icon) => {
+    icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
       icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
