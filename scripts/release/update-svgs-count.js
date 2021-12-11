@@ -5,34 +5,40 @@
  * at README every time the number of current icons is more than `updateRange`
  * more than the previous milestone.
  */
-
-const fs = require('fs');
-const path = require('path');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { getIconData } from '../utils.js';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const rootDir = path.resolve(__dirname, '..', '..');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
 const readmeFile = path.resolve(rootDir, 'README.md');
-const readmeContent = fs.readFileSync(readmeFile, 'utf-8');
 
-let overNIconsInReadme;
-try {
-  overNIconsInReadme = parseInt(regexMatcher.exec(readmeContent)[1]);
-} catch (err) {
-  console.error(
-    'Failed to obtain number of SVG icons of current milestone in README:',
-    err,
-  );
-  process.exit(1);
-}
+(async () => {
+  const readmeContent = await fs.readFile(readmeFile, 'utf-8');
 
-const nIcons = require(dataFile).icons.length,
-  newNIcons = overNIconsInReadme + updateRange;
-if (nIcons <= newNIcons) {
-  process.exit(0);
-}
+  let overNIconsInReadme;
+  try {
+    overNIconsInReadme = parseInt(regexMatcher.exec(readmeContent)[1]);
+  } catch (err) {
+    console.error(
+      'Failed to obtain number of SVG icons of current milestone in README:',
+      err,
+    );
+    process.exit(1);
+  }
 
-const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
-fs.writeFileSync(readmeFile, newContent);
+  const nIcons = (await getIconData()).length;
+  const newNIcons = overNIconsInReadme + updateRange;
+
+  if (nIcons <= newNIcons) {
+    process.exit(0);
+  }
+
+  const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
+  await fs.writeFile(readmeFile, newContent);
+})();
