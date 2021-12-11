@@ -183,6 +183,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Asana` | `asana` |
 | `Asciidoctor` | `asciidoctor` |
 | `asciinema` | `asciinema` |
+| `ASDA` | `asda` |
 | `Aseprite` | `aseprite` |
 | `Ask Ubuntu` | `askubuntu` |
 | `ASKfm` | `askfm` |
@@ -276,6 +277,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bookmeter` | `bookmeter` |
 | `BookStack` | `bookstack` |
 | `Boost` | `boost` |
+| `Boots` | `boots` |
 | `Bootstrap` | `bootstrap` |
 | `Bosch` | `bosch` |
 | `Bose` | `bose` |
@@ -1159,6 +1161,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Microsoft SharePoint` | `microsoftsharepoint` |
 | `Microsoft SQL Server` | `microsoftsqlserver` |
 | `Microsoft Teams` | `microsoftteams` |
+| `Microsoft Translator` | `microsofttranslator` |
 | `Microsoft Visio` | `microsoftvisio` |
 | `Microsoft Word` | `microsoftword` |
 | `MicroStrategy` | `microstrategy` |
@@ -1271,6 +1274,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
 | `OCaml` | `ocaml` |
+| `Octane Render` | `octanerender` |
 | `Octave` | `octave` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
@@ -1690,6 +1694,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Society6` | `society6` |
 | `Socket.io` | `socketdotio` |
 | `Sogou` | `sogou` |
+| `Solid` | `solid` |
 | `Solidity` | `solidity` |
 | `Sololearn` | `sololearn` |
 | `Solus` | `solus` |
@@ -1806,6 +1811,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tails` | `tails` |
 | `Tailwind CSS` | `tailwindcss` |
 | `Talend` | `talend` |
+| `Talenthouse` | `talenthouse` |
 | `Tampermonkey` | `tampermonkey` |
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
