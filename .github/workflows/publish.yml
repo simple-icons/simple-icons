@@ -19,23 +19,15 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Cache Jest
-        uses: actions/cache@v2
-        with:
-          path: .cache/jest
-          key: ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-${{ github.run_number }}
-          restore-keys: |
-            ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-
-            ${{ runner.os }}-jest-
       - name: Install dependencies
-        run: npm ci
-      - name: Build NodeJS package
-        run: npm run build
+        run: npm i
       - name: Run linters
         run: npm run lint
+      - name: Build NodeJS package
+        run: npm run build
       - name: Run tests
         run: npm run test
   npm:
@@ -53,11 +45,11 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
@@ -72,16 +64,6 @@ jobs:
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v1
-      - name: Get release title and body
-        id: release
-        run: |
-          RELEASE_TITLE=$(echo "${{ steps.commit.outputs.git-message }}" | head -n 1)
-          echo "::set-output name=title::$RELEASE_TITLE"
-          RELEASE_BODY=$(echo "${{ steps.commit.outputs.git-message }}" | tail -n $(expr $(echo "${{ steps.commit.outputs.git-message }}" | wc -l) - 1))
-          RELEASE_BODY="${RELEASE_BODY//'%'/'%25'}"
-          RELEASE_BODY="${RELEASE_BODY//$'\n'/'%0A'}"
-          RELEASE_BODY="${RELEASE_BODY//$'\r'/'%0D'}"
-          echo "::set-output name=body::$RELEASE_BODY"
       - name: Get release version
         id: get-version
         run: |
@@ -98,8 +80,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.get-version.outputs.version }}
-          release_name: ${{ steps.release.outputs.title }}
-          body: ${{ steps.release.outputs.body }}
+          release_name: ${{ steps.commit.outputs.title }}
+          body: ${{ steps.commit.outputs.body }}
   font:
     name: Trigger simple-icons-font release
     needs: npm
