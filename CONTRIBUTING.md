@@ -34,6 +34,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
+* [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
 
 ## Requesting an Icon
@@ -85,6 +86,9 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Favicons
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
+
+It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this.
+Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
 
 #### Icon Guidelines
 
@@ -287,8 +291,8 @@ We use the source URL as a reference for the current SVG in our repository and a
 
 If the SVG is sourced from:
 
-- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
-- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
+- **Branding page**: For an SVG from a branding page the source URL should link to the branding page and not the image, PDF, or archive (such as `.zip`) file.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source image and not the image file itself.
 - **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself.
 
   In any case the commit hash should be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files).
@@ -384,15 +388,3 @@ Then, start a Docker container for simple-icons and attach to it:
 ```shell
 docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
-
----
-
-# Versioning
-
-We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
-
-| Version number | Kinds of changes |
-| :---- | :---- |
-| _Major_ | Removed icons; Renamed icons; Breaking API changes |
-| _Minor_ | New icons; API changes |
-| _Patch_ | Updated SVGs; Updated metadata |
