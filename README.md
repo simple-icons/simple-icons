@@ -4,7 +4,7 @@
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 2000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 2100 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -26,15 +26,15 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/[ICON SLUG].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v5/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/[ICON SLUG].svg" />
 ```
 
 Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/simpleicons.svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v5/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -60,9 +60,17 @@ const icon = simpleIcons.Get('simpleicons');
 
 ```
 
-Alternatively you can import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
-This is useful if you are e.g. compiling your code with [webpack](https://webpack.js.org/) and therefore have to be mindful of your package size:
+Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+```javascript
+// Import a specific icon by its slug as:
+// import { si[ICON SLUG] } from 'simple-icons/icons'
 
+// For example:
+// use import/esm to allow tree shaking
+import { siSimpleicons } from 'simple-icons/icons'
+```
+
+You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
 ```javascript
 // Import a specific icon by its slug as:
 // require('simple-icons/icons/[ICON SLUG]');
@@ -110,11 +118,7 @@ for (const iconSlug in simpleIcons) {
 
 #### TypeScript Usage
 
-There are also TypeScript type definitions for the Node package. To use them, simply run:
-
-```shell
-npm install --save-dev @types/simple-icons
-```
+Type definitions are bundled with the package.
 
 ### PHP Usage
 
@@ -142,6 +146,8 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 | Extension | Author |
 | :--- | :--- |
+| [Blender add-on](https://github.com/mondeja/simple-icons-blender) | [@mondeja](https://github.com/mondeja) |
+| [Drawio library](https://github.com/mondeja/simple-icons-drawio) | [@mondeja](https://github.com/mondeja) |
 | [Drupal module](https://www.drupal.org/project/simple_icons) | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
 | [Flutter package](https://pub.dev/packages/simple_icons) | [@jlnrrg](https://jlnrrg.github.io/) |
 | [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) | [@nidbCN](https://github.com/nidbCN/) |
@@ -156,3 +162,9 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
 [slug]: ./slugs.md
+
+## Contribute
+
+Information describing how to contribute can be found here:
+
+https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
