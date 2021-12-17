@@ -70,7 +70,7 @@ Alternatively, you can also import all icons from a single file, where `[ICON SL
 import { siSimpleicons } from 'simple-icons/icons'
 ```
 
-> :warning: The old way of importing with require('simple-icons/icons/[ICON SLUG]) is deprecated and
+> :warning: The old way of importing with `require('simple-icons/icons/[ICON SLUG]')` is deprecated and
 will be removed in v7.0.0.
 
 Either method will return an icon object:
