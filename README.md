@@ -71,6 +71,8 @@ import { siSimpleicons } from 'simple-icons/icons'
 ```
 
 You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
+
+⚠️ This way of importing icons has been deprecated in v6.0.0 and will no longer work from v7.0.0.
 ```javascript
 // Import a specific icon by its slug as:
 // require('simple-icons/icons/[ICON SLUG]');
