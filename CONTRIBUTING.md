@@ -370,7 +370,7 @@ If you have an affiliation to the brand you contributing that allows you to spea
 
 ## Testing Package Locally
 
-* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.20.0 is required.
+* Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `^12.20.0 || ^14.13.1 || >=16.0.0` is required.
 * Install the dependencies using `$ npm install`.
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
