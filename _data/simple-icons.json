@@ -1881,6 +1881,12 @@
             "source": "https://www.kitware.com/platforms/"
         },
         {
+            "title": "CNCF",
+            "hex": "231F20",
+            "source": "https://github.com/cncf/artwork/blob/master/examples/other.md#cncf-logos",
+            "guidelines": "https://www.cncf.io/brand-guidelines/"
+        },
+        {
             "title": "CNN",
             "hex": "CC0000",
             "source": "https://edition.cnn.com/"
@@ -3946,7 +3952,7 @@
         {
             "title": "Google Keep",
             "hex": "FFBB00",
-            "source": "https://play.google.com/store/apps/details?id=com.google.android.keep"
+            "source": "https://about.google/brand-resource-center/logos-list/"
         },
         {
             "title": "Google Lens",
@@ -3959,9 +3965,14 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg"
         },
         {
+            "title": "Google Marketing Platform",
+            "hex": "4285F4",
+            "source": "https://about.google/brand-resource-center/logos-list/"
+        },
+        {
             "title": "Google Meet",
             "hex": "00897B",
-            "source": "https://meet.google.com/"
+            "source": "https://about.google/brand-resource-center/logos-list/"
         },
         {
             "title": "Google Messages",
@@ -4112,6 +4123,11 @@
             "title": "Gridsome",
             "hex": "00A672",
             "source": "https://gridsome.org/logo/"
+        },
+        {
+            "title": "GroupMe",
+            "hex": "00AFF0",
+            "source": "https://groupme.com"
         },
         {
             "title": "Groupon",
@@ -10360,8 +10376,9 @@
         },
         {
             "title": "Unity",
-            "hex": "000000",
-            "source": "https://unity.com/"
+            "hex": "FFFFFF",
+            "source": "https://brand.unity.com/",
+            "guidelines": "https://brand.unity.com/"
         },
         {
             "title": "Unraid",
