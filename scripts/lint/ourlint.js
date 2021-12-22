@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const { diffLinesUnified } = require('jest-diff');
+const fakeDiff = require('fake-diff');
 
 const UTF8 = 'utf8';
 
@@ -58,15 +58,7 @@ const TESTS = {
     const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
     const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
     if (dataString !== dataPretty) {
-      const dataDiff = diffLinesUnified(
-        dataString.split('\n'),
-        dataPretty.split('\n'),
-        {
-          expand: false,
-          omitAnnotationLines: true,
-        },
-      );
-
+      const dataDiff = fakeDiff(dataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
   },
