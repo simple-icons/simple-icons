@@ -663,6 +663,11 @@
             "source": "https://groovy-lang.org/"
         },
         {
+            "title": "Apache Hadoop",
+            "hex": "66CCFF",
+            "source": "https://apache.org/logos/#hadoop"
+        },
+        {
             "title": "Apache Hive",
             "hex": "FDEE21",
             "source": "https://apache.org/logos/"
@@ -922,6 +927,14 @@
             "title": "Aston Martin",
             "hex": "000000",
             "source": "https://www.astonmartin.com/"
+        },
+        {
+            "title": "Astro",
+            "hex": "FF5D01",
+            "source": "https://github.com/withastro/astro/blob/09144e8e88fbb79a75a2283aca8bf6eba6dc45f0/assets/brand/logo-white.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "ASUS",
@@ -1866,6 +1879,12 @@
             "title": "CMake",
             "hex": "064F8C",
             "source": "https://www.kitware.com/platforms/"
+        },
+        {
+            "title": "CNCF",
+            "hex": "231F20",
+            "source": "https://github.com/cncf/artwork/blob/master/examples/other.md#cncf-logos",
+            "guidelines": "https://www.cncf.io/brand-guidelines/"
         },
         {
             "title": "CNN",
@@ -3933,7 +3952,7 @@
         {
             "title": "Google Keep",
             "hex": "FFBB00",
-            "source": "https://play.google.com/store/apps/details?id=com.google.android.keep"
+            "source": "https://about.google/brand-resource-center/logos-list/"
         },
         {
             "title": "Google Lens",
@@ -3946,9 +3965,14 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg"
         },
         {
+            "title": "Google Marketing Platform",
+            "hex": "4285F4",
+            "source": "https://about.google/brand-resource-center/logos-list/"
+        },
+        {
             "title": "Google Meet",
             "hex": "00897B",
-            "source": "https://meet.google.com/"
+            "source": "https://about.google/brand-resource-center/logos-list/"
         },
         {
             "title": "Google Messages",
@@ -4099,6 +4123,11 @@
             "title": "Gridsome",
             "hex": "00A672",
             "source": "https://gridsome.org/logo/"
+        },
+        {
+            "title": "GroupMe",
+            "hex": "00AFF0",
+            "source": "https://groupme.com"
         },
         {
             "title": "Groupon",
@@ -8535,6 +8564,11 @@
             "source": "http://www.actransit.org/wp-content/uploads/HSP_CC-sched.pdf"
         },
         {
+            "title": "SanDisk",
+            "hex": "ED1C24",
+            "source": "https://kb.sandisk.com/"
+        },
+        {
             "title": "São Paulo Metro",
             "hex": "004382",
             "source": "https://upload.wikimedia.org/wikipedia/commons/d/da/Sao_Paulo_Metro_Logo.svg"
@@ -9607,6 +9641,11 @@
             "source": "https://foursquare.com/about/logos"
         },
         {
+            "title": "SWC",
+            "hex": "FFFFFF",
+            "source": "https://github.com/swc-project/logo/blob/f26cac1b4a490e3bdf128d3b084bb57f4fab1aac/svg/swc_black.svg"
+        },
+        {
             "title": "Swift",
             "hex": "F05138",
             "source": "https://developer.apple.com/swift/resources/",
@@ -9904,6 +9943,11 @@
             "title": "ThinkPad",
             "hex": "EE2624",
             "source": "https://www.lenovo.com/us/en/thinkpad"
+        },
+        {
+            "title": "Threadless",
+            "hex": "0099FF",
+            "source": "https://www.threadless.com/about-us/"
         },
         {
             "title": "Three.js",
@@ -10332,8 +10376,9 @@
         },
         {
             "title": "Unity",
-            "hex": "000000",
-            "source": "https://unity.com/"
+            "hex": "FFFFFF",
+            "source": "https://brand.unity.com/",
+            "guidelines": "https://brand.unity.com/"
         },
         {
             "title": "Unraid",
@@ -10809,6 +10854,16 @@
             "title": "WEMO",
             "hex": "72D44C",
             "source": "https://commons.wikimedia.org/wiki/File:WeMoApp.svg"
+        },
+        {
+            "title": "Western Digital",
+            "aliases": {
+                "aka": [
+                    "WD"
+                ]
+            },
+            "hex": "000000",
+            "source": "https://www.westerndigital.com"
         },
         {
             "title": "WeTransfer",
