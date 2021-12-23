@@ -287,6 +287,16 @@
             "source": "https://commons.wikimedia.org/wiki/File:AI_Dungeon_Logo.png"
         },
         {
+            "title": "AIB",
+            "hex": "7F2B7B",
+            "source": "https://aib.ie/",
+            "aliases": {
+                "aka": [
+                    "Allied Irish Banks"
+                ]
+            }
+        },
+        {
             "title": "AIOHTTP",
             "hex": "2C5BB4",
             "source": "https://github.com/aio-libs/aiohttp/blob/fb5fe72b1bca3b899af579d376f5fe45745410e4/docs/aiohttp-plain.svg"
@@ -641,6 +651,11 @@
             "title": "Apache Cordova",
             "hex": "E8E8E8",
             "source": "https://cordova.apache.org/artwork/"
+        },
+        {
+            "title": "Apache CouchDB",
+            "hex": "E42528",
+            "source": "https://apache.org/logos/#couchdb"
         },
         {
             "title": "Apache Druid",
