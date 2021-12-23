@@ -1,20 +1,29 @@
 # Contributing to Simple Icons
 
+> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
+
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 1. Fork this repository
 1. (Optional) Clone the fork
 
-   ```bash
-   # Using SSH
-   git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+   - Using SSH
 
-   # Using HTTPS
-   git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+     ```shell
+     git clone --filter=tree:0 git@github.com:simple-icons/simple-icons.git
+     ```
 
-   # Using GitHub CLI
-   gh repo clone simple-icons/simple-icons -- --filter=tree:0
-   ```
+   - Using HTTPS
+
+     ```shell
+     git clone --filter=tree:0 https://github.com/simple-icons/simple-icons.git
+     ```
+
+   - Using GitHub CLI
+
+     ```shell
+     gh repo clone simple-icons/simple-icons -- --filter=tree:0
+     ```
 
 1. Create a new branch from the latest `develop`
 1. Start hacking on the new branch
@@ -25,7 +34,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
-* [Building the Website](#building-locally)
+* [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
 
 ## Requesting an Icon
@@ -77,6 +86,9 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Favicons
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
+
+It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this.
+Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
 
 #### Icon Guidelines
 
@@ -279,8 +291,8 @@ We use the source URL as a reference for the current SVG in our repository and a
 
 If the SVG is sourced from:
 
-- **Branding page**: For an SVG from a branding page the source URL should simply link to the branding page.
-- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source material.
+- **Branding page**: For an SVG from a branding page the source URL should link to the branding page and not the image, PDF, or archive (such as `.zip`) file.
+- **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source image and not the image file itself.
 - **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color comes from another file in the repository the URL should link to the repository itself.
 
   In any case the commit hash should be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files).
@@ -356,63 +368,23 @@ Once you've completed the previous steps, create a pull request to merge your ed
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
-## Building Website Locally
-
-* Make sure you have [Ruby](https://www.ruby-lang.org/en/downloads/) installed.
-* Make sure you have [Bundler](https://bundler.io/) installed (using `$ gem install bundler`).
-* Set your local gems installation location for the simple-icons website using `$ bundle config set path 'vendor/bundle'`.
-* Install dependencies using `$ bundle install`.
-* Build and run the website locally using `$ bundle exec jekyll serve`.
-* Connect to the website in your browser via the "Server address" provided by the output of this command, e.g. `http://localhost:4000/`
-
 ## Testing Package Locally
 
-* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
+* Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `^12.20.0 || ^14.13.1 || >=16.0.0` is required.
 * Install the dependencies using `$ npm install`.
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
 
-## Building in Your Browser
-
-Alternatively, you can build and run the website in a readily configured online workspace:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/simple-icons/simple-icons)
-
 ## Using Docker
 
-You can build a Docker image for this project from the Dockerfile by running:
+You can build a Docker image for this project which can be used as a development environment and allows you to run SVGO safely. First, build the Docker image for simple-icons (if you haven't yet):
 
-```bash
-# Build the Docker image for simple-icons (if you haven't yet)
-$ docker build . -t simple-icons
-
-# Start a Docker container for simple-icons and attach to it
-$ docker run -it --rm --entrypoint "/bin/ash" simple-icons
+```shell
+docker build . -t simple-icons
 ```
 
-### Jekyll Server using Docker
+Then, start a Docker container for simple-icons and attach to it:
 
-To use a Docker container to run the Jekyll server for the website, run:
-
-```bash
-# Start a container running `jekyll serve` in the background
-$ docker run -d -p 4000:4000 --rm --volume $PWD:/srv/jekyll --name simple-icons-server jekyll/jekyll jekyll serve
-
-# Inspect the server logs
-$ docker logs simple-icons-server
-
-# Stop the server (and delete the container)
-$ docker stop simple-icons-server
+```shell
+docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
-
----
-
-# Versioning
-
-We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
-
-| Version number | Kinds of changes |
-| :---- | :---- |
-| _Major_ | Removed icons; Renamed icons; Breaking API changes |
-| _Minor_ | New icons; API changes |
-| _Patch_ | Updated SVGs; Updated metadata |
