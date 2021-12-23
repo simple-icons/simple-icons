@@ -1,6 +1,6 @@
 var icons = {%s};
 
-Object.defineProperty(icons, "get", {
+Object.defineProperty(icons, "Get", {
   enumerable: false,
   value: function(targetName) {
     return icons[targetName];
