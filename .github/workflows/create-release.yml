@@ -45,6 +45,8 @@ jobs:
         run: node ./scripts/release/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update major version in CDN URLs
         run: node ./scripts/release/update-cdn-urls.js
+      - name: Update SVGs count milestone
+        run: node ./scripts/release/update-svgs-count.js
       - name: Update slugs table
         run: node ./scripts/release/update-slugs-table.js
       - name: Commit version bump
