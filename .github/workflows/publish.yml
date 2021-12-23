@@ -22,20 +22,12 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Cache Jest
-        uses: actions/cache@v2
-        with:
-          path: .cache/jest
-          key: ${{ runner.os }}-jest-${{ hashFiles('package.json') }}-${{ github.run_number }}
-          restore-keys: |
-            ${{ runner.os }}-jest-${{ hashFiles('package.json') }}-
-            ${{ runner.os }}-jest-
       - name: Install dependencies
         run: npm i
-      - name: Build NodeJS package
-        run: npm run build
       - name: Run linters
         run: npm run lint
+      - name: Build NodeJS package
+        run: npm run build
       - name: Run tests
         run: npm run test
   npm:
@@ -71,7 +63,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Get commit message (for release title and body)
         id: commit
-        uses: kceb/git-message-action@v1.2.0
+        uses: kceb/git-message-action@v1
       - name: Get release version
         id: get-version
         run: |
