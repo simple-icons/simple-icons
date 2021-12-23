@@ -18,7 +18,7 @@ const getMajorVersion = (semVerVersion) => {
 };
 
 const getManifest = () => {
-  const manifestRaw = fs.readFileSync(packageJsonFile).toString();
+  const manifestRaw = fs.readFileSync(packageJsonFile, 'utf-8');
   return JSON.parse(manifestRaw);
 };
 

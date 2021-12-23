@@ -11,7 +11,7 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const packageJsonFile = path.resolve(rootDir, 'package.json');
 
 const readManifest = (file) => {
-  const manifestRaw = fs.readFileSync(file).toString();
+  const manifestRaw = fs.readFileSync(file, 'utf-8');
   const manifestJson = JSON.parse(manifestRaw);
   return manifestJson;
 };
