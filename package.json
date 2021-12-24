@@ -56,7 +56,7 @@
     "our-lint": "node scripts/lint/ourlint.js",
     "jslint": "prettier --check .",
     "jsonlint": "node scripts/lint/jsonlint.js",
-    "svglint": "svglint icons/*.svg --ci",
+    "svglint": "svglint icons/*.svg --ci --config .svglintrc.mjs",
     "wslint": "editorconfig-checker",
     "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
