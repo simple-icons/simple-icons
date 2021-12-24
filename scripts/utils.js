@@ -82,7 +82,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 /**
  * Get contents of _data/simple-icons.json.
  */
-export const getIconDataString = () => {
+export const getIconsDataString = () => {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   const rootDir = path.resolve(__dirname, '..');
   const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
@@ -92,8 +92,8 @@ export const getIconDataString = () => {
 /**
  * Get icon data as object from _data/simple-icons.json.
  */
-export const getIconData = async () => {
-  const fileContents = await getIconDataString();
+export const getIconsData = async () => {
+  const fileContents = await getIconsDataString();
   return JSON.parse(fileContents).icons;
 };
 

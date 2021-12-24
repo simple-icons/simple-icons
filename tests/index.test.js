@@ -1,10 +1,10 @@
 import simpleIcons from '../index.js';
-import { getIconSlug, getIconData } from '../scripts/utils.js';
+import { getIconSlug, getIconsData } from '../scripts/utils.js';
 import { test, exec } from 'uvu';
 import * as assert from 'uvu/assert';
 
 (async () => {
-  const icons = await getIconData();
+  const icons = await getIconsData();
 
   icons.forEach((icon) => {
     const slug = getIconSlug(icon);

@@ -6,7 +6,7 @@
  */
 
 import fakeDiff from 'fake-diff';
-import { getIconDataString } from '../utils.js';
+import { getIconsDataString } from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -59,7 +59,7 @@ const TESTS = {
 
 // execute all tests and log all errors
 (async () => {
-  const dataString = await getIconDataString();
+  const dataString = await getIconsDataString();
   const data = JSON.parse(dataString);
 
   const errors = (

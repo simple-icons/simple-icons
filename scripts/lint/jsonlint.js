@@ -7,7 +7,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { Validator } from 'jsonschema';
-import { getDirnameFromImportMeta, getIconData } from '../utils.js';
+import { getDirnameFromImportMeta, getIconsData } from '../utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -15,7 +15,7 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const schemaFile = path.resolve(rootDir, '.jsonschema.json');
 
 (async () => {
-  const icons = await getIconData();
+  const icons = await getIconsData();
   const schema = JSON.parse(await fs.readFile(schemaFile, 'utf8'));
 
   const validator = new Validator();

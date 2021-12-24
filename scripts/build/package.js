@@ -16,7 +16,7 @@ import {
   svgToPath,
   titleToHtmlFriendly,
   slugToVariableName,
-  getIconData,
+  getIconsData,
   getDirnameFromImportMeta,
 } from '../utils.js';
 
@@ -36,7 +36,7 @@ const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const build = async () => {
-  const icons = await getIconData();
+  const icons = await getIconsData();
   const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 

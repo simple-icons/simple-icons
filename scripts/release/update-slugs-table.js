@@ -7,7 +7,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getIconData, getIconSlug } from '../utils.js';
+import { getIconsData, getIconSlug } from '../utils.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -27,7 +27,7 @@ update the script at '${path.relative(rootDir, __filename)}'.
 `;
 
 (async () => {
-  const icons = await getIconData();
+  const icons = await getIconsData();
 
   icons.forEach((icon) => {
     const brandName = icon.title;

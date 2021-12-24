@@ -1,5 +1,5 @@
 import {
-  getIconData,
+  getIconsData,
   getIconSlug,
   slugToVariableName,
 } from '../scripts/utils.js';
@@ -8,7 +8,7 @@ import { testIcon } from './test-icon.js';
 import { exec } from 'uvu';
 
 (async () => {
-  const icons = await getIconData();
+  const icons = await getIconsData();
 
   icons.map((icon) => {
     const slug = getIconSlug(icon);

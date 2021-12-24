@@ -7,7 +7,7 @@
  */
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { getDirnameFromImportMeta, getIconData } from '../utils.js';
+import { getDirnameFromImportMeta, getIconsData } from '../utils.js';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
@@ -31,7 +31,7 @@ const readmeFile = path.resolve(rootDir, 'README.md');
     process.exit(1);
   }
 
-  const nIcons = (await getIconData()).length;
+  const nIcons = (await getIconsData()).length;
   const newNIcons = overNIconsInReadme + updateRange;
 
   if (nIcons <= newNIcons) {

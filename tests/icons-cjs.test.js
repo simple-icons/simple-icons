@@ -1,10 +1,10 @@
 import { exec } from 'uvu';
 import { testIcon } from './test-icon.js';
-import { getIconSlug, getIconData } from '../scripts/utils.js';
+import { getIconSlug, getIconsData } from '../scripts/utils.js';
 (async () => {
   console.warn = () => {};
 
-  const icons = await getIconData();
+  const icons = await getIconsData();
 
   const tests = icons.map(async (icon) => {
     const slug = getIconSlug(icon);
