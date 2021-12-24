@@ -3,9 +3,9 @@
  * Some common utilities for scripts.
  */
 
-import path from 'path';
-import { promises as fs } from 'fs';
-import { fileURLToPath } from 'url';
+import path from 'node:path';
+import { promises as fs } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 
 /**
  * Get the slug/filename for an icon.
@@ -96,3 +96,10 @@ export const getIconData = async () => {
   const fileContents = await getIconDataString();
   return JSON.parse(fileContents).icons;
 };
+
+/**
+ * Get the directory name from import.meta.url.
+ * @param {String} importMetaUrl import.meta.url
+ */
+export const getDirnameFromImportMeta = (importMetaUrl) =>
+  path.dirname(fileURLToPath(importMetaUrl));

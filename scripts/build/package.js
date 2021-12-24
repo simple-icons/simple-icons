@@ -7,20 +7,20 @@
  * tree-shakeable
  */
 
-import { promises as fs } from 'fs';
-import path from 'path';
-import util from 'util';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import util from 'node:util';
 import { transform as esbuildTransform } from 'esbuild';
-import { fileURLToPath } from 'url';
 import {
   getIconSlug,
   svgToPath,
   titleToHtmlFriendly,
   slugToVariableName,
   getIconData,
+  getDirnameFromImportMeta,
 } from '../utils.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const UTF8 = 'utf8';
 

@@ -5,15 +5,14 @@
  * at README every time the number of current icons is more than `updateRange`
  * more than the previous milestone.
  */
-import { promises as fs } from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { getIconData } from '../utils.js';
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import { getDirnameFromImportMeta, getIconData } from '../utils.js';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const readmeFile = path.resolve(rootDir, 'README.md');

@@ -5,11 +5,11 @@
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import path from 'node:path';
+import { getDirnameFromImportMeta } from '../utils.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const packageJsonFile = path.resolve(rootDir, 'package.json');

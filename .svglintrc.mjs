@@ -1,12 +1,14 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { htmlFriendlyToTitle } from './scripts/utils.js';
+import fs from 'node:fs';
+import path from 'node:path';
+import {
+  getDirnameFromImportMeta,
+  htmlFriendlyToTitle,
+} from './scripts/utils.js';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 const dataFile = path.join(__dirname, '_data', 'simple-icons.json');
 const htmlNamedEntitiesFile = path.join(
   __dirname,
