@@ -375,6 +375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clubhouse` | `clubhouse` |
 | `Clyp` | `clyp` |
 | `CMake` | `cmake` |
+| `CNCF` | `cncf` |
 | `CNN` | `cnn` |
 | `Co-op` | `coop` |
 | `Cockpit` | `cockpit` |
@@ -765,6 +766,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Keep` | `googlekeep` |
 | `Google Lens` | `googlelens` |
 | `Google Maps` | `googlemaps` |
+| `Google Marketing Platform` | `googlemarketingplatform` |
 | `Google Meet` | `googlemeet` |
 | `Google Messages` | `googlemessages` |
 | `Google My Business` | `googlemybusiness` |
@@ -793,6 +795,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GreenSock` | `greensock` |
 | `Grid.ai` | `griddotai` |
 | `Gridsome` | `gridsome` |
+| `GroupMe` | `groupme` |
 | `Groupon` | `groupon` |
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |

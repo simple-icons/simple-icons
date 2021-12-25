@@ -70,14 +70,8 @@ Alternatively, you can also import all icons from a single file, where `[ICON SL
 import { siSimpleicons } from 'simple-icons/icons'
 ```
 
-You can also import the needed icons individually, where `[ICON SLUG]` is replaced by a [slug].
-```javascript
-// Import a specific icon by its slug as:
-// require('simple-icons/icons/[ICON SLUG]');
-
-// For example:
-const icon = require('simple-icons/icons/simpleicons');
-```
+> :warning: The old way of importing with `require('simple-icons/icons/[ICON SLUG]')` is deprecated and
+will be removed in v7.0.0.
 
 Either method will return an icon object:
 
