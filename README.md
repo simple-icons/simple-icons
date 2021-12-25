@@ -3,7 +3,6 @@
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
 </a>
-
 <h3 align="center">Simple Icons</h3>
 <p align="center">
 Over 2100 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
