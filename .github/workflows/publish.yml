@@ -79,7 +79,7 @@ jobs:
         with:
           files: README.md
           strict: true
-      # Add commit for the tag only (in master, outside develop history)
+      # Add commit that will only be included in the tag
       - name: Commit dark theme images strip
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
