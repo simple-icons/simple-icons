@@ -48,6 +48,11 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - name: Remove dark theme images from README
+        uses: mondeja/strip-gh-theme-links@v1
+        with:
+          files: README.md
+          strict: true
       - name: Install dependencies
         run: npm i
       - name: Deploy to NPM
@@ -61,6 +66,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Remove dark theme images from README
+        uses: mondeja/strip-gh-theme-links@v1
+        with:
+          files: README.md
+          strict: true
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v1
