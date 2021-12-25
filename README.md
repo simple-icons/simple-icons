@@ -1,6 +1,8 @@
 <p align="center">
+<a href="https://simpleicons.org/">
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
+</a>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
