@@ -49,7 +49,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Remove dark theme images from README
-        uses: mondeja/strip-gh-theme-links@v1
+        uses: mondeja/strip-gh-theme-links@v2
         with:
           files: README.md
           strict: true
@@ -75,7 +75,7 @@ jobs:
           export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
           echo "::set-output name=version::$PACKAGE_VERSION"
       - name: Remove dark theme images from README
-        uses: mondeja/strip-gh-theme-links@v1
+        uses: mondeja/strip-gh-theme-links@v2
         with:
           files: README.md
           strict: true
