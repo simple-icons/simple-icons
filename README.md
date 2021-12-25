@@ -1,5 +1,4 @@
 <p align="center">
-
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
 
@@ -51,7 +50,7 @@ npm install simple-icons
 The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
 
 ```javascript
-const simpleIcons = require("simple-icons");
+const simpleIcons = require('simple-icons');
 
 // Get a specific icon by its slug as:
 // simpleIcons.Get('[ICON SLUG]');
@@ -85,7 +84,7 @@ console.log(icon);
     slug: 'simpleicons',
     hex: '111111',
     source: 'https://simpleicons.org/',
-    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
+    svg: '<svg role='img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
     guidelines: 'https://simpleicons.org/styleguide',
     license: {
@@ -103,7 +102,7 @@ Lastly, the `simpleIcons` object is also enumerable.
 This is useful if you want to do a computation on every icon:
 
 ```javascript
-const simpleIcons = require("simple-icons");
+const simpleIcons = require('simple-icons');
 
 for (const iconSlug in simpleIcons) {
   const icon = simpleIcons.Get(iconSlug);
