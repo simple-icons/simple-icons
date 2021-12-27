@@ -2,7 +2,7 @@
 <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
        <style>
-         .dark-mode: {
+         .dark-mode {
           filter:invert(1);
          }
        </style>
