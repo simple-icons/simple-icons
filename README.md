@@ -1,8 +1,10 @@
-<style>
+<style
+       type="text/css">
     dark-mode: {
     filter: invert(1);
     }
 </style>
+
 <p align="center">
 
 <img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
