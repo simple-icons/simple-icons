@@ -1,6 +1,6 @@
 <p align="center">
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject x="20" y="20" width="160" height="160">
+<svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
        <img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
        <img class="dark-mode" style='filter:invert(1);' src="./readme-icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
   </foreignObject>
