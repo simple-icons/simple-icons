@@ -1,12 +1,24 @@
-<style
-       type="text/css">
-    dark-mode: {
-    filter: invert(1);
-    }
-</style>
+
 
 <p align="center">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    div {
+      color: white;
+      font: 18px serif;
+      height: 100%;
+      overflow: auto;
+    }
+  </style>
 
+  <polygon points="5,5 195,10 185,185 10,195" />
+
+  <!-- Common use case: embed HTML text into SVG -->
+  <foreignObject x="20" y="20" width="160" height="160">
+       <img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
+       <img class="dark-mode" style='filter:invert(1);' src="./readme-icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
+  </foreignObject>
+</svg>
 <img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
 <img class="dark-mode" style='filter:invert(1);' src="./readme-icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
 
