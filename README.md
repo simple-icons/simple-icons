@@ -4,6 +4,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
        <style>
          .dark-mode {
+         fill:white;
           filter:invert(1);
          }
        </style>
