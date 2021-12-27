@@ -8,7 +8,7 @@
 <p align="center">
 
 <img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
-<img class="dark-mode" src="./readme-icons/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
+<img class="dark-mode" style='filter:invert(1);' src="./readme-icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
 
 <h3 align="center">Simple Icons</h3>
 <p align="center">
