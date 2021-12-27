@@ -1,7 +1,7 @@
 <p align="center">
 <a href="https://simpleicons.org/">
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
-<img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
+<img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" style="filter: invert(1)" width=70>
 </a>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
@@ -40,7 +40,7 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-### Node Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg#gh-light-mode-only" alt="Node" align=left width=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/nodedotjs-white.svg#gh-dark-mode-only" alt="Node" align=left width=24>
+### Node Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg#gh-light-mode-only" alt="Node" align=left width=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg#gh-dark-mode-only" alt="Node" style="filter: invert(1)" align=left width=24>
 
 The icons are also available through our npm package. To install, simply run:
 
@@ -111,11 +111,11 @@ for (const iconSlug in simpleIcons) {
 }
 ```
 
-#### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg#gh-dark-mode-only" alt="Typescript" align=left width=24 height=24>
+#### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-dark-mode-only" alt="Typescript" style="filter: invert(1)" align=left width=24 height=24>
 
 Type definitions are bundled with the package.
 
-### PHP Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-light-mode-only" alt="Php" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-dark-mode-only" alt="Php" align=left width=24 height=24 fill=white>
+### PHP Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-light-mode-only" alt="Php" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-dark-mode-only" alt="Php" style="filter: invert(1)"  align=left width=24 height=24>
 
 The icons are also available through our Packagist package. To install, simply run:
 
@@ -141,7 +141,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 | Extension | Author |
 | :-- | :-- |
-| <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg#gh-light-mode-only" alt="Blender" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg#gh-dark-mode-only" alt="Blender" style='fill: white' align=left width=24 height=24> [Blender add-on](https://github.com/mondeja/simple-icons-blender) | [@mondeja](https://github.com/mondeja) |
+| <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg#gh-light-mode-only" alt="Blender" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg#gh-dark-mode-only" alt="Blender" style='filter: invert(1)' align=left width=24 height=24> [Blender add-on](https://github.com/mondeja/simple-icons-blender) | [@mondeja](https://github.com/mondeja) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/diagramsdotnet.svg#gh-light-mode-only" alt="Drawio" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/diagramsdotnet.svg#gh-dark-mode-only" alt="Drawio" style='filter: invert(1)' align=left width=24 height=24> [Drawio library](https://github.com/mondeja/simple-icons-drawio) | [@mondeja](https://github.com/mondeja) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/drupal.svg#gh-light-mode-only" alt="Drupal" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/drupal.svg#gh-dark-mode-only" alt="Drupal" style='filter: invert(1)' align=left width=24 height=24> [Drupal module](https://www.drupal.org/project/simple_icons) | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/flutter.svg#gh-light-mode-only" alt="Flutter" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/flutter.svg#gh-dark-mode-only" alt="Flutter" style='filter: invert(1)' align=left width=24 height=24> [Flutter package](https://pub.dev/packages/simple_icons) | [@jlnrrg](https://jlnrrg.github.io/) |
