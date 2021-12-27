@@ -287,6 +287,16 @@
             "source": "https://commons.wikimedia.org/wiki/File:AI_Dungeon_Logo.png"
         },
         {
+            "title": "AIB",
+            "hex": "7F2B7B",
+            "source": "https://aib.ie/",
+            "aliases": {
+                "aka": [
+                    "Allied Irish Banks"
+                ]
+            }
+        },
+        {
             "title": "AIOHTTP",
             "hex": "2C5BB4",
             "source": "https://github.com/aio-libs/aiohttp/blob/fb5fe72b1bca3b899af579d376f5fe45745410e4/docs/aiohttp-plain.svg"
@@ -641,6 +651,11 @@
             "title": "Apache Cordova",
             "hex": "E8E8E8",
             "source": "https://cordova.apache.org/artwork/"
+        },
+        {
+            "title": "Apache CouchDB",
+            "hex": "E42528",
+            "source": "https://apache.org/logos/#couchdb"
         },
         {
             "title": "Apache Druid",
@@ -1518,6 +1533,11 @@
             "source": "https://www.buzzfeed.com/press/assets"
         },
         {
+            "title": "Byju's",
+            "hex": "813588",
+            "source": "https://byjus.com/byjus-the-learning-app/"
+        },
+        {
             "title": "byte",
             "hex": "551DEF",
             "source": "https://byte.co/byte"
@@ -1546,6 +1566,12 @@
             "title": "Cachet",
             "hex": "7ED321",
             "source": "https://cachethq.io/press"
+        },
+        {
+            "title": "Caffeine",
+            "hex": "0000FF",
+            "source": "https://www.caffeine.tv/",
+            "guidelines": "https://www.caffeine.tv/newsroom.html"
         },
         {
             "title": "Cairo Metro",
@@ -1879,6 +1905,12 @@
             "title": "CMake",
             "hex": "064F8C",
             "source": "https://www.kitware.com/platforms/"
+        },
+        {
+            "title": "CNCF",
+            "hex": "231F20",
+            "source": "https://github.com/cncf/artwork/blob/master/examples/other.md#cncf-logos",
+            "guidelines": "https://www.cncf.io/brand-guidelines/"
         },
         {
             "title": "CNN",
@@ -3056,6 +3088,11 @@
             }
         },
         {
+            "title": "Exordo",
+            "hex": "DAA449",
+            "source": "https://www.exordo.com/"
+        },
+        {
             "title": "Expensify",
             "hex": "0185FF",
             "source": "https://use.expensify.com/press-kit",
@@ -3946,7 +3983,7 @@
         {
             "title": "Google Keep",
             "hex": "FFBB00",
-            "source": "https://play.google.com/store/apps/details?id=com.google.android.keep"
+            "source": "https://about.google/brand-resource-center/logos-list/"
         },
         {
             "title": "Google Lens",
@@ -3959,9 +3996,14 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg"
         },
         {
+            "title": "Google Marketing Platform",
+            "hex": "4285F4",
+            "source": "https://about.google/brand-resource-center/logos-list/"
+        },
+        {
             "title": "Google Meet",
             "hex": "00897B",
-            "source": "https://meet.google.com/"
+            "source": "https://about.google/brand-resource-center/logos-list/"
         },
         {
             "title": "Google Messages",
@@ -4112,6 +4154,11 @@
             "title": "Gridsome",
             "hex": "00A672",
             "source": "https://gridsome.org/logo/"
+        },
+        {
+            "title": "GroupMe",
+            "hex": "00AFF0",
+            "source": "https://groupme.com"
         },
         {
             "title": "Groupon",
@@ -4948,6 +4995,11 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "Jetpack Compose",
+            "hex": "4285F4",
+            "source": "https://developer.android.com/jetpack/compose/"
         },
         {
             "title": "JFrog",
@@ -6947,6 +6999,21 @@
             "guidelines": "https://en.opensuse.org/Portal:Artwork"
         },
         {
+            "title": "OpenTelemetry",
+            "hex": "000000",
+            "source": "https://cncf-branding.netlify.app/projects/opentelemetry/",
+            "guidelines": "https://cncf-branding.netlify.app/projects/opentelemetry/",
+            "license": {
+                "type": "CC-BY-4.0",
+                "url": "https://www.linuxfoundation.org/trademark-usage/"
+            },
+            "aliases": {
+                "aka": [
+                    "OTel"
+                ]
+            }
+        },
+        {
             "title": "OpenVPN",
             "hex": "EA7E20",
             "source": "https://openvpn.net/wp-content/themes/openvpn/assets/images/logo.svg",
@@ -7583,9 +7650,19 @@
             "source": "https://powerapps.microsoft.com/en-us/"
         },
         {
+            "title": "Power Automate",
+            "hex": "0066FF",
+            "source": "https://flow.microsoft.com/en-us/"
+        },
+        {
             "title": "Power BI",
             "hex": "F2C811",
             "source": "https://powerbi.microsoft.com/en-us/"
+        },
+        {
+            "title": "Power Virtual Agents",
+            "hex": "0B556A",
+            "source": "https://powervirtualagents.microsoft.com/en-us/"
         },
         {
             "title": "POWERS",
@@ -10840,6 +10917,16 @@
             "source": "https://commons.wikimedia.org/wiki/File:WeMoApp.svg"
         },
         {
+            "title": "Western Digital",
+            "aliases": {
+                "aka": [
+                    "WD"
+                ]
+            },
+            "hex": "000000",
+            "source": "https://www.westerndigital.com"
+        },
+        {
             "title": "WeTransfer",
             "hex": "409FFF",
             "source": "https://wetransfer.com/"
@@ -10899,6 +10986,11 @@
             "title": "Wikivoyage",
             "hex": "006699",
             "source": "https://commons.wikimedia.org/wiki/File:Wikivoyage-Logo-v3-en.svg"
+        },
+        {
+            "title": "Winamp",
+            "hex": "F93821",
+            "source": "https://www.winamp.com"
         },
         {
             "title": "Windi CSS",
