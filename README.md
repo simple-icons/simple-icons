@@ -115,7 +115,7 @@ for (const iconSlug in simpleIcons) {
 
 Type definitions are bundled with the package.
 
-### PHP Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-light-mode-only" alt="Php" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/php-white.svg#gh-dark-mode-only" alt="Php" align=left width=24 height=24>
+### PHP Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-light-mode-only" alt="Php" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg#gh-dark-mode-only" alt="Php" align=left width=24 height=24 fill=white>
 
 The icons are also available through our Packagist package. To install, simply run:
 
