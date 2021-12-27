@@ -1,8 +1,13 @@
 <p align="center">
 <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
+       <style>
+         .dark-mode: {
+          filter:invert(1);
+         }
+       </style>
        <img src="./readme-icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70>
-       <img class="dark-mode" style='filter:invert(1);' src="./readme-icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
+       <img class="dark-mode" src="./readme-icons/simpleicons.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
   </foreignObject>
 </svg>
 
