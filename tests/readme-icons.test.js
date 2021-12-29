@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
     const darkIconsPath = path.resolve(__dirname, '../assets/readme');
     fs.readdirSync(lightIconsPath).forEach((file) => {
       const lightContent = fs.readFileSync(
-        path.resolve(darkIconsPath, file),
+        path.resolve(lightIconsPath, file),
         'utf8',
       );
       const darkContent = fs.readFileSync(
