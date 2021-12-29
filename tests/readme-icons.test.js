@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
   test(`Check readme light and dark icons`, () => {
     const __dirname = path.dirname(fileURLToPath(import.meta.url));
     const lightIconsPath = path.resolve(__dirname, '../assets/readme');
-    const darkIconsPath = path.resolve(__dirname, '../assets/readme');
+    const darkIconsPath = path.resolve(__dirname, '../icons');
     fs.readdirSync(lightIconsPath).forEach((file) => {
       const lightContent = fs.readFileSync(
         path.resolve(lightIconsPath, file),
