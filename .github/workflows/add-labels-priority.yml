@@ -33,6 +33,17 @@ jobs:
       - id: get-linked-issues
         name: Get linked issue numbers
         uses: mondeja/pr-linked-issues-action@v2
+        with:
+          # Lazy linked issues. If one of the lines of the pull request body
+          # matches one of the next contents, the matching issue number will
+          # be added to `issues` output:
+          add_links_by_content: |
+            **Issue:** #{issue_number}
+            **Issue**: #{issue_number}
+            **Close:** #{issue_number}
+            **Close**: #{issue_number}
+            **Closes:** #{issue_number}
+            **Closes**: #{issue_number}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
