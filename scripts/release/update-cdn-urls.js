@@ -5,8 +5,11 @@
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
+import { getDirnameFromImportMeta } from '../utils.js';
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const packageJsonFile = path.resolve(rootDir, 'package.json');
@@ -18,7 +21,7 @@ const getMajorVersion = (semVerVersion) => {
 };
 
 const getManifest = () => {
-  const manifestRaw = fs.readFileSync(packageJsonFile).toString();
+  const manifestRaw = fs.readFileSync(packageJsonFile, 'utf-8');
   return JSON.parse(manifestRaw);
 };
 

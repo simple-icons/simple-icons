@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
+import { suite } from 'uvu';
+import * as assert from 'uvu/assert';
 
 const iconsDir = path.resolve(process.cwd(), 'icons');
-const { suite } = require('uvu');
-const assert = require('uvu/assert');
 
 /**
  * Checks if icon data matches a subject icon.
@@ -11,7 +11,7 @@ const assert = require('uvu/assert');
  * @param {import('..').SimpleIcon} subject Icon to check against icon data
  * @param {String} slug Icon data slug
  */
-const testIcon = (icon, subject, slug) => {
+export const testIcon = (icon, subject, slug) => {
   const test = suite(icon.title);
   const svgPath = path.resolve(iconsDir, `${slug}.svg`);
 
@@ -64,14 +64,8 @@ const testIcon = (icon, subject, slug) => {
     const svgFileContents = fs
       .readFileSync(svgPath, 'utf8')
       .replace(/\r?\n/, '');
-
-    assert.is(
-      subject.svg.substring(subject.svg.indexOf('<title>')),
-      svgFileContents.substring(svgFileContents.indexOf('<title>')),
-    );
+    assert.is(subject.svg, svgFileContents);
   });
 
   test.run();
 };
-
-module.exports = testIcon;

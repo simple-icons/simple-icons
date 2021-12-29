@@ -63,6 +63,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Affinity Photo` | `affinityphoto` |
 | `Affinity Publisher` | `affinitypublisher` |
 | `AI Dungeon` | `aidungeon` |
+| `AIB` | `aib` |
 | `AIOHTTP` | `aiohttp` |
 | `Aiqfome` | `aiqfome` |
 | `Air Canada` | `aircanada` |
@@ -134,10 +135,12 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache Cassandra` | `apachecassandra` |
 | `Apache CloudStack` | `apachecloudstack` |
 | `Apache Cordova` | `apachecordova` |
+| `Apache CouchDB` | `apachecouchdb` |
 | `Apache Druid` | `apachedruid` |
 | `Apache ECharts` | `apacheecharts` |
 | `Apache Flink` | `apacheflink` |
 | `Apache Groovy` | `apachegroovy` |
+| `Apache Hadoop` | `apachehadoop` |
 | `Apache Hive` | `apachehive` |
 | `Apache JMeter` | `apachejmeter` |
 | `Apache Kafka` | `apachekafka` |
@@ -183,11 +186,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Asana` | `asana` |
 | `Asciidoctor` | `asciidoctor` |
 | `asciinema` | `asciinema` |
+| `ASDA` | `asda` |
 | `Aseprite` | `aseprite` |
 | `Ask Ubuntu` | `askubuntu` |
 | `ASKfm` | `askfm` |
 | `AssemblyScript` | `assemblyscript` |
 | `Aston Martin` | `astonmartin` |
+| `Astro` | `astro` |
 | `ASUS` | `asus` |
 | `AT&T` | `atandt` |
 | `Atari` | `atari` |
@@ -276,6 +281,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bookmeter` | `bookmeter` |
 | `BookStack` | `bookstack` |
 | `Boost` | `boost` |
+| `Boots` | `boots` |
 | `Bootstrap` | `bootstrap` |
 | `Bosch` | `bosch` |
 | `Bose` | `bose` |
@@ -301,12 +307,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Burger King` | `burgerking` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
+| `Byju's` | `byjus` |
 | `byte` | `byte` |
 | `ByteDance` | `bytedance` |
 | `C` | `c` |
 | `C Sharp` | `csharp` |
 | `C++` | `cplusplus` |
 | `Cachet` | `cachet` |
+| `Caffeine` | `caffeine` |
 | `Cairo Metro` | `cairometro` |
 | `CakePHP` | `cakephp` |
 | `Campaign Monitor` | `campaignmonitor` |
@@ -371,6 +379,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clubhouse` | `clubhouse` |
 | `Clyp` | `clyp` |
 | `CMake` | `cmake` |
+| `CNCF` | `cncf` |
 | `CNN` | `cnn` |
 | `Co-op` | `coop` |
 | `Cockpit` | `cockpit` |
@@ -594,6 +603,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eventbrite` | `eventbrite` |
 | `Evernote` | `evernote` |
 | `Exercism` | `exercism` |
+| `Exordo` | `exordo` |
 | `Expensify` | `expensify` |
 | `Experts Exchange` | `expertsexchange` |
 | `Expo` | `expo` |
@@ -761,6 +771,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Keep` | `googlekeep` |
 | `Google Lens` | `googlelens` |
 | `Google Maps` | `googlemaps` |
+| `Google Marketing Platform` | `googlemarketingplatform` |
 | `Google Meet` | `googlemeet` |
 | `Google Messages` | `googlemessages` |
 | `Google My Business` | `googlemybusiness` |
@@ -789,6 +800,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GreenSock` | `greensock` |
 | `Grid.ai` | `griddotai` |
 | `Gridsome` | `gridsome` |
+| `GroupMe` | `groupme` |
 | `Groupon` | `groupon` |
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
@@ -1159,6 +1171,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Microsoft SharePoint` | `microsoftsharepoint` |
 | `Microsoft SQL Server` | `microsoftsqlserver` |
 | `Microsoft Teams` | `microsoftteams` |
+| `Microsoft Translator` | `microsofttranslator` |
 | `Microsoft Visio` | `microsoftvisio` |
 | `Microsoft Word` | `microsoftword` |
 | `MicroStrategy` | `microstrategy` |
@@ -1271,6 +1284,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
 | `OCaml` | `ocaml` |
+| `Octane Render` | `octanerender` |
 | `Octave` | `octave` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
@@ -1305,6 +1319,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenStack` | `openstack` |
 | `OpenStreetMap` | `openstreetmap` |
 | `openSUSE` | `opensuse` |
+| `OpenTelemetry` | `opentelemetry` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
 | `Opera` | `opera` |
@@ -1424,7 +1439,9 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Postman` | `postman` |
 | `Postmates` | `postmates` |
 | `Power Apps` | `powerapps` |
+| `Power Automate` | `powerautomate` |
 | `Power BI` | `powerbi` |
+| `Power Virtual Agents` | `powervirtualagents` |
 | `POWERS` | `powers` |
 | `PowerShell` | `powershell` |
 | `pr.co` | `prdotco` |
@@ -1597,6 +1614,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Samsung` | `samsung` |
 | `Samsung Pay` | `samsungpay` |
 | `San Francisco Municipal Railway` | `sanfranciscomunicipalrailway` |
+| `SanDisk` | `sandisk` |
 | `São Paulo Metro` | `saopaulometro` |
 | `SAP` | `sap` |
 | `Sass` | `sass` |
@@ -1690,6 +1708,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Society6` | `society6` |
 | `Socket.io` | `socketdotio` |
 | `Sogou` | `sogou` |
+| `Solid` | `solid` |
 | `Solidity` | `solidity` |
 | `Sololearn` | `sololearn` |
 | `Solus` | `solus` |
@@ -1792,6 +1811,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SVGO` | `svgo` |
 | `Swagger` | `swagger` |
 | `Swarm` | `swarm` |
+| `SWC` | `swc` |
 | `Swift` | `swift` |
 | `Swiggy` | `swiggy` |
 | `Swiper` | `swiper` |
@@ -1806,6 +1826,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tails` | `tails` |
 | `Tailwind CSS` | `tailwindcss` |
 | `Talend` | `talend` |
+| `Talenthouse` | `talenthouse` |
 | `Tampermonkey` | `tampermonkey` |
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
@@ -1847,6 +1868,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Washington Post` | `thewashingtonpost` |
 | `Thingiverse` | `thingiverse` |
 | `ThinkPad` | `thinkpad` |
+| `Threadless` | `threadless` |
 | `Three.js` | `threedotjs` |
 | `Threema` | `threema` |
 | `Thumbtack` | `thumbtack` |
@@ -2019,6 +2041,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Weights & Biases` | `weightsandbiases` |
 | `Welcome to the Jungle` | `welcometothejungle` |
 | `WEMO` | `wemo` |
+| `Western Digital` | `westerndigital` |
 | `WeTransfer` | `wetransfer` |
 | `WhatsApp` | `whatsapp` |
 | `When I Work` | `wheniwork` |
@@ -2031,6 +2054,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wikipedia` | `wikipedia` |
 | `Wikiquote` | `wikiquote` |
 | `Wikivoyage` | `wikivoyage` |
+| `Winamp` | `winamp` |
 | `Windi CSS` | `windicss` |
 | `Windows` | `windows` |
 | `Windows 95` | `windows95` |
