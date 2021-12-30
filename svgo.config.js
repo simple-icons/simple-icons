@@ -20,7 +20,7 @@ module.exports = {
       name: 'convertPathData',
       params: {
         // 3 decimals of precision in floating point numbers
-        floatPrecision: 4,
+        floatPrecision: 3,
         // Some editors (e.g. Adobe Illustrator and Sketch) cannot parse flags
         // without space wrapping
         noSpaceAfterFlags: false,
