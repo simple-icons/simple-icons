@@ -34,6 +34,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
+* [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
 
 ## Requesting an Icon
@@ -369,7 +370,7 @@ If you have an affiliation to the brand you contributing that allows you to spea
 
 ## Testing Package Locally
 
-* Make sure you have [NodeJS](https://nodejs.org/en/download/) installed. At least version 12.4.0 is required.
+* Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `^12.20.0 || ^14.13.1 || >=16.0.0` is required.
 * Install the dependencies using `$ npm install`.
 * Build and test the package using `$ npm test`.
 * Run the project linting process using `$ npm run lint`.
@@ -387,15 +388,3 @@ Then, start a Docker container for simple-icons and attach to it:
 ```shell
 docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
-
----
-
-# Versioning
-
-We use [Semantic Versioning](https://semver.org/) in this project. Given a version number `MAJOR.MINOR.PATCH` you can expect the following kinds of changes:
-
-| Version number | Kinds of changes |
-| :---- | :---- |
-| _Major_ | Removed icons; Renamed icons; Breaking API changes |
-| _Minor_ | New icons; API changes |
-| _Patch_ | Updated SVGs; Updated metadata |
