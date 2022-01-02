@@ -7,15 +7,24 @@
  * tree-shakeable
  */
 
-const fs = require('fs').promises;
-const path = require('path');
-const util = require('util');
-const { transform: esbuildTransform } = require('esbuild');
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import util from 'node:util';
+import { transform as esbuildTransform } from 'esbuild';
+import {
+  getIconSlug,
+  svgToPath,
+  titleToHtmlFriendly,
+  slugToVariableName,
+  getIconsData,
+  getDirnameFromImportMeta,
+} from '../utils.js';
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const UTF8 = 'utf8';
 
 const rootDir = path.resolve(__dirname, '..', '..');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
 const indexFile = path.resolve(rootDir, 'index.js');
 const iconsDir = path.resolve(rootDir, 'icons');
 const iconsJsFile = path.resolve(rootDir, 'icons.js');
@@ -26,15 +35,8 @@ const templatesDir = path.resolve(__dirname, 'templates');
 const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
-const data = require(dataFile);
-const {
-  getIconSlug,
-  svgToPath,
-  titleToHtmlFriendly,
-  slugToVariableName,
-} = require('../utils.js');
-
 const build = async () => {
+  const icons = await getIconsData();
   const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
@@ -82,16 +84,16 @@ const build = async () => {
   const iconsBarrelMjs = [];
   const iconsBarrelJs = [];
   const iconsBarrelDts = [];
-  const icons = [];
+  const buildIcons = [];
 
   await Promise.all(
-    data.icons.map(async (icon) => {
+    icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
       icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
-      icons.push(icon);
+      buildIcons.push(icon);
 
       const iconObject = iconToObject(icon);
 
@@ -126,7 +128,7 @@ const build = async () => {
   // write our generic index.js
   const rawIndexJs = util.format(
     indexTemplate,
-    icons.map(iconToKeyValue).join(','),
+    buildIcons.map(iconToKeyValue).join(','),
   );
   await writeJs(indexFile, rawIndexJs);
 
