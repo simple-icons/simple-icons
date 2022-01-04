@@ -1,34 +1,34 @@
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { test, exec } from 'uvu';
 import * as assert from 'uvu/assert';
-import path from 'path';
-import * as fs from 'fs';
-import { fileURLToPath } from 'url';
 
 (async () => {
-  test(`Check readme light and dark icons`, () => {
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
-    const lightIconsPath = path.resolve(__dirname, '../assets/readme');
-    const darkIconsPath = path.resolve(__dirname, '../icons');
-    fs.readdirSync(lightIconsPath).forEach((file) => {
-      const lightContent = fs.readFileSync(
-        path.resolve(lightIconsPath, file),
-        'utf8',
-      );
-      const darkContent = fs.readFileSync(
-        path.resolve(darkIconsPath, file),
-        'utf8',
-      );
+  const __dirname = path.dirname(fileURLToPath(import.meta.url)),
+    root = path.dirname(__dirname),
+    darkIconsPath = path.join(root, 'icons'),
+    lightIconsPath = path.join(root, 'assets', 'readme'),
+    lightIconsFileNames = await fs.readdir(lightIconsPath);
 
-      //compare light svgs to dark ones. The only difference should be a fill="white" attribute
-      assert.ok(
-        lightContent
-          .replace(/ /g, '')
-          .replace('fill="white"', '')
-          .localeCompare(darkContent.replace(/ /g, '')),
+  for (let lightIconFileName of lightIconsFileNames) {
+    const lightIconPath = path.join(lightIconsPath, lightIconFileName),
+      darkIconPath = path.join(
+        darkIconsPath,
+        lightIconFileName.replace(/-white\.svg$/, '.svg'),
+      ),
+      lightIconRelPath = path.relative(root, lightIconPath),
+      darkIconRelPath = path.relative(root, darkIconPath),
+      lightIconContent = await fs.readFile(lightIconPath, 'utf8'),
+      darkIconContent = await fs.readFile(darkIconPath, 'utf8');
+
+    test(`'${lightIconRelPath}' content must be equivalent to '${darkIconRelPath}' content`, () => {
+      assert.equal(
+        lightIconContent.replace(' fill="white"', ''),
+        darkIconContent,
       );
     });
-  });
-
+  }
   test.run();
   exec();
 })();

@@ -82,8 +82,8 @@ jobs:
       # Add commit that will only be included in the tag
       - name: Commit dark theme images strip
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           git add README.md
           git commit -m 'Strip README dark theme image links'
       - name: Create and push git tag
