@@ -4749,7 +4749,7 @@
         },
         {
             "title": "Insomnia",
-            "hex": "5849BE",
+            "hex": "4000BF",
             "source": "https://insomnia.rest/"
         },
         {
@@ -5283,6 +5283,16 @@
             "title": "Kik",
             "hex": "82BC23",
             "source": "https://www.kik.com/news/"
+        },
+        {
+            "title": "Kingston Technology",
+            "aliases": {
+                "aka": [
+                    "Kingston"
+                ]
+            },
+            "hex": "000000",
+            "source": "https://www.kingston.com/"
         },
         {
             "title": "KinoPoisk",
@@ -10901,6 +10911,11 @@
             "hex": "07C160",
             "source": "https://wechat.design/standard/download/brand",
             "guidelines": "https://wechat.design/standard/download/brand"
+        },
+        {
+            "title": "WeGame",
+            "hex": "FAAB00",
+            "source": "https://www.wegame.com.cn"
         },
         {
             "title": "Weights & Biases",
