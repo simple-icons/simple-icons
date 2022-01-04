@@ -82,4 +82,4 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Run tests
-        run: npm run test
+        run: FORCE_COLOR=0 npm run test
