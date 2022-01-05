@@ -955,6 +955,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jest` | `jest` |
 | `JET` | `jet` |
 | `JetBrains` | `jetbrains` |
+| `Jetpack Compose` | `jetpackcompose` |
 | `JFrog` | `jfrog` |
 | `JFrog Bintray` | `jfrogbintray` |
 | `Jinja` | `jinja` |
