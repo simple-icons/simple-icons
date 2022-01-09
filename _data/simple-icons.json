@@ -2841,7 +2841,12 @@
         {
             "title": "Fedora",
             "hex": "51A2DA",
-            "source": "https://fedoraproject.org/wiki/Logo/UsageGuidelines"
+            "source": "https://docs.fedoraproject.org/en-US/project/brand/".
+            "guidelines": "https://fedoraproject.org/wiki/Legal:Trademark_guidelines",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.fedoraproject.org/en-US/project/brand/"
+            }
         },
         {
             "title": "FedRAMP",
