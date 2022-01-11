@@ -697,6 +697,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fur Affinity` | `furaffinity` |
 | `Furry Network` | `furrynetwork` |
 | `FutureLearn` | `futurelearn` |
+| `G2` | `g2` |
 | `G2A` | `g2a` |
 | `Game & Watch` | `gameandwatch` |
 | `Game Jolt` | `gamejolt` |
@@ -1007,6 +1008,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kibana` | `kibana` |
 | `Kickstarter` | `kickstarter` |
 | `Kik` | `kik` |
+| `Kingston Technology` | `kingstontechnology` |
 | `KinoPoisk` | `kinopoisk` |
 | `Kirby` | `kirby` |
 | `Kitsu` | `kitsu` |
@@ -2039,6 +2041,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WebStorm` | `webstorm` |
 | `WEBTOON` | `webtoon` |
 | `WeChat` | `wechat` |
+| `WeGame` | `wegame` |
 | `Weights & Biases` | `weightsandbiases` |
 | `Welcome to the Jungle` | `welcometothejungle` |
 | `WEMO` | `wemo` |
