@@ -28,7 +28,7 @@ for (let whiteIconFileName of whiteIconsFileNames) {
 
     assert.ok(
       fs.existsSync(blackIconPath),
-      `Equivalent icon '${blackIconRelPath}' for README asset '${whiteIconRelPath}'` +
+      `Corresponding icon '${blackIconRelPath}' for README asset '${whiteIconRelPath}'` +
         ` not found in '${path.dirname(blackIconRelPath)}' directory.`,
     );
 
