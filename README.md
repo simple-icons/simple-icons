@@ -157,6 +157,8 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 ## Contribute
 
+[![Number of icons currently in the library](https://img.shields.io/badge/dynamic/json?color=success&label=icons&prefix=%20&logo=simpleicons&query=%24.icons.length&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimple-icons%2Fsimple-icons%2Fdevelop%2F_data%2Fsimple-icons.json)](https://simpleicons.org) [![Backers and sponsors](https://img.shields.io/opencollective/all/simple-icons?logo=opencollective)](https://opencollective.com/simple-icons)
+
 Information describing how to contribute can be found here:
 
 https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
