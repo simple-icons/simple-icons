@@ -1,34 +1,44 @@
-import { promises as fs } from 'node:fs';
+import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { test, exec } from 'uvu';
+import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 
-(async () => {
-  const __dirname = path.dirname(fileURLToPath(import.meta.url)),
-    root = path.dirname(__dirname),
-    darkIconsPath = path.join(root, 'icons'),
-    lightIconsPath = path.join(root, 'assets', 'readme'),
-    lightIconsFileNames = await fs.readdir(lightIconsPath);
+const __dirname = path.dirname(fileURLToPath(import.meta.url)),
+  root = path.dirname(__dirname),
+  blackIconsPath = path.join(root, 'icons'),
+  whiteIconsPath = path.join(root, 'assets', 'readme'),
+  whiteIconsFileNames = fs.readdirSync(whiteIconsPath);
 
-  for (let lightIconFileName of lightIconsFileNames) {
-    const lightIconPath = path.join(lightIconsPath, lightIconFileName),
-      darkIconPath = path.join(
-        darkIconsPath,
-        lightIconFileName.replace(/-white\.svg$/, '.svg'),
-      ),
-      lightIconRelPath = path.relative(root, lightIconPath),
-      darkIconRelPath = path.relative(root, darkIconPath),
-      lightIconContent = await fs.readFile(lightIconPath, 'utf8'),
-      darkIconContent = await fs.readFile(darkIconPath, 'utf8');
+for (let whiteIconFileName of whiteIconsFileNames) {
+  const whiteIconPath = path.join(whiteIconsPath, whiteIconFileName),
+    blackIconPath = path.join(
+      blackIconsPath,
+      whiteIconFileName.replace(/-white\.svg$/, '.svg'),
+    ),
+    whiteIconRelPath = path.relative(root, whiteIconPath),
+    blackIconRelPath = path.relative(root, blackIconPath);
 
-    test(`'${lightIconRelPath}' content must be equivalent to '${darkIconRelPath}' content`, () => {
-      assert.equal(
-        lightIconContent.replace(' fill="white"', ''),
-        darkIconContent,
-      );
-    });
-  }
+  test(`'${whiteIconRelPath}' content must be equivalent to '${blackIconRelPath}' content`, () => {
+    assert.ok(
+      whiteIconFileName.endsWith('-white.svg'),
+      `README icon assets file name '${whiteIconFileName}'` +
+        " must ends with '-white.svg'.",
+    );
+
+    assert.ok(
+      fs.existsSync(blackIconPath),
+      `Equivalent icon '${blackIconRelPath}' for README asset '${whiteIconRelPath}'` +
+        ` not found in '${path.dirname(blackIconRelPath)}' directory.`,
+    );
+
+    const whiteIconContent = fs.readFileSync(whiteIconPath, 'utf8'),
+      blackIconContent = fs.readFileSync(blackIconPath, 'utf8');
+    assert.equal(
+      whiteIconContent,
+      blackIconContent.replace('<svg', '<svg fill="white"'),
+    );
+  });
+
   test.run();
-  exec();
-})();
+}
