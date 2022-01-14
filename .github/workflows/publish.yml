@@ -19,23 +19,15 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Cache Jest
-        uses: actions/cache@v2
-        with:
-          path: .cache/jest
-          key: ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-${{ github.run_number }}
-          restore-keys: |
-            ${{ runner.os }}-jest-${{ hashFiles('package-lock.json') }}-
-            ${{ runner.os }}-jest-
       - name: Install dependencies
-        run: npm ci
-      - name: Build NodeJS package
-        run: npm run build
+        run: npm i
       - name: Run linters
         run: npm run lint
+      - name: Build NodeJS package
+        run: npm run build
       - name: Run tests
         run: npm run test
   npm:
@@ -53,11 +45,16 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - name: Remove dark theme images from README
+        uses: mondeja/strip-gh-theme-links@v2
+        with:
+          files: README.md
+          strict: true
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v1
         with:
@@ -72,21 +69,23 @@ jobs:
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v1
-      - name: Get release title and body
-        id: release
-        run: |
-          RELEASE_TITLE=$(echo "${{ steps.commit.outputs.git-message }}" | head -n 1)
-          echo "::set-output name=title::$RELEASE_TITLE"
-          RELEASE_BODY=$(echo "${{ steps.commit.outputs.git-message }}" | tail -n $(expr $(echo "${{ steps.commit.outputs.git-message }}" | wc -l) - 1))
-          RELEASE_BODY="${RELEASE_BODY//'%'/'%25'}"
-          RELEASE_BODY="${RELEASE_BODY//$'\n'/'%0A'}"
-          RELEASE_BODY="${RELEASE_BODY//$'\r'/'%0D'}"
-          echo "::set-output name=body::$RELEASE_BODY"
       - name: Get release version
         id: get-version
         run: |
           export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
           echo "::set-output name=version::$PACKAGE_VERSION"
+      - name: Remove dark theme images from README
+        uses: mondeja/strip-gh-theme-links@v2
+        with:
+          files: README.md
+          strict: true
+      # Add commit that will only be included in the tag
+      - name: Commit dark theme images strip
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add README.md
+          git commit -m 'Strip README dark theme image links'
       - name: Create and push git tag
         uses: actions-ecosystem/action-push-tag@v1
         with:
@@ -98,8 +97,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.get-version.outputs.version }}
-          release_name: ${{ steps.release.outputs.title }}
-          body: ${{ steps.release.outputs.body }}
+          release_name: ${{ steps.commit.outputs.title }}
+          body: ${{ steps.commit.outputs.body }}
   font:
     name: Trigger simple-icons-font release
     needs: npm
