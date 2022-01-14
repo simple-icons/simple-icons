@@ -977,6 +977,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Atom_editor_logo.svg"
         },
         {
+            "title": "Auchan",
+            "hex": "D6180B",
+            "source": "https://www.auchan.fr/"
+        },
+        {
             "title": "Audacity",
             "hex": "0000CC",
             "source": "https://github.com/audacity/audacity/blob/c818449c69193f5311b430fbf600d8d6cbe49047/images/audacity.svg"
@@ -1749,7 +1754,7 @@
         },
         {
             "title": "Chromecast",
-            "hex": "1BB6F6",
+            "hex": "999999",
             "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
             "aliases": {
                 "aka": [
@@ -3225,6 +3230,16 @@
             "source": "https://newsroom.fedex.com/"
         },
         {
+            "title": "Fedora",
+            "hex": "51A2DA",
+            "source": "https://docs.fedoraproject.org/en-US/project/brand/",
+            "guidelines": "https://fedoraproject.org/wiki/Legal:Trademark_guidelines",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.fedoraproject.org/en-US/project/brand/"
+            }
+        },
+        {
             "title": "Feedly",
             "hex": "2BB24C",
             "source": "https://blog.feedly.com/"
@@ -3424,8 +3439,8 @@
         },
         {
             "title": "Font Awesome",
-            "hex": "339AF0",
-            "source": "https://fontawesome.com/icons/font-awesome"
+            "hex": "528DD7",
+            "source": "https://fontawesome.com/v5.15/icons/font-awesome-flag"
         },
         {
             "title": "FontBase",
@@ -3578,6 +3593,12 @@
             "title": "FutureLearn",
             "hex": "DE00A5",
             "source": "https://www.futurelearn.com/"
+        },
+        {
+            "title": "G2",
+            "hex": "FF492C",
+            "source": "https://www.g2.com",
+            "guidelines": "https://company.g2.com/brand-resources"
         },
         {
             "title": "G2A",
@@ -3937,7 +3958,7 @@
         },
         {
             "title": "Google Classroom",
-            "hex": "4285F4",
+            "hex": "0F9D58",
             "source": "https://classroom.google.com/"
         },
         {
@@ -4743,7 +4764,7 @@
         },
         {
             "title": "Insomnia",
-            "hex": "5849BE",
+            "hex": "4000BF",
             "source": "https://insomnia.rest/"
         },
         {
@@ -4995,6 +5016,11 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "Jetpack Compose",
+            "hex": "4285F4",
+            "source": "https://developer.android.com/jetpack/compose/"
         },
         {
             "title": "JFrog",
@@ -5274,6 +5300,16 @@
             "source": "https://www.kik.com/news/"
         },
         {
+            "title": "Kingston Technology",
+            "aliases": {
+                "aka": [
+                    "Kingston"
+                ]
+            },
+            "hex": "000000",
+            "source": "https://www.kingston.com/"
+        },
+        {
             "title": "KinoPoisk",
             "hex": "FF6600",
             "source": "https://www.kinopoisk.ru/",
@@ -5500,6 +5536,11 @@
             "title": "Lerna",
             "hex": "2F0268",
             "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
+        },
+        {
+            "title": "Leroy Merlin",
+            "hex": "78BE20",
+            "source": "https://www.leroymerlin.fr/"
         },
         {
             "title": "Less",
@@ -5770,6 +5811,11 @@
             "title": "Macy’s",
             "hex": "E21A2C",
             "source": "https://www.macysinc.com/news-media/media-assets"
+        },
+        {
+            "title": "Magasins U",
+            "hex": "E71B34",
+            "source": "https://www.magasins-u.com"
         },
         {
             "title": "Magento",
@@ -6287,6 +6333,11 @@
             "source": "https://www.getmonero.org/press-kit/"
         },
         {
+            "title": "MoneyGram",
+            "hex": "FF6600",
+            "source": "https://moneygram.com"
+        },
+        {
             "title": "MongoDB",
             "hex": "47A248",
             "source": "https://www.mongodb.com/pressroom"
@@ -6666,6 +6717,11 @@
             "title": "Nokia",
             "hex": "124191",
             "source": "https://www.nokia.com/"
+        },
+        {
+            "title": "Norco",
+            "hex": "00FF00",
+            "source": "https://www.norco.com/"
         },
         {
             "title": "NordVPN",
@@ -8138,6 +8194,11 @@
             "hex": "0075A8",
             "source": "https://rancher.com/brand-guidelines/",
             "guidelines": "https://rancher.com/brand-guidelines/"
+        },
+        {
+            "title": "Rarible",
+            "hex": "FEDA03",
+            "source": "https://rarible.com/"
         },
         {
             "title": "Raspberry Pi",
@@ -9845,7 +9906,7 @@
         },
         {
             "title": "Teespring",
-            "hex": "39ACE6",
+            "hex": "ED2761",
             "source": "https://teespring.com"
         },
         {
@@ -10632,6 +10693,16 @@
             "source": "https://livestream.com"
         },
         {
+            "title": "Virgin",
+            "aliases": {
+                "aka": [
+                    "Virgin Group"
+                ]
+            },
+            "hex": "E10A0A",
+            "source": "https://www.virgin.com/img/virgin-logo-square.svg"
+        },
+        {
             "title": "VirtualBox",
             "hex": "183A61",
             "source": "https://commons.wikimedia.org/wiki/File:Virtualbox_logo.png"
@@ -10896,6 +10967,11 @@
             "hex": "07C160",
             "source": "https://wechat.design/standard/download/brand",
             "guidelines": "https://wechat.design/standard/download/brand"
+        },
+        {
+            "title": "WeGame",
+            "hex": "FAAB00",
+            "source": "https://www.wegame.com.cn"
         },
         {
             "title": "Weights & Biases",
@@ -11268,7 +11344,8 @@
         {
             "title": "YouTube",
             "hex": "FF0000",
-            "source": "https://www.youtube.com/yt/about/brand-resources/#logos-icons-colors"
+            "source": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors",
+            "guidelines": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors"
         },
         {
             "title": "YouTube Gaming",

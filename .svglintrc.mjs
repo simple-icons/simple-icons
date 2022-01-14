@@ -1,11 +1,28 @@
-const fs = require('fs');
+import fs from 'node:fs';
+import path from 'node:path';
+import {
+  getDirnameFromImportMeta,
+  htmlFriendlyToTitle,
+} from './scripts/utils.js';
+import svgpath from 'svgpath';
+import svgPathBbox from 'svg-path-bbox';
+import parsePath from 'svg-path-segments';
 
-const data = require('./_data/simple-icons.json');
-const { htmlFriendlyToTitle } = require('./scripts/utils.js');
-const htmlNamedEntities = require('named-html-entities-json');
-const svgpath = require('svgpath');
-const svgPathBbox = require('svg-path-bbox');
-const parsePath = require('svg-path-segments');
+const __dirname = getDirnameFromImportMeta(import.meta.url);
+const dataFile = path.join(__dirname, '_data', 'simple-icons.json');
+const htmlNamedEntitiesFile = path.join(
+  __dirname,
+  'node_modules',
+  'named-html-entities-json',
+  'index.json',
+);
+const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
+
+const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+const htmlNamedEntities = JSON.parse(
+  fs.readFileSync(htmlNamedEntitiesFile, 'utf8'),
+);
+const svglintIgnores = JSON.parse(fs.readFileSync(svglintIgnoredFile, 'utf8'));
 
 const svgRegexp =
   /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\n?$/;
@@ -19,7 +36,7 @@ const iconTolerance = 0.001;
 // set env SI_UPDATE_IGNORE to recreate the ignore file
 const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
 const ignoreFile = './.svglint-ignored.json';
-const iconIgnored = !updateIgnoreFile ? require(ignoreFile) : {};
+const iconIgnored = !updateIgnoreFile ? svglintIgnores : {};
 
 const sortObjectByKey = (obj) => {
   return Object.keys(obj)
@@ -126,7 +143,7 @@ const ignoreIcon = (linterName, path, $) => {
   iconIgnored[linterName][path] = iconName;
 };
 
-module.exports = {
+export default {
   rules: {
     elm: {
       svg: 1,
