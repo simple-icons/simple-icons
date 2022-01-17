@@ -5,7 +5,7 @@ import {
 } from '../scripts/utils.js';
 import * as simpleIcons from '../icons.mjs';
 import { testIcon } from './test-icon.js';
-import { exec } from 'uvu';
+import { before } from 'mocha';
 
 (async () => {
   const icons = await getIconsData();
@@ -17,6 +17,4 @@ import { exec } from 'uvu';
 
     testIcon(icon, subject, slug);
   });
-
-  exec();
 })();
