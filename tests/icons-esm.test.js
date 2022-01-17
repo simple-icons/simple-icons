@@ -5,7 +5,6 @@ import {
 } from '../scripts/utils.js';
 import * as simpleIcons from '../icons.mjs';
 import { testIcon } from './test-icon.js';
-import { before } from 'mocha';
 
 (async () => {
   const icons = await getIconsData();
