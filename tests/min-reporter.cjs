@@ -1,9 +1,11 @@
-const { reporters } = require('mocha');
+const { reporters, Runner } = require('mocha');
+
+const { EVENT_RUN_END } = Runner.constants;
 
 class EvenMoreMin extends reporters.Base {
   constructor(runner) {
     super(runner);
-    runner.once('end', () => this.epilogue());
+    runner.once(EVENT_RUN_END, () => this.epilogue());
   }
 }
 
