@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { test } from 'uvu';
-import * as assert from 'uvu/assert';
+import { test } from 'mocha';
+import { strict as assert } from 'node:assert';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.dirname(__dirname);
@@ -39,6 +39,4 @@ for (let whiteIconFileName of whiteIconsFileNames) {
       blackIconContent.replace('<svg', '<svg fill="white"'),
     );
   });
-
-  test.run();
 }
