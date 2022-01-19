@@ -7,6 +7,32 @@ import path from 'node:path';
 import { promises as fs } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
+const TITLE_TO_SLUG_REPLACEMENTS = {
+  '+': 'plus',
+  '.': 'dot',
+  '&': 'and',
+  đ: 'd',
+  ħ: 'h',
+  ı: 'i',
+  ĸ: 'k',
+  ŀ: 'l',
+  ł: 'l',
+  ß: 'ss',
+  ŧ: 't',
+};
+
+const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
+  // Special characters such as '+' and '.' must be escaped
+  Object.keys(TITLE_TO_SLUG_REPLACEMENTS)
+    .map((char) => {
+      return ['+', '.'].includes(char) ? `\\${char}` : char;
+    })
+    .join('|'),
+  'g',
+);
+
+const TITLE_TO_SLUG_RANGE_REGEX = RegExp('[^a-z0-9]', 'g');
+
 /**
  * Get the slug/filename for an icon.
  * @param {Object} icon The icon data as it appears in _data/simple-icons.json
@@ -26,19 +52,12 @@ export const svgToPath = (svg) => svg.match(/<path\s+d="([^"]*)/)[1];
 export const titleToSlug = (title) =>
   title
     .toLowerCase()
-    .replace(/\+/g, 'plus')
-    .replace(/\./g, 'dot')
-    .replace(/&/g, 'and')
-    .replace(/đ/g, 'd')
-    .replace(/ħ/g, 'h')
-    .replace(/ı/g, 'i')
-    .replace(/ĸ/g, 'k')
-    .replace(/ŀ/g, 'l')
-    .replace(/ł/g, 'l')
-    .replace(/ß/g, 'ss')
-    .replace(/ŧ/g, 't')
+    .replace(
+      TITLE_TO_SLUG_CHARS_REGEX,
+      (char) => TITLE_TO_SLUG_REPLACEMENTS[char],
+    )
     .normalize('NFD')
-    .replace(/[^a-z0-9]/g, '');
+    .replace(TITLE_TO_SLUG_RANGE_REGEX, '');
 
 /**
  * Converts a slug into a variable name that can be exported.
