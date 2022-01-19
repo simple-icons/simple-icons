@@ -2,15 +2,13 @@ root=true
 
 [*]
 charset=utf-8
-insert_final_newline=true
-
-[LICENSE.md]
-indent_size=unset
-indent_style=space
-
-[*.{json,yml}]
 indent_size=2
 indent_style=space
+insert_final_newline=true
+trim_trailing_whitespace=true
+
+[*.md]
+indent_size=unset
 
 [*.svg]
 insert_final_newline=false
@@ -20,4 +18,3 @@ trim_trailing_whitespace=false # Templates with trailing whitespace are more usa
 
 [_data/simple-icons.json]
 indent_size=4
-trim_trailing_whitespace=true
