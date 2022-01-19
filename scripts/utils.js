@@ -24,7 +24,7 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
   `[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
   'g',
-)
+);
 
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 
