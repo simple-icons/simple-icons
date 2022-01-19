@@ -61,7 +61,7 @@
     "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
-    "test": "mocha tests --reporter min --inline-diffs",
+    "test": "mocha tests --reporter tests/min-reporter.cjs --inline-diffs",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
     "svgo": "svgo --config svgo.config.js",
