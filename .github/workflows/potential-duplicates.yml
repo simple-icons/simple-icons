@@ -7,7 +7,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: bubkoo/potential-duplicates@v1
+      - uses: wow-actions/potential-duplicates@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           label: potential duplicate
@@ -32,5 +32,5 @@ jobs:
           comment: |
             This issue is potentially a duplicate of one of the following issues:
             {{#issues}}
-              - [#{{ number }}] {{ title }} ({{ accuracy }}%)
+              - #{{ number }} ({{ accuracy }}%)
             {{/issues}}
