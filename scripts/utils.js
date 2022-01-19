@@ -31,7 +31,7 @@ const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
   'g',
 );
 
-const TITLE_TO_SLUG_RANGE_REGEX = RegExp('[^a-z0-9]', 'g');
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 
 /**
  * Get the slug/filename for an icon.
