@@ -22,14 +22,9 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 };
 
 const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
-  // Special characters such as '+' and '.' must be escaped
-  Object.keys(TITLE_TO_SLUG_REPLACEMENTS)
-    .map((char) => {
-      return ['+', '.'].includes(char) ? `\\${char}` : char;
-    })
-    .join('|'),
+  `[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
   'g',
-);
+)
 
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 
