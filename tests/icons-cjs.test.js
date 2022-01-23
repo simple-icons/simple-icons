@@ -1,4 +1,3 @@
-import { exec } from 'uvu';
 import { testIcon } from './test-icon.js';
 import { getIconSlug, getIconsData } from '../scripts/utils.js';
 (async () => {
@@ -14,6 +13,4 @@ import { getIconSlug, getIconsData } from '../scripts/utils.js';
   });
 
   await Promise.all(tests);
-
-  exec();
 })();
