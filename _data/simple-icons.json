@@ -362,6 +362,11 @@
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg"
         },
         {
+            "title": "Albert Heijn",
+            "hex": "04ACE6",
+            "source": "https://www.ah.nl/"
+        },
+        {
             "title": "Aldi Nord",
             "hex": "2490D7",
             "source": "https://commons.wikimedia.org/wiki/File:Aldi_Nord_201x_logo.svg"
@@ -975,6 +980,11 @@
             "title": "Atom",
             "hex": "66595C",
             "source": "https://commons.wikimedia.org/wiki/File:Atom_editor_logo.svg"
+        },
+        {
+            "title": "Auchan",
+            "hex": "D6180B",
+            "source": "https://www.auchan.fr/"
         },
         {
             "title": "Audacity",
@@ -1749,7 +1759,7 @@
         },
         {
             "title": "Chromecast",
-            "hex": "1BB6F6",
+            "hex": "999999",
             "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
             "aliases": {
                 "aka": [
@@ -2353,6 +2363,11 @@
             "source": "https://github.com/dart-lang/site-shared/tree/master/src/_assets/image/dart/logo"
         },
         {
+            "title": "Darty",
+            "hex": "EB1B23",
+            "source": "https://www.darty.com/"
+        },
+        {
             "title": "Das Erste",
             "hex": "001A4B",
             "source": "https://en.wikipedia.org/wiki/Das_Erste"
@@ -2665,6 +2680,11 @@
             "title": "DLNA",
             "hex": "48A842",
             "source": "https://upload.wikimedia.org/wikipedia/de/e/eb/Digital_Living_Network_Alliance_logo.svg"
+        },
+        {
+            "title": "dm",
+            "hex": "002878",
+            "source": "https://www.dm.de/"
         },
         {
             "title": "Docker",
@@ -3093,6 +3113,12 @@
             "source": "https://www.exordo.com/"
         },
         {
+            "title": "Exoscale",
+            "hex": "DA291C",
+            "source": "https://www.exoscale.com/press/",
+            "guidelines": "https://www.exoscale.com/press/"
+        },
+        {
             "title": "Expensify",
             "hex": "0185FF",
             "source": "https://use.expensify.com/press-kit",
@@ -3223,6 +3249,16 @@
             "title": "FedEx",
             "hex": "4D148C",
             "source": "https://newsroom.fedex.com/"
+        },
+        {
+            "title": "Fedora",
+            "hex": "51A2DA",
+            "source": "https://docs.fedoraproject.org/en-US/project/brand/",
+            "guidelines": "https://fedoraproject.org/wiki/Legal:Trademark_guidelines",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.fedoraproject.org/en-US/project/brand/"
+            }
         },
         {
             "title": "Feedly",
@@ -3424,8 +3460,8 @@
         },
         {
             "title": "Font Awesome",
-            "hex": "339AF0",
-            "source": "https://fontawesome.com/icons/font-awesome"
+            "hex": "528DD7",
+            "source": "https://fontawesome.com/v5.15/icons/font-awesome-flag"
         },
         {
             "title": "FontBase",
@@ -3578,6 +3614,12 @@
             "title": "FutureLearn",
             "hex": "DE00A5",
             "source": "https://www.futurelearn.com/"
+        },
+        {
+            "title": "G2",
+            "hex": "FF492C",
+            "source": "https://www.g2.com",
+            "guidelines": "https://company.g2.com/brand-resources"
         },
         {
             "title": "G2A",
@@ -3937,7 +3979,7 @@
         },
         {
             "title": "Google Classroom",
-            "hex": "4285F4",
+            "hex": "0F9D58",
             "source": "https://classroom.google.com/"
         },
         {
@@ -4743,7 +4785,7 @@
         },
         {
             "title": "Insomnia",
-            "hex": "5849BE",
+            "hex": "4000BF",
             "source": "https://insomnia.rest/"
         },
         {
@@ -5279,6 +5321,16 @@
             "source": "https://www.kik.com/news/"
         },
         {
+            "title": "Kingston Technology",
+            "aliases": {
+                "aka": [
+                    "Kingston"
+                ]
+            },
+            "hex": "000000",
+            "source": "https://www.kingston.com/"
+        },
+        {
             "title": "KinoPoisk",
             "hex": "FF6600",
             "source": "https://www.kinopoisk.ru/",
@@ -5505,6 +5557,11 @@
             "title": "Lerna",
             "hex": "2F0268",
             "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
+        },
+        {
+            "title": "Leroy Merlin",
+            "hex": "78BE20",
+            "source": "https://www.leroymerlin.fr/"
         },
         {
             "title": "Less",
@@ -5775,6 +5832,11 @@
             "title": "Macy’s",
             "hex": "E21A2C",
             "source": "https://www.macysinc.com/news-media/media-assets"
+        },
+        {
+            "title": "Magasins U",
+            "hex": "E71B34",
+            "source": "https://www.magasins-u.com"
         },
         {
             "title": "Magento",
@@ -6292,6 +6354,11 @@
             "source": "https://www.getmonero.org/press-kit/"
         },
         {
+            "title": "MoneyGram",
+            "hex": "FF6600",
+            "source": "https://moneygram.com"
+        },
+        {
             "title": "MongoDB",
             "hex": "47A248",
             "source": "https://www.mongodb.com/pressroom"
@@ -6300,6 +6367,11 @@
             "title": "monkey tie",
             "hex": "1A52C2",
             "source": "https://www.monkey-tie.com"
+        },
+        {
+            "title": "Monoprix",
+            "hex": "FB1911",
+            "source": "https://www.monoprix.fr/"
         },
         {
             "title": "Monster",
@@ -6315,6 +6387,11 @@
             "title": "Moo",
             "hex": "00945E",
             "source": "https://www.moo.com/uk/about/press"
+        },
+        {
+            "title": "Morrisons",
+            "hex": "007531",
+            "source": "https://groceries.morrisons.com"
         },
         {
             "title": "Moscow Metro",
@@ -6367,6 +6444,11 @@
             "hex": "00A0DF",
             "source": "https://www.mulesoft.com/brand",
             "guidelines": "https://www.mulesoft.com/brand"
+        },
+        {
+            "title": "Müller",
+            "hex": "F46519",
+            "source": "https://www.mueller.de/"
         },
         {
             "title": "Mumble",
@@ -6499,6 +6581,12 @@
             "hex": "0067C5",
             "source": "http://www.netapp.com/",
             "guidelines": "https://www.netapp.com/company/legal/trademark-guidelines/"
+        },
+        {
+            "title": "NetBSD",
+            "hex": "FF6600",
+            "source": "https://www.netbsd.org",
+            "guidelines": "https://www.netbsd.org/about/disclaimer.html"
         },
         {
             "title": "Netflix",
@@ -6671,6 +6759,11 @@
             "title": "Nokia",
             "hex": "124191",
             "source": "https://www.nokia.com/"
+        },
+        {
+            "title": "Norco",
+            "hex": "00FF00",
+            "source": "https://www.norco.com/"
         },
         {
             "title": "NordVPN",
@@ -7429,6 +7522,12 @@
             "source": "https://github.com/Piwigo/piwigodotorg/blob/6edb840c16257314caec770a9a51f67ef81836e4/images/piwigo.org.svg"
         },
         {
+            "title": "Pix",
+            "hex": "77B6A8",
+            "source": "https://www.bcb.gov.br/estabilidadefinanceira/pix",
+            "guidelines": "https://www.bcb.gov.br/content/estabilidadefinanceira/pix/Regulamento_Pix/I_manual_uso_marca_pix.pdf"
+        },
+        {
             "title": "Pixabay",
             "hex": "2EC66D",
             "source": "https://pixabay.com/service/about/"
@@ -8139,6 +8238,11 @@
             "guidelines": "https://rancher.com/brand-guidelines/"
         },
         {
+            "title": "Rarible",
+            "hex": "FEDA03",
+            "source": "https://rarible.com/"
+        },
+        {
             "title": "Raspberry Pi",
             "hex": "A22846",
             "source": "https://www.raspberrypi.org/trademark-rules",
@@ -8653,6 +8757,11 @@
             "slug": "sat1",
             "hex": "047DA3",
             "source": "https://www.prosiebensat1.com/presse/downloads/logos"
+        },
+        {
+            "title": "Saturn",
+            "hex": "EB680B",
+            "source": "https://www.saturn.de/"
         },
         {
             "title": "Sauce Labs",
@@ -9844,7 +9953,7 @@
         },
         {
             "title": "Teespring",
-            "hex": "39ACE6",
+            "hex": "ED2761",
             "source": "https://teespring.com"
         },
         {
@@ -10636,6 +10745,16 @@
             "source": "https://livestream.com"
         },
         {
+            "title": "Virgin",
+            "aliases": {
+                "aka": [
+                    "Virgin Group"
+                ]
+            },
+            "hex": "E10A0A",
+            "source": "https://www.virgin.com/img/virgin-logo-square.svg"
+        },
+        {
             "title": "VirtualBox",
             "hex": "183A61",
             "source": "https://commons.wikimedia.org/wiki/File:Virtualbox_logo.png"
@@ -10720,6 +10839,11 @@
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vscopress.co/media-kit"
+        },
+        {
+            "title": "VTEX",
+            "hex": "ED125F",
+            "source": "https://vtex.com"
         },
         {
             "title": "Vue.js",
@@ -10900,6 +11024,11 @@
             "hex": "07C160",
             "source": "https://wechat.design/standard/download/brand",
             "guidelines": "https://wechat.design/standard/download/brand"
+        },
+        {
+            "title": "WeGame",
+            "hex": "FAAB00",
+            "source": "https://www.wegame.com.cn"
         },
         {
             "title": "Weights & Biases",
@@ -11272,7 +11401,8 @@
         {
             "title": "YouTube",
             "hex": "FF0000",
-            "source": "https://www.youtube.com/yt/about/brand-resources/#logos-icons-colors"
+            "source": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors",
+            "guidelines": "https://www.youtube.com/howyoutubeworks/resources/brand-resources/#logos-icons-and-colors"
         },
         {
             "title": "YouTube Gaming",
