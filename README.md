@@ -6,9 +6,13 @@ Over 2100 Free SVG icons for popular brands. See them all on one page at <a href
 </p>
 
 <p align="center">
-<a href="https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop"><img src="https://img.shields.io/github/workflow/status/simple-icons/simple-icons/Verify/develop?logo=github" alt="Build status"/></a>
+<a href="https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop"><img src="https://img.shields.io/github/workflow/status/simple-icons/simple-icons/Verify/develop?logo=github&label=tests" alt="Build status"/></a>
 <a href="https://www.npmjs.com/package/simple-icons"><img src="https://img.shields.io/npm/v/simple-icons.svg?logo=npm" alt="NPM version"/></a>
 <a href="https://packagist.org/packages/simple-icons/simple-icons"><img src="https://img.shields.io/packagist/v/simple-icons/simple-icons?logo=packagist&logoColor=white" alt="Build status"/></a>
+</p>
+<p align="center">
+<a href="https://simpleicons.org"><img src="https://img.shields.io/badge/dynamic/json?color=informational&label=icons&prefix=%20&logo=simpleicons&query=%24.icons.length&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimple-icons%2Fsimple-icons%2Fdevelop%2F_data%2Fsimple-icons.json" alt="Number of icons currently in the library"/></a>
+<a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
 ## Usage
@@ -108,7 +112,7 @@ for (const iconSlug in simpleIcons) {
 }
 ```
 
-#### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg#gh-dark-mode-only" alt="Typescript" align=left width=24 height=24>
+#### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=19 height=19><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg#gh-dark-mode-only" alt="Typescript" align=left width=19 height=19>
 
 Type definitions are bundled with the package.
 
@@ -138,6 +142,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 | Extension | Author |
 | :-- | :-- |
+| <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/angular.svg#gh-light-mode-only" alt="Angular" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/angular-white.svg#gh-dark-mode-only" alt="Angular" align=left width=24 height=24> [Angular Module](https://github.com/avmaisak/ngx-simple-icons) | [@avmaisak](https://github.com/avmaisak) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg#gh-light-mode-only" alt="Blender" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/blender-white.svg#gh-dark-mode-only" alt="Blender" align=left width=24 height=24> [Blender add-on](https://github.com/mondeja/simple-icons-blender) | [@mondeja](https://github.com/mondeja) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/diagramsdotnet.svg#gh-light-mode-only" alt="Drawio" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/diagramsdotnet-white.svg#gh-dark-mode-only" alt="Drawio" align=left width=24 height=24> [Drawio library](https://github.com/mondeja/simple-icons-drawio) | [@mondeja](https://github.com/mondeja) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/drupal.svg#gh-light-mode-only" alt="Drupal" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/drupal-white.svg#gh-dark-mode-only" alt="Drupal" align=left width=24 height=24> [Drupal module](https://www.drupal.org/project/simple_icons) | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
@@ -153,9 +158,12 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/vuedotjs-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24> [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wordpress.svg#gh-light-mode-only" alt="Wordpress" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/wordpress-white.svg#gh-dark-mode-only" alt="Wordpress" align=left width=24 height=24> [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
+
 [slug]: ./slugs.md
 
 ## Contribute
+
+[![Good first issues open](https://img.shields.io/github/issues/simple-icons/simple-icons/good%20first%20issue?label=good%20first%20issues&logo=git&logoColor=white)](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue)
 
 Information describing how to contribute can be found here:
 
