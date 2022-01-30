@@ -47,6 +47,8 @@ describe('README icons assets must be consistent with Github themes', () => {
 
 test('README third party extensions must be alphabetically sorted', async () => {
   const thirdPartyExtensions = await getThirdPartyExtensions();
+  assert.ok(thirdPartyExtensions.length > 0);
+
   const thirdPartyExtensionsNames = thirdPartyExtensions.map(
     (ext) => ext.module.name,
   );
