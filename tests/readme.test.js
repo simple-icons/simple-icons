@@ -1,6 +1,5 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { describe, test } from 'mocha';
 import { strict as assert } from 'node:assert';
 import {
