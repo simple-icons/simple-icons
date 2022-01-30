@@ -117,3 +117,30 @@ export const getIconsData = async () => {
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
+
+/**
+ * Get information about third party extensions.
+ */
+export const getThirdPartyExtensions = async () => {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const readmePath = path.resolve(__dirname, '..', 'README.md');
+  const readmeContent = await fs.readFile(readmePath, 'utf8');
+  return readmeContent
+    .split('## Third-Party Extensions\n\n')[1]
+    .split('\n\n')[0]
+    .split('\n')
+    .slice(2)
+    .map((line) => {
+      const [module, author] = line.split(' | ');
+      return {
+        module: {
+          name: /\[(.+)\]/.exec(module)[1],
+          url: /\((.+)\)/.exec(module)[1],
+        },
+        author: {
+          name: /\[(.+)\]/.exec(author)[1],
+          url: /\((.+)\)/.exec(author)[1],
+        },
+      };
+    });
+};
