@@ -3,9 +3,12 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, test } from 'mocha';
 import { strict as assert } from 'node:assert';
-import { getThirdPartyExtensions } from '../scripts/utils.js';
+import {
+  getThirdPartyExtensions,
+  getDirnameFromImportMeta,
+} from '../scripts/utils.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 const root = path.dirname(__dirname);
 
 describe('README icons assets must be consistent with Github themes', () => {
