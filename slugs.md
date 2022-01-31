@@ -421,6 +421,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Common Workflow Language` | `commonworkflowlanguage` |
 | `Composer` | `composer` |
 | `Comsol` | `comsol` |
+| `Conan` | `conan` |
 | `Concourse` | `concourse` |
 | `Conda-Forge` | `condaforge` |
 | `Conekta` | `conekta` |
@@ -608,6 +609,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Evernote` | `evernote` |
 | `Exercism` | `exercism` |
 | `Exordo` | `exordo` |
+| `Exoscale` | `exoscale` |
 | `Expensify` | `expensify` |
 | `Experts Exchange` | `expertsexchange` |
 | `Expo` | `expo` |
@@ -1036,6 +1038,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kuaishou` | `kuaishou` |
 | `Kubernetes` | `kubernetes` |
 | `Kubuntu` | `kubuntu` |
+| `Kuma` | `kuma` |
 | `Kyocera` | `kyocera` |
 | `LabVIEW` | `labview` |
 | `Lada` | `lada` |
@@ -1207,6 +1210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MoneyGram` | `moneygram` |
 | `MongoDB` | `mongodb` |
 | `monkey tie` | `monkeytie` |
+| `Monoprix` | `monoprix` |
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
 | `Moo` | `moo` |
@@ -1219,6 +1223,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MTR` | `mtr` |
 | `MUI` | `mui` |
 | `Mulesoft` | `mulesoft` |
+| `Müller` | `muller` |
 | `Mumble` | `mumble` |
 | `MuseScore` | `musescore` |
 | `MusicBrainz` | `musicbrainz` |
@@ -1243,6 +1248,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Neovim` | `neovim` |
 | `NestJS` | `nestjs` |
 | `NetApp` | `netapp` |
+| `NetBSD` | `netbsd` |
 | `Netflix` | `netflix` |
 | `Netlify` | `netlify` |
 | `Nette` | `nette` |
@@ -1328,6 +1334,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Openlayers` | `openlayers` |
 | `OpenMined` | `openmined` |
 | `OpenNebula` | `opennebula` |
+| `OpenSea` | `opensea` |
 | `OpenSSL` | `openssl` |
 | `OpenStack` | `openstack` |
 | `OpenStreetMap` | `openstreetmap` |
@@ -1347,6 +1354,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oshkosh` | `oshkosh` |
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
+| `Otto` | `otto` |
 | `Overcast` | `overcast` |
 | `Overleaf` | `overleaf` |
 | `OVH` | `ovh` |
@@ -1603,6 +1611,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Roots Bedrock` | `rootsbedrock` |
 | `Roots Sage` | `rootssage` |
 | `ROS` | `ros` |
+| `Rossmann` | `rossmann` |
 | `Rotary International` | `rotaryinternational` |
 | `Rotten Tomatoes` | `rottentomatoes` |
 | `Roundcube` | `roundcube` |
@@ -1994,6 +2003,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vectorworks` | `vectorworks` |
 | `Veeam` | `veeam` |
 | `Veepee` | `veepee` |
+| `Velog` | `velog` |
 | `Venmo` | `venmo` |
 | `Vercel` | `vercel` |
 | `Verdaccio` | `verdaccio` |
@@ -2023,6 +2033,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vonage` | `vonage` |
 | `VOX` | `vox` |
 | `VSCO` | `vsco` |
+| `VTEX` | `vtex` |
 | `Vue.js` | `vuedotjs` |
 | `Vuetify` | `vuetify` |
 | `Vulkan` | `vulkan` |
