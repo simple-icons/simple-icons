@@ -2123,6 +2123,11 @@
             "source": "https://cdn.comsol.com/company/comsol-brand-guide-November2019.pdf"
         },
         {
+            "title": "Conan",
+            "hex": "6699CB",
+            "source": "https://conan.io/"
+        },
+        {
             "title": "Concourse",
             "hex": "3398DC",
             "source": "https://concourse-ci.org/"
@@ -3111,6 +3116,12 @@
             "title": "Exordo",
             "hex": "DAA449",
             "source": "https://www.exordo.com/"
+        },
+        {
+            "title": "Exoscale",
+            "hex": "DA291C",
+            "source": "https://www.exoscale.com/press/",
+            "guidelines": "https://www.exoscale.com/press/"
         },
         {
             "title": "Expensify",
@@ -5445,6 +5456,11 @@
             "source": "https://kubuntu.org"
         },
         {
+            "title": "Kuma",
+            "hex": "290B53",
+            "source": "https://cncf-branding.netlify.app/projects/kuma/"
+        },
+        {
             "title": "Kyocera",
             "hex": "DF0522",
             "source": "https://uk.kyocera.com/"
@@ -5655,6 +5671,11 @@
             "hex": "0A66C2",
             "source": "https://brand.linkedin.com",
             "guidelines": "https://brand.linkedin.com/policies"
+        },
+        {
+            "title": "Linkfire",
+            "hex": "FF3850",
+            "source": "https://www.linkfire.com/"
         },
         {
             "title": "Linktree",
@@ -6363,6 +6384,11 @@
             "source": "https://www.monkey-tie.com"
         },
         {
+            "title": "Monoprix",
+            "hex": "FB1911",
+            "source": "https://www.monoprix.fr/"
+        },
+        {
             "title": "Monster",
             "hex": "6D4C9F",
             "source": "https://www.monster.com/press/"
@@ -6433,6 +6459,11 @@
             "hex": "00A0DF",
             "source": "https://www.mulesoft.com/brand",
             "guidelines": "https://www.mulesoft.com/brand"
+        },
+        {
+            "title": "Müller",
+            "hex": "F46519",
+            "source": "https://www.mueller.de/"
         },
         {
             "title": "Mumble",
@@ -6565,6 +6596,12 @@
             "hex": "0067C5",
             "source": "http://www.netapp.com/",
             "guidelines": "https://www.netapp.com/company/legal/trademark-guidelines/"
+        },
+        {
+            "title": "NetBSD",
+            "hex": "FF6600",
+            "source": "https://www.netbsd.org",
+            "guidelines": "https://www.netbsd.org/about/disclaimer.html"
         },
         {
             "title": "Netflix",
@@ -7047,6 +7084,11 @@
             "source": "https://opennebula.io/docs/"
         },
         {
+            "title": "OpenSea",
+            "hex": "2081E2",
+            "source": "https://docs.opensea.io"
+        },
+        {
             "title": "OpenSSL",
             "hex": "721412",
             "source": "https://www.openssl.org/"
@@ -7163,6 +7205,11 @@
             "hex": "FF66AA",
             "source": "https://osu.ppy.sh/wiki/vi/Brand_identity_guidelines",
             "guidelines": "https://osu.ppy.sh/wiki/vi/Brand_identity_guidelines"
+        },
+        {
+            "title": "Otto",
+            "hex": "D4021D",
+            "source": "https://www.ottogroup.com/en/presse/material.php"
         },
         {
             "title": "Overcast",
@@ -8387,6 +8434,11 @@
             "source": "https://repl.it/"
         },
         {
+            "title": "ReScript",
+            "hex": "E6484F",
+            "source": "https://rescript-lang.org/brand"
+        },
+        {
             "title": "RescueTime",
             "hex": "161A3B",
             "source": "https://www.rescuetime.com/press"
@@ -8556,6 +8608,11 @@
             "hex": "22314E",
             "source": "https://www.ros.org/press-kit/",
             "guidelines": "https://www.ros.org/press-kit/"
+        },
+        {
+            "title": "Rossmann",
+            "hex": "C3002D",
+            "source": "https://www.rossmann.de"
         },
         {
             "title": "Rotary International",
@@ -9904,6 +9961,15 @@
             "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
         },
         {
+            "title": "Tauri",
+            "hex": "FFC131",
+            "source": "https://github.com/tauri-apps/tauri/blob/093f85dc2b90a6dd0f48d941f6e88daec311250a/app-icon.png",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0",
+                "url": "https://github.com/tauri-apps/tauri"
+            }
+        },
+        {
             "title": "TaxBuzz",
             "hex": "ED8B0B",
             "source": "https://www.taxbuzz.com/"
@@ -10233,6 +10299,11 @@
             "title": "tqdm",
             "hex": "FFC107",
             "source": "https://github.com/tqdm/img/blob/0dd23d9336af67976f88f9988ea660cde78c54d4/logo.svg"
+        },
+        {
+            "title": "Traefik Mesh",
+            "hex": "9D0FB0",
+            "source": "https://github.com/traefik/mesh/blob/ef03c40b78c08931d47fdad0be10d1986f4e21bc/docs/content/assets/img/traefik-mesh-logo.svg"
         },
         {
             "title": "TrainerRoad",
@@ -10663,6 +10734,11 @@
             "source": "https://www.veepee.fr/"
         },
         {
+            "title": "Velog",
+            "hex": "20C997",
+            "source": "https://github.com/velopert/velog-client/blob/8fbbb371f4b4525b6747e54d0c608900ea8bf03e/src/static/svg/velog-icon.svg"
+        },
+        {
             "title": "Venmo",
             "hex": "3D95CE",
             "source": "https://venmo.com/about/brand/"
@@ -10812,6 +10888,11 @@
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vscopress.co/media-kit"
+        },
+        {
+            "title": "VTEX",
+            "hex": "ED125F",
+            "source": "https://vtex.com"
         },
         {
             "title": "Vue.js",
