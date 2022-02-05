@@ -89,8 +89,8 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
-      - name: Assign closed pull requests to "Unprioritised"
+      - name: Assign closed pull requests to "Completed or Abandoned"
         uses: srggrs/assign-one-project-github-action@1.3.1
         with:
           project: https://github.com/orgs/simple-icons/projects/2
-          column_name: Unprioritised
+          column_name: Completed or Abandoned
