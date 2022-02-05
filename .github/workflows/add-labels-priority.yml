@@ -80,7 +80,7 @@ jobs:
 
   unassign-from-project:
     runs-on: ubuntu-latest
-    name: Unassign from Projects
+    name: Unassign from Project
     if: |
       github.event.action != 'opened' &&
       github.event.pull_request.merged == false
