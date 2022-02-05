@@ -6,6 +6,7 @@ on:
 jobs:
   triage:
     runs-on: ubuntu-latest
+    if: github.event.action == 'opened'
     steps:
       - uses: ericcornelissen/labeler@label-based-on-status
         with:
