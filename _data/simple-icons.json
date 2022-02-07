@@ -2247,6 +2247,11 @@
             "source": "https://creativecommons.org/"
         },
         {
+            "title": "Credly",
+            "hex": "FF6B00",
+            "source": "https://cdn.credly.com/assets/structure/logo-78b59f8114817c758ca965ed8f1a58a76a39b6fd70d031f771a9bbc581fcde65.svg"
+        },
+        {
             "title": "Crehana",
             "hex": "4B22F4",
             "source": "https://www.crehana.com/"
@@ -5673,6 +5678,11 @@
             "guidelines": "https://brand.linkedin.com/policies"
         },
         {
+            "title": "Linkfire",
+            "hex": "FF3850",
+            "source": "https://www.linkfire.com/"
+        },
+        {
             "title": "Linktree",
             "hex": "39E09B",
             "source": "https://linktr.ee/"
@@ -7559,6 +7569,11 @@
             "guidelines": "https://policies.pixiv.net/en.html#brand"
         },
         {
+            "title": "pkgsrc",
+            "hex": "FF6600",
+            "source": "https://pkgsrc.org/"
+        },
+        {
             "title": "Planet",
             "hex": "009DB1",
             "source": "https://www.planet.com/explorer/"
@@ -8427,6 +8442,11 @@
             "title": "Replit",
             "hex": "667881",
             "source": "https://repl.it/"
+        },
+        {
+            "title": "ReScript",
+            "hex": "E6484F",
+            "source": "https://rescript-lang.org/brand"
         },
         {
             "title": "RescueTime",
@@ -9951,6 +9971,15 @@
             "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
         },
         {
+            "title": "Tauri",
+            "hex": "FFC131",
+            "source": "https://github.com/tauri-apps/tauri/blob/093f85dc2b90a6dd0f48d941f6e88daec311250a/app-icon.png",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0",
+                "url": "https://github.com/tauri-apps/tauri"
+            }
+        },
+        {
             "title": "TaxBuzz",
             "hex": "ED8B0B",
             "source": "https://www.taxbuzz.com/"
@@ -10280,6 +10309,11 @@
             "title": "tqdm",
             "hex": "FFC107",
             "source": "https://github.com/tqdm/img/blob/0dd23d9336af67976f88f9988ea660cde78c54d4/logo.svg"
+        },
+        {
+            "title": "Traefik Mesh",
+            "hex": "9D0FB0",
+            "source": "https://github.com/traefik/mesh/blob/ef03c40b78c08931d47fdad0be10d1986f4e21bc/docs/content/assets/img/traefik-mesh-logo.svg"
         },
         {
             "title": "TrainerRoad",
