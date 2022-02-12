@@ -962,17 +962,6 @@
             "source": "https://www.asus.com/"
         },
         {
-            "title": "Republic of Gamers",
-            "aliases": {
-                "aka": [
-                    "ASUS ROG",
-                    "ROG"
-                ]
-            },
-            "hex": "FF0029",
-            "source": "https://rog.asus.com/in/"
-        },
-        {
             "title": "AT&T",
             "hex": "009FDB",
             "source": "https://www.att.com"
@@ -8453,6 +8442,17 @@
             "title": "Replit",
             "hex": "667881",
             "source": "https://repl.it/"
+        },
+        {
+            "title": "Republic of Gamers",
+            "aliases": {
+                "aka": [
+                    "ASUS ROG",
+                    "ROG"
+                ]
+            },
+            "hex": "FF0029",
+            "source": "https://rog.asus.com/in/"
         },
         {
             "title": "ReScript",
