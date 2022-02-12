@@ -1,20 +1,33 @@
-const path = require("path");
-const Validator = require("jsonschema").Validator;
+#!/usr/bin/env node
+/**
+ * @fileoverview
+ * CLI tool to run jsonschema on the simple-icons.json data file.
+ */
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const schemaFile = path.resolve(rootDir, ".jsonschema.json");
-const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import { Validator } from 'jsonschema';
+import { getDirnameFromImportMeta, getIconsData } from '../utils.js';
 
-const schema = require(schemaFile);
-const data = require(dataFile);
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
-const validator = new Validator();
-const result = validator.validate(data, schema);
-if (result.errors.length > 0) {
-  result.errors.forEach((error) => {
-    console.error(error);
-  });
+const rootDir = path.resolve(__dirname, '..', '..');
+const schemaFile = path.resolve(rootDir, '.jsonschema.json');
 
-  console.error(`Found ${result.errors.length} error(s) in simple-icons.json`);
-  process.exit(1);
-}
+(async () => {
+  const icons = await getIconsData();
+  const schema = JSON.parse(await fs.readFile(schemaFile, 'utf8'));
+
+  const validator = new Validator();
+  const result = validator.validate({ icons }, schema);
+  if (result.errors.length > 0) {
+    result.errors.forEach((error) => {
+      console.error(error);
+    });
+
+    console.error(
+      `Found ${result.errors.length} error(s) in simple-icons.json`,
+    );
+    process.exit(1);
+  }
+})();
