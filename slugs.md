@@ -668,6 +668,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flipkart` | `flipkart` |
 | `Floatplane` | `floatplane` |
 | `Flood` | `flood` |
+| `Fluent Bit` | `fluentbit` |
 | `Fluentd` | `fluentd` |
 | `Flutter` | `flutter` |
 | `Flyway` | `flyway` |
@@ -930,6 +931,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IntelliJ IDEA` | `intellijidea` |
 | `InteractJS` | `interactjs` |
 | `Intercom` | `intercom` |
+| `Intermarche` | `intermarche` |
 | `Internet Archive` | `internetarchive` |
 | `Internet Explorer` | `internetexplorer` |
 | `Intigriti` | `intigriti` |
@@ -1559,6 +1561,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
 | `React` | `react` |
+| `React Query` | `reactquery` |
 | `React Router` | `reactrouter` |
 | `React Table` | `reacttable` |
 | `ReactiveX` | `reactivex` |
