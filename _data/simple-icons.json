@@ -3429,6 +3429,11 @@
             "source": "https://flood.io/"
         },
         {
+            "title": "Fluent Bit",
+            "hex": "49BDA5",
+            "source": "https://github.com/fluent/fluent-bit/blob/cdb35721d06242d66a729656282831ccd1589ca2/snap/fluent-bit.svg"
+        },
+        {
             "title": "Fluentd",
             "hex": "0E83C8",
             "source": "https://docs.fluentd.org/quickstart/logo",
@@ -4850,6 +4855,11 @@
             "hex": "6AFDEF",
             "source": "https://www.intercom.com/press",
             "guidelines": "https://www.intercom.com/press"
+        },
+        {
+            "title": "Intermarche",
+            "hex": "E2001A",
+            "source": "https://www.intermarche.com/"
         },
         {
             "title": "Internet Archive",
@@ -8306,6 +8316,11 @@
                     }
                 ]
             }
+        },
+        {
+            "title": "React Query",
+            "hex": "FF4154",
+            "source": "https://github.com/tannerlinsley/react-query/blob/9b5d18cd47a4c1454d6c8dd0f38280641c1dd5dd/docs/src/images/emblem-light.svg"
         },
         {
             "title": "React Router",

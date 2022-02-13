@@ -445,6 +445,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Craft CMS` | `craftcms` |
 | `Create React App` | `createreactapp` |
 | `Creative Commons` | `creativecommons` |
+| `Credly` | `credly` |
 | `Crehana` | `crehana` |
 | `Crowdin` | `crowdin` |
 | `Crowdsource` | `crowdsource` |
@@ -667,6 +668,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flipkart` | `flipkart` |
 | `Floatplane` | `floatplane` |
 | `Flood` | `flood` |
+| `Fluent Bit` | `fluentbit` |
 | `Fluentd` | `fluentd` |
 | `Flutter` | `flutter` |
 | `Flyway` | `flyway` |
@@ -929,6 +931,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IntelliJ IDEA` | `intellijidea` |
 | `InteractJS` | `interactjs` |
 | `Intercom` | `intercom` |
+| `Intermarche` | `intermarche` |
 | `Internet Archive` | `internetarchive` |
 | `Internet Explorer` | `internetexplorer` |
 | `Intigriti` | `intigriti` |
@@ -1077,6 +1080,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LINE` | `line` |
 | `LineageOS` | `lineageos` |
 | `LinkedIn` | `linkedin` |
+| `Linkfire` | `linkfire` |
 | `Linktree` | `linktree` |
 | `Linode` | `linode` |
 | `Linux` | `linux` |
@@ -1420,6 +1424,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pix` | `pix` |
 | `Pixabay` | `pixabay` |
 | `pixiv` | `pixiv` |
+| `pkgsrc` | `pkgsrc` |
 | `Planet` | `planet` |
 | `PlanGrid` | `plangrid` |
 | `Platform.sh` | `platformdotsh` |
@@ -1556,6 +1561,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
 | `React` | `react` |
+| `React Query` | `reactquery` |
 | `React Router` | `reactrouter` |
 | `React Table` | `reacttable` |
 | `ReactiveX` | `reactivex` |
@@ -1580,6 +1586,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RenovateBot` | `renovatebot` |
 | `Renren` | `renren` |
 | `Replit` | `replit` |
+| `ReScript` | `rescript` |
 | `RescueTime` | `rescuetime` |
 | `ResearchGate` | `researchgate` |
 | `Resurrection Remix OS` | `resurrectionremixos` |
@@ -1858,6 +1865,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Target` | `target` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
+| `Tauri` | `tauri` |
 | `TaxBuzz` | `taxbuzz` |
 | `TeamCity` | `teamcity` |
 | `TeamSpeak` | `teamspeak` |
@@ -1921,6 +1929,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Toyota` | `toyota` |
 | `TP-Link` | `tplink` |
 | `tqdm` | `tqdm` |
+| `Traefik Mesh` | `traefikmesh` |
 | `TrainerRoad` | `trainerroad` |
 | `Trakt` | `trakt` |
 | `TransferWise` | `transferwise` |
