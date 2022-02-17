@@ -48,8 +48,8 @@ body:
         relevant.
 
 
-        [Similarweb rank]: https://www.similarweb.com
-        [Alexa rank]: https://www.alexa.com/siteinfo
+        [similarweb rank]: https://www.similarweb.com
+        [alexa rank]: https://www.alexa.com/siteinfo
       placeholder: 'Example: The Alexa rank is 249,089. See https://www.alexa.com/siteinfo/simpleicons.org'
     validations:
       required: true
