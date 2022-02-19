@@ -42,9 +42,11 @@ body:
     attributes:
       label: Popularity Metric
       description: >-
-        Provide either a [Similarweb rank] or the number of GitHub stars. If Similarweb does not have a rank for your brand or the rank fails to meet our requirements, we can also accept an [Alexa rank] as an alternative. If these are not
-        available or too low you can still open the issue. In this case, please
-        provide any information regarding the brand's popularity you think is
+        Provide either a [Similarweb rank] or the number of GitHub stars. If
+        Similarweb does not have a rank for your brand or the rank fails to meet our
+        requirements, we can also accept an [Alexa rank] as an alternative. If these
+        are not available or too low you can still open the issue. In this case,
+        please provide any information regarding the brand's popularity you think is
         relevant.
 
 
@@ -54,6 +56,7 @@ body:
       placeholder: 'Example: The Alexa rank is 249,089. See https://www.alexa.com/siteinfo/simpleicons.org'
     validations:
       required: true
+
 
   - type: textarea
     attributes:
