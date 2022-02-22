@@ -7,8 +7,8 @@ https://petershaggynoble.github.io/SI-Sandbox/preview/
 -->
 
 **Issue:**
-**Alexa rank:**
-  <!-- The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/
+**Similarweb rank:**
+  <!-- The Similarweb rank can be retrieved at https://www.similarweb.com
        Please see our contributing guidelines for more details on how we
        assess a brand's popularity. -->
 
