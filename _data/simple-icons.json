@@ -8613,7 +8613,10 @@
         {
             "title": "RocksDB",
             "hex": "2A2A2A",
-            "source": "http://rocksdb.org"
+            "source": "https://github.com/facebook/rocksdb/blob/9ed96703d11a1cf4af0e1c1db0e4a6057a8e5d42/docs/static/logo.svg",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Rocky Linux",
