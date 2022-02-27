@@ -1561,6 +1561,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rancher` | `rancher` |
 | `Rarible` | `rarible` |
 | `Raspberry Pi` | `raspberrypi` |
+| `Ray` | `ray` |
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
 | `React` | `react` |
@@ -1589,6 +1590,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RenovateBot` | `renovatebot` |
 | `Renren` | `renren` |
 | `Replit` | `replit` |
+| `Republic of Gamers` | `republicofgamers` |
 | `ReScript` | `rescript` |
 | `RescueTime` | `rescuetime` |
 | `ResearchGate` | `researchgate` |
@@ -1612,6 +1614,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Roblox` | `roblox` |
 | `Robot Framework` | `robotframework` |
 | `Rocket.Chat` | `rocketdotchat` |
+| `RocksDB` | `rocksdb` |
 | `Rocky Linux` | `rockylinux` |
 | `Roku` | `roku` |
 | `Rolls-Royce` | `rollsroyce` |
@@ -1794,6 +1797,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stack Exchange` | `stackexchange` |
 | `Stack Overflow` | `stackoverflow` |
 | `Stackbit` | `stackbit` |
+| `StackEdit` | `stackedit` |
 | `StackPath` | `stackpath` |
 | `StackShare` | `stackshare` |
 | `Stadia` | `stadia` |
@@ -1880,6 +1884,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TELE5` | `tele5` |
 | `Telegram` | `telegram` |
 | `Telegraph` | `telegraph` |
+| `Temporal` | `temporal` |
 | `Tencent QQ` | `tencentqq` |
 | `TensorFlow` | `tensorflow` |
 | `Teradata` | `teradata` |
