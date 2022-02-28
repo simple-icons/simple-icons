@@ -8309,6 +8309,11 @@
             "guidelines": "https://www.raspberrypi.org/trademark-rules"
         },
         {
+            "title": "Ray",
+            "hex": "028CF0",
+            "source": "https://github.com/ray-project/ray/blob/6522935291caa120e83697c6c9b3a450617c9283/dashboard/client/src/logo.svg"
+        },
+        {
             "title": "Razer",
             "hex": "00FF00",
             "source": "https://press.razer.com/"
@@ -8604,6 +8609,14 @@
             "hex": "F5455C",
             "source": "https://rocket.chat/press",
             "guidelines": "https://docs.rocket.chat/guides/brand-and-visual-guidelines/logo"
+        },
+        {
+            "title": "RocksDB",
+            "hex": "2A2A2A",
+            "source": "https://github.com/facebook/rocksdb/blob/9ed96703d11a1cf4af0e1c1db0e4a6057a8e5d42/docs/static/logo.svg",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Rocky Linux",
@@ -9613,6 +9626,11 @@
             "hex": "207BEA",
             "source": "https://www.stackbit.com/branding-guidelines/",
             "guidelines": "https://www.stackbit.com/branding-guidelines/"
+        },
+        {
+            "title": "StackEdit",
+            "hex": "606060",
+            "source": "https://github.com/benweet/stackedit/blob/46383b5b6a54b65b8720d786ed0a0518b9ad652d/src/assets/iconStackedit.svg"
         },
         {
             "title": "StackPath",
