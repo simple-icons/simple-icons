@@ -97,7 +97,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
  * Get contents of _data/simple-icons.json.
  */
 export const getIconsDataString = () => {
-  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const __dirname = getDirnameFromImportMeta(import.meta.url);
   const rootDir = path.resolve(__dirname, '..');
   const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
   return fs.readFile(iconDataPath, 'utf8');
@@ -117,3 +117,30 @@ export const getIconsData = async () => {
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
+
+/**
+ * Get information about third party extensions.
+ */
+export const getThirdPartyExtensions = async () => {
+  const __dirname = getDirnameFromImportMeta(import.meta.url);
+  const readmePath = path.resolve(__dirname, '..', 'README.md');
+  const readmeContent = await fs.readFile(readmePath, 'utf8');
+  return readmeContent
+    .split('## Third-Party Extensions\n\n')[1]
+    .split('\n\n')[0]
+    .split('\n')
+    .slice(2)
+    .map((line) => {
+      const [module, author] = line.split(' | ');
+      return {
+        module: {
+          name: /\[(.+)\]/.exec(module)[1],
+          url: /\((.+)\)/.exec(module)[1],
+        },
+        author: {
+          name: /\[(.+)\]/.exec(author)[1],
+          url: /\((.+)\)/.exec(author)[1],
+        },
+      };
+    });
+};
