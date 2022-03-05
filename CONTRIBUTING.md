@@ -48,7 +48,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - For GitHub projects, the amount of "stars" should be above 5k.
     - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
-    - Illegal service (e.g. piracy, malware, threatening material, spam, etc.)
+    - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
     - Governmental agencies, programs, departments
        - Allowed: International organizations and NGOs with supranational interests
        - Allowed: Space agencies
@@ -265,7 +265,7 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
 
-* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an exiting icon's name.
+* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an existing icon's name.
 * The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
 * The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
 
