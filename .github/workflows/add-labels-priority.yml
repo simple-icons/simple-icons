@@ -85,7 +85,6 @@ jobs:
     if: |
       github.event.action != 'opened' &&
       github.event.pull_request.merged == false
-    needs: triage
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
