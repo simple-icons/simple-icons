@@ -76,6 +76,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AirPlay Audio` | `airplayaudio` |
 | `AirPlay Video` | `airplayvideo` |
 | `Airtable` | `airtable` |
+| `AJV` | `ajv` |
 | `Alacritty` | `alacritty` |
 | `Albert Heijn` | `albertheijn` |
 | `Aldi Nord` | `aldinord` |
@@ -477,6 +478,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dashlane` | `dashlane` |
 | `Dassault Systèmes` | `dassaultsystemes` |
 | `Data Version Control` | `dataversioncontrol` |
+| `data.ai` | `datadotai` |
 | `Databricks` | `databricks` |
 | `DataCamp` | `datacamp` |
 | `Datadog` | `datadog` |
@@ -1034,6 +1036,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kodi` | `kodi` |
 | `Kofax` | `kofax` |
 | `Komoot` | `komoot` |
+| `Konami` | `konami` |
 | `Kongregate` | `kongregate` |
 | `Konva` | `konva` |
 | `Kotlin` | `kotlin` |
@@ -1348,6 +1351,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenTelemetry` | `opentelemetry` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
+| `OpenZFS` | `openzfs` |
 | `Opera` | `opera` |
 | `OPNSense` | `opnsense` |
 | `Opsgenie` | `opsgenie` |
@@ -1713,6 +1717,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Simkl` | `simkl` |
 | `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
+| `Simplenote` | `simplenote` |
 | `Sina Weibo` | `sinaweibo` |
 | `SingleStore` | `singlestore` |
 | `SitePoint` | `sitepoint` |
@@ -2154,6 +2159,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yoast` | `yoast` |
+| `YOLO` | `yolo` |
 | `YourTravel.TV` | `yourtraveldottv` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
