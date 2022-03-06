@@ -4,34 +4,37 @@
  * Updates the version of this package to the CLI specified version.
  */
 
-const fs = require("fs");
-const path = require("path");
+import fs from 'node:fs';
+import path from 'node:path';
+import { getDirnameFromImportMeta } from '../utils.js';
 
-const rootDir = path.resolve(__dirname, "..", "..");
-const packageJsonFile = path.resolve(rootDir, "package.json");
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
-function readManifest(file) {
-  const manifestRaw = fs.readFileSync(file).toString();
+const rootDir = path.resolve(__dirname, '..', '..');
+const packageJsonFile = path.resolve(rootDir, 'package.json');
+
+const readManifest = (file) => {
+  const manifestRaw = fs.readFileSync(file, 'utf-8');
   const manifestJson = JSON.parse(manifestRaw);
   return manifestJson;
-}
+};
 
-function writeManifest(file, json) {
-  const manifestRaw = JSON.stringify(json, null, 2) + "\n";
+const writeManifest = (file, json) => {
+  const manifestRaw = JSON.stringify(json, null, 2) + '\n';
   fs.writeFileSync(file, manifestRaw);
-}
+};
 
-function main(newVersion) {
+const main = (newVersion) => {
   try {
     const manifest = readManifest(packageJsonFile);
 
-    manifest.version = newVersion
+    manifest.version = newVersion;
 
     writeManifest(packageJsonFile, manifest);
   } catch (error) {
     console.error(`Failed to bump package version to ${newVersion}:`, error);
     process.exit(1);
   }
-}
+};
 
 main(process.argv[2]);

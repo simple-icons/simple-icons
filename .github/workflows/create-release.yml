@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   schedule:
     # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
-    - cron: "0 0 * * 0"
+    - cron: '0 0 * * 0'
 
 # This Workflow can be triggered manually through the GitHub UI or API. For the
 # API use the following request:
@@ -45,12 +45,14 @@ jobs:
         run: node ./scripts/release/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
       - name: Update major version in CDN URLs
         run: node ./scripts/release/update-cdn-urls.js
+      - name: Update SVGs count milestone
+        run: node ./scripts/release/update-svgs-count.js
       - name: Update slugs table
         run: node ./scripts/release/update-slugs-table.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        uses: stefanzweifel/git-auto-commit-action@v4.13.1
         with:
           commit_message: version bump
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "github-actions[bot]@users.noreply.github.com"
-          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+          commit_user_name: 'github-actions[bot]'
+          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
