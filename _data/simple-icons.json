@@ -357,6 +357,11 @@
             "source": "https://airtable.com/press"
         },
         {
+            "title": "AJV",
+            "hex": "23C8D2",
+            "source": "https://ajv.js.org/"
+        },
+        {
             "title": "Alacritty",
             "hex": "F46D01",
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg"
@@ -2028,7 +2033,7 @@
         },
         {
             "title": "CodeNewbie",
-            "hex": "6BD80B",
+            "hex": "9013FE",
             "source": "https://community.codenewbie.org/"
         },
         {
@@ -2183,6 +2188,11 @@
             "title": "Cookiecutter",
             "hex": "D4AA00",
             "source": "https://github.com/cookiecutter/cookiecutter/blob/52dd18513bbab7f0fbfcb2938c9644d9092247cf/logo/cookiecutter-logo.svg"
+        },
+        {
+            "title": "Cora",
+            "hex": "E61845",
+            "source": "https://www.cora.fr/"
         },
         {
             "title": "Corona Engine",
@@ -2407,6 +2417,11 @@
             },
             "hex": "945DD6",
             "source": "https://static.iterative.ai/logo/dvc.svg"
+        },
+        {
+            "title": "data.ai",
+            "hex": "000000",
+            "source": "https://www.data.ai/en/about/press/"
         },
         {
             "title": "Databricks",
@@ -3212,8 +3227,8 @@
         },
         {
             "title": "Fandom",
-            "hex": "00D6D6",
-            "source": "https://fandomdesignsystem.com/identity/assets"
+            "hex": "FA005A",
+            "source": "https://fandomdesignsystem.com/"
         },
         {
             "title": "FARFETCH",
@@ -3427,6 +3442,11 @@
             "title": "Flood",
             "hex": "4285F4",
             "source": "https://flood.io/"
+        },
+        {
+            "title": "Fluent Bit",
+            "hex": "49BDA5",
+            "source": "https://github.com/fluent/fluent-bit/blob/cdb35721d06242d66a729656282831ccd1589ca2/snap/fluent-bit.svg"
         },
         {
             "title": "Fluentd",
@@ -4852,6 +4872,11 @@
             "guidelines": "https://www.intercom.com/press"
         },
         {
+            "title": "Intermarche",
+            "hex": "E2001A",
+            "source": "https://www.intermarche.com/"
+        },
+        {
             "title": "Internet Archive",
             "hex": "666666",
             "source": "https://archive.org/"
@@ -5419,6 +5444,11 @@
             "guidelines": "http://newsroom.komoot.com/media_kits/219423/"
         },
         {
+            "title": "Konami",
+            "hex": "B60014",
+            "source": "https://commons.wikimedia.org/wiki/File:Konami_4th_logo_2.svg"
+        },
+        {
             "title": "Kongregate",
             "hex": "990000",
             "source": "https://www.kongregate.com/pages/logos-and-branding"
@@ -5541,6 +5571,11 @@
             "hex": "2F9176",
             "source": "https://lbry.com/press-kit",
             "guidelines": "https://lbry.com/faq/acceptable-use-policy"
+        },
+        {
+            "title": "Leader Price",
+            "hex": "E50005",
+            "source": "https://www.leaderprice.fr"
         },
         {
             "title": "Leaflet",
@@ -7149,6 +7184,11 @@
             "guidelines": "https://openwrt.org/docs/guide-graphic-designer/openwrt-logo"
         },
         {
+            "title": "OpenZFS",
+            "hex": "2A667F",
+            "source": "https://commons.wikimedia.org/wiki/File:OpenZFS_logo.svg"
+        },
+        {
             "title": "Opera",
             "hex": "FF1B2D",
             "source": "https://brand.opera.com/1472-2/opera-logos/",
@@ -7501,6 +7541,11 @@
             "hex": "96060C",
             "source": "https://docs.pi-hole.net",
             "guidelines": "https://pi-hole.net/trademark-rules-and-brand-guidelines/"
+        },
+        {
+            "title": "Picard Surgelés",
+            "hex": "2D4999",
+            "source": "https://www.picard.fr/"
         },
         {
             "title": "Picarto.TV",
@@ -8289,6 +8334,11 @@
             "guidelines": "https://www.raspberrypi.org/trademark-rules"
         },
         {
+            "title": "Ray",
+            "hex": "028CF0",
+            "source": "https://github.com/ray-project/ray/blob/6522935291caa120e83697c6c9b3a450617c9283/dashboard/client/src/logo.svg"
+        },
+        {
             "title": "Razer",
             "hex": "00FF00",
             "source": "https://press.razer.com/"
@@ -8311,6 +8361,11 @@
                     }
                 ]
             }
+        },
+        {
+            "title": "React Query",
+            "hex": "FF4154",
+            "source": "https://github.com/tannerlinsley/react-query/blob/9b5d18cd47a4c1454d6c8dd0f38280641c1dd5dd/docs/src/images/emblem-light.svg"
         },
         {
             "title": "React Router",
@@ -8449,6 +8504,17 @@
             "source": "https://repl.it/"
         },
         {
+            "title": "Republic of Gamers",
+            "aliases": {
+                "aka": [
+                    "ASUS ROG",
+                    "ROG"
+                ]
+            },
+            "hex": "FF0029",
+            "source": "https://rog.asus.com"
+        },
+        {
             "title": "ReScript",
             "hex": "E6484F",
             "source": "https://rescript-lang.org/brand"
@@ -8568,6 +8634,14 @@
             "hex": "F5455C",
             "source": "https://rocket.chat/press",
             "guidelines": "https://docs.rocket.chat/guides/brand-and-visual-guidelines/logo"
+        },
+        {
+            "title": "RocksDB",
+            "hex": "2A2A2A",
+            "source": "https://github.com/facebook/rocksdb/blob/9ed96703d11a1cf4af0e1c1db0e4a6057a8e5d42/docs/static/logo.svg",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Rocky Linux",
@@ -9107,6 +9181,11 @@
             }
         },
         {
+            "title": "Simplenote",
+            "hex": "3361CC",
+            "source": "https://en.wikipedia.org/wiki/File:Simplenote_logo.svg"
+        },
+        {
             "title": "Sina Weibo",
             "hex": "E6162D",
             "source": "https://en.wikipedia.org/wiki/Sina_Weibo"
@@ -9265,6 +9344,11 @@
             "title": "Snyk",
             "hex": "4C4A73",
             "source": "https://snyk.io/press-kit"
+        },
+        {
+            "title": "Social Blade",
+            "hex": "B3382C",
+            "source": "https://socialblade.com/info/media"
         },
         {
             "title": "Society6",
@@ -9567,6 +9651,11 @@
             "hex": "207BEA",
             "source": "https://www.stackbit.com/branding-guidelines/",
             "guidelines": "https://www.stackbit.com/branding-guidelines/"
+        },
+        {
+            "title": "StackEdit",
+            "hex": "606060",
+            "source": "https://github.com/benweet/stackedit/blob/46383b5b6a54b65b8720d786ed0a0518b9ad652d/src/assets/iconStackedit.svg"
         },
         {
             "title": "StackPath",
@@ -10035,6 +10124,11 @@
             "title": "Telegraph",
             "hex": "FAFAFA",
             "source": "https://telegra.ph/"
+        },
+        {
+            "title": "Temporal",
+            "hex": "000000",
+            "source": "https://github.com/temporalio/temporaldotio/blob/b6b5f3ed1fda818d5d6c07e27ec15d51a61f2267/public/images/icons/temporal-no-text.svg"
         },
         {
             "title": "Tencent QQ",
@@ -11132,8 +11226,8 @@
         {
             "title": "WhatsApp",
             "hex": "25D366",
-            "source": "https://www.whatsappbrand.com",
-            "guidelines": "https://whatsappbrand.com/"
+            "source": "https://www.facebook.com/brand/resources/whatsapp/whatsapp-brand",
+            "guidelines": "https://www.facebook.com/brand/resources/whatsapp/whatsapp-brand"
         },
         {
             "title": "When I Work",
@@ -11456,6 +11550,11 @@
             "title": "Yoast",
             "hex": "A4286A",
             "source": "https://yoast.com/media/logo/"
+        },
+        {
+            "title": "YOLO",
+            "hex": "00FFFF",
+            "source": "https://pjreddie.com/darknet/yolo/"
         },
         {
             "title": "YourTravel.TV",
