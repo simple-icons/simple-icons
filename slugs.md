@@ -894,6 +894,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Iata` | `iata` |
 | `iBeacon` | `ibeacon` |
 | `IBM` | `ibm` |
+| `IBM Cloud` | `ibmcloud` |
 | `IBM Watson` | `ibmwatson` |
 | `Iceland` | `iceland` |
 | `Icinga` | `icinga` |
@@ -1113,6 +1114,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lubuntu` | `lubuntu` |
 | `Lufthansa` | `lufthansa` |
 | `Lumen` | `lumen` |
+| `Lunacy` | `lunacy` |
 | `Lydia` | `lydia` |
 | `Lyft` | `lyft` |
 | `MAAS` | `maas` |
@@ -1506,6 +1508,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ProtonVPN` | `protonvpn` |
 | `Protractor` | `protractor` |
 | `Proxmox` | `proxmox` |
+| `PUBG` | `pubg` |
 | `Publons` | `publons` |
 | `PubMed` | `pubmed` |
 | `Pug` | `pug` |
@@ -2170,6 +2173,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zalando` | `zalando` |
 | `Zalo` | `zalo` |
 | `Zapier` | `zapier` |
+| `Zara` | `zara` |
+| `Zazzle` | `zazzle` |
 | `Zcash` | `zcash` |
 | `ZDF` | `zdf` |
 | `Zelle` | `zelle` |
