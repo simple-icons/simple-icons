@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "6.13.0",
+  "version": "6.14.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -30,6 +30,10 @@
   },
   "author": "Simple Icons Collaborators",
   "license": "CC0-1.0",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/simple-icons"
+  },
   "devDependencies": {
     "editorconfig-checker": "4.0.2",
     "esbuild": "0.14.21",
