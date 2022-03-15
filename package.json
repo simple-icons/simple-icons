@@ -30,6 +30,10 @@
   },
   "author": "Simple Icons Collaborators",
   "license": "CC0-1.0",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/simple-icons"
+  },
   "devDependencies": {
     "editorconfig-checker": "4.0.2",
     "esbuild": "0.14.21",
