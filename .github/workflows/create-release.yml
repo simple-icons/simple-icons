@@ -50,7 +50,7 @@ jobs:
       - name: Update slugs table
         run: node ./scripts/release/update-slugs-table.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        uses: stefanzweifel/git-auto-commit-action@v4.13.1
         with:
           commit_message: version bump
           commit_user_name: 'github-actions[bot]'
