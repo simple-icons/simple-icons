@@ -57,22 +57,6 @@
           "oneOf": [
             {
               "type": "object",
-              "required": ["type", "url"],
-              "properties": {
-                "type": {
-                  "description": "The license name or 'custom'",
-                  "type": "string",
-                  "enum": ["custom"]
-                },
-                "url": {
-                  "description": "The URL to the license text by the brand",
-                  "$ref": "#/definitions/url"
-                }
-              },
-              "additionalProperties": false
-            },
-            {
-              "type": "object",
               "required": ["type"],
               "properties": {
                 "type": {
@@ -166,6 +150,22 @@
                 }
               },
               "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "required": ["type", "url"],
+              "properties": {
+                "type": {
+                  "description": "The license name or 'custom'",
+                  "type": "string",
+                  "enum": ["custom"]
+                },
+                "url": {
+                  "description": "The URL to the license text by the brand",
+                  "$ref": "#/definitions/url"
+                }
+              },
+              "additionalProperties": false
             }
           ]
         }
@@ -235,7 +235,6 @@
       "pattern": "^https?://[^\\s]+$"
     }
   },
-
   "type": "object",
   "properties": {
     "icons": {
@@ -243,5 +242,7 @@
       "type": "array",
       "items": { "$ref": "#/definitions/brand" }
     }
-  }
+  },
+  "additionalProperties": false,
+  "required": ["icons"]
 }
