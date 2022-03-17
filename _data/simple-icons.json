@@ -357,9 +357,9 @@
             "source": "https://airtable.com/press"
         },
         {
-            "title": "AJV",
+            "title": "Ajv",
             "hex": "23C8D2",
-            "source": "https://ajv.js.org/"
+            "source": "https://github.com/ajv-validator/ajv/blob/95b15b683dfb60f63c5129b0426629b968d53af8/docs/.vuepress/public/img/ajv.svg"
         },
         {
             "title": "Alacritty",
@@ -1743,6 +1743,11 @@
             "source": "https://www.chef.io/"
         },
         {
+            "title": "Chemex",
+            "hex": "4D2B1A",
+            "source": "https://vtlogo.com/chemex-coffeemaker-vector-logo-svg/"
+        },
+        {
             "title": "Chevrolet",
             "hex": "CD9834",
             "source": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/02-pdf/2019-chevrolet-corvette-catalog.pdf"
@@ -1837,6 +1842,11 @@
             "title": "Claris",
             "hex": "000000",
             "source": "https://www.claris.com/"
+        },
+        {
+            "title": "ClickHouse",
+            "hex": "FFCC01",
+            "source": "https://github.com/ClickHouse/ClickHouse/blob/12bd453a43819176d25ecf247033f6cb1af54beb/website/images/logo-clickhouse.svg"
         },
         {
             "title": "ClickUp",
@@ -4206,6 +4216,11 @@
             "source": "https://www.grammarly.com/media-assets"
         },
         {
+            "title": "Grand Frais",
+            "hex": "ED2D2F",
+            "source": "https://www.grandfrais.com/"
+        },
+        {
             "title": "GraphQL",
             "hex": "E10098",
             "source": "https://graphql.org/brand",
@@ -5229,6 +5244,11 @@
             "source": "https://justgiving.com"
         },
         {
+            "title": "K3s",
+            "hex": "FFC61C",
+            "source": "https://k3s.io/"
+        },
+        {
             "title": "Kaggle",
             "hex": "20BEFF",
             "source": "https://www.kaggle.com/brand-guidelines",
@@ -5621,6 +5641,11 @@
             "title": "Lenovo",
             "hex": "E2231A",
             "source": "https://news.lenovo.com/press-kits/"
+        },
+        {
+            "title": "Lens",
+            "hex": "3D90CE",
+            "source": "https://github.com/lensapp/lens/blob/3cc12d9599b655a366e7a34c356d2a84654b2466/docs/img/lens-logo-icon.svg"
         },
         {
             "title": "Lerna",
@@ -6048,6 +6073,11 @@
             "title": "Matrix",
             "hex": "000000",
             "source": "https://matrix.org"
+        },
+        {
+            "title": "Matter.js",
+            "hex": "76F09B",
+            "source": "https://brm.io/matter-js"
         },
         {
             "title": "Mattermost",
@@ -9928,6 +9958,11 @@
             "hex": "38A1CE",
             "source": "https://stackoverflow.design/brand/logo/",
             "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
+        },
+        {
+            "title": "Supermicro",
+            "hex": "151F6D",
+            "source": "https://www.supermicro.com/manuals/supermicro_logo_guidelines.pdf"
         },
         {
             "title": "SurveyMonkey",
