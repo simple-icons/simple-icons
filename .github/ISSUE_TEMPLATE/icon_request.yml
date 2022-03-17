@@ -19,7 +19,7 @@ body:
 
         [contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
-        [new-icon-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22+is%3Aopen
+        [new-icon-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22
 
   - type: input
     attributes:
@@ -42,14 +42,18 @@ body:
     attributes:
       label: Popularity Metric
       description: >-
-        Provide either an [Alexa rank] or the number of GitHub stars. If these are not
-        available or too low you can still open the issue. In this case, please
-        provide any information regarding the brand's popularity you think is
+        Provide either a [Similarweb rank] or the number of GitHub stars. If
+        Similarweb does not have a rank for your brand or the rank fails to meet our
+        requirements, we can also accept an [Alexa rank] as an alternative. If these
+        are not available or too low you can still open the issue. In this case,
+        please provide any information regarding the brand's popularity you think is
         relevant.
 
 
-        [alexa rank]: https://www.alexa.com/siteinfo
-      placeholder: 'Example: The Alexa rank is 249,089. See https://www.alexa.com/siteinfo/simpleicons.org'
+        [Similarweb rank]: https://www.similarweb.com
+
+        [Alexa rank]: https://www.alexa.com/siteinfo
+      placeholder: 'Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org'
     validations:
       required: true
 
