@@ -2128,6 +2128,11 @@
             "source": "https://www.coinbase.com/press"
         },
         {
+            "title": "CoinMarketCap",
+            "hex": "17181B",
+            "source": "https://www.coinmarketcap.com/"
+        },
+        {
             "title": "Commerzbank",
             "hex": "FFCC33",
             "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
@@ -2273,6 +2278,11 @@
             "title": "Craft CMS",
             "hex": "E5422B",
             "source": "https://craftcms.com/brand-resources"
+        },
+        {
+            "title": "CrateDB",
+            "hex": "009DC7",
+            "source": "https://github.com/crate/crate-docs-theme/blob/cbd734b3617489ca937f35e30f37f3f6c1870e1f/src/crate/theme/rtd/crate/static/images/crate-logo.svg"
         },
         {
             "title": "Create React App",
@@ -2430,6 +2440,11 @@
             "title": "Dashlane",
             "hex": "0E353D",
             "source": "https://brandfolder.com/dashlane/brandkitpartners"
+        },
+        {
+            "title": "Dask",
+            "hex": "FDA061",
+            "source": "https://github.com/dask/dask/blob/fc911b6d481e602f7549eecb180c3f7622260001/docs/source/images/dask_icon.svg"
         },
         {
             "title": "Dassault Systèmes",
@@ -2852,6 +2867,12 @@
             "title": "Duolingo",
             "hex": "58CC02",
             "source": "https://www.duolingo.com/"
+        },
+        {
+            "title": "DVC",
+            "hex": "13ADC7",
+            "source": "https://iterative.ai/brand/",
+            "guidelines": "https://iterative.ai/brand/"
         },
         {
             "title": "dwm",
@@ -3851,7 +3872,8 @@
         {
             "title": "GitLab",
             "hex": "FCA121",
-            "source": "https://about.gitlab.com/press/press-kit/"
+            "source": "https://about.gitlab.com/press/press-kit/",
+            "guidelines": "https://about.gitlab.com/handbook/marketing/corporate-marketing/brand-activation/trademark-guidelines/"
         },
         {
             "title": "Gitpod",
@@ -3887,7 +3909,14 @@
         {
             "title": "GNOME",
             "hex": "4A86CF",
-            "source": "https://wiki.gnome.org/Engagement/BrandGuidelines"
+            "source": "https://wiki.gnome.org/Engagement/BrandGuidelines",
+            "guidelines": "https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf"
+        },
+        {
+            "title": "GNOME Terminal",
+            "hex": "241F31",
+            "source": "https://gitlab.gnome.org/GNOME/gnome-terminal/-/blob/9c32e039bfb7902c136dc7aed3308e027325776c/data/icons/hicolor_apps_scalable_org.gnome.Terminal.svg",
+            "guidelines": "https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf"
         },
         {
             "title": "GNU",
@@ -5767,6 +5796,11 @@
             "guidelines": "https://brand.linkedin.com/policies"
         },
         {
+            "title": "Linkerd",
+            "hex": "2BEDA7",
+            "source": "https://cncf-branding.netlify.app/projects/linkerd/"
+        },
+        {
             "title": "Linkfire",
             "hex": "FF3850",
             "source": "https://www.linkfire.com/"
@@ -5806,6 +5840,12 @@
             "title": "Lion Air",
             "hex": "ED3237",
             "source": "https://lionairthai.com/en/"
+        },
+        {
+            "title": "Liquibase",
+            "hex": "2962FF",
+            "source": "https://www.liquibase.com/brand",
+            "guidelines": "https://www.liquibase.com/brand"
         },
         {
             "title": "Lit",
@@ -9520,6 +9560,11 @@
             "source": "https://www.sony.com"
         },
         {
+            "title": "Soundcharts",
+            "hex": "0C1528",
+            "source": "https://soundcharts.com/img/soundcharts-logo.svg"
+        },
+        {
             "title": "SoundCloud",
             "hex": "FF3300",
             "source": "https://soundcloud.com/press"
@@ -9763,6 +9808,11 @@
             "hex": "006241",
             "source": "https://starbucks.com/",
             "guidelines": "https://creative.starbucks.com/"
+        },
+        {
+            "title": "Stardock",
+            "hex": "004B8D",
+            "source": "https://www.stardock.com/press/stardock%20branding/"
         },
         {
             "title": "Starling Bank",
