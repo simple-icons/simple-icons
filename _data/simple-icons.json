@@ -2128,6 +2128,11 @@
             "source": "https://www.coinbase.com/press"
         },
         {
+            "title": "CoinMarketCap",
+            "hex": "17181B",
+            "source": "https://www.coinmarketcap.com/"
+        },
+        {
             "title": "Commerzbank",
             "hex": "FFCC33",
             "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
@@ -3857,7 +3862,8 @@
         {
             "title": "GitLab",
             "hex": "FCA121",
-            "source": "https://about.gitlab.com/press/press-kit/"
+            "source": "https://about.gitlab.com/press/press-kit/",
+            "guidelines": "https://about.gitlab.com/handbook/marketing/corporate-marketing/brand-activation/trademark-guidelines/"
         },
         {
             "title": "Gitpod",
@@ -3893,7 +3899,14 @@
         {
             "title": "GNOME",
             "hex": "4A86CF",
-            "source": "https://wiki.gnome.org/Engagement/BrandGuidelines"
+            "source": "https://wiki.gnome.org/Engagement/BrandGuidelines",
+            "guidelines": "https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf"
+        },
+        {
+            "title": "GNOME Terminal",
+            "hex": "241F31",
+            "source": "https://gitlab.gnome.org/GNOME/gnome-terminal/-/blob/9c32e039bfb7902c136dc7aed3308e027325776c/data/icons/hicolor_apps_scalable_org.gnome.Terminal.svg",
+            "guidelines": "https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf"
         },
         {
             "title": "GNU",
@@ -5767,6 +5780,11 @@
             "guidelines": "https://brand.linkedin.com/policies"
         },
         {
+            "title": "Linkerd",
+            "hex": "2BEDA7",
+            "source": "https://cncf-branding.netlify.app/projects/linkerd/"
+        },
+        {
             "title": "Linkfire",
             "hex": "FF3850",
             "source": "https://www.linkfire.com/"
@@ -5806,6 +5824,12 @@
             "title": "Lion Air",
             "hex": "ED3237",
             "source": "https://lionairthai.com/en/"
+        },
+        {
+            "title": "Liquibase",
+            "hex": "2962FF",
+            "source": "https://www.liquibase.com/brand",
+            "guidelines": "https://www.liquibase.com/brand"
         },
         {
             "title": "Lit",
@@ -9518,6 +9542,11 @@
             "title": "Sony",
             "hex": "FFFFFF",
             "source": "https://www.sony.com"
+        },
+        {
+            "title": "Soundcharts",
+            "hex": "0C1528",
+            "source": "https://soundcharts.com/img/soundcharts-logo.svg"
         },
         {
             "title": "SoundCloud",
