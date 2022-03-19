@@ -3893,7 +3893,14 @@
         {
             "title": "GNOME",
             "hex": "4A86CF",
-            "source": "https://wiki.gnome.org/Engagement/BrandGuidelines"
+            "source": "https://wiki.gnome.org/Engagement/BrandGuidelines",
+            "guidelines": "https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf"
+        },
+        {
+            "title": "GNOME Terminal",
+            "hex": "241F31",
+            "source": "https://gitlab.gnome.org/GNOME/gnome-terminal/-/blob/9c32e039bfb7902c136dc7aed3308e027325776c/data/icons/hicolor_apps_scalable_org.gnome.Terminal.svg",
+            "guidelines": "https://gitlab.gnome.org/Teams/Design/brand/-/blob/master/brand-book.pdf"
         },
         {
             "title": "GNU",
