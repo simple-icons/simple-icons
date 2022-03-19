@@ -18,7 +18,10 @@
       "require": "./icons.js",
       "default": "./icons.js"
     },
-    "./icons/*": ["./icons/*.js", "./icons/*"]
+    "./icons/*": [
+      "./icons/*.js",
+      "./icons/*"
+    ]
   },
   "sideEffects": false,
   "repository": {
