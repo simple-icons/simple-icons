@@ -5,16 +5,8 @@
  * linters (e.g. jsonlint/svglint).
  */
 
-const fs = require("fs");
-const path = require("path");
-
-const { diffLinesUnified } = require("jest-diff");
-
-const UTF8 = "utf8";
-
-const rootDir = path.resolve(__dirname, "..", "..");
-const dataFile = path.resolve(rootDir, "_data", "simple-icons.json");
-const data = require(dataFile);
+import fakeDiff from 'fake-diff';
+import { getIconsDataString } from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -22,7 +14,7 @@ const data = require(dataFile);
  */
 const TESTS = {
   /* Tests whether our icons are in alphabetical order */
-  alphabetical: function() {
+  alphabetical: (data) => {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
@@ -39,7 +31,7 @@ const TESTS = {
       }
       return invalidEntries;
     };
-    const format = icon => {
+    const format = (icon) => {
       if (icon.slug) {
         return `${icon.title} (${icon.slug})`;
       }
@@ -49,35 +41,35 @@ const TESTS = {
     const invalids = data.icons.reduce(collector, []);
     if (invalids.length) {
       return `Some icons aren't in alphabetical order:
-        ${invalids.map(icon => format(icon)).join(", ")}`;
+        ${invalids.map((icon) => format(icon)).join(', ')}`;
     }
   },
 
   /* Check the formatting of the data file */
-  prettified: function() {
-    const dataString = fs.readFileSync(dataFile, UTF8).replace(/\r\n/g, '\n');
-    const dataPretty = `${JSON.stringify(data, null, "    ")}\n`;
-    if (dataString !== dataPretty) {
-      const dataDiff = diffLinesUnified(
-        dataString.split("\n"),
-        dataPretty.split("\n"),
-        {
-          expand: false,
-          omitAnnotationLines: true
-        },
-      );
+  prettified: async (data, dataString) => {
+    const normalizedDataString = dataString.replace(/\r\n/g, '\n');
+    const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
 
+    if (normalizedDataString !== dataPretty) {
+      const dataDiff = fakeDiff(normalizedDataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
-  }
+  },
 };
 
 // execute all tests and log all errors
-const errors = Object.keys(TESTS)
-  .map(k => TESTS[k]())
-  .filter(Boolean);
+(async () => {
+  const dataString = await getIconsDataString();
+  const data = JSON.parse(dataString);
 
-if (errors.length > 0) {
-  errors.forEach(error => console.error(`\u001b[31m${error}\u001b[0m`));
-  process.exit(1);
-}
+  const errors = (
+    await Promise.all(
+      Object.keys(TESTS).map((test) => TESTS[test](data, dataString)),
+    )
+  ).filter(Boolean);
+
+  if (errors.length > 0) {
+    errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
+    process.exit(1);
+  }
+})();
