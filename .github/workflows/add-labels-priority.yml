@@ -1,11 +1,12 @@
 name: Add Pull Request Labels and Assign to Project
 on:
   pull_request_target:
-    types: [opened]
+    types: [opened, closed]
 
 jobs:
   triage:
     runs-on: ubuntu-latest
+    if: github.event.action == 'opened'
     steps:
       - uses: ericcornelissen/labeler@label-based-on-status
         with:
@@ -14,6 +15,7 @@ jobs:
   assign-to-project:
     runs-on: ubuntu-latest
     name: Assign to Project
+    if: github.event.action == 'opened'
     needs: triage
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
@@ -33,12 +35,23 @@ jobs:
       - id: get-linked-issues
         name: Get linked issue numbers
         uses: mondeja/pr-linked-issues-action@v2
+        with:
+          # Lazy linked issues. If one of the lines of the pull request body
+          # matches one of the next contents, the matching issue number will
+          # be added to `issues` output:
+          add_links_by_content: |
+            **Issue:** #{issue_number}
+            **Issue**: #{issue_number}
+            **Close:** #{issue_number}
+            **Close**: #{issue_number}
+            **Closes:** #{issue_number}
+            **Closes**: #{issue_number}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: priority-1
         name: Assign `icon outdated` pull requests to "Priority 1"
-        uses: srggrs/assign-one-project-github-action@1.2.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         if: contains(steps.get-labels.outputs.labels, 'icon outdated')
         with:
           project: https://github.com/orgs/simple-icons/projects/2
@@ -46,7 +59,7 @@ jobs:
 
       - id: priority-2
         name: Assign `new icon` pull requests to "Priority 2"
-        uses: srggrs/assign-one-project-github-action@1.2.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         # the PR has the `new icon` label along with a linked issue and
         # the opener is not a member of simple-icons organization
         if: |
@@ -58,10 +71,25 @@ jobs:
           column_name: Priority 2
 
       - name: Assign pull requests to "Unprioritised"
-        uses: srggrs/assign-one-project-github-action@1.2.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         if: |
           steps.priority-1.conclusion == 'skipped' &&
           steps.priority-2.conclusion == 'skipped'
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Unprioritised
+
+  unassign-from-project:
+    runs-on: ubuntu-latest
+    name: Unassign from Project
+    if: |
+      github.event.action != 'opened' &&
+      github.event.pull_request.merged == false
+    env:
+      MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
+    steps:
+      - name: Assign closed pull requests to "Completed or Abandoned"
+        uses: srggrs/assign-one-project-github-action@1.3.1
+        with:
+          project: https://github.com/orgs/simple-icons/projects/2
+          column_name: Completed or Abandoned
