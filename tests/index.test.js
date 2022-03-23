@@ -1,5 +1,5 @@
 import simpleIcons from '../index.js';
-import { getIconSlug, getIconsData } from '../scripts/utils.js';
+import { getIconSlug, getIconsData, titleToSlug } from '../scripts/utils.js';
 import { test } from 'mocha';
 import { strict as assert } from 'node:assert';
 
@@ -16,6 +16,15 @@ import { strict as assert } from 'node:assert';
       assert.equal(found.hex, icon.hex);
       assert.equal(found.source, icon.source);
     });
+
+    if (icon.slug) {
+      // if an icon data has a slug, it must be different to the
+      // slug inferred from the title, which prevents adding
+      // unnecessary slugs to icons data
+      test(`'${icon.title}' slug must be necessary`, () => {
+        assert.notEqual(titleToSlug(icon.title), icon.slug);
+      });
+    }
   });
 
   test(`Iterating over simpleIcons only exposes icons`, () => {
