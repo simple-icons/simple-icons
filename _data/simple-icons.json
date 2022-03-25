@@ -2604,6 +2604,15 @@
             "source": "https://news.delta.com/delta-air-lines-logos-brand-guidelines"
         },
         {
+            "title": "Deluge",
+            "hex": "094491",
+            "source": "https://github.com/deluge-torrent/deluge/blob/master/deluge/ui/data/pixmaps/deluge.svg",
+            "license": {
+                "type": "GPL-3.0-only",
+                "url": "https://github.com/deluge-torrent/deluge/blob/develop/LICENSE"
+            }
+        },
+        {
             "title": "Deno",
             "hex": "000000",
             "source": "https://github.com/denoland/dotland/blob/f1ba74327b401b47de678f30d768ff9bf54494b6/public/logo.svg",
