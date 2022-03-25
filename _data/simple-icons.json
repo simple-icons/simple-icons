@@ -2607,6 +2607,11 @@
             "title": "Deluge",
             "hex": "094491",
             "source": "https://github.com/deluge-torrent/deluge/blob/master/deluge/ui/data/pixmaps/deluge.svg",
+            "aliases": {
+                "aka": [
+                    "Deluge Torrent"
+                ]
+            },
             "license": {
                 "type": "GPL-3.0-only",
                 "url": "https://github.com/deluge-torrent/deluge/blob/develop/LICENSE"
