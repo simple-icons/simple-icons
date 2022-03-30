@@ -178,6 +178,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Archive of Our Own` | `archiveofourown` |
 | `Ardour` | `ardour` |
 | `Arduino` | `arduino` |
+| `Argos` | `argos` |
 | `ARK Ecosystem` | `arkecosystem` |
 | `Arlo` | `arlo` |
 | `Arm` | `arm` |
@@ -357,6 +358,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chromecast` | `chromecast` |
 | `Chrysler` | `chrysler` |
 | `Chupa Chups` | `chupachups` |
+| `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
@@ -953,6 +955,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Invoice Ninja` | `invoiceninja` |
 | `ioBroker` | `iobroker` |
 | `Ionic` | `ionic` |
+| `Ionos` | `ionos` |
 | `iOS` | `ios` |
 | `IOTA` | `iota` |
 | `IPFS` | `ipfs` |
@@ -1012,6 +1015,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kakao` | `kakao` |
 | `KakaoTalk` | `kakaotalk` |
 | `Kali Linux` | `kalilinux` |
+| `Kaniko` | `kaniko` |
 | `Karlsruher Verkehrsverbund` | `karlsruherverkehrsverbund` |
 | `Kasa Smart` | `kasasmart` |
 | `KashFlow` | `kashflow` |
@@ -2056,6 +2060,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Verdaccio` | `verdaccio` |
 | `Veritas` | `veritas` |
 | `Verizon` | `verizon` |
+| `VEXXHOST` | `vexxhost` |
 | `vFairs` | `vfairs` |
 | `Viadeo` | `viadeo` |
 | `Viber` | `viber` |
@@ -2191,6 +2196,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube Studio` | `youtubestudio` |
 | `YouTube TV` | `youtubetv` |
 | `Z-Wave` | `zwave` |
+| `Żabka` | `zabka` |
 | `Zalando` | `zalando` |
 | `Zalo` | `zalo` |
 | `Zapier` | `zapier` |
