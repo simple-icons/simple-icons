@@ -6,7 +6,7 @@
  */
 
 import fakeDiff from 'fake-diff';
-import { getIconsDataString } from '../utils.js';
+import { getIconsDataString, normalizeNewlines } from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -47,7 +47,7 @@ const TESTS = {
 
   /* Check the formatting of the data file */
   prettified: async (data, dataString) => {
-    const normalizedDataString = dataString.replace(/\r\n/g, '\n');
+    const normalizedDataString = normalizeNewlines(dataString);
     const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
 
     if (normalizedDataString !== dataPretty) {
