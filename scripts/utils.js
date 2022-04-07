@@ -119,12 +119,22 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
 
 /**
+ * Replace Windows newline characters by Unix ones.
+ * @param {String} text The text to replace
+ */
+export const normalizeNewlines = (text) => {
+  return text.replace(/\r\n/g, '\n');
+};
+
+/**
  * Get information about third party extensions.
  */
 export const getThirdPartyExtensions = async () => {
   const __dirname = getDirnameFromImportMeta(import.meta.url);
   const readmePath = path.resolve(__dirname, '..', 'README.md');
-  const readmeContent = await fs.readFile(readmePath, 'utf8');
+  const readmeContent = normalizeNewlines(
+    await fs.readFile(readmePath, 'utf8'),
+  );
   return readmeContent
     .split('## Third-Party Extensions\n\n')[1]
     .split('\n\n')[0]

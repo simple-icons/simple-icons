@@ -178,6 +178,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Archive of Our Own` | `archiveofourown` |
 | `Ardour` | `ardour` |
 | `Arduino` | `arduino` |
+| `Argos` | `argos` |
 | `ARK Ecosystem` | `arkecosystem` |
 | `Arlo` | `arlo` |
 | `Arm` | `arm` |
@@ -357,6 +358,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chromecast` | `chromecast` |
 | `Chrysler` | `chrysler` |
 | `Chupa Chups` | `chupachups` |
+| `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
@@ -540,6 +542,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DLNA` | `dlna` |
 | `dm` | `dm` |
 | `Docker` | `docker` |
+| `Docs.rs` | `docsdotrs` |
 | `DocuSign` | `docusign` |
 | `Dogecoin` | `dogecoin` |
 | `Dolby` | `dolby` |
@@ -953,6 +956,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Invoice Ninja` | `invoiceninja` |
 | `ioBroker` | `iobroker` |
 | `Ionic` | `ionic` |
+| `Ionos` | `ionos` |
 | `iOS` | `ios` |
 | `IOTA` | `iota` |
 | `IPFS` | `ipfs` |
@@ -1012,6 +1016,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kakao` | `kakao` |
 | `KakaoTalk` | `kakaotalk` |
 | `Kali Linux` | `kalilinux` |
+| `Kaniko` | `kaniko` |
 | `Karlsruher Verkehrsverbund` | `karlsruherverkehrsverbund` |
 | `Kasa Smart` | `kasasmart` |
 | `KashFlow` | `kashflow` |
@@ -1049,6 +1054,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kofax` | `kofax` |
 | `Komoot` | `komoot` |
 | `Konami` | `konami` |
+| `Kong` | `kong` |
 | `Kongregate` | `kongregate` |
 | `Konva` | `konva` |
 | `Kotlin` | `kotlin` |
@@ -1500,6 +1506,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PowerShell` | `powershell` |
 | `pr.co` | `prdotco` |
 | `pre-commit` | `precommit` |
+| `Preact` | `preact` |
 | `Premier League` | `premierleague` |
 | `PrestaShop` | `prestashop` |
 | `Presto` | `presto` |
@@ -1994,6 +2001,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TUI` | `tui` |
 | `Tumblr` | `tumblr` |
 | `TuneIn` | `tunein` |
+| `Turborepo` | `turborepo` |
 | `TurboSquid` | `turbosquid` |
 | `Turkish Airlines` | `turkishairlines` |
 | `Tutanota` | `tutanota` |
@@ -2056,6 +2064,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Verdaccio` | `verdaccio` |
 | `Veritas` | `veritas` |
 | `Verizon` | `verizon` |
+| `VEXXHOST` | `vexxhost` |
 | `vFairs` | `vfairs` |
 | `Viadeo` | `viadeo` |
 | `Viber` | `viber` |
@@ -2191,6 +2200,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube Studio` | `youtubestudio` |
 | `YouTube TV` | `youtubetv` |
 | `Z-Wave` | `zwave` |
+| `Żabka` | `zabka` |
 | `Zalando` | `zalando` |
 | `Zalo` | `zalo` |
 | `Zapier` | `zapier` |
