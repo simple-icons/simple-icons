@@ -550,6 +550,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Douban` | `douban` |
 | `Douban Read` | `doubanread` |
 | `DPD` | `dpd` |
+| `Dragonframe` | `dragonframe` |
 | `Draugiem.lv` | `draugiemdotlv` |
 | `Dribbble` | `dribbble` |
 | `Drone` | `drone` |
@@ -859,6 +860,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Haxe` | `haxe` |
 | `HBO` | `hbo` |
 | `HCL` | `hcl` |
+| `Headless UI` | `headlessui` |
 | `Headspace` | `headspace` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
@@ -1429,6 +1431,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Perforce` | `perforce` |
 | `Perl` | `perl` |
 | `Personio` | `personio` |
+| `Pets at Home` | `petsathome` |
 | `Peugeot` | `peugeot` |
 | `Pexels` | `pexels` |
 | `pfSense` | `pfsense` |
@@ -1678,6 +1681,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sabanci` | `sabanci` |
 | `Safari` | `safari` |
 | `Sahibinden` | `sahibinden` |
+| `Sailfish OS` | `sailfishos` |
 | `Salesforce` | `salesforce` |
 | `Salt Project` | `saltproject` |
 | `Samsung` | `samsung` |
@@ -2199,6 +2203,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube Music` | `youtubemusic` |
 | `YouTube Studio` | `youtubestudio` |
 | `YouTube TV` | `youtubetv` |
+| `Yubico` | `yubico` |
 | `Z-Wave` | `zwave` |
 | `Żabka` | `zabka` |
 | `Zalando` | `zalando` |
