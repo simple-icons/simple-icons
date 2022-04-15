@@ -5680,6 +5680,11 @@
             }
         },
         {
+            "title": "Lazarus",
+            "hex": "000000",
+            "source": "https://sourceforge.net/projects/lazarus/"
+        },
+        {
             "title": "LBRY",
             "hex": "2F9176",
             "source": "https://lbry.com/press-kit",
@@ -6161,7 +6166,7 @@
         },
         {
             "title": "Matter.js",
-            "hex": "76F09B",
+            "hex": "4B5562",
             "source": "https://brm.io/matter-js"
         },
         {
@@ -10190,7 +10195,8 @@
         {
             "title": "T-Mobile",
             "hex": "E20074",
-            "source": "https://www.t-mobile.com/"
+            "source": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal",
+            "guidelines": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal"
         },
         {
             "title": "Tableau",
@@ -11187,6 +11193,11 @@
             "title": "Vonage",
             "hex": "FFFFFF",
             "source": "https://www.vonage.com"
+        },
+        {
+            "title": "Vowpal Wabbit",
+            "hex": "FF81F9",
+            "source": "https://github.com/VowpalWabbit/vowpal_wabbit/blob/1da1aa4bb4f2dfb5e1a6083c14b429b30eba372d/logo_assets/vowpal-wabbits-icon.svg"
         },
         {
             "title": "VOX",
