@@ -5680,6 +5680,11 @@
             }
         },
         {
+            "title": "Lazarus",
+            "hex": "000000",
+            "source": "https://sourceforge.net/projects/lazarus/"
+        },
+        {
             "title": "LBRY",
             "hex": "2F9176",
             "source": "https://lbry.com/press-kit",
@@ -5737,7 +5742,7 @@
             "source": "https://github.com/less/logo/blob/c9c10c328cfc00071e92443934b35e389310abf8/less_logo.ai"
         },
         {
-            "title": "Let’s Encrypt",
+            "title": "Let's Encrypt",
             "hex": "003A70",
             "source": "https://letsencrypt.org/trademarks/",
             "guidelines": "https://letsencrypt.org/trademarks/",
@@ -6018,7 +6023,7 @@
             "source": "https://commons.wikimedia.org/wiki/File:MacOS_wordmark_(2017).svg"
         },
         {
-            "title": "Macy’s",
+            "title": "Macy's",
             "hex": "E21A2C",
             "source": "https://www.macysinc.com/news-media/media-assets"
         },
@@ -6161,7 +6166,7 @@
         },
         {
             "title": "Matter.js",
-            "hex": "76F09B",
+            "hex": "4B5562",
             "source": "https://brm.io/matter-js"
         },
         {
@@ -6214,6 +6219,11 @@
             "title": "MDN Web Docs",
             "hex": "000000",
             "source": "https://github.com/mdn/yari/blob/77e6cda02f7013219e9da27a00b9424085e60fdb/client/src/assets/mdn-logo.svg"
+        },
+        {
+            "title": "MDX",
+            "hex": "1B1F24",
+            "source": "https://github.com/mdx-js/mdx/blob/b8a76c95deb14f7297bafdac1aa3eddd2b0fbb8f/docs/_static/icon.svg"
         },
         {
             "title": "MediaFire",
@@ -10185,7 +10195,8 @@
         {
             "title": "T-Mobile",
             "hex": "E20074",
-            "source": "https://www.t-mobile.com/"
+            "source": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal",
+            "guidelines": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal"
         },
         {
             "title": "Tableau",
@@ -11182,6 +11193,11 @@
             "title": "Vonage",
             "hex": "FFFFFF",
             "source": "https://www.vonage.com"
+        },
+        {
+            "title": "Vowpal Wabbit",
+            "hex": "FF81F9",
+            "source": "https://github.com/VowpalWabbit/vowpal_wabbit/blob/1da1aa4bb4f2dfb5e1a6083c14b429b30eba372d/logo_assets/vowpal-wabbits-icon.svg"
         },
         {
             "title": "VOX",
