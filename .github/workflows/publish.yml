@@ -90,6 +90,7 @@ jobs:
           git commit -m 'Strip README dark theme image links'
       - name: Create and push git tag
         run: |
+          set -e
           tag="${{ steps.get-version.outputs.version }}"
           git tag -a "${tag}" -m "${{ steps.commit.outputs.git-message }}"
           git push origin "${tag}"
