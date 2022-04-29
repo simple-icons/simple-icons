@@ -1501,6 +1501,11 @@
             "source": "https://buddy.works/about"
         },
         {
+            "title": "Budibase",
+            "hex": "000000",
+            "source": "https://github.com/Budibase/budibase/blob/6137ffd9a278ecb3e4dbb42af804c9652741699e/packages/builder/assets/bb-emblem.svg"
+        },
+        {
             "title": "Buefy",
             "hex": "7957D5",
             "source": "https://github.com/buefy/buefy/blob/a9a724efca0b531e6a64ab734889b00bf4507a9d/static/img/icons/safari-pinned-tab.svg"
@@ -2343,6 +2348,11 @@
             "title": "Crystal",
             "hex": "000000",
             "source": "https://crystal-lang.org/media/"
+        },
+        {
+            "title": "CSS Modules",
+            "hex": "000000",
+            "source": "https://github.com/css-modules/logos/blob/32e4717062e4328ed861fa92d5d9cfd47859362f/css-modules-logo.svg"
         },
         {
             "title": "CSS Wizardry",
@@ -5511,6 +5521,12 @@
             "title": "Klook",
             "hex": "FF5722",
             "source": "https://www.klook.com/en-GB/newsroom/"
+        },
+        {
+            "title": "Knative",
+            "hex": "0865AD",
+            "source": "https://github.com/knative/community/blob/fb49068c9b7619685248247d29e48eb3d96f3ac2/icons/logo.svg",
+            "guidelines": "https://github.com/knative/community/blob/main/BRANDING.MD"
         },
         {
             "title": "KnowledgeBase",
@@ -9691,6 +9707,11 @@
             "source": "https://www.spacex.com/"
         },
         {
+            "title": "spaCy",
+            "hex": "09A3D5",
+            "source": "https://github.com/explosion/spaCy/blob/c17980e535a8009b14ee4d1f818db207d9c07e55/website/src/images/logo.svg"
+        },
+        {
             "title": "Spark AR",
             "hex": "FF5C83",
             "source": "https://sparkar.facebook.com/"
@@ -10972,6 +10993,11 @@
             "title": "UPS",
             "hex": "150400",
             "source": "https://www.ups.com/"
+        },
+        {
+            "title": "Upstash",
+            "hex": "00E9A3",
+            "source": "https://upstash.com/"
         },
         {
             "title": "Uptobox",
