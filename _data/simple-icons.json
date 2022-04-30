@@ -1501,6 +1501,11 @@
             "source": "https://buddy.works/about"
         },
         {
+            "title": "Budibase",
+            "hex": "000000",
+            "source": "https://github.com/Budibase/budibase/blob/6137ffd9a278ecb3e4dbb42af804c9652741699e/packages/builder/assets/bb-emblem.svg"
+        },
+        {
             "title": "Buefy",
             "hex": "7957D5",
             "source": "https://github.com/buefy/buefy/blob/a9a724efca0b531e6a64ab734889b00bf4507a9d/static/img/icons/safari-pinned-tab.svg"
@@ -2343,6 +2348,11 @@
             "title": "Crystal",
             "hex": "000000",
             "source": "https://crystal-lang.org/media/"
+        },
+        {
+            "title": "CSS Modules",
+            "hex": "000000",
+            "source": "https://github.com/css-modules/logos/blob/32e4717062e4328ed861fa92d5d9cfd47859362f/css-modules-logo.svg"
         },
         {
             "title": "CSS Wizardry",
@@ -4367,6 +4377,11 @@
             "source": "https://github.com/benoitc/gunicorn/blob/ff58e0c6da83d5520916bc4cc109a529258d76e1/docs/logo/gunicorn.svg"
         },
         {
+            "title": "Gurobi",
+            "hex": "EE3524",
+            "source": "https://cdn.gurobi.com/wp-content/uploads/2021/02/Gurobi-Optimization_Corporate-Brochure.pdf"
+        },
+        {
             "title": "Gutenberg",
             "hex": "000000",
             "source": "https://github.com/WordPress/gutenberg/blob/master/docs/final-g-wapuu-black.svg"
@@ -5508,6 +5523,12 @@
             "source": "https://www.klook.com/en-GB/newsroom/"
         },
         {
+            "title": "Knative",
+            "hex": "0865AD",
+            "source": "https://github.com/knative/community/blob/fb49068c9b7619685248247d29e48eb3d96f3ac2/icons/logo.svg",
+            "guidelines": "https://github.com/knative/community/blob/main/BRANDING.MD"
+        },
+        {
             "title": "KnowledgeBase",
             "hex": "FFD000",
             "source": "https://www.knowledgebase.ai/design",
@@ -5754,6 +5775,11 @@
             "title": "Letterboxd",
             "hex": "00D735",
             "source": "https://letterboxd.com/about/logos/"
+        },
+        {
+            "title": "levels.fyi",
+            "hex": "788B95",
+            "source": "https://www.levels.fyi/press/"
         },
         {
             "title": "LG",
@@ -6291,6 +6317,12 @@
             "hex": "00B2FF",
             "source": "https://en.facebookbrand.com/facebookapp/assets/messenger/",
             "guidelines": "https://en.facebookbrand.com/facebookapp/assets/messenger/"
+        },
+        {
+            "title": "Meta",
+            "hex": "0467DF",
+            "source": "https://www.meta.com",
+            "guidelines": "https://www.facebook.com/brand/resources/meta/company-brand"
         },
         {
             "title": "Metabase",
@@ -7524,6 +7556,11 @@
             "hex": "FFDC28",
             "source": "https://projects.invisionapp.com/boards/8UOJQWW2J3G5#/1145336",
             "guidelines": "https://projects.invisionapp.com/boards/8UOJQWW2J3G5#/1145336"
+        },
+        {
+            "title": "Paperspace",
+            "hex": "000000",
+            "source": "https://docs.paperspace.com/img/ps-logo-light.svg"
         },
         {
             "title": "Parity Substrate",
@@ -9680,6 +9717,11 @@
             "source": "https://www.spacex.com/"
         },
         {
+            "title": "spaCy",
+            "hex": "09A3D5",
+            "source": "https://github.com/explosion/spaCy/blob/c17980e535a8009b14ee4d1f818db207d9c07e55/website/src/images/logo.svg"
+        },
+        {
             "title": "Spark AR",
             "hex": "FF5C83",
             "source": "https://sparkar.facebook.com/"
@@ -10961,6 +11003,11 @@
             "title": "UPS",
             "hex": "150400",
             "source": "https://www.ups.com/"
+        },
+        {
+            "title": "Upstash",
+            "hex": "00E9A3",
+            "source": "https://upstash.com/"
         },
         {
             "title": "Uptobox",
