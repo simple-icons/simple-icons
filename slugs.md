@@ -300,6 +300,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Broadcom` | `broadcom` |
 | `BT` | `bt` |
 | `Buddy` | `buddy` |
+| `Budibase` | `budibase` |
 | `Buefy` | `buefy` |
 | `Buffer` | `buffer` |
 | `Bugatti` | `bugatti` |
@@ -463,6 +464,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Crunchyroll` | `crunchyroll` |
 | `CRYENGINE` | `cryengine` |
 | `Crystal` | `crystal` |
+| `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
 | `CSS3` | `css3` |
 | `Cucumber` | `cucumber` |
@@ -837,6 +839,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
 | `Gunicorn` | `gunicorn` |
+| `Gurobi` | `gurobi` |
 | `Gutenberg` | `gutenberg` |
 | `Habr` | `habr` |
 | `Hack Club` | `hackclub` |
@@ -1047,6 +1050,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Klarna` | `klarna` |
 | `KLM` | `klm` |
 | `Klook` | `klook` |
+| `Knative` | `knative` |
 | `KnowledgeBase` | `knowledgebase` |
 | `Known` | `known` |
 | `Ko-fi` | `kofi` |
@@ -1079,6 +1083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LastPass` | `lastpass` |
 | `LaTeX` | `latex` |
 | `Launchpad` | `launchpad` |
+| `Lazarus` | `lazarus` |
 | `LBRY` | `lbry` |
 | `Leader Price` | `leaderprice` |
 | `Leaflet` | `leaflet` |
@@ -1090,8 +1095,9 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lerna` | `lerna` |
 | `Leroy Merlin` | `leroymerlin` |
 | `Less` | `less` |
-| `Let’s Encrypt` | `letsencrypt` |
+| `Let's Encrypt` | `letsencrypt` |
 | `Letterboxd` | `letterboxd` |
+| `levels.fyi` | `levelsdotfyi` |
 | `LG` | `lg` |
 | `LGTM` | `lgtm` |
 | `Liberapay` | `liberapay` |
@@ -1141,7 +1147,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lyft` | `lyft` |
 | `MAAS` | `maas` |
 | `macOS` | `macos` |
-| `Macy’s` | `macys` |
+| `Macy's` | `macys` |
 | `Magasins U` | `magasinsu` |
 | `Magento` | `magento` |
 | `Magisk` | `magisk` |
@@ -1178,6 +1184,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `McDonald's` | `mcdonalds` |
 | `McLaren` | `mclaren` |
 | `MDN Web Docs` | `mdnwebdocs` |
+| `MDX` | `mdx` |
 | `MediaFire` | `mediafire` |
 | `MediaMarkt` | `mediamarkt` |
 | `MediaTek` | `mediatek` |
@@ -1190,6 +1197,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Merck` | `merck` |
 | `Mercurial` | `mercurial` |
 | `Messenger` | `messenger` |
+| `Meta` | `meta` |
 | `Metabase` | `metabase` |
 | `MetaFilter` | `metafilter` |
 | `Meteor` | `meteor` |
@@ -1411,6 +1419,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pandas` | `pandas` |
 | `Pandora` | `pandora` |
 | `Pantheon` | `pantheon` |
+| `Paperspace` | `paperspace` |
 | `Parity Substrate` | `paritysubstrate` |
 | `Parse.ly` | `parsedotly` |
 | `Passport` | `passport` |
@@ -1806,6 +1815,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Southwest Airlines` | `southwestairlines` |
 | `Spacemacs` | `spacemacs` |
 | `SpaceX` | `spacex` |
+| `spaCy` | `spacy` |
 | `Spark AR` | `sparkar` |
 | `Sparkasse` | `sparkasse` |
 | `SparkFun` | `sparkfun` |
@@ -2046,6 +2056,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `UpLabs` | `uplabs` |
 | `Uploaded` | `uploaded` |
 | `UPS` | `ups` |
+| `Upstash` | `upstash` |
 | `Uptobox` | `uptobox` |
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
@@ -2091,6 +2102,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Volkswagen` | `volkswagen` |
 | `Volvo` | `volvo` |
 | `Vonage` | `vonage` |
+| `Vowpal Wabbit` | `vowpalwabbit` |
 | `VOX` | `vox` |
 | `VSCO` | `vsco` |
 | `VTEX` | `vtex` |
