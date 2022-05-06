@@ -128,14 +128,10 @@ export const normalizeNewlines = (text) => {
 
 /**
  * Get information about third party extensions.
+ * @param {String} readmePath Path to the README file
  */
-export const getThirdPartyExtensions = async () => {
-  const __dirname = getDirnameFromImportMeta(import.meta.url);
-  const readmePath = path.resolve(__dirname, '..', 'README.md');
-  const readmeContent = normalizeNewlines(
-    await fs.readFile(readmePath, 'utf8'),
-  );
-  return readmeContent
+export const getThirdPartyExtensions = async (readmePath) =>
+  normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Extensions\n\n')[1]
     .split('\n\n')[0]
     .split('\n')
@@ -153,4 +149,3 @@ export const getThirdPartyExtensions = async () => {
         },
       };
     });
-};
