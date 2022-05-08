@@ -95,24 +95,28 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 
 /**
  * Get contents of _data/simple-icons.json.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
  */
-export const getIconsDataString = () => {
-  const __dirname = getDirnameFromImportMeta(import.meta.url);
-  const rootDir = path.resolve(__dirname, '..');
+export const getIconsDataString = (rootDir) => {
+  if (rootDir === undefined) {
+    rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
+  }
   const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
   return fs.readFile(iconDataPath, 'utf8');
 };
 
 /**
- * Get icon data as object from _data/simple-icons.json.
+ * Get icons data as object from _data/simple-icons.json.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
  */
-export const getIconsData = async () => {
-  const fileContents = await getIconsDataString();
+export const getIconsData = async (rootDir) => {
+  const fileContents = await getIconsDataString(rootDir);
   return JSON.parse(fileContents).icons;
 };
 
 /**
- * Get the directory name from import.meta.url.
+ * Get the directory name where this file is located from `import.meta.url`,
+ * equivalent to the `__dirname` global variable in CommonJS.
  * @param {String} importMetaUrl import.meta.url
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
