@@ -24,7 +24,7 @@ body:
   - type: input
     attributes:
       label: Brand Name
-      placeholder: "Example: Simple Icons"
+      placeholder: 'Example: Simple Icons'
     validations:
       required: true
 
@@ -34,7 +34,7 @@ body:
       description: >-
         For non-web brands you can add a relevant link. You can put "None" if you don't
         think there's a website.
-      placeholder: "Example: https://simpleicons.org"
+      placeholder: 'Example: https://simpleicons.org'
     validations:
       required: true
 
@@ -49,7 +49,7 @@ body:
 
 
         [Similarweb rank]: https://www.similarweb.com
-      placeholder: "Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org"
+      placeholder: 'Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org'
     validations:
       required: true
 
@@ -74,7 +74,7 @@ body:
         - Are there multiple options for the logo and/or color?
         - Is the icon released under a license?
         - If you think the brand might not be accepted, why do you think it should be considered?
-      placeholder: "Example: There are two variants of this icon..."
+      placeholder: 'Example: There are two variants of this icon...'
 
   - type: dropdown
     attributes:
@@ -83,7 +83,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         add this icon?
       options:
-        - "Yes"
-        - "No"
+        - 'Yes'
+        - 'No'
     validations:
       required: true
