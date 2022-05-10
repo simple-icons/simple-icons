@@ -44,9 +44,10 @@ body:
       description: >-
         Provide either a [Similarweb rank], which must range from 0-500,000 to qualify
         or the number of GitHub stars, which must be above 5,000 to qualify. If
-        Similarweb does not have a rank for your brand or these numbers are too low,
-        you can still open the issue. In this case, please provide any information
-        regarding the brand's popularity you think is relevant.
+        Similarweb does not have a rank for your brand or these numbers do not meet
+        our requirements, you can still open the issue. In this case, please provide
+        any information regarding the brand's popularity you think is relevant.
+
 
 
         [Similarweb rank]: https://www.similarweb.com
