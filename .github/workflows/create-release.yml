@@ -23,7 +23,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: simple-icons/release-action@master
+      - uses: simple-icons/release-action@v1
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
