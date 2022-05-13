@@ -4351,6 +4351,12 @@
             "guidelines": "https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md"
         },
         {
+            "title": "GTK",
+            "hex": "7FE719",
+            "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
+            "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
+        },
+        {
             "title": "Guangzhou Metro",
             "hex": "C51935",
             "source": "https://commons.wikimedia.org/wiki/File:Guangzhou_Metro_logo.svg"
@@ -4683,6 +4689,11 @@
             "title": "HTML5",
             "hex": "E34F26",
             "source": "http://www.w3.org/html/logo/"
+        },
+        {
+            "title": "HTTPie",
+            "hex": "73DC8C",
+            "source": "https://github.com/httpie/httpie/blob/d262181bede5241a6b692c3245a77e2eb02bc262/docs/httpie-logo.svg"
         },
         {
             "title": "Huawei",
@@ -6092,6 +6103,11 @@
             "guidelines": "http://mailchimp.com/about/brand-assets"
         },
         {
+            "title": "Mailgun",
+            "hex": "F06B66",
+            "source": "https://mailgun.com"
+        },
+        {
             "title": "Major League Hacking",
             "hex": "265A8F",
             "source": "https://mlh.io/brand-guidelines",
@@ -6152,6 +6168,11 @@
             "title": "Marketo",
             "hex": "5C4C9F",
             "source": "https://www.marketo.com/"
+        },
+        {
+            "title": "Marko",
+            "hex": "2596BE",
+            "source": "https://github.com/marko-js/website/blob/c03b8229e8fe8e01fde6c0772bc1cb0ceae9be05/src/logos/marko.svg"
         },
         {
             "title": "Marriott",
@@ -6252,6 +6273,11 @@
             "title": "McLaren",
             "hex": "FF0000",
             "source": "https://cars.mclaren.com/"
+        },
+        {
+            "title": "mdBook",
+            "hex": "000000",
+            "source": "https://github.com/rust-lang/mdBook/blob/cdfa5ad9909e2cba8390688f3f0686fb70cb4bef/src/theme/favicon.svg"
         },
         {
             "title": "MDN Web Docs",
@@ -7304,6 +7330,11 @@
             "title": "OpenID",
             "hex": "F78C40",
             "source": "https://openid.net/add-openid/logos/"
+        },
+        {
+            "title": "OpenJDK",
+            "hex": "FFFFFF",
+            "source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1"
         },
         {
             "title": "Openlayers",
@@ -8703,6 +8734,11 @@
             "source": "https://www.ril.com/getattachment/7c210e67-5b0e-4965-b1a2-2ee83e19cee9/Morgan-Stanley-Eighteenth-Annual-India-Summit,-31.aspx"
         },
         {
+            "title": "Remix",
+            "hex": "000000",
+            "source": "https://drive.google.com/drive/u/0/folders/1pbHnJqg8Y1ATs0Oi8gARH7wccJGv4I2c"
+        },
+        {
             "title": "Ren'Py",
             "hex": "FF7F7F",
             "source": "https://renpy.org"
@@ -8971,6 +9007,14 @@
             "title": "RTLZWEI",
             "hex": "00BCF6",
             "source": "https://www.rtl2.de/"
+        },
+        {
+            "title": "RuboCop",
+            "hex": "000000",
+            "source": "https://github.com/rubocop-semver/rubocop-ruby2_0/blob/5302f93058f7b739a73a7a6c11c566a2b196b96e/docs/images/logo/rubocop-light.svg",
+            "license": {
+                "type": "CC-BY-NC-4.0"
+            }
         },
         {
             "title": "Ruby",
@@ -10895,7 +10939,7 @@
         {
             "title": "Ubuntu",
             "hex": "E95420",
-            "source": "https://design.ubuntu.com/brand/ubuntu-logo/",
+            "source": "https://design.ubuntu.com/downloads/",
             "guidelines": "https://design.ubuntu.com/brand/ubuntu-logo/"
         },
         {
