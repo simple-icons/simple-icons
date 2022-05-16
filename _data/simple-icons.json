@@ -3101,6 +3101,11 @@
             "source": "https://www.enpass.io/press/"
         },
         {
+            "title": "EnterpriseDB",
+            "hex": "FF3E00",
+            "source": "https://www.enterprisedb.com/"
+        },
+        {
             "title": "Envato",
             "hex": "81B441",
             "source": "https://envato.com/"
@@ -4344,6 +4349,12 @@
             "hex": "FAA918",
             "source": "https://github.com/gruntjs/gruntjs.com/blob/70f43898d9ce8e6cc862ad72bf8a7aee5ca199a9/src/media/grunt-logo-no-wordmark.svg",
             "guidelines": "https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md"
+        },
+        {
+            "title": "GTK",
+            "hex": "7FE719",
+            "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
+            "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
         },
         {
             "title": "Guangzhou Metro",
@@ -6262,6 +6273,11 @@
             "title": "McLaren",
             "hex": "FF0000",
             "source": "https://cars.mclaren.com/"
+        },
+        {
+            "title": "mdBook",
+            "hex": "000000",
+            "source": "https://github.com/rust-lang/mdBook/blob/cdfa5ad9909e2cba8390688f3f0686fb70cb4bef/src/theme/favicon.svg"
         },
         {
             "title": "MDN Web Docs",
@@ -8993,6 +9009,14 @@
             "source": "https://www.rtl2.de/"
         },
         {
+            "title": "RuboCop",
+            "hex": "000000",
+            "source": "https://github.com/rubocop-semver/rubocop-ruby2_0/blob/5302f93058f7b739a73a7a6c11c566a2b196b96e/docs/images/logo/rubocop-light.svg",
+            "license": {
+                "type": "CC-BY-NC-4.0"
+            }
+        },
+        {
             "title": "Ruby",
             "hex": "CC342D",
             "source": "https://www.ruby-lang.org/en/about/logo/",
@@ -9995,6 +10019,12 @@
             "guidelines": "https://partner.steamgames.com/doc/marketing/branding"
         },
         {
+            "title": "Steam Deck",
+            "hex": "1A9FFF",
+            "source": "https://partner.steamgames.com/doc/marketing/branding",
+            "guidelines": "https://partner.steamgames.com/doc/marketing/branding"
+        },
+        {
             "title": "SteamDB",
             "hex": "000000",
             "source": "https://steamdb.info/"
@@ -10915,7 +10945,7 @@
         {
             "title": "Ubuntu",
             "hex": "E95420",
-            "source": "https://design.ubuntu.com/brand/ubuntu-logo/",
+            "source": "https://design.ubuntu.com/downloads/",
             "guidelines": "https://design.ubuntu.com/brand/ubuntu-logo/"
         },
         {
