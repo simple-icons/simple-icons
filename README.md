@@ -74,7 +74,14 @@ import { siSimpleicons } from 'simple-icons/icons'
 const { siSimpleicons } = require('simple-icons/icons')
 ```
 
+<<<<<<< HEAD
 It will return an icon object:
+=======
+> :warning: The old way of importing with `require('simple-icons/icons/[ICON SLUG]')` is deprecated and
+will be removed in v7.0.0.
+
+Either method will return an icon object:
+>>>>>>> develop
 
 ```javascript
 console.log(siSimpleicons);
