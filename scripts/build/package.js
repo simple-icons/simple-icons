@@ -120,7 +120,7 @@ const build = async () => {
   const rawIconsMjs = iconsBarrelMjs.join('');
   await writeJs(iconsMjsFile, rawIconsMjs);
   // and create a type declaration file
-  const rawIconsDts = `import {SimpleIcon} from "."; type I = SimpleIcon; ${iconsBarrelDts.join(
+  const rawIconsDts = `import {SimpleIcon} from ".";type I = SimpleIcon;${iconsBarrelDts.join(
     '',
   )}`;
   await writeTs(iconsDtsFile, rawIconsDts);
