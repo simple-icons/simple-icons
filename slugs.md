@@ -605,6 +605,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Emlakjet` | `emlakjet` |
 | `Empire Kred` | `empirekred` |
 | `Enpass` | `enpass` |
+| `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
 | `EPEL` | `epel` |
 | `Epic Games` | `epicgames` |
@@ -779,6 +780,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GoldenLine` | `goldenline` |
 | `Goodreads` | `goodreads` |
 | `Google` | `google` |
+| `Google AdMob` | `googleadmob` |
 | `Google Ads` | `googleads` |
 | `Google AdSense` | `googleadsense` |
 | `Google Analytics` | `googleanalytics` |
@@ -833,6 +835,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Groupon` | `groupon` |
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
+| `GTK` | `gtk` |
 | `Guangzhou Metro` | `guangzhoumetro` |
 | `Guilded` | `guilded` |
 | `gulp` | `gulp` |
@@ -896,6 +899,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HP` | `hp` |
 | `HTML Academy` | `htmlacademy` |
 | `HTML5` | `html5` |
+| `HTTPie` | `httpie` |
 | `Huawei` | `huawei` |
 | `HubSpot` | `hubspot` |
 | `Hugo` | `hugo` |
@@ -1153,6 +1157,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Magisk` | `magisk` |
 | `Mail.Ru` | `maildotru` |
 | `MailChimp` | `mailchimp` |
+| `Mailgun` | `mailgun` |
 | `Major League Hacking` | `majorleaguehacking` |
 | `MakerBot` | `makerbot` |
 | `MAMP` | `mamp` |
@@ -1164,6 +1169,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MariaDB Foundation` | `mariadbfoundation` |
 | `Markdown` | `markdown` |
 | `Marketo` | `marketo` |
+| `Marko` | `marko` |
 | `Marriott` | `marriott` |
 | `Maserati` | `maserati` |
 | `MasterCard` | `mastercard` |
@@ -1183,6 +1189,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `McAfee` | `mcafee` |
 | `McDonald's` | `mcdonalds` |
 | `McLaren` | `mclaren` |
+| `mdBook` | `mdbook` |
 | `MDN Web Docs` | `mdnwebdocs` |
 | `MDX` | `mdx` |
 | `MediaFire` | `mediafire` |
@@ -1374,6 +1381,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenFaaS` | `openfaas` |
 | `OpenGL` | `opengl` |
 | `OpenID` | `openid` |
+| `OpenJDK` | `openjdk` |
 | `Openlayers` | `openlayers` |
 | `OpenMined` | `openmined` |
 | `OpenNebula` | `opennebula` |
@@ -1629,6 +1637,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RedwoodJS` | `redwoodjs` |
 | `Reebok` | `reebok` |
 | `Reliance Industries Limited` | `relianceindustrieslimited` |
+| `Remix` | `remix` |
 | `Ren'Py` | `renpy` |
 | `Renault` | `renault` |
 | `RenovateBot` | `renovatebot` |
@@ -1677,6 +1686,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RTÉ` | `rte` |
 | `RTL` | `rtl` |
 | `RTLZWEI` | `rtlzwei` |
+| `RuboCop` | `rubocop` |
 | `Ruby` | `ruby` |
 | `Ruby on Rails` | `rubyonrails` |
 | `Ruby Sinatra` | `rubysinatra` |
@@ -1860,6 +1870,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Statuspage` | `statuspage` |
 | `Statuspal` | `statuspal` |
 | `Steam` | `steam` |
+| `Steam Deck` | `steamdeck` |
 | `SteamDB` | `steamdb` |
 | `Steamworks` | `steamworks` |
 | `Steelseries` | `steelseries` |
