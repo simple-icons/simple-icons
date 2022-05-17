@@ -69,9 +69,9 @@ Alternatively, you can also import all icons from a single file, where `[ICON SL
 
 // For example:
 // use import/esm to allow tree shaking
-import { siSimpleicons } from 'simple-icons/icons'
+import { siSimpleicons } from 'simple-icons/icons';
 // or with require/cjs
-const { siSimpleicons } = require('simple-icons/icons')
+const { siSimpleicons } = require('simple-icons/icons');
 ```
 
 It will return an icon object:
