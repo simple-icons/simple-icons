@@ -10,9 +10,7 @@ _data/simple-icons.json
 scripts/build/templates/*.js
 
 # Generated JavaScript files don't need to be formatted
-icons/*.js
-icons/*.d.ts
-icons.d.ts
+index.js
 icons.js
 icons.mjs
-index.js
+icons.d.ts

@@ -19,7 +19,6 @@
       "default": "./icons.js"
     },
     "./icons/*": [
-      "./icons/*.js",
       "./icons/*"
     ]
   },
@@ -57,7 +56,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rimraf icons/*.js icons/*.d.ts index.js icons.js icons.mjs icons.d.ts",
+    "clean": "rimraf index.js icons.js icons.mjs icons.d.ts",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
