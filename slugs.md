@@ -605,6 +605,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Emlakjet` | `emlakjet` |
 | `Empire Kred` | `empirekred` |
 | `Enpass` | `enpass` |
+| `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
 | `EPEL` | `epel` |
 | `Epic Games` | `epicgames` |
@@ -834,6 +835,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Groupon` | `groupon` |
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
+| `GTK` | `gtk` |
 | `Guangzhou Metro` | `guangzhoumetro` |
 | `Guilded` | `guilded` |
 | `gulp` | `gulp` |
@@ -1187,6 +1189,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `McAfee` | `mcafee` |
 | `McDonald's` | `mcdonalds` |
 | `McLaren` | `mclaren` |
+| `mdBook` | `mdbook` |
 | `MDN Web Docs` | `mdnwebdocs` |
 | `MDX` | `mdx` |
 | `MediaFire` | `mediafire` |
@@ -1683,6 +1686,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RTÉ` | `rte` |
 | `RTL` | `rtl` |
 | `RTLZWEI` | `rtlzwei` |
+| `RuboCop` | `rubocop` |
 | `Ruby` | `ruby` |
 | `Ruby on Rails` | `rubyonrails` |
 | `Ruby Sinatra` | `rubysinatra` |
@@ -1866,6 +1870,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Statuspage` | `statuspage` |
 | `Statuspal` | `statuspal` |
 | `Steam` | `steam` |
+| `Steam Deck` | `steamdeck` |
 | `SteamDB` | `steamdb` |
 | `Steamworks` | `steamworks` |
 | `Steelseries` | `steelseries` |
