@@ -469,13 +469,23 @@
         {
             "title": "Amazon AWS",
             "hex": "232F3E",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "AWS"
+                ]
+            }
         },
         {
             "title": "Amazon DynamoDB",
             "hex": "4053D6",
             "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS DynamoDB"
+                ]
+            }
         },
         {
             "title": "Amazon Fire TV",
@@ -502,7 +512,12 @@
             "title": "Amazon S3",
             "hex": "569A31",
             "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS S3"
+                ]
+            }
         },
         {
             "title": "AMD",
