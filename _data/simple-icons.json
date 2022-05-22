@@ -469,13 +469,23 @@
         {
             "title": "Amazon AWS",
             "hex": "232F3E",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "AWS"
+                ]
+            }
         },
         {
             "title": "Amazon DynamoDB",
             "hex": "4053D6",
             "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS DynamoDB"
+                ]
+            }
         },
         {
             "title": "Amazon Fire TV",
@@ -502,7 +512,12 @@
             "title": "Amazon S3",
             "hex": "569A31",
             "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS S3"
+                ]
+            }
         },
         {
             "title": "AMD",
@@ -3409,7 +3424,8 @@
         {
             "title": "Figma",
             "hex": "F24E1E",
-            "source": "https://brand.figma.com/icon.html"
+            "source": "https://www.figma.com/using-the-figma-brand/",
+            "guidelines": "https://www.figma.com/using-the-figma-brand/"
         },
         {
             "title": "figshare",
@@ -5679,6 +5695,11 @@
             "source": "https://media.landrover.com/en/press-kit"
         },
         {
+            "title": "Lapce",
+            "hex": "3B82F6",
+            "source": "https://github.com/lapce/lapce/blob/95c4cf2d87083e348c0b621d0be0ea17f79ed703/extra/images/logo.svg"
+        },
+        {
             "title": "Laragon",
             "hex": "0E83CD",
             "source": "https://laragon.org/"
@@ -6009,6 +6030,11 @@
             "title": "Loop",
             "hex": "F29400",
             "source": "https://loop.frontiersin.org/"
+        },
+        {
+            "title": "LoopBack",
+            "hex": "3F5DFF",
+            "source": "https://loopback.io/resources"
         },
         {
             "title": "Lospec",
@@ -11113,6 +11139,11 @@
             "guidelines": "https://www.hashicorp.com/brand"
         },
         {
+            "title": "Valorant",
+            "hex": "FA4454",
+            "source": "https://commons.wikimedia.org/wiki/File:Valorant_logo_-_black_color_version.svg"
+        },
+        {
             "title": "Valve",
             "hex": "F74843",
             "source": "https://www.valvesoftware.com/"
@@ -11659,6 +11690,12 @@
             "title": "Wireshark",
             "hex": "1679A7",
             "source": "https://gitlab.com/wanduow/wireshark/-/blob/cd5539b0f76975474869984a9d2f0fce29d5c21e/image/wsicon.svg"
+        },
+        {
+            "title": "Wise",
+            "hex": "00B9FF",
+            "source": "https://brand.wise.com/logo",
+            "guidelines": "https://brand.wise.com/logo"
         },
         {
             "title": "Wish",
