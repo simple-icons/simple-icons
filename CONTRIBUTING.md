@@ -64,10 +64,6 @@ Some companies and organizations are excessively protective with their brands, s
 - Disney
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
-    - Yearly releases
-    - Universities or other educational institutions
-    - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
-
 If you are in doubt, feel free to submit it and we'll have a look.
 
 When submitting a request for a new or updated icon include helpful information such as:
