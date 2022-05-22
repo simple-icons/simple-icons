@@ -55,7 +55,15 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Symbols, including flags and banners
     - Sport clubs
        - Allowed: Sports organizations
-    - Brands of companies or organizations that are excessively protective (e.g. Disney)
+    - Yearly releases
+    - Universities or other educational institutions
+    - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
+
+Some companies and organizations are excessively protective with their brands, so please don't consider them:
+
+- Disney
+- Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
+
     - Yearly releases
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
