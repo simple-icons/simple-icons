@@ -55,6 +55,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Symbols, including flags and banners
     - Sport clubs
        - Allowed: Sports organizations
+    - Brands of companies or organizations that are excessively protective (e.g. Disney)
     - Yearly releases
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
