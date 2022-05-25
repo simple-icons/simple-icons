@@ -23,7 +23,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: simple-icons/release-action@master
+      - uses: simple-icons/release-action@5edfadcb9d0fcced712defd84c26d8fd3913beb9
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
       needs.release-pr.outputs.did-create-pr == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ secrets.RELEASE_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
       - name: Update slugs table
         run: node ./scripts/release/update-slugs-table.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.13.1
+        uses: stefanzweifel/git-auto-commit-action@v4.14.1
         with:
           commit_message: version bump
           commit_user_name: 'github-actions[bot]'
