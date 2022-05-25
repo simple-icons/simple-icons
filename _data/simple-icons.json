@@ -469,13 +469,23 @@
         {
             "title": "Amazon AWS",
             "hex": "232F3E",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+            "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "AWS"
+                ]
+            }
         },
         {
             "title": "Amazon DynamoDB",
             "hex": "4053D6",
             "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS DynamoDB"
+                ]
+            }
         },
         {
             "title": "Amazon Fire TV",
@@ -502,7 +512,12 @@
             "title": "Amazon S3",
             "hex": "569A31",
             "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS S3"
+                ]
+            }
         },
         {
             "title": "AMD",
@@ -1464,6 +1479,11 @@
             "title": "Box",
             "hex": "0061D5",
             "source": "https://www.box.com/en-gb/about-us/press"
+        },
+        {
+            "title": "Boxy SVG",
+            "hex": "3584E3",
+            "source": "https://boxy-svg.com/ideas/7/redesign-the-app-icon#comment-1875"
         },
         {
             "title": "Brandfolder",
@@ -3101,6 +3121,11 @@
             "source": "https://www.enpass.io/press/"
         },
         {
+            "title": "EnterpriseDB",
+            "hex": "FF3E00",
+            "source": "https://www.enterprisedb.com/"
+        },
+        {
             "title": "Envato",
             "hex": "81B441",
             "source": "https://envato.com/"
@@ -3404,7 +3429,8 @@
         {
             "title": "Figma",
             "hex": "F24E1E",
-            "source": "https://brand.figma.com/icon.html"
+            "source": "https://www.figma.com/using-the-figma-brand/",
+            "guidelines": "https://www.figma.com/using-the-figma-brand/"
         },
         {
             "title": "figshare",
@@ -4346,6 +4372,12 @@
             "guidelines": "https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md"
         },
         {
+            "title": "GTK",
+            "hex": "7FE719",
+            "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
+            "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
+        },
+        {
             "title": "Guangzhou Metro",
             "hex": "C51935",
             "source": "https://commons.wikimedia.org/wiki/File:Guangzhou_Metro_logo.svg"
@@ -4678,6 +4710,11 @@
             "title": "HTML5",
             "hex": "E34F26",
             "source": "http://www.w3.org/html/logo/"
+        },
+        {
+            "title": "HTTPie",
+            "hex": "73DC8C",
+            "source": "https://github.com/httpie/httpie/blob/d262181bede5241a6b692c3245a77e2eb02bc262/docs/httpie-logo.svg"
         },
         {
             "title": "Huawei",
@@ -5663,6 +5700,11 @@
             "source": "https://media.landrover.com/en/press-kit"
         },
         {
+            "title": "Lapce",
+            "hex": "3B82F6",
+            "source": "https://github.com/lapce/lapce/blob/95c4cf2d87083e348c0b621d0be0ea17f79ed703/extra/images/logo.svg"
+        },
+        {
             "title": "Laragon",
             "hex": "0E83CD",
             "source": "https://laragon.org/"
@@ -5995,6 +6037,11 @@
             "source": "https://loop.frontiersin.org/"
         },
         {
+            "title": "LoopBack",
+            "hex": "3F5DFF",
+            "source": "https://loopback.io/resources"
+        },
+        {
             "title": "Lospec",
             "hex": "EAEAEA",
             "source": "https://lospec.com/brand",
@@ -6087,6 +6134,11 @@
             "guidelines": "http://mailchimp.com/about/brand-assets"
         },
         {
+            "title": "Mailgun",
+            "hex": "F06B66",
+            "source": "https://mailgun.com"
+        },
+        {
             "title": "Major League Hacking",
             "hex": "265A8F",
             "source": "https://mlh.io/brand-guidelines",
@@ -6147,6 +6199,11 @@
             "title": "Marketo",
             "hex": "5C4C9F",
             "source": "https://www.marketo.com/"
+        },
+        {
+            "title": "Marko",
+            "hex": "2596BE",
+            "source": "https://github.com/marko-js/website/blob/c03b8229e8fe8e01fde6c0772bc1cb0ceae9be05/src/logos/marko.svg"
         },
         {
             "title": "Marriott",
@@ -6247,6 +6304,11 @@
             "title": "McLaren",
             "hex": "FF0000",
             "source": "https://cars.mclaren.com/"
+        },
+        {
+            "title": "mdBook",
+            "hex": "000000",
+            "source": "https://github.com/rust-lang/mdBook/blob/cdfa5ad9909e2cba8390688f3f0686fb70cb4bef/src/theme/favicon.svg"
         },
         {
             "title": "MDN Web Docs",
@@ -6555,6 +6617,11 @@
                     "Major League Baseball"
                 ]
             }
+        },
+        {
+            "title": "MLflow",
+            "hex": "0194E2",
+            "source": "https://github.com/mlflow/mlflow/blob/855881f93703b15ffe643003fb4d7c84f0ec2502/assets/icon.svg"
         },
         {
             "title": "MobX",
@@ -7301,6 +7368,11 @@
             "source": "https://openid.net/add-openid/logos/"
         },
         {
+            "title": "OpenJDK",
+            "hex": "FFFFFF",
+            "source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1"
+        },
+        {
             "title": "Openlayers",
             "hex": "1F6B75",
             "source": "https://github.com/openlayers/openlayers.github.io/blob/5b93e18b8d302eb49a812fb96abb529895ceb7a2/assets/logo.svg"
@@ -7831,6 +7903,11 @@
             "title": "Planet",
             "hex": "009DB1",
             "source": "https://www.planet.com/explorer/"
+        },
+        {
+            "title": "PlanetScale",
+            "hex": "000000",
+            "source": "https://planetscale.com/"
         },
         {
             "title": "PlanGrid",
@@ -8547,6 +8624,11 @@
             "source": "https://rarible.com/"
         },
         {
+            "title": "Rasa",
+            "hex": "5A17EE",
+            "source": "https://rasa.com/"
+        },
+        {
             "title": "Raspberry Pi",
             "hex": "A22846",
             "source": "https://www.raspberrypi.org/trademark-rules",
@@ -8696,6 +8778,11 @@
             "title": "Reliance Industries Limited",
             "hex": "D1AB66",
             "source": "https://www.ril.com/getattachment/7c210e67-5b0e-4965-b1a2-2ee83e19cee9/Morgan-Stanley-Eighteenth-Annual-India-Summit,-31.aspx"
+        },
+        {
+            "title": "Remix",
+            "hex": "000000",
+            "source": "https://drive.google.com/drive/u/0/folders/1pbHnJqg8Y1ATs0Oi8gARH7wccJGv4I2c"
         },
         {
             "title": "Ren'Py",
@@ -8966,6 +9053,14 @@
             "title": "RTLZWEI",
             "hex": "00BCF6",
             "source": "https://www.rtl2.de/"
+        },
+        {
+            "title": "RuboCop",
+            "hex": "000000",
+            "source": "https://github.com/rubocop-semver/rubocop-ruby2_0/blob/5302f93058f7b739a73a7a6c11c566a2b196b96e/docs/images/logo/rubocop-light.svg",
+            "license": {
+                "type": "CC-BY-NC-4.0"
+            }
         },
         {
             "title": "Ruby",
@@ -9970,6 +10065,12 @@
             "guidelines": "https://partner.steamgames.com/doc/marketing/branding"
         },
         {
+            "title": "Steam Deck",
+            "hex": "1A9FFF",
+            "source": "https://partner.steamgames.com/doc/marketing/branding",
+            "guidelines": "https://partner.steamgames.com/doc/marketing/branding"
+        },
+        {
             "title": "SteamDB",
             "hex": "000000",
             "source": "https://steamdb.info/"
@@ -10744,6 +10845,11 @@
             "guidelines": "https://trove.nla.gov.au/about/who-we-are/trove-brand-guidelines"
         },
         {
+            "title": "tRPC",
+            "hex": "2596BE",
+            "source": "https://github.com/trpc/trpc/blob/e0df4a2d5b498dd953a65901e04915c6e3f7ecc5/www/static/img/logo-no-text.svg"
+        },
+        {
             "title": "TrueNAS",
             "hex": "0095D5",
             "source": "https://www.truenas.com/"
@@ -10890,7 +10996,7 @@
         {
             "title": "Ubuntu",
             "hex": "E95420",
-            "source": "https://design.ubuntu.com/brand/ubuntu-logo/",
+            "source": "https://design.ubuntu.com/downloads/",
             "guidelines": "https://design.ubuntu.com/brand/ubuntu-logo/"
         },
         {
@@ -11056,6 +11162,11 @@
             "hex": "1868F2",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
+        },
+        {
+            "title": "Valorant",
+            "hex": "FA4454",
+            "source": "https://commons.wikimedia.org/wiki/File:Valorant_logo_-_black_color_version.svg"
         },
         {
             "title": "Valve",
@@ -11609,6 +11720,12 @@
             "title": "Wireshark",
             "hex": "1679A7",
             "source": "https://gitlab.com/wanduow/wireshark/-/blob/cd5539b0f76975474869984a9d2f0fce29d5c21e/image/wsicon.svg"
+        },
+        {
+            "title": "Wise",
+            "hex": "00B9FF",
+            "source": "https://brand.wise.com/logo",
+            "guidelines": "https://brand.wise.com/logo"
         },
         {
             "title": "Wish",
