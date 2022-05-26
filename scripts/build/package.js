@@ -99,25 +99,6 @@ const build = async () => {
 
       const iconExportName = slugToVariableName(icon.slug);
 
-      // write the static .js file for the icon
-      const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-      const newImportMessage = `use "const { ${iconExportName} } = require('simple-icons/icons');" instead`;
-      const message = JSON.stringify(
-        `Imports like "const ${icon.slug} = require('simple-icons/icons/${icon.slug}');" have been deprecated in v6.0.0 and will no longer work from v7.0.0, ${newImportMessage}`,
-      );
-
-      const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
-      await Promise.all([
-        writeJs(
-          jsFilepath,
-          `console.warn("warn -", ${message});module.exports=${iconObject};`,
-        ),
-        writeTs(
-          dtsFilepath,
-          `/**@deprecated ${newImportMessage}*/declare const i:import("../alias").I;export default i;`,
-        ),
-      ]);
-
       // add object to the barrel file
       iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
       iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
@@ -139,7 +120,9 @@ const build = async () => {
   const rawIconsMjs = iconsBarrelMjs.join('');
   await writeJs(iconsMjsFile, rawIconsMjs);
   // and create a type declaration file
-  const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join('')}`;
+  const rawIconsDts = `import {SimpleIcon} from ".";type I = SimpleIcon;${iconsBarrelDts.join(
+    '',
+  )}`;
   await writeTs(iconsDtsFile, rawIconsDts);
 };
 
