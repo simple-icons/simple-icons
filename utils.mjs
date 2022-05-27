@@ -1,8 +1,3 @@
-/**
- * Converts a brand title (as it is seen in simple-icons.json) into a brand
- * title in HTML/SVG friendly format.
- * @param {String} brandTitle The title to convert
- */
 export const titleToHtmlFriendly = (brandTitle) =>
   brandTitle
     .replace(/&/g, '&amp;')
@@ -14,11 +9,6 @@ export const titleToHtmlFriendly = (brandTitle) =>
       return charCode > 127 ? `&#${charCode};` : char;
     });
 
-/**
- * Converts a brand title in HTML/SVG friendly format into a brand title (as
- * it is seen in simple-icons.json)
- * @param {String} htmlFriendlyTitle The title to convert
- */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
   htmlFriendlyTitle
     .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))
