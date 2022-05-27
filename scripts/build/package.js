@@ -118,7 +118,7 @@ const build = async () => {
   await writeJs(indexFile, rawIndexJs);
 
   // write our file containing the exports of all icons in CommonJS ...
-  const rawIconsJs = `${constantsString};module.exports={${iconsBarrelJs.join(
+  const rawIconsJs = `${constantsString}module.exports={${iconsBarrelJs.join(
     '',
   )}};`;
   await writeJs(iconsJsFile, rawIconsJs);
