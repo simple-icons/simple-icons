@@ -1,6 +1,9 @@
 export interface SimpleIcon {
   title: string;
   slug: string;
+  /**
+   * @deprecated The `svg` property will be removed in the next major. Please use `import { getSvg } from "simple-icons/utils"` instead.
+   */
   svg: string;
   path: string;
   source: string;

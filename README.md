@@ -72,7 +72,6 @@ console.log(siSimpleicons);
     slug: 'simpleicons',
     hex: '111111',
     source: 'https://simpleicons.org/',
-    svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">...</svg>',
     path: 'M12 12v-1.5c-2.484 ...',
     guidelines: 'https://simpleicons.org/styleguide',
     license: {
@@ -84,6 +83,14 @@ console.log(siSimpleicons);
 NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines for the icon.
 NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
+```
+
+You can get the SVG string for an icon like so:
+```javascript
+import { siSimpleicons } from 'simple-icons/icons';
+import { getSvg } from 'simple-icons/utils';
+
+const svg = getSvg(siSimpleIcons);
 ```
 
 #### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=19 height=19><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg#gh-dark-mode-only" alt="Typescript" align=left width=19 height=19>

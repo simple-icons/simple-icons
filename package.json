@@ -20,7 +20,13 @@
     },
     "./icons/*": [
       "./icons/*"
-    ]
+    ],
+    "./utils": {
+      "module": "./utils.mjs",
+      "import": "./utils.mjs",
+      "require": "./utils.js",
+      "default": "./utils.js"
+    }
   },
   "sideEffects": false,
   "repository": {

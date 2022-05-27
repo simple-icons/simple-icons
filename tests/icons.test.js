@@ -6,14 +6,14 @@ import {
 import * as simpleIcons from '../icons.mjs';
 import { testIcon } from './test-icon.js';
 
-(async () => {
-  const icons = await getIconsData();
+console.warn = () => {};
 
-  icons.map((icon) => {
-    const slug = getIconSlug(icon);
-    const variableName = slugToVariableName(slug);
-    const subject = simpleIcons[variableName];
+const icons = await getIconsData();
 
-    testIcon(icon, subject, slug);
-  });
-})();
+icons.map((icon) => {
+  const slug = getIconSlug(icon);
+  const variableName = slugToVariableName(slug);
+  const subject = simpleIcons[variableName];
+
+  testIcon(icon, subject, slug);
+});

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
+import { getSvg } from '../utils.mjs';
 
 const iconsDir = path.resolve(process.cwd(), 'icons');
 
@@ -65,6 +66,7 @@ export const testIcon = (icon, subject, slug) => {
         .readFileSync(svgPath, 'utf8')
         .replace(/\r?\n/, '');
       assert.equal(subject.svg, svgFileContents);
+      assert.equal(getSvg(subject), svgFileContents);
     });
   });
 };

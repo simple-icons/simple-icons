@@ -14,11 +14,11 @@ import { transform as esbuildTransform } from 'esbuild';
 import {
   getIconSlug,
   svgToPath,
-  titleToHtmlFriendly,
   slugToVariableName,
   getIconsData,
   getDirnameFromImportMeta,
 } from '../utils.js';
+import { titleToHtmlFriendly } from '../../utils.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -30,15 +30,22 @@ const iconsDir = path.resolve(rootDir, 'icons');
 const iconsJsFile = path.resolve(rootDir, 'icons.js');
 const iconsMjsFile = path.resolve(rootDir, 'icons.mjs');
 const iconsDtsFile = path.resolve(rootDir, 'icons.d.ts');
+const utilsJsFile = path.resolve(rootDir, 'utils.js');
+const utilsMjsFile = path.resolve(rootDir, 'utils.mjs');
 
 const templatesDir = path.resolve(__dirname, 'templates');
 const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const build = async () => {
-  const icons = await getIconsData();
-  const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
-  const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
+  const [icons, indexTemplate, iconObjectTemplate, utilsJs] = await Promise.all(
+    [
+      getIconsData(),
+      fs.readFile(indexTemplateFile, UTF8),
+      fs.readFile(iconObjectTemplateFile, UTF8),
+      fs.readFile(utilsMjsFile, UTF8),
+    ],
+  );
 
   // Local helper functions
   const escape = (value) => {
@@ -62,7 +69,6 @@ const build = async () => {
       iconObjectTemplate,
       escape(icon.title),
       escape(icon.slug),
-      escape(titleToHtmlFriendly(icon.title)),
       escape(icon.path),
       escape(icon.source),
       escape(icon.hex),
@@ -73,6 +79,7 @@ const build = async () => {
   const writeJs = async (filepath, rawJavaScript) => {
     const { code } = await esbuildTransform(rawJavaScript, {
       minify: true,
+      target: 'node14',
     });
     await fs.writeFile(filepath, code);
   };
@@ -113,17 +120,38 @@ const build = async () => {
   );
   await writeJs(indexFile, rawIndexJs);
 
+  const svgPropertyDeprecationWarning =
+    'The `svg` property will be removed in the next major. Please use `import { getSvg } from "simple-icons/utils"` instead.';
+  const iconsJsPrelude = `const d = () => console.warn(${JSON.stringify(
+    svgPropertyDeprecationWarning,
+  )});`;
+
   // write our file containing the exports of all icons in CommonJS ...
-  const rawIconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
+  const rawIconsJs = `const {getSvg} =require('./utils.js');${iconsJsPrelude}module.exports={${iconsBarrelJs.join(
+    '',
+  )}};`;
   await writeJs(iconsJsFile, rawIconsJs);
   // and ESM
-  const rawIconsMjs = iconsBarrelMjs.join('');
+  const rawIconsMjs = `import {getSvg} from './utils.mjs';${iconsJsPrelude}${iconsBarrelMjs.join(
+    '',
+  )}`;
   await writeJs(iconsMjsFile, rawIconsMjs);
   // and create a type declaration file
   const rawIconsDts = `import {SimpleIcon} from ".";type I = SimpleIcon;${iconsBarrelDts.join(
     '',
   )}`;
   await writeTs(iconsDtsFile, rawIconsDts);
+
+  await fs.writeFile(
+    utilsJsFile,
+    (
+      await esbuildTransform(utilsJs, {
+        format: 'cjs',
+        minify: true,
+      })
+    ).code,
+    UTF8,
+  );
 };
 
 build();

@@ -1,12 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {
-  getDirnameFromImportMeta,
-  htmlFriendlyToTitle,
-} from './scripts/utils.js';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
+import { getDirnameFromImportMeta } from './scripts/utils.js';
+import { htmlFriendlyToTitle } from './utils.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const dataFile = path.join(__dirname, '_data', 'simple-icons.json');
