@@ -49,20 +49,7 @@ The icons are also available through our npm package. To install, simply run:
 npm install simple-icons
 ```
 
-The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
-
-```javascript
-const simpleIcons = require('simple-icons');
-
-// Get a specific icon by its slug as:
-// simpleIcons.Get('[ICON SLUG]');
-
-// For example:
-const icon = simpleIcons.Get('simpleicons');
-
-```
-
-Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+All icons are imported from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
 ```javascript
 // Import a specific icon by its slug as:
 // import { si[ICON SLUG] } from 'simple-icons/icons'
@@ -97,18 +84,6 @@ console.log(siSimpleicons);
 NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines for the icon.
 NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
-```
-
-Lastly, the `simpleIcons` object is also enumerable.
-This is useful if you want to do a computation on every icon:
-
-```javascript
-const simpleIcons = require('simple-icons');
-
-for (const iconSlug in simpleIcons) {
-  const icon = simpleIcons.Get(iconSlug);
-  // do stuff
-}
 ```
 
 #### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=19 height=19><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg#gh-dark-mode-only" alt="Typescript" align=left width=19 height=19>
