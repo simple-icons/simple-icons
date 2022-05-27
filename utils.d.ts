@@ -12,7 +12,7 @@ export declare const titleToHtmlFriendly: (brandTitle: string) => string;
  * it is seen in simple-icons.json)
  * @param htmlFriendlyTitle The title to convert
  */
-export const htmlFriendlyToTitle = (htmlFriendlyTitle: string) => string;
+export declare const htmlFriendlyToTitle: (htmlFriendlyTitle: string) => string;
 
 /**
  * Gets the SVG string from an icon object.
