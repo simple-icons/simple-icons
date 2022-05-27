@@ -106,18 +106,24 @@ const build = async () => {
     }),
   );
 
+  // constants used in templates to reduce package size
+  const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
+
   // write our generic index.js
   const rawIndexJs = util.format(
     indexTemplate,
+    constantsString,
     buildIcons.map(iconToKeyValue).join(','),
   );
   await writeJs(indexFile, rawIndexJs);
 
   // write our file containing the exports of all icons in CommonJS ...
-  const rawIconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
+  const rawIconsJs = `${constantsString}module.exports={${iconsBarrelJs.join(
+    '',
+  )}};`;
   await writeJs(iconsJsFile, rawIconsJs);
   // and ESM
-  const rawIconsMjs = iconsBarrelMjs.join('');
+  const rawIconsMjs = constantsString + iconsBarrelMjs.join('');
   await writeJs(iconsMjsFile, rawIconsMjs);
   // and create a type declaration file
   const rawIconsDts = `import {SimpleIcon} from ".";type I = SimpleIcon;${iconsBarrelDts.join(
