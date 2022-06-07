@@ -293,6 +293,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `boulanger` | `boulanger` |
 | `Bower` | `bower` |
 | `Box` | `box` |
+| `Boxy SVG` | `boxysvg` |
 | `Brandfolder` | `brandfolder` |
 | `Brave` | `brave` |
 | `Breaker` | `breaker` |
@@ -981,7 +982,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jameson` | `jameson` |
 | `Jamstack` | `jamstack` |
 | `Jasmine` | `jasmine` |
-| `Java` | `java` |
 | `JavaScript` | `javascript` |
 | `JBL` | `jbl` |
 | `JCB` | `jcb` |
@@ -1079,6 +1079,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lada` | `lada` |
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
+| `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
 | `Laravel Horizon` | `laravelhorizon` |
@@ -1115,6 +1116,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lighthouse` | `lighthouse` |
 | `LINE` | `line` |
 | `LineageOS` | `lineageos` |
+| `Linear` | `linear` |
 | `LinkedIn` | `linkedin` |
 | `Linkerd` | `linkerd` |
 | `Linkfire` | `linkfire` |
@@ -1140,6 +1142,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Looker` | `looker` |
 | `Loom` | `loom` |
 | `Loop` | `loop` |
+| `LoopBack` | `loopback` |
 | `Lospec` | `lospec` |
 | `LOT Polish Airlines` | `lotpolishairlines` |
 | `Lua` | `lua` |
@@ -1248,6 +1251,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mix` | `mix` |
 | `Mixcloud` | `mixcloud` |
 | `MLB` | `mlb` |
+| `MLflow` | `mlflow` |
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
@@ -1478,6 +1482,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pixiv` | `pixiv` |
 | `pkgsrc` | `pkgsrc` |
 | `Planet` | `planet` |
+| `PlanetScale` | `planetscale` |
 | `PlanGrid` | `plangrid` |
 | `Platform.sh` | `platformdotsh` |
 | `Platzi` | `platzi` |
@@ -1612,6 +1617,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ram` | `ram` |
 | `Rancher` | `rancher` |
 | `Rarible` | `rarible` |
+| `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
 | `Ray` | `ray` |
 | `Razer` | `razer` |
@@ -1932,6 +1938,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
 | `Target` | `target` |
+| `Task` | `task` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
 | `Tauri` | `tauri` |
@@ -2002,7 +2009,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Traefik Mesh` | `traefikmesh` |
 | `TrainerRoad` | `trainerroad` |
 | `Trakt` | `trakt` |
-| `TransferWise` | `transferwise` |
 | `Transport for Ireland` | `transportforireland` |
 | `Transport for London` | `transportforlondon` |
 | `Travis CI` | `travisci` |
@@ -2015,6 +2021,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Trip.com` | `tripdotcom` |
 | `Tripadvisor` | `tripadvisor` |
 | `Trove` | `trove` |
+| `tRPC` | `trpc` |
 | `TrueNAS` | `truenas` |
 | `trulia` | `trulia` |
 | `Trusted Shops` | `trustedshops` |
@@ -2075,6 +2082,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `V8` | `v8` |
 | `Vaadin` | `vaadin` |
 | `Vagrant` | `vagrant` |
+| `Valorant` | `valorant` |
 | `Valve` | `valve` |
 | `Vapor` | `vapor` |
 | `Vault` | `vault` |
@@ -2104,6 +2112,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Visual Studio` | `visualstudio` |
 | `Visual Studio Code` | `visualstudiocode` |
 | `Vite` | `vite` |
+| `Vitess` | `vitess` |
 | `Vivaldi` | `vivaldi` |
 | `Vivino` | `vivino` |
 | `VK` | `vk` |
@@ -2177,6 +2186,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wire` | `wire` |
 | `WireGuard` | `wireguard` |
 | `Wireshark` | `wireshark` |
+| `Wise` | `wise` |
 | `Wish` | `wish` |
 | `Wistia` | `wistia` |
 | `Wix` | `wix` |
