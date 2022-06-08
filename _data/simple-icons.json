@@ -4304,11 +4304,6 @@
             "source": "https://grafana.com/"
         },
         {
-            "title": "Grafana k6",
-            "hex": "7D64FF",
-            "source": "https://commons.wikimedia.org/wiki/File:K6-logo.svg"
-        },
-        {
             "title": "Grammarly",
             "hex": "15C39A",
             "source": "https://www.grammarly.com/media-assets"
@@ -5368,6 +5363,16 @@
             "title": "K3s",
             "hex": "FFC61C",
             "source": "https://k3s.io/"
+        },
+        {
+            "title": "k6",
+            "hex": "7D64FF",
+            "source": "https://commons.wikimedia.org/wiki/File:K6-logo.svg",
+            "aliases": {
+                "aka": [
+                    "Grafana k6"
+                ]
+            }
         },
         {
             "title": "Kaggle",
