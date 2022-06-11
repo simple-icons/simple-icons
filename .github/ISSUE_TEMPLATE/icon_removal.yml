@@ -1,6 +1,5 @@
 name: Icon removal
 description: Report an icon for removal
-title: "Remove: "
 labels: [removal request]
 
 body:
@@ -13,12 +12,12 @@ body:
         you're reporting then leave a comment on it or add a reaction.
 
 
-        [removal-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22removal+request%22%2C%22breaking+change%22+is%3Aopen+
+        [removal-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22removal+request%22%2C%22breaking+change%22
 
   - type: input
     attributes:
       label: Brand Name
-      placeholder: "Example: Simple Icons"
+      placeholder: 'Example: Simple Icons'
     validations:
       required: true
 
