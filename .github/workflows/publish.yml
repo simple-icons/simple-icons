@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
@@ -24,10 +24,10 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm i
-      - name: Build NodeJS package
-        run: npm run build
       - name: Run linters
         run: npm run lint
+      - name: Build NodeJS package
+        run: npm run build
       - name: Run tests
         run: npm run test
   npm:
@@ -36,18 +36,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v2
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - name: Remove dark theme images from README
+        uses: mondeja/strip-gh-theme-links@v3
+        with:
+          files: README.md
+          strict: true
       - name: Install dependencies
         run: npm i
       - name: Deploy to NPM
@@ -60,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v1
@@ -69,11 +74,26 @@ jobs:
         run: |
           export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
           echo "::set-output name=version::$PACKAGE_VERSION"
-      - name: Create and push git tag
-        uses: actions-ecosystem/action-push-tag@v1
+      - name: Remove dark theme images from README
+        uses: mondeja/strip-gh-theme-links@v3
         with:
-          tag: ${{ steps.get-version.outputs.version }}
-          message: ${{ steps.commit.outputs.git-message }}
+          files: README.md
+          strict: true
+      - name: Configure GIT credentials
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      # Commit that will only be included in the tag
+      - name: Commit dark theme images strip
+        run: |
+          git add README.md
+          git commit -m 'Strip README dark theme image links'
+      - name: Create and push git tag
+        run: |
+          set -e
+          tag="${{ steps.get-version.outputs.version }}"
+          git tag -a "${tag}" -m "${{ steps.commit.outputs.git-message }}"
+          git push origin "${tag}"
       - name: Create release
         uses: actions/create-release@v1
         env:
