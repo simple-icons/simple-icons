@@ -1019,6 +1019,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Just Eat` | `justeat` |
 | `JustGiving` | `justgiving` |
 | `K3s` | `k3s` |
+| `k6` | `k6` |
 | `Kaggle` | `kaggle` |
 | `Kahoot!` | `kahoot` |
 | `KaiOS` | `kaios` |
@@ -1398,6 +1399,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenTelemetry` | `opentelemetry` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
+| `OpenZeppelin` | `openzeppelin` |
 | `OpenZFS` | `openzfs` |
 | `Opera` | `opera` |
 | `OPNSense` | `opnsense` |

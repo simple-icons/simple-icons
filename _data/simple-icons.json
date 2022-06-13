@@ -459,7 +459,8 @@
         {
             "title": "Amazon",
             "hex": "FF9900",
-            "source": "https://worldvectorlogo.com/logo/amazon-icon"
+            "source": "https://worldvectorlogo.com/logo/amazon-icon",
+            "guidelines": "https://worldvectorlogo.com/terms-of-use"
         },
         {
             "title": "Amazon Alexa",
@@ -5365,6 +5366,16 @@
             "source": "https://k3s.io/"
         },
         {
+            "title": "k6",
+            "hex": "7D64FF",
+            "source": "https://commons.wikimedia.org/wiki/File:K6-logo.svg",
+            "aliases": {
+                "aka": [
+                    "Grafana k6"
+                ]
+            }
+        },
+        {
             "title": "Kaggle",
             "hex": "20BEFF",
             "source": "https://www.kaggle.com/brand-guidelines",
@@ -7447,6 +7458,11 @@
             "hex": "00B5E2",
             "source": "https://openwrt.org/docs/guide-graphic-designer/openwrt-logo",
             "guidelines": "https://openwrt.org/docs/guide-graphic-designer/openwrt-logo"
+        },
+        {
+            "title": "OpenZeppelin",
+            "hex": "4E5EE4",
+            "source": "https://openzeppelin.com/"
         },
         {
             "title": "OpenZFS",
