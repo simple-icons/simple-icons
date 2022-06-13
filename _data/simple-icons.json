@@ -515,6 +515,19 @@
             }
         },
         {
+            "title": "Amazon EKS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS EKS",
+                    "AWS Elastic Kubernetes Service"
+                ]
+            }
+        },
+        {
             "title": "Amazon Fire TV",
             "hex": "FC4C02",
             "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201348270"
