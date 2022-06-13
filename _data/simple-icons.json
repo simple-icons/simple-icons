@@ -489,19 +489,6 @@
             }
         },
         {
-            "title": "Amazon ECS",
-            "hex": "FF9900",
-            "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/",
-            "aliases": {
-                "aka": [
-                    "Amazon Elastic Container Service",
-                    "AWS ECS",
-                    "AWS Elastic Container Service"
-                ]
-            }
-        },
-        {
             "title": "Amazon EC2",
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
@@ -511,6 +498,19 @@
                     "Amazon Elastic Compute Cloud",
                     "AWS EC2",
                     "AWS Elastic Compute Cloud"
+                ]
+            }
+        },
+        {
+            "title": "Amazon ECS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Container Service",
+                    "AWS ECS",
+                    "AWS Elastic Container Service"
                 ]
             }
         },
