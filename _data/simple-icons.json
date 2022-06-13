@@ -459,7 +459,8 @@
         {
             "title": "Amazon",
             "hex": "FF9900",
-            "source": "https://worldvectorlogo.com/logo/amazon-icon"
+            "source": "https://worldvectorlogo.com/logo/amazon-icon",
+            "guidelines": "https://worldvectorlogo.com/terms-of-use"
         },
         {
             "title": "Amazon Alexa",
@@ -488,10 +489,36 @@
             }
         },
         {
-            "title": "Amazon EKS",
+            "title": "Amazon EC2",
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Compute Cloud",
+                    "AWS EC2",
+                    "AWS Elastic Compute Cloud"
+                ]
+            }
+        },
+        {
+            "title": "Amazon ECS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Container Service",
+                    "AWS ECS",
+                    "AWS Elastic Container Service"
+                ]
+            }
+        },
+        {
+            "title": "Amazon EKS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",     
             "aliases": {
                 "aka": [
                     "Amazon Elastic Kubernetes Service",
@@ -5378,6 +5405,16 @@
             "source": "https://k3s.io/"
         },
         {
+            "title": "k6",
+            "hex": "7D64FF",
+            "source": "https://commons.wikimedia.org/wiki/File:K6-logo.svg",
+            "aliases": {
+                "aka": [
+                    "Grafana k6"
+                ]
+            }
+        },
+        {
             "title": "Kaggle",
             "hex": "20BEFF",
             "source": "https://www.kaggle.com/brand-guidelines",
@@ -7462,6 +7499,11 @@
             "guidelines": "https://openwrt.org/docs/guide-graphic-designer/openwrt-logo"
         },
         {
+            "title": "OpenZeppelin",
+            "hex": "4E5EE4",
+            "source": "https://openzeppelin.com/"
+        },
+        {
             "title": "OpenZFS",
             "hex": "2A667F",
             "source": "https://commons.wikimedia.org/wiki/File:OpenZFS_logo.svg"
@@ -8388,6 +8430,16 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "PyG",
+            "hex": "3C2179",
+            "source": "https://github.com/pyg-team/pyg_sphinx_theme/blob/4f696513b4b4adf2ba3874574a10a8e8718672fe/pyg_sphinx_theme/static/img/pyg_logo.svg",
+            "aliases": {
+                "aka": [
+                    "PyTorch Geometric"
+                ]
+            }
         },
         {
             "title": "PyPI",
