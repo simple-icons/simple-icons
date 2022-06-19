@@ -100,6 +100,9 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Amazon Alexa` | `amazonalexa` |
 | `Amazon AWS` | `amazonaws` |
 | `Amazon DynamoDB` | `amazondynamodb` |
+| `Amazon EC2` | `amazonec2` |
+| `Amazon ECS` | `amazonecs` |
+| `Amazon EKS` | `amazoneks` |
 | `Amazon Fire TV` | `amazonfiretv` |
 | `Amazon Lumberyard` | `amazonlumberyard` |
 | `Amazon Pay` | `amazonpay` |
@@ -653,6 +656,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fastlane` | `fastlane` |
 | `Fastly` | `fastly` |
 | `Fathom` | `fathom` |
+| `Fauna` | `fauna` |
 | `Favro` | `favro` |
 | `FeatHub` | `feathub` |
 | `FedEx` | `fedex` |
@@ -879,6 +883,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hetzner` | `hetzner` |
 | `Hexo` | `hexo` |
 | `HEY` | `hey` |
+| `Hi Bob` | `hibob` |
 | `Hibernate` | `hibernate` |
 | `Hilton` | `hilton` |
 | `Hitachi` | `hitachi` |
@@ -1574,6 +1579,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pusher` | `pusher` |
 | `PWA` | `pwa` |
 | `PyCharm` | `pycharm` |
+| `PyG` | `pyg` |
 | `PyPI` | `pypi` |
 | `PyPy` | `pypy` |
 | `PyScaffold` | `pyscaffold` |
