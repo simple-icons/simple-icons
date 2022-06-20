@@ -459,7 +459,8 @@
         {
             "title": "Amazon",
             "hex": "FF9900",
-            "source": "https://worldvectorlogo.com/logo/amazon-icon"
+            "source": "https://worldvectorlogo.com/logo/amazon-icon",
+            "guidelines": "https://worldvectorlogo.com/terms-of-use"
         },
         {
             "title": "Amazon Alexa",
@@ -484,6 +485,45 @@
             "aliases": {
                 "aka": [
                     "AWS DynamoDB"
+                ]
+            }
+        },
+        {
+            "title": "Amazon EC2",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Compute Cloud",
+                    "AWS EC2",
+                    "AWS Elastic Compute Cloud"
+                ]
+            }
+        },
+        {
+            "title": "Amazon ECS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Container Service",
+                    "AWS ECS",
+                    "AWS Elastic Container Service"
+                ]
+            }
+        },
+        {
+            "title": "Amazon EKS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS EKS",
+                    "AWS Elastic Kubernetes Service"
                 ]
             }
         },
@@ -888,6 +928,11 @@
             "title": "Arduino",
             "hex": "00979D",
             "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
+        },
+        {
+            "title": "Argo",
+            "hex": "EF7B4D",
+            "source": "https://cncf-branding.netlify.app/projects/argo/"
         },
         {
             "title": "Argos",
@@ -3371,6 +3416,11 @@
             "source": "https://usefathom.com/brand"
         },
         {
+            "title": "Fauna",
+            "hex": "3A1AB6",
+            "source": "https://fauna.com/"
+        },
+        {
             "title": "Favro",
             "hex": "512DA8",
             "source": "https://favro.com/login"
@@ -3523,6 +3573,12 @@
             "title": "Flathub",
             "hex": "4A86CF",
             "source": "https://flathub.org/"
+        },
+        {
+            "title": "Flatpak",
+            "hex": "4A90D9",
+            "source": "https://flatpak.org/press",
+            "guidelines": "https://flatpak.org/press"
         },
         {
             "title": "Flattr",
@@ -4607,6 +4663,16 @@
             "source": "https://hey.com/"
         },
         {
+            "title": "Hi Bob",
+            "hex": "E42C51",
+            "source": "https://www.hibob.com/",
+            "aliases": {
+                "aka": [
+                    "Bob"
+                ]
+            }
+        },
+        {
             "title": "Hibernate",
             "hex": "59666C",
             "source": "https://hibernate.org/"
@@ -5371,6 +5437,16 @@
             "source": "https://k3s.io/"
         },
         {
+            "title": "k6",
+            "hex": "7D64FF",
+            "source": "https://commons.wikimedia.org/wiki/File:K6-logo.svg",
+            "aliases": {
+                "aka": [
+                    "Grafana k6"
+                ]
+            }
+        },
+        {
             "title": "Kaggle",
             "hex": "20BEFF",
             "source": "https://www.kaggle.com/brand-guidelines",
@@ -5453,6 +5529,11 @@
             "hex": "527EB2",
             "source": "https://kdenlive.org/en/logo/",
             "guidelines": "https://kdenlive.org/en/logo/"
+        },
+        {
+            "title": "Keep a Changelog",
+            "hex": "E05735",
+            "source": "https://keepachangelog.com/"
         },
         {
             "title": "KeePassXC",
@@ -5798,7 +5879,7 @@
         },
         {
             "title": "Lerna",
-            "hex": "2F0268",
+            "hex": "9333EA",
             "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
         },
         {
@@ -8386,6 +8467,16 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "PyG",
+            "hex": "3C2179",
+            "source": "https://github.com/pyg-team/pyg_sphinx_theme/blob/4f696513b4b4adf2ba3874574a10a8e8718672fe/pyg_sphinx_theme/static/img/pyg_logo.svg",
+            "aliases": {
+                "aka": [
+                    "PyTorch Geometric"
+                ]
+            }
         },
         {
             "title": "PyPI",
