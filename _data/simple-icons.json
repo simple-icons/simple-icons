@@ -489,6 +489,45 @@
             }
         },
         {
+            "title": "Amazon EC2",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Compute Cloud",
+                    "AWS EC2",
+                    "AWS Elastic Compute Cloud"
+                ]
+            }
+        },
+        {
+            "title": "Amazon ECS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Container Service",
+                    "AWS ECS",
+                    "AWS Elastic Container Service"
+                ]
+            }
+        },
+        {
+            "title": "Amazon EKS",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS EKS",
+                    "AWS Elastic Kubernetes Service"
+                ]
+            }
+        },
+        {
             "title": "Amazon Fire TV",
             "hex": "FC4C02",
             "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201348270"
@@ -889,6 +928,11 @@
             "title": "Arduino",
             "hex": "00979D",
             "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
+        },
+        {
+            "title": "Argo",
+            "hex": "EF7B4D",
+            "source": "https://cncf-branding.netlify.app/projects/argo/"
         },
         {
             "title": "Argos",
@@ -3366,6 +3410,11 @@
             "source": "https://usefathom.com/brand"
         },
         {
+            "title": "Fauna",
+            "hex": "3A1AB6",
+            "source": "https://fauna.com/"
+        },
+        {
             "title": "Favro",
             "hex": "512DA8",
             "source": "https://favro.com/login"
@@ -3518,6 +3567,12 @@
             "title": "Flathub",
             "hex": "4A86CF",
             "source": "https://flathub.org/"
+        },
+        {
+            "title": "Flatpak",
+            "hex": "4A90D9",
+            "source": "https://flatpak.org/press",
+            "guidelines": "https://flatpak.org/press"
         },
         {
             "title": "Flattr",
@@ -4600,6 +4655,16 @@
             "title": "HEY",
             "hex": "5522FA",
             "source": "https://hey.com/"
+        },
+        {
+            "title": "Hi Bob",
+            "hex": "E42C51",
+            "source": "https://www.hibob.com/",
+            "aliases": {
+                "aka": [
+                    "Bob"
+                ]
+            }
         },
         {
             "title": "Hibernate",
@@ -5803,7 +5868,7 @@
         },
         {
             "title": "Lerna",
-            "hex": "2F0268",
+            "hex": "9333EA",
             "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
         },
         {
@@ -8391,6 +8456,16 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "PyG",
+            "hex": "3C2179",
+            "source": "https://github.com/pyg-team/pyg_sphinx_theme/blob/4f696513b4b4adf2ba3874574a10a8e8718672fe/pyg_sphinx_theme/static/img/pyg_logo.svg",
+            "aliases": {
+                "aka": [
+                    "PyTorch Geometric"
+                ]
+            }
         },
         {
             "title": "PyPI",
