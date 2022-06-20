@@ -930,6 +930,11 @@
             "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
         },
         {
+            "title": "Argo",
+            "hex": "EF7B4D",
+            "source": "https://cncf-branding.netlify.app/projects/argo/"
+        },
+        {
             "title": "Argos",
             "hex": "DA291C",
             "source": "https://www.argos.co.uk/"
@@ -3562,6 +3567,12 @@
             "title": "Flathub",
             "hex": "4A86CF",
             "source": "https://flathub.org/"
+        },
+        {
+            "title": "Flatpak",
+            "hex": "4A90D9",
+            "source": "https://flatpak.org/press",
+            "guidelines": "https://flatpak.org/press"
         },
         {
             "title": "Flattr",
