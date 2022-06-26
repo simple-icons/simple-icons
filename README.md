@@ -28,15 +28,15 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/[ICON SLUG].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v7/icons/[ICON SLUG].svg" />
 ```
 
 Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/simpleicons.svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v7/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -49,36 +49,22 @@ The icons are also available through our npm package. To install, simply run:
 npm install simple-icons
 ```
 
-The API can then be used as follows, where `[ICON SLUG]` is replaced by a [slug]:
-
-```javascript
-const simpleIcons = require('simple-icons');
-
-// Get a specific icon by its slug as:
-// simpleIcons.Get('[ICON SLUG]');
-
-// For example:
-const icon = simpleIcons.Get('simpleicons');
-
-```
-
-Alternatively, you can also import all icons from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
+All icons are imported from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
 ```javascript
 // Import a specific icon by its slug as:
 // import { si[ICON SLUG] } from 'simple-icons/icons'
 
 // For example:
 // use import/esm to allow tree shaking
-import { siSimpleicons } from 'simple-icons/icons'
+import { siSimpleicons } from 'simple-icons/icons';
+// or with require/cjs
+const { siSimpleicons } = require('simple-icons/icons');
 ```
 
-> :warning: The old way of importing with `require('simple-icons/icons/[ICON SLUG]')` is deprecated and
-will be removed in v7.0.0.
-
-Either method will return an icon object:
+It will return an icon object:
 
 ```javascript
-console.log(icon);
+console.log(siSimpleicons);
 
 /*
 {
@@ -98,18 +84,6 @@ console.log(icon);
 NOTE: the `guidelines` entry will be `undefined` if we do not yet have guidelines for the icon.
 NOTE: the `license` entry will be `undefined` if we do not yet have license data for the icon.
 */
-```
-
-Lastly, the `simpleIcons` object is also enumerable.
-This is useful if you want to do a computation on every icon:
-
-```javascript
-const simpleIcons = require('simple-icons');
-
-for (const iconSlug in simpleIcons) {
-  const icon = simpleIcons.Get(iconSlug);
-  // do stuff
-}
 ```
 
 #### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg#gh-light-mode-only" alt="Typescript" align=left width=19 height=19><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg#gh-dark-mode-only" alt="Typescript" align=left width=19 height=19>
@@ -150,7 +124,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/hexo.svg#gh-light-mode-only" alt="Hexo" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/hexo-white.svg#gh-dark-mode-only" alt="Hexo" align=left width=24 height=24> [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) | [@nidbCN](https://github.com/nidbCN/) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/homeassistant.svg#gh-light-mode-only" alt="Home Assistant" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/homeassistant-white.svg#gh-dark-mode-only" alt="Home Assistant" align=left width=24 height=24> [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) | [@vigonotion](https://github.com/vigonotion/) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/hugo.svg#gh-light-mode-only" alt="Hugo" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/hugo-white.svg#gh-dark-mode-only" alt="Hugo" align=left width=24 height=24> [Hugo module](https://github.com/foo-dogsquared/hugo-mod-simple-icons) | [@foo-dogsquared](https://github.com/foo-dogsquared) |
-| <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/java.svg#gh-light-mode-only" alt="Java" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/java-white.svg#gh-dark-mode-only" alt="Java" align=left width=24 height=24> [Java library](https://github.com/silentsoft/simpleicons4j) | [@silentsoft](https://github.com/silentsoft) |
+| <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openjdk.svg#gh-light-mode-only" alt="OpenJDK" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/openjdk-white.svg#gh-dark-mode-only" alt="OpenJDK" align=left width=24 height=24> [Java library](https://github.com/silentsoft/simpleicons4j) | [@silentsoft](https://github.com/silentsoft) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/jetpackcompose.svg#gh-light-mode-only" alt="Jetpack Compose" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/jetpackcompose-white.svg#gh-dark-mode-only" alt="Jetpack Compose" align=left width=24 height=24> [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) | [@devsrsouza](https://github.com/devsrsouza/) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/kirby.svg#gh-light-mode-only" alt="Kirby" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/kirby-white.svg#gh-dark-mode-only" alt="Kirby" align=left width=24 height=24> [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) | [@runxel](https://github.com/runxel) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/laravel.svg#gh-light-mode-only" alt="Laravel" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/laravel-white.svg#gh-dark-mode-only" alt="Laravel" align=left width=24 height=24> [Laravel Package](https://github.com/ublabs/blade-simple-icons) | [@adrian-ub](https://github.com/adrian-ub) |
