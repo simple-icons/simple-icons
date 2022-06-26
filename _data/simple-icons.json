@@ -1993,7 +1993,8 @@
         {
             "title": "Cloudflare",
             "hex": "F38020",
-            "source": "https://www.cloudflare.com/logo/"
+            "source": "https://www.cloudflare.com/logo/",
+            "guidelines": "https://www.cloudflare.com/trademark/"
         },
         {
             "title": "Cloudsmith",
@@ -2216,6 +2217,11 @@
             "title": "Commerzbank",
             "hex": "FFCC33",
             "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
+        },
+        {
+            "title": "commitlint",
+            "hex": "000000",
+            "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
             "title": "Common Workflow Language",
@@ -2936,6 +2942,11 @@
             "title": "DTube",
             "hex": "F01A30",
             "source": "https://about.d.tube/mediakit.html"
+        },
+        {
+            "title": "DuckDB",
+            "hex": "FFF000",
+            "source": "https://duckdb.org/"
         },
         {
             "title": "DuckDuckGo",
@@ -5523,6 +5534,11 @@
             "hex": "527EB2",
             "source": "https://kdenlive.org/en/logo/",
             "guidelines": "https://kdenlive.org/en/logo/"
+        },
+        {
+            "title": "Keep a Changelog",
+            "hex": "E05735",
+            "source": "https://keepachangelog.com/"
         },
         {
             "title": "KeePassXC",
