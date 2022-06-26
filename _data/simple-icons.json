@@ -468,12 +468,34 @@
             "source": "https://developer.amazon.com/docs/alexa-voice-service/logo-and-brand.html"
         },
         {
+            "title": "Amazon API Gateway",
+            "hex": "FF4F8B",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS API Gateway"
+                ]
+            }
+        },
+        {
             "title": "Amazon AWS",
             "hex": "232F3E",
             "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
             "aliases": {
                 "aka": [
                     "AWS"
+                ]
+            }
+        },
+        {
+            "title": "Amazon CloudWatch",
+            "hex": "FF4F8B",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS CloudWatch"
                 ]
             }
         },
@@ -547,6 +569,17 @@
             "title": "Amazon Prime",
             "hex": "00A8E1",
             "source": "https://www.amazon.com/b?node=17277626011"
+        },
+        {
+            "title": "Amazon RDS",
+            "hex": "527FFF",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS RDS"
+                ]
+            }
         },
         {
             "title": "Amazon S3",
@@ -1155,6 +1188,12 @@
         },
         {
             "title": "AWS Amplify",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
+            "title": "AWS Fargate",
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/"
@@ -2006,7 +2045,8 @@
         {
             "title": "Cloudflare",
             "hex": "F38020",
-            "source": "https://www.cloudflare.com/logo/"
+            "source": "https://www.cloudflare.com/logo/",
+            "guidelines": "https://www.cloudflare.com/trademark/"
         },
         {
             "title": "Cloudsmith",
@@ -2229,6 +2269,11 @@
             "title": "Commerzbank",
             "hex": "FFCC33",
             "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
+        },
+        {
+            "title": "commitlint",
+            "hex": "000000",
+            "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
             "title": "Common Workflow Language",
@@ -2949,6 +2994,11 @@
             "title": "DTube",
             "hex": "F01A30",
             "source": "https://about.d.tube/mediakit.html"
+        },
+        {
+            "title": "DuckDB",
+            "hex": "FFF000",
+            "source": "https://duckdb.org/"
         },
         {
             "title": "DuckDuckGo",
@@ -5600,6 +5650,14 @@
             "source": "https://www.elastic.co/brand"
         },
         {
+            "title": "KiCad",
+            "hex": "314CB0",
+            "source": "https://www.kicad.org/about/kicad/",
+            "license": {
+                "type": "GPL-3.0-or-later"
+            }
+        },
+        {
             "title": "Kickstarter",
             "hex": "05CE78",
             "source": "https://www.kickstarter.com/help/brand_assets"
@@ -6938,7 +6996,14 @@
         {
             "title": "Naver",
             "hex": "03C75A",
-            "source": "https://www.navercorp.com/investment/annualReport"
+            "source": "https://developers.naver.com/docs/login/bi/bi.md",
+            "guidelines": "https://developers.naver.com/docs/login/bi/bi.md",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "네이버",
+                    "ja-JP": "ネイバー"
+                }
+            }
         },
         {
             "title": "NBA",
