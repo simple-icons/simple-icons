@@ -100,6 +100,9 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Amazon Alexa` | `amazonalexa` |
 | `Amazon AWS` | `amazonaws` |
 | `Amazon DynamoDB` | `amazondynamodb` |
+| `Amazon EC2` | `amazonec2` |
+| `Amazon ECS` | `amazonecs` |
+| `Amazon EKS` | `amazoneks` |
 | `Amazon Fire TV` | `amazonfiretv` |
 | `Amazon Lumberyard` | `amazonlumberyard` |
 | `Amazon Pay` | `amazonpay` |
@@ -178,6 +181,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Archive of Our Own` | `archiveofourown` |
 | `Ardour` | `ardour` |
 | `Arduino` | `arduino` |
+| `Argo` | `argo` |
 | `Argos` | `argos` |
 | `ARK Ecosystem` | `arkecosystem` |
 | `Arlo` | `arlo` |
@@ -562,6 +566,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Drupal` | `drupal` |
 | `DS Automobiles` | `dsautomobiles` |
 | `DTube` | `dtube` |
+| `DuckDB` | `duckdb` |
 | `DuckDuckGo` | `duckduckgo` |
 | `Dungeons & Dragons` | `dungeonsanddragons` |
 | `Dunked` | `dunked` |
@@ -653,6 +658,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fastlane` | `fastlane` |
 | `Fastly` | `fastly` |
 | `Fathom` | `fathom` |
+| `Fauna` | `fauna` |
 | `Favro` | `favro` |
 | `FeatHub` | `feathub` |
 | `FedEx` | `fedex` |
@@ -681,6 +687,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flask` | `flask` |
 | `Flat` | `flat` |
 | `Flathub` | `flathub` |
+| `Flatpak` | `flatpak` |
 | `Flattr` | `flattr` |
 | `Flickr` | `flickr` |
 | `Flipboard` | `flipboard` |
@@ -879,6 +886,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hetzner` | `hetzner` |
 | `Hexo` | `hexo` |
 | `HEY` | `hey` |
+| `Hi Bob` | `hibob` |
 | `Hibernate` | `hibernate` |
 | `Hilton` | `hilton` |
 | `Hitachi` | `hitachi` |
@@ -1019,6 +1027,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Just Eat` | `justeat` |
 | `JustGiving` | `justgiving` |
 | `K3s` | `k3s` |
+| `k6` | `k6` |
 | `Kaggle` | `kaggle` |
 | `Kahoot!` | `kahoot` |
 | `KaiOS` | `kaios` |
@@ -1035,6 +1044,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kaufland` | `kaufland` |
 | `KDE` | `kde` |
 | `Kdenlive` | `kdenlive` |
+| `Keep a Changelog` | `keepachangelog` |
 | `KeePassXC` | `keepassxc` |
 | `Kentico` | `kentico` |
 | `Keras` | `keras` |
@@ -1398,6 +1408,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenTelemetry` | `opentelemetry` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
+| `OpenZeppelin` | `openzeppelin` |
 | `OpenZFS` | `openzfs` |
 | `Opera` | `opera` |
 | `OPNSense` | `opnsense` |
@@ -1572,6 +1583,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pusher` | `pusher` |
 | `PWA` | `pwa` |
 | `PyCharm` | `pycharm` |
+| `PyG` | `pyg` |
 | `PyPI` | `pypi` |
 | `PyPy` | `pypy` |
 | `PyScaffold` | `pyscaffold` |
