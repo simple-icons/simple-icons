@@ -1553,6 +1553,11 @@
             "source": "http://getbootstrap.com/about"
         },
         {
+            "title": "BorgBackup",
+            "hex": "00DD00",
+            "source": "https://www.borgbackup.org/"
+        },
+        {
             "title": "Bosch",
             "hex": "EA0016",
             "source": "https://www.bosch.de/"
@@ -11263,6 +11268,11 @@
             "hex": "FFFFFF",
             "source": "https://brand.unity.com/",
             "guidelines": "https://brand.unity.com/"
+        },
+        {
+            "title": "UnoCSS",
+            "hex": "333333",
+            "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
         },
         {
             "title": "Unraid",
