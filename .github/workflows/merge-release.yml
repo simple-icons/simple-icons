@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.pull_request.labels.*.name, 'release')
     steps:
-      - uses: simple-icons/release-action@master
+      - uses: simple-icons/release-action@v1
         with:
           repo-token: ${{ secrets.RELEASE_TOKEN }}
