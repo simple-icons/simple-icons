@@ -1,10 +1,19 @@
-const { icons } = require('../_data/simple-icons.json');
-const { getIconSlug } = require('../scripts/utils.js');
-const testIcon = require('./test-icon.js');
+import {
+  getIconsData,
+  getIconSlug,
+  slugToVariableName,
+} from '../scripts/utils.js';
+import * as simpleIcons from '../icons.mjs';
+import { testIcon } from './test-icon.js';
 
-icons.forEach((icon) => {
-  const slug = getIconSlug(icon);
-  const subject = require(`../icons/${slug}.js`);
+(async () => {
+  const icons = await getIconsData();
 
-  testIcon(icon, subject, slug);
-});
+  icons.map((icon) => {
+    const slug = getIconSlug(icon);
+    const variableName = slugToVariableName(slug);
+    const subject = simpleIcons[variableName];
+
+    testIcon(icon, subject, slug);
+  });
+})();

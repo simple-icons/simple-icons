@@ -4,14 +4,17 @@
  * Updates the version of this package to the CLI specified version.
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
+import { getDirnameFromImportMeta } from '../utils.js';
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const rootDir = path.resolve(__dirname, '..', '..');
 const packageJsonFile = path.resolve(rootDir, 'package.json');
 
 const readManifest = (file) => {
-  const manifestRaw = fs.readFileSync(file).toString();
+  const manifestRaw = fs.readFileSync(file, 'utf-8');
   const manifestJson = JSON.parse(manifestRaw);
   return manifestJson;
 };
