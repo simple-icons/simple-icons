@@ -161,7 +161,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aparat` | `aparat` |
 | `Apollo GraphQL` | `apollographql` |
 | `Apostrophe` | `apostrophe` |
-| `App Annie` | `appannie` |
 | `App Store` | `appstore` |
 | `Appian` | `appian` |
 | `Apple` | `apple` |
