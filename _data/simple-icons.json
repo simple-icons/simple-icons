@@ -468,12 +468,34 @@
             "source": "https://developer.amazon.com/docs/alexa-voice-service/logo-and-brand.html"
         },
         {
+            "title": "Amazon API Gateway",
+            "hex": "FF4F8B",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS API Gateway"
+                ]
+            }
+        },
+        {
             "title": "Amazon AWS",
             "hex": "232F3E",
             "source": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
             "aliases": {
                 "aka": [
                     "AWS"
+                ]
+            }
+        },
+        {
+            "title": "Amazon CloudWatch",
+            "hex": "FF4F8B",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS CloudWatch"
                 ]
             }
         },
@@ -549,6 +571,17 @@
             "source": "https://www.amazon.com/b?node=17277626011"
         },
         {
+            "title": "Amazon RDS",
+            "hex": "527FFF",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS RDS"
+                ]
+            }
+        },
+        {
             "title": "Amazon S3",
             "hex": "569A31",
             "source": "https://aws.amazon.com/architecture/icons/",
@@ -556,6 +589,19 @@
             "aliases": {
                 "aka": [
                     "AWS S3"
+                ]
+            }
+        },
+        {
+            "title": "Amazon SQS",
+            "hex": "FF4F8B",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "Amazon Simple Queue Service",
+                    "AWS SQS",
+                    "AWS Simple Queue Service"
                 ]
             }
         },
@@ -1147,6 +1193,12 @@
             "guidelines": "https://aws.amazon.com/architecture/icons/"
         },
         {
+            "title": "AWS Fargate",
+            "hex": "FF9900",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
             "title": "AWS Lambda",
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
@@ -1499,6 +1551,11 @@
             "title": "Bootstrap",
             "hex": "7952B3",
             "source": "http://getbootstrap.com/about"
+        },
+        {
+            "title": "BorgBackup",
+            "hex": "00DD00",
+            "source": "https://www.borgbackup.org/"
         },
         {
             "title": "Bosch",
@@ -1994,6 +2051,12 @@
             "title": "Cloudflare",
             "hex": "F38020",
             "source": "https://www.cloudflare.com/logo/",
+            "guidelines": "https://www.cloudflare.com/trademark/"
+        },
+        {
+            "title": "Cloudflare Pages",
+            "hex": "F38020",
+            "source": "https://pages.cloudflare.com/",
             "guidelines": "https://www.cloudflare.com/trademark/"
         },
         {
@@ -5598,6 +5661,14 @@
             "source": "https://www.elastic.co/brand"
         },
         {
+            "title": "KiCad",
+            "hex": "314CB0",
+            "source": "https://www.kicad.org/about/kicad/",
+            "license": {
+                "type": "GPL-3.0-or-later"
+            }
+        },
+        {
             "title": "Kickstarter",
             "hex": "05CE78",
             "source": "https://www.kickstarter.com/help/brand_assets"
@@ -5727,6 +5798,11 @@
             "hex": "7F52FF",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "Koyeb",
+            "hex": "121212",
+            "source": "https://www.koyeb.com/"
         },
         {
             "title": "Krita",
@@ -6153,6 +6229,11 @@
             "title": "Lubuntu",
             "hex": "0068C8",
             "source": "https://lubuntu.net/"
+        },
+        {
+            "title": "Ludwig",
+            "hex": "FFFFFF",
+            "source": "https://github.com/ludwig-ai/ludwig-docs/blob/8d8abb2117a93af2622a6545943c773b27153e1b/docs/images/ludwig_icon.svg"
         },
         {
             "title": "Lufthansa",
@@ -6936,7 +7017,14 @@
         {
             "title": "Naver",
             "hex": "03C75A",
-            "source": "https://www.navercorp.com/investment/annualReport"
+            "source": "https://developers.naver.com/docs/login/bi/bi.md",
+            "guidelines": "https://developers.naver.com/docs/login/bi/bi.md",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "네이버",
+                    "ja-JP": "ネイバー"
+                }
+            }
         },
         {
             "title": "NBA",
@@ -8071,6 +8159,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:PlayStation_Vita_logo.svg"
         },
         {
+            "title": "Playwright",
+            "hex": "2EAD33",
+            "source": "https://github.com/microsoft/playwright.dev/blob/768c59464e5b3270db26fa6a839d022a7e0dd064/static/img/playwright-logo.svg"
+        },
+        {
             "title": "Pleroma",
             "hex": "FBA457",
             "source": "https://pleroma.social/"
@@ -8899,6 +8992,11 @@
             "title": "Renault",
             "hex": "FFCC33",
             "source": "https://en.media.groupe.renault.com/news/renault-news-march-2021-5f28-989c5.html"
+        },
+        {
+            "title": "Render",
+            "hex": "46E3B7",
+            "source": "https://render.com/"
         },
         {
             "title": "RenovateBot",
@@ -11175,6 +11273,11 @@
             "hex": "FFFFFF",
             "source": "https://brand.unity.com/",
             "guidelines": "https://brand.unity.com/"
+        },
+        {
+            "title": "UnoCSS",
+            "hex": "333333",
+            "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
         },
         {
             "title": "Unraid",
