@@ -1,7 +1,7 @@
 *                  text=auto
 
 # SVGs are treated as binary by default
-*.svg              text
+*.svg              text eol=lf
 
 # Don't diff machine generated files
 slugs.md           -diff
