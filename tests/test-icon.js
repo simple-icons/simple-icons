@@ -61,9 +61,7 @@ export const testIcon = (icon, subject, slug) => {
     });
 
     it('has a valid svg value', () => {
-      const svgFileContents = fs
-        .readFileSync(svgPath, 'utf8')
-        .replace(/\r?\n/, '');
+      const svgFileContents = fs.readFileSync(svgPath, 'utf8');
       assert.equal(subject.svg, svgFileContents);
     });
   });
