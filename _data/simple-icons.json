@@ -337,6 +337,11 @@
             "source": "https://brand.airbus.com/brand-elements/logo.html"
         },
         {
+            "title": "Airbyte",
+            "hex": "615EFF",
+            "source": "https://airbyte.com/"
+        },
+        {
             "title": "Aircall",
             "hex": "00B388",
             "source": "https://aircall.io/"
@@ -1247,6 +1252,11 @@
                 "type": "MIT",
                 "url": "https://github.com/jashkenas/backbone/blob/master/LICENSE"
             }
+        },
+        {
+            "title": "Backendless",
+            "hex": "FFFFFF",
+            "source": "https://backendless.com/"
         },
         {
             "title": "Badgr",
@@ -7333,6 +7343,11 @@
             "guidelines": "https://github.com/numpy/numpy/blob/main/branding/logo/logoguidelines.md"
         },
         {
+            "title": "Nunjucks",
+            "hex": "1C4913",
+            "source": "https://github.com/mozilla/nunjucks/blob/master/docs/img/favicon.png"
+        },
+        {
             "title": "Nutanix",
             "hex": "024DA1",
             "source": "https://www.nutanix.com/content/dam/nutanix/en/cmn/documents/nutanix-brandbook.pdf"
@@ -11275,6 +11290,11 @@
             "guidelines": "https://brand.unity.com/"
         },
         {
+            "title": "Unlicense",
+            "hex": "808080",
+            "source": "https://commons.wikimedia.org/wiki/File:PD-icon.svg"
+        },
+        {
             "title": "UnoCSS",
             "hex": "333333",
             "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
@@ -11669,6 +11689,12 @@
             "slug": "warnerbros",
             "hex": "004DB4",
             "source": "https://www.warnerbros.com/"
+        },
+        {
+            "title": "wasmCloud",
+            "hex": "00BC8E",
+            "source": "https://github.com/wasmCloud/branding/",
+            "guidelines": "https://github.com/wasmCloud/branding/"
         },
         {
             "title": "Wattpad",

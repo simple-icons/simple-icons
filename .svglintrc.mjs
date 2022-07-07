@@ -25,7 +25,7 @@ const htmlNamedEntities = JSON.parse(
 const svglintIgnores = JSON.parse(fs.readFileSync(svglintIgnoredFile, 'utf8'));
 
 const svgRegexp =
-  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\n?$/;
+  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
 const iconSize = 24;
