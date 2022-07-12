@@ -10942,6 +10942,16 @@
             "source": "https://tinyletter.com/site/press/"
         },
         {
+            "title": "Tistory",
+            "hex": "FF5600",
+            "source": "https://tistory.com/",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "티스토리"
+                }
+            }
+        },
+        {
             "title": "tmux",
             "hex": "1BB91F",
             "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
