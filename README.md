@@ -28,15 +28,15 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@vNaN/icons/[ICON SLUG].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@vNaN/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v7/icons/[ICON SLUG].svg" />
 ```
 
 Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@vNaN/icons/simpleicons.svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@vNaN/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v7/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -131,6 +131,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/python.svg#gh-light-mode-only" alt="Python" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/python-white.svg#gh-dark-mode-only" alt="Python" align=left width=24 height=24> [Python package](https://github.com/sachinraja/simple-icons-py) | [@sachinraja](https://github.com/sachinraja) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/react.svg#gh-light-mode-only" alt="React" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/react-white.svg#gh-dark-mode-only" alt="React" align=left width=24 height=24> [React package](https://github.com/icons-pack/react-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/svelte.svg#gh-light-mode-only" alt="Svelte" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/svelte-white.svg#gh-dark-mode-only" alt="Svelte" align=left width=24 height=24> [Svelte package](https://github.com/icons-pack/svelte-simple-icons) | [@wootsbot](https://github.com/wootsbot) |
+| <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/vuedotjs-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24> [Vue 3 package](https://github.com/wyatt-herkamp/vue3-simple-icons) | [@wyatt-herkamp](https://github.com/wyatt-herkamp) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/vuedotjs-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24> [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wordpress.svg#gh-light-mode-only" alt="Wordpress" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/wordpress-white.svg#gh-dark-mode-only" alt="Wordpress" align=left width=24 height=24> [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
