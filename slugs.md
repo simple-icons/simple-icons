@@ -324,7 +324,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bulma` | `bulma` |
 | `bunq` | `bunq` |
 | `Burger King` | `burgerking` |
-| `Burton` | `burton` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
 | `Byju's` | `byjus` |
