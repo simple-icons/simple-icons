@@ -6374,12 +6374,6 @@
             "source": "https://manjaro.org/"
         },
         {
-            "title": "Mapbox",
-            "hex": "000000",
-            "source": "https://www.mapbox.com/about/press/brand-guidelines",
-            "guidelines": "https://www.mapbox.com/about/press/brand-guidelines"
-        },
-        {
             "title": "Mantine",
             "hex": "339AF0",
             "source": "https://mantine.dev/",
@@ -6388,6 +6382,12 @@
                 "type": "MIT",
                 "url": "https://github.com/mantinedev/mantine/blob/master/LICENSE"
             }
+        },
+        {
+            "title": "Mapbox",
+            "hex": "000000",
+            "source": "https://www.mapbox.com/about/press/brand-guidelines",
+            "guidelines": "https://www.mapbox.com/about/press/brand-guidelines"
         },
         {
             "title": "MariaDB",
