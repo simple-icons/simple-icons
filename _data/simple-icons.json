@@ -1690,6 +1690,12 @@
             "guidelines": "https://www.bk.com/trademarks"
         },
         {
+            "title": "Burton",
+            "hex": "000000",
+            "source": "https://brand.burton.com/logo/",
+            "guidelines": "https://brand.burton.com/logo/"
+        },
+        {
             "title": "Buy Me A Coffee",
             "hex": "FFDD00",
             "source": "https://www.buymeacoffee.com/brand"
@@ -3179,6 +3185,11 @@
             "source": "https://www.electronjs.org/"
         },
         {
+            "title": "electron-builder",
+            "hex": "FFFFFF",
+            "source": "https://www.electron.build/"
+        },
+        {
             "title": "Element",
             "hex": "0DBD8B",
             "source": "https://element.io/"
@@ -3187,6 +3198,12 @@
             "title": "elementary",
             "hex": "64BAFF",
             "source": "https://elementary.io/brand"
+        },
+        {
+            "title": "Elementor",
+            "hex": "92003B",
+            "source": "https://elementor.com/logos/",
+            "guidelines": "https://elementor.com/logos/"
         },
         {
             "title": "Eleventy",
@@ -3417,6 +3434,11 @@
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
+        },
+        {
+            "title": "F1",
+            "hex": "E10600",
+            "source": "https://www.formula1.com/"
         },
         {
             "title": "Facebook",
@@ -7343,6 +7365,11 @@
             "guidelines": "https://github.com/numpy/numpy/blob/main/branding/logo/logoguidelines.md"
         },
         {
+            "title": "Nunjucks",
+            "hex": "1C4913",
+            "source": "https://github.com/mozilla/nunjucks/blob/master/docs/img/favicon.png"
+        },
+        {
             "title": "Nutanix",
             "hex": "024DA1",
             "source": "https://www.nutanix.com/content/dam/nutanix/en/cmn/documents/nutanix-brandbook.pdf"
@@ -7630,6 +7657,12 @@
                     "OTel"
                 ]
             }
+        },
+        {
+            "title": "Openverse",
+            "hex": "FFE033",
+            "source": "https://github.com/WordPress/openverse/blob/main/brand/icon.svg",
+            "guidelines": "https://www.figma.com/file/GIIQ4sDbaToCfFQyKMvzr8/Openverse-Design-Library?node-id=312%3A487"
         },
         {
             "title": "OpenVPN",
@@ -8878,6 +8911,11 @@
             }
         },
         {
+            "title": "React Hook Form",
+            "hex": "EC5990",
+            "source": "https://github.com/react-hook-form/documentation/blob/d049ffe923336ce7a5bf58990c54c07f39ab2429/src/images/Logo.svg"
+        },
+        {
             "title": "React Query",
             "hex": "FF4154",
             "source": "https://github.com/tannerlinsley/react-query/blob/9b5d18cd47a4c1454d6c8dd0f38280641c1dd5dd/docs/src/images/emblem-light.svg"
@@ -9235,7 +9273,7 @@
             "title": "Rotary International",
             "hex": "F7A81B",
             "source": "https://www.rotary.org/en",
-            "guidelines": "https://my-cms.rotary.org/en/document/tell-rotarys-story-voice-and-visual-identity-guidelines-rotarians"
+            "guidelines": "https://my.rotary.org/en/rotary-identity-guidelines"
         },
         {
             "title": "Rotten Tomatoes",
@@ -11290,6 +11328,11 @@
             "guidelines": "https://brand.unity.com/"
         },
         {
+            "title": "Unlicense",
+            "hex": "808080",
+            "source": "https://commons.wikimedia.org/wiki/File:PD-icon.svg"
+        },
+        {
             "title": "UnoCSS",
             "hex": "333333",
             "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
@@ -11684,6 +11727,12 @@
             "slug": "warnerbros",
             "hex": "004DB4",
             "source": "https://www.warnerbros.com/"
+        },
+        {
+            "title": "wasmCloud",
+            "hex": "00BC8E",
+            "source": "https://github.com/wasmCloud/branding/",
+            "guidelines": "https://github.com/wasmCloud/branding/"
         },
         {
             "title": "Wattpad",
@@ -12261,6 +12310,11 @@
             "source": "https://www.zdf.de/"
         },
         {
+            "title": "Zebra Technologies",
+            "hex": "000000",
+            "source": "https://www.zebra.com/"
+        },
+        {
             "title": "Zelle",
             "hex": "6D1ED4",
             "source": "https://www.zellepay.com/"
@@ -12305,6 +12359,12 @@
             "title": "Zerply",
             "hex": "7BBB6E",
             "source": "https://zerply.com/about/resources"
+        },
+        {
+            "title": "Zettlr",
+            "hex": "1CB27E",
+            "source": "https://www.zettlr.com/",
+            "guidelines": "https://www.zettlr.com/press"
         },
         {
             "title": "Zhihu",
