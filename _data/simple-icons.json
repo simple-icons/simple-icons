@@ -1690,6 +1690,12 @@
             "guidelines": "https://www.bk.com/trademarks"
         },
         {
+            "title": "Burton",
+            "hex": "000000",
+            "source": "https://brand.burton.com/logo/",
+            "guidelines": "https://brand.burton.com/logo/"
+        },
+        {
             "title": "Buy Me A Coffee",
             "hex": "FFDD00",
             "source": "https://www.buymeacoffee.com/brand"
@@ -2464,6 +2470,11 @@
             "source": "https://www.crehana.com/"
         },
         {
+            "title": "Critical Role",
+            "hex": "000000",
+            "source": "https://critrole.com/"
+        },
+        {
             "title": "Crowdin",
             "hex": "2E3340",
             "source": "https://support.crowdin.com/using-logo/"
@@ -3179,6 +3190,11 @@
             "source": "https://www.electronjs.org/"
         },
         {
+            "title": "electron-builder",
+            "hex": "FFFFFF",
+            "source": "https://www.electron.build/"
+        },
+        {
             "title": "Element",
             "hex": "0DBD8B",
             "source": "https://element.io/"
@@ -3423,6 +3439,11 @@
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
+        },
+        {
+            "title": "F1",
+            "hex": "E10600",
+            "source": "https://www.formula1.com/"
         },
         {
             "title": "Facebook",
@@ -5108,6 +5129,11 @@
             "title": "Ingress",
             "hex": "783CBD",
             "source": "https://ingress.com/assets/fonts/ingress_icons.woff"
+        },
+        {
+            "title": "Inkdrop",
+            "hex": "7A78D7",
+            "source": "https://site-cdn.inkdrop.app/site/icons/inkdrop-icon.svg"
         },
         {
             "title": "Inkscape",
@@ -6918,6 +6944,11 @@
             "source": "https://www.msi.com/page/brochure"
         },
         {
+            "title": "MSI Business",
+            "hex": "9A8555",
+            "source": "https://www.msi.com/Business-Productivity"
+        },
+        {
             "title": "MTA",
             "hex": "0039A6",
             "source": "https://mta.info/"
@@ -7424,6 +7455,11 @@
             "title": "Octave",
             "hex": "0790C0",
             "source": "https://www.gnu.org/software/octave/"
+        },
+        {
+            "title": "OctoPrint",
+            "hex": "13C100",
+            "source": "https://github.com/OctoPrint/OctoPrint/blob/53b9b6185781c07e8c4744a6e28462e96448f249/src/octoprint/static/img/mask.svg"
         },
         {
             "title": "Octopus Deploy",
@@ -8890,6 +8926,11 @@
             }
         },
         {
+            "title": "React Hook Form",
+            "hex": "EC5990",
+            "source": "https://github.com/react-hook-form/documentation/blob/d049ffe923336ce7a5bf58990c54c07f39ab2429/src/images/Logo.svg"
+        },
+        {
             "title": "React Query",
             "hex": "FF4154",
             "source": "https://github.com/tannerlinsley/react-query/blob/9b5d18cd47a4c1454d6c8dd0f38280641c1dd5dd/docs/src/images/emblem-light.svg"
@@ -9247,7 +9288,7 @@
             "title": "Rotary International",
             "hex": "F7A81B",
             "source": "https://www.rotary.org/en",
-            "guidelines": "https://my-cms.rotary.org/en/document/tell-rotarys-story-voice-and-visual-identity-guidelines-rotarians"
+            "guidelines": "https://my.rotary.org/en/rotary-identity-guidelines"
         },
         {
             "title": "Rotten Tomatoes",
@@ -10931,6 +10972,16 @@
             "source": "https://tinyletter.com/site/press/"
         },
         {
+            "title": "Tistory",
+            "hex": "000000",
+            "source": "https://tistory.com/",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "티스토리"
+                }
+            }
+        },
+        {
             "title": "tmux",
             "hex": "1BB91F",
             "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
@@ -12338,6 +12389,12 @@
             "title": "Zerply",
             "hex": "7BBB6E",
             "source": "https://zerply.com/about/resources"
+        },
+        {
+            "title": "Zettlr",
+            "hex": "1CB27E",
+            "source": "https://www.zettlr.com/",
+            "guidelines": "https://www.zettlr.com/press"
         },
         {
             "title": "Zhihu",
