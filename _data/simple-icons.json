@@ -2470,6 +2470,11 @@
             "source": "https://www.crehana.com/"
         },
         {
+            "title": "Critical Role",
+            "hex": "000000",
+            "source": "https://critrole.com/"
+        },
+        {
             "title": "Crowdin",
             "hex": "2E3340",
             "source": "https://support.crowdin.com/using-logo/"
@@ -5126,6 +5131,11 @@
             "source": "https://ingress.com/assets/fonts/ingress_icons.woff"
         },
         {
+            "title": "Inkdrop",
+            "hex": "7A78D7",
+            "source": "https://site-cdn.inkdrop.app/site/icons/inkdrop-icon.svg"
+        },
+        {
             "title": "Inkscape",
             "hex": "000000",
             "source": "https://inkscape.org/gallery/=inkscape-branding/inkscape-brand-assets/",
@@ -6934,6 +6944,11 @@
             "source": "https://www.msi.com/page/brochure"
         },
         {
+            "title": "MSI Business",
+            "hex": "9A8555",
+            "source": "https://www.msi.com/Business-Productivity"
+        },
+        {
             "title": "MTA",
             "hex": "0039A6",
             "source": "https://mta.info/"
@@ -7440,6 +7455,11 @@
             "title": "Octave",
             "hex": "0790C0",
             "source": "https://www.gnu.org/software/octave/"
+        },
+        {
+            "title": "OctoPrint",
+            "hex": "13C100",
+            "source": "https://github.com/OctoPrint/OctoPrint/blob/53b9b6185781c07e8c4744a6e28462e96448f249/src/octoprint/static/img/mask.svg"
         },
         {
             "title": "Octopus Deploy",
@@ -10952,6 +10972,16 @@
             "source": "https://tinyletter.com/site/press/"
         },
         {
+            "title": "Tistory",
+            "hex": "000000",
+            "source": "https://tistory.com/",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "티스토리"
+                }
+            }
+        },
+        {
             "title": "tmux",
             "hex": "1BB91F",
             "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
@@ -11550,6 +11580,11 @@
             },
             "hex": "E10A0A",
             "source": "https://www.virgin.com/img/virgin-logo-square.svg"
+        },
+        {
+            "title": "Virgin Media",
+            "hex": "ED1A37",
+            "source": "https://en.wikipedia.org/wiki/Virgin_Media#/media/File:Virgin_Media.svg"
         },
         {
             "title": "VirtualBox",
@@ -12354,6 +12389,12 @@
             "title": "Zerply",
             "hex": "7BBB6E",
             "source": "https://zerply.com/about/resources"
+        },
+        {
+            "title": "Zettlr",
+            "hex": "1CB27E",
+            "source": "https://www.zettlr.com/",
+            "guidelines": "https://www.zettlr.com/press"
         },
         {
             "title": "Zhihu",
