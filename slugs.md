@@ -324,6 +324,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bulma` | `bulma` |
 | `bunq` | `bunq` |
 | `Burger King` | `burgerking` |
+| `Burton` | `burton` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
 | `Byju's` | `byjus` |
@@ -473,6 +474,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Creative Commons` | `creativecommons` |
 | `Credly` | `credly` |
 | `Crehana` | `crehana` |
+| `Critical Role` | `criticalrole` |
 | `Crowdin` | `crowdin` |
 | `Crowdsource` | `crowdsource` |
 | `Crunchbase` | `crunchbase` |
@@ -607,6 +609,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Elastic Stack` | `elasticstack` |
 | `Elasticsearch` | `elasticsearch` |
 | `Electron` | `electron` |
+| `electron-builder` | `electronbuilder` |
 | `Element` | `element` |
 | `elementary` | `elementary` |
 | `Elementor` | `elementor` |
@@ -654,6 +657,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `EyeEm` | `eyeem` |
 | `F-Droid` | `fdroid` |
 | `F-Secure` | `fsecure` |
+| `F1` | `f1` |
 | `Facebook` | `facebook` |
 | `Facebook Gaming` | `facebookgaming` |
 | `Facebook Live` | `facebooklive` |
@@ -965,6 +969,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Informatica` | `informatica` |
 | `Infosys` | `infosys` |
 | `Ingress` | `ingress` |
+| `Inkdrop` | `inkdrop` |
 | `Inkscape` | `inkscape` |
 | `Insomnia` | `insomnia` |
 | `Instacart` | `instacart` |
@@ -1296,6 +1301,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Motorola` | `motorola` |
 | `Mozilla` | `mozilla` |
 | `MSI` | `msi` |
+| `MSI Business` | `msibusiness` |
 | `MTA` | `mta` |
 | `MTR` | `mtr` |
 | `MUI` | `mui` |
@@ -1383,6 +1389,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OCaml` | `ocaml` |
 | `Octane Render` | `octanerender` |
 | `Octave` | `octave` |
+| `OctoPrint` | `octoprint` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
 | `Odnoklassniki` | `odnoklassniki` |
@@ -1652,6 +1659,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
 | `React` | `react` |
+| `React Hook Form` | `reacthookform` |
 | `React Query` | `reactquery` |
 | `React Router` | `reactrouter` |
 | `React Table` | `reacttable` |
@@ -2023,6 +2031,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Timescale` | `timescale` |
 | `Tinder` | `tinder` |
 | `TinyLetter` | `tinyletter` |
+| `Tistory` | `tistory` |
 | `tmux` | `tmux` |
 | `Todoist` | `todoist` |
 | `Toggl` | `toggl` |
@@ -2138,6 +2147,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vimeo` | `vimeo` |
 | `Vimeo Livestream` | `vimeolivestream` |
 | `Virgin` | `virgin` |
+| `Virgin Media` | `virginmedia` |
 | `VirtualBox` | `virtualbox` |
 | `VirusTotal` | `virustotal` |
 | `Visa` | `visa` |
@@ -2289,6 +2299,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zerodha` | `zerodha` |
 | `ZeroMQ` | `zeromq` |
 | `Zerply` | `zerply` |
+| `Zettlr` | `zettlr` |
 | `Zhihu` | `zhihu` |
 | `Zig` | `zig` |
 | `Zigbee` | `zigbee` |

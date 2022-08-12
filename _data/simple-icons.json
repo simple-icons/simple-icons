@@ -222,8 +222,9 @@
         },
         {
             "title": "AdonisJS",
-            "hex": "220052",
-            "source": "https://adonisjs.com/"
+            "hex": "5A45FF",
+            "source": "https://adonisjs.com/",
+            "guidelines": "https://www.notion.so/adonisjs/Welcome-to-the-AdonisJS-Brand-Assets-Guidelines-a042a6d0be7640c6bc78eb32e1bbaaa1"
         },
         {
             "title": "Adyen",
@@ -1176,6 +1177,11 @@
             "source": "https://github.com/postcss/autoprefixer/blob/1341747bc8142a147342f55eea5ed4286a3ca318/logo.svg"
         },
         {
+            "title": "avajs",
+            "hex": "4B4B77",
+            "source": "https://github.com/avajs/ava/blob/6f8e30c94626238a5b26deadac319089fa43d333/media/logo.svg"
+        },
+        {
             "title": "Avast",
             "hex": "FF7800",
             "source": "https://www.avast.com/",
@@ -1541,6 +1547,11 @@
             "title": "Bookmeter",
             "hex": "64BC4B",
             "source": "https://bookmeter.com/"
+        },
+        {
+            "title": "BookMyShow",
+            "hex": "C4242B",
+            "source": "https://in.bookmyshow.com/"
         },
         {
             "title": "BookStack",
@@ -2470,6 +2481,11 @@
             "source": "https://www.crehana.com/"
         },
         {
+            "title": "Critical Role",
+            "hex": "000000",
+            "source": "https://critrole.com/"
+        },
+        {
             "title": "Crowdin",
             "hex": "2E3340",
             "source": "https://support.crowdin.com/using-logo/"
@@ -3185,6 +3201,11 @@
             "source": "https://www.electronjs.org/"
         },
         {
+            "title": "electron-builder",
+            "hex": "FFFFFF",
+            "source": "https://www.electron.build/"
+        },
+        {
             "title": "Element",
             "hex": "0DBD8B",
             "source": "https://element.io/"
@@ -3429,6 +3450,16 @@
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
+        },
+        {
+            "title": "F1",
+            "hex": "E10600",
+            "source": "https://www.formula1.com/"
+        },
+        {
+            "title": "F5",
+            "hex": "E4002B",
+            "source": "https://www.f5.com/company/news/press-kit"
         },
         {
             "title": "Facebook",
@@ -5116,6 +5147,11 @@
             "source": "https://ingress.com/assets/fonts/ingress_icons.woff"
         },
         {
+            "title": "Inkdrop",
+            "hex": "7A78D7",
+            "source": "https://site-cdn.inkdrop.app/site/icons/inkdrop-icon.svg"
+        },
+        {
             "title": "Inkscape",
             "hex": "000000",
             "source": "https://inkscape.org/gallery/=inkscape-branding/inkscape-brand-assets/",
@@ -5649,6 +5685,11 @@
             "title": "KeyCDN",
             "hex": "047AED",
             "source": "https://www.keycdn.com/logos"
+        },
+        {
+            "title": "Keystone",
+            "hex": "166BFF",
+            "source": "https://keystonejs.com/"
         },
         {
             "title": "KFC",
@@ -6878,6 +6919,11 @@
             "source": "https://www.monkey-tie.com"
         },
         {
+            "title": "MonoGames",
+            "hex": "E73C00",
+            "source": "https://www.monogame.net"
+        },
+        {
             "title": "Monoprix",
             "hex": "FB1911",
             "source": "https://www.monoprix.fr/"
@@ -6927,6 +6973,11 @@
             },
             "hex": "FF0000",
             "source": "https://www.msi.com/page/brochure"
+        },
+        {
+            "title": "MSI Business",
+            "hex": "9A8555",
+            "source": "https://www.msi.com/Business-Productivity"
         },
         {
             "title": "MTA",
@@ -7435,6 +7486,11 @@
             "title": "Octave",
             "hex": "0790C0",
             "source": "https://www.gnu.org/software/octave/"
+        },
+        {
+            "title": "OctoPrint",
+            "hex": "13C100",
+            "source": "https://github.com/OctoPrint/OctoPrint/blob/53b9b6185781c07e8c4744a6e28462e96448f249/src/octoprint/static/img/mask.svg"
         },
         {
             "title": "Octopus Deploy",
@@ -8899,6 +8955,11 @@
                     }
                 ]
             }
+        },
+        {
+            "title": "React Hook Form",
+            "hex": "EC5990",
+            "source": "https://github.com/react-hook-form/documentation/blob/d049ffe923336ce7a5bf58990c54c07f39ab2429/src/images/Logo.svg"
         },
         {
             "title": "React Query",
@@ -10942,6 +11003,16 @@
             "source": "https://tinyletter.com/site/press/"
         },
         {
+            "title": "Tistory",
+            "hex": "000000",
+            "source": "https://tistory.com/",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "티스토리"
+                }
+            }
+        },
+        {
             "title": "tmux",
             "hex": "1BB91F",
             "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
@@ -11012,6 +11083,11 @@
             "title": "Traefik Mesh",
             "hex": "9D0FB0",
             "source": "https://github.com/traefik/mesh/blob/ef03c40b78c08931d47fdad0be10d1986f4e21bc/docs/content/assets/img/traefik-mesh-logo.svg"
+        },
+        {
+            "title": "Traefik Proxy",
+            "hex": "24A1C1",
+            "source": "https://traefik.io/traefik/"
         },
         {
             "title": "TrainerRoad",
@@ -11540,6 +11616,11 @@
             },
             "hex": "E10A0A",
             "source": "https://www.virgin.com/img/virgin-logo-square.svg"
+        },
+        {
+            "title": "Virgin Media",
+            "hex": "ED1A37",
+            "source": "https://en.wikipedia.org/wiki/Virgin_Media#/media/File:Virgin_Media.svg"
         },
         {
             "title": "VirtualBox",
@@ -12344,6 +12425,12 @@
             "title": "Zerply",
             "hex": "7BBB6E",
             "source": "https://zerply.com/about/resources"
+        },
+        {
+            "title": "Zettlr",
+            "hex": "1CB27E",
+            "source": "https://www.zettlr.com/",
+            "guidelines": "https://www.zettlr.com/press"
         },
         {
             "title": "Zhihu",
