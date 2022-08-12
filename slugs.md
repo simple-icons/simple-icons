@@ -474,6 +474,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Creative Commons` | `creativecommons` |
 | `Credly` | `credly` |
 | `Crehana` | `crehana` |
+| `Critical Role` | `criticalrole` |
 | `Crowdin` | `crowdin` |
 | `Crowdsource` | `crowdsource` |
 | `Crunchbase` | `crunchbase` |
@@ -968,6 +969,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Informatica` | `informatica` |
 | `Infosys` | `infosys` |
 | `Ingress` | `ingress` |
+| `Inkdrop` | `inkdrop` |
 | `Inkscape` | `inkscape` |
 | `Insomnia` | `insomnia` |
 | `Instacart` | `instacart` |
@@ -1299,6 +1301,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Motorola` | `motorola` |
 | `Mozilla` | `mozilla` |
 | `MSI` | `msi` |
+| `MSI Business` | `msibusiness` |
 | `MTA` | `mta` |
 | `MTR` | `mtr` |
 | `MUI` | `mui` |
@@ -1386,6 +1389,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OCaml` | `ocaml` |
 | `Octane Render` | `octanerender` |
 | `Octave` | `octave` |
+| `OctoPrint` | `octoprint` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
 | `Odnoklassniki` | `odnoklassniki` |
@@ -2027,6 +2031,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Timescale` | `timescale` |
 | `Tinder` | `tinder` |
 | `TinyLetter` | `tinyletter` |
+| `Tistory` | `tistory` |
 | `tmux` | `tmux` |
 | `Todoist` | `todoist` |
 | `Toggl` | `toggl` |
@@ -2142,6 +2147,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vimeo` | `vimeo` |
 | `Vimeo Livestream` | `vimeolivestream` |
 | `Virgin` | `virgin` |
+| `Virgin Media` | `virginmedia` |
 | `VirtualBox` | `virtualbox` |
 | `VirusTotal` | `virustotal` |
 | `Visa` | `visa` |
@@ -2293,6 +2299,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zerodha` | `zerodha` |
 | `ZeroMQ` | `zeromq` |
 | `Zerply` | `zerply` |
+| `Zettlr` | `zettlr` |
 | `Zhihu` | `zhihu` |
 | `Zig` | `zig` |
 | `Zigbee` | `zigbee` |
