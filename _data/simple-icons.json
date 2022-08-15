@@ -222,8 +222,9 @@
         },
         {
             "title": "AdonisJS",
-            "hex": "220052",
-            "source": "https://adonisjs.com/"
+            "hex": "5A45FF",
+            "source": "https://adonisjs.com/",
+            "guidelines": "https://www.notion.so/adonisjs/Welcome-to-the-AdonisJS-Brand-Assets-Guidelines-a042a6d0be7640c6bc78eb32e1bbaaa1"
         },
         {
             "title": "Adyen",
@@ -1176,6 +1177,11 @@
             "source": "https://github.com/postcss/autoprefixer/blob/1341747bc8142a147342f55eea5ed4286a3ca318/logo.svg"
         },
         {
+            "title": "avajs",
+            "hex": "4B4B77",
+            "source": "https://github.com/avajs/ava/blob/6f8e30c94626238a5b26deadac319089fa43d333/media/logo.svg"
+        },
+        {
             "title": "Avast",
             "hex": "FF7800",
             "source": "https://www.avast.com/",
@@ -1533,6 +1539,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
         },
         {
+            "title": "Bookalope",
+            "hex": "DC2829",
+            "source": "https://bookalope.net/"
+        },
+        {
             "title": "BookBub",
             "hex": "F44336",
             "source": "https://insights.bookbub.com/bookbub-follow-bookmark-buttons-for-authors-websites/"
@@ -1541,6 +1552,11 @@
             "title": "Bookmeter",
             "hex": "64BC4B",
             "source": "https://bookmeter.com/"
+        },
+        {
+            "title": "BookMyShow",
+            "hex": "C4242B",
+            "source": "https://in.bookmyshow.com/"
         },
         {
             "title": "BookStack",
@@ -3444,6 +3460,11 @@
             "title": "F1",
             "hex": "E10600",
             "source": "https://www.formula1.com/"
+        },
+        {
+            "title": "F5",
+            "hex": "E4002B",
+            "source": "https://www.f5.com/company/news/press-kit"
         },
         {
             "title": "Facebook",
@@ -5671,6 +5692,11 @@
             "source": "https://www.keycdn.com/logos"
         },
         {
+            "title": "Keystone",
+            "hex": "166BFF",
+            "source": "https://keystonejs.com/"
+        },
+        {
             "title": "KFC",
             "hex": "F40027",
             "source": "https://global.kfc.com/asset-library/",
@@ -6181,6 +6207,11 @@
             "hex": "A6A9AA",
             "source": "https://litecoin-foundation.org/litecoin-branding-guidelines/",
             "guidelines": "https://litecoin-foundation.org/litecoin-branding-guidelines/"
+        },
+        {
+            "title": "LITIENGINE",
+            "hex": "00A5BC",
+            "source": "https://litiengine.com/"
         },
         {
             "title": "LiveChat",
@@ -6891,6 +6922,11 @@
             "title": "monkey tie",
             "hex": "1A52C2",
             "source": "https://www.monkey-tie.com"
+        },
+        {
+            "title": "MonoGames",
+            "hex": "E73C00",
+            "source": "https://www.monogame.net"
         },
         {
             "title": "Monoprix",
@@ -9133,6 +9169,16 @@
             "source": "https://www.reverbnation.com"
         },
         {
+            "title": "Revolt.chat",
+            "hex": "FF4655",
+            "source": "https://app.revolt.chat/assets/badges/revolt_r.svg",
+            "aliases": {
+                "aka": [
+                    "revolt"
+                ]
+            }
+        },
+        {
             "title": "Revolut",
             "hex": "0075EB",
             "source": "https://www.revolut.com/"
@@ -10632,6 +10678,11 @@
             "source": "https://www.tableau.com/about/media-download-center"
         },
         {
+            "title": "Taco Bell",
+            "hex": "38096C",
+            "source": "https://www.tacobell.com"
+        },
+        {
             "title": "tado°",
             "hex": "FFA900",
             "source": "https://www.tado.com/gb-en/press-assets"
@@ -11052,6 +11103,11 @@
             "title": "Traefik Mesh",
             "hex": "9D0FB0",
             "source": "https://github.com/traefik/mesh/blob/ef03c40b78c08931d47fdad0be10d1986f4e21bc/docs/content/assets/img/traefik-mesh-logo.svg"
+        },
+        {
+            "title": "Traefik Proxy",
+            "hex": "24A1C1",
+            "source": "https://traefik.io/traefik/"
         },
         {
             "title": "TrainerRoad",

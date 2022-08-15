@@ -224,6 +224,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AutoHotkey` | `autohotkey` |
 | `Automattic` | `automattic` |
 | `Autoprefixer` | `autoprefixer` |
+| `avajs` | `avajs` |
 | `Avast` | `avast` |
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
@@ -293,8 +294,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BMW` | `bmw` |
 | `Boehringer Ingelheim` | `boehringeringelheim` |
 | `Boeing` | `boeing` |
+| `Bookalope` | `bookalope` |
 | `BookBub` | `bookbub` |
 | `Bookmeter` | `bookmeter` |
+| `BookMyShow` | `bookmyshow` |
 | `BookStack` | `bookstack` |
 | `Boost` | `boost` |
 | `Boots` | `boots` |
@@ -658,6 +661,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `F-Droid` | `fdroid` |
 | `F-Secure` | `fsecure` |
 | `F1` | `f1` |
+| `F5` | `f5` |
 | `Facebook` | `facebook` |
 | `Facebook Gaming` | `facebookgaming` |
 | `Facebook Live` | `facebooklive` |
@@ -1066,6 +1070,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Keras` | `keras` |
 | `Keybase` | `keybase` |
 | `KeyCDN` | `keycdn` |
+| `Keystone` | `keystone` |
 | `KFC` | `kfc` |
 | `Khan Academy` | `khanacademy` |
 | `Khronos Group` | `khronosgroup` |
@@ -1158,6 +1163,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Liquibase` | `liquibase` |
 | `Lit` | `lit` |
 | `Litecoin` | `litecoin` |
+| `LITIENGINE` | `litiengine` |
 | `LiveChat` | `livechat` |
 | `LiveJournal` | `livejournal` |
 | `Livewire` | `livewire` |
@@ -1292,6 +1298,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MoneyGram` | `moneygram` |
 | `MongoDB` | `mongodb` |
 | `monkey tie` | `monkeytie` |
+| `MonoGames` | `monogames` |
 | `Monoprix` | `monoprix` |
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
@@ -1696,6 +1703,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RetroPie` | `retropie` |
 | `reveal.js` | `revealdotjs` |
 | `ReverbNation` | `reverbnation` |
+| `Revolt.chat` | `revoltdotchat` |
 | `Revolut` | `revolut` |
 | `Revue` | `revue` |
 | `REWE` | `rewe` |
@@ -1967,6 +1975,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Synology` | `synology` |
 | `T-Mobile` | `tmobile` |
 | `Tableau` | `tableau` |
+| `Taco Bell` | `tacobell` |
 | `tado°` | `tado` |
 | `Tails` | `tails` |
 | `Tailwind CSS` | `tailwindcss` |
@@ -2046,6 +2055,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TP-Link` | `tplink` |
 | `tqdm` | `tqdm` |
 | `Traefik Mesh` | `traefikmesh` |
+| `Traefik Proxy` | `traefikproxy` |
 | `TrainerRoad` | `trainerroad` |
 | `Trakt` | `trakt` |
 | `Transport for Ireland` | `transportforireland` |
