@@ -95,37 +95,47 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 
 /**
  * Get contents of _data/simple-icons.json.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
  */
-export const getIconsDataString = () => {
-  const __dirname = getDirnameFromImportMeta(import.meta.url);
-  const rootDir = path.resolve(__dirname, '..');
+export const getIconsDataString = (rootDir) => {
+  if (rootDir === undefined) {
+    rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
+  }
   const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
   return fs.readFile(iconDataPath, 'utf8');
 };
 
 /**
- * Get icon data as object from _data/simple-icons.json.
+ * Get icons data as object from _data/simple-icons.json.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
  */
-export const getIconsData = async () => {
-  const fileContents = await getIconsDataString();
+export const getIconsData = async (rootDir) => {
+  const fileContents = await getIconsDataString(rootDir);
   return JSON.parse(fileContents).icons;
 };
 
 /**
- * Get the directory name from import.meta.url.
+ * Get the directory name where this file is located from `import.meta.url`,
+ * equivalent to the `__dirname` global variable in CommonJS.
  * @param {String} importMetaUrl import.meta.url
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
 
 /**
- * Get information about third party extensions.
+ * Replace Windows newline characters by Unix ones.
+ * @param {String} text The text to replace
  */
-export const getThirdPartyExtensions = async () => {
-  const __dirname = getDirnameFromImportMeta(import.meta.url);
-  const readmePath = path.resolve(__dirname, '..', 'README.md');
-  const readmeContent = await fs.readFile(readmePath, 'utf8');
-  return readmeContent
+export const normalizeNewlines = (text) => {
+  return text.replace(/\r\n/g, '\n');
+};
+
+/**
+ * Get information about third party extensions.
+ * @param {String} readmePath Path to the README file
+ */
+export const getThirdPartyExtensions = async (readmePath) =>
+  normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Extensions\n\n')[1]
     .split('\n\n')[0]
     .split('\n')
@@ -143,4 +153,3 @@ export const getThirdPartyExtensions = async () => {
         },
       };
     });
-};
