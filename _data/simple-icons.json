@@ -1539,6 +1539,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
         },
         {
+            "title": "Bookalope",
+            "hex": "DC2829",
+            "source": "https://bookalope.net/"
+        },
+        {
             "title": "BookBub",
             "hex": "F44336",
             "source": "https://insights.bookbub.com/bookbub-follow-bookmark-buttons-for-authors-websites/"
@@ -2564,6 +2569,11 @@
             "title": "Cytoscape.js",
             "hex": "F7DF1E",
             "source": "https://github.com/cytoscape/cytoscape.js/blob/97c27700feefe2f7b79fca248763049e9a0b38c6/documentation/img/cytoscape-logo.svg"
+        },
+        {
+            "title": "D",
+            "hex": "B03931",
+            "source": "https://github.com/dlang/dlang.org/blob/6d0e2e5f6a8249031cfd010e389b99ff014cd320/images/dlogo.svg"
         },
         {
             "title": "D-EDGE",
@@ -6473,8 +6483,8 @@
         },
         {
             "title": "Mastodon",
-            "hex": "3088D4",
-            "source": "https://joinmastodon.org/"
+            "hex": "6364FF",
+            "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg"
         },
         {
             "title": "Material Design",
@@ -9169,6 +9179,16 @@
             "source": "https://www.reverbnation.com"
         },
         {
+            "title": "Revolt.chat",
+            "hex": "FF4655",
+            "source": "https://app.revolt.chat/assets/badges/revolt_r.svg",
+            "aliases": {
+                "aka": [
+                    "revolt"
+                ]
+            }
+        },
+        {
             "title": "Revolut",
             "hex": "0075EB",
             "source": "https://www.revolut.com/"
@@ -10666,6 +10686,11 @@
             "title": "Tableau",
             "hex": "E97627",
             "source": "https://www.tableau.com/about/media-download-center"
+        },
+        {
+            "title": "Taco Bell",
+            "hex": "38096C",
+            "source": "https://www.tacobell.com"
         },
         {
             "title": "tado°",
