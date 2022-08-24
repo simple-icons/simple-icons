@@ -7804,10 +7804,12 @@
                 "aka": [
                     "Open Science Framework"
                 ],
-                "dup": {
-                    "title": "Center for Open Science",
-                    "source": "https://www.cos.io/initiatives/top-guidelines"
-                }
+                "dup": [
+                    {
+                        "title": "Center for Open Science",
+                        "source": "https://www.cos.io/initiatives/top-guidelines"
+                    }
+                ]
             }
         },
         {
