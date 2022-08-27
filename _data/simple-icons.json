@@ -1,6 +1,16 @@
 {
     "icons": [
         {
+            "title": ".ENV",
+            "hex": "ECD53F",
+            "source": "https://github.com/motdotla/dotenv",
+            "aliases": {
+                "aka": [
+                    "Dotenv"
+                ]
+            }
+        },
+        {
             "title": ".NET",
             "hex": "512BD4",
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
@@ -1214,6 +1224,11 @@
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
+            "title": "Axios",
+            "hex": "5A29E4",
+            "source": "https://github.com/axios/axios-docs/blob/ba35d67160f94419c1b0292831cd1a4b378adb42/assets/logo.svg"
         },
         {
             "title": "Azure Artifacts",
@@ -2566,6 +2581,11 @@
             "source": "https://github.com/cytoscape/cytoscape.js/blob/97c27700feefe2f7b79fca248763049e9a0b38c6/documentation/img/cytoscape-logo.svg"
         },
         {
+            "title": "D",
+            "hex": "B03931",
+            "source": "https://github.com/dlang/dlang.org/blob/6d0e2e5f6a8249031cfd010e389b99ff014cd320/images/dlogo.svg"
+        },
+        {
             "title": "D-EDGE",
             "hex": "432975",
             "source": "https://github.com/d-edge/JoinUs/blob/main/d-edge.svg"
@@ -3042,6 +3062,11 @@
             "title": "DTube",
             "hex": "F01A30",
             "source": "https://about.d.tube/mediakit.html"
+        },
+        {
+            "title": "Ducati",
+            "hex": "CC0000",
+            "source": "https://brandlogos.net/ducati-logo-vector-svg-92931.html"
         },
         {
             "title": "DuckDB",
@@ -4685,6 +4710,16 @@
             "source": "https://branding.cncf.io/projects/harbor/"
         },
         {
+            "title": "HarmonyOS",
+            "hex": "000000",
+            "source": "https://www.harmonyos.com/",
+            "aliases": {
+                "aka": [
+                    "HMOS"
+                ]
+            }
+        },
+        {
             "title": "Hashnode",
             "hex": "2962FF",
             "source": "https://hashnode.com/media"
@@ -6012,6 +6047,11 @@
             "source": "https://leetcode.com/store"
         },
         {
+            "title": "Legacy Games",
+            "hex": "144B9E",
+            "source": "https://legacygames.com"
+        },
+        {
             "title": "Lemmy",
             "hex": "FFFFFF",
             "source": "https://join-lemmy.org"
@@ -6473,8 +6513,8 @@
         },
         {
             "title": "Mastodon",
-            "hex": "3088D4",
-            "source": "https://joinmastodon.org/"
+            "hex": "6364FF",
+            "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg"
         },
         {
             "title": "Material Design",
@@ -10678,6 +10718,11 @@
             "source": "https://www.tableau.com/about/media-download-center"
         },
         {
+            "title": "TableCheck",
+            "hex": "7935D2",
+            "source": "https://www.tablecheck.com/join"
+        },
+        {
             "title": "Taco Bell",
             "hex": "38096C",
             "source": "https://www.tacobell.com"
@@ -11780,6 +11825,11 @@
                 "type": "custom",
                 "url": "https://www.w3.org/Consortium/Legal/2002/trademark-license-20021231"
             }
+        },
+        {
+            "title": "Wacom",
+            "hex": "000000",
+            "source": "https://support.wacom.com/hc/en-us"
         },
         {
             "title": "Wagtail",
