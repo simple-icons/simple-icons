@@ -1,6 +1,16 @@
 {
     "icons": [
         {
+            "title": ".ENV",
+            "hex": "ECD53F",
+            "source": "https://github.com/motdotla/dotenv",
+            "aliases": {
+                "aka": [
+                    "Dotenv"
+                ]
+            }
+        },
+        {
             "title": ".NET",
             "hex": "512BD4",
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
