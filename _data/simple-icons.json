@@ -1,6 +1,16 @@
 {
     "icons": [
         {
+            "title": ".ENV",
+            "hex": "ECD53F",
+            "source": "https://github.com/motdotla/dotenv",
+            "aliases": {
+                "aka": [
+                    "Dotenv"
+                ]
+            }
+        },
+        {
             "title": ".NET",
             "hex": "512BD4",
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
@@ -1214,6 +1224,11 @@
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
+            "title": "Axios",
+            "hex": "5A29E4",
+            "source": "https://github.com/axios/axios-docs/blob/ba35d67160f94419c1b0292831cd1a4b378adb42/assets/logo.svg"
         },
         {
             "title": "Azure Artifacts",
@@ -3049,6 +3064,11 @@
             "source": "https://about.d.tube/mediakit.html"
         },
         {
+            "title": "Ducati",
+            "hex": "CC0000",
+            "source": "https://brandlogos.net/ducati-logo-vector-svg-92931.html"
+        },
+        {
             "title": "DuckDB",
             "hex": "FFF000",
             "source": "https://duckdb.org/"
@@ -3913,6 +3933,12 @@
             "source": "https://www.frontendmentor.io"
         },
         {
+            "title": "Fuga Cloud",
+            "hex": "242F4B",
+            "source": "https://fuga.cloud",
+            "guidelines": "https://fuga.cloud/media/"
+        },
+        {
             "title": "Fujifilm",
             "hex": "ED1A3A",
             "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujifilm_logo.svg"
@@ -4688,6 +4714,16 @@
             "title": "Harbor",
             "hex": "60B932",
             "source": "https://branding.cncf.io/projects/harbor/"
+        },
+        {
+            "title": "HarmonyOS",
+            "hex": "000000",
+            "source": "https://www.harmonyos.com/",
+            "aliases": {
+                "aka": [
+                    "HMOS"
+                ]
+            }
         },
         {
             "title": "Hashnode",
@@ -6015,6 +6051,11 @@
             "title": "LeetCode",
             "hex": "FFA116",
             "source": "https://leetcode.com/store"
+        },
+        {
+            "title": "Legacy Games",
+            "hex": "144B9E",
+            "source": "https://legacygames.com"
         },
         {
             "title": "Lemmy",
@@ -10683,6 +10724,11 @@
             "source": "https://www.tableau.com/about/media-download-center"
         },
         {
+            "title": "TableCheck",
+            "hex": "7935D2",
+            "source": "https://www.tablecheck.com/join"
+        },
+        {
             "title": "Taco Bell",
             "hex": "38096C",
             "source": "https://www.tacobell.com"
@@ -11780,6 +11826,11 @@
                 "type": "custom",
                 "url": "https://www.w3.org/Consortium/Legal/2002/trademark-license-20021231"
             }
+        },
+        {
+            "title": "Wacom",
+            "hex": "000000",
+            "source": "https://support.wacom.com/hc/en-us"
         },
         {
             "title": "Wagtail",
