@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+impjort fs from 'node:fs';
 import path from 'node:path';
 import {
   getDirnameFromImportMeta,
