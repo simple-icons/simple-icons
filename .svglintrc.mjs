@@ -17,7 +17,7 @@ const htmlNamedEntitiesFile = path.join(
   'index.json',
 );
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
-
+//hello
 const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
 const htmlNamedEntities = JSON.parse(
   fs.readFileSync(htmlNamedEntitiesFile, 'utf8'),
