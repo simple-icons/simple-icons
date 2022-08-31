@@ -7,6 +7,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 
 | Brand name | Brand slug |
 | :--- | :--- |
+| `.ENV` | `dotenv` |
 | `.NET` | `dotnet` |
 | `/e/` | `e` |
 | `1001Tracklists` | `1001tracklists` |
@@ -231,6 +232,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AWS Amplify` | `awsamplify` |
 | `AWS Fargate` | `awsfargate` |
 | `AWS Lambda` | `awslambda` |
+| `Axios` | `axios` |
 | `Azure Artifacts` | `azureartifacts` |
 | `Azure Data Explorer` | `azuredataexplorer` |
 | `Azure DevOps` | `azuredevops` |
@@ -582,6 +584,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Drupal` | `drupal` |
 | `DS Automobiles` | `dsautomobiles` |
 | `DTube` | `dtube` |
+| `Ducati` | `ducati` |
 | `DuckDB` | `duckdb` |
 | `DuckDuckGo` | `duckduckgo` |
 | `Dungeons & Dragons` | `dungeonsanddragons` |
@@ -886,6 +889,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
 | `Harbor` | `harbor` |
+| `HarmonyOS` | `harmonyos` |
 | `Hashnode` | `hashnode` |
 | `Haskell` | `haskell` |
 | `Hasura` | `hasura` |
@@ -1128,6 +1132,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Leaflet` | `leaflet` |
 | `Leanpub` | `leanpub` |
 | `LeetCode` | `leetcode` |
+| `Legacy Games` | `legacygames` |
 | `Lemmy` | `lemmy` |
 | `Lenovo` | `lenovo` |
 | `Lens` | `lens` |
@@ -1976,6 +1981,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Synology` | `synology` |
 | `T-Mobile` | `tmobile` |
 | `Tableau` | `tableau` |
+| `TableCheck` | `tablecheck` |
 | `Taco Bell` | `tacobell` |
 | `tado°` | `tado` |
 | `Tails` | `tails` |
@@ -2184,6 +2190,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vulkan` | `vulkan` |
 | `Vultr` | `vultr` |
 | `W3C` | `w3c` |
+| `Wacom` | `wacom` |
 | `Wagtail` | `wagtail` |
 | `WakaTime` | `wakatime` |
 | `WALKMAN` | `walkman` |
