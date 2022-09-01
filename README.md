@@ -32,7 +32,7 @@ Icons can be served from a CDN such as [JSDelivr](https://www.jsdelivr.com/packa
 <img height="32" width="32" src="https://unpkg.com/simple-icons@v7/icons/[ICON SLUG].svg" />
 ```
 
-Where `[ICON SLUG]` is replaced by the [slug](https://github.com/simple-icons/simple-icons/blob/master/slugs.md) of the icon you want to use, for example:
+Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/simpleicons.svg" />
@@ -144,4 +144,4 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
-
+[slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
