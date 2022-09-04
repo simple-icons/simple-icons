@@ -21,7 +21,7 @@ Over 2300 Free SVG icons for popular brands. See them all on one page at <a href
 
 ### General Usage
 
-Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the icon you want, and the download should start automatically.
+Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the download button of the icon you want, and the download will start automatically.
 
 ### CDN Usage
 
@@ -138,13 +138,10 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg#gh-light-mode-only" alt="Vue" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/vuedotjs-white.svg#gh-dark-mode-only" alt="Vue" align=left width=24 height=24> [Vue package](https://github.com/mainvest/vue-simple-icons) | [@noahlitvin](https://github.com/noahlitvin) |
 | <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wordpress.svg#gh-light-mode-only" alt="Wordpress" align=left width=24 height=24><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/wordpress-white.svg#gh-dark-mode-only" alt="Wordpress" align=left width=24 height=24> [WordPress plugin](https://wordpress.org/plugins/simple-icons/) | [@tjtaylo](https://github.com/tjtaylo) |
 
-
-[slug]: ./slugs.md
-
 ## Contribute
 
 [![Good first issues open](https://img.shields.io/github/issues/simple-icons/simple-icons/good%20first%20issue?label=good%20first%20issues&logo=git&logoColor=white)](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue)
 
-Information describing how to contribute can be found here:
+Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
-https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
+[slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md

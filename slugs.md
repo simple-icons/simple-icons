@@ -327,6 +327,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Buildkite` | `buildkite` |
 | `Bukalapak` | `bukalapak` |
 | `Bulma` | `bulma` |
+| `Bun` | `bun` |
 | `bunq` | `bunq` |
 | `Burger King` | `burgerking` |
 | `Burton` | `burton` |
@@ -749,6 +750,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Freelancer` | `freelancer` |
 | `FreeNAS` | `freenas` |
 | `Frontend Mentor` | `frontendmentor` |
+| `Fuga Cloud` | `fugacloud` |
 | `Fujifilm` | `fujifilm` |
 | `Fujitsu` | `fujitsu` |
 | `Funimation` | `funimation` |
@@ -1354,6 +1356,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `New Relic` | `newrelic` |
 | `New York Times` | `newyorktimes` |
 | `Next.js` | `nextdotjs` |
+| `NextBillion.ai` | `nextbilliondotai` |
 | `Nextcloud` | `nextcloud` |
 | `Nextdoor` | `nextdoor` |
 | `NFC` | `nfc` |
@@ -1434,6 +1437,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Openlayers` | `openlayers` |
 | `OpenMined` | `openmined` |
 | `OpenNebula` | `opennebula` |
+| `OpenProject` | `openproject` |
 | `OpenSea` | `opensea` |
 | `OpenSearch` | `opensearch` |
 | `OpenSSL` | `openssl` |
@@ -1637,6 +1641,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qiita` | `qiita` |
 | `Qiskit` | `qiskit` |
 | `QIWI` | `qiwi` |
+| `QMK` | `qmk` |
 | `Qt` | `qt` |
 | `Qualcomm` | `qualcomm` |
 | `Qualtrics` | `qualtrics` |
@@ -2137,6 +2142,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
 | `V` | `v` |
+| `V2EX` | `v2ex` |
 | `V8` | `v8` |
 | `Vaadin` | `vaadin` |
 | `Vagrant` | `vagrant` |
@@ -2199,6 +2205,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `wasmCloud` | `wasmcloud` |
+| `Wasmer` | `wasmer` |
 | `Wattpad` | `wattpad` |
 | `Waze` | `waze` |
 | `Wear OS` | `wearos` |
@@ -2239,6 +2246,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Winamp` | `winamp` |
 | `Windi CSS` | `windicss` |
 | `Windows` | `windows` |
+| `Windows 11` | `windows11` |
 | `Windows 95` | `windows95` |
 | `Windows Terminal` | `windowsterminal` |
 | `Windows XP` | `windowsxp` |
