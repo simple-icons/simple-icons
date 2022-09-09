@@ -1335,6 +1335,16 @@
             "source": "https://basecamp.com/about/press"
         },
         {
+            "title": "Bastyon",
+            "hex": "00A4FF",
+            "source": "https://github.com/pocketnetteam/pocketnet.gui/blob/978201dca0d63bc87c4c66513a67f085f2f51d83/img/logo.svg",
+            "aliases": {
+                "aka": [
+                    "pocketnet"
+                ]
+            }
+        },
+        {
             "title": "Bata",
             "hex": "DD282E",
             "source": "https://www.bata.com/"
@@ -2625,6 +2635,11 @@
             "hex": "E6E6E6",
             "source": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype_Black_DTP",
             "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
+        },
+        {
+            "title": "Dapr",
+            "hex": "0D2192",
+            "source": "https://raw.githubusercontent.com/dapr/dapr/18575823c74318c811d6cd6f57ffac76d5debe93/img/dapr_logo.svg"
         },
         {
             "title": "Dark Reader",
@@ -9700,6 +9715,11 @@
             "source": "https://www.seat.es/"
         },
         {
+            "title": "SecurityScorecard",
+            "hex": "7033FD",
+            "source": "https://securityscorecard.com/"
+        },
+        {
             "title": "Sefaria",
             "hex": "212E50",
             "source": "https://github.com/Sefaria/Sefaria-Project/blob/c141b2b3491660ed563df9f4b1a2e4c071e88688/static/img/logo/samekh.svg"
@@ -12350,6 +12370,11 @@
             "title": "XMPP",
             "hex": "002B5C",
             "source": "https://github.com/xsf/xmpp.org/tree/00c49187e353c1a156c95562dafaf129e688fbad/content/icons"
+        },
+        {
+            "title": "XO",
+            "hex": "5ED9C7",
+            "source": "https://github.com/xojs/xo"
         },
         {
             "title": "XRP",
