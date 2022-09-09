@@ -5085,18 +5085,6 @@
             "source": "https://icons8.com/"
         },
         {
-            "title": "ICP",
-            "hex": "3B00B9",
-            "source": "https://cryptologos.cc/logos/internet-computer-icp-logo.svg?v=023",
-            "guidelines": "https://dfinity.frontify.com/d/XzkdhhDptijE/dfinity-brand-guide#/dfinity/logo",
-            "aliases": {
-                "aka": [
-                    "Internet Computer Protocol",
-                    "DFINITY Foundation ICP"
-                ]
-            }
-        },
-        {
             "title": "ICQ",
             "hex": "24FF00",
             "source": "https://commons.wikimedia.org/wiki/File:ICQNewlogo.svg"
@@ -5273,6 +5261,18 @@
             "title": "Internet Archive",
             "hex": "666666",
             "source": "https://archive.org/"
+        },
+        {
+            "title": "Internet Computer",
+            "hex": "3B00B9",
+            "source": "https://cryptologos.cc/logos/internet-computer-icp-logo.svg?v=023",
+            "guidelines": "https://dfinity.frontify.com/d/XzkdhhDptijE/dfinity-brand-guide#/dfinity/logo",
+            "aliases": {
+                "aka": [
+                    "ICP",
+                    "Internet Computer Protocol"
+                ]
+            }
         },
         {
             "title": "Internet Explorer",
