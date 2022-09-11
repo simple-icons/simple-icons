@@ -253,6 +253,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Barclays` | `barclays` |
 | `Baremetrics` | `baremetrics` |
 | `Basecamp` | `basecamp` |
+| `Bastyon` | `bastyon` |
 | `Bata` | `bata` |
 | `Bath ASU` | `bathasu` |
 | `Battle.net` | `battledotnet` |
@@ -504,6 +505,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DAF` | `daf` |
 | `Dailymotion` | `dailymotion` |
 | `Daimler` | `daimler` |
+| `Dapr` | `dapr` |
 | `Dark Reader` | `darkreader` |
 | `Dart` | `dart` |
 | `Darty` | `darty` |
@@ -1559,6 +1561,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pnpm` | `pnpm` |
 | `Pocket` | `pocket` |
 | `Pocket Casts` | `pocketcasts` |
+| `PocketBase` | `pocketbase` |
 | `Podcast Addict` | `podcastaddict` |
 | `Podman` | `podman` |
 | `Poetry` | `poetry` |
@@ -1793,6 +1796,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Scrutinizer CI` | `scrutinizerci` |
 | `Seagate` | `seagate` |
 | `SEAT` | `seat` |
+| `SecurityScorecard` | `securityscorecard` |
 | `Sefaria` | `sefaria` |
 | `Sega` | `sega` |
 | `Selenium` | `selenium` |
@@ -1918,6 +1922,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stack Exchange` | `stackexchange` |
 | `Stack Overflow` | `stackoverflow` |
 | `Stackbit` | `stackbit` |
+| `StackBlitz` | `stackblitz` |
 | `StackEdit` | `stackedit` |
 | `StackPath` | `stackpath` |
 | `StackShare` | `stackshare` |
@@ -2138,6 +2143,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Uploaded` | `uploaded` |
 | `UPS` | `ups` |
 | `Upstash` | `upstash` |
+| `Uptime Kuma` | `uptimekuma` |
 | `Uptobox` | `uptobox` |
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
@@ -2286,6 +2292,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xilinx` | `xilinx` |
 | `Xing` | `xing` |
 | `XMPP` | `xmpp` |
+| `XO` | `xo` |
 | `XRP` | `xrp` |
 | `XSplit` | `xsplit` |
 | `XState` | `xstate` |
