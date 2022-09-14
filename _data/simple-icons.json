@@ -293,6 +293,11 @@
             "source": "https://affinity.serif.com/en-gb/publisher/"
         },
         {
+            "title": "Agora",
+            "hex": "099DFD",
+            "source": "https://github.com/AgoraIO/Docs/blob/c77b7131e351dbbb99158228971dc4e53de336b1/static/img/agora.svg"
+        },
+        {
             "title": "AI Dungeon",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:AI_Dungeon_Logo.png"
@@ -919,6 +924,11 @@
             "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
         },
         {
+            "title": "Apple News",
+            "hex": "FD415E",
+            "source": "https://www.apple.com/apple-news/"
+        },
+        {
             "title": "Apple Pay",
             "hex": "000000",
             "source": "https://developer.apple.com/apple-pay/marketing/"
@@ -1335,6 +1345,16 @@
             "source": "https://basecamp.com/about/press"
         },
         {
+            "title": "Bastyon",
+            "hex": "00A4FF",
+            "source": "https://github.com/pocketnetteam/pocketnet.gui/blob/978201dca0d63bc87c4c66513a67f085f2f51d83/img/logo.svg",
+            "aliases": {
+                "aka": [
+                    "pocketnet"
+                ]
+            }
+        },
+        {
             "title": "Bata",
             "hex": "DD282E",
             "source": "https://www.bata.com/"
@@ -1708,6 +1728,11 @@
             "title": "Bulma",
             "hex": "00D1B2",
             "source": "https://github.com/jgthms/bulma/tree/b0ed28b0e63fdfe54ef802ad155c889241fb6ae1"
+        },
+        {
+            "title": "Bun",
+            "hex": "000000",
+            "source": "https://bun.sh"
         },
         {
             "title": "bunq",
@@ -2334,6 +2359,11 @@
             "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
+            "title": "Commodore",
+            "hex": "1E2A4E",
+            "source": "https://commodore.inc/"
+        },
+        {
             "title": "Common Workflow Language",
             "hex": "B5314C",
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -2620,6 +2650,11 @@
             "hex": "E6E6E6",
             "source": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype_Black_DTP",
             "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
+        },
+        {
+            "title": "Dapr",
+            "hex": "0D2192",
+            "source": "https://raw.githubusercontent.com/dapr/dapr/18575823c74318c811d6cd6f57ffac76d5debe93/img/dapr_logo.svg"
         },
         {
             "title": "Dark Reader",
@@ -3931,6 +3966,12 @@
             "title": "Frontend Mentor",
             "hex": "3F54A3",
             "source": "https://www.frontendmentor.io"
+        },
+        {
+            "title": "Fuga Cloud",
+            "hex": "242F4B",
+            "source": "https://fuga.cloud",
+            "guidelines": "https://fuga.cloud/media/"
         },
         {
             "title": "Fujifilm",
@@ -7233,6 +7274,11 @@
             "source": "https://www.netto-online.de/INTERSHOP/static/WFS/Plus-NettoDE-Site/-/-/de_DE/css/images/netto-logo.svg"
         },
         {
+            "title": "Neutralinojs",
+            "hex": "F89901",
+            "source": "https://github.com/neutralinojs/neutralinojs"
+        },
+        {
             "title": "New Balance",
             "hex": "CF0A2C",
             "source": "https://www.newbalance.com"
@@ -7272,6 +7318,11 @@
             "title": "Next.js",
             "hex": "000000",
             "source": "https://nextjs.org/"
+        },
+        {
+            "title": "NextBillion.ai",
+            "hex": "8D5A9E",
+            "source": "https://nextbillion.ai"
         },
         {
             "title": "Nextcloud",
@@ -7699,6 +7750,11 @@
             "title": "OpenNebula",
             "hex": "0097C2",
             "source": "https://opennebula.io/docs/"
+        },
+        {
+            "title": "OpenProject",
+            "hex": "0770B8",
+            "source": "https://www.openproject.org/press/"
         },
         {
             "title": "OpenSea",
@@ -8361,6 +8417,11 @@
             "source": "https://blog.pocketcasts.com/press/"
         },
         {
+            "title": "PocketBase",
+            "hex": "B8DBE4",
+            "source": "https://github.com/pocketbase/pocketbase/blob/4b64e0910b7dc527ff3de8cdacec074e40449e2e/ui/dist/images/logo.svg"
+        },
+        {
             "title": "Podcast Addict",
             "hex": "F4842D",
             "source": "https://podcastaddict.com"
@@ -8799,6 +8860,11 @@
             "title": "QIWI",
             "hex": "FF8C00",
             "source": "https://qiwi.com/"
+        },
+        {
+            "title": "QMK",
+            "hex": "333333",
+            "source": "https://github.com/qmk/qmk_firmware"
         },
         {
             "title": "Qt",
@@ -9662,6 +9728,11 @@
             "source": "https://www.seat.es/"
         },
         {
+            "title": "SecurityScorecard",
+            "hex": "7033FD",
+            "source": "https://securityscorecard.com/"
+        },
+        {
             "title": "Sefaria",
             "hex": "212E50",
             "source": "https://github.com/Sefaria/Sefaria-Project/blob/c141b2b3491660ed563df9f4b1a2e4c071e88688/static/img/logo/samekh.svg"
@@ -9680,6 +9751,11 @@
             "title": "Sellfy",
             "hex": "21B352",
             "source": "https://sellfy.com/about/"
+        },
+        {
+            "title": "Semantic Scholar",
+            "hex": "1857B6",
+            "source": "https://www.semanticscholar.org/about"
         },
         {
             "title": "Semantic UI React",
@@ -10341,6 +10417,11 @@
             "hex": "207BEA",
             "source": "https://www.stackbit.com/branding-guidelines/",
             "guidelines": "https://www.stackbit.com/branding-guidelines/"
+        },
+        {
+            "title": "StackBlitz",
+            "hex": "1269D3",
+            "source": "https://stackblitz.com"
         },
         {
             "title": "StackEdit",
@@ -11522,6 +11603,11 @@
             "source": "https://upstash.com/"
         },
         {
+            "title": "Uptime Kuma",
+            "hex": "5CDD8B",
+            "source": "https://uptime.kuma.pet/"
+        },
+        {
             "title": "Uptobox",
             "hex": "5CE1E6",
             "source": "https://uptoboxpremium.org/"
@@ -11543,6 +11629,11 @@
             "license": {
                 "type": "MIT"
             }
+        },
+        {
+            "title": "V2EX",
+            "hex": "1F1F1F",
+            "source": "https://www.v2ex.com"
         },
         {
             "title": "V8",
@@ -11876,6 +11967,11 @@
             "guidelines": "https://github.com/wasmCloud/branding/"
         },
         {
+            "title": "Wasmer",
+            "hex": "4946DD",
+            "source": "https://github.com/wasmerio/wasmer.io/blob/0d425f5b4ace56496e75278e304f54492c46adde/public/images/icon.svg"
+        },
+        {
             "title": "Wattpad",
             "hex": "FF500A",
             "source": "https://company.wattpad.com/brandguideline",
@@ -12095,6 +12191,12 @@
             "source": "https://commons.wikimedia.org/wiki/File:Windows_10_Logo.svg"
         },
         {
+            "title": "Windows 11",
+            "hex": "0078D4",
+            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
+            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
+        },
+        {
             "title": "Windows 95",
             "hex": "008080",
             "source": "https://en.wikipedia.org/wiki/Windows_95"
@@ -12296,6 +12398,11 @@
             "title": "XMPP",
             "hex": "002B5C",
             "source": "https://github.com/xsf/xmpp.org/tree/00c49187e353c1a156c95562dafaf129e688fbad/content/icons"
+        },
+        {
+            "title": "XO",
+            "hex": "5ED9C7",
+            "source": "https://github.com/xojs/xo"
         },
         {
             "title": "XRP",
