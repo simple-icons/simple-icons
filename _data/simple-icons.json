@@ -3147,8 +3147,13 @@
         },
         {
             "title": "Dynamics 365",
-            "hex": "002050",
-            "source": "http://thepartnerchannel.com/wp-content/uploads/Dynamics365_styleguide_092816.pdf"
+            "hex": "0B53CE",
+            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
+            }
         },
         {
             "title": "Dynatrace",
