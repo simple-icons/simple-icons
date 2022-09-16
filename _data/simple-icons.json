@@ -929,6 +929,11 @@
             "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
         },
         {
+            "title": "Apple News",
+            "hex": "FD415E",
+            "source": "https://www.apple.com/apple-news/"
+        },
+        {
             "title": "Apple Pay",
             "hex": "000000",
             "source": "https://developer.apple.com/apple-pay/marketing/"
@@ -2359,6 +2364,11 @@
             "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
+            "title": "Commodore",
+            "hex": "1E2A4E",
+            "source": "https://commodore.inc/"
+        },
+        {
             "title": "Common Workflow Language",
             "hex": "B5314C",
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -3142,8 +3152,13 @@
         },
         {
             "title": "Dynamics 365",
-            "hex": "002050",
-            "source": "http://thepartnerchannel.com/wp-content/uploads/Dynamics365_styleguide_092816.pdf"
+            "hex": "0B53CE",
+            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
+            }
         },
         {
             "title": "Dynatrace",
@@ -7269,6 +7284,11 @@
             "source": "https://www.netto-online.de/INTERSHOP/static/WFS/Plus-NettoDE-Site/-/-/de_DE/css/images/netto-logo.svg"
         },
         {
+            "title": "Neutralinojs",
+            "hex": "F89901",
+            "source": "https://github.com/neutralinojs/neutralinojs"
+        },
+        {
             "title": "New Balance",
             "hex": "CF0A2C",
             "source": "https://www.newbalance.com"
@@ -9741,6 +9761,11 @@
             "title": "Sellfy",
             "hex": "21B352",
             "source": "https://sellfy.com/about/"
+        },
+        {
+            "title": "Semantic Scholar",
+            "hex": "1857B6",
+            "source": "https://www.semanticscholar.org/about"
         },
         {
             "title": "Semantic UI React",
