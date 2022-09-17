@@ -8521,17 +8521,37 @@
         {
             "title": "Power Apps",
             "hex": "742774",
-            "source": "https://powerapps.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Automate",
             "hex": "0066FF",
-            "source": "https://flow.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Microsoft Flow"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power BI",
             "hex": "F2C811",
-            "source": "https://powerbi.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Pages",
@@ -8551,7 +8571,12 @@
         {
             "title": "Power Virtual Agents",
             "hex": "0B556A",
-            "source": "https://powervirtualagents.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "POWERS",
