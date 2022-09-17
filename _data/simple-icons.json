@@ -8536,7 +8536,12 @@
         {
             "title": "Power Virtual Agents",
             "hex": "0B556A",
-            "source": "https://powervirtualagents.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "POWERS",
