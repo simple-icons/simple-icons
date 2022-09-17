@@ -8526,7 +8526,17 @@
         {
             "title": "Power Automate",
             "hex": "0066FF",
-            "source": "https://flow.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Microsoft Flow"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power BI",
