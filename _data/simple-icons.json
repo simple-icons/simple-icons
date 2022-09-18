@@ -688,8 +688,9 @@
         },
         {
             "title": "Andela",
-            "hex": "3359DF",
-            "source": "https://andela.com/press/"
+            "hex": "173B3F",
+            "source": "https://andela.com/press/",
+            "guidelines": "https://andela.com/press/"
         },
         {
             "title": "Android",
@@ -7242,9 +7243,9 @@
         },
         {
             "title": "Neo4j",
-            "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/",
-            "guidelines": "https://neo4j.com/style-guide/"
+            "hex": "4581C3",
+            "source": "https://neo4j.com/brand/#logo",
+            "guidelines": "https://neo4j.com/brand/#logo"
         },
         {
             "title": "Neovim",
@@ -9904,6 +9905,11 @@
             "title": "Serverless",
             "hex": "FD5750",
             "source": "https://serverless.com/"
+        },
+        {
+            "title": "Sessionize",
+            "hex": "1AB394",
+            "source": "https://sessionize.com/brand"
         },
         {
             "title": "SFML",
