@@ -293,6 +293,11 @@
             "source": "https://affinity.serif.com/en-gb/publisher/"
         },
         {
+            "title": "Agora",
+            "hex": "099DFD",
+            "source": "https://github.com/AgoraIO/Docs/blob/c77b7131e351dbbb99158228971dc4e53de336b1/static/img/agora.svg"
+        },
+        {
             "title": "AI Dungeon",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:AI_Dungeon_Logo.png"
@@ -411,6 +416,11 @@
             "title": "Algolia",
             "hex": "5468FF",
             "source": "https://www.algolia.com/press/?section=brand-guidelines"
+        },
+        {
+            "title": "Algorand",
+            "hex": "000000",
+            "source": "https://www.algorand.com/about/media-kit"
         },
         {
             "title": "Alibaba Cloud",
@@ -673,8 +683,9 @@
         },
         {
             "title": "Andela",
-            "hex": "3359DF",
-            "source": "https://andela.com/press/"
+            "hex": "173B3F",
+            "source": "https://andela.com/press/",
+            "guidelines": "https://andela.com/press/"
         },
         {
             "title": "Android",
@@ -917,6 +928,11 @@
             "title": "Apple Music",
             "hex": "FA243C",
             "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
+        },
+        {
+            "title": "Apple News",
+            "hex": "FD415E",
+            "source": "https://www.apple.com/apple-news/"
         },
         {
             "title": "Apple Pay",
@@ -2349,6 +2365,11 @@
             "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
+            "title": "Commodore",
+            "hex": "1E2A4E",
+            "source": "https://commodore.inc/"
+        },
+        {
             "title": "Common Workflow Language",
             "hex": "B5314C",
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -2730,6 +2751,16 @@
             "hex": "3A3A42",
             "source": "https://www.datastax.com/brand-resources",
             "guidelines": "https://www.datastax.com/brand-resources"
+        },
+        {
+            "title": "Dataverse",
+            "hex": "088142",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "DatoCMS",
@@ -3132,8 +3163,13 @@
         },
         {
             "title": "Dynamics 365",
-            "hex": "002050",
-            "source": "http://thepartnerchannel.com/wp-content/uploads/Dynamics365_styleguide_092816.pdf"
+            "hex": "0B53CE",
+            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
+            }
         },
         {
             "title": "Dynatrace",
@@ -4407,6 +4443,11 @@
             "title": "Google Hangouts",
             "hex": "0C9D58",
             "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hangouts_icon.svg"
+        },
+        {
+            "title": "Google Home",
+            "hex": "4285F4",
+            "source": "https://home.google.com/welcome/"
         },
         {
             "title": "Google Keep",
@@ -7197,9 +7238,9 @@
         },
         {
             "title": "Neo4j",
-            "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/",
-            "guidelines": "https://neo4j.com/style-guide/"
+            "hex": "4581C3",
+            "source": "https://neo4j.com/brand/#logo",
+            "guidelines": "https://neo4j.com/brand/#logo"
         },
         {
             "title": "Neovim",
@@ -7257,6 +7298,11 @@
             "title": "Netto",
             "hex": "FFE500",
             "source": "https://www.netto-online.de/INTERSHOP/static/WFS/Plus-NettoDE-Site/-/-/de_DE/css/images/netto-logo.svg"
+        },
+        {
+            "title": "Neutralinojs",
+            "hex": "F89901",
+            "source": "https://github.com/neutralinojs/neutralinojs"
         },
         {
             "title": "New Balance",
@@ -8486,22 +8532,72 @@
         {
             "title": "Power Apps",
             "hex": "742774",
-            "source": "https://powerapps.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Automate",
             "hex": "0066FF",
-            "source": "https://flow.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Microsoft Flow"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power BI",
             "hex": "F2C811",
-            "source": "https://powerbi.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
+        },
+        {
+            "title": "Power Fx",
+            "hex": "7F2157",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
+        },
+        {
+            "title": "Power Pages",
+            "hex": "A493E7",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Power Apps Portals"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Virtual Agents",
             "hex": "0B556A",
-            "source": "https://powervirtualagents.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "POWERS",
@@ -9733,6 +9829,11 @@
             "source": "https://sellfy.com/about/"
         },
         {
+            "title": "Semantic Scholar",
+            "hex": "1857B6",
+            "source": "https://www.semanticscholar.org/about"
+        },
+        {
             "title": "Semantic UI React",
             "hex": "35BDB2",
             "source": "https://react.semantic-ui.com"
@@ -9799,6 +9900,11 @@
             "title": "Serverless",
             "hex": "FD5750",
             "source": "https://serverless.com/"
+        },
+        {
+            "title": "Sessionize",
+            "hex": "1AB394",
+            "source": "https://sessionize.com/brand"
         },
         {
             "title": "SFML",
