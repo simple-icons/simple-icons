@@ -17,4 +17,7 @@
 
   // We generally always want the major version
   separateMajorMinor: false,
+
+  // We manually update digest dependencies (eg. hashes in Github actions)
+  digest: { enabled: false },
 }
