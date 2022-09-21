@@ -161,6 +161,11 @@
             "source": "https://www.adidas.com"
         },
         {
+            "title": "Adminer",
+            "hex": "34567C",
+            "source": "https://www.adminer.org/"
+        },
+        {
             "title": "Adobe",
             "hex": "FF0000",
             "source": "https://www.adobe.com/"
@@ -418,6 +423,11 @@
             "source": "https://www.algolia.com/press/?section=brand-guidelines"
         },
         {
+            "title": "Algorand",
+            "hex": "000000",
+            "source": "https://www.algorand.com/about/media-kit"
+        },
+        {
             "title": "Alibaba Cloud",
             "hex": "FF6A00",
             "source": "https://www.alibabagroup.com/en/ir/reports"
@@ -576,6 +586,11 @@
             "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201348270"
         },
         {
+            "title": "Amazon Games",
+            "hex": "FF9900",
+            "source": "https://www.amazongames.com"
+        },
+        {
             "title": "Amazon Lumberyard",
             "hex": "66459B",
             "source": "https://aws.amazon.com/architecture/icons/",
@@ -678,8 +693,9 @@
         },
         {
             "title": "Andela",
-            "hex": "3359DF",
-            "source": "https://andela.com/press/"
+            "hex": "173B3F",
+            "source": "https://andela.com/press/",
+            "guidelines": "https://andela.com/press/"
         },
         {
             "title": "Android",
@@ -1797,6 +1813,11 @@
             "source": "https://cachethq.io/press"
         },
         {
+            "title": "CafePress",
+            "hex": "58A616",
+            "source": "https://en.wikipedia.org/wiki/CafePress#/media/File:CafePress_logo.svg"
+        },
+        {
             "title": "Caffeine",
             "hex": "0000FF",
             "source": "https://www.caffeine.tv/",
@@ -2359,6 +2380,11 @@
             "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
+            "title": "Commodore",
+            "hex": "1E2A4E",
+            "source": "https://commodore.inc/"
+        },
+        {
             "title": "Common Workflow Language",
             "hex": "B5314C",
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -2740,6 +2766,16 @@
             "hex": "3A3A42",
             "source": "https://www.datastax.com/brand-resources",
             "guidelines": "https://www.datastax.com/brand-resources"
+        },
+        {
+            "title": "Dataverse",
+            "hex": "088142",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "DatoCMS",
@@ -3142,8 +3178,13 @@
         },
         {
             "title": "Dynamics 365",
-            "hex": "002050",
-            "source": "http://thepartnerchannel.com/wp-content/uploads/Dynamics365_styleguide_092816.pdf"
+            "hex": "0B53CE",
+            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
+            }
         },
         {
             "title": "Dynatrace",
@@ -4017,6 +4058,16 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Game_and_watch_logo.svg"
         },
         {
+            "title": "Game Developer",
+            "hex": "E60012",
+            "source": "https://www.gamedeveloper.com/",
+            "aliases": {
+                "aka": [
+                    "Gamasutra"
+                ]
+            }
+        },
+        {
             "title": "Game Jolt",
             "hex": "CCFF00",
             "source": "https://gamejolt.com/about",
@@ -4417,6 +4468,11 @@
             "title": "Google Hangouts",
             "hex": "0C9D58",
             "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hangouts_icon.svg"
+        },
+        {
+            "title": "Google Home",
+            "hex": "4285F4",
+            "source": "https://home.google.com/welcome/"
         },
         {
             "title": "Google Keep",
@@ -5283,6 +5339,11 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "Interaction Design Foundation",
+            "hex": "2B2B2B",
+            "source": "https://www.interaction-design.org/"
+        },
+        {
             "title": "InteractJS",
             "hex": "2599ED",
             "source": "https://github.com/taye/interact.js/blob/603c34d4b34dece8a260381e2e5991b810d6d739/img/ijs-icon.svg"
@@ -5600,6 +5661,11 @@
             "title": "JSS",
             "hex": "F7DF1E",
             "source": "https://cssinjs.org/"
+        },
+        {
+            "title": "JUKE",
+            "hex": "6CD74A",
+            "source": "https://juke.nl/"
         },
         {
             "title": "Julia",
@@ -7207,9 +7273,9 @@
         },
         {
             "title": "Neo4j",
-            "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/",
-            "guidelines": "https://neo4j.com/style-guide/"
+            "hex": "4581C3",
+            "source": "https://neo4j.com/brand/#logo",
+            "guidelines": "https://neo4j.com/brand/#logo"
         },
         {
             "title": "Neovim",
@@ -7267,6 +7333,11 @@
             "title": "Netto",
             "hex": "FFE500",
             "source": "https://www.netto-online.de/INTERSHOP/static/WFS/Plus-NettoDE-Site/-/-/de_DE/css/images/netto-logo.svg"
+        },
+        {
+            "title": "Neutralinojs",
+            "hex": "F89901",
+            "source": "https://github.com/neutralinojs/neutralinojs"
         },
         {
             "title": "New Balance",
@@ -8361,7 +8432,7 @@
         },
         {
             "title": "Plex",
-            "hex": "E5A00D",
+            "hex": "EBAF00",
             "source": "https://brand.plex.tv/",
             "guidelines": "https://brand.plex.tv/"
         },
@@ -8496,22 +8567,72 @@
         {
             "title": "Power Apps",
             "hex": "742774",
-            "source": "https://powerapps.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Automate",
             "hex": "0066FF",
-            "source": "https://flow.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Microsoft Flow"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power BI",
             "hex": "F2C811",
-            "source": "https://powerbi.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
+        },
+        {
+            "title": "Power Fx",
+            "hex": "7F2157",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
+        },
+        {
+            "title": "Power Pages",
+            "hex": "A493E7",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Power Apps Portals"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Virtual Agents",
             "hex": "0B556A",
-            "source": "https://powervirtualagents.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "POWERS",
@@ -9174,6 +9295,11 @@
             "source": "https://www.reebok.com/us"
         },
         {
+            "title": "Relay",
+            "hex": "F26B00",
+            "source": "https://relay.dev/"
+        },
+        {
             "title": "Reliance Industries Limited",
             "hex": "D1AB66",
             "source": "https://www.ril.com/getattachment/7c210e67-5b0e-4965-b1a2-2ee83e19cee9/Morgan-Stanley-Eighteenth-Annual-India-Summit,-31.aspx"
@@ -9238,6 +9364,12 @@
             "title": "ResearchGate",
             "hex": "00CCBB",
             "source": "https://c5.rgstatic.net/m/428059296771819/images/favicon/favicon.svg"
+        },
+        {
+            "title": "ReSharper",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
+            "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
             "title": "Resurrection Remix OS",
@@ -9743,6 +9875,11 @@
             "source": "https://sellfy.com/about/"
         },
         {
+            "title": "Semantic Scholar",
+            "hex": "1857B6",
+            "source": "https://www.semanticscholar.org/about"
+        },
+        {
             "title": "Semantic UI React",
             "hex": "35BDB2",
             "source": "https://react.semantic-ui.com"
@@ -9809,6 +9946,11 @@
             "title": "Serverless",
             "hex": "FD5750",
             "source": "https://serverless.com/"
+        },
+        {
+            "title": "Sessionize",
+            "hex": "1AB394",
+            "source": "https://sessionize.com/brand"
         },
         {
             "title": "SFML",
@@ -10799,6 +10941,16 @@
             "source": "https://www.tado.com/gb-en/press-assets"
         },
         {
+            "title": "Taichi Graphics",
+            "hex": "000000",
+            "source": "https://taichi.graphics"
+        },
+        {
+            "title": "Taichi Lang",
+            "hex": "000000",
+            "source": "https://docs.taichi-lang.org/blog"
+        },
+        {
             "title": "Tails",
             "hex": "56347C",
             "source": "https://tails.boum.org/contribute/how/promote/material/logo/"
@@ -11107,6 +11259,11 @@
             "title": "Tide",
             "hex": "4050FB",
             "source": "https://www.tide.co/newsroom/"
+        },
+        {
+            "title": "Tidyverse",
+            "hex": "1A162D",
+            "source": "https://github.com/rstudio/hex-stickers/blob/69528093ef59f541e5a4798dbcb00e60267e8870/SVG/tidyverse.svg"
         },
         {
             "title": "TietoEVRY",
@@ -11804,6 +11961,11 @@
             "source": "https://cncf-branding.netlify.app/projects/vitess/"
         },
         {
+            "title": "Vitest",
+            "hex": "6E9F18",
+            "source": "https://vitest.dev/"
+        },
+        {
             "title": "Vivaldi",
             "hex": "EF3939",
             "source": "https://vivaldi.com/press/"
@@ -11863,6 +12025,11 @@
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vscopress.co/media-kit"
+        },
+        {
+            "title": "VSCodium",
+            "hex": "2F80ED",
+            "source": "https://vscodium.com"
         },
         {
             "title": "VTEX",
