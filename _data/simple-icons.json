@@ -161,6 +161,11 @@
             "source": "https://www.adidas.com"
         },
         {
+            "title": "Adminer",
+            "hex": "34567C",
+            "source": "https://www.adminer.org/"
+        },
+        {
             "title": "Adobe",
             "hex": "FF0000",
             "source": "https://www.adobe.com/"
@@ -581,6 +586,11 @@
             "source": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201348270"
         },
         {
+            "title": "Amazon Games",
+            "hex": "FF9900",
+            "source": "https://www.amazongames.com"
+        },
+        {
             "title": "Amazon Lumberyard",
             "hex": "66459B",
             "source": "https://aws.amazon.com/architecture/icons/",
@@ -683,8 +693,9 @@
         },
         {
             "title": "Andela",
-            "hex": "3359DF",
-            "source": "https://andela.com/press/"
+            "hex": "173B3F",
+            "source": "https://andela.com/press/",
+            "guidelines": "https://andela.com/press/"
         },
         {
             "title": "Android",
@@ -1800,6 +1811,11 @@
             "title": "Cachet",
             "hex": "7ED321",
             "source": "https://cachethq.io/press"
+        },
+        {
+            "title": "CafePress",
+            "hex": "58A616",
+            "source": "https://en.wikipedia.org/wiki/CafePress#/media/File:CafePress_logo.svg"
         },
         {
             "title": "Caffeine",
@@ -4042,6 +4058,16 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Game_and_watch_logo.svg"
         },
         {
+            "title": "Game Developer",
+            "hex": "E60012",
+            "source": "https://www.gamedeveloper.com/",
+            "aliases": {
+                "aka": [
+                    "Gamasutra"
+                ]
+            }
+        },
+        {
             "title": "Game Jolt",
             "hex": "CCFF00",
             "source": "https://gamejolt.com/about",
@@ -5313,6 +5339,11 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "Interaction Design Foundation",
+            "hex": "2B2B2B",
+            "source": "https://www.interaction-design.org/"
+        },
+        {
             "title": "InteractJS",
             "hex": "2599ED",
             "source": "https://github.com/taye/interact.js/blob/603c34d4b34dece8a260381e2e5991b810d6d739/img/ijs-icon.svg"
@@ -5630,6 +5661,11 @@
             "title": "JSS",
             "hex": "F7DF1E",
             "source": "https://cssinjs.org/"
+        },
+        {
+            "title": "JUKE",
+            "hex": "6CD74A",
+            "source": "https://juke.nl/"
         },
         {
             "title": "Julia",
@@ -7237,9 +7273,9 @@
         },
         {
             "title": "Neo4j",
-            "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/",
-            "guidelines": "https://neo4j.com/style-guide/"
+            "hex": "4581C3",
+            "source": "https://neo4j.com/brand/#logo",
+            "guidelines": "https://neo4j.com/brand/#logo"
         },
         {
             "title": "Neovim",
@@ -8396,7 +8432,7 @@
         },
         {
             "title": "Plex",
-            "hex": "E5A00D",
+            "hex": "EBAF00",
             "source": "https://brand.plex.tv/",
             "guidelines": "https://brand.plex.tv/"
         },
@@ -9259,6 +9295,11 @@
             "source": "https://www.reebok.com/us"
         },
         {
+            "title": "Relay",
+            "hex": "F26B00",
+            "source": "https://relay.dev/"
+        },
+        {
             "title": "Reliance Industries Limited",
             "hex": "D1AB66",
             "source": "https://www.ril.com/getattachment/7c210e67-5b0e-4965-b1a2-2ee83e19cee9/Morgan-Stanley-Eighteenth-Annual-India-Summit,-31.aspx"
@@ -9323,6 +9364,12 @@
             "title": "ResearchGate",
             "hex": "00CCBB",
             "source": "https://c5.rgstatic.net/m/428059296771819/images/favicon/favicon.svg"
+        },
+        {
+            "title": "ReSharper",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
+            "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
             "title": "Resurrection Remix OS",
@@ -9899,6 +9946,11 @@
             "title": "Serverless",
             "hex": "FD5750",
             "source": "https://serverless.com/"
+        },
+        {
+            "title": "Sessionize",
+            "hex": "1AB394",
+            "source": "https://sessionize.com/brand"
         },
         {
             "title": "SFML",
@@ -10894,6 +10946,16 @@
             "source": "https://www.tado.com/gb-en/press-assets"
         },
         {
+            "title": "Taichi Graphics",
+            "hex": "000000",
+            "source": "https://taichi.graphics"
+        },
+        {
+            "title": "Taichi Lang",
+            "hex": "000000",
+            "source": "https://docs.taichi-lang.org/blog"
+        },
+        {
             "title": "Tails",
             "hex": "56347C",
             "source": "https://tails.boum.org/contribute/how/promote/material/logo/"
@@ -10913,6 +10975,11 @@
             "title": "Talenthouse",
             "hex": "FFFFFF",
             "source": "https://www.talenthouse.com/"
+        },
+        {
+            "title": "Tamiya",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:TAMIYA_Logo.svg"
         },
         {
             "title": "Tampermonkey",
@@ -11197,6 +11264,11 @@
             "title": "Tide",
             "hex": "4050FB",
             "source": "https://www.tide.co/newsroom/"
+        },
+        {
+            "title": "Tidyverse",
+            "hex": "1A162D",
+            "source": "https://github.com/rstudio/hex-stickers/blob/69528093ef59f541e5a4798dbcb00e60267e8870/SVG/tidyverse.svg"
         },
         {
             "title": "TietoEVRY",
@@ -11894,6 +11966,11 @@
             "source": "https://cncf-branding.netlify.app/projects/vitess/"
         },
         {
+            "title": "Vitest",
+            "hex": "6E9F18",
+            "source": "https://vitest.dev/"
+        },
+        {
             "title": "Vivaldi",
             "hex": "EF3939",
             "source": "https://vivaldi.com/press/"
@@ -11953,6 +12030,11 @@
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vscopress.co/media-kit"
+        },
+        {
+            "title": "VSCodium",
+            "hex": "2F80ED",
+            "source": "https://vscodium.com"
         },
         {
             "title": "VTEX",
@@ -12034,6 +12116,11 @@
             "slug": "warnerbros",
             "hex": "004DB4",
             "source": "https://www.warnerbros.com/"
+        },
+        {
+            "title": "Warp",
+            "hex": "01A4FF",
+            "source": "https://warp.dev"
         },
         {
             "title": "wasmCloud",
@@ -12711,6 +12798,11 @@
             "title": "Zillow",
             "hex": "006AFF",
             "source": "https://www.zillow.com/"
+        },
+        {
+            "title": "ZincSearch",
+            "hex": "5BA37F",
+            "source": "https://zincsearch.com/"
         },
         {
             "title": "Zingat",
