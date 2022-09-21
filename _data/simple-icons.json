@@ -161,6 +161,11 @@
             "source": "https://www.adidas.com"
         },
         {
+            "title": "Adminer",
+            "hex": "34567C",
+            "source": "https://www.adminer.org/"
+        },
+        {
             "title": "Adobe",
             "hex": "FF0000",
             "source": "https://www.adobe.com/"
@@ -293,6 +298,11 @@
             "source": "https://affinity.serif.com/en-gb/publisher/"
         },
         {
+            "title": "Agora",
+            "hex": "099DFD",
+            "source": "https://github.com/AgoraIO/Docs/blob/c77b7131e351dbbb99158228971dc4e53de336b1/static/img/agora.svg"
+        },
+        {
             "title": "AI Dungeon",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:AI_Dungeon_Logo.png"
@@ -411,6 +421,11 @@
             "title": "Algolia",
             "hex": "5468FF",
             "source": "https://www.algolia.com/press/?section=brand-guidelines"
+        },
+        {
+            "title": "Algorand",
+            "hex": "000000",
+            "source": "https://www.algorand.com/about/media-kit"
         },
         {
             "title": "Alibaba Cloud",
@@ -673,8 +688,9 @@
         },
         {
             "title": "Andela",
-            "hex": "3359DF",
-            "source": "https://andela.com/press/"
+            "hex": "173B3F",
+            "source": "https://andela.com/press/",
+            "guidelines": "https://andela.com/press/"
         },
         {
             "title": "Android",
@@ -917,6 +933,11 @@
             "title": "Apple Music",
             "hex": "FA243C",
             "source": "https://www.apple.com/itunes/marketing-on-music/identity-guidelines.html#apple-music-icon"
+        },
+        {
+            "title": "Apple News",
+            "hex": "FD415E",
+            "source": "https://www.apple.com/apple-news/"
         },
         {
             "title": "Apple Pay",
@@ -1335,6 +1356,16 @@
             "source": "https://basecamp.com/about/press"
         },
         {
+            "title": "Bastyon",
+            "hex": "00A4FF",
+            "source": "https://github.com/pocketnetteam/pocketnet.gui/blob/978201dca0d63bc87c4c66513a67f085f2f51d83/img/logo.svg",
+            "aliases": {
+                "aka": [
+                    "pocketnet"
+                ]
+            }
+        },
+        {
             "title": "Bata",
             "hex": "DD282E",
             "source": "https://www.bata.com/"
@@ -1710,6 +1741,11 @@
             "source": "https://github.com/jgthms/bulma/tree/b0ed28b0e63fdfe54ef802ad155c889241fb6ae1"
         },
         {
+            "title": "Bun",
+            "hex": "000000",
+            "source": "https://bun.sh"
+        },
+        {
             "title": "bunq",
             "hex": "3394D7",
             "source": "https://www.bunq.com/press/"
@@ -1770,6 +1806,11 @@
             "title": "Cachet",
             "hex": "7ED321",
             "source": "https://cachethq.io/press"
+        },
+        {
+            "title": "CafePress",
+            "hex": "58A616",
+            "source": "https://en.wikipedia.org/wiki/CafePress#/media/File:CafePress_logo.svg"
         },
         {
             "title": "Caffeine",
@@ -2334,6 +2375,11 @@
             "source": "https://github.com/conventional-changelog/commitlint/blob/0b177635472214faac5a5800ced970bf4d2e6012/docs/assets/icon.svg"
         },
         {
+            "title": "Commodore",
+            "hex": "1E2A4E",
+            "source": "https://commodore.inc/"
+        },
+        {
             "title": "Common Workflow Language",
             "hex": "B5314C",
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -2622,6 +2668,11 @@
             "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
         },
         {
+            "title": "Dapr",
+            "hex": "0D2192",
+            "source": "https://raw.githubusercontent.com/dapr/dapr/18575823c74318c811d6cd6f57ffac76d5debe93/img/dapr_logo.svg"
+        },
+        {
             "title": "Dark Reader",
             "hex": "141E24",
             "source": "https://github.com/simple-icons/simple-icons/pull/3348#issuecomment-667090608"
@@ -2710,6 +2761,16 @@
             "hex": "3A3A42",
             "source": "https://www.datastax.com/brand-resources",
             "guidelines": "https://www.datastax.com/brand-resources"
+        },
+        {
+            "title": "Dataverse",
+            "hex": "088142",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "DatoCMS",
@@ -3112,8 +3173,13 @@
         },
         {
             "title": "Dynamics 365",
-            "hex": "002050",
-            "source": "http://thepartnerchannel.com/wp-content/uploads/Dynamics365_styleguide_092816.pdf"
+            "hex": "0B53CE",
+            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
+            }
         },
         {
             "title": "Dynatrace",
@@ -3987,6 +4053,16 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Game_and_watch_logo.svg"
         },
         {
+            "title": "Game Developer",
+            "hex": "E60012",
+            "source": "https://www.gamedeveloper.com/",
+            "aliases": {
+                "aka": [
+                    "Gamasutra"
+                ]
+            }
+        },
+        {
             "title": "Game Jolt",
             "hex": "CCFF00",
             "source": "https://gamejolt.com/about",
@@ -4387,6 +4463,11 @@
             "title": "Google Hangouts",
             "hex": "0C9D58",
             "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hangouts_icon.svg"
+        },
+        {
+            "title": "Google Home",
+            "hex": "4285F4",
+            "source": "https://home.google.com/welcome/"
         },
         {
             "title": "Google Keep",
@@ -5253,6 +5334,11 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "Interaction Design Foundation",
+            "hex": "2B2B2B",
+            "source": "https://www.interaction-design.org/"
+        },
+        {
             "title": "InteractJS",
             "hex": "2599ED",
             "source": "https://github.com/taye/interact.js/blob/603c34d4b34dece8a260381e2e5991b810d6d739/img/ijs-icon.svg"
@@ -5570,6 +5656,11 @@
             "title": "JSS",
             "hex": "F7DF1E",
             "source": "https://cssinjs.org/"
+        },
+        {
+            "title": "JUKE",
+            "hex": "6CD74A",
+            "source": "https://juke.nl/"
         },
         {
             "title": "Julia",
@@ -7177,9 +7268,9 @@
         },
         {
             "title": "Neo4j",
-            "hex": "008CC1",
-            "source": "https://neo4j.com/style-guide/",
-            "guidelines": "https://neo4j.com/style-guide/"
+            "hex": "4581C3",
+            "source": "https://neo4j.com/brand/#logo",
+            "guidelines": "https://neo4j.com/brand/#logo"
         },
         {
             "title": "Neovim",
@@ -7239,6 +7330,11 @@
             "source": "https://www.netto-online.de/INTERSHOP/static/WFS/Plus-NettoDE-Site/-/-/de_DE/css/images/netto-logo.svg"
         },
         {
+            "title": "Neutralinojs",
+            "hex": "F89901",
+            "source": "https://github.com/neutralinojs/neutralinojs"
+        },
+        {
             "title": "New Balance",
             "hex": "CF0A2C",
             "source": "https://www.newbalance.com"
@@ -7278,6 +7374,11 @@
             "title": "Next.js",
             "hex": "000000",
             "source": "https://nextjs.org/"
+        },
+        {
+            "title": "NextBillion.ai",
+            "hex": "8D5A9E",
+            "source": "https://nextbillion.ai"
         },
         {
             "title": "Nextcloud",
@@ -7705,6 +7806,11 @@
             "title": "OpenNebula",
             "hex": "0097C2",
             "source": "https://opennebula.io/docs/"
+        },
+        {
+            "title": "OpenProject",
+            "hex": "0770B8",
+            "source": "https://www.openproject.org/press/"
         },
         {
             "title": "OpenSea",
@@ -8321,7 +8427,7 @@
         },
         {
             "title": "Plex",
-            "hex": "E5A00D",
+            "hex": "EBAF00",
             "source": "https://brand.plex.tv/",
             "guidelines": "https://brand.plex.tv/"
         },
@@ -8365,6 +8471,11 @@
             "title": "Pocket Casts",
             "hex": "F43E37",
             "source": "https://blog.pocketcasts.com/press/"
+        },
+        {
+            "title": "PocketBase",
+            "hex": "B8DBE4",
+            "source": "https://github.com/pocketbase/pocketbase/blob/4b64e0910b7dc527ff3de8cdacec074e40449e2e/ui/dist/images/logo.svg"
         },
         {
             "title": "Podcast Addict",
@@ -8451,22 +8562,72 @@
         {
             "title": "Power Apps",
             "hex": "742774",
-            "source": "https://powerapps.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Automate",
             "hex": "0066FF",
-            "source": "https://flow.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Microsoft Flow"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power BI",
             "hex": "F2C811",
-            "source": "https://powerbi.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
+        },
+        {
+            "title": "Power Fx",
+            "hex": "7F2157",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
+        },
+        {
+            "title": "Power Pages",
+            "hex": "A493E7",
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "aliases": {
+                "aka": [
+                    "Power Apps Portals"
+                ]
+            },
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "Power Virtual Agents",
             "hex": "0B556A",
-            "source": "https://powervirtualagents.microsoft.com/en-us/"
+            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
+            "license": {
+                "type": "custom",
+                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
+            }
         },
         {
             "title": "POWERS",
@@ -8807,6 +8968,11 @@
             "source": "https://qiwi.com/"
         },
         {
+            "title": "QMK",
+            "hex": "333333",
+            "source": "https://github.com/qmk/qmk_firmware"
+        },
+        {
             "title": "Qt",
             "hex": "41CD52",
             "source": "https://qt-brandbook.webflow.io/design",
@@ -9124,6 +9290,11 @@
             "source": "https://www.reebok.com/us"
         },
         {
+            "title": "Relay",
+            "hex": "F26B00",
+            "source": "https://relay.dev/"
+        },
+        {
             "title": "Reliance Industries Limited",
             "hex": "D1AB66",
             "source": "https://www.ril.com/getattachment/7c210e67-5b0e-4965-b1a2-2ee83e19cee9/Morgan-Stanley-Eighteenth-Annual-India-Summit,-31.aspx"
@@ -9188,6 +9359,12 @@
             "title": "ResearchGate",
             "hex": "00CCBB",
             "source": "https://c5.rgstatic.net/m/428059296771819/images/favicon/favicon.svg"
+        },
+        {
+            "title": "ReSharper",
+            "hex": "000000",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
+            "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
             "title": "Resurrection Remix OS",
@@ -9668,6 +9845,11 @@
             "source": "https://www.seat.es/"
         },
         {
+            "title": "SecurityScorecard",
+            "hex": "7033FD",
+            "source": "https://securityscorecard.com/"
+        },
+        {
             "title": "Sefaria",
             "hex": "212E50",
             "source": "https://github.com/Sefaria/Sefaria-Project/blob/c141b2b3491660ed563df9f4b1a2e4c071e88688/static/img/logo/samekh.svg"
@@ -9686,6 +9868,11 @@
             "title": "Sellfy",
             "hex": "21B352",
             "source": "https://sellfy.com/about/"
+        },
+        {
+            "title": "Semantic Scholar",
+            "hex": "1857B6",
+            "source": "https://www.semanticscholar.org/about"
         },
         {
             "title": "Semantic UI React",
@@ -9754,6 +9941,11 @@
             "title": "Serverless",
             "hex": "FD5750",
             "source": "https://serverless.com/"
+        },
+        {
+            "title": "Sessionize",
+            "hex": "1AB394",
+            "source": "https://sessionize.com/brand"
         },
         {
             "title": "SFML",
@@ -10347,6 +10539,11 @@
             "hex": "207BEA",
             "source": "https://www.stackbit.com/branding-guidelines/",
             "guidelines": "https://www.stackbit.com/branding-guidelines/"
+        },
+        {
+            "title": "StackBlitz",
+            "hex": "1269D3",
+            "source": "https://stackblitz.com"
         },
         {
             "title": "StackEdit",
@@ -11044,6 +11241,11 @@
             "source": "https://www.tide.co/newsroom/"
         },
         {
+            "title": "Tidyverse",
+            "hex": "1A162D",
+            "source": "https://github.com/rstudio/hex-stickers/blob/69528093ef59f541e5a4798dbcb00e60267e8870/SVG/tidyverse.svg"
+        },
+        {
             "title": "TietoEVRY",
             "hex": "063752",
             "source": "https://www.tietoevry.com/en/about-us/our-company/"
@@ -11523,6 +11725,11 @@
             "source": "https://upstash.com/"
         },
         {
+            "title": "Uptime Kuma",
+            "hex": "5CDD8B",
+            "source": "https://uptime.kuma.pet/"
+        },
+        {
             "title": "Uptobox",
             "hex": "5CE1E6",
             "source": "https://uptoboxpremium.org/"
@@ -11544,6 +11751,11 @@
             "license": {
                 "type": "MIT"
             }
+        },
+        {
+            "title": "V2EX",
+            "hex": "1F1F1F",
+            "source": "https://www.v2ex.com"
         },
         {
             "title": "V8",
@@ -11729,6 +11941,11 @@
             "source": "https://cncf-branding.netlify.app/projects/vitess/"
         },
         {
+            "title": "Vitest",
+            "hex": "6E9F18",
+            "source": "https://vitest.dev/"
+        },
+        {
             "title": "Vivaldi",
             "hex": "EF3939",
             "source": "https://vivaldi.com/press/"
@@ -11788,6 +12005,11 @@
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vscopress.co/media-kit"
+        },
+        {
+            "title": "VSCodium",
+            "hex": "2F80ED",
+            "source": "https://vscodium.com"
         },
         {
             "title": "VTEX",
@@ -11880,6 +12102,11 @@
             "hex": "00BC8E",
             "source": "https://github.com/wasmCloud/branding/",
             "guidelines": "https://github.com/wasmCloud/branding/"
+        },
+        {
+            "title": "Wasmer",
+            "hex": "4946DD",
+            "source": "https://github.com/wasmerio/wasmer.io/blob/0d425f5b4ace56496e75278e304f54492c46adde/public/images/icon.svg"
         },
         {
             "title": "Wattpad",
@@ -12101,6 +12328,12 @@
             "source": "https://commons.wikimedia.org/wiki/File:Windows_10_Logo.svg"
         },
         {
+            "title": "Windows 11",
+            "hex": "0078D4",
+            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
+            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
+        },
+        {
             "title": "Windows 95",
             "hex": "008080",
             "source": "https://en.wikipedia.org/wiki/Windows_95"
@@ -12302,6 +12535,11 @@
             "title": "XMPP",
             "hex": "002B5C",
             "source": "https://github.com/xsf/xmpp.org/tree/00c49187e353c1a156c95562dafaf129e688fbad/content/icons"
+        },
+        {
+            "title": "XO",
+            "hex": "5ED9C7",
+            "source": "https://github.com/xojs/xo"
         },
         {
             "title": "XRP",
