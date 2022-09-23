@@ -4,7 +4,7 @@
  */
 
 import path from 'node:path';
-import { promises as fs } from 'node:fs';
+import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const TITLE_TO_SLUG_REPLACEMENTS = {
