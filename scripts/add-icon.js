@@ -4,17 +4,28 @@ import chalkPipe from 'chalk-pipe';
 import logSymbols from 'log-symbols';
 import { getIconsDataString, getIconDataPath, titleToSlug } from './utils.js';
 
+const iconsData = JSON.parse(await getIconsDataString());
+
 const prompts = [
   {
     type: 'input',
     name: 'title',
+    validate: (text) => {
+      if (!text) return 'This field is required';
+      if (iconsData.icons.find((x) => x.title === text))
+        return 'This icon title already exist';
+      return true;
+    },
     message: 'Title',
   },
   {
     type: 'input',
     name: 'hex',
-    message: 'HEX color',
-    validate: (text) => /^[a-fA-F0-9]{6}$/.test(text.replace(/^#/, '')),
+    message: 'Hex',
+    validate: (text) =>
+      /^[a-fA-F0-9]{6}$/.test(text.replace(/^#/, ''))
+        ? true
+        : 'It should be a 6-digit hex code',
     transformer: (text) => {
       return chalkPipe(text.startsWith('#') ? text : `#${text}`)(text);
     },
@@ -23,16 +34,14 @@ const prompts = [
     type: 'input',
     name: 'source',
     message: 'source',
+    validate: (text) =>
+      Boolean(text.startsWith('https://') || text.startsWith('http://'))
+        ? true
+        : 'It should be a URL',
   },
 ];
 
 const icon = await inquirer.prompt(prompts);
-const iconsData = JSON.parse(await getIconsDataString());
-
-if (iconsData.icons.find((x) => x.title === icon.title)) {
-  console.error(logSymbols.error, 'Duplicated icon');
-  process.exit(1);
-}
 
 iconsData.icons.push({
   title: icon.title,
