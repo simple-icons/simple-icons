@@ -34,7 +34,11 @@ if (iconsData.icons.find((x) => x.title === icon.title)) {
   process.exit(1);
 }
 
-iconsData.icons.push(icon);
+iconsData.icons.push({
+  title: icon.title,
+  hex: icon.hex.replace(/^#/, '').toUpperCase(),
+  source: icon.source,
+});
 iconsData.icons.sort((a, b) => a.title.localeCompare(b.title));
 
 await fs.writeFile(
