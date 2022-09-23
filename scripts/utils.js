@@ -94,15 +94,22 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
+ * Get path of _data/simpe-icons.json.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const getIconDataPath = (rootDir) => {
+  if (rootDir === undefined) {
+    rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
+  }
+  return path.resolve(rootDir, '_data', 'simple-icons.json');
+};
+
+/**
  * Get contents of _data/simple-icons.json.
  * @param {String|undefined} rootDir Path to the root directory of the project.
  */
 export const getIconsDataString = (rootDir) => {
-  if (rootDir === undefined) {
-    rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
-  }
-  const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
-  return fs.readFile(iconDataPath, 'utf8');
+  return fs.readFile(getIconDataPath(rootDir), 'utf8');
 };
 
 /**

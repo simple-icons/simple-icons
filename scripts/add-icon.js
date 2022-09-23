@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import inquirer from 'inquirer';
 import chalkPipe from 'chalk-pipe';
 import logSymbols from 'log-symbols';
-import { getIconsDataString, titleToSlug } from './utils.js';
+import { getIconsDataString, getIconDataPath, titleToSlug } from './utils.js';
 
 const prompts = [
   {
@@ -33,6 +33,15 @@ if (iconsData.icons.find((x) => x.title === icon.title)) {
   console.error(logSymbols.error, 'Duplicated icon');
   process.exit(1);
 }
+
+iconsData.icons.push(icon);
+iconsData.icons.sort((a, b) => a.title.localeCompare(b.title));
+
+await fs.writeFile(
+  getIconDataPath(),
+  JSON.stringify(iconsData, null, 4) + '\n',
+  'utf8',
+);
 
 console.log(
   logSymbols.success,
