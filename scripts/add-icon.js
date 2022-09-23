@@ -25,7 +25,7 @@ const prompts = [
     validate: (text) =>
       /^[a-fA-F0-9]{6}$/.test(text.replace(/^#/, ''))
         ? true
-        : 'It should be a 6-digit hex code',
+        : 'This should be a 6-digit hex code',
     transformer: (text) => {
       return chalkPipe(text.startsWith('#') ? text : `#${text}`)(text);
     },
@@ -37,7 +37,7 @@ const prompts = [
     validate: (text) =>
       Boolean(text.startsWith('https://') || text.startsWith('http://'))
         ? true
-        : 'It should be a URL',
+        : 'This should be a URL',
   },
 ];
 
