@@ -2,8 +2,10 @@ import fs from 'node:fs/promises';
 import inquirer from 'inquirer';
 import chalkPipe from 'chalk-pipe';
 import logSymbols from 'log-symbols';
+import getRelativeLuminance from 'get-relative-luminance';
 import { getIconsDataString, getIconDataPath, titleToSlug } from './utils.js';
 
+const hexPattern = /^#?[a-fA-F0-9]{6}$/;
 const iconsData = JSON.parse(await getIconsDataString());
 
 const prompts = [
@@ -23,17 +25,22 @@ const prompts = [
     name: 'hex',
     message: 'Hex',
     validate: (text) =>
-      /^[a-fA-F0-9]{6}$/.test(text.replace(/^#/, ''))
-        ? true
-        : 'This should be a 6-digit hex code',
+      hexPattern.test(text) ? true : 'This should be a 6-digit hex code',
     transformer: (text) => {
-      return chalkPipe(text.startsWith('#') ? text : `#${text}`)(text);
+      const color = text.startsWith('#') ? text : `#${text}`;
+      const luminance = hexPattern.test(text)
+        ? getRelativeLuminance.default(color)
+        : -1;
+      if (luminance === -1) return text;
+      return chalkPipe(`bg${color}.${luminance < 0.4 ? 'white' : 'black'}`)(
+        text,
+      );
     },
   },
   {
     type: 'input',
     name: 'source',
-    message: 'source',
+    message: 'Source',
     validate: (text) =>
       Boolean(text.startsWith('https://') || text.startsWith('http://'))
         ? true
