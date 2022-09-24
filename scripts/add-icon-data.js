@@ -65,7 +65,7 @@ const dataPrompt = [
   },
   {
     type: 'confirm',
-    name: 'add-guidelines',
+    name: 'addGuidelines',
     message: 'The icon has brand guidelines?',
   },
   {
@@ -73,25 +73,19 @@ const dataPrompt = [
     name: 'guidelines',
     message: 'Guidelines',
     validate: sourceValidator,
-    when: (answers) => answers['add-guidelines'],
+    when: (answers) => answers.addGuidelines,
   },
   {
     type: 'confirm',
     name: 'confirm',
-    message: (answers) => {
-      answers = Object.assign(
-        ...Object.keys(answers)
-          .filter((key) => !key.includes('-'))
-          .map((key) => {
-            return { [key]: answers[key] };
-          }),
-      );
+    message: ({ addGuidelines: _, ...icon }) => {
       return [
         'About to write to simple-icons.json',
-        chalk.reset(JSON.stringify(answers, null, 4)),
+        chalk.reset(JSON.stringify(icon, null, 4)),
         chalk.reset('Is this OK?'),
       ].join('\n\n');
     },
+  },
 ];
 
 const { confirm, ...icon } = await inquirer.prompt(dataPrompt);
