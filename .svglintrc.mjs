@@ -47,7 +47,7 @@ const sortObjectByKey = (obj) => {
 
 const sortObjectByValue = (obj) => {
   return Object.keys(obj)
-    .sort((a, b) => collator.compare(`${obj[a]}`, obj[b]))
+    .sort((a, b) => collator.compare(obj[a], obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 };
 
