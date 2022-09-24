@@ -291,6 +291,8 @@ Here is the object of the fictional brand from before, but with all optional val
 }
 ```
 
+> Non secured HTTP URLs are forbidden. If a brand's website only supports HTTP, you must still declare the URL using the `https://` protocol.
+
 #### Source Guidelines
 
 We use the source URL as a reference for the current SVG in our repository and as a jumping-off point to find updates if the logo changes. If you used one of the sources listed below, make sure to follow these guidelines. If you're unsure about the source URL you can open a Pull Request and ask for help from others.
