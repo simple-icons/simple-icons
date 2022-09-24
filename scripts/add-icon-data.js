@@ -127,7 +127,7 @@ const dataPrompt = [
 const answers = await inquirer.prompt(dataPrompt);
 const icon = getIconDataFromAnswers(answers);
 
-if (confirm) {
+if (answers.confirm) {
   iconsData.icons.push(icon);
   iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
   await writeIconsData(iconsData);
