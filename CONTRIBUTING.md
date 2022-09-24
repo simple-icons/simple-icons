@@ -265,7 +265,7 @@ Here is the object of a fictional brand as an example:
 }
 ```
 
-You can use `npm run add-icon` to add metadata via a CLI prompt.
+You can use `npm run add-icon-data` to add metadata via a CLI prompt.
 
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
