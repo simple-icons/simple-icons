@@ -37,7 +37,7 @@
     "url": "https://opencollective.com/simple-icons"
   },
   "devDependencies": {
-    "chalk-pipe": "^5.1.1",
+    "chalk": "^5.0.1",
     "editorconfig-checker": "4.0.2",
     "esbuild": "0.15.6",
     "fake-diff": "1.0.0",
@@ -76,7 +76,7 @@
     "posttest": "npm run postpublish",
     "svgo": "svgo --config svgo.config.js",
     "get-filename": "node scripts/get-filename.js",
-    "add-icon": "node scripts/add-icon.js"
+    "add-icon-data": "node scripts/add-icon-data.js"
   },
   "engines": {
     "node": ">=0.12.18"

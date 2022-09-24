@@ -122,6 +122,20 @@ export const getIconsData = async (rootDir) => {
 };
 
 /**
+ * Write icons data to _data/simple-icons.json.
+ * @param {Object} iconsData Icons data object.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ *
+ */
+export const writeIconsData = async (iconsData, rootDir) => {
+  return fs.writeFile(
+    getIconDataPath(rootDir),
+    `${JSON.stringify(iconsData, null, 4)}\n`,
+    'utf8',
+  );
+};
+
+/**
  * Get the directory name where this file is located from `import.meta.url`,
  * equivalent to the `__dirname` global variable in CommonJS.
  * @param {String} importMetaUrl import.meta.url
@@ -135,6 +149,20 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
  */
 export const normalizeNewlines = (text) => {
   return text.replace(/\r\n/g, '\n');
+};
+
+/**
+ * Convert non-6-digit hex color to 6-digit.
+ * @param {String} text The color text
+ */
+export const normalizeColor = (text) => {
+  let color = text.replace('#', '').toUpperCase();
+  if (color.length < 6) {
+    color = [...color.slice(0, 3)].map((x) => x.repeat(2)).join('');
+  } else if (color.length > 6) {
+    color = color.slice(0, 6);
+  }
+  return color;
 };
 
 /**
