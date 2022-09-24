@@ -155,7 +155,7 @@ export const getThirdPartyExtensions = async (readmePath) =>
     });
 
 /**
- * `Intl.Collator` object ready to be used for sorting of icon titles.
+ * `Intl.Collator` object ready to be used for icon titles sorting.
  * @type {Intl.Collator}
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
  **/
