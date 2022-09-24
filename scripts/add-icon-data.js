@@ -65,7 +65,7 @@ const dataPrompt = [
   },
   {
     type: 'confirm',
-    name: 'addGuidelines',
+    name: 'hasGuidelines',
     message: 'The icon has brand guidelines?',
   },
   {
@@ -73,12 +73,12 @@ const dataPrompt = [
     name: 'guidelines',
     message: 'Guidelines',
     validate: sourceValidator,
-    when: (answers) => answers.addGuidelines,
+    when: (answers) => answers.hasGuidelines,
   },
   {
     type: 'confirm',
     name: 'confirm',
-    message: ({ addGuidelines: _, ...icon }) => {
+    message: ({ hasGuidelines: _, ...icon }) => {
       return [
         'About to write to simple-icons.json',
         chalk.reset(JSON.stringify(icon, null, 4)),
