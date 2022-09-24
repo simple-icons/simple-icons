@@ -28,6 +28,8 @@ const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
 
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 
+export const URL_REGEX = /^https:\/\/[^\s]+$/;
+
 /**
  * Get the slug/filename for an icon.
  * @param {Object} icon The icon data as it appears in _data/simple-icons.json
