@@ -127,7 +127,6 @@ export const getIconsData = async (rootDir) => {
  * Write icons data to _data/simple-icons.json.
  * @param {Object} iconsData Icons data object.
  * @param {String|undefined} rootDir Path to the root directory of the project.
- *
  */
 export const writeIconsData = async (iconsData, rootDir) => {
   return fs.writeFile(
