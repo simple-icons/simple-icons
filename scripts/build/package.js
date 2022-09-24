@@ -18,6 +18,7 @@ import {
   slugToVariableName,
   getIconsData,
   getDirnameFromImportMeta,
+  collator,
 } from '../utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -98,7 +99,8 @@ const build = async () => {
   const iconsBarrelJs = [];
   const iconsBarrelMjs = [];
 
-  buildIcons.forEach(({ icon, iconObject, iconExportName }) => {
+  buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
+  buildIcons.forEach(({ iconObject, iconExportName }) => {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
     iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);

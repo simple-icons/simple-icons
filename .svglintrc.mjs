@@ -3,6 +3,7 @@ import path from 'node:path';
 import {
   getDirnameFromImportMeta,
   htmlFriendlyToTitle,
+  collator,
 } from './scripts/utils.js';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
@@ -46,7 +47,7 @@ const sortObjectByKey = (obj) => {
 
 const sortObjectByValue = (obj) => {
   return Object.keys(obj)
-    .sort((a, b) => ('' + obj[a]).localeCompare(obj[b]))
+    .sort((a, b) => collator.compare(obj[a], obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 };
 
