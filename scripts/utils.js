@@ -28,6 +28,8 @@ const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
 
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 
+export const URL_REGEX = /^https:\/\/[^\s]+$/;
+
 /**
  * Get the slug/filename for an icon.
  * @param {Object} icon The icon data as it appears in _data/simple-icons.json
@@ -153,3 +155,13 @@ export const getThirdPartyExtensions = async (readmePath) =>
         },
       };
     });
+
+/**
+ * `Intl.Collator` object ready to be used for icon titles sorting.
+ * @type {Intl.Collator}
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+ **/
+export const collator = new Intl.Collator('en', {
+  usage: 'search',
+  caseFirst: 'upper',
+});
