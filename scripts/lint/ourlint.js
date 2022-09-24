@@ -6,7 +6,7 @@
  */
 
 import fakeDiff from 'fake-diff';
-import { getIconsDataString, normalizeNewlines } from '../utils.js';
+import { getIconsDataString, normalizeNewlines, collator } from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -15,8 +15,6 @@ import { getIconsDataString, normalizeNewlines } from '../utils.js';
 const TESTS = {
   /* Tests whether our icons are in alphabetical order */
   alphabetical: (data) => {
-    const collator = new Intl.Collator('en', { usage: 'search' });
-
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
