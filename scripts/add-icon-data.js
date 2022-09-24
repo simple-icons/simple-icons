@@ -42,6 +42,21 @@ const hexTransformer = (text) => {
   return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(text);
 };
 
+const getIconDataFromAnswers = (answers) => ({
+  title: answers.title,
+  hex: answers.hex,
+  source: answers.source,
+  ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
+  ...(answers.hasLicense
+    ? {
+        license: {
+          type: answers.licenseType,
+          ...(answers.licenseUrl ? { url: answers.licenseUrl } : {}),
+        },
+      }
+    : {}),
+});
+
 const dataPrompt = [
   {
     type: 'input',
@@ -73,12 +88,33 @@ const dataPrompt = [
     name: 'guidelines',
     message: 'Guidelines',
     validate: sourceValidator,
-    when: (answers) => answers.hasGuidelines,
+    when: ({ hasGuidelines }) => hasGuidelines,
+  },
+  {
+    type: 'confirm',
+    name: 'hasLicense',
+    message: 'The icon has brand license?',
+  },
+  {
+    type: 'input',
+    name: 'licenseType',
+    message: 'License type',
+    validate: (text) => Boolean(text),
+    when: ({ hasLicense }) => hasLicense,
+  },
+  {
+    type: 'input',
+    name: 'licenseUrl',
+    message: 'License URL',
+    suffix: ' (optional)',
+    validate: (text) => !Boolean(text) || sourceValidator(text),
+    when: ({ hasLicense }) => hasLicense,
   },
   {
     type: 'confirm',
     name: 'confirm',
-    message: ({ hasGuidelines: _, ...icon }) => {
+    message: (answers) => {
+      const icon = getIconDataFromAnswers(answers);
       return [
         'About to write to simple-icons.json',
         chalk.reset(JSON.stringify(icon, null, 4)),
@@ -88,7 +124,8 @@ const dataPrompt = [
   },
 ];
 
-const { confirm, ...icon } = await inquirer.prompt(dataPrompt);
+const answers = await inquirer.prompt(dataPrompt);
+const icon = getIconDataFromAnswers(answers);
 
 if (confirm) {
   iconsData.icons.push(icon);
