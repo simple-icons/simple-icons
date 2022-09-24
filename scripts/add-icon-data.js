@@ -4,6 +4,8 @@ import chalk from 'chalk';
 import logSymbols from 'log-symbols';
 import getRelativeLuminance from 'get-relative-luminance';
 import {
+  URL_REGEX,
+  collator,
   getIconsDataString,
   getIconDataPath,
   writeIconsData,
@@ -12,7 +14,6 @@ import {
 } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
-const linkPattern = /^https:\/\/[^\s]+$/;
 
 const iconsData = JSON.parse(await getIconsDataString());
 
@@ -31,7 +32,7 @@ const hexValidator = (text) =>
   hexPattern.test(text) ? true : 'This should be a valid hex code';
 
 const sourceValidator = (text) =>
-  linkPattern.test(text) ? true : 'This should be a secure URL';
+  URL_REGEX.test(text) ? true : 'This should be a secure URL';
 
 const hexTransformer = (text) => {
   const color = normalizeColor(text);
@@ -79,7 +80,7 @@ const { confirm, ...icon } = await inquirer.prompt(dataPrompt);
 
 if (confirm) {
   iconsData.icons.push(icon);
-  iconsData.icons.sort((a, b) => a.title.localeCompare(b.title));
+  iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
   await writeIconsData(iconsData);
 } else {
   console.log('Aborted.');
