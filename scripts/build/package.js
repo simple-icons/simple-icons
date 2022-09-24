@@ -99,9 +99,7 @@ const build = async () => {
   const iconsBarrelJs = [];
   const iconsBarrelMjs = [];
 
-  buildIcons.sort((a, b) => {
-    return collator.compare(a.icon.title, b.icon.title);
-  });
+  buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
   buildIcons.forEach(({ iconObject, iconExportName }) => {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
