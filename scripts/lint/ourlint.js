@@ -48,7 +48,7 @@ const TESTS = {
   /* Check the formatting of the data file */
   prettified: async (data, dataString) => {
     const normalizedDataString = normalizeNewlines(dataString);
-    const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
+    const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
 
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
