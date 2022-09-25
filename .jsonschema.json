@@ -231,8 +231,9 @@
     },
     "url": {
       "$id": "#url",
+      "description": "HTTPS-only URL for a source",
       "type": "string",
-      "pattern": "^https?://[^\\s]+$"
+      "pattern": "^https://[^\\s]+$"
     }
   },
   "type": "object",
