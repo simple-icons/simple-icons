@@ -7,10 +7,10 @@
  * tree-shakeable
  */
 
-import { promises as fs } from 'node:fs';
+import {promises as fs} from 'node:fs';
 import path from 'node:path';
 import util from 'node:util';
-import { transform as esbuildTransform } from 'esbuild';
+import {transform as esbuildTransform} from 'esbuild';
 import {
   getIconSlug,
   svgToPath,
@@ -45,9 +45,11 @@ const build = async () => {
   const escape = (value) => {
     return value.replace(/(?<!\\)'/g, "\\'");
   };
+
   const iconToKeyValue = (icon) => {
     return `'${icon.slug}':${iconToObject(icon)}`;
   };
+
   const licenseToObject = (license) => {
     if (license === undefined) {
       return;
@@ -56,8 +58,10 @@ const build = async () => {
     if (license.url === undefined) {
       license.url = `https://spdx.org/licenses/${license.type}`;
     }
+
     return license;
   };
+
   const iconToObject = (icon) => {
     return util.format(
       iconObjectTemplate,
@@ -71,12 +75,14 @@ const build = async () => {
       licenseToObject(icon.license),
     );
   };
+
   const writeJs = async (filepath, rawJavaScript) => {
-    const { code } = await esbuildTransform(rawJavaScript, {
+    const {code} = await esbuildTransform(rawJavaScript, {
       minify: true,
     });
     await fs.writeFile(filepath, code);
   };
+
   const writeTs = async (filepath, rawTypeScript) => {
     await fs.writeFile(filepath, rawTypeScript);
   };
@@ -86,12 +92,13 @@ const build = async () => {
     icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
-      icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
+      const svgContent = await fs.readFile(svgFilepath, UTF8);
+      icon.svg = svgContent.replace(/\r?\n/, '');
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
       const iconObject = iconToObject(icon);
       const iconExportName = slugToVariableName(icon.slug);
-      return { icon, iconObject, iconExportName };
+      return {icon, iconObject, iconExportName};
     }),
   );
 
@@ -100,32 +107,32 @@ const build = async () => {
   const iconsBarrelMjs = [];
 
   buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
-  buildIcons.forEach(({ iconObject, iconExportName }) => {
+  for (const {iconObject, iconExportName} of buildIcons) {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
     iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
-  });
+  }
 
-  // constants used in templates to reduce package size
+  // Constants used in templates to reduce package size
   const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
 
-  // write our generic index.js
+  // Write our generic index.js
   const rawIndexJs = util.format(
     indexTemplate,
     constantsString,
-    buildIcons.map(({ icon }) => iconToKeyValue(icon)).join(','),
+    buildIcons.map(({icon}) => iconToKeyValue(icon)).join(','),
   );
   await writeJs(indexFile, rawIndexJs);
 
-  // write our file containing the exports of all icons in CommonJS ...
+  // Write our file containing the exports of all icons in CommonJS ...
   const rawIconsJs = `${constantsString}module.exports={${iconsBarrelJs.join(
     '',
   )}};`;
   await writeJs(iconsJsFile, rawIconsJs);
-  // and ESM
+  // And ESM
   const rawIconsMjs = constantsString + iconsBarrelMjs.join('');
   await writeJs(iconsMjsFile, rawIconsMjs);
-  // and create a type declaration file
+  // And create a type declaration file
   const rawIconsDts = `import {SimpleIcon} from ".";type I = SimpleIcon;${iconsBarrelDts.join(
     '',
   )}`;

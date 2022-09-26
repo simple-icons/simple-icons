@@ -1,11 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { describe, test } from 'mocha';
-import { strict as assert } from 'node:assert';
+import {strict as assert} from 'node:assert';
+import {describe, test} from 'mocha';
 import {
   getThirdPartyExtensions,
   getDirnameFromImportMeta,
-  URL_REGEX,
 } from '../scripts/utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -16,7 +15,7 @@ describe('README icons assets must be consistent with Github themes', () => {
   const whiteIconsPath = path.join(root, 'assets', 'readme');
   const whiteIconsFileNames = fs.readdirSync(whiteIconsPath);
 
-  for (let whiteIconFileName of whiteIconsFileNames) {
+  for (const whiteIconFileName of whiteIconsFileNames) {
     const whiteIconPath = path.join(whiteIconsPath, whiteIconFileName);
     const blackIconPath = path.join(
       blackIconsPath,
@@ -66,24 +65,24 @@ test('README third party extensions must be alphabetically sorted', async () => 
 });
 
 test('Only allow HTTPS links in documentation pages', async () => {
-  const ignoreHttpLinks = ['http://www.w3.org/2000/svg'];
+  const ignoreHttpLinks = new Set(['http://www.w3.org/2000/svg']);
 
   const docsFiles = fs
     .readdirSync(root)
     .filter((fname) => fname.endsWith('.md'));
 
-  const linksGetter = new RegExp('http://[^\\s"\']+', 'g');
-  for (let docsFile of docsFiles) {
+  const linksGetter = /http:\/\/b[^\s"']+/g;
+  for (const docsFile of docsFiles) {
     const docsFilePath = path.join(root, docsFile);
     const docsFileContent = fs.readFileSync(docsFilePath, 'utf8');
 
-    Array.from(docsFileContent.matchAll(linksGetter)).forEach((match) => {
+    for (const match of Array.from(docsFileContent.matchAll(linksGetter))) {
       const link = match[0];
       assert.ok(
-        ignoreHttpLinks.includes(link) || link.startsWith('https://'),
+        ignoreHttpLinks.has(link) || link.startsWith('https://'),
         `Link '${link}' in '${docsFile}' (at index ${match.index})` +
           ` must use the HTTPS protocol.`,
       );
-    });
+    }
   }
 });

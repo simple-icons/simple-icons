@@ -7,7 +7,8 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { getDirnameFromImportMeta } from '../utils.js';
+import process from 'node:process';
+import {getDirnameFromImportMeta} from '../utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -17,11 +18,11 @@ const readmeFile = path.resolve(rootDir, 'README.md');
 
 const getMajorVersion = (semVerVersion) => {
   const majorVersionAsString = semVerVersion.split('.')[0];
-  return parseInt(majorVersionAsString);
+  return Number.parseInt(majorVersionAsString, 10);
 };
 
 const getManifest = () => {
-  const manifestRaw = fs.readFileSync(packageJsonFile, 'utf-8');
+  const manifestRaw = fs.readFileSync(packageJsonFile, 'utf8');
   return JSON.parse(manifestRaw);
 };
 
@@ -29,7 +30,7 @@ const updateVersionInReadmeIfNecessary = (majorVersion) => {
   let content = fs.readFileSync(readmeFile).toString();
 
   content = content.replace(
-    /simple-icons@v[0-9]+/g,
+    /simple-icons@v\d+/g,
     `simple-icons@v${majorVersion}`,
   );
 

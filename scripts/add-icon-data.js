@@ -1,4 +1,4 @@
-import fs from 'node:fs/promises';
+import process from 'node:process';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import getRelativeLuminance from 'get-relative-luminance';
@@ -6,20 +6,19 @@ import {
   URL_REGEX,
   collator,
   getIconsDataString,
-  getIconDataPath,
   writeIconsData,
   titleToSlug,
   normalizeColor,
 } from './utils.js';
 
-const hexPattern = /^#?[a-f0-9]{3,8}$/i;
+const hexPattern = /^#?[a-f\d]{3,8}$/i;
 
 const iconsData = JSON.parse(await getIconsDataString());
 
 const titleValidator = (text) => {
   if (!text) return 'This field is required';
   if (
-    iconsData.icons.find(
+    iconsData.icons.some(
       (x) => x.title === text || titleToSlug(x.title) === titleToSlug(text),
     )
   )
@@ -46,12 +45,12 @@ const getIconDataFromAnswers = (answers) => ({
   title: answers.title,
   hex: answers.hex,
   source: answers.source,
-  ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
+  ...(answers.hasGuidelines ? {guidelines: answers.guidelines} : {}),
   ...(answers.hasLicense
     ? {
         license: {
           type: answers.licenseType,
-          ...(answers.licenseUrl ? { url: answers.licenseUrl } : {}),
+          ...(answers.licenseUrl ? {url: answers.licenseUrl} : {}),
         },
       }
     : {}),
@@ -88,7 +87,7 @@ const dataPrompt = [
     name: 'guidelines',
     message: 'Guidelines',
     validate: sourceValidator,
-    when: ({ hasGuidelines }) => hasGuidelines,
+    when: ({hasGuidelines}) => hasGuidelines,
   },
   {
     type: 'confirm',
@@ -99,21 +98,21 @@ const dataPrompt = [
     type: 'input',
     name: 'licenseType',
     message: 'License type',
-    validate: (text) => Boolean(text),
-    when: ({ hasLicense }) => hasLicense,
+    validate: Boolean,
+    when: ({hasLicense}) => hasLicense,
   },
   {
     type: 'input',
     name: 'licenseUrl',
     message: 'License URL',
     suffix: ' (optional)',
-    validate: (text) => !Boolean(text) || sourceValidator(text),
-    when: ({ hasLicense }) => hasLicense,
+    validate: (text) => !text || sourceValidator(text),
+    when: ({hasLicense}) => hasLicense,
   },
   {
     type: 'confirm',
     name: 'confirm',
-    message: (answers) => {
+    message(answers) {
       const icon = getIconDataFromAnswers(answers);
       return [
         'About to write to simple-icons.json',
@@ -133,5 +132,6 @@ if (answers.confirm) {
   await writeIconsData(iconsData);
 } else {
   console.log('Aborted.');
+  // eslint-disable-next-line unicorn/no-process-exit
   process.exit(1);
 }

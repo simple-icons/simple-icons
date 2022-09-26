@@ -49,7 +49,6 @@
     "mocha": "10.0.0",
     "named-html-entities-json": "1.0.0",
     "npm-run-all": "4.1.5",
-    "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "svg-path-bbox": "1.2.2",
     "svg-path-segments": "1.0.0",
@@ -61,10 +60,9 @@
   "scripts": {
     "build": "node scripts/build/package.js",
     "clean": "rimraf index.js icons.js icons.mjs icons.d.ts",
-    "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
-    "jslint": "prettier --check .",
+    "jslint": "xo",
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint icons/*.svg --ci --config .svglintrc.mjs",
     "wslint": "editorconfig-checker",
@@ -77,8 +75,5 @@
     "svgo": "svgo --config svgo.config.js",
     "get-filename": "node scripts/get-filename.js",
     "add-icon-data": "node scripts/add-icon-data.js"
-  },
-  "engines": {
-    "node": ">=0.12.18"
   }
 }

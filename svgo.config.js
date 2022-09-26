@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   multipass: true,
   eol: 'lf',
@@ -62,7 +63,7 @@ module.exports = {
       // Convert basic shapes (such as <circle>) to <path>
       name: 'convertShapeToPath',
       params: {
-        // including <arc>
+        // Including <arc>
         convertArcs: true,
       },
     },
@@ -89,7 +90,7 @@ module.exports = {
       // to the <svg> tag if it's not there already
       name: 'addAttributesToSVGElement',
       params: {
-        attributes: [{ role: 'img', xmlns: 'http://www.w3.org/2000/svg' }],
+        attributes: [{role: 'img', xmlns: 'http://www.w3.org/2000/svg'}],
       },
     },
     'removeOffCanvasPaths',

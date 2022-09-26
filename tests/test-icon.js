@@ -1,8 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { strict as assert } from 'node:assert';
-import { describe, it } from 'mocha';
-import { URL_REGEX } from '../scripts/utils.js';
+import process from 'node:process';
+import {strict as assert} from 'node:assert';
+import {describe, it} from 'mocha';
+import {URL_REGEX} from '../scripts/utils.js';
 
 const iconsDir = path.resolve(process.cwd(), 'icons');
 
@@ -38,7 +39,7 @@ export const testIcon = (icon, subject, slug) => {
     });
 
     it('has a valid "path" value', () => {
-      assert.match(subject.path, /^[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/g);
+      assert.match(subject.path, /^[MmZzLlHhVvCcSsQqTtAaEe\d-,.\s]+$/g);
     });
 
     it(`has ${icon.guidelines ? 'the correct' : 'no'} "guidelines"`, () => {

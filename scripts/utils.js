@@ -5,7 +5,7 @@
 
 import path from 'node:path';
 import fs from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import {fileURLToPath} from 'node:url';
 
 const TITLE_TO_SLUG_REPLACEMENTS = {
   '+': 'plus',
@@ -21,14 +21,14 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
   ŧ: 't',
 };
 
-const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
+const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
   `[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
   'g',
 );
 
-const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
 
-export const URL_REGEX = /^https:\/\/[^\s]+$/;
+export const URL_REGEX = /^https:\/\/\S+$/;
 
 /**
  * Get the slug/filename for an icon.
@@ -78,7 +78,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/./g, (char) => {
-      const charCode = char.charCodeAt(0);
+      const charCode = char.codePointAt(0);
       return charCode > 127 ? `&#${charCode};` : char;
     });
 
@@ -89,10 +89,12 @@ export const titleToHtmlFriendly = (brandTitle) =>
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
   htmlFriendlyTitle
-    .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))
+    .replace(/&#(\d+);/g, (_, number_) =>
+      String.fromCodePoint(Number.parseInt(number_, 10)),
+    )
     .replace(
       /&(quot|amp|lt|gt);/g,
-      (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
+      (_, ref) => ({quot: '"', amp: '&', lt: '<', gt: '>'}[ref]),
     );
 
 /**
@@ -103,6 +105,7 @@ export const getIconDataPath = (rootDir) => {
   if (rootDir === undefined) {
     rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
   }
+
   return path.resolve(rootDir, '_data', 'simple-icons.json');
 };
 
@@ -163,6 +166,7 @@ export const normalizeColor = (text) => {
   } else if (color.length > 6) {
     color = color.slice(0, 6);
   }
+
   return color;
 };
 
@@ -180,11 +184,11 @@ export const getThirdPartyExtensions = async (readmePath) =>
       const [module, author] = line.split(' | ');
       return {
         module: {
-          name: /\[(.+)\]/.exec(module)[1],
+          name: /\[(.+)]/.exec(module)[1],
           url: /\((.+)\)/.exec(module)[1],
         },
         author: {
-          name: /\[(.+)\]/.exec(author)[1],
+          name: /\[(.+)]/.exec(author)[1],
           url: /\((.+)\)/.exec(author)[1],
         },
       };
