@@ -231,7 +231,7 @@
     },
     "sourceUrl": {
       "$id": "#sourceUrl",
-      "description": "URL for icon source. If is a Github URL, is validated to contain a commit hash, to be an issue comment or to be a Github organization URL",
+      "description": "URL for icon source. If is a GitHub URL, is validated to contain a commit hash, to be an issue comment or to be a GitHub organization URL",
       "type": "string",
       "if": {
         "pattern": "^https://github\\.com/(?!(features/actions)|(sponsors)|(logos)$)"
