@@ -55,7 +55,8 @@
     "svg-path-segments": "1.0.0",
     "svglint": "2.1.0",
     "svgo": "2.8.0",
-    "svgpath": "2.5.0"
+    "svgpath": "2.5.0",
+    "xo": "^0.52.3"
   },
   "scripts": {
     "build": "node scripts/build/package.js",
