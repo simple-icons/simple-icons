@@ -6,7 +6,6 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { readFile } from 'node:fs';
 
 const TITLE_TO_SLUG_REPLACEMENTS = {
   '+': 'plus',
