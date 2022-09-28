@@ -19,7 +19,7 @@
         },
         "source": {
           "description": "The website from which the icon was sourced",
-          "$ref": "#/definitions/url"
+          "$ref": "#/definitions/sourceUrl"
         },
         "guidelines": {
           "description": "The brand guidelines",
@@ -228,6 +228,20 @@
       "$id": "#title",
       "description": "The name of the brand",
       "type": "string"
+    },
+    "sourceUrl": {
+      "$id": "#sourceUrl",
+      "description": "URL for icon source. If is a GitHub URL, is validated to contain a commit hash, to be an issue comment or to be a GitHub organization URL",
+      "type": "string",
+      "if": {
+        "pattern": "^https://github\\.com/(?!(features/actions)|(sponsors)|(logos)$)"
+      },
+      "then": {
+        "pattern": "^https://github\\.com/[^/]+/[^/]+/(blob/[a-f\\d]{40}/[^\\s]+)|(tree/[a-f\\d]{40}(/[^\\s]+)?)|(((issues)|(pull))/\\d+#issuecomment-\\d+)$"
+      },
+      "else": {
+        "$ref": "#/definitions/url"
+      }
     },
     "url": {
       "$id": "#url",
