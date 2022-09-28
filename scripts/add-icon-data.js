@@ -183,7 +183,6 @@ if (answers.confirmToAdd) {
   iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
   await writeIconsData(iconsData);
 } else {
-  console.log(answers);
   console.log('Aborted.');
   process.exit(1);
 }
