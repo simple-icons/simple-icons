@@ -53,7 +53,7 @@ const aliasesTransformer = (text) =>
 const aliasesChoices = Object.entries(
   jsonSchema.definitions.brand.properties.aliases.properties,
 )
-  .filter(([k]) => k !== 'loc')
+  .filter(([k]) => ['aka', 'old'].includes(k))
   .map(([k, v]) => ({ name: `${k}: ${v.description}`, value: k }));
 
 const getIconDataFromAnswers = (answers) => ({
