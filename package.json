@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "7.12.0",
+  "version": "7.13.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -37,10 +37,13 @@
     "url": "https://opencollective.com/simple-icons"
   },
   "devDependencies": {
+    "chalk": "^5.0.1",
     "editorconfig-checker": "4.0.2",
     "esbuild": "0.15.6",
     "fake-diff": "1.0.0",
+    "get-relative-luminance": "^1.0.0",
     "husky": "8.0.1",
+    "inquirer": "^9.1.2",
     "is-ci": "3.0.1",
     "jsonschema": "1.4.1",
     "mocha": "10.0.0",
@@ -71,7 +74,8 @@
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
     "svgo": "svgo --config svgo.config.js",
-    "get-filename": "node scripts/get-filename.js"
+    "get-filename": "node scripts/get-filename.js",
+    "add-icon-data": "node scripts/add-icon-data.js"
   },
   "engines": {
     "node": ">=0.12.18"
