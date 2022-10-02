@@ -3,7 +3,7 @@
         {
             "title": ".ENV",
             "hex": "ECD53F",
-            "source": "https://github.com/motdotla/dotenv",
+            "source": "https://github.com/motdotla/dotenv/tree/40e75440337d1de2345dc8326d6108331f583fd8",
             "aliases": {
                 "aka": [
                     "Dotenv"
@@ -1010,7 +1010,7 @@
         {
             "title": "Ardour",
             "hex": "C61C3E",
-            "source": "https://github.com/Ardour/ardour/tree/master/tools/misc_resources/"
+            "source": "https://github.com/Ardour/ardour/tree/d39f064756c88197adfe13fe695b86bd8cb3bb81/tools/misc_resources"
         },
         {
             "title": "Arduino",
@@ -1226,7 +1226,7 @@
         {
             "title": "Awesome Lists",
             "hex": "FC60A8",
-            "source": "https://github.com/sindresorhus/awesome/tree/master/media"
+            "source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media"
         },
         {
             "title": "awesomeWM",
@@ -1824,6 +1824,11 @@
             "guidelines": "https://www.caffeine.tv/newsroom.html"
         },
         {
+            "title": "Cairo Graphics",
+            "hex": "F39914",
+            "source": "https://github.com/freedesktop/cairo/blob/44f808fce9f437e14f2b0ef4e1583def8ab578ae/doc/tutorial/slides/cairo-title.svg"
+        },
+        {
             "title": "Cairo Metro",
             "hex": "C10C0C",
             "source": "https://en.wikipedia.org/wiki/File:Cairo_metro_logo2012.svg"
@@ -2181,7 +2186,7 @@
         {
             "title": "CNCF",
             "hex": "231F20",
-            "source": "https://github.com/cncf/artwork/blob/master/examples/other.md#cncf-logos",
+            "source": "https://github.com/cncf/artwork/blob/d2ed716cc0769e6c65d2e58f9a503fca02b60a56/examples/other.md#cncf-logos",
             "guidelines": "https://www.cncf.io/brand-guidelines/"
         },
         {
@@ -2315,8 +2320,8 @@
         },
         {
             "title": "CodeSandbox",
-            "hex": "000000",
-            "source": "https://codesandbox.io"
+            "hex": "151515",
+            "source": "https://codesandbox.io/CodeSandbox-Press-Kit.zip"
         },
         {
             "title": "Codeship",
@@ -2639,7 +2644,7 @@
         {
             "title": "D-EDGE",
             "hex": "432975",
-            "source": "https://github.com/d-edge/JoinUs/blob/main/d-edge.svg"
+            "source": "https://github.com/d-edge/JoinUs/blob/4d8b5cf7145db26649fe9f1587194e44dbbe3565/d-edge.svg"
         },
         {
             "title": "D-Wave Systems",
@@ -2685,7 +2690,7 @@
         {
             "title": "Dart",
             "hex": "0175C2",
-            "source": "https://github.com/dart-lang/site-shared/tree/master/src/_assets/image/dart/logo"
+            "source": "https://github.com/dart-lang/site-shared/tree/18458ff440afd3d06f04e5cb871c4c5eda29c9d5/src/_assets/image/dart/logo"
         },
         {
             "title": "Darty",
@@ -3044,7 +3049,7 @@
         {
             "title": "DocuSign",
             "hex": "FFCC22",
-            "source": "https://github.com/simple-icons/simple-icons/issues/1098"
+            "source": "https://www.docusign.com/sites/all/themes/custom/docusign/favicons/mstile-310x310.png"
         },
         {
             "title": "Dogecoin",
@@ -3304,7 +3309,7 @@
         {
             "title": "Electron Fiddle",
             "hex": "E79537",
-            "source": "https://github.com/electron/fiddle"
+            "source": "https://github.com/electron/fiddle/blob/19360ade76354240630e5660469b082128e1e57e/assets/icons/fiddle.svg"
         },
         {
             "title": "electron-builder",
@@ -3335,7 +3340,7 @@
         {
             "title": "Elixir",
             "hex": "4B275F",
-            "source": "https://github.com/elixir-lang/elixir-lang.github.com/tree/master/images/logo"
+            "source": "https://github.com/elixir-lang/elixir-lang.github.com/tree/031746384ee23b9be19298c92a9699c56cc05845/images/logo"
         },
         {
             "title": "Ello",
@@ -4655,6 +4660,12 @@
             "source": "https://www.graylog.org"
         },
         {
+            "title": "Greenhouse",
+            "hex": "24A47F",
+            "source": "https://brand.greenhouse.io/brand-portal/p/6",
+            "guidelines": "https://brand.greenhouse.io/brand-portal/p/5"
+        },
+        {
             "title": "GreenSock",
             "hex": "88CE02",
             "source": "https://greensock.com/"
@@ -4740,7 +4751,7 @@
         {
             "title": "Gutenberg",
             "hex": "000000",
-            "source": "https://github.com/WordPress/gutenberg/blob/master/docs/final-g-wapuu-black.svg"
+            "source": "https://github.com/WordPress/gutenberg/blob/7829913ae117dfb561d14c600eea7b281afd6556/docs/final-g-wapuu-black.svg"
         },
         {
             "title": "Habr",
@@ -5003,6 +5014,11 @@
             "title": "Honda",
             "hex": "E40521",
             "source": "https://www.honda.ie/"
+        },
+        {
+            "title": "Honey",
+            "hex": "FF6801",
+            "source": "https://www.joinhoney.com/"
         },
         {
             "title": "Hootsuite",
@@ -5497,7 +5513,7 @@
         {
             "title": "Jamstack",
             "hex": "F0047F",
-            "source": "https://github.com/jamstack/jamstack.org/tree/main/src/site/img/logo"
+            "source": "https://github.com/jamstack/jamstack.org/tree/9e761f6b77ad11e8dc6d3a953e61e53f1d99a1e6/src/site/img/logo"
         },
         {
             "title": "Jasmine",
@@ -6043,7 +6059,7 @@
         {
             "title": "Kubernetes",
             "hex": "326CE5",
-            "source": "https://github.com/kubernetes/kubernetes/tree/master/logo"
+            "source": "https://github.com/kubernetes/kubernetes/tree/cac53883f4714452f3084a22e4be20d042a9df33/logo"
         },
         {
             "title": "Kubuntu",
@@ -6527,7 +6543,7 @@
         {
             "title": "Magisk",
             "hex": "00AF9C",
-            "source": "https://github.com/topjohnwu/Magisk/blob/master/app/src/main/res/drawable/ic_magisk.xml"
+            "source": "https://github.com/topjohnwu/Magisk/blob/23ad611566b557f26d268920692b25aa89fc0070/app/src/main/res/drawable/ic_magisk.xml"
         },
         {
             "title": "Mail.Ru",
@@ -7357,7 +7373,7 @@
         {
             "title": "Neutralinojs",
             "hex": "F89901",
-            "source": "https://github.com/neutralinojs/neutralinojs"
+            "source": "https://github.com/neutralinojs/design-guide/blob/52a7232598ff22cddd810a3079e09a2cc2892609/logo/neutralinojs_logo_vector.svg"
         },
         {
             "title": "New Balance",
@@ -7481,7 +7497,7 @@
         {
             "title": "NixOS",
             "hex": "5277C3",
-            "source": "https://github.com/NixOS/nixos-homepage/tree/master/logo"
+            "source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
         },
         {
             "title": "Node-RED",
@@ -7590,7 +7606,7 @@
         {
             "title": "Nunjucks",
             "hex": "1C4913",
-            "source": "https://github.com/mozilla/nunjucks/blob/master/docs/img/favicon.png"
+            "source": "https://github.com/mozilla/nunjucks/blob/fd500902d7c88672470c87170796de52fc0f791a/docs/img/favicon.png"
         },
         {
             "title": "Nutanix",
@@ -7761,7 +7777,7 @@
         {
             "title": "Open Containers Initiative",
             "hex": "262261",
-            "source": "https://github.com/opencontainers/artwork/tree/master/oci/icon"
+            "source": "https://github.com/opencontainers/artwork/tree/d8ccfe94471a0236b1d4a3f0f90862c4fe5486ce/oci/icon"
         },
         {
             "title": "Open Source Initiative",
@@ -7889,7 +7905,7 @@
         {
             "title": "Openverse",
             "hex": "FFE033",
-            "source": "https://github.com/WordPress/openverse/blob/main/brand/icon.svg",
+            "source": "https://github.com/WordPress/openverse/blob/5db2545d6b73ec4aa5e908822683ee9d18af301d/brand/icon.svg",
             "guidelines": "https://www.figma.com/file/GIIQ4sDbaToCfFQyKMvzr8/Openverse-Design-Library?node-id=312%3A487"
         },
         {
@@ -7974,7 +7990,7 @@
         {
             "title": "OSMC",
             "hex": "17394A",
-            "source": "https://github.com/osmc/osmc/tree/master/assets"
+            "source": "https://github.com/osmc/website/tree/e7d0d8002660c979ae5119e28d1c69c893ac9f76/content/themes/osmc/assets/img/logo"
         },
         {
             "title": "osu!",
@@ -8026,7 +8042,7 @@
         {
             "title": "Packagist",
             "hex": "F28D1A",
-            "source": "https://github.com/composer/packagist/issues/1147",
+            "source": "https://github.com/composer/packagist/issues/1147#issuecomment-747951608",
             "license": {
                 "type": "MIT"
             }
@@ -8067,7 +8083,7 @@
         {
             "title": "Palantir",
             "hex": "101113",
-            "source": "https://github.com/palantir/conjure/blob/master/docs/media/palantir-logo.svg"
+            "source": "https://github.com/palantir/conjure/blob/1b0d450dc52c4822b4c9d1da8c61ad7f78855fe5/docs/media/palantir-logo.svg"
         },
         {
             "title": "Palo Alto Software",
@@ -8700,6 +8716,11 @@
             "source": "https://github.com/prettier/prettier-logo/blob/06997b307e0608ebee2044dafa0b9429d6b5a103/images/prettier-icon-clean-centred.svg"
         },
         {
+            "title": "Prevention",
+            "hex": "44C1C5",
+            "source": "https://prevention.com"
+        },
+        {
             "title": "Prezi",
             "hex": "3181FF",
             "source": "https://prezi.com/press/kit/"
@@ -8995,7 +9016,7 @@
         {
             "title": "QMK",
             "hex": "333333",
-            "source": "https://github.com/qmk/qmk_firmware"
+            "source": "https://github.com/qmk/qmk.fm/blob/d6f7b646aa03f2941bb3977ba13a07ca351f20ae/assets/images/badge-dark.svg"
         },
         {
             "title": "Qt",
@@ -9296,7 +9317,7 @@
         {
             "title": "Redux",
             "hex": "764ABC",
-            "source": "https://github.com/reactjs/redux/tree/master/logo"
+            "source": "https://github.com/reduxjs/redux/tree/8ad084251a5b3e4617157fc52795b6284e68bc1e/logo"
         },
         {
             "title": "Redux-Saga",
@@ -9394,7 +9415,7 @@
         {
             "title": "Resurrection Remix OS",
             "hex": "000000",
-            "source": "https://github.com/ResurrectionRemix"
+            "source": "https://avatars.githubusercontent.com/u/4931972"
         },
         {
             "title": "RetroArch",
@@ -9645,7 +9666,7 @@
         {
             "title": "Ruby Sinatra",
             "hex": "000000",
-            "source": "https://github.com/sinatra/resources/tree/master/logo"
+            "source": "https://github.com/sinatra/resources/tree/64c22f9b4bf2e52b5c0c875ba16671f295689efb/logo"
         },
         {
             "title": "RubyGems",
@@ -9938,7 +9959,7 @@
         {
             "title": "Sensu",
             "hex": "89C967",
-            "source": "https://github.com/sensu/sensu-go/blob/master/dashboard/src/assets/logo/graphic/green.svg"
+            "source": "https://github.com/sensu/web/blob/c823738c11e576d6b2e5d4ca2d216dbd472c0b11/src/assets/logo/graphic/green.svg"
         },
         {
             "title": "Sentry",
@@ -9954,7 +9975,7 @@
         {
             "title": "Sequelize",
             "hex": "52B0E7",
-            "source": "https://github.com/sequelize/sequelize/pull/12871"
+            "source": "https://github.com/sequelize/website/blob/e6a482fa58a839b15ace80e3c8901ed2887be45e/static/img/logo-simple.svg"
         },
         {
             "title": "Server Fault",
@@ -10468,7 +10489,7 @@
         {
             "title": "Spinnaker",
             "hex": "139BB4",
-            "source": "https://github.com/spinnaker/spinnaker.github.io/tree/master/assets/images"
+            "source": "https://github.com/spinnaker/spinnaker.github.io/tree/0cdd37af7541293a810494a1bb4d7df9ef553d60/assets/images"
         },
         {
             "title": "Spinrilla",
@@ -10850,6 +10871,11 @@
             "title": "Supermicro",
             "hex": "151F6D",
             "source": "https://www.supermicro.com/manuals/supermicro_logo_guidelines.pdf"
+        },
+        {
+            "title": "SurrealDB",
+            "hex": "FF00A0",
+            "source": "https://surrealdb.com/media"
         },
         {
             "title": "SurveyMonkey",
@@ -11642,7 +11668,7 @@
         {
             "title": "uBlock Origin",
             "hex": "800000",
-            "source": "https://github.com/gorhill/uBlock/blob/master/src/img/ublock.svg"
+            "source": "https://github.com/gorhill/uBlock/blob/59aa235952a9289cfe72e4fb9f8a7d8f4c80be9a/src/img/ublock.svg"
         },
         {
             "title": "Ubuntu",
@@ -12160,7 +12186,7 @@
         {
             "title": "wasmCloud",
             "hex": "00BC8E",
-            "source": "https://github.com/wasmCloud/branding/",
+            "source": "https://github.com/wasmCloud/branding/tree/0827503c63f55471a0c709e97d609f56d716be40",
             "guidelines": "https://github.com/wasmCloud/branding/"
         },
         {
@@ -12539,7 +12565,7 @@
         {
             "title": "Xamarin",
             "hex": "3498DB",
-            "source": "https://github.com/dotnet/swag/tree/master/xamarin"
+            "source": "https://github.com/dotnet-foundation/swag/tree/0d21c59a604f348f509d772c12a99b888ed9f21f/xamarin"
         },
         {
             "title": "XAML",
@@ -12599,7 +12625,7 @@
         {
             "title": "XO",
             "hex": "5ED9C7",
-            "source": "https://github.com/xojs/xo"
+            "source": "https://github.com/xojs/xo/tree/f9c7db99255d009b3c81535ced021c3f6ade57b4"
         },
         {
             "title": "XRP",
@@ -12798,7 +12824,7 @@
         {
             "title": "ZeroMQ",
             "hex": "DF0000",
-            "source": "https://github.com/zeromq/zeromq.org/blob/master/static/safari-pinned-tab.svg"
+            "source": "https://github.com/zeromq/zeromq.org/blob/00f635314a0b0b801d411c7efef314dfd9625404/static/safari-pinned-tab.svg"
         },
         {
             "title": "Zerply",

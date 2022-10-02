@@ -348,6 +348,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cachet` | `cachet` |
 | `CafePress` | `cafepress` |
 | `Caffeine` | `caffeine` |
+| `Cairo Graphics` | `cairographics` |
 | `Cairo Metro` | `cairometro` |
 | `CakePHP` | `cakephp` |
 | `Campaign Monitor` | `campaignmonitor` |
@@ -876,6 +877,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grav` | `grav` |
 | `Gravatar` | `gravatar` |
 | `Graylog` | `graylog` |
+| `Greenhouse` | `greenhouse` |
 | `GreenSock` | `greensock` |
 | `Grid.ai` | `griddotai` |
 | `Gridsome` | `gridsome` |
@@ -940,6 +942,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Homebridge` | `homebridge` |
 | `homify` | `homify` |
 | `Honda` | `honda` |
+| `Honey` | `honey` |
 | `Hootsuite` | `hootsuite` |
 | `Hoppscotch` | `hoppscotch` |
 | `Hotels.com` | `hotelsdotcom` |
@@ -1610,6 +1613,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PrestaShop` | `prestashop` |
 | `Presto` | `presto` |
 | `Prettier` | `prettier` |
+| `Prevention` | `prevention` |
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
@@ -1999,6 +2003,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
 | `Supermicro` | `supermicro` |
+| `SurrealDB` | `surrealdb` |
 | `SurveyMonkey` | `surveymonkey` |
 | `SUSE` | `suse` |
 | `Suzuki` | `suzuki` |

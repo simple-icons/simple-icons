@@ -5,6 +5,7 @@ import getRelativeLuminance from 'get-relative-luminance';
 import {
   URL_REGEX,
   collator,
+  getJsonSchemaData,
   getIconsDataString,
   getIconDataPath,
   writeIconsData,
@@ -15,6 +16,7 @@ import {
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
 const iconsData = JSON.parse(await getIconsDataString());
+const jsonSchema = await getJsonSchemaData();
 
 const titleValidator = (text) => {
   if (!text) return 'This field is required';
@@ -42,6 +44,18 @@ const hexTransformer = (text) => {
   return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(text);
 };
 
+const aliasesTransformer = (text) =>
+  text
+    .split(',')
+    .map((x) => chalk.cyan(x))
+    .join(',');
+
+const aliasesChoices = Object.entries(
+  jsonSchema.definitions.brand.properties.aliases.properties,
+)
+  .filter(([k]) => ['aka', 'old'].includes(k))
+  .map(([k, v]) => ({ name: `${k}: ${v.description}`, value: k }));
+
 const getIconDataFromAnswers = (answers) => ({
   title: answers.title,
   hex: answers.hex,
@@ -53,6 +67,21 @@ const getIconDataFromAnswers = (answers) => ({
           type: answers.licenseType,
           ...(answers.licenseUrl ? { url: answers.licenseUrl } : {}),
         },
+      }
+    : {}),
+  ...(answers.hasAliases
+    ? {
+        aliases: aliasesChoices.reduce((previous, current) => {
+          const promptKey = `${current.value}AliasesList`;
+          if (answers[promptKey])
+            return {
+              ...previous,
+              [current.value]: answers[promptKey]
+                .split(',')
+                .map((x) => x.trim()),
+            };
+          return previous;
+        }, {}),
       }
     : {}),
 });
@@ -112,7 +141,29 @@ const dataPrompt = [
   },
   {
     type: 'confirm',
-    name: 'confirm',
+    name: 'hasAliases',
+    message: 'The icon has brand aliases?',
+    default: false,
+  },
+  {
+    type: 'checkbox',
+    name: 'aliasesTypes',
+    message: 'What types of aliases do you want to add?',
+    choices: aliasesChoices,
+    when: ({ hasAliases }) => hasAliases,
+  },
+  ...aliasesChoices.map((x) => ({
+    type: 'input',
+    name: `${x.value}AliasesList`,
+    message: x.value,
+    suffix: ' (separate with commas)',
+    validate: (text) => Boolean(text),
+    transformer: aliasesTransformer,
+    when: (answers) => answers?.aliasesTypes?.includes(x.value),
+  })),
+  {
+    type: 'confirm',
+    name: 'confirmToAdd',
     message: (answers) => {
       const icon = getIconDataFromAnswers(answers);
       return [
@@ -127,7 +178,7 @@ const dataPrompt = [
 const answers = await inquirer.prompt(dataPrompt);
 const icon = getIconDataFromAnswers(answers);
 
-if (answers.confirm) {
+if (answers.confirmToAdd) {
   iconsData.icons.push(icon);
   iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
   await writeIconsData(iconsData);
