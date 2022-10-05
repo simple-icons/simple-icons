@@ -14,6 +14,9 @@ export interface SimpleIcon {
     | undefined;
 }
 
+/**
+ * @deprecated The `simple-icons` entrypoint will be removed in the next major. Please switch to using `import * as icons from "simple-icons/icons"` if you need an object with all the icons.
+ */
 declare const icons: Record<string, SimpleIcon> & {
   Get(name: string): SimpleIcon;
 };
