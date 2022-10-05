@@ -31,6 +31,16 @@ const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 export const URL_REGEX = /^https:\/\/[^\s]+$/;
 
 /**
+ * Get the directory name where this file is located from `import.meta.url`,
+ * equivalent to the `__dirname` global variable in CommonJS.
+ * @param {String} importMetaUrl import.meta.url
+ */
+export const getDirnameFromImportMeta = (importMetaUrl) =>
+  path.dirname(fileURLToPath(importMetaUrl));
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
+
+/**
  * Get the slug/filename for an icon.
  * @param {Object} icon The icon data as it appears in _data/simple-icons.json
  */
@@ -96,13 +106,25 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
+ * Get JSON schema data.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const getJsonSchemaData = async (
+  rootDir = path.resolve(__dirname, '..'),
+) => {
+  const __dirname = getDirnameFromImportMeta(import.meta.url);
+  const jsonSchemaPath = path.resolve(rootDir, '.jsonschema.json');
+  const jsonSchemaString = await fs.readFile(jsonSchemaPath, 'utf8');
+  return JSON.parse(jsonSchemaString);
+};
+
+/**
  * Get path of _data/simpe-icons.json.
  * @param {String|undefined} rootDir Path to the root directory of the project.
  */
-export const getIconDataPath = (rootDir) => {
-  if (rootDir === undefined) {
-    rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
-  }
+export const getIconDataPath = (
+  rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..'),
+) => {
   return path.resolve(rootDir, '_data', 'simple-icons.json');
 };
 
@@ -135,14 +157,6 @@ export const writeIconsData = async (iconsData, rootDir) => {
     'utf8',
   );
 };
-
-/**
- * Get the directory name where this file is located from `import.meta.url`,
- * equivalent to the `__dirname` global variable in CommonJS.
- * @param {String} importMetaUrl import.meta.url
- */
-export const getDirnameFromImportMeta = (importMetaUrl) =>
-  path.dirname(fileURLToPath(importMetaUrl));
 
 /**
  * Replace Windows newline characters by Unix ones.
