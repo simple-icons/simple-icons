@@ -1464,6 +1464,11 @@
             "source": "https://www.bilibili.com/"
         },
         {
+            "title": "Billboard",
+            "hex": "000000",
+            "source": "https://www.billboard.com/"
+        },
+        {
             "title": "Binance",
             "hex": "F0B90B",
             "source": "https://binance.com/"
@@ -2535,6 +2540,11 @@
             "title": "CrateDB",
             "hex": "009DC7",
             "source": "https://github.com/crate/crate-docs-theme/blob/cbd734b3617489ca937f35e30f37f3f6c1870e1f/src/crate/theme/rtd/crate/static/images/crate-logo.svg"
+        },
+        {
+            "title": "Crayon",
+            "hex": "FF6A4C",
+            "source": "https://www.crayon.com"
         },
         {
             "title": "Create React App",
@@ -8953,6 +8963,11 @@
             "title": "PyScaffold",
             "hex": "005CA0",
             "source": "https://github.com/pyscaffold/pyscaffold/blob/3f72bf7894fc73b34af06a90bb5d43aae410ce5d/docs/gfx/logo.svg"
+        },
+        {
+            "title": "PySyft",
+            "hex": "F1BF7A",
+            "source": "https://github.com/OpenMined/openmined-website/blob/db5c223657c8c49ab1ee8db2841fe802f73af31c/src/containers/app/components/repo-icon/assets/syft.svg"
         },
         {
             "title": "Pytest",
