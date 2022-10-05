@@ -1,4 +1,4 @@
-a<p align="center">
+<p align="center">
 <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg#gh-light-mode-only" alt="Simple Icons" width=70><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg#gh-dark-mode-only" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
