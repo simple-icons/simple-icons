@@ -279,6 +279,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BigCommerce` | `bigcommerce` |
 | `Bilibili` | `bilibili` |
 | `Billboard` | `billboard` |
+| `BIM` | `bim` |
 | `Binance` | `binance` |
 | `Bio Link` | `biolink` |
 | `Bit` | `bit` |
@@ -589,6 +590,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DoorDash` | `doordash` |
 | `Douban` | `douban` |
 | `Douban Read` | `doubanread` |
+| `Dovecot` | `dovecot` |
 | `DPD` | `dpd` |
 | `Dragonframe` | `dragonframe` |
 | `Draugiem.lv` | `draugiemdotlv` |
@@ -647,6 +649,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Emirates` | `emirates` |
 | `Emlakjet` | `emlakjet` |
 | `Empire Kred` | `empirekred` |
+| `Engadget` | `engadget` |
 | `Enpass` | `enpass` |
 | `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
@@ -756,6 +759,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fossil SCM` | `fossilscm` |
 | `Foursquare` | `foursquare` |
 | `Foursquare City Guide` | `foursquarecityguide` |
+| `FOX` | `fox` |
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
@@ -889,6 +893,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Groupon` | `groupon` |
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
+| `GSK` | `gsk` |
 | `GTK` | `gtk` |
 | `Guangzhou Metro` | `guangzhoumetro` |
 | `Guilded` | `guilded` |
@@ -1338,6 +1343,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
 | `Moo` | `moo` |
+| `Moonrepo` | `moonrepo` |
 | `Morrisons` | `morrisons` |
 | `Moscow Metro` | `moscowmetro` |
 | `Motorola` | `motorola` |
@@ -2031,6 +2037,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Symphony` | `symphony` |
 | `SymPy` | `sympy` |
 | `Synology` | `synology` |
+| `System76` | `system76` |
 | `T-Mobile` | `tmobile` |
 | `Tableau` | `tableau` |
 | `TableCheck` | `tablecheck` |
@@ -2325,6 +2332,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `World Health Organization` | `worldhealthorganization` |
 | `WP Engine` | `wpengine` |
 | `WP Rocket` | `wprocket` |
+| `WPExplorer` | `wpexplorer` |
 | `write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
