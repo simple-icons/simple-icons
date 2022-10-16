@@ -245,6 +245,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Azure Pipelines` | `azurepipelines` |
 | `B&R Automation` | `bandrautomation` |
 | `Babel` | `babel` |
+| `Backblaze` | `backblaze` |
 | `Backbone.js` | `backbonedotjs` |
 | `Backendless` | `backendless` |
 | `Badgr` | `badgr` |
@@ -277,6 +278,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BigBlueButton` | `bigbluebutton` |
 | `BigCommerce` | `bigcommerce` |
 | `Bilibili` | `bilibili` |
+| `Billboard` | `billboard` |
+| `BIM` | `bim` |
 | `Binance` | `binance` |
 | `Bio Link` | `biolink` |
 | `Bit` | `bit` |
@@ -348,6 +351,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cachet` | `cachet` |
 | `CafePress` | `cafepress` |
 | `Caffeine` | `caffeine` |
+| `Cairo Graphics` | `cairographics` |
 | `Cairo Metro` | `cairometro` |
 | `CakePHP` | `cakephp` |
 | `Campaign Monitor` | `campaignmonitor` |
@@ -484,6 +488,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `cPanel` | `cpanel` |
 | `Craft CMS` | `craftcms` |
 | `CrateDB` | `cratedb` |
+| `Crayon` | `crayon` |
 | `Create React App` | `createreactapp` |
 | `Creative Commons` | `creativecommons` |
 | `Credly` | `credly` |
@@ -585,6 +590,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DoorDash` | `doordash` |
 | `Douban` | `douban` |
 | `Douban Read` | `doubanread` |
+| `Dovecot` | `dovecot` |
 | `DPD` | `dpd` |
 | `Dragonframe` | `dragonframe` |
 | `Draugiem.lv` | `draugiemdotlv` |
@@ -643,6 +649,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Emirates` | `emirates` |
 | `Emlakjet` | `emlakjet` |
 | `Empire Kred` | `empirekred` |
+| `Engadget` | `engadget` |
 | `Enpass` | `enpass` |
 | `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
@@ -716,6 +723,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Firebase` | `firebase` |
 | `Firefox` | `firefox` |
 | `Firefox Browser` | `firefoxbrowser` |
+| `Fireship` | `fireship` |
 | `FIRST` | `first` |
 | `Fitbit` | `fitbit` |
 | `FITE` | `fite` |
@@ -751,6 +759,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fossil SCM` | `fossilscm` |
 | `Foursquare` | `foursquare` |
 | `Foursquare City Guide` | `foursquarecityguide` |
+| `FOX` | `fox` |
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
@@ -876,6 +885,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grav` | `grav` |
 | `Gravatar` | `gravatar` |
 | `Graylog` | `graylog` |
+| `Greenhouse` | `greenhouse` |
 | `GreenSock` | `greensock` |
 | `Grid.ai` | `griddotai` |
 | `Gridsome` | `gridsome` |
@@ -883,6 +893,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Groupon` | `groupon` |
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
+| `GSK` | `gsk` |
 | `GTK` | `gtk` |
 | `Guangzhou Metro` | `guangzhoumetro` |
 | `Guilded` | `guilded` |
@@ -917,6 +928,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HCL` | `hcl` |
 | `Headless UI` | `headlessui` |
 | `Headspace` | `headspace` |
+| `Hedera` | `hedera` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
 | `Helm` | `helm` |
@@ -940,6 +952,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Homebridge` | `homebridge` |
 | `homify` | `homify` |
 | `Honda` | `honda` |
+| `Honey` | `honey` |
 | `Hootsuite` | `hootsuite` |
 | `Hoppscotch` | `hoppscotch` |
 | `Hotels.com` | `hotelsdotcom` |
@@ -1003,6 +1016,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Instapaper` | `instapaper` |
 | `Instatus` | `instatus` |
 | `Instructables` | `instructables` |
+| `Instructure` | `instructure` |
 | `Integromat` | `integromat` |
 | `Intel` | `intel` |
 | `IntelliJ IDEA` | `intellijidea` |
@@ -1329,6 +1343,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
 | `Moo` | `moo` |
+| `Moonrepo` | `moonrepo` |
 | `Morrisons` | `morrisons` |
 | `Moscow Metro` | `moscowmetro` |
 | `Motorola` | `motorola` |
@@ -1517,10 +1532,12 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pelican` | `pelican` |
 | `Peloton` | `peloton` |
 | `Penny` | `penny` |
+| `Penpot` | `penpot` |
 | `Pepsi` | `pepsi` |
 | `Percy` | `percy` |
 | `Perforce` | `perforce` |
 | `Perl` | `perl` |
+| `Persistent` | `persistent` |
 | `Personio` | `personio` |
 | `Pets at Home` | `petsathome` |
 | `Peugeot` | `peugeot` |
@@ -1610,6 +1627,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PrestaShop` | `prestashop` |
 | `Presto` | `presto` |
 | `Prettier` | `prettier` |
+| `Prevention` | `prevention` |
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
@@ -1650,6 +1668,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PyPI` | `pypi` |
 | `PyPy` | `pypy` |
 | `PyScaffold` | `pyscaffold` |
+| `PySyft` | `pysyft` |
 | `Pytest` | `pytest` |
 | `Python` | `python` |
 | `PyTorch` | `pytorch` |
@@ -1768,6 +1787,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rotary International` | `rotaryinternational` |
 | `Rotten Tomatoes` | `rottentomatoes` |
 | `Roundcube` | `roundcube` |
+| `RSocket` | `rsocket` |
 | `RSS` | `rss` |
 | `RStudio` | `rstudio` |
 | `RTÉ` | `rte` |
@@ -1999,6 +2019,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
 | `Supermicro` | `supermicro` |
+| `SurrealDB` | `surrealdb` |
 | `SurveyMonkey` | `surveymonkey` |
 | `SUSE` | `suse` |
 | `Suzuki` | `suzuki` |
@@ -2016,6 +2037,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Symphony` | `symphony` |
 | `SymPy` | `sympy` |
 | `Synology` | `synology` |
+| `System76` | `system76` |
 | `T-Mobile` | `tmobile` |
 | `Tableau` | `tableau` |
 | `TableCheck` | `tablecheck` |
@@ -2310,6 +2332,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `World Health Organization` | `worldhealthorganization` |
 | `WP Engine` | `wpengine` |
 | `WP Rocket` | `wprocket` |
+| `WPExplorer` | `wpexplorer` |
 | `write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
