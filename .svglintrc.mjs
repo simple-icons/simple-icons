@@ -3,6 +3,7 @@ import path from 'node:path';
 import {
   getDirnameFromImportMeta,
   htmlFriendlyToTitle,
+  collator,
 } from './scripts/utils.js';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
@@ -25,7 +26,7 @@ const htmlNamedEntities = JSON.parse(
 const svglintIgnores = JSON.parse(fs.readFileSync(svglintIgnoredFile, 'utf8'));
 
 const svgRegexp =
-  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>\n?$/;
+  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 
 const iconSize = 24;
@@ -46,7 +47,7 @@ const sortObjectByKey = (obj) => {
 
 const sortObjectByValue = (obj) => {
   return Object.keys(obj)
-    .sort((a, b) => ('' + obj[a]).localeCompare(obj[b]))
+    .sort((a, b) => collator.compare(obj[a], obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 };
 
