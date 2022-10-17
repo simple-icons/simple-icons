@@ -12482,6 +12482,14 @@
             "guidelines": "https://company.wattpad.com/brandguideline"
         },
         {
+            "title": "Wayland",
+            "hex": "FFBC00",
+            "source": "https://gitlab.freedesktop.org/wayland/weston/-/blob/77ede00a938b8137bd638ce67b6f58cb52b1d1b0/data/wayland.svg",
+            "license": {
+                "type": "MIT"
+            }
+        },
+        {
             "title": "Waze",
             "hex": "33CCFF",
             "source": "https://www.waze.com/"
