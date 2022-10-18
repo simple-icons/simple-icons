@@ -18,6 +18,7 @@ import {
   slugToVariableName,
   getIconsData,
   getDirnameFromImportMeta,
+  collator,
 } from '../utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -81,30 +82,29 @@ const build = async () => {
   };
 
   // 'main'
-  const iconsBarrelMjs = [];
-  const iconsBarrelJs = [];
-  const iconsBarrelDts = [];
-  const buildIcons = [];
-
-  await Promise.all(
+  const buildIcons = await Promise.all(
     icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
       icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
-      buildIcons.push(icon);
-
       const iconObject = iconToObject(icon);
-
       const iconExportName = slugToVariableName(icon.slug);
-
-      // add object to the barrel file
-      iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
-      iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
-      iconsBarrelDts.push(`export const ${iconExportName}:I;`);
+      return { icon, iconObject, iconExportName };
     }),
   );
+
+  const iconsBarrelDts = [];
+  const iconsBarrelJs = [];
+  const iconsBarrelMjs = [];
+
+  buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
+  buildIcons.forEach(({ iconObject, iconExportName }) => {
+    iconsBarrelDts.push(`export const ${iconExportName}:I;`);
+    iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
+    iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
+  });
 
   // constants used in templates to reduce package size
   const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
@@ -113,7 +113,7 @@ const build = async () => {
   const rawIndexJs = util.format(
     indexTemplate,
     constantsString,
-    buildIcons.map(iconToKeyValue).join(','),
+    buildIcons.map(({ icon }) => iconToKeyValue(icon)).join(','),
   );
   await writeJs(indexFile, rawIndexJs);
 
