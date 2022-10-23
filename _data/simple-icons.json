@@ -1312,6 +1312,12 @@
             "source": "https://backendless.com/"
         },
         {
+            "title": "Backstage",
+            "hex": "9BF0E1",
+            "source": "https://github.com/backstage/backstage/blob/862f2517188849dd7467d059edeb8692e6933c35/microsite/static/logo_assets/svg/Icon_Teal.svg",
+            "guidelines": "https://backstage.io/logo_assets/Backstage_Identity_Assets_Overview.pdf"
+        },
+        {
             "title": "Badgr",
             "hex": "282C4C",
             "source": "https://info.badgr.com/"
@@ -3228,6 +3234,16 @@
             "source": "https://www.e.leclerc/assets/images/sue-logo.svg"
         },
         {
+            "title": "E3",
+            "hex": "E73D2F",
+            "source": "https://commons.wikimedia.org/wiki/File:E3_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "Electronic Entertainment Expo"
+                ]
+            }
+        },
+        {
             "title": "EA",
             "hex": "000000",
             "source": "https://www.ea.com"
@@ -3362,6 +3378,11 @@
             "title": "Eleventy",
             "hex": "000000",
             "source": "https://www.11ty.io"
+        },
+        {
+            "title": "Elgato",
+            "hex": "101010",
+            "source": "https://www.elgato.com/en/media-room"
         },
         {
             "title": "Elixir",
@@ -5226,6 +5247,11 @@
             "source": "https://www.ibm.com/brand/systems/watson/brand/"
         },
         {
+            "title": "Iced",
+            "hex": "3645FF",
+            "source": "https://iced.rs"
+        },
+        {
             "title": "Iceland",
             "hex": "CC092F",
             "source": "https://www.iceland.co.uk/"
@@ -6394,8 +6420,8 @@
         },
         {
             "title": "Linktree",
-            "hex": "39E09B",
-            "source": "https://linktr.ee/"
+            "hex": "43E55E",
+            "source": "https://linktr.ee"
         },
         {
             "title": "Linode",
@@ -10726,6 +10752,11 @@
             "title": "Staffbase",
             "hex": "00A4FD",
             "source": "https://staffbase.com/en/about/press-assets/"
+        },
+        {
+            "title": "StandardJS",
+            "hex": "F3DF49",
+            "source": "https://github.com/standard/standard/blob/6516bf87f127b7968c34cac0100d48d6c455a891/sticker.svg"
         },
         {
             "title": "Star Trek",
