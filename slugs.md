@@ -248,6 +248,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Backblaze` | `backblaze` |
 | `Backbone.js` | `backbonedotjs` |
 | `Backendless` | `backendless` |
+| `Backstage` | `backstage` |
 | `Badgr` | `badgr` |
 | `Badoo` | `badoo` |
 | `Baidu` | `baidu` |
@@ -612,6 +613,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dynamics 365` | `dynamics365` |
 | `Dynatrace` | `dynatrace` |
 | `E.Leclerc` | `edotleclerc` |
+| `E3` | `e3` |
 | `EA` | `ea` |
 | `Eagle` | `eagle` |
 | `easyJet` | `easyjet` |
@@ -639,6 +641,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `elementary` | `elementary` |
 | `Elementor` | `elementor` |
 | `Eleventy` | `eleventy` |
+| `Elgato` | `elgato` |
 | `Elixir` | `elixir` |
 | `Ello` | `ello` |
 | `Elm` | `elm` |
@@ -981,6 +984,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IBM` | `ibm` |
 | `IBM Cloud` | `ibmcloud` |
 | `IBM Watson` | `ibmwatson` |
+| `Iced` | `iced` |
 | `Iceland` | `iceland` |
 | `Icinga` | `icinga` |
 | `iCloud` | `icloud` |
@@ -1975,6 +1979,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `StackShare` | `stackshare` |
 | `Stadia` | `stadia` |
 | `Staffbase` | `staffbase` |
+| `StandardJS` | `standardjs` |
 | `Star Trek` | `startrek` |
 | `Starbucks` | `starbucks` |
 | `Stardock` | `stardock` |
