@@ -50,13 +50,14 @@ We also provide a CDN service which allows you to use colors.
 <img height="32" width="32" src="https://cdn.simpleicons.org/[ICON_SLUG]/[COLOR]" />
 ```
 
-Where `[COLOR]` is optional, and can be replaced by the [hex triplet](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to you use. The color is defaulted to the color of icon from [Simpleicons.org](https://simpleicons.org). For example:
+Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to you use. The color is defaulted to the color of icon from [Simpleicons.org](https://simpleicons.org). For example:
 
 ```html
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/gray" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/hotpink" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/0cf" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/0cf9" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff99" />
 ```
