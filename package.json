@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "7.17.0",
+  "version": "7.18.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -53,7 +53,7 @@
     "rimraf": "3.0.2",
     "svg-path-bbox": "1.2.2",
     "svg-path-segments": "1.0.0",
-    "svglint": "2.1.0",
+    "svglint": "2.2.0",
     "svgo": "2.8.0",
     "svgpath": "2.5.0"
   },
@@ -65,7 +65,7 @@
     "our-lint": "node scripts/lint/ourlint.js",
     "jslint": "prettier --check .",
     "jsonlint": "node scripts/lint/jsonlint.js",
-    "svglint": "svglint icons/*.svg --ci --config .svglintrc.mjs",
+    "svglint": "svglint icons/*.svg --ci",
     "wslint": "editorconfig-checker",
     "prepare": "is-ci || husky install",
     "prepublishOnly": "npm run build",
