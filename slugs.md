@@ -1352,6 +1352,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Moscow Metro` | `moscowmetro` |
 | `Motorola` | `motorola` |
 | `Mozilla` | `mozilla` |
+| `MQTT` | `mqtt` |
 | `MSI` | `msi` |
 | `MSI Business` | `msibusiness` |
 | `MTA` | `mta` |
@@ -1718,6 +1719,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rarible` | `rarible` |
 | `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
+| `Ravelry` | `ravelry` |
 | `Ray` | `ray` |
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
