@@ -101,6 +101,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
 | `Altium Designer` | `altiumdesigner` |
+| `Alwaysdata` | `alwaysdata` |
 | `Amazon` | `amazon` |
 | `Amazon Alexa` | `amazonalexa` |
 | `Amazon API Gateway` | `amazonapigateway` |
@@ -2270,6 +2271,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |
 | `Walmart` | `walmart` |
+| `Wantedly` | `wantedly` |
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Warp` | `warp` |
