@@ -50,7 +50,7 @@ We also provide a CDN service which allows you to use colors.
 <img height="32" width="32" src="https://cdn.simpleicons.org/[ICON_SLUG]/[COLOR]" />
 ```
 
-Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to you use. The color is defaulted to the color of icon from [Simpleicons.org](https://simpleicons.org). For example:
+Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to you use. The color is defaulted to the HEX color of the icon shown in [simpleicons.org website](https://simpleicons.org). For example:
 
 ```html
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons" />
