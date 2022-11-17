@@ -6,7 +6,7 @@
  */
 
 import fakeDiff from 'fake-diff';
-import { getIconsDataString, normalizeNewlines } from '../utils.js';
+import { getIconsDataString, normalizeNewlines, collator } from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -18,12 +18,12 @@ const TESTS = {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
-        const compare = icon.title.localeCompare(prev.title);
-        if (compare < 0) {
+        const comparison = collator.compare(icon.title, prev.title);
+        if (comparison < 0) {
           invalidEntries.push(icon);
-        } else if (compare === 0) {
+        } else if (comparison === 0) {
           if (prev.slug) {
-            if (!icon.slug || icon.slug.localeCompare(prev.slug) < 0) {
+            if (!icon.slug || collator.compare(icon.slug, prev.slug) < 0) {
               invalidEntries.push(icon);
             }
           }
@@ -48,7 +48,7 @@ const TESTS = {
   /* Check the formatting of the data file */
   prettified: async (data, dataString) => {
     const normalizedDataString = normalizeNewlines(dataString);
-    const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
+    const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
 
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
