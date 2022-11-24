@@ -54,6 +54,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Adobe Premiere Pro` | `adobepremierepro` |
 | `Adobe XD` | `adobexd` |
 | `AdonisJS` | `adonisjs` |
+| `ADP` | `adp` |
 | `Adyen` | `adyen` |
 | `Aer Lingus` | `aerlingus` |
 | `Aeroflot` | `aeroflot` |
@@ -101,6 +102,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
 | `Altium Designer` | `altiumdesigner` |
+| `Alwaysdata` | `alwaysdata` |
 | `Amazon` | `amazon` |
 | `Amazon Alexa` | `amazonalexa` |
 | `Amazon API Gateway` | `amazonapigateway` |
@@ -248,6 +250,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Backblaze` | `backblaze` |
 | `Backbone.js` | `backbonedotjs` |
 | `Backendless` | `backendless` |
+| `Backstage` | `backstage` |
 | `Badgr` | `badgr` |
 | `Badoo` | `badoo` |
 | `Baidu` | `baidu` |
@@ -612,6 +615,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dynamics 365` | `dynamics365` |
 | `Dynatrace` | `dynatrace` |
 | `E.Leclerc` | `edotleclerc` |
+| `E3` | `e3` |
 | `EA` | `ea` |
 | `Eagle` | `eagle` |
 | `easyJet` | `easyjet` |
@@ -639,6 +643,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `elementary` | `elementary` |
 | `Elementor` | `elementor` |
 | `Eleventy` | `eleventy` |
+| `Elgato` | `elgato` |
 | `Elixir` | `elixir` |
 | `Ello` | `ello` |
 | `Elm` | `elm` |
@@ -981,6 +986,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IBM` | `ibm` |
 | `IBM Cloud` | `ibmcloud` |
 | `IBM Watson` | `ibmwatson` |
+| `Iced` | `iced` |
 | `Iceland` | `iceland` |
 | `Icinga` | `icinga` |
 | `iCloud` | `icloud` |
@@ -1348,6 +1354,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Moscow Metro` | `moscowmetro` |
 | `Motorola` | `motorola` |
 | `Mozilla` | `mozilla` |
+| `MQTT` | `mqtt` |
 | `MSI` | `msi` |
 | `MSI Business` | `msibusiness` |
 | `MTA` | `mta` |
@@ -1714,6 +1721,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rarible` | `rarible` |
 | `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
+| `Ravelry` | `ravelry` |
 | `Ray` | `ray` |
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
@@ -1975,6 +1983,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `StackShare` | `stackshare` |
 | `Stadia` | `stadia` |
 | `Staffbase` | `staffbase` |
+| `StandardJS` | `standardjs` |
 | `Star Trek` | `startrek` |
 | `Starbucks` | `starbucks` |
 | `Stardock` | `stardock` |
@@ -2263,6 +2272,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |
 | `Walmart` | `walmart` |
+| `Wantedly` | `wantedly` |
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Warp` | `warp` |

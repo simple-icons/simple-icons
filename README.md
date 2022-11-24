@@ -2,7 +2,7 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg" alt="Simple Icons" width=70></picture>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 2300 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 2400 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -40,6 +40,27 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
+
+#### CDN with colors
+
+We also provide a CDN service which allows you to use colors.
+
+```html
+<img height="32" width="32" src="https://cdn.simpleicons.org/[ICON SLUG]" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/[ICON SLUG]/[COLOR]" />
+```
+
+Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to you use. The color is defaulted to the HEX color of the icon shown in [simpleicons.org website](https://simpleicons.org). For example:
+
+```html
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/gray" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/hotpink" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/0cf" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/0cf9" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff99" />
+```
 
 ### Node Usage <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/nodedotjs-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg" alt="Node" align=left width=24></picture>
 
