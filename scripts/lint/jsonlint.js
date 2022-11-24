@@ -4,18 +4,21 @@
  * CLI tool to run jsonschema on the simple-icons.json data file.
  */
 
-const path = require('path');
-const { Validator } = require('jsonschema');
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import { Validator } from 'jsonschema';
+import {
+  getDirnameFromImportMeta,
+  getIconsData,
+  getJsonSchemaData,
+} from '../utils.js';
 
-const rootDir = path.resolve(__dirname, '..', '..');
-const schemaFile = path.resolve(rootDir, '.jsonschema.json');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
-
-const schema = require(schemaFile);
-const data = require(dataFile);
+const icons = await getIconsData();
+const __dirname = getDirnameFromImportMeta(import.meta.url);
+const schema = await getJsonSchemaData(path.resolve(__dirname, '..', '..'));
 
 const validator = new Validator();
-const result = validator.validate(data, schema);
+const result = validator.validate({ icons }, schema);
 if (result.errors.length > 0) {
   result.errors.forEach((error) => {
     console.error(error);
