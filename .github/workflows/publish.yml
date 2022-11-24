@@ -68,7 +68,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Get commit message (for release title and body)
         id: commit
-        uses: kceb/git-message-action@v1
+        uses: kceb/git-message-action@v2
       - name: Get release version
         id: get-version
         run: |
