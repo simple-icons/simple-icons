@@ -71,7 +71,7 @@ export const testIcon = (icon, subject, slug) => {
       // if an icon data has a slug, it must be different to the
       // slug inferred from the title, which prevents adding
       // unnecessary slugs to icons data
-      test(`'${icon.title}' slug must be necessary`, () => {
+      it(`'${icon.title}' slug must be necessary`, () => {
         assert.notEqual(titleToSlug(icon.title), icon.slug);
       });
     }
