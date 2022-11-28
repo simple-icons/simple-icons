@@ -173,7 +173,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aparat` | `aparat` |
 | `Apollo GraphQL` | `apollographql` |
 | `Apostrophe` | `apostrophe` |
-| `App Annie` | `appannie` |
 | `App Store` | `appstore` |
 | `Appian` | `appian` |
 | `Apple` | `apple` |
@@ -729,6 +728,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Firefox` | `firefox` |
 | `Firefox Browser` | `firefoxbrowser` |
 | `Fireship` | `fireship` |
+| `Firewalla` | `firewalla` |
 | `FIRST` | `first` |
 | `Fitbit` | `fitbit` |
 | `FITE` | `fite` |
@@ -1151,6 +1151,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kubernetes` | `kubernetes` |
 | `Kubuntu` | `kubuntu` |
 | `Kuma` | `kuma` |
+| `Kuula` | `kuula` |
 | `Kyocera` | `kyocera` |
 | `LabVIEW` | `labview` |
 | `Lada` | `lada` |
@@ -1733,9 +1734,11 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ReactiveX` | `reactivex` |
 | `ReactOS` | `reactos` |
 | `Read the Docs` | `readthedocs` |
+| `ReadMe` | `readme` |
 | `Realm` | `realm` |
 | `Reason` | `reason` |
 | `Reason Studios` | `reasonstudios` |
+| `Red` | `red` |
 | `Red Hat` | `redhat` |
 | `Red Hat Open Shift` | `redhatopenshift` |
 | `Redbubble` | `redbubble` |
@@ -2268,6 +2271,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `W3C` | `w3c` |
 | `Wacom` | `wacom` |
 | `Wagtail` | `wagtail` |
+| `Wails` | `wails` |
 | `WakaTime` | `wakatime` |
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |

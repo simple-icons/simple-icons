@@ -5,8 +5,7 @@ import { strict as assert } from 'node:assert';
 import {
   getThirdPartyExtensions,
   getDirnameFromImportMeta,
-  URL_REGEX,
-} from '../scripts/utils.js';
+} from '../utils.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const root = path.dirname(__dirname);

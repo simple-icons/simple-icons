@@ -19,7 +19,7 @@ import {
   getIconsData,
   getDirnameFromImportMeta,
   collator,
-} from '../utils.js';
+} from '../../utils.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
