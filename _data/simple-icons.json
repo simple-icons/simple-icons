@@ -2757,16 +2757,6 @@
             "source": "https://www.3ds.com/"
         },
         {
-            "title": "Data Version Control",
-            "aliases": {
-                "aka": [
-                    "DVC"
-                ]
-            },
-            "hex": "945DD6",
-            "source": "https://static.iterative.ai/logo/dvc.svg"
-        },
-        {
             "title": "data.ai",
             "hex": "000000",
             "source": "https://www.data.ai/en/about/press/"
@@ -3211,6 +3201,11 @@
         },
         {
             "title": "DVC",
+            "aliases": {
+                "aka": [
+                    "Data Version Control"
+                ]
+            },
             "hex": "13ADC7",
             "source": "https://iterative.ai/brand/",
             "guidelines": "https://iterative.ai/brand/"
