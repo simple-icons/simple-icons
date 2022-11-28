@@ -44,7 +44,7 @@ module.exports = {
     },
     'removeUselessStrokeAndFill',
     'removeUnusedNS',
-    'cleanupIDs',
+    'cleanupIds',
     'cleanupNumericValues',
     'cleanupListOfValues',
     'moveGroupAttrsToElems',
