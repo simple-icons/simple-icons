@@ -920,11 +920,6 @@
             "source": "https://github.com/apostrophecms/apostrophe/blob/a7fcc6b13831302e27f79a6fcaaf58e3a40517df/logo.svg"
         },
         {
-            "title": "App Annie",
-            "hex": "0F2346",
-            "source": "https://www.appannie.com/en/about/press/"
-        },
-        {
             "title": "App Store",
             "hex": "0D96F6",
             "source": "https://developer.apple.com/app-store/"
@@ -2762,16 +2757,6 @@
             "source": "https://www.3ds.com/"
         },
         {
-            "title": "Data Version Control",
-            "aliases": {
-                "aka": [
-                    "DVC"
-                ]
-            },
-            "hex": "945DD6",
-            "source": "https://static.iterative.ai/logo/dvc.svg"
-        },
-        {
             "title": "data.ai",
             "hex": "000000",
             "source": "https://www.data.ai/en/about/press/"
@@ -3216,6 +3201,11 @@
         },
         {
             "title": "DVC",
+            "aliases": {
+                "aka": [
+                    "Data Version Control"
+                ]
+            },
             "hex": "13ADC7",
             "source": "https://iterative.ai/brand/",
             "guidelines": "https://iterative.ai/brand/"
