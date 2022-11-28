@@ -4,7 +4,7 @@
  */
 
 import path from 'node:path';
-import { promises as fs } from 'node:fs';
+import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const TITLE_TO_SLUG_REPLACEMENTS = {
@@ -27,6 +27,18 @@ const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
 );
 
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
+
+export const URL_REGEX = /^https:\/\/[^\s]+$/;
+
+/**
+ * Get the directory name where this file is located from `import.meta.url`,
+ * equivalent to the `__dirname` global variable in CommonJS.
+ * @param {String} importMetaUrl import.meta.url
+ */
+export const getDirnameFromImportMeta = (importMetaUrl) =>
+  path.dirname(fileURLToPath(importMetaUrl));
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
  * Get the slug/filename for an icon.
@@ -94,15 +106,34 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
+ * Get JSON schema data.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const getJsonSchemaData = async (
+  rootDir = path.resolve(__dirname, '..'),
+) => {
+  const __dirname = getDirnameFromImportMeta(import.meta.url);
+  const jsonSchemaPath = path.resolve(rootDir, '.jsonschema.json');
+  const jsonSchemaString = await fs.readFile(jsonSchemaPath, 'utf8');
+  return JSON.parse(jsonSchemaString);
+};
+
+/**
+ * Get path of _data/simpe-icons.json.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const getIconDataPath = (
+  rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..'),
+) => {
+  return path.resolve(rootDir, '_data', 'simple-icons.json');
+};
+
+/**
  * Get contents of _data/simple-icons.json.
  * @param {String|undefined} rootDir Path to the root directory of the project.
  */
 export const getIconsDataString = (rootDir) => {
-  if (rootDir === undefined) {
-    rootDir = path.resolve(getDirnameFromImportMeta(import.meta.url), '..');
-  }
-  const iconDataPath = path.resolve(rootDir, '_data', 'simple-icons.json');
-  return fs.readFile(iconDataPath, 'utf8');
+  return fs.readFile(getIconDataPath(rootDir), 'utf8');
 };
 
 /**
@@ -115,12 +146,17 @@ export const getIconsData = async (rootDir) => {
 };
 
 /**
- * Get the directory name where this file is located from `import.meta.url`,
- * equivalent to the `__dirname` global variable in CommonJS.
- * @param {String} importMetaUrl import.meta.url
+ * Write icons data to _data/simple-icons.json.
+ * @param {Object} iconsData Icons data object.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
  */
-export const getDirnameFromImportMeta = (importMetaUrl) =>
-  path.dirname(fileURLToPath(importMetaUrl));
+export const writeIconsData = async (iconsData, rootDir) => {
+  return fs.writeFile(
+    getIconDataPath(rootDir),
+    `${JSON.stringify(iconsData, null, 4)}\n`,
+    'utf8',
+  );
+};
 
 /**
  * Replace Windows newline characters by Unix ones.
@@ -128,6 +164,20 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
  */
 export const normalizeNewlines = (text) => {
   return text.replace(/\r\n/g, '\n');
+};
+
+/**
+ * Convert non-6-digit hex color to 6-digit.
+ * @param {String} text The color text
+ */
+export const normalizeColor = (text) => {
+  let color = text.replace('#', '').toUpperCase();
+  if (color.length < 6) {
+    color = [...color.slice(0, 3)].map((x) => x.repeat(2)).join('');
+  } else if (color.length > 6) {
+    color = color.slice(0, 6);
+  }
+  return color;
 };
 
 /**
@@ -145,7 +195,7 @@ export const getThirdPartyExtensions = async (readmePath) =>
       return {
         module: {
           name: /\[(.+)\]/.exec(module)[1],
-          url: /\((.+)\)/.exec(module)[1],
+          url: /\((.+)\)/.exec(module.split('</picture>')[1])[1],
         },
         author: {
           name: /\[(.+)\]/.exec(author)[1],
@@ -153,3 +203,13 @@ export const getThirdPartyExtensions = async (readmePath) =>
         },
       };
     });
+
+/**
+ * `Intl.Collator` object ready to be used for icon titles sorting.
+ * @type {Intl.Collator}
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+ **/
+export const collator = new Intl.Collator('en', {
+  usage: 'search',
+  caseFirst: 'upper',
+});

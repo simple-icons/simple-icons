@@ -62,6 +62,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
 - Disney
+- Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
@@ -264,6 +265,8 @@ Here is the object of a fictional brand as an example:
 }
 ```
 
+You can use `npm run add-icon-data` to add metadata via a CLI prompt.
+
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
 #### Optional Data
@@ -289,6 +292,8 @@ Here is the object of the fictional brand from before, but with all optional val
     }
 }
 ```
+
+> Non secured HTTP URLs are forbidden. If a brand's website only supports HTTP, you must still declare the URL using the `https://` protocol.
 
 #### Source Guidelines
 
