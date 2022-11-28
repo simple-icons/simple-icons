@@ -117,6 +117,10 @@ import * as icons from 'simple-icons';
 
 Type definitions are bundled with the package.
 
+```typescript
+import type { SimpleIcon } from 'simple-icons';
+```
+
 ### PHP Usage <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/php-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg" alt="Php" align=left width=24 height=24></picture>
 
 The icons are also available through our Packagist package. To install, simply run:
