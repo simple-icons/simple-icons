@@ -12071,6 +12071,15 @@
             "source": "https://www.veepee.fr/"
         },
         {
+            "title": "Vega Altair",
+            "hex": "03A9F4",
+            "source": "https://github.com/altair-viz/altair/blob/68d197e8783db5a53a49a246fc2c2ce0f0205ef7/design/altair-logo-light.svg",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/altair-viz/altair/blob/master/LICENSE"
+            }
+        },
+        {
             "title": "Velog",
             "hex": "20C997",
             "source": "https://github.com/velopert/velog-client/blob/8fbbb371f4b4525b6747e54d0c608900ea8bf03e/src/static/svg/velog-icon.svg"
