@@ -13,10 +13,10 @@
   "exports": {
     ".": "./index.js",
     "./icons": {
-      "module": "./icons.mjs",
-      "import": "./icons.mjs",
-      "require": "./icons.js",
-      "default": "./icons.js"
+      "module": "./index.mjs",
+      "import": "./index.mjs",
+      "require": "./index.js",
+      "default": "./index.js"
     },
     "./icons/*": [
       "./icons/*"
@@ -59,7 +59,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rimraf index.js icons.js icons.mjs icons.d.ts",
+    "clean": "rimraf index.js index.mjs index.d.ts",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",

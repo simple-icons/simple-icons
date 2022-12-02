@@ -73,13 +73,13 @@ npm install simple-icons
 All icons are imported from a single file, where `[ICON SLUG]` is replaced by a capitalized [slug]. We highly recommend using a bundler that can tree shake such as [webpack](https://webpack.js.org/) to remove the unused icon code:
 ```javascript
 // Import a specific icon by its slug as:
-// import { si[ICON SLUG] } from 'simple-icons/icons'
+// import { si[ICON SLUG] } from 'simple-icons'
 
 // For example:
 // use import/esm to allow tree shaking
-import { siSimpleicons } from 'simple-icons/icons';
+import { siSimpleicons } from 'simple-icons';
 // or with require/cjs
-const { siSimpleicons } = require('simple-icons/icons');
+const { siSimpleicons } = require('simple-icons');
 ```
 
 It will return an icon object:
@@ -107,9 +107,19 @@ NOTE: the `license` entry will be `undefined` if we do not yet have license data
 */
 ```
 
+If you need to iterate over all icons, use:
+
+```javascript
+import * as icons from 'simple-icons';
+```
+
 #### TypeScript Usage <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/typescript-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg" alt="Typescript" align=left width=19 height=19></picture>
 
 Type definitions are bundled with the package.
+
+```typescript
+import type { SimpleIcon } from 'simple-icons';
+```
 
 ### PHP Usage <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/php-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg" alt="Php" align=left width=24 height=24></picture>
 
