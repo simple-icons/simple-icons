@@ -26,19 +26,16 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 const UTF8 = 'utf8';
 
 const rootDir = path.resolve(__dirname, '..', '..');
-const indexFile = path.resolve(rootDir, 'index.js');
 const iconsDir = path.resolve(rootDir, 'icons');
-const iconsJsFile = path.resolve(rootDir, 'icons.js');
-const iconsMjsFile = path.resolve(rootDir, 'icons.mjs');
-const iconsDtsFile = path.resolve(rootDir, 'icons.d.ts');
+const indexJsFile = path.resolve(rootDir, 'index.js');
+const indexMjsFile = path.resolve(rootDir, 'index.mjs');
+const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
-const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const build = async () => {
   const icons = await getIconsData();
-  const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
   // Local helper functions
@@ -109,27 +106,19 @@ const build = async () => {
   // constants used in templates to reduce package size
   const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
 
-  // write our generic index.js
-  const rawIndexJs = util.format(
-    indexTemplate,
-    constantsString,
-    buildIcons.map(({ icon }) => iconToKeyValue(icon)).join(','),
-  );
-  await writeJs(indexFile, rawIndexJs);
-
   // write our file containing the exports of all icons in CommonJS ...
-  const rawIconsJs = `${constantsString}module.exports={${iconsBarrelJs.join(
+  const rawIndexJs = `${constantsString}module.exports={${iconsBarrelJs.join(
     '',
   )}};`;
-  await writeJs(iconsJsFile, rawIconsJs);
+  await writeJs(indexJsFile, rawIndexJs);
   // and ESM
-  const rawIconsMjs = constantsString + iconsBarrelMjs.join('');
-  await writeJs(iconsMjsFile, rawIconsMjs);
+  const rawIndexMjs = constantsString + iconsBarrelMjs.join('');
+  await writeJs(indexMjsFile, rawIndexMjs);
   // and create a type declaration file
-  const rawIconsDts = `import {SimpleIcon} from ".";type I = SimpleIcon;${iconsBarrelDts.join(
+  const rawIndexDts = `import {SimpleIcon} from "./types";export {SimpleIcon};type I=SimpleIcon;${iconsBarrelDts.join(
     '',
   )}`;
-  await writeTs(iconsDtsFile, rawIconsDts);
+  await writeTs(indexDtsFile, rawIndexDts);
 };
 
 build();

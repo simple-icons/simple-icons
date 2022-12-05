@@ -173,7 +173,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aparat` | `aparat` |
 | `Apollo GraphQL` | `apollographql` |
 | `Apostrophe` | `apostrophe` |
-| `App Annie` | `appannie` |
 | `App Store` | `appstore` |
 | `Appian` | `appian` |
 | `Apple` | `apple` |
@@ -529,7 +528,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dashlane` | `dashlane` |
 | `Dask` | `dask` |
 | `Dassault Systèmes` | `dassaultsystemes` |
-| `Data Version Control` | `dataversioncontrol` |
 | `data.ai` | `datadotai` |
 | `Databricks` | `databricks` |
 | `DataCamp` | `datacamp` |
