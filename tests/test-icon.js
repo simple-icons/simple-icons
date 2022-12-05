@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
-import { URL_REGEX } from '../scripts/utils.js';
+import { URL_REGEX, titleToSlug } from '../scripts/utils.js';
 
 const iconsDir = path.resolve(process.cwd(), 'icons');
 
@@ -66,5 +66,14 @@ export const testIcon = (icon, subject, slug) => {
       const svgFileContents = fs.readFileSync(svgPath, 'utf8');
       assert.equal(subject.svg, svgFileContents);
     });
+
+    if (icon.slug) {
+      // if an icon data has a slug, it must be different to the
+      // slug inferred from the title, which prevents adding
+      // unnecessary slugs to icons data
+      it(`'${icon.title}' slug must be necessary`, () => {
+        assert.notEqual(titleToSlug(icon.title), icon.slug);
+      });
+    }
   });
 };

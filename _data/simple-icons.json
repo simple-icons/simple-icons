@@ -920,11 +920,6 @@
             "source": "https://github.com/apostrophecms/apostrophe/blob/a7fcc6b13831302e27f79a6fcaaf58e3a40517df/logo.svg"
         },
         {
-            "title": "App Annie",
-            "hex": "0F2346",
-            "source": "https://www.appannie.com/en/about/press/"
-        },
-        {
             "title": "App Store",
             "hex": "0D96F6",
             "source": "https://developer.apple.com/app-store/"
@@ -1811,6 +1806,16 @@
             "source": "https://www.buzzfeed.com/press/assets"
         },
         {
+            "title": "BVG",
+            "hex": "F0D722",
+            "source": "https://www.bvg.de",
+            "aliases": {
+                "aka": [
+                    "Berliner Verkehrsbetriebe"
+                ]
+            }
+        },
+        {
             "title": "Byju's",
             "hex": "813588",
             "source": "https://byjus.com/byjus-the-learning-app/"
@@ -2645,6 +2650,16 @@
             "source": "https://www.w3.org/html/logo/"
         },
         {
+            "title": "CTS",
+            "hex": "E53236",
+            "source": "https://commons.wikimedia.org/wiki/File:Logo_Compagnie_des_transports_strasbourgeois.svg",
+            "aliases": {
+                "aka": [
+                    "Compagnie des Transports Strasbourgeois"
+                ]
+            }
+        },
+        {
             "title": "Cucumber",
             "hex": "23D96C",
             "source": "https://cucumber.io"
@@ -2760,16 +2775,6 @@
             "title": "Dassault Systèmes",
             "hex": "005386",
             "source": "https://www.3ds.com/"
-        },
-        {
-            "title": "Data Version Control",
-            "aliases": {
-                "aka": [
-                    "DVC"
-                ]
-            },
-            "hex": "945DD6",
-            "source": "https://static.iterative.ai/logo/dvc.svg"
         },
         {
             "title": "data.ai",
@@ -3216,6 +3221,11 @@
         },
         {
             "title": "DVC",
+            "aliases": {
+                "aka": [
+                    "Data Version Control"
+                ]
+            },
             "hex": "13ADC7",
             "source": "https://iterative.ai/brand/",
             "guidelines": "https://iterative.ai/brand/"
@@ -10426,6 +10436,12 @@
             "license": {
                 "type": "CC-BY-ND-2.0"
             }
+        },
+        {
+            "title": "SNCF",
+            "hex": "CA0939",
+            "source": "https://www.sncf.com/",
+            "guidelines": "https://www.sncf.com/fr/groupe/marques/sncf/identite"
         },
         {
             "title": "Snowflake",
