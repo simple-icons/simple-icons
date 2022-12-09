@@ -3,12 +3,13 @@ Before opening your pull request, have a quick look at our contribution guidelin
 https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
 Consider adding a preview image of your submission using:
-https://petershaggynoble.github.io/MDI-Sandbox/simpleicons/preview/
+https://petershaggynoble.github.io/SI-Sandbox/preview/
 -->
 
-**Issue:**
-**Alexa rank:**
-  <!-- The Alexa rank can be retrieved at https://www.alexa.com/siteinfo/
+**Issue:** closes #
+
+**Similarweb rank:**
+  <!-- The Similarweb rank can be retrieved at https://www.similarweb.com
        Please see our contributing guidelines for more details on how we
        assess a brand's popularity. -->
 

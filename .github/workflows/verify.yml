@@ -1,0 +1,85 @@
+name: Verify Source
+on: [pull_request, push]
+
+jobs:
+  build:
+    name: Build package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Build NodeJS package
+        run: npm run build
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Run linter
+        run: npm run lint
+      - name: Verify file permissions
+        run: |
+          CHECK_DIRS="icons/ _data/"
+          echo "Searching the following directories for executable files:"
+          echo "${CHECK_DIRS}"
+          echo ""
+          EXE_FILES=$(find ${CHECK_DIRS} -type f -executable)
+          if test -n "${EXE_FILES-}"
+          then
+            echo "Some files were detected to have their executable bit set."
+            echo "To fix this, you can use 'chmod -x PATH/TO/FILE' on the following files:"
+            echo ""
+            echo "${EXE_FILES}"
+            exit 1
+          else
+            echo "All clear."
+            exit 0
+          fi
+  test:
+    name: Test package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm i
+      - name: Run tests
+        run: npm run test
