@@ -344,6 +344,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Burton` | `burton` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
+| `BVG` | `bvg` |
 | `Byju's` | `byjus` |
 | `byte` | `byte` |
 | `ByteDance` | `bytedance` |
@@ -505,6 +506,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
 | `CSS3` | `css3` |
+| `CTS` | `cts` |
 | `Cucumber` | `cucumber` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
@@ -717,6 +719,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fiat` | `fiat` |
 | `Fido Alliance` | `fidoalliance` |
 | `FIFA` | `fifa` |
+| `Fig` | `fig` |
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
@@ -1919,6 +1922,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SmugMug` | `smugmug` |
 | `Snapchat` | `snapchat` |
 | `Snapcraft` | `snapcraft` |
+| `SNCF` | `sncf` |
 | `Snowflake` | `snowflake` |
 | `Snowpack` | `snowpack` |
 | `Snyk` | `snyk` |
