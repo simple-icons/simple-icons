@@ -195,7 +195,7 @@ export const getThirdPartyExtensions = async (readmePath) =>
       return {
         module: {
           name: /\[(.+)\]/.exec(module)[1],
-          url: /\((.+)\)/.exec(module.split('</picture>')[1])[1],
+          url: /\((.+)\)/.exec(module.split('<picture>')[0])[1],
         },
         author: {
           name: /\[(.+)\]/.exec(author)[1],
