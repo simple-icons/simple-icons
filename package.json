@@ -73,7 +73,6 @@
     "test": "mocha tests --reporter tests/min-reporter.cjs --inline-diffs",
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
-    "svgo": "svgo",
     "get-filename": "node scripts/get-filename.js",
     "add-icon-data": "node scripts/add-icon-data.js"
   },
