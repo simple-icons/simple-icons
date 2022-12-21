@@ -214,8 +214,8 @@ export const getThirdPartyExtensions = async (
       let [module, author] = line.split(' | ');
 
       // README shipped with package has not Github theme image links
-      module = module.includes('</picture>')
-        ? module.split('</picture>')[1]
+      module = module.includes('<picture>')
+        ? module.split('<picture>')[0]
         : module.split('<img src="')[1].split(' ').slice(5).join(' ');
       return {
         module: {
