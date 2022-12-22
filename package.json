@@ -21,7 +21,24 @@
     "./icons/*": [
       "./icons/*"
     ],
-    "./utils": "./utils.mjs"
+    "./utils": {
+      "import": {
+        "types": "./utils.d.ts",
+        "default": "./utils.mjs"
+      },
+      "module": {
+        "types": "./utils.d.ts",
+        "default": "./utils.mjs"
+      },
+      "require": {
+        "types": "./utils.d.ts",
+        "default": "./utils.js"
+      },
+      "default": {
+        "types": "./utils.d.ts",
+        "default": "./utils.js"
+      }
+    }
   },
   "sideEffects": false,
   "repository": {

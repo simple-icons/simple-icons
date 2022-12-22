@@ -8,26 +8,8 @@ import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 /**
- * @typedef {Object} ThirdPartyExtensionSubject
- * @property {String} name
- * @property {String} url
- */
-
-/**
- * @typedef {Object} ThirdPartyExtension
- * @property {ThirdPartyExtensionSubject} module
- * @property {ThirdPartyExtensionSubject} author
- */
-
-/**
- * @typedef {Object} IconData
- * @property {String} title
- * @property {String} hex
- * @property {String} source
- * @property {String|undefined} slug
- * @property {String|undefined} guidelines
- * @property {String|Object|undefined} license
- * @property {Object|undefined} aliases
+ * @typedef {import("./utils").ThirdPartyExtension} ThirdPartyExtension
+ * @typedef {import("./utils").IconData} IconData
  */
 
 const TITLE_TO_SLUG_REPLACEMENTS = {
@@ -67,7 +49,7 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
 
 /**
  * Get the slug/filename for an icon.
- * @param {Object} icon The icon data as it appears in _data/simple-icons.json
+ * @param {IconData} icon The icon data as it appears in _data/simple-icons.json
  * @returns {String} The slug/filename for the icon
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);

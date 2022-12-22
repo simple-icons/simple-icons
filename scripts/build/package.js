@@ -29,6 +29,8 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const iconsDir = path.resolve(rootDir, 'icons');
 const indexJsFile = path.resolve(rootDir, 'index.js');
 const indexMjsFile = path.resolve(rootDir, 'index.mjs');
+const utilsJsFile = path.resolve(rootDir, 'utils.js');
+const utilsMjsFile = path.resolve(rootDir, 'utils.mjs');
 const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
@@ -68,10 +70,9 @@ const build = async () => {
       licenseToObject(icon.license),
     );
   };
-  const writeJs = async (filepath, rawJavaScript) => {
-    const { code } = await esbuildTransform(rawJavaScript, {
-      minify: true,
-    });
+  const writeJs = async (filepath, rawJavaScript, opts = null) => {
+    opts = opts === null ? { minify: true } : opts;
+    const { code } = await esbuildTransform(rawJavaScript, opts);
     await fs.writeFile(filepath, code);
   };
   const writeTs = async (filepath, rawTypeScript) => {
@@ -119,6 +120,11 @@ const build = async () => {
     '',
   )}`;
   await writeTs(indexDtsFile, rawIndexDts);
+
+  // create a CommonJS utils file
+  await writeJs(utilsJsFile, await fs.readFile(utilsMjsFile, UTF8), {
+    format: 'cjs',
+  });
 };
 
 build();

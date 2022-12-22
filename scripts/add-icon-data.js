@@ -1,4 +1,3 @@
-import fs from 'node:fs/promises';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import getRelativeLuminance from 'get-relative-luminance';
