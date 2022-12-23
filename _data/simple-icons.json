@@ -920,11 +920,6 @@
             "source": "https://github.com/apostrophecms/apostrophe/blob/a7fcc6b13831302e27f79a6fcaaf58e3a40517df/logo.svg"
         },
         {
-            "title": "App Annie",
-            "hex": "0F2346",
-            "source": "https://www.appannie.com/en/about/press/"
-        },
-        {
             "title": "App Store",
             "hex": "0D96F6",
             "source": "https://developer.apple.com/app-store/"
@@ -1811,6 +1806,16 @@
             "source": "https://www.buzzfeed.com/press/assets"
         },
         {
+            "title": "BVG",
+            "hex": "F0D722",
+            "source": "https://www.bvg.de",
+            "aliases": {
+                "aka": [
+                    "Berliner Verkehrsbetriebe"
+                ]
+            }
+        },
+        {
             "title": "Byju's",
             "hex": "813588",
             "source": "https://byjus.com/byjus-the-learning-app/"
@@ -2650,9 +2655,24 @@
             "source": "https://www.w3.org/html/logo/"
         },
         {
+            "title": "CTS",
+            "hex": "E53236",
+            "source": "https://commons.wikimedia.org/wiki/File:Logo_Compagnie_des_transports_strasbourgeois.svg",
+            "aliases": {
+                "aka": [
+                    "Compagnie des Transports Strasbourgeois"
+                ]
+            }
+        },
+        {
             "title": "Cucumber",
             "hex": "23D96C",
             "source": "https://cucumber.io"
+        },
+        {
+            "title": "Cultura",
+            "hex": "1D2C54",
+            "source": "https://www.cultura.com/"
         },
         {
             "title": "curl",
@@ -2765,16 +2785,6 @@
             "title": "Dassault Systèmes",
             "hex": "005386",
             "source": "https://www.3ds.com/"
-        },
-        {
-            "title": "Data Version Control",
-            "aliases": {
-                "aka": [
-                    "DVC"
-                ]
-            },
-            "hex": "945DD6",
-            "source": "https://static.iterative.ai/logo/dvc.svg"
         },
         {
             "title": "data.ai",
@@ -3221,6 +3231,11 @@
         },
         {
             "title": "DVC",
+            "aliases": {
+                "aka": [
+                    "Data Version Control"
+                ]
+            },
             "hex": "13ADC7",
             "source": "https://iterative.ai/brand/",
             "guidelines": "https://iterative.ai/brand/"
@@ -3795,6 +3810,11 @@
             "source": "https://en.wikipedia.org/wiki/FIFA"
         },
         {
+            "title": "Fig",
+            "hex": "000000",
+            "source": "https://fig.io/icons/fig.svg"
+        },
+        {
             "title": "Figma",
             "hex": "F24E1E",
             "source": "https://www.figma.com/using-the-figma-brand/",
@@ -3846,6 +3866,11 @@
             "title": "Fireship",
             "hex": "EB844E",
             "source": "https://github.com/fireship-io/fireship.io/blob/987da97305a5968b99347aa748f928a4667336f8/hugo/layouts/partials/svg/logo.svg"
+        },
+        {
+            "title": "Firewalla",
+            "hex": "C8332D",
+            "source": "https://github.com/firewalla/firewalla/blob/97f7463fe07b85b979a8f0738fdf14c1af0249a8/extension/diag/static/firewalla.svg"
         },
         {
             "title": "FIRST",
@@ -5353,6 +5378,11 @@
             "source": "https://www.ikea.com/"
         },
         {
+            "title": "Île-de-France Mobilités",
+            "hex": "67B4E7",
+            "source": "https://www.iledefrance-mobilites.fr"
+        },
+        {
             "title": "ImageJ",
             "hex": "00D8E0",
             "source": "https://github.com/imagej/imagej/blob/0667395bcac20e5d7a371ac9f468522c74367d59/logo/inkscape_image_logo_src.svg"
@@ -5404,6 +5434,11 @@
             "title": "Infosys",
             "hex": "007CC3",
             "source": "https://www.infosys.com/newsroom/journalist-resources/infosyslogo.html"
+        },
+        {
+            "title": "Infracost",
+            "hex": "DB44B8",
+            "source": "https://www.infracost.io/img/logo.svg"
         },
         {
             "title": "Ingress",
@@ -6177,6 +6212,11 @@
             "title": "Kuma",
             "hex": "290B53",
             "source": "https://cncf-branding.netlify.app/projects/kuma/"
+        },
+        {
+            "title": "Kuula",
+            "hex": "4092B4",
+            "source": "https://kuula.co"
         },
         {
             "title": "Kyocera",
@@ -7167,6 +7207,11 @@
             "title": "Mocha",
             "hex": "8D6748",
             "source": "https://mochajs.org/"
+        },
+        {
+            "title": "Modrinth",
+            "hex": "00AF5C",
+            "source": "https://github.com/modrinth/art/blob/d5ab4f965b0b4cea7201967483885ecd8d04a562/Branding/Favicon/favicon.svg"
         },
         {
             "title": "MODX",
@@ -8672,6 +8717,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg"
         },
         {
+            "title": "Polars",
+            "hex": "CD792C",
+            "source": "https://pola.rs/"
+        },
+        {
             "title": "Polkadot",
             "hex": "E6007A",
             "source": "https://polkadot.network/brand-assets/",
@@ -9402,6 +9452,11 @@
             "source": "https://github.com/readthedocs/readthedocs.org/blob/2dc9706c4fe7fa6d4410ed0e5aedca8d4796fe0f/media/readthedocsbranding.ai"
         },
         {
+            "title": "ReadMe",
+            "hex": "018EF5",
+            "source": "https://readme.com"
+        },
+        {
             "title": "Realm",
             "hex": "39477F",
             "source": "https://realm.io/"
@@ -9416,6 +9471,11 @@
             "hex": "FFFFFF",
             "source": "https://www.reasonstudios.com/press",
             "guidelines": "https://www.reasonstudios.com/press"
+        },
+        {
+            "title": "Red",
+            "hex": "B32629",
+            "source": "https://www.red-lang.org"
         },
         {
             "title": "Red Hat",
@@ -10411,6 +10471,12 @@
             "license": {
                 "type": "CC-BY-ND-2.0"
             }
+        },
+        {
+            "title": "SNCF",
+            "hex": "CA0939",
+            "source": "https://www.sncf.com/",
+            "guidelines": "https://www.sncf.com/fr/groupe/marques/sncf/identite"
         },
         {
             "title": "Snowflake",
@@ -12298,6 +12364,11 @@
             "title": "Wagtail",
             "hex": "43B1B0",
             "source": "https://github.com/wagtail/wagtail/blob/e3e46e23b780aa2b1b521de081cb81872f77466d/wagtail/admin/static_src/wagtailadmin/images/wagtail-logo.svg"
+        },
+        {
+            "title": "Wails",
+            "hex": "DF0000",
+            "source": "https://wails.io/"
         },
         {
             "title": "WakaTime",

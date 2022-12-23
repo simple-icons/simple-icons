@@ -173,7 +173,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aparat` | `aparat` |
 | `Apollo GraphQL` | `apollographql` |
 | `Apostrophe` | `apostrophe` |
-| `App Annie` | `appannie` |
 | `App Store` | `appstore` |
 | `Appian` | `appian` |
 | `Apple` | `apple` |
@@ -345,6 +344,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Burton` | `burton` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
+| `BVG` | `bvg` |
 | `Byju's` | `byjus` |
 | `byte` | `byte` |
 | `ByteDance` | `bytedance` |
@@ -506,6 +506,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
 | `CSS3` | `css3` |
+| `CTS` | `cts` |
 | `Cucumber` | `cucumber` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
@@ -529,7 +530,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dashlane` | `dashlane` |
 | `Dask` | `dask` |
 | `Dassault Systèmes` | `dassaultsystemes` |
-| `Data Version Control` | `dataversioncontrol` |
 | `data.ai` | `datadotai` |
 | `Databricks` | `databricks` |
 | `DataCamp` | `datacamp` |
@@ -719,6 +719,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fiat` | `fiat` |
 | `Fido Alliance` | `fidoalliance` |
 | `FIFA` | `fifa` |
+| `Fig` | `fig` |
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
@@ -729,6 +730,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Firefox` | `firefox` |
 | `Firefox Browser` | `firefoxbrowser` |
 | `Fireship` | `fireship` |
+| `Firewalla` | `firewalla` |
 | `FIRST` | `first` |
 | `Fitbit` | `fitbit` |
 | `FITE` | `fite` |
@@ -1151,6 +1153,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kubernetes` | `kubernetes` |
 | `Kubuntu` | `kubuntu` |
 | `Kuma` | `kuma` |
+| `Kuula` | `kuula` |
 | `Kyocera` | `kyocera` |
 | `LabVIEW` | `labview` |
 | `Lada` | `lada` |
@@ -1733,9 +1736,11 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ReactiveX` | `reactivex` |
 | `ReactOS` | `reactos` |
 | `Read the Docs` | `readthedocs` |
+| `ReadMe` | `readme` |
 | `Realm` | `realm` |
 | `Reason` | `reason` |
 | `Reason Studios` | `reasonstudios` |
+| `Red` | `red` |
 | `Red Hat` | `redhat` |
 | `Red Hat Open Shift` | `redhatopenshift` |
 | `Redbubble` | `redbubble` |
@@ -1917,6 +1922,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SmugMug` | `smugmug` |
 | `Snapchat` | `snapchat` |
 | `Snapcraft` | `snapcraft` |
+| `SNCF` | `sncf` |
 | `Snowflake` | `snowflake` |
 | `Snowpack` | `snowpack` |
 | `Snyk` | `snyk` |
@@ -2268,6 +2274,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `W3C` | `w3c` |
 | `Wacom` | `wacom` |
 | `Wagtail` | `wagtail` |
+| `Wails` | `wails` |
 | `WakaTime` | `wakatime` |
 | `WALKMAN` | `walkman` |
 | `Wallabag` | `wallabag` |
