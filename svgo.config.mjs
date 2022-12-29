@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   multipass: true,
   eol: 'lf',
   plugins: [
