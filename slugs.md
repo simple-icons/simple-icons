@@ -344,6 +344,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Burton` | `burton` |
 | `Buy Me A Coffee` | `buymeacoffee` |
 | `BuzzFeed` | `buzzfeed` |
+| `BVG` | `bvg` |
 | `Byju's` | `byjus` |
 | `byte` | `byte` |
 | `ByteDance` | `bytedance` |
@@ -505,7 +506,9 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
 | `CSS3` | `css3` |
+| `CTS` | `cts` |
 | `Cucumber` | `cucumber` |
+| `Cultura` | `cultura` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
 | `Cycling '74` | `cycling74` |
@@ -717,6 +720,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fiat` | `fiat` |
 | `Fido Alliance` | `fidoalliance` |
 | `FIFA` | `fifa` |
+| `Fig` | `fig` |
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
@@ -1002,6 +1006,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IFTTT` | `ifttt` |
 | `iHeartRadio` | `iheartradio` |
 | `IKEA` | `ikea` |
+| `Île-de-France Mobilités` | `iledefrancemobilites` |
 | `ImageJ` | `imagej` |
 | `IMDb` | `imdb` |
 | `Imgur` | `imgur` |
@@ -1012,6 +1017,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `InfluxDB` | `influxdb` |
 | `Informatica` | `informatica` |
 | `Infosys` | `infosys` |
+| `Infracost` | `infracost` |
 | `Ingress` | `ingress` |
 | `Inkdrop` | `inkdrop` |
 | `Inkscape` | `inkscape` |
@@ -1336,6 +1342,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
+| `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
 | `Mojang Studios` | `mojangstudios` |
 | `Moleculer` | `moleculer` |
@@ -1608,6 +1615,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Poetry` | `poetry` |
 | `Pointy` | `pointy` |
 | `Pokémon` | `pokemon` |
+| `Polars` | `polars` |
 | `Polkadot` | `polkadot` |
 | `Poly` | `poly` |
 | `Polymer Project` | `polymerproject` |
@@ -1919,6 +1927,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SmugMug` | `smugmug` |
 | `Snapchat` | `snapchat` |
 | `Snapcraft` | `snapcraft` |
+| `SNCF` | `sncf` |
 | `Snowflake` | `snowflake` |
 | `Snowpack` | `snowpack` |
 | `Snyk` | `snyk` |
