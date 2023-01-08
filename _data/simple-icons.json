@@ -404,6 +404,11 @@
             "source": "https://www.ah.nl/"
         },
         {
+            "title": "Alchemy",
+            "hex": "0C0C0E",
+            "source": "https://www.alchemy.com"
+        },
+        {
             "title": "Aldi Nord",
             "hex": "2490D7",
             "source": "https://commons.wikimedia.org/wiki/File:Aldi_Nord_201x_logo.svg"
@@ -752,6 +757,11 @@
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
+        },
+        {
+            "title": "Answer",
+            "hex": "0033FF",
+            "source": "https://answer.dev/"
         },
         {
             "title": "Ansys",
@@ -1606,6 +1616,11 @@
             "title": "BMW",
             "hex": "0066B1",
             "source": "https://www.bmw.de/"
+        },
+        {
+            "title": "BoardGameGeek",
+            "hex": "FF5100",
+            "source": "https://boardgamegeek.com/"
         },
         {
             "title": "Boehringer Ingelheim",
@@ -2590,6 +2605,11 @@
             "source": "https://creativecommons.org/"
         },
         {
+            "title": "Creative Technology",
+            "hex": "000000",
+            "source": "https://creative.com/"
+        },
+        {
             "title": "Credly",
             "hex": "FF6B00",
             "source": "https://cdn.credly.com/assets/structure/logo-78b59f8114817c758ca965ed8f1a58a76a39b6fd70d031f771a9bbc581fcde65.svg"
@@ -2663,6 +2683,11 @@
             "title": "Cucumber",
             "hex": "23D96C",
             "source": "https://cucumber.io"
+        },
+        {
+            "title": "Cultura",
+            "hex": "1D2C54",
+            "source": "https://www.cultura.com/"
         },
         {
             "title": "curl",
@@ -3479,6 +3504,11 @@
             "source": "https://envato.com/"
         },
         {
+            "title": "Envoy Proxy",
+            "hex": "AC6199",
+            "source": "https://d33wubrfki0l68.cloudfront.net/6f16455dae972425b77c7e31642269b375ec250e/3bd11/img/envoy-logo.svg"
+        },
+        {
             "title": "EPEL",
             "hex": "FC0000",
             "source": "https://fedoraproject.org/wiki/EPEL"
@@ -3800,6 +3830,11 @@
             "source": "https://en.wikipedia.org/wiki/FIFA"
         },
         {
+            "title": "Fig",
+            "hex": "000000",
+            "source": "https://fig.io/icons/fig.svg"
+        },
+        {
             "title": "Figma",
             "hex": "F24E1E",
             "source": "https://www.figma.com/using-the-figma-brand/",
@@ -3955,6 +3990,11 @@
             "hex": "02569B",
             "source": "https://flutter.dev/brand",
             "guidelines": "https://flutter.dev/brand"
+        },
+        {
+            "title": "Fluxus",
+            "hex": "FFFFFF",
+            "source": "https://github.com/YieldingFluxus/fluxuswebsite/blob/651d798b8753786dcc51644c3b048a4f399db166/public/icon-svg.svg"
         },
         {
             "title": "Flyway",
@@ -5363,6 +5403,11 @@
             "source": "https://www.ikea.com/"
         },
         {
+            "title": "Île-de-France Mobilités",
+            "hex": "67B4E7",
+            "source": "https://www.iledefrance-mobilites.fr"
+        },
+        {
             "title": "ImageJ",
             "hex": "00D8E0",
             "source": "https://github.com/imagej/imagej/blob/0667395bcac20e5d7a371ac9f468522c74367d59/logo/inkscape_image_logo_src.svg"
@@ -5414,6 +5459,11 @@
             "title": "Infosys",
             "hex": "007CC3",
             "source": "https://www.infosys.com/newsroom/journalist-resources/infosyslogo.html"
+        },
+        {
+            "title": "Infracost",
+            "hex": "DB44B8",
+            "source": "https://www.infracost.io/img/logo.svg"
         },
         {
             "title": "Ingress",
@@ -7184,6 +7234,11 @@
             "source": "https://mochajs.org/"
         },
         {
+            "title": "Modrinth",
+            "hex": "00AF5C",
+            "source": "https://github.com/modrinth/art/blob/d5ab4f965b0b4cea7201967483885ecd8d04a562/Branding/Favicon/favicon.svg"
+        },
+        {
             "title": "MODX",
             "hex": "102C53",
             "source": "https://docs.modx.com/"
@@ -7409,7 +7464,7 @@
         },
         {
             "title": "NativeScript",
-            "hex": "3655FF",
+            "hex": "65ADF1",
             "source": "https://docs.nativescript.org/"
         },
         {
@@ -8690,6 +8745,11 @@
             "title": "Pokémon",
             "hex": "FFCB05",
             "source": "https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg"
+        },
+        {
+            "title": "Polars",
+            "hex": "CD792C",
+            "source": "https://pola.rs/"
         },
         {
             "title": "Polkadot",
@@ -11402,6 +11462,16 @@
             "source": "https://textpattern.com/"
         },
         {
+            "title": "TGA",
+            "hex": "0014FF",
+            "source": "https://thegameawards.com/about",
+            "aliases": {
+                "aka": [
+                    "The Game Awards"
+                ]
+            }
+        },
+        {
             "title": "The Algorithms",
             "hex": "00BCB4",
             "source": "https://github.com/TheAlgorithms/website/blob/f4e439578c88fed3b21c70898605238602975d2d/public/logo_t.svg"
@@ -11565,6 +11635,11 @@
             "title": "tmux",
             "hex": "1BB91F",
             "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
+        },
+        {
+            "title": "TNT",
+            "hex": "FF6600",
+            "source": "https://commons.wikimedia.org/wiki/File:TNT_Express_Logo.svg"
         },
         {
             "title": "Todoist",
