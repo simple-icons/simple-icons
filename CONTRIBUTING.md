@@ -144,9 +144,7 @@ If you have any problems or questions while creating the SVG, check out [the Git
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  * Install dependencies
-    * With npm: `npm install` from the root of this repository
-  * Run the following command `npm run svgo -- icons/file-to-optimize.svg`
+  * Run the following command `npx svgo icons/file-to-optimize.svg`
   * Check if there is a loss of quality in the output, if so increase the precision.
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.

@@ -508,6 +508,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CSS3` | `css3` |
 | `CTS` | `cts` |
 | `Cucumber` | `cucumber` |
+| `Cultura` | `cultura` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
 | `Cycling '74` | `cycling74` |
@@ -1005,6 +1006,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IFTTT` | `ifttt` |
 | `iHeartRadio` | `iheartradio` |
 | `IKEA` | `ikea` |
+| `Île-de-France Mobilités` | `iledefrancemobilites` |
 | `ImageJ` | `imagej` |
 | `IMDb` | `imdb` |
 | `Imgur` | `imgur` |
@@ -1015,6 +1017,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `InfluxDB` | `influxdb` |
 | `Informatica` | `informatica` |
 | `Infosys` | `infosys` |
+| `Infracost` | `infracost` |
 | `Ingress` | `ingress` |
 | `Inkdrop` | `inkdrop` |
 | `Inkscape` | `inkscape` |
@@ -1339,6 +1342,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
+| `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
 | `Mojang Studios` | `mojangstudios` |
 | `Moleculer` | `moleculer` |
@@ -1611,6 +1615,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Poetry` | `poetry` |
 | `Pointy` | `pointy` |
 | `Pokémon` | `pokemon` |
+| `Polars` | `polars` |
 | `Polkadot` | `polkadot` |
 | `Poly` | `poly` |
 | `Polymer Project` | `polymerproject` |
