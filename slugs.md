@@ -84,6 +84,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ajv` | `ajv` |
 | `Alacritty` | `alacritty` |
 | `Albert Heijn` | `albertheijn` |
+| `Alchemy` | `alchemy` |
 | `Aldi Nord` | `aldinord` |
 | `Aldi Süd` | `aldisud` |
 | `Alfa Romeo` | `alfaromeo` |
@@ -140,6 +141,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AngularJS` | `angularjs` |
 | `AniList` | `anilist` |
 | `Ansible` | `ansible` |
+| `Answer` | `answer` |
 | `Ansys` | `ansys` |
 | `Ant Design` | `antdesign` |
 | `Anta` | `anta` |
@@ -305,6 +307,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bluetooth` | `bluetooth` |
 | `BMC Software` | `bmcsoftware` |
 | `BMW` | `bmw` |
+| `BoardGameGeek` | `boardgamegeek` |
 | `Boehringer Ingelheim` | `boehringeringelheim` |
 | `Boeing` | `boeing` |
 | `Bookalope` | `bookalope` |
@@ -376,6 +379,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ceph` | `ceph` |
 | `Cesium` | `cesium` |
 | `Chai` | `chai` |
+| `Chainguard` | `chainguard` |
 | `Chainlink` | `chainlink` |
 | `Chakra UI` | `chakraui` |
 | `Chart.js` | `chartdotjs` |
@@ -494,6 +498,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Crayon` | `crayon` |
 | `Create React App` | `createreactapp` |
 | `Creative Commons` | `creativecommons` |
+| `Creative Technology` | `creativetechnology` |
 | `Credly` | `credly` |
 | `Crehana` | `crehana` |
 | `Critical Role` | `criticalrole` |
@@ -659,6 +664,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Enpass` | `enpass` |
 | `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
+| `Envoy Proxy` | `envoyproxy` |
 | `EPEL` | `epel` |
 | `Epic Games` | `epicgames` |
 | `Epson` | `epson` |
@@ -750,6 +756,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fluent Bit` | `fluentbit` |
 | `Fluentd` | `fluentd` |
 | `Flutter` | `flutter` |
+| `Fluxus` | `fluxus` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
@@ -1350,6 +1357,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Monero` | `monero` |
 | `MoneyGram` | `moneygram` |
 | `MongoDB` | `mongodb` |
+| `Monica` | `monica` |
 | `monkey tie` | `monkeytie` |
 | `MonoGames` | `monogames` |
 | `Monoprix` | `monoprix` |
@@ -2101,6 +2109,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Testing Library` | `testinglibrary` |
 | `Tether` | `tether` |
 | `Textpattern` | `textpattern` |
+| `TGA` | `tga` |
 | `The Algorithms` | `thealgorithms` |
 | `The Conversation` | `theconversation` |
 | `The Irish Times` | `theirishtimes` |
@@ -2132,6 +2141,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TinyLetter` | `tinyletter` |
 | `Tistory` | `tistory` |
 | `tmux` | `tmux` |
+| `TNT` | `tnt` |
 | `Todoist` | `todoist` |
 | `Toggl` | `toggl` |
 | `Tokyo Metro` | `tokyometro` |
@@ -2291,6 +2301,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `wasmCloud` | `wasmcloud` |
 | `Wasmer` | `wasmer` |
 | `Wattpad` | `wattpad` |
+| `Wayland` | `wayland` |
 | `Waze` | `waze` |
 | `Wear OS` | `wearos` |
 | `Weasyl` | `weasyl` |
