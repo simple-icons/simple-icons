@@ -404,6 +404,11 @@
             "source": "https://www.ah.nl/"
         },
         {
+            "title": "Alchemy",
+            "hex": "0C0C0E",
+            "source": "https://www.alchemy.com"
+        },
+        {
             "title": "Aldi Nord",
             "hex": "2490D7",
             "source": "https://commons.wikimedia.org/wiki/File:Aldi_Nord_201x_logo.svg"
@@ -752,6 +757,11 @@
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
+        },
+        {
+            "title": "Answer",
+            "hex": "0033FF",
+            "source": "https://answer.dev/"
         },
         {
             "title": "Ansys",
@@ -1608,6 +1618,11 @@
             "source": "https://www.bmw.de/"
         },
         {
+            "title": "BoardGameGeek",
+            "hex": "FF5100",
+            "source": "https://boardgamegeek.com/"
+        },
+        {
             "title": "Boehringer Ingelheim",
             "hex": "003366",
             "source": "https://cd.boehringer-ingelheim.com"
@@ -1974,6 +1989,11 @@
             "title": "Chai",
             "hex": "A30701",
             "source": "https://github.com/simple-icons/simple-icons/issues/4983#issuecomment-796736373"
+        },
+        {
+            "title": "Chainguard",
+            "hex": "4445E7",
+            "source": "https://www.chainguard.dev/"
         },
         {
             "title": "Chainlink",
@@ -2588,6 +2608,11 @@
             "title": "Creative Commons",
             "hex": "EF9421",
             "source": "https://creativecommons.org/"
+        },
+        {
+            "title": "Creative Technology",
+            "hex": "000000",
+            "source": "https://creative.com/"
         },
         {
             "title": "Credly",
@@ -3484,6 +3509,11 @@
             "source": "https://envato.com/"
         },
         {
+            "title": "Envoy Proxy",
+            "hex": "AC6199",
+            "source": "https://d33wubrfki0l68.cloudfront.net/6f16455dae972425b77c7e31642269b375ec250e/3bd11/img/envoy-logo.svg"
+        },
+        {
             "title": "EPEL",
             "hex": "FC0000",
             "source": "https://fedoraproject.org/wiki/EPEL"
@@ -3965,6 +3995,11 @@
             "hex": "02569B",
             "source": "https://flutter.dev/brand",
             "guidelines": "https://flutter.dev/brand"
+        },
+        {
+            "title": "Fluxus",
+            "hex": "FFFFFF",
+            "source": "https://github.com/YieldingFluxus/fluxuswebsite/blob/651d798b8753786dcc51644c3b048a4f399db166/public/icon-svg.svg"
         },
         {
             "title": "Flyway",
@@ -7244,6 +7279,11 @@
             "source": "https://www.mongodb.com/pressroom"
         },
         {
+            "title": "Monica",
+            "hex": "2C2B29",
+            "source": "https://github.com/monicahq/monica/blob/d7886cc6fd11388a95b7504e1a5363ecc7ad9a59/public/img/monica.svg"
+        },
+        {
             "title": "monkey tie",
             "hex": "1A52C2",
             "source": "https://www.monkey-tie.com"
@@ -7429,7 +7469,7 @@
         },
         {
             "title": "NativeScript",
-            "hex": "3655FF",
+            "hex": "65ADF1",
             "source": "https://docs.nativescript.org/"
         },
         {
@@ -11427,6 +11467,16 @@
             "source": "https://textpattern.com/"
         },
         {
+            "title": "TGA",
+            "hex": "0014FF",
+            "source": "https://thegameawards.com/about",
+            "aliases": {
+                "aka": [
+                    "The Game Awards"
+                ]
+            }
+        },
+        {
             "title": "The Algorithms",
             "hex": "00BCB4",
             "source": "https://github.com/TheAlgorithms/website/blob/f4e439578c88fed3b21c70898605238602975d2d/public/logo_t.svg"
@@ -11590,6 +11640,11 @@
             "title": "tmux",
             "hex": "1BB91F",
             "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
+        },
+        {
+            "title": "TNT",
+            "hex": "FF6600",
+            "source": "https://commons.wikimedia.org/wiki/File:TNT_Express_Logo.svg"
         },
         {
             "title": "Todoist",
@@ -12425,6 +12480,14 @@
             "hex": "FF500A",
             "source": "https://company.wattpad.com/brandguideline",
             "guidelines": "https://company.wattpad.com/brandguideline"
+        },
+        {
+            "title": "Wayland",
+            "hex": "FFBC00",
+            "source": "https://gitlab.freedesktop.org/wayland/weston/-/blob/77ede00a938b8137bd638ce67b6f58cb52b1d1b0/data/wayland.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Waze",
