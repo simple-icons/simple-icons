@@ -11,6 +11,5 @@ scripts/build/templates/*.js
 
 # Generated JavaScript files don't need to be formatted
 index.js
-icons.js
-icons.mjs
-icons.d.ts
+index.mjs
+index.d.ts

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   multipass: true,
   eol: 'lf',
   plugins: [
@@ -44,7 +44,7 @@ module.exports = {
     },
     'removeUselessStrokeAndFill',
     'removeUnusedNS',
-    'cleanupIDs',
+    'cleanupIds',
     'cleanupNumericValues',
     'cleanupListOfValues',
     'moveGroupAttrsToElems',
