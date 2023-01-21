@@ -159,7 +159,7 @@ const dataPrompt = [
     suffix: ' (separate with commas)',
     validate: (text) => Boolean(text),
     transformer: aliasesTransformer,
-    when: (answers) => answers?.aliasesTypes.includes(x.value),
+    when: (answers) => answers?.aliasesTypes?.includes(x.value),
   })),
   {
     type: 'confirm',
