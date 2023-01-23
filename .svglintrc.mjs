@@ -808,7 +808,7 @@ export default {
         if (!svgRegexp.test(ast.source)) {
           if (ast.source.includes('\n') || ast.source.includes('\r')) {
             reporter.error(
-              'Unexpected newline character detected in SVG markup',
+              'Unexpected newline character(s) detected in SVG markup',
             );
           } else {
             reporter.error(
