@@ -2761,6 +2761,11 @@
             "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
         },
         {
+            "title": "DaisyUI",
+            "hex": "5A0EF8",
+            "source": "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg"
+        },
+        {
             "title": "Dapr",
             "hex": "0D2192",
             "source": "https://raw.githubusercontent.com/dapr/dapr/18575823c74318c811d6cd6f57ffac76d5debe93/img/dapr_logo.svg"
@@ -5653,6 +5658,11 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/d/df/ITunes_logo.svg"
         },
         {
+            "title": "ITVx",
+            "hex": "DEEB52",
+            "source": "https://www.itvmedia.co.uk"
+        },
+        {
             "title": "IVECO",
             "hex": "004994",
             "source": "https://www.iveco.com/germany/Pages/Home-page.aspx"
@@ -7813,8 +7823,8 @@
         {
             "title": "Nuxt.js",
             "hex": "00DC82",
-            "source": "https://nuxtjs.org/design",
-            "guidelines": "https://nuxtjs.org/design"
+            "source": "https://nuxt.com/design-kit",
+            "guidelines": "https://nuxt.com/design-kit"
         },
         {
             "title": "NVIDIA",
@@ -11662,6 +11672,11 @@
             "source": "https://en.wikipedia.org/wiki/File:TokyoMetro.svg"
         },
         {
+            "title": "TOML",
+            "hex": "9C4121",
+            "source": "https://github.com/toml-lang/toml/blob/625f62b55c5acdfb9924c78e1d0bf4cf0be23d91/logos/toml.svg"
+        },
+        {
             "title": "Tomorrowland",
             "hex": "000000",
             "source": "https://global.tomorrowland.com/"
@@ -12129,6 +12144,15 @@
             "hex": "1868F2",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
+        },
+        {
+            "title": "Vala",
+            "hex": "7239B3",
+            "source": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg",
+            "license": {
+                "type": "MIT",
+                "url": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg"
+            }
         },
         {
             "title": "Valorant",
