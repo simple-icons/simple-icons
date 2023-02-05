@@ -1296,6 +1296,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MediaTek` | `mediatek` |
 | `MediaTemple` | `mediatemple` |
 | `Medium` | `medium` |
+| `Medusa` | `medusa` |
 | `Meetup` | `meetup` |
 | `MEGA` | `mega` |
 | `Mendeley` | `mendeley` |
