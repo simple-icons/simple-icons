@@ -144,9 +144,7 @@ If you have any problems or questions while creating the SVG, check out [the Git
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  * Install dependencies
-    * With npm: `npm install` from the root of this repository
-  * Run the following command `npm run svgo -- icons/file-to-optimize.svg`
+  * Run the following command `npx svgo icons/file-to-optimize.svg`
   * Check if there is a loss of quality in the output, if so increase the precision.
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.
@@ -265,6 +263,8 @@ Here is the object of a fictional brand as an example:
 }
 ```
 
+You can use `npm run add-icon-data` to add metadata via a CLI prompt.
+
 Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
 
 #### Optional Data
@@ -290,6 +290,8 @@ Here is the object of the fictional brand from before, but with all optional val
     }
 }
 ```
+
+> Non secured HTTP URLs are forbidden. If a brand's website only supports HTTP, you must still declare the URL using the `https://` protocol.
 
 #### Source Guidelines
 
