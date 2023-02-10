@@ -527,6 +527,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DAF` | `daf` |
 | `Dailymotion` | `dailymotion` |
 | `Daimler` | `daimler` |
+| `DaisyUI` | `daisyui` |
 | `Dapr` | `dapr` |
 | `Dark Reader` | `darkreader` |
 | `Dart` | `dart` |
@@ -1058,6 +1059,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Itch.io` | `itchdotio` |
 | `iTerm2` | `iterm2` |
 | `iTunes` | `itunes` |
+| `ITVx` | `itvx` |
 | `IVECO` | `iveco` |
 | `Jabber` | `jabber` |
 | `Jaguar` | `jaguar` |
@@ -2145,6 +2147,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Todoist` | `todoist` |
 | `Toggl` | `toggl` |
 | `Tokyo Metro` | `tokyometro` |
+| `TOML` | `toml` |
 | `Tomorrowland` | `tomorrowland` |
 | `Topcoder` | `topcoder` |
 | `Toptal` | `toptal` |
@@ -2235,6 +2238,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `V8` | `v8` |
 | `Vaadin` | `vaadin` |
 | `Vagrant` | `vagrant` |
+| `Vala` | `vala` |
 | `Valorant` | `valorant` |
 | `Valve` | `valve` |
 | `Vapor` | `vapor` |
