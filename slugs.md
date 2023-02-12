@@ -1299,6 +1299,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Meetup` | `meetup` |
 | `MEGA` | `mega` |
 | `Mendeley` | `mendeley` |
+| `Mercado Pago` | `mercadopago` |
 | `Mercedes` | `mercedes` |
 | `Merck` | `merck` |
 | `Mercurial` | `mercurial` |
