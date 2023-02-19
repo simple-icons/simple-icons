@@ -394,6 +394,11 @@
             "source": "https://github.com/ajv-validator/ajv/blob/95b15b683dfb60f63c5129b0426629b968d53af8/docs/.vuepress/public/img/ajv.svg"
         },
         {
+            "title": "Akamai",
+            "hex": "0096D6",
+            "source": "https://www.akamai.com"
+        },
+        {
             "title": "Alacritty",
             "hex": "F46D01",
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg"
@@ -2022,8 +2027,9 @@
         },
         {
             "title": "ChatBot",
-            "hex": "FFD000",
-            "source": "https://chatbot.design/"
+            "hex": "0066FF",
+            "source": "https://chatbot.design/",
+            "guidelines": "https://chatbot.design/"
         },
         {
             "title": "CheckiO",
@@ -2759,6 +2765,11 @@
             "hex": "E6E6E6",
             "source": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype_Black_DTP",
             "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
+        },
+        {
+            "title": "DaisyUI",
+            "hex": "5A0EF8",
+            "source": "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg"
         },
         {
             "title": "Dapr",
@@ -5062,7 +5073,7 @@
         },
         {
             "title": "HelpDesk",
-            "hex": "FFD000",
+            "hex": "2FC774",
             "source": "https://helpdesk.design/",
             "guidelines": "https://helpdesk.design/"
         },
@@ -5653,6 +5664,11 @@
             "source": "https://upload.wikimedia.org/wikipedia/commons/d/df/ITunes_logo.svg"
         },
         {
+            "title": "ITVx",
+            "hex": "DEEB52",
+            "source": "https://www.itvmedia.co.uk"
+        },
+        {
             "title": "IVECO",
             "hex": "004994",
             "source": "https://www.iveco.com/germany/Pages/Home-page.aspx"
@@ -6139,9 +6155,9 @@
         },
         {
             "title": "KnowledgeBase",
-            "hex": "FFD000",
-            "source": "https://www.knowledgebase.ai/design",
-            "guidelines": "https://www.knowledgebase.ai/design"
+            "hex": "9146FF",
+            "source": "https://www.knowledgebase.com/design",
+            "guidelines": "https://www.knowledgebase.com/design"
         },
         {
             "title": "Known",
@@ -6565,7 +6581,7 @@
         },
         {
             "title": "LiveChat",
-            "hex": "FFD000",
+            "hex": "FF5100",
             "source": "https://livechat.design/",
             "guidelines": "https://livechat.design/"
         },
@@ -6961,6 +6977,11 @@
             "title": "Mendeley",
             "hex": "9D1620",
             "source": "https://www.mendeley.com/"
+        },
+        {
+            "title": "Mercado Pago",
+            "hex": "00B1EA",
+            "source": "https://www.mercadopago.com/"
         },
         {
             "title": "Mercedes",
@@ -7818,8 +7839,8 @@
         {
             "title": "Nuxt.js",
             "hex": "00DC82",
-            "source": "https://nuxtjs.org/design",
-            "guidelines": "https://nuxtjs.org/design"
+            "source": "https://nuxt.com/design-kit",
+            "guidelines": "https://nuxt.com/design-kit"
         },
         {
             "title": "NVIDIA",
@@ -11667,6 +11688,11 @@
             "source": "https://en.wikipedia.org/wiki/File:TokyoMetro.svg"
         },
         {
+            "title": "TOML",
+            "hex": "9C4121",
+            "source": "https://github.com/toml-lang/toml/blob/625f62b55c5acdfb9924c78e1d0bf4cf0be23d91/logos/toml.svg"
+        },
+        {
             "title": "Tomorrowland",
             "hex": "000000",
             "source": "https://global.tomorrowland.com/"
@@ -12134,6 +12160,15 @@
             "hex": "1868F2",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
+        },
+        {
+            "title": "Vala",
+            "hex": "7239B3",
+            "source": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg",
+            "license": {
+                "type": "MIT",
+                "url": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg"
+            }
         },
         {
             "title": "Valorant",
