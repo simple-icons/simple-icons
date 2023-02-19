@@ -3,5 +3,6 @@ node_modules/
 npm-debug.log
 
 # Build files
-icons/*.js
 /index.js
+/index.mjs
+/index.d.ts
