@@ -18,6 +18,7 @@ import {
   slugToVariableName,
   getIconsData,
   getDirnameFromImportMeta,
+  collator,
 } from '../utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -25,19 +26,16 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 const UTF8 = 'utf8';
 
 const rootDir = path.resolve(__dirname, '..', '..');
-const indexFile = path.resolve(rootDir, 'index.js');
 const iconsDir = path.resolve(rootDir, 'icons');
-const iconsJsFile = path.resolve(rootDir, 'icons.js');
-const iconsMjsFile = path.resolve(rootDir, 'icons.mjs');
-const iconsDtsFile = path.resolve(rootDir, 'icons.d.ts');
+const indexJsFile = path.resolve(rootDir, 'index.js');
+const indexMjsFile = path.resolve(rootDir, 'index.mjs');
+const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
-const indexTemplateFile = path.resolve(templatesDir, 'index.js');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const build = async () => {
   const icons = await getIconsData();
-  const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
   // Local helper functions
@@ -81,66 +79,46 @@ const build = async () => {
   };
 
   // 'main'
-  const iconsBarrelMjs = [];
-  const iconsBarrelJs = [];
-  const iconsBarrelDts = [];
-  const buildIcons = [];
-
-  await Promise.all(
+  const buildIcons = await Promise.all(
     icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
       icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
-      buildIcons.push(icon);
-
       const iconObject = iconToObject(icon);
-
       const iconExportName = slugToVariableName(icon.slug);
-
-      // write the static .js file for the icon
-      const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-      const newImportMessage = `use "const { ${iconExportName} } = require('simple-icons/icons');" instead`;
-      const message = JSON.stringify(
-        `Imports like "const ${icon.slug} = require('simple-icons/icons/${icon.slug}');" have been deprecated in v6.0.0 and will no longer work from v7.0.0, ${newImportMessage}`,
-      );
-
-      const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
-      await Promise.all([
-        writeJs(
-          jsFilepath,
-          `console.warn("warn -", ${message});module.exports=${iconObject};`,
-        ),
-        writeTs(
-          dtsFilepath,
-          `/**@deprecated ${newImportMessage}*/declare const i:import("../alias").I;export default i;`,
-        ),
-      ]);
-
-      // add object to the barrel file
-      iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
-      iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
-      iconsBarrelDts.push(`export const ${iconExportName}:I;`);
+      return { icon, iconObject, iconExportName };
     }),
   );
 
-  // write our generic index.js
-  const rawIndexJs = util.format(
-    indexTemplate,
-    buildIcons.map(iconToKeyValue).join(','),
-  );
-  await writeJs(indexFile, rawIndexJs);
+  const iconsBarrelDts = [];
+  const iconsBarrelJs = [];
+  const iconsBarrelMjs = [];
+
+  buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
+  buildIcons.forEach(({ iconObject, iconExportName }) => {
+    iconsBarrelDts.push(`export const ${iconExportName}:I;`);
+    iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
+    iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
+  });
+
+  // constants used in templates to reduce package size
+  const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
 
   // write our file containing the exports of all icons in CommonJS ...
-  const rawIconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
-  await writeJs(iconsJsFile, rawIconsJs);
+  const rawIndexJs = `${constantsString}module.exports={${iconsBarrelJs.join(
+    '',
+  )}};`;
+  await writeJs(indexJsFile, rawIndexJs);
   // and ESM
-  const rawIconsMjs = iconsBarrelMjs.join('');
-  await writeJs(iconsMjsFile, rawIconsMjs);
+  const rawIndexMjs = constantsString + iconsBarrelMjs.join('');
+  await writeJs(indexMjsFile, rawIndexMjs);
   // and create a type declaration file
-  const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join('')}`;
-  await writeTs(iconsDtsFile, rawIconsDts);
+  const rawIndexDts = `import {SimpleIcon} from "./types";export {SimpleIcon};type I=SimpleIcon;${iconsBarrelDts.join(
+    '',
+  )}`;
+  await writeTs(indexDtsFile, rawIndexDts);
 };
 
 build();
