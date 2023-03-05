@@ -82,6 +82,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AirPlay Video` | `airplayvideo` |
 | `Airtable` | `airtable` |
 | `Ajv` | `ajv` |
+| `Akamai` | `akamai` |
 | `Alacritty` | `alacritty` |
 | `Albert Heijn` | `albertheijn` |
 | `Alchemy` | `alchemy` |
@@ -1442,6 +1443,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Notion` | `notion` |
 | `Notist` | `notist` |
 | `Noun Project` | `nounproject` |
+| `Novu` | `novu` |
 | `NOW` | `now` |
 | `npm` | `npm` |
 | `Nrwl` | `nrwl` |
