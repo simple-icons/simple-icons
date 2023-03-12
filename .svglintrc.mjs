@@ -806,9 +806,15 @@ export default {
         reporter.name = 'extraneous';
 
         if (!svgRegexp.test(ast.source)) {
-          reporter.error(
-            'Unexpected character(s), most likely extraneous whitespace, detected in SVG markup',
-          );
+          if (ast.source.includes('\n') || ast.source.includes('\r')) {
+            reporter.error(
+              'Unexpected newline character(s) detected in SVG markup',
+            );
+          } else {
+            reporter.error(
+              'Unexpected character(s), most likely extraneous whitespace, detected in SVG markup',
+            );
+          }
         }
       },
       (reporter, $, ast) => {
