@@ -766,6 +766,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fonoma` | `fonoma` |
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
+| `FontForge` | `fontforge` |
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
 | `Forestry` | `forestry` |
@@ -1353,6 +1354,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
+| `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
 | `Mojang Studios` | `mojangstudios` |
@@ -1765,6 +1767,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Reddit` | `reddit` |
 | `Redis` | `redis` |
 | `Redmine` | `redmine` |
+| `Redox` | `redox` |
 | `Redux` | `redux` |
 | `Redux-Saga` | `reduxsaga` |
 | `RedwoodJS` | `redwoodjs` |
