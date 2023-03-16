@@ -3038,7 +3038,12 @@
         {
             "title": "diagrams.net",
             "hex": "F08705",
-            "source": "https://github.com/jgraph/drawio/blob/4743eba8d5eaa497dc003df7bf7295b695c59bea/src/main/webapp/images/drawlogo.svg"
+            "source": "https://github.com/jgraph/drawio/blob/4743eba8d5eaa497dc003df7bf7295b695c59bea/src/main/webapp/images/drawlogo.svg",
+            "aliases": {
+                "aka": [
+                    "draw.io"
+                ]
+            }
         },
         {
             "title": "Dialogflow",
@@ -4053,6 +4058,11 @@
             "title": "FontBase",
             "hex": "3D03A7",
             "source": "https://fontba.se/"
+        },
+        {
+            "title": "FontForge",
+            "hex": "F2712B",
+            "source": "https://fontforge.org"
         },
         {
             "title": "foodpanda",
@@ -7266,6 +7276,11 @@
             "source": "https://mochajs.org/"
         },
         {
+            "title": "Modin",
+            "hex": "001729",
+            "source": "https://modin.org/"
+        },
+        {
             "title": "Modrinth",
             "hex": "00AF5C",
             "source": "https://github.com/modrinth/art/blob/d5ab4f965b0b4cea7201967483885ecd8d04a562/Branding/Favicon/favicon.svg"
@@ -9581,6 +9596,11 @@
             }
         },
         {
+            "title": "Redox",
+            "hex": "000000",
+            "source": "https://github.com/redox-os/assets/blob/4935a777cd7aa44323d3c263b1e0bb4ae864a027/logos/redox/vectorized_logo.svg"
+        },
+        {
             "title": "Redux",
             "hex": "764ABC",
             "source": "https://github.com/reduxjs/redux/tree/8ad084251a5b3e4617157fc52795b6284e68bc1e/logo"
@@ -10221,6 +10241,11 @@
             "hex": "86BC40",
             "source": "https://design.sencha.com/",
             "guidelines": "https://design.sencha.com/productlogo.html"
+        },
+        {
+            "title": "Sendinblue",
+            "hex": "0092FF",
+            "source": "https://get.sendinblue.com/assets/logos/"
         },
         {
             "title": "Sennheiser",
