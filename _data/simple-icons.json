@@ -3034,7 +3034,12 @@
         {
             "title": "diagrams.net",
             "hex": "F08705",
-            "source": "https://github.com/jgraph/drawio/blob/4743eba8d5eaa497dc003df7bf7295b695c59bea/src/main/webapp/images/drawlogo.svg"
+            "source": "https://github.com/jgraph/drawio/blob/4743eba8d5eaa497dc003df7bf7295b695c59bea/src/main/webapp/images/drawlogo.svg",
+            "aliases": {
+                "aka": [
+                    "draw.io"
+                ]
+            }
         },
         {
             "title": "Dialogflow",
@@ -10232,6 +10237,11 @@
             "hex": "86BC40",
             "source": "https://design.sencha.com/",
             "guidelines": "https://design.sencha.com/productlogo.html"
+        },
+        {
+            "title": "Sendinblue",
+            "hex": "0092FF",
+            "source": "https://get.sendinblue.com/assets/logos/"
         },
         {
             "title": "Sennheiser",
