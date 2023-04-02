@@ -1883,6 +1883,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Semaphore CI` | `semaphoreci` |
 | `SemVer` | `semver` |
 | `Sencha` | `sencha` |
+| `Sendinblue` | `sendinblue` |
 | `Sennheiser` | `sennheiser` |
 | `Sensu` | `sensu` |
 | `Sentry` | `sentry` |
@@ -2006,6 +2007,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stackbit` | `stackbit` |
 | `StackBlitz` | `stackblitz` |
 | `StackEdit` | `stackedit` |
+| `StackHawk` | `stackhawk` |
 | `StackPath` | `stackpath` |
 | `StackShare` | `stackshare` |
 | `Stadia` | `stadia` |
