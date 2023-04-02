@@ -766,6 +766,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fonoma` | `fonoma` |
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
+| `FontForge` | `fontforge` |
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
 | `Forestry` | `forestry` |
@@ -1353,6 +1354,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
+| `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
 | `Mojang Studios` | `mojangstudios` |
@@ -1765,6 +1767,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Reddit` | `reddit` |
 | `Redis` | `redis` |
 | `Redmine` | `redmine` |
+| `Redox` | `redox` |
 | `Redux` | `redux` |
 | `Redux-Saga` | `reduxsaga` |
 | `RedwoodJS` | `redwoodjs` |
@@ -1880,6 +1883,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Semaphore CI` | `semaphoreci` |
 | `SemVer` | `semver` |
 | `Sencha` | `sencha` |
+| `Sendinblue` | `sendinblue` |
 | `Sennheiser` | `sennheiser` |
 | `Sensu` | `sensu` |
 | `Sentry` | `sentry` |
@@ -2003,6 +2007,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stackbit` | `stackbit` |
 | `StackBlitz` | `stackblitz` |
 | `StackEdit` | `stackedit` |
+| `StackHawk` | `stackhawk` |
 | `StackPath` | `stackpath` |
 | `StackShare` | `stackshare` |
 | `Stadia` | `stadia` |
