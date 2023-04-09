@@ -402,6 +402,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cinema 4D` | `cinema4d` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
+| `CircuitVerse` | `circuitverse` |
 | `Cirrus CI` | `cirrusci` |
 | `Cisco` | `cisco` |
 | `Citrix` | `citrix` |
@@ -1440,6 +1441,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nokia` | `nokia` |
 | `Norco` | `norco` |
 | `NordVPN` | `nordvpn` |
+| `Normalize.css` | `normalizedotcss` |
 | `Norwegian` | `norwegian` |
 | `Notepad++` | `notepadplusplus` |
 | `Notion` | `notion` |
@@ -1522,6 +1524,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Org` | `org` |
 | `Origin` | `origin` |
 | `Osano` | `osano` |
+| `OSGeo` | `osgeo` |
 | `Oshkosh` | `oshkosh` |
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
@@ -1535,6 +1538,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `p5.js` | `p5dotjs` |
 | `Packagist` | `packagist` |
 | `Packer` | `packer` |
+| `PaddlePaddle` | `paddlepaddle` |
 | `Paddy Power` | `paddypower` |
 | `Pagekit` | `pagekit` |
 | `PagerDuty` | `pagerduty` |
@@ -1627,6 +1631,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PocketBase` | `pocketbase` |
 | `Podcast Addict` | `podcastaddict` |
 | `Podman` | `podman` |
+| `Poe` | `poe` |
 | `Poetry` | `poetry` |
 | `Pointy` | `pointy` |
 | `Pokémon` | `pokemon` |
@@ -2071,6 +2076,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Swiggy` | `swiggy` |
 | `Swiper` | `swiper` |
 | `Symantec` | `symantec` |
+| `Symbolab` | `symbolab` |
 | `Symfony` | `symfony` |
 | `Symphony` | `symphony` |
 | `SymPy` | `sympy` |
@@ -2403,6 +2409,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yale` | `yale` |
 | `Yamaha Corporation` | `yamahacorporation` |
 | `Yamaha Motor Corporation` | `yamahamotorcorporation` |
+| `YAML` | `yaml` |
 | `Yammer` | `yammer` |
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
