@@ -59,7 +59,7 @@ type DuplicateAlias = {
  *
  * Corresponds to the data stored for each icon in the *_data/simple-icons.json* file.
  *
- * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#data}
+ * @see {@link https://github.com/mondeja/simple-icons/blob/utils-entrypoint/CONTRIBUTING.md#7-update-the-json-data-for-simpleiconsorg}
  */
 export type IconData = {
   title: string;

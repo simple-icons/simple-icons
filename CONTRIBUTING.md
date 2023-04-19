@@ -244,12 +244,7 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     ```
 
 
-<h3 name="#data">7. Update the JSON Data for SimpleIcons.org</h3>
-
-<!--
-WARNING: The previous header is defined with HTML to provide a inmutable
-hyperlink for referencing icons data format. DO NOT CHANGE
--->
+### 7. Update the JSON Data for SimpleIcons.org
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
 
