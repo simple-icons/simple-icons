@@ -49,7 +49,7 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
 
 /**
  * Get the slug/filename for an icon.
- * @param {IconData} icon The icon data as it appears in _data/simple-icons.json
+ * @param {IconData} icon The icon data as it appears in *_data/simple-icons.json*
  * @returns {String} The slug/filename for the icon
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
@@ -88,7 +88,7 @@ export const slugToVariableName = (slug) => {
 };
 
 /**
- * Converts a brand title as defined in simple-icons.json into a brand
+ * Converts a brand title as defined in *_data/simple-icons.json* into a brand
  * title in HTML/SVG friendly format.
  * @param {String} brandTitle The title to convert
  * @returns {String} The brand title in HTML/SVG friendly format
@@ -106,7 +106,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 
 /**
  * Converts a brand title in HTML/SVG friendly format into a brand title (as
- * it is seen in simple-icons.json)
+ * it is seen in *_data/simple-icons.json*)
  * @param {String} htmlFriendlyTitle The title to convert
  * @returns {String} The brand title in HTML/SVG friendly format
  */
@@ -119,9 +119,9 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
- * Get path of _data/simpe-icons.json.
+ * Get path of *_data/simpe-icons.json*.
  * @param {String|undefined} rootDir Path to the root directory of the project
- * @returns {String} Path of _data/simple-icons.json
+ * @returns {String} Path of *_data/simple-icons.json*
  */
 export const getIconDataPath = (
   rootDir = getDirnameFromImportMeta(import.meta.url),
@@ -130,9 +130,9 @@ export const getIconDataPath = (
 };
 
 /**
- * Get contents of _data/simple-icons.json.
+ * Get contents of *_data/simple-icons.json*.
  * @param {String|undefined} rootDir Path to the root directory of the project
- * @returns {String} Contents of _data/simple-icons.json
+ * @returns {String} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
   rootDir = getDirnameFromImportMeta(import.meta.url),
@@ -141,9 +141,9 @@ export const getIconsDataString = (
 };
 
 /**
- * Get icons data as object from _data/simple-icons.json.
+ * Get icons data as object from *_data/simple-icons.json*.
  * @param {String|undefined} rootDir Path to the root directory of the project
- * @returns {IconData[]} Icons data as object from _data/simple-icons.json
+ * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
   rootDir = getDirnameFromImportMeta(import.meta.url),
@@ -162,7 +162,7 @@ export const normalizeNewlines = (text) => {
 };
 
 /**
- * Convert non-6-digit hex color to 6-digit.
+ * Convert non-6-digit hex color to 6-digit with the character `#` stripped.
  * @param {String} text The color text
  * @returns {String} The color text in 6-digit hex format
  */
@@ -177,7 +177,7 @@ export const normalizeColor = (text) => {
 };
 
 /**
- * Get information about third party extensions.
+ * Get information about third party extensions from the README table.
  * @param {String|undefined} readmePath Path to the README file
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
  */
@@ -214,7 +214,7 @@ export const getThirdPartyExtensions = async (
 /**
  * `Intl.Collator` object ready to be used for icon titles sorting.
  * @type {Intl.Collator}
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator Intl.Collator}
  **/
 export const collator = new Intl.Collator('en', {
   usage: 'search',
