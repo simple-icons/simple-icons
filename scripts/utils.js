@@ -1,6 +1,6 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
-import { getDirnameFromImportMeta, getIconDataPath } from '../utils.mjs';
+import { getDirnameFromImportMeta, getIconDataPath } from '../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 

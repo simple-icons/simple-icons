@@ -26,22 +26,22 @@
     "./icons/*": [
       "./icons/*"
     ],
-    "./utils": {
+    "./sdk": {
       "import": {
-        "types": "./utils.d.ts",
-        "default": "./utils.mjs"
+        "types": "./sdk.d.ts",
+        "default": "./sdk.mjs"
       },
       "module": {
-        "types": "./utils.d.ts",
-        "default": "./utils.mjs"
+        "types": "./sdk.d.ts",
+        "default": "./sdk.mjs"
       },
       "require": {
-        "types": "./utils.d.ts",
-        "default": "./utils.js"
+        "types": "./sdk.d.ts",
+        "default": "./sdk.js"
       },
       "default": {
-        "types": "./utils.d.ts",
-        "default": "./utils.js"
+        "types": "./sdk.d.ts",
+        "default": "./sdk.js"
       }
     }
   },

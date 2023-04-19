@@ -6,7 +6,7 @@
 
 import path from 'node:path';
 import { Validator } from 'jsonschema';
-import { getDirnameFromImportMeta, getIconsData } from '../../utils.mjs';
+import { getDirnameFromImportMeta, getIconsData } from '../../sdk.mjs';
 import { getJsonSchemaData } from '../utils.js';
 
 const icons = await getIconsData();

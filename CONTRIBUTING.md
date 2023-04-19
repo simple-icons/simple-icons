@@ -243,7 +243,13 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: hive_blockchain.svg
     ```
 
-### 7. Update the JSON Data for SimpleIcons.org
+
+<h3 href="#icons-data-format">7. Update the JSON Data for SimpleIcons.org</h3>
+
+<!--
+WARNING: The previous h3 header is defined with HTML including a href attribute
+to provide a inmutable hyperlink for referencing icons data format. DO NOT CHANGE
+-->
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
 
@@ -395,4 +401,24 @@ Then, start a Docker container for simple-icons and attach to it:
 
 ```shell
 docker run -it --rm --entrypoint "/bin/ash" simple-icons
+```
+
+## Third-Party Extensions
+
+We include a SDK to make it easier the development of third party extensions
+with Javascript and Typescript in the `simple-icons/sdk` entrypoint.
+
+```typescript
+import type { getIconsData, type IconData } from 'simple-icons/sdk';
+
+const iconsData: IconData[] = getIconsData();
+```
+
+```javascript
+import { getIconsData } from 'simple-icons/sdk';
+
+/* @typedef {import("./simple-icons/sdk").IconData} IconData */
+
+/* @type {IconData[]} */
+const iconsData = getIconsData();
 ```

@@ -19,7 +19,7 @@ import {
   getIconsData,
   getDirnameFromImportMeta,
   collator,
-} from '../../utils.mjs';
+} from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -29,8 +29,8 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const iconsDir = path.resolve(rootDir, 'icons');
 const indexJsFile = path.resolve(rootDir, 'index.js');
 const indexMjsFile = path.resolve(rootDir, 'index.mjs');
-const utilsJsFile = path.resolve(rootDir, 'utils.js');
-const utilsMjsFile = path.resolve(rootDir, 'utils.mjs');
+const sdkJsFile = path.resolve(rootDir, 'sdk.js');
+const sdkMjsFile = path.resolve(rootDir, 'sdk.mjs');
 const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
@@ -121,8 +121,8 @@ const build = async () => {
   )}`;
   await writeTs(indexDtsFile, rawIndexDts);
 
-  // create a CommonJS utils file
-  await writeJs(utilsJsFile, await fs.readFile(utilsMjsFile, UTF8), {
+  // create a CommonJS SDK file
+  await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
     format: 'cjs',
   });
 };

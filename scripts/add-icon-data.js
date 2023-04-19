@@ -8,7 +8,7 @@ import {
   getIconsDataString,
   titleToSlug,
   normalizeColor,
-} from '../utils.mjs';
+} from '../sdk.mjs';
 import { writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;

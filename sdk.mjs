@@ -8,8 +8,8 @@ import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 /**
- * @typedef {import("./utils").ThirdPartyExtension} ThirdPartyExtension
- * @typedef {import("./utils").IconData} IconData
+ * @typedef {import("./sdk").ThirdPartyExtension} ThirdPartyExtension
+ * @typedef {import("./sdk").IconData} IconData
  */
 
 const TITLE_TO_SLUG_REPLACEMENTS = {

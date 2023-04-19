@@ -1,4 +1,4 @@
-import { getIconsData, getIconSlug, slugToVariableName } from '../utils.mjs';
+import { getIconsData, getIconSlug, slugToVariableName } from '../sdk.mjs';
 import * as simpleIcons from '../index.mjs';
 import { testIcon } from './test-icon.js';
 
