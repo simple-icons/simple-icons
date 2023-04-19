@@ -244,11 +244,11 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     ```
 
 
-<h3 href="#icons-data-format">7. Update the JSON Data for SimpleIcons.org</h3>
+<h3 name="#data">7. Update the JSON Data for SimpleIcons.org</h3>
 
 <!--
-WARNING: The previous h3 header is defined with HTML including a href attribute
-to provide a inmutable hyperlink for referencing icons data format. DO NOT CHANGE
+WARNING: The previous header is defined with HTML to provide a inmutable
+hyperlink for referencing icons data format. DO NOT CHANGE
 -->
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
@@ -405,11 +405,12 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Third-Party Extensions
 
-We include a SDK to make it easier the development of third party extensions
-with Javascript and Typescript in the `simple-icons/sdk` entrypoint.
+We include a SDK in the `simple-icons/sdk` entrypoint of the npm package
+to make it easier the development of third party extensions
+with Javascript and Typescript.
 
 ```typescript
-import type { getIconsData, type IconData } from 'simple-icons/sdk';
+import { getIconsData, type IconData } from 'simple-icons/sdk';
 
 const iconsData: IconData[] = getIconsData();
 ```
