@@ -1,10 +1,15 @@
 /**
+ * @fileoverview
+ * Types for Simple Icons SDK.
+ */
+
+/**
  * The data for a third-party extension.
  *
  * Includes the module and author of the extension,
  * both including a name and URL.
  *
- * @see {@link https://github.com/simple-icons/simple-icons#third-party-extensions}
+ * @see {@link https://github.com/simple-icons/simple-icons#third-party-extensions Third-Party Extensions}
  */
 export type ThirdPartyExtension = {
   module: ThirdPartyExtensionSubject;
@@ -21,7 +26,7 @@ type ThirdPartyExtensionSubject = {
  *
  * Corresponds to the `license` property in the *_data/simple-icons.json* file.
  *
- * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#optional-data}
+ * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#optional-data Optional Data}
  */
 export type License = SPDXLicense | CustomLicense;
 
@@ -40,7 +45,7 @@ type CustomLicense = {
  *
  * Corresponds to the `aliases` property in the *_data/simple-icons.json* file.
  *
- * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#aliases}
+ * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#aliases Aliases}
  */
 export type Aliases = {
   aka?: string[];
@@ -59,7 +64,7 @@ type DuplicateAlias = {
  *
  * Corresponds to the data stored for each icon in the *_data/simple-icons.json* file.
  *
- * @see {@link https://github.com/mondeja/simple-icons/blob/utils-entrypoint/CONTRIBUTING.md#7-update-the-json-data-for-simpleiconsorg}
+ * @see {@link https://github.com/mondeja/simple-icons/blob/utils-entrypoint/CONTRIBUTING.md#7-update-the-json-data-for-simpleiconsorg Update the JSON Data for SimpleIcons.org}
  */
 export type IconData = {
   title: string;

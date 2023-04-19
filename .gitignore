@@ -22,6 +22,8 @@ yarn.lock
 # Dependency directories
 node_modules/
 
+# Generated files
+*.tgz
 
 ### macOS ###
 # General

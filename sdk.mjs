@@ -1,6 +1,6 @@
 /**
  * @fileoverview
- * Simple Icons Javascript utilities.
+ * Simple Icons SDK.
  */
 
 import path from 'node:path';
