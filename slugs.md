@@ -1217,7 +1217,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Linkerd` | `linkerd` |
 | `Linkfire` | `linkfire` |
 | `Linktree` | `linktree` |
-| `Linode` | `linode` |
 | `Linux` | `linux` |
 | `Linux Containers` | `linuxcontainers` |
 | `Linux Foundation` | `linuxfoundation` |
