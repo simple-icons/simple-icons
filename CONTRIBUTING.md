@@ -243,7 +243,6 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: hive_blockchain.svg
     ```
 
-
 ### 7. Update the JSON Data for SimpleIcons.org
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:

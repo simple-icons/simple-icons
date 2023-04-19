@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 /**
  * @fileoverview
- * Compiles our icons into static .js files that can be imported in the browser
- * and are tree-shakeable. The static .js files go in icons/{filename}.js. Also
- * generates an index.js that exports all icons by title, but is not
- * tree-shakeable
+ * Simple Icons package build script.
  */
 
 import { promises as fs } from 'node:fs';
