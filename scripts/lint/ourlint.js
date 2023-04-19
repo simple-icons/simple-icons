@@ -6,7 +6,7 @@
  */
 
 import fakeDiff from 'fake-diff';
-import { getIconsDataString, normalizeNewlines, collator } from '../utils.js';
+import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
