@@ -25,7 +25,25 @@
     },
     "./icons/*": [
       "./icons/*"
-    ]
+    ],
+    "./sdk": {
+      "import": {
+        "types": "./sdk.d.ts",
+        "default": "./sdk.mjs"
+      },
+      "module": {
+        "types": "./sdk.d.ts",
+        "default": "./sdk.mjs"
+      },
+      "require": {
+        "types": "./sdk.d.ts",
+        "default": "./sdk.js"
+      },
+      "default": {
+        "types": "./sdk.d.ts",
+        "default": "./sdk.js"
+      }
+    }
   },
   "sideEffects": false,
   "repository": {
