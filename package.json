@@ -82,7 +82,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rimraf index.js index.mjs index.d.ts",
+    "clean": "rimraf index.js index.mjs index.d.ts sdk.js",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
