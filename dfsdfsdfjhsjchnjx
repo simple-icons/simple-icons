@@ -1,0 +1,613 @@
+[33mcommit c1fb202dd207da6773c29cbeff344d5d3b5fe923[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Irfan Khan <Kirfan8133@gmail.com>
+Date:   Wed Feb 22 13:32:07 2023 +0530
+
+    HSBC logo added
+
+[33mcommit 5fa4d9f4eb947da94b0709a77c100750d8853b01[m
+Author: Mike Bale <64280645+ripzerotwo@users.noreply.github.com>
+Date:   Sun Feb 19 04:23:16 2023 -0500
+
+    New Icon: Novu (#8245)
+    
+    * New Icon: Novu
+    
+    * fix precision
+    
+    ---------
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 58ef347f9b3a6ca254d356b7630f483fbb8887ca[m
+Author: Johnwesley R <47087725+jwr12135@users.noreply.github.com>
+Date:   Sun Feb 19 03:57:48 2023 -0500
+
+    Update LiveChat products data (#8344)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit dc98bcc277164f306385a56a2ea5b20231cbc903[m
+Author: Erick Sarabia <erick.sarabia@outlook.com>
+Date:   Sun Feb 19 02:49:19 2023 -0600
+
+    Add akamai icon (#6728)
+    
+    * Add akamai icon
+    
+    * Fix SVG lint warnings
+    
+    * Improve akamai svg paths
+    
+    * Add fill attribute
+    
+    * Add title tag
+    
+    * Update akamai source
+    
+    * fix icon
+    
+    * fix icon
+    
+    ---------
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit a2d7521052511d0c06dff3b0c3a8e4d66a10ef5a[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Feb 12 00:26:17 2023 +0000
+
+    version bump
+
+[33mcommit 118d3e94a4bf44873755c6c4482146d0825b6c00[m
+Author: fmdavid <92343820+fmdavid1@users.noreply.github.com>
+Date:   Fri Feb 10 17:57:40 2023 -0300
+
+    Add Mercado Pago (#8254)
+    
+    * add mercadopago icon
+    
+    * format hex
+    
+    * centered icon
+    
+    * fix 24px
+
+[33mcommit 0befae66c9df4d714a460b5a009381aa55c7c0f7[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Fri Feb 10 01:49:48 2023 +0100
+
+    Fix tree shaking when importing root entrypoint (#8332)
+
+[33mcommit 64be4fa10b69f2986ea5cc3d1ff470bf04fc34d9[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Thu Feb 9 20:47:14 2023 +0100
+
+    Improve linter message when icons SVGs include newline characters (#8281)
+
+[33mcommit d8d024080a0820bb8bf89a432e3a87b702b2e4cf[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Thu Feb 9 20:18:10 2023 +0100
+
+    Update deprecated `set-output` GHA syntax (#8331)
+
+[33mcommit 2e015fcc0e8c0bea112a28386f8f395f80fa3beb[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Jan 29 00:26:08 2023 +0000
+
+    version bump
+
+[33mcommit 5a007383a65437a8bab4faaf73408d8ec64777c8[m
+Author: Nick Rowlands <89347+rowlando@users.noreply.github.com>
+Date:   Sat Jan 28 10:41:54 2023 +0000
+
+    Add ITVx icon (#8270)
+    
+    * Add ITVx icon
+    
+    * Update simple-icons.json
+    
+    ---------
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit ccd88e723205628b45efc70fbdb0bb833f63e7b2[m
+Author: Gianni Lerro <73607126+glerroo@users.noreply.github.com>
+Date:   Sat Jan 28 11:32:52 2023 +0100
+
+    Add Vala icon (#7881)
+    
+    * Add Vala Icon
+    
+    * Delete vala.svg
+    
+    * Updated Vala Icon
+    
+    Only V without square background.
+    Base color changed to 7239B3.
+    
+    * fix icon
+    
+    ---------
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 40056c0dd6387bf8f33bf88188a82a54d87fd3df[m
+Author: Sébastien Chopin <seb@nuxtlabs.com>
+Date:   Sat Jan 28 11:23:57 2023 +0100
+
+    chore: update nuxt icon (#8115)
+    
+    * chore: update nuxt icon
+    
+    * move precision to 3
+    
+    * Update nuxtdotjs.svg
+    
+    * Update nuxtdotjs.svg
+    
+    * Update nuxtdotjs.svg
+    
+    * Update nuxtdotjs.svg
+    
+    * feat: fix icon
+    
+    ---------
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 2751719b73b428e047462595c437c5962d65423c[m
+Author: George Fincher <finchergeorge1@gmail.com>
+Date:   Sat Jan 28 10:06:29 2023 +0000
+
+    Feat: add DaisyUI icon (#8265)
+    
+    Added the DaisyUI svg:
+        - Made the icon monochromatic
+        - Compounded paths
+        - Centered the icon
+        - Made the viewbox 24 by 24
+        - Icon width is 24px
+        - Icon was optimized using the SVGOMG Online tool
+        - Annotated the icon to the correct paramenters
+    
+    Added the JSON data for DaisyUI icon.
+
+[33mcommit ac0799708a52e79ca833c257d6024fd881eb0eb1[m
+Author: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+Date:   Mon Jan 23 17:10:18 2023 +0100
+
+    chore(deps): update all dependencies (#8230)
+    
+    Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+[33mcommit 05fd1e6f8b7b1546d6331628b7025ad3a8b9e7f5[m
+Author: Mike Bale <64280645+ripzerotwo@users.noreply.github.com>
+Date:   Mon Jan 23 11:03:30 2023 -0500
+
+    New Icon: TOML (#8271)
+    
+    * what is diff
+    
+    * remove file
+    
+    * New Icon: TOML
+    
+    * Fixed github link with perm
+    
+    * Uppercase title in data
+    
+    * Uppercase title in icon
+    
+    * Remove newline from icon
+
+[33mcommit d24fb0d05216b67996f2aed27d10f2b0ea9f1fb3[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Jan 15 00:25:21 2023 +0000
+
+    version bump
+
+[33mcommit 5cfce370b203dcd58b1bb3e01086ba30f32d7a2e[m
+Author: Val Packett <val@packett.cool>
+Date:   Thu Jan 12 11:14:43 2023 -0300
+
+    Add Wayland icon (#7967)
+    
+    Co-authored-by: Sigurd Spieckermann <https://github.com/sisp>
+
+[33mcommit 289725256bcc40f6347fe656c084b42057633bc8[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Mon Jan 9 16:13:45 2023 +0100
+
+    Freeze development dependencies versions (#8223)
+
+[33mcommit 1b863752c57bea268cb8281e58224231966129d3[m
+Author: Engin Diri <engin.diri@ediri.de>
+Date:   Sun Jan 8 16:19:31 2023 +0100
+
+    feat: add Chainguard logo (#8057)
+
+[33mcommit 379871917b9590effa8fa5124cbd1fe208007093[m
+Author: Wu Tingfeng <wutingfeng@outlook.com>
+Date:   Sun Jan 8 23:11:52 2023 +0800
+
+    Add Monica icon (#8110)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 91a12450717f484c7ea592e842a12b029d38d0a2[m
+Author: zainabnazar <82872249+zainabnazar@users.noreply.github.com>
+Date:   Sun Jan 8 15:04:57 2023 +0000
+
+    Add Alchemy Icon (#8122)
+    
+    * Add Alchemy Icon
+    
+    * Modfiy the icon to have the triangle only
+    
+    * Update alchemy.svg
+    
+    * Update simple-icons.json
+    
+    * Update alchemy.svg
+    
+    * Update alchemy.svg
+    
+    * Update alchemy.svg
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 8aaedec4b786248e3edb7354c8d676e75c6f4840[m
+Author: LitoMore <LitoMore@users.noreply.github.com>
+Date:   Sun Jan 8 22:45:01 2023 +0800
+
+    Add TGA icon (#8117)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 3fe254b8624d45d51790d2a7f26fe85bc376e537[m
+Author: Yielding <90570076+YieldingExploiter@users.noreply.github.com>
+Date:   Sun Jan 8 15:37:39 2023 +0100
+
+    Add Fluxus Icon (#8111)
+    
+    * Add Fluxus Icon
+    
+    * Link directly to the commit
+    
+    * Hopefully fix centering
+    It's worth noting that in most branding, it's shown offcenter, as in previous commits.
+    
+    Co-authored-by: YieldingFluxus <YieldingExploiter@users.noreply.github.com>
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 65cc67dbe2a75ef9a47cf220cfecfba3e44cf372[m
+Author: Igor Randjelovic <rigor789@gmail.com>
+Date:   Sun Jan 8 15:31:42 2023 +0100
+
+    Update NativeScript primary color (#8174)
+    
+    * chore: update NativeScript primary color
+    
+    https://github.com/NativeScript/artwork/#color
+    
+    * fix: use uppercase hex value
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 8dfb55cead4546f3434a69e36641a82efb6c119e[m
+Author: Wu Tingfeng <wutingfeng@outlook.com>
+Date:   Sun Jan 8 22:29:39 2023 +0800
+
+    Add Answer icon (#8161)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit e116b597999677754c0029a21e2e4e4f61ae807f[m
+Author: Yi Lu <50001769+digihunch@users.noreply.github.com>
+Date:   Sun Jan 8 09:24:16 2023 -0500
+
+    Add Envoy Proxy icon (#8143)
+    
+    * Add Envoy Proxy icon
+    
+    * Edit Envoy Proxy icon: update source
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 6dde72945397e3142864ec33b87ba09888a120d8[m
+Author: Chris Mahoney <44449504+chrimaho@users.noreply.github.com>
+Date:   Mon Jan 9 01:10:15 2023 +1100
+
+    New Icon: TNT (#8204)
+    
+    * Add info for new icon `tnt`
+    
+    * Fix linter issue for correct `hex` syntax
+    
+    * Capitalise `hex` code
+    
+    Co-authored-by: chmahone <chris.mahoney@dbschenker.com>
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit cfb46e8d2730a5b791131430179f42cac151d510[m
+Author: Adam Rusted <hello@adamrusted.me>
+Date:   Sun Jan 8 14:07:19 2023 +0000
+
+    Added BoardGameGeek (#8191)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit bc496925b4eb977057321e40d551061c33361c3b[m
+Author: Wu Tingfeng <wutingfeng@outlook.com>
+Date:   Sun Jan 8 21:57:38 2023 +0800
+
+    Add Creative Technology icon (#8227)
+
+[33mcommit d7b8157909d09b59f3b1c594c0ce438bfa68657e[m
+Author: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+Date:   Tue Dec 27 18:03:35 2022 +0800
+
+    Update all dependencies (#8165)
+
+[33mcommit 96209703517252ea7fcd811870dfa2f7915d5f87[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Dec 25 00:24:35 2022 +0000
+
+    version bump
+
+[33mcommit a3d2baf5ed9519f07013fba32c9c0dcafa01d66d[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Wed Dec 21 19:36:02 2022 +0100
+
+    Remove `event` parameter from status badge URL of README (#8148)
+
+[33mcommit b9f15de708eb900b3db460a5e9f61b1bed8536f2[m
+Author: Alistair Scott <ali.scott@gmail.com>
+Date:   Wed Dec 21 14:58:28 2022 +0000
+
+    Add Infracost icon (#8135)
+    
+    * Add Infracost icon
+    
+    * Fix Infracost icon rounded corners
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 40635f39bde9852086256c598b16025759d96115[m
+Author: Alexandre Paradis <service.paradis@gmail.com>
+Date:   Wed Dec 21 07:59:51 2022 -0500
+
+    Add Cultura icon (#8123)
+    
+    * Add Cultura icon
+    
+    * Fix title
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit fdcead7aed78d9c1e78386f609f3b94a9d6dd2cd[m
+Author: Wu Tingfeng <wutingfeng@outlook.com>
+Date:   Wed Dec 21 20:55:54 2022 +0800
+
+    Add Polars icon (#8128)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 3271d9e950f5b1296b23a6da776224d82368f76b[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Wed Dec 21 12:56:09 2022 +0100
+
+    Modernize SVGO setup (#8149)
+    
+    * SVGO now discovers config file automatically
+    
+    * Drop `svgo` script from package.json
+    
+    * Use '.mjs' extension for SVGO config file
+
+[33mcommit 119fdd812bb68a259484d006212b6577890ec04a[m
+Author: LitoMore <LitoMore@users.noreply.github.com>
+Date:   Wed Dec 21 19:32:32 2022 +0800
+
+    Workaround for icons in table (#8158)
+    
+    * Workaround for icons in table
+    
+    * Fix pattern of module URL
+
+[33mcommit ef76014f94e6def63a5fe3dd3acce69741b71fcc[m
+Author: Samuel Polat <119085608+jamu3l@users.noreply.github.com>
+Date:   Wed Dec 21 11:51:58 2022 +0100
+
+    Add Île-de-France Mobilités icon (#8062)
+
+[33mcommit 941bef9ca2a5e5d56b738e33034877a45342202f[m
+Author: Magnus Ihse Bursie <mag@icus.se>
+Date:   Wed Dec 21 11:22:19 2022 +0100
+
+    Add Modrinth icon (#8101)
+    
+    * Add Modrinth icon
+    
+    * Fix lint issues about size
+    
+    * Use light mode brand color
+
+[33mcommit bbcc90b4077277084f888333d03b0a77542c9356[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Sun Dec 18 02:35:58 2022 +0100
+
+    Use event=push as temporal workaround for status badge (#8152)
+
+[33mcommit 2753dc3b87330651a44c0d816e3892681501f2b8[m
+Author: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+Date:   Mon Dec 12 03:13:27 2022 +0100
+
+    Update all dependencies (#8130)
+    
+    Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+
+[33mcommit b0a3bb56d36ec679a9fe96803d8765000548c61d[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Dec 11 00:25:38 2022 +0000
+
+    version bump
+
+[33mcommit e33ecb458ad424703fa270bcf603151a950ac8b3[m
+Author: Jonah Lawrence <jonah@freshidea.com>
+Date:   Sat Dec 10 09:32:12 2022 -0700
+
+    Add Fig icon (#8124)
+    
+    * feat: Add Fig logo
+    
+    * Use black for hex color
+    
+    * Use newer version of logo
+
+[33mcommit 0f70bf4dba8996b896aba1882a6a40b5bf49d175[m
+Author: Samuel Polat <119085608+jamu3l@users.noreply.github.com>
+Date:   Mon Dec 5 11:59:29 2022 +0100
+
+    Add CTS icon (#8072)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 786198d653e9813f87d76cb9d6e9a37b8ac3aadd[m
+Author: Samuel Polat <119085608+jamu3l@users.noreply.github.com>
+Date:   Mon Dec 5 11:54:49 2022 +0100
+
+    Add BVG icon (#8073)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 51c91fc24290678fac5bb7391ba703dcf4a33090[m
+Author: Samuel Polat <119085608+jamu3l@users.noreply.github.com>
+Date:   Mon Dec 5 11:47:59 2022 +0100
+
+    Add SNCF icon (#8070)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 131660a913c102a7624ac085d8cc9cc18df9c614[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Dec 4 00:22:18 2022 +0000
+
+    version bump
+
+[33mcommit 8765f74c8a9e4f44aefaa4c59c907f840e57f386[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Fri Dec 2 10:30:59 2022 +0100
+
+    Export `./icons` entrypoint as index in package.json (#8076)
+    
+    * Fix exports in package.json
+
+[33mcommit fcec7adc8bfc1ee5033e73b5a9154edfd0f14c30[m
+Author: Sachin Raja <me@s4n.land>
+Date:   Mon Nov 28 03:32:57 2022 -0800
+
+    replace index.js entry point (#8058)
+    
+    * replace index.js entry point
+    
+    * add types.d.ts
+    
+    * Update documentation
+    
+    * Add Typescript usage example
+    
+    * Drop template file
+    
+    * Readd test
+    
+    * Minor change
+    
+    Co-authored-by: Álvaro Mondéjar Rubio <mondejar1994@gmail.com>
+
+[33mcommit 89dc12cb35f01569e5632a6fcd98e5187a33c168[m
+Author: Sigurd Spieckermann <2206639+sisp@users.noreply.github.com>
+Date:   Mon Nov 28 10:29:55 2022 +0100
+
+    Deduplicate DVC icon (#7945)
+    
+    * Deduplicate DVC icon
+
+[33mcommit 580eebc0840ded6a36b0d5a8a7526c3f5f35ab9d[m
+Author: Alexandre Paradis <service.paradis@gmail.com>
+Date:   Mon Nov 28 04:22:56 2022 -0500
+
+    Remove App Annie (#7555)
+    
+    Close #7180
+
+[33mcommit 1fa10346a24b2b45e469ccc5de6b76d3e5158a09[m
+Author: Álvaro Mondéjar <mondejar1994@gmail.com>
+Date:   Sun Nov 27 12:46:23 2022 +0100
+
+    Use `<picture>` blocks for GH theme images in README (#7983)
+    
+    * Visual manual test on Github
+    
+    * Replace all images
+    
+    * Fix error
+    
+    * Merge with develop
+    
+    * Upgrade strip-gh-theme-links action
+
+[33mcommit b586c6faa5351bf86daaeb09f6fffe72e6213800[m
+Author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+Date:   Sun Nov 27 00:25:44 2022 +0000
+
+    version bump
+
+[33mcommit 44a1d64e3bccc1e0719a9f28fae61ad8f9b74bc9[m
+Author: Wu Tingfeng <wutingfeng@outlook.com>
+Date:   Thu Nov 24 23:00:30 2022 +0800
+
+    add wails (#7858)
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit 95be8a08f165558b1c5b8edf323219455be083a1[m
+Author: Wu Tingfeng <wutingfeng@outlook.com>
+Date:   Thu Nov 24 22:52:13 2022 +0800
+
+    Add Firewalla icon (#7835)
+    
+    * Add MapLibre
+    
+    * add firewalla
+    
+    * remove phantom icon
+    
+    * attempt to fix
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
+
+[33mcommit a63fbf93bd72afc14f9734677a25b14fa065aec4[m
+Author: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+Date:   Thu Nov 24 14:39:11 2022 +0100
+
+    Update all dependencies (#8034)
+    
+    * Update all dependencies
+    
+    * Update svgo.config.js
+    
+    Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+    Co-authored-by: Álvaro Mondéjar <mondejar1994@gmail.com>
+
+[33mcommit 12b18cfb186a98bddea91c7c1631add9a291154d[m
+Author: LitoMore <LitoMore@users.noreply.github.com>
+Date:   Thu Nov 24 16:57:17 2022 +0800
+
+    Add ReadMe icon (#8021)
+    
+    * Add ReadMe icon
+    
+    * Use presicion 4
+    
+    Co-authored-by: Engin Diri <engin.diri@ediri.de>
