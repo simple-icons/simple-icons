@@ -396,3 +396,22 @@ Then, start a Docker container for simple-icons and attach to it:
 ```shell
 docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
+
+## Developing Third-Party Extensions
+
+A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with Javascript and Typescript.
+
+```typescript
+import { getIconsData, type IconData } from 'simple-icons/sdk';
+
+const iconsData: IconData[] = getIconsData();
+```
+
+```javascript
+import { getIconsData } from 'simple-icons/sdk';
+
+/* @typedef {import("./simple-icons/sdk").IconData} IconData */
+
+/* @type {IconData[]} */
+const iconsData = getIconsData();
+```
