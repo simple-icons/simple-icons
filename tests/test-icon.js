@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
-import { URL_REGEX, titleToSlug } from '../scripts/utils.js';
+import { URL_REGEX, titleToSlug } from '../sdk.mjs';
 
 const iconsDir = path.resolve(process.cwd(), 'icons');
 
