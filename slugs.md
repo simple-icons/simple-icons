@@ -432,6 +432,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CNCF` | `cncf` |
 | `CNN` | `cnn` |
 | `Co-op` | `coop` |
+| `Coca Cola` | `cocacola` |
 | `Cockpit` | `cockpit` |
 | `Cockroach Labs` | `cockroachlabs` |
 | `CocoaPods` | `cocoapods` |
