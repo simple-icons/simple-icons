@@ -6,7 +6,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { getDirnameFromImportMeta } from '../utils.js';
+import { getDirnameFromImportMeta } from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 

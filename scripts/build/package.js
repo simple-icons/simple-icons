@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 /**
  * @fileoverview
- * Compiles our icons into static .js files that can be imported in the browser
- * and are tree-shakeable. The static .js files go in icons/{filename}.js. Also
- * generates an index.js that exports all icons by title, but is not
- * tree-shakeable
+ * Simple Icons package build script.
  */
 
 import { promises as fs } from 'node:fs';
@@ -19,7 +16,7 @@ import {
   getIconsData,
   getDirnameFromImportMeta,
   collator,
-} from '../utils.js';
+} from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -29,6 +26,8 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const iconsDir = path.resolve(rootDir, 'icons');
 const indexJsFile = path.resolve(rootDir, 'index.js');
 const indexMjsFile = path.resolve(rootDir, 'index.mjs');
+const sdkJsFile = path.resolve(rootDir, 'sdk.js');
+const sdkMjsFile = path.resolve(rootDir, 'sdk.mjs');
 const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
@@ -68,10 +67,9 @@ const build = async () => {
       licenseToObject(icon.license),
     );
   };
-  const writeJs = async (filepath, rawJavaScript) => {
-    const { code } = await esbuildTransform(rawJavaScript, {
-      minify: true,
-    });
+  const writeJs = async (filepath, rawJavaScript, opts = null) => {
+    opts = opts === null ? { minify: true } : opts;
+    const { code } = await esbuildTransform(rawJavaScript, opts);
     await fs.writeFile(filepath, code);
   };
   const writeTs = async (filepath, rawTypeScript) => {
@@ -119,6 +117,11 @@ const build = async () => {
     '',
   )}`;
   await writeTs(indexDtsFile, rawIndexDts);
+
+  // create a CommonJS SDK file
+  await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
+    format: 'cjs',
+  });
 };
 
 build();
