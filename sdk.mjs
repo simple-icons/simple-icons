@@ -220,3 +220,31 @@ export const collator = new Intl.Collator('en', {
   usage: 'search',
   caseFirst: 'upper',
 });
+
+/**
+ * Get JSON schema data.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const getJsonSchemaData = async (
+  rootDir = getDirnameFromImportMeta(import.meta.url),
+) => {
+  const jsonSchemaPath = path.resolve(rootDir, '.jsonschema.json');
+  const jsonSchemaString = await fs.readFile(jsonSchemaPath, 'utf8');
+  return JSON.parse(jsonSchemaString);
+};
+
+/**
+ * Write icons data to _data/simple-icons.json.
+ * @param {Object} iconsData Icons data object.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const writeIconsData = async (
+  iconsData,
+  rootDir = getDirnameFromImportMeta(import.meta.url),
+) => {
+  return fs.writeFile(
+    getIconDataPath(rootDir),
+    `${JSON.stringify(iconsData, null, 4)}\n`,
+    'utf8',
+  );
+};
