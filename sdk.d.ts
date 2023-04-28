@@ -3,6 +3,8 @@
  * Types for Simple Icons SDK.
  */
 
+import type { License } from './types.d.ts';
+
 /**
  * The data for a third-party extension.
  *
@@ -18,25 +20,6 @@ export type ThirdPartyExtension = {
 
 type ThirdPartyExtensionSubject = {
   name: string;
-  url: string;
-};
-
-/**
- * The license for a Simple Icon.
- *
- * Corresponds to the `license` property in the *_data/simple-icons.json* file.
- *
- * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#optional-data Optional Data}
- */
-export type License = SPDXLicense | CustomLicense;
-
-type SPDXLicense = {
-  type: string;
-  url?: string;
-};
-
-type CustomLicense = {
-  type: 'custom';
   url: string;
 };
 
