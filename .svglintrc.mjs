@@ -4,7 +4,7 @@ import {
   getDirnameFromImportMeta,
   htmlFriendlyToTitle,
   collator,
-} from './scripts/utils.js';
+} from './sdk.mjs';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
