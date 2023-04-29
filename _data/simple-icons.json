@@ -1928,6 +1928,11 @@
             "source": "https://www.carthrottle.com/"
         },
         {
+            "title": "Cardano",
+            "hex": "0133AD",
+            "source": "https://cardano.org/brand-assets/"
+        },
+        {
             "title": "Carrefour",
             "hex": "004E9F",
             "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Carrefour_logo.svg"
@@ -2271,6 +2276,11 @@
             "source": "https://www.co-operative.coop/media/assets"
         },
         {
+            "title": "Coca Cola",
+            "hex": "D00013",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg"
+        },
+        {
             "title": "Cockpit",
             "hex": "0066CC",
             "source": "https://github.com/cockpit-project/cockpit-project.github.io/blob/b851b3477d90017961ac9b252401c9a6cb6239f1/images/site/cockpit-logo.svg"
@@ -2521,6 +2531,12 @@
             "title": "containerd",
             "hex": "575757",
             "source": "https://cncf-branding.netlify.app/projects/containerd/"
+        },
+        {
+            "title": "Contao",
+            "hex": "F47C00",
+            "source": "https://contao.org",
+            "guidelines": "https://contao.org/en/media"
         },
         {
             "title": "Contentful",
@@ -3961,7 +3977,7 @@
         },
         {
             "title": "Flathub",
-            "hex": "4A86CF",
+            "hex": "000000",
             "source": "https://flathub.org/"
         },
         {
@@ -9989,6 +10005,11 @@
             "title": "RubyGems",
             "hex": "E9573F",
             "source": "https://rubygems.org/pages/about"
+        },
+        {
+            "title": "Ruff",
+            "hex": "FCC21B",
+            "source": "https://github.com/charliermarsh/ruff/blob/e04ef423344837c916e75a7b09ea674711a104e0/assets/badge/v1.json"
         },
         {
             "title": "Runkeeper",
