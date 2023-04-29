@@ -284,6 +284,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:AEW_Logo_(simplified).svg"
         },
         {
+            "title": "AFFiNE",
+            "hex": "1E96EB",
+            "source": "https://affine.pro/"
+        },
+        {
             "title": "Affinity",
             "hex": "222324",
             "source": "https://affinity.serif.com/"
@@ -1933,6 +1938,11 @@
             "source": "https://www.carthrottle.com/"
         },
         {
+            "title": "Cardano",
+            "hex": "0133AD",
+            "source": "https://cardano.org/brand-assets/"
+        },
+        {
             "title": "Carrefour",
             "hex": "004E9F",
             "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Carrefour_logo.svg"
@@ -2276,6 +2286,11 @@
             "source": "https://www.co-operative.coop/media/assets"
         },
         {
+            "title": "Coca Cola",
+            "hex": "D00013",
+            "source": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg"
+        },
+        {
             "title": "Cockpit",
             "hex": "0066CC",
             "source": "https://github.com/cockpit-project/cockpit-project.github.io/blob/b851b3477d90017961ac9b252401c9a6cb6239f1/images/site/cockpit-logo.svg"
@@ -2526,6 +2541,12 @@
             "title": "containerd",
             "hex": "575757",
             "source": "https://cncf-branding.netlify.app/projects/containerd/"
+        },
+        {
+            "title": "Contao",
+            "hex": "F47C00",
+            "source": "https://contao.org",
+            "guidelines": "https://contao.org/en/media"
         },
         {
             "title": "Contentful",
@@ -3971,7 +3992,7 @@
         },
         {
             "title": "Flathub",
-            "hex": "4A86CF",
+            "hex": "000000",
             "source": "https://flathub.org/"
         },
         {
@@ -7332,6 +7353,11 @@
             "source": "https://www.mongodb.com/pressroom"
         },
         {
+            "title": "Mongoose",
+            "hex": "880000",
+            "source": "https://github.com/Automattic/mongoose/blob/7971a4dbd55888f0b005e65b06024109af8352f7/docs/images/mongoose.svg"
+        },
+        {
             "title": "Monica",
             "hex": "2C2B29",
             "source": "https://github.com/monicahq/monica/blob/d7886cc6fd11388a95b7504e1a5363ecc7ad9a59/public/img/monica.svg"
@@ -9996,6 +10022,11 @@
             "source": "https://rubygems.org/pages/about"
         },
         {
+            "title": "Ruff",
+            "hex": "FCC21B",
+            "source": "https://github.com/charliermarsh/ruff/blob/e04ef423344837c916e75a7b09ea674711a104e0/assets/badge/v1.json"
+        },
+        {
             "title": "Runkeeper",
             "hex": "001E62",
             "source": "https://runkeeper.com/cms/press-kit",
@@ -11201,8 +11232,8 @@
         },
         {
             "title": "Supabase",
-            "hex": "3ECF8E",
-            "source": "https://github.com/supabase/supabase/blob/2a983c3290148d17cfce9e34c0a39102b22fdf78/web/static/img/showcase-logo/supabase-logo.svg"
+            "hex": "3FCF8E",
+            "source": "https://github.com/supabase/supabase/blob/4031a7549f5d46da7bc79c01d56be4177dc7c114/packages/common/assets/images/supabase-logo-wordmark--light.svg"
         },
         {
             "title": "Super User",
