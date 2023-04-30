@@ -4,12 +4,11 @@ import getRelativeLuminance from 'get-relative-luminance';
 import {
   URL_REGEX,
   collator,
-  getJsonSchemaData,
   getIconsDataString,
   titleToSlug,
   normalizeColor,
 } from '../sdk.mjs';
-import { writeIconsData } from './utils.js';
+import { getJsonSchemaData, writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
