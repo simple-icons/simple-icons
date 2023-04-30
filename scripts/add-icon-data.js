@@ -1,17 +1,14 @@
-import fs from 'node:fs/promises';
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import getRelativeLuminance from 'get-relative-luminance';
 import {
   URL_REGEX,
   collator,
-  getJsonSchemaData,
   getIconsDataString,
-  getIconDataPath,
-  writeIconsData,
   titleToSlug,
   normalizeColor,
-} from './utils.js';
+} from '../sdk.mjs';
+import { getJsonSchemaData, writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
