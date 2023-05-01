@@ -61,6 +61,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aeroméxico` | `aeromexico` |
 | `Aerospike` | `aerospike` |
 | `AEW` | `aew` |
+| `AFFiNE` | `affine` |
 | `Affinity` | `affinity` |
 | `Affinity Designer` | `affinitydesigner` |
 | `Affinity Photo` | `affinityphoto` |
@@ -191,6 +192,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aqua` | `aqua` |
 | `ARAL` | `aral` |
 | `ArangoDB` | `arangodb` |
+| `ArcGIS` | `arcgis` |
 | `Arch Linux` | `archlinux` |
 | `Archicad` | `archicad` |
 | `Archive of Our Own` | `archiveofourown` |
@@ -366,6 +368,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Canva` | `canva` |
 | `Capacitor` | `capacitor` |
 | `Car Throttle` | `carthrottle` |
+| `Cardano` | `cardano` |
 | `Carrefour` | `carrefour` |
 | `Carto` | `carto` |
 | `Cash App` | `cashapp` |
@@ -482,6 +485,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Consul` | `consul` |
 | `Contactless Payment` | `contactlesspayment` |
 | `containerd` | `containerd` |
+| `Contao` | `contao` |
 | `Contentful` | `contentful` |
 | `Conventional Commits` | `conventionalcommits` |
 | `Convertio` | `convertio` |
@@ -680,6 +684,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ESLint` | `eslint` |
 | `ESPHome` | `esphome` |
 | `Espressif` | `espressif` |
+| `ESRI` | `esri` |
 | `etcd` | `etcd` |
 | `Ethereum` | `ethereum` |
 | `Ethiopian Airlines` | `ethiopianairlines` |
@@ -1365,6 +1370,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Monero` | `monero` |
 | `MoneyGram` | `moneygram` |
 | `MongoDB` | `mongodb` |
+| `Mongoose` | `mongoose` |
 | `Monica` | `monica` |
 | `monkey tie` | `monkeytie` |
 | `MonoGames` | `monogames` |
@@ -1838,6 +1844,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ruby on Rails` | `rubyonrails` |
 | `Ruby Sinatra` | `rubysinatra` |
 | `RubyGems` | `rubygems` |
+| `Ruff` | `ruff` |
 | `Runkeeper` | `runkeeper` |
 | `RunKit` | `runkit` |
 | `Rust` | `rust` |
