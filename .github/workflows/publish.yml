@@ -56,6 +56,8 @@ jobs:
           strict: true
       - name: Install dependencies
         run: npm i
+      - name: Build NodeJS package
+        run: npm run build
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v2
         with:

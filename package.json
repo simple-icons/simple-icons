@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "8.12.0",
+  "version": "8.13.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -60,13 +60,13 @@
     "url": "https://opencollective.com/simple-icons"
   },
   "devDependencies": {
+    "@inquirer/prompts": "^1.0.0",
     "chalk": "5.2.0",
     "editorconfig-checker": "5.0.1",
     "esbuild": "0.17.18",
     "fake-diff": "1.0.0",
     "get-relative-luminance": "1.0.0",
     "husky": "8.0.3",
-    "inquirer": "9.2.0",
     "is-ci": "3.0.1",
     "jsonschema": "1.4.1",
     "mocha": "10.2.0",
