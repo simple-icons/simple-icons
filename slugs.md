@@ -1673,6 +1673,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
+| `Printables` | `printables` |
 | `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
 | `Private Internet Access` | `privateinternetaccess` |
