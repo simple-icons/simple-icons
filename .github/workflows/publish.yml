@@ -49,14 +49,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Remove dark theme images from README
-        uses: mondeja/strip-gh-theme-links@v3
+        uses: mondeja/strip-gh-theme-links@v4
         with:
           files: README.md
+          keep: light
           strict: true
       - name: Install dependencies
         run: npm i
+      - name: Build NodeJS package
+        run: npm run build
       - name: Deploy to NPM
-        uses: JS-DevTools/npm-publish@v1
+        uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
   github:
@@ -68,16 +71,17 @@ jobs:
         uses: actions/checkout@v3
       - name: Get commit message (for release title and body)
         id: commit
-        uses: kceb/git-message-action@v1
+        uses: kceb/git-message-action@v2
       - name: Get release version
         id: get-version
         run: |
           export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
           echo "::set-output name=version::$PACKAGE_VERSION"
       - name: Remove dark theme images from README
-        uses: mondeja/strip-gh-theme-links@v3
+        uses: mondeja/strip-gh-theme-links@v4
         with:
           files: README.md
+          keep: light
           strict: true
       - name: Configure GIT credentials
         run: |
