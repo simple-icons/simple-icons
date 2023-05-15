@@ -15,6 +15,20 @@ Over 2400 Free SVG icons for popular brands. See them all on one page at <a href
 <a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
+## Table of Contents 
+- [Table of Contents](#table-of-contents)
+- [Usage](#usage)
+  - [General Usage](#general-usage)
+  - [CDN Usage](#cdn-usage)
+    - [CDN with colors](#cdn-with-colors)
+  - [Node Usage ](#node-usage-)
+    - [TypeScript Usage ](#typescript-usage-)
+  - [PHP Usage ](#php-usage-)
+- [Third-Party Extensions](#third-party-extensions)
+- [Contribute](#contribute)
+- [Contributors 💕](#contributors-)
+
+
 ## Usage
 
 > :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
@@ -178,3 +192,14 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
 [slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+
+
+## Contributors 💕
+
+<a href="https://github.com/simple-icons/simple-icons/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=simple-icons/simple-icons" />
+</a>
+
+<h2 align = center >
+A Open Source Project 💖
+</h2>
