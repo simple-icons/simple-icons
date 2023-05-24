@@ -1478,6 +1478,11 @@
             "source": "https://en.wikipedia.org/wiki/File:Bentley_logo_2.svg"
         },
         {
+            "title": "Bento",
+            "hex": "768CFF",
+            "source": "https://bento.me"
+        },
+        {
             "title": "Betfair",
             "hex": "FFB80B",
             "source": "https://partnerships.betfair.com/"
@@ -7262,6 +7267,14 @@
             "source": "https://miro.com/"
         },
         {
+            "title": "Misskey",
+            "hex": "A1CA03",
+            "source": "https://misskey-hub.net/appendix/assets.html",
+            "license": {
+                "type": "CC-BY-NC-SA-4.0"
+            }
+        },
+        {
             "title": "Mitsubishi",
             "hex": "E60012",
             "source": "https://www.mitsubishi.com/"
@@ -7447,6 +7460,11 @@
             "title": "MTR",
             "hex": "AC2E45",
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
+        },
+        {
+            "title": "MUBI",
+            "hex": "000000",
+            "source": "https://mubi.com/"
         },
         {
             "title": "MUI",
@@ -9861,8 +9879,13 @@
         {
             "title": "Roblox",
             "hex": "000000",
-            "source": "https://corp.roblox.com/press-kit/",
-            "guidelines": "https://corp.roblox.com/wp-content/uploads/2021/03/Logo_Roblox.zip"
+            "source": "https://blog.roblox.com/wp-content/themes/roblox/img/Roblox_Logo_White.svg",
+            "guidelines": "https://en.help.roblox.com/hc/en-us/articles/115001708126-Roblox-Name-and-Logo-Community-Usage-Guidelines"
+        },
+        {
+            "title": "Roblox Studio",
+            "hex": "00A2FF",
+            "source": "https://create.roblox.com/assets/common/studio_white.svg"
         },
         {
             "title": "Robot Framework",

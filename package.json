@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "8.13.0",
+  "version": "8.15.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -63,7 +63,7 @@
     "@inquirer/prompts": "^1.0.0",
     "chalk": "5.2.0",
     "editorconfig-checker": "5.0.1",
-    "esbuild": "0.17.18",
+    "esbuild": "0.17.19",
     "fake-diff": "1.0.0",
     "get-relative-luminance": "1.0.0",
     "husky": "8.0.3",
@@ -73,7 +73,7 @@
     "named-html-entities-json": "1.0.0",
     "npm-run-all": "4.1.5",
     "prettier": "2.8.8",
-    "rimraf": "5.0.0",
+    "rimraf": "5.0.1",
     "svg-path-bbox": "1.2.4",
     "svg-path-segments": "1.0.0",
     "svglint": "2.3.1",
