@@ -284,6 +284,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:AEW_Logo_(simplified).svg"
         },
         {
+            "title": "AFFiNE",
+            "hex": "1E96EB",
+            "source": "https://affine.pro/"
+        },
+        {
             "title": "Affinity",
             "hex": "222324",
             "source": "https://affinity.serif.com/"
@@ -435,8 +440,8 @@
         },
         {
             "title": "Algolia",
-            "hex": "5468FF",
-            "source": "https://www.algolia.com/press/?section=brand-guidelines"
+            "hex": "003DFF",
+            "source": "https://algolia.frontify.com/d/1AZwVNcFZiu7/style-guide"
         },
         {
             "title": "Algorand",
@@ -462,11 +467,6 @@
             "title": "Alipay",
             "hex": "00A1E9",
             "source": "https://gw.alipayobjects.com/os/rmsportal/trUJZfSrlnRCcFgfZGjD.ai"
-        },
-        {
-            "title": "Alitalia",
-            "hex": "006643",
-            "source": "https://www.alitalia.com/it_it/fly-alitalia/in-flight/ulisse-magazine.html"
         },
         {
             "title": "Allegro",
@@ -666,6 +666,20 @@
             "title": "AMD",
             "hex": "ED1C24",
             "source": "https://www.amd.com/"
+        },
+        {
+            "title": "Ameba",
+            "hex": "2D8C3C",
+            "source": "https://ameblo.jp/",
+            "aliases": {
+                "aka": [
+                    "Ameba Blog",
+                    "Ameblo"
+                ],
+                "loc": {
+                    "ja-JP": "アメブロ"
+                }
+            }
         },
         {
             "title": "American Airlines",
@@ -1011,6 +1025,11 @@
             "hex": "DDE072",
             "source": "https://www.arangodb.com",
             "guidelines": "https://www.arangodb.com/resources/logos"
+        },
+        {
+            "title": "ArcGIS",
+            "hex": "2C7AC3",
+            "source": "https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview"
         },
         {
             "title": "Arch Linux",
@@ -1466,6 +1485,11 @@
             "title": "Bentley",
             "hex": "333333",
             "source": "https://en.wikipedia.org/wiki/File:Bentley_logo_2.svg"
+        },
+        {
+            "title": "Bento",
+            "hex": "768CFF",
+            "source": "https://bento.me"
         },
         {
             "title": "Betfair",
@@ -3608,6 +3632,11 @@
             "title": "Espressif",
             "hex": "E7352C",
             "source": "https://www.espressif.com/"
+        },
+        {
+            "title": "ESRI",
+            "hex": "000000",
+            "source": "https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview"
         },
         {
             "title": "etcd",
@@ -6560,11 +6589,6 @@
             "source": "https://linktr.ee"
         },
         {
-            "title": "Linode",
-            "hex": "00A95C",
-            "source": "https://www.linode.com/company/press/"
-        },
-        {
             "title": "Linux",
             "hex": "FCC624",
             "source": "https://www.linuxfoundation.org/the-linux-mark/"
@@ -7247,6 +7271,14 @@
             "source": "https://miro.com/"
         },
         {
+            "title": "Misskey",
+            "hex": "A1CA03",
+            "source": "https://misskey-hub.net/appendix/assets.html",
+            "license": {
+                "type": "CC-BY-NC-SA-4.0"
+            }
+        },
+        {
             "title": "Mitsubishi",
             "hex": "E60012",
             "source": "https://www.mitsubishi.com/"
@@ -7432,6 +7464,11 @@
             "title": "MTR",
             "hex": "AC2E45",
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
+        },
+        {
+            "title": "MUBI",
+            "hex": "000000",
+            "source": "https://mubi.com/"
         },
         {
             "title": "MUI",
@@ -9040,6 +9077,11 @@
             "guidelines": "https://videodirect.amazon.com/home/help?topicId=GT7W7GJBTDJW6Z8W#G8T2JFQZXPMHJLRZ"
         },
         {
+            "title": "Printables",
+            "hex": "FA6831",
+            "source": "https://printables.com/"
+        },
+        {
             "title": "Prisma",
             "hex": "2D3748",
             "source": "https://github.com/prisma/presskit/tree/4bcb64181f266723439d955d60afa1c55fefa715"
@@ -9841,8 +9883,13 @@
         {
             "title": "Roblox",
             "hex": "000000",
-            "source": "https://corp.roblox.com/press-kit/",
-            "guidelines": "https://corp.roblox.com/wp-content/uploads/2021/03/Logo_Roblox.zip"
+            "source": "https://blog.roblox.com/wp-content/themes/roblox/img/Roblox_Logo_White.svg",
+            "guidelines": "https://en.help.roblox.com/hc/en-us/articles/115001708126-Roblox-Name-and-Logo-Community-Usage-Guidelines"
+        },
+        {
+            "title": "Roblox Studio",
+            "hex": "00A2FF",
+            "source": "https://create.roblox.com/assets/common/studio_white.svg"
         },
         {
             "title": "Robot Framework",
@@ -11838,6 +11885,12 @@
             "source": "https://traefik.io/traefik/"
         },
         {
+            "title": "Trailforks",
+            "hex": "FFCD00",
+            "source": "https://www.trailforks.com/about/graphics/",
+            "guidelines": "https://www.trailforks.com/about/graphics/"
+        },
+        {
             "title": "TrainerRoad",
             "hex": "DA291C",
             "source": "https://www.trainerroad.com/press/",
@@ -13281,6 +13334,11 @@
             "title": "Zigbee",
             "hex": "EB0443",
             "source": "https://zigbeealliance.org/solution/zigbee/"
+        },
+        {
+            "title": "Zilch",
+            "hex": "00D287",
+            "source": "https://www.zilch.com/"
         },
         {
             "title": "Zillow",

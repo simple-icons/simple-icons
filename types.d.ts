@@ -25,6 +25,6 @@ export interface SimpleIcon {
   path: string;
   source: string;
   hex: string;
-  guidelines: string | undefined;
-  license: License | undefined;
+  guidelines?: string;
+  license?: License;
 }
