@@ -1702,7 +1702,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pytest` | `pytest` |
 | `Python` | `python` |
 | `PyTorch` | `pytorch` |
-| `Lightning` | `lightning` |
+| `PyTorch Lightning` | `pytorchlightning` |
 | `PyUp` | `pyup` |
 | `Qantas` | `qantas` |
 | `Qatar Airways` | `qatarairways` |
