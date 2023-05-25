@@ -399,7 +399,7 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Developing Third-Party Extensions
 
-A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with Javascript and Typescript.
+A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 
 ```typescript
 import { getIconsData, type IconData } from 'simple-icons/sdk';
