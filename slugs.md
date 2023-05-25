@@ -279,6 +279,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Beijing Subway` | `beijingsubway` |
 | `BEM` | `bem` |
 | `Bentley` | `bentley` |
+| `Bento` | `bento` |
 | `Betfair` | `betfair` |
 | `Big Cartel` | `bigcartel` |
 | `bigbasket` | `bigbasket` |
@@ -1818,6 +1819,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Riseup` | `riseup` |
 | `Roam Research` | `roamresearch` |
 | `Roblox` | `roblox` |
+| `Roblox Studio` | `robloxstudio` |
 | `Robot Framework` | `robotframework` |
 | `Rocket.Chat` | `rocketdotchat` |
 | `RocksDB` | `rocksdb` |
