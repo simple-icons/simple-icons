@@ -469,11 +469,6 @@
             "source": "https://gw.alipayobjects.com/os/rmsportal/trUJZfSrlnRCcFgfZGjD.ai"
         },
         {
-            "title": "Alitalia",
-            "hex": "006643",
-            "source": "https://www.alitalia.com/it_it/fly-alitalia/in-flight/ulisse-magazine.html"
-        },
-        {
             "title": "Allegro",
             "hex": "FF5A00",
             "source": "https://allegro.pl/"
@@ -671,6 +666,20 @@
             "title": "AMD",
             "hex": "ED1C24",
             "source": "https://www.amd.com/"
+        },
+        {
+            "title": "Ameba",
+            "hex": "2D8C3C",
+            "source": "https://ameblo.jp/",
+            "aliases": {
+                "aka": [
+                    "Ameba Blog",
+                    "Ameblo"
+                ],
+                "loc": {
+                    "ja-JP": "アメブロ"
+                }
+            }
         },
         {
             "title": "American Airlines",
@@ -2491,6 +2500,11 @@
             "source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
         },
         {
+            "title": "Compiler Explorer",
+            "hex": "67C52A",
+            "source": "https://github.com/compiler-explorer/infra/blob/8d362efe7ddc24e6a625f7db671d0a6e7600e3c9/logo/icon/CompilerExplorer%20Logo%20Icon%20SVG.svg"
+        },
+        {
             "title": "Composer",
             "hex": "885630",
             "source": "https://getcomposer.org/"
@@ -4221,6 +4235,11 @@
             "title": "Frontend Mentor",
             "hex": "3F54A3",
             "source": "https://www.frontendmentor.io"
+        },
+        {
+            "title": "Frontify",
+            "hex": "2D3232",
+            "source": "https://brand.frontify.com/d/7WQZazaZFkMz/brand-guidelines-1#/visual/logo"
         },
         {
             "title": "Fuga Cloud",
@@ -6542,6 +6561,11 @@
             "source": "https://github.com/GoogleChrome/lighthouse/blob/80d2e6c1948f232ec4f1bdeabc8bc632fc5d0bfd/assets/lh_favicon.svg"
         },
         {
+            "title": "Lightning",
+            "hex": "792EE5",
+            "source": "https://github.com/Lightning-AI/lightning/blob/a584196abf820179adb0758ef67ddae91c44e7bc/docs/source/_static/images/icon.svg"
+        },
+        {
             "title": "LINE",
             "hex": "00C300",
             "source": "https://line.me/en/logo",
@@ -6578,11 +6602,6 @@
             "title": "Linktree",
             "hex": "43E55E",
             "source": "https://linktr.ee"
-        },
-        {
-            "title": "Linode",
-            "hex": "00A95C",
-            "source": "https://www.linode.com/company/press/"
         },
         {
             "title": "Linux",
@@ -7267,6 +7286,14 @@
             "source": "https://miro.com/"
         },
         {
+            "title": "Misskey",
+            "hex": "A1CA03",
+            "source": "https://misskey-hub.net/appendix/assets.html",
+            "license": {
+                "type": "CC-BY-NC-SA-4.0"
+            }
+        },
+        {
             "title": "Mitsubishi",
             "hex": "E60012",
             "source": "https://www.mitsubishi.com/"
@@ -7373,7 +7400,7 @@
             "source": "https://www.monkey-tie.com"
         },
         {
-            "title": "MonoGames",
+            "title": "MonoGame",
             "hex": "E73C00",
             "source": "https://www.monogame.net"
         },
@@ -7452,6 +7479,11 @@
             "title": "MTR",
             "hex": "AC2E45",
             "source": "https://commons.wikimedia.org/wiki/File:MTR_(logo_with_text).svg"
+        },
+        {
+            "title": "MUBI",
+            "hex": "000000",
+            "source": "https://mubi.com/"
         },
         {
             "title": "MUI",
@@ -8441,6 +8473,11 @@
             "guidelines": "https://www.patreon.com/brand/downloads"
         },
         {
+            "title": "Payload CMS",
+            "hex": "000000",
+            "source": "https://payloadcms.com"
+        },
+        {
             "title": "Payoneer",
             "hex": "FF4800",
             "source": "https://www.payoneer.com/"
@@ -9293,11 +9330,6 @@
             "guidelines": "https://github.com/pytorch/pytorch.github.io/blob/381117ec296f002b2de475402ef29cca6c55e209/assets/brand-guidelines/PyTorch-Brand-Guidelines.pdf"
         },
         {
-            "title": "PyTorch Lightning",
-            "hex": "792EE5",
-            "source": "https://github.com/PyTorchLightning/pytorch-lightning/blob/a584196abf820179adb0758ef67ddae91c44e7bc/docs/source/_static/images/icon.svg"
-        },
-        {
             "title": "PyUp",
             "hex": "9F55FF",
             "source": "https://pyup.io/"
@@ -9866,8 +9898,8 @@
         {
             "title": "Roblox",
             "hex": "000000",
-            "source": "https://corp.roblox.com/press-kit/",
-            "guidelines": "https://corp.roblox.com/wp-content/uploads/2021/03/Logo_Roblox.zip"
+            "source": "https://blog.roblox.com/wp-content/themes/roblox/img/Roblox_Logo_White.svg",
+            "guidelines": "https://en.help.roblox.com/hc/en-us/articles/115001708126-Roblox-Name-and-Logo-Community-Usage-Guidelines"
         },
         {
             "title": "Roblox Studio",
@@ -11866,6 +11898,12 @@
             "title": "Traefik Proxy",
             "hex": "24A1C1",
             "source": "https://traefik.io/traefik/"
+        },
+        {
+            "title": "Trailforks",
+            "hex": "FFCD00",
+            "source": "https://www.trailforks.com/about/graphics/",
+            "guidelines": "https://www.trailforks.com/about/graphics/"
         },
         {
             "title": "TrainerRoad",
