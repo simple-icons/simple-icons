@@ -5,6 +5,7 @@
  * linters (e.g. jsonlint/svglint).
  */
 
+import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
 import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
 
@@ -53,6 +54,33 @@ const TESTS = {
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
+    }
+  },
+
+  /* Check redundant trailing slash in URL */
+  checkUrl: (data) => {
+    const hasRedundantTrailingSlash = (url) => {
+      const origin = new URL(url).origin;
+      return /^\/+$/.test(url.replace(origin, ''));
+    };
+
+    const allUrlFields = [
+      ...new Set(
+        data.icons
+          .map((icon) => [icon.source, icon.guidelines, icon.license?.url])
+          .flat()
+          .filter(Boolean),
+      ),
+    ];
+
+    const invalidUrls = allUrlFields.filter((url) =>
+      hasRedundantTrailingSlash(url),
+    );
+
+    if (invalidUrls.length > 0) {
+      return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
+        '\n',
+      )}`;
     }
   },
 };
