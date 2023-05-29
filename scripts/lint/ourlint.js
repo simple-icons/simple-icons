@@ -5,6 +5,7 @@
  * linters (e.g. jsonlint/svglint).
  */
 
+import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
 import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
 
@@ -53,6 +54,33 @@ const TESTS = {
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
+    }
+  },
+
+  /* Check redundant slash suffix in URL */
+  checkUrl: (data) => {
+    const hasRedundantSlashSuffix = (url) => {
+      const origin = new URL(url).origin;
+      return url.replace(origin, '') === '/';
+    };
+
+    const allUrlFields = [
+      ...new Set(
+        data.icons
+          .map((icon) => [icon.source, icon.guidelines, icon.license?.url])
+          .flat()
+          .filter(Boolean),
+      ),
+    ];
+
+    const invalidUrls = allUrlFields.filter((url) =>
+      hasRedundantSlashSuffix(url),
+    );
+
+    if (invalidUrls.length > 0) {
+      return `Some URLs have a redundant slash suffix:\n\n${invalidUrls.join(
+        '\n',
+      )}`;
     }
   },
 };
