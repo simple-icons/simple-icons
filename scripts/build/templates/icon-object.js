@@ -5,6 +5,6 @@
     return a + '%s' + b + this.path + c;
   },
   path: '%s',
-  source: '%s',
+  source: d+'%s',
   hex: '%s',%s%s
 }
