@@ -57,9 +57,9 @@ const TESTS = {
     }
   },
 
-  /* Check redundant slash suffix in URL */
+  /* Check redundant trailing slash in URL */
   checkUrl: (data) => {
-    const hasRedundantSlashSuffix = (url) => {
+    const hasRedundantTrailingSlash = (url) => {
       const origin = new URL(url).origin;
       return url.replace(origin, '') === '/';
     };
@@ -74,11 +74,11 @@ const TESTS = {
     ];
 
     const invalidUrls = allUrlFields.filter((url) =>
-      hasRedundantSlashSuffix(url),
+      hasRedundantTrailingSlash(url),
     );
 
     if (invalidUrls.length > 0) {
-      return `Some URLs have a redundant slash suffix:\n\n${invalidUrls.join(
+      return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
         '\n',
       )}`;
     }
