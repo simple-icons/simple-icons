@@ -38,6 +38,9 @@ const build = async () => {
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
   // Local helper functions
+  const stripUrlProtocol = (url) => {
+    return url.replace('https://', '');
+  };
   const escape = (value) => {
     return value.replace(/(?<!\\)'/g, "\\'");
   };
@@ -61,11 +64,16 @@ const build = async () => {
       escape(icon.slug),
       escape(titleToHtmlFriendly(icon.title)),
       escape(icon.path),
-      escape(icon.source),
+      escape(stripUrlProtocol(icon.source)),
       escape(icon.hex),
-      icon.guidelines ? `\n  guidelines: '${escape(icon.guidelines)}',` : '',
+      icon.guidelines
+        ? `\n  guidelines: d+'${escape(stripUrlProtocol(icon.guidelines))}',`
+        : '',
       licenseToObject(icon.license)
-        ? `\n  license: ${JSON.stringify(licenseToObject(icon.license))},`
+        ? `\n  license: ${JSON.stringify(licenseToObject(icon.license)).replace(
+            'url":"https://',
+            'url":d+"',
+          )},`
         : '',
     );
   };
@@ -104,7 +112,7 @@ const build = async () => {
   });
 
   // constants used in templates to reduce package size
-  const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
+  const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>',d='https://';`;
 
   // write our file containing the exports of all icons in CommonJS ...
   const rawIndexJs = `${constantsString}module.exports={${iconsBarrelJs.join(
