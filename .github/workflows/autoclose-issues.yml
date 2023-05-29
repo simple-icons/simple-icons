@@ -1,0 +1,14 @@
+name: Autocloser
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: IndyV/IssueChecker@v1.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-pattern: ".*java(?!\S)"
+          issue-close-message: "@${issue.user.login} this issue was automatically closed. Please refer to #7374."
