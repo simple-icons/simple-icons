@@ -61,7 +61,7 @@ const TESTS = {
   checkUrl: (data) => {
     const hasRedundantTrailingSlash = (url) => {
       const origin = new URL(url).origin;
-      return /^\/+$/.test(url.repalce(origin, ''));
+      return /^\/+$/.test(url.replace(origin, ''));
     };
 
     const allUrlFields = [
