@@ -69,7 +69,7 @@ const build = async () => {
       escape(stripUrlProtocol(icon.source)),
       escape(icon.hex),
       icon.guidelines
-        ? `\n  guidelines(){return d+'${escape(
+        ? `\n  get guidelines(){return d+'${escape(
             stripUrlProtocol(icon.guidelines),
           )}'},`
         : '',
