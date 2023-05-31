@@ -82,6 +82,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
+    "build:measure": "node scripts/build/package.js --measure",
     "clean": "rimraf index.js index.mjs index.d.ts sdk.js",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",

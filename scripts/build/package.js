@@ -7,6 +7,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import util from 'node:util';
+import process from 'node:process';
 import { transform as esbuildTransform } from 'esbuild';
 import {
   getIconSlug,
@@ -19,6 +20,7 @@ import {
 } from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
+const measureMode = process.argv.includes('--measure');
 
 const UTF8 = 'utf8';
 
@@ -67,20 +69,31 @@ const build = async () => {
       escape(stripUrlProtocol(icon.source)),
       escape(icon.hex),
       icon.guidelines
-        ? `\n  guidelines: d+'${escape(stripUrlProtocol(icon.guidelines))}',`
+        ? `\n  guidelines(){return d+'${escape(
+            stripUrlProtocol(icon.guidelines),
+          )}'},`
         : '',
       licenseToObject(icon.license)
-        ? `\n  license: ${JSON.stringify(licenseToObject(icon.license)).replace(
-            'url":"https://',
-            'url":d+"',
-          )},`
+        ? `\n  license: ${JSON.stringify(licenseToObject(icon.license))
+            .replace('"url":"https://', 'get url(){return d+"')
+            .replace('"}', '"}}')},`
         : '',
     );
   };
   const writeJs = async (filepath, rawJavaScript, opts = null) => {
     opts = opts === null ? { minify: true } : opts;
     const { code } = await esbuildTransform(rawJavaScript, opts);
-    await fs.writeFile(filepath, code);
+    await fs.writeFile(
+      filepath,
+      measureMode
+        ? [
+            'const start = process.hrtime.bigint();',
+            code,
+            'const end = process.hrtime.bigint();',
+            "console.log(Number((end - start)) / 1e6, 'ms');",
+          ].join('')
+        : code,
+    );
   };
   const writeTs = async (filepath, rawTypeScript) => {
     await fs.writeFile(filepath, rawTypeScript);
