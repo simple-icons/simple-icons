@@ -7,8 +7,32 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: IndyV/IssueChecker@v1.0
+      - id: match-title
+        name: Match title
+        run: |
+          if [[ ${{ github.event.issue.title }} =~ (^|[[:space:]])([j|J][a|A][v|V][a|A])([[:space:]]|$) ]]; then
+              echo "match=true" >> $GITHUB_OUTPUT
+          fi
+      - name: Close the issue
+        if: steps.match-title.outputs.match == 'true'
+        uses: actions/github-script@v6
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-pattern: ".*java(?!\S)"
-          issue-close-message: "@${issue.user.login} this issue was automatically closed. Please refer to #7374."
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'This issue was automatically closed. Please refer to #7374.'
+            })
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['duplicate']
+            })
+            github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed'
+            });
