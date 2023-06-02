@@ -21,7 +21,7 @@ jobs:
       - id: get-labels
         name: Get labels
         run: |
-          labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/pulls/${{ github.event.issue.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
+          labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/issues/${{ github.event.issue.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
           echo "labels=$labels" >> $GITHUB_OUTPUT
 
       # if the issue is labeled as a 'new icon' and it matches Java, we
