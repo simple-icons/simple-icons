@@ -6,7 +6,5 @@
   },
   path: '%s',
   source: '%s',
-  hex: '%s',
-  guidelines: %s,
-  license: %s,
+  hex: '%s',%s%s
 }
