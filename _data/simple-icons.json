@@ -4141,6 +4141,16 @@
             "source": "https://forestry.io"
         },
         {
+            "title": "Forgejo",
+            "hex": "FB923C",
+            "source": "https://codeberg.org/forgejo/meta/raw/branch/readme/branding/logo/forgejo-monochrome.svg",
+            "guidelines": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/README.md#logo",
+            "license": {
+                "type": "CC-BY-SA-4.0",
+                "url": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/logo/forgejo-logo-license-exemption.txt"
+            }
+        },
+        {
             "title": "Formstack",
             "hex": "21B573",
             "source": "https://www.formstack.com/brand/guidelines"
@@ -10834,6 +10844,16 @@
             "hex": "00CBEC",
             "source": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines",
             "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
+        },
+        {
+            "title": "SourceHut",
+            "hex": "000000",
+            "source": "https://sourcehut.org/logo/",
+            "guidelines": "https://sourcehut.org/logo/",
+            "license": {
+                "type": "CC0-1.0",
+                "url": "https://sourcehut.org/logo/"
+            }
         },
         {
             "title": "Sourcetree",
