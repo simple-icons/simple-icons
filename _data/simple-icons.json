@@ -618,6 +618,17 @@
             "guidelines": "https://aws.amazon.com/architecture/icons/"
         },
         {
+            "title": "Amazon Organizations",
+            "hex": "E7157B",
+            "source": "https://aws.amazon.com/architecture/icons/",
+            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "aliases": {
+                "aka": [
+                    "AWS Organizations"
+                ]
+            }
+        },
+        {
             "title": "Amazon Pay",
             "hex": "FF9900",
             "source": "https://pay.amazon.com"
