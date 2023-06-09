@@ -3389,6 +3389,11 @@
             "source": "https://go.developer.ebay.com/logos"
         },
         {
+            "title": "EBOX",
+            "hex": "BE2323",
+            "source": "https://www.ebox.ca"
+        },
+        {
             "title": "Eclipse Che",
             "hex": "525C86",
             "source": "https://www.eclipse.org/che/"
@@ -4134,6 +4139,16 @@
             "title": "Forestry",
             "hex": "343A40",
             "source": "https://forestry.io"
+        },
+        {
+            "title": "Forgejo",
+            "hex": "FB923C",
+            "source": "https://codeberg.org/forgejo/meta/raw/branch/readme/branding/logo/forgejo-monochrome.svg",
+            "guidelines": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/README.md#logo",
+            "license": {
+                "type": "CC-BY-SA-4.0",
+                "url": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/logo/forgejo-logo-license-exemption.txt"
+            }
         },
         {
             "title": "Formstack",
@@ -10836,6 +10851,16 @@
             "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
         },
         {
+            "title": "SourceHut",
+            "hex": "000000",
+            "source": "https://sourcehut.org/logo/",
+            "guidelines": "https://sourcehut.org/logo/",
+            "license": {
+                "type": "CC0-1.0",
+                "url": "https://sourcehut.org/logo/"
+            }
+        },
+        {
             "title": "Sourcetree",
             "hex": "0052CC",
             "source": "https://atlassian.design/resources/logo-library",
@@ -12537,6 +12562,11 @@
             "title": "Vodafone",
             "hex": "E60000",
             "source": "https://web.vodafone.com.eg"
+        },
+        {
+            "title": "VoIP.ms",
+            "hex": "E1382D",
+            "source": "https://voip.ms"
         },
         {
             "title": "Volkswagen",
