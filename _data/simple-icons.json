@@ -13145,7 +13145,13 @@
         {
             "title": "XML",
             "hex": "005fad",
-            "source": "https://www.w3.org/Icons/XML/xml.svg"
+            "source": "https://www.w3.org/Icons/XML/xml.svg",
+            "aliases": {
+                "aka": [
+                    "Extensible Markup Language",
+                    "eXtensible Markup Language"
+                ]
+            }
         },
         {
             "title": "XMPP",
