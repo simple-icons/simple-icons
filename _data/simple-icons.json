@@ -3404,16 +3404,6 @@
             }
         },
         {
-            "title": "Eclipse AQAvit",
-            "hex": "FF1464",
-            "source": "https://adoptium.net/",
-            "guidelines": "https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf",
-            "license": {
-                "type": "EPL-2.0",
-                "url": "https://www.eclipse.org/legal/epl-2.0/"
-            }
-        },
-        {
             "title": "Eclipse Che",
             "hex": "525C86",
             "source": "https://www.eclipse.org/che/"
@@ -3429,29 +3419,9 @@
             "source": "https://github.com/eclipse/jetty.project/blob/dab26c601d08d350cd830c1007bb196c5196f0f6/logos/jetty-avatar.svg"
         },
         {
-            "title": "Eclipse Mission Control",
-            "hex": "FF1464",
-            "source": "https://adoptium.net/",
-            "guidelines": "https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf",
-            "license": {
-                "type": "EPL-2.0",
-                "url": "https://www.eclipse.org/legal/epl-2.0/"
-            }
-        },
-        {
             "title": "Eclipse Mosquitto",
             "hex": "3C5280",
             "source": "https://github.com/eclipse/mosquitto/blob/75fc908bba90d4bd06e85efc1c4ed77952ec842c/logo/mosquitto-logo-only.svg"
-        },
-        {
-            "title": "Eclipse Temurin",
-            "hex": "FF1464",
-            "source": "https://adoptium.net/",
-            "guidelines": "https://www.eclipse.org/org/artwork/guidelines/adoptium-brand-guidelines.pdf",
-            "license": {
-                "type": "EPL-2.0",
-                "url": "https://www.eclipse.org/legal/epl-2.0/"
-            }
         },
         {
             "title": "Eclipse Vert.x",
