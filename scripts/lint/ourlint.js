@@ -5,8 +5,9 @@
  * linters (e.g. jsonlint/svglint).
  */
 
+import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
-import { getIconsDataString, normalizeNewlines } from '../utils.js';
+import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -18,12 +19,12 @@ const TESTS = {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
-        const compare = icon.title.localeCompare(prev.title);
-        if (compare < 0) {
+        const comparison = collator.compare(icon.title, prev.title);
+        if (comparison < 0) {
           invalidEntries.push(icon);
-        } else if (compare === 0) {
+        } else if (comparison === 0) {
           if (prev.slug) {
-            if (!icon.slug || icon.slug.localeCompare(prev.slug) < 0) {
+            if (!icon.slug || collator.compare(icon.slug, prev.slug) < 0) {
               invalidEntries.push(icon);
             }
           }
@@ -48,11 +49,38 @@ const TESTS = {
   /* Check the formatting of the data file */
   prettified: async (data, dataString) => {
     const normalizedDataString = normalizeNewlines(dataString);
-    const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
+    const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
 
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
+    }
+  },
+
+  /* Check redundant trailing slash in URL */
+  checkUrl: (data) => {
+    const hasRedundantTrailingSlash = (url) => {
+      const origin = new URL(url).origin;
+      return /^\/+$/.test(url.replace(origin, ''));
+    };
+
+    const allUrlFields = [
+      ...new Set(
+        data.icons
+          .map((icon) => [icon.source, icon.guidelines, icon.license?.url])
+          .flat()
+          .filter(Boolean),
+      ),
+    ];
+
+    const invalidUrls = allUrlFields.filter((url) =>
+      hasRedundantTrailingSlash(url),
+    );
+
+    if (invalidUrls.length > 0) {
+      return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
+        '\n',
+      )}`;
     }
   },
 };
