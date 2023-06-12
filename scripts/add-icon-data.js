@@ -1,17 +1,14 @@
-import fs from 'node:fs/promises';
-import inquirer from 'inquirer';
 import chalk from 'chalk';
+import { input, confirm, checkbox } from '@inquirer/prompts';
 import getRelativeLuminance from 'get-relative-luminance';
 import {
   URL_REGEX,
   collator,
-  getJsonSchemaData,
   getIconsDataString,
-  getIconDataPath,
-  writeIconsData,
   titleToSlug,
   normalizeColor,
-} from './utils.js';
+} from '../sdk.mjs';
+import { getJsonSchemaData, writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
@@ -40,8 +37,10 @@ const hexTransformer = (text) => {
   const luminance = hexPattern.test(text)
     ? getRelativeLuminance.default(`#${color}`)
     : -1;
-  if (luminance === -1) return text;
-  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(text);
+  if (luminance === -1) return text.toUpperCase();
+  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
+    text.toUpperCase(),
+  );
 };
 
 const aliasesTransformer = (text) =>
@@ -58,7 +57,7 @@ const aliasesChoices = Object.entries(
 
 const getIconDataFromAnswers = (answers) => ({
   title: answers.title,
-  hex: answers.hex,
+  hex: answers.hex.toUpperCase(),
   source: answers.source,
   ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
   ...(answers.hasLicense
@@ -86,96 +85,81 @@ const getIconDataFromAnswers = (answers) => ({
     : {}),
 });
 
-const dataPrompt = [
-  {
-    type: 'input',
-    name: 'title',
-    message: 'Title',
-    validate: titleValidator,
-  },
-  {
-    type: 'input',
-    name: 'hex',
-    message: 'Hex',
-    validate: hexValidator,
-    filter: (text) => normalizeColor(text),
-    transformer: hexTransformer,
-  },
-  {
-    type: 'input',
-    name: 'source',
-    message: 'Source',
-    validate: sourceValidator,
-  },
-  {
-    type: 'confirm',
-    name: 'hasGuidelines',
-    message: 'The icon has brand guidelines?',
-  },
-  {
-    type: 'input',
-    name: 'guidelines',
+const answers = {};
+
+answers.title = await input({
+  message: 'Title',
+  validate: titleValidator,
+});
+
+answers.hex = await input({
+  message: 'Hex',
+  validate: hexValidator,
+  filter: (text) => normalizeColor(text),
+  transformer: hexTransformer,
+});
+
+answers.source = await input({
+  message: 'Source',
+  validate: sourceValidator,
+});
+
+answers.hasGuidelines = await confirm({
+  message: 'The icon has brand guidelines?',
+});
+
+if (answers.hasGuidelines) {
+  answers.guidelines = await input({
     message: 'Guidelines',
     validate: sourceValidator,
-    when: ({ hasGuidelines }) => hasGuidelines,
-  },
-  {
-    type: 'confirm',
-    name: 'hasLicense',
-    message: 'The icon has brand license?',
-  },
-  {
-    type: 'input',
-    name: 'licenseType',
+  });
+}
+
+answers.hasLicense = await confirm({
+  message: 'The icon has brand license?',
+});
+
+if (answers.hasLicense) {
+  answers.licenseType = await input({
     message: 'License type',
     validate: (text) => Boolean(text),
-    when: ({ hasLicense }) => hasLicense,
-  },
-  {
-    type: 'input',
-    name: 'licenseUrl',
-    message: 'License URL',
-    suffix: ' (optional)',
+  });
+
+  answers.licenseUrl = await input({
+    message: 'License URL' + chalk.reset(' (optional)'),
     validate: (text) => !Boolean(text) || sourceValidator(text),
-    when: ({ hasLicense }) => hasLicense,
-  },
-  {
-    type: 'confirm',
-    name: 'hasAliases',
-    message: 'The icon has brand aliases?',
-    default: false,
-  },
-  {
-    type: 'checkbox',
-    name: 'aliasesTypes',
+  });
+}
+
+answers.hasAliases = await confirm({
+  message: 'This icon has brands aliases?',
+  default: false,
+});
+
+if (answers.hasAliases) {
+  answers.aliasesTypes = await checkbox({
     message: 'What types of aliases do you want to add?',
     choices: aliasesChoices,
-    when: ({ hasAliases }) => hasAliases,
-  },
-  ...aliasesChoices.map((x) => ({
-    type: 'input',
-    name: `${x.value}AliasesList`,
-    message: x.value,
-    suffix: ' (separate with commas)',
-    validate: (text) => Boolean(text),
-    transformer: aliasesTransformer,
-    when: (answers) => answers?.aliasesTypes?.includes(x.value),
-  })),
-  {
-    type: 'confirm',
-    name: 'confirmToAdd',
-    message: (answers) => {
-      const icon = getIconDataFromAnswers(answers);
-      return [
-        'About to write to simple-icons.json',
-        chalk.reset(JSON.stringify(icon, null, 4)),
-        chalk.reset('Is this OK?'),
-      ].join('\n\n');
-    },
-  },
-];
+  });
 
-const answers = await inquirer.prompt(dataPrompt);
+  for (const x of aliasesChoices) {
+    if (!answers?.aliasesTypes?.includes(x.value)) continue;
+    answers[`${x.value}AliasesList`] = await input({
+      message: x.value + chalk.reset(' (separate with commas)'),
+      validate: (text) => Boolean(text),
+      transformer: aliasesTransformer,
+    });
+  }
+}
+
+answers.confirmToAdd = await confirm({
+  message: [
+    'About to write to simple-icons.json',
+    chalk.reset(JSON.stringify(getIconDataFromAnswers(answers), null, 4)),
+    chalk.reset('Is this OK?'),
+  ].join('\n\n'),
+});
+
 const icon = getIconDataFromAnswers(answers);
 
 if (answers.confirmToAdd) {
