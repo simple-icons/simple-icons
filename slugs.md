@@ -325,6 +325,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BorgBackup` | `borgbackup` |
 | `Bosch` | `bosch` |
 | `Bose` | `bose` |
+| `Botble CMS` | `botblecms` |
 | `boulanger` | `boulanger` |
 | `Bower` | `bower` |
 | `Box` | `box` |
@@ -636,6 +637,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eagle` | `eagle` |
 | `easyJet` | `easyjet` |
 | `eBay` | `ebay` |
+| `EBOX` | `ebox` |
 | `Eclipse Che` | `eclipseche` |
 | `Eclipse IDE` | `eclipseide` |
 | `Eclipse Jetty` | `eclipsejetty` |
@@ -779,6 +781,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
 | `Forestry` | `forestry` |
+| `Forgejo` | `forgejo` |
 | `Formstack` | `formstack` |
 | `Fortinet` | `fortinet` |
 | `Fortran` | `fortran` |
@@ -1991,6 +1994,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Source Engine` | `sourceengine` |
 | `SourceForge` | `sourceforge` |
 | `Sourcegraph` | `sourcegraph` |
+| `SourceHut` | `sourcehut` |
 | `Sourcetree` | `sourcetree` |
 | `Southwest Airlines` | `southwestairlines` |
 | `Spacemacs` | `spacemacs` |
@@ -2308,6 +2312,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `VLC media player` | `vlcmediaplayer` |
 | `VMware` | `vmware` |
 | `Vodafone` | `vodafone` |
+| `VoIP.ms` | `voipdotms` |
 | `Volkswagen` | `volkswagen` |
 | `Volvo` | `volvo` |
 | `Vonage` | `vonage` |
