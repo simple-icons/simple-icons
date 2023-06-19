@@ -2269,8 +2269,9 @@
         },
         {
             "title": "Cloudsmith",
-            "hex": "187EB6",
-            "source": "https://cloudsmith.io/branding/"
+            "hex": "2A6FE1",
+            "source": "https://cloudsmith.com/company/brand/",
+            "guidelines": "https://cloudsmith.com/company/brand/"
         },
         {
             "title": "Cloudways",
@@ -3207,6 +3208,12 @@
             "title": "Dogecoin",
             "hex": "C2A633",
             "source": "https://cryptologos.cc/dogecoin"
+        },
+        {
+            "title": "DOI",
+            "hex": "FAB70C",
+            "source": "https://www.doi.org/images/logos/header_logo_cropped.svg",
+            "guidelines": "https://www.doi.org/resources/130718-trademark-policy.pdf"
         },
         {
             "title": "Dolby",
@@ -7815,6 +7822,11 @@
             "guidelines": "https://www.nginx.com/press/"
         },
         {
+            "title": "Nginx Proxy Manager",
+            "hex": "F15833",
+            "source": "https://github.com/NginxProxyManager/nginx-proxy-manager/blob/2a06384a4aa597777931d38cef49cf89540392e6/docs/.vuepress/public/logo.svg"
+        },
+        {
             "title": "ngrok",
             "hex": "1F1E37",
             "source": "https://ngrok.com"
@@ -10662,6 +10674,11 @@
             "title": "Skype for Business",
             "hex": "00AFF0",
             "source": "https://en.wikipedia.org/wiki/Skype_for_Business_Server"
+        },
+        {
+            "title": "Skyrock",
+            "hex": "009AFF",
+            "source": "https://www.svgrepo.com/svg/54507/skyrock-logo"
         },
         {
             "title": "Slack",
