@@ -909,6 +909,11 @@
             "source": "https://apache.org/logos"
         },
         {
+            "title": "Apache Parquet",
+            "hex": "50ABF1",
+            "source": "https://apache.org/logos/"
+        },
+        {
             "title": "Apache Pulsar",
             "hex": "188FFF",
             "source": "https://apache.org/logos/"
@@ -2269,8 +2274,9 @@
         },
         {
             "title": "Cloudsmith",
-            "hex": "187EB6",
-            "source": "https://cloudsmith.io/branding/"
+            "hex": "2A6FE1",
+            "source": "https://cloudsmith.com/company/brand/",
+            "guidelines": "https://cloudsmith.com/company/brand/"
         },
         {
             "title": "Cloudways",
@@ -3207,6 +3213,12 @@
             "title": "Dogecoin",
             "hex": "C2A633",
             "source": "https://cryptologos.cc/dogecoin"
+        },
+        {
+            "title": "DOI",
+            "hex": "FAB70C",
+            "source": "https://www.doi.org/images/logos/header_logo_cropped.svg",
+            "guidelines": "https://www.doi.org/resources/130718-trademark-policy.pdf"
         },
         {
             "title": "Dolby",
@@ -4257,6 +4269,11 @@
             "source": "https://github.com/freenas/webui/blob/fd668f4c5920fe864fd98fa98e20fd333336c609/src/assets/images/logo.svg"
         },
         {
+            "title": "Freepik",
+            "hex": "1273EB",
+            "source": "https://commons.wikimedia.org/wiki/File:Freepik.svg"
+        },
+        {
             "title": "Frontend Mentor",
             "hex": "3F54A3",
             "source": "https://www.frontendmentor.io"
@@ -4352,6 +4369,11 @@
             "hex": "663399",
             "source": "https://www.gatsbyjs.com/guidelines/logo",
             "guidelines": "https://www.gatsbyjs.com/guidelines/logo"
+        },
+        {
+            "title": "GDAL",
+            "hex": "5CAE58",
+            "source": "https://www.osgeo.org/projects/gdal/"
         },
         {
             "title": "Géant",
@@ -4661,6 +4683,11 @@
             "title": "Google Analytics",
             "hex": "E37400",
             "source": "https://marketingplatform.google.com/intl/en_uk/about/analytics/"
+        },
+        {
+            "title": "Google Apps Script",
+            "hex": "4285F4",
+            "source": "https://github.com/simple-icons/simple-icons/issues/3556#issuecomment-800482267"
         },
         {
             "title": "Google Assistant",
@@ -6490,6 +6517,11 @@
             "source": "https://github.com/lensapp/lens/blob/3cc12d9599b655a366e7a34c356d2a84654b2466/docs/img/lens-logo-icon.svg"
         },
         {
+            "title": "Leptos",
+            "hex": "EF3939",
+            "source": "https://github.com/leptos-rs/leptos/blob/6fac92cb6298f1bfa72464de47e33e47b5e5857d/logos/Simple_Icon.svg"
+        },
+        {
             "title": "Lerna",
             "hex": "9333EA",
             "source": "https://github.com/lerna/logo/blob/fb18db535d71aacc6ffb0f6b75a0c3bd9e353543/lerna.svg"
@@ -7532,6 +7564,12 @@
             "source": "https://www.mueller.de"
         },
         {
+            "title": "Multisim",
+            "hex": "57B685",
+            "source": "https://www.multisim.com",
+            "guidelines": "https://www.ni.com/en-us/about-ni/legal.html"
+        },
+        {
             "title": "Mumble",
             "hex": "FFFFFF",
             "source": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/icons/mumble_small.svg",
@@ -7781,6 +7819,11 @@
             "hex": "009639",
             "source": "https://www.nginx.com/press/",
             "guidelines": "https://www.nginx.com/press/"
+        },
+        {
+            "title": "Nginx Proxy Manager",
+            "hex": "F15833",
+            "source": "https://github.com/NginxProxyManager/nginx-proxy-manager/blob/2a06384a4aa597777931d38cef49cf89540392e6/docs/.vuepress/public/logo.svg"
         },
         {
             "title": "ngrok",
@@ -9080,6 +9123,11 @@
             "source": "https://preactjs.com"
         },
         {
+            "title": "Prefect",
+            "hex": "024DFD",
+            "source": "https://www.prefect.io/newsroom/logos/"
+        },
+        {
             "title": "Premier League",
             "hex": "360D3A",
             "source": "https://www.premierleague.com"
@@ -9198,6 +9246,11 @@
             "hex": "4D9FE7",
             "source": "https://www.protocols.io/brand",
             "guidelines": "https://www.protocols.io/brand"
+        },
+        {
+            "title": "Proton Drive",
+            "hex": "EF548C",
+            "source": "https://proton.me/media/kit"
         },
         {
             "title": "ProtonDB",
@@ -9656,6 +9709,11 @@
             "title": "Read the Docs",
             "hex": "8CA1AF",
             "source": "https://github.com/readthedocs/readthedocs.org/blob/2dc9706c4fe7fa6d4410ed0e5aedca8d4796fe0f/media/readthedocsbranding.ai"
+        },
+        {
+            "title": "read.cv",
+            "hex": "111111",
+            "source": "https://read.cv/support/vcY96F2GqbvLOdKkWl0I"
         },
         {
             "title": "ReadMe",
@@ -10622,6 +10680,11 @@
             "source": "https://en.wikipedia.org/wiki/Skype_for_Business_Server"
         },
         {
+            "title": "Skyrock",
+            "hex": "009AFF",
+            "source": "https://www.svgrepo.com/svg/54507/skyrock-logo"
+        },
+        {
             "title": "Slack",
             "hex": "4A154B",
             "source": "https://slack.com/brand-guidelines",
@@ -11322,6 +11385,11 @@
             "hex": "38A1CE",
             "source": "https://stackoverflow.design/brand/logo/",
             "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
+        },
+        {
+            "title": "Supercrease",
+            "hex": "000000",
+            "source": "https://supercrease.com/wp-content/themes/super-crease/assets/svgs/super-crease.svg"
         },
         {
             "title": "Supermicro",
