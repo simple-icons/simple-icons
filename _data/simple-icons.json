@@ -1339,6 +1339,11 @@
             "source": "https://github.com/babel/website/blob/93330158b6ecca1ab88d3be8dbf661f5c2da6c76/website/static/img/babel-black.svg"
         },
         {
+            "title": "Babylon.js",
+            "hex": "BB464B",
+            "source": "https://github.com/BabylonJS/Brand-Toolkit/blob/8583d4d9bf252a233fa480fa02ac6f367d5207a1/babylon_logo/monochrome/babylon_logo_monochrome_dark.svg"
+        },
+        {
             "title": "Backblaze",
             "hex": "E21E29",
             "source": "https://www.backblaze.com/company/news.html",
@@ -2269,8 +2274,9 @@
         },
         {
             "title": "Cloudsmith",
-            "hex": "187EB6",
-            "source": "https://cloudsmith.io/branding/"
+            "hex": "2A6FE1",
+            "source": "https://cloudsmith.com/company/brand/",
+            "guidelines": "https://cloudsmith.com/company/brand/"
         },
         {
             "title": "Cloudways",
@@ -3207,6 +3213,12 @@
             "title": "Dogecoin",
             "hex": "C2A633",
             "source": "https://cryptologos.cc/dogecoin"
+        },
+        {
+            "title": "DOI",
+            "hex": "FAB70C",
+            "source": "https://www.doi.org/images/logos/header_logo_cropped.svg",
+            "guidelines": "https://www.doi.org/resources/130718-trademark-policy.pdf"
         },
         {
             "title": "Dolby",
@@ -7558,6 +7570,12 @@
             "source": "https://www.mueller.de"
         },
         {
+            "title": "Multisim",
+            "hex": "57B685",
+            "source": "https://www.multisim.com",
+            "guidelines": "https://www.ni.com/en-us/about-ni/legal.html"
+        },
+        {
             "title": "Mumble",
             "hex": "FFFFFF",
             "source": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/icons/mumble_small.svg",
@@ -7807,6 +7825,11 @@
             "hex": "009639",
             "source": "https://www.nginx.com/press/",
             "guidelines": "https://www.nginx.com/press/"
+        },
+        {
+            "title": "Nginx Proxy Manager",
+            "hex": "F15833",
+            "source": "https://github.com/NginxProxyManager/nginx-proxy-manager/blob/2a06384a4aa597777931d38cef49cf89540392e6/docs/.vuepress/public/logo.svg"
         },
         {
             "title": "ngrok",
@@ -9104,6 +9127,11 @@
             "title": "Preact",
             "hex": "673AB8",
             "source": "https://preactjs.com"
+        },
+        {
+            "title": "Prefect",
+            "hex": "024DFD",
+            "source": "https://www.prefect.io/newsroom/logos/"
         },
         {
             "title": "Premier League",
@@ -10658,6 +10686,11 @@
             "source": "https://en.wikipedia.org/wiki/Skype_for_Business_Server"
         },
         {
+            "title": "Skyrock",
+            "hex": "009AFF",
+            "source": "https://www.svgrepo.com/svg/54507/skyrock-logo"
+        },
+        {
             "title": "Slack",
             "hex": "4A154B",
             "source": "https://slack.com/brand-guidelines",
@@ -11358,6 +11391,11 @@
             "hex": "38A1CE",
             "source": "https://stackoverflow.design/brand/logo/",
             "guidelines": "https://stackoverflow.com/legal/trademark-guidance"
+        },
+        {
+            "title": "Supercrease",
+            "hex": "000000",
+            "source": "https://supercrease.com/wp-content/themes/super-crease/assets/svgs/super-crease.svg"
         },
         {
             "title": "Supermicro",
