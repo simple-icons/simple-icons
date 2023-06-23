@@ -3411,6 +3411,12 @@
             "source": "https://www.ebox.ca"
         },
         {
+            "title": "Eclipse Adoptium",
+            "hex": "FF1464",
+            "source": "https://www.eclipse.org/org/artwork/",
+            "guidelines": "https://www.eclipse.org/legal/logo_guidelines.php"
+        },
+        {
             "title": "Eclipse Che",
             "hex": "525C86",
             "source": "https://www.eclipse.org/che/"
@@ -6247,6 +6253,11 @@
             }
         },
         {
+            "title": "Kinsta",
+            "hex": "5333ED",
+            "source": "https://kinsta.com/press"
+        },
+        {
             "title": "Kirby",
             "hex": "000000",
             "source": "https://getkirby.com/press"
@@ -7462,6 +7473,15 @@
             "source": "https://www.monkey-tie.com"
         },
         {
+            "title": "Monkeytype",
+            "hex": "E2B714",
+            "source": "https://github.com/monkeytypegame/monkeytype/blob/20a08d27ead851bbfd5ac557b4ea444ea8bddd79/frontend/static/html/top.html",
+            "license": {
+                "type": "GPL-3.0-only",
+                "url": "https://github.com/monkeytypegame/monkeytype/blob/20a08d27ead851bbfd5ac557b4ea444ea8bddd79/LICENSE"
+            }
+        },
+        {
             "title": "MonoGame",
             "hex": "E73C00",
             "source": "https://www.monogame.net"
@@ -8024,6 +8044,12 @@
             "title": "Nx",
             "hex": "143055",
             "source": "https://nx.dev"
+        },
+        {
+            "title": "NXP",
+            "hex": "000000",
+            "source": "https://www.nxp.com/company/about-nxp/newsroom:NEWSROOM",
+            "guidelines": "https://www.nxp.com/company/about-nxp/newsroom:NEWSROOM"
         },
         {
             "title": "NZXT",
@@ -12079,6 +12105,12 @@
             "title": "Tripadvisor",
             "hex": "34E0A1",
             "source": "https://tripadvisor.mediaroom.com/logo-guidelines"
+        },
+        {
+            "title": "Trivy",
+            "hex": "1904DA",
+            "source": "https://www.aquasec.com/brand/",
+            "guidelines": "https://www.aquasec.com/brand/"
         },
         {
             "title": "Trove",
