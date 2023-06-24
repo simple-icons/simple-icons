@@ -1918,6 +1918,12 @@
             "source": "https://cachethq.io/press"
         },
         {
+            "title": "Cadillac",
+            "hex": "000000",
+            "source": "https://www.cadillac.com",
+            "guidelines": "https://www.gm.com/copyright-trademark"
+        },
+        {
             "title": "CafePress",
             "hex": "58A616",
             "source": "https://en.wikipedia.org/wiki/CafePress#/media/File:CafePress_logo.svg"
@@ -7204,6 +7210,17 @@
             "title": "MeWe",
             "hex": "17377F",
             "source": "https://mewe.com"
+        },
+        {
+            "title": "MG",
+            "aliases": {
+                "aka": [
+                    "Morris Garages"
+                ]
+            },
+            "hex": "FF0000",
+            "source": "https://www.mg.co.uk/themes/custom/mg/assets/images/svg/mg-logo-desktop.svg",
+            "guidelines": "https://www.mg.co.uk/terms-and-conditions"
         },
         {
             "title": "micro:bit",
