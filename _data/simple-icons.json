@@ -3322,6 +3322,12 @@
             "source": "https://www.stellantis.com/en/brands/ds"
         },
         {
+            "title": "DTS",
+            "hex": "F98B2B",
+            "source": "https://xperi.com/brands/dts/",
+            "guidelines": "https://xperi.com/terms-conditions/"
+        },
+        {
             "title": "DTube",
             "hex": "F01A30",
             "source": "https://about.d.tube/mediakit.html"
@@ -7387,6 +7393,11 @@
             "source": "https://en.wikipedia.org/wiki/MIDI"
         },
         {
+            "title": "Mikrotik",
+            "hex": "293239",
+            "source": "https://mikrotik.com/aboutus"
+        },
+        {
             "title": "Minds",
             "hex": "FED12F",
             "source": "https://www.minds.com/branding",
@@ -7925,6 +7936,12 @@
             "title": "Nike",
             "hex": "111111",
             "source": "https://www.nike.com"
+        },
+        {
+            "title": "Nikon",
+            "hex": "FFE100",
+            "source": "https://www.nikon.com",
+            "guidelines": "https://www.nikon.com/usage/group-info"
         },
         {
             "title": "Nim",
@@ -11802,6 +11819,12 @@
             "source": "https://teratail.com"
         },
         {
+            "title": "Termius",
+            "hex": "000000",
+            "source": "https://termius.com/brand-resources",
+            "guidelines": "https://termius.com/terms-of-use"
+        },
+        {
             "title": "Terraform",
             "hex": "7B42BC",
             "source": "https://www.hashicorp.com/brand",
@@ -12290,8 +12313,9 @@
         },
         {
             "title": "Twitter",
-            "hex": "1DA1F2",
-            "source": "https://brand.twitter.com"
+            "hex": "1D9BF0",
+            "source": "https://brand.twitter.com",
+            "guidelines": "https://about.twitter.com/en/who-we-are/brand-toolkit"
         },
         {
             "title": "Twoo",
