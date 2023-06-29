@@ -2132,6 +2132,16 @@
             "source": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/02-pdf/2019-chevrolet-corvette-catalog.pdf"
         },
         {
+            "title": "Chia Network",
+            "hex": "5ECE71",
+            "source": "https://www.chia.net/wp-content/uploads/2023/06/chia_icon_green-hex5ECE71.svg",
+            "guidelines": "https://www.chia.net/wp-content/uploads/2022/08/Guidelines-for-Using-Chia-Network.pdf",
+            "license": {
+                "type": "custom",
+                "url": "https://www.chia.net/wp-content/uploads/2022/08/Chia-Trademark-Policy.pdf"
+            }
+        },
+        {
             "title": "China Eastern Airlines",
             "hex": "1A2477",
             "source": "https://uk.ceair.com/newCMS/uk/en/content/en_Footer/Support/201904/t20190404_5763.html"
@@ -9379,13 +9389,13 @@
         },
         {
             "title": "ProtonMail",
-            "hex": "8B89CC",
-            "source": "https://protonmail.com/media-kit"
+            "hex": "6D4AFF",
+            "source": "https://proton.me/media/kit"
         },
         {
             "title": "ProtonVPN",
-            "hex": "56B366",
-            "source": "https://protonvpn.com/press"
+            "hex": "6D4AFF",
+            "source": "https://proton.me/media/kit"
         },
         {
             "title": "Protractor",
@@ -12612,6 +12622,15 @@
             "title": "Veepee",
             "hex": "EC008C",
             "source": "https://www.veepee.fr"
+        },
+        {
+            "title": "Vega",
+            "hex": "2450B2",
+            "source": "https://github.com/vega/logos/blob/af32bc29f0c09c8de826aaafb037935fb69e960a/assets/VG_Black.svg",
+            "guidelines": "https://github.com/vega/logos",
+            "license": {
+                "type": "BSD-3-Clause"
+            }
         },
         {
             "title": "Velog",
