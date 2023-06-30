@@ -4,14 +4,10 @@
  * CLI tool to run jsonschema on the simple-icons.json data file.
  */
 
-import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { Validator } from 'jsonschema';
-import {
-  getDirnameFromImportMeta,
-  getIconsData,
-  getJsonSchemaData,
-} from '../utils.js';
+import { getDirnameFromImportMeta, getIconsData } from '../../sdk.mjs';
+import { getJsonSchemaData } from '../utils.js';
 
 const icons = await getIconsData();
 const __dirname = getDirnameFromImportMeta(import.meta.url);
