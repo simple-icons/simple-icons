@@ -24,13 +24,13 @@ jobs:
         name: Get labels
         run: |
           labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/pulls/${{ github.event.pull_request.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
-          echo "::set-output name=labels::$labels"
+          echo "labels=$labels" >> $GITHUB_OUTPUT
 
       - id: get-si-members
         name: Get simple-icons members
         run: |
           members="$(curl --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
-          echo "::set-output name=members::$members"
+          echo "members=$members" >> $GITHUB_OUTPUT
 
       - id: get-linked-issues
         name: Get linked issue numbers
