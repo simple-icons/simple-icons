@@ -1,44 +1,33 @@
+import path from 'node:path';
+import fs from 'node:fs/promises';
+import { getDirnameFromImportMeta, getIconDataPath } from '../sdk.mjs';
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
+
 /**
- * @fileoverview
- * Some common utilities for scripts.
+ * Get JSON schema data.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
  */
+export const getJsonSchemaData = async (
+  rootDir = path.resolve(__dirname, '..'),
+) => {
+  const jsonSchemaPath = path.resolve(rootDir, '.jsonschema.json');
+  const jsonSchemaString = await fs.readFile(jsonSchemaPath, 'utf8');
+  return JSON.parse(jsonSchemaString);
+};
 
-module.exports = {
-  /**
-   * Get the slug/filename for an icon.
-   * @param {Object} icon The icon data as it appears in _data/simple-icons.json
-   */
-  getIconSlug: icon => icon.slug || module.exports.titleToSlug(icon.title),
-
-  /**
-   * Converts a brand title into a slug/filename.
-   * @param {String} title The title to convert
-   */
-  titleToSlug: title => (
-    title.toLowerCase()
-      .replace(/\+/g, "plus")
-      .replace(/\./g, "dot")
-      .replace(/&/g, "and")
-      .replace(/đ/g, "d")
-      .replace(/ħ/g, "h")
-      .replace(/ı/g, "i")
-      .replace(/ĸ/g, "k")
-      .replace(/ŀ/g, "l")
-      .replace(/ł/g, "l")
-      .replace(/ß/g, "ss")
-      .replace(/ŧ/g, "t")
-      .normalize("NFD")
-      .replace(/[^a-z0-9]/g, "")
-  ),
-
-  /**
-   * Converts a brand title in HTML/SVG friendly format into a brand title (as
-   * it is seen in simple-icons.json)
-   * @param {String} htmlFriendlyTitle The title to convert
-   */
-  htmlFriendlyToTitle: htmlFriendlyTitle => (
-    htmlFriendlyTitle
-      .replace(/&apos;/g, "’")
-      .replace(/&amp;/g, "&")
-  ),
-}
+/**
+ * Write icons data to _data/simple-icons.json.
+ * @param {Object} iconsData Icons data object.
+ * @param {String|undefined} rootDir Path to the root directory of the project.
+ */
+export const writeIconsData = async (
+  iconsData,
+  rootDir = path.resolve(__dirname, '..'),
+) => {
+  return fs.writeFile(
+    getIconDataPath(rootDir),
+    `${JSON.stringify(iconsData, null, 4)}\n`,
+    'utf8',
+  );
+};
