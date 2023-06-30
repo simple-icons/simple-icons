@@ -3,7 +3,8 @@ import path from 'node:path';
 import {
   getDirnameFromImportMeta,
   htmlFriendlyToTitle,
-} from './scripts/utils.js';
+  collator,
+} from './sdk.mjs';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
@@ -46,7 +47,7 @@ const sortObjectByKey = (obj) => {
 
 const sortObjectByValue = (obj) => {
   return Object.keys(obj)
-    .sort((a, b) => ('' + obj[a]).localeCompare(obj[b]))
+    .sort((a, b) => collator.compare(obj[a], obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 };
 
@@ -805,9 +806,15 @@ export default {
         reporter.name = 'extraneous';
 
         if (!svgRegexp.test(ast.source)) {
-          reporter.error(
-            'Unexpected character(s), most likely extraneous whitespace, detected in SVG markup',
-          );
+          if (ast.source.includes('\n') || ast.source.includes('\r')) {
+            reporter.error(
+              'Unexpected newline character(s) detected in SVG markup',
+            );
+          } else {
+            reporter.error(
+              'Unexpected character(s), most likely extraneous whitespace, detected in SVG markup',
+            );
+          }
         }
       },
       (reporter, $, ast) => {
