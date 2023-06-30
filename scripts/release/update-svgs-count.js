@@ -7,7 +7,7 @@
  */
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
-import { getDirnameFromImportMeta, getIconsData } from '../utils.js';
+import { getDirnameFromImportMeta, getIconsData } from '../../sdk.mjs';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
