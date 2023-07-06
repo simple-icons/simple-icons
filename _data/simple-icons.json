@@ -2126,6 +2126,16 @@
             "source": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/02-pdf/2019-chevrolet-corvette-catalog.pdf"
         },
         {
+            "title": "Chia Network",
+            "hex": "5ECE71",
+            "source": "https://www.chia.net/branding/",
+            "guidelines": "https://www.chia.net/wp-content/uploads/2022/08/Guidelines-for-Using-Chia-Network.pdf",
+            "license": {
+                "type": "custom",
+                "url": "https://www.chia.net/wp-content/uploads/2022/08/Chia-Trademark-Policy.pdf"
+            }
+        },
+        {
             "title": "China Eastern Airlines",
             "hex": "1A2477",
             "source": "https://uk.ceair.com/newCMS/uk/en/content/en_Footer/Support/201904/t20190404_5763.html"
@@ -3322,6 +3332,12 @@
             "source": "https://www.stellantis.com/en/brands/ds"
         },
         {
+            "title": "DTS",
+            "hex": "F98B2B",
+            "source": "https://xperi.com/brands/dts/",
+            "guidelines": "https://xperi.com/terms-conditions/"
+        },
+        {
             "title": "DTube",
             "hex": "F01A30",
             "source": "https://about.d.tube/mediakit.html"
@@ -3518,6 +3534,11 @@
             "title": "Elasticsearch",
             "hex": "005571",
             "source": "https://www.elastic.co/brand"
+        },
+        {
+            "title": "Elavon",
+            "hex": "0C2074",
+            "source": "https://www.elavon.com"
         },
         {
             "title": "Electron",
@@ -7387,6 +7408,11 @@
             "source": "https://en.wikipedia.org/wiki/MIDI"
         },
         {
+            "title": "Mikrotik",
+            "hex": "293239",
+            "source": "https://mikrotik.com/aboutus"
+        },
+        {
             "title": "Minds",
             "hex": "FED12F",
             "source": "https://www.minds.com/branding",
@@ -7864,7 +7890,7 @@
         },
         {
             "title": "New Relic",
-            "hex": "008C99",
+            "hex": "1CE783",
             "source": "https://newrelic.com/about/media-assets",
             "guidelines": "https://newrelic.com/about/media-assets#guidelines"
         },
@@ -7927,6 +7953,12 @@
             "source": "https://www.nike.com"
         },
         {
+            "title": "Nikon",
+            "hex": "FFE100",
+            "source": "https://www.nikon.com",
+            "guidelines": "https://www.nikon.com/usage/group-info"
+        },
+        {
             "title": "Nim",
             "hex": "FFE953",
             "source": "https://nim-lang.org"
@@ -7984,7 +8016,7 @@
         },
         {
             "title": "Nokia",
-            "hex": "124191",
+            "hex": "005AFF",
             "source": "https://www.nokia.com"
         },
         {
@@ -8136,7 +8168,7 @@
         },
         {
             "title": "Obsidian",
-            "hex": "483699",
+            "hex": "7C3AED",
             "source": "https://obsidian.md"
         },
         {
@@ -9240,6 +9272,11 @@
             "source": "https://github.com/prettier/prettier-logo/blob/06997b307e0608ebee2044dafa0b9429d6b5a103/images/prettier-icon-clean-centred.svg"
         },
         {
+            "title": "Pretzel",
+            "hex": "1BB3A4",
+            "source": "https://www.pretzel.rocks"
+        },
+        {
             "title": "Prevention",
             "hex": "44C1C5",
             "source": "https://prevention.com"
@@ -9356,13 +9393,13 @@
         },
         {
             "title": "ProtonMail",
-            "hex": "8B89CC",
-            "source": "https://protonmail.com/media-kit"
+            "hex": "6D4AFF",
+            "source": "https://proton.me/media/kit"
         },
         {
             "title": "ProtonVPN",
-            "hex": "56B366",
-            "source": "https://protonvpn.com/press"
+            "hex": "6D4AFF",
+            "source": "https://proton.me/media/kit"
         },
         {
             "title": "Protractor",
@@ -9832,6 +9869,11 @@
             "hex": "FFFFFF",
             "source": "https://www.reasonstudios.com/press",
             "guidelines": "https://www.reasonstudios.com/press"
+        },
+        {
+            "title": "Recoil",
+            "hex": "3578E5",
+            "source": "https://recoiljs.org"
         },
         {
             "title": "Red",
@@ -10384,7 +10426,7 @@
         },
         {
             "title": "Sauce Labs",
-            "hex": "E2231A",
+            "hex": "3DDC91",
             "source": "https://saucelabs.com"
         },
         {
@@ -11802,6 +11844,12 @@
             "source": "https://teratail.com"
         },
         {
+            "title": "Termius",
+            "hex": "000000",
+            "source": "https://termius.com/brand-resources",
+            "guidelines": "https://termius.com/terms-of-use"
+        },
+        {
             "title": "Terraform",
             "hex": "7B42BC",
             "source": "https://www.hashicorp.com/brand",
@@ -12290,8 +12338,9 @@
         },
         {
             "title": "Twitter",
-            "hex": "1DA1F2",
-            "source": "https://brand.twitter.com"
+            "hex": "1D9BF0",
+            "source": "https://brand.twitter.com",
+            "guidelines": "https://about.twitter.com/en/who-we-are/brand-toolkit"
         },
         {
             "title": "Twoo",
@@ -12590,6 +12639,15 @@
             "source": "https://www.veepee.fr"
         },
         {
+            "title": "Vega",
+            "hex": "2450B2",
+            "source": "https://github.com/vega/logos/blob/af32bc29f0c09c8de826aaafb037935fb69e960a/assets/VG_Black.svg",
+            "guidelines": "https://github.com/vega/logos",
+            "license": {
+                "type": "BSD-3-Clause"
+            }
+        },
+        {
             "title": "Velog",
             "hex": "20C997",
             "source": "https://github.com/velopert/velog-client/blob/8fbbb371f4b4525b6747e54d0c608900ea8bf03e/src/static/svg/velog-icon.svg"
@@ -12708,6 +12766,11 @@
             "title": "Vitest",
             "hex": "6E9F18",
             "source": "https://vitest.dev"
+        },
+        {
+            "title": "Viva Wallet",
+            "hex": "1F263A",
+            "source": "https://www.vivawallet.com/gb_en/press-center-gb"
         },
         {
             "title": "Vivaldi",
