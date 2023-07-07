@@ -1474,12 +1474,12 @@
         {
             "title": "BBC",
             "hex": "000000",
-            "source": "https://commons.wikimedia.org/wiki/File:BBC.svg",
+            "source": "https://www.bbc.co.uk",
             "guidelines": "https://www.bbc.co.uk/branding/logo-use"
         },
         {
             "title": "BBC iPlayer",
-            "hex": "F54997",
+            "hex": "FF4C98",
             "source": "https://www.bbc.co.uk/iplayer"
         },
         {
@@ -7319,7 +7319,12 @@
         {
             "title": "Microsoft Access",
             "hex": "A4373A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Azure",
@@ -7339,12 +7344,22 @@
         {
             "title": "Microsoft Excel",
             "hex": "217346",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Exchange",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Office",
@@ -7354,12 +7369,22 @@
         {
             "title": "Microsoft OneDrive",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft OneNote",
             "hex": "7719AA",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Outlook",
@@ -7369,12 +7394,22 @@
         {
             "title": "Microsoft PowerPoint",
             "hex": "B7472A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft SharePoint",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft SQL Server",
@@ -7384,7 +7419,12 @@
         {
             "title": "Microsoft Teams",
             "hex": "6264A7",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Translator",
@@ -7394,12 +7434,22 @@
         {
             "title": "Microsoft Visio",
             "hex": "3955A3",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Word",
             "hex": "2B579A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "MicroStrategy",
@@ -10111,6 +10161,12 @@
             "hex": "0085C0",
             "source": "https://www.ripple.com/media-kit/",
             "guidelines": "https://brand.ripple.com/article/brand-policy"
+        },
+        {
+            "title": "RISC-V",
+            "hex": "283272",
+            "source": "https://riscv.org/risc-v-logo/",
+            "guidelines": "https://riscv.org/about/risc-v-branding-guidelines/"
         },
         {
             "title": "Riseup",
