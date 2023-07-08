@@ -1798,7 +1798,11 @@
         {
             "title": "Broadcom",
             "hex": "E31837",
-            "source": "https://www.broadcom.com/support"
+            "source": "https://www.broadcom.com/support",
+            "license":{
+                "type": "custom",
+                "url": "https://logorequest.broadcom.com/Home.aspx"
+            }
         },
         {
             "title": "BT",
