@@ -17,7 +17,7 @@ Over 2500 Free SVG icons for popular brands. See them all on one page at <a href
 
 ## Usage
 
-> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
+> **Note** We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
 
 ### General Usage
 
