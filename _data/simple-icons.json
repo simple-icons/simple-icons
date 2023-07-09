@@ -4361,8 +4361,9 @@
         },
         {
             "title": "Fujifilm",
-            "hex": "ED1A3A",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujifilm_logo.svg"
+            "hex": "FB0020",
+            "source": "https://www.fujifilm.com",
+            "guidelines": "https://www.fujifilm.com/us/en/terms"
         },
         {
             "title": "Fujitsu",
@@ -12044,6 +12045,11 @@
             "title": "Threadless",
             "hex": "0099FF",
             "source": "https://www.threadless.com/about-us/"
+        },
+        {
+            "title": "Threads",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:Threads_(app)_logo.svg"
         },
         {
             "title": "Three.js",

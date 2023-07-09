@@ -204,6 +204,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Arduino` | `arduino` |
 | `Argo` | `argo` |
 | `Argos` | `argos` |
+| `Ariakit` | `ariakit` |
 | `ARK Ecosystem` | `arkecosystem` |
 | `Arlo` | `arlo` |
 | `Arm` | `arm` |
@@ -1707,6 +1708,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PrestaShop` | `prestashop` |
 | `Presto` | `presto` |
 | `Prettier` | `prettier` |
+| `Pretzel` | `pretzel` |
 | `Prevention` | `prevention` |
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
@@ -1813,6 +1815,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Realm` | `realm` |
 | `Reason` | `reason` |
 | `Reason Studios` | `reasonstudios` |
+| `Recoil` | `recoil` |
 | `Red` | `red` |
 | `Red Hat` | `redhat` |
 | `Red Hat Open Shift` | `redhatopenshift` |
@@ -1855,6 +1858,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ring` | `ring` |
 | `Riot Games` | `riotgames` |
 | `Ripple` | `ripple` |
+| `RISC-V` | `riscv` |
 | `Riseup` | `riseup` |
 | `Roam Research` | `roamresearch` |
 | `Roblox` | `roblox` |
@@ -1974,6 +1978,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Simplenote` | `simplenote` |
 | `Sina Weibo` | `sinaweibo` |
 | `SingleStore` | `singlestore` |
+| `Sitecore` | `sitecore` |
 | `SitePoint` | `sitepoint` |
 | `Sketch` | `sketch` |
 | `Sketchfab` | `sketchfab` |
@@ -2194,6 +2199,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Thingiverse` | `thingiverse` |
 | `ThinkPad` | `thinkpad` |
 | `Threadless` | `threadless` |
+| `Threads` | `threads` |
 | `Three.js` | `threedotjs` |
 | `Threema` | `threema` |
 | `Thumbtack` | `thumbtack` |
@@ -2375,6 +2381,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Warp` | `warp` |
+| `Wasabi` | `wasabi` |
 | `wasmCloud` | `wasmcloud` |
 | `Wasmer` | `wasmer` |
 | `Wattpad` | `wattpad` |
