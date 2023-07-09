@@ -11,7 +11,7 @@ body:
         closed issues) before you continue.
 
 
-        [docs-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Adocs+is%3Aopen
+        [docs-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Adocs
 
   - type: dropdown
     attributes:
@@ -41,7 +41,7 @@ body:
         This is an open source project and we welcome contributions. Do you want to
         work on this issue?
       options:
-        - "Yes"
-        - "No"
+        - 'Yes'
+        - 'No'
     validations:
       required: true
