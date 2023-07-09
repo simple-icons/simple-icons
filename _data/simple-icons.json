@@ -1090,6 +1090,11 @@
             "source": "https://www.argos.co.uk"
         },
         {
+            "title": "Ariakit",
+            "hex": "007ACC",
+            "source": "https://github.com/ariakit/ariakit/blob/a739913ab1c3919c4353f0e0e3573ec6eda99549/logo/icon.svg"
+        },
+        {
             "title": "ARK Ecosystem",
             "hex": "C9292C",
             "source": "https://ark.io/press-kit"
@@ -1469,12 +1474,12 @@
         {
             "title": "BBC",
             "hex": "000000",
-            "source": "https://commons.wikimedia.org/wiki/File:BBC.svg",
+            "source": "https://www.bbc.co.uk",
             "guidelines": "https://www.bbc.co.uk/branding/logo-use"
         },
         {
             "title": "BBC iPlayer",
-            "hex": "F54997",
+            "hex": "FF4C98",
             "source": "https://www.bbc.co.uk/iplayer"
         },
         {
@@ -1792,8 +1797,12 @@
         },
         {
             "title": "Broadcom",
-            "hex": "CC092F",
-            "source": "https://en.wikipedia.org/wiki/Broadcom_Inc"
+            "hex": "E31837",
+            "source": "https://www.broadcom.com/support",
+            "license": {
+                "type": "custom",
+                "url": "https://logorequest.broadcom.com/Home.aspx"
+            }
         },
         {
             "title": "BT",
@@ -2128,7 +2137,7 @@
         {
             "title": "Chia Network",
             "hex": "5ECE71",
-            "source": "https://www.chia.net/wp-content/uploads/2023/06/chia_icon_green-hex5ECE71.svg",
+            "source": "https://www.chia.net/branding/",
             "guidelines": "https://www.chia.net/wp-content/uploads/2022/08/Guidelines-for-Using-Chia-Network.pdf",
             "license": {
                 "type": "custom",
@@ -3536,6 +3545,11 @@
             "source": "https://www.elastic.co/brand"
         },
         {
+            "title": "Elavon",
+            "hex": "0C2074",
+            "source": "https://www.elavon.com"
+        },
+        {
             "title": "Electron",
             "hex": "47848F",
             "source": "https://www.electronjs.org"
@@ -4347,8 +4361,9 @@
         },
         {
             "title": "Fujifilm",
-            "hex": "ED1A3A",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujifilm_logo.svg"
+            "hex": "FB0020",
+            "source": "https://www.fujifilm.com",
+            "guidelines": "https://www.fujifilm.com/us/en/terms"
         },
         {
             "title": "Fujitsu",
@@ -7309,7 +7324,12 @@
         {
             "title": "Microsoft Access",
             "hex": "A4373A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Azure",
@@ -7329,12 +7349,22 @@
         {
             "title": "Microsoft Excel",
             "hex": "217346",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Exchange",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Office",
@@ -7344,12 +7374,22 @@
         {
             "title": "Microsoft OneDrive",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft OneNote",
             "hex": "7719AA",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Outlook",
@@ -7359,12 +7399,22 @@
         {
             "title": "Microsoft PowerPoint",
             "hex": "B7472A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft SharePoint",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft SQL Server",
@@ -7374,7 +7424,12 @@
         {
             "title": "Microsoft Teams",
             "hex": "6264A7",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Translator",
@@ -7384,12 +7439,22 @@
         {
             "title": "Microsoft Visio",
             "hex": "3955A3",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Word",
             "hex": "2B579A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "MicroStrategy",
@@ -7885,7 +7950,7 @@
         },
         {
             "title": "New Relic",
-            "hex": "008C99",
+            "hex": "1CE783",
             "source": "https://newrelic.com/about/media-assets",
             "guidelines": "https://newrelic.com/about/media-assets#guidelines"
         },
@@ -8011,7 +8076,7 @@
         },
         {
             "title": "Nokia",
-            "hex": "124191",
+            "hex": "005AFF",
             "source": "https://www.nokia.com"
         },
         {
@@ -8163,7 +8228,7 @@
         },
         {
             "title": "Obsidian",
-            "hex": "483699",
+            "hex": "7C3AED",
             "source": "https://obsidian.md"
         },
         {
@@ -9267,6 +9332,11 @@
             "source": "https://github.com/prettier/prettier-logo/blob/06997b307e0608ebee2044dafa0b9429d6b5a103/images/prettier-icon-clean-centred.svg"
         },
         {
+            "title": "Pretzel",
+            "hex": "1BB3A4",
+            "source": "https://www.pretzel.rocks"
+        },
+        {
             "title": "Prevention",
             "hex": "44C1C5",
             "source": "https://prevention.com"
@@ -9378,7 +9448,7 @@
         },
         {
             "title": "Proton Drive",
-            "hex": "EF548C",
+            "hex": "EB508D",
             "source": "https://proton.me/media/kit"
         },
         {
@@ -9866,6 +9936,11 @@
             "guidelines": "https://www.reasonstudios.com/press"
         },
         {
+            "title": "Recoil",
+            "hex": "3578E5",
+            "source": "https://recoiljs.org"
+        },
+        {
             "title": "Red",
             "hex": "B32629",
             "source": "https://www.red-lang.org"
@@ -10096,6 +10171,12 @@
             "hex": "0085C0",
             "source": "https://www.ripple.com/media-kit/",
             "guidelines": "https://brand.ripple.com/article/brand-policy"
+        },
+        {
+            "title": "RISC-V",
+            "hex": "283272",
+            "source": "https://riscv.org/risc-v-logo/",
+            "guidelines": "https://riscv.org/about/risc-v-branding-guidelines/"
         },
         {
             "title": "Riseup",
@@ -10410,7 +10491,7 @@
         },
         {
             "title": "Sauce Labs",
-            "hex": "E2231A",
+            "hex": "3DDC91",
             "source": "https://saucelabs.com"
         },
         {
@@ -10750,6 +10831,11 @@
             "title": "SingleStore",
             "hex": "AA00FF",
             "source": "https://www.singlestore.com/brand/"
+        },
+        {
+            "title": "Sitecore",
+            "hex": "EB1F1F",
+            "source": "https://www.sitecore.com"
         },
         {
             "title": "SitePoint",
@@ -11966,6 +12052,11 @@
             "source": "https://www.threadless.com/about-us/"
         },
         {
+            "title": "Threads",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:Threads_(app)_logo.svg"
+        },
+        {
             "title": "Three.js",
             "hex": "000000",
             "source": "https://github.com/mrdoob/three.js/blob/a567b810cfcb7f6a03e4faea99f03c53081da477/files/icon.svg"
@@ -12752,6 +12843,11 @@
             "source": "https://vitest.dev"
         },
         {
+            "title": "Viva Wallet",
+            "hex": "1F263A",
+            "source": "https://www.vivawallet.com/gb_en/press-center-gb"
+        },
+        {
             "title": "Vivaldi",
             "hex": "EF3939",
             "source": "https://vivaldi.com/press/"
@@ -12918,6 +13014,11 @@
             "title": "Warp",
             "hex": "01A4FF",
             "source": "https://warp.dev"
+        },
+        {
+            "title": "Wasabi",
+            "hex": "01CD3E",
+            "source": "https://wasabi.com"
         },
         {
             "title": "wasmCloud",

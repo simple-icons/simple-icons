@@ -204,6 +204,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Arduino` | `arduino` |
 | `Argo` | `argo` |
 | `Argos` | `argos` |
+| `Ariakit` | `ariakit` |
 | `ARK Ecosystem` | `arkecosystem` |
 | `Arlo` | `arlo` |
 | `Arm` | `arm` |
@@ -403,6 +404,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chef` | `chef` |
 | `Chemex` | `chemex` |
 | `Chevrolet` | `chevrolet` |
+| `Chia Network` | `chianetwork` |
 | `China Eastern Airlines` | `chinaeasternairlines` |
 | `China Southern Airlines` | `chinasouthernairlines` |
 | `Chocolatey` | `chocolatey` |
@@ -627,6 +629,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dropbox` | `dropbox` |
 | `Drupal` | `drupal` |
 | `DS Automobiles` | `dsautomobiles` |
+| `DTS` | `dts` |
 | `DTube` | `dtube` |
 | `Ducati` | `ducati` |
 | `DuckDB` | `duckdb` |
@@ -662,6 +665,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Elastic Cloud` | `elasticcloud` |
 | `Elastic Stack` | `elasticstack` |
 | `Elasticsearch` | `elasticsearch` |
+| `Elavon` | `elavon` |
 | `Electron` | `electron` |
 | `Electron Fiddle` | `electronfiddle` |
 | `electron-builder` | `electronbuilder` |
@@ -1372,6 +1376,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Microsoft Word` | `microsoftword` |
 | `MicroStrategy` | `microstrategy` |
 | `MIDI` | `midi` |
+| `Mikrotik` | `mikrotik` |
 | `Minds` | `minds` |
 | `Minecraft` | `minecraft` |
 | `Minetest` | `minetest` |
@@ -1464,6 +1469,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ngrok` | `ngrok` |
 | `niconico` | `niconico` |
 | `Nike` | `nike` |
+| `Nikon` | `nikon` |
 | `Nim` | `nim` |
 | `Nintendo` | `nintendo` |
 | `Nintendo 3DS` | `nintendo3ds` |
@@ -1702,6 +1708,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PrestaShop` | `prestashop` |
 | `Presto` | `presto` |
 | `Prettier` | `prettier` |
+| `Pretzel` | `pretzel` |
 | `Prevention` | `prevention` |
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
@@ -1808,6 +1815,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Realm` | `realm` |
 | `Reason` | `reason` |
 | `Reason Studios` | `reasonstudios` |
+| `Recoil` | `recoil` |
 | `Red` | `red` |
 | `Red Hat` | `redhat` |
 | `Red Hat Open Shift` | `redhatopenshift` |
@@ -1850,6 +1858,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ring` | `ring` |
 | `Riot Games` | `riotgames` |
 | `Ripple` | `ripple` |
+| `RISC-V` | `riscv` |
 | `Riseup` | `riseup` |
 | `Roam Research` | `roamresearch` |
 | `Roblox` | `roblox` |
@@ -1969,6 +1978,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Simplenote` | `simplenote` |
 | `Sina Weibo` | `sinaweibo` |
 | `SingleStore` | `singlestore` |
+| `Sitecore` | `sitecore` |
 | `SitePoint` | `sitepoint` |
 | `Sketch` | `sketch` |
 | `Sketchfab` | `sketchfab` |
@@ -2165,6 +2175,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TensorFlow` | `tensorflow` |
 | `Teradata` | `teradata` |
 | `teratail` | `teratail` |
+| `Termius` | `termius` |
 | `Terraform` | `terraform` |
 | `Tesco` | `tesco` |
 | `Tesla` | `tesla` |
@@ -2188,6 +2199,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Thingiverse` | `thingiverse` |
 | `ThinkPad` | `thinkpad` |
 | `Threadless` | `threadless` |
+| `Threads` | `threads` |
 | `Three.js` | `threedotjs` |
 | `Threema` | `threema` |
 | `Thumbtack` | `thumbtack` |
@@ -2313,6 +2325,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vectorworks` | `vectorworks` |
 | `Veeam` | `veeam` |
 | `Veepee` | `veepee` |
+| `Vega` | `vega` |
 | `Velog` | `velog` |
 | `Venmo` | `venmo` |
 | `Vercel` | `vercel` |
@@ -2336,6 +2349,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vite` | `vite` |
 | `Vitess` | `vitess` |
 | `Vitest` | `vitest` |
+| `Viva Wallet` | `vivawallet` |
 | `Vivaldi` | `vivaldi` |
 | `Vivino` | `vivino` |
 | `VK` | `vk` |
@@ -2367,6 +2381,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Warp` | `warp` |
+| `Wasabi` | `wasabi` |
 | `wasmCloud` | `wasmcloud` |
 | `Wasmer` | `wasmer` |
 | `Wattpad` | `wattpad` |
