@@ -1797,8 +1797,12 @@
         },
         {
             "title": "Broadcom",
-            "hex": "CC092F",
-            "source": "https://en.wikipedia.org/wiki/Broadcom_Inc"
+            "hex": "E31837",
+            "source": "https://www.broadcom.com/support",
+            "license": {
+                "type": "custom",
+                "url": "https://logorequest.broadcom.com/Home.aspx"
+            }
         },
         {
             "title": "BT",
@@ -4357,8 +4361,9 @@
         },
         {
             "title": "Fujifilm",
-            "hex": "ED1A3A",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujifilm_logo.svg"
+            "hex": "FB0020",
+            "source": "https://www.fujifilm.com",
+            "guidelines": "https://www.fujifilm.com/us/en/terms"
         },
         {
             "title": "Fujitsu",
@@ -9438,7 +9443,7 @@
         },
         {
             "title": "Proton Drive",
-            "hex": "EF548C",
+            "hex": "EB508D",
             "source": "https://proton.me/media/kit"
         },
         {
@@ -9453,7 +9458,7 @@
         },
         {
             "title": "ProtonVPN",
-            "hex": "6D4AFF",
+            "hex": "66DEB1",
             "source": "https://proton.me/media/kit"
         },
         {
@@ -11199,6 +11204,17 @@
             "title": "Speedtest",
             "hex": "141526",
             "source": "https://www.speedtest.net"
+        },
+        {
+            "title": "Sphere Online Judge",
+            "slug": "spoj",
+            "aliases": {
+                "aka": [
+                    "SPOJ"
+                ]
+            },
+            "hex": "337AB7",
+            "source": "https://www.spoj.com"
         },
         {
             "title": "Spinnaker",
