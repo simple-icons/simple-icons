@@ -61,8 +61,8 @@ Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://dev
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/0cf9" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff99" />
-<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/orange/pink">
-<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/_/eee">
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/orange/pink" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/_/eee" />
 ```
 
 ### Node Usage <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/nodedotjs-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg" alt="Node" align=left width=24></picture>
