@@ -11,7 +11,7 @@ body:
         closed issues) before you continue.
 
 
-        [package-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Apackage+is%3Aopen
+        [package-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Apackage
 
   - type: dropdown
     attributes:
@@ -34,7 +34,7 @@ body:
   - type: input
     attributes:
       label: Package Version
-      placeholder: "Example: 5.11.0"
+      placeholder: 'Example: 5.11.0'
     validations:
       required: true
 
@@ -59,6 +59,6 @@ body:
         - For bugs: "Steps to reproduce" and "Expected behavior"
         - For feature requests: An example of a use case
         - For performance: An example where performance is poor
-      placeholder: "Example: The NPM package does not work for my use case..."
+      placeholder: 'Example: The NPM package does not work for my use case...'
     validations:
       required: true
