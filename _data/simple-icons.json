@@ -1797,8 +1797,12 @@
         },
         {
             "title": "Broadcom",
-            "hex": "CC092F",
-            "source": "https://en.wikipedia.org/wiki/Broadcom_Inc"
+            "hex": "E31837",
+            "source": "https://www.broadcom.com/support",
+            "license": {
+                "type": "custom",
+                "url": "https://logorequest.broadcom.com/Home.aspx"
+            }
         },
         {
             "title": "BT",
@@ -2813,7 +2817,7 @@
         },
         {
             "title": "CurseForge",
-            "hex": "6441A4",
+            "hex": "F16436",
             "source": "https://www.curseforge.com"
         },
         {
@@ -2853,8 +2857,8 @@
         },
         {
             "title": "Dacia",
-            "hex": "122AFF",
-            "source": "https://www.dacia.ro"
+            "hex": "646B52",
+            "source": "https://commons.wikimedia.org/wiki/File:Dacia-Logo-2021.svg"
         },
         {
             "title": "DAF",
@@ -2915,8 +2919,8 @@
         },
         {
             "title": "Dask",
-            "hex": "FDA061",
-            "source": "https://github.com/dask/dask/blob/fc911b6d481e602f7549eecb180c3f7622260001/docs/source/images/dask_icon.svg"
+            "hex": "FC6E6B",
+            "source": "https://github.com/dask/dask/blob/67e648922512615f94f8a90726423e721d0e3eb2/docs/source/images/dask_icon_black.svg"
         },
         {
             "title": "Dassault Systèmes",
@@ -4357,8 +4361,9 @@
         },
         {
             "title": "Fujifilm",
-            "hex": "ED1A3A",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fujifilm_logo.svg"
+            "hex": "FB0020",
+            "source": "https://www.fujifilm.com",
+            "guidelines": "https://www.fujifilm.com/us/en/terms"
         },
         {
             "title": "Fujitsu",
@@ -6643,6 +6648,11 @@
             "source": "https://lgtm.com"
         },
         {
+            "title": "Libera.Chat",
+            "hex": "FF55DD",
+            "source": "https://libera.chat"
+        },
+        {
             "title": "Liberapay",
             "hex": "F6C915",
             "source": "https://en.liberapay.com/about/logos",
@@ -7106,6 +7116,11 @@
             "title": "Matternet",
             "hex": "261C29",
             "source": "https://mttr.net"
+        },
+        {
+            "title": "Mautic",
+            "hex": "4E5E9E",
+            "source": "https://www.mautic.org/about/logos-and-graphics"
         },
         {
             "title": "Max",
@@ -9438,7 +9453,7 @@
         },
         {
             "title": "Proton Drive",
-            "hex": "EF548C",
+            "hex": "EB508D",
             "source": "https://proton.me/media/kit"
         },
         {
@@ -9453,7 +9468,7 @@
         },
         {
             "title": "ProtonVPN",
-            "hex": "6D4AFF",
+            "hex": "66DEB1",
             "source": "https://proton.me/media/kit"
         },
         {
@@ -9466,6 +9481,11 @@
             "hex": "E57000",
             "source": "https://www.proxmox.com/en/news/media-kit",
             "guidelines": "https://www.proxmox.com/en/news/media-kit"
+        },
+        {
+            "title": "Pterodactyl",
+            "hex": "10539F",
+            "source": "https://github.com/pterodactyl/panel/blob/eaf46429f2a001469fb5f18f7891ce8e5be7f049/public/favicons/favicon-96x96.png"
         },
         {
             "title": "PUBG",
@@ -10539,8 +10559,8 @@
         {
             "title": "Scribd",
             "hex": "1E7B85",
-            "source": "https://scribdbrand.frontify.com/d/eqGJ2WET8x3A/scribd-brand-style-guide#/other/media-press-kit/download-horizontal-vertical-logos-for-small-applications",
-            "guidelines": "https://scribdbrand.frontify.com/d/eqGJ2WET8x3A/scribd-brand-style-guide#/basics/logo-usage-guidelines-1576192924"
+            "source": "https://brand.scribd.com/d/oFZcsq7FVpSh/about-scribd#/media-press-kit/downloads",
+            "guidelines": "https://brand.scribd.com/d/oFZcsq7FVpSh/about-scribd#/marketing-visual-guidelines/our-logo/our-logomark"
         },
         {
             "title": "Scrimba",
@@ -11199,6 +11219,17 @@
             "title": "Speedtest",
             "hex": "141526",
             "source": "https://www.speedtest.net"
+        },
+        {
+            "title": "Sphere Online Judge",
+            "slug": "spoj",
+            "aliases": {
+                "aka": [
+                    "SPOJ"
+                ]
+            },
+            "hex": "337AB7",
+            "source": "https://www.spoj.com"
         },
         {
             "title": "Spinnaker",
@@ -12441,7 +12472,7 @@
         {
             "title": "Ubiquiti",
             "hex": "0559C9",
-            "source": "https://www.ui.com/marketing/#logos"
+            "source": "https://www.ui.com"
         },
         {
             "title": "Ubisoft",
