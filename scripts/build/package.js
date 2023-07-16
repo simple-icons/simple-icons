@@ -63,8 +63,10 @@ const build = async () => {
       escape(icon.path),
       escape(icon.source),
       escape(icon.hex),
-      icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
-      licenseToObject(icon.license),
+      icon.guidelines ? `\n  guidelines: '${escape(icon.guidelines)}',` : '',
+      licenseToObject(icon.license)
+        ? `\n  license: ${JSON.stringify(licenseToObject(icon.license))},`
+        : '',
     );
   };
   const writeJs = async (filepath, rawJavaScript, opts = null) => {
