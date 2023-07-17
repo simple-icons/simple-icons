@@ -23,7 +23,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: simple-icons/release-action@5edfadcb9d0fcced712defd84c26d8fd3913beb9
+      - uses: LitoMore/simple-icons-release-action@9969e1266c9e470fe015dbd825a2897423e9270e
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
