@@ -624,6 +624,11 @@
             "guidelines": "https://aws.amazon.com/architecture/icons/"
         },
         {
+            "title": "Amazon Luna",
+            "hex": "9146FF",
+            "source": "https://luna.amazon.com"
+        },
+        {
             "title": "Amazon Pay",
             "hex": "FF9900",
             "source": "https://pay.amazon.com"
@@ -6923,16 +6928,6 @@
             "title": "Lumen",
             "hex": "E74430",
             "source": "https://lumen.laravel.com"
-        },
-        {
-            "title": "Luna",
-            "hex": "9146FF",
-            "source": "https://luna.amazon.com",
-            "aliases": {
-                "aka": [
-                    "Amazon Luna"
-                ]
-            }
         },
         {
             "title": "Lunacy",
