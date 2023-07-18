@@ -2,11 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { describe, test } from 'mocha';
 import { strict as assert } from 'node:assert';
-import {
-  getThirdPartyExtensions,
-  getDirnameFromImportMeta,
-  URL_REGEX,
-} from '../scripts/utils.js';
+import { getThirdPartyExtensions, getDirnameFromImportMeta } from '../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const root = path.dirname(__dirname);
