@@ -27,8 +27,8 @@
         },
         {
             "title": "1Password",
-            "hex": "0094F5",
-            "source": "https://1password.com/press/"
+            "hex": "1A285F",
+            "source": "https://1password.com"
         },
         {
             "title": "3M",
@@ -239,7 +239,7 @@
         {
             "title": "Adobe XD",
             "hex": "FF61F6",
-            "source": "https://www.adobe.com/products/xd.html"
+            "source": "https://commons.wikimedia.org/wiki/File:Adobe_XD_CC_icon.svg"
         },
         {
             "title": "AdonisJS",
@@ -622,6 +622,11 @@
             "hex": "66459B",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
+            "title": "Amazon Luna",
+            "hex": "9146FF",
+            "source": "https://luna.amazon.com"
         },
         {
             "title": "Amazon Pay",
@@ -1254,6 +1259,11 @@
             "title": "Auth0",
             "hex": "EB5424",
             "source": "https://styleguide.auth0.com"
+        },
+        {
+            "title": "Authelia",
+            "hex": "113155",
+            "source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg"
         },
         {
             "title": "Authy",
@@ -1938,6 +1948,11 @@
             "source": "https://cachethq.io/press"
         },
         {
+            "title": "Caddy",
+            "hex": "1F88C0",
+            "source": "https://caddyserver.com"
+        },
+        {
             "title": "Cadillac",
             "hex": "000000",
             "source": "https://www.cadillac.com",
@@ -2087,6 +2102,11 @@
             "title": "Chakra UI",
             "hex": "319795",
             "source": "https://github.com/chakra-ui/chakra-ui/blob/327e1624d22936abb43068e1f57054e43c9c6819/logo/logomark-colored.svg"
+        },
+        {
+            "title": "Channel 4",
+            "hex": "AAFF89",
+            "source": "https://www.channel4.com"
         },
         {
             "title": "Chart.js",
@@ -2822,7 +2842,7 @@
         },
         {
             "title": "CurseForge",
-            "hex": "6441A4",
+            "hex": "F16436",
             "source": "https://www.curseforge.com"
         },
         {
@@ -3976,6 +3996,11 @@
             "slug": "ferrarinv",
             "hex": "EB2E2C",
             "source": "https://corporate.ferrari.com"
+        },
+        {
+            "title": "FerretDB",
+            "hex": "042133",
+            "source": "https://github.com/FerretDB/FerretDB/blob/1176606075dfe52225ce0cd1bbd0cd06128f8599/website/static/img/logo.svg"
         },
         {
             "title": "FFmpeg",
@@ -5404,6 +5429,11 @@
             "source": "https://www.hotjar.com"
         },
         {
+            "title": "Hotwire",
+            "hex": "FFE801",
+            "source": "https://hotwired.dev"
+        },
+        {
             "title": "Houdini",
             "hex": "FF4713",
             "source": "https://www.sidefx.com/products/houdini/"
@@ -5659,6 +5689,11 @@
             "title": "Indeed",
             "hex": "003A9B",
             "source": "https://indeed.design/resources"
+        },
+        {
+            "title": "Inertia",
+            "hex": "9553E9",
+            "source": "https://inertiajs.com"
         },
         {
             "title": "Infiniti",
@@ -6085,6 +6120,11 @@
             "title": "JSS",
             "hex": "F7DF1E",
             "source": "https://cssinjs.org"
+        },
+        {
+            "title": "Juejin",
+            "hex": "007FFF",
+            "source": "https://juejin.cn"
         },
         {
             "title": "JUKE",
@@ -6633,8 +6673,9 @@
         },
         {
             "title": "Letterboxd",
-            "hex": "00D735",
-            "source": "https://letterboxd.com/about/logos/"
+            "hex": "202830",
+            "source": "https://letterboxd.com/about/brand/",
+            "guidelines": "https://letterboxd.com/about/brand/"
         },
         {
             "title": "levels.fyi",
@@ -6651,6 +6692,11 @@
             "title": "LGTM",
             "hex": "FFFFFF",
             "source": "https://lgtm.com"
+        },
+        {
+            "title": "Libera.Chat",
+            "hex": "FF55DD",
+            "source": "https://libera.chat"
         },
         {
             "title": "Liberapay",
@@ -7300,6 +7346,11 @@
             "hex": "FF0000",
             "source": "https://www.mg.co.uk/themes/custom/mg/assets/images/svg/mg-logo-desktop.svg",
             "guidelines": "https://www.mg.co.uk/terms-and-conditions"
+        },
+        {
+            "title": "Micro Editor",
+            "hex": "2E3192",
+            "source": "https://github.com/zyedidia/micro/blob/48645907ec55798b75723019dad75dba51bd97d7/assets/micro-logo-mark.svg"
         },
         {
             "title": "micro:bit",
@@ -8437,6 +8488,11 @@
             "title": "OpenProject",
             "hex": "0770B8",
             "source": "https://www.openproject.org/press/"
+        },
+        {
+            "title": "OpenSCAD",
+            "hex": "F9D72C",
+            "source": "https://commons.wikimedia.org/wiki/File:Openscad.svg"
         },
         {
             "title": "OpenSea",
@@ -10110,6 +10166,11 @@
             "source": "https://github.com/RetroPie/RetroPie-Docs/blob/c4e882bd2c9d740c591ff346e07a4a4cb536ca93/images/logo.svg"
         },
         {
+            "title": "ReVanced",
+            "hex": "9ED5FF",
+            "source": "https://revanced.app"
+        },
+        {
             "title": "reveal.js",
             "hex": "F2E142",
             "source": "https://revealjs.com"
@@ -11388,6 +11449,11 @@
             "source": "https://staffbase.com/en/about/press-assets/"
         },
         {
+            "title": "Standard Resume",
+            "hex": "2A3FFB",
+            "source": "https://standardresume.co/press"
+        },
+        {
             "title": "StandardJS",
             "hex": "F3DF49",
             "source": "https://github.com/standard/standard/blob/6516bf87f127b7968c34cac0100d48d6c455a891/sticker.svg"
@@ -12113,6 +12179,11 @@
             "source": "https://tidal.com"
         },
         {
+            "title": "TiddlyWiki",
+            "hex": "111111",
+            "source": "https://tiddlywiki.com"
+        },
+        {
             "title": "Tide",
             "hex": "4050FB",
             "source": "https://www.tide.co/newsroom/"
@@ -12395,6 +12466,11 @@
             "title": "TuneIn",
             "hex": "14D8CC",
             "source": "https://cms.tunein.com/press/"
+        },
+        {
+            "title": "Turbo",
+            "hex": "5CD8E5",
+            "source": "https://turbo.hotwired.dev"
         },
         {
             "title": "Turborepo",
@@ -13161,6 +13237,12 @@
             "title": "WEBTOON",
             "hex": "00D564",
             "source": "https://webtoons.com"
+        },
+        {
+            "title": "webtrees",
+            "hex": "2694E8",
+            "source": "https://webtrees.net",
+            "guidelines": "https://wtwi.jprodina.cz/index.php?title=Logo_webtrees"
         },
         {
             "title": "WeChat",

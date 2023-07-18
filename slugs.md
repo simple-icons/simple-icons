@@ -1232,6 +1232,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `levels.fyi` | `levelsdotfyi` |
 | `LG` | `lg` |
 | `LGTM` | `lgtm` |
+| `Libera.Chat` | `liberadotchat` |
 | `Liberapay` | `liberapay` |
 | `Libraries.io` | `librariesdotio` |
 | `LibraryThing` | `librarything` |
@@ -1318,6 +1319,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Matter.js` | `matterdotjs` |
 | `Mattermost` | `mattermost` |
 | `Matternet` | `matternet` |
+| `Mautic` | `mautic` |
 | `Max` | `max` |
 | `Max-Planck-Gesellschaft` | `maxplanckgesellschaft` |
 | `Maytag` | `maytag` |
@@ -1735,6 +1737,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ProtonVPN` | `protonvpn` |
 | `Protractor` | `protractor` |
 | `Proxmox` | `proxmox` |
+| `Pterodactyl` | `pterodactyl` |
 | `PUBG` | `pubg` |
 | `Publons` | `publons` |
 | `PubMed` | `pubmed` |
@@ -2046,6 +2049,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Speaker Deck` | `speakerdeck` |
 | `Spectrum` | `spectrum` |
 | `Speedtest` | `speedtest` |
+| `Sphere Online Judge` | `spoj` |
 | `Spinnaker` | `spinnaker` |
 | `Spinrilla` | `spinrilla` |
 | `Splunk` | `splunk` |
