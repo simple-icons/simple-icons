@@ -1133,7 +1133,8 @@
         {
             "title": "arXiv",
             "hex": "B31B1B",
-            "source": "https://static.arxiv.org/static/base/0.15.2/images/arxiv-logo-web.svg"
+            "source": "https://arxiv.org",
+            "guidelines": "https://arxiv.org/about/brand"
         },
         {
             "title": "Asana",
@@ -5287,6 +5288,11 @@
             "source": "https://www.headspace.com/press-and-media"
         },
         {
+            "title": "hearthis.at",
+            "hex": "000000",
+            "source": "https://hearthis.at"
+        },
+        {
             "title": "Hedera",
             "hex": "222222",
             "source": "https://hederabrandcentral.frontify.com/d/Tmocz52AXpLj/brand-assets#/brand-assets/brand-identity/our-hbar-logomark",
@@ -6048,6 +6054,12 @@
             "title": "JFrog Bintray",
             "hex": "43A047",
             "source": "https://bintray.com"
+        },
+        {
+            "title": "JFrog Pipelines",
+            "hex": "40BE46",
+            "source": "https://jfrog.com/pipelines/",
+            "guidelines": "https://jfrog.com/brand-guidelines/"
         },
         {
             "title": "Jinja",
@@ -7544,6 +7556,11 @@
                 "type": "custom",
                 "url": "https://aka.ms/fluentui-assets-license"
             }
+        },
+        {
+            "title": "Microstation",
+            "hex": "62BB47",
+            "source": "https://www.bentley.com/software/microstation"
         },
         {
             "title": "MicroStrategy",
