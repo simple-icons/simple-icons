@@ -8849,7 +8849,12 @@
         {
             "title": "Pearson",
             "hex": "000000",
-            "source": "https://www.pearson.com"
+            "source": "https://www.pearson.com",
+            "aliases": {
+                "aka": [
+                    "Pearson VUE"
+                ]
+            }
         },
         {
             "title": "PeerTube",
