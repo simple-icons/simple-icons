@@ -360,6 +360,11 @@
             "source": "https://www.airfrance.fr"
         },
         {
+            "title": "Air India",
+            "hex": "D9000D",
+            "source": "https://www.airindia.com"
+        },
+        {
             "title": "AirAsia",
             "hex": "FF0000",
             "source": "https://www.airasia.com/shop"
@@ -1133,7 +1138,8 @@
         {
             "title": "arXiv",
             "hex": "B31B1B",
-            "source": "https://static.arxiv.org/static/base/0.15.2/images/arxiv-logo-web.svg"
+            "source": "https://arxiv.org",
+            "guidelines": "https://arxiv.org/about/brand"
         },
         {
             "title": "Asana",
@@ -4110,7 +4116,8 @@
         {
             "title": "FIRST",
             "hex": "0066B3",
-            "source": "https://www.firstinspires.org/brand"
+            "source": "https://www.firstinspires.org/brand",
+            "guidelines": "https://www.firstinspires.org/brand"
         },
         {
             "title": "Fitbit",
@@ -5126,8 +5133,8 @@
         },
         {
             "title": "Gumroad",
-            "hex": "36A9AE",
-            "source": "https://gumroad.com/press"
+            "hex": "FF90E8",
+            "source": "https://gumroad.com"
         },
         {
             "title": "Gumtree",
@@ -5289,6 +5296,11 @@
             "title": "Headspace",
             "hex": "F47D31",
             "source": "https://www.headspace.com/press-and-media"
+        },
+        {
+            "title": "hearthis.at",
+            "hex": "000000",
+            "source": "https://hearthis.at"
         },
         {
             "title": "Hedera",
@@ -6054,6 +6066,12 @@
             "source": "https://bintray.com"
         },
         {
+            "title": "JFrog Pipelines",
+            "hex": "40BE46",
+            "source": "https://jfrog.com/pipelines/",
+            "guidelines": "https://jfrog.com/brand-guidelines/"
+        },
+        {
             "title": "Jinja",
             "hex": "B41717",
             "source": "https://github.com/pallets/jinja/blob/1c240154865a7b6034033027e3c2ca8a2fa53fc2/artwork/jinjalogo.svg"
@@ -6451,6 +6469,12 @@
             "source": "https://www.koc.com.tr/en"
         },
         {
+            "title": "Kodak",
+            "hex": "ED0000",
+            "source": "https://www.kodak.com",
+            "guidelines": "https://www.kodak.com/en/company/page/site-terms"
+        },
+        {
             "title": "Kodi",
             "hex": "17B2E7",
             "source": "https://kodi.tv"
@@ -6646,6 +6670,12 @@
             "title": "Legacy Games",
             "hex": "144B9E",
             "source": "https://legacygames.com"
+        },
+        {
+            "title": "Leica",
+            "hex": "E20612",
+            "source": "https://leica-camera.com",
+            "guidelines": "https://leica-camera.com/en-US/legal-notices"
         },
         {
             "title": "Lemmy",
@@ -7544,6 +7574,11 @@
             }
         },
         {
+            "title": "Microstation",
+            "hex": "62BB47",
+            "source": "https://www.bentley.com/software/microstation"
+        },
+        {
             "title": "MicroStrategy",
             "hex": "D9232E",
             "source": "https://www.microstrategy.com/en/company/press-kit",
@@ -7695,6 +7730,12 @@
             "title": "Mongoose",
             "hex": "880000",
             "source": "https://github.com/Automattic/mongoose/blob/7971a4dbd55888f0b005e65b06024109af8352f7/docs/images/mongoose.svg"
+        },
+        {
+            "title": "Mongoose",
+            "hex": "F04D35",
+            "slug": "mongoosedotws",
+            "source": "https://mongoose.ws"
         },
         {
             "title": "Monica",
@@ -8047,6 +8088,11 @@
             "source": "https://www.nytimes.com"
         },
         {
+            "title": "Newegg",
+            "hex": "E05E00",
+            "source": "https://www.newegg.com"
+        },
+        {
             "title": "Next.js",
             "hex": "000000",
             "source": "https://nextjs.org"
@@ -8066,6 +8112,12 @@
             "title": "Nextdoor",
             "hex": "8ED500",
             "source": "https://about.nextdoor.com/us-media/"
+        },
+        {
+            "title": "Nextra",
+            "hex": "000000",
+            "source": "https://nextra.site",
+            "guidelines": "https://nextra.site/about#design-assets"
         },
         {
             "title": "NFC",
@@ -9539,6 +9591,11 @@
             "source": "https://proton.me/media/kit"
         },
         {
+            "title": "Proton Calendar",
+            "hex": "50B0E9",
+            "source": "https://proton.me/media/kit"
+        },
+        {
             "title": "Proton Drive",
             "hex": "EB508D",
             "source": "https://proton.me/media/kit"
@@ -10560,6 +10617,15 @@
             "title": "SanDisk",
             "hex": "ED1C24",
             "source": "https://kb.sandisk.com"
+        },
+        {
+            "title": "Sanity",
+            "hex": "F03E2F",
+            "source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/LICENSE"
+            }
         },
         {
             "title": "São Paulo Metro",
@@ -11663,6 +11729,11 @@
             "source": "https://www.stubhub.com"
         },
         {
+            "title": "Studio 3T",
+            "hex": "17AF66",
+            "source": "https://studio3t.com"
+        },
+        {
             "title": "styled-components",
             "hex": "DB7093",
             "source": "https://www.styled-components.com"
@@ -12636,6 +12707,16 @@
             "title": "Umbraco",
             "hex": "3544B1",
             "source": "https://umbraco.com"
+        },
+        {
+            "title": "UML",
+            "hex": "FABD14",
+            "source": "https://www.uml.org",
+            "aliases": {
+                "aka": [
+                    "Unified Modelling Language"
+                ]
+            }
         },
         {
             "title": "Unacademy",
