@@ -239,7 +239,7 @@
         {
             "title": "Adobe XD",
             "hex": "FF61F6",
-            "source": "https://www.adobe.com/products/xd.html"
+            "source": "https://commons.wikimedia.org/wiki/File:Adobe_XD_CC_icon.svg"
         },
         {
             "title": "AdonisJS",
@@ -622,6 +622,11 @@
             "hex": "66459B",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
+            "title": "Amazon Luna",
+            "hex": "9146FF",
+            "source": "https://luna.amazon.com"
         },
         {
             "title": "Amazon Pay",
@@ -2507,6 +2512,16 @@
             "source": "https://app.codeship.com"
         },
         {
+            "title": "CodeSignal",
+            "hex": "1062FB",
+            "source": "https://codesignal.com"
+        },
+        {
+            "title": "CodeStream",
+            "hex": "008C99",
+            "source": "https://www.codestream.com"
+        },
+        {
             "title": "Codewars",
             "hex": "B1361E",
             "source": "https://github.com/codewars/branding/tree/1ff0d44db52ac4a5e3a1c43277dc35f228eb6983"
@@ -4090,7 +4105,8 @@
         {
             "title": "FIRST",
             "hex": "0066B3",
-            "source": "https://www.firstinspires.org/brand"
+            "source": "https://www.firstinspires.org/brand",
+            "guidelines": "https://www.firstinspires.org/brand"
         },
         {
             "title": "Fitbit",
@@ -5074,6 +5090,11 @@
             }
         },
         {
+            "title": "GStreamer",
+            "hex": "FF3131",
+            "source": "https://gstreamer.freedesktop.org/artwork"
+        },
+        {
             "title": "GTK",
             "hex": "7FE719",
             "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
@@ -5101,8 +5122,8 @@
         },
         {
             "title": "Gumroad",
-            "hex": "36A9AE",
-            "source": "https://gumroad.com/press"
+            "hex": "FF90E8",
+            "source": "https://gumroad.com"
         },
         {
             "title": "Gumtree",
@@ -5123,6 +5144,11 @@
             "title": "Gutenberg",
             "hex": "000000",
             "source": "https://github.com/WordPress/gutenberg/blob/7829913ae117dfb561d14c600eea7b281afd6556/docs/final-g-wapuu-black.svg"
+        },
+        {
+            "title": "H3",
+            "hex": "1E54B7",
+            "source": "https://github.com/uber/h3/blob/71e09dc002b211887c6db525609a449058233a71/website/static/images/h3Logo-color.svg"
         },
         {
             "title": "Habr",
@@ -5419,6 +5445,11 @@
             "source": "https://www.hotjar.com"
         },
         {
+            "title": "Hotwire",
+            "hex": "FFE801",
+            "source": "https://hotwired.dev"
+        },
+        {
             "title": "Houdini",
             "hex": "FF4713",
             "source": "https://www.sidefx.com/products/houdini/"
@@ -5674,6 +5705,11 @@
             "title": "Indeed",
             "hex": "003A9B",
             "source": "https://indeed.design/resources"
+        },
+        {
+            "title": "Inertia",
+            "hex": "9553E9",
+            "source": "https://inertiajs.com"
         },
         {
             "title": "Infiniti",
@@ -6100,6 +6136,11 @@
             "title": "JSS",
             "hex": "F7DF1E",
             "source": "https://cssinjs.org"
+        },
+        {
+            "title": "Juejin",
+            "hex": "007FFF",
+            "source": "https://juejin.cn"
         },
         {
             "title": "JUKE",
@@ -6648,8 +6689,9 @@
         },
         {
             "title": "Letterboxd",
-            "hex": "00D735",
-            "source": "https://letterboxd.com/about/logos/"
+            "hex": "202830",
+            "source": "https://letterboxd.com/about/brand/",
+            "guidelines": "https://letterboxd.com/about/brand/"
         },
         {
             "title": "levels.fyi",
@@ -6897,6 +6939,12 @@
             "title": "LOT Polish Airlines",
             "hex": "11397E",
             "source": "https://www.lot.com/us/en/kaleidoscope-inflight-magazine"
+        },
+        {
+            "title": "LTspice",
+            "hex": "900028",
+            "source": "https://www.analog.com/media/en/news-marketing-collateral/solutions-bulletins-brochures/ltspice-keyboard-shortcuts.pdf",
+            "guidelines": "https://www.analog.com/en/about-adi/legal-and-risk-oversight/intellectual-property/trademark-notice.html"
         },
         {
             "title": "Lua",
@@ -7322,6 +7370,11 @@
             "guidelines": "https://www.mg.co.uk/terms-and-conditions"
         },
         {
+            "title": "Micro Editor",
+            "hex": "2E3192",
+            "source": "https://github.com/zyedidia/micro/blob/48645907ec55798b75723019dad75dba51bd97d7/assets/micro-logo-mark.svg"
+        },
+        {
             "title": "micro:bit",
             "hex": "00ED00",
             "source": "https://microbit.org"
@@ -7638,6 +7691,12 @@
             "title": "Mongoose",
             "hex": "880000",
             "source": "https://github.com/Automattic/mongoose/blob/7971a4dbd55888f0b005e65b06024109af8352f7/docs/images/mongoose.svg"
+        },
+        {
+            "title": "Mongoose",
+            "hex": "F04D35",
+            "slug": "mongoosedotws",
+            "source": "https://mongoose.ws"
         },
         {
             "title": "Monica",
@@ -8643,6 +8702,11 @@
             "title": "OWASP",
             "hex": "000000",
             "source": "https://github.com/OWASP/www-event-2020-07-virtual/blob/eefbef6c1afdd1dee2af11e7f44ad005b25ad48c/assets/images/logo.svg"
+        },
+        {
+            "title": "ownCloud",
+            "hex": "041E42",
+            "source": "https://owncloud.com"
         },
         {
             "title": "Oxygen",
@@ -10758,6 +10822,11 @@
             "source": "https://en.wikipedia.org/wiki/File:Shanghai_Metro_Full_Logo.svg"
         },
         {
+            "title": "ShareX",
+            "hex": "2885F1",
+            "source": "https://getsharex.com/brand-assets"
+        },
+        {
             "title": "sharp",
             "hex": "99CC00",
             "source": "https://github.com/lovell/sharp/blob/315f519e1dd9adca0678e94a5ed0492cb5e0aae4/docs/image/sharp-logo-mono.svg"
@@ -11602,6 +11671,11 @@
             "source": "https://www.stubhub.com"
         },
         {
+            "title": "Studio 3T",
+            "hex": "17AF66",
+            "source": "https://studio3t.com"
+        },
+        {
             "title": "styled-components",
             "hex": "DB7093",
             "source": "https://www.styled-components.com"
@@ -11635,6 +11709,11 @@
             "title": "Substack",
             "hex": "FF6719",
             "source": "https://on.substack.com"
+        },
+        {
+            "title": "Subtitle Edit",
+            "hex": "CC2424",
+            "source": "https://github.com/SubtitleEdit/subtitleedit/issues/61#issuecomment-1442100888"
         },
         {
             "title": "Subversion",
@@ -12441,6 +12520,11 @@
             "title": "TuneIn",
             "hex": "14D8CC",
             "source": "https://cms.tunein.com/press/"
+        },
+        {
+            "title": "Turbo",
+            "hex": "5CD8E5",
+            "source": "https://turbo.hotwired.dev"
         },
         {
             "title": "Turborepo",
