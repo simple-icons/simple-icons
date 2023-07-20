@@ -37,8 +37,10 @@ const hexTransformer = (text) => {
   const luminance = hexPattern.test(text)
     ? getRelativeLuminance.default(`#${color}`)
     : -1;
-  if (luminance === -1) return text;
-  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(text);
+  if (luminance === -1) return text.toUpperCase();
+  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
+    text.toUpperCase(),
+  );
 };
 
 const aliasesTransformer = (text) =>
@@ -55,7 +57,7 @@ const aliasesChoices = Object.entries(
 
 const getIconDataFromAnswers = (answers) => ({
   title: answers.title,
-  hex: answers.hex,
+  hex: answers.hex.toUpperCase(),
   source: answers.source,
   ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
   ...(answers.hasLicense
