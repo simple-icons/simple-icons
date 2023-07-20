@@ -4093,6 +4093,11 @@
             "guidelines": "https://firebase.google.com/brand-guidelines/"
         },
         {
+            "title": "Firefly III",
+            "hex": "CD5029",
+            "source": "https://docs.firefly-iii.org/firefly-iii/more-information/logo"
+        },
+        {
             "title": "Firefox",
             "hex": "FF7139",
             "source": "https://mozilla.design/firefox/logos-usage/",
@@ -4846,6 +4851,12 @@
             "title": "Google Colab",
             "hex": "F9AB00",
             "source": "https://colab.research.google.com"
+        },
+        {
+            "title": "Google Container Optimized OS",
+            "hex": "4285F4",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://cloud.google.com/terms/"
         },
         {
             "title": "Google Domains",
@@ -7094,6 +7105,11 @@
             "source": "https://www.makerbot.com/makerbot-press-assets"
         },
         {
+            "title": "Mamba UI",
+            "hex": "6D28D9",
+            "source": "https://github.com/Microwawe/mamba-ui/blob/b4ca2eba570c451886e5822d7ba12a8d78015bba/src/assets/svg/logo.svg"
+        },
+        {
             "title": "MAMP",
             "hex": "02749C",
             "source": "https://www.mamp.info/en/mamp/mac/"
@@ -7294,6 +7310,11 @@
             "title": "MediaTemple",
             "hex": "000000",
             "source": "https://mediatemple.net"
+        },
+        {
+            "title": "MediBang Paint",
+            "hex": "00DBDE",
+            "source": "https://medibangpaint.com"
         },
         {
             "title": "Medium",
@@ -9351,6 +9372,12 @@
             "guidelines": "https://www.postgresql.org/about/policies/trademarks/"
         },
         {
+            "title": "PostHog",
+            "hex": "000000",
+            "source": "https://posthog.com/handbook/company/brand-assets",
+            "guidelines": "https://posthog.com/handbook/company/brand-assets"
+        },
+        {
             "title": "Postman",
             "hex": "FF6C37",
             "source": "https://www.getpostman.com/resources/media-assets/"
@@ -9712,6 +9739,11 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "Pydantic",
+            "hex": "E92063",
+            "source": "https://github.com/pydantic/pydantic/blob/94c748001a32992a587694b999fb1f3d2f1fc1fe/docs/logo-white.svg"
         },
         {
             "title": "PyG",
@@ -10343,6 +10375,11 @@
             "source": "https://riseup.net/en/about-us/images"
         },
         {
+            "title": "roadmap.sh",
+            "hex": "000000",
+            "source": "https://roadmap.sh"
+        },
+        {
             "title": "Roam Research",
             "hex": "343A40",
             "source": "https://roamresearch.com/#/app/help/page/Vu1MmjinS"
@@ -10524,6 +10561,11 @@
             "title": "Ruff",
             "hex": "FCC21B",
             "source": "https://github.com/charliermarsh/ruff/blob/e04ef423344837c916e75a7b09ea674711a104e0/assets/badge/v1.json"
+        },
+        {
+            "title": "Rundeck",
+            "hex": "F73F39",
+            "source": "https://github.com/rundeck/docs/blob/a1c98b682eb6e82b60de0daa876133f390630821/docs/.vuepress/public/images/rundeck-logo.svg"
         },
         {
             "title": "Runkeeper",
@@ -12048,8 +12090,8 @@
         },
         {
             "title": "TeamSpeak",
-            "hex": "2580C3",
-            "source": "https://www.teamspeak.com/en/more/media-pack/"
+            "hex": "4B69B6",
+            "source": "https://teamspeak.com"
         },
         {
             "title": "TeamViewer",
@@ -12362,8 +12404,13 @@
         },
         {
             "title": "Toggl",
-            "hex": "E01B22",
-            "source": "https://toggl.com/media-toolkit"
+            "hex": "FFDE91",
+            "source": "https://toggl.com/track/media-toolkit"
+        },
+        {
+            "title": "Toggl Track",
+            "hex": "E57CD8",
+            "source": "https://toggl.com/track/media-toolkit"
         },
         {
             "title": "Tokyo Metro",
@@ -12484,6 +12531,11 @@
             "title": "Treyarch",
             "hex": "000000",
             "source": "https://upload.wikimedia.org/wikipedia/en/7/7a/Treyarch_logo.svg"
+        },
+        {
+            "title": "Trilium",
+            "hex": "000000",
+            "source": "https://github.com/zadam/trilium/blob/05d2f4fe96f49c5bc7f3a02a9e47fc352ce5971d/images/icon.svg"
         },
         {
             "title": "Triller",
@@ -13037,6 +13089,12 @@
             "source": "https://merchantsignageeu.visa.com/product.asp?dptID=696"
         },
         {
+            "title": "Visual Basic",
+            "hex": "512BD4",
+            "source": "https://aka.ms/fluentui-icons",
+            "guidelines": "https://aka.ms/fluentui-assets-license"
+        },
+        {
             "title": "Visual Studio",
             "hex": "5C2D91",
             "source": "https://visualstudio.microsoft.com"
@@ -13205,6 +13263,11 @@
             "title": "Wallabag",
             "hex": "3F6184",
             "source": "https://github.com/wallabag/logo/blob/f670395da2d85c3bbcb8dcfa8d2a339d8af5abb0/_default/icon/svg/logo-icon-black-no-bg.svg"
+        },
+        {
+            "title": "WalletConnect",
+            "hex": "3B99FC",
+            "source": "https://walletconnect.com/brand"
         },
         {
             "title": "Walmart",
