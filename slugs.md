@@ -1945,7 +1945,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Semaphore CI` | `semaphoreci` |
 | `SemVer` | `semver` |
 | `Sencha` | `sencha` |
-| `Sendinblue` | `sendinblue` |
 | `Sennheiser` | `sennheiser` |
 | `Sensu` | `sensu` |
 | `Sentry` | `sentry` |
