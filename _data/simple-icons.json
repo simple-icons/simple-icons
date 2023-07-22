@@ -956,6 +956,12 @@
             "source": "https://apache.org/logos/"
         },
         {
+            "title": "Apache Storm",
+            "hex": "225593",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks"
+        },
+        {
             "title": "Apache Tomcat",
             "hex": "F8DC75",
             "source": "https://apache.org/logos/"
@@ -1119,6 +1125,11 @@
             "hex": "0091BD",
             "source": "https://www.arm.com",
             "guidelines": "https://www.arm.com/company/policies/trademarks/guidelines-corporate-logo"
+        },
+        {
+            "title": "Ars Technica",
+            "hex": "FF4E00",
+            "source": "https://arstechnica.com"
         },
         {
             "title": "Artifact Hub",
@@ -2270,6 +2281,11 @@
             "title": "CKEditor 4",
             "hex": "0287D0",
             "source": "https://github.com/ckeditor/ckeditor4/blob/7d8305ce4d12683853a563b9d6ea54e0d4686a2f/samples/img/logo.svg"
+        },
+        {
+            "title": "Clarifai",
+            "hex": "1955FF",
+            "source": "https://www.clarifai.com"
         },
         {
             "title": "Claris",
@@ -3938,6 +3954,12 @@
             "source": "https://fantom.foundation"
         },
         {
+            "title": "FareHarbor",
+            "hex": "0A6ECE",
+            "source": "https://help.fareharbor.com/about/logo",
+            "guidelines": "https://help.fareharbor.com/about/logo"
+        },
+        {
             "title": "FARFETCH",
             "hex": "000000",
             "source": "https://www.farfetch.com"
@@ -4853,6 +4875,12 @@
             "source": "https://colab.research.google.com"
         },
         {
+            "title": "Google Container Optimized OS",
+            "hex": "4285F4",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://cloud.google.com/terms/"
+        },
+        {
             "title": "Google Domains",
             "hex": "4285F4",
             "source": "https://domains.google"
@@ -5485,6 +5513,12 @@
             "title": "HP",
             "hex": "0096D6",
             "source": "https://brandcentral.ext.hp.com/login"
+        },
+        {
+            "title": "HSBC",
+            "hex": "DB0011",
+            "source": "https://www.hsbc.com",
+            "guidelines": "https://www.hsbc.com/terms-and-conditions"
         },
         {
             "title": "HTML Academy",
@@ -6165,6 +6199,11 @@
             "source": "https://cssinjs.org"
         },
         {
+            "title": "JUCE",
+            "hex": "8DC63F",
+            "source": "https://juce.com"
+        },
+        {
             "title": "Juejin",
             "hex": "007FFF",
             "source": "https://juejin.cn"
@@ -6253,6 +6292,11 @@
             "hex": "557C94",
             "source": "https://www.kali.org/docs/policy/trademark/",
             "guidelines": "https://www.kali.org/docs/policy/trademark/"
+        },
+        {
+            "title": "Kamailio",
+            "hex": "506365",
+            "source": "https://www.kamailio.org/pub/kamailio-logos/current"
         },
         {
             "title": "Kaniko",
@@ -7099,6 +7143,11 @@
             "source": "https://www.makerbot.com/makerbot-press-assets"
         },
         {
+            "title": "Mamba UI",
+            "hex": "6D28D9",
+            "source": "https://github.com/Microwawe/mamba-ui/blob/b4ca2eba570c451886e5822d7ba12a8d78015bba/src/assets/svg/logo.svg"
+        },
+        {
             "title": "MAMP",
             "hex": "02749C",
             "source": "https://www.mamp.info/en/mamp/mac/"
@@ -7299,6 +7348,11 @@
             "title": "MediaTemple",
             "hex": "000000",
             "source": "https://mediatemple.net"
+        },
+        {
+            "title": "MediBang Paint",
+            "hex": "00DBDE",
+            "source": "https://medibangpaint.com"
         },
         {
             "title": "Medium",
@@ -9731,6 +9785,11 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "Pydantic",
+            "hex": "E92063",
+            "source": "https://github.com/pydantic/pydantic/blob/94c748001a32992a587694b999fb1f3d2f1fc1fe/docs/logo-white.svg"
+        },
+        {
             "title": "PyG",
             "hex": "3C2179",
             "source": "https://github.com/pyg-team/pyg_sphinx_theme/blob/4f696513b4b4adf2ba3874574a10a8e8718672fe/pyg_sphinx_theme/static/img/pyg_logo.svg",
@@ -9912,6 +9971,11 @@
             "title": "Quora",
             "hex": "B92B27",
             "source": "https://www.quora.com"
+        },
+        {
+            "title": "Qwant",
+            "hex": "5C97FF",
+            "source": "https://about.qwant.com"
         },
         {
             "title": "Qwiklabs",
@@ -10360,6 +10424,11 @@
             "source": "https://riseup.net/en/about-us/images"
         },
         {
+            "title": "roadmap.sh",
+            "hex": "000000",
+            "source": "https://roadmap.sh"
+        },
+        {
             "title": "Roam Research",
             "hex": "343A40",
             "source": "https://roamresearch.com/#/app/help/page/Vu1MmjinS"
@@ -10541,6 +10610,11 @@
             "title": "Ruff",
             "hex": "FCC21B",
             "source": "https://github.com/charliermarsh/ruff/blob/e04ef423344837c916e75a7b09ea674711a104e0/assets/badge/v1.json"
+        },
+        {
+            "title": "Rundeck",
+            "hex": "F73F39",
+            "source": "https://github.com/rundeck/docs/blob/a1c98b682eb6e82b60de0daa876133f390630821/docs/.vuepress/public/images/rundeck-logo.svg"
         },
         {
             "title": "Runkeeper",
@@ -11401,6 +11475,11 @@
             "source": "https://www.speedtest.net"
         },
         {
+            "title": "SpeedyPage",
+            "hex": "1C71F9",
+            "source": "https://speedypage.com"
+        },
+        {
             "title": "Sphere Online Judge",
             "slug": "spoj",
             "aliases": {
@@ -12065,8 +12144,8 @@
         },
         {
             "title": "TeamSpeak",
-            "hex": "2580C3",
-            "source": "https://www.teamspeak.com/en/more/media-pack/"
+            "hex": "4B69B6",
+            "source": "https://teamspeak.com"
         },
         {
             "title": "TeamViewer",
@@ -12165,6 +12244,11 @@
             "title": "Testing Library",
             "hex": "E33332",
             "source": "https://testing-library.com"
+        },
+        {
+            "title": "TestRail",
+            "hex": "65C179",
+            "source": "https://www.testrail.com"
         },
         {
             "title": "Tether",
@@ -12379,8 +12463,13 @@
         },
         {
             "title": "Toggl",
-            "hex": "E01B22",
-            "source": "https://toggl.com/media-toolkit"
+            "hex": "FFDE91",
+            "source": "https://toggl.com/track/media-toolkit"
+        },
+        {
+            "title": "Toggl Track",
+            "hex": "E57CD8",
+            "source": "https://toggl.com/track/media-toolkit"
         },
         {
             "title": "Tokyo Metro",
@@ -12501,6 +12590,11 @@
             "title": "Treyarch",
             "hex": "000000",
             "source": "https://upload.wikimedia.org/wikipedia/en/7/7a/Treyarch_logo.svg"
+        },
+        {
+            "title": "Trilium",
+            "hex": "000000",
+            "source": "https://github.com/zadam/trilium/blob/05d2f4fe96f49c5bc7f3a02a9e47fc352ce5971d/images/icon.svg"
         },
         {
             "title": "Triller",
@@ -13054,6 +13148,12 @@
             "source": "https://merchantsignageeu.visa.com/product.asp?dptID=696"
         },
         {
+            "title": "Visual Basic",
+            "hex": "512BD4",
+            "source": "https://aka.ms/fluentui-icons",
+            "guidelines": "https://aka.ms/fluentui-assets-license"
+        },
+        {
             "title": "Visual Studio",
             "hex": "5C2D91",
             "source": "https://visualstudio.microsoft.com"
@@ -13461,6 +13561,11 @@
             "source": "https://commons.wikipedia.org/wiki/File:WiiU.svg"
         },
         {
+            "title": "wiki.gg",
+            "hex": "FF1985",
+            "source": "https://commons.wiki.gg/wiki/Category:Wiki.gg_logos"
+        },
+        {
             "title": "Wiki.js",
             "hex": "1976D2",
             "source": "https://cdn.js.wiki/images/wikijs-butterfly-mono.svg"
@@ -13502,6 +13607,12 @@
         },
         {
             "title": "Windows",
+            "hex": "0078D4",
+            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
+            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
+        },
+        {
+            "title": "Windows 10",
             "hex": "0078D6",
             "source": "https://commons.wikimedia.org/wiki/File:Windows_10_Logo.svg"
         },
