@@ -65,7 +65,7 @@ jobs:
         if: |
           contains(steps.get-labels.outputs.labels, 'new icon') &&
           join(steps.get-linked-issues.outputs.issues) != '' &&
-          contains(steps.get-si-members.outputs.members, github.event.actor.login) == false
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == false
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 2
