@@ -3822,10 +3822,16 @@
             "source": "https://www.eyeem.com"
         },
         {
-            "title": "F Sharp",
+            "title": "F#",
+            "slug": "fsharp",
             "hex": "378BBA",
             "source": "https://foundation.fsharp.org/logo",
-            "guidelines": "https://foundation.fsharp.org/logo"
+            "guidelines": "https://foundation.fsharp.org/logo",
+            "aliases": {
+                "aka": [
+                    "F Sharp"
+                ]
+            }
         },
         {
             "title": "F-Droid",
