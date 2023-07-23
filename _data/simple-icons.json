@@ -8851,8 +8851,11 @@
             "hex": "000000",
             "source": "https://www.pearson.com",
             "aliases": {
-                "aka": [
-                    "Pearson VUE"
+                "dup": [
+                    {
+                        "title": "Pearson VUE",
+                        "hex": "008FB4"
+                    }
                 ]
             }
         },
