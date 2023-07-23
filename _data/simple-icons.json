@@ -9009,6 +9009,19 @@
             "source": "https://www.peakdesign.com"
         },
         {
+            "title": "Pearson",
+            "hex": "000000",
+            "source": "https://www.pearson.com",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Pearson VUE",
+                        "hex": "008FB4"
+                    }
+                ]
+            }
+        },
+        {
             "title": "PeerTube",
             "hex": "F1680D",
             "source": "https://joinpeertube.org"
