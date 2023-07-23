@@ -650,13 +650,12 @@
             }
         },
         {
-            "title": "Amazon SES",
+            "title": "Amazon Simple Email Service",
             "hex": "DD344C",
-            "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
             "aliases": {
                 "aka": [
-                    "Amazon Simple Email Service",
                     "AWS SES"
                 ]
             }
