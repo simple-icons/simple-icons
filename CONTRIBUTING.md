@@ -1,6 +1,6 @@
 # Contributing to Simple Icons
 
-> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
+> **Note** We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
 
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
