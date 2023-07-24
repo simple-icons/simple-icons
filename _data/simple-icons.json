@@ -613,14 +613,10 @@
         },
         {
             "title": "Amazon Identity Access Management",
+            "slug": "amazoniam",
             "hex": "DD344C",
-            "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/",
-            "aliases": {
-                "aka": [
-                    "amazoniam"
-                ]
-            }
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "Amazon Lumberyard",
