@@ -380,6 +380,11 @@
             "source": "https://www.airbnb.com"
         },
         {
+            "title": "Airbrake.io",
+            "hex": "FFA500",
+            "source": "https://github.com/airbrake/slate/blob/c116f2968bcf4dfda126511de0a2d0f0dc8b6a8e/source/images/logo.svg"
+        },
+        {
             "title": "Airbus",
             "hex": "00205B",
             "source": "https://brand.airbus.com/brand-elements/logo.html"
@@ -631,6 +636,13 @@
             "title": "Amazon Games",
             "hex": "FF9900",
             "source": "https://www.amazongames.com"
+        },
+        {
+            "title": "Amazon Identity Access Management",
+            "slug": "amazoniam",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "Amazon Lumberyard",
@@ -2180,6 +2192,11 @@
             "hex": "0066FF",
             "source": "https://chatbot.design",
             "guidelines": "https://chatbot.design"
+        },
+        {
+            "title": "Chatwoot",
+            "hex": "1F93FF",
+            "source": "https://www.chatwoot.com"
         },
         {
             "title": "CheckiO",
@@ -3928,6 +3945,18 @@
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
+        },
+        {
+            "title": "F#",
+            "hex": "378BBA",
+            "slug": "fsharp",
+            "source": "https://foundation.fsharp.org/logo",
+            "guidelines": "https://foundation.fsharp.org/logo",
+            "aliases": {
+                "aka": [
+                    "F sharp"
+                ]
+            }
         },
         {
             "title": "F1",
@@ -6009,6 +6038,11 @@
             "license": {
                 "type": "CC-BY-SA-3.0"
             }
+        },
+        {
+            "title": "IRIS",
+            "hex": "25313C",
+            "source": "https://www.iris.co.uk"
         },
         {
             "title": "Issuu",
@@ -8806,6 +8840,12 @@
             "guidelines": "https://brand.opera.com"
         },
         {
+            "title": "Opera GX",
+            "hex": "EE2950",
+            "source": "https://brand.opera.com/1472-2/opera-logos/",
+            "guidelines": "https://brand.opera.com"
+        },
+        {
             "title": "OPNSense",
             "hex": "D94F00",
             "source": "https://opnsense.org/about/legal-notices/",
@@ -10002,6 +10042,12 @@
             "title": "QIWI",
             "hex": "FF8C00",
             "source": "https://qiwi.com"
+        },
+        {
+            "title": "Qlik",
+            "hex": "009848",
+            "source": "https://www.qlik.com",
+            "guidelines": "https://www.qlik.com/us/legal/trademarks"
         },
         {
             "title": "QMK",
@@ -11958,6 +12004,11 @@
             "title": "strongSwan",
             "hex": "E00033",
             "source": "https://www.strongswan.org/images/"
+        },
+        {
+            "title": "Stryker",
+            "hex": "E74C3C",
+            "source": "https://stryker-mutator.io"
         },
         {
             "title": "StubHub",
