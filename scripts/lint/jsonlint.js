@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * CLI tool to run jsonschema on the simple-icons.json data file.
