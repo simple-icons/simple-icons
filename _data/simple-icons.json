@@ -3559,6 +3559,11 @@
             "source": "https://en.eagle.cool"
         },
         {
+            "title": "EasyEDA",
+            "hex": "1765F6",
+            "source": "https://easyeda.com"
+        },
+        {
             "title": "easyJet",
             "hex": "FF6600",
             "source": "https://www.easyjet.com"
@@ -14237,7 +14242,8 @@
         {
             "title": "Zendesk",
             "hex": "03363D",
-            "source": "https://brandland.zendesk.com"
+            "source": "https://brandland.zendesk.com",
+            "guidelines": "https://brandland.zendesk.com"
         },
         {
             "title": "Zenn",
@@ -14263,7 +14269,8 @@
         {
             "title": "Zerply",
             "hex": "7BBB6E",
-            "source": "https://zerply.com/about/resources"
+            "source": "https://zerply.com/about/resources",
+            "guidelines": "https://zerply.com/about/resources"
         },
         {
             "title": "Zettlr",
@@ -14279,7 +14286,7 @@
         {
             "title": "Zig",
             "hex": "F7A41D",
-            "source": "https://github.com/ziglang/logo/tree/608770bf7303613c18a8c3faf284516fa31072f0",
+            "source": "https://github.com/ziglang/logo/blob/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg",
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
@@ -14287,7 +14294,7 @@
         {
             "title": "Zigbee",
             "hex": "EB0443",
-            "source": "https://zigbeealliance.org/solution/zigbee/"
+            "source": "https://csa-iot.org/all-solutions/zigbee"
         },
         {
             "title": "Zilch",
@@ -14302,7 +14309,7 @@
         {
             "title": "ZincSearch",
             "hex": "5BA37F",
-            "source": "https://zincsearch.com"
+            "source": "https://github.com/zincsearch/zincsearch-docs/blob/f5b8bec0c05c10968f54aca3eabde9d4d77a1712/docs/images/logo.svg"
         },
         {
             "title": "Zingat",
@@ -14340,8 +14347,8 @@
         },
         {
             "title": "Zorin",
-            "hex": "0CC1F3",
-            "source": "https://zorinos.com/press/"
+            "hex": "15A6F0",
+            "source": "https://zorin.com/press"
         },
         {
             "title": "Zotero",
