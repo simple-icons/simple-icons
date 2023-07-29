@@ -380,6 +380,11 @@
             "source": "https://www.airbnb.com"
         },
         {
+            "title": "Airbrake.io",
+            "hex": "FFA500",
+            "source": "https://github.com/airbrake/slate/blob/c116f2968bcf4dfda126511de0a2d0f0dc8b6a8e/source/images/logo.svg"
+        },
+        {
             "title": "Airbus",
             "hex": "00205B",
             "source": "https://brand.airbus.com/brand-elements/logo.html"
@@ -631,6 +636,13 @@
             "title": "Amazon Games",
             "hex": "FF9900",
             "source": "https://www.amazongames.com"
+        },
+        {
+            "title": "Amazon Identity Access Management",
+            "slug": "amazoniam",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "Amazon Lumberyard",
@@ -2182,6 +2194,11 @@
             "guidelines": "https://chatbot.design"
         },
         {
+            "title": "Chatwoot",
+            "hex": "1F93FF",
+            "source": "https://www.chatwoot.com"
+        },
+        {
             "title": "CheckiO",
             "hex": "008DB6",
             "source": "https://py.checkio.org/blog/"
@@ -3540,6 +3557,11 @@
             "title": "Eagle",
             "hex": "0072EF",
             "source": "https://en.eagle.cool"
+        },
+        {
+            "title": "EasyEDA",
+            "hex": "1765F6",
+            "source": "https://easyeda.com"
         },
         {
             "title": "easyJet",
@@ -8823,6 +8845,12 @@
             "guidelines": "https://brand.opera.com"
         },
         {
+            "title": "Opera GX",
+            "hex": "EE2950",
+            "source": "https://brand.opera.com/1472-2/opera-logos/",
+            "guidelines": "https://brand.opera.com"
+        },
+        {
             "title": "OPNSense",
             "hex": "D94F00",
             "source": "https://opnsense.org/about/legal-notices/",
@@ -9470,6 +9498,11 @@
             "source": "https://podcastaddict.com"
         },
         {
+            "title": "Podcast Index",
+            "hex": "F90000",
+            "source": "https://podcastindex.org"
+        },
+        {
             "title": "Podman",
             "hex": "892CA0",
             "source": "https://podman.io"
@@ -10019,6 +10052,12 @@
             "title": "QIWI",
             "hex": "FF8C00",
             "source": "https://qiwi.com"
+        },
+        {
+            "title": "Qlik",
+            "hex": "009848",
+            "source": "https://www.qlik.com",
+            "guidelines": "https://www.qlik.com/us/legal/trademarks"
         },
         {
             "title": "QMK",
@@ -11749,6 +11788,12 @@
             "source": "https://www.ssrn.com"
         },
         {
+            "title": "SST",
+            "hex": "E27152",
+            "source": "https://sst.dev",
+            "guidelines": "https://github.com/serverless-stack/identity"
+        },
+        {
             "title": "Stack Exchange",
             "hex": "1E5397",
             "source": "https://stackoverflow.com/company/logos",
@@ -11974,6 +12019,11 @@
             "title": "strongSwan",
             "hex": "E00033",
             "source": "https://www.strongswan.org/images/"
+        },
+        {
+            "title": "Stryker",
+            "hex": "E74C3C",
+            "source": "https://stryker-mutator.io"
         },
         {
             "title": "StubHub",
@@ -12596,6 +12646,11 @@
             "title": "Timescale",
             "hex": "FDB515",
             "source": "https://www.timescale.com"
+        },
+        {
+            "title": "Tina",
+            "hex": "EC4815",
+            "source": "https://github.com/tinacms/tinacms/blob/965edfb7d2a318ab6b86a4772e4daebf53f34f2e/examples/tina-self-hosted-demo/public/tina.svg"
         },
         {
             "title": "Tinder",
@@ -13406,6 +13461,11 @@
             "source": "https://www.vonage.com"
         },
         {
+            "title": "Voron Design",
+            "hex": "ED3023",
+            "source": "https://github.com/VoronDesign/Voron-Extras/blob/d8591f964b408b3da21b6f9b4ab0437e229065de/Images/Logo/SVG/Voron_Design_Hex.svg"
+        },
+        {
             "title": "Vowpal Wabbit",
             "hex": "FF81F9",
             "source": "https://github.com/VowpalWabbit/vowpal_wabbit/blob/1da1aa4bb4f2dfb5e1a6083c14b429b30eba372d/logo_assets/vowpal-wabbits-icon.svg"
@@ -14187,7 +14247,8 @@
         {
             "title": "Zendesk",
             "hex": "03363D",
-            "source": "https://brandland.zendesk.com"
+            "source": "https://brandland.zendesk.com",
+            "guidelines": "https://brandland.zendesk.com"
         },
         {
             "title": "Zenn",
@@ -14213,7 +14274,8 @@
         {
             "title": "Zerply",
             "hex": "7BBB6E",
-            "source": "https://zerply.com/about/resources"
+            "source": "https://zerply.com/about/resources",
+            "guidelines": "https://zerply.com/about/resources"
         },
         {
             "title": "Zettlr",
@@ -14229,7 +14291,7 @@
         {
             "title": "Zig",
             "hex": "F7A41D",
-            "source": "https://github.com/ziglang/logo/tree/608770bf7303613c18a8c3faf284516fa31072f0",
+            "source": "https://github.com/ziglang/logo/blob/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg",
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
@@ -14237,7 +14299,7 @@
         {
             "title": "Zigbee",
             "hex": "EB0443",
-            "source": "https://zigbeealliance.org/solution/zigbee/"
+            "source": "https://csa-iot.org/all-solutions/zigbee"
         },
         {
             "title": "Zilch",
@@ -14252,7 +14314,7 @@
         {
             "title": "ZincSearch",
             "hex": "5BA37F",
-            "source": "https://zincsearch.com"
+            "source": "https://github.com/zincsearch/zincsearch-docs/blob/f5b8bec0c05c10968f54aca3eabde9d4d77a1712/docs/images/logo.svg"
         },
         {
             "title": "Zingat",
@@ -14290,8 +14352,8 @@
         },
         {
             "title": "Zorin",
-            "hex": "0CC1F3",
-            "source": "https://zorinos.com/press/"
+            "hex": "15A6F0",
+            "source": "https://zorin.com/press"
         },
         {
             "title": "Zotero",
