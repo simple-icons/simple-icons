@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Simple Icons package build script.
