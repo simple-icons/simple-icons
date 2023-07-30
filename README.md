@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cdn.simpleicons.org/simpleicons/000/fff" alt="Simple Icons" width=70>
+<img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
 Over 2600 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
@@ -65,7 +65,7 @@ Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://dev
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/_/eee" />
 ```
 
-### Node Usage <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
+### Node Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/nodedotjs.svg" alt="Node" align=left width=24>
 
 The icons are also available through our npm package. To install, simply run:
 
@@ -116,7 +116,7 @@ If you need to iterate over all icons, use:
 import * as icons from 'simple-icons';
 ```
 
-#### TypeScript Usage <img src="https://cdn.simpleicons.org/typescript/000/fff" alt="Typescript" align=left width=19 height=19>
+#### TypeScript Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/typescript.svg" alt="Typescript" align=left width=19 height=19>
 
 Type definitions are bundled with the package.
 
@@ -124,7 +124,7 @@ Type definitions are bundled with the package.
 import type { SimpleIcon } from 'simple-icons';
 ```
 
-### PHP Usage <img src="https://cdn.simpleicons.org/php/000/fff" alt="Php" align=left width=24 height=24>
+### PHP Usage <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/php.svg" alt="Php" align=left width=24 height=24>
 
 The icons are also available through our Packagist package. To install, simply run:
 
@@ -150,30 +150,30 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 | Extension | Author |
 | :-- | :-- |
-| [Angular Module](https://github.com/avmaisak/ngx-simple-icons) <img src="https://cdn.simpleicons.org/angular/000/fff" alt="Angular" align=left width=24 height=24> | [@avmaisak](https://github.com/avmaisak) |
-| [Blazor Nuget](https://github.com/TimeWarpEngineering/timewarp-simple-icons)  <img src="https://cdn.simpleicons.org/blazor/000/fff" alt="Blazor" align=left width=24 height=24> | [@TimeWarpEngineering](https://github.com/TimeWarpEngineering) |
-| [Blender add-on](https://github.com/mondeja/simple-icons-blender) <img src="https://cdn.simpleicons.org/blender/000/fff" alt="Blender" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
-| [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
-| [Drupal module](https://www.drupal.org/project/simple_icons) <img src="https://cdn.simpleicons.org/drupal/000/fff" alt="Drupal" align=left width=24 height=24> | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
-| [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908/Simple-Icons) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
-| [Flutter package](https://pub.dev/packages/simple_icons) <img src="https://cdn.simpleicons.org/flutter/000/fff" alt="Flutter" align=left width=24 height=24> | [@jlnrrg](https://jlnrrg.github.io/) |
-| [Framer component](https://github.com/LitoMore/simple-icons-framer) <img src="https://cdn.simpleicons.org/framer/000/fff" alt="Framer" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
-| [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) <img src="https://cdn.simpleicons.org/hexo/000/fff" alt="Hexo" align=left width=24 height=24> | [@nidbCN](https://github.com/nidbCN/) |
-| [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) <img src="https://cdn.simpleicons.org/homeassistant/000/fff" alt="Home Assistant" align=left width=24 height=24> | [@vigonotion](https://github.com/vigonotion/) |
-| [Hugo module](https://github.com/foo-dogsquared/hugo-mod-simple-icons) <img src="https://cdn.simpleicons.org/hugo/000/fff" alt="Hugo" align=left width=24 height=24> | [@foo-dogsquared](https://github.com/foo-dogsquared) |
-| [Java library](https://github.com/silentsoft/simpleicons4j) <img src="https://cdn.simpleicons.org/openjdk/000/fff" alt="OpenJDK" align=left width=24 height=24> | [@silentsoft](https://github.com/silentsoft) |
-| [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) <img src="https://cdn.simpleicons.org/jetpackcompose/000/fff" alt="Jetpack Compose" align=left width=24 height=24> | [@devsrsouza](https://github.com/devsrsouza/) |
-| [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) <img src="https://cdn.simpleicons.org/kirby/000/fff" alt="Kirby" align=left width=24 height=24> | [@runxel](https://github.com/runxel) |
-| [LaTeX package](https://github.com/ineshbose/simple-icons-latex) <img src="https://cdn.simpleicons.org/latex/000/fff" alt="LaTeX" align=left width=24 height=24> | [@ineshbose](https://github.com/ineshbose) |
-| [Laravel Package](https://github.com/ublabs/blade-simple-icons) <img src="https://cdn.simpleicons.org/laravel/000/fff" alt="Laravel" align=left width=24 height=24> | [@adrian-ub](https://github.com/adrian-ub) |
-| [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://cdn.simpleicons.org/python/000/fff" alt="Python" align=left width=24 height=24> | [@sachinraja](https://github.com/sachinraja) |
-| [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://cdn.simpleicons.org/react/000/fff" alt="React" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
-| [Solid package](https://github.com/x64Bits/solid-icons) <img src="https://cdn.simpleicons.org/solid/000/fff" alt="Solid" align=left width=24 height=24> | [@x64Bits](https://github.com/x64Bits) |
-| [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) |
-| [Svelte package](https://github.com/icons-pack/svelte-simple-icons) <img src="https://cdn.simpleicons.org/svelte/000/fff" alt="Svelte" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
-| [Vue 3 package](https://github.com/wyatt-herkamp/vue3-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@wyatt-herkamp](https://github.com/wyatt-herkamp) |
-| [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) |
-| [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="Wordpress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) |
+| [Angular Module](https://github.com/avmaisak/ngx-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/angular.svg" alt="Angular" align=left width=24 height=24> | [@avmaisak](https://github.com/avmaisak) |
+| [Blazor Nuget](https://github.com/TimeWarpEngineering/timewarp-simple-icons)  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blazor.svg" alt="Blazor" align=left width=24 height=24> | [@TimeWarpEngineering](https://github.com/TimeWarpEngineering) |
+| [Blender add-on](https://github.com/mondeja/simple-icons-blender) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/blender.svg" alt="Blender" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
+| [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/diagramsdotnet.svg" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
+| [Drupal module](https://www.drupal.org/project/simple_icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/drupal.svg" alt="Drupal" align=left width=24 height=24> | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
+| [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908/Simple-Icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/figma.svg" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
+| [Flutter package](https://pub.dev/packages/simple_icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/flutter.svg" alt="Flutter" align=left width=24 height=24> | [@jlnrrg](https://jlnrrg.github.io/) |
+| [Framer component](https://github.com/LitoMore/simple-icons-framer) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/framer.svg" alt="Framer" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
+| [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/hexo.svg" alt="Hexo" align=left width=24 height=24> | [@nidbCN](https://github.com/nidbCN/) |
+| [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/homeassistant.svg" alt="Home Assistant" align=left width=24 height=24> | [@vigonotion](https://github.com/vigonotion/) |
+| [Hugo module](https://github.com/foo-dogsquared/hugo-mod-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/hugo.svg" alt="Hugo" align=left width=24 height=24> | [@foo-dogsquared](https://github.com/foo-dogsquared) |
+| [Java library](https://github.com/silentsoft/simpleicons4j) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/openjdk.svg" alt="OpenJDK" align=left width=24 height=24> | [@silentsoft](https://github.com/silentsoft) |
+| [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/jetpackcompose.svg" alt="Jetpack Compose" align=left width=24 height=24> | [@devsrsouza](https://github.com/devsrsouza/) |
+| [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/kirby.svg" alt="Kirby" align=left width=24 height=24> | [@runxel](https://github.com/runxel) |
+| [LaTeX package](https://github.com/ineshbose/simple-icons-latex) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/latex.svg" alt="LaTeX" align=left width=24 height=24> | [@ineshbose](https://github.com/ineshbose) |
+| [Laravel Package](https://github.com/ublabs/blade-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/laravel.svg" alt="Laravel" align=left width=24 height=24> | [@adrian-ub](https://github.com/adrian-ub) |
+| [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/python.svg" alt="Python" align=left width=24 height=24> | [@sachinraja](https://github.com/sachinraja) |
+| [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/react.svg" alt="React" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
+| [Solid package](https://github.com/x64Bits/solid-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/solid.svg" alt="Solid" align=left width=24 height=24> | [@x64Bits](https://github.com/x64Bits) |
+| [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/elgato.svg" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) |
+| [Svelte package](https://github.com/icons-pack/svelte-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/svelte.svg" alt="Svelte" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
+| [Vue 3 package](https://github.com/wyatt-herkamp/vue3-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg" alt="Vue" align=left width=24 height=24> | [@wyatt-herkamp](https://github.com/wyatt-herkamp) |
+| [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/vuedotjs.svg" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) |
+| [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/wordpress.svg" alt="Wordpress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) |
 
 ## Contribute
 
