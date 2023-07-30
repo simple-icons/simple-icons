@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Generates a MarkDown file that lists every brand name and their slug.
