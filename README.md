@@ -150,8 +150,8 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 | Extension | Author |
 | :-- | :-- |
-| [Angular Module](https://github.com/avmaisak/ngx-simple-icons) <img src="https://cdn.simpleicons.org/angular/000/fff" alt="Angular" align=left width=24 height=24> | [@avmaisak](https://github.com/avmaisak) |
-| [Blazor Nuget](https://github.com/TimeWarpEngineering/timewarp-simple-icons)  <img src="https://cdn.simpleicons.org/blazor/000/fff" alt="Blazor" align=left width=24 height=24> | [@TimeWarpEngineering](https://github.com/TimeWarpEngineering) |
+| [Angular module](https://github.com/avmaisak/ngx-simple-icons) <img src="https://cdn.simpleicons.org/angular/000/fff" alt="Angular" align=left width=24 height=24> | [@avmaisak](https://github.com/avmaisak) |
+| [Blazor Nuget package](https://github.com/TimeWarpEngineering/timewarp-simple-icons)  <img src="https://cdn.simpleicons.org/blazor/000/fff" alt="Blazor" align=left width=24 height=24> | [@TimeWarpEngineering](https://github.com/TimeWarpEngineering) |
 | [Blender add-on](https://github.com/mondeja/simple-icons-blender) <img src="https://cdn.simpleicons.org/blender/000/fff" alt="Blender" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Drupal module](https://www.drupal.org/project/simple_icons) <img src="https://cdn.simpleicons.org/drupal/000/fff" alt="Drupal" align=left width=24 height=24> | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
@@ -165,7 +165,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Jetpack Compose library](https://github.com/DevSrSouza/compose-icons) <img src="https://cdn.simpleicons.org/jetpackcompose/000/fff" alt="Jetpack Compose" align=left width=24 height=24> | [@devsrsouza](https://github.com/devsrsouza/) |
 | [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) <img src="https://cdn.simpleicons.org/kirby/000/fff" alt="Kirby" align=left width=24 height=24> | [@runxel](https://github.com/runxel) |
 | [LaTeX package](https://github.com/ineshbose/simple-icons-latex) <img src="https://cdn.simpleicons.org/latex/000/fff" alt="LaTeX" align=left width=24 height=24> | [@ineshbose](https://github.com/ineshbose) |
-| [Laravel Package](https://github.com/ublabs/blade-simple-icons) <img src="https://cdn.simpleicons.org/laravel/000/fff" alt="Laravel" align=left width=24 height=24> | [@adrian-ub](https://github.com/adrian-ub) |
+| [Laravel package](https://github.com/ublabs/blade-simple-icons) <img src="https://cdn.simpleicons.org/laravel/000/fff" alt="Laravel" align=left width=24 height=24> | [@adrian-ub](https://github.com/adrian-ub) |
 | [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://cdn.simpleicons.org/python/000/fff" alt="Python" align=left width=24 height=24> | [@sachinraja](https://github.com/sachinraja) |
 | [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://cdn.simpleicons.org/react/000/fff" alt="React" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
 | [Solid package](https://github.com/x64Bits/solid-icons) <img src="https://cdn.simpleicons.org/solid/000/fff" alt="Solid" align=left width=24 height=24> | [@x64Bits](https://github.com/x64Bits) |
