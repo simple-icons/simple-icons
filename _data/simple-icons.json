@@ -386,6 +386,11 @@
             "source": "https://www.airbnb.com"
         },
         {
+            "title": "Airbrake.io",
+            "hex": "FFA500",
+            "source": "https://github.com/airbrake/slate/blob/c116f2968bcf4dfda126511de0a2d0f0dc8b6a8e/source/images/logo.svg"
+        },
+        {
             "title": "Airbus",
             "hex": "00205B",
             "source": "https://brand.airbus.com/brand-elements/logo.html"
@@ -637,6 +642,13 @@
             "title": "Amazon Games",
             "hex": "FF9900",
             "source": "https://www.amazongames.com"
+        },
+        {
+            "title": "Amazon Identity Access Management",
+            "slug": "amazoniam",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "Amazon Lumberyard",
@@ -988,6 +1000,11 @@
             "source": "https://www.aparat.com/logo"
         },
         {
+            "title": "Apifox",
+            "hex": "F44A53",
+            "source": "https://apifox.com"
+        },
+        {
             "title": "Apollo GraphQL",
             "hex": "311C87",
             "source": "https://github.com/apollographql/space-kit/blob/9a42083746a49c9a734563f427c13233e42adcc9/logos/mark.svg"
@@ -1108,8 +1125,9 @@
         },
         {
             "title": "Arduino",
-            "hex": "00979D",
-            "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
+            "hex": "00878F",
+            "source": "https://www.arduino.cc",
+            "guidelines": "https://www.arduino.cc/en/trademark"
         },
         {
             "title": "Argo",
@@ -1806,7 +1824,8 @@
         {
             "title": "Bose",
             "hex": "000000",
-            "source": "https://developer.bose.com/sites/default/files/Bose%20AR%20Design%20Guidelines%20v1.0.pdf"
+            "source": "https://www.bose.com",
+            "guidelines": "https://www.bose.com/legal/terms-of-use"
         },
         {
             "title": "Botble CMS",
@@ -2186,6 +2205,11 @@
             "hex": "0066FF",
             "source": "https://chatbot.design",
             "guidelines": "https://chatbot.design"
+        },
+        {
+            "title": "Chatwoot",
+            "hex": "1F93FF",
+            "source": "https://www.chatwoot.com"
         },
         {
             "title": "CheckiO",
@@ -2812,6 +2836,11 @@
             "title": "Crayon",
             "hex": "FF6A4C",
             "source": "https://www.crayon.com"
+        },
+        {
+            "title": "Creality",
+            "hex": "000000",
+            "source": "https://www.creality.com"
         },
         {
             "title": "Create React App",
@@ -3546,6 +3575,11 @@
             "title": "Eagle",
             "hex": "0072EF",
             "source": "https://en.eagle.cool"
+        },
+        {
+            "title": "EasyEDA",
+            "hex": "1765F6",
+            "source": "https://easyeda.com"
         },
         {
             "title": "easyJet",
@@ -6027,6 +6061,11 @@
             "license": {
                 "type": "CC-BY-SA-3.0"
             }
+        },
+        {
+            "title": "IRIS",
+            "hex": "25313C",
+            "source": "https://www.iris.co.uk"
         },
         {
             "title": "Issuu",
@@ -8662,6 +8701,20 @@
             "source": "https://github.com/opencontainers/artwork/tree/d8ccfe94471a0236b1d4a3f0f90862c4fe5486ce/oci/icon"
         },
         {
+            "title": "Open Source Hardware",
+            "hex": "0099B0",
+            "source": "https://www.oshwa.org/open-source-hardware-logo",
+            "guidelines": "https://www.oshwa.org/open-source-hardware-logo",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            },
+            "aliases": {
+                "aka": [
+                    "OSHWA"
+                ]
+            }
+        },
+        {
             "title": "Open Source Initiative",
             "hex": "3DA639",
             "source": "https://opensource.org/logo-usage-guidelines",
@@ -8820,6 +8873,12 @@
         {
             "title": "Opera",
             "hex": "FF1B2D",
+            "source": "https://brand.opera.com/1472-2/opera-logos/",
+            "guidelines": "https://brand.opera.com"
+        },
+        {
+            "title": "Opera GX",
+            "hex": "EE2950",
             "source": "https://brand.opera.com/1472-2/opera-logos/",
             "guidelines": "https://brand.opera.com"
         },
@@ -9471,6 +9530,11 @@
             "source": "https://podcastaddict.com"
         },
         {
+            "title": "Podcast Index",
+            "hex": "F90000",
+            "source": "https://podcastindex.org"
+        },
+        {
             "title": "Podman",
             "hex": "892CA0",
             "source": "https://podman.io"
@@ -10022,6 +10086,12 @@
             "source": "https://qiwi.com"
         },
         {
+            "title": "Qlik",
+            "hex": "009848",
+            "source": "https://www.qlik.com",
+            "guidelines": "https://www.qlik.com/us/legal/trademarks"
+        },
+        {
             "title": "QMK",
             "hex": "333333",
             "source": "https://github.com/qmk/qmk.fm/blob/d6f7b646aa03f2941bb3977ba13a07ca351f20ae/assets/images/badge-dark.svg"
@@ -10393,6 +10463,11 @@
             "title": "Reliance Industries Limited",
             "hex": "D1AB66",
             "source": "https://www.ril.com/getattachment/7c210e67-5b0e-4965-b1a2-2ee83e19cee9/Morgan-Stanley-Eighteenth-Annual-India-Summit,-31.aspx"
+        },
+        {
+            "title": "remark",
+            "hex": "000000",
+            "source": "https://github.com/remarkjs/remark/blob/26dc58a675ac7267c105f0fdb76a82db77f8402a/logo.svg"
         },
         {
             "title": "Remix",
@@ -11745,6 +11820,12 @@
             "source": "https://www.ssrn.com"
         },
         {
+            "title": "SST",
+            "hex": "E27152",
+            "source": "https://sst.dev",
+            "guidelines": "https://github.com/serverless-stack/identity"
+        },
+        {
             "title": "Stack Exchange",
             "hex": "1E5397",
             "source": "https://stackoverflow.com/company/logos",
@@ -11970,6 +12051,11 @@
             "title": "strongSwan",
             "hex": "E00033",
             "source": "https://www.strongswan.org/images/"
+        },
+        {
+            "title": "Stryker",
+            "hex": "E74C3C",
+            "source": "https://stryker-mutator.io"
         },
         {
             "title": "StubHub",
@@ -12592,6 +12678,11 @@
             "title": "Timescale",
             "hex": "FDB515",
             "source": "https://www.timescale.com"
+        },
+        {
+            "title": "Tina",
+            "hex": "EC4815",
+            "source": "https://github.com/tinacms/tinacms/blob/965edfb7d2a318ab6b86a4772e4daebf53f34f2e/examples/tina-self-hosted-demo/public/tina.svg"
         },
         {
             "title": "Tinder",
@@ -13402,6 +13493,11 @@
             "source": "https://www.vonage.com"
         },
         {
+            "title": "Voron Design",
+            "hex": "ED3023",
+            "source": "https://github.com/VoronDesign/Voron-Extras/blob/d8591f964b408b3da21b6f9b4ab0437e229065de/Images/Logo/SVG/Voron_Design_Hex.svg"
+        },
+        {
             "title": "Vowpal Wabbit",
             "hex": "FF81F9",
             "source": "https://github.com/VowpalWabbit/vowpal_wabbit/blob/1da1aa4bb4f2dfb5e1a6083c14b429b30eba372d/logo_assets/vowpal-wabbits-icon.svg"
@@ -14183,7 +14279,8 @@
         {
             "title": "Zendesk",
             "hex": "03363D",
-            "source": "https://brandland.zendesk.com"
+            "source": "https://brandland.zendesk.com",
+            "guidelines": "https://brandland.zendesk.com"
         },
         {
             "title": "Zenn",
@@ -14209,7 +14306,8 @@
         {
             "title": "Zerply",
             "hex": "7BBB6E",
-            "source": "https://zerply.com/about/resources"
+            "source": "https://zerply.com/about/resources",
+            "guidelines": "https://zerply.com/about/resources"
         },
         {
             "title": "Zettlr",
@@ -14225,7 +14323,7 @@
         {
             "title": "Zig",
             "hex": "F7A41D",
-            "source": "https://github.com/ziglang/logo/tree/608770bf7303613c18a8c3faf284516fa31072f0",
+            "source": "https://github.com/ziglang/logo/blob/6446ba8e37a0651da720d8869e1ce9264fa0c0b9/zig-mark.svg",
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
@@ -14233,7 +14331,7 @@
         {
             "title": "Zigbee",
             "hex": "EB0443",
-            "source": "https://zigbeealliance.org/solution/zigbee/"
+            "source": "https://csa-iot.org/all-solutions/zigbee"
         },
         {
             "title": "Zilch",
@@ -14248,7 +14346,7 @@
         {
             "title": "ZincSearch",
             "hex": "5BA37F",
-            "source": "https://zincsearch.com"
+            "source": "https://github.com/zincsearch/zincsearch-docs/blob/f5b8bec0c05c10968f54aca3eabde9d4d77a1712/docs/images/logo.svg"
         },
         {
             "title": "Zingat",
@@ -14286,8 +14384,8 @@
         },
         {
             "title": "Zorin",
-            "hex": "0CC1F3",
-            "source": "https://zorinos.com/press/"
+            "hex": "15A6F0",
+            "source": "https://zorin.com/press"
         },
         {
             "title": "Zotero",

@@ -29,7 +29,7 @@ jobs:
       - id: get-si-members
         name: Get simple-icons members
         run: |
-          members="$(curl --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
+          members="$(curl -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
           echo "members=$members" >> $GITHUB_OUTPUT
 
       - id: get-linked-issues

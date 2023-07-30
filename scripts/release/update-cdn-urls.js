@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Updates the CDN URLs in the README.md to match the major version in the
