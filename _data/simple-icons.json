@@ -994,6 +994,11 @@
             "source": "https://www.aparat.com/logo"
         },
         {
+            "title": "Apifox",
+            "hex": "F44A53",
+            "source": "https://apifox.com"
+        },
+        {
             "title": "Apollo GraphQL",
             "hex": "311C87",
             "source": "https://github.com/apollographql/space-kit/blob/9a42083746a49c9a734563f427c13233e42adcc9/logos/mark.svg"
@@ -1114,8 +1119,9 @@
         },
         {
             "title": "Arduino",
-            "hex": "00979D",
-            "source": "https://cdn.arduino.cc/projecthub/img/Arduino-logo.svg"
+            "hex": "00878F",
+            "source": "https://www.arduino.cc",
+            "guidelines": "https://www.arduino.cc/en/trademark"
         },
         {
             "title": "Argo",
@@ -1812,7 +1818,8 @@
         {
             "title": "Bose",
             "hex": "000000",
-            "source": "https://developer.bose.com/sites/default/files/Bose%20AR%20Design%20Guidelines%20v1.0.pdf"
+            "source": "https://www.bose.com",
+            "guidelines": "https://www.bose.com/legal/terms-of-use"
         },
         {
             "title": "Botble CMS",
@@ -2823,6 +2830,11 @@
             "title": "Crayon",
             "hex": "FF6A4C",
             "source": "https://www.crayon.com"
+        },
+        {
+            "title": "Creality",
+            "hex": "000000",
+            "source": "https://www.creality.com"
         },
         {
             "title": "Create React App",
@@ -8686,6 +8698,20 @@
             "title": "Open Containers Initiative",
             "hex": "262261",
             "source": "https://github.com/opencontainers/artwork/tree/d8ccfe94471a0236b1d4a3f0f90862c4fe5486ce/oci/icon"
+        },
+        {
+            "title": "Open Source Hardware",
+            "hex": "0099B0",
+            "source": "https://www.oshwa.org/open-source-hardware-logo",
+            "guidelines": "https://www.oshwa.org/open-source-hardware-logo",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            },
+            "aliases": {
+                "aka": [
+                    "OSHWA"
+                ]
+            }
         },
         {
             "title": "Open Source Initiative",
