@@ -166,6 +166,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Kirby plugin](https://github.com/runxel/kirby3-simpleicons) <img src="https://cdn.simpleicons.org/kirby/000/fff" alt="Kirby" align=left width=24 height=24> | [@runxel](https://github.com/runxel) |
 | [LaTeX package](https://github.com/ineshbose/simple-icons-latex) <img src="https://cdn.simpleicons.org/latex/000/fff" alt="LaTeX" align=left width=24 height=24> | [@ineshbose](https://github.com/ineshbose) |
 | [Laravel Package](https://github.com/ublabs/blade-simple-icons) <img src="https://cdn.simpleicons.org/laravel/000/fff" alt="Laravel" align=left width=24 height=24> | [@adrian-ub](https://github.com/adrian-ub) |
+| [Leptos crate](https://github.com/Carlosted/leptos-icons) <img src="https://cdn.simpleicons.org/leptos/000/fff" alt="Leptos" align=left width=24 height=24> | [@Carlosted](https://github.com/Carlosted) |
 | [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://cdn.simpleicons.org/python/000/fff" alt="Python" align=left width=24 height=24> | [@sachinraja](https://github.com/sachinraja) |
 | [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://cdn.simpleicons.org/react/000/fff" alt="React" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
 | [Solid package](https://github.com/x64Bits/solid-icons) <img src="https://cdn.simpleicons.org/solid/000/fff" alt="Solid" align=left width=24 height=24> | [@x64Bits](https://github.com/x64Bits) |
