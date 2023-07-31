@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Replaces the SVG count milestone "Over <NUMBER> Free SVG icons..." located
