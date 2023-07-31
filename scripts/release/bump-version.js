@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Updates the version of this package to the CLI specified version.
