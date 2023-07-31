@@ -169,7 +169,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Leptos crate](https://github.com/Carlosted/leptos-icons) <img src="https://cdn.simpleicons.org/leptos/000/fff" alt="Leptos" align=left width=24 height=24> | [@Carlosted](https://github.com/Carlosted) |
 | [Python package](https://github.com/sachinraja/simple-icons-py) <img src="https://cdn.simpleicons.org/python/000/fff" alt="Python" align=left width=24 height=24> | [@sachinraja](https://github.com/sachinraja) |
 | [React package](https://github.com/icons-pack/react-simple-icons) <img src="https://cdn.simpleicons.org/react/000/fff" alt="React" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
-|[Ruby gem](https://rubygems.org/gems/simple-icons-rails) <img src="https://cdn.simpleicons.org/rubygems/000/fff" alt="Ruby" align=left width=24 height=24> | [@thepew](https://github.com/the-pew-inc/simple-icons-rails)
+| [Ruby gem](https://rubygems.org/gems/simple-icons-rails) <img src="https://cdn.simpleicons.org/rubygems/000/fff" alt="Ruby" align=left width=24 height=24> | [@thepew](https://github.com/the-pew-inc/simple-icons-rails) |
 | [Solid package](https://github.com/x64Bits/solid-icons) <img src="https://cdn.simpleicons.org/solid/000/fff" alt="Solid" align=left width=24 height=24> | [@x64Bits](https://github.com/x64Bits) |
 | [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) |
 | [Svelte package](https://github.com/icons-pack/svelte-simple-icons) <img src="https://cdn.simpleicons.org/svelte/000/fff" alt="Svelte" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) |
