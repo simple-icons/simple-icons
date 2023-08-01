@@ -307,7 +307,7 @@ export default {
           // which shouldn't be encoded
           for (const match of encodingMatches.filter((m) => !isNaN(m[2]))) {
             const decimalNumber = parseInt(match[2]);
-            if (decimalNumber >= 128) {
+            if (decimalNumber > 127) {
               continue;
             }
             _validCodepointsRepr = false;
