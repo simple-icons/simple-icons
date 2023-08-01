@@ -53,7 +53,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Bump version
-        run: npm version "${{ needs.release-pr.outputs.new-version }}"
+        run: |
+          npm version --no-commit-hooks --no-git-tag-version \
+            "${{ needs.release-pr.outputs.new-version }}"
       - name: Install dependencies
         run: npm i
       - name: Update major version in CDN URLs
