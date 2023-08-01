@@ -656,26 +656,18 @@ export default {
               nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
             switch (cmd) {
-              case 'L':
+              // Next switch statements have been ordered by frequency
+              // of occurrence in the SVG paths of the icons
+              case 'M':
                 currAbsCoord[0] = seg[1];
                 currAbsCoord[1] = seg[2];
-                break;
-              case 'l':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                startPoint = undefined;
                 break;
               case 'm':
                 currAbsCoord[0] =
                   (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
                 currAbsCoord[1] =
                   (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-                startPoint = undefined;
-                break;
-              case 'M':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
                 startPoint = undefined;
                 break;
               case 'H':
@@ -692,6 +684,22 @@ export default {
                 currAbsCoord[1] =
                   (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
                 break;
+              case 'L':
+                currAbsCoord[0] = seg[1];
+                currAbsCoord[1] = seg[2];
+                break;
+              case 'l':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                break;
+              case 'Z':
+              case 'z':
+                // Overlapping in Z should be handled in another rule
+                currAbsCoord = [startPoint[0], startPoint[1]];
+                _resetStartPoint = true;
+                break;
               case 'C':
                 currAbsCoord[0] = seg[5];
                 currAbsCoord[1] = seg[6];
@@ -702,15 +710,15 @@ export default {
                 currAbsCoord[1] =
                   (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
                 break;
+              case 'A':
+                currAbsCoord[0] = seg[6];
+                currAbsCoord[1] = seg[7];
+                break;
               case 'a':
                 currAbsCoord[0] =
                   (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[6];
                 currAbsCoord[1] =
                   (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[7];
-                break;
-              case 'A':
-                currAbsCoord[0] = seg[6];
-                currAbsCoord[1] = seg[7];
                 break;
               case 's':
                 currAbsCoord[0] =
@@ -732,12 +740,6 @@ export default {
                 currAbsCoord[0] = seg[1];
                 currAbsCoord[1] = seg[2];
                 break;
-              case 'c':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
-                break;
               case 'Q':
                 currAbsCoord[0] = seg[3];
                 currAbsCoord[1] = seg[4];
@@ -747,12 +749,6 @@ export default {
                   (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
                 currAbsCoord[1] =
                   (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
-                break;
-              case 'Z':
-              case 'z':
-                // Overlapping in Z should be handled in another rule
-                currAbsCoord = [startPoint[0], startPoint[1]];
-                _resetStartPoint = true;
                 break;
               default:
                 throw new Error(`"${cmd}" command not handled`);
