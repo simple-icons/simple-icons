@@ -178,7 +178,7 @@ export const normalizeColor = (text) => {
 
 /**
  * Get information about third party extensions from the README table.
- * @param {String|undefined} readmePath Path to the README file
+ * @param {String} readmePath Path to the README file
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
  */
 export const getThirdPartyExtensions = async (
