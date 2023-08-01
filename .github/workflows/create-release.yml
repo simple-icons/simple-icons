@@ -41,8 +41,23 @@ jobs:
           token: ${{ secrets.RELEASE_TOKEN }}
           # Ensure we are checked out on the develop branch
           ref: develop
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Bump version
-        run: node ./scripts/release/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
+        run: |
+          npm version --no-commit-hooks --no-git-tag-version \
+            "${{ needs.release-pr.outputs.new-version }}"
+      - name: Install dependencies
+        run: npm i
       - name: Update major version in CDN URLs
         run: node ./scripts/release/update-cdn-urls.js
       - name: Update SVGs count milestone
