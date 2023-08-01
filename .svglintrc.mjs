@@ -656,7 +656,7 @@ export default {
               nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
             switch (cmd) {
-              // Next switch statements have been ordered by frequency
+              // Next switch cases have been ordered by frequency
               // of occurrence in the SVG paths of the icons
               case 'M':
                 currAbsCoord[0] = seg[1];
