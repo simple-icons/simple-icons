@@ -113,6 +113,10 @@ const hexadecimalToDecimal = (hex) => {
   return result;
 };
 
+const maybeShortenedWithEllipsis = (str) => {
+  return str.length > 20 ? `${str.substring(0, 20)}...` : str;
+};
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -380,13 +384,9 @@ export default {
               segment.end,
             )}"`;
             if (segment.chained) {
-              let readableChain = iconPath.substring(
-                segment.chainStart,
-                segment.chainEnd,
+              const readableChain = maybeShortenedWithEllipsis(
+                iconPath.substring(segment.chainStart, segment.chainEnd),
               );
-              if (readableChain.length > 20) {
-                readableChain = `${readableChain.substring(0, 20)}...`;
-              }
               errorMsg += ` of chain "${readableChain}"`;
             }
             errorMsg += ` at index ${
@@ -430,14 +430,17 @@ export default {
           upperCurveCommand,
           upperShorthandCurveCommand,
         ];
-        const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
-        const commands = [
-          ...lowerMovementCommands,
-          ...lowerDirectionCommands,
-          ...upperMovementCommands,
-          ...upperDirectionCommands,
-          ...curveCommands,
-        ];
+        const curveCommands = lowerCurveCommands.concat(upperCurveCommands);
+        const commands = [].concat.apply(
+          [],
+          [
+            lowerMovementCommands,
+            lowerDirectionCommands,
+            upperMovementCommands,
+            upperDirectionCommands,
+            curveCommands,
+          ],
+        );
         const isInvalidSegment = (
           [command, x1Coord, y1Coord, ...rest],
           index,
@@ -593,13 +596,9 @@ export default {
             }
 
             if (segment.chained) {
-              let readableChain = iconPath.substring(
-                segment.chainStart,
-                segment.chainEnd,
+              const readableChain = maybeShortenedWithEllipsis(
+                iconPath.substring(segment.chainStart, segment.chainEnd),
               );
-              if (readableChain.length > 20) {
-                readableChain = `${readableChain.substring(0, 20)}...`;
-              }
               errorMsg += ` in chain "${readableChain}"`;
             }
             errorMsg += ` at index ${
@@ -793,13 +792,9 @@ export default {
             segment.end,
           )}" found`;
           if (segment.chained) {
-            let readableChain = iconPath.substring(
-              segment.chainStart,
-              segment.chainEnd,
+            let readableChain = maybeShortenedWithEllipsis(
+              iconPath.substring(segment.chainStart, segment.chainEnd),
             );
-            if (readableChain.length > 20) {
-              readableChain = `${readableChain.substring(0, 20)}...`;
-            }
             errorMsg += ` in chain "${readableChain}"`;
           }
           errorMsg += ` at index ${
