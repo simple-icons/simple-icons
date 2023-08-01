@@ -77,17 +77,15 @@ jobs:
           echo "::set-output name=version::$PACKAGE_VERSION"
       - name: Replace CDN theme image links from README
         run: npm run strip-theme-link
-      - name: Update SDK Typescript definitions
-        run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Configure GIT credentials
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       # Commit that will only be included in the tag
-      - name: Commit new files
+      - name: Commit CDN theme image links removal
         run: |
-          git add README.md sdk.d.ts
-          git commit -m 'Update files for release'
+          git add README.md
+          git commit -m 'Replace README CDN theme image links'
       - name: Create and push git tag
         run: |
           set -e
