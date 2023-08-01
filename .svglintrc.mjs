@@ -846,7 +846,6 @@ export default {
         );
         if (negativeZeroMatches.length) {
           // Calculate the index for each match in the file
-          const svgFileContent = ast.source;
           const pathDIndex = getPathDIndex(ast.source);
 
           for (const match of negativeZeroMatches) {
