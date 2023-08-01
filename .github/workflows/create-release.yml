@@ -49,6 +49,8 @@ jobs:
         run: node ./scripts/release/update-svgs-count.js
       - name: Update slugs table
         run: node ./scripts/release/update-slugs-table.js
+      - name: Update SDK Typescript definitions
+        run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v4.16.0
         with:

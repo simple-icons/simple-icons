@@ -120,7 +120,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 
 /**
  * Get path of *_data/simpe-icons.json*.
- * @param {String|undefined} rootDir Path to the root directory of the project
+ * @param {String} rootDir Path to the root directory of the project
  * @returns {String} Path of *_data/simple-icons.json*
  */
 export const getIconDataPath = (
@@ -131,7 +131,7 @@ export const getIconDataPath = (
 
 /**
  * Get contents of *_data/simple-icons.json*.
- * @param {String|undefined} rootDir Path to the root directory of the project
+ * @param {String} rootDir Path to the root directory of the project
  * @returns {String} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
@@ -142,7 +142,7 @@ export const getIconsDataString = (
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
- * @param {String|undefined} rootDir Path to the root directory of the project
+ * @param {String} rootDir Path to the root directory of the project
  * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (

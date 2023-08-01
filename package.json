@@ -78,7 +78,8 @@
     "svg-path-segments": "1.0.0",
     "svglint": "2.3.1",
     "svgo": "3.0.2",
-    "svgpath": "2.6.0"
+    "svgpath": "2.6.0",
+    "typescript": "5.1.6"
   },
   "scripts": {
     "build": "node scripts/build/package.js",
