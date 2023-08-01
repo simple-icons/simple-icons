@@ -158,7 +158,7 @@ export default {
     },
     attr: [
       {
-        // ensure that the SVG elm has the appropriate attributes
+        // ensure that the SVG element has the appropriate attributes
         // alphabetically ordered
         role: 'img',
         viewBox: `0 0 ${iconSize} ${iconSize}`,
@@ -168,7 +168,7 @@ export default {
         'rule::order': true,
       },
       {
-        // ensure that the title elm has the appropriate attribute
+        // ensure that the title element has the appropriate attribute
         'rule::selector': 'svg > title',
         'rule::whitelist': true,
       },
