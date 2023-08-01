@@ -43,7 +43,7 @@ const generateSdkMts = async () => {
   await fs.writeFile(sdkMjs, originalSdkMjsContent);
 };
 
-(async () => {
+const generateSdkTs = async () => {
   fsSync.existsSync(sdkMts) && (await fs.unlink(sdkMts));
   await generateSdkMts();
 
@@ -56,7 +56,7 @@ const generateSdkMts = async () => {
   await fs.unlink(sdkMts);
 
   try {
-    execSync('prettier -w sdk.d.ts');
+    execSync('npx prettier -w sdk.d.ts');
   } catch (error) {
     console.log(
       `Error ${error.status} executing Prettier` +
@@ -64,4 +64,6 @@ const generateSdkMts = async () => {
     );
     process.exit(1);
   }
-})();
+};
+
+await generateSdkTs();
