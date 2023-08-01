@@ -158,7 +158,8 @@ export default {
     },
     attr: [
       {
-        // ensure that the SVG elm has the appropriate attrs alphabetically ordered
+        // ensure that the SVG elm has the appropriate attributes
+        // alphabetically ordered
         role: 'img',
         viewBox: `0 0 ${iconSize} ${iconSize}`,
         xmlns: 'http://www.w3.org/2000/svg',
@@ -167,12 +168,13 @@ export default {
         'rule::order': true,
       },
       {
-        // ensure that the title elm has the appropriate attr
+        // ensure that the title elm has the appropriate attribute
         'rule::selector': 'svg > title',
         'rule::whitelist': true,
       },
       {
-        // ensure that the path element only has the 'd' attr (no style, opacity, etc.)
+        // ensure that the path element only has the 'd' attribute
+        // (no style, opacity, etc.)
         d: svgPathRegexp,
         'rule::selector': 'svg > path',
         'rule::whitelist': true,
@@ -211,7 +213,8 @@ export default {
             }
 
             reporter.error(
-              `Hexadecimal representation of encoded character "${match[0]}" found at index ${charHexReprIndex}:` +
+              'Hexadecimal representation of encoded character' +
+                ` "${match[0]}" found at index ${charHexReprIndex}:` +
                 ` replace it with "${charRepr}".`,
             );
           }
@@ -246,7 +249,8 @@ export default {
               }
 
               reporter.error(
-                `Named entity representation of encoded character "${match[0]}" found at index ${namedEntiyReprIndex}.` +
+                'Named entity representation of encoded character' +
+                  ` "${match[0]}" found at index ${namedEntiyReprIndex}.` +
                   ` Replace it with ${replacement}.`,
               );
             }
@@ -322,7 +326,8 @@ export default {
             }
 
             reporter.error(
-              `Unnecessary encoded character "${match[0]}" found at index ${decimalCodepointCharIndex}:` +
+              `Unnecessary encoded character "${match[0]}" found` +
+                ` at index ${decimalCodepointCharIndex}:` +
                 ` replace it with ${replacement}.`,
             );
           }
@@ -361,7 +366,8 @@ export default {
           }
         } else if (width !== iconSize && height !== iconSize) {
           reporter.error(
-            `Size of <path> must be exactly ${iconSize} in one dimension; the size is currently ${width} x ${height}`,
+            `Size of <path> must be exactly ${iconSize} in one dimension;` +
+              ` the size is currently ${width} x ${height}`,
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -379,10 +385,9 @@ export default {
             ...segment.params.slice(1).map(countDecimals),
           );
           if (precisionMax > iconMaxFloatPrecision) {
-            let errorMsg = `found ${precisionMax} decimals in segment "${iconPath.substring(
-              segment.start,
-              segment.end,
-            )}"`;
+            let errorMsg =
+              `found ${precisionMax} decimals in segment` +
+              ` "${iconPath.substring(segment.start, segment.end)}"`;
             if (segment.chained) {
               const readableChain = maybeShortenedWithEllipsis(
                 iconPath.substring(segment.chainStart, segment.chainEnd),
@@ -393,7 +398,8 @@ export default {
               segment.start + getPathDIndex(ast.source)
             }`;
             reporter.error(
-              `Maximum precision should not be greater than ${iconMaxFloatPrecision}; ${errorMsg}`,
+              'Maximum precision should not be greater than' +
+                ` ${iconMaxFloatPrecision}; ${errorMsg}`,
             );
           }
         }
@@ -402,9 +408,6 @@ export default {
         reporter.name = 'ineffective-segments';
 
         const iconPath = $.find('path').attr('d');
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
 
         const segments = parsePath(iconPath);
         const absSegments = svgpath(iconPath).abs().unshort().segments;
@@ -444,6 +447,7 @@ export default {
         const isInvalidSegment = (
           [command, x1Coord, y1Coord, ...rest],
           index,
+          previousSegmentIsZ,
         ) => {
           if (commands.includes(command)) {
             // Relative directions (h or v) having a length of 0
@@ -457,7 +461,10 @@ export default {
               x1Coord === 0 &&
               y1Coord === 0
             ) {
-              return true;
+              // When the path is closed (z), the new segment
+              // can start with a relative placement (m) as
+              // if it were absolute (M)
+              return command.toLowerCase() === 'm' ? !previousSegmentIsZ : true;
             }
             if (
               lowerCurveCommands.includes(command) &&
@@ -480,7 +487,8 @@ export default {
               let [yPrevCoord, xPrevCoord] = [
                 ...absSegments[index - 1],
               ].reverse();
-              // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
+              // If the previous command was a direction one,
+              // we need to iterate back until we find the missing coordinates
               if (upperDirectionCommands.includes(xPrevCoord)) {
                 xPrevCoord = undefined;
                 yPrevCoord = undefined;
@@ -492,12 +500,14 @@ export default {
                   let [yPrevCoordDeep, xPrevCoordDeep] = [
                     ...absSegments[idx],
                   ].reverse();
-                  // If the previous command was a horizontal movement, we need to consider the single coordinate as x
+                  // If the previous command was a horizontal movement,
+                  // we need to consider the single coordinate as x
                   if (upperHorDirectionCommand === xPrevCoordDeep) {
                     xPrevCoordDeep = yPrevCoordDeep;
                     yPrevCoordDeep = undefined;
                   }
-                  // If the previous command was a vertical movement, we need to consider the single coordinate as y
+                  // If the previous command was a vertical movement,
+                  // we need to consider the single coordinate as y
                   if (upperVerDirectionCommand === xPrevCoordDeep) {
                     xPrevCoordDeep = undefined;
                   }
@@ -518,7 +528,9 @@ export default {
 
               if (upperCurveCommands.includes(command)) {
                 const [x2Coord, y2Coord, xCoord, yCoord] = rest;
-                // Absolute shorthand curve (S) having the same coordinate as the previous segment and a control point equal to the ending point
+                // Absolute shorthand curve (S) having
+                // the same coordinate as the previous segment
+                // and a control point equal to the ending point
                 if (
                   upperShorthandCurveCommand === command &&
                   x1Coord === xPrevCoord &&
@@ -528,7 +540,9 @@ export default {
                 ) {
                   return true;
                 }
-                // Absolute bézier curve (C) having the same coordinate as the previous segment and last control point equal to the ending point
+                // Absolute bézier curve (C) having
+                // the same coordinate as the previous segment
+                // and last control point equal to the ending point
                 if (
                   upperCurveCommand === command &&
                   x1Coord === xPrevCoord &&
@@ -541,13 +555,16 @@ export default {
               }
 
               return (
-                // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                // Absolute horizontal direction (H) having
+                // the same x coordinate as the previous segment
                 (upperHorDirectionCommand === command &&
                   x1Coord === xPrevCoord) ||
-                // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                // Absolute vertical direction (V) having
+                // the same y coordinate as the previous segment
                 (upperVerDirectionCommand === command &&
                   x1Coord === yPrevCoord) ||
-                // Absolute movement (M or L) having the same coordinate as the previous segment
+                // Absolute movement (M or L) having the same
+                // coordinate as the previous segment
                 (upperMovementCommands.includes(command) &&
                   x1Coord === xPrevCoord &&
                   y1Coord === yPrevCoord)
@@ -558,7 +575,10 @@ export default {
 
         for (let index = 0; index < segments.length; index++) {
           const segment = segments[index];
-          if (isInvalidSegment(segment.params, index)) {
+          const previousSegmentIsZ =
+            index > 0 && segments[index - 1].params[0].toLowerCase() === 'z';
+
+          if (isInvalidSegment(segment.params, index, previousSegmentIsZ)) {
             const [command, x1, y1, ...rest] = segment.params;
 
             let errorMsg = `Innefective segment "${iconPath.substring(
@@ -606,10 +626,6 @@ export default {
             }`;
 
             reporter.error(`${errorMsg} (${resolutionTip})`);
-
-            if (updateIgnoreFile) {
-              ignoreIcon(reporter.name, iconPath, $);
-            }
           }
         }
       },
@@ -813,7 +829,8 @@ export default {
             );
           } else {
             reporter.error(
-              'Unexpected character(s), most likely extraneous whitespace, detected in SVG markup',
+              'Unexpected character(s), most likely extraneous' +
+                ' whitespace, detected in SVG markup',
             );
           }
         }
@@ -839,7 +856,8 @@ export default {
               ? ' 0'
               : '0';
             reporter.error(
-              `Found "-0" at index ${negativeZeroFileIndex} (should be "${replacement}")`,
+              `Found "-0" at index ${negativeZeroFileIndex} (should` +
+                ` be "${replacement}")`,
             );
           }
         }
@@ -864,7 +882,8 @@ export default {
           Math.abs(devianceY) > iconTolerance
         ) {
           reporter.error(
-            `<path> must be centered at (${targetCenter}, ${targetCenter}); the center is currently (${centerX}, ${centerY})`,
+            `<path> must be centered at (${targetCenter}, ${targetCenter});` +
+              ` the center is currently (${centerX}, ${centerY})`,
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -882,7 +901,9 @@ export default {
 
           if (!/^[Mm]/.test(iconPath)) {
             // doesn't start with moveto
-            reason = `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`;
+            reason =
+              'should start with "moveto" command ("M" or "m"),' +
+              ` but starts with \"${iconPath[0]}\"`;
             reporter.error(`${errorMsg}: ${reason}`);
           }
 
@@ -919,8 +940,8 @@ export default {
           const reason =
             `found a closing "path" tag at index ${ast.source.indexOf(
               '</path>',
-            )}.` +
-            " The path should be self-closing, use '/>' instead of '></path>'.";
+            )}. The path should be self-closing,` +
+            ' use "/>" instead of "></path>".';
           reporter.error(`Invalid SVG content format: ${reason}`);
         }
       },
