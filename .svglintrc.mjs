@@ -433,7 +433,7 @@ export default {
           upperCurveCommand,
           upperShorthandCurveCommand,
         ];
-        const curveCommands = [...lowerCurveCommands, ...upper];
+        const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
         const commands = [
           ...lowerMovementCommands,
           ...lowerDirectionCommands,
