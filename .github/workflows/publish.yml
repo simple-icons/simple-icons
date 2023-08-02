@@ -48,10 +48,12 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Replace CDN theme image links from README
-        run: npm run strip-theme-link
       - name: Install dependencies
         run: npm i
+      - name: Replace CDN theme image links from README
+        run: npm run strip-theme-link
+      - name: Update SDK Typescript definitions
+        run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
@@ -80,7 +82,7 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       # Commit that will only be included in the tag
-      - name: Commit dark theme images strip
+      - name: Commit CDN theme image links removal
         run: |
           git add README.md
           git commit -m 'Replace README CDN theme image links'
