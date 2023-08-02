@@ -458,9 +458,8 @@ export default {
               x1Coord === 0 &&
               y1Coord === 0
             ) {
-              // When the path is closed (z), the new segment
-              // can start with a relative placement (m) as
-              // if it were absolute (M)
+              // When the path is closed (z), the new segment can start with
+              // a relative placement (m) as if it were absolute (M)
               return command.toLowerCase() === 'm' ? !previousSegmentIsZ : true;
             }
             if (
