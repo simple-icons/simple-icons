@@ -321,7 +321,7 @@ export default {
                 ]
               };"`;
             } else {
-              replacement = String.fromCharCode(decimalNumber);
+              replacement = String.fromCodePoint(decimalNumber);
               replacement = replacement == '"' ? `'"'` : `"${replacement}"`;
             }
 
@@ -433,17 +433,14 @@ export default {
           upperCurveCommand,
           upperShorthandCurveCommand,
         ];
-        const curveCommands = lowerCurveCommands.concat(upperCurveCommands);
-        const commands = [].concat.apply(
-          [],
-          [
-            lowerMovementCommands,
-            lowerDirectionCommands,
-            upperMovementCommands,
-            upperDirectionCommands,
-            curveCommands,
-          ],
-        );
+        const curveCommands = [...lowerCurveCommands, ...upper];
+        const commands = [
+          ...lowerMovementCommands,
+          ...lowerDirectionCommands,
+          ...upperMovementCommands,
+          ...upperDirectionCommands,
+          ...curveCommands,
+        ];
         const isInvalidSegment = (
           [command, x1Coord, y1Coord, ...rest],
           index,
