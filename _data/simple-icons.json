@@ -618,12 +618,6 @@
             "guidelines": "https://aws.amazon.com/architecture/icons/"
         },
         {
-            "title": "AWS Organizations",
-            "hex": "E7157B",
-            "source": "https://aws.amazon.com/architecture/icons",
-            "guidelines": "https://aws.amazon.com/architecture/icons"
-        },
-        {
             "title": "Amazon Pay",
             "hex": "FF9900",
             "source": "https://pay.amazon.com"
@@ -1298,6 +1292,12 @@
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons/",
             "guidelines": "https://aws.amazon.com/architecture/icons/"
+        },
+        {
+            "title": "AWS Organizations",
+            "hex": "E7157B",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "Axios",
