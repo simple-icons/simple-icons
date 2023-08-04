@@ -7314,8 +7314,11 @@
         {
             "title": "MediaWiki",
             "hex": "000000",
-            "source": "https://www.mediawiki.org",
-            "guidelines": "https://www.mediawiki.org/wiki/Manual:MediaWiki_logo_guidelines"
+            "source": "https://commons.wikimedia.org/wiki/File:MediaWiki-2020-logo.svg",
+            "guidelines": "https://www.mediawiki.org/wiki/Manual:MediaWiki_logo_guidelines",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "MediBang Paint",
