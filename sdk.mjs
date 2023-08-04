@@ -112,7 +112,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
   htmlFriendlyTitle
-    .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))
+    .replace(/&#([0-9]+);/g, (_, num) => String.fromCodePoint(parseInt(num)))
     .replace(
       /&(quot|amp|lt|gt);/g,
       (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
