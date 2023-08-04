@@ -4008,7 +4008,7 @@
         {
             "title": "Facepunch",
             "hex": "EC1C24",
-            "source": "https://facepunch.com/img/brand/default-light.svg"
+            "source": "https://sbox.facepunch.com/news"
         },
         {
             "title": "Falcon",
@@ -14029,6 +14029,11 @@
             "guidelines": "https://www.audiokinetic.com/resources/credits/"
         },
         {
+            "title": "X",
+            "hex": "000000",
+            "source": "https://twitter.com"
+        },
+        {
             "title": "X.Org",
             "hex": "F28834",
             "source": "https://upload.wikimedia.org/wikipedia/commons/9/90/X.Org_Logo.svg"
@@ -14146,12 +14151,21 @@
         {
             "title": "Yammer",
             "hex": "106EBE",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Yarn",
             "hex": "2C8EBB",
-            "source": "https://github.com/yarnpkg/assets/tree/76d30ca2aebed5b73ea8131d972218fb860bd32d"
+            "source": "https://github.com/yarnpkg/assets/blob/76d30ca2aebed5b73ea8131d972218fb860bd32d/yarn-kitten-circle.svg",
+            "guidelines": "https://github.com/yarnpkg/assets/tree/76d30ca2aebed5b73ea8131d972218fb860bd32d",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Yelp",
