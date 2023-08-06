@@ -34,6 +34,7 @@ const generateSdkMts = async () => {
         ' --declaration --emitDeclarationOnly --allowJs --removeComments',
     );
   } catch (error) {
+    await fs.writeFile(sdkMjs, originalSdkMjsContent);
     console.log(
       `Error ${error.status} generating Typescript` +
         ` definitions: '${error.message}'`,
