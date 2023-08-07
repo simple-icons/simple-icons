@@ -150,38 +150,27 @@ const ignoreIcon = (linterName, path, $) => {
 };
 
 /**
- * Cache for SVG icons.
- *
- * Used to avoid parsing the same data for each icon multiple times.
+ * Memoize a function that accept a single argument.
+ * A second argument can be passed to be used as key.
+ * @param {*} func
+ * @returns
  */
-class IconsCache {
-  static content = {
-    path: {},
-    segments: {},
-    bbox: {},
+const memoize = (func) => {
+  const results = {};
+
+  return (arg, defaultKey = null) => {
+    const key = defaultKey || arg;
+
+    if (!results[key]) {
+      results[key] = func(arg);
+    }
+    return results[key];
   };
+};
 
-  static getOrSetPath($icon, filepath) {
-    if (!this.content.path[filepath]) {
-      this.content.path[filepath] = $icon.find('path').attr('d');
-    }
-    return this.content.path[filepath];
-  }
-
-  static getOrSetSegments(iconPath) {
-    if (!this.content.segments[iconPath]) {
-      this.content.segments[iconPath] = parsePath(iconPath);
-    }
-    return this.content.segments[iconPath];
-  }
-
-  static getOrSetBbox(iconPath) {
-    if (!this.content.bbox[iconPath]) {
-      this.content.bbox[iconPath] = svgPathBbox(iconPath);
-    }
-    return this.content.bbox[iconPath];
-  }
-}
+const getIconPath = memoize(($icon, filepath) => $icon.find('path').attr('d'));
+const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
+const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
 
 export default {
   rules: {
@@ -383,12 +372,12 @@ export default {
       (reporter, $, ast, filepath) => {
         reporter.name = 'icon-size';
 
-        const iconPath = IconsCache.getOrSetPath($, filepath);
+        const iconPath = getIconPath($, filepath);
         if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
           return;
         }
 
-        const [minX, minY, maxX, maxY] = IconsCache.getOrSetBbox(iconPath);
+        const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const width = +(maxX - minX).toFixed(iconFloatPrecision);
         const height = +(maxY - minY).toFixed(iconFloatPrecision);
 
@@ -412,8 +401,8 @@ export default {
       (reporter, $, ast, filepath) => {
         reporter.name = 'icon-precision';
 
-        const iconPath = IconsCache.getOrSetPath($, filepath);
-        const segments = IconsCache.getOrSetSegments(iconPath);
+        const iconPath = getIconPath($, filepath);
+        const segments = getIconPathSegments(iconPath);
 
         for (const segment of segments) {
           const precisionMax = Math.max(
@@ -442,8 +431,8 @@ export default {
       (reporter, $, ast, filepath) => {
         reporter.name = 'ineffective-segments';
 
-        const iconPath = IconsCache.getOrSetPath($, filepath);
-        const segments = IconsCache.getOrSetSegments(iconPath);
+        const iconPath = getIconPath($, filepath);
+        const segments = getIconPathSegments(iconPath);
         const absSegments = svgpath(iconPath).abs().unshort().segments;
 
         const lowerMovementCommands = ['m', 'l'];
@@ -667,7 +656,7 @@ export default {
          *   (does not extracts collinear coordinates from curves).
          **/
         const getCollinearSegments = (iconPath) => {
-          const segments = IconsCache.getOrSetSegments(iconPath),
+          const segments = getIconPathSegments(iconPath),
             collinearSegments = [],
             straightLineCommands = 'HhVvLlMm';
 
@@ -824,7 +813,7 @@ export default {
           return collinearSegments;
         };
 
-        const iconPath = IconsCache.getOrSetPath($, filepath),
+        const iconPath = getIconPath($, filepath),
           collinearSegments = getCollinearSegments(iconPath);
         if (collinearSegments.length === 0) {
           return;
@@ -866,7 +855,7 @@ export default {
       (reporter, $, ast, filepath) => {
         reporter.name = 'negative-zeros';
 
-        const iconPath = IconsCache.getOrSetPath($, filepath);
+        const iconPath = getIconPath($, filepath);
 
         // Find negative zeros inside path
         const negativeZeroMatches = Array.from(
@@ -892,12 +881,12 @@ export default {
       (reporter, $, ast, filepath) => {
         reporter.name = 'icon-centered';
 
-        const iconPath = IconsCache.getOrSetPath($, filepath);
+        const iconPath = getIconPath($, filepath);
         if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
           return;
         }
 
-        const [minX, minY, maxX, maxY] = IconsCache.getOrSetBbox(iconPath);
+        const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const centerX = +((minX + maxX) / 2).toFixed(iconFloatPrecision);
         const devianceX = centerX - iconTargetCenter;
         const centerY = +((minY + maxY) / 2).toFixed(iconFloatPrecision);
@@ -919,7 +908,7 @@ export default {
       (reporter, $, ast, filepath) => {
         reporter.name = 'path-format';
 
-        const iconPath = IconsCache.getOrSetPath($, filepath);
+        const iconPath = getIconPath($, filepath);
 
         if (!svgPathRegexp.test(iconPath)) {
           let errorMsg = 'Invalid path format',
