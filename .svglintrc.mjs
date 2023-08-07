@@ -119,7 +119,7 @@ const maybeShortenedWithEllipsis = (str) => {
 };
 
 /**
- * Memoize a function that accept a single argument.
+ * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
  */
 const memoize = (func) => {
