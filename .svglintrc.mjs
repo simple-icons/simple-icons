@@ -118,6 +118,29 @@ const maybeShortenedWithEllipsis = (str) => {
   return str.length > 20 ? `${str.substring(0, 20)}...` : str;
 };
 
+/**
+ * Memoize a function that accept a single argument.
+ * A second argument can be passed to be used as key.
+ * @param {*} func
+ * @returns
+ */
+const memoize = (func) => {
+  const results = {};
+
+  return (arg, defaultKey = null) => {
+    const key = defaultKey || arg;
+
+    if (!results[key]) {
+      results[key] = func(arg);
+    }
+    return results[key];
+  };
+};
+
+const getIconPath = memoize(($icon, filepath) => $icon.find('path').attr('d'));
+const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
+const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
+
 if (updateIgnoreFile) {
   process.on('exit', () => {
     // ensure object output order is consistent due to async svglint processing
@@ -148,29 +171,6 @@ const ignoreIcon = (linterName, path, $) => {
 
   iconIgnored[linterName][path] = iconName;
 };
-
-/**
- * Memoize a function that accept a single argument.
- * A second argument can be passed to be used as key.
- * @param {*} func
- * @returns
- */
-const memoize = (func) => {
-  const results = {};
-
-  return (arg, defaultKey = null) => {
-    const key = defaultKey || arg;
-
-    if (!results[key]) {
-      results[key] = func(arg);
-    }
-    return results[key];
-  };
-};
-
-const getIconPath = memoize(($icon, filepath) => $icon.find('path').attr('d'));
-const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
-const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
 
 export default {
   rules: {
