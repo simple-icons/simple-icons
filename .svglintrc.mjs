@@ -28,6 +28,7 @@ const svglintIgnores = JSON.parse(fs.readFileSync(svglintIgnoredFile, 'utf8'));
 const svgRegexp =
   /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
+const svgPathRegexp = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9\-,. ]+$/;
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
@@ -105,12 +106,15 @@ const getTitleTextIndex = (svgFileContent) => {
 const hexadecimalToDecimal = (hex) => {
   let result = 0,
     digitValue;
-  hex = hex.toLowerCase();
-  for (var i = 0; i < hex.length; i++) {
-    digitValue = '0123456789abcdefgh'.indexOf(hex[i]);
+  for (const digit of hex.toLowerCase()) {
+    digitValue = '0123456789abcdefgh'.indexOf(digit);
     result = result * 16 + digitValue;
   }
   return result;
+};
+
+const maybeShortenedWithEllipsis = (str) => {
+  return str.length > 20 ? `${str.substring(0, 20)}...` : str;
 };
 
 if (updateIgnoreFile) {
@@ -154,7 +158,8 @@ export default {
     },
     attr: [
       {
-        // ensure that the SVG elm has the appropriate attrs alphabetically ordered
+        // ensure that the SVG element has the appropriate attributes
+        // alphabetically ordered
         role: 'img',
         viewBox: `0 0 ${iconSize} ${iconSize}`,
         xmlns: 'http://www.w3.org/2000/svg',
@@ -163,13 +168,14 @@ export default {
         'rule::order': true,
       },
       {
-        // ensure that the title elm has the appropriate attr
+        // ensure that the title element has the appropriate attribute
         'rule::selector': 'svg > title',
         'rule::whitelist': true,
       },
       {
-        // ensure that the path element only has the 'd' attr (no style, opacity, etc.)
-        d: /^[,a-zA-Z0-9\. -]+$/,
+        // ensure that the path element only has the 'd' attribute
+        // (no style, opacity, etc.)
+        d: svgPathRegexp,
         'rule::selector': 'svg > path',
         'rule::whitelist': true,
       },
@@ -190,7 +196,7 @@ export default {
         if (hexadecimalCodepoints.length > 0) {
           _validCodepointsRepr = false;
 
-          hexadecimalCodepoints.forEach((match) => {
+          for (const match of hexadecimalCodepoints) {
             const charHexReprIndex =
               getTitleTextIndex(ast.source) + match.index + 1;
             const charDec = hexadecimalToDecimal(match[1]);
@@ -207,10 +213,11 @@ export default {
             }
 
             reporter.error(
-              `Hexadecimal representation of encoded character "${match[0]}" found at index ${charHexReprIndex}:` +
+              'Hexadecimal representation of encoded character' +
+                ` "${match[0]}" found at index ${charHexReprIndex}:` +
                 ` replace it with "${charRepr}".`,
             );
-          });
+          }
         }
 
         // avoid character codepoints as named entities
@@ -218,7 +225,7 @@ export default {
           iconTitleText.matchAll(/&([A-Za-z0-9]+);/g),
         );
         if (namedEntitiesCodepoints.length > 0) {
-          namedEntitiesCodepoints.forEach((match) => {
+          for (const match of namedEntitiesCodepoints) {
             const namedEntiyReprIndex =
               getTitleTextIndex(ast.source) + match.index + 1;
 
@@ -242,11 +249,12 @@ export default {
               }
 
               reporter.error(
-                `Named entity representation of encoded character "${match[0]}" found at index ${namedEntiyReprIndex}.` +
+                'Named entity representation of encoded character' +
+                  ` "${match[0]}" found at index ${namedEntiyReprIndex}.` +
                   ` Replace it with ${replacement}.`,
               );
             }
-          });
+          }
         }
 
         if (_validCodepointsRepr) {
@@ -256,16 +264,15 @@ export default {
             ),
             encodedBuf = [];
 
-          const _indexesToIgnore = [];
-          for (let m = 0; m < encodingMatches.length; m++) {
-            let index = encodingMatches[m].index;
-            for (let r = index; r < index + encodingMatches[m][0].length; r++) {
-              _indexesToIgnore.push(r);
+          const indexesToIgnore = [];
+          for (const match of encodingMatches) {
+            for (let r = match.index; r < match.index + match[0].length; r++) {
+              indexesToIgnore.push(r);
             }
           }
 
           for (let i = iconTitleText.length - 1; i >= 0; i--) {
-            if (_indexesToIgnore.includes(i)) {
+            if (indexesToIgnore.includes(i)) {
               encodedBuf.unshift(iconTitleText[i]);
             } else {
               // encode all non ascii characters plus "'&<> (XML named entities)
@@ -298,32 +305,32 @@ export default {
 
           // check if there are some other encoded characters in decimal notation
           // which shouldn't be encoded
-          encodingMatches
-            .filter((m) => !isNaN(m[2]))
-            .forEach((match) => {
-              const decimalNumber = parseInt(match[2]);
-              if (decimalNumber < 128) {
-                _validCodepointsRepr = false;
+          for (const match of encodingMatches.filter((m) => !isNaN(m[2]))) {
+            const decimalNumber = parseInt(match[2]);
+            if (decimalNumber > 127) {
+              continue;
+            }
+            _validCodepointsRepr = false;
 
-                const decimalCodepointCharIndex =
-                  getTitleTextIndex(ast.source) + match.index + 1;
-                if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
-                  replacement = `"&${
-                    xmlNamedEntities[
-                      xmlNamedEntitiesCodepoints.indexOf(decimalNumber)
-                    ]
-                  };"`;
-                } else {
-                  replacement = String.fromCharCode(decimalNumber);
-                  replacement = replacement == '"' ? `'"'` : `"${replacement}"`;
-                }
+            const decimalCodepointCharIndex =
+              getTitleTextIndex(ast.source) + match.index + 1;
+            if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
+              replacement = `"&${
+                xmlNamedEntities[
+                  xmlNamedEntitiesCodepoints.indexOf(decimalNumber)
+                ]
+              };"`;
+            } else {
+              replacement = String.fromCodePoint(decimalNumber);
+              replacement = replacement == '"' ? `'"'` : `"${replacement}"`;
+            }
 
-                reporter.error(
-                  `Unnecessary encoded character "${match[0]}" found at index ${decimalCodepointCharIndex}:` +
-                    ` replace it with ${replacement}.`,
-                );
-              }
-            });
+            reporter.error(
+              `Unnecessary encoded character "${match[0]}" found` +
+                ` at index ${decimalCodepointCharIndex}:` +
+                ` replace it with ${replacement}.`,
+            );
+          }
 
           if (_validCodepointsRepr) {
             const iconName = htmlFriendlyToTitle(iconTitleText);
@@ -338,7 +345,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $) => {
         reporter.name = 'icon-size';
 
         const iconPath = $.find('path').attr('d');
@@ -359,7 +366,8 @@ export default {
           }
         } else if (width !== iconSize && height !== iconSize) {
           reporter.error(
-            `Size of <path> must be exactly ${iconSize} in one dimension; the size is currently ${width} x ${height}`,
+            `Size of <path> must be exactly ${iconSize} in one dimension;` +
+              ` the size is currently ${width} x ${height}`,
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -370,51 +378,36 @@ export default {
         reporter.name = 'icon-precision';
 
         const iconPath = $.find('path').attr('d');
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
+        const segments = parsePath(iconPath);
 
-        const segments = parsePath(iconPath),
-          svgFileContent = $.html();
-
-        segments.forEach((segment) => {
+        for (const segment of segments) {
           const precisionMax = Math.max(
             ...segment.params.slice(1).map(countDecimals),
           );
           if (precisionMax > iconMaxFloatPrecision) {
-            let errorMsg = `found ${precisionMax} decimals in segment "${iconPath.substring(
-              segment.start,
-              segment.end,
-            )}"`;
+            let errorMsg =
+              `found ${precisionMax} decimals in segment` +
+              ` "${iconPath.substring(segment.start, segment.end)}"`;
             if (segment.chained) {
-              let readableChain = iconPath.substring(
-                segment.chainStart,
-                segment.chainEnd,
+              const readableChain = maybeShortenedWithEllipsis(
+                iconPath.substring(segment.chainStart, segment.chainEnd),
               );
-              if (readableChain.length > 20) {
-                readableChain = `${readableChain.substring(0, 20)}...`;
-              }
               errorMsg += ` of chain "${readableChain}"`;
             }
             errorMsg += ` at index ${
-              segment.start + getPathDIndex(svgFileContent)
+              segment.start + getPathDIndex(ast.source)
             }`;
             reporter.error(
-              `Maximum precision should not be greater than ${iconMaxFloatPrecision}; ${errorMsg}`,
+              'Maximum precision should not be greater than' +
+                ` ${iconMaxFloatPrecision}; ${errorMsg}`,
             );
-            if (updateIgnoreFile) {
-              ignoreIcon(reporter.name, iconPath, $);
-            }
           }
-        });
+        }
       },
       (reporter, $, ast) => {
         reporter.name = 'ineffective-segments';
 
         const iconPath = $.find('path').attr('d');
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
 
         const segments = parsePath(iconPath);
         const absSegments = svgpath(iconPath).abs().unshort().segments;
@@ -451,6 +444,7 @@ export default {
         const isInvalidSegment = (
           [command, x1Coord, y1Coord, ...rest],
           index,
+          previousSegmentIsZ,
         ) => {
           if (commands.includes(command)) {
             // Relative directions (h or v) having a length of 0
@@ -464,7 +458,9 @@ export default {
               x1Coord === 0 &&
               y1Coord === 0
             ) {
-              return true;
+              // When the path is closed (z), the new segment can start with
+              // a relative placement (m) as if it were absolute (M)
+              return command.toLowerCase() === 'm' ? !previousSegmentIsZ : true;
             }
             if (
               lowerCurveCommands.includes(command) &&
@@ -487,7 +483,8 @@ export default {
               let [yPrevCoord, xPrevCoord] = [
                 ...absSegments[index - 1],
               ].reverse();
-              // If the previous command was a direction one, we need to iterate back until we find the missing coordinates
+              // If the previous command was a direction one,
+              // we need to iterate back until we find the missing coordinates
               if (upperDirectionCommands.includes(xPrevCoord)) {
                 xPrevCoord = undefined;
                 yPrevCoord = undefined;
@@ -499,12 +496,14 @@ export default {
                   let [yPrevCoordDeep, xPrevCoordDeep] = [
                     ...absSegments[idx],
                   ].reverse();
-                  // If the previous command was a horizontal movement, we need to consider the single coordinate as x
+                  // If the previous command was a horizontal movement,
+                  // we need to consider the single coordinate as x
                   if (upperHorDirectionCommand === xPrevCoordDeep) {
                     xPrevCoordDeep = yPrevCoordDeep;
                     yPrevCoordDeep = undefined;
                   }
-                  // If the previous command was a vertical movement, we need to consider the single coordinate as y
+                  // If the previous command was a vertical movement,
+                  // we need to consider the single coordinate as y
                   if (upperVerDirectionCommand === xPrevCoordDeep) {
                     xPrevCoordDeep = undefined;
                   }
@@ -525,7 +524,9 @@ export default {
 
               if (upperCurveCommands.includes(command)) {
                 const [x2Coord, y2Coord, xCoord, yCoord] = rest;
-                // Absolute shorthand curve (S) having the same coordinate as the previous segment and a control point equal to the ending point
+                // Absolute shorthand curve (S) having
+                // the same coordinate as the previous segment
+                // and a control point equal to the ending point
                 if (
                   upperShorthandCurveCommand === command &&
                   x1Coord === xPrevCoord &&
@@ -535,7 +536,9 @@ export default {
                 ) {
                   return true;
                 }
-                // Absolute bézier curve (C) having the same coordinate as the previous segment and last control point equal to the ending point
+                // Absolute bézier curve (C) having
+                // the same coordinate as the previous segment
+                // and last control point equal to the ending point
                 if (
                   upperCurveCommand === command &&
                   x1Coord === xPrevCoord &&
@@ -548,13 +551,16 @@ export default {
               }
 
               return (
-                // Absolute horizontal direction (H) having the same x coordinate as the previous segment
+                // Absolute horizontal direction (H) having
+                // the same x coordinate as the previous segment
                 (upperHorDirectionCommand === command &&
                   x1Coord === xPrevCoord) ||
-                // Absolute vertical direction (V) having the same y coordinate as the previous segment
+                // Absolute vertical direction (V) having
+                // the same y coordinate as the previous segment
                 (upperVerDirectionCommand === command &&
                   x1Coord === yPrevCoord) ||
-                // Absolute movement (M or L) having the same coordinate as the previous segment
+                // Absolute movement (M or L) having the same
+                // coordinate as the previous segment
                 (upperMovementCommands.includes(command) &&
                   x1Coord === xPrevCoord &&
                   y1Coord === yPrevCoord)
@@ -563,10 +569,12 @@ export default {
           }
         };
 
-        const svgFileContent = $.html();
+        for (let index = 0; index < segments.length; index++) {
+          const segment = segments[index];
+          const previousSegmentIsZ =
+            index > 0 && segments[index - 1].params[0].toLowerCase() === 'z';
 
-        segments.forEach((segment, index) => {
-          if (isInvalidSegment(segment.params, index)) {
+          if (isInvalidSegment(segment.params, index, previousSegmentIsZ)) {
             const [command, x1, y1, ...rest] = segment.params;
 
             let errorMsg = `Innefective segment "${iconPath.substring(
@@ -604,34 +612,23 @@ export default {
             }
 
             if (segment.chained) {
-              let readableChain = iconPath.substring(
-                segment.chainStart,
-                segment.chainEnd,
+              const readableChain = maybeShortenedWithEllipsis(
+                iconPath.substring(segment.chainStart, segment.chainEnd),
               );
-              if (readableChain.length > 20) {
-                readableChain = `${readableChain.substring(0, 20)}...`;
-              }
               errorMsg += ` in chain "${readableChain}"`;
             }
             errorMsg += ` at index ${
-              segment.start + getPathDIndex(svgFileContent)
+              segment.start + getPathDIndex(ast.source)
             }`;
 
             reporter.error(`${errorMsg} (${resolutionTip})`);
-
-            if (updateIgnoreFile) {
-              ignoreIcon(reporter.name, iconPath, $);
-            }
           }
-        });
+        }
       },
       (reporter, $, ast) => {
         reporter.name = 'collinear-segments';
 
         const iconPath = $.find('path').attr('d');
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
 
         /**
          * Extracts collinear coordinates from SVG path straight lines
@@ -640,8 +637,7 @@ export default {
         const getCollinearSegments = (iconPath) => {
           const segments = parsePath(iconPath),
             collinearSegments = [],
-            straightLineCommands = 'HhVvLlMm',
-            zCommands = 'Zz';
+            straightLineCommands = 'HhVvLlMm';
 
           let currLine = [],
             currAbsCoord = [undefined, undefined],
@@ -655,80 +651,103 @@ export default {
               cmd = seg[0],
               nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
-            if (cmd === 'L') {
-              currAbsCoord[0] = seg[1];
-              currAbsCoord[1] = seg[2];
-            } else if (cmd === 'l') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-            } else if (cmd === 'm') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-              startPoint = undefined;
-            } else if (cmd === 'M') {
-              currAbsCoord[0] = seg[1];
-              currAbsCoord[1] = seg[2];
-              startPoint = undefined;
-            } else if (cmd === 'H') {
-              currAbsCoord[0] = seg[1];
-            } else if (cmd === 'h') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-            } else if (cmd === 'V') {
-              currAbsCoord[1] = seg[1];
-            } else if (cmd === 'v') {
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
-            } else if (cmd === 'C') {
-              currAbsCoord[0] = seg[5];
-              currAbsCoord[1] = seg[6];
-            } else if (cmd === 'a') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[6];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[7];
-            } else if (cmd === 'A') {
-              currAbsCoord[0] = seg[6];
-              currAbsCoord[1] = seg[7];
-            } else if (cmd === 's') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-            } else if (cmd === 'S') {
-              currAbsCoord[0] = seg[1];
-              currAbsCoord[1] = seg[2];
-            } else if (cmd === 't') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-            } else if (cmd === 'T') {
-              currAbsCoord[0] = seg[1];
-              currAbsCoord[1] = seg[2];
-            } else if (cmd === 'c') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
-            } else if (cmd === 'Q') {
-              currAbsCoord[0] = seg[3];
-              currAbsCoord[1] = seg[4];
-            } else if (cmd === 'q') {
-              currAbsCoord[0] =
-                (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
-              currAbsCoord[1] =
-                (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
-            } else if (zCommands.includes(cmd)) {
-              // Overlapping in Z should be handled in another rule
-              currAbsCoord = [startPoint[0], startPoint[1]];
-              _resetStartPoint = true;
-            } else {
-              throw new Error(`"${cmd}" command not handled`);
+            switch (cmd) {
+              // Next switch cases have been ordered by frequency
+              // of occurrence in the SVG paths of the icons
+              case 'M':
+                currAbsCoord[0] = seg[1];
+                currAbsCoord[1] = seg[2];
+                startPoint = undefined;
+                break;
+              case 'm':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                startPoint = undefined;
+                break;
+              case 'H':
+                currAbsCoord[0] = seg[1];
+                break;
+              case 'h':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                break;
+              case 'V':
+                currAbsCoord[1] = seg[1];
+                break;
+              case 'v':
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
+                break;
+              case 'L':
+                currAbsCoord[0] = seg[1];
+                currAbsCoord[1] = seg[2];
+                break;
+              case 'l':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                break;
+              case 'Z':
+              case 'z':
+                // Overlapping in Z should be handled in another rule
+                currAbsCoord = [startPoint[0], startPoint[1]];
+                _resetStartPoint = true;
+                break;
+              case 'C':
+                currAbsCoord[0] = seg[5];
+                currAbsCoord[1] = seg[6];
+                break;
+              case 'c':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
+                break;
+              case 'A':
+                currAbsCoord[0] = seg[6];
+                currAbsCoord[1] = seg[7];
+                break;
+              case 'a':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[6];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[7];
+                break;
+              case 's':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                break;
+              case 'S':
+                currAbsCoord[0] = seg[1];
+                currAbsCoord[1] = seg[2];
+                break;
+              case 't':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                break;
+              case 'T':
+                currAbsCoord[0] = seg[1];
+                currAbsCoord[1] = seg[2];
+                break;
+              case 'Q':
+                currAbsCoord[0] = seg[3];
+                currAbsCoord[1] = seg[4];
+                break;
+              case 'q':
+                currAbsCoord[0] =
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
+                currAbsCoord[1] =
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
+                break;
+              default:
+                throw new Error(`"${cmd}" command not handled`);
             }
 
             if (startPoint === undefined) {
@@ -774,32 +793,22 @@ export default {
         };
 
         const collinearSegments = getCollinearSegments(iconPath),
-          pathDIndex = getPathDIndex($.html());
-        collinearSegments.forEach((segment) => {
+          pathDIndex = getPathDIndex(ast.source);
+        for (const segment of collinearSegments) {
           let errorMsg = `Collinear segment "${iconPath.substring(
             segment.start,
             segment.end,
           )}" found`;
           if (segment.chained) {
-            let readableChain = iconPath.substring(
-              segment.chainStart,
-              segment.chainEnd,
+            let readableChain = maybeShortenedWithEllipsis(
+              iconPath.substring(segment.chainStart, segment.chainEnd),
             );
-            if (readableChain.length > 20) {
-              readableChain = `${readableChain.substring(0, 20)}...`;
-            }
             errorMsg += ` in chain "${readableChain}"`;
           }
           errorMsg += ` at index ${
             segment.start + pathDIndex
           } (should be removed)`;
           reporter.error(errorMsg);
-        });
-
-        if (collinearSegments.length) {
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         }
       },
       (reporter, $, ast) => {
@@ -812,7 +821,8 @@ export default {
             );
           } else {
             reporter.error(
-              'Unexpected character(s), most likely extraneous whitespace, detected in SVG markup',
+              'Unexpected character(s), most likely extraneous' +
+                ' whitespace, detected in SVG markup',
             );
           }
         }
@@ -821,9 +831,6 @@ export default {
         reporter.name = 'negative-zeros';
 
         const iconPath = $.find('path').attr('d');
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
 
         // Find negative zeros inside path
         const negativeZeroMatches = Array.from(
@@ -831,22 +838,22 @@ export default {
         );
         if (negativeZeroMatches.length) {
           // Calculate the index for each match in the file
-          const svgFileContent = $.html();
-          const pathDIndex = getPathDIndex(svgFileContent);
+          const pathDIndex = getPathDIndex(ast.source);
 
-          negativeZeroMatches.forEach((match) => {
+          for (const match of negativeZeroMatches) {
             const negativeZeroFileIndex = match.index + pathDIndex;
-            const previousChar = svgFileContent[negativeZeroFileIndex - 1];
+            const previousChar = ast.source[negativeZeroFileIndex - 1];
             const replacement = '0123456789'.includes(previousChar)
               ? ' 0'
               : '0';
             reporter.error(
-              `Found "-0" at index ${negativeZeroFileIndex} (should be "${replacement}")`,
+              `Found "-0" at index ${negativeZeroFileIndex} (should` +
+                ` be "${replacement}")`,
             );
-          });
+          }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $) => {
         reporter.name = 'icon-centered';
 
         const iconPath = $.find('path').attr('d');
@@ -866,7 +873,8 @@ export default {
           Math.abs(devianceY) > iconTolerance
         ) {
           reporter.error(
-            `<path> must be centered at (${targetCenter}, ${targetCenter}); the center is currently (${centerX}, ${centerY})`,
+            `<path> must be centered at (${targetCenter}, ${targetCenter});` +
+              ` the center is currently (${centerX}, ${centerY})`,
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -878,20 +886,24 @@ export default {
 
         const iconPath = $.find('path').attr('d');
 
-        const validPathFormatRegex = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/;
-        if (!validPathFormatRegex.test(iconPath)) {
+        if (!svgPathRegexp.test(iconPath)) {
           let errorMsg = 'Invalid path format',
             reason;
 
           if (!/^[Mm]/.test(iconPath)) {
             // doesn't start with moveto
-            reason = `should start with \"moveto\" command (\"M\" or \"m\"), but starts with \"${iconPath[0]}\"`;
+            reason =
+              'should start with "moveto" command ("M" or "m"),' +
+              ` but starts with \"${iconPath[0]}\"`;
             reporter.error(`${errorMsg}: ${reason}`);
           }
 
-          const validPathCharacters = 'MmZzLlHhVvCcSsQqTtAaEe0123456789-,. ',
+          const validPathCharacters = svgPathRegexp.source.replace(
+              /[\[\]+^$]/g,
+              '',
+            ),
             invalidCharactersMsgs = [],
-            pathDIndex = getPathDIndex($.html());
+            pathDIndex = getPathDIndex(ast.source);
 
           for (let [i, char] of Object.entries(iconPath)) {
             if (validPathCharacters.indexOf(char) === -1) {
@@ -919,8 +931,8 @@ export default {
           const reason =
             `found a closing "path" tag at index ${ast.source.indexOf(
               '</path>',
-            )}.` +
-            " The path should be self-closing, use '/>' instead of '></path>'.";
+            )}. The path should be self-closing,` +
+            ' use "/>" instead of "></path>".';
           reporter.error(`Invalid SVG content format: ${reason}`);
         }
       },
