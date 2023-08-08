@@ -88,9 +88,7 @@ const dataString = await getIconsDataString();
 const data = JSON.parse(dataString);
 
 const errors = (
-  await Promise.all(
-    Object.keys(TESTS).map((test) => TESTS[test](data, dataString)),
-  )
+  await Promise.all(Object.values(TESTS).map((test) => test(data, dataString)))
 ).filter(Boolean);
 
 if (errors.length > 0) {
