@@ -93,11 +93,11 @@ const build = async () => {
   const iconsBarrelMjs = [];
 
   buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
-  buildIcons.forEach(({ iconObject, iconExportName }) => {
+  for (const { iconObject, iconExportName } of buildIcons) {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
     iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
-  });
+  }
 
   // constants used in templates to reduce package size
   const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
