@@ -41,7 +41,7 @@ export const URL_REGEX = /^https:\/\/[^\s"']+$/;
 /**
  * Regex to validate SVG paths.
  */
-export const SVG_PATH_REGEX = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9\-,. ]+$/;
+export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae0-9,. ]+$/i;
 
 /**
  * Get the directory name where this file is located from `import.meta.url`,
@@ -88,7 +88,7 @@ export const titleToSlug = (title) =>
  */
 export const slugToVariableName = (slug) => {
   const slugFirstLetter = slug[0].toUpperCase();
-  return `si${slugFirstLetter}${slug.substring(1)}`;
+  return `si${slugFirstLetter}${slug.slice(1)}`;
 };
 
 /**

@@ -6,7 +6,7 @@
  */
 
 import process from 'node:process';
-import { promises as fs } from 'node:fs';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { getDirnameFromImportMeta, getIconsData } from '../../sdk.mjs';
 
