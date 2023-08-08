@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import process from 'node:process';
 import {
+  SVG_PATH_REGEX,
   getDirnameFromImportMeta,
   htmlFriendlyToTitle,
   collator,
@@ -28,7 +30,6 @@ const svglintIgnores = JSON.parse(fs.readFileSync(svglintIgnoredFile, 'utf8'));
 const svgRegexp =
   /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
 const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
-const svgPathRegexp = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9\-,. ]+$/;
 
 const iconSize = 24;
 const iconFloatPrecision = 3;
@@ -175,7 +176,7 @@ export default {
       {
         // ensure that the path element only has the 'd' attribute
         // (no style, opacity, etc.)
-        d: svgPathRegexp,
+        d: SVG_PATH_REGEX,
         'rule::selector': 'svg > path',
         'rule::whitelist': true,
       },
@@ -886,7 +887,7 @@ export default {
 
         const iconPath = $.find('path').attr('d');
 
-        if (!svgPathRegexp.test(iconPath)) {
+        if (!SVG_PATH_REGEX.test(iconPath)) {
           let errorMsg = 'Invalid path format',
             reason;
 
@@ -898,7 +899,7 @@ export default {
             reporter.error(`${errorMsg}: ${reason}`);
           }
 
-          const validPathCharacters = svgPathRegexp.source.replace(
+          const validPathCharacters = SVG_PATH_REGEX.source.replace(
               /[\[\]+^$]/g,
               '',
             ),

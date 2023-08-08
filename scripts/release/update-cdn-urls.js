@@ -4,6 +4,7 @@
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
+import process from 'node:process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { getDirnameFromImportMeta } from '../../sdk.mjs';

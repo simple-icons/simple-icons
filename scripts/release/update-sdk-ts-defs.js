@@ -4,6 +4,7 @@
  * to match the current definitions of functions of sdk.mjs.
  */
 
+import process from 'node:process';
 import fsSync from 'node:fs';
 import fs from 'node:fs/promises';
 import path from 'node:path';

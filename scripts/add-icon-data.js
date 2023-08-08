@@ -1,10 +1,11 @@
+import process from 'node:process';
 import chalk from 'chalk';
 import { input, confirm, checkbox } from '@inquirer/prompts';
 import getRelativeLuminance from 'get-relative-luminance';
 import {
   URL_REGEX,
   collator,
-  getIconsDataString,
+  getIconsData,
   titleToSlug,
   normalizeColor,
 } from '../sdk.mjs';
@@ -12,7 +13,7 @@ import { getJsonSchemaData, writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
-const iconsData = JSON.parse(await getIconsDataString());
+const iconsData = await getIconsData();
 const jsonSchema = await getJsonSchemaData();
 
 const titleValidator = (text) => {
@@ -27,10 +28,10 @@ const titleValidator = (text) => {
 };
 
 const hexValidator = (text) =>
-  hexPattern.test(text) ? true : 'This should be a valid hex code';
+  hexPattern.test(text) || 'This should be a valid hex code';
 
 const sourceValidator = (text) =>
-  URL_REGEX.test(text) ? true : 'This should be a secure URL';
+  URL_REGEX.test(text) || 'This should be a secure URL';
 
 const hexTransformer = (text) => {
   const color = normalizeColor(text);

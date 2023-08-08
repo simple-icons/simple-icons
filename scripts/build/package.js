@@ -40,9 +40,6 @@ const build = async () => {
   const escape = (value) => {
     return value.replace(/(?<!\\)'/g, "\\'");
   };
-  const iconToKeyValue = (icon) => {
-    return `'${icon.slug}':${iconToObject(icon)}`;
-  };
   const licenseToObject = (license) => {
     if (license === undefined) {
       return;
@@ -82,7 +79,7 @@ const build = async () => {
     icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
-      icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
+      icon.svg = await fs.readFile(svgFilepath, UTF8);
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
       const iconObject = iconToObject(icon);

@@ -36,7 +36,12 @@ const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 /**
  * Regex to validate HTTPs URLs.
  */
-export const URL_REGEX = /^https:\/\/[^\s]+$/;
+export const URL_REGEX = /^https:\/\/[^\s"']+$/;
+
+/**
+ * Regex to validate SVG paths.
+ */
+export const SVG_PATH_REGEX = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9\-,. ]+$/;
 
 /**
  * Get the directory name where this file is located from `import.meta.url`,
@@ -59,7 +64,7 @@ export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
  * @param {String} svg The icon SVG content
  * @returns {String} The path from the icon SVG content
  **/
-export const svgToPath = (svg) => svg.match(/<path\s+d="([^"]*)/)[1];
+export const svgToPath = (svg) => svg.split('"', 8)[7];
 
 /**
  * Converts a brand title into a slug/filename.
@@ -83,8 +88,7 @@ export const titleToSlug = (title) =>
  */
 export const slugToVariableName = (slug) => {
   const slugFirstLetter = slug[0].toUpperCase();
-  const slugRest = slug.slice(1);
-  return `si${slugFirstLetter}${slugRest}`;
+  return `si${slugFirstLetter}${slug.substring(1)}`;
 };
 
 /**
@@ -189,13 +193,11 @@ export const getThirdPartyExtensions = async (
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Extensions\n\n')[1]
-    .split('\n\n')[0]
+    .split('\n\n', 1)[0]
     .split('\n')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');
-
-      // README shipped with package has not Github theme image links
       module = module.split('<img src="')[0];
       return {
         module: {
