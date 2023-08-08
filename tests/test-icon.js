@@ -3,10 +3,10 @@ import path from 'node:path';
 import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
 import {
-  URL_REGEX,
-  titleToSlug,
   SVG_PATH_REGEX,
+  URL_REGEX,
   getDirnameFromImportMeta,
+  titleToSlug,
 } from '../sdk.mjs';
 
 const iconsDir = path.resolve(
