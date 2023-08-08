@@ -31,6 +31,7 @@ const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
 const svgPathRegexp = /^[Mm][MmZzLlHhVvCcSsQqTtAaEe0-9\-,. ]+$/;
 
 const iconSize = 24;
+const iconTargetCenter = iconSize / 2;
 const iconFloatPrecision = 3;
 const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
@@ -116,6 +117,27 @@ const hexadecimalToDecimal = (hex) => {
 const maybeShortenedWithEllipsis = (str) => {
   return str.length > 20 ? `${str.substring(0, 20)}...` : str;
 };
+
+/**
+ * Memoize a function which accepts a single argument.
+ * A second argument can be passed to be used as key.
+ */
+const memoize = (func) => {
+  const results = {};
+
+  return (arg, defaultKey = null) => {
+    const key = defaultKey || arg;
+
+    if (!results[key]) {
+      results[key] = func(arg);
+    }
+    return results[key];
+  };
+};
+
+const getIconPath = memoize(($icon, filepath) => $icon.find('path').attr('d'));
+const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
+const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
 
 if (updateIgnoreFile) {
   process.on('exit', () => {
@@ -345,15 +367,15 @@ export default {
           }
         }
       },
-      (reporter, $) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'icon-size';
 
-        const iconPath = $.find('path').attr('d');
+        const iconPath = getIconPath($, filepath);
         if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
           return;
         }
 
-        const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
+        const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const width = +(maxX - minX).toFixed(iconFloatPrecision);
         const height = +(maxY - minY).toFixed(iconFloatPrecision);
 
@@ -374,11 +396,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'icon-precision';
 
-        const iconPath = $.find('path').attr('d');
-        const segments = parsePath(iconPath);
+        const iconPath = getIconPath($, filepath);
+        const segments = getIconPathSegments(iconPath);
 
         for (const segment of segments) {
           const precisionMax = Math.max(
@@ -404,12 +426,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'ineffective-segments';
 
-        const iconPath = $.find('path').attr('d');
-
-        const segments = parsePath(iconPath);
+        const iconPath = getIconPath($, filepath);
+        const segments = getIconPathSegments(iconPath);
         const absSegments = svgpath(iconPath).abs().unshort().segments;
 
         const lowerMovementCommands = ['m', 'l'];
@@ -625,17 +646,15 @@ export default {
           }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'collinear-segments';
-
-        const iconPath = $.find('path').attr('d');
 
         /**
          * Extracts collinear coordinates from SVG path straight lines
          *   (does not extracts collinear coordinates from curves).
          **/
         const getCollinearSegments = (iconPath) => {
-          const segments = parsePath(iconPath),
+          const segments = getIconPathSegments(iconPath),
             collinearSegments = [],
             straightLineCommands = 'HhVvLlMm';
 
@@ -792,8 +811,12 @@ export default {
           return collinearSegments;
         };
 
-        const collinearSegments = getCollinearSegments(iconPath),
-          pathDIndex = getPathDIndex(ast.source);
+        const iconPath = getIconPath($, filepath),
+          collinearSegments = getCollinearSegments(iconPath);
+        if (collinearSegments.length === 0) {
+          return;
+        }
+        const pathDIndex = getPathDIndex(ast.source);
         for (const segment of collinearSegments) {
           let errorMsg = `Collinear segment "${iconPath.substring(
             segment.start,
@@ -827,10 +850,10 @@ export default {
           }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'negative-zeros';
 
-        const iconPath = $.find('path').attr('d');
+        const iconPath = getIconPath($, filepath);
 
         // Find negative zeros inside path
         const negativeZeroMatches = Array.from(
@@ -853,27 +876,26 @@ export default {
           }
         }
       },
-      (reporter, $) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'icon-centered';
 
-        const iconPath = $.find('path').attr('d');
+        const iconPath = getIconPath($, filepath);
         if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
           return;
         }
 
-        const [minX, minY, maxX, maxY] = svgPathBbox(iconPath);
-        const targetCenter = iconSize / 2;
+        const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const centerX = +((minX + maxX) / 2).toFixed(iconFloatPrecision);
-        const devianceX = centerX - targetCenter;
+        const devianceX = centerX - iconTargetCenter;
         const centerY = +((minY + maxY) / 2).toFixed(iconFloatPrecision);
-        const devianceY = centerY - targetCenter;
+        const devianceY = centerY - iconTargetCenter;
 
         if (
           Math.abs(devianceX) > iconTolerance ||
           Math.abs(devianceY) > iconTolerance
         ) {
           reporter.error(
-            `<path> must be centered at (${targetCenter}, ${targetCenter});` +
+            `<path> must be centered at (${iconTargetCenter}, ${iconTargetCenter});` +
               ` the center is currently (${centerX}, ${centerY})`,
           );
           if (updateIgnoreFile) {
@@ -881,16 +903,16 @@ export default {
           }
         }
       },
-      (reporter, $, ast) => {
+      (reporter, $, ast, filepath) => {
         reporter.name = 'path-format';
 
-        const iconPath = $.find('path').attr('d');
+        const iconPath = getIconPath($, filepath);
 
         if (!svgPathRegexp.test(iconPath)) {
           let errorMsg = 'Invalid path format',
             reason;
 
-          if (!/^[Mm]/.test(iconPath)) {
+          if (!iconPath.startsWith('M') && !iconPath.startsWith('m')) {
             // doesn't start with moveto
             reason =
               'should start with "moveto" command ("M" or "m"),' +
@@ -917,8 +939,7 @@ export default {
           if (invalidCharactersMsgs.length > 0) {
             reason = `unexpected character${
               invalidCharactersMsgs.length > 1 ? 's' : ''
-            } found`;
-            reason += ` (${invalidCharactersMsgs.join(', ')})`;
+            } found (${invalidCharactersMsgs.join(', ')})`;
             reporter.error(`${errorMsg}: ${reason}`);
           }
         }
