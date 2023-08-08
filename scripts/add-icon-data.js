@@ -5,7 +5,7 @@ import getRelativeLuminance from 'get-relative-luminance';
 import {
   URL_REGEX,
   collator,
-  getIconsData,
+  getIconsDataString,
   titleToSlug,
   normalizeColor,
 } from '../sdk.mjs';
@@ -13,7 +13,7 @@ import { getJsonSchemaData, writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
-const iconsData = await getIconsData();
+const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
 const titleValidator = (text) => {
