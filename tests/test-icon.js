@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
@@ -75,8 +75,8 @@ export const testIcon = (icon, subject, slug) => {
       }
     });
 
-    it('has a valid svg value', () => {
-      const svgFileContents = fs.readFileSync(svgPath, 'utf8');
+    it('has a valid svg value', async () => {
+      const svgFileContents = await fs.readFile(svgPath, 'utf8');
       assert.equal(subject.svg, svgFileContents);
     });
 

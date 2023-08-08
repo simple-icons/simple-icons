@@ -1,4 +1,4 @@
-import fs from 'node:fs';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import {
@@ -21,11 +21,13 @@ const htmlNamedEntitiesFile = path.join(
 );
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
-const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+const data = JSON.parse(await fs.readFile(dataFile, 'utf8'));
 const htmlNamedEntities = JSON.parse(
-  fs.readFileSync(htmlNamedEntitiesFile, 'utf8'),
+  await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );
-const svglintIgnores = JSON.parse(fs.readFileSync(svglintIgnoredFile, 'utf8'));
+const svglintIgnores = JSON.parse(
+  await fs.readFile(svglintIgnoredFile, 'utf8'),
+);
 
 const svgRegexp =
   /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
@@ -119,14 +121,14 @@ const maybeShortenedWithEllipsis = (str) => {
 };
 
 if (updateIgnoreFile) {
-  process.on('exit', () => {
+  process.on('exit', async () => {
     // ensure object output order is consistent due to async svglint processing
     const sorted = sortObjectByKey(iconIgnored);
     for (const linterName in sorted) {
       sorted[linterName] = sortObjectByValue(sorted[linterName]);
     }
 
-    fs.writeFileSync(ignoreFile, JSON.stringify(sorted, null, 2) + '\n', {
+    await fs.writeFile(ignoreFile, JSON.stringify(sorted, null, 2) + '\n', {
       flag: 'w',
     });
   });
