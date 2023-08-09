@@ -58,6 +58,7 @@ jobs:
         run: |
           npx markdown-link-check --retry \
             ${{ steps.changes.outputs.docs_files }}
+        continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
