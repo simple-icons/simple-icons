@@ -46,9 +46,8 @@ jobs:
         run: npm run lint
       - name: Check documentation links
         run: |
-          npm install markdown-link-check --no-save
           find . -name \*.md -not -path "*/node_modules/*" -print0 \
-            | xargs -0 -n1 markdown-link-check
+            | xargs -0 -n1 npx markdown-link-check
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
