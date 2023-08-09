@@ -44,20 +44,20 @@ jobs:
         run: npm i
       - name: Run linter
         run: npm run lint
-      - uses: dorny/paths-filter@v2
+      - name: Detect changed documentation files
+        uses: dorny/paths-filter@v2
         id: changes
         with:
+          list-files: shell
           filters: |
             docs:
-              - '/*.md'
-              - '/.github/**/*.md'
-      - name: Debug
-        run: |
-          echo "docs: ${{ steps.changes.outputs.docs }}"
-          echo "docs_files: ${{ steps.changes.outputs.docs_files }}"
+              - '*.md'
+              - '.github/?(**/)*.md'
       - name: Check documentation links
         if: steps.changes.outputs.docs == 'true'
-        run: markdown-link-check ${{ steps.changes.outputs.docs_files }}
+        run: |
+          npx markdown-link-check --retry \
+            ${{ steps.changes.outputs.docs_files }}
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
