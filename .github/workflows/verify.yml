@@ -44,6 +44,8 @@ jobs:
         run: npm i
       - name: Run linter
         run: npm run lint
+      - name: Check documentation links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
