@@ -858,6 +858,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Game & Watch` | `gameandwatch` |
 | `Game Developer` | `gamedeveloper` |
 | `Game Jolt` | `gamejolt` |
+| `Gamemaker` | `gamemaker` |
 | `Garmin` | `garmin` |
 | `Gatling` | `gatling` |
 | `Gatsby` | `gatsby` |
@@ -2563,6 +2564,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
+| `X` | `x` |
 | `X.Org` | `xdotorg` |
 | `Xamarin` | `xamarin` |
 | `XAML` | `xaml` |
