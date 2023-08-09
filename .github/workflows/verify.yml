@@ -52,7 +52,7 @@ jobs:
           filters: |
             docs:
               - '*.md'
-              - '.github/?(**/)*.md'
+              - '.github/**.md'
       - name: Check documentation links
         if: steps.changes.outputs.docs == 'true'
         run: |
