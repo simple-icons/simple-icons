@@ -56,7 +56,7 @@ jobs:
       - name: Check documentation links
         if: steps.changes.outputs.docs == 'true'
         run: |
-          npx markdown-link-check --retry \
+          markdown-link-check --retry \
             ${{ steps.changes.outputs.docs_files }}
         continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
       - name: Verify file permissions
