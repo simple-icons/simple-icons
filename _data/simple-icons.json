@@ -1229,11 +1229,8 @@
         },
         {
             "title": "Astro",
-            "hex": "FF5D01",
-            "source": "https://github.com/withastro/astro/blob/09144e8e88fbb79a75a2283aca8bf6eba6dc45f0/assets/brand/logo-white.svg",
-            "license": {
-                "type": "MIT"
-            }
+            "hex": "BC52EE",
+            "source": "https://astro.build/press"
         },
         {
             "title": "ASUS",
@@ -2352,6 +2349,11 @@
             "source": "https://www.claris.com"
         },
         {
+            "title": "Clarivate",
+            "hex": "FFFFFF",
+            "source": "https://clarivate.com"
+        },
+        {
             "title": "ClickHouse",
             "hex": "FFCC01",
             "source": "https://github.com/ClickHouse/ClickHouse/blob/12bd453a43819176d25ecf247033f6cb1af54beb/website/images/logo-clickhouse.svg"
@@ -3350,6 +3352,11 @@
             "source": "https://disroot.org/en"
         },
         {
+            "title": "Distrokid",
+            "hex": "231F20",
+            "source": "https://distrokid.com/logo"
+        },
+        {
             "title": "Django",
             "hex": "092E20",
             "source": "https://www.djangoproject.com/community/logos/"
@@ -4014,7 +4021,7 @@
         {
             "title": "Facepunch",
             "hex": "EC1C24",
-            "source": "https://facepunch.com/img/brand/default-light.svg"
+            "source": "https://sbox.facepunch.com/news"
         },
         {
             "title": "Falcon",
@@ -4592,6 +4599,12 @@
             "guidelines": "https://gamejolt.com/about"
         },
         {
+            "title": "Gamemaker",
+            "hex": "000000",
+            "source": "https://gamemaker.io/en/legal/brand",
+            "guidelines": "https://gamemaker.io/en/legal/brand"
+        },
+        {
             "title": "Garmin",
             "hex": "000000",
             "source": "https://creative.garmin.com/styleguide/logo/",
@@ -4931,6 +4944,11 @@
             "title": "Google Assistant",
             "hex": "4285F4",
             "source": "https://assistant.google.com"
+        },
+        {
+            "title": "Google Bard",
+            "hex": "886FBF",
+            "source": "https://bard.google.com"
         },
         {
             "title": "Google Calendar",
@@ -5866,6 +5884,11 @@
             "source": "https://www.imoulife.com/support/download/userManual"
         },
         {
+            "title": "ImprovMX",
+            "hex": "2FBEFF",
+            "source": "https://improvmx.com"
+        },
+        {
             "title": "Indeed",
             "hex": "003A9B",
             "source": "https://indeed.design/resources"
@@ -5885,6 +5908,11 @@
             "hex": "22ADF6",
             "source": "https://influxdata.github.io/branding/logo/downloads/",
             "guidelines": "https://influxdata.github.io/branding/logo/usage/"
+        },
+        {
+            "title": "InfoQ",
+            "hex": "2C6CAF",
+            "source": "https://www.infoq.com"
         },
         {
             "title": "Informatica",
@@ -8480,7 +8508,7 @@
             "title": "npm",
             "hex": "CB3837",
             "source": "https://www.npmjs.com",
-            "guidelines": "https://www.npmjs.com/policies/trademark"
+            "guidelines": "https://docs.npmjs.com/policies/logos-and-usage"
         },
         {
             "title": "Nrwl",
@@ -11451,7 +11479,7 @@
         {
             "title": "SmugMug",
             "hex": "6DB944",
-            "source": "https://help.smugmug.com/using-smugmug's-logo-HJulJePkEBf"
+            "source": "https://www.smugmughelp.com/articles/409-smugmug-s-logo-and-usage"
         },
         {
             "title": "Snapchat",
@@ -11615,9 +11643,9 @@
         },
         {
             "title": "Sourcegraph",
-            "hex": "00CBEC",
-            "source": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines",
-            "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
+            "hex": "000000",
+            "source": "https://handbook.sourcegraph.com/departments/engineering/design/brand_guidelines/logo/",
+            "guidelines": "https://handbook.sourcegraph.com/departments/engineering/design/brand_guidelines/logo/"
         },
         {
             "title": "SourceHut",
@@ -14029,6 +14057,11 @@
             "guidelines": "https://www.audiokinetic.com/resources/credits/"
         },
         {
+            "title": "X",
+            "hex": "000000",
+            "source": "https://twitter.com"
+        },
+        {
             "title": "X.Org",
             "hex": "F28834",
             "source": "https://upload.wikimedia.org/wikipedia/commons/9/90/X.Org_Logo.svg"
@@ -14146,12 +14179,21 @@
         {
             "title": "Yammer",
             "hex": "106EBE",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products"
+            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Yarn",
             "hex": "2C8EBB",
-            "source": "https://github.com/yarnpkg/assets/tree/76d30ca2aebed5b73ea8131d972218fb860bd32d"
+            "source": "https://github.com/yarnpkg/assets/blob/76d30ca2aebed5b73ea8131d972218fb860bd32d/yarn-kitten-circle.svg",
+            "guidelines": "https://github.com/yarnpkg/assets/tree/76d30ca2aebed5b73ea8131d972218fb860bd32d",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Yelp",
@@ -14247,9 +14289,9 @@
                     "ZEC"
                 ]
             },
-            "hex": "F4B728",
-            "source": "https://z.cash/press/",
-            "guidelines": "https://www.zfnd.org/about/trademark-policy/"
+            "hex": "F3B724",
+            "source": "https://z.cash",
+            "guidelines": "https://zfnd.org/trademark-policy"
         },
         {
             "title": "ZDF",
@@ -14379,8 +14421,9 @@
         },
         {
             "title": "Zoom",
-            "hex": "2D8CFF",
-            "source": "https://zoom.us/brandguidelines"
+            "hex": "0B5CFF",
+            "source": "https://brand.zoom.us/media-library.html",
+            "guidelines": "https://brand.zoom.us"
         },
         {
             "title": "Zorin",
