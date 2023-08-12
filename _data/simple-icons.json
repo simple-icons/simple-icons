@@ -799,7 +799,10 @@
         {
             "title": "Angular",
             "hex": "DD0031",
-            "source": "https://angular.io/assets/images/logos/angular/angular_solidBlack.svg"
+            "source": "https://angular.io/presskit",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Angular Universal",
