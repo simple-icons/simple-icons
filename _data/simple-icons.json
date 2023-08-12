@@ -1229,11 +1229,8 @@
         },
         {
             "title": "Astro",
-            "hex": "FF5D01",
-            "source": "https://github.com/withastro/astro/blob/09144e8e88fbb79a75a2283aca8bf6eba6dc45f0/assets/brand/logo-white.svg",
-            "license": {
-                "type": "MIT"
-            }
+            "hex": "BC52EE",
+            "source": "https://astro.build/press"
         },
         {
             "title": "ASUS",
@@ -2350,6 +2347,11 @@
             "title": "Claris",
             "hex": "000000",
             "source": "https://www.claris.com"
+        },
+        {
+            "title": "Clarivate",
+            "hex": "FFFFFF",
+            "source": "https://clarivate.com"
         },
         {
             "title": "ClickHouse",
@@ -5881,6 +5883,11 @@
             "source": "https://www.imoulife.com/support/download/userManual"
         },
         {
+            "title": "ImprovMX",
+            "hex": "2FBEFF",
+            "source": "https://improvmx.com"
+        },
+        {
             "title": "Indeed",
             "hex": "003A9B",
             "source": "https://indeed.design/resources"
@@ -5900,6 +5907,11 @@
             "hex": "22ADF6",
             "source": "https://influxdata.github.io/branding/logo/downloads/",
             "guidelines": "https://influxdata.github.io/branding/logo/usage/"
+        },
+        {
+            "title": "InfoQ",
+            "hex": "2C6CAF",
+            "source": "https://www.infoq.com"
         },
         {
             "title": "Informatica",
@@ -11630,9 +11642,9 @@
         },
         {
             "title": "Sourcegraph",
-            "hex": "00CBEC",
-            "source": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines",
-            "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
+            "hex": "000000",
+            "source": "https://handbook.sourcegraph.com/departments/engineering/design/brand_guidelines/logo/",
+            "guidelines": "https://handbook.sourcegraph.com/departments/engineering/design/brand_guidelines/logo/"
         },
         {
             "title": "SourceHut",
@@ -14276,9 +14288,9 @@
                     "ZEC"
                 ]
             },
-            "hex": "F4B728",
-            "source": "https://z.cash/press/",
-            "guidelines": "https://www.zfnd.org/about/trademark-policy/"
+            "hex": "F3B724",
+            "source": "https://z.cash",
+            "guidelines": "https://zfnd.org/trademark-policy"
         },
         {
             "title": "ZDF",
@@ -14408,8 +14420,9 @@
         },
         {
             "title": "Zoom",
-            "hex": "2D8CFF",
-            "source": "https://zoom.us/brandguidelines"
+            "hex": "0B5CFF",
+            "source": "https://brand.zoom.us/media-library.html",
+            "guidelines": "https://brand.zoom.us"
         },
         {
             "title": "Zorin",
