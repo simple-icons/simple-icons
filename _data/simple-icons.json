@@ -1229,11 +1229,8 @@
         },
         {
             "title": "Astro",
-            "hex": "FF5D01",
-            "source": "https://github.com/withastro/astro/blob/09144e8e88fbb79a75a2283aca8bf6eba6dc45f0/assets/brand/logo-white.svg",
-            "license": {
-                "type": "MIT"
-            }
+            "hex": "BC52EE",
+            "source": "https://astro.build/press"
         },
         {
             "title": "ASUS",
@@ -2352,6 +2349,11 @@
             "source": "https://www.claris.com"
         },
         {
+            "title": "Clarivate",
+            "hex": "FFFFFF",
+            "source": "https://clarivate.com"
+        },
+        {
             "title": "ClickHouse",
             "hex": "FFCC01",
             "source": "https://github.com/ClickHouse/ClickHouse/blob/12bd453a43819176d25ecf247033f6cb1af54beb/website/images/logo-clickhouse.svg"
@@ -3342,6 +3344,11 @@
             "title": "Disroot",
             "hex": "50162D",
             "source": "https://disroot.org/en"
+        },
+        {
+            "title": "Distrokid",
+            "hex": "231F20",
+            "source": "https://distrokid.com/logo"
         },
         {
             "title": "Django",
@@ -4933,6 +4940,11 @@
             "source": "https://assistant.google.com"
         },
         {
+            "title": "Google Bard",
+            "hex": "886FBF",
+            "source": "https://bard.google.com"
+        },
+        {
             "title": "Google Calendar",
             "hex": "4285F4",
             "source": "https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg"
@@ -5866,6 +5878,11 @@
             "source": "https://www.imoulife.com/support/download/userManual"
         },
         {
+            "title": "ImprovMX",
+            "hex": "2FBEFF",
+            "source": "https://improvmx.com"
+        },
+        {
             "title": "Indeed",
             "hex": "003A9B",
             "source": "https://indeed.design/resources"
@@ -5885,6 +5902,11 @@
             "hex": "22ADF6",
             "source": "https://influxdata.github.io/branding/logo/downloads/",
             "guidelines": "https://influxdata.github.io/branding/logo/usage/"
+        },
+        {
+            "title": "InfoQ",
+            "hex": "2C6CAF",
+            "source": "https://www.infoq.com"
         },
         {
             "title": "Informatica",
@@ -8480,7 +8502,7 @@
             "title": "npm",
             "hex": "CB3837",
             "source": "https://www.npmjs.com",
-            "guidelines": "https://www.npmjs.com/policies/trademark"
+            "guidelines": "https://docs.npmjs.com/policies/logos-and-usage"
         },
         {
             "title": "Nrwl",
@@ -11456,7 +11478,7 @@
         {
             "title": "SmugMug",
             "hex": "6DB944",
-            "source": "https://help.smugmug.com/using-smugmug's-logo-HJulJePkEBf"
+            "source": "https://www.smugmughelp.com/articles/409-smugmug-s-logo-and-usage"
         },
         {
             "title": "Snapchat",
@@ -11620,9 +11642,9 @@
         },
         {
             "title": "Sourcegraph",
-            "hex": "00CBEC",
-            "source": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines",
-            "guidelines": "https://about.sourcegraph.com/handbook/marketing/brand/brand_guidelines"
+            "hex": "000000",
+            "source": "https://handbook.sourcegraph.com/departments/engineering/design/brand_guidelines/logo/",
+            "guidelines": "https://handbook.sourcegraph.com/departments/engineering/design/brand_guidelines/logo/"
         },
         {
             "title": "SourceHut",
@@ -14266,9 +14288,9 @@
                     "ZEC"
                 ]
             },
-            "hex": "F4B728",
-            "source": "https://z.cash/press/",
-            "guidelines": "https://www.zfnd.org/about/trademark-policy/"
+            "hex": "F3B724",
+            "source": "https://z.cash",
+            "guidelines": "https://zfnd.org/trademark-policy"
         },
         {
             "title": "ZDF",
@@ -14398,8 +14420,9 @@
         },
         {
             "title": "Zoom",
-            "hex": "2D8CFF",
-            "source": "https://zoom.us/brandguidelines"
+            "hex": "0B5CFF",
+            "source": "https://brand.zoom.us/media-library.html",
+            "guidelines": "https://brand.zoom.us"
         },
         {
             "title": "Zorin",
