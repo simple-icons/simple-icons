@@ -16,6 +16,12 @@
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
         },
         {
+            "title": "(ISC)²",
+            "slug": "iscsquared",
+            "hex": "007054",
+            "source": "https://www.isc2.org"
+        },
+        {
             "title": "/e/",
             "hex": "000000",
             "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
@@ -486,8 +492,8 @@
         },
         {
             "title": "Alipay",
-            "hex": "00A1E9",
-            "source": "https://gw.alipayobjects.com/os/rmsportal/trUJZfSrlnRCcFgfZGjD.ai"
+            "hex": "1890FF",
+            "source": "https://global.alipay.com"
         },
         {
             "title": "Allegro",
@@ -814,7 +820,7 @@
         {
             "title": "AniList",
             "hex": "02A9FF",
-            "source": "https://anilist.co/img/icons/icon.svg"
+            "source": "https://anilist.co"
         },
         {
             "title": "Ansible",
@@ -12392,6 +12398,17 @@
             "hex": "486AAE",
             "source": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/",
             "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
+        },
+        {
+            "title": "Tata Consultancy Services",
+            "slug": "tcs",
+            "hex": "EE3984",
+            "source": "https://www.tcs.com",
+            "aliases": {
+                "aka": [
+                    "TCS"
+                ]
+            }
         },
         {
             "title": "Tauri",
