@@ -444,6 +444,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CKEditor 4` | `ckeditor4` |
 | `Clarifai` | `clarifai` |
 | `Claris` | `claris` |
+| `Clarivate` | `clarivate` |
 | `ClickHouse` | `clickhouse` |
 | `ClickUp` | `clickup` |
 | `CLion` | `clion` |
@@ -630,6 +631,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Discover` | `discover` |
 | `Disqus` | `disqus` |
 | `Disroot` | `disroot` |
+| `Distrokid` | `distrokid` |
 | `Django` | `django` |
 | `Dlib` | `dlib` |
 | `DLNA` | `dlna` |
@@ -858,6 +860,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Game & Watch` | `gameandwatch` |
 | `Game Developer` | `gamedeveloper` |
 | `Game Jolt` | `gamejolt` |
+| `Gamemaker` | `gamemaker` |
 | `Garmin` | `garmin` |
 | `Gatling` | `gatling` |
 | `Gatsby` | `gatsby` |
@@ -917,6 +920,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Analytics` | `googleanalytics` |
 | `Google Apps Script` | `googleappsscript` |
 | `Google Assistant` | `googleassistant` |
+| `Google Bard` | `googlebard` |
 | `Google Calendar` | `googlecalendar` |
 | `Google Cardboard` | `googlecardboard` |
 | `Google Chat` | `googlechat` |
@@ -1090,10 +1094,12 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Immer` | `immer` |
 | `Immich` | `immich` |
 | `Imou` | `imou` |
+| `ImprovMX` | `improvmx` |
 | `Indeed` | `indeed` |
 | `Inertia` | `inertia` |
 | `Infiniti` | `infiniti` |
 | `InfluxDB` | `influxdb` |
+| `InfoQ` | `infoq` |
 | `Informatica` | `informatica` |
 | `Infosys` | `infosys` |
 | `Infracost` | `infracost` |
@@ -2563,6 +2569,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
+| `X` | `x` |
 | `X.Org` | `xdotorg` |
 | `Xamarin` | `xamarin` |
 | `XAML` | `xaml` |
