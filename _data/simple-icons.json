@@ -16,6 +16,12 @@
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
         },
         {
+            "title": "(ISC)²",
+            "slug": "iscsquared",
+            "hex": "007054",
+            "source": "https://www.isc2.org"
+        },
+        {
             "title": "/e/",
             "hex": "000000",
             "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
@@ -486,8 +492,8 @@
         },
         {
             "title": "Alipay",
-            "hex": "00A1E9",
-            "source": "https://gw.alipayobjects.com/os/rmsportal/trUJZfSrlnRCcFgfZGjD.ai"
+            "hex": "1890FF",
+            "source": "https://global.alipay.com"
         },
         {
             "title": "Allegro",
@@ -814,7 +820,7 @@
         {
             "title": "AniList",
             "hex": "02A9FF",
-            "source": "https://anilist.co/img/icons/icon.svg"
+            "source": "https://anilist.co"
         },
         {
             "title": "Ansible",
@@ -1153,6 +1159,11 @@
             "hex": "0091BD",
             "source": "https://www.arm.com",
             "guidelines": "https://www.arm.com/company/policies/trademarks/guidelines-corporate-logo"
+        },
+        {
+            "title": "Arm Keil",
+            "hex": "394049",
+            "source": "https://www.keil.arm.com"
         },
         {
             "title": "Ars Technica",
@@ -2258,6 +2269,11 @@
             "source": "https://chocolatey.org/media-kit"
         },
         {
+            "title": "Chromatic",
+            "hex": "FC521F",
+            "source": "https://www.chromatic.com"
+        },
+        {
             "title": "Chromecast",
             "hex": "999999",
             "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
@@ -2684,6 +2700,12 @@
             "title": "Composer",
             "hex": "885630",
             "source": "https://getcomposer.org"
+        },
+        {
+            "title": "CompTIA",
+            "hex": "C8202F",
+            "source": "https://www.comptia.org",
+            "guidelines": "https://www.comptia.org/newsroom/media-library"
         },
         {
             "title": "Comsol",
@@ -12388,6 +12410,17 @@
             "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
         },
         {
+            "title": "Tata Consultancy Services",
+            "slug": "tcs",
+            "hex": "EE3984",
+            "source": "https://www.tcs.com",
+            "aliases": {
+                "aka": [
+                    "TCS"
+                ]
+            }
+        },
+        {
             "title": "Tauri",
             "hex": "FFC131",
             "source": "https://github.com/tauri-apps/tauri/blob/093f85dc2b90a6dd0f48d941f6e88daec311250a/app-icon.png",
@@ -13569,6 +13602,11 @@
             "source": "https://www.vultr.com/company/brand-assets/"
         },
         {
+            "title": "Vyond",
+            "hex": "D95E26",
+            "source": "https://www.vyond.com"
+        },
+        {
             "title": "W3C",
             "hex": "005A9C",
             "source": "https://www.w3.org/Consortium/Legal/logo-usage-20000308",
@@ -14193,6 +14231,11 @@
             "title": "Yelp",
             "hex": "D32323",
             "source": "https://www.yelp.com/styleguide/icons"
+        },
+        {
+            "title": "Yeti",
+            "hex": "00263C",
+            "source": "https://www.yeti.com"
         },
         {
             "title": "Yoast",
