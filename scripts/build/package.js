@@ -1,49 +1,44 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
- * Compiles our icons into static .js files that can be imported in the browser
- * and are tree-shakeable. The static .js files go in icons/{filename}.js. Also
- * generates an index.js that exports all icons by title, but is not
- * tree-shakeable
+ * Simple Icons package build script.
  */
 
-const fs = require('fs').promises;
-const path = require('path');
-const util = require('util');
-const { transform: esbuildTransform } = require('esbuild');
-
-const UTF8 = 'utf8';
-
-const rootDir = path.resolve(__dirname, '..', '..');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
-const indexFile = path.resolve(rootDir, 'index.js');
-const iconsDir = path.resolve(rootDir, 'icons');
-const iconsJsFile = path.resolve(rootDir, 'icons.js');
-const iconsMjsFile = path.resolve(rootDir, 'icons.mjs');
-const iconsDtsFile = path.resolve(rootDir, 'icons.d.ts');
-
-const templatesDir = path.resolve(__dirname, 'templates');
-const indexTemplateFile = path.resolve(templatesDir, 'index.js');
-const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
-
-const data = require(dataFile);
-const {
+import { promises as fs } from 'node:fs';
+import path from 'node:path';
+import util from 'node:util';
+import { transform as esbuildTransform } from 'esbuild';
+import {
   getIconSlug,
   svgToPath,
   titleToHtmlFriendly,
   slugToVariableName,
-} = require('../utils.js');
+  getIconsData,
+  getDirnameFromImportMeta,
+  collator,
+} from '../../sdk.mjs';
+
+const __dirname = getDirnameFromImportMeta(import.meta.url);
+
+const UTF8 = 'utf8';
+
+const rootDir = path.resolve(__dirname, '..', '..');
+const iconsDir = path.resolve(rootDir, 'icons');
+const indexJsFile = path.resolve(rootDir, 'index.js');
+const indexMjsFile = path.resolve(rootDir, 'index.mjs');
+const sdkJsFile = path.resolve(rootDir, 'sdk.js');
+const sdkMjsFile = path.resolve(rootDir, 'sdk.mjs');
+const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
+
+const templatesDir = path.resolve(__dirname, 'templates');
+const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
 
 const build = async () => {
-  const indexTemplate = await fs.readFile(indexTemplateFile, UTF8);
+  const icons = await getIconsData();
   const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
   // Local helper functions
   const escape = (value) => {
     return value.replace(/(?<!\\)'/g, "\\'");
-  };
-  const iconToKeyValue = (icon) => {
-    return `'${icon.slug}':${iconToObject(icon)}`;
   };
   const licenseToObject = (license) => {
     if (license === undefined) {
@@ -64,14 +59,15 @@ const build = async () => {
       escape(icon.path),
       escape(icon.source),
       escape(icon.hex),
-      icon.guidelines ? `'${escape(icon.guidelines)}'` : undefined,
-      licenseToObject(icon.license),
+      icon.guidelines ? `\n  guidelines: '${escape(icon.guidelines)}',` : '',
+      licenseToObject(icon.license)
+        ? `\n  license: ${JSON.stringify(licenseToObject(icon.license))},`
+        : '',
     );
   };
-  const writeJs = async (filepath, rawJavaScript) => {
-    const { code } = await esbuildTransform(rawJavaScript, {
-      minify: true,
-    });
+  const writeJs = async (filepath, rawJavaScript, opts = null) => {
+    opts = opts === null ? { minify: true } : opts;
+    const { code } = await esbuildTransform(rawJavaScript, opts);
     await fs.writeFile(filepath, code);
   };
   const writeTs = async (filepath, rawTypeScript) => {
@@ -79,66 +75,51 @@ const build = async () => {
   };
 
   // 'main'
-  const iconsBarrelMjs = [];
-  const iconsBarrelJs = [];
-  const iconsBarrelDts = [];
-  const icons = [];
-
-  await Promise.all(
-    data.icons.map(async (icon) => {
+  const buildIcons = await Promise.all(
+    icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
-      icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
+      icon.svg = await fs.readFile(svgFilepath, UTF8);
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
-      icons.push(icon);
-
       const iconObject = iconToObject(icon);
-
       const iconExportName = slugToVariableName(icon.slug);
-
-      // write the static .js file for the icon
-      const jsFilepath = path.resolve(iconsDir, `${filename}.js`);
-      const newImportMessage = `use "const { ${iconExportName} } = require('simple-icons/icons');" instead`;
-      const message = JSON.stringify(
-        `Imports like "const ${icon.slug} = require('simple-icons/icons/${icon.slug}');" have been deprecated in v6.0.0 and will no longer work from v7.0.0, ${newImportMessage}`,
-      );
-
-      const dtsFilepath = path.resolve(iconsDir, `${filename}.d.ts`);
-      await Promise.all([
-        writeJs(
-          jsFilepath,
-          `console.warn("warn -", ${message});module.exports=${iconObject};`,
-        ),
-        writeTs(
-          dtsFilepath,
-          `/**@deprecated ${newImportMessage}*/declare const i:import("../alias").I;export default i;`,
-        ),
-      ]);
-
-      // add object to the barrel file
-      iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
-      iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
-      iconsBarrelDts.push(`export const ${iconExportName}:I;`);
+      return { icon, iconObject, iconExportName };
     }),
   );
 
-  // write our generic index.js
-  const rawIndexJs = util.format(
-    indexTemplate,
-    icons.map(iconToKeyValue).join(','),
-  );
-  await writeJs(indexFile, rawIndexJs);
+  const iconsBarrelDts = [];
+  const iconsBarrelJs = [];
+  const iconsBarrelMjs = [];
+
+  buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
+  for (const { iconObject, iconExportName } of buildIcons) {
+    iconsBarrelDts.push(`export const ${iconExportName}:I;`);
+    iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
+    iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
+  }
+
+  // constants used in templates to reduce package size
+  const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;
 
   // write our file containing the exports of all icons in CommonJS ...
-  const rawIconsJs = `module.exports={${iconsBarrelJs.join('')}};`;
-  await writeJs(iconsJsFile, rawIconsJs);
+  const rawIndexJs = `${constantsString}module.exports={${iconsBarrelJs.join(
+    '',
+  )}};`;
+  await writeJs(indexJsFile, rawIndexJs);
   // and ESM
-  const rawIconsMjs = iconsBarrelMjs.join('');
-  await writeJs(iconsMjsFile, rawIconsMjs);
+  const rawIndexMjs = constantsString + iconsBarrelMjs.join('');
+  await writeJs(indexMjsFile, rawIndexMjs);
   // and create a type declaration file
-  const rawIconsDts = `import {I} from "./alias";${iconsBarrelDts.join('')}`;
-  await writeTs(iconsDtsFile, rawIconsDts);
+  const rawIndexDts = `import {SimpleIcon} from "./types";export {SimpleIcon};type I=SimpleIcon;${iconsBarrelDts.join(
+    '',
+  )}`;
+  await writeTs(indexDtsFile, rawIndexDts);
+
+  // create a CommonJS SDK file
+  await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
+    format: 'cjs',
+  });
 };
 
 build();

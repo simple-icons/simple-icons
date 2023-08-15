@@ -1,73 +1,92 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { strict as assert } from 'node:assert';
+import { describe, it } from 'mocha';
+import {
+  SVG_PATH_REGEX,
+  URL_REGEX,
+  getDirnameFromImportMeta,
+  titleToSlug,
+} from '../sdk.mjs';
 
-const iconsDir = path.resolve(process.cwd(), 'icons');
-const { suite } = require('uvu');
-const assert = require('uvu/assert');
+const iconsDir = path.resolve(
+  getDirnameFromImportMeta(import.meta.url),
+  '..',
+  'icons',
+);
+
+/**
+ * @typedef {import('..').SimpleIcon} SimpleIcon
+ */
 
 /**
  * Checks if icon data matches a subject icon.
- * @param {import('..').SimpleIcon} icon Icon data
- * @param {import('..').SimpleIcon} subject Icon to check against icon data
+ * @param {SimpleIcon} icon Icon data
+ * @param {SimpleIcon} subject Icon to check against icon data
  * @param {String} slug Icon data slug
  */
-const testIcon = (icon, subject, slug) => {
-  const test = suite(icon.title);
+export const testIcon = (icon, subject, slug) => {
   const svgPath = path.resolve(iconsDir, `${slug}.svg`);
 
-  test('has the correct "title"', () => {
-    assert.is(subject.title, icon.title);
-  });
+  describe(icon.title, () => {
+    it('has the correct "title"', () => {
+      assert.equal(subject.title, icon.title);
+    });
 
-  test('has the correct "slug"', () => {
-    assert.is(subject.slug, slug);
-  });
+    it('has the correct "slug"', () => {
+      assert.equal(subject.slug, slug);
+    });
 
-  test('has the correct "hex" value', () => {
-    assert.is(subject.hex, icon.hex);
-  });
+    it('has the correct "hex" value', () => {
+      assert.equal(subject.hex, icon.hex);
+    });
 
-  test('has the correct "source"', () => {
-    assert.is(subject.source, icon.source);
-  });
+    it('has the correct "source"', () => {
+      assert.equal(subject.source, icon.source);
+      assert.match(subject.source, URL_REGEX);
+    });
 
-  test('has an "svg" value', () => {
-    assert.type(subject.svg, 'string');
-  });
+    it('has an "svg" value', () => {
+      assert.equal(typeof subject.svg, 'string');
+    });
 
-  test('has a valid "path" value', () => {
-    assert.match(subject.path, /^[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/g);
-  });
+    it('has a valid "path" value', () => {
+      assert.match(subject.path, SVG_PATH_REGEX);
+    });
 
-  test(`has ${icon.guidelines ? 'the correct' : 'no'} "guidelines"`, () => {
-    if (icon.guidelines) {
-      assert.is(subject.guidelines, icon.guidelines);
-    } else {
-      assert.is(subject.guidelines, undefined);
-    }
-  });
-
-  test(`has ${icon.license ? 'the correct' : 'no'} "license"`, () => {
-    if (icon.license) {
-      assert.is(subject.license.type, icon.license.type);
-      if (icon.license.type === 'custom') {
-        assert.is(subject.license.url, icon.license.url);
+    it(`has ${icon.guidelines ? 'the correct' : 'no'} "guidelines"`, () => {
+      if (icon.guidelines) {
+        assert.equal(subject.guidelines, icon.guidelines);
       } else {
-        assert.match(subject.license.url, /^https?:\/\/[^\s]+$/);
+        assert.equal(subject.guidelines, undefined);
       }
-    } else {
-      assert.is(subject.license, undefined);
+    });
+
+    it(`has ${icon.license ? 'the correct' : 'no'} "license"`, () => {
+      if (icon.license) {
+        assert.equal(subject.license.type, icon.license.type);
+        if (icon.license.type === 'custom') {
+          assert.equal(subject.license.url, icon.license.url);
+        } else {
+          assert.match(subject.license.url, URL_REGEX);
+        }
+      } else {
+        assert.equal(subject.license, undefined);
+      }
+    });
+
+    it('has a valid svg value', async () => {
+      const svgFileContents = await fs.readFile(svgPath, 'utf8');
+      assert.equal(subject.svg, svgFileContents);
+    });
+
+    if (icon.slug) {
+      // if an icon data has a slug, it must be different to the
+      // slug inferred from the title, which prevents adding
+      // unnecessary slugs to icons data
+      it(`'${icon.title}' slug must be necessary`, () => {
+        assert.notEqual(titleToSlug(icon.title), icon.slug);
+      });
     }
   });
-
-  test('has a valid svg value', () => {
-    const svgFileContents = fs
-      .readFileSync(svgPath, 'utf8')
-      .replace(/\r?\n/, '');
-    assert.is(subject.svg, svgFileContents);
-  });
-
-  test.run();
 };
-
-module.exports = testIcon;

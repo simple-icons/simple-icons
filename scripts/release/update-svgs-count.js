@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Replaces the SVG count milestone "Over <NUMBER> Free SVG icons..." located
@@ -6,16 +5,19 @@
  * more than the previous milestone.
  */
 
-const fs = require('fs');
-const path = require('path');
+import process from 'node:process';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { getDirnameFromImportMeta, getIconsData } from '../../sdk.mjs';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
 
+const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDir = path.resolve(__dirname, '..', '..');
-const dataFile = path.resolve(rootDir, '_data', 'simple-icons.json');
 const readmeFile = path.resolve(rootDir, 'README.md');
-const readmeContent = fs.readFileSync(readmeFile, 'utf-8');
+
+const readmeContent = await fs.readFile(readmeFile, 'utf-8');
 
 let overNIconsInReadme;
 try {
@@ -28,11 +30,10 @@ try {
   process.exit(1);
 }
 
-const nIcons = require(dataFile).icons.length,
-  newNIcons = overNIconsInReadme + updateRange;
-if (nIcons <= newNIcons) {
-  process.exit(0);
-}
+const nIcons = (await getIconsData()).length;
+const newNIcons = overNIconsInReadme + updateRange;
 
-const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
-fs.writeFileSync(readmeFile, newContent);
+if (nIcons > newNIcons) {
+  const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
+  await fs.writeFile(readmeFile, newContent);
+}
