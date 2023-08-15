@@ -433,7 +433,11 @@
         {
             "title": "Akaunting",
             "hex": "6DA252",
-            "source": "https://assets.akaunting.com/site/img/logo/akaunting-logo.svg"
+            "source": "https://akaunting.com/logo",
+            "license": {
+                "type": "GPL-3.0-only",
+                "url": "https://akaunting.com/license"
+            }
         },
         {
             "title": "Alacritty",
