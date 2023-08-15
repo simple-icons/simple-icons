@@ -23,7 +23,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: simple-icons/release-action@master
+      - uses: LitoMore/simple-icons-release-action@9969e1266c9e470fe015dbd825a2897423e9270e
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,22 +35,39 @@ jobs:
       needs.release-pr.outputs.did-create-pr == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ secrets.RELEASE_TOKEN }}
           # Ensure we are checked out on the develop branch
           ref: develop
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Bump version
-        run: node ./scripts/release/bump-version.js "${{ needs.release-pr.outputs.new-version }}"
+        run: |
+          npm version --no-commit-hooks --no-git-tag-version \
+            "${{ needs.release-pr.outputs.new-version }}"
+      - name: Install dependencies
+        run: npm i
       - name: Update major version in CDN URLs
         run: node ./scripts/release/update-cdn-urls.js
       - name: Update SVGs count milestone
         run: node ./scripts/release/update-svgs-count.js
       - name: Update slugs table
         run: node ./scripts/release/update-slugs-table.js
+      - name: Update SDK Typescript definitions
+        run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.13.1
+        uses: stefanzweifel/git-auto-commit-action@v4.16.0
         with:
           commit_message: version bump
           commit_user_name: 'github-actions[bot]'
