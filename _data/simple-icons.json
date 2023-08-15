@@ -16,6 +16,12 @@
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
         },
         {
+            "title": "(ISC)²",
+            "slug": "iscsquared",
+            "hex": "007054",
+            "source": "https://www.isc2.org"
+        },
+        {
             "title": "/e/",
             "hex": "000000",
             "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
@@ -486,8 +492,8 @@
         },
         {
             "title": "Alipay",
-            "hex": "00A1E9",
-            "source": "https://gw.alipayobjects.com/os/rmsportal/trUJZfSrlnRCcFgfZGjD.ai"
+            "hex": "1890FF",
+            "source": "https://global.alipay.com"
         },
         {
             "title": "Allegro",
@@ -814,7 +820,7 @@
         {
             "title": "AniList",
             "hex": "02A9FF",
-            "source": "https://anilist.co/img/icons/icon.svg"
+            "source": "https://anilist.co"
         },
         {
             "title": "Ansible",
@@ -1153,6 +1159,11 @@
             "hex": "0091BD",
             "source": "https://www.arm.com",
             "guidelines": "https://www.arm.com/company/policies/trademarks/guidelines-corporate-logo"
+        },
+        {
+            "title": "Arm Keil",
+            "hex": "394049",
+            "source": "https://www.keil.arm.com"
         },
         {
             "title": "Ars Technica",
@@ -2258,6 +2269,11 @@
             "source": "https://chocolatey.org/media-kit"
         },
         {
+            "title": "Chromatic",
+            "hex": "FC521F",
+            "source": "https://www.chromatic.com"
+        },
+        {
             "title": "Chromecast",
             "hex": "999999",
             "source": "https://www.google.com/intl/en_us/chromecast/built-in/",
@@ -2686,6 +2702,12 @@
             "source": "https://getcomposer.org"
         },
         {
+            "title": "CompTIA",
+            "hex": "C8202F",
+            "source": "https://www.comptia.org",
+            "guidelines": "https://www.comptia.org/newsroom/media-library"
+        },
+        {
             "title": "Comsol",
             "hex": "368CCB",
             "source": "https://cdn.comsol.com/company/comsol-brand-guide-November2019.pdf"
@@ -2822,6 +2844,11 @@
             "title": "Craft CMS",
             "hex": "E5422B",
             "source": "https://craftcms.com/brand-resources"
+        },
+        {
+            "title": "Craftsman",
+            "hex": "D6001C",
+            "source": "https://www.craftsman.com"
         },
         {
             "title": "CrateDB",
@@ -3144,6 +3171,11 @@
             "license": {
                 "type": "CC-BY-SA-3.0"
             }
+        },
+        {
+            "title": "Decap CMS",
+            "hex": "FF0082",
+            "source": "https://github.com/decaporg/decap-cms/blob/ba158f4a56d6d79869811971bc1bb0ef15197d30/website/static/img/decap-logo.svg"
         },
         {
             "title": "deepin",
@@ -4593,6 +4625,14 @@
             "guidelines": "https://gamejolt.com/about"
         },
         {
+            "title": "GameBanana",
+            "hex": "FCEF40",
+            "source": "https://gamebanana.com/tools/3474",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0"
+            }
+        },
+        {
             "title": "Gamemaker",
             "hex": "000000",
             "source": "https://gamemaker.io/en/legal/brand",
@@ -5657,6 +5697,11 @@
             "source": "https://www.w3.org/html/logo/"
         },
         {
+            "title": "htop",
+            "hex": "009020",
+            "source": "https://github.com/htop-dev/htop/blob/03d5e4746f53bd07daf68638d714a7fec336297b/htop.svg"
+        },
+        {
             "title": "HTTPie",
             "hex": "73DC8C",
             "source": "https://github.com/httpie/httpie/blob/d262181bede5241a6b692c3245a77e2eb02bc262/docs/httpie-logo.svg"
@@ -6228,6 +6273,11 @@
             "title": "JET",
             "hex": "FBBA00",
             "source": "https://de.wikipedia.org/wiki/Datei:JET.svg"
+        },
+        {
+            "title": "JetBlue",
+            "hex": "001E59",
+            "source": "https://www.jetblue.com"
         },
         {
             "title": "JetBrains",
@@ -7001,6 +7051,11 @@
             "guidelines": "https://www.dropbox.com/sh/i9khucz3ucy0q5v/AACrbtcpEIS0PdP84RdkhoAFa/Guides"
         },
         {
+            "title": "LightBurn",
+            "hex": "57182D",
+            "source": "https://lightburnsoftware.com"
+        },
+        {
             "title": "Lighthouse",
             "hex": "F44B21",
             "source": "https://github.com/GoogleChrome/lighthouse/blob/80d2e6c1948f232ec4f1bdeabc8bc632fc5d0bfd/assets/lh_favicon.svg"
@@ -7121,6 +7176,11 @@
             "title": "LMMS",
             "hex": "10B146",
             "source": "https://lmms.io/branding"
+        },
+        {
+            "title": "Local",
+            "hex": "51BB7B",
+            "source": "https://localwp.com"
         },
         {
             "title": "Lodash",
@@ -7834,6 +7894,12 @@
             "source": "https://mini.co.uk"
         },
         {
+            "title": "MinIO",
+            "hex": "C72E49",
+            "source": "https://min.io",
+            "guidelines": "https://min.io/logo"
+        },
+        {
             "title": "Minutemailer",
             "hex": "30B980",
             "source": "https://minutemailer.com"
@@ -8203,6 +8269,11 @@
             "title": "NDR",
             "hex": "0C1754",
             "source": "https://www.ndr.de"
+        },
+        {
+            "title": "NEAR",
+            "hex": "000000",
+            "source": "https://near.org/brand"
         },
         {
             "title": "NEC",
@@ -10959,6 +11030,11 @@
             "source": "https://kb.sandisk.com"
         },
         {
+            "title": "Sanic",
+            "hex": "FF0D68",
+            "source": "https://github.com/sanic-org/sanic-assets/blob/79af646b7948fdfdc3b2f98d8aeedf58eba34b5b/svg/sanic-framework-logo-mono-black.svg"
+        },
+        {
             "title": "Sanity",
             "hex": "F03E2F",
             "source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
@@ -11344,6 +11420,11 @@
             "title": "Sina Weibo",
             "hex": "E6162D",
             "source": "https://en.wikipedia.org/wiki/Sina_Weibo"
+        },
+        {
+            "title": "Singapore Airlines",
+            "hex": "F99F1C",
+            "source": "https://www.singaporeair.com"
         },
         {
             "title": "SingleStore",
@@ -12391,6 +12472,17 @@
             "hex": "486AAE",
             "source": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/",
             "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
+        },
+        {
+            "title": "Tata Consultancy Services",
+            "slug": "tcs",
+            "hex": "EE3984",
+            "source": "https://www.tcs.com",
+            "aliases": {
+                "aka": [
+                    "TCS"
+                ]
+            }
         },
         {
             "title": "Tauri",
@@ -13574,6 +13666,11 @@
             "source": "https://www.vultr.com/company/brand-assets/"
         },
         {
+            "title": "Vyond",
+            "hex": "D95E26",
+            "source": "https://www.vyond.com"
+        },
+        {
             "title": "W3C",
             "hex": "005A9C",
             "source": "https://www.w3.org/Consortium/Legal/logo-usage-20000308",
@@ -14198,6 +14295,11 @@
             "title": "Yelp",
             "hex": "D32323",
             "source": "https://www.yelp.com/styleguide/icons"
+        },
+        {
+            "title": "Yeti",
+            "hex": "00263C",
+            "source": "https://www.yeti.com"
         },
         {
             "title": "Yoast",
