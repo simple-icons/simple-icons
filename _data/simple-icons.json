@@ -4621,8 +4621,11 @@
         },
         {
             "title": "GameBanana",
-            "hex": "000000",
-            "source": "https://gamebanana.com/tools/3474"
+            "hex": "FCEF40",
+            "source": "https://gamebanana.com/tools/3474",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0"
+            }
         },
         {
             "title": "Gamemaker",
