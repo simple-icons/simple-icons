@@ -919,6 +919,14 @@
             "source": "https://groovy-lang.org"
         },
         {
+            "title": "Apache Guacamole",
+            "hex": "578B34",
+            "source": "https://apache.org/logos",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
             "title": "Apache Hadoop",
             "hex": "66CCFF",
             "source": "https://apache.org/logos/#hadoop"
@@ -5280,11 +5288,6 @@
             "hex": "7FE719",
             "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
             "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
-        },
-        {
-            "title": "Guacamole",
-            "hex": "304730",
-            "source": "https://github.com/apache/guacamole-website/blob/7b832798bb43f9047d0725b10604e09fd3245cbd/images/guac-logo.png"
         },
         {
             "title": "Guangzhou Metro",
