@@ -13230,7 +13230,10 @@
         {
             "title": "Umami",
             "hex": "000000",
-            "source": "https://github.com/mikecao/umami/blob/5358e28a68e0ccf4fdba95dbdc495779429f2a4f/assets/logo.svg"
+            "source": "https://github.com/umami-software/umami/blob/3572df0a09503f357a06fe7f816295ba2c878325/assets/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Umbraco",
