@@ -1262,7 +1262,7 @@
         {
             "title": "ARK Ecosystem",
             "hex": "C9292C",
-            "source": "https://ark.io/press-kit"
+            "source": "https://ark.io"
         },
         {
             "title": "Arlo",
@@ -1288,7 +1288,7 @@
         {
             "title": "Artifact Hub",
             "hex": "417598",
-            "source": "https://raw.githubusercontent.com/artifacthub/hub/87a1fed/web/public/static/media/logo/artifacthub-brand-white.svg"
+            "source": "https://github.com/artifacthub/hub/blob/b7df64e044687e5788d6e7e809539679eb9fe45a/web/public/static/media/logo/artifacthub-brand-white.svg"
         },
         {
             "title": "Artix Linux",
@@ -1309,7 +1309,7 @@
         {
             "title": "Asana",
             "hex": "F06A6A",
-            "source": "https://asana.com/styles",
+            "source": "https://asana.com/brand",
             "guidelines": "https://asana.com/brand"
         },
         {
@@ -1320,7 +1320,7 @@
         {
             "title": "asciinema",
             "hex": "D40000",
-            "source": "https://github.com/asciinema/asciinema-logo/tree/1c743621830c0d8c92fd0076b4f15f75b4cf79f4"
+            "source": "https://github.com/asciinema/asciinema-logo/blob/1c743621830c0d8c92fd0076b4f15f75b4cf79f4/logo-red.svg"
         },
         {
             "title": "ASDA",
@@ -1376,7 +1376,8 @@
         {
             "title": "Atlassian",
             "hex": "0052CC",
-            "source": "https://www.atlassian.com/company/news/press-kit"
+            "source": "https://atlassian.design/resources/logo-library",
+            "guidelines": "https://atlassian.design/foundations/logos"
         },
         {
             "title": "Atom",
@@ -1396,7 +1397,8 @@
         {
             "title": "Audi",
             "hex": "BB0A30",
-            "source": "https://www.audi.com/ci/en/intro/basics/rings.html"
+            "source": "https://www.audi.com/ci/en/intro/basics/rings.html",
+            "guidelines": "https://www.audi.com/ci/en/intro/basics/rings.html"
         },
         {
             "title": "Audible",
@@ -1406,7 +1408,7 @@
         {
             "title": "Audio-Technica",
             "hex": "000000",
-            "source": "https://wikipedia.org/wiki/File:Audio-technica.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Audio-technica.svg"
         },
         {
             "title": "Audioboom",
@@ -1426,7 +1428,7 @@
         {
             "title": "Auth0",
             "hex": "EB5424",
-            "source": "https://styleguide.auth0.com"
+            "source": "https://auth0.com"
         },
         {
             "title": "Authelia",
@@ -1441,8 +1443,8 @@
         {
             "title": "Autodesk",
             "hex": "000000",
-            "source": "https://brand.autodesk.com",
-            "guidelines": "https://brand.autodesk.com/brand-system/logo/"
+            "source": "https://brand.autodesk.com/brand-system/logo",
+            "guidelines": "https://brand.autodesk.com/brand-system/logo"
         },
         {
             "title": "AutoHotkey",
@@ -1452,7 +1454,7 @@
         {
             "title": "Automattic",
             "hex": "3499CD",
-            "source": "https://automattic.com/press/brand-materials/"
+            "source": "https://automattic.com/press/brand-materials"
         },
         {
             "title": "Autoprefixer",
@@ -1467,13 +1469,13 @@
         {
             "title": "Avast",
             "hex": "FF7800",
-            "source": "https://www.avast.com",
-            "guidelines": "https://press.avast.com/media-materials"
+            "source": "https://press.avast.com/media-materials#logos-and-brand-guidelines",
+            "guidelines": "https://press.avast.com/media-materials#logos-and-brand-guidelines"
         },
         {
             "title": "Awesome Lists",
             "hex": "FC60A8",
-            "source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media"
+            "source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media/logo.svg"
         },
         {
             "title": "awesomeWM",
@@ -1483,20 +1485,20 @@
         {
             "title": "AWS Amplify",
             "hex": "FF9900",
-            "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "AWS Fargate",
             "hex": "FF9900",
-            "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "AWS Lambda",
             "hex": "FF9900",
-            "source": "https://aws.amazon.com/architecture/icons/",
-            "guidelines": "https://aws.amazon.com/architecture/icons/"
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
             "title": "Axios",
@@ -1506,17 +1508,17 @@
         {
             "title": "Azure Artifacts",
             "hex": "CB2E6D",
-            "source": "https://azure.microsoft.com/en-us/services/devops/artifacts/"
+            "source": "https://azure.microsoft.com/en-gb/products/devops"
         },
         {
             "title": "Azure Data Explorer",
             "hex": "0078D4",
-            "source": "https://azure.microsoft.com/en-us/pricing/details/data-explorer/"
+            "source": "https://azure.microsoft.com/en-us/pricing/details/data-explorer"
         },
         {
             "title": "Azure DevOps",
             "hex": "0078D7",
-            "source": "https://azure.microsoft.com/products/devops/"
+            "source": "https://azure.microsoft.com/products/devops"
         },
         {
             "title": "Azure Functions",
@@ -1526,7 +1528,7 @@
         {
             "title": "Azure Pipelines",
             "hex": "2560E0",
-            "source": "https://github.com/vscode-icons/vscode-icons/blob/dc7872262c9b059c574bd16fc4cfedbb6bdf156e/icons/file_type_azurepipelines.svg"
+            "source": "https://azure.microsoft.com/en-gb/products/devops"
         },
         {
             "title": "B&R Automation",
