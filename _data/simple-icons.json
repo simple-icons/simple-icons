@@ -348,7 +348,10 @@
         {
             "title": "AIOHTTP",
             "hex": "2C5BB4",
-            "source": "https://github.com/aio-libs/aiohttp/blob/fb5fe72b1bca3b899af579d376f5fe45745410e4/docs/aiohttp-plain.svg"
+            "source": "https://github.com/aio-libs/aiohttp/blob/fb5fe72b1bca3b899af579d376f5fe45745410e4/docs/aiohttp-plain.svg",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Aiqfome",
@@ -388,7 +391,10 @@
         {
             "title": "Airbrake.io",
             "hex": "FFA500",
-            "source": "https://github.com/airbrake/slate/blob/c116f2968bcf4dfda126511de0a2d0f0dc8b6a8e/source/images/logo.svg"
+            "source": "https://github.com/airbrake/slate/blob/c116f2968bcf4dfda126511de0a2d0f0dc8b6a8e/source/images/logo.svg",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Airbus",
@@ -425,7 +431,10 @@
         {
             "title": "Ajv",
             "hex": "23C8D2",
-            "source": "https://github.com/ajv-validator/ajv/blob/95b15b683dfb60f63c5129b0426629b968d53af8/docs/.vuepress/public/img/ajv.svg"
+            "source": "https://github.com/ajv-validator/ajv/blob/95b15b683dfb60f63c5129b0426629b968d53af8/docs/.vuepress/public/img/ajv.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Akamai",
@@ -435,7 +444,10 @@
         {
             "title": "Alacritty",
             "hex": "F46D01",
-            "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg"
+            "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Albert Heijn",
