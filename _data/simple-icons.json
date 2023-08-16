@@ -1103,7 +1103,11 @@
         {
             "title": "Apache Tomcat",
             "hex": "F8DC75",
-            "source": "https://apache.org/logos"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Aparat",
