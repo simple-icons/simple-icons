@@ -878,133 +878,232 @@
         {
             "title": "Apache",
             "hex": "D22128",
-            "source": "https://www.apache.org/foundation/press/kit/"
+            "source": "https://www.apache.org/foundation/press/kit",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Airflow",
             "hex": "017CEE",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Ant",
             "hex": "A81C7D",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Cassandra",
             "hex": "1287B1",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg"
+            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache CloudStack",
             "hex": "2AA5DC",
-            "source": "https://cloudstack.apache.org/trademark-guidelines.html"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Cordova",
             "hex": "E8E8E8",
-            "source": "https://cordova.apache.org/artwork/"
+            "source": "https://cordova.apache.org/artwork",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache CouchDB",
             "hex": "E42528",
-            "source": "https://apache.org/logos/#couchdb"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Druid",
             "hex": "29F1FB",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache ECharts",
             "hex": "AA344D",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Flink",
             "hex": "E6526F",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Groovy",
             "hex": "4298B8",
-            "source": "https://groovy-lang.org"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Hadoop",
             "hex": "66CCFF",
-            "source": "https://apache.org/logos/#hadoop"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Hive",
             "hex": "FDEE21",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache JMeter",
             "hex": "D22128",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Kafka",
             "hex": "231F20",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Kylin",
             "hex": "F09D13",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Maven",
             "hex": "C71A36",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache NetBeans IDE",
             "hex": "1B6AC6",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache OpenOffice",
             "hex": "0E85CD",
-            "source": "https://apache.org/logos"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Parquet",
             "hex": "50ABF1",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Pulsar",
             "hex": "188FFF",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache RocketMQ",
             "hex": "D77310",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Solr",
             "hex": "D9411E",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Spark",
             "hex": "E25A1C",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Storm",
             "hex": "225593",
             "source": "https://apache.org/logos",
-            "guidelines": "https://www.apache.org/foundation/marks"
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "Apache Tomcat",
             "hex": "F8DC75",
-            "source": "https://apache.org/logos/"
+            "source": "https://apache.org/logos"
         },
         {
             "title": "Aparat",
