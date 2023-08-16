@@ -408,12 +408,14 @@
         {
             "title": "AirPlay Audio",
             "hex": "000000",
-            "source": "https://developer.apple.com/design/human-interface-guidelines/airplay/overview/icons/"
+            "source": "https://developer.apple.com/design/human-interface-guidelines/airplay/overview/icons",
+            "guidelines": "https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html"
         },
         {
             "title": "AirPlay Video",
             "hex": "000000",
-            "source": "https://developer.apple.com/design/human-interface-guidelines/airplay/overview/icons/"
+            "source": "https://developer.apple.com/design/human-interface-guidelines/airplay/overview/icons/",
+            "guidelines": "https://www.apple.com/legal/intellectual-property/guidelinesfor3rdparties.html"
         },
         {
             "title": "Airtable",
