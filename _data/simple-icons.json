@@ -4334,6 +4334,11 @@
             "source": "https://www.flickr.com"
         },
         {
+            "title": "Flightaware",
+            "hex": "19315B",
+            "source": "https://flightaware.com/about/logo"
+        },
+        {
             "title": "Flipboard",
             "hex": "E12828",
             "source": "https://about.flipboard.com/brand-guidelines"
@@ -5163,6 +5168,11 @@
             "title": "Google Sheets",
             "hex": "34A853",
             "source": "https://sheets.google.com"
+        },
+        {
+            "title": "Google Slides",
+            "hex": "FBBC04",
+            "source": "https://slides.google.com"
         },
         {
             "title": "Google Street View",
@@ -10311,8 +10321,11 @@
         },
         {
             "title": "QuickLook",
-            "hex": "22A2E3",
-            "source": "https://github.com/QL-Win/QuickLook/tree/f726841d99bbceafd5399e5777b4dba302bf1e51"
+            "hex": "0078D3",
+            "source": "https://github.com/QL-Win/QuickLook/blob/f726841d99bbceafd5399e5777b4dba302bf1e51/QuickLook/Resources/app.svg",
+            "license": {
+                "type": "GPL-3.0-or-later"
+            }
         },
         {
             "title": "QuickTime",
@@ -10982,6 +10995,11 @@
             "title": "Ruff",
             "hex": "FCC21B",
             "source": "https://github.com/charliermarsh/ruff/blob/e04ef423344837c916e75a7b09ea674711a104e0/assets/badge/v1.json"
+        },
+        {
+            "title": "Rumble",
+            "hex": "85C742",
+            "source": "https://rumble.com"
         },
         {
             "title": "Rundeck",
