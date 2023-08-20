@@ -5216,6 +5216,20 @@
             "guidelines": "https://gradle.com/brand"
         },
         {
+            "title": "Gradle Play Publisher",
+            "hex": "82B816",
+            "source": "https://github.com/Triple-T/gradle-play-publisher",
+            "source": "https://github.com/Triple-T/gradle-play-publisher/blob/master/assets/logo.svg"
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/Triple-T/gradle-play-publisher/blob/master/LICENSE"
+            }
+            "aliases": {
+                "aka": [
+                    "gpp"
+                    ]
+        },
+        {
             "title": "Grafana",
             "hex": "F46800",
             "source": "https://grafana.com"
