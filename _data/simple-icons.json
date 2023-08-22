@@ -4222,8 +4222,8 @@
         },
         {
             "title": "Fila",
-            "hex": "03234C",
-            "source": "https://en.wikipedia.org/wiki/Fila_(company)"
+            "hex": "002D62",
+            "source": "https://www.fila.com"
         },
         {
             "title": "Files",
@@ -5178,6 +5178,11 @@
             "title": "Google Sheets",
             "hex": "34A853",
             "source": "https://sheets.google.com"
+        },
+        {
+            "title": "Google Slides",
+            "hex": "FBBC04",
+            "source": "https://slides.google.com"
         },
         {
             "title": "Google Street View",
@@ -7753,12 +7758,14 @@
         {
             "title": "Microsoft",
             "hex": "5E5E5E",
-            "source": "https://developer.microsoft.com"
+            "source": "https://developer.microsoft.com",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft Academic",
             "hex": "2D9FD9",
-            "source": "https://academic.microsoft.com"
+            "source": "https://academic.microsoft.com",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft Access",
@@ -7773,17 +7780,20 @@
         {
             "title": "Microsoft Azure",
             "hex": "0078D4",
-            "source": "https://github.com/microsoft/vscode-azureresourcegroups/blob/0a06362e82170fd7f8dc2496286825b1a69cc42b/resources/azure.svg"
+            "source": "https://github.com/microsoft/vscode-azureresourcegroups/blob/0a06362e82170fd7f8dc2496286825b1a69cc42b/resources/azure.svg",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft Bing",
             "hex": "258FFA",
-            "source": "https://www.bing.com/covid/"
+            "source": "https://www.bing.com/covid/",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft Edge",
             "hex": "0078D7",
-            "source": "https://support.microsoft.com/en-us/help/17171/microsoft-edge-get-to-know"
+            "source": "https://support.microsoft.com/en-us/help/17171/microsoft-edge-get-to-know",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft Excel",
@@ -7808,7 +7818,8 @@
         {
             "title": "Microsoft Office",
             "hex": "D83B01",
-            "source": "https://developer.microsoft.com/en-us/microsoft-365"
+            "source": "https://developer.microsoft.com/en-us/microsoft-365",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft OneDrive",
@@ -7833,7 +7844,8 @@
         {
             "title": "Microsoft Outlook",
             "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/outlook/docs"
+            "source": "https://developer.microsoft.com/en-us/outlook/docs",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft PowerPoint",
@@ -7873,7 +7885,8 @@
         {
             "title": "Microsoft Translator",
             "hex": "057B00",
-            "source": "https://translator.microsoft.com"
+            "source": "https://translator.microsoft.com",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
         },
         {
             "title": "Microsoft Visio",
@@ -10326,8 +10339,11 @@
         },
         {
             "title": "QuickLook",
-            "hex": "22A2E3",
-            "source": "https://github.com/QL-Win/QuickLook/tree/f726841d99bbceafd5399e5777b4dba302bf1e51"
+            "hex": "0078D3",
+            "source": "https://github.com/QL-Win/QuickLook/blob/f726841d99bbceafd5399e5777b4dba302bf1e51/QuickLook/Resources/app.svg",
+            "license": {
+                "type": "GPL-3.0-or-later"
+            }
         },
         {
             "title": "QuickTime",
@@ -11434,6 +11450,12 @@
             "source": "https://www.shopware.com/en/press/press-material/"
         },
         {
+            "title": "Shortcut",
+            "hex": "58B1E4",
+            "source": "https://www.shortcut.com/branding",
+            "guidelines": "https://www.shortcut.com/branding"
+        },
+        {
             "title": "Shotcut",
             "hex": "115C77",
             "source": "https://shotcut.com/media/"
@@ -11901,6 +11923,11 @@
             },
             "hex": "337AB7",
             "source": "https://www.spoj.com"
+        },
+        {
+            "title": "SpigotMC",
+            "hex": "ED8106",
+            "source": "https://www.spigotmc.org"
         },
         {
             "title": "Spinnaker",
@@ -13537,6 +13564,12 @@
             "source": "https://www.verizondigitalmedia.com/about/logo-usage/"
         },
         {
+            "title": "Vespa",
+            "hex": "85B09A",
+            "source": "https://www.piaggiogroup.com/sites/piaggiocorpd7/files/doc/guidalogo_vespa_0.pdf",
+            "guidelines": "https://www.piaggiogroup.com/en/archive/document/logo-guide"
+        },
+        {
             "title": "VEXXHOST",
             "hex": "2A1659",
             "source": "https://vexxhost.com"
@@ -13780,7 +13813,7 @@
         {
             "title": "WALKMAN",
             "hex": "000000",
-            "source": "https://en.wikipedia.org/wiki/File:Walkman_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Walkman_logo_(2000).svg"
         },
         {
             "title": "Wallabag",
@@ -13790,7 +13823,8 @@
         {
             "title": "WalletConnect",
             "hex": "3B99FC",
-            "source": "https://walletconnect.com/brand"
+            "source": "https://walletconnect.com/brand",
+            "guidelines": "https://walletconnect.com/brand"
         },
         {
             "title": "Walmart",
@@ -13806,8 +13840,9 @@
         },
         {
             "title": "Wappalyzer",
-            "hex": "32067C",
-            "source": "https://www.wappalyzer.com"
+            "hex": "4608AD",
+            "source": "https://www.wappalyzer.com/logos",
+            "guidelines": "https://www.wappalyzer.com/logos"
         },
         {
             "title": "Warner Bros.",
@@ -13828,8 +13863,8 @@
         {
             "title": "wasmCloud",
             "hex": "00BC8E",
-            "source": "https://github.com/wasmCloud/branding/tree/0827503c63f55471a0c709e97d609f56d716be40",
-            "guidelines": "https://github.com/wasmCloud/branding/"
+            "source": "https://github.com/wasmCloud/branding/blob/0827503c63f55471a0c709e97d609f56d716be40/03.Icon/Vector/SVG/Wasmcloud.Icon_Black.svg",
+            "guidelines": "https://github.com/wasmCloud/branding/blob/0827503c63f55471a0c709e97d609f56d716be40/wasmcloud_Visual.Guidelines_1.0.pdf"
         },
         {
             "title": "Wasmer",
@@ -13889,7 +13924,7 @@
         {
             "title": "WebdriverIO",
             "hex": "EA5906",
-            "source": "https://webdriver.io/docs/api/"
+            "source": "https://webdriver.io/docs/api"
         },
         {
             "title": "Webflow",
@@ -13899,8 +13934,8 @@
         {
             "title": "WebGL",
             "hex": "990000",
-            "source": "https://www.khronos.org/legal/trademarks/",
-            "guidelines": "https://www.khronos.org/legal/trademarks/"
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/legal/trademarks"
         },
         {
             "title": "webhint",
@@ -13928,7 +13963,12 @@
         {
             "title": "Webpack",
             "hex": "8DD6F9",
-            "source": "https://webpack.js.org/branding/"
+            "source": "https://webpack.js.org/branding",
+            "guidelines": "https://webpack.js.org/branding",
+            "license": {
+                "type": "custom",
+                "url": "https://js.foundation/about/governance/trademark-policy"
+            }
         },
         {
             "title": "WebRTC",
@@ -13938,8 +13978,8 @@
         {
             "title": "WebStorm",
             "hex": "000000",
-            "source": "https://www.jetbrains.com/company/brand/logos/",
-            "guidelines": "https://www.jetbrains.com/company/brand/"
+            "source": "https://www.jetbrains.com/company/brand/logos",
+            "guidelines": "https://www.jetbrains.com/company/brand"
         },
         {
             "title": "WEBTOON",
@@ -13979,6 +14019,11 @@
             "source": "https://www.welcometothejungle.com"
         },
         {
+            "title": "Wellfound",
+            "hex": "000000",
+            "source": "https://wellfound.com/logo"
+        },
+        {
             "title": "WEMO",
             "hex": "72D44C",
             "source": "https://commons.wikimedia.org/wiki/File:WeMoApp.svg"
@@ -14001,8 +14046,8 @@
         {
             "title": "WhatsApp",
             "hex": "25D366",
-            "source": "https://www.facebook.com/brand/resources/whatsapp/whatsapp-brand",
-            "guidelines": "https://www.facebook.com/brand/resources/whatsapp/whatsapp-brand"
+            "source": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand",
+            "guidelines": "https://about.meta.com/brand/resources/whatsapp/whatsapp-brand"
         },
         {
             "title": "When I Work",
@@ -14120,7 +14165,8 @@
         {
             "title": "WireGuard",
             "hex": "88171A",
-            "source": "https://www.wireguard.com"
+            "source": "https://www.wireguard.com",
+            "guidelines": "https://www.wireguard.com/trademark-policy"
         },
         {
             "title": "Wireshark",
@@ -14140,7 +14186,7 @@
         },
         {
             "title": "Wistia",
-            "hex": "54BBFF",
+            "hex": "58B7FE",
             "source": "https://wistia.com/about/assets",
             "guidelines": "https://wistia.com/about/assets"
         },
@@ -14157,40 +14203,41 @@
         {
             "title": "Wolfram",
             "hex": "DD1100",
-            "source": "https://company.wolfram.com/press-center/wolfram-corporate/"
+            "source": "https://company.wolfram.com/press-center/wolfram-corporate"
         },
         {
             "title": "Wolfram Language",
             "hex": "DD1100",
-            "source": "https://company.wolfram.com/press-center/language/"
+            "source": "https://company.wolfram.com/press-center/language"
         },
         {
             "title": "Wolfram Mathematica",
             "hex": "DD1100",
-            "source": "https://company.wolfram.com/press-center/mathematica/"
+            "source": "https://company.wolfram.com/press-center/mathematica"
         },
         {
             "title": "Woo",
             "hex": "96588A",
-            "source": "https://woocommerce.com/style-guide/",
-            "guidelines": "https://woocommerce.com/trademark-guidelines/"
+            "source": "https://woocommerce.com/style-guide",
+            "guidelines": "https://woocommerce.com/trademark-guidelines"
         },
         {
             "title": "WooCommerce",
             "hex": "96588A",
-            "source": "https://woocommerce.com/style-guide/",
-            "guidelines": "https://woocommerce.com/trademark-guidelines/"
+            "source": "https://woocommerce.com/style-guide",
+            "guidelines": "https://woocommerce.com/trademark-guidelines"
         },
         {
             "title": "WordPress",
             "hex": "21759B",
-            "source": "https://wordpress.org/about/logos"
+            "source": "https://wordpress.org/about/logos",
+            "guidelines": "https://wordpressfoundation.org/trademark-policy"
         },
         {
             "title": "Workplace",
-            "hex": "4326C4",
-            "source": "https://en.facebookbrand.com",
-            "guidelines": "https://en.facebookbrand.com"
+            "hex": "4526CE",
+            "source": "https://about.meta.com/brand/resources/workplace/workplace-brand",
+            "guidelines": "https://about.meta.com/brand/resources/workplace/workplace-brand"
         },
         {
             "title": "World Health Organization",
@@ -14200,7 +14247,8 @@
         {
             "title": "WP Engine",
             "hex": "0ECAD4",
-            "source": "https://wpengine.com/brand-assets/"
+            "source": "https://wpengine.com/brand-assets",
+            "guidelines": "https://wpengine.com/brand-assets"
         },
         {
             "title": "WP Rocket",
