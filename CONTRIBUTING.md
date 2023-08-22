@@ -47,7 +47,6 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - For websites, the [Similarweb global rank](https://www.similarweb.com) should be less than 500k.
         - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
     - For GitHub projects, the amount of "stars" should be above 5k.
-    - For Stack Exchange sites, the [visits per day](https://stackexchange.com/sites?view=list#traffic) should be above 50k.
     - For anything else, popularity will be judged on a case-by-case basis.
 * Doesn't fall into one of the following categories:
     - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
