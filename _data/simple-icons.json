@@ -4509,6 +4509,16 @@
             "guidelines": "https://flutter.dev/brand"
         },
         {
+            "title": "Flux",
+            "hex": "5468FF",
+            "source": "https://github.com/cncf/artwork/blob/c2e619cdf85e8bac090ceca7c0834c5cfedf9426/projects/flux/icon/black/flux-icon-black.svg",
+            "guidelines": "https://www.cncf.io/brand-guidelines/",
+            "license": {
+                "type": "custom",
+                "url": "https://www.linuxfoundation.org/legal/trademark-usage"
+            }
+        },
+        {
             "title": "Fluxus",
             "hex": "FFFFFF",
             "source": "https://github.com/YieldingFluxus/fluxuswebsite/blob/651d798b8753786dcc51644c3b048a4f399db166/public/icon-svg.svg"
