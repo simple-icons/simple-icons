@@ -89,7 +89,8 @@
         {
             "title": "about.me",
             "hex": "333333",
-            "source": "https://about.me/assets"
+            "source": "https://about.me/assets",
+            "guidelines": "https://about.me/assets"
         },
         {
             "title": "Abstract",
@@ -180,72 +181,86 @@
         {
             "title": "Adobe",
             "hex": "FF0000",
-            "source": "https://www.adobe.com"
+            "source": "https://www.adobe.com",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Acrobat Reader",
             "hex": "EC1C24",
-            "source": "https://acrobat.adobe.com"
+            "source": "https://acrobat.adobe.com",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe After Effects",
             "hex": "9999FF",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Audition",
             "hex": "9999FF",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Creative Cloud",
             "hex": "DA1F26",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Dreamweaver",
             "hex": "FF61F6",
-            "source": "https://www.adobe.com/products/catalog.html"
+            "source": "https://www.adobe.com/products/catalog.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Fonts",
             "hex": "000B1D",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Illustrator",
             "hex": "FF9A00",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe InDesign",
             "hex": "FF3366",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Lightroom",
             "hex": "31A8FF",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Lightroom Classic",
             "hex": "31A8FF",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Photoshop",
             "hex": "31A8FF",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe Premiere Pro",
             "hex": "9999FF",
-            "source": "https://www.adobe.com/creativecloud.html"
+            "source": "https://www.adobe.com/creativecloud.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "Adobe XD",
             "hex": "FF61F6",
-            "source": "https://helpx.adobe.com/support/xd.html"
+            "source": "https://helpx.adobe.com/support/xd.html",
+            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines/"
         },
         {
             "title": "AdonisJS",
