@@ -13945,7 +13945,12 @@
         {
             "title": "Webpack",
             "hex": "8DD6F9",
-            "source": "https://webpack.js.org/branding/"
+            "source": "https://webpack.js.org/branding",
+            "guidelines": "https://webpack.js.org/branding",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/webpack/media/blob/3e52c178e6ad2428585a2cbf5d22d6dbe0697f0f/LICENSE"
+            }
         },
         {
             "title": "WebRTC",
