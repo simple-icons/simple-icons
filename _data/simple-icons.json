@@ -1952,7 +1952,7 @@
         {
             "title": "Bun",
             "hex": "000000",
-            "source": "https://bun.sh"
+            "source": "https://bun.sh/press-kit"
         },
         {
             "title": "bunq",
@@ -7494,6 +7494,11 @@
             "title": "Marriott",
             "hex": "A70023",
             "source": "https://marriott-hotels.marriott.com"
+        },
+        {
+            "title": "Marvel",
+            "hex": "1FB6FF",
+            "source": "https://marvelapp.com"
         },
         {
             "title": "Maserati",
@@ -14299,12 +14304,13 @@
         {
             "title": "X.Org",
             "hex": "F28834",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/9/90/X.Org_Logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:X.Org_Logo.svg"
         },
         {
             "title": "Xamarin",
             "hex": "3498DB",
-            "source": "https://github.com/dotnet-foundation/swag/tree/0d21c59a604f348f509d772c12a99b888ed9f21f/xamarin"
+            "source": "https://github.com/dotnet-foundation/swag/blob/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin/Xamagon/svg/Xamagon.svg",
+            "guidelines": "https://github.com/dotnet-foundation/swag/tree/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin"
         },
         {
             "title": "XAML",
@@ -14324,7 +14330,7 @@
         {
             "title": "Xcode",
             "hex": "147EFB",
-            "source": "https://developer.apple.com/develop/"
+            "source": "https://developer.apple.com/develop"
         },
         {
             "title": "XDA Developers",
