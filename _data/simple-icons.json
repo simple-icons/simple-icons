@@ -1555,7 +1555,8 @@
         {
             "title": "Beats",
             "hex": "005571",
-            "source": "https://www.elastic.co/beats"
+            "source": "https://www.elastic.co/beats",
+            "guidelines": "https://www.elastic.co/legal/trademarks"
         },
         {
             "title": "Beats by Dre",
@@ -1616,7 +1617,8 @@
         {
             "title": "BigCommerce",
             "hex": "121118",
-            "source": "https://www.bigcommerce.co.uk/press"
+            "source": "https://www.bigcommerce.co.uk/press",
+            "guidelines": "https://www.elastic.co/legal/trademarks"
         },
         {
             "title": "Bilibili",
@@ -1656,7 +1658,8 @@
         {
             "title": "Bitbucket",
             "hex": "0052CC",
-            "source": "https://atlassian.design/resources/logo-library"
+            "source": "https://atlassian.design/resources/logo-library",
+            "guidelines": "https://atlassian.design/foundations/logos"
         },
         {
             "title": "Bitcoin",
@@ -1715,8 +1718,9 @@
         },
         {
             "title": "Blender",
-            "hex": "F5792A",
-            "source": "https://www.blender.org/about/logo"
+            "hex": "E87D0D",
+            "source": "https://www.blender.org/about/logo",
+            "guidelines": "https://www.blender.org/about/logo"
         },
         {
             "title": "Blockchain.com",
@@ -1814,6 +1818,7 @@
             "title": "Bootstrap",
             "hex": "7952B3",
             "source": "https://getbootstrap.com/docs/5.3/about/brand",
+            "guidelines": "https://getbootstrap.com/docs/5.3/about/brand",
             "license": {
                 "type": "MIT"
             }
