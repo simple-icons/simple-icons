@@ -1568,7 +1568,7 @@
         {
             "title": "Backbone.js",
             "hex": "0071B5",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/2/20/Backbone.js_logo.svg",
+            "source": "https://commons.wikimedia.org/wiki/File:Backbone.js_logo.svg",
             "license": {
                 "type": "MIT",
                 "url": "https://github.com/jashkenas/backbone/blob/master/LICENSE"
@@ -1593,7 +1593,7 @@
         {
             "title": "Badoo",
             "hex": "783BF9",
-            "source": "https://badoo.com/team/press/"
+            "source": "https://badoo.com"
         },
         {
             "title": "Baidu",
@@ -1613,12 +1613,12 @@
         {
             "title": "BandLab",
             "hex": "F12C18",
-            "source": "https://blog.bandlab.com/press/"
+            "source": "https://www.bandlab.com"
         },
         {
             "title": "Bandsintown",
             "hex": "00CEC8",
-            "source": "https://corp.bandsintown.com/media-library"
+            "source": "https://www.company.bandsintown.com/brand-assets"
         },
         {
             "title": "Bank of America",
@@ -1658,12 +1658,12 @@
         {
             "title": "Bath ASU",
             "hex": "00A3E0",
-            "source": "https://bathasu.com/press/"
+            "source": "https://bathasu.com"
         },
         {
             "title": "Battle.net",
             "hex": "148EFF",
-            "source": "https://eu.shop.battle.net/en-gb"
+            "source": "https://battle.net"
         },
         {
             "title": "BBC",
@@ -1674,18 +1674,20 @@
         {
             "title": "BBC iPlayer",
             "hex": "FF4C98",
-            "source": "https://www.bbc.co.uk/iplayer"
+            "source": "https://www.bbc.co.uk/iplayer",
+            "guidelines": "https://www.bbc.co.uk/branding/logo-use"
         },
         {
             "title": "Beatport",
             "hex": "01FF95",
-            "source": "https://brand.beatport.com",
-            "guidelines": "https://support.beatport.com/hc/en-us/articles/200353255-Beatport-Logos-and-Images"
+            "source": "https://www.beatport.com",
+            "guidelines": "https://support.beatport.com/hc/en-us/articles/4412316336404-Beatport-Logos-and-Images"
         },
         {
             "title": "Beats",
             "hex": "005571",
-            "source": "https://www.elastic.co/brand"
+            "source": "https://www.elastic.co/beats",
+            "guidelines": "https://www.elastic.co/legal/trademarks"
         },
         {
             "title": "Beats by Dre",
@@ -1695,7 +1697,7 @@
         {
             "title": "Behance",
             "hex": "1769FF",
-            "source": "https://www.behance.net/dev/api/brand"
+            "source": "https://www.behance.net"
         },
         {
             "title": "Beijing Subway",
@@ -1725,7 +1727,7 @@
         {
             "title": "Betfair",
             "hex": "FFB80B",
-            "source": "https://partnerships.betfair.com"
+            "source": "https://www.betfair.com"
         },
         {
             "title": "Big Cartel",
@@ -1741,12 +1743,13 @@
             "title": "BigBlueButton",
             "hex": "283274",
             "source": "https://github.com/bigbluebutton/bbb-app-rooms/blob/0fcf9636a3ba683296326f46354265917c4f0ea4/app/assets/images/icon.svg",
-            "guidelines": "https://bigbluebutton.org/trademark/"
+            "guidelines": "https://bigbluebutton.org/trademark"
         },
         {
             "title": "BigCommerce",
             "hex": "121118",
-            "source": "https://www.bigcommerce.co.uk/press/media-kit/"
+            "source": "https://www.bigcommerce.co.uk/press",
+            "guidelines": "https://www.elastic.co/legal/trademarks"
         },
         {
             "title": "Bilibili",
@@ -1761,7 +1764,7 @@
         {
             "title": "BIM",
             "hex": "EB1928",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Bim_%28company%29_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Bim_(company)_logo.svg"
         },
         {
             "title": "Binance",
@@ -1786,17 +1789,18 @@
         {
             "title": "Bitbucket",
             "hex": "0052CC",
-            "source": "https://www.atlassian.com/company/news/press-kit"
+            "source": "https://atlassian.design/resources/logo-library",
+            "guidelines": "https://atlassian.design/foundations/logos"
         },
         {
             "title": "Bitcoin",
             "hex": "F7931A",
-            "source": "https://bitcoin.org/en"
+            "source": "https://bitcoin.org"
         },
         {
             "title": "Bitcoin Cash",
             "hex": "0AC18E",
-            "source": "https://www.bitcoincash.org/graphics/"
+            "source": "https://www.bitcoincash.org/graphics"
         },
         {
             "title": "Bitcoin SV",
@@ -1806,7 +1810,7 @@
         {
             "title": "Bitdefender",
             "hex": "ED1C24",
-            "source": "https://www.bitdefender.com/funzone/logos.html"
+            "source": "https://brand.bitdefender.com"
         },
         {
             "title": "Bitly",
@@ -1841,17 +1845,18 @@
         {
             "title": "Blazor",
             "hex": "512BD4",
-            "source": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor"
+            "source": "https://commons.wikimedia.org/wiki/File:Blazor.png"
         },
         {
             "title": "Blender",
-            "hex": "F5792A",
-            "source": "https://www.blender.org/about/logo/"
+            "hex": "E87D0D",
+            "source": "https://www.blender.org/about/logo",
+            "guidelines": "https://www.blender.org/about/logo"
         },
         {
             "title": "Blockchain.com",
             "hex": "121D33",
-            "source": "https://www.blockchain.com",
+            "source": "https://www.blockchain.com/en/press",
             "guidelines": "https://www.blockchain.com/en/press"
         },
         {
@@ -1867,12 +1872,13 @@
         {
             "title": "Blueprint",
             "hex": "137CBD",
-            "source": "https://blueprintjs.com"
+            "source": "https://blueprintjs.com/docs"
         },
         {
             "title": "Bluetooth",
             "hex": "0082FC",
-            "source": "https://www.bluetooth.com/develop-with-bluetooth/marketing-branding/"
+            "source": "https://www.bluetooth.com/develop-with-bluetooth/marketing-branding",
+            "guidelines": "https://www.bluetooth.com/develop-with-bluetooth/marketing-branding"
         },
         {
             "title": "BMC Software",
@@ -1912,7 +1918,7 @@
         {
             "title": "BookBub",
             "hex": "F44336",
-            "source": "https://insights.bookbub.com/bookbub-follow-bookmark-buttons-for-authors-websites/"
+            "source": "https://insights.bookbub.com/bookbub-follow-bookmark-buttons-for-authors-websites"
         },
         {
             "title": "Bookmeter",
@@ -1937,12 +1943,16 @@
         {
             "title": "Boots",
             "hex": "05054B",
-            "source": "https://www.boots-uk.com/css/images/Boots_logo.svg"
+            "source": "https://www.boots-uk.com"
         },
         {
             "title": "Bootstrap",
             "hex": "7952B3",
-            "source": "https://getbootstrap.com/about"
+            "source": "https://getbootstrap.com/docs/5.3/about/brand",
+            "guidelines": "https://getbootstrap.com/docs/5.3/about/brand",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "BorgBackup",
@@ -1978,12 +1988,13 @@
         {
             "title": "Box",
             "hex": "0061D5",
-            "source": "https://www.box.com/en-gb/about-us/press"
+            "source": "https://www.box.com/en-gb/about-us/press",
+            "guidelines": "https://www.box.com/en-gb/about-us/press"
         },
         {
             "title": "Boxy SVG",
             "hex": "3584E3",
-            "source": "https://boxy-svg.com/ideas/7/redesign-the-app-icon#comment-1875"
+            "source": "https://boxy-svg.com/ideas/7/app-icon-redesign#comment-1953"
         },
         {
             "title": "Brandfolder",
@@ -1993,7 +2004,7 @@
         {
             "title": "Brave",
             "hex": "FB542B",
-            "source": "https://brave.com/brave-branding-assets/"
+            "source": "https://brave.com/brave-branding-assets"
         },
         {
             "title": "Breaker",
@@ -2008,7 +2019,7 @@
         {
             "title": "British Airways",
             "hex": "2E5C99",
-            "source": "https://www.britishairways.com/travel/home/public/en_ie/"
+            "source": "https://www.britishairways.com"
         },
         {
             "title": "Broadcom",
@@ -2047,7 +2058,7 @@
         {
             "title": "Buffer",
             "hex": "231F20",
-            "source": "https://buffer.com/press"
+            "source": "https://buffer.com"
         },
         {
             "title": "Bugatti",
@@ -2057,38 +2068,40 @@
         {
             "title": "Bugcrowd",
             "hex": "F26822",
-            "source": "https://www.bugcrowd.com/about/press-kit/"
+            "source": "https://www.bugcrowd.com/about/press-kit",
+            "guidelines": "https://www.bugcrowd.com/about/press-kit"
         },
         {
             "title": "Bugsnag",
             "hex": "4949E4",
-            "source": "https://www.bugsnag.com/newsroom"
+            "source": "https://www.bugsnag.com"
         },
         {
             "title": "Buildkite",
             "hex": "14CC80",
-            "source": "https://buildkite.com/brand-assets"
+            "source": "https://buildkite.com/brand-assets",
+            "guidelines": "https://buildkite.com/brand-assets"
         },
         {
             "title": "Bukalapak",
             "hex": "E31E52",
-            "source": "https://assets.bukalapak.com/sigil/bukalapak-logo-icon.svg",
+            "source": "https://www.bukalapak.com",
             "guidelines": "https://brand.bukalapak.design/brand-elements#logo-overview"
         },
         {
             "title": "Bulma",
             "hex": "00D1B2",
-            "source": "https://github.com/jgthms/bulma/tree/b0ed28b0e63fdfe54ef802ad155c889241fb6ae1"
+            "source": "https://bulma.io/brand"
         },
         {
             "title": "Bun",
             "hex": "000000",
-            "source": "https://bun.sh"
+            "source": "https://bun.sh/press-kit"
         },
         {
             "title": "bunq",
             "hex": "3394D7",
-            "source": "https://www.bunq.com/press/"
+            "source": "https://press.bunq.com/media_kits"
         },
         {
             "title": "Burger King",
@@ -2099,8 +2112,8 @@
         {
             "title": "Burton",
             "hex": "000000",
-            "source": "https://brand.burton.com/logo/",
-            "guidelines": "https://brand.burton.com/logo/"
+            "source": "https://brand.burton.com/logo",
+            "guidelines": "https://brand.burton.com/logo"
         },
         {
             "title": "Buy Me A Coffee",
@@ -2125,7 +2138,7 @@
         {
             "title": "Byju's",
             "hex": "813588",
-            "source": "https://byjus.com/byjus-the-learning-app/"
+            "source": "https://byjus.com/byjus-the-learning-app"
         },
         {
             "title": "byte",
@@ -5357,6 +5370,20 @@
             "guidelines": "https://gradle.com/brand"
         },
         {
+            "title": "Gradle Play Publisher",
+            "hex": "82B816",
+            "source": "https://github.com/Triple-T/gradle-play-publisher/blob/df4eadf1ca6b5bad50e21be0b21816722ed50342/assets/logo.svg",
+            "license": {
+                "type": "MIT"
+            },
+            "aliases": {
+                "aka": [
+                    "gpp",
+                    "Triple-T"
+                ]
+            }
+        },
+        {
             "title": "Grafana",
             "hex": "F46800",
             "source": "https://grafana.com"
@@ -7611,6 +7638,11 @@
             "title": "Marriott",
             "hex": "A70023",
             "source": "https://marriott-hotels.marriott.com"
+        },
+        {
+            "title": "MarvelApp",
+            "hex": "1FB6FF",
+            "source": "https://marvelapp.com"
         },
         {
             "title": "Maserati",
@@ -14416,12 +14448,13 @@
         {
             "title": "X.Org",
             "hex": "F28834",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/9/90/X.Org_Logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:X.Org_Logo.svg"
         },
         {
             "title": "Xamarin",
             "hex": "3498DB",
-            "source": "https://github.com/dotnet-foundation/swag/tree/0d21c59a604f348f509d772c12a99b888ed9f21f/xamarin"
+            "source": "https://github.com/dotnet-foundation/swag/blob/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin/Xamagon/svg/Xamagon.svg",
+            "guidelines": "https://github.com/dotnet-foundation/swag/tree/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin"
         },
         {
             "title": "XAML",
@@ -14441,7 +14474,7 @@
         {
             "title": "Xcode",
             "hex": "147EFB",
-            "source": "https://developer.apple.com/develop/"
+            "source": "https://developer.apple.com/develop"
         },
         {
             "title": "XDA Developers",
@@ -14501,7 +14534,7 @@
         {
             "title": "Y Combinator",
             "hex": "F0652F",
-            "source": "https://www.ycombinator.com/press/"
+            "source": "https://www.ycombinator.com/press"
         },
         {
             "title": "Yahoo!",
@@ -14521,7 +14554,7 @@
         {
             "title": "Yamaha Motor Corporation",
             "hex": "E60012",
-            "source": "https://en.wikipedia.org/wiki/Yamaha_Motor_Company"
+            "source": "https://commons.wikimedia.org/wiki/File:Yamaha_Motor_Logo_(full).svg"
         },
         {
             "title": "YAML",
@@ -14586,7 +14619,7 @@
         {
             "title": "YouTube Music",
             "hex": "FF0000",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+            "source": "https://partnermarketinghub.withgoogle.com/#/brands"
         },
         {
             "title": "YouTube Studio",
@@ -14596,7 +14629,7 @@
         {
             "title": "YouTube TV",
             "hex": "FF0000",
-            "source": "https://partnermarketinghub.withgoogle.com/#/brands/"
+            "source": "https://partnermarketinghub.withgoogle.com/#/brands"
         },
         {
             "title": "Yubico",
