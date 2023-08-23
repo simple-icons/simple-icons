@@ -13840,7 +13840,11 @@
         {
             "title": "Vivaldi",
             "hex": "EF3939",
-            "source": "https://vivaldi.com/press/"
+            "source": "https://vivaldi.com/press",
+            "guidelines": "https://vivaldi.com/press",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Vivino",
