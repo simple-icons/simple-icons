@@ -838,7 +838,11 @@
         {
             "title": "Angular",
             "hex": "DD0031",
-            "source": "https://angular.io"
+            "source": "https://angular.io",
+            "guidelines": "https://angular.io/presskit",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Angular Universal",
@@ -925,7 +929,7 @@
         {
             "title": "Apache Cassandra",
             "hex": "1287B1",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Cassandra_logo.svg",
+            "source": "https://www.apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
             "license": {
                 "type": "Apache-2.0"
@@ -4204,6 +4208,12 @@
             "title": "Facepunch",
             "hex": "EC1C24",
             "source": "https://sbox.facepunch.com/news"
+        },
+        {
+            "title": "Falco",
+            "hex": "00AEC7",
+            "source": "https://falco.org/community/falco-brand",
+            "guidelines": "https://falco.org/community/falco-brand"
         },
         {
             "title": "Falcon",
@@ -10473,8 +10483,9 @@
         },
         {
             "title": "QuantConnect",
-            "hex": "F5AE29",
-            "source": "https://www.quantconnect.com/docs/home/home"
+            "hex": "F98309",
+            "source": "https://www.quantconnect.com",
+            "guidelines": "https://www.quantconnect.com/terms"
         },
         {
             "title": "Quarkus",
@@ -14110,7 +14121,8 @@
         {
             "title": "Webflow",
             "hex": "4353FF",
-            "source": "https://webflow.com"
+            "source": "https://brand-at.webflow.io/resources#logos",
+            "guidelines": "https://brand-at.webflow.io"
         },
         {
             "title": "WebGL",
@@ -14374,7 +14386,8 @@
         {
             "title": "Wix",
             "hex": "0C6EFC",
-            "source": "https://www.wix.com/about/design-assets"
+            "source": "https://www.wix.com/about/design-assets",
+            "guidelines": "https://www.wix.com/about/design-assets"
         },
         {
             "title": "Wizz Air",
