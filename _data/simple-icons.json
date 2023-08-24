@@ -838,7 +838,11 @@
         {
             "title": "Angular",
             "hex": "DD0031",
-            "source": "https://angular.io"
+            "source": "https://angular.io",
+            "guidelines": "https://angular.io/presskit",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Angular Universal",
