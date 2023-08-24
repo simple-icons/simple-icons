@@ -469,6 +469,12 @@
             "source": "https://www.ah.nl"
         },
         {
+            "title": "Alby",
+            "hex": "FFDF6F",
+            "source": "https://github.com/getAlby/media/blob/c24fee4a3f76d6cd000343a972f10590d3913b25/Alby-logo-icons/Alby-logo-head/alby.svg",
+            "guidelines": "https://github.com/getAlby/lightning-browser-extension/wiki/Open-Design"
+        },
+        {
             "title": "Alchemy",
             "hex": "0C0C0E",
             "source": "https://www.alchemy.com"
@@ -10386,12 +10392,12 @@
         {
             "title": "Qantas",
             "hex": "E40000",
-            "source": "https://freight.qantas.com"
+            "source": "https://www.qantas.com"
         },
         {
             "title": "Qatar Airways",
             "hex": "5C0D34",
-            "source": "https://www.qatarairways.com/en/press-kit.html"
+            "source": "https://www.qatarairways.com/press-releases/en-WW/media_kits"
         },
         {
             "title": "QEMU",
@@ -10440,8 +10446,8 @@
         {
             "title": "Qt",
             "hex": "41CD52",
-            "source": "https://qt-brandbook.webflow.io/design",
-            "guidelines": "https://qt-brandbook.webflow.io/design"
+            "source": "https://www.qt.io",
+            "guidelines": "https://www.qt.io/brand"
         },
         {
             "title": "Qualcomm",
@@ -10451,14 +10457,14 @@
         {
             "title": "Qualtrics",
             "hex": "00B4EF",
-            "source": "https://www.qualtrics.com/brand-book/",
-            "guidelines": "https://www.qualtrics.com/brand-book/"
+            "source": "https://www.qualtrics.com/brand-book",
+            "guidelines": "https://www.qualtrics.com/brand-book"
         },
         {
             "title": "Qualys",
             "hex": "ED2E26",
             "source": "https://www.qualys.com",
-            "guidelines": "https://www.qualys.com/docs/qualys-logo-guidelines.pdf"
+            "guidelines": "https://www.qualys.com/company/newsroom/media-contacts"
         },
         {
             "title": "Quantcast",
@@ -10474,7 +10480,7 @@
         {
             "title": "Quarkus",
             "hex": "4695EB",
-            "source": "https://design.jboss.org/quarkus/"
+            "source": "https://design.jboss.org/quarkus"
         },
         {
             "title": "Quasar",
@@ -10492,14 +10498,14 @@
         {
             "title": "Quest",
             "hex": "FB4F14",
-            "source": "https://brand.quest.com",
-            "guidelines": "https://brand.quest.com"
+            "source": "https://brand.quest.com/quest/questlogos",
+            "guidelines": "https://brand.quest.com/quest/questlogos"
         },
         {
             "title": "QuickBooks",
             "hex": "2CA01C",
-            "source": "https://designsystem.quickbooks.com/visual-assets/logos/",
-            "guidelines": "https://designsystem.quickbooks.com/visual-assets/logos/"
+            "source": "https://design.intuit.com/quickbooks/brand",
+            "guidelines": "https://design.intuit.com/quickbooks/brand"
         },
         {
             "title": "QuickLook",
@@ -10532,7 +10538,7 @@
         {
             "title": "Qwiklabs",
             "hex": "F5CD0E",
-            "source": "https://www.qwiklabs.com"
+            "source": "https://www.cloudskillsboost.google"
         },
         {
             "title": "Qzone",
@@ -13601,7 +13607,7 @@
         {
             "title": "V",
             "hex": "5D87BF",
-            "source": "https://github.com/vlang/v-logo/tree/62dd9fe256f64190b53a306310c4a4cc27398d0f",
+            "source": "https://github.com/vlang/v-logo/blob/eec050c901ed3afefce8cbe56092d55ed6770706/dist/v-logo.svg",
             "license": {
                 "type": "MIT"
             }
@@ -13654,7 +13660,7 @@
         },
         {
             "title": "Vault",
-            "hex": "000000",
+            "hex": "FFEC6E",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
         },
@@ -13710,12 +13716,14 @@
         {
             "title": "Vercel",
             "hex": "000000",
-            "source": "https://vercel.com/design"
+            "source": "https://vercel.com/design/brands",
+            "guidelines": "https://vercel.com/design/brands"
         },
         {
             "title": "Verdaccio",
             "hex": "4B5E40",
-            "source": "https://verdaccio.org/docs/en/logo"
+            "source": "https://verdaccio.org/docs/logo",
+            "guidelines": "https://verdaccio.org/docs/logo"
         },
         {
             "title": "Veritas",
@@ -13730,7 +13738,7 @@
         {
             "title": "Vespa",
             "hex": "85B09A",
-            "source": "https://www.piaggiogroup.com/sites/piaggiocorpd7/files/doc/guidalogo_vespa_0.pdf",
+            "source": "https://www.piaggiogroup.com/en/archive/document/logo-guide",
             "guidelines": "https://www.piaggiogroup.com/en/archive/document/logo-guide"
         },
         {
@@ -13751,7 +13759,8 @@
         {
             "title": "Viber",
             "hex": "7360F2",
-            "source": "https://www.viber.com/brand-center/"
+            "source": "https://www.viber.com/brand-center",
+            "guidelines": "https://www.viber.com/brand-center"
         },
         {
             "title": "Vim",
@@ -13761,7 +13770,8 @@
         {
             "title": "Vimeo",
             "hex": "1AB7EA",
-            "source": "https://vimeo.com/about/brand_guidelines"
+            "source": "https://press.vimeo.com/brand-guidelines",
+            "guidelines": "https://press.vimeo.com/brand-guidelines"
         },
         {
             "title": "Vimeo Livestream",
@@ -13781,7 +13791,7 @@
         {
             "title": "Virgin Media",
             "hex": "ED1A37",
-            "source": "https://en.wikipedia.org/wiki/Virgin_Media#/media/File:Virgin_Media.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Virgin_Media.svg"
         },
         {
             "title": "VirtualBox",
@@ -13837,12 +13847,17 @@
         {
             "title": "Vivaldi",
             "hex": "EF3939",
-            "source": "https://vivaldi.com/press/"
+            "source": "https://vivaldi.com/press",
+            "guidelines": "https://vivaldi.com/press",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Vivino",
-            "hex": "AA1329",
-            "source": "https://www.vivino.com/press"
+            "hex": "A61A30",
+            "source": "https://www.vivino.com/press",
+            "guidelines": "https://www.vivino.com/press"
         },
         {
             "title": "VK",
@@ -13853,7 +13868,7 @@
         {
             "title": "VLC media player",
             "hex": "FF8800",
-            "source": "https://git.videolan.org/?p=vlc.git;a=tree;f=extras/package/macosx/asset_sources"
+            "source": "https://code.videolan.org/videolan/vlc/-/blob/1ce7f686ee17a028d2d79627ae69f22d905f2e23/extras/package/macosx/asset_sources/vlc_app_icon.svg"
         },
         {
             "title": "VMware",
@@ -13873,7 +13888,7 @@
         {
             "title": "Volkswagen",
             "hex": "151F5D",
-            "source": "https://www.volkswagen.ie"
+            "source": "https://www.vw.com"
         },
         {
             "title": "Volvo",
@@ -13908,7 +13923,7 @@
         {
             "title": "VSCodium",
             "hex": "2F80ED",
-            "source": "https://vscodium.com"
+            "source": "https://github.com/VSCodium/vscodium.github.io/blob/ed028c57f10e6432ec55dfc34d4db1a83fba941d/img/codium_cnl.svg"
         },
         {
             "title": "VTEX",
@@ -13918,8 +13933,8 @@
         {
             "title": "Vue.js",
             "hex": "4FC08D",
-            "source": "https://github.com/vuejs/art/tree/d840546f0779f0639ba3fe1cb78e7b04d8127eab",
-            "guidelines": "https://github.com/vuejs/art/blob/master/README.md",
+            "source": "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/logo.svg",
+            "guidelines": "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/README.md",
             "license": {
                 "type": "CC-BY-NC-SA-4.0"
             }
@@ -13932,12 +13947,14 @@
         {
             "title": "Vulkan",
             "hex": "AC162C",
-            "source": "https://www.khronos.org/legal/trademarks/"
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/legal/trademarks"
         },
         {
             "title": "Vultr",
             "hex": "007BFC",
-            "source": "https://www.vultr.com/company/brand-assets/"
+            "source": "https://www.vultr.com/company/brand-assets",
+            "guidelines": "https://www.vultr.com/company/brand-assets"
         },
         {
             "title": "Vyond",
