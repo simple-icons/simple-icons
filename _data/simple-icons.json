@@ -13600,7 +13600,7 @@
         {
             "title": "V",
             "hex": "5D87BF",
-            "source": "https://github.com/vlang/v-logo/tree/62dd9fe256f64190b53a306310c4a4cc27398d0f",
+            "source": "https://github.com/vlang/v-logo/blob/eec050c901ed3afefce8cbe56092d55ed6770706/dist/v-logo.svg",
             "license": {
                 "type": "MIT"
             }
@@ -13653,7 +13653,7 @@
         },
         {
             "title": "Vault",
-            "hex": "000000",
+            "hex": "FFEC6E",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
         },
@@ -13709,12 +13709,14 @@
         {
             "title": "Vercel",
             "hex": "000000",
-            "source": "https://vercel.com/design"
+            "source": "https://vercel.com/design/brands",
+            "guidelines": "https://vercel.com/design/brands"
         },
         {
             "title": "Verdaccio",
             "hex": "4B5E40",
-            "source": "https://verdaccio.org/docs/en/logo"
+            "source": "https://verdaccio.org/docs/logo",
+            "guidelines": "https://verdaccio.org/docs/logo"
         },
         {
             "title": "Veritas",
@@ -13729,7 +13731,7 @@
         {
             "title": "Vespa",
             "hex": "85B09A",
-            "source": "https://www.piaggiogroup.com/sites/piaggiocorpd7/files/doc/guidalogo_vespa_0.pdf",
+            "source": "https://www.piaggiogroup.com/en/archive/document/logo-guide",
             "guidelines": "https://www.piaggiogroup.com/en/archive/document/logo-guide"
         },
         {
@@ -13750,7 +13752,8 @@
         {
             "title": "Viber",
             "hex": "7360F2",
-            "source": "https://www.viber.com/brand-center/"
+            "source": "https://www.viber.com/brand-center",
+            "guidelines": "https://www.viber.com/brand-center"
         },
         {
             "title": "Vim",
@@ -13760,7 +13763,8 @@
         {
             "title": "Vimeo",
             "hex": "1AB7EA",
-            "source": "https://vimeo.com/about/brand_guidelines"
+            "source": "https://press.vimeo.com/brand-guidelines",
+            "guidelines": "https://press.vimeo.com/brand-guidelines"
         },
         {
             "title": "Vimeo Livestream",
@@ -13780,7 +13784,7 @@
         {
             "title": "Virgin Media",
             "hex": "ED1A37",
-            "source": "https://en.wikipedia.org/wiki/Virgin_Media#/media/File:Virgin_Media.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Virgin_Media.svg"
         },
         {
             "title": "VirtualBox",
@@ -13836,12 +13840,17 @@
         {
             "title": "Vivaldi",
             "hex": "EF3939",
-            "source": "https://vivaldi.com/press/"
+            "source": "https://vivaldi.com/press",
+            "guidelines": "https://vivaldi.com/press",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Vivino",
-            "hex": "AA1329",
-            "source": "https://www.vivino.com/press"
+            "hex": "A61A30",
+            "source": "https://www.vivino.com/press",
+            "guidelines": "https://www.vivino.com/press"
         },
         {
             "title": "VK",
@@ -13852,7 +13861,7 @@
         {
             "title": "VLC media player",
             "hex": "FF8800",
-            "source": "https://git.videolan.org/?p=vlc.git;a=tree;f=extras/package/macosx/asset_sources"
+            "source": "https://code.videolan.org/videolan/vlc/-/blob/1ce7f686ee17a028d2d79627ae69f22d905f2e23/extras/package/macosx/asset_sources/vlc_app_icon.svg"
         },
         {
             "title": "VMware",
@@ -13872,7 +13881,7 @@
         {
             "title": "Volkswagen",
             "hex": "151F5D",
-            "source": "https://www.volkswagen.ie"
+            "source": "https://www.vw.com"
         },
         {
             "title": "Volvo",
@@ -13917,8 +13926,8 @@
         {
             "title": "Vue.js",
             "hex": "4FC08D",
-            "source": "https://github.com/vuejs/art/tree/d840546f0779f0639ba3fe1cb78e7b04d8127eab",
-            "guidelines": "https://github.com/vuejs/art/blob/master/README.md",
+            "source": "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/logo.svg",
+            "guidelines": "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/README.md",
             "license": {
                 "type": "CC-BY-NC-SA-4.0"
             }
@@ -13931,12 +13940,14 @@
         {
             "title": "Vulkan",
             "hex": "AC162C",
-            "source": "https://www.khronos.org/legal/trademarks/"
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/legal/trademarks"
         },
         {
             "title": "Vultr",
             "hex": "007BFC",
-            "source": "https://www.vultr.com/company/brand-assets/"
+            "source": "https://www.vultr.com/company/brand-assets",
+            "guidelines": "https://www.vultr.com/company/brand-assets"
         },
         {
             "title": "Vyond",
