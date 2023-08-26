@@ -2524,6 +2524,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wappalyzer` | `wappalyzer` |
 | `Warner Bros.` | `warnerbros` |
 | `Warp` | `warp` |
+| `Matlab` | `matlab` |
 | `Wasabi` | `wasabi` |
 | `wasmCloud` | `wasmcloud` |
 | `Wasmer` | `wasmer` |
