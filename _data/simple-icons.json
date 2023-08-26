@@ -10499,10 +10499,11 @@
         },
         {
             "title": "Quasar",
-            "hex": "1976D2",
-            "source": "https://github.com/quasarframework/quasar-art/blob/cbbbb4b0b7ec7181dfc2d1b29a1ce025e71575bc/src/quasar-logo.svg",
+            "hex": "050A14",
+            "source": "https://github.com/quasarframework/quasar-art/blob/6300e95687a923cd027dc4b8c356dd4e0cea618f/Brand/Logo/RGB/Icon/Monochrome/Cold%20Black/QUASAR_icon_mono_cold_black_RGB.svg",
             "license": {
-                "type": "CC-BY-4.0"
+                "type": "custom",
+                "url": "https://github.com/quasarframework/quasar-art/blob/6300e95687a923cd027dc4b8c356dd4e0cea618f/LICENSE"
             }
         },
         {
@@ -11434,6 +11435,12 @@
             "title": "Scrutinizer CI",
             "hex": "8A9296",
             "source": "https://scrutinizer-ci.com"
+        },
+        {
+            "title": "ScyllaDB",
+            "hex": "6CD5E7",
+            "source": "https://www.scylladb.com/media-kit",
+            "guidelines": "https://www.scylladb.com/media-kit"
         },
         {
             "title": "Seagate",
@@ -13725,8 +13732,9 @@
         },
         {
             "title": "Venmo",
-            "hex": "3D95CE",
-            "source": "https://venmo.com/about/brand/"
+            "hex": "008CFF",
+            "source": "https://venmo.com/about/brand",
+            "guidelines": "https://venmo.com/about/brand"
         },
         {
             "title": "Vercel",
@@ -14617,8 +14625,9 @@
         },
         {
             "title": "Yelp",
-            "hex": "D32323",
-            "source": "https://www.yelp.com/styleguide/icons"
+            "hex": "FF1A1A",
+            "source": "https://www.yelp.com/brand",
+            "guidelines": "https://www.yelp.com/brand"
         },
         {
             "title": "Yeti",
@@ -14693,8 +14702,9 @@
         },
         {
             "title": "Zapier",
-            "hex": "FF4A00",
-            "source": "https://zapier.com/about/brand"
+            "hex": "FF4F00",
+            "source": "https://brand.zapier.com",
+            "guidelines": "https://brand.zapier.com"
         },
         {
             "title": "Zara",
