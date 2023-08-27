@@ -521,6 +521,11 @@
             "source": "https://www.alibabagroup.com/en/ir/reports"
         },
         {
+            "title": "Alienware",
+            "hex": "541BAE",
+            "source": "https://www.dell.com/en-us/gaming/alienware"
+        },
+        {
             "title": "AliExpress",
             "hex": "FF4747",
             "source": "https://www.alibabagroup.com/en/ir/reports"
@@ -6358,6 +6363,16 @@
             "title": "IRIS",
             "hex": "25313C",
             "source": "https://www.iris.co.uk"
+        },
+        {
+            "title": "ISC2",
+            "hex": "468145",
+            "source": "https://www.isc2.org",
+            "aliases": {
+                "aka": [
+                    "(ISC)²"
+                ]
+            }
         },
         {
             "title": "Issuu",
