@@ -1614,6 +1614,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
 | `OnePlus` | `oneplus` |
+| `OnLight` | `onlight` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
 | `ONNX` | `onnx` |
