@@ -63,6 +63,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
 - Disney
+- Microchip Technology Inc.
 - Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
