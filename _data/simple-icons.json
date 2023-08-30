@@ -14523,7 +14523,12 @@
         {
             "title": "X",
             "hex": "000000",
-            "source": "https://twitter.com"
+            "source": "https://twitter.com",
+            "aliases": {
+                "aka": [
+                    "Twitter"
+                ]
+            }
         },
         {
             "title": "X.Org",
