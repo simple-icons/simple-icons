@@ -85,7 +85,7 @@ jobs:
 
       - id: priority-4
         name: Assign `new icon` pull requests by maintainers without an issue to "Priority 4"
-        uses: srggrs/assign-one-projtect-github-action@1.3.1
+        uses: srggrs/assign-one-project-github-action@1.3.1
         # the PR has the `new icon` label but with no linked issue and
         # the opener is a member of the simple-icons organisation
         if: |
