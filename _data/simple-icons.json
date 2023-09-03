@@ -3376,8 +3376,9 @@
         },
         {
             "title": "Delphi",
-            "hex": "EE1F35",
-            "source": "https://www.embarcadero.com/news/logo"
+            "hex": "E62431",
+            "source": "https://www.embarcadero.com/news/logo",
+            "guidelines": "https://www.ideracorp.com/legal/embarcadero"
         },
         {
             "title": "Delta",
@@ -3570,6 +3571,11 @@
             "title": "Docs.rs",
             "hex": "000000",
             "source": "https://docs.rs"
+        },
+        {
+            "title": "Docusaurus",
+            "hex": "3ECC5F",
+            "source": "https://github.com/facebook/docusaurus/blob/67c40069d1062b5aae530b696e6f66bf9618a696/website/static/img/docusaurus.svg"
         },
         {
             "title": "DocuSign",
@@ -4410,6 +4416,12 @@
             "hex": "FFCA28",
             "source": "https://firebase.google.com/brand-guidelines/",
             "guidelines": "https://firebase.google.com/brand-guidelines/"
+        },
+        {
+            "title": "Firefish",
+            "hex": "F19885",
+            "source": "https://joinfirefish.org/about/#brand",
+            "guidelines": "https://joinfirefish.org/about/#brand"
         },
         {
             "title": "Firefly III",
@@ -6363,6 +6375,16 @@
             "title": "IRIS",
             "hex": "25313C",
             "source": "https://www.iris.co.uk"
+        },
+        {
+            "title": "ISC2",
+            "hex": "468145",
+            "source": "https://www.isc2.org",
+            "aliases": {
+                "aka": [
+                    "(ISC)²"
+                ]
+            }
         },
         {
             "title": "Issuu",
@@ -9199,6 +9221,16 @@
             }
         },
         {
+            "title": "OpenTF",
+            "hex": "933EFF",
+            "source": "https://github.com/opentffoundation/brand-artifacts/blob/d9eb71760dee1db5ace6607a50161d2a822ad48b/symbol-only/transparent/SVG/on-light.svg",
+            "aliases": {
+                "aka": [
+                    "Terraform"
+                ]
+            }
+        },
+        {
             "title": "Openverse",
             "hex": "FFE033",
             "source": "https://github.com/WordPress/openverse/blob/5db2545d6b73ec4aa5e908822683ee9d18af301d/brand/icon.svg",
@@ -11400,6 +11432,11 @@
             "source": "https://scp-wiki.wikidot.com"
         },
         {
+            "title": "Scrapbox",
+            "hex": "06B632",
+            "source": "https://scrapbox.io/nota-press"
+        },
+        {
             "title": "Scratch",
             "hex": "4D97FF",
             "source": "https://github.com/LLK/scratch-link/blob/027e3754ba6db976495e905023d5ac5e730dccfc/Assets/Windows/SVG/Windows%20Tray%20400x400.svg"
@@ -13434,12 +13471,14 @@
         {
             "title": "Uber",
             "hex": "000000",
-            "source": "https://www.uber.com/media/"
+            "source": "https://assets.uber.com/d/k4nuxdZ8MC7E/logos/collection/151",
+            "guidelines": "https://assets.uber.com/d/k4nuxdZ8MC7E/user-guide#/user-guide/terms-of-use"
         },
         {
             "title": "Uber Eats",
             "hex": "06C167",
-            "source": "https://www.ubereats.com"
+            "source": "https://assets.uber.com/d/k4nuxdZ8MC7E/logos/collection/150",
+            "guidelines": "https://assets.uber.com/d/k4nuxdZ8MC7E/user-guide#/user-guide/terms-of-use"
         },
         {
             "title": "Ubiquiti",
@@ -13459,8 +13498,8 @@
         {
             "title": "Ubuntu",
             "hex": "E95420",
-            "source": "https://design.ubuntu.com/downloads/",
-            "guidelines": "https://design.ubuntu.com/brand/ubuntu-logo/"
+            "source": "https://design.ubuntu.com/resources",
+            "guidelines": "https://design.ubuntu.com/brand"
         },
         {
             "title": "Udacity",
@@ -13510,7 +13549,7 @@
         {
             "title": "Under Armour",
             "hex": "1D1D1D",
-            "source": "https://www.underarmour.com/en-us/"
+            "source": "https://www.underarmour.com/en-us"
         },
         {
             "title": "Underscore.js",
@@ -13525,17 +13564,17 @@
         {
             "title": "Unicode",
             "hex": "5455FE",
-            "source": "https://en.wikipedia.org/wiki/Unicode"
+            "source": "https://commons.wikimedia.org/wiki/File:New_Unicode_logo.svg"
         },
         {
             "title": "Unilever",
             "hex": "1F36C7",
-            "source": "https://www.unilever.co.uk/about/who-we-are/our-logo/"
+            "source": "https://www.unilever.com/our-company/the-logo"
         },
         {
             "title": "United Airlines",
             "hex": "002244",
-            "source": "https://en.wikipedia.org/wiki/File:United_Airlines_Logo.svg"
+            "source": "https://www.united.com"
         },
         {
             "title": "Unity",
@@ -13547,6 +13586,11 @@
             "title": "Unlicense",
             "hex": "808080",
             "source": "https://commons.wikimedia.org/wiki/File:PD-icon.svg"
+        },
+        {
+            "title": "Uno",
+            "hex": "ED1C24",
+            "source": "https://commons.wikimedia.org/wiki/File:UNO_Logo.svg"
         },
         {
             "title": "UnoCSS",
@@ -13614,7 +13658,7 @@
         {
             "title": "Uptobox",
             "hex": "5CE1E6",
-            "source": "https://uptoboxpremium.org"
+            "source": "https://uptobox.fr"
         },
         {
             "title": "Upwork",
@@ -14486,7 +14530,12 @@
         {
             "title": "X",
             "hex": "000000",
-            "source": "https://twitter.com"
+            "source": "https://twitter.com",
+            "aliases": {
+                "aka": [
+                    "Twitter"
+                ]
+            }
         },
         {
             "title": "X.Org",
