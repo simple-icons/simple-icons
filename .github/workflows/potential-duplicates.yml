@@ -34,6 +34,7 @@ jobs:
             assets
             for
             from
+            [Icon request]
           state: all
           threshold: 0.7
           comment: |
