@@ -36,7 +36,12 @@ const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 /**
  * Regex to validate HTTPs URLs.
  */
-export const URL_REGEX = /^https:\/\/[^\s]+$/;
+export const URL_REGEX = /^https:\/\/[^\s"']+$/;
+
+/**
+ * Regex to validate SVG paths.
+ */
+export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae0-9,. ]+$/i;
 
 /**
  * Get the directory name where this file is located from `import.meta.url`,
@@ -59,7 +64,7 @@ export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
  * @param {String} svg The icon SVG content
  * @returns {String} The path from the icon SVG content
  **/
-export const svgToPath = (svg) => svg.match(/<path\s+d="([^"]*)/)[1];
+export const svgToPath = (svg) => svg.split('"', 8)[7];
 
 /**
  * Converts a brand title into a slug/filename.
@@ -83,8 +88,7 @@ export const titleToSlug = (title) =>
  */
 export const slugToVariableName = (slug) => {
   const slugFirstLetter = slug[0].toUpperCase();
-  const slugRest = slug.slice(1);
-  return `si${slugFirstLetter}${slugRest}`;
+  return `si${slugFirstLetter}${slug.slice(1)}`;
 };
 
 /**
@@ -112,7 +116,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
   htmlFriendlyTitle
-    .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))
+    .replace(/&#([0-9]+);/g, (_, num) => String.fromCodePoint(parseInt(num)))
     .replace(
       /&(quot|amp|lt|gt);/g,
       (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
@@ -120,7 +124,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 
 /**
  * Get path of *_data/simpe-icons.json*.
- * @param {String|undefined} rootDir Path to the root directory of the project
+ * @param {String} rootDir Path to the root directory of the project
  * @returns {String} Path of *_data/simple-icons.json*
  */
 export const getIconDataPath = (
@@ -131,7 +135,7 @@ export const getIconDataPath = (
 
 /**
  * Get contents of *_data/simple-icons.json*.
- * @param {String|undefined} rootDir Path to the root directory of the project
+ * @param {String} rootDir Path to the root directory of the project
  * @returns {String} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
@@ -142,7 +146,7 @@ export const getIconsDataString = (
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
- * @param {String|undefined} rootDir Path to the root directory of the project
+ * @param {String} rootDir Path to the root directory of the project
  * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
@@ -178,7 +182,7 @@ export const normalizeColor = (text) => {
 
 /**
  * Get information about third party extensions from the README table.
- * @param {String|undefined} readmePath Path to the README file
+ * @param {String} readmePath Path to the README file
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
  */
 export const getThirdPartyExtensions = async (
@@ -189,16 +193,12 @@ export const getThirdPartyExtensions = async (
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Extensions\n\n')[1]
-    .split('\n\n')[0]
+    .split('\n\n', 1)[0]
     .split('\n')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');
-
-      // README shipped with package has not Github theme image links
-      module = module.split(
-        module.includes('<picture>') ? '<picture>' : '<img src="',
-      )[0];
+      module = module.split('<img src="')[0];
       return {
         module: {
           name: /\[(.+)\]/.exec(module)[1],
