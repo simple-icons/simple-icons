@@ -57,6 +57,7 @@ jobs:
         if: steps.changes.outputs.docs == 'true'
         run: |
           npx markdown-link-check --retry \
+            --config .github/markdown-link-check.json \
             ${{ steps.changes.outputs.docs_files }}
         continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
       - name: Verify file permissions
