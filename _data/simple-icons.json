@@ -1826,7 +1826,7 @@
         },
         {
             "title": "Bit",
-            "hex": "73398D",
+            "hex": "592EC1",
             "source": "https://bit.dev"
         },
         {
@@ -3175,6 +3175,11 @@
             "source": "https://www.curseforge.com"
         },
         {
+            "title": "CyberDefenders",
+            "hex": "335EEA",
+            "source": "https://cyberdefenders.org"
+        },
+        {
             "title": "Cycling '74",
             "hex": "111111",
             "source": "https://cycling74.com"
@@ -3616,6 +3621,11 @@
             "title": "Docs.rs",
             "hex": "000000",
             "source": "https://docs.rs"
+        },
+        {
+            "title": "Docsify",
+            "hex": "2ECE53",
+            "source": "https://github.com/docsifyjs/docsify/blob/d01841fd9d829adeeae6cde1d5818ce8798c7e58/docs/_media/icon.svg"
         },
         {
             "title": "Docusaurus",
@@ -5318,6 +5328,11 @@
             "source": "https://earth.google.com/web/"
         },
         {
+            "title": "Google Earth Engine",
+            "hex": "4285F4",
+            "source": "https://github.com/simple-icons/simple-icons/issues/8912#issuecomment-1638850020"
+        },
+        {
             "title": "Google Fit",
             "hex": "4285F4",
             "source": "https://partnermarketinghub.withgoogle.com/brands/google-fit/"
@@ -5634,6 +5649,11 @@
             "title": "Gutenberg",
             "hex": "000000",
             "source": "https://github.com/WordPress/gutenberg/blob/7829913ae117dfb561d14c600eea7b281afd6556/docs/final-g-wapuu-black.svg"
+        },
+        {
+            "title": "H&M",
+            "hex": "E50010",
+            "source": "https://www2.hm.com/en_gb/index.html"
         },
         {
             "title": "H3",
@@ -6888,6 +6908,16 @@
             "hex": "527EB2",
             "source": "https://kdenlive.org/en/logo/",
             "guidelines": "https://kdenlive.org/en/logo/"
+        },
+        {
+            "title": "Kedro",
+            "hex": "FFC900",
+            "source": "https://github.com/kedro-org/kedro-brand-identity/blob/7f7b380cb1a2951c06ca292f0d2b442db895f804/icon/black/kedro-icon-svgo-black.svg",
+            "guidelines": "https://github.com/kedro-org/kedro-brand-identity/blob/7f7b380cb1a2951c06ca292f0d2b442db895f804/Kedro_Brand_Guidelines.pdf",
+            "license": {
+                "type": "custom",
+                "url": "https://www.linuxfoundation.org/trademark-usage"
+            }
         },
         {
             "title": "Keep a Changelog",
@@ -9441,8 +9471,8 @@
         {
             "title": "osu!",
             "hex": "FF66AA",
-            "source": "https://osu.ppy.sh/wiki/vi/Brand_identity_guidelines",
-            "guidelines": "https://osu.ppy.sh/wiki/vi/Brand_identity_guidelines"
+            "source": "https://osu.ppy.sh/wiki/Brand_identity_guidelines",
+            "guidelines": "https://osu.ppy.sh/wiki/Brand_identity_guidelines"
         },
         {
             "title": "Otto",
@@ -11615,6 +11645,11 @@
             "source": "https://branding.seagate.com/productpage/3fc51aba-c35a-4eff-a833-a258b0440bd2"
         },
         {
+            "title": "SearXNG",
+            "hex": "3050FF",
+            "source": "https://docs.searxng.org"
+        },
+        {
             "title": "SEAT",
             "hex": "33302E",
             "source": "https://www.seat.es"
@@ -12860,7 +12895,8 @@
         {
             "title": "Tableau",
             "hex": "E97627",
-            "source": "https://www.tableau.com/about/media-download-center"
+            "source": "https://www.tableau.com/about/media-kit/brand-assets",
+            "guidelines": "https://www.salesforce.com/company/legal/intellectual/tmcusageguidelines"
         },
         {
             "title": "TableCheck",
@@ -12901,7 +12937,7 @@
         {
             "title": "Talend",
             "hex": "FF6D70",
-            "source": "https://www.talend.com/blog/"
+            "source": "https://www.talend.com/blog"
         },
         {
             "title": "Talenthouse",
@@ -12936,18 +12972,18 @@
         {
             "title": "Task",
             "hex": "29BEB0",
-            "source": "https://github.com/go-task/task/blob/367c0b38a6787bebf6ee5af864be1574ad40b24a/docs/Logo_mono.svg"
+            "source": "https://github.com/go-task/task/blob/84ad0056e49e2206bf5903863cdf972a7305072c/docs/static/img/logo_mono.svg"
         },
         {
             "title": "Tasmota",
             "hex": "1FA3EC",
-            "source": "https://tasmota.github.io/docs/"
+            "source": "https://github.com/tasmota/docs/blob/f9ad71612681d85f3b21406c7defa86b3eaa6bb9/docs/images/symbol.svg"
         },
         {
             "title": "Tata",
             "hex": "486AAE",
-            "source": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/",
-            "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines/"
+            "source": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines",
+            "guidelines": "https://www.tatasteel.com/media/media-kit/logos-usage-guidelines"
         },
         {
             "title": "Tata Consultancy Services",
@@ -12977,8 +13013,8 @@
         {
             "title": "TeamCity",
             "hex": "000000",
-            "source": "https://www.jetbrains.com/company/brand/logos/",
-            "guidelines": "https://www.jetbrains.com/company/brand/"
+            "source": "https://www.jetbrains.com/company/brand/logos",
+            "guidelines": "https://www.jetbrains.com/company/brand"
         },
         {
             "title": "TeamSpeak",
@@ -12988,12 +13024,13 @@
         {
             "title": "TeamViewer",
             "hex": "004680",
-            "source": "https://www.teamviewer.com/en-us/"
+            "source": "https://www.teamviewer.com/en-us"
         },
         {
             "title": "TED",
             "hex": "E62B1E",
-            "source": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo"
+            "source": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo",
+            "guidelines": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo"
         },
         {
             "title": "Teespring",
@@ -13014,7 +13051,7 @@
         {
             "title": "Telegram",
             "hex": "26A5E4",
-            "source": "https://telegram.org"
+            "source": "https://telegram.org/tour/screenshots"
         },
         {
             "title": "Telegraph",
@@ -13039,7 +13076,7 @@
         {
             "title": "Teradata",
             "hex": "F37440",
-            "source": "https://github.com/Teradata/teradata.github.io/tree/0b5124f0c652d7ba006a487c8b4b21bd61150ab2"
+            "source": "https://github.com/Teradata/teradata.github.io/blob/0fb3886aaeefea7bea4951c300f49ac8f9c2476f/src/assets/icons/teradata-icon.svg"
         },
         {
             "title": "teratail",
@@ -13054,7 +13091,7 @@
         },
         {
             "title": "Terraform",
-            "hex": "7B42BC",
+            "hex": "844FBA",
             "source": "https://www.hashicorp.com/brand",
             "guidelines": "https://www.hashicorp.com/brand"
         },
@@ -13086,7 +13123,8 @@
         {
             "title": "TestRail",
             "hex": "65C179",
-            "source": "https://www.testrail.com"
+            "source": "https://www.testrail.com",
+            "guidelines": "https://www.ideracorp.com/Legal/idera-trademark-usage-guidelines-and-abuse-policy"
         },
         {
             "title": "Tether",
@@ -13192,7 +13230,7 @@
         {
             "title": "Threadless",
             "hex": "0099FF",
-            "source": "https://www.threadless.com/about-us/"
+            "source": "https://www.threadless.com/about-us"
         },
         {
             "title": "Threads",
@@ -13237,7 +13275,7 @@
         {
             "title": "Tidal",
             "hex": "000000",
-            "source": "https://tidal.com"
+            "source": "https://tidal.com/press"
         },
         {
             "title": "TiddlyWiki",
@@ -13247,7 +13285,7 @@
         {
             "title": "Tide",
             "hex": "4050FB",
-            "source": "https://www.tide.co/newsroom/"
+            "source": "https://www.tide.co/newsroom"
         },
         {
             "title": "Tidyverse",
@@ -13302,7 +13340,7 @@
         {
             "title": "tmux",
             "hex": "1BB91F",
-            "source": "https://github.com/tmux/tmux/tree/f04cc3997629823f0e304d4e4184e2ec93c703f0/logo"
+            "source": "https://github.com/tmux/tmux/blob/e26356607e38cbb4676a7c91815ae2d5734443c3/logo/tmux-logo-1-color.svg"
         },
         {
             "title": "TNT",
@@ -13312,17 +13350,19 @@
         {
             "title": "Todoist",
             "hex": "E44332",
-            "source": "https://doist.com/press/"
+            "source": "https://doist.com/press"
         },
         {
             "title": "Toggl",
             "hex": "FFDE91",
-            "source": "https://toggl.com/track/media-toolkit"
+            "source": "https://toggl.com/track/media-toolkit",
+            "guidelines": "https://toggl.com/track/media-toolkit"
         },
         {
             "title": "Toggl Track",
             "hex": "E57CD8",
-            "source": "https://toggl.com/track/media-toolkit"
+            "source": "https://toggl.com/track/media-toolkit",
+            "guidelines": "https://toggl.com/track/media-toolkit"
         },
         {
             "title": "Tokyo Metro",
@@ -13353,12 +13393,12 @@
         {
             "title": "Tor Browser",
             "hex": "7D4698",
-            "source": "https://styleguide.torproject.org/brand-assets/"
+            "source": "https://styleguide.torproject.org/brand-assets"
         },
         {
             "title": "Tor Project",
-            "hex": "7E4798",
-            "source": "https://styleguide.torproject.org/brand-assets/"
+            "hex": "7D4698",
+            "source": "https://styleguide.torproject.org/brand-assets"
         },
         {
             "title": "Toshiba",
@@ -13389,24 +13429,25 @@
         {
             "title": "Traefik Proxy",
             "hex": "24A1C1",
-            "source": "https://traefik.io/traefik/"
+            "source": "https://traefik.io/traefik"
         },
         {
             "title": "Trailforks",
             "hex": "FFCD00",
-            "source": "https://www.trailforks.com/about/graphics/",
-            "guidelines": "https://www.trailforks.com/about/graphics/"
+            "source": "https://www.trailforks.com/about/graphics",
+            "guidelines": "https://www.trailforks.com/about/graphics"
         },
         {
             "title": "TrainerRoad",
             "hex": "DA291C",
-            "source": "https://www.trainerroad.com/press/",
-            "guidelines": "https://www.trainerroad.com/press/"
+            "source": "https://www.trainerroad.com/press",
+            "guidelines": "https://www.trainerroad.com/press"
         },
         {
             "title": "Trakt",
             "hex": "ED1C24",
-            "source": "https://trakt.tv"
+            "source": "https://trakt.tv/branding",
+            "guidelines": "https://trakt.tv/branding"
         },
         {
             "title": "Transport for Ireland",
@@ -13426,13 +13467,13 @@
         {
             "title": "Treehouse",
             "hex": "5FCF80",
-            "source": "https://teamtreehouse.com/about"
+            "source": "https://teamtreehouse.com"
         },
         {
             "title": "Trello",
             "hex": "0052CC",
             "source": "https://atlassian.design/resources/logo-library",
-            "guidelines": "https://atlassian.design/foundations/logos/"
+            "guidelines": "https://atlassian.design/foundations/logos"
         },
         {
             "title": "Trend Micro",
@@ -13452,7 +13493,7 @@
         {
             "title": "Triller",
             "hex": "FF0089",
-            "source": "https://triller.co/static/media/illustrations/logo-full-white.svg"
+            "source": "https://triller.co"
         },
         {
             "title": "Trino",
@@ -13467,13 +13508,14 @@
         {
             "title": "Tripadvisor",
             "hex": "34E0A1",
-            "source": "https://tripadvisor.mediaroom.com/logo-guidelines"
+            "source": "https://tripadvisor.mediaroom.com/logo-guidelines",
+            "guidelines": "https://tripadvisor.mediaroom.com/logo-guidelines"
         },
         {
             "title": "Trivy",
             "hex": "1904DA",
-            "source": "https://www.aquasec.com/brand/",
-            "guidelines": "https://www.aquasec.com/brand/"
+            "source": "https://www.aquasec.com/brand",
+            "guidelines": "https://www.aquasec.com/brand"
         },
         {
             "title": "Trove",
@@ -13494,8 +13536,8 @@
         {
             "title": "trulia",
             "hex": "0A0B09",
-            "source": "https://www.trulia.com/newsroom/media/brand-logos/",
-            "guidelines": "https://www.trulia.com/newsroom/media/brand-logos/"
+            "source": "https://www.trulia.com/newsroom/media/brand-logos",
+            "guidelines": "https://www.trulia.com/newsroom/media/brand-logos"
         },
         {
             "title": "Trusted Shops",
@@ -13505,7 +13547,8 @@
         {
             "title": "Trustpilot",
             "hex": "00B67A",
-            "source": "https://support.trustpilot.com/hc/en-us/articles/206289947-Trustpilot-Brand-Assets-Style-Guide"
+            "source": "https://support.trustpilot.com/hc/en-us/articles/206289947-Trustpilot-Brand-Assets-Style-Guide",
+            "guidelines": "https://support.trustpilot.com/hc/en-us/articles/206289947-Trustpilot-Brand-Assets-Style-Guide"
         },
         {
             "title": "Try It Online",
@@ -13515,12 +13558,12 @@
         {
             "title": "TryHackMe",
             "hex": "212C42",
-            "source": "https://tryhackme.com/about"
+            "source": "https://tryhackme.com"
         },
         {
             "title": "ts-node",
             "hex": "3178C6",
-            "source": "https://typestrong.org/ts-node/"
+            "source": "https://typestrong.org/ts-node"
         },
         {
             "title": "Tubi",
@@ -13530,13 +13573,14 @@
         {
             "title": "TUI",
             "hex": "D40E14",
-            "source": "https://www.design.tui/brand/logos/",
-            "guidelines": "https://www.design.tui/brand/"
+            "source": "https://www.design.tui/brand/logos",
+            "guidelines": "https://www.design.tui/brand"
         },
         {
             "title": "Tumblr",
             "hex": "36465D",
-            "source": "https://www.tumblr.com/logo"
+            "source": "https://www.tumblr.com/logo",
+            "guidelines": "https://www.tumblr.com/logo"
         },
         {
             "title": "TuneIn",
@@ -13562,7 +13606,7 @@
         {
             "title": "Turkish Airlines",
             "hex": "C70A0C",
-            "source": "https://www.turkishairlines.com/tr-int/basin-odasi/logo-arsivi/index.html"
+            "source": "https://www.turkishairlines.com/en-int/press-room/logo-archive/index.html"
         },
         {
             "title": "Tutanota",
@@ -13582,7 +13626,8 @@
         {
             "title": "Twitch",
             "hex": "9146FF",
-            "source": "https://brand.twitch.tv"
+            "source": "https://brand.twitch.tv",
+            "guidelines": "https://brand.twitch.tv"
         },
         {
             "title": "Twitter",
@@ -13609,7 +13654,7 @@
         {
             "title": "TYPO3",
             "hex": "FF8700",
-            "source": "https://typo3.com/fileadmin/assets/typo3logos/typo3_bullet_01.svg"
+            "source": "https://typo3.org"
         },
         {
             "title": "Uber",
@@ -13673,6 +13718,14 @@
             "title": "Ulule",
             "hex": "18A5D6",
             "source": "https://ulule.frontify.com/d/EX3dK8qsXgqh/branding-guidelines"
+        },
+        {
+            "title": "Umami",
+            "hex": "000000",
+            "source": "https://github.com/umami-software/umami/blob/3572df0a09503f357a06fe7f816295ba2c878325/assets/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Umbraco",
