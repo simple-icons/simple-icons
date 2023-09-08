@@ -14220,7 +14220,11 @@
         {
             "title": "Vuetify",
             "hex": "1867C0",
-            "source": "https://vuetifyjs.com"
+            "source": "https://vuetifyjs.com/resources/brand-kit",
+            "guidelines": "https://vuetifyjs.com/resources/brand-kit",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Vulkan",
