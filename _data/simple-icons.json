@@ -9471,8 +9471,8 @@
         {
             "title": "osu!",
             "hex": "FF66AA",
-            "source": "https://osu.ppy.sh/wiki/vi/Brand_identity_guidelines",
-            "guidelines": "https://osu.ppy.sh/wiki/vi/Brand_identity_guidelines"
+            "source": "https://osu.ppy.sh/wiki/Brand_identity_guidelines",
+            "guidelines": "https://osu.ppy.sh/wiki/Brand_identity_guidelines"
         },
         {
             "title": "Otto",
@@ -11645,6 +11645,11 @@
             "source": "https://branding.seagate.com/productpage/3fc51aba-c35a-4eff-a833-a258b0440bd2"
         },
         {
+            "title": "SearXNG",
+            "hex": "3050FF",
+            "source": "https://docs.searxng.org"
+        },
+        {
             "title": "SEAT",
             "hex": "33302E",
             "source": "https://www.seat.es"
@@ -13698,6 +13703,14 @@
             "title": "Ulule",
             "hex": "18A5D6",
             "source": "https://ulule.frontify.com/d/EX3dK8qsXgqh/branding-guidelines"
+        },
+        {
+            "title": "Umami",
+            "hex": "000000",
+            "source": "https://github.com/umami-software/umami/blob/3572df0a09503f357a06fe7f816295ba2c878325/assets/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Umbraco",
