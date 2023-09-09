@@ -9,15 +9,16 @@ Over 2600 Free SVG icons for popular brands. See them all on one page at <a href
 <a href="https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop"><img src="https://img.shields.io/github/actions/workflow/status/simple-icons/simple-icons/verify.yml?branch=develop&logo=github&label=tests" alt="Build status"/></a>
 <a href="https://www.npmjs.com/package/simple-icons"><img src="https://img.shields.io/npm/v/simple-icons.svg?logo=npm" alt="NPM version"/></a>
 <a href="https://packagist.org/packages/simple-icons/simple-icons"><img src="https://img.shields.io/packagist/v/simple-icons/simple-icons?logo=packagist&logoColor=white" alt="Build status"/></a>
-</p>
-<p align="center">
+<br/>
 <a href="https://simpleicons.org"><img src="https://img.shields.io/badge/dynamic/json?color=informational&label=icons&prefix=%20&logo=simpleicons&query=%24.icons.length&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimple-icons%2Fsimple-icons%2Fdevelop%2F_data%2Fsimple-icons.json" alt="Number of icons currently in the library"/></a>
+<a href="https://discord.gg/CV7QtdqYrk"><img src="https://img.shields.io/discord/1142044630909726760?logo=discord&logoColor=white&label=discord" alt="Number of users active in our Discord server" /></a>
 <a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
 ## Usage
 
-> **Note** We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before using icons from Simple Icons.
+> **Note**\
+> We ask that all users read our [legal disclaimer](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md) before using icons from Simple Icons.
 
 ### General Usage
 
@@ -156,7 +157,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Drupal module](https://www.drupal.org/project/simple_icons) <img src="https://cdn.simpleicons.org/drupal/000/fff" alt="Drupal" align=left width=24 height=24> | [Phil Wolstenholme](https://www.drupal.org/u/phil-wolstenholme) |
 | [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908/Simple-Icons) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
-| [Flutter package](https://pub.dev/packages/simple_icons) <img src="https://cdn.simpleicons.org/flutter/000/fff" alt="Flutter" align=left width=24 height=24> | [@jlnrrg](https://jlnrrg.github.io/) |
+| [Flutter package](https://pub.dev/packages/simple_icons) <img src="https://cdn.simpleicons.org/flutter/000/fff" alt="Flutter" align=left width=24 height=24> | [@jlnrrg](https://github.com/jlnrrg) |
 | [Framer component](https://github.com/LitoMore/simple-icons-framer) <img src="https://cdn.simpleicons.org/framer/000/fff" alt="Framer" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Hexo plugin](https://github.com/nidbCN/hexo-simpleIcons) <img src="https://cdn.simpleicons.org/hexo/000/fff" alt="Hexo" align=left width=24 height=24> | [@nidbCN](https://github.com/nidbCN/) |
 | [Home Assistant plugin](https://github.com/vigonotion/hass-simpleicons) <img src="https://cdn.simpleicons.org/homeassistant/000/fff" alt="Home Assistant" align=left width=24 height=24> | [@vigonotion](https://github.com/vigonotion/) |
