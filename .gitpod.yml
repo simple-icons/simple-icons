@@ -1,7 +1,0 @@
-ports:
-  - port: 4000
-    onOpen: ignore
-tasks:
-  - command: gp await-port 4000 && sleep 3 && gp preview $(gp url 4000)
-  - init: gem install jekyll bundler
-    command: jekyll serve --host 0.0.0.0
