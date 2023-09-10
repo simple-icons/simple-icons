@@ -2205,10 +2205,12 @@
             "source": "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg"
         },
         {
-            "title": "C#",
-            "slug": "csharp",
+            "title": "C Sharp",
             "hex": "512BD4",
-            "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1"
+            "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1",
+            "aliases": {
+                "aka": ["C#"]
+            }
         },
         {
             "title": "C++",
