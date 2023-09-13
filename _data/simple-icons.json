@@ -761,6 +761,17 @@
             }
         },
         {
+            "title": "Amazon Simple Email Service",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS SES"
+                ]
+            }
+        },
+        {
             "title": "Amazon SQS",
             "hex": "FF4F8B",
             "source": "https://aws.amazon.com/architecture/icons",
@@ -7676,6 +7687,11 @@
             "title": "Lunacy",
             "hex": "179DE3",
             "source": "https://icons8.com/lunacy"
+        },
+        {
+            "title": "Lutris",
+            "hex": "FF9900",
+            "source": "https://github.com/lutris/lutris/blob/f62feaef063868cb39afddefbb9ba7a5928bd978/share/icons/hicolor/scalable/apps/lutris.svg"
         },
         {
             "title": "Lydia",
