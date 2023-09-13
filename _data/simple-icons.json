@@ -7689,6 +7689,11 @@
             "source": "https://icons8.com/lunacy"
         },
         {
+            "title": "Lutris",
+            "hex": "FF9900",
+            "source": "https://github.com/lutris/lutris/blob/f62feaef063868cb39afddefbb9ba7a5928bd978/share/icons/hicolor/scalable/apps/lutris.svg"
+        },
+        {
             "title": "Lydia",
             "hex": "0180FF",
             "source": "https://lydia-app.com/en/info/press.html",
@@ -12367,6 +12372,14 @@
             },
             "hex": "337AB7",
             "source": "https://www.spoj.com"
+        },
+        {
+            "title": "Sphinx",
+            "hex": "000000",
+            "source": "https://github.com/sphinx-doc/sphinx/blob/ed84d63e6f2c4fd43b97fc43ee8be4156a13af9e/doc/_static/favicon.svg",
+            "license": {
+                "type": "BSD-3-Clause"
+            }
         },
         {
             "title": "SpigotMC",
