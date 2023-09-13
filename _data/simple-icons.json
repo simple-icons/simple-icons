@@ -761,6 +761,17 @@
             }
         },
         {
+            "title": "Amazon Simple Email Service",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS SES"
+                ]
+            }
+        },
+        {
             "title": "Amazon SQS",
             "hex": "FF4F8B",
             "source": "https://aws.amazon.com/architecture/icons",
@@ -1705,7 +1716,7 @@
         },
         {
             "title": "Battle.net",
-            "hex": "148EFF",
+            "hex": "4381C3",
             "source": "https://battle.net"
         },
         {
@@ -2211,8 +2222,13 @@
         },
         {
             "title": "C Sharp",
-            "hex": "239120",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/0/0d/C_Sharp_wordmark.svg"
+            "hex": "512BD4",
+            "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1",
+            "aliases": {
+                "aka": [
+                    "C#"
+                ]
+            }
         },
         {
             "title": "C++",
@@ -6281,6 +6297,11 @@
             "source": "https://indeed.design/resources"
         },
         {
+            "title": "IndiGo",
+            "hex": "09009B",
+            "source": "https://www.goindigo.in"
+        },
+        {
             "title": "Inertia",
             "hex": "9553E9",
             "source": "https://inertiajs.com"
@@ -7671,6 +7692,11 @@
             "title": "Lunacy",
             "hex": "179DE3",
             "source": "https://icons8.com/lunacy"
+        },
+        {
+            "title": "Lutris",
+            "hex": "FF9900",
+            "source": "https://github.com/lutris/lutris/blob/f62feaef063868cb39afddefbb9ba7a5928bd978/share/icons/hicolor/scalable/apps/lutris.svg"
         },
         {
             "title": "Lydia",
@@ -11480,6 +11506,12 @@
             "source": "https://sailfishos.org"
         },
         {
+            "title": "Sails.js",
+            "hex": "14ACC2",
+            "source": "https://sailsjs.com/logos",
+            "guidelines": "https://sailsjs.com/logos"
+        },
+        {
             "title": "Salesforce",
             "hex": "00A1E0",
             "source": "https://brand.salesforce.com/content/logo-guidelines",
@@ -12345,6 +12377,14 @@
             },
             "hex": "337AB7",
             "source": "https://www.spoj.com"
+        },
+        {
+            "title": "Sphinx",
+            "hex": "000000",
+            "source": "https://github.com/sphinx-doc/sphinx/blob/ed84d63e6f2c4fd43b97fc43ee8be4156a13af9e/doc/_static/favicon.svg",
+            "license": {
+                "type": "BSD-3-Clause"
+            }
         },
         {
             "title": "SpigotMC",
@@ -14475,8 +14515,8 @@
         {
             "title": "WeChat",
             "hex": "07C160",
-            "source": "https://wechat.design/standard/download/brand",
-            "guidelines": "https://wechat.design/standard/download/brand"
+            "source": "https://wechat.design/tool/brand",
+            "guidelines": "https://wechat.design/brand/main-brand"
         },
         {
             "title": "WeGame",
