@@ -6,7 +6,8 @@ Consider adding a preview image of your submission using:
 https://petershaggynoble.github.io/SI-Sandbox/preview/
 -->
 
-**Issue:**
+**Issue:** closes #
+
 **Similarweb rank:**
   <!-- The Similarweb rank can be retrieved at https://www.similarweb.com
        Please see our contributing guidelines for more details on how we
