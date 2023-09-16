@@ -456,6 +456,15 @@
             "source": "https://www.akamai.com"
         },
         {
+            "title": "Akaunting",
+            "hex": "6DA252",
+            "source": "https://akaunting.com/logo",
+            "license": {
+                "type": "GPL-3.0-only",
+                "url": "https://akaunting.com/license"
+            }
+        },
+        {
             "title": "Alacritty",
             "hex": "F46D01",
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg",
@@ -1538,6 +1547,12 @@
             "hex": "FF7800",
             "source": "https://press.avast.com/media-materials#logos-and-brand-guidelines",
             "guidelines": "https://press.avast.com/media-materials#logos-and-brand-guidelines"
+        },
+        {
+            "title": "Avira",
+            "hex": "E02027",
+            "source": "https://www.avira.com/en/media-library",
+            "guidelines": "https://www.avira.com/en/media-library"
         },
         {
             "title": "Awesome Lists",
@@ -6130,6 +6145,11 @@
             "source": "https://github.com/i18next/i18next-gitbook/blob/32efcfd9c59ae55cc63a60e633dbc1651c7950ad/assets/img/logo.svg"
         },
         {
+            "title": "i3",
+            "hex": "52C0FF",
+            "source": "https://github.com/i3/i3/blob/d6e2a38b5cdf200c0fb82fc4cf7fff7dbcdeb605/logo.svg"
+        },
+        {
             "title": "Iata",
             "hex": "004E81",
             "source": "https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg"
@@ -6439,6 +6459,17 @@
             "title": "Internet Archive",
             "hex": "666666",
             "source": "https://archive.org"
+        },
+        {
+            "title": "Internet Computer",
+            "hex": "3B00B9",
+            "source": "https://dfinity.frontify.com/d/pD7yZhsmpqos/internet-computer#/internet-computer/logo",
+            "guidelines": "https://dfinity.frontify.com/d/pD7yZhsmpqos",
+            "aliases": {
+                "aka": [
+                    "Internet Computer Protocol"
+                ]
+            }
         },
         {
             "title": "Internet Explorer",
@@ -7401,8 +7432,8 @@
         {
             "title": "LG",
             "hex": "A50034",
-            "source": "https://en.wikipedia.org/wiki/LG_Corporation",
-            "guidelines": "https://www.lg.com/global/about-lg-brand-identity"
+            "source": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp",
+            "guidelines": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp"
         },
         {
             "title": "LGTM",
@@ -7806,6 +7837,15 @@
             "source": "https://manjaro.org"
         },
         {
+            "title": "Mantine",
+            "hex": "339AF0",
+            "source": "https://github.com/mantinedev/mantine/blob/f2da0287bfcda19dcf7866f4d03a05d1ee7b49f7/docs/src/images/logo.svg",
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/mantinedev/mantine/blob/master/LICENSE"
+            }
+        },
+        {
             "title": "Mapbox",
             "hex": "000000",
             "source": "https://www.mapbox.com/about/press/brand-guidelines",
@@ -8017,6 +8057,11 @@
             "title": "MEGA",
             "hex": "D9272E",
             "source": "https://mega.io/corporate"
+        },
+        {
+            "title": "Meilisearch",
+            "hex": "FF5CAA",
+            "source": "https://www.meilisearch.com"
         },
         {
             "title": "Mendeley",
@@ -8381,6 +8426,12 @@
             "hex": "5000FF",
             "source": "https://www.mixcloud.com/about",
             "guidelines": "https://www.mixcloud.com/about"
+        },
+        {
+            "title": "Mixpanel",
+            "hex": "7856FF",
+            "source": "https://mixpanel.com",
+            "guidelines": "https://brand.mixpanel.com"
         },
         {
             "title": "MLB",
@@ -12906,6 +12957,11 @@
             "source": "https://swiperjs.com"
         },
         {
+            "title": "SWR",
+            "hex": "000000",
+            "source": "https://swr.vercel.app"
+        },
+        {
             "title": "Symantec",
             "hex": "FDB511",
             "source": "https://commons.wikimedia.org/wiki/File:Symantec_logo10.svg"
@@ -13291,7 +13347,8 @@
         {
             "title": "Threads",
             "hex": "000000",
-            "source": "https://commons.wikimedia.org/wiki/File:Threads_(app)_logo.svg"
+            "source": "https://about.meta.com/brand/resources/instagram/threads",
+            "guidelines": "https://about.meta.com/brand/resources/instagram/threads"
         },
         {
             "title": "Three.js",
@@ -13460,6 +13517,11 @@
             "title": "Toshiba",
             "hex": "FF0000",
             "source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
+        },
+        {
+            "title": "TourBox",
+            "hex": "231F20",
+            "source": "https://www.tourboxtech.com"
         },
         {
             "title": "Toyota",
