@@ -7832,6 +7832,15 @@
             "source": "https://manjaro.org"
         },
         {
+            "title": "Mantine",
+            "hex": "339AF0",
+            "source": "https://github.com/mantinedev/mantine/blob/f2da0287bfcda19dcf7866f4d03a05d1ee7b49f7/docs/src/images/logo.svg",
+            "license": {
+                "type": "MIT",
+                "url": "https://github.com/mantinedev/mantine/blob/master/LICENSE"
+            }
+        },
+        {
             "title": "Mapbox",
             "hex": "000000",
             "source": "https://www.mapbox.com/about/press/brand-guidelines",
@@ -12943,6 +12952,11 @@
             "source": "https://swiperjs.com"
         },
         {
+            "title": "SWR",
+            "hex": "000000",
+            "source": "https://swr.vercel.app"
+        },
+        {
             "title": "Symantec",
             "hex": "FDB511",
             "source": "https://commons.wikimedia.org/wiki/File:Symantec_logo10.svg"
@@ -13498,6 +13512,11 @@
             "title": "Toshiba",
             "hex": "FF0000",
             "source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
+        },
+        {
+            "title": "TourBox",
+            "hex": "231F20",
+            "source": "https://www.tourboxtech.com"
         },
         {
             "title": "Toyota",
