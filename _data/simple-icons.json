@@ -138,6 +138,14 @@
             "source": "https://www.activision.com"
         },
         {
+            "title": "ActivityPub",
+            "hex": "F1007E",
+            "source": "https://activitypub.rocks",
+            "license": {
+                "type": "CC0-1.0"
+            }
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -2818,6 +2826,16 @@
             "title": "CodeIgniter",
             "hex": "EF4223",
             "source": "https://www.codeigniter.com/help/legal"
+        },
+        {
+            "title": "Codeium",
+            "hex": "09B6A2",
+            "source": "https://github.com/Exafunction/codeium.vim/blob/e03c410a7673dbbe7f64afbc9a08f423363ded81/codeium-simple-logo.svg",
+            "aliases": {
+                "aka": [
+                    "Exafunction"
+                ]
+            }
         },
         {
             "title": "Codemagic",
@@ -5716,7 +5734,8 @@
         {
             "title": "Hack Club",
             "hex": "EC3750",
-            "source": "https://hackclub.com/brand"
+            "source": "https://hackclub.com/brand",
+            "guidelines": "https://hackclub.com/brand"
         },
         {
             "title": "Hack The Box",
@@ -5742,7 +5761,8 @@
         {
             "title": "HackerOne",
             "hex": "494649",
-            "source": "https://www.hackerone.com/branding"
+            "source": "https://www.hackerone.com/branding",
+            "guidelines": "https://www.hackerone.com/branding/pages#logo_usage"
         },
         {
             "title": "HackerRank",
@@ -5764,7 +5784,7 @@
         {
             "title": "Handlebars.js",
             "hex": "000000",
-            "source": "https://raw.githubusercontent.com/handlebars-lang/docs/master/src/.vuepress/public/icons/handlebarsjs-icon.svg"
+            "source": "https://github.com/handlebars-lang/docs/blob/13a2e2d9e31ebff4295924ea366abf3062e47ede/src/.vuepress/public/icons/handlebarsjs-icon.svg"
         },
         {
             "title": "Handshake",
@@ -5911,8 +5931,8 @@
         {
             "title": "Heroku",
             "hex": "430098",
-            "source": "https://brand.heroku.com",
-            "guidelines": "https://brand.heroku.com"
+            "source": "https://devcenter.heroku.com/articles/heroku-brand-guidelines#logos",
+            "guidelines": "https://devcenter.heroku.com/articles/heroku-brand-guidelines"
         },
         {
             "title": "Hetzner",
@@ -5973,7 +5993,7 @@
             "title": "Hive",
             "slug": "hive_blockchain",
             "hex": "E31337",
-            "source": "https://hive.io/brand/"
+            "source": "https://hive.io/brand"
         },
         {
             "title": "Home Assistant",
@@ -9064,6 +9084,11 @@
             "source": "https://github.com/necolas/normalize.css/blob/3a60304f90870c6087d226f53e02a7523c907a35/logo.svg"
         },
         {
+            "title": "Norton",
+            "hex": "FFE01A",
+            "source": "https://us.norton.com"
+        },
+        {
             "title": "Norwegian",
             "hex": "D81939",
             "source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
@@ -9469,6 +9494,16 @@
             }
         },
         {
+            "title": "OpenText",
+            "hex": "000000",
+            "source": "https://www.opentext.com",
+            "aliases": {
+                "aka": [
+                    "Micro Focus"
+                ]
+            }
+        },
+        {
             "title": "OpenTF",
             "hex": "933EFF",
             "source": "https://github.com/opentffoundation/brand-artifacts/blob/d9eb71760dee1db5ace6607a50161d2a822ad48b/symbol-only/transparent/SVG/on-light.svg",
@@ -9753,9 +9788,9 @@
         },
         {
             "title": "Patreon",
-            "hex": "FF424D",
-            "source": "https://www.patreon.com/brand/downloads",
-            "guidelines": "https://www.patreon.com/brand/downloads"
+            "hex": "000000",
+            "source": "https://www.patreon.com/brand",
+            "guidelines": "https://www.patreon.com/brand"
         },
         {
             "title": "Paychex",
@@ -13762,6 +13797,11 @@
             "source": "https://www.turkishairlines.com/en-int/press-room/logo-archive/index.html"
         },
         {
+            "title": "Turso",
+            "hex": "4FF8D2",
+            "source": "https://turso.tech"
+        },
+        {
             "title": "Tutanota",
             "hex": "840010",
             "source": "https://github.com/tutao/tutanota/blob/8ff5f0e7d78834ac8fcb0f2357c394b757ea4793/resources/images/logo-solo-red.svg"
@@ -15068,8 +15108,9 @@
         },
         {
             "title": "Yoast",
-            "hex": "A4286A",
-            "source": "https://yoast.com/media/logo/"
+            "hex": "A61E69",
+            "source": "https://yoast.com/brand",
+            "guidelines": "https://yoast.com/brand"
         },
         {
             "title": "YOLO",
