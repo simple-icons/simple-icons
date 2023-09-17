@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -29,10 +29,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -57,6 +57,7 @@ jobs:
         if: steps.changes.outputs.docs == 'true'
         run: |
           npx markdown-link-check --retry \
+            --config .github/markdown-link-check.json \
             ${{ steps.changes.outputs.docs_files }}
         continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
       - name: Verify file permissions
@@ -83,10 +84,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
