@@ -9576,6 +9576,15 @@
             "source": "https://github.com/OWASP/www-event-2020-07-virtual/blob/eefbef6c1afdd1dee2af11e7f44ad005b25ad48c/assets/images/logo.svg"
         },
         {
+            "title": "OWASP Dependency-Check",
+            "slug": "dependencycheck",
+            "hex": "F78D0A",
+            "source": "https://github.com/jeremylong/DependencyCheck/blob/8ee82149179c6faeca78727e57039e987c387e26/src/site/resources/images/logo.svg",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
             "title": "ownCloud",
             "hex": "041E42",
             "source": "https://owncloud.com"
