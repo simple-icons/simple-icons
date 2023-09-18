@@ -456,6 +456,14 @@
             "source": "https://www.akamai.com"
         },
         {
+            "title": "Akaunting",
+            "hex": "6DA252",
+            "source": "https://akaunting.com/logo",
+            "license": {
+                "type": "GPL-3.0-only"
+            }
+        },
+        {
             "title": "Alacritty",
             "hex": "F46D01",
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg",
@@ -757,6 +765,17 @@
             "aliases": {
                 "aka": [
                     "AWS S3"
+                ]
+            }
+        },
+        {
+            "title": "Amazon Simple Email Service",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS SES"
                 ]
             }
         },
@@ -1524,6 +1543,12 @@
             "guidelines": "https://press.avast.com/media-materials#logos-and-brand-guidelines"
         },
         {
+            "title": "Avira",
+            "hex": "E02027",
+            "source": "https://www.avira.com/en/media-library",
+            "guidelines": "https://www.avira.com/en/media-library"
+        },
+        {
             "title": "Awesome Lists",
             "hex": "FC60A8",
             "source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media/logo.svg"
@@ -1613,8 +1638,7 @@
             "hex": "0071B5",
             "source": "https://commons.wikimedia.org/wiki/File:Backbone.js_logo.svg",
             "license": {
-                "type": "MIT",
-                "url": "https://github.com/jashkenas/backbone/blob/master/LICENSE"
+                "type": "MIT"
             }
         },
         {
@@ -4702,8 +4726,7 @@
             "source": "https://codeberg.org/forgejo/meta/raw/branch/readme/branding/logo/forgejo-monochrome.svg",
             "guidelines": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/README.md#logo",
             "license": {
-                "type": "CC-BY-SA-4.0",
-                "url": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/logo/forgejo-logo-license-exemption.txt"
+                "type": "CC-BY-SA-4.0"
             }
         },
         {
@@ -4788,8 +4811,7 @@
             "source": "https://design-style-guide.freecodecamp.org",
             "guidelines": "https://design-style-guide.freecodecamp.org",
             "license": {
-                "type": "CC-BY-SA-4.0",
-                "url": "https://github.com/freeCodeCamp/design-style-guide/blob/cc950c311c61574b6ecbd9e724b6631026e14bfa/LICENSE"
+                "type": "CC-BY-SA-4.0"
             }
         },
         {
@@ -6119,6 +6141,11 @@
             "source": "https://github.com/i18next/i18next-gitbook/blob/32efcfd9c59ae55cc63a60e633dbc1651c7950ad/assets/img/logo.svg"
         },
         {
+            "title": "i3",
+            "hex": "52C0FF",
+            "source": "https://github.com/i3/i3/blob/d6e2a38b5cdf200c0fb82fc4cf7fff7dbcdeb605/logo.svg"
+        },
+        {
             "title": "Iata",
             "hex": "004E81",
             "source": "https://upload.wikimedia.org/wikipedia/commons/f/f7/IATAlogo.svg"
@@ -6428,6 +6455,17 @@
             "title": "Internet Archive",
             "hex": "666666",
             "source": "https://archive.org"
+        },
+        {
+            "title": "Internet Computer",
+            "hex": "3B00B9",
+            "source": "https://dfinity.frontify.com/d/pD7yZhsmpqos/internet-computer#/internet-computer/logo",
+            "guidelines": "https://dfinity.frontify.com/d/pD7yZhsmpqos",
+            "aliases": {
+                "aka": [
+                    "Internet Computer Protocol"
+                ]
+            }
         },
         {
             "title": "Internet Explorer",
@@ -7390,8 +7428,8 @@
         {
             "title": "LG",
             "hex": "A50034",
-            "source": "https://en.wikipedia.org/wiki/LG_Corporation",
-            "guidelines": "https://www.lg.com/global/about-lg-brand-identity"
+            "source": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp",
+            "guidelines": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp"
         },
         {
             "title": "LGTM",
@@ -7683,6 +7721,11 @@
             "source": "https://icons8.com/lunacy"
         },
         {
+            "title": "Lutris",
+            "hex": "FF9900",
+            "source": "https://github.com/lutris/lutris/blob/f62feaef063868cb39afddefbb9ba7a5928bd978/share/icons/hicolor/scalable/apps/lutris.svg"
+        },
+        {
             "title": "Lydia",
             "hex": "0180FF",
             "source": "https://lydia-app.com/en/info/press.html",
@@ -7788,6 +7831,14 @@
             "title": "Manjaro",
             "hex": "35BF5C",
             "source": "https://manjaro.org"
+        },
+        {
+            "title": "Mantine",
+            "hex": "339AF0",
+            "source": "https://github.com/mantinedev/mantine/blob/f2da0287bfcda19dcf7866f4d03a05d1ee7b49f7/docs/src/images/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Mapbox",
@@ -8001,6 +8052,11 @@
             "title": "MEGA",
             "hex": "D9272E",
             "source": "https://mega.io/corporate"
+        },
+        {
+            "title": "Meilisearch",
+            "hex": "FF5CAA",
+            "source": "https://www.meilisearch.com"
         },
         {
             "title": "Mendeley",
@@ -8367,6 +8423,12 @@
             "guidelines": "https://www.mixcloud.com/about"
         },
         {
+            "title": "Mixpanel",
+            "hex": "7856FF",
+            "source": "https://mixpanel.com",
+            "guidelines": "https://brand.mixpanel.com"
+        },
+        {
             "title": "MLB",
             "hex": "041E42",
             "source": "https://www.mlb.com",
@@ -8395,6 +8457,11 @@
             "title": "Mocha",
             "hex": "8D6748",
             "source": "https://mochajs.org"
+        },
+        {
+            "title": "Mock Service Worker",
+            "hex": "FF6A33",
+            "source": "https://github.com/mswjs/msw/blob/9c53bd23040307d41b5b0b7cec1bf3a05950dbc8/media/msw-logo-black.svg"
         },
         {
             "title": "Modin",
@@ -8467,8 +8534,7 @@
             "hex": "E2B714",
             "source": "https://github.com/monkeytypegame/monkeytype/blob/20a08d27ead851bbfd5ac557b4ea444ea8bddd79/frontend/static/html/top.html",
             "license": {
-                "type": "GPL-3.0-only",
-                "url": "https://github.com/monkeytypegame/monkeytype/blob/20a08d27ead851bbfd5ac557b4ea444ea8bddd79/LICENSE"
+                "type": "GPL-3.0-only"
             }
         },
         {
@@ -9369,8 +9435,7 @@
             "source": "https://cncf-branding.netlify.app/projects/opentelemetry/",
             "guidelines": "https://cncf-branding.netlify.app/projects/opentelemetry/",
             "license": {
-                "type": "CC-BY-4.0",
-                "url": "https://www.linuxfoundation.org/trademark-usage/"
+                "type": "CC-BY-4.0"
             },
             "aliases": {
                 "aka": [
@@ -9519,6 +9584,15 @@
             "title": "OWASP",
             "hex": "000000",
             "source": "https://github.com/OWASP/www-event-2020-07-virtual/blob/eefbef6c1afdd1dee2af11e7f44ad005b25ad48c/assets/images/logo.svg"
+        },
+        {
+            "title": "OWASP Dependency-Check",
+            "slug": "dependencycheck",
+            "hex": "F78D0A",
+            "source": "https://github.com/jeremylong/DependencyCheck/blob/8ee82149179c6faeca78727e57039e987c387e26/src/site/resources/images/logo.svg",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "ownCloud",
@@ -10999,8 +11073,7 @@
             "hex": "B32024",
             "source": "https://www.redmine.org/projects/redmine/wiki/logo",
             "license": {
-                "type": "CC-BY-SA-2.5",
-                "url": "https://github.com/edavis10/redmine_logo/blob/2afe855c4e9cd955b648972d09cc20d76dabbf4c/COPYRIGHT"
+                "type": "CC-BY-SA-2.5"
             }
         },
         {
@@ -11542,8 +11615,7 @@
             "hex": "F03E2F",
             "source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
             "license": {
-                "type": "MIT",
-                "url": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/LICENSE"
+                "type": "MIT"
             }
         },
         {
@@ -12270,8 +12342,7 @@
             "source": "https://sourcehut.org/logo/",
             "guidelines": "https://sourcehut.org/logo/",
             "license": {
-                "type": "CC0-1.0",
-                "url": "https://sourcehut.org/logo/"
+                "type": "CC0-1.0"
             }
         },
         {
@@ -12890,6 +12961,11 @@
             "source": "https://swiperjs.com"
         },
         {
+            "title": "SWR",
+            "hex": "000000",
+            "source": "https://swr.vercel.app"
+        },
+        {
             "title": "Symantec",
             "hex": "FDB511",
             "source": "https://commons.wikimedia.org/wiki/File:Symantec_logo10.svg"
@@ -13041,8 +13117,7 @@
             "hex": "FFC131",
             "source": "https://github.com/tauri-apps/tauri/blob/093f85dc2b90a6dd0f48d941f6e88daec311250a/app-icon.png",
             "license": {
-                "type": "CC-BY-NC-ND-4.0",
-                "url": "https://github.com/tauri-apps/tauri"
+                "type": "CC-BY-NC-ND-4.0"
             }
         },
         {
@@ -13275,7 +13350,8 @@
         {
             "title": "Threads",
             "hex": "000000",
-            "source": "https://commons.wikimedia.org/wiki/File:Threads_(app)_logo.svg"
+            "source": "https://about.meta.com/brand/resources/instagram/threads",
+            "guidelines": "https://about.meta.com/brand/resources/instagram/threads"
         },
         {
             "title": "Three.js",
@@ -13444,6 +13520,11 @@
             "title": "Toshiba",
             "hex": "FF0000",
             "source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
+        },
+        {
+            "title": "TourBox",
+            "hex": "231F20",
+            "source": "https://www.tourboxtech.com"
         },
         {
             "title": "Toyota",
@@ -13818,6 +13899,12 @@
             "source": "https://www.united.com"
         },
         {
+            "title": "United Nations",
+            "hex": "009EDB",
+            "source": "https://www.un.org/en",
+            "guidelines": "https://www.un.org/styleguide/pdf/UN_brand_identity_quick_guide_2020.pdf"
+        },
+        {
             "title": "Unity",
             "hex": "000000",
             "source": "https://brand.unity.com",
@@ -13912,6 +13999,11 @@
             "source": "https://www.usps.com"
         },
         {
+            "title": "uTorrent",
+            "hex": "76B83F",
+            "source": "https://www.utorrent.com"
+        },
+        {
             "title": "V",
             "hex": "5D87BF",
             "source": "https://github.com/vlang/v-logo/blob/eec050c901ed3afefce8cbe56092d55ed6770706/dist/v-logo.svg",
@@ -13946,8 +14038,7 @@
             "hex": "7239B3",
             "source": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg",
             "license": {
-                "type": "MIT",
-                "url": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg"
+                "type": "MIT"
             }
         },
         {
@@ -15144,8 +15235,7 @@
             "hex": "3E67B1",
             "source": "https://zod.dev",
             "license": {
-                "type": "MIT",
-                "url": "https://github.com/colinhacks/zod/blob/master/LICENSE"
+                "type": "MIT"
             }
         },
         {
