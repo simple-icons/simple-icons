@@ -87,9 +87,10 @@
             "source": "https://www.ableton.com/en/legal/branding-trademark-guidelines/"
         },
         {
-            "title": "About.me",
-            "hex": "00A98F",
-            "source": "https://about.me/assets"
+            "title": "about.me",
+            "hex": "333333",
+            "source": "https://about.me/assets",
+            "guidelines": "https://about.me/assets"
         },
         {
             "title": "Abstract",
@@ -279,6 +280,11 @@
             "source": "https://www.adroll.com"
         },
         {
+            "title": "Advent Of Code",
+            "hex": "FFFF66",
+            "source": "https://adventofcode.com"
+        },
+        {
             "title": "Adyen",
             "hex": "0ABF53",
             "source": "https://www.adyen.com/press-and-media/presskit",
@@ -460,8 +466,7 @@
             "hex": "6DA252",
             "source": "https://akaunting.com/logo",
             "license": {
-                "type": "GPL-3.0-only",
-                "url": "https://akaunting.com/license"
+                "type": "GPL-3.0-only"
             }
         },
         {
@@ -1518,6 +1523,11 @@
             "guidelines": "https://brand.autodesk.com/brand-system/logo"
         },
         {
+            "title": "Autodesk Revit",
+            "hex": "186BFF",
+            "source": "https://www.autodesk.com/products/revit"
+        },
+        {
             "title": "AutoHotkey",
             "hex": "334455",
             "source": "https://www.autohotkey.com"
@@ -1639,8 +1649,7 @@
             "hex": "0071B5",
             "source": "https://commons.wikimedia.org/wiki/File:Backbone.js_logo.svg",
             "license": {
-                "type": "MIT",
-                "url": "https://github.com/jashkenas/backbone/blob/master/LICENSE"
+                "type": "MIT"
             }
         },
         {
@@ -4505,7 +4514,7 @@
         },
         {
             "title": "Firefish",
-            "hex": "F19885",
+            "hex": "F07A5B",
             "source": "https://joinfirefish.org/about/#brand",
             "guidelines": "https://joinfirefish.org/about/#brand"
         },
@@ -4723,8 +4732,7 @@
             "source": "https://codeberg.org/forgejo/meta/raw/branch/readme/branding/logo/forgejo-monochrome.svg",
             "guidelines": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/README.md#logo",
             "license": {
-                "type": "CC-BY-SA-4.0",
-                "url": "https://codeberg.org/forgejo/meta/src/branch/readme/branding/logo/forgejo-logo-license-exemption.txt"
+                "type": "CC-BY-SA-4.0"
             }
         },
         {
@@ -4809,8 +4817,7 @@
             "source": "https://design-style-guide.freecodecamp.org",
             "guidelines": "https://design-style-guide.freecodecamp.org",
             "license": {
-                "type": "CC-BY-SA-4.0",
-                "url": "https://github.com/freeCodeCamp/design-style-guide/blob/cc950c311c61574b6ecbd9e724b6631026e14bfa/LICENSE"
+                "type": "CC-BY-SA-4.0"
             }
         },
         {
@@ -7832,6 +7839,14 @@
             "source": "https://manjaro.org"
         },
         {
+            "title": "Mantine",
+            "hex": "339AF0",
+            "source": "https://github.com/mantinedev/mantine/blob/f2da0287bfcda19dcf7866f4d03a05d1ee7b49f7/docs/src/images/logo.svg",
+            "license": {
+                "type": "MIT"
+            }
+        },
+        {
             "title": "Mapbox",
             "hex": "000000",
             "source": "https://www.mapbox.com/about/press/brand-guidelines",
@@ -8450,6 +8465,11 @@
             "source": "https://mochajs.org"
         },
         {
+            "title": "Mock Service Worker",
+            "hex": "FF6A33",
+            "source": "https://github.com/mswjs/msw/blob/9c53bd23040307d41b5b0b7cec1bf3a05950dbc8/media/msw-logo-black.svg"
+        },
+        {
             "title": "Modin",
             "hex": "001729",
             "source": "https://modin.org"
@@ -8520,8 +8540,7 @@
             "hex": "E2B714",
             "source": "https://github.com/monkeytypegame/monkeytype/blob/20a08d27ead851bbfd5ac557b4ea444ea8bddd79/frontend/static/html/top.html",
             "license": {
-                "type": "GPL-3.0-only",
-                "url": "https://github.com/monkeytypegame/monkeytype/blob/20a08d27ead851bbfd5ac557b4ea444ea8bddd79/LICENSE"
+                "type": "GPL-3.0-only"
             }
         },
         {
@@ -9422,8 +9441,7 @@
             "source": "https://cncf-branding.netlify.app/projects/opentelemetry/",
             "guidelines": "https://cncf-branding.netlify.app/projects/opentelemetry/",
             "license": {
-                "type": "CC-BY-4.0",
-                "url": "https://www.linuxfoundation.org/trademark-usage/"
+                "type": "CC-BY-4.0"
             },
             "aliases": {
                 "aka": [
@@ -9572,6 +9590,15 @@
             "title": "OWASP",
             "hex": "000000",
             "source": "https://github.com/OWASP/www-event-2020-07-virtual/blob/eefbef6c1afdd1dee2af11e7f44ad005b25ad48c/assets/images/logo.svg"
+        },
+        {
+            "title": "OWASP Dependency-Check",
+            "slug": "dependencycheck",
+            "hex": "F78D0A",
+            "source": "https://github.com/jeremylong/DependencyCheck/blob/8ee82149179c6faeca78727e57039e987c387e26/src/site/resources/images/logo.svg",
+            "license": {
+                "type": "Apache-2.0"
+            }
         },
         {
             "title": "ownCloud",
@@ -9728,8 +9755,9 @@
         },
         {
             "title": "PayPal",
-            "hex": "00457C",
-            "source": "https://www.paypal.com"
+            "hex": "003087",
+            "source": "https://www.paypal.com",
+            "guidelines": "https://newsroom.paypal-corp.com/media-resources"
         },
         {
             "title": "Paytm",
@@ -11052,8 +11080,7 @@
             "hex": "B32024",
             "source": "https://www.redmine.org/projects/redmine/wiki/logo",
             "license": {
-                "type": "CC-BY-SA-2.5",
-                "url": "https://github.com/edavis10/redmine_logo/blob/2afe855c4e9cd955b648972d09cc20d76dabbf4c/COPYRIGHT"
+                "type": "CC-BY-SA-2.5"
             }
         },
         {
@@ -11595,8 +11622,7 @@
             "hex": "F03E2F",
             "source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
             "license": {
-                "type": "MIT",
-                "url": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/LICENSE"
+                "type": "MIT"
             }
         },
         {
@@ -12328,8 +12354,7 @@
             "source": "https://sourcehut.org/logo/",
             "guidelines": "https://sourcehut.org/logo/",
             "license": {
-                "type": "CC0-1.0",
-                "url": "https://sourcehut.org/logo/"
+                "type": "CC0-1.0"
             }
         },
         {
@@ -13104,8 +13129,7 @@
             "hex": "FFC131",
             "source": "https://github.com/tauri-apps/tauri/blob/093f85dc2b90a6dd0f48d941f6e88daec311250a/app-icon.png",
             "license": {
-                "type": "CC-BY-NC-ND-4.0",
-                "url": "https://github.com/tauri-apps/tauri"
+                "type": "CC-BY-NC-ND-4.0"
             }
         },
         {
@@ -13887,6 +13911,12 @@
             "source": "https://www.united.com"
         },
         {
+            "title": "United Nations",
+            "hex": "009EDB",
+            "source": "https://www.un.org/en",
+            "guidelines": "https://www.un.org/styleguide/pdf/UN_brand_identity_quick_guide_2020.pdf"
+        },
+        {
             "title": "Unity",
             "hex": "000000",
             "source": "https://brand.unity.com",
@@ -13981,6 +14011,11 @@
             "source": "https://www.usps.com"
         },
         {
+            "title": "uTorrent",
+            "hex": "76B83F",
+            "source": "https://www.utorrent.com"
+        },
+        {
             "title": "V",
             "hex": "5D87BF",
             "source": "https://github.com/vlang/v-logo/blob/eec050c901ed3afefce8cbe56092d55ed6770706/dist/v-logo.svg",
@@ -14015,8 +14050,7 @@
             "hex": "7239B3",
             "source": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg",
             "license": {
-                "type": "MIT",
-                "url": "https://commons.wikimedia.org/wiki/File:Vala_Logo.svg"
+                "type": "MIT"
             }
         },
         {
@@ -15213,8 +15247,7 @@
             "hex": "3E67B1",
             "source": "https://zod.dev",
             "license": {
-                "type": "MIT",
-                "url": "https://github.com/colinhacks/zod/blob/master/LICENSE"
+                "type": "MIT"
             }
         },
         {
