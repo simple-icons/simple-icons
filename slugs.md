@@ -23,7 +23,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Abbott` | `abbott` |
 | `Abbvie` | `abbvie` |
 | `Ableton Live` | `abletonlive` |
-| `about.me` | `aboutdotme` |
+| `About.me` | `aboutdotme` |
 | `Abstract` | `abstract` |
 | `Academia` | `academia` |
 | `Accenture` | `accenture` |
