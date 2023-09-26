@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "9.14.0",
+  "version": "9.16.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -60,7 +60,7 @@
     "url": "https://opencollective.com/simple-icons"
   },
   "devDependencies": {
-    "@inquirer/prompts": "1.0.0",
+    "@inquirer/prompts": "3.1.1",
     "chalk": "5.2.0",
     "editorconfig-checker": "5.0.1",
     "esbuild": "0.17.19",
