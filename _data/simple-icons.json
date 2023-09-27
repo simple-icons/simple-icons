@@ -87,7 +87,7 @@
             "source": "https://www.ableton.com/en/legal/branding-trademark-guidelines/"
         },
         {
-            "title": "about.me",
+            "title": "About.me",
             "hex": "333333",
             "source": "https://about.me/assets",
             "guidelines": "https://about.me/assets"
@@ -1523,6 +1523,11 @@
             "guidelines": "https://brand.autodesk.com/brand-system/logo"
         },
         {
+            "title": "Autodesk Revit",
+            "hex": "186BFF",
+            "source": "https://www.autodesk.com/products/revit"
+        },
+        {
             "title": "AutoHotkey",
             "hex": "334455",
             "source": "https://www.autohotkey.com"
@@ -2304,9 +2309,9 @@
         },
         {
             "title": "Canonical",
-            "hex": "77216F",
-            "source": "https://design.ubuntu.com/downloads/",
-            "guidelines": "https://design.ubuntu.com/brand/canonical-logo/",
+            "hex": "E95420",
+            "source": "https://design.ubuntu.com/resources",
+            "guidelines": "https://design.ubuntu.com/brand/",
             "license": {
                 "type": "CC-BY-SA-3.0"
             }
@@ -5957,11 +5962,9 @@
         },
         {
             "title": "Home Assistant",
-            "hex": "41BDF5",
-            "source": "https://github.com/home-assistant/assets/blob/1e19f0dca208f0876b274c68345fcf989de7377a/logo/logo-small.png",
-            "license": {
-                "type": "CC-BY-NC-SA-4.0"
-            }
+            "hex": "18BCF2",
+            "source": "https://github.com/home-assistant/assets/blob/0f69676da79c3881e7dfca6d6c0a5739f88273d8/logo/home-assistant-logo.zip",
+            "guidelines": "https://design.home-assistant.io/#brand/logo"
         },
         {
             "title": "Home Assistant Community Store",
@@ -9750,8 +9753,9 @@
         },
         {
             "title": "PayPal",
-            "hex": "00457C",
-            "source": "https://www.paypal.com"
+            "hex": "003087",
+            "source": "https://www.paypal.com",
+            "guidelines": "https://newsroom.paypal-corp.com/media-resources"
         },
         {
             "title": "Paytm",
@@ -9854,7 +9858,7 @@
         },
         {
             "title": "Pets at Home",
-            "hex": "4BA840",
+            "hex": "00AA28",
             "source": "https://petsathome.com"
         },
         {
@@ -11473,8 +11477,8 @@
         },
         {
             "title": "Ruby on Rails",
-            "hex": "CC0000",
-            "source": "https://rubyonrails.org",
+            "hex": "D30001",
+            "source": "https://github.com/simple-icons/simple-icons/issues/9619#issuecomment-1735150580",
             "guidelines": "https://rubyonrails.org/trademarks/"
         },
         {
@@ -13115,8 +13119,9 @@
         },
         {
             "title": "Tauri",
-            "hex": "FFC131",
-            "source": "https://github.com/tauri-apps/tauri/blob/093f85dc2b90a6dd0f48d941f6e88daec311250a/app-icon.png",
+            "hex": "24C8D8",
+            "source": "https://github.com/tauri-apps/tauri-docs/blob/b1cdfa9d7c6d0b17dae60a90266ddced40a7b384/static/img/tauri.svg",
+            "guidelines": "https://github.com/tauri-apps/tauri-docs/blob/b1cdfa9d7c6d0b17dae60a90266ddced40a7b384/static/img/Brand_Guidelines.pdf",
             "license": {
                 "type": "CC-BY-NC-ND-4.0"
             }
