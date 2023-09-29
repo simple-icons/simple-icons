@@ -590,10 +590,6 @@
                     "ZPL-2.0",
                     "ZPL-2.1"
                   ]
-                },
-                "url": {
-                  "description": "The URL to the license text by the brand",
-                  "$ref": "#/definitions/url"
                 }
               },
               "additionalProperties": false
