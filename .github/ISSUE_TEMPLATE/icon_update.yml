@@ -42,15 +42,3 @@ body:
         - Are there multiple options for the logo and/or color?
         - Is the icon released under a license?
       placeholder: 'Example: There are two variants of this icon...'
-
-  - type: dropdown
-    attributes:
-      label: Contributing
-      description: >-
-        This is an open source project and we welcome contributions. Do you want to
-        update this icon?
-      options:
-        - 'Yes'
-        - 'No'
-    validations:
-      required: true
