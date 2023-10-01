@@ -58,6 +58,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AdonisJS` | `adonisjs` |
 | `ADP` | `adp` |
 | `Adroll` | `adroll` |
+| `Advent Of Code` | `adventofcode` |
 | `Adyen` | `adyen` |
 | `Aer Lingus` | `aerlingus` |
 | `Aeroflot` | `aeroflot` |
@@ -256,6 +257,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Authelia` | `authelia` |
 | `Authy` | `authy` |
 | `Autodesk` | `autodesk` |
+| `Autodesk Revit` | `autodeskrevit` |
 | `AutoHotkey` | `autohotkey` |
 | `Automattic` | `automattic` |
 | `Autoprefixer` | `autoprefixer` |
@@ -1513,6 +1515,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MobX` | `mobx` |
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
+| `Mock Service Worker` | `mockserviceworker` |
 | `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
@@ -1710,6 +1713,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Overleaf` | `overleaf` |
 | `OVH` | `ovh` |
 | `OWASP` | `owasp` |
+| `OWASP Dependency-Check` | `dependencycheck` |
 | `ownCloud` | `owncloud` |
 | `Oxygen` | `oxygen` |
 | `OYO` | `oyo` |

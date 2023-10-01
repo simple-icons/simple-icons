@@ -35,7 +35,7 @@ jobs:
       needs.release-pr.outputs.did-create-pr == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ secrets.RELEASE_TOKEN }}
