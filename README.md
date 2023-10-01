@@ -9,24 +9,45 @@ Over 2700 Free SVG icons for popular brands. See them all on one page at <a href
 <a href="https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop"><img src="https://img.shields.io/github/actions/workflow/status/simple-icons/simple-icons/verify.yml?branch=develop&logo=github&label=tests" alt="Build status"/></a>
 <a href="https://www.npmjs.com/package/simple-icons"><img src="https://img.shields.io/npm/v/simple-icons.svg?logo=npm" alt="NPM version"/></a>
 <a href="https://packagist.org/packages/simple-icons/simple-icons"><img src="https://img.shields.io/packagist/v/simple-icons/simple-icons?logo=packagist&logoColor=white" alt="Build status"/></a>
-<br/>
 <a href="https://simpleicons.org"><img src="https://img.shields.io/badge/dynamic/json?color=informational&label=icons&prefix=%20&logo=simpleicons&query=%24.icons.length&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimple-icons%2Fsimple-icons%2Fdevelop%2F_data%2Fsimple-icons.json" alt="Number of icons currently in the library"/></a>
 <a href="https://discord.gg/vUXFa7t5xJ"><img src="https://img.shields.io/discord/1142044630909726760?logo=discord&logoColor=white&label=discord" alt="Number of users active in our Discord server" /></a>
 <a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
-## Usage
+# Overview
+
+Welcome to Simple Icons, a collection of over 2700 free SVG icons representing popular brands. Whether you're designing a website, creating presentations, or working on a project, Simple Icons provides a diverse set of icons to enhance your visual content.
+
+# Legal Disclaimer
 
 > **Note**\
 > We ask that all users read our [legal disclaimer](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md) before using icons from Simple Icons.
 
-### General Usage
+# Table of Contents
+
+- [Overview](#overview)
+- [Legal Disclaimer](#legal-disclaimer)
+- [Installation](#installation)
+  - [General Integration](#general-Integration)
+  - [CDN Integration](#cdn-Integration)
+    - [CDN with colors](#cdn-with-colors)
+  - [Node Integration](#node-Integration)
+  - [TypeScript Integration](#typescript-Integration)
+  - [PHP Intergration](#php-Integration)
+- [Third-Party Extensions](#third-party-extensions)
+- [Contribution](#contribute)
+
+# Installation
+
+Getting started with Simple Icons is easy. Choose the method that fits your workflow:
+
+## General Integration
 
 Icons can be downloaded as SVGs directly from [our website](https://simpleicons.org/) - simply click the download button of the icon you want, and the download will start automatically.
 
-### CDN Usage
+## CDN Integration
 
-Icons can be served from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+Simplify icon integration with our CDN options, such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Utilize the `simple-icons` npm package and specify a version in the URL.
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/[ICON SLUG].svg" />
@@ -42,7 +63,7 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-#### CDN with colors
+### CDN with colors
 
 We also provide a CDN service which allows you to use colors.
 
@@ -66,9 +87,9 @@ Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://dev
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/_/eee" />
 ```
 
-### Node Usage <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
+## Node Integration <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
 
-The icons are also available through our npm package. To install, simply run:
+For Node.js projects, seamlessly include icons by installing the Simple Icons npm package. To install, simply run:
 
 ```shell
 npm install simple-icons
@@ -117,7 +138,7 @@ If you need to iterate over all icons, use:
 import * as icons from 'simple-icons';
 ```
 
-#### TypeScript Usage <img src="https://cdn.simpleicons.org/typescript/000/fff" alt="Typescript" align=left width=19 height=19>
+## TypeScript Integration <img src="https://cdn.simpleicons.org/typescript/000/fff" alt="Typescript" align=left width=19 height=19>
 
 Type definitions are bundled with the package.
 
@@ -125,9 +146,9 @@ Type definitions are bundled with the package.
 import type { SimpleIcon } from 'simple-icons';
 ```
 
-### PHP Usage <img src="https://cdn.simpleicons.org/php/000/fff" alt="Php" align=left width=24 height=24>
+## PHP Integration <img src="https://cdn.simpleicons.org/php/000/fff" alt="Php" align=left width=24 height=24>
 
-The icons are also available through our Packagist package. To install, simply run:
+In PHP projects, leverage the Simple Icons Packagist package. To install, simply run:
 
 ```shell
 composer require simple-icons/simple-icons
@@ -147,7 +168,11 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 ?>
 ```
 
-## Third-Party Extensions
+Choose the method that aligns with your development environment, and start enhancing your projects with beautiful icons.
+
+# Third-Party Extensions
+
+Enhance your workflow with third-party extensions:
 
 | Extension | Author |
 | :-- | :-- |
@@ -178,10 +203,10 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) |
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="Wordpress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) |
 
-## Contribute
+# Contribute
 
 [![Good first issues open](https://img.shields.io/github/issues/simple-icons/simple-icons/good%20first%20issue?label=good%20first%20issues&logo=git&logoColor=white)](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue)
 
-Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
+We welcome contributions! Check out our good first issues to get started. Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
 [slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
