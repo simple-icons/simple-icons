@@ -35,16 +35,16 @@ jobs:
       needs.release-pr.outputs.did-create-pr == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ secrets.RELEASE_TOKEN }}
           # Ensure we are checked out on the develop branch
           ref: develop
-      - name: Use Node.js 16.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
