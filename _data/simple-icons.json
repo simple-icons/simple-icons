@@ -9443,7 +9443,12 @@
         {
             "title": "OpenText",
             "hex": "000000",
-            "source": "https://www.opentext.com"
+            "source": "https://www.opentext.com",
+            "aliases": {
+                "aka": [
+                    "Micro Focus"
+                ]
+            }
         },
         {
             "title": "OpenTF",
