@@ -680,7 +680,7 @@
         "pattern": "^https://github\\.com/(?!(features/actions)|(sponsors)|(logos)$)"
       },
       "then": {
-        "pattern": "^https://github\\.com/[^/]+/[^/]+/(blob/[a-f\\d]{40}/[^\\s]+)|(tree/[a-f\\d]{40}(/[^\\s]+)?)|(((issues)|(pull))/\\d+#issuecomment-\\d+)$"
+        "pattern": "^https://github\\.com/[^/]+/[^/]+/(blob/[a-f\\d]{40}/[^\\s]+)|(tree/[a-f\\d]{40}(/[^\\s]+)?)|(((issues)|(pull)|(discussions))/\\d+#(issuecomment|discussioncomment)-\\d+)$"
       },
       "else": {
         "$ref": "#/definitions/url"
