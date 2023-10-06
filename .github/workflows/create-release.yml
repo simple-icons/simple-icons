@@ -23,7 +23,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: LitoMore/simple-icons-release-action@9969e1266c9e470fe015dbd825a2897423e9270e
+      - uses: LitoMore/simple-icons-release-action@b14cfca88575c04ea2a90ef282ca16d275cb2715
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,16 +35,16 @@ jobs:
       needs.release-pr.outputs.did-create-pr == 'true'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ secrets.RELEASE_TOKEN }}
           # Ensure we are checked out on the develop branch
           ref: develop
-      - name: Use Node.js 16.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
