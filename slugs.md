@@ -212,6 +212,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aqua` | `aqua` |
 | `ARAL` | `aral` |
 | `ArangoDB` | `arangodb` |
+| `Arc` | `arc` |
 | `ArcGIS` | `arcgis` |
 | `Arch Linux` | `archlinux` |
 | `Archicad` | `archicad` |
@@ -499,6 +500,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CodeFactor` | `codefactor` |
 | `Codeforces` | `codeforces` |
 | `CodeIgniter` | `codeigniter` |
+| `Codeium` | `codeium` |
 | `Codemagic` | `codemagic` |
 | `CodeMirror` | `codemirror` |
 | `CodeNewbie` | `codenewbie` |
@@ -653,6 +655,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Disroot` | `disroot` |
 | `Distrokid` | `distrokid` |
 | `Django` | `django` |
+| `DJI` | `dji` |
 | `Dlib` | `dlib` |
 | `DLNA` | `dlna` |
 | `dm` | `dm` |
@@ -1593,6 +1596,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nextcloud` | `nextcloud` |
 | `Nextdoor` | `nextdoor` |
 | `Nextra` | `nextra` |
+| `NextUI` | `nextui` |
 | `NFC` | `nfc` |
 | `NGINX` | `nginx` |
 | `Nginx Proxy Manager` | `nginxproxymanager` |
@@ -1616,6 +1620,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Norco` | `norco` |
 | `NordVPN` | `nordvpn` |
 | `Normalize.css` | `normalizedotcss` |
+| `Norton` | `norton` |
 | `Norwegian` | `norwegian` |
 | `Notepad++` | `notepadplusplus` |
 | `Notion` | `notion` |
@@ -1688,6 +1693,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenStreetMap` | `openstreetmap` |
 | `openSUSE` | `opensuse` |
 | `OpenTelemetry` | `opentelemetry` |
+| `OpenText` | `opentext` |
 | `OpenTF` | `opentf` |
 | `Openverse` | `openverse` |
 | `OpenVPN` | `openvpn` |
@@ -2290,6 +2296,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stryker` | `stryker` |
 | `StubHub` | `stubhub` |
 | `Studio 3T` | `studio3t` |
+| `Studyverse` | `studyverse` |
 | `styled-components` | `styledcomponents` |
 | `stylelint` | `stylelint` |
 | `StyleShare` | `styleshare` |
@@ -2461,6 +2468,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Turborepo` | `turborepo` |
 | `TurboSquid` | `turbosquid` |
 | `Turkish Airlines` | `turkishairlines` |
+| `Turso` | `turso` |
 | `Tutanota` | `tutanota` |
 | `TV Time` | `tvtime` |
 | `Twilio` | `twilio` |
@@ -2563,6 +2571,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `VLC media player` | `vlcmediaplayer` |
 | `VMware` | `vmware` |
 | `Vodafone` | `vodafone` |
+| `Void Linux` | `voidlinux` |
 | `VoIP.ms` | `voipdotms` |
 | `Volkswagen` | `volkswagen` |
 | `Volvo` | `volvo` |
