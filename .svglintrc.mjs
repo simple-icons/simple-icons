@@ -382,6 +382,13 @@ export default {
         const width = +(maxX - minX).toFixed(iconFloatPrecision);
         const height = +(maxY - minY).toFixed(iconFloatPrecision);
 
+        const widthDifference = parseFloat(
+          Math.abs(width - iconSize).toFixed(iconFloatPrecision),
+        );
+        const heightDifference = parseFloat(
+          Math.abs(height - iconSize).toFixed(iconFloatPrecision),
+        );
+
         if (width === 0 && height === 0) {
           reporter.error(
             'Path bounds were reported as 0 x 0; check if the path is valid',
@@ -389,7 +396,10 @@ export default {
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
           }
-        } else if (width !== iconSize && height !== iconSize) {
+        } else if (
+          !(heightDifference <= iconTolerance) &&
+          !(widthDifference <= iconTolerance)
+        ) {
           reporter.error(
             `Size of <path> must be exactly ${iconSize} in one dimension;` +
               ` the size is currently ${width} x ${height}`,
