@@ -5734,7 +5734,8 @@
         {
             "title": "Hack Club",
             "hex": "EC3750",
-            "source": "https://hackclub.com/brand"
+            "source": "https://hackclub.com/brand",
+            "guidelines": "https://hackclub.com/brand"
         },
         {
             "title": "Hack The Box",
@@ -5760,7 +5761,8 @@
         {
             "title": "HackerOne",
             "hex": "494649",
-            "source": "https://www.hackerone.com/branding"
+            "source": "https://www.hackerone.com/branding",
+            "guidelines": "https://www.hackerone.com/branding/pages#logo_usage"
         },
         {
             "title": "HackerRank",
@@ -5782,7 +5784,7 @@
         {
             "title": "Handlebars.js",
             "hex": "000000",
-            "source": "https://raw.githubusercontent.com/handlebars-lang/docs/master/src/.vuepress/public/icons/handlebarsjs-icon.svg"
+            "source": "https://github.com/handlebars-lang/docs/blob/13a2e2d9e31ebff4295924ea366abf3062e47ede/src/.vuepress/public/icons/handlebarsjs-icon.svg"
         },
         {
             "title": "Handshake",
@@ -5929,8 +5931,8 @@
         {
             "title": "Heroku",
             "hex": "430098",
-            "source": "https://brand.heroku.com",
-            "guidelines": "https://brand.heroku.com"
+            "source": "https://devcenter.heroku.com/articles/heroku-brand-guidelines#logos",
+            "guidelines": "https://devcenter.heroku.com/articles/heroku-brand-guidelines"
         },
         {
             "title": "Hetzner",
@@ -5991,7 +5993,7 @@
             "title": "Hive",
             "slug": "hive_blockchain",
             "hex": "E31337",
-            "source": "https://hive.io/brand/"
+            "source": "https://hive.io/brand"
         },
         {
             "title": "Home Assistant",
@@ -9082,6 +9084,11 @@
             "source": "https://github.com/necolas/normalize.css/blob/3a60304f90870c6087d226f53e02a7523c907a35/logo.svg"
         },
         {
+            "title": "Norton",
+            "hex": "FFE01A",
+            "source": "https://us.norton.com"
+        },
+        {
             "title": "Norwegian",
             "hex": "D81939",
             "source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
@@ -9483,6 +9490,16 @@
             "aliases": {
                 "aka": [
                     "OTel"
+                ]
+            }
+        },
+        {
+            "title": "OpenText",
+            "hex": "000000",
+            "source": "https://www.opentext.com",
+            "aliases": {
+                "aka": [
+                    "Micro Focus"
                 ]
             }
         },
@@ -15091,8 +15108,9 @@
         },
         {
             "title": "Yoast",
-            "hex": "A4286A",
-            "source": "https://yoast.com/media/logo/"
+            "hex": "A61E69",
+            "source": "https://yoast.com/brand",
+            "guidelines": "https://yoast.com/brand"
         },
         {
             "title": "YOLO",
