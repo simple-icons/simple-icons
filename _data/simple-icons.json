@@ -4312,8 +4312,9 @@
         },
         {
             "title": "Facebook",
-            "hex": "1877F2",
-            "source": "https://en.facebookbrand.com"
+            "hex": "0866FF",
+            "source": "https://about.meta.com/brand/resources/facebookapp/logo",
+            "guidelines": "https://about.meta.com/brand/resources/facebookapp/logo"
         },
         {
             "title": "Facebook Gaming",
@@ -15082,6 +15083,12 @@
                 "type": "custom",
                 "url": "https://aka.ms/fluentui-assets-license"
             }
+        },
+        {
+            "title": "Yandex Cloud",
+            "hex": "5282FF",
+            "source": "https://cloud.yandex.com/en/brandbook",
+            "guidelines": "https://cloud.yandex.com/en/brandbook"
         },
         {
             "title": "Yarn",
