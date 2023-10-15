@@ -33,6 +33,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ACM` | `acm` |
 | `ActiGraph` | `actigraph` |
 | `Activision` | `activision` |
+| `ActivityPub` | `activitypub` |
 | `Acura` | `acura` |
 | `Adafruit` | `adafruit` |
 | `AdBlock` | `adblock` |
@@ -310,6 +311,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bentley` | `bentley` |
 | `Bento` | `bento` |
 | `BentoML` | `bentoml` |
+| `BeReal` | `bereal` |
 | `Betfair` | `betfair` |
 | `Big Cartel` | `bigcartel` |
 | `bigbasket` | `bigbasket` |
@@ -2701,6 +2703,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yamaha Motor Corporation` | `yamahamotorcorporation` |
 | `YAML` | `yaml` |
 | `Yammer` | `yammer` |
+| `Yandex Cloud` | `yandexcloud` |
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yeti` | `yeti` |

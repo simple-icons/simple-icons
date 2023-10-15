@@ -138,6 +138,14 @@
             "source": "https://www.activision.com"
         },
         {
+            "title": "ActivityPub",
+            "hex": "F1007E",
+            "source": "https://activitypub.rocks",
+            "license": {
+                "type": "CC0-1.0"
+            }
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -1806,6 +1814,11 @@
             "title": "BentoML",
             "hex": "000000",
             "source": "https://github.com/bentoml/BentoML/blob/2169ebe9bc74e3d89ceba5dda8f8e1b85f08efa5/docs/source/_static/img/logo-light.svg"
+        },
+        {
+            "title": "BeReal",
+            "hex": "000000",
+            "source": "https://bereal.com"
         },
         {
             "title": "Betfair",
@@ -4312,8 +4325,9 @@
         },
         {
             "title": "Facebook",
-            "hex": "1877F2",
-            "source": "https://en.facebookbrand.com"
+            "hex": "0866FF",
+            "source": "https://about.meta.com/brand/resources/facebookapp/logo",
+            "guidelines": "https://about.meta.com/brand/resources/facebookapp/logo"
         },
         {
             "title": "Facebook Gaming",
@@ -15077,6 +15091,12 @@
                 "type": "custom",
                 "url": "https://aka.ms/fluentui-assets-license"
             }
+        },
+        {
+            "title": "Yandex Cloud",
+            "hex": "5282FF",
+            "source": "https://cloud.yandex.com/en/brandbook",
+            "guidelines": "https://cloud.yandex.com/en/brandbook"
         },
         {
             "title": "Yarn",
