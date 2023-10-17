@@ -2,6 +2,7 @@
 # See the following thread for the discussion:
 #   https://github.com/simple-icons/simple-icons-font/pull/73
 *.md
+!.github/PULL_REQUEST_TEMPLATE.md
 
 # We use our own formatting for the data files.
 _data/simple-icons.json
@@ -11,6 +12,6 @@ scripts/build/templates/*.js
 
 # Generated JavaScript files don't need to be formatted
 index.js
-icons.js
-icons.mjs
-icons.d.ts
+index.mjs
+index.d.ts
+sdk.js
