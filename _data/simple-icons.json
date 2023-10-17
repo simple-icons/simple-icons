@@ -9962,7 +9962,10 @@
         {
             "title": "Phosphor Icons",
             "hex": "3C402B",
-            "source": "https://phosphoricons.com"
+            "source": "https://phosphoricons.com",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Photobucket",
