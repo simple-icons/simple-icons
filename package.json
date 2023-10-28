@@ -13,11 +13,11 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./index.d.mts",
+        "types": "./index.d.ts",
         "default": "./index.mjs"
       },
       "module": {
-        "types": "./index.d.mts",
+        "types": "./index.d.ts",
         "default": "./index.mjs"
       },
       "require": {
@@ -31,11 +31,11 @@
     },
     "./icons": {
       "import": {
-        "types": "./index.d.mts",
+        "types": "./index.d.ts",
         "default": "./index.mjs"
       },
       "module": {
-        "types": "./index.d.mts",
+        "types": "./index.d.ts",
         "default": "./index.mjs"
       },
       "require": {
@@ -108,7 +108,7 @@
   },
   "scripts": {
     "build": "node scripts/build/package.js",
-    "clean": "rimraf index.js index.mjs index.d.ts index.d.mts sdk.js",
+    "clean": "rimraf index.js index.mjs index.d.ts sdk.js",
     "format": "prettier --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",

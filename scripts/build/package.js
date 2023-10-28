@@ -28,7 +28,6 @@ const indexMjsFile = path.resolve(rootDir, 'index.mjs');
 const sdkJsFile = path.resolve(rootDir, 'sdk.js');
 const sdkMjsFile = path.resolve(rootDir, 'sdk.mjs');
 const indexDtsFile = path.resolve(rootDir, 'index.d.ts');
-const indexDmtsFile = path.resolve(rootDir, 'index.d.mts');
 
 const templatesDir = path.resolve(__dirname, 'templates');
 const iconObjectTemplateFile = path.resolve(templatesDir, 'icon-object.js');
@@ -116,7 +115,6 @@ const build = async () => {
     '',
   )}`;
   await writeTs(indexDtsFile, rawIndexDts);
-  await writeTs(indexDmtsFile, rawIndexDts);
 
   // create a CommonJS SDK file
   await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
