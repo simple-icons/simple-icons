@@ -48,11 +48,8 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Get release version
-        id: get-version
-        run: |
-          export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
-          echo "version=$PACKAGE_VERSION" >> $GITHUB_OUTPUT
+      - id: get-version
+        uses: ./.github/workflows/get-version.yml
       - name: Install dependencies
         run: npm i
       - name: Replace CDN theme image links from README
@@ -75,11 +72,8 @@ jobs:
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v2
-      - name: Get release version
-        id: get-version
-        run: |
-          export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
-          echo "version=$PACKAGE_VERSION" >> $GITHUB_OUTPUT
+      - id: get-version
+        uses: ./.github/workflows/get-version.yml
       - name: Replace CDN theme image links from README
         run: node ./scripts/release/strip-theme-links.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
