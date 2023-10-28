@@ -12,16 +12,40 @@
   "types": "index.d.ts",
   "exports": {
     ".": {
-      "module": "./index.mjs",
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "default": "./index.js"
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "module": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
     },
     "./icons": {
-      "module": "./index.mjs",
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "default": "./index.js"
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "module": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
     },
     "./icons/*": [
       "./icons/*"
