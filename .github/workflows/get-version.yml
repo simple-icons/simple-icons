@@ -15,7 +15,7 @@ jobs:
     outputs:
       version: ${{ steps.get-version.outputs.version }}
     steps:
-      - name: Get version
+      - name: Get version from package.json
         id: get-version
         run: |
           version="$(grep version -m 1 -i package.json | sed 's/[ \",:version]//g')"
