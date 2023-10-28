@@ -123,8 +123,7 @@
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
     "get-filename": "node scripts/get-filename.js",
-    "add-icon-data": "node scripts/add-icon-data.js",
-    "strip-theme-link": "node scripts/build/strip-theme-link.js"
+    "add-icon-data": "node scripts/add-icon-data.js"
   },
   "engines": {
     "node": ">=0.12.18"
