@@ -7,6 +7,8 @@ import path from 'node:path';
 import { writeFile, readFile } from 'node:fs/promises';
 import { getDirnameFromImportMeta } from '../../sdk.mjs';
 
+const LINK_BRANCH = process.argv[2] || 'develop';
+
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 const rootDir = path.resolve(__dirname, '..', '..');
@@ -17,6 +19,6 @@ await writeFile(
   readmeFile,
   readme.replace(
     /https:\/\/cdn.simpleicons.org\/(.+)\/000\/fff/g,
-    'https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/$1.svg',
+    `https://raw.githubusercontent.com/simple-icons/simple-icons/${LINK_BRANCH}/icons/$1.svg`,
   ),
 );
