@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "9.18.0",
+  "version": "9.19.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -12,16 +12,40 @@
   "types": "index.d.ts",
   "exports": {
     ".": {
-      "module": "./index.mjs",
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "default": "./index.js"
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "module": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
     },
     "./icons": {
-      "module": "./index.mjs",
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "default": "./index.js"
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "module": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
     },
     "./icons/*": [
       "./icons/*"
@@ -99,8 +123,7 @@
     "pretest": "npm run prepublishOnly",
     "posttest": "npm run postpublish",
     "get-filename": "node scripts/get-filename.js",
-    "add-icon-data": "node scripts/add-icon-data.js",
-    "strip-theme-link": "node scripts/build/strip-theme-link.js"
+    "add-icon-data": "node scripts/add-icon-data.js"
   },
   "engines": {
     "node": ">=0.12.18"
