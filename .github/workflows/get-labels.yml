@@ -1,0 +1,27 @@
+# Get the current labels of an issue or pull request through the GitHub API
+name: Get issue/pull request labels
+
+on:
+  workflow_call:
+    inputs:
+      issue_number:
+        description: Issue or pull request number to get labels from
+        required: true
+        type: number
+    outputs:
+      labels:
+        description: Labels of the issue or pull request
+        value: ${{ jobs.get-labels.outputs.labels }}
+
+jobs:
+  get-labels:
+    name: Get labels
+    runs-on: ubuntu-latest
+    outputs:
+      labels: ${{ steps.get-labels.outputs.labels }}
+    steps:
+      - id: get-labels
+        name: Get labels using GitHub API
+        run: |
+          labels="$(gh api 'repos/simple-icons/simple-icons/issues/${{ inputs.issue_number }}' --jq '.labels.[].name')"
+          echo "labels=$labels" >> $GITHUB_OUTPUT
