@@ -6066,8 +6066,8 @@
         },
         {
             "title": "Hoppscotch",
-            "hex": "31C48D",
-            "source": "https://github.com/hoppscotch/hoppscotch/blob/77862cdf9bd902a4ea64bd8b2301ed2206820649/static/images/ufo_logo.svg"
+            "hex": "10B981",
+            "source": "https://github.com/hoppscotch/hoppscotch/blob/65884293be0f1124c3db0c3fe985fe78b307d787/packages/hoppscotch-common/public/logo.svg"
         },
         {
             "title": "Hotels.com",
@@ -6167,7 +6167,7 @@
         {
             "title": "Husqvarna",
             "hex": "273A60",
-            "source": "https://www.husqvarna.com/uk/catalogues/"
+            "source": "https://www.husqvarna.com"
         },
         {
             "title": "Hyper",
@@ -6646,6 +6646,12 @@
             "license": {
                 "type": "CC-BY-2.5"
             }
+        },
+        {
+            "title": "Jaeger",
+            "hex": "66CFE3",
+            "source": "https://github.com/cncf/artwork/blob/e7e09686c20db6ddac06e482cf3338b0c8b2e22d/projects/jaeger/icon/black/jaeger-icon-black.svg",
+            "guidelines": "https://github.com/cncf/artwork/blob/e7e09686c20db6ddac06e482cf3338b0c8b2e22d/projects/jaeger/jaeger-logo-guide.pdf"
         },
         {
             "title": "Jaguar",
@@ -12154,8 +12160,8 @@
         },
         {
             "title": "ŠKODA",
-            "hex": "4BA82E",
-            "source": "https://en.wikipedia.org/wiki/File:Skoda_Auto_logo_(2011).svg"
+            "hex": "0E3A2F",
+            "source": "https://www.skoda.co.uk"
         },
         {
             "title": "Sky",
@@ -12608,6 +12614,14 @@
             "title": "Spyder IDE",
             "hex": "FF0000",
             "source": "https://www.spyder-ide.org"
+        },
+        {
+            "title": "SQLAlchemy",
+            "hex": "D71F00",
+            "source": "https://github.com/sqlalchemy/sqlalchemy/discussions/7672#discussioncomment-2157650",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "SQLite",
@@ -14979,7 +14993,8 @@
         {
             "title": "X",
             "hex": "000000",
-            "source": "https://twitter.com",
+            "source": "https://x.com",
+            "guidelines": "https://about.x.com/en/who-we-are/brand-toolkit",
             "aliases": {
                 "aka": [
                     "Twitter"
