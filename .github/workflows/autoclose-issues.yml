@@ -8,6 +8,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - id: match-title
         name: Match title
         # if the title contains the word Java (case insensitive)
@@ -19,7 +20,7 @@ jobs:
           fi
 
       - id: get-labels
-        uses: ./.github/workflows/get-labels.yml
+        uses: ./.github/workflows/get-labels.yml@develop
         with:
           issue_number: ${{ github.event.issue.number }}
 
