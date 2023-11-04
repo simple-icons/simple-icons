@@ -1,12 +1,12 @@
 name: Add Pull Request Labels and Assign to Project
 on:
   pull_request_target:
-    types: [opened, closed]
+    types: [opened, reopened, closed]
 
 jobs:
   triage:
     runs-on: ubuntu-latest
-    if: github.event.action == 'opened'
+    if: github.event.action == 'opened' || github.event.action == 'reopened'
     steps:
       - uses: ericcornelissen/labeler@label-based-on-status
         with:
@@ -15,13 +15,14 @@ jobs:
   assign-to-project:
     runs-on: ubuntu-latest
     name: Assign to Project
-    if: github.event.action == 'opened'
+    if: github.event.action == 'opened' || github.event.action == 'reopened'
     needs: triage
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - id: get-labels
-        uses: ./.github/workflows/get-labels.yml
+        uses: ./.github/workflows/get-labels.yml@develop
         with:
           issue_number: ${{ github.event.pull_request.number }}
 

@@ -49,7 +49,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - id: get-version
-        uses: ./.github/workflows/get-version.yml
+        uses: ./.github/workflows/get-version.yml@develop
       - name: Install dependencies
         run: npm i
       - name: Replace CDN theme image links from README
@@ -73,7 +73,7 @@ jobs:
         id: commit
         uses: kceb/git-message-action@v2
       - id: get-version
-        uses: ./.github/workflows/get-version.yml
+        uses: ./.github/workflows/get-version.yml@develop
       - name: Replace CDN theme image links from README
         run: node ./scripts/release/strip-theme-links.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
