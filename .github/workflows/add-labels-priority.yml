@@ -20,6 +20,7 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - uses: actions/checkout@v4
       - id: get-labels
         uses: ./.github/workflows/get-labels.yml
         with:
