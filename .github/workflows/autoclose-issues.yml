@@ -19,7 +19,7 @@ jobs:
           fi
 
       - id: get-labels
-        uses: ./.github/workflows/get-labels.yml
+        uses: ./.github/actions/get-labels
         with:
           issue_number: ${{ github.event.issue.number }}
 
