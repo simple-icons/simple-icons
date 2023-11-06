@@ -20,6 +20,9 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - id: get-labels
         uses: ./.github/actions/get-labels
         with:
