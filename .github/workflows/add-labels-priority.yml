@@ -27,6 +27,8 @@ jobs:
         uses: ./.github/actions/get-labels
         with:
           issue_number: ${{ github.event.pull_request.number }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: get-si-members
         name: Get simple-icons members
