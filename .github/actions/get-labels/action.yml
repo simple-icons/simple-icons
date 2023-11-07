@@ -12,8 +12,8 @@ outputs:
 
 runs:
   using: composite
-    env:
-      GH_TOKEN: ${{ github.token }}
+  env:
+    GH_TOKEN: ${{ github.token }}
   steps:
     - id: get-labels
       shell: sh
