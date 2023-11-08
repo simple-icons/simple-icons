@@ -138,6 +138,14 @@
             "source": "https://www.activision.com"
         },
         {
+            "title": "ActivityPub",
+            "hex": "F1007E",
+            "source": "https://activitypub.rocks",
+            "license": {
+                "type": "CC0-1.0"
+            }
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -889,9 +897,9 @@
         },
         {
             "title": "Angular",
-            "hex": "DD0031",
-            "source": "https://angular.io",
-            "guidelines": "https://angular.io/presskit",
+            "hex": "0F0F11",
+            "source": "https://angular.dev/press-kit",
+            "guidelines": "https://angular.dev/press-kit",
             "license": {
                 "type": "CC-BY-4.0"
             }
@@ -1814,6 +1822,11 @@
             "title": "BentoML",
             "hex": "000000",
             "source": "https://github.com/bentoml/BentoML/blob/2169ebe9bc74e3d89ceba5dda8f8e1b85f08efa5/docs/source/_static/img/logo-light.svg"
+        },
+        {
+            "title": "BeReal",
+            "hex": "000000",
+            "source": "https://bereal.com"
         },
         {
             "title": "Betfair",
@@ -4320,8 +4333,9 @@
         },
         {
             "title": "Facebook",
-            "hex": "1877F2",
-            "source": "https://en.facebookbrand.com"
+            "hex": "0866FF",
+            "source": "https://about.meta.com/brand/resources/facebookapp/logo",
+            "guidelines": "https://about.meta.com/brand/resources/facebookapp/logo"
         },
         {
             "title": "Facebook Gaming",
@@ -5976,8 +5990,9 @@
         },
         {
             "title": "Hilton",
-            "hex": "124D97",
-            "source": "https://newsroom.hilton.com/hhr/page/logos"
+            "hex": "231F20",
+            "source": "https://www.hilton.com",
+            "guidelines": "https://stories.hilton.com/media-kit-hilton-corporate"
         },
         {
             "title": "Hitachi",
@@ -6050,13 +6065,13 @@
         },
         {
             "title": "Hoppscotch",
-            "hex": "31C48D",
-            "source": "https://github.com/hoppscotch/hoppscotch/blob/77862cdf9bd902a4ea64bd8b2301ed2206820649/static/images/ufo_logo.svg"
+            "hex": "10B981",
+            "source": "https://github.com/hoppscotch/hoppscotch/blob/65884293be0f1124c3db0c3fe985fe78b307d787/packages/hoppscotch-common/public/logo.svg"
         },
         {
             "title": "Hotels.com",
-            "hex": "D32F2F",
-            "source": "https://en.wikipedia.org/wiki/File:Hotels.com_logo.svg"
+            "hex": "EF3346",
+            "source": "https://www.hotels.com"
         },
         {
             "title": "Hotjar",
@@ -6082,7 +6097,8 @@
         {
             "title": "HP",
             "hex": "0096D6",
-            "source": "https://brandcentral.ext.hp.com/login"
+            "source": "https://brandcentral.hp.com/us/en/elements/hp-logo.html",
+            "guidelines": "https://brandcentral.hp.com/us/en/elements/hp-logo.html"
         },
         {
             "title": "HSBC",
@@ -6151,7 +6167,7 @@
         {
             "title": "Husqvarna",
             "hex": "273A60",
-            "source": "https://www.husqvarna.com/uk/catalogues/"
+            "source": "https://www.husqvarna.com"
         },
         {
             "title": "Hyper",
@@ -6632,6 +6648,12 @@
             }
         },
         {
+            "title": "Jaeger",
+            "hex": "66CFE3",
+            "source": "https://github.com/cncf/artwork/blob/e7e09686c20db6ddac06e482cf3338b0c8b2e22d/projects/jaeger/icon/black/jaeger-icon-black.svg",
+            "guidelines": "https://github.com/cncf/artwork/blob/e7e09686c20db6ddac06e482cf3338b0c8b2e22d/projects/jaeger/jaeger-logo-guide.pdf"
+        },
+        {
             "title": "Jaguar",
             "hex": "000000",
             "source": "https://media.jaguar.com/en/press-kit"
@@ -6678,8 +6700,7 @@
         {
             "title": "Jeep",
             "hex": "000000",
-            "source": "https://www.fcaci.com/x/JEEPv15",
-            "guidelines": "https://www.fcaci.com/x/JEEPv15"
+            "source": "https://commons.wikimedia.org/wiki/File:Jeep_logo.svg"
         },
         {
             "title": "Jekyll",
@@ -6738,9 +6759,9 @@
         },
         {
             "title": "JFrog",
-            "hex": "41BF47",
-            "source": "https://jfrog.com/brand-guidelines/",
-            "guidelines": "https://jfrog.com/brand-guidelines/"
+            "hex": "40BE46",
+            "source": "https://jfrog.com/brand-guidelines",
+            "guidelines": "https://jfrog.com/brand-guidelines"
         },
         {
             "title": "JFrog Bintray",
@@ -6818,7 +6839,7 @@
         },
         {
             "title": "JR Group",
-            "hex": "000000",
+            "hex": "44AF35",
             "source": "https://www.jrhokkaido.co.jp"
         },
         {
@@ -6875,7 +6896,7 @@
         {
             "title": "JUnit5",
             "hex": "25A162",
-            "source": "https://raw.githubusercontent.com/junit-team/junit5/86465f4f491219ad0c0cf9c64eddca7b0edeb86f/assets/img/junit5-logo.svg"
+            "source": "https://github.com/junit-team/junit5/blob/86465f4f491219ad0c0cf9c64eddca7b0edeb86f/assets/img/junit5-logo.svg"
         },
         {
             "title": "Jupyter",
@@ -8696,6 +8717,12 @@
             "guidelines": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/LICENSE"
         },
         {
+            "title": "Mural",
+            "hex": "FF4B4B",
+            "source": "https://www.mural.co/brand-assets",
+            "guidelines": "https://www.mural.co/brand-assets"
+        },
+        {
             "title": "MuseScore",
             "hex": "1A70B8",
             "source": "https://musescore.org/en/about/logos-and-graphics"
@@ -9082,6 +9109,11 @@
             "title": "Normalize.css",
             "hex": "E3695F",
             "source": "https://github.com/necolas/normalize.css/blob/3a60304f90870c6087d226f53e02a7523c907a35/logo.svg"
+        },
+        {
+            "title": "Norton",
+            "hex": "FFE01A",
+            "source": "https://us.norton.com"
         },
         {
             "title": "Norwegian",
@@ -9485,6 +9517,16 @@
             "aliases": {
                 "aka": [
                     "OTel"
+                ]
+            }
+        },
+        {
+            "title": "OpenText",
+            "hex": "000000",
+            "source": "https://www.opentext.com",
+            "aliases": {
+                "aka": [
+                    "Micro Focus"
                 ]
             }
         },
@@ -12113,8 +12155,8 @@
         },
         {
             "title": "ŠKODA",
-            "hex": "4BA82E",
-            "source": "https://en.wikipedia.org/wiki/File:Skoda_Auto_logo_(2011).svg"
+            "hex": "0E3A2F",
+            "source": "https://www.skoda.co.uk"
         },
         {
             "title": "Sky",
@@ -12567,6 +12609,14 @@
             "title": "Spyder IDE",
             "hex": "FF0000",
             "source": "https://www.spyder-ide.org"
+        },
+        {
+            "title": "SQLAlchemy",
+            "hex": "D71F00",
+            "source": "https://github.com/sqlalchemy/sqlalchemy/discussions/7672#discussioncomment-2157650",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "SQLite",
@@ -14938,7 +14988,8 @@
         {
             "title": "X",
             "hex": "000000",
-            "source": "https://twitter.com",
+            "source": "https://x.com",
+            "guidelines": "https://about.x.com/en/who-we-are/brand-toolkit",
             "aliases": {
                 "aka": [
                     "Twitter"
@@ -15070,6 +15121,12 @@
                 "type": "custom",
                 "url": "https://aka.ms/fluentui-assets-license"
             }
+        },
+        {
+            "title": "Yandex Cloud",
+            "hex": "5282FF",
+            "source": "https://cloud.yandex.com/en/brandbook",
+            "guidelines": "https://cloud.yandex.com/en/brandbook"
         },
         {
             "title": "Yarn",
@@ -15331,6 +15388,11 @@
             "title": "Zotero",
             "hex": "CC2936",
             "source": "https://www.zotero.org/support/brand"
+        },
+        {
+            "title": "Zsh",
+            "hex": "F15A24",
+            "source": "https://github.com/Zsh-art/logo/blob/253927e62bd2a640d29915ad7a794880b787eda8/svg/black_vertical_icon.svg"
         },
         {
             "title": "Zulip",
