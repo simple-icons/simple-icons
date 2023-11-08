@@ -897,9 +897,9 @@
         },
         {
             "title": "Angular",
-            "hex": "DD0031",
-            "source": "https://angular.io",
-            "guidelines": "https://angular.io/presskit",
+            "hex": "0F0F11",
+            "source": "https://angular.dev/press-kit",
+            "guidelines": "https://angular.dev/press-kit",
             "license": {
                 "type": "CC-BY-4.0"
             }
@@ -1054,6 +1054,14 @@
             "hex": "4298B8",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache Guacamole",
+            "hex": "578B34",
+            "source": "https://apache.org/logos",
             "license": {
                 "type": "Apache-2.0"
             }
