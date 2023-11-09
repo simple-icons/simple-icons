@@ -897,9 +897,9 @@
         },
         {
             "title": "Angular",
-            "hex": "DD0031",
-            "source": "https://angular.io",
-            "guidelines": "https://angular.io/presskit",
+            "hex": "0F0F11",
+            "source": "https://angular.dev/press-kit",
+            "guidelines": "https://angular.dev/press-kit",
             "license": {
                 "type": "CC-BY-4.0"
             }
@@ -1054,6 +1054,14 @@
             "hex": "4298B8",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache Guacamole",
+            "hex": "578B34",
+            "source": "https://apache.org/logos",
             "license": {
                 "type": "Apache-2.0"
             }
@@ -1993,8 +2001,9 @@
         },
         {
             "title": "Boehringer Ingelheim",
-            "hex": "003366",
-            "source": "https://cd.boehringer-ingelheim.com"
+            "hex": "00E47C",
+            "source": "https://www.boehringer-ingelheim.com",
+            "guidelines": "https://brand.boehringer-ingelheim.com"
         },
         {
             "title": "Boeing",
@@ -4826,6 +4835,11 @@
             "source": "https://framer.com"
         },
         {
+            "title": "Framework",
+            "hex": "000000",
+            "source": "https://frame.work"
+        },
+        {
             "title": "Framework7",
             "hex": "EE350F",
             "source": "https://github.com/framework7io/framework7-website/blob/2a1e32290c795c2070ffc7019ba7276614e00de0/public/i/logo.svg"
@@ -5982,8 +5996,9 @@
         },
         {
             "title": "Hilton",
-            "hex": "124D97",
-            "source": "https://newsroom.hilton.com/hhr/page/logos"
+            "hex": "231F20",
+            "source": "https://www.hilton.com",
+            "guidelines": "https://stories.hilton.com/media-kit-hilton-corporate"
         },
         {
             "title": "Hitachi",
@@ -6056,8 +6071,8 @@
         },
         {
             "title": "Hoppscotch",
-            "hex": "31C48D",
-            "source": "https://github.com/hoppscotch/hoppscotch/blob/77862cdf9bd902a4ea64bd8b2301ed2206820649/static/images/ufo_logo.svg"
+            "hex": "10B981",
+            "source": "https://github.com/hoppscotch/hoppscotch/blob/65884293be0f1124c3db0c3fe985fe78b307d787/packages/hoppscotch-common/public/logo.svg"
         },
         {
             "title": "Hotels.com",
@@ -6088,7 +6103,8 @@
         {
             "title": "HP",
             "hex": "0096D6",
-            "source": "https://brandcentral.ext.hp.com/login"
+            "source": "https://brandcentral.hp.com/us/en/elements/hp-logo.html",
+            "guidelines": "https://brandcentral.hp.com/us/en/elements/hp-logo.html"
         },
         {
             "title": "HSBC",
