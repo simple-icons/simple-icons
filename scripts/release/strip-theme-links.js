@@ -19,6 +19,6 @@ await writeFile(
   readmeFile,
   readme.replace(
     /https:\/\/cdn.simpleicons.org\/(.+)\/000\/fff/g,
-    `https://raw.githubusercontent.com/simple-icons/simple-icons/${LINKS_BRANCH}/icons/$1.svg`,
-  ),
+    `https://raw.githubusercontent.com/simple-icons/simple-icons/${LINKS_BRANCH}/icons/$1.svg`
+  )
 );
