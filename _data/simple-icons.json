@@ -897,9 +897,9 @@
         },
         {
             "title": "Angular",
-            "hex": "DD0031",
-            "source": "https://angular.io",
-            "guidelines": "https://angular.io/presskit",
+            "hex": "0F0F11",
+            "source": "https://angular.dev/press-kit",
+            "guidelines": "https://angular.dev/press-kit",
             "license": {
                 "type": "CC-BY-4.0"
             }
@@ -1054,6 +1054,14 @@
             "hex": "4298B8",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache Guacamole",
+            "hex": "578B34",
+            "source": "https://apache.org/logos",
             "license": {
                 "type": "Apache-2.0"
             }
@@ -1993,8 +2001,9 @@
         },
         {
             "title": "Boehringer Ingelheim",
-            "hex": "003366",
-            "source": "https://cd.boehringer-ingelheim.com"
+            "hex": "00E47C",
+            "source": "https://www.boehringer-ingelheim.com",
+            "guidelines": "https://brand.boehringer-ingelheim.com"
         },
         {
             "title": "Boeing",
@@ -4824,6 +4833,11 @@
             "title": "Framer",
             "hex": "0055FF",
             "source": "https://framer.com"
+        },
+        {
+            "title": "Framework",
+            "hex": "000000",
+            "source": "https://frame.work"
         },
         {
             "title": "Framework7",
@@ -15171,6 +15185,11 @@
             "title": "YouTube Music",
             "hex": "FF0000",
             "source": "https://partnermarketinghub.withgoogle.com/#/brands"
+        },
+        {
+            "title": "YouTube Shorts",
+            "hex": "FF0000",
+            "source": "https://www.youtube.com/shorts"
         },
         {
             "title": "YouTube Studio",
