@@ -68,17 +68,17 @@ const TESTS = {
       ...new Set(
         data.icons
           .flatMap((icon) => [icon.source, icon.guidelines, icon.license?.url])
-          .filter(Boolean)
+          .filter(Boolean),
       ),
     ];
 
     const invalidUrls = allUrlFields.filter((url) =>
-      hasRedundantTrailingSlash(url)
+      hasRedundantTrailingSlash(url),
     );
 
     if (invalidUrls.length > 0) {
       return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
-        '\n'
+        '\n',
       )}`;
     }
   },

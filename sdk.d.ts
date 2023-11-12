@@ -76,6 +76,6 @@ export function getIconsData(rootDir?: string): IconData[];
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
-  readmePath?: string
+  readmePath?: string,
 ): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
