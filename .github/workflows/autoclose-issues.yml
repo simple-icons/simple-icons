@@ -8,6 +8,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - id: match-title
         name: Match title
         # if the title contains the word Java (case insensitive)
@@ -22,6 +24,8 @@ jobs:
         uses: ./.github/actions/get-labels
         with:
           issue_number: ${{ github.event.issue.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # if the issue is labeled as a 'new icon' and it matches Java, we
       # - add a comment referring to the removal request
