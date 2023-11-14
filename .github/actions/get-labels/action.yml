@@ -16,5 +16,5 @@ runs:
     - id: get-labels
       shell: sh
       run: |
-        labels="$(gh api 'repos/simple-icons/simple-icons/issues/${{ inputs.issue_number }}' --jq '.labels.[].name')"
+        labels="$(gh api 'repos/simple-icons/simple-icons/issues/${{ inputs.issue_number }}' --jq '.labels.[].name' | tr '\n' ',')"
         echo "labels=$labels" >> $GITHUB_OUTPUT
