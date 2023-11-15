@@ -1,3 +1,4 @@
+import process from 'node:process';
 import chalk from 'chalk';
 import { input, confirm, checkbox } from '@inquirer/prompts';
 import getRelativeLuminance from 'get-relative-luminance';
@@ -27,18 +28,20 @@ const titleValidator = (text) => {
 };
 
 const hexValidator = (text) =>
-  hexPattern.test(text) ? true : 'This should be a valid hex code';
+  hexPattern.test(text) || 'This should be a valid hex code';
 
 const sourceValidator = (text) =>
-  URL_REGEX.test(text) ? true : 'This should be a secure URL';
+  URL_REGEX.test(text) || 'This should be a secure URL';
 
 const hexTransformer = (text) => {
   const color = normalizeColor(text);
   const luminance = hexPattern.test(text)
     ? getRelativeLuminance.default(`#${color}`)
     : -1;
-  if (luminance === -1) return text;
-  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(text);
+  if (luminance === -1) return text.toUpperCase();
+  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
+    text.toUpperCase(),
+  );
 };
 
 const aliasesTransformer = (text) =>
@@ -55,7 +58,7 @@ const aliasesChoices = Object.entries(
 
 const getIconDataFromAnswers = (answers) => ({
   title: answers.title,
-  hex: answers.hex,
+  hex: normalizeColor(answers.hex),
   source: answers.source,
   ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
   ...(answers.hasLicense
@@ -93,7 +96,6 @@ answers.title = await input({
 answers.hex = await input({
   message: 'Hex',
   validate: hexValidator,
-  filter: (text) => normalizeColor(text),
   transformer: hexTransformer,
 });
 
