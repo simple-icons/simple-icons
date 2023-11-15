@@ -897,9 +897,9 @@
         },
         {
             "title": "Angular",
-            "hex": "DD0031",
-            "source": "https://angular.io",
-            "guidelines": "https://angular.io/presskit",
+            "hex": "0F0F11",
+            "source": "https://angular.dev/press-kit",
+            "guidelines": "https://angular.dev/press-kit",
             "license": {
                 "type": "CC-BY-4.0"
             }
@@ -1054,6 +1054,14 @@
             "hex": "4298B8",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache Guacamole",
+            "hex": "578B34",
+            "source": "https://apache.org/logos",
             "license": {
                 "type": "Apache-2.0"
             }
@@ -1993,8 +2001,9 @@
         },
         {
             "title": "Boehringer Ingelheim",
-            "hex": "003366",
-            "source": "https://cd.boehringer-ingelheim.com"
+            "hex": "00E47C",
+            "source": "https://www.boehringer-ingelheim.com",
+            "guidelines": "https://brand.boehringer-ingelheim.com"
         },
         {
             "title": "Boeing",
@@ -4350,6 +4359,11 @@
             "source": "https://sbox.facepunch.com/news"
         },
         {
+            "title": "Fairphone",
+            "hex": "4495D1",
+            "source": "https://www.fairphone.com"
+        },
+        {
             "title": "Falco",
             "hex": "00AEC7",
             "source": "https://falco.org/community/falco-brand",
@@ -4824,6 +4838,11 @@
             "title": "Framer",
             "hex": "0055FF",
             "source": "https://framer.com"
+        },
+        {
+            "title": "Framework",
+            "hex": "000000",
+            "source": "https://frame.work"
         },
         {
             "title": "Framework7",
@@ -10120,6 +10139,12 @@
             "source": "https://platform.sh/logos/"
         },
         {
+            "title": "PlatformIO",
+            "hex": "F5822A",
+            "source": "https://piolabs.com",
+            "guidelines": "https://piolabs.com/legal/trademarks.html#use-of-logos"
+        },
+        {
             "title": "Platzi",
             "hex": "98CA3F",
             "source": "https://github.com/PlatziDev/oss/blob/932bd83d43e061e1c38fbc116db31aa6d0145be6/static/logo.svg"
@@ -11722,6 +11747,11 @@
             "slug": "sat1",
             "hex": "047DA3",
             "source": "https://www.prosiebensat1.com/presse/downloads/logos"
+        },
+        {
+            "title": "Satellite",
+            "hex": "000000",
+            "source": "https://www.satellite.me"
         },
         {
             "title": "Saturn",
@@ -13701,6 +13731,11 @@
             "source": "https://upload.wikimedia.org/wikipedia/en/7/7a/Treyarch_logo.svg"
         },
         {
+            "title": "Tricentis",
+            "hex": "12438C",
+            "source": "https://www.tricentis.com"
+        },
+        {
             "title": "Trilium",
             "hex": "000000",
             "source": "https://github.com/zadam/trilium/blob/05d2f4fe96f49c5bc7f3a02a9e47fc352ce5971d/images/icon.svg"
@@ -14625,6 +14660,16 @@
             "source": "https://webdriver.io/docs/api"
         },
         {
+            "title": "Webex",
+            "hex": "FFFFFF",
+            "source": "https://github.com/momentum-design/momentum-ui/blob/970c5bec962a3f72e17e0b7ed69f2c38d298c405/icons-rebrand/svg/webex-helix-filled.svg",
+            "guidelines": "https://resources.webex.com/webex/brand-exchange-collection",
+            "license": {
+                "type": "custom",
+                "url": "https://www.cisco.com/c/en/us/about/legal/trademarks.html"
+            }
+        },
+        {
             "title": "Webflow",
             "hex": "4353FF",
             "source": "https://brand-at.webflow.io/resources#logos",
@@ -14721,6 +14766,11 @@
             "title": "Wellfound",
             "hex": "000000",
             "source": "https://wellfound.com/logo"
+        },
+        {
+            "title": "Wells Fargo",
+            "hex": "D71E28",
+            "source": "https://www.wellsfargo.com/about"
         },
         {
             "title": "WEMO",
@@ -15171,6 +15221,11 @@
             "title": "YouTube Music",
             "hex": "FF0000",
             "source": "https://partnermarketinghub.withgoogle.com/#/brands"
+        },
+        {
+            "title": "YouTube Shorts",
+            "hex": "FF0000",
+            "source": "https://www.youtube.com/shorts"
         },
         {
             "title": "YouTube Studio",

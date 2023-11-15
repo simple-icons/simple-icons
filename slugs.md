@@ -178,6 +178,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache ECharts` | `apacheecharts` |
 | `Apache Flink` | `apacheflink` |
 | `Apache Groovy` | `apachegroovy` |
+| `Apache Guacamole` | `apacheguacamole` |
 | `Apache Hadoop` | `apachehadoop` |
 | `Apache Hive` | `apachehive` |
 | `Apache JMeter` | `apachejmeter` |
@@ -870,6 +871,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
+| `Framework` | `framework` |
 | `Framework7` | `framework7` |
 | `Franprix` | `franprix` |
 | `Fraunhofer-Gesellschaft` | `fraunhofergesellschaft` |
@@ -2716,6 +2718,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
 | `YouTube Music` | `youtubemusic` |
+| `YouTube Shorts` | `youtubeshorts` |
 | `YouTube Studio` | `youtubestudio` |
 | `YouTube TV` | `youtubetv` |
 | `Yubico` | `yubico` |
