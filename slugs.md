@@ -178,6 +178,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache ECharts` | `apacheecharts` |
 | `Apache Flink` | `apacheflink` |
 | `Apache Groovy` | `apachegroovy` |
+| `Apache Guacamole` | `apacheguacamole` |
 | `Apache Hadoop` | `apachehadoop` |
 | `Apache Hive` | `apachehive` |
 | `Apache JMeter` | `apachejmeter` |
@@ -870,6 +871,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
+| `Framework` | `framework` |
 | `Framework7` | `framework7` |
 | `Franprix` | `franprix` |
 | `Fraunhofer-Gesellschaft` | `fraunhofergesellschaft` |
@@ -1193,6 +1195,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ITVx` | `itvx` |
 | `IVECO` | `iveco` |
 | `Jabber` | `jabber` |
+| `Jaeger` | `jaeger` |
 | `Jaguar` | `jaguar` |
 | `Jamboard` | `jamboard` |
 | `Jameson` | `jameson` |
@@ -1556,6 +1559,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Müller` | `muller` |
 | `Multisim` | `multisim` |
 | `Mumble` | `mumble` |
+| `Mural` | `mural` |
 | `MuseScore` | `musescore` |
 | `MusicBrainz` | `musicbrainz` |
 | `MX Linux` | `mxlinux` |
@@ -2247,6 +2251,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Spring Boot` | `springboot` |
 | `Spring Security` | `springsecurity` |
 | `Spyder IDE` | `spyderide` |
+| `SQLAlchemy` | `sqlalchemy` |
 | `SQLite` | `sqlite` |
 | `Square` | `square` |
 | `Square Enix` | `squareenix` |
@@ -2713,6 +2718,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
 | `YouTube Music` | `youtubemusic` |
+| `YouTube Shorts` | `youtubeshorts` |
 | `YouTube Studio` | `youtubestudio` |
 | `YouTube TV` | `youtubetv` |
 | `Yubico` | `yubico` |
@@ -2751,5 +2757,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zoom` | `zoom` |
 | `Zorin` | `zorin` |
 | `Zotero` | `zotero` |
+| `Zsh` | `zsh` |
 | `Zulip` | `zulip` |
 | `Zyte` | `zyte` |
