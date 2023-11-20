@@ -20,10 +20,15 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - id: get-labels
-        uses: ./.github/workflows/get-labels.yml
+        uses: ./.github/actions/get-labels
         with:
           issue_number: ${{ github.event.pull_request.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: get-si-members
         name: Get simple-icons members
