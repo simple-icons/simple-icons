@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+        uses: actions/checkout@v4
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -28,11 +28,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+        uses: actions/checkout@v4
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -44,6 +44,22 @@ jobs:
         run: npm i
       - name: Run linter
         run: npm run lint
+      - name: Detect changed documentation files
+        uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          list-files: shell
+          filters: |
+            docs:
+              - '*.md'
+              - '.github/**.md'
+      - name: Check documentation links
+        if: steps.changes.outputs.docs == 'true'
+        run: |
+          npx markdown-link-check --retry \
+            --config .github/markdown-link-check.json \
+            ${{ steps.changes.outputs.docs_files }}
+        continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
@@ -67,11 +83,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+        uses: actions/checkout@v4
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
