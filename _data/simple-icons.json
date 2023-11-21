@@ -1284,8 +1284,9 @@
         },
         {
             "title": "Appwrite",
-            "hex": "F02E65",
-            "source": "https://appwrite.io"
+            "hex": "FD366E",
+            "source": "https://appwrite.io/assets",
+            "guidelines": "https://appwrite.io/assets"
         },
         {
             "title": "Aqua",
@@ -8192,6 +8193,11 @@
             "guidelines": "https://medium.design/logos-and-brand-guidelines-f1a01a733592"
         },
         {
+            "title": "Medusa",
+            "hex": "000000",
+            "source": "https://github.com/medusajs/medusa/blob/5b91a3503af41b94697a5c27c35268c29e9bd135/www/docs/static/img/logo.svg"
+        },
+        {
             "title": "Meetup",
             "hex": "ED1C40",
             "source": "https://www.meetup.com/media/"
@@ -14450,6 +14456,20 @@
             "hex": "7360F2",
             "source": "https://www.viber.com/brand-center",
             "guidelines": "https://www.viber.com/brand-center"
+        },
+        {
+            "title": "VictoriaMetrics",
+            "aliases": {
+                "aka": [
+                    "VM"
+                ],
+                "loc": {
+                    "ko-KR": "빅토리아메트릭스"
+                }
+            },
+            "hex": "621773",
+            "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
+            "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo"
         },
         {
             "title": "Vim",
