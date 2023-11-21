@@ -1963,6 +1963,12 @@
             "guidelines": "https://www.blender.org/about/logo"
         },
         {
+            "title": "Blockbench",
+            "hex": "1E93D9",
+            "source": "https://www.blockbench.net/wiki/blockbench/logos",
+            "guidelines": "https://www.blockbench.net/wiki/blockbench/logos"
+        },
+        {
             "title": "Blockchain.com",
             "hex": "121D33",
             "source": "https://www.blockchain.com/en/press",
@@ -5709,6 +5715,11 @@
             }
         },
         {
+            "title": "GSMArena.com",
+            "hex": "D50000",
+            "source": "https://www.gsmarena.com"
+        },
+        {
             "title": "GStreamer",
             "hex": "FF3131",
             "source": "https://gstreamer.freedesktop.org/artwork"
@@ -8418,6 +8429,16 @@
             "source": "https://de.wikipedia.org/wiki/Datei:Microsoft_SQL_Server_Logo.svg"
         },
         {
+            "title": "Microsoft Store",
+            "hex": "005FB8",
+            "source": "https://github.com/microsoft/fluentui-system-icons/blob/4c58d8fb4d8549b9af9f7db8764d5d154df796c2/assets/Store%20Microsoft/SVG/ic_fluent_store_microsoft_24_regular.svg",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
+        },
+        {
             "title": "Microsoft Teams",
             "hex": "6264A7",
             "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
@@ -11113,6 +11134,12 @@
             "source": "https://github.com/ray-project/ray/blob/6522935291caa120e83697c6c9b3a450617c9283/dashboard/client/src/logo.svg"
         },
         {
+            "title": "Raycast",
+            "hex": "FF6363",
+            "source": "https://www.raycast.com/press",
+            "guidelines": "https://www.raycast.com/press"
+        },
+        {
             "title": "Razer",
             "hex": "00FF00",
             "source": "https://press.razer.com"
@@ -13682,6 +13709,11 @@
             "title": "Tokyo Metro",
             "hex": "149DD3",
             "source": "https://en.wikipedia.org/wiki/File:TokyoMetro.svg"
+        },
+        {
+            "title": "Toll",
+            "hex": "007A68",
+            "source": "https://www.tollgroup.com"
         },
         {
             "title": "TOML",
