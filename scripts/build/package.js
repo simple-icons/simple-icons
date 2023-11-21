@@ -62,7 +62,7 @@ const build = async () => {
       icon.guidelines ? `\n  guidelines: '${escape(icon.guidelines)}',` : '',
       licenseToObject(icon.license)
         ? `\n  license: ${JSON.stringify(licenseToObject(icon.license))},`
-        : '',
+        : ''
     );
   };
   const writeJs = async (filepath, rawJavaScript, opts = null) => {
@@ -85,7 +85,7 @@ const build = async () => {
       const iconObject = iconToObject(icon);
       const iconExportName = slugToVariableName(icon.slug);
       return { icon, iconObject, iconExportName };
-    }),
+    })
   );
 
   const iconsBarrelDts = [];
@@ -104,7 +104,7 @@ const build = async () => {
 
   // write our file containing the exports of all icons in CommonJS ...
   const rawIndexJs = `${constantsString}module.exports={${iconsBarrelJs.join(
-    '',
+    ''
   )}};`;
   await writeJs(indexJsFile, rawIndexJs);
   // and ESM
@@ -112,7 +112,7 @@ const build = async () => {
   await writeJs(indexMjsFile, rawIndexMjs);
   // and create a type declaration file
   const rawIndexDts = `import {SimpleIcon} from "./types";export {SimpleIcon};type I=SimpleIcon;${iconsBarrelDts.join(
-    '',
+    ''
   )}`;
   await writeTs(indexDtsFile, rawIndexDts);
 

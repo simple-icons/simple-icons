@@ -12,7 +12,7 @@ import {
 const iconsDir = path.resolve(
   getDirnameFromImportMeta(import.meta.url),
   '..',
-  'icons',
+  'icons'
 );
 
 /**
