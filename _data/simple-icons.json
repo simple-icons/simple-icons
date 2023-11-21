@@ -1284,8 +1284,9 @@
         },
         {
             "title": "Appwrite",
-            "hex": "F02E65",
-            "source": "https://appwrite.io"
+            "hex": "FD366E",
+            "source": "https://appwrite.io/assets",
+            "guidelines": "https://appwrite.io/assets"
         },
         {
             "title": "Aqua",
@@ -1961,6 +1962,12 @@
             "hex": "E87D0D",
             "source": "https://www.blender.org/about/logo",
             "guidelines": "https://www.blender.org/about/logo"
+        },
+        {
+            "title": "Blockbench",
+            "hex": "1E93D9",
+            "source": "https://www.blockbench.net/wiki/blockbench/logos",
+            "guidelines": "https://www.blockbench.net/wiki/blockbench/logos"
         },
         {
             "title": "Blockchain.com",
@@ -5422,6 +5429,12 @@
             "guidelines": "https://about.google/brand-resource-center"
         },
         {
+            "title": "Google Dataflow",
+            "hex": "AECBFA",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
+        },
+        {
             "title": "Google Docs",
             "hex": "4285F4",
             "source": "https://www.google.com/docs/about"
@@ -5543,6 +5556,12 @@
             "title": "Google Podcasts",
             "hex": "4285F4",
             "source": "https://developers.google.com/search/docs/data-types/podcast"
+        },
+        {
+            "title": "Google Pub/Sub",
+            "hex": "AECBFA",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
         },
         {
             "title": "Google Scholar",
@@ -5707,6 +5726,11 @@
                     "GlaxoSmithKline"
                 ]
             }
+        },
+        {
+            "title": "GSMArena.com",
+            "hex": "D50000",
+            "source": "https://www.gsmarena.com"
         },
         {
             "title": "GStreamer",
@@ -7362,6 +7386,11 @@
             "source": "https://uk.kyocera.com"
         },
         {
+            "title": "L'Équipe",
+            "hex": "E42829",
+            "source": "https://commons.wikimedia.org/wiki/File:L_Equipe_Logo.svg"
+        },
+        {
             "title": "LabVIEW",
             "hex": "FFDB00",
             "source": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987",
@@ -8164,6 +8193,11 @@
             "guidelines": "https://medium.design/logos-and-brand-guidelines-f1a01a733592"
         },
         {
+            "title": "Medusa",
+            "hex": "000000",
+            "source": "https://github.com/medusajs/medusa/blob/5b91a3503af41b94697a5c27c35268c29e9bd135/www/docs/static/img/logo.svg"
+        },
+        {
             "title": "Meetup",
             "hex": "ED1C40",
             "source": "https://www.meetup.com/media/"
@@ -8416,6 +8450,16 @@
             "title": "Microsoft SQL Server",
             "hex": "CC2927",
             "source": "https://de.wikipedia.org/wiki/Datei:Microsoft_SQL_Server_Logo.svg"
+        },
+        {
+            "title": "Microsoft Store",
+            "hex": "005FB8",
+            "source": "https://github.com/microsoft/fluentui-system-icons/blob/4c58d8fb4d8549b9af9f7db8764d5d154df796c2/assets/Store%20Microsoft/SVG/ic_fluent_store_microsoft_24_regular.svg",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Teams",
@@ -11123,6 +11167,12 @@
             "source": "https://github.com/ray-project/ray/blob/6522935291caa120e83697c6c9b3a450617c9283/dashboard/client/src/logo.svg"
         },
         {
+            "title": "Raycast",
+            "hex": "FF6363",
+            "source": "https://www.raycast.com/press",
+            "guidelines": "https://www.raycast.com/press"
+        },
+        {
             "title": "Razer",
             "hex": "00FF00",
             "source": "https://press.razer.com"
@@ -11637,6 +11687,19 @@
             "title": "RTLZWEI",
             "hex": "00BCF6",
             "source": "https://www.rtl2.de"
+        },
+        {
+            "title": "RTM",
+            "hex": "36474F",
+            "source": "https://www.rtm.fr",
+            "aliases": {
+                "aka": [
+                    "Régie des Transports Métropolitains"
+                ],
+                "old": [
+                    "Régie des Transports de Marseille"
+                ]
+            }
         },
         {
             "title": "RuboCop",
@@ -13694,6 +13757,11 @@
             "source": "https://en.wikipedia.org/wiki/File:TokyoMetro.svg"
         },
         {
+            "title": "Toll",
+            "hex": "007A68",
+            "source": "https://www.tollgroup.com"
+        },
+        {
             "title": "TOML",
             "hex": "9C4121",
             "source": "https://github.com/toml-lang/toml/blob/625f62b55c5acdfb9924c78e1d0bf4cf0be23d91/logos/toml.svg"
@@ -13749,6 +13817,11 @@
             "title": "tqdm",
             "hex": "FFC107",
             "source": "https://github.com/tqdm/img/blob/0dd23d9336af67976f88f9988ea660cde78c54d4/logo.svg"
+        },
+        {
+            "title": "TradingView",
+            "hex": "131622",
+            "source": "https://www.tradingview.com/media-kit"
         },
         {
             "title": "Traefik Mesh",
@@ -14388,6 +14461,20 @@
             "hex": "7360F2",
             "source": "https://www.viber.com/brand-center",
             "guidelines": "https://www.viber.com/brand-center"
+        },
+        {
+            "title": "VictoriaMetrics",
+            "aliases": {
+                "aka": [
+                    "VM"
+                ],
+                "loc": {
+                    "ko-KR": "빅토리아메트릭스"
+                }
+            },
+            "hex": "621773",
+            "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
+            "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo"
         },
         {
             "title": "Vim",
