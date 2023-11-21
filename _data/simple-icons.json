@@ -1284,8 +1284,9 @@
         },
         {
             "title": "Appwrite",
-            "hex": "F02E65",
-            "source": "https://appwrite.io"
+            "hex": "FD366E",
+            "source": "https://appwrite.io/assets",
+            "guidelines": "https://appwrite.io/assets"
         },
         {
             "title": "Aqua",
@@ -5428,6 +5429,12 @@
             "guidelines": "https://about.google/brand-resource-center"
         },
         {
+            "title": "Google Dataflow",
+            "hex": "AECBFA",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
+        },
+        {
             "title": "Google Docs",
             "hex": "4285F4",
             "source": "https://www.google.com/docs/about"
@@ -5549,6 +5556,12 @@
             "title": "Google Podcasts",
             "hex": "4285F4",
             "source": "https://developers.google.com/search/docs/data-types/podcast"
+        },
+        {
+            "title": "Google Pub/Sub",
+            "hex": "AECBFA",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
         },
         {
             "title": "Google Scholar",
@@ -7373,6 +7386,11 @@
             "source": "https://uk.kyocera.com"
         },
         {
+            "title": "L'Équipe",
+            "hex": "E42829",
+            "source": "https://commons.wikimedia.org/wiki/File:L_Equipe_Logo.svg"
+        },
+        {
             "title": "LabVIEW",
             "hex": "FFDB00",
             "source": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987",
@@ -8173,6 +8191,11 @@
             "hex": "000000",
             "source": "https://medium.design/logos-and-brand-guidelines-f1a01a733592",
             "guidelines": "https://medium.design/logos-and-brand-guidelines-f1a01a733592"
+        },
+        {
+            "title": "Medusa",
+            "hex": "000000",
+            "source": "https://github.com/medusajs/medusa/blob/5b91a3503af41b94697a5c27c35268c29e9bd135/www/docs/static/img/logo.svg"
         },
         {
             "title": "Meetup",
@@ -11656,6 +11679,19 @@
             "source": "https://www.rtl2.de"
         },
         {
+            "title": "RTM",
+            "hex": "36474F",
+            "source": "https://www.rtm.fr",
+            "aliases": {
+                "aka": [
+                    "Régie des Transports Métropolitains"
+                ],
+                "old": [
+                    "Régie des Transports de Marseille"
+                ]
+            }
+        },
+        {
             "title": "RuboCop",
             "hex": "000000",
             "source": "https://github.com/rubocop-semver/rubocop-ruby2_0/blob/5302f93058f7b739a73a7a6c11c566a2b196b96e/docs/images/logo/rubocop-light.svg",
@@ -14415,6 +14451,20 @@
             "hex": "7360F2",
             "source": "https://www.viber.com/brand-center",
             "guidelines": "https://www.viber.com/brand-center"
+        },
+        {
+            "title": "VictoriaMetrics",
+            "aliases": {
+                "aka": [
+                    "VM"
+                ],
+                "loc": {
+                    "ko-KR": "빅토리아메트릭스"
+                }
+            },
+            "hex": "621773",
+            "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
+            "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo"
         },
         {
             "title": "Vim",
