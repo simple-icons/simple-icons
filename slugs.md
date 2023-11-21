@@ -1464,7 +1464,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MediaTemple` | `mediatemple` |
 | `MediBang Paint` | `medibangpaint` |
 | `Medium` | `medium` |
-| `Medusa` | `medusa` |
 | `Meetup` | `meetup` |
 | `MEGA` | `mega` |
 | `Meilisearch` | `meilisearch` |
