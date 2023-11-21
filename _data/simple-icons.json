@@ -1943,6 +1943,11 @@
             "source": "https://www.blackberry.com"
         },
         {
+            "title": "Blackmagic Design",
+            "hex": "FFA200",
+            "source": "https://www.blackmagicdesign.com"
+        },
+        {
             "title": "Blazemeter",
             "hex": "CA2133",
             "source": "https://www.blazemeter.com"
@@ -1957,6 +1962,12 @@
             "hex": "E87D0D",
             "source": "https://www.blender.org/about/logo",
             "guidelines": "https://www.blender.org/about/logo"
+        },
+        {
+            "title": "Blockbench",
+            "hex": "1E93D9",
+            "source": "https://www.blockbench.net/wiki/blockbench/logos",
+            "guidelines": "https://www.blockbench.net/wiki/blockbench/logos"
         },
         {
             "title": "Blockchain.com",
@@ -2640,6 +2651,11 @@
             "title": "Clarivate",
             "hex": "000000",
             "source": "https://clarivate.com"
+        },
+        {
+            "title": "Clerk",
+            "hex": "6C47FF",
+            "source": "https://clerk.com"
         },
         {
             "title": "ClickHouse",
@@ -3514,6 +3530,14 @@
             "source": "https://news.delta.com/delta-air-lines-logos-brand-guidelines"
         },
         {
+            "title": "Deluge",
+            "hex": "094491",
+            "source": "https://github.com/deluge-torrent/deluge/blob/0b5f45b486e8e974ba8a0b1d6e8edcd124fca62a/deluge/ui/data/pixmaps/deluge.svg",
+            "license": {
+                "type": "GPL-3.0-only"
+            }
+        },
+        {
             "title": "Deno",
             "hex": "000000",
             "source": "https://github.com/denoland/dotland/blob/f1ba74327b401b47de678f30d768ff9bf54494b6/public/logo.svg",
@@ -3623,6 +3647,11 @@
             "hex": "0080FF",
             "source": "https://www.digitalocean.com/press/",
             "guidelines": "https://www.digitalocean.com/press/"
+        },
+        {
+            "title": "Diners Club",
+            "hex": "004C97",
+            "source": "https://www.dinersclub.com/about-us/press"
         },
         {
             "title": "Dior",
@@ -5400,6 +5429,12 @@
             "guidelines": "https://about.google/brand-resource-center"
         },
         {
+            "title": "Google Dataflow",
+            "hex": "AECBFA",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
+        },
+        {
             "title": "Google Docs",
             "hex": "4285F4",
             "source": "https://www.google.com/docs/about"
@@ -5521,6 +5556,12 @@
             "title": "Google Podcasts",
             "hex": "4285F4",
             "source": "https://developers.google.com/search/docs/data-types/podcast"
+        },
+        {
+            "title": "Google Pub/Sub",
+            "hex": "AECBFA",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
         },
         {
             "title": "Google Scholar",
@@ -5687,6 +5728,11 @@
             }
         },
         {
+            "title": "GSMArena.com",
+            "hex": "D50000",
+            "source": "https://www.gsmarena.com"
+        },
+        {
             "title": "GStreamer",
             "hex": "FF3131",
             "source": "https://gstreamer.freedesktop.org/artwork"
@@ -5766,8 +5812,8 @@
         {
             "title": "Hack The Box",
             "hex": "9FEF00",
-            "source": "https://www.hackthebox.eu/docs/Hack_The_Box_Brand_Assets_Guide.pdf",
-            "guidelines": "https://www.hackthebox.eu/docs/Hack_The_Box_Brand_Assets_Guide.pdf"
+            "source": "https://www.hackthebox.com/contact-us",
+            "guidelines": "https://www.hackthebox.com/contact-us"
         },
         {
             "title": "Hackaday",
@@ -6005,6 +6051,11 @@
             "hex": "231F20",
             "source": "https://www.hilton.com",
             "guidelines": "https://stories.hilton.com/media-kit-hilton-corporate"
+        },
+        {
+            "title": "Hilton Hotels & Resorts",
+            "hex": "1E4380",
+            "source": "https://www.hilton.com/en/brands/hilton-hotels"
         },
         {
             "title": "Hitachi",
@@ -6444,6 +6495,12 @@
             "source": "https://insomnia.rest"
         },
         {
+            "title": "Insta360",
+            "hex": "FFEE00",
+            "source": "https://www.insta360.com/press/logo",
+            "guidelines": "https://www.insta360.com/press/logo"
+        },
+        {
             "title": "Instacart",
             "hex": "43B02A",
             "source": "https://www.instacart.com/press"
@@ -6802,6 +6859,11 @@
             "hex": "0052CC",
             "source": "https://www.atlassian.com/company/news/press-kit",
             "guidelines": "https://atlassian.design/foundations/logos/"
+        },
+        {
+            "title": "JitPack",
+            "hex": "000000",
+            "source": "https://docs.jitpack.io"
         },
         {
             "title": "Jitsi",
@@ -7322,6 +7384,11 @@
             "title": "Kyocera",
             "hex": "DF0522",
             "source": "https://uk.kyocera.com"
+        },
+        {
+            "title": "L'Équipe",
+            "hex": "E42829",
+            "source": "https://commons.wikimedia.org/wiki/File:L_Equipe_Logo.svg"
         },
         {
             "title": "LabVIEW",
@@ -7869,6 +7936,11 @@
             "source": "https://mailgun.com"
         },
         {
+            "title": "Mailtrap",
+            "hex": "22D172",
+            "source": "https://mailtrap.io"
+        },
+        {
             "title": "Major League Hacking",
             "hex": "265A8F",
             "source": "https://mlh.io/brand-guidelines",
@@ -7996,6 +8068,11 @@
             "license": {
                 "type": "Apache-2.0"
             }
+        },
+        {
+            "title": "Material for MkDocs",
+            "hex": "526CFE",
+            "source": "https://github.com/squidfunk/mkdocs-material/blob/9ff75d11838cc01615697884c0eb9eb55f4652ad/src/templates/.icons/logo-monochrome.svg"
         },
         {
             "title": "Matillion",
@@ -8158,6 +8235,11 @@
             "license": {
                 "type": "GPL-2.0-or-later"
             }
+        },
+        {
+            "title": "Mermaid",
+            "hex": "FF3670",
+            "source": "https://github.com/mermaid-js/mermaid/blob/f5bd1e08098fa688ef889e73c8b06696e75e62d8/docs/public/mermaid-logo.svg"
         },
         {
             "title": "Messenger",
@@ -8363,6 +8445,16 @@
             "title": "Microsoft SQL Server",
             "hex": "CC2927",
             "source": "https://de.wikipedia.org/wiki/Datei:Microsoft_SQL_Server_Logo.svg"
+        },
+        {
+            "title": "Microsoft Store",
+            "hex": "005FB8",
+            "source": "https://github.com/microsoft/fluentui-system-icons/blob/4c58d8fb4d8549b9af9f7db8764d5d154df796c2/assets/Store%20Microsoft/SVG/ic_fluent_store_microsoft_24_regular.svg",
+            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
+            "license": {
+                "type": "custom",
+                "url": "https://aka.ms/fluentui-assets-license"
+            }
         },
         {
             "title": "Microsoft Teams",
@@ -8659,6 +8751,11 @@
             "hex": "000000",
             "source": "https://mozilla.design/mozilla/",
             "guidelines": "https://mozilla.design/mozilla/"
+        },
+        {
+            "title": "mpv",
+            "hex": "691F69",
+            "source": "https://github.com/mpv-player/mpv/blob/da400ed3a9b54408d1b5112855a7281380a1ef52/etc/mpv.svg"
         },
         {
             "title": "MQTT",
@@ -9863,6 +9960,11 @@
             "source": "https://www.pcgamingwiki.com/wiki/Home"
         },
         {
+            "title": "PDM",
+            "hex": "AC75D7",
+            "source": "https://github.com/pdm-project/pdm/blob/68abaae63e8d8fc8eb0c101285fd7dcb5cd9798a/docs/docs/assets/logo.svg"
+        },
+        {
             "title": "Peak Design",
             "hex": "1C1B1C",
             "source": "https://www.peakdesign.com"
@@ -10343,6 +10445,11 @@
             "title": "Portainer",
             "hex": "13BEF9",
             "source": "https://www.portainer.io"
+        },
+        {
+            "title": "PortSwigger",
+            "hex": "FF6633",
+            "source": "https://portswigger.net"
         },
         {
             "title": "PostCSS",
@@ -11045,6 +11152,12 @@
             "source": "https://github.com/ray-project/ray/blob/6522935291caa120e83697c6c9b3a450617c9283/dashboard/client/src/logo.svg"
         },
         {
+            "title": "Raycast",
+            "hex": "FF6363",
+            "source": "https://www.raycast.com/press",
+            "guidelines": "https://www.raycast.com/press"
+        },
+        {
             "title": "Razer",
             "hex": "00FF00",
             "source": "https://press.razer.com"
@@ -11561,6 +11674,19 @@
             "source": "https://www.rtl2.de"
         },
         {
+            "title": "RTM",
+            "hex": "36474F",
+            "source": "https://www.rtm.fr",
+            "aliases": {
+                "aka": [
+                    "Régie des Transports Métropolitains"
+                ],
+                "old": [
+                    "Régie des Transports de Marseille"
+                ]
+            }
+        },
+        {
             "title": "RuboCop",
             "hex": "000000",
             "source": "https://github.com/rubocop-semver/rubocop-ruby2_0/blob/5302f93058f7b739a73a7a6c11c566a2b196b96e/docs/images/logo/rubocop-light.svg",
@@ -11636,6 +11762,11 @@
             "title": "Ryanair",
             "hex": "073590",
             "source": "https://corporate.ryanair.com/media-centre/stock-images-gallery/#album-container-3"
+        },
+        {
+            "title": "Rye",
+            "hex": "000000",
+            "source": "https://github.com/mitsuhiko/rye/blob/8b76d2a1a9d44c97ccbbcedceb72bc7437142caf/docs/static/favicon.svg"
         },
         {
             "title": "S7 Airlines",
@@ -12636,7 +12767,7 @@
         {
             "title": "SQLAlchemy",
             "hex": "D71F00",
-            "source": "https://github.com/sqlalchemy/sqlalchemy/discussions/7672#discussioncomment-2157650",
+            "source": "https://commons.wikimedia.org/wiki/File:SQLAlchemy.svg",
             "license": {
                 "type": "MIT"
             }
@@ -13496,7 +13627,7 @@
         {
             "title": "Thunderbird",
             "hex": "0A84FF",
-            "source": "https://github.com/thundernest/thunderbird-website/blob/d7446f3eee14b38f02ee60da7d4b4fb8c9ef20e3/media/svg/logo.svg"
+            "source": "https://design.thunderbird.net/resources/logo"
         },
         {
             "title": "Thurgauer Kantonalbank",
@@ -13611,6 +13742,11 @@
             "source": "https://en.wikipedia.org/wiki/File:TokyoMetro.svg"
         },
         {
+            "title": "Toll",
+            "hex": "007A68",
+            "source": "https://www.tollgroup.com"
+        },
+        {
             "title": "TOML",
             "hex": "9C4121",
             "source": "https://github.com/toml-lang/toml/blob/625f62b55c5acdfb9924c78e1d0bf4cf0be23d91/logos/toml.svg"
@@ -13666,6 +13802,11 @@
             "title": "tqdm",
             "hex": "FFC107",
             "source": "https://github.com/tqdm/img/blob/0dd23d9336af67976f88f9988ea660cde78c54d4/logo.svg"
+        },
+        {
+            "title": "TradingView",
+            "hex": "131622",
+            "source": "https://www.tradingview.com/media-kit"
         },
         {
             "title": "Traefik Mesh",
