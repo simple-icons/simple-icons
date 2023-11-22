@@ -1,12 +1,13 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Linters for the package that can't easily be implemented in the existing
  * linters (e.g. jsonlint/svglint).
  */
 
+import process from 'node:process';
+import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
-import { getIconsDataString } from '../utils.js';
+import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -18,12 +19,12 @@ const TESTS = {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
-        const compare = icon.title.localeCompare(prev.title);
-        if (compare < 0) {
+        const comparison = collator.compare(icon.title, prev.title);
+        if (comparison < 0) {
           invalidEntries.push(icon);
-        } else if (compare === 0) {
+        } else if (comparison === 0) {
           if (prev.slug) {
-            if (!icon.slug || icon.slug.localeCompare(prev.slug) < 0) {
+            if (!icon.slug || collator.compare(icon.slug, prev.slug) < 0) {
               invalidEntries.push(icon);
             }
           }
@@ -46,30 +47,51 @@ const TESTS = {
   },
 
   /* Check the formatting of the data file */
-  prettified: async (data, dataString) => {
-    const normalizedDataString = dataString.replace(/\r\n/g, '\n');
-    const dataPretty = `${JSON.stringify(data, null, '    ')}\n`;
+  prettified: (data, dataString) => {
+    const normalizedDataString = normalizeNewlines(dataString);
+    const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
 
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
       return `Data file is formatted incorrectly:\n\n${dataDiff}`;
     }
   },
+
+  /* Check redundant trailing slash in URL */
+  checkUrl: (data) => {
+    const hasRedundantTrailingSlash = (url) => {
+      const origin = new URL(url).origin;
+      return /^\/+$/.test(url.replace(origin, ''));
+    };
+
+    const allUrlFields = [
+      ...new Set(
+        data.icons
+          .flatMap((icon) => [icon.source, icon.guidelines, icon.license?.url])
+          .filter(Boolean),
+      ),
+    ];
+
+    const invalidUrls = allUrlFields.filter((url) =>
+      hasRedundantTrailingSlash(url),
+    );
+
+    if (invalidUrls.length > 0) {
+      return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
+        '\n',
+      )}`;
+    }
+  },
 };
 
-// execute all tests and log all errors
-(async () => {
-  const dataString = await getIconsDataString();
-  const data = JSON.parse(dataString);
+const dataString = await getIconsDataString();
+const data = JSON.parse(dataString);
 
-  const errors = (
-    await Promise.all(
-      Object.keys(TESTS).map((test) => TESTS[test](data, dataString)),
-    )
-  ).filter(Boolean);
+const errors = (
+  await Promise.all(Object.values(TESTS).map((test) => test(data, dataString)))
+).filter(Boolean);
 
-  if (errors.length > 0) {
-    errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
-    process.exit(1);
-  }
-})();
+if (errors.length > 0) {
+  errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
+  process.exit(1);
+}
