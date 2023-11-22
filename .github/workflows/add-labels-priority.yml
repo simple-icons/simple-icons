@@ -20,17 +20,21 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - id: get-labels
-        name: Get labels
-        run: |
-          labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/pulls/${{ github.event.pull_request.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
-          echo "::set-output name=labels::$labels"
+        uses: ./.github/actions/get-labels
+        with:
+          issue_number: ${{ github.event.pull_request.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: get-si-members
         name: Get simple-icons members
         run: |
-          members="$(curl --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
-          echo "::set-output name=members::$members"
+          members="$(curl -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
+          echo "members=$members" >> $GITHUB_OUTPUT
 
       - id: get-linked-issues
         name: Get linked issue numbers
@@ -65,16 +69,44 @@ jobs:
         if: |
           contains(steps.get-labels.outputs.labels, 'new icon') &&
           join(steps.get-linked-issues.outputs.issues) != '' &&
-          contains(steps.get-si-members.outputs.members, github.event.actor.login) == false
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == false
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 2
+
+      - id: priority-3
+        name: Assign `new icon` pull requests by maintainers to "Priority 3"
+        uses: srggrs/assign-one-project-github-action@1.3.1
+        # the PR has the `new icon` label along with a linked issue and
+        # the opener is a member of the simple-icons organisation
+        if: |
+          contains(steps.get-labels.outputs.labels, 'new icon') &&
+          join(steps.get-linked-issues.outputs.issues) != '' &&
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == true
+        with:
+          project: https://github.com/orgs/simple-icons/projects/2
+          column_name: Priority 3
+
+      - id: priority-4
+        name: Assign `new icon` pull requests by maintainers without an issue to "Priority 4"
+        uses: srggrs/assign-one-project-github-action@1.3.1
+        # the PR has the `new icon` label but with no linked issue and
+        # the opener is a member of the simple-icons organisation
+        if: |
+          contains(steps.get-labels.outputs.labels, 'new icon') &&
+          join(steps.get-linked-issues.outputs.issues) == '' &&
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == true
+        with:
+          project: https://github.com/orgs/simple-icons/projects/2
+          column_name: Priority 4
 
       - name: Assign pull requests to "Unprioritised"
         uses: srggrs/assign-one-project-github-action@1.3.1
         if: |
           steps.priority-1.conclusion == 'skipped' &&
-          steps.priority-2.conclusion == 'skipped'
+          steps.priority-2.conclusion == 'skipped' &&
+          steps.priority-3.conclusion == 'skipped' &&
+          steps.priority-4.conclusion == 'skipped'
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Unprioritised
