@@ -1835,6 +1835,11 @@
             "source": "https://www.betfair.com"
         },
         {
+            "title": "Bevy",
+            "hex": "232326",
+            "source": "https://github.com/bevyengine/bevy/blob/371c90f6faecf318ff66e3c6efa6f9f48781f63f/assets/branding/bevy_bird_simpleicons.svg"
+        },
+        {
             "title": "Big Cartel",
             "hex": "222222",
             "source": "https://www.bigcartel.com"
@@ -2056,6 +2061,12 @@
             "title": "Boost",
             "hex": "F7901E",
             "source": "https://www.boostmobile.com"
+        },
+        {
+            "title": "Boosty",
+            "hex": "F15F2C",
+            "source": "https://boosty.to/app/brand",
+            "guidelines": "https://boosty.to/app/brand"
         },
         {
             "title": "Boots",
@@ -2359,6 +2370,12 @@
             "title": "Canva",
             "hex": "00C4CC",
             "source": "https://www.canva.com"
+        },
+        {
+            "title": "Canvas",
+            "hex": "E72429",
+            "source": "https://www.instructure.com/about/brand-guide/media-resources",
+            "guidelines": "https://www.instructure.com/about/brand-guide/media-resources"
         },
         {
             "title": "Capacitor",
@@ -3812,6 +3829,11 @@
             "title": "Dribbble",
             "hex": "EA4C89",
             "source": "https://dribbble.com/branding"
+        },
+        {
+            "title": "Drizzle",
+            "hex": "C5F74F",
+            "source": "https://orm.drizzle.team"
         },
         {
             "title": "Drone",
@@ -9416,6 +9438,12 @@
             "source": "https://insideok.ru/brandbook"
         },
         {
+            "title": "Odoo",
+            "hex": "714B67",
+            "source": "https://www.odoo.com/page/brand-assets",
+            "guidelines": "https://www.odoo.com/page/brand-assets"
+        },
+        {
             "title": "Odysee",
             "hex": "EF1970",
             "source": "https://odysee.com/@OdyseeHelp:b/odyseepresskit:b"
@@ -12379,6 +12407,15 @@
             "source": "https://www.slideshare.net/ss/creators/"
         },
         {
+            "title": "Slint",
+            "hex": "2379F4",
+            "source": "https://github.com/slint-ui/slint/blob/10ae5cd60ab3fcd01ef89a300c97e2e0952bc750/logo/slint-logo-full-dark.png",
+            "guidelines": "https://github.com/slint-ui/slint/blob/master/logo/README.md",
+            "license": {
+                "type": "CC-BY-ND-4.0"
+            }
+        },
+        {
             "title": "smart",
             "hex": "FABC0C",
             "source": "https://www.smart.com/gb/en/models/eq-fortwo-coupe"
@@ -14683,6 +14720,11 @@
             }
         },
         {
+            "title": "W3Schools",
+            "hex": "04AA6D",
+            "source": "https://profile.w3schools.com"
+        },
+        {
             "title": "Wacom",
             "hex": "000000",
             "source": "https://support.wacom.com/hc/en-us"
@@ -14951,6 +14993,11 @@
             "title": "WeTransfer",
             "hex": "409FFF",
             "source": "https://wetransfer.com"
+        },
+        {
+            "title": "WezTerm",
+            "hex": "4E49EE",
+            "source": "https://github.com/wez/wezterm/blob/fe78b5821fc106c1061f4c1cc454ff01e74bf97d/assets/icon/wezterm-icon.svg"
         },
         {
             "title": "WhatsApp",
