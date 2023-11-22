@@ -33,15 +33,3 @@ body:
       placeholder: "Example: The documentation doesn't cover my use case of the NPM package..."
     validations:
       required: true
-
-  - type: dropdown
-    attributes:
-      label: Contributing
-      description: >-
-        This is an open source project and we welcome contributions. Do you want to
-        work on this issue?
-      options:
-        - 'Yes'
-        - 'No'
-    validations:
-      required: true
