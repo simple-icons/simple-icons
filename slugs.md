@@ -178,6 +178,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache ECharts` | `apacheecharts` |
 | `Apache Flink` | `apacheflink` |
 | `Apache Groovy` | `apachegroovy` |
+| `Apache Guacamole` | `apacheguacamole` |
 | `Apache Hadoop` | `apachehadoop` |
 | `Apache Hive` | `apachehive` |
 | `Apache JMeter` | `apachejmeter` |
@@ -334,6 +335,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bitwarden` | `bitwarden` |
 | `Bitwig` | `bitwig` |
 | `Blackberry` | `blackberry` |
+| `Blackmagic Design` | `blackmagicdesign` |
 | `Blazemeter` | `blazemeter` |
 | `Blazor` | `blazor` |
 | `Blender` | `blender` |
@@ -627,6 +629,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dell` | `dell` |
 | `Delphi` | `delphi` |
 | `Delta` | `delta` |
+| `Deluge` | `deluge` |
 | `Deno` | `deno` |
 | `Denon` | `denon` |
 | `Dependabot` | `dependabot` |
@@ -647,6 +650,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Digg` | `digg` |
 | `Digi-Key Electronics` | `digikeyelectronics` |
 | `DigitalOcean` | `digitalocean` |
+| `Diners Club` | `dinersclub` |
 | `Dior` | `dior` |
 | `Directus` | `directus` |
 | `Discogs` | `discogs` |
@@ -783,6 +787,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Facebook Live` | `facebooklive` |
 | `FACEIT` | `faceit` |
 | `Facepunch` | `facepunch` |
+| `Fairphone` | `fairphone` |
 | `Falco` | `falco` |
 | `Falcon` | `falcon` |
 | `FamPay` | `fampay` |
@@ -870,6 +875,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Foxtel` | `foxtel` |
 | `Fozzy` | `fozzy` |
 | `Framer` | `framer` |
+| `Framework` | `framework` |
 | `Framework7` | `framework7` |
 | `Franprix` | `franprix` |
 | `Fraunhofer-Gesellschaft` | `fraunhofergesellschaft` |
@@ -1073,6 +1079,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hi Bob` | `hibob` |
 | `Hibernate` | `hibernate` |
 | `Hilton` | `hilton` |
+| `Hilton Hotels & Resorts` | `hiltonhotelsandresorts` |
 | `Hitachi` | `hitachi` |
 | `Hive` | `hive` |
 | `Hive` | `hive_blockchain` |
@@ -1156,6 +1163,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Inkdrop` | `inkdrop` |
 | `Inkscape` | `inkscape` |
 | `Insomnia` | `insomnia` |
+| `Insta360` | `insta360` |
 | `Instacart` | `instacart` |
 | `Instagram` | `instagram` |
 | `Instapaper` | `instapaper` |
@@ -1432,6 +1440,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mastodon` | `mastodon` |
 | `Material Design` | `materialdesign` |
 | `Material Design Icons` | `materialdesignicons` |
+| `Material for MkDocs` | `materialformkdocs` |
 | `Matillion` | `matillion` |
 | `Matomo` | `matomo` |
 | `Matrix` | `matrix` |
@@ -1463,6 +1472,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mercedes` | `mercedes` |
 | `Merck` | `merck` |
 | `Mercurial` | `mercurial` |
+| `Mermaid` | `mermaid` |
 | `Messenger` | `messenger` |
 | `Meta` | `meta` |
 | `Metabase` | `metabase` |
@@ -1546,6 +1556,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Moscow Metro` | `moscowmetro` |
 | `Motorola` | `motorola` |
 | `Mozilla` | `mozilla` |
+| `mpv` | `mpv` |
 | `MQTT` | `mqtt` |
 | `MSI` | `msi` |
 | `MSI Business` | `msibusiness` |
@@ -1755,6 +1766,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PayPal` | `paypal` |
 | `Paytm` | `paytm` |
 | `PCGamingWiki` | `pcgamingwiki` |
+| `PDM` | `pdm` |
 | `Peak Design` | `peakdesign` |
 | `Pearson` | `pearson` |
 | `Peerlist` | `peerlist` |
@@ -1805,6 +1817,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PlanetScale` | `planetscale` |
 | `PlanGrid` | `plangrid` |
 | `Platform.sh` | `platformdotsh` |
+| `PlatformIO` | `platformio` |
 | `Platzi` | `platzi` |
 | `Plausible Analytics` | `plausibleanalytics` |
 | `PlayCanvas` | `playcanvas` |
@@ -1844,6 +1857,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pop!_OS` | `popos` |
 | `Porsche` | `porsche` |
 | `Portainer` | `portainer` |
+| `PortSwigger` | `portswigger` |
 | `PostCSS` | `postcss` |
 | `PostgreSQL` | `postgresql` |
 | `PostHog` | `posthog` |
@@ -1975,7 +1989,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ReactiveX` | `reactivex` |
 | `ReactOS` | `reactos` |
 | `Read the Docs` | `readthedocs` |
-| `read.cv` | `readdotcv` |
+| `Read.cv` | `readdotcv` |
 | `ReadMe` | `readme` |
 | `Realm` | `realm` |
 | `Reason` | `reason` |
@@ -2069,6 +2083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rust` | `rust` |
 | `RxDB` | `rxdb` |
 | `Ryanair` | `ryanair` |
+| `Rye` | `rye` |
 | `S7 Airlines` | `s7airlines` |
 | `Sabanci` | `sabanci` |
 | `Safari` | `safari` |
@@ -2088,6 +2103,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SAP` | `sap` |
 | `Sass` | `sass` |
 | `Sat.1` | `sat1` |
+| `Satellite` | `satellite` |
 | `Saturn` | `saturn` |
 | `Sauce Labs` | `saucelabs` |
 | `Scala` | `scala` |
@@ -2450,6 +2466,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Trello` | `trello` |
 | `Trend Micro` | `trendmicro` |
 | `Treyarch` | `treyarch` |
+| `Tricentis` | `tricentis` |
 | `Trilium` | `trilium` |
 | `Triller` | `triller` |
 | `Trino` | `trino` |
@@ -2618,6 +2635,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WebAuthn` | `webauthn` |
 | `webcomponents.org` | `webcomponentsdotorg` |
 | `WebdriverIO` | `webdriverio` |
+| `Webex` | `webex` |
 | `Webflow` | `webflow` |
 | `WebGL` | `webgl` |
 | `webhint` | `webhint` |
@@ -2634,6 +2652,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Weights & Biases` | `weightsandbiases` |
 | `Welcome to the Jungle` | `welcometothejungle` |
 | `Wellfound` | `wellfound` |
+| `Wells Fargo` | `wellsfargo` |
 | `WEMO` | `wemo` |
 | `Western Digital` | `westerndigital` |
 | `WeTransfer` | `wetransfer` |
@@ -2716,6 +2735,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
 | `YouTube Music` | `youtubemusic` |
+| `YouTube Shorts` | `youtubeshorts` |
 | `YouTube Studio` | `youtubestudio` |
 | `YouTube TV` | `youtubetv` |
 | `Yubico` | `yubico` |
