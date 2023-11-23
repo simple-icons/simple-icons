@@ -16,12 +16,6 @@
             "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
         },
         {
-            "title": "(ISC)²",
-            "slug": "iscsquared",
-            "hex": "007054",
-            "source": "https://www.isc2.org"
-        },
-        {
             "title": "/e/",
             "hex": "000000",
             "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
@@ -160,11 +154,6 @@
             "title": "Adblock Plus",
             "hex": "C70D2C",
             "source": "https://adblockplus.org"
-        },
-        {
-            "title": "AddThis",
-            "hex": "FF6550",
-            "source": "https://www.addthis.com"
         },
         {
             "title": "AdGuard",
@@ -861,11 +850,6 @@
             "source": "https://www.analogue.co"
         },
         {
-            "title": "Anchor",
-            "hex": "5000B9",
-            "source": "https://anchor.fm"
-        },
-        {
             "title": "Andela",
             "hex": "173B3F",
             "source": "https://andela.com"
@@ -886,11 +870,6 @@
             "source": "https://developer.android.com/studio"
         },
         {
-            "title": "AngelList",
-            "hex": "000000",
-            "source": "https://angel.co/logo"
-        },
-        {
             "title": "Angular",
             "hex": "0F0F11",
             "source": "https://angular.dev/press-kit",
@@ -903,11 +882,6 @@
             "title": "Angular Universal",
             "hex": "00ACC1",
             "source": "https://angular.io/presskit"
-        },
-        {
-            "title": "AngularJS",
-            "hex": "E23237",
-            "source": "https://angularjs.org"
         },
         {
             "title": "AniList",
@@ -1467,11 +1441,6 @@
             "guidelines": "https://atlassian.design/foundations/logos"
         },
         {
-            "title": "Atom",
-            "hex": "66595C",
-            "source": "https://commons.wikimedia.org/wiki/File:Atom_editor_logo.svg"
-        },
-        {
             "title": "Auchan",
             "hex": "D6180B",
             "source": "https://www.auchan.fr"
@@ -1673,11 +1642,6 @@
             "hex": "9BF0E1",
             "source": "https://github.com/backstage/backstage/blob/862f2517188849dd7467d059edeb8692e6933c35/microsite/static/logo_assets/svg/Icon_Teal.svg",
             "guidelines": "https://backstage.io/logo_assets/Backstage_Identity_Assets_Overview.pdf"
-        },
-        {
-            "title": "Badgr",
-            "hex": "282C4C",
-            "source": "https://info.badgr.com"
         },
         {
             "title": "Badoo",
@@ -2264,11 +2228,6 @@
             "source": "https://byjus.com/byjus-the-learning-app"
         },
         {
-            "title": "byte",
-            "hex": "551DEF",
-            "source": "https://byte.co/byte"
-        },
-        {
             "title": "ByteDance",
             "hex": "3C8CFF",
             "source": "https://www.bytedance.com"
@@ -2279,12 +2238,13 @@
             "source": "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg"
         },
         {
-            "title": "C Sharp",
+            "title": "C#",
+            "slug": "csharp",
             "hex": "512BD4",
             "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1",
             "aliases": {
                 "aka": [
-                    "C#"
+                    "C sharp"
                 ]
             }
         },
@@ -7554,11 +7514,6 @@
             "guidelines": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp"
         },
         {
-            "title": "LGTM",
-            "hex": "000000",
-            "source": "https://lgtm.com"
-        },
-        {
             "title": "Libera.Chat",
             "hex": "FF55DD",
             "source": "https://libera.chat"
@@ -8158,11 +8113,6 @@
             "title": "MediaTek",
             "hex": "EC9430",
             "source": "https://corp.mediatek.com/news-events/press-library"
-        },
-        {
-            "title": "MediaTemple",
-            "hex": "000000",
-            "source": "https://mediatemple.net"
         },
         {
             "title": "MediBang Paint",
