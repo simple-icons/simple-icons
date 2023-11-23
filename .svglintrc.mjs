@@ -601,7 +601,7 @@ export default {
           if (isInvalidSegment(segment.params, index, previousSegmentIsZ)) {
             const [command, x1, y1, ...rest] = segment.params;
 
-            let errorMsg = `Innefective segment "${iconPath.substring(
+            let errorMsg = `Ineffective segment "${iconPath.substring(
                 segment.start,
                 segment.end,
               )}" found`,
