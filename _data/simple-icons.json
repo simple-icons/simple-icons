@@ -1524,6 +1524,11 @@
             "guidelines": "https://press.avast.com/media-materials#logos-and-brand-guidelines"
         },
         {
+            "title": "avianca",
+            "hex": "FF0000",
+            "source": "https://www.avianca.com"
+        },
+        {
             "title": "Avira",
             "hex": "E02027",
             "source": "https://www.avira.com/en/media-library",
@@ -2355,6 +2360,26 @@
             "source": "https://commons.wikimedia.org/wiki/File:Caterpillar_logo.svg"
         },
         {
+            "title": "CBC",
+            "hex": "E60505",
+            "source": "https://www.cbc.ca",
+            "aliases": {
+                "aka": [
+                    "Canadian Broadcasting Company"
+                ],
+                "dup": [
+                    {
+                        "title": "Radio Canada",
+                        "hex": "FF0000",
+                        "source": "https://radio-canada.ca"
+                    }
+                ],
+                "loc": {
+                    "fr-CA": "Société Radio-Canada"
+                }
+            }
+        },
+        {
             "title": "CBS",
             "hex": "033963",
             "source": "https://www.cbs.com"
@@ -2368,6 +2393,11 @@
             "title": "Celery",
             "hex": "37814A",
             "source": "https://github.com/celery/celery/blob/4d77ddddb10797011dc10dd2e4e1e7a7467b8431/docs/images/favicon.ico"
+        },
+        {
+            "title": "Celestron",
+            "hex": "F47216",
+            "source": "https://www.celestron.com"
         },
         {
             "title": "CentOS",
@@ -9036,6 +9066,16 @@
             }
         },
         {
+            "title": "NHL",
+            "hex": "000000",
+            "source": "https://www.nhl.com",
+            "aliases": {
+                "aka": [
+                    "National Hockey League"
+                ]
+            }
+        },
+        {
             "title": "niconico",
             "hex": "231815",
             "source": "https://www.nicovideo.jp"
@@ -9860,6 +9900,11 @@
             "source": "https://www.paychex.com"
         },
         {
+            "title": "Payhip",
+            "hex": "5C6AC4",
+            "source": "https://payhip.com"
+        },
+        {
             "title": "Payload CMS",
             "hex": "000000",
             "source": "https://payloadcms.com"
@@ -10061,6 +10106,11 @@
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
             "guidelines": "https://www.jetbrains.com/company/brand/"
+        },
+        {
+            "title": "Pi Network",
+            "hex": "F4AF47",
+            "source": "https://blockexplorer.minepi.com"
         },
         {
             "title": "Pi-hole",
@@ -11450,6 +11500,11 @@
             "title": "Riseup",
             "hex": "FF0000",
             "source": "https://riseup.net/en/about-us/images"
+        },
+        {
+            "title": "Rive",
+            "hex": "1D1D1D",
+            "source": "https://rive.app"
         },
         {
             "title": "roadmap.sh",
@@ -12913,6 +12968,11 @@
             "title": "STMicroelectronics",
             "hex": "03234B",
             "source": "https://www.st.com"
+        },
+        {
+            "title": "StockX",
+            "hex": "006340",
+            "source": "https://stockx.com/about/brand-assets"
         },
         {
             "title": "StopStalk",
@@ -14467,6 +14527,12 @@
             "hex": "A61A30",
             "source": "https://www.vivino.com/press",
             "guidelines": "https://www.vivino.com/press"
+        },
+        {
+            "title": "Vivint",
+            "hex": "212721",
+            "source": "https://brandfolder.com/portals/vivint",
+            "guidelines": "https://s.tiled.co/2wH-ED5/branding-guide"
         },
         {
             "title": "VK",
