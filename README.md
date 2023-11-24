@@ -149,9 +149,6 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 
 ## Third-Party Extensions
 
-> **Note for Extension Authors**\
-> As of v11 we will be removing third-party extensions from the below list that do not keep up to date with the previous major release. For example, when v11 releases we will remove anything not supporting `>v9.0.0`.
-
 | Extension | Author | License | Simple Icons Version |
 | :-- | :-- | :-: | :-: |
 | [Angular module](https://github.com/avmaisak/ngx-simple-icons) <img src="https://cdn.simpleicons.org/angular/000/fff" alt="Angular" align=left width=24 height=24> | [@avmaisak](https://github.com/avmaisak) | ![](https://img.shields.io/github/license/avmaisak/ngx-simple-icons) | [v6.18.0](https://github.com/simple-icons/simple-icons/tree/6.18.0) |
@@ -180,6 +177,9 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Vue 3 package](https://github.com/wyatt-herkamp/vue3-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@wyatt-herkamp](https://github.com/wyatt-herkamp) | ![](https://img.shields.io/github/license/wyatt-herkamp/vue3-simple-icons) | [v9.10.0](https://github.com/simple-icons/simple-icons/tree/9.10.0) |
 | [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) | ![](https://img.shields.io/github/license/mainvest/vue-simple-icons) | [v4.7.0](https://github.com/simple-icons/simple-icons/tree/4.7.0) |
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="WordPress" align=left width=24 height=24> |  [@tjtaylo](https://github.com/tjtaylo) | ![](https://img.shields.io/badge/license-GPL_v2-blue.svg) | [v4.25.0](https://github.com/simple-icons/simple-icons/tree/4.25.0)
+
+> **Note for Extension Authors**\
+> As of v11 we will be removing third-party extensions from the below list that do not keep up to date with the previous major release. For example, when v11 releases we will remove anything not supporting `>v9.0.0`.
 
 ## Contribute
 
