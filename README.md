@@ -179,7 +179,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="WordPress" align=left width=24 height=24> |  [@tjtaylo](https://github.com/tjtaylo) | ![](https://img.shields.io/badge/license-GPL_v2-blue.svg) | [v4.25.0](https://github.com/simple-icons/simple-icons/tree/4.25.0)
 
 > **Note for Extension Authors**\
-> As of v11 we will be removing third-party extensions from the below list that do not keep up to date with the previous major release. For example, when v11 releases we will remove anything not supporting `>v9.0.0`.
+> As of v11 we will be removing third-party extensions from the above list that do not keep up to date with the previous major release. For example, when v11 releases we will remove anything not supporting `>v9.0.0`.
 
 ## Contribute
 
