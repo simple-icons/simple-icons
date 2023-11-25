@@ -20,11 +20,15 @@ jobs:
     env:
       MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - id: get-labels
-        name: Get labels
-        run: |
-          labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/pulls/${{ github.event.pull_request.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
-          echo "labels=$labels" >> $GITHUB_OUTPUT
+        uses: ./.github/actions/get-labels
+        with:
+          issue_number: ${{ github.event.pull_request.number }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: get-si-members
         name: Get simple-icons members
