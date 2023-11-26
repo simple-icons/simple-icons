@@ -27,7 +27,7 @@ await writeFile(
       function (str, $0) {
         const capital = $0.substr(0, 1);
         const body = $0.substr(1).toLowerCase();
-        return capital + body;
+        return `**${capital + body}**`;
       },
     ),
 );
