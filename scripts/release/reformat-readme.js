@@ -1,6 +1,6 @@
 /**
  * @fileoverview
- * Simple Icons strip theme URL script.
+ * Reformat README to regular markdown.
  */
 
 import path from 'node:path';
