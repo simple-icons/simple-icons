@@ -64,6 +64,7 @@ Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://dev
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/00ccff99" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/orange/pink" />
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/_/eee" />
+<img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/eee/_" />
 ```
 
 ### Node Usage <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
