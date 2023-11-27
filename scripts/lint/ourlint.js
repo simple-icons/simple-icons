@@ -82,6 +82,19 @@ const TESTS = {
       )}`;
     }
   },
+
+  /* Check icon colors */
+  checkColor: (data) => {
+    const hasWhiteColor = (color) => {
+      return color === 'FFFFFF';
+    };
+
+    const allColors = [...new Set(data.icons.flatMap((icon) => icon.hex))];
+
+    if (allColors.some((color) => hasWhiteColor(color))) {
+      return 'Some icon colors are white `FFFFFF`, please replace with black `000000`';
+    }
+  },
 };
 
 const dataString = await getIconsDataString();
