@@ -179,7 +179,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) | ![](https://img.shields.io/github/license/mainvest/vue-simple-icons) | ![](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmainvest%2Fvue-simple-icons%2Fmaster%2Fpackage.json&query=%24.version&logo=simpleicons&label=version) |
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="WordPress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) | ![](https://img.shields.io/badge/license-GPL_v2-blue.svg) | [![v4.25.0](https://img.shields.io/static/v1?label=version&message=v4.25.0&logo=simpleicons&color=red)](https://github.com/simple-icons/simple-icons/tree/4.25.0) |
 
-> [!IMPORTANT]
+> [!IMPORTANT]\
 > From our next major release (v11, releasing on May 26, 2024), we will begin removing third-party extensions from the above list that are not up to date with at least our previous major release.\
 > For example, when v11 is released, we will remove any extensions that don't support `v10.0.0` or higher.\
 > Please create a PR to update the version number of your extension in this README following each update of your extension.
