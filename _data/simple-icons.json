@@ -6334,6 +6334,11 @@
             "source": "https://www.iceland.co.uk"
         },
         {
+            "title": "ICICI Bank",
+            "hex": "AE282E",
+            "source": "https://www.icicibank.com/ms/aboutus/annual-reports/2022-23/icici/assets/images/home-page/logo.svg"
+        },
+        {
             "title": "Icinga",
             "hex": "06062C",
             "source": "https://github.com/Icinga/icingaweb2/blob/293021b2000e9d459387153ca5690f97e0184aaa/public/img/icinga-logo-compact.svg"
@@ -12271,6 +12276,11 @@
             "source": "https://www.sfml-dev.org/download/goodies/"
         },
         {
+            "title": "shadcn/ui",
+            "hex": "000000",
+            "source": "https://ui.shadcn.com"
+        },
+        {
             "title": "Shadow",
             "hex": "0A0C0D",
             "source": "https://shadow.tech"
@@ -13164,6 +13174,11 @@
             "title": "Strava",
             "hex": "FC4C02",
             "source": "https://itunes.apple.com/us/app/strava-running-and-cycling-gps/id426826309"
+        },
+        {
+            "title": "Streamlabs",
+            "hex": "80F5D2",
+            "source": "https://streamlabs.com/about"
         },
         {
             "title": "Streamlit",
@@ -14658,6 +14673,11 @@
             "source": "https://visualstudio.microsoft.com"
         },
         {
+            "title": "Visual Studio App Center",
+            "hex": "CB2E6D",
+            "source": "https://learn.microsoft.com/en-us/visualstudio/subscriptions"
+        },
+        {
             "title": "Visual Studio Code",
             "hex": "007ACC",
             "source": "https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
@@ -14963,7 +14983,7 @@
         },
         {
             "title": "Webex",
-            "hex": "FFFFFF",
+            "hex": "000000",
             "source": "https://github.com/momentum-design/momentum-ui/blob/970c5bec962a3f72e17e0b7ed69f2c38d298c405/icons-rebrand/svg/webex-helix-filled.svg",
             "guidelines": "https://resources.webex.com/webex/brand-exchange-collection",
             "license": {
