@@ -1503,6 +1503,11 @@
             "guidelines": "https://brand.autodesk.com/brand-system/logo"
         },
         {
+            "title": "Autodesk Maya",
+            "hex": "37A5CC",
+            "source": "https://area.autodesk.com/learn/courses/maya-intro"
+        },
+        {
             "title": "Autodesk Revit",
             "hex": "186BFF",
             "source": "https://www.autodesk.com/products/revit"
@@ -3800,6 +3805,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Dovecot_logo.svg"
         },
         {
+            "title": "Doxygen",
+            "hex": "2C4AA8",
+            "source": "https://github.com/doxygen/doxygen/blob/2e73e6a53abe00a57b7eb0ea5ed6474baf4ebab7/templates/html/doxygen.svg"
+        },
+        {
             "title": "DPD",
             "hex": "DC0032",
             "source": "https://www.dpd.com"
@@ -4037,6 +4047,11 @@
             "title": "Eight Sleep",
             "hex": "262729",
             "source": "https://www.eightsleep.com/press/"
+        },
+        {
+            "title": "EJS",
+            "hex": "B4CA65",
+            "source": "https://github.com/mde/ejs-site/blob/dd845093a46b373df42108b888a0ad80085a5c94/ejs.svg"
         },
         {
             "title": "El Jueves",
@@ -6332,6 +6347,11 @@
             "title": "Iceland",
             "hex": "CC092F",
             "source": "https://www.iceland.co.uk"
+        },
+        {
+            "title": "ICICI Bank",
+            "hex": "AE282E",
+            "source": "https://www.icicibank.com/ms/aboutus/annual-reports/2022-23/icici/assets/images/home-page/logo.svg"
         },
         {
             "title": "Icinga",
@@ -12280,6 +12300,11 @@
             "source": "https://www.sfml-dev.org/download/goodies/"
         },
         {
+            "title": "shadcn/ui",
+            "hex": "000000",
+            "source": "https://ui.shadcn.com"
+        },
+        {
             "title": "Shadow",
             "hex": "0A0C0D",
             "source": "https://shadow.tech"
@@ -12710,6 +12735,11 @@
             "title": "Sony",
             "hex": "000000",
             "source": "https://www.sony.com"
+        },
+        {
+            "title": "Soriana",
+            "hex": "D52B1E",
+            "source": "https://www.soriana.com"
         },
         {
             "title": "Soundcharts",
@@ -13173,6 +13203,11 @@
             "title": "Strava",
             "hex": "FC4C02",
             "source": "https://itunes.apple.com/us/app/strava-running-and-cycling-gps/id426826309"
+        },
+        {
+            "title": "Streamlabs",
+            "hex": "80F5D2",
+            "source": "https://streamlabs.com/about"
         },
         {
             "title": "Streamlit",
@@ -14667,6 +14702,11 @@
             "source": "https://visualstudio.microsoft.com"
         },
         {
+            "title": "Visual Studio App Center",
+            "hex": "CB2E6D",
+            "source": "https://learn.microsoft.com/en-us/visualstudio/subscriptions"
+        },
+        {
             "title": "Visual Studio Code",
             "hex": "007ACC",
             "source": "https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
@@ -14972,7 +15012,7 @@
         },
         {
             "title": "Webex",
-            "hex": "FFFFFF",
+            "hex": "000000",
             "source": "https://github.com/momentum-design/momentum-ui/blob/970c5bec962a3f72e17e0b7ed69f2c38d298c405/icons-rebrand/svg/webex-helix-filled.svg",
             "guidelines": "https://resources.webex.com/webex/brand-exchange-collection",
             "license": {
@@ -15492,6 +15532,11 @@
             "title": "YouTube Gaming",
             "hex": "FF0000",
             "source": "https://gaming.youtube.com"
+        },
+        {
+            "title": "YouTube Kids",
+            "hex": "FF0000",
+            "source": "https://www.youtube.com/intl/ALL_us/kids"
         },
         {
             "title": "YouTube Music",
