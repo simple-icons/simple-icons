@@ -7658,7 +7658,7 @@
                 "type": "MPL-2.0"
             }
         },
-
+        {
             "title": "LibreOffice Draw",
             "hex": "CB6D30",
             "source": "https://github.com/LibreOffice/help/blob/02faeab6e7b014ca97a8c452e829af4522dadfc8/source/media/navigation/libo-draw.svg",
@@ -7676,19 +7676,19 @@
                 "type": "MPL-2.0"
             }
         },
-	      {
-            "title": "LibreOffice Writer",
-            "hex": "083FA6",
-            "source": "https://github.com/LibreOffice/help/blob/02faeab6e7b014ca97a8c452e829af4522dadfc8/source/media/navigation/libo-writer.svg",
+        {
+            "title": "LibreOffice Math",
+            "hex": "C10018",
+            "source": "https://github.com/LibreOffice/help/blob/02faeab6e7b014ca97a8c452e829af4522dadfc8/source/media/navigation/libo-math.svg",
             "guidelines": "https://wiki.documentfoundation.org/Design/Branding",
             "license": {
                 "type": "MPL-2.0"
             }
         },
         {
-            "title": "LibreOffice Math",
-            "hex": "C10018",
-            "source": "https://github.com/LibreOffice/help/blob/02faeab6e7b014ca97a8c452e829af4522dadfc8/source/media/navigation/libo-math.svg",
+            "title": "LibreOffice Writer",
+            "hex": "083FA6",
+            "source": "https://github.com/LibreOffice/help/blob/02faeab6e7b014ca97a8c452e829af4522dadfc8/source/media/navigation/libo-writer.svg",
             "guidelines": "https://wiki.documentfoundation.org/Design/Branding",
             "license": {
                 "type": "MPL-2.0"
