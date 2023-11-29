@@ -55,8 +55,12 @@ jobs:
               - '.github/**.md'
       - name: Check documentation links
         if: steps.changes.outputs.docs == 'true'
-        run: |
-          npx markdown-link-check --retry \
+        uses: nick-fields/retry@v2.9.0
+        with:
+          timeout_seconds: 300
+          max_attempts: 3
+          retry_on: error
+          command: npx markdown-link-check --retry \
             --config .github/markdown-link-check.json \
             ${{ steps.changes.outputs.docs_files }}
         continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
