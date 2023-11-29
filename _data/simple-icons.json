@@ -7686,6 +7686,15 @@
             }
         },
         {
+            "title": "LibreOffice Math",
+            "hex": "C10018",
+            "source": "https://github.com/LibreOffice/help/blob/02faeab6e7b014ca97a8c452e829af4522dadfc8/source/media/navigation/libo-math.svg",
+            "guidelines": "https://wiki.documentfoundation.org/Design/Branding",
+            "license": {
+                "type": "MPL-2.0"
+            }
+        },
+        {
             "title": "libuv",
             "hex": "403C3D",
             "source": "https://github.com/libuv/libuv/blob/e4087dedf837f415056a45a838f639a3d9dc3ced/img/logos.svg"
