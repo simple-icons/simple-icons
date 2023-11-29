@@ -15,7 +15,7 @@ Over 2700 Free SVG icons for popular brands. See them all on one page at <a href
 <a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
-## Usag
+## Usage
 
 > [!NOTE]\
 > We ask that all users read our [legal disclaimer](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md) before using icons from Simple Icons.
