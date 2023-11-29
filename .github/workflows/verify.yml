@@ -60,9 +60,7 @@ jobs:
           timeout_seconds: 300
           max_attempts: 3
           retry_on: error
-          command: npx markdown-link-check --retry \
-            --config .github/markdown-link-check.json \
-            ${{ steps.changes.outputs.docs_files }}
+          command: npx markdown-link-check --retry --config .github/markdown-link-check.json ${{ steps.changes.outputs.docs_files }}
         continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
       - name: Verify file permissions
         run: |
