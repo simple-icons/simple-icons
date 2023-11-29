@@ -3076,6 +3076,15 @@
             "source": "https://press.contentful.com/media_kits"
         },
         {
+            "title": "Contentstack",
+            "hex": "E74C3D",
+            "source": "https://www.contentstack.com",
+            "license": {
+                "type": "custom",
+                "url": "https://www.contentstack.com/legal/terms-of-service"
+            }
+        },
+        {
             "title": "Conventional Commits",
             "hex": "FE5196",
             "source": "https://www.conventionalcommits.org",
