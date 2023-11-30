@@ -48,10 +48,12 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+      - id: get-version
+        uses: ./.github/actions/get-version
       - name: Install dependencies
         run: npm i
-      - name: Replace CDN theme image links from README
-        run: npm run strip-theme-link
+      - name: Reformat README to regular markdown
+        run: node ./scripts/release/reformat-readme.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
         run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Build NodeJS package
@@ -70,13 +72,10 @@ jobs:
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v2
-      - name: Get release version
-        id: get-version
-        run: |
-          export PACKAGE_VERSION=$(cat package.json | grep 'version' | sed 's/[ \",:]//g' | sed 's/version//')
-          echo "::set-output name=version::$PACKAGE_VERSION"
+      - id: get-version
+        uses: ./.github/actions/get-version
       - name: Replace CDN theme image links from README
-        run: npm run strip-theme-link
+        run: node ./scripts/release/reformat-readme.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
         run: |
           git config user.name "${GITHUB_ACTOR}"
