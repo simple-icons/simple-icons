@@ -62,6 +62,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- BP
 - Disney
 - Mattel
 - Microchip Technology Inc.
