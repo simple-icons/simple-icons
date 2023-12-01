@@ -11118,6 +11118,15 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "PyCQA",
+            "hex": "201B44",
+            "source": "https://github.com/PyCQA/meta/blob/ac828d8d7eb55501addefb0ceb6496ab15e85ca5/logo/pycqa1-02.svg",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0",
+                "url": "https://github.com/PyCQA/meta/blob/ac828d8d7eb55501addefb0ceb6496ab15e85ca5/logo/LICENCE.md"
+            }
+        },
+        {
             "title": "Pydantic",
             "hex": "E92063",
             "source": "https://github.com/pydantic/pydantic/blob/94c748001a32992a587694b999fb1f3d2f1fc1fe/docs/logo-white.svg"
