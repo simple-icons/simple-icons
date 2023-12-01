@@ -20,7 +20,7 @@ await writeFile(
   readme
     .replace(
       /https:\/\/cdn.simpleicons.org\/(.+)\/000\/fff/g,
-      `https://raw.githubusercontent.com/simple-icons/simple-icons/${LINKS_BRANCH}/icons/$1.svg`,
+      `https://raw.githubusercontent.com/simple-icons/simple-icons/${LINKS_BRANCH}/icons/$1.svg`
     )
     .replace(
       /\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\](?!\()/g,
@@ -28,6 +28,6 @@ await writeFile(
         const capital = $0.substr(0, 1);
         const body = $0.substr(1).toLowerCase();
         return `**${capital + body}**`;
-      },
-    ),
+      }
+    )
 );
