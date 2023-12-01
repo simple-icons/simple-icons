@@ -56,6 +56,12 @@
             "source": "https://about.500px.com/press"
         },
         {
+            "title": "99designs",
+            "hex": "FE5F50",
+            "source": "https://99designs.com/branding",
+            "guidelines": "https://99designs.com/branding"
+        },
+        {
             "title": "9GAG",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:9gag_logo.svg"
@@ -5313,6 +5319,11 @@
             "source": "https://www.globus.de"
         },
         {
+            "title": "Glovo",
+            "hex": "F2CC38",
+            "source": "https://about.glovoapp.com/press"
+        },
+        {
             "title": "Gmail",
             "hex": "EA4335",
             "source": "https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg"
@@ -6625,6 +6636,11 @@
             "title": "Insomnia",
             "hex": "4000BF",
             "source": "https://insomnia.rest"
+        },
+        {
+            "title": "INSPIRE",
+            "hex": "00E5FF",
+            "source": "https://inspirehep.net"
         },
         {
             "title": "Insta360",
@@ -9177,6 +9193,12 @@
             "hex": "FF6600",
             "source": "https://www.netbsd.org",
             "guidelines": "https://www.netbsd.org/about/disclaimer.html"
+        },
+        {
+            "title": "netcup",
+            "hex": "056473",
+            "source": "https://www.netcup.de/static/assets/images/favicons/favicon.svg",
+            "guidelines": "https://www.netcup.eu/ueber-netcup/werbemittel"
         },
         {
             "title": "Netflix",
@@ -13608,6 +13630,16 @@
             "guidelines": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal"
         },
         {
+            "title": "Tabelog",
+            "hex": "F2CC38",
+            "source": "https://tabelog.com",
+            "aliases": {
+                "loc": {
+                    "ja-JP": "食べログ"
+                }
+            }
+        },
+        {
             "title": "Tableau",
             "hex": "E97627",
             "source": "https://www.tableau.com/about/media-kit/brand-assets",
@@ -14715,6 +14747,11 @@
             "license": {
                 "type": "BSD-3-Clause"
             }
+        },
+        {
+            "title": "VEGAS",
+            "hex": "1A1A1A",
+            "source": "https://www.vegascreativesoftware.com"
         },
         {
             "title": "Velog",
