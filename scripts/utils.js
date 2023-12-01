@@ -102,7 +102,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     .replace(/&#([0-9]+);/g, (_, num) => String.fromCharCode(parseInt(num)))
     .replace(
       /&(quot|amp|lt|gt);/g,
-      (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref]),
+      (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' })[ref],
     );
 
 /**
