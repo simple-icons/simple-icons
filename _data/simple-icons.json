@@ -56,6 +56,17 @@
             "source": "https://about.500px.com/press"
         },
         {
+            "title": "99designs",
+            "hex": "FE5F50",
+            "source": "https://99designs.com/branding",
+            "guidelines": "https://99designs.com/branding"
+        },
+        {
+            "title": "9GAG",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:9gag_logo.svg"
+        },
+        {
             "title": "A-Frame",
             "hex": "EF2D5E",
             "source": "https://aframe.io/docs"
@@ -1185,6 +1196,11 @@
             "title": "Apifox",
             "hex": "F44A53",
             "source": "https://apifox.com"
+        },
+        {
+            "title": "APM Terminals",
+            "hex": "FF6441",
+            "source": "https://www.apmterminals.com"
         },
         {
             "title": "Apollo GraphQL",
@@ -5303,6 +5319,11 @@
             "source": "https://www.globus.de"
         },
         {
+            "title": "Glovo",
+            "hex": "F2CC38",
+            "source": "https://about.glovoapp.com/press"
+        },
+        {
             "title": "Gmail",
             "hex": "EA4335",
             "source": "https://fonts.gstatic.com/s/i/productlogos/gmail_2020q4/v8/192px.svg"
@@ -6615,6 +6636,11 @@
             "title": "Insomnia",
             "hex": "4000BF",
             "source": "https://insomnia.rest"
+        },
+        {
+            "title": "INSPIRE",
+            "hex": "00E5FF",
+            "source": "https://inspirehep.net"
         },
         {
             "title": "Insta360",
@@ -9169,10 +9195,22 @@
             "guidelines": "https://www.netbsd.org/about/disclaimer.html"
         },
         {
+            "title": "netcup",
+            "hex": "056473",
+            "source": "https://www.netcup.de/static/assets/images/favicons/favicon.svg",
+            "guidelines": "https://www.netcup.eu/ueber-netcup/werbemittel"
+        },
+        {
             "title": "Netflix",
             "hex": "E50914",
             "source": "https://brand.netflix.com/en/assets/brand-symbol",
             "guidelines": "https://brand.netflix.com/en/assets/brand-symbol"
+        },
+        {
+            "title": "NETGEAR",
+            "hex": "2C262D",
+            "source": "https://www.powershift.netgear.de/images/powershift/collateral/logos-visio-icons/brandguideline_partner_2018.pdf",
+            "guidelines": "https://www.netgear.com/about/trademarks"
         },
         {
             "title": "Netlify",
@@ -10708,6 +10746,11 @@
             "source": "https://www.polywork.com"
         },
         {
+            "title": "Pond5",
+            "hex": "000000",
+            "source": "https://pond5.com"
+        },
+        {
             "title": "Pop!_OS",
             "hex": "48B9C7",
             "source": "https://pop.system76.com"
@@ -11409,6 +11452,11 @@
             "hex": "0075A8",
             "source": "https://rancher.com/brand-guidelines/",
             "guidelines": "https://rancher.com/brand-guidelines/"
+        },
+        {
+            "title": "Rapid",
+            "hex": "0055DA",
+            "source": "https://rapidapi.com"
         },
         {
             "title": "Rarible",
@@ -12253,6 +12301,11 @@
             "title": "Scrapbox",
             "hex": "06B632",
             "source": "https://scrapbox.io/nota-press"
+        },
+        {
+            "title": "Scrapy",
+            "hex": "60A839",
+            "source": "https://github.com/scrapy/scrapy.org/blob/d8e296f68c30664ffee3d142dd5d4c288d1e77c6/_brand/Scrapy%20Logo.eps"
         },
         {
             "title": "Scratch",
@@ -13593,6 +13646,16 @@
             "guidelines": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal"
         },
         {
+            "title": "Tabelog",
+            "hex": "F2CC38",
+            "source": "https://tabelog.com",
+            "aliases": {
+                "loc": {
+                    "ja-JP": "食べログ"
+                }
+            }
+        },
+        {
             "title": "Tableau",
             "hex": "E97627",
             "source": "https://www.tableau.com/about/media-kit/brand-assets",
@@ -14702,6 +14765,11 @@
             }
         },
         {
+            "title": "VEGAS",
+            "hex": "1A1A1A",
+            "source": "https://www.vegascreativesoftware.com"
+        },
+        {
             "title": "Velog",
             "hex": "20C997",
             "source": "https://github.com/velopert/velog-client/blob/8fbbb371f4b4525b6747e54d0c608900ea8bf03e/src/static/svg/velog-icon.svg"
@@ -15693,6 +15761,11 @@
             "title": "YouTube TV",
             "hex": "FF0000",
             "source": "https://partnermarketinghub.withgoogle.com/#/brands"
+        },
+        {
+            "title": "Yr",
+            "hex": "00B9F1",
+            "source": "https://www.yr.no"
         },
         {
             "title": "Yubico",
