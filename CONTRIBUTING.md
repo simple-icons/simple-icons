@@ -67,6 +67,8 @@ Some companies and organizations are excessively protective with their brands, s
 - Mattel
 - Microchip Technology Inc.
 - Oracle
+- Microsoft
+- Adobe
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
