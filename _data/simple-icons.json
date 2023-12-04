@@ -1616,31 +1616,6 @@
             "source": "https://github.com/axios/axios-docs/blob/ba35d67160f94419c1b0292831cd1a4b378adb42/assets/logo.svg"
         },
         {
-            "title": "Azure Artifacts",
-            "hex": "CB2E6D",
-            "source": "https://azure.microsoft.com/products/devops"
-        },
-        {
-            "title": "Azure Data Explorer",
-            "hex": "0078D4",
-            "source": "https://azure.microsoft.com/pricing/details/data-explorer"
-        },
-        {
-            "title": "Azure DevOps",
-            "hex": "0078D7",
-            "source": "https://azure.microsoft.com/products/devops"
-        },
-        {
-            "title": "Azure Functions",
-            "hex": "0062AD",
-            "source": "https://learn.microsoft.com/azure/architecture/icons"
-        },
-        {
-            "title": "Azure Pipelines",
-            "hex": "2560E0",
-            "source": "https://azure.microsoft.com/products/devops"
-        },
-        {
             "title": "B&R Automation",
             "hex": "FF8800",
             "source": "https://www.br-automation.com"
@@ -2276,22 +2251,6 @@
             "title": "C",
             "hex": "A8B9CC",
             "source": "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg"
-        },
-        {
-            "title": "C#",
-            "slug": "csharp",
-            "hex": "512BD4",
-            "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1",
-            "aliases": {
-                "aka": [
-                    "C sharp"
-                ]
-            }
-        },
-        {
-            "title": "C++",
-            "hex": "00599C",
-            "source": "https://github.com/isocpp/logos/tree/64ef037049f87ac74875dbe72695e59118b52186"
         },
         {
             "title": "C++ Builder",
@@ -3493,16 +3452,6 @@
             "guidelines": "https://www.datastax.com/brand-resources"
         },
         {
-            "title": "Dataverse",
-            "hex": "088142",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
             "title": "DatoCMS",
             "hex": "FF7751",
             "source": "https://www.datocms.com/company/brand-assets",
@@ -3989,16 +3938,6 @@
             "source": "https://dwm.suckless.org"
         },
         {
-            "title": "Dynamics 365",
-            "hex": "0B53CE",
-            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
-            }
-        },
-        {
             "title": "Dynatrace",
             "hex": "1496FF",
             "source": "https://www.dynatrace.com/company/press-kit/"
@@ -4437,18 +4376,6 @@
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
-        },
-        {
-            "title": "F#",
-            "hex": "378BBA",
-            "slug": "fsharp",
-            "source": "https://foundation.fsharp.org/logo",
-            "guidelines": "https://foundation.fsharp.org/logo",
-            "aliases": {
-                "aka": [
-                    "F sharp"
-                ]
-            }
         },
         {
             "title": "F1",
@@ -6740,11 +6667,6 @@
             }
         },
         {
-            "title": "Internet Explorer",
-            "hex": "0076D6",
-            "source": "https://compass-ssl.microsoft.com/assets/c8/67/c867db4c-f328-45b8-817c-33834c70aae6.svg?n=IE.svg"
-        },
-        {
             "title": "Intigriti",
             "hex": "161A36",
             "source": "https://www.intigriti.com"
@@ -8535,163 +8457,6 @@
             "source": "https://commons.wikimedia.org/wiki/File:MicroPython_new_logo.svg"
         },
         {
-            "title": "Microsoft",
-            "hex": "5E5E5E",
-            "source": "https://developer.microsoft.com",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Academic",
-            "hex": "2D9FD9",
-            "source": "https://academic.microsoft.com",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Access",
-            "hex": "A4373A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Azure",
-            "hex": "0078D4",
-            "source": "https://github.com/microsoft/vscode-azureresourcegroups/blob/0a06362e82170fd7f8dc2496286825b1a69cc42b/resources/azure.svg",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Bing",
-            "hex": "258FFA",
-            "source": "https://www.bing.com/covid/",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Edge",
-            "hex": "0078D7",
-            "source": "https://support.microsoft.com/en-us/help/17171/microsoft-edge-get-to-know",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Excel",
-            "hex": "217346",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Exchange",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft OneDrive",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft OneNote",
-            "hex": "7719AA",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Outlook",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/outlook/docs",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft PowerPoint",
-            "hex": "B7472A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft SharePoint",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft SQL Server",
-            "hex": "CC2927",
-            "source": "https://de.wikipedia.org/wiki/Datei:Microsoft_SQL_Server_Logo.svg"
-        },
-        {
-            "title": "Microsoft Store",
-            "hex": "005FB8",
-            "source": "https://github.com/microsoft/fluentui-system-icons/blob/4c58d8fb4d8549b9af9f7db8764d5d154df796c2/assets/Store%20Microsoft/SVG/ic_fluent_store_microsoft_24_regular.svg",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Teams",
-            "hex": "6264A7",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Translator",
-            "hex": "057B00",
-            "source": "https://translator.microsoft.com",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Visio",
-            "hex": "3955A3",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Word",
-            "hex": "2B579A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
             "title": "Microstation",
             "hex": "62BB47",
             "source": "https://www.bentley.com/software/microstation"
@@ -8724,11 +8489,6 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
-        },
-        {
-            "title": "Minecraft",
-            "hex": "62B47A",
-            "source": "https://education.minecraft.net/press/"
         },
         {
             "title": "Minetest",
@@ -8840,11 +8600,6 @@
             "title": "MODX",
             "hex": "102C53",
             "source": "https://docs.modx.com"
-        },
-        {
-            "title": "Mojang Studios",
-            "hex": "EF323D",
-            "source": "https://www.minecraft.net"
         },
         {
             "title": "Moleculer",
@@ -10798,84 +10553,9 @@
             "source": "https://postmates.com/press-and-media"
         },
         {
-            "title": "Power Apps",
-            "hex": "742774",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Automate",
-            "hex": "0066FF",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "aliases": {
-                "aka": [
-                    "Microsoft Flow"
-                ]
-            },
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power BI",
-            "hex": "F2C811",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Fx",
-            "hex": "7F2157",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Pages",
-            "hex": "A493E7",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "aliases": {
-                "aka": [
-                    "Power Apps Portals"
-                ]
-            },
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Virtual Agents",
-            "hex": "0B556A",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
             "title": "POWERS",
             "hex": "E74536",
             "source": "https://www.powerswhiskey.com"
-        },
-        {
-            "title": "PowerShell",
-            "hex": "5391FE",
-            "source": "https://github.com/PowerShell/PowerShell/tree/11d7587f9b934cf27013d318886f97fb95c811cf"
         },
         {
             "title": "pr.co",
@@ -12702,16 +12382,6 @@
             "title": "Skypack",
             "hex": "3167FF",
             "source": "https://skypack.dev"
-        },
-        {
-            "title": "Skype",
-            "hex": "00AFF0",
-            "source": "https://blogs.skype.com/?attachment_id=56273"
-        },
-        {
-            "title": "Skype for Business",
-            "hex": "00AFF0",
-            "source": "https://en.wikipedia.org/wiki/Skype_for_Business_Server"
         },
         {
             "title": "Skyrock",
@@ -14905,27 +14575,6 @@
             "source": "https://merchantsignageeu.visa.com/product.asp?dptID=696"
         },
         {
-            "title": "Visual Basic",
-            "hex": "512BD4",
-            "source": "https://aka.ms/fluentui-icons",
-            "guidelines": "https://aka.ms/fluentui-assets-license"
-        },
-        {
-            "title": "Visual Studio",
-            "hex": "5C2D91",
-            "source": "https://visualstudio.microsoft.com"
-        },
-        {
-            "title": "Visual Studio App Center",
-            "hex": "CB2E6D",
-            "source": "https://learn.microsoft.com/en-us/visualstudio/subscriptions"
-        },
-        {
-            "title": "Visual Studio Code",
-            "hex": "007ACC",
-            "source": "https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
-        },
-        {
             "title": "Vite",
             "hex": "646CFF",
             "source": "https://vitejs.dev"
@@ -15419,38 +15068,6 @@
             "source": "https://www.winamp.com"
         },
         {
-            "title": "Windows",
-            "hex": "0078D4",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
-            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
-        },
-        {
-            "title": "Windows 10",
-            "hex": "0078D6",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_10_Logo.svg"
-        },
-        {
-            "title": "Windows 11",
-            "hex": "0078D4",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
-            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
-        },
-        {
-            "title": "Windows 95",
-            "hex": "008080",
-            "source": "https://en.wikipedia.org/wiki/Windows_95"
-        },
-        {
-            "title": "Windows Terminal",
-            "hex": "4D4D4D",
-            "source": "https://github.com/microsoft/terminal/blob/a90289548f8548bf5c370a4b141b4b815c22616b/res/terminal/Terminal_HC.svg"
-        },
-        {
-            "title": "Windows XP",
-            "hex": "003399",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2002%E2%80%932012_(Multicolored).svg"
-        },
-        {
             "title": "Wipro",
             "hex": "341C53",
             "source": "https://www.wipro.com/content/dam/nexus/en/service-lines/applications/latest-thinking/state-of-cybersecurity-report-2019.pdf"
@@ -15594,12 +15211,6 @@
             "source": "https://commons.wikimedia.org/wiki/File:X.Org_Logo.svg"
         },
         {
-            "title": "Xamarin",
-            "hex": "3498DB",
-            "source": "https://github.com/dotnet-foundation/swag/blob/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin/Xamagon/svg/Xamagon.svg",
-            "guidelines": "https://github.com/dotnet-foundation/swag/tree/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin"
-        },
-        {
             "title": "XAML",
             "hex": "0C54C2",
             "source": "https://github.com/microsoft/microsoft-ui-xaml/issues/1185#issuecomment-529731046"
@@ -15608,11 +15219,6 @@
             "title": "XAMPP",
             "hex": "FB7A24",
             "source": "https://www.apachefriends.org/en/"
-        },
-        {
-            "title": "Xbox",
-            "hex": "107C10",
-            "source": "https://www.xbox.com/en-US/consoles"
         },
         {
             "title": "Xcode",
