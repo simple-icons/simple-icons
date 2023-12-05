@@ -1,6 +1,6 @@
 new icon:
   - any: [icons/*.svg]
     status: added
-icon outdated:
+update icon/data:
   - any: [icons/*.svg]
     status: modified
