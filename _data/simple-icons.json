@@ -3451,7 +3451,15 @@
         {
             "title": "Dassault Systèmes",
             "hex": "005386",
-            "source": "https://www.3ds.com"
+            "source": "https://www.3ds.com",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "SolidWorks",
+                        "hex": "D81E1A"
+                    }
+                ]
+            }
         },
         {
             "title": "data.ai",
