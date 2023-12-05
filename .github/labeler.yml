@@ -9,5 +9,5 @@ docs:
     status: modified
 meta:
   - any: ['.github/*', 'scripts/*', 'tests/*', '*']
-  - all: ['!*.md', '!icons/*.svg']
+  - all: ['!*.md', '!icons/*.svg', '!_data/*', '!package.json']
     status: modified
