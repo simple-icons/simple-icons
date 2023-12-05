@@ -4439,7 +4439,10 @@
         {
             "title": "F-Droid",
             "hex": "1976D2",
-            "source": "https://f-droid.org"
+            "source": "https://f-droid.org",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "F-Secure",
@@ -4782,7 +4785,10 @@
             "title": "Flatpak",
             "hex": "4A90D9",
             "source": "https://flatpak.org/press",
-            "guidelines": "https://flatpak.org/press"
+            "guidelines": "https://flatpak.org/press",
+            "license": {
+                "type": "CC-BY-3.0"
+            }
         },
         {
             "title": "Flattr",
@@ -5883,7 +5889,10 @@
             "title": "GTK",
             "hex": "7FE719",
             "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
-            "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
+            "guidelines": "https://foundation.gnome.org/logo-and-trademarks",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Guangzhou Metro",
@@ -7668,7 +7677,11 @@
         {
             "title": "Lemmy",
             "hex": "14854F",
-            "source": "https://join-lemmy.org"
+            "source": "https://join-lemmy.org",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/LemmyNet/lemmy/blob/main/LICENSE"
+            }
         },
         {
             "title": "Lenovo",
@@ -8872,7 +8885,10 @@
         {
             "title": "Monero",
             "hex": "FF6600",
-            "source": "https://www.getmonero.org/press-kit/"
+            "source": "https://www.getmonero.org/press-kit",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "MoneyGram",
@@ -10289,7 +10305,10 @@
         {
             "title": "PeerTube",
             "hex": "F1680D",
-            "source": "https://joinpeertube.org"
+            "source": "https://joinpeertube.org",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Pegasus Airlines",
@@ -10626,7 +10645,11 @@
         {
             "title": "Pleroma",
             "hex": "FBA457",
-            "source": "https://pleroma.social"
+            "source": "https://pleroma.social",
+            "license": {
+                "type": "custom",
+                "url": "https://git.pleroma.social/pleroma/pleroma/-/blob/develop/COPYING"
+            }
         },
         {
             "title": "Plesk",
