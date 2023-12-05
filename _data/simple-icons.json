@@ -3451,7 +3451,15 @@
         {
             "title": "Dassault Systèmes",
             "hex": "005386",
-            "source": "https://www.3ds.com"
+            "source": "https://www.3ds.com",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "SolidWorks",
+                        "hex": "D81E1A"
+                    }
+                ]
+            }
         },
         {
             "title": "data.ai",
@@ -6152,6 +6160,11 @@
             "hex": "2FC774",
             "source": "https://helpdesk.design",
             "guidelines": "https://helpdesk.design"
+        },
+        {
+            "title": "Hepsiemlak",
+            "hex": "E1251B",
+            "source": "https://www.hepsiemlak.com"
         },
         {
             "title": "HERE",
@@ -9635,6 +9648,11 @@
             "license": {
                 "type": "Unlicense"
             }
+        },
+        {
+            "title": "oclif",
+            "hex": "000000",
+            "source": "https://github.com/oclif/oclif.github.io/blob/2356a96dbaf0d3791ec2ddce3b08ccd78408e0a0/website/static/img/oclif.svg"
         },
         {
             "title": "Octane Render",
@@ -15584,8 +15602,8 @@
             "source": "https://wpexplorer.com"
         },
         {
-            "title": "write.as",
-            "hex": "5BC4EE",
+            "title": "Write.as",
+            "hex": "5AC4EE",
             "source": "https://write.as/brand",
             "guidelines": "https://write.as/brand"
         },
