@@ -2,7 +2,7 @@
 <img src="https://cdn.simpleicons.org/simpleicons/000/fff" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 2700 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 2800 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -181,8 +181,8 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="WordPress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) | ![](https://img.shields.io/badge/license-GPL_v2-blue.svg) | [![v4.25.0](https://img.shields.io/static/v1?label=version&message=v4.25.0&logo=simpleicons&color=red)](https://github.com/simple-icons/simple-icons/tree/4.25.0) |
 
 > [!IMPORTANT]\
-> From our next major release (v11, releasing on May 26, 2024), we will begin removing third-party extensions from the above list that are not up to date with at least our previous major release.\
-> For example, when v11 is released, we will remove any extensions that don't support `v10.0.0` or higher.\
+> From our next scheduled major release (v12, releasing on May 26, 2024), we will begin removing third-party extensions from the above list that are not up to date with at least our previous major release.\
+> For example, when v12 is released, we will remove any extensions that don't support `v11.0.0` or higher.\
 > Please create a PR to update the version number of your extension in this README following each update of your extension.
 
 ## Contribute

@@ -3451,7 +3451,15 @@
         {
             "title": "Dassault Systèmes",
             "hex": "005386",
-            "source": "https://www.3ds.com"
+            "source": "https://www.3ds.com",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "SolidWorks",
+                        "hex": "D81E1A"
+                    }
+                ]
+            }
         },
         {
             "title": "data.ai",
@@ -4431,7 +4439,10 @@
         {
             "title": "F-Droid",
             "hex": "1976D2",
-            "source": "https://f-droid.org"
+            "source": "https://f-droid.org",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "F-Secure",
@@ -4774,7 +4785,10 @@
             "title": "Flatpak",
             "hex": "4A90D9",
             "source": "https://flatpak.org/press",
-            "guidelines": "https://flatpak.org/press"
+            "guidelines": "https://flatpak.org/press",
+            "license": {
+                "type": "CC-BY-3.0"
+            }
         },
         {
             "title": "Flattr",
@@ -5875,7 +5889,10 @@
             "title": "GTK",
             "hex": "7FE719",
             "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
-            "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
+            "guidelines": "https://foundation.gnome.org/logo-and-trademarks",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Guangzhou Metro",
@@ -6143,6 +6160,11 @@
             "hex": "2FC774",
             "source": "https://helpdesk.design",
             "guidelines": "https://helpdesk.design"
+        },
+        {
+            "title": "Hepsiemlak",
+            "hex": "E1251B",
+            "source": "https://www.hepsiemlak.com"
         },
         {
             "title": "HERE",
@@ -7655,7 +7677,11 @@
         {
             "title": "Lemmy",
             "hex": "14854F",
-            "source": "https://join-lemmy.org"
+            "source": "https://join-lemmy.org",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/LemmyNet/lemmy/blob/main/LICENSE"
+            }
         },
         {
             "title": "Lenovo",
@@ -8859,7 +8885,10 @@
         {
             "title": "Monero",
             "hex": "FF6600",
-            "source": "https://www.getmonero.org/press-kit/"
+            "source": "https://www.getmonero.org/press-kit",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "MoneyGram",
@@ -9207,6 +9236,12 @@
             "guidelines": "https://brand.netflix.com/en/assets/brand-symbol"
         },
         {
+            "title": "NETGEAR",
+            "hex": "2C262D",
+            "source": "https://www.powershift.netgear.de/images/powershift/collateral/logos-visio-icons/brandguideline_partner_2018.pdf",
+            "guidelines": "https://www.netgear.com/about/trademarks"
+        },
+        {
             "title": "Netlify",
             "hex": "00C7B7",
             "source": "https://www.netlify.com/press/",
@@ -9350,6 +9385,11 @@
                     "National Hockey League"
                 ]
             }
+        },
+        {
+            "title": "Niantic",
+            "hex": "000000",
+            "source": "https://nianticlabs.com/press"
         },
         {
             "title": "niconico",
@@ -9608,6 +9648,11 @@
             "license": {
                 "type": "Unlicense"
             }
+        },
+        {
+            "title": "oclif",
+            "hex": "000000",
+            "source": "https://github.com/oclif/oclif.github.io/blob/2356a96dbaf0d3791ec2ddce3b08ccd78408e0a0/website/static/img/oclif.svg"
         },
         {
             "title": "Octane Render",
@@ -10260,7 +10305,10 @@
         {
             "title": "PeerTube",
             "hex": "F1680D",
-            "source": "https://joinpeertube.org"
+            "source": "https://joinpeertube.org",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Pegasus Airlines",
@@ -10597,7 +10645,11 @@
         {
             "title": "Pleroma",
             "hex": "FBA457",
-            "source": "https://pleroma.social"
+            "source": "https://pleroma.social",
+            "license": {
+                "type": "custom",
+                "url": "https://git.pleroma.social/pleroma/pleroma/-/blob/develop/COPYING"
+            }
         },
         {
             "title": "Plesk",
@@ -10733,6 +10785,11 @@
             "title": "Polywork",
             "hex": "543DE0",
             "source": "https://www.polywork.com"
+        },
+        {
+            "title": "Pond5",
+            "hex": "000000",
+            "source": "https://pond5.com"
         },
         {
             "title": "Pop!_OS",
@@ -12639,6 +12696,11 @@
             "title": "SitePoint",
             "hex": "258AAF",
             "source": "https://www.sitepoint.com"
+        },
+        {
+            "title": "Skaffold",
+            "hex": "2AA2D6",
+            "source": "https://github.com/GoogleContainerTools/skaffold/blob/9376dc047aded2adb188f599267fbb829a327dfd/logo/skaffold.eps"
         },
         {
             "title": "Sketch",
@@ -14819,6 +14881,11 @@
             "guidelines": "https://www.viber.com/brand-center"
         },
         {
+            "title": "Viblo",
+            "hex": "5387C6",
+            "source": "https://viblo.asia"
+        },
+        {
             "title": "VictoriaMetrics",
             "aliases": {
                 "aka": [
@@ -15535,8 +15602,8 @@
             "source": "https://wpexplorer.com"
         },
         {
-            "title": "write.as",
-            "hex": "5BC4EE",
+            "title": "Write.as",
+            "hex": "5AC4EE",
             "source": "https://write.as/brand",
             "guidelines": "https://write.as/brand"
         },
