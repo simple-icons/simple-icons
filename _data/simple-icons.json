@@ -1691,6 +1691,11 @@
             "source": "https://www.baidu.com"
         },
         {
+            "title": "Bakaláři",
+            "hex": "00A2E2",
+            "source": "https://konference.bakalari.cz"
+        },
+        {
             "title": "Bamboo",
             "hex": "0052CC",
             "source": "https://www.atlassian.design/guidelines/marketing/resources/logo-files"
@@ -4103,6 +4108,11 @@
             "source": "https://editorconfig.org"
         },
         {
+            "title": "Educative",
+            "hex": "4951F5",
+            "source": "https://www.educative.io"
+        },
+        {
             "title": "edX",
             "hex": "02262B",
             "source": "https://www.edx.org"
@@ -4444,7 +4454,10 @@
         {
             "title": "F-Droid",
             "hex": "1976D2",
-            "source": "https://f-droid.org"
+            "source": "https://f-droid.org",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "F-Secure",
@@ -4787,7 +4800,10 @@
             "title": "Flatpak",
             "hex": "4A90D9",
             "source": "https://flatpak.org/press",
-            "guidelines": "https://flatpak.org/press"
+            "guidelines": "https://flatpak.org/press",
+            "license": {
+                "type": "CC-BY-3.0"
+            }
         },
         {
             "title": "Flattr",
@@ -5822,6 +5838,11 @@
             "source": "https://www.graylog.org"
         },
         {
+            "title": "Great Learning",
+            "hex": "0E39A9",
+            "source": "https://www.mygreatlearning.com"
+        },
+        {
             "title": "Greenhouse",
             "hex": "24A47F",
             "source": "https://brand.greenhouse.io/brand-portal/p/6",
@@ -5888,7 +5909,10 @@
             "title": "GTK",
             "hex": "7FE719",
             "source": "https://commons.wikimedia.org/wiki/File:GTK_logo.svg",
-            "guidelines": "https://foundation.gnome.org/logo-and-trademarks/"
+            "guidelines": "https://foundation.gnome.org/logo-and-trademarks",
+            "license": {
+                "type": "CC-BY-SA-3.0"
+            }
         },
         {
             "title": "Guangzhou Metro",
@@ -7673,7 +7697,11 @@
         {
             "title": "Lemmy",
             "hex": "14854F",
-            "source": "https://join-lemmy.org"
+            "source": "https://join-lemmy.org",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/LemmyNet/lemmy/blob/main/LICENSE"
+            }
         },
         {
             "title": "Lenovo",
@@ -8877,7 +8905,10 @@
         {
             "title": "Monero",
             "hex": "FF6600",
-            "source": "https://www.getmonero.org/press-kit/"
+            "source": "https://www.getmonero.org/press-kit",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "MoneyGram",
@@ -10294,7 +10325,10 @@
         {
             "title": "PeerTube",
             "hex": "F1680D",
-            "source": "https://joinpeertube.org"
+            "source": "https://joinpeertube.org",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Pegasus Airlines",
@@ -10631,7 +10665,11 @@
         {
             "title": "Pleroma",
             "hex": "FBA457",
-            "source": "https://pleroma.social"
+            "source": "https://pleroma.social",
+            "license": {
+                "type": "custom",
+                "url": "https://git.pleroma.social/pleroma/pleroma/-/blob/develop/COPYING"
+            }
         },
         {
             "title": "Plesk",
@@ -12865,6 +12903,11 @@
             "source": "https://socket.io"
         },
         {
+            "title": "Softpedia",
+            "hex": "002873",
+            "source": "https://commons.wikimedia.org/wiki/File:Softpedia_logo.svg"
+        },
+        {
             "title": "Sogou",
             "hex": "FB6022",
             "source": "https://www.sogou.com"
@@ -14113,6 +14156,11 @@
             "title": "Tinder",
             "hex": "FF6B6B",
             "source": "https://www.gotinder.com/press"
+        },
+        {
+            "title": "Tinkercad",
+            "hex": "1477D1",
+            "source": "https://www.tinkercad.com"
         },
         {
             "title": "TinyLetter",
