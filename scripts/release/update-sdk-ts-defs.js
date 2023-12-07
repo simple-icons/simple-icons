@@ -31,13 +31,13 @@ const generateSdkMts = async () => {
   try {
     execSync(
       'npx tsc sdk.mjs' +
-        ' --declaration --emitDeclarationOnly --allowJs --removeComments',
+        ' --declaration --emitDeclarationOnly --allowJs --removeComments'
     );
   } catch (error) {
     await fs.writeFile(sdkMjs, originalSdkMjsContent);
     console.log(
       `Error ${error.status} generating Typescript` +
-        ` definitions: '${error.message}'`,
+        ` definitions: '${error.message}'`
     );
     process.exit(1);
   }
@@ -65,7 +65,7 @@ const generateSdkTs = async () => {
   } catch (error) {
     console.log(
       `Error ${error.status} executing Prettier` +
-        ` to pretiffy SDK TS definitions: '${error.message}'`,
+        ` to pretiffy SDK TS definitions: '${error.message}'`
     );
     process.exit(1);
   }
