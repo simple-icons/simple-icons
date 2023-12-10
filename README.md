@@ -181,13 +181,16 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="WordPress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) | ![](https://img.shields.io/badge/license-GPL_v2-blue.svg) | [![v4.25.0](https://img.shields.io/static/v1?label=version&message=v4.25.0&logo=simpleicons&color=red)](https://github.com/simple-icons/simple-icons/tree/4.25.0) |
 
 > [!IMPORTANT]\
-> From our next major release (v11, releasing on May 26, 2024), we will begin removing third-party extensions from the above list that are not up to date with at least our previous major release.\
-> For example, when v11 is released, we will remove any extensions that don't support `v10.0.0` or higher.\
+> From our next scheduled major release (v12, releasing on May 26, 2024), we will begin removing third-party extensions from the above list that are not up to date with at least our previous major release.\
+> For example, when v12 is released, we will remove any extensions that don't support `v11.0.0` or higher.\
 > Please create a PR to update the version number of your extension in this README following each update of your extension.
 
 ## Contribute
 
-[![Good first issues open](https://img.shields.io/github/issues/simple-icons/simple-icons/good%20first%20issue?label=good%20first%20issues&logo=git&logoColor=white)](https://github.com/simple-icons/simple-icons/labels/good%20first%20issue)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522good%2520first%2520issue%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=github&label=good%20first%20issues&color=228f6c&labelColor=228f6c&logoColor=white&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
 
 Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
