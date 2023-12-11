@@ -287,6 +287,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Backstage` | `backstage` |
 | `Badoo` | `badoo` |
 | `Baidu` | `baidu` |
+| `Bakaláři` | `bakalari` |
 | `Bamboo` | `bamboo` |
 | `Bandcamp` | `bandcamp` |
 | `BandLab` | `bandlab` |
@@ -371,6 +372,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Brave` | `brave` |
 | `Breaker` | `breaker` |
 | `Brevo` | `brevo` |
+| `Bricks` | `bricks` |
 | `British Airways` | `britishairways` |
 | `Broadcom` | `broadcom` |
 | `BSD` | `bsd` |
@@ -634,6 +636,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Debian` | `debian` |
 | `Decap CMS` | `decapcms` |
 | `deepin` | `deepin` |
+| `DeepL` | `deepl` |
 | `Deepnote` | `deepnote` |
 | `del.icio.us` | `delicious` |
 | `Deliveroo` | `deliveroo` |
@@ -708,6 +711,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DuckDuckGo` | `duckduckgo` |
 | `Dungeons & Dragons` | `dungeonsanddragons` |
 | `Dunked` | `dunked` |
+| `Dunzo` | `dunzo` |
 | `Duolingo` | `duolingo` |
 | `DVC` | `dvc` |
 | `dwm` | `dwm` |
@@ -729,6 +733,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eclipse Vert.x` | `eclipsevertdotx` |
 | `EDEKA` | `edeka` |
 | `EditorConfig` | `editorconfig` |
+| `Educative` | `educative` |
 | `edX` | `edx` |
 | `egghead` | `egghead` |
 | `Egnyte` | `egnyte` |
@@ -990,6 +995,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Cloud` | `googlecloud` |
 | `Google Cloud Composer` | `googlecloudcomposer` |
 | `Google Cloud Spanner` | `googlecloudspanner` |
+| `Google Cloud Storage` | `googlecloudstorage` |
 | `Google Colab` | `googlecolab` |
 | `Google Container Optimized OS` | `googlecontaineroptimizedos` |
 | `Google Data Studio` | `googledatastudio` |
@@ -1035,10 +1041,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grafana` | `grafana` |
 | `Grammarly` | `grammarly` |
 | `Grand Frais` | `grandfrais` |
+| `GrapheneOS` | `grapheneos` |
+| `Graphite` | `graphite` |
 | `GraphQL` | `graphql` |
 | `Grav` | `grav` |
 | `Gravatar` | `gravatar` |
 | `Graylog` | `graylog` |
+| `Great Learning` | `greatlearning` |
 | `Greenhouse` | `greenhouse` |
 | `GreenSock` | `greensock` |
 | `Grid.ai` | `griddotai` |
@@ -1098,6 +1107,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Helm` | `helm` |
 | `Help Scout` | `helpscout` |
 | `HelpDesk` | `helpdesk` |
+| `Hepsiemlak` | `hepsiemlak` |
 | `HERE` | `here` |
 | `Heroku` | `heroku` |
 | `Hetzner` | `hetzner` |
@@ -1589,6 +1599,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Monster` | `monster` |
 | `Monzo` | `monzo` |
 | `Moo` | `moo` |
+| `Moodle` | `moodle` |
 | `Moonrepo` | `moonrepo` |
 | `Moqups` | `moqups` |
 | `Morrisons` | `morrisons` |
@@ -1638,6 +1649,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NetBSD` | `netbsd` |
 | `netcup` | `netcup` |
 | `Netflix` | `netflix` |
+| `NETGEAR` | `netgear` |
 | `Netlify` | `netlify` |
 | `Nette` | `nette` |
 | `Netto` | `netto` |
@@ -1659,6 +1671,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ngrok` | `ngrok` |
 | `NgRx` | `ngrx` |
 | `NHL` | `nhl` |
+| `Niantic` | `niantic` |
 | `niconico` | `niconico` |
 | `Nike` | `nike` |
 | `Nikon` | `nikon` |
@@ -1707,6 +1720,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
 | `OCaml` | `ocaml` |
+| `oclif` | `oclif` |
 | `Octane Render` | `octanerender` |
 | `Octave` | `octave` |
 | `October CMS` | `octobercms` |
@@ -1788,6 +1802,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `p5.js` | `p5dotjs` |
 | `Packagist` | `packagist` |
 | `Packer` | `packer` |
+| `Packt` | `packt` |
 | `PaddlePaddle` | `paddlepaddle` |
 | `Paddy Power` | `paddypower` |
 | `Pagekit` | `pagekit` |
@@ -1849,10 +1864,12 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pi Network` | `pinetwork` |
 | `Pi-hole` | `pihole` |
 | `Piaggio Group` | `piaggiogroup` |
+| `Piapro` | `piapro` |
 | `Picard Surgelés` | `picardsurgeles` |
 | `Picarto.TV` | `picartodottv` |
 | `Picnic` | `picnic` |
 | `PicPay` | `picpay` |
+| `Picxy` | `picxy` |
 | `Pimcore` | `pimcore` |
 | `Pinboard` | `pinboard` |
 | `Pine Script` | `pinescript` |
@@ -2082,6 +2099,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ReScript` | `rescript` |
 | `RescueTime` | `rescuetime` |
 | `ResearchGate` | `researchgate` |
+| `Resend` | `resend` |
 | `ReSharper` | `resharper` |
 | `Resurrection Remix OS` | `resurrectionremixos` |
 | `Retool` | `retool` |
@@ -2248,6 +2266,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SingleStore` | `singlestore` |
 | `Sitecore` | `sitecore` |
 | `SitePoint` | `sitepoint` |
+| `Skaffold` | `skaffold` |
 | `Sketch` | `sketch` |
 | `Sketchfab` | `sketchfab` |
 | `SketchUp` | `sketchup` |
@@ -2281,6 +2300,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Social Blade` | `socialblade` |
 | `Society6` | `society6` |
 | `Socket.io` | `socketdotio` |
+| `Softpedia` | `softpedia` |
 | `Sogou` | `sogou` |
 | `Solid` | `solid` |
 | `Solidity` | `solidity` |
@@ -2505,6 +2525,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Timescale` | `timescale` |
 | `Tina` | `tina` |
 | `Tinder` | `tinder` |
+| `Tinkercad` | `tinkercad` |
 | `TinyLetter` | `tinyletter` |
 | `Tistory` | `tistory` |
 | `tmux` | `tmux` |
@@ -2643,6 +2664,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Viadeo` | `viadeo` |
 | `Viaplay` | `viaplay` |
 | `Viber` | `viber` |
+| `Viblo` | `viblo` |
 | `VictoriaMetrics` | `victoriametrics` |
 | `Vim` | `vim` |
 | `Vimeo` | `vimeo` |
@@ -2769,7 +2791,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WP Engine` | `wpengine` |
 | `WP Rocket` | `wprocket` |
 | `WPExplorer` | `wpexplorer` |
-| `write.as` | `writedotas` |
+| `Write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
 | `X` | `x` |
@@ -2780,6 +2802,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xbox` | `xbox` |
 | `Xcode` | `xcode` |
 | `XDA Developers` | `xdadevelopers` |
+| `Xendit` | `xendit` |
 | `Xero` | `xero` |
 | `XFCE` | `xfce` |
 | `Xiaomi` | `xiaomi` |

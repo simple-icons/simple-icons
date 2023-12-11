@@ -54,9 +54,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - id: priority-1
-        name: Assign `icon outdated` pull requests to "Priority 1"
+        name: Assign `update icon/data` pull requests to "Priority 1"
         uses: srggrs/assign-one-project-github-action@1.3.1
-        if: contains(steps.get-labels.outputs.labels, 'icon outdated')
+        if: contains(steps.get-labels.outputs.labels, 'update icon/data')
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 1
