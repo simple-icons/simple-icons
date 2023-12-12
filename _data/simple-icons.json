@@ -11141,7 +11141,11 @@
         {
             "title": "Qase",
             "hex": "4F46DC",
-            "source": "https://qase.io"
+            "source": "https://qase.io",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/simple-icons/simple-icons/pull/9907#issuecomment-1831377594"
+            }
         },
         {
             "title": "Qatar Airways",
