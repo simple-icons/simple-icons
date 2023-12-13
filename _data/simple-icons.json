@@ -8586,6 +8586,12 @@
             "source": "https://www.metabase.com"
         },
         {
+            "title": "Metacritic",
+            "hex": "000000",
+            "source": "https://www.metacritic.com",
+            "guidelines": "https://developer.iva-api.com/docs/v2/metacritic-brand-guidelines"
+        },
+        {
             "title": "MetaFilter",
             "hex": "065A8F",
             "source": "https://www.metafilter.com/apple-touch-icon.png"
@@ -10639,6 +10645,11 @@
             "title": "Pioneer DJ",
             "hex": "1A1928",
             "source": "https://www.pioneerdj.com"
+        },
+        {
+            "title": "pipx",
+            "hex": "2CFFAA",
+            "source": "https://github.com/pypa/pipx/blob/fc9c95349cfcec1d886c26b70329257de53e10cb/logo.svg"
         },
         {
             "title": "Pivotal Tracker",
