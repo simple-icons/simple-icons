@@ -2517,6 +2517,11 @@
             "source": "https://www.channel4.com"
         },
         {
+            "title": "Charles",
+            "hex": "F3F5F5",
+            "source": "https://www.charlesproxy.com"
+        },
+        {
             "title": "Chart.js",
             "hex": "FF6384",
             "source": "https://www.chartjs.org"
@@ -2709,6 +2714,11 @@
             "source": "https://clerk.com"
         },
         {
+            "title": "Clever Cloud",
+            "hex": "171C36",
+            "source": "https://www.clever-cloud.com"
+        },
+        {
             "title": "ClickHouse",
             "hex": "FFCC01",
             "source": "https://github.com/ClickHouse/ClickHouse/blob/12bd453a43819176d25ecf247033f6cb1af54beb/website/images/logo-clickhouse.svg"
@@ -2866,6 +2876,11 @@
             "title": "Code Climate",
             "hex": "000000",
             "source": "https://codeclimate.com/github/codeclimate/python-test-reporter/badges/"
+        },
+        {
+            "title": "Code::Blocks",
+            "hex": "41AD48",
+            "source": "https://wiki.codeblocks.org/index.php/Main_Page"
         },
         {
             "title": "Codeberg",
@@ -3363,8 +3378,8 @@
         },
         {
             "title": "Cypress",
-            "hex": "17202C",
-            "source": "https://cypress.io"
+            "hex": "69D3A7",
+            "source": "https://www.cypress.io/press-kit"
         },
         {
             "title": "Cytoscape.js",
@@ -3400,6 +3415,12 @@
             "title": "DAF",
             "hex": "00529B",
             "source": "https://www.daf.com/en"
+        },
+        {
+            "title": "daily.dev",
+            "hex": "CE3DF3",
+            "source": "https://brand.daily.dev/d/4gCtbahXkzKk/guidelines",
+            "guidelines": "https://brand.daily.dev"
         },
         {
             "title": "Dailymotion",
@@ -4333,6 +4354,11 @@
             "source": "https://github.com/erlang/erlide_eclipse/blob/99d1d61fde8e32ef1630ca0e1b05a6822b3d6489/meta/media/erlang-logo.svg"
         },
         {
+            "title": "ERPNext",
+            "hex": "0089FF",
+            "source": "https://github.com/frappe/erpnext/blob/924911e74317f95a59f29e9410d4f141020a0411/erpnext/public/images/erpnext-logo.svg"
+        },
+        {
             "title": "esbuild",
             "hex": "FFCF00",
             "source": "https://github.com/evanw/esbuild/blob/ac542f913908d7326b65eb2e01f0559ed135a40e/images/logo.svg"
@@ -4504,8 +4530,8 @@
         {
             "title": "Facebook",
             "hex": "0866FF",
-            "source": "https://about.meta.com/brand/resources/facebookapp/logo",
-            "guidelines": "https://about.meta.com/brand/resources/facebookapp/logo"
+            "source": "https://about.meta.com/brand/resources/facebook/logo",
+            "guidelines": "https://about.meta.com/brand/resources/facebook/logo"
         },
         {
             "title": "Facebook Gaming",
@@ -5027,6 +5053,11 @@
             "source": "https://www.franprix.fr"
         },
         {
+            "title": "Frappe",
+            "hex": "0089FF",
+            "source": "https://github.com/frappe/frappe/blob/1331fa6f721122805d15894fa3bd9eb90dccdca2/frappe/public/images/frappe-framework-logo.svg"
+        },
+        {
             "title": "Fraunhofer-Gesellschaft",
             "hex": "179C7D",
             "source": "https://www.fraunhofer.de"
@@ -5309,6 +5340,14 @@
             "title": "GitHub Actions",
             "hex": "2088FF",
             "source": "https://github.com/features/actions"
+        },
+        {
+            "title": "GitHub Copilot",
+            "hex": "000000",
+            "source": "https://primer.style/foundations/icons/copilot-24",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "GitHub Pages",
@@ -7603,6 +7642,12 @@
             "source": "https://kuula.co"
         },
         {
+            "title": "KX",
+            "hex": "101820",
+            "source": "https://kx.com/news-room",
+            "guidelines": "https://kx.com/news-room"
+        },
+        {
             "title": "Kyocera",
             "hex": "DF0522",
             "source": "https://uk.kyocera.com"
@@ -7828,7 +7873,7 @@
         },
         {
             "title": "LibreOffice Base",
-            "hex": "B63AD3",
+            "hex": "7324A9",
             "source": "https://github.com/LibreOffice/help/blob/e3b1cce7dde7e964c7670dd24a167e750654685a/source/media/navigation/libo-base.svg",
             "guidelines": "https://wiki.documentfoundation.org/Design/Branding",
             "license": {
@@ -8554,6 +8599,12 @@
             "title": "Metabase",
             "hex": "509EE3",
             "source": "https://www.metabase.com"
+        },
+        {
+            "title": "Metacritic",
+            "hex": "000000",
+            "source": "https://www.metacritic.com",
+            "guidelines": "https://developer.iva-api.com/docs/v2/metacritic-brand-guidelines"
         },
         {
             "title": "MetaFilter",
@@ -10611,6 +10662,11 @@
             "source": "https://www.pioneerdj.com"
         },
         {
+            "title": "pipx",
+            "hex": "2CFFAA",
+            "source": "https://github.com/pypa/pipx/blob/fc9c95349cfcec1d886c26b70329257de53e10cb/logo.svg"
+        },
+        {
             "title": "Pivotal Tracker",
             "hex": "517A9E",
             "source": "https://www.pivotaltracker.com/branding-guidelines",
@@ -11351,6 +11407,15 @@
             "source": "https://www.qantas.com"
         },
         {
+            "title": "Qase",
+            "hex": "4F46DC",
+            "source": "https://qase.io",
+            "license": {
+                "type": "custom",
+                "url": "https://github.com/simple-icons/simple-icons/pull/9907#issuecomment-1831377594"
+            }
+        },
+        {
             "title": "Qatar Airways",
             "hex": "5C0D34",
             "source": "https://www.qatarairways.com/press-releases/en-WW/media_kits"
@@ -11726,6 +11791,11 @@
             "title": "Red",
             "hex": "B32629",
             "source": "https://www.red-lang.org"
+        },
+        {
+            "title": "Red Bull",
+            "hex": "DB0A40",
+            "source": "https://www.redbull.com"
         },
         {
             "title": "Red Hat",
@@ -12759,6 +12829,11 @@
             "license": {
                 "type": "CC0-1.0"
             }
+        },
+        {
+            "title": "SimpleLogin",
+            "hex": "EA319F",
+            "source": "https://simplelogin.io/press"
         },
         {
             "title": "Simplenote",
@@ -13965,6 +14040,11 @@
             "guidelines": "https://github.com/cdfoundation/artwork/blob/main/tekton/tekton_brand_guide.pdf"
         },
         {
+            "title": "Télé-Québec",
+            "hex": "1343FB",
+            "source": "https://www.telequebec.tv/societe/logo-et-normes-techniques"
+        },
+        {
             "title": "TELE5",
             "hex": "C2AD6F",
             "source": "https://www.tele5.de"
@@ -14178,6 +14258,12 @@
             "title": "Thunderbird",
             "hex": "0A84FF",
             "source": "https://design.thunderbird.net/resources/logo"
+        },
+        {
+            "title": "Thunderstore",
+            "hex": "23FFB0",
+            "source": "https://github.com/thunderstore-io/brand-guidelines/blob/7b5d4b62ca192a61b8ce5842cd8f5ad1f24ffcfd/assets/logo/thunderstore-logomark-black.svg",
+            "guidelines": "https://github.com/thunderstore-io/brand-guidelines"
         },
         {
             "title": "Thurgauer Kantonalbank",
