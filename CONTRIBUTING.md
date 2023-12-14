@@ -1,6 +1,7 @@
 # Contributing to Simple Icons
 
-> **Note** We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
+> **Note**\
+> We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
 
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
@@ -33,6 +34,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 ## Table of contents
 
 * [Requesting an Icon](#requesting-an-icon)
+  * [Forbidden Brands](#forbidden-brands)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
 * [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
@@ -59,9 +61,15 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
 
+### Forbidden Brands
+
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- BP
 - Disney
+- International Olympic Committee
+- Mattel
+- Microchip Technology Inc.
 - Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
