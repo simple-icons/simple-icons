@@ -17,13 +17,14 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           labels: |
+            assessing
             awaiting reply
-            changes requested
             duplicate
             in discussion
             invalid
             out of scope
             pending
+            permission required
             won't add
   remove-closed-pr-labels:
     name: Remove closed pull request labels
@@ -36,6 +37,7 @@ jobs:
           labels: |
             in discussion
             pending
+            assessing
   remove-closed-issue-labels:
     name: Remove closed issue labels
     if: github.event.issue.state == 'closed'
@@ -47,5 +49,4 @@ jobs:
           labels: |
             in discussion
             pending
-            tracking
-            help wanted
+            assessing
