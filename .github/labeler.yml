@@ -1,6 +1,13 @@
 new icon:
   - any: [icons/*.svg]
     status: added
-icon outdated:
+update icon/data:
   - any: [icons/*.svg]
+    status: modified
+docs:
+  - any: ['*.md']
+    status: modified
+meta:
+  - any: ['.github/*', 'scripts/*', 'tests/*', '*']
+  - all: ['!*.md', '!icons/*.svg', '!_data/*', '!package.json']
     status: modified
