@@ -2204,8 +2204,8 @@
         },
         {
             "title": "Bugatti",
-            "hex": "BE0030",
-            "source": "https://www.bugatti.com"
+            "hex": "000000",
+            "source": "https://newsroom.bugatti.com"
         },
         {
             "title": "Bugcrowd",
@@ -2680,8 +2680,8 @@
         },
         {
             "title": "Citroën",
-            "hex": "6E6E6E",
-            "source": "https://citroen.pcaci.co.uk/logo.php"
+            "hex": "DA291C",
+            "source": "https://www.stellantis.com/en/brands/citroen"
         },
         {
             "title": "CiviCRM",
@@ -9378,6 +9378,16 @@
             "guidelines": "https://www.netcup.eu/ueber-netcup/werbemittel"
         },
         {
+            "title": "NetEase Cloud Music",
+            "hex": "D43C33",
+            "source": "https://y.music.163.com/m",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "网易云音乐"
+                }
+            }
+        },
+        {
             "title": "Netflix",
             "hex": "E50914",
             "source": "https://brand.netflix.com/en/assets/brand-symbol",
@@ -12815,6 +12825,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Showtime.svg"
         },
         {
+            "title": "Showwcase",
+            "hex": "0A0D14",
+            "source": "https://www.showwcase.com"
+        },
+        {
             "title": "Shutterstock",
             "hex": "EE2B24",
             "source": "https://www.shutterstock.com/press/media",
@@ -14840,6 +14855,22 @@
             "title": "Unilever",
             "hex": "1F36C7",
             "source": "https://www.unilever.com/our-company/the-logo"
+        },
+        {
+            "title": "Uniqlo",
+            "hex": "FF0000",
+            "source": "https://www.uniqlo.com"
+        },
+        {
+            "title": "Uniqlo",
+            "slug": "uniqlo_ja",
+            "hex": "FF0000",
+            "source": "https://www.uniqlo.com",
+            "aliases": {
+                "loc": {
+                    "ja-JP": "ユニクロ"
+                }
+            }
         },
         {
             "title": "United Airlines",
