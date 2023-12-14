@@ -14856,6 +14856,17 @@
             "source": "https://www.uniqlo.com"
         },
         {
+            "title": "Uniqlo",
+            "slug": "uniqlo_ja",
+            "hex": "FF0000",
+            "source": "https://www.uniqlo.com",
+            "aliases": {
+                "loc": {
+                    "ja-JP": "ユニクロ"
+                }
+            }
+        },
+        {
             "title": "United Airlines",
             "hex": "002244",
             "source": "https://www.united.com"
