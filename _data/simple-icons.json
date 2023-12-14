@@ -3542,6 +3542,11 @@
             }
         },
         {
+            "title": "date-fns",
+            "hex": "770C56",
+            "source": "https://date-fns.org"
+        },
+        {
             "title": "DatoCMS",
             "hex": "FF7751",
             "source": "https://www.datocms.com/company/brand-assets",
@@ -7472,9 +7477,10 @@
             "source": "https://www.kingston.com"
         },
         {
-            "title": "KinoPoisk",
-            "hex": "FF6600",
-            "source": "https://www.kinopoisk.ru",
+            "title": "Kinopoisk",
+            "hex": "FF5500",
+            "source": "https://www.kinopoisk.ru/special/branding",
+            "guidelines": "https://www.kinopoisk.ru/special/branding",
             "aliases": {
                 "loc": {
                     "ru-RU": "КиноПоиск"
@@ -8102,6 +8108,11 @@
             "title": "Logitech",
             "hex": "00B8FC",
             "source": "https://www.logitech.com/en-us/pr/library"
+        },
+        {
+            "title": "Logitech G",
+            "hex": "00B8FC",
+            "source": "https://www.logitechg.com"
         },
         {
             "title": "LogMeIn",
@@ -14531,6 +14542,11 @@
             "title": "Triller",
             "hex": "FF0089",
             "source": "https://triller.co"
+        },
+        {
+            "title": "TrillerTV",
+            "hex": "E61414",
+            "source": "https://fite.tv"
         },
         {
             "title": "Trino",
