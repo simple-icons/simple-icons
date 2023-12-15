@@ -14610,7 +14610,12 @@
         {
             "title": "TrillerTV",
             "hex": "E61414",
-            "source": "https://fite.tv"
+            "source": "https://fite.tv",
+            "aliases": {
+                "old": [
+                    "FITE"
+                ]
+            }
         },
         {
             "title": "Trino",
