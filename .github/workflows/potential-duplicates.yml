@@ -10,7 +10,7 @@ jobs:
       - uses: wow-actions/potential-duplicates@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          label: potential duplicate
+          label: duplicate
           exclude: |
             adding
             add
@@ -24,10 +24,17 @@ jobs:
             miss
             needing
             need
+            new
             please
             requesting
             request
             project
+            updated
+            outdated
+            brand
+            assets
+            for
+            from
           state: all
           threshold: 0.7
           comment: |

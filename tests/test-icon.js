@@ -1,15 +1,28 @@
-import fs from 'node:fs';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
-import { URL_REGEX, titleToSlug } from '../scripts/utils.js';
+import {
+  SVG_PATH_REGEX,
+  URL_REGEX,
+  getDirnameFromImportMeta,
+  titleToSlug,
+} from '../sdk.mjs';
 
-const iconsDir = path.resolve(process.cwd(), 'icons');
+const iconsDir = path.resolve(
+  getDirnameFromImportMeta(import.meta.url),
+  '..',
+  'icons',
+);
+
+/**
+ * @typedef {import('..').SimpleIcon} SimpleIcon
+ */
 
 /**
  * Checks if icon data matches a subject icon.
- * @param {import('..').SimpleIcon} icon Icon data
- * @param {import('..').SimpleIcon} subject Icon to check against icon data
+ * @param {SimpleIcon} icon Icon data
+ * @param {SimpleIcon} subject Icon to check against icon data
  * @param {String} slug Icon data slug
  */
 export const testIcon = (icon, subject, slug) => {
@@ -38,7 +51,7 @@ export const testIcon = (icon, subject, slug) => {
     });
 
     it('has a valid "path" value', () => {
-      assert.match(subject.path, /^[MmZzLlHhVvCcSsQqTtAaEe0-9-,.\s]+$/g);
+      assert.match(subject.path, SVG_PATH_REGEX);
     });
 
     it(`has ${icon.guidelines ? 'the correct' : 'no'} "guidelines"`, () => {
@@ -62,8 +75,8 @@ export const testIcon = (icon, subject, slug) => {
       }
     });
 
-    it('has a valid svg value', () => {
-      const svgFileContents = fs.readFileSync(svgPath, 'utf8');
+    it('has a valid svg value', async () => {
+      const svgFileContents = await fs.readFile(svgPath, 'utf8');
       assert.equal(subject.svg, svgFileContents);
     });
 
