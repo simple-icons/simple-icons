@@ -1882,6 +1882,16 @@
             "source": "https://bio.link"
         },
         {
+            "title": "Biome",
+            "hex": "F7B911",
+            "source": "https://biomejs.dev",
+            "aliases": {
+                "old": [
+                    "Rome"
+                ]
+            }
+        },
+        {
             "title": "BisectHosting",
             "hex": "0D1129",
             "source": "https://www.bisecthosting.com"
@@ -3575,6 +3585,11 @@
             "title": "DAZN",
             "hex": "F8F8F5",
             "source": "https://media.dazn.com/en/assets/"
+        },
+        {
+            "title": "DBeaver",
+            "hex": "382923",
+            "source": "https://dbeaver.com"
         },
         {
             "title": "dblp",
@@ -5589,6 +5604,12 @@
         },
         {
             "title": "Google BigQuery",
+            "hex": "669DF6",
+            "source": "https://cloud.google.com/icons",
+            "guidelines": "https://about.google/brand-resource-center"
+        },
+        {
+            "title": "Google Bigtable",
             "hex": "669DF6",
             "source": "https://cloud.google.com/icons",
             "guidelines": "https://about.google/brand-resource-center"
@@ -15252,6 +15273,11 @@
             },
             "hex": "E10A0A",
             "source": "https://www.virgin.com/img/virgin-logo-square.svg"
+        },
+        {
+            "title": "Virgin Atlantic",
+            "hex": "DA0530",
+            "source": "https://www.virginatlantic.com"
         },
         {
             "title": "Virgin Media",
