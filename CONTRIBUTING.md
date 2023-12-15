@@ -91,7 +91,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - [npm](https://www.npmjs.com): 100k weekly downloads,
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
-    - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or, 
+    - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
     - [Packagist](https://packagist.org): 200 average daily installs in a month.
 5. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
     - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
