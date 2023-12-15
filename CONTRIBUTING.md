@@ -35,6 +35,8 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 * [Requesting an Icon](#requesting-an-icon)
   * [Forbidden Brands](#forbidden-brands)
+  * [Assessing Popularity](#assessing-popularity)
+  * [Opening an Issue](#opening-an-issue)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
 * [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
@@ -44,11 +46,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-* Is of a _popular_ brand:
-    - For websites, the [Similarweb global rank](https://www.similarweb.com) should be less than 500k.
-        - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
-    - For GitHub projects, the amount of "stars" should be above 5k.
-    - For anything else, popularity will be judged on a case-by-case basis.
+* Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
 * Doesn't fall into one of the following categories:
     - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
     - Governmental agencies, programs, departments
@@ -74,6 +72,46 @@ Some companies and organizations are excessively protective with their brands, s
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
+
+### Assessing Popularity
+
+To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
+
+1. Its website has a Similarweb global rank of 500k or better.
+    - As Similarweb only update their data once a month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
+    - For existing icons in our library, the threshold is dropped from 500k to 750k.
+    - A rank of 2m or worse, without any other metric being provided, will result in the brand being declared outside our scope.
+2. The website's Similarweb rank in any one country is either:
+    - In the top 100, or,
+    - 50k or better, _with_ a global rank of 1m or better.
+3. The website's Similarweb rank in any one category is either:
+    - In the top 50, or,
+    - 10k or better, _with_ a global rank of 1m or better.
+4. Its packages meet one of the following minimum requirements:
+    - [npm](https://www.npmjs.com): 100k weekly downloads,
+    - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
+    - [crates.io](https://crates.io): 100k weekly downloads,
+    - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or, 
+    - [Packagist](https://packagist.org): 200 average daily installs in a month.
+5. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
+    - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
+6. The brand's popularity can be illustrated through a Google Trends comparison, or similar.
+    - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
+    - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
+    - Trending equal to or higher than the compared brand will be considered in scope.
+    - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
+7. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see not below):
+    - A minimum of 5k GitHub stars will be required for consideration, and,
+    - An additional 1k will be required for each year the project is in existence beyond its initial year, providing,
+    - The repository is still active, and,
+    - its [star history](https://star-history.com) is on a consistenly upward trajectory.
+
+If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
+
+> [!NOTE]\
+> All metrics & cut-offs above a subject to review and change. These current metrics were devised in order to no longer rely on GitHub stars as an indication of a project's popularity. But, for projects that exist solely on GitHub, we do still need some way of assessing their popularity so, until we can come up with a better way to do so, we have kept stars for the time being but will not be putting as much weight on them as in the past. If you know of a better way of assessing the popularity of a GitHub project then please create an issue for discussion.
+
+### Opening an Issue
 
 When submitting a request for a new or updated icon include helpful information such as:
 
