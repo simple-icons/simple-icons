@@ -1883,7 +1883,12 @@
         {
             "title": "Biome",
             "hex": "F7B911",
-            "source": "https://biomejs.dev"
+            "source": "https://biomejs.dev",
+            "aliases": {
+                "old": [
+                    "Rome"
+                ]
+            }
         },
         {
             "title": "BisectHosting",
