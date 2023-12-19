@@ -1552,6 +1552,11 @@
             "source": "https://www.autohotkey.com"
         },
         {
+            "title": "AutoIt",
+            "hex": "5D83AC",
+            "source": "https://www.autoitscript.com"
+        },
+        {
             "title": "Automattic",
             "hex": "3499CD",
             "source": "https://automattic.com/press/brand-materials"
@@ -8636,6 +8641,16 @@
             "title": "Meilisearch",
             "hex": "FF5CAA",
             "source": "https://www.meilisearch.com"
+        },
+        {
+            "title": "Meituan",
+            "hex": "FFD100",
+            "source": "https://www.meituan.com/media",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "美团"
+                }
+            }
         },
         {
             "title": "Mendeley",
