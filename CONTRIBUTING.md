@@ -83,24 +83,25 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - A rank of 2m or worse, without any other metric being provided, will result in the brand being declared outside our scope.
 2. The website's Similarweb rank in any one country is either:
     - In the top 100, or,
-    - 50k or better, _with_ a global rank of 1m or better.
-3. The website's Similarweb rank in any one category is either:
-    - In the top 50, or,
     - 10k or better, _with_ a global rank of 1m or better.
-4. Its packages meet one of the following minimum requirements:
+3. The website's Similarweb global rank in any one category is either:
+    - In the top 50, or,
+    - 5k or better, _with_ a global rank of 1m or better.
+4. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
+5. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
     - [Packagist](https://packagist.org): 200 average daily installs in a month.
-5. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
+6. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
     - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
-6. The brand's popularity can be illustrated through a Google Trends comparison, or similar.
+7. The brand's popularity can be illustrated through a Google Trends comparison, or similar.
     - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
     - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
     - Trending equal to or higher than the compared brand will be considered in scope.
     - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
-7. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see not below):
+8. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see not below):
     - A minimum of 5k GitHub stars will be required for consideration, and,
     - An additional 1k will be required for each year the project is in existence beyond its initial year, providing,
     - The repository is still active, and,
