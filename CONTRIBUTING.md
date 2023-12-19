@@ -109,7 +109,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
-> [!NOTE]\
+> [!NOTE]
 > All metrics & cut-offs above a subject to review and change. These current metrics were devised in order to no longer rely on GitHub stars as an indication of a project's popularity. But, for projects that exist solely on GitHub, we do still need some way of assessing their popularity so, until we can come up with a better way to do so, we have kept stars for the time being but will not be putting as much weight on them as in the past. If you know of a better way of assessing the popularity of a GitHub project then please create an issue for discussion.
 
 ### Opening an Issue
