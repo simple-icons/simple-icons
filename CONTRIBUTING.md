@@ -101,7 +101,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
     - Trending equal to or higher than the compared brand will be considered in scope.
     - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
-8. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see not below):
+8. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
     - A minimum of 5k GitHub stars will be required for consideration, and,
     - An additional 1k will be required for each year the project is in existence beyond its initial year, providing,
     - The repository is still active, and,
