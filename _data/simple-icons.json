@@ -3747,6 +3747,12 @@
             "source": "https://www.db.com"
         },
         {
+            "title": "Deutsche Post",
+            "hex": "FFCC00",
+            "source": "https://www.deutschepost.de",
+            "guidelines": "https://www.dpdhl-brands.com/de/dp/logo"
+        },
+        {
             "title": "dev.to",
             "hex": "0A0A0A",
             "source": "https://dev.to"
@@ -6454,6 +6460,11 @@
             "title": "Honey",
             "hex": "FF6801",
             "source": "https://www.joinhoney.com"
+        },
+        {
+            "title": "Hono",
+            "hex": "FF612B",
+            "source": "https://github.com/honojs/hono/blob/76dbc74407329c46870af6aa4fab0c04036d8ae2/docs/images/hono-logo.svg"
         },
         {
             "title": "Honor",
