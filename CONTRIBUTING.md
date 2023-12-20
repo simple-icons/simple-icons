@@ -105,7 +105,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - A minimum of 5k GitHub stars will be required for consideration, and,
     - An additional 1k will be required for each year the project is in existence beyond its initial year, providing,
     - The repository is still active, and,
-    - its [star history](https://star-history.com) is on a consistenly upward trajectory.
+    - its [star history](https://star-history.com) is on a consistently upward trajectory.
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
