@@ -3747,6 +3747,12 @@
             "source": "https://www.db.com"
         },
         {
+            "title": "Deutsche Post",
+            "hex": "FFCC00",
+            "source": "https://www.deutschepost.de",
+            "guidelines": "https://www.dpdhl-brands.com/de/dp/logo"
+        },
+        {
             "title": "dev.to",
             "hex": "0A0A0A",
             "source": "https://dev.to"
@@ -6454,6 +6460,11 @@
             "title": "Honey",
             "hex": "FF6801",
             "source": "https://www.joinhoney.com"
+        },
+        {
+            "title": "Hono",
+            "hex": "FF612B",
+            "source": "https://github.com/honojs/hono/blob/76dbc74407329c46870af6aa4fab0c04036d8ae2/docs/images/hono-logo.svg"
         },
         {
             "title": "Honor",
@@ -10385,6 +10396,11 @@
             "title": "Packt",
             "hex": "F37143",
             "source": "https://www.packtpub.com"
+        },
+        {
+            "title": "Paddle",
+            "hex": "FDDD35",
+            "source": "https://www.paddle.com"
         },
         {
             "title": "PaddlePaddle",
@@ -14654,6 +14670,11 @@
             "hex": "ED1C24",
             "source": "https://trakt.tv/branding",
             "guidelines": "https://trakt.tv/branding"
+        },
+        {
+            "title": "Transmission",
+            "hex": "D70008",
+            "source": "https://github.com/transmission/transmission/blob/7c9e04d035f3f75a8124e83d612701824487eb4e/gtk/icons/hicolor_apps_symbolic_transmission-symbolic.svg"
         },
         {
             "title": "Transport for Ireland",
