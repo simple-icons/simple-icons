@@ -1,6 +1,7 @@
 # Contributing to Simple Icons
 
-> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
+> **Note**\
+> We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
 
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
@@ -33,6 +34,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 ## Table of contents
 
 * [Requesting an Icon](#requesting-an-icon)
+  * [Forbidden Brands](#forbidden-brands)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
 * [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
@@ -43,7 +45,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
 * Is of a _popular_ brand:
-    - For websites, the [Similarweb rank](https://www.similarweb.com) should be less than 500k.
+    - For websites, the [Similarweb global rank](https://www.similarweb.com) should be less than 500k.
         - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
     - For GitHub projects, the amount of "stars" should be above 5k.
     - For anything else, popularity will be judged on a case-by-case basis.
@@ -59,9 +61,15 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
 
+### Forbidden Brands
+
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- BP
 - Disney
+- International Olympic Committee
+- Mattel
+- Microchip Technology Inc.
 - Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
@@ -144,9 +152,7 @@ If you have any problems or questions while creating the SVG, check out [the Git
 All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
 
 * The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  * Install dependencies
-    * With npm: `npm install` from the root of this repository
-  * Run the following command `npm run svgo -- icons/file-to-optimize.svg`
+  * Run the following command `npx svgo icons/file-to-optimize.svg`
   * Check if there is a loss of quality in the output, if so increase the precision.
 * The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
   * Click "Open SVG" and select an SVG file.
@@ -397,4 +403,23 @@ Then, start a Docker container for simple-icons and attach to it:
 
 ```shell
 docker run -it --rm --entrypoint "/bin/ash" simple-icons
+```
+
+## Developing Third-Party Extensions
+
+A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
+
+```typescript
+import { getIconsData, type IconData } from 'simple-icons/sdk';
+
+const iconsData: IconData[] = getIconsData();
+```
+
+```javascript
+import { getIconsData } from 'simple-icons/sdk';
+
+/* @typedef {import("./simple-icons/sdk").IconData} IconData */
+
+/* @type {IconData[]} */
+const iconsData = getIconsData();
 ```
