@@ -344,6 +344,12 @@
             "source": "https://affinity.serif.com/publisher"
         },
         {
+            "title": "Afterpay",
+            "hex": "B2FCE4",
+            "source": "https://www.afterpay.com/en-AU/business/resources/marketing/logos",
+            "guidelines": "https://www.afterpay.com/en-AU/business/resources/marketing/brand-tools/brand-guidelines"
+        },
+        {
             "title": "Agora",
             "hex": "099DFD",
             "source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg"
@@ -2020,6 +2026,16 @@
             "title": "Blueprint",
             "hex": "137CBD",
             "source": "https://blueprintjs.com/docs"
+        },
+        {
+            "title": "Bluesky",
+            "hex": "0285FF",
+            "source": "https://github.com/FortAwesome/Font-Awesome/issues/19810#issuecomment-1854999604",
+            "aliases": {
+                "aka": [
+                    "bsky"
+                ]
+            }
         },
         {
             "title": "Bluetooth",
@@ -5663,6 +5679,11 @@
             "source": "https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg"
         },
         {
+            "title": "Google Campaign Manager 360",
+            "hex": "1E8E3E",
+            "source": "https://developers.google.com/doubleclick-advertisers"
+        },
+        {
             "title": "Google Cardboard",
             "hex": "FF7143",
             "source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
@@ -5675,7 +5696,8 @@
         {
             "title": "Google Chrome",
             "hex": "4285F4",
-            "source": "https://www.google.com/chrome/"
+            "source": "https://www.google.com/chrome",
+            "guidelines": "https://partnermarketinghub.withgoogle.com/brands/chrome"
         },
         {
             "title": "Google Classroom",
@@ -6804,9 +6826,9 @@
             "source": "https://inertiajs.com"
         },
         {
-            "title": "Infiniti",
-            "hex": "000000",
-            "source": "https://www.infinitiusa.com"
+            "title": "INFINITI",
+            "hex": "020B24",
+            "source": "https://www.infiniti.com"
         },
         {
             "title": "InfluxDB",
@@ -7459,8 +7481,8 @@
         {
             "title": "Kdenlive",
             "hex": "527EB2",
-            "source": "https://kdenlive.org/en/logo/",
-            "guidelines": "https://kdenlive.org/en/logo/"
+            "source": "https://kdenlive.org/en/trademark-logo/",
+            "guidelines": "https://kdenlive.org/en/trademark-logo/"
         },
         {
             "title": "Kedro",
@@ -9593,6 +9615,11 @@
             "guidelines": "https://nextcloud.com/trademarks/"
         },
         {
+            "title": "NextDNS",
+            "hex": "007BFF",
+            "source": "https://github.com/simple-icons/simple-icons/pull/9150#issuecomment-1856317201"
+        },
+        {
             "title": "Nextdoor",
             "hex": "8ED500",
             "source": "https://about.nextdoor.com/us-media/"
@@ -10821,6 +10848,11 @@
             "title": "Pioneer DJ",
             "hex": "1A1928",
             "source": "https://www.pioneerdj.com"
+        },
+        {
+            "title": "Piped",
+            "hex": "F84330",
+            "source": "https://github.com/TeamPiped/Piped/blob/71a3742f18893b87cad15e832855bd2bd7c2b557/public/img/icons/logo.svg"
         },
         {
             "title": "pipx",
@@ -13083,7 +13115,7 @@
         {
             "title": "ŠKODA",
             "hex": "0E3A2F",
-            "source": "https://www.skoda.co.uk"
+            "source": "https://www.skoda-connect.com"
         },
         {
             "title": "Sky",
