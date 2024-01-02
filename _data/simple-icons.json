@@ -344,6 +344,12 @@
             "source": "https://affinity.serif.com/publisher"
         },
         {
+            "title": "Afterpay",
+            "hex": "B2FCE4",
+            "source": "https://www.afterpay.com/en-AU/business/resources/marketing/logos",
+            "guidelines": "https://www.afterpay.com/en-AU/business/resources/marketing/brand-tools/brand-guidelines"
+        },
+        {
             "title": "Agora",
             "hex": "099DFD",
             "source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg"
@@ -1663,11 +1669,6 @@
             "source": "https://github.com/babel/website/blob/93330158b6ecca1ab88d3be8dbf661f5c2da6c76/website/static/img/babel-black.svg"
         },
         {
-            "title": "Babylon.js",
-            "hex": "BB464B",
-            "source": "https://github.com/BabylonJS/Brand-Toolkit/blob/8583d4d9bf252a233fa480fa02ac6f367d5207a1/babylon_logo/monochrome/babylon_logo_monochrome_dark.svg"
-        },
-        {
             "title": "Backblaze",
             "hex": "E21E29",
             "source": "https://www.backblaze.com/company/news.html",
@@ -2020,6 +2021,16 @@
             "title": "Blueprint",
             "hex": "137CBD",
             "source": "https://blueprintjs.com/docs"
+        },
+        {
+            "title": "Bluesky",
+            "hex": "0285FF",
+            "source": "https://github.com/FortAwesome/Font-Awesome/issues/19810#issuecomment-1854999604",
+            "aliases": {
+                "aka": [
+                    "bsky"
+                ]
+            }
         },
         {
             "title": "Bluetooth",
@@ -5663,6 +5674,11 @@
             "source": "https://fonts.gstatic.com/s/i/productlogos/calendar_2020q4/v8/192px.svg"
         },
         {
+            "title": "Google Campaign Manager 360",
+            "hex": "1E8E3E",
+            "source": "https://developers.google.com/doubleclick-advertisers"
+        },
+        {
             "title": "Google Cardboard",
             "hex": "FF7143",
             "source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
@@ -5675,7 +5691,8 @@
         {
             "title": "Google Chrome",
             "hex": "4285F4",
-            "source": "https://www.google.com/chrome/"
+            "source": "https://www.google.com/chrome",
+            "guidelines": "https://partnermarketinghub.withgoogle.com/brands/chrome"
         },
         {
             "title": "Google Classroom",
@@ -6576,12 +6593,6 @@
             "source": "https://gohugo.io"
         },
         {
-            "title": "Hulu",
-            "hex": "1CE783",
-            "source": "https://thisis.hulu.com",
-            "guidelines": "https://thisis.hulu.com"
-        },
-        {
             "title": "Humble Bundle",
             "hex": "CC2929",
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
@@ -6804,9 +6815,9 @@
             "source": "https://inertiajs.com"
         },
         {
-            "title": "Infiniti",
-            "hex": "000000",
-            "source": "https://www.infinitiusa.com"
+            "title": "INFINITI",
+            "hex": "020B24",
+            "source": "https://www.infiniti.com"
         },
         {
             "title": "InfluxDB",
@@ -7459,8 +7470,8 @@
         {
             "title": "Kdenlive",
             "hex": "527EB2",
-            "source": "https://kdenlive.org/en/logo/",
-            "guidelines": "https://kdenlive.org/en/logo/"
+            "source": "https://kdenlive.org/en/trademark-logo/",
+            "guidelines": "https://kdenlive.org/en/trademark-logo/"
         },
         {
             "title": "Kedro",
@@ -9593,6 +9604,11 @@
             "guidelines": "https://nextcloud.com/trademarks/"
         },
         {
+            "title": "NextDNS",
+            "hex": "007BFF",
+            "source": "https://github.com/simple-icons/simple-icons/pull/9150#issuecomment-1856317201"
+        },
+        {
             "title": "Nextdoor",
             "hex": "8ED500",
             "source": "https://about.nextdoor.com/us-media/"
@@ -10628,12 +10644,6 @@
             "source": "https://penpot.app"
         },
         {
-            "title": "Pepsi",
-            "hex": "2151A1",
-            "source": "https://gillettepepsicola.com/promotions-media/media-kit/",
-            "guidelines": "https://gillettepepsicola.com/promotions-media/media-kit/"
-        },
-        {
             "title": "Percy",
             "hex": "9E66BF",
             "source": "https://percy.io"
@@ -10821,6 +10831,11 @@
             "title": "Pioneer DJ",
             "hex": "1A1928",
             "source": "https://www.pioneerdj.com"
+        },
+        {
+            "title": "Piped",
+            "hex": "F84330",
+            "source": "https://github.com/TeamPiped/Piped/blob/71a3742f18893b87cad15e832855bd2bd7c2b557/public/img/icons/logo.svg"
         },
         {
             "title": "pipx",
@@ -12391,8 +12406,8 @@
         },
         {
             "title": "RTL",
-            "hex": "E9113B",
-            "source": "https://commons.wikimedia.org/wiki/File:RTL_Cornerlogo.svg"
+            "hex": "FA002E",
+            "source": "https://www.rtl.de"
         },
         {
             "title": "RTLZWEI",
@@ -13083,7 +13098,7 @@
         {
             "title": "ŠKODA",
             "hex": "0E3A2F",
-            "source": "https://www.skoda.co.uk"
+            "source": "https://www.skoda-connect.com"
         },
         {
             "title": "Sky",
@@ -13158,8 +13173,8 @@
         },
         {
             "title": "smart",
-            "hex": "FABC0C",
-            "source": "https://www.smart.com/gb/en/models/eq-fortwo-coupe"
+            "hex": "D7E600",
+            "source": "https://global.smart.com"
         },
         {
             "title": "SmartThings",
@@ -13653,6 +13668,11 @@
             "source": "https://staffbase.com/en/about/press-assets/"
         },
         {
+            "title": "Stagetimer",
+            "hex": "00A66C",
+            "source": "https://stagetimer.io"
+        },
+        {
             "title": "Standard Resume",
             "hex": "2A3FFB",
             "source": "https://standardresume.co/press"
@@ -13691,8 +13711,8 @@
         },
         {
             "title": "STARZ",
-            "hex": "000000",
-            "source": "https://www.starz.com/guides/starzlibrary/"
+            "hex": "082125",
+            "source": "https://www.starz.com/takethelead"
         },
         {
             "title": "Statamic",
@@ -15075,11 +15095,6 @@
             "source": "https://commons.wikimedia.org/wiki/File:PD-icon.svg"
         },
         {
-            "title": "Uno",
-            "hex": "ED1C24",
-            "source": "https://commons.wikimedia.org/wiki/File:UNO_Logo.svg"
-        },
-        {
             "title": "UnoCSS",
             "hex": "333333",
             "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
@@ -15975,7 +15990,7 @@
         },
         {
             "title": "Wish",
-            "hex": "2FB7EC",
+            "hex": "32E476",
             "source": "https://wish.com"
         },
         {
@@ -16076,6 +16091,11 @@
             "hex": "00549F",
             "source": "https://www.audiokinetic.com/resources/credits/",
             "guidelines": "https://www.audiokinetic.com/resources/credits/"
+        },
+        {
+            "title": "Wyze",
+            "hex": "1DF0BB",
+            "source": "https://www.wyze.com"
         },
         {
             "title": "X",
