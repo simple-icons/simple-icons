@@ -330,17 +330,17 @@
         },
         {
             "title": "Affinity Designer",
-            "hex": "1B72BE",
+            "hex": "134881",
             "source": "https://affinity.serif.com/designer"
         },
         {
             "title": "Affinity Photo",
-            "hex": "7E4DD2",
+            "hex": "4E3188",
             "source": "https://affinity.serif.com/photo"
         },
         {
             "title": "Affinity Publisher",
-            "hex": "C9284D",
+            "hex": "891B26",
             "source": "https://affinity.serif.com/publisher"
         },
         {
@@ -3231,6 +3231,12 @@
             "source": "https://github.com/cookiecutter/cookiecutter/blob/52dd18513bbab7f0fbfcb2938c9644d9092247cf/logo/cookiecutter-logo.svg"
         },
         {
+            "title": "Cooler Master",
+            "hex": "1E1E28",
+            "source": "https://www.coolermaster.com/branding",
+            "guidelines": "https://www.coolermaster.com/branding"
+        },
+        {
             "title": "Coppel",
             "hex": "0266AE",
             "source": "https://www.coppel.com"
@@ -3662,6 +3668,11 @@
             "title": "Decap CMS",
             "hex": "FF0082",
             "source": "https://github.com/decaporg/decap-cms/blob/ba158f4a56d6d79869811971bc1bb0ef15197d30/website/static/img/decap-logo.svg"
+        },
+        {
+            "title": "DeepCool",
+            "hex": "068584",
+            "source": "https://www.deepcool.com"
         },
         {
             "title": "deepin",
@@ -8415,6 +8426,12 @@
             "guidelines": "https://mlh.io/brand-guidelines"
         },
         {
+            "title": "Make",
+            "hex": "6D00CC",
+            "source": "https://www.make.com/en/press",
+            "guidelines": "https://www.make.com/en/press"
+        },
+        {
             "title": "MakerBot",
             "hex": "FF1E0D",
             "source": "https://www.makerbot.com/makerbot-press-assets"
@@ -12995,6 +13012,12 @@
             "guidelines": "https://www.shutterstock.com/press/media"
         },
         {
+            "title": "SideQuest",
+            "hex": "101227",
+            "source": "https://sidequestvr.com/branding",
+            "guidelines": "https://sidequestvr.com/branding"
+        },
+        {
             "title": "Siemens",
             "hex": "009999",
             "source": "https://siemens.com"
@@ -13068,6 +13091,24 @@
             "title": "SitePoint",
             "hex": "258AAF",
             "source": "https://www.sitepoint.com"
+        },
+        {
+            "title": "SiYuan",
+            "hex": "D23F31",
+            "source": "https://b3log.org/brand-marking.html",
+            "aliases": {
+                "aka": [
+                    "sy"
+                ],
+                "loc": {
+                    "zh-CN": "思源笔记",
+                    "zh-HK": "思源筆記",
+                    "zh-MO": "思源筆記",
+                    "zh-MY": "思源笔记",
+                    "zh-SG": "思源笔记",
+                    "zh-TW": "思源筆記"
+                }
+            }
         },
         {
             "title": "Skaffold",
@@ -15362,6 +15403,12 @@
             "hex": "621773",
             "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
             "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo"
+        },
+        {
+            "title": "Victron Energy",
+            "hex": "0066B2",
+            "source": "https://www.victronenergy.com/information/press",
+            "guidelines": "https://www.victronenergy.com/information/press"
         },
         {
             "title": "Vim",
