@@ -77,35 +77,33 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
 
-1. Its website has a Similarweb global rank of 500k or better.
+1. Its website's Similarweb global rank is in the top 500k.
     - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
     - For existing icons in our library, the threshold is dropped from 500k to 750k.
-    - A rank of 2m or worse, without any other metric being provided, will result in the brand being declared outside our scope.
+    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
 1. The website's Similarweb rank in any one country is either:
     - In the top 100, or,
-    - 10k or better, _with_ a global rank of 1m or better.
+    - In the top 10k, _with_ a global rank of 1m or better.
 1. The website's Similarweb global rank in any one category is either:
     - In the top 50, or,
-    - 5k or better, _with_ a global rank of 1m or better.
+    - In the top 5k, _with_ a global rank of 1m or better.
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
-    - [Packagist](https://packagist.org): 200 average daily installs in a month.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
     - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
-1. The brand's popularity can be illustrated through a Google Trends comparison, or similar.
+1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
     - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
     - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
     - Trending equal to or higher than the compared brand will be considered in scope.
     - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
 1. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
-    - A minimum of 5k GitHub stars will be required for consideration, and,
-    - An additional 1k will be required for each year the project is in existence beyond its initial year, providing,
+    - A minimum of 5k GitHub stars will be required for consideration, providing,
     - The repository is still active, and,
-    - its [star history](https://star-history.com) is on a consistently upward trajectory.
+    - Its [star history](https://star-history.com) is on a consistently upward trajectory.
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
