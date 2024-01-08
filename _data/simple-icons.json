@@ -330,17 +330,17 @@
         },
         {
             "title": "Affinity Designer",
-            "hex": "1B72BE",
+            "hex": "134881",
             "source": "https://affinity.serif.com/designer"
         },
         {
             "title": "Affinity Photo",
-            "hex": "7E4DD2",
+            "hex": "4E3188",
             "source": "https://affinity.serif.com/photo"
         },
         {
             "title": "Affinity Publisher",
-            "hex": "C9284D",
+            "hex": "891B26",
             "source": "https://affinity.serif.com/publisher"
         },
         {
@@ -1669,11 +1669,6 @@
             "source": "https://github.com/babel/website/blob/93330158b6ecca1ab88d3be8dbf661f5c2da6c76/website/static/img/babel-black.svg"
         },
         {
-            "title": "Babylon.js",
-            "hex": "BB464B",
-            "source": "https://github.com/BabylonJS/Brand-Toolkit/blob/8583d4d9bf252a233fa480fa02ac6f367d5207a1/babylon_logo/monochrome/babylon_logo_monochrome_dark.svg"
-        },
-        {
             "title": "Backblaze",
             "hex": "E21E29",
             "source": "https://www.backblaze.com/company/news.html",
@@ -1899,8 +1894,8 @@
         },
         {
             "title": "Biome",
-            "hex": "F7B911",
-            "source": "https://biomejs.dev",
+            "hex": "60A5FA",
+            "source": "https://github.com/biomejs/resources/blob/551f36498dfe34b24bc7755fcdd0fa501b757cf4/svg/icon-light-mono.svg",
             "aliases": {
                 "old": [
                     "Rome"
@@ -3236,6 +3231,12 @@
             "source": "https://github.com/cookiecutter/cookiecutter/blob/52dd18513bbab7f0fbfcb2938c9644d9092247cf/logo/cookiecutter-logo.svg"
         },
         {
+            "title": "Cooler Master",
+            "hex": "1E1E28",
+            "source": "https://www.coolermaster.com/branding",
+            "guidelines": "https://www.coolermaster.com/branding"
+        },
+        {
             "title": "Coppel",
             "hex": "0266AE",
             "source": "https://www.coppel.com"
@@ -3667,6 +3668,11 @@
             "title": "Decap CMS",
             "hex": "FF0082",
             "source": "https://github.com/decaporg/decap-cms/blob/ba158f4a56d6d79869811971bc1bb0ef15197d30/website/static/img/decap-logo.svg"
+        },
+        {
+            "title": "DeepCool",
+            "hex": "068584",
+            "source": "https://www.deepcool.com"
         },
         {
             "title": "deepin",
@@ -6604,12 +6610,6 @@
             "source": "https://gohugo.io"
         },
         {
-            "title": "Hulu",
-            "hex": "1CE783",
-            "source": "https://thisis.hulu.com",
-            "guidelines": "https://thisis.hulu.com"
-        },
-        {
             "title": "Humble Bundle",
             "hex": "CC2929",
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
@@ -8430,6 +8430,12 @@
             "hex": "265A8F",
             "source": "https://mlh.io/brand-guidelines",
             "guidelines": "https://mlh.io/brand-guidelines"
+        },
+        {
+            "title": "Make",
+            "hex": "6D00CC",
+            "source": "https://www.make.com/en/press",
+            "guidelines": "https://www.make.com/en/press"
         },
         {
             "title": "MakerBot",
@@ -10659,12 +10665,6 @@
             "title": "Penpot",
             "hex": "000000",
             "source": "https://penpot.app"
-        },
-        {
-            "title": "Pepsi",
-            "hex": "2151A1",
-            "source": "https://gillettepepsicola.com/promotions-media/media-kit/",
-            "guidelines": "https://gillettepepsicola.com/promotions-media/media-kit/"
         },
         {
             "title": "Percy",
@@ -13018,6 +13018,12 @@
             "guidelines": "https://www.shutterstock.com/press/media"
         },
         {
+            "title": "SideQuest",
+            "hex": "101227",
+            "source": "https://sidequestvr.com/branding",
+            "guidelines": "https://sidequestvr.com/branding"
+        },
+        {
             "title": "Siemens",
             "hex": "009999",
             "source": "https://siemens.com"
@@ -13091,6 +13097,24 @@
             "title": "SitePoint",
             "hex": "258AAF",
             "source": "https://www.sitepoint.com"
+        },
+        {
+            "title": "SiYuan",
+            "hex": "D23F31",
+            "source": "https://b3log.org/brand-marking.html",
+            "aliases": {
+                "aka": [
+                    "sy"
+                ],
+                "loc": {
+                    "zh-CN": "思源笔记",
+                    "zh-HK": "思源筆記",
+                    "zh-MO": "思源筆記",
+                    "zh-MY": "思源笔记",
+                    "zh-SG": "思源笔记",
+                    "zh-TW": "思源筆記"
+                }
+            }
         },
         {
             "title": "Skaffold",
@@ -13691,6 +13715,11 @@
             "source": "https://staffbase.com/en/about/press-assets/"
         },
         {
+            "title": "Stagetimer",
+            "hex": "00A66C",
+            "source": "https://stagetimer.io"
+        },
+        {
             "title": "Standard Resume",
             "hex": "2A3FFB",
             "source": "https://standardresume.co/press"
@@ -14272,14 +14301,14 @@
             "guidelines": "https://github.com/cdfoundation/artwork/blob/main/tekton/tekton_brand_guide.pdf"
         },
         {
+            "title": "TELE 5",
+            "hex": "FF00FF",
+            "source": "https://commons.wikimedia.org/wiki/File:Tele_5_Logo_2021.svg"
+        },
+        {
             "title": "Télé-Québec",
             "hex": "1343FB",
             "source": "https://www.telequebec.tv/societe/logo-et-normes-techniques"
-        },
-        {
-            "title": "TELE5",
-            "hex": "C2AD6F",
-            "source": "https://www.tele5.de"
         },
         {
             "title": "Telegram",
@@ -15113,11 +15142,6 @@
             "source": "https://commons.wikimedia.org/wiki/File:PD-icon.svg"
         },
         {
-            "title": "Uno",
-            "hex": "ED1C24",
-            "source": "https://commons.wikimedia.org/wiki/File:UNO_Logo.svg"
-        },
-        {
             "title": "UnoCSS",
             "hex": "333333",
             "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
@@ -15385,6 +15409,12 @@
             "hex": "621773",
             "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
             "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo"
+        },
+        {
+            "title": "Victron Energy",
+            "hex": "0066B2",
+            "source": "https://www.victronenergy.com/information/press",
+            "guidelines": "https://www.victronenergy.com/information/press"
         },
         {
             "title": "Vim",
