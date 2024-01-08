@@ -16372,7 +16372,12 @@
         {
             "title": "ZAP",
             "hex": "00549E",
-            "source": "https://www.zaproxy.org"
+            "source": "https://www.zaproxy.org",
+            "aliases": {
+                "aka": [
+                    "Zed Attack Proxy"
+                ]
+            }
         },
         {
             "title": "Zapier",
