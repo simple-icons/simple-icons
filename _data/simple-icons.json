@@ -3,7 +3,7 @@
         {
             "title": ".ENV",
             "hex": "ECD53F",
-            "source": "https://github.com/motdotla/dotenv/tree/40e75440337d1de2345dc8326d6108331f583fd8",
+            "source": "https://github.com/motdotla/dotenv/blob/40e75440337d1de2345dc8326d6108331f583fd8/dotenv.svg",
             "aliases": {
                 "aka": [
                     "Dotenv"
@@ -13,12 +13,12 @@
         {
             "title": ".NET",
             "hex": "512BD4",
-            "source": "https://github.com/dotnet/brand/tree/defe0408e765b48223a434a0d9a94213edc062f8"
+            "source": "https://github.com/dotnet/brand/blob/defe0408e765b48223a434a0d9a94213edc062f8/logo/dotnet-logo.svg"
         },
         {
             "title": "/e/",
             "hex": "000000",
-            "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
+            "source": "https://doc.e.foundation"
         },
         {
             "title": "1001Tracklists",
@@ -27,8 +27,9 @@
         },
         {
             "title": "1Password",
-            "hex": "1A285F",
-            "source": "https://1password.com"
+            "hex": "3B66BC",
+            "source": "https://1password.com/press",
+            "guidelines": "https://1password.com/press"
         },
         {
             "title": "3M",
@@ -1456,7 +1457,7 @@
         },
         {
             "title": "Aston Martin",
-            "hex": "000000",
+            "hex": "00665E",
             "source": "https://www.astonmartin.com"
         },
         {
@@ -2465,6 +2466,12 @@
             "title": "Cardano",
             "hex": "0133AD",
             "source": "https://cardano.org/brand-assets/"
+        },
+        {
+            "title": "Carlsberg Group",
+            "hex": "00321E",
+            "source": "https://www.carlsberggroup.com/who-we-are/about-the-carlsberg-group/design-guide",
+            "guidelines": "https://www.carlsberggroup.com/who-we-are/about-the-carlsberg-group/design-guide"
         },
         {
             "title": "Carrd",
@@ -6941,8 +6948,8 @@
         {
             "title": "Instagram",
             "hex": "E4405F",
-            "source": "https://en.facebookbrand.com/instagram/",
-            "guidelines": "https://en.facebookbrand.com/instagram/"
+            "source": "https://about.meta.com/brand/resources/instagram",
+            "guidelines": "https://about.meta.com/brand/resources/instagram"
         },
         {
             "title": "Instapaper",
@@ -7689,6 +7696,11 @@
             "guidelines": "https://github.com/knative/community/blob/main/BRANDING.MD"
         },
         {
+            "title": "Knex.js",
+            "hex": "D26B38",
+            "source": "https://github.com/knex/documentation/blob/a9c4ce47dbc6001bb1c6aa0649bb668edc78fea7/src/public/knex-logo.png"
+        },
+        {
             "title": "KnowledgeBase",
             "hex": "9146FF",
             "source": "https://www.knowledgebase.com/design",
@@ -7833,9 +7845,14 @@
             "guidelines": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987"
         },
         {
-            "title": "Lada",
+            "title": "LADA",
             "hex": "ED6B21",
-            "source": "https://www.lada.ru/priora/sedan/accessories.html"
+            "source": "https://www.lada.ru",
+            "aliases": {
+                "loc": {
+                    "ru-RU": "Лада"
+                }
+            }
         },
         {
             "title": "Lamborghini",
@@ -9757,8 +9774,8 @@
         },
         {
             "title": "Nintendo",
-            "hex": "8F8F8F",
-            "source": "https://en.wikipedia.org/wiki/Nintendo#/media/File:Nintendo.svg"
+            "hex": "E60012",
+            "source": "https://www.nintendo.com"
         },
         {
             "title": "Nintendo 3DS",
@@ -11996,6 +12013,11 @@
             "source": "https://github.com/tannerlinsley/react-table/blob/8c77b4ad97353a0b1f0746be5b919868862a9dcc/docs/src/images/emblem-light.svg"
         },
         {
+            "title": "Reactive Resume",
+            "hex": "000000",
+            "source": "https://github.com/AmruthPillai/Reactive-Resume/blob/0f765af4687acd05d63cccf3676583735c86a8c2/apps/artboard/public/icon/dark.svg"
+        },
+        {
             "title": "ReactiveX",
             "hex": "B7178C",
             "source": "https://github.com/ReactiveX/rxjs/blob/ee6ababb9fa75f068ac2122e956ff4e449604c59/resources/CI-CD/logo/svg/RxJs_Logo_Black.svg",
@@ -12262,8 +12284,8 @@
         },
         {
             "title": "Revolut",
-            "hex": "0075EB",
-            "source": "https://www.revolut.com"
+            "hex": "191C1F",
+            "source": "https://developer.revolut.com/docs/resources/marketing-assets-guidelines/marketing-guidelines"
         },
         {
             "title": "Revue",
