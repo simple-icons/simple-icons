@@ -6942,8 +6942,8 @@
         {
             "title": "Instagram",
             "hex": "E4405F",
-            "source": "https://en.facebookbrand.com/instagram/",
-            "guidelines": "https://en.facebookbrand.com/instagram/"
+            "source": "https://about.meta.com/brand/resources/instagram",
+            "guidelines": "https://about.meta.com/brand/resources/instagram"
         },
         {
             "title": "Instapaper",
@@ -7839,9 +7839,14 @@
             "guidelines": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987"
         },
         {
-            "title": "Lada",
+            "title": "LADA",
             "hex": "ED6B21",
-            "source": "https://www.lada.ru/priora/sedan/accessories.html"
+            "source": "https://www.lada.ru",
+            "aliases": {
+                "loc": {
+                    "ru-RU": "Лада"
+                }
+            }
         },
         {
             "title": "Lamborghini",
