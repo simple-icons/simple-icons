@@ -1457,7 +1457,7 @@
         },
         {
             "title": "Aston Martin",
-            "hex": "000000",
+            "hex": "00665E",
             "source": "https://www.astonmartin.com"
         },
         {
@@ -2466,6 +2466,12 @@
             "title": "Cardano",
             "hex": "0133AD",
             "source": "https://cardano.org/brand-assets/"
+        },
+        {
+            "title": "Carlsberg Group",
+            "hex": "00321E",
+            "source": "https://www.carlsberggroup.com/who-we-are/about-the-carlsberg-group/design-guide",
+            "guidelines": "https://www.carlsberggroup.com/who-we-are/about-the-carlsberg-group/design-guide"
         },
         {
             "title": "Carrd",
@@ -7684,6 +7690,11 @@
             "guidelines": "https://github.com/knative/community/blob/main/BRANDING.MD"
         },
         {
+            "title": "Knex.js",
+            "hex": "D26B38",
+            "source": "https://github.com/knex/documentation/blob/a9c4ce47dbc6001bb1c6aa0649bb668edc78fea7/src/public/knex-logo.png"
+        },
+        {
             "title": "KnowledgeBase",
             "hex": "9146FF",
             "source": "https://www.knowledgebase.com/design",
@@ -9752,8 +9763,8 @@
         },
         {
             "title": "Nintendo",
-            "hex": "8F8F8F",
-            "source": "https://en.wikipedia.org/wiki/Nintendo#/media/File:Nintendo.svg"
+            "hex": "E60012",
+            "source": "https://www.nintendo.com"
         },
         {
             "title": "Nintendo 3DS",
@@ -11989,6 +12000,11 @@
             "title": "React Table",
             "hex": "FF4154",
             "source": "https://github.com/tannerlinsley/react-table/blob/8c77b4ad97353a0b1f0746be5b919868862a9dcc/docs/src/images/emblem-light.svg"
+        },
+        {
+            "title": "Reactive Resume",
+            "hex": "000000",
+            "source": "https://github.com/AmruthPillai/Reactive-Resume/blob/0f765af4687acd05d63cccf3676583735c86a8c2/apps/artboard/public/icon/dark.svg"
         },
         {
             "title": "ReactiveX",
