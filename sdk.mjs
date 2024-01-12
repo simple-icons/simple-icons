@@ -49,7 +49,7 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
 
 /**
  * Build a regex to validate HTTPs URLs.
- * @param {String} jsonschemaPath Path to the JSON schema file
+ * @param {String} jsonschemaPath Path to the *.jsonschema.json* file
  * @returns {Promise<RegExp>} Regex to validate HTTPs URLs
  */
 export const urlRegex = async (
