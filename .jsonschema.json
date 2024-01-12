@@ -616,7 +616,7 @@
     },
     "duplicate": {
       "$id": "#duplicate",
-      "description": "A duplicated brand",
+      "description": "A brand that uses the same icon",
       "type": "object",
       "required": ["title"],
       "properties": {
