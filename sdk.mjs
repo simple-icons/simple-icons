@@ -34,11 +34,6 @@ const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
 
 /**
- * Regex to validate HTTPs URLs.
- */
-export const URL_REGEX = /^https:\/\/[^\s"']+$/;
-
-/**
  * Regex to validate SVG paths.
  */
 export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae0-9,. ]+$/i;
@@ -51,6 +46,24 @@ export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae0-9,. ]+$/i;
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
+
+/**
+ * Regex to validate HTTPs URLs.
+ * @param {String} jsonschemaPath Path to the JSON schema file
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs
+ */
+export const urlRegex = async (
+  jsonschemaPath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    '.jsonschema.json',
+  ),
+) => {
+  return new RegExp(
+    JSON.parse(
+      await fs.readFile(jsonschemaPath, 'utf8'),
+    ).definitions.url.pattern,
+  );
+};
 
 /**
  * Get the slug/filename for an icon.
@@ -136,7 +149,7 @@ export const getIconDataPath = (
 /**
  * Get contents of *_data/simple-icons.json*.
  * @param {String} rootDir Path to the root directory of the project
- * @returns {String} Content of *_data/simple-icons.json*
+ * @returns {Promise<String>} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
   rootDir = getDirnameFromImportMeta(import.meta.url),
@@ -147,7 +160,7 @@ export const getIconsDataString = (
 /**
  * Get icons data as object from *_data/simple-icons.json*.
  * @param {String} rootDir Path to the root directory of the project
- * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
+ * @returns {Promise<IconData[]>} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
   rootDir = getDirnameFromImportMeta(import.meta.url),
