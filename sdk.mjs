@@ -48,7 +48,7 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
 
 /**
- * Regex to validate HTTPs URLs.
+ * Build a regex to validate HTTPs URLs.
  * @param {String} jsonschemaPath Path to the JSON schema file
  * @returns {Promise<RegExp>} Regex to validate HTTPs URLs
  */
