@@ -44,6 +44,9 @@ jobs:
         run: npm i
       - name: Run linter
         run: npm run lint
+        env:
+          # Authorise GitHub API requests for editorconfig-checker
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Detect changed documentation files
         uses: dorny/paths-filter@v2
         id: changes
