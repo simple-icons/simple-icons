@@ -52,8 +52,8 @@ jobs:
         uses: ./.github/actions/get-version
       - name: Install dependencies
         run: npm i
-      - name: Replace CDN theme image links from README
-        run: node ./scripts/release/strip-theme-links.js "${{ steps.get-version.outputs.version }}"
+      - name: Reformat README to regular markdown
+        run: node ./scripts/release/reformat-readme.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
         run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Build NodeJS package
@@ -75,7 +75,7 @@ jobs:
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Replace CDN theme image links from README
-        run: node ./scripts/release/strip-theme-links.js "${{ steps.get-version.outputs.version }}"
+        run: node ./scripts/release/reformat-readme.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
         run: |
           git config user.name "${GITHUB_ACTOR}"
