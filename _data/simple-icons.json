@@ -1847,6 +1847,11 @@
             "source": "https://bento.me"
         },
         {
+            "title": "BentoBox",
+            "hex": "F15541",
+            "source": "https://www.getbento.com"
+        },
+        {
             "title": "BentoML",
             "hex": "000000",
             "source": "https://github.com/bentoml/BentoML/blob/2169ebe9bc74e3d89ceba5dda8f8e1b85f08efa5/docs/source/_static/img/logo-light.svg"
@@ -3717,6 +3722,12 @@
             "source": "https://www.deepcool.com"
         },
         {
+            "title": "Deepgram",
+            "hex": "13EF93",
+            "source": "https://deepgram.com/company/newsroom",
+            "guidelines": "https://deepgram.com/company/newsroom"
+        },
+        {
             "title": "deepin",
             "hex": "007CFF",
             "source": "https://commons.wikimedia.org/wiki/File:Deepin_logo.svg"
@@ -5338,6 +5349,11 @@
             "license": {
                 "type": "CC-BY-NC-ND-4.0"
             }
+        },
+        {
+            "title": "Gameloft",
+            "hex": "000000",
+            "source": "https://www.gameloft.com"
         },
         {
             "title": "Gamemaker",
@@ -9436,6 +9452,16 @@
             "guidelines": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/LICENSE"
         },
         {
+            "title": "MUO",
+            "hex": "C60D0D",
+            "source": "https://www.makeuseof.com",
+            "aliases": {
+                "aka": [
+                    "MakeUseOf"
+                ]
+            }
+        },
+        {
             "title": "Mural",
             "hex": "FF4B4B",
             "source": "https://www.mural.co/brand-assets",
@@ -12438,6 +12464,11 @@
             }
         },
         {
+            "title": "Rockstar Games",
+            "hex": "FCAF17",
+            "source": "https://www.rockstargames.com"
+        },
+        {
             "title": "Rocky Linux",
             "hex": "10B981",
             "source": "https://github.com/rocky-linux/branding/blob/94e97dd30b87d909cc4f6a6838a2926f77f9ac47/logo/src/icon-black.svg",
@@ -12781,6 +12812,11 @@
             "title": "Sauce Labs",
             "hex": "3DDC91",
             "source": "https://saucelabs.com"
+        },
+        {
+            "title": "Saudia",
+            "hex": "026938",
+            "source": "https://www.saudiatechnic.com/media-center/press-kit"
         },
         {
             "title": "Scala",
@@ -14414,6 +14450,12 @@
             "guidelines": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo"
         },
         {
+            "title": "TeePublic",
+            "hex": "4E64DF",
+            "source": "https://teepublic.design/brand-kit",
+            "guidelines": "https://teepublic.design"
+        },
+        {
             "title": "Teespring",
             "hex": "ED2761",
             "source": "https://teespring.com"
@@ -15425,6 +15467,11 @@
             "title": "vBulletin",
             "hex": "184D66",
             "source": "https://commons.wikimedia.org/wiki/File:VBulletin.svg"
+        },
+        {
+            "title": "Vectary",
+            "hex": "6100FF",
+            "source": "https://www.vectary.com"
         },
         {
             "title": "Vector Logo Zone",
@@ -16508,6 +16555,16 @@
             "title": "Zalo",
             "hex": "0068FF",
             "source": "https://zalo.me"
+        },
+        {
+            "title": "ZAP",
+            "hex": "00549E",
+            "source": "https://www.zaproxy.org",
+            "aliases": {
+                "aka": [
+                    "Zed Attack Proxy"
+                ]
+            }
         },
         {
             "title": "Zapier",
