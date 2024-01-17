@@ -18,7 +18,7 @@
         {
             "title": "/e/",
             "hex": "000000",
-            "source": "https://gitlab.e.foundation/e/cloud/my-spot/-/blob/4e5430a17ba4ce77d4cb188222e47924f032b197/searx/static/themes/eelo/img/logo.svg"
+            "source": "https://doc.e.foundation"
         },
         {
             "title": "1001Tracklists",
@@ -39,7 +39,7 @@
         {
             "title": "42",
             "hex": "000000",
-            "source": "https://www.42.fr"
+            "source": "https://www.42network.org"
         },
         {
             "title": "4chan",
@@ -53,8 +53,8 @@
         },
         {
             "title": "500px",
-            "hex": "0099E5",
-            "source": "https://about.500px.com/press"
+            "hex": "222222",
+            "source": "https://500px.com"
         },
         {
             "title": "7Zip",
@@ -407,6 +407,11 @@
             "title": "Air India",
             "hex": "D9000D",
             "source": "https://www.airindia.com"
+        },
+        {
+            "title": "Air Transat",
+            "hex": "172B54",
+            "source": "https://www.airtransat.com"
         },
         {
             "title": "AirAsia",
@@ -1840,6 +1845,11 @@
             "title": "Bento",
             "hex": "768CFF",
             "source": "https://bento.me"
+        },
+        {
+            "title": "BentoBox",
+            "hex": "F15541",
+            "source": "https://www.getbento.com"
         },
         {
             "title": "BentoML",
@@ -3658,6 +3668,11 @@
             "guidelines": "https://www.datto.com/brand"
         },
         {
+            "title": "DaVinci Resolve",
+            "hex": "233A51",
+            "source": "https://www.blackmagicdesign.com/media/images/davinci-resolve-logo-square"
+        },
+        {
             "title": "DAZN",
             "hex": "F8F8F5",
             "source": "https://media.dazn.com/en/assets/"
@@ -3705,6 +3720,12 @@
             "title": "DeepCool",
             "hex": "068584",
             "source": "https://www.deepcool.com"
+        },
+        {
+            "title": "Deepgram",
+            "hex": "13EF93",
+            "source": "https://deepgram.com/company/newsroom",
+            "guidelines": "https://deepgram.com/company/newsroom"
         },
         {
             "title": "deepin",
@@ -4139,7 +4160,8 @@
         {
             "title": "Duolingo",
             "hex": "58CC02",
-            "source": "https://www.duolingo.com"
+            "source": "https://design.duolingo.com",
+            "guidelines": "https://design.duolingo.com"
         },
         {
             "title": "DVC",
@@ -4504,6 +4526,12 @@
             "title": "ESLint",
             "hex": "4B32C3",
             "source": "https://eslint.org"
+        },
+        {
+            "title": "Esoteric Software",
+            "hex": "3FA9F5",
+            "source": "https://esotericsoftware.com/forum/d/25405-sheildsio-branding",
+            "guidelines": "https://esotericsoftware.com/branding"
         },
         {
             "title": "ESPHome",
@@ -5233,6 +5261,12 @@
             "source": "https://brand.frontify.com/d/7WQZazaZFkMz/brand-guidelines-1#/visual/logo"
         },
         {
+            "title": "Fubo",
+            "hex": "C83D1E",
+            "source": "https://www.fubo.tv",
+            "guidelines": "https://www.fubo.tv/press-inquiries"
+        },
+        {
             "title": "Fuga Cloud",
             "hex": "242F4B",
             "source": "https://fuga.cloud",
@@ -5315,6 +5349,11 @@
             "license": {
                 "type": "CC-BY-NC-ND-4.0"
             }
+        },
+        {
+            "title": "Gameloft",
+            "hex": "000000",
+            "source": "https://www.gameloft.com"
         },
         {
             "title": "Gamemaker",
@@ -5450,6 +5489,11 @@
             "title": "GitBook",
             "hex": "3884FF",
             "source": "https://github.com/GitbookIO/styleguide/blob/c958388dab901defa3e22978ca01272295627e05/icons/Logo.svg"
+        },
+        {
+            "title": "Gitconnected",
+            "hex": "2E69AE",
+            "source": "https://gitconnected.com/richard-hendricks-demo/resume"
         },
         {
             "title": "Gitea",
@@ -8826,6 +8870,11 @@
             "title": "MetaFilter",
             "hex": "065A8F",
             "source": "https://www.metafilter.com"
+        },
+        {
+            "title": "Metasploit",
+            "hex": "2596CD",
+            "source": "https://github.com/rapid7/metasploit-framework/blob/f8bd7dfd834354c9a2e2c03e1d9f5d53f8881954/docs/assets/images/favicon.png"
         },
         {
             "title": "Meteor",
@@ -12745,6 +12794,11 @@
             "source": "https://saucelabs.com"
         },
         {
+            "title": "Saudia",
+            "hex": "026938",
+            "source": "https://www.saudiatechnic.com/media-center/press-kit"
+        },
+        {
             "title": "Scala",
             "hex": "DC322F",
             "source": "https://www.scala-lang.org"
@@ -13611,6 +13665,12 @@
             "source": "https://www.spigotmc.org"
         },
         {
+            "title": "Spine",
+            "hex": "FF4000",
+            "source": "https://esotericsoftware.com/branding",
+            "guidelines": "https://esotericsoftware.com/branding"
+        },
+        {
             "title": "Spinnaker",
             "hex": "139BB4",
             "source": "https://github.com/spinnaker/spinnaker.github.io/tree/0cdd37af7541293a810494a1bb4d7df9ef553d60/assets/images"
@@ -14370,6 +14430,12 @@
             "guidelines": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo"
         },
         {
+            "title": "TeePublic",
+            "hex": "4E64DF",
+            "source": "https://teepublic.design/brand-kit",
+            "guidelines": "https://teepublic.design"
+        },
+        {
             "title": "Teespring",
             "hex": "ED2761",
             "source": "https://teespring.com"
@@ -14758,6 +14824,11 @@
             "hex": "0098EA",
             "source": "https://ton.org/en/brand-assets",
             "guidelines": "https://ton.org/en/brand-assets"
+        },
+        {
+            "title": "Top.gg",
+            "hex": "FF3366",
+            "source": "https://top.gg"
         },
         {
             "title": "Topcoder",
@@ -16473,8 +16544,8 @@
         {
             "title": "Zapier",
             "hex": "FF4F00",
-            "source": "https://brand.zapier.com",
-            "guidelines": "https://brand.zapier.com"
+            "source": "https://www.figma.com/file/NQFxTCE5pGR3dHZt0DkOyy/Zapier-Brand-Guidelines-%5BExternal%5D?type=design&node-id=101-9701&mode=design",
+            "guidelines": "https://www.figma.com/file/NQFxTCE5pGR3dHZt0DkOyy/Zapier-Brand-Guidelines-%5BExternal%5D?type=design&node-id=101-9701&mode=design"
         },
         {
             "title": "Zara",
