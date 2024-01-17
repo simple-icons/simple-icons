@@ -4,6 +4,7 @@
  * icon SVG filename to standard output.
  */
 
+import process from 'node:process';
 import { titleToSlug } from '../sdk.mjs';
 
 if (process.argv.length < 3) {

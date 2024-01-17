@@ -76,15 +76,3 @@ body:
         - Is the icon released under a license?
         - If you think the brand might not be accepted, why do you think it should be considered?
       placeholder: 'Example: There are two variants of this icon...'
-
-  - type: dropdown
-    attributes:
-      label: Contributing
-      description: >-
-        This is an open source project and we welcome contributions. Do you want to
-        add this icon?
-      options:
-        - 'Yes'
-        - 'No'
-    validations:
-      required: true

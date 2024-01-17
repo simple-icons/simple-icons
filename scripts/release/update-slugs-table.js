@@ -25,14 +25,10 @@ update the script at '${path.relative(rootDir, __filename)}'.
 | :--- | :--- |
 `;
 
-(async () => {
-  const icons = await getIconsData();
-
-  icons.forEach((icon) => {
-    const brandName = icon.title;
-    const brandSlug = getIconSlug(icon);
-    content += `| \`${brandName}\` | \`${brandSlug}\` |\n`;
-  });
-
-  await fs.writeFile(slugsFile, content);
-})();
+const icons = await getIconsData();
+for (const icon of icons) {
+  const brandName = icon.title;
+  const brandSlug = getIconSlug(icon);
+  content += `| \`${brandName}\` | \`${brandSlug}\` |\n`;
+}
+await fs.writeFile(slugsFile, content);

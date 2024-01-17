@@ -40,9 +40,6 @@ const build = async () => {
   const escape = (value) => {
     return value.replace(/(?<!\\)'/g, "\\'");
   };
-  const iconToKeyValue = (icon) => {
-    return `'${icon.slug}':${iconToObject(icon)}`;
-  };
   const licenseToObject = (license) => {
     if (license === undefined) {
       return;
@@ -82,7 +79,7 @@ const build = async () => {
     icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDir, `${filename}.svg`);
-      icon.svg = (await fs.readFile(svgFilepath, UTF8)).replace(/\r?\n/, '');
+      icon.svg = await fs.readFile(svgFilepath, UTF8);
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
       const iconObject = iconToObject(icon);
@@ -96,11 +93,11 @@ const build = async () => {
   const iconsBarrelMjs = [];
 
   buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
-  buildIcons.forEach(({ iconObject, iconExportName }) => {
+  for (const { iconObject, iconExportName } of buildIcons) {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
     iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
-  });
+  }
 
   // constants used in templates to reduce package size
   const constantsString = `const a='<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>',b='</title><path d="',c='"/></svg>';`;

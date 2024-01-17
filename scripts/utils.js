@@ -6,7 +6,7 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
  * Get JSON schema data.
- * @param {String|undefined} rootDir Path to the root directory of the project.
+ * @param {String} rootDir Path to the root directory of the project.
  */
 export const getJsonSchemaData = async (
   rootDir = path.resolve(__dirname, '..'),
@@ -19,13 +19,13 @@ export const getJsonSchemaData = async (
 /**
  * Write icons data to _data/simple-icons.json.
  * @param {Object} iconsData Icons data object.
- * @param {String|undefined} rootDir Path to the root directory of the project.
+ * @param {String} rootDir Path to the root directory of the project.
  */
 export const writeIconsData = async (
   iconsData,
   rootDir = path.resolve(__dirname, '..'),
 ) => {
-  return fs.writeFile(
+  await fs.writeFile(
     getIconDataPath(rootDir),
     `${JSON.stringify(iconsData, null, 4)}\n`,
     'utf8',
