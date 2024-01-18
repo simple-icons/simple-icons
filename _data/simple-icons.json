@@ -409,6 +409,11 @@
             "source": "https://www.airindia.com"
         },
         {
+            "title": "Air Transat",
+            "hex": "172B54",
+            "source": "https://www.airtransat.com"
+        },
+        {
             "title": "AirAsia",
             "hex": "FF0000",
             "source": "https://www.airasia.com/shop"
@@ -1840,6 +1845,11 @@
             "title": "Bento",
             "hex": "768CFF",
             "source": "https://bento.me"
+        },
+        {
+            "title": "BentoBox",
+            "hex": "F15541",
+            "source": "https://www.getbento.com"
         },
         {
             "title": "BentoML",
@@ -3712,6 +3722,12 @@
             "source": "https://www.deepcool.com"
         },
         {
+            "title": "Deepgram",
+            "hex": "13EF93",
+            "source": "https://deepgram.com/company/newsroom",
+            "guidelines": "https://deepgram.com/company/newsroom"
+        },
+        {
             "title": "deepin",
             "hex": "007CFF",
             "source": "https://commons.wikimedia.org/wiki/File:Deepin_logo.svg"
@@ -5335,6 +5351,11 @@
             }
         },
         {
+            "title": "Gameloft",
+            "hex": "000000",
+            "source": "https://www.gameloft.com"
+        },
+        {
             "title": "Gamemaker",
             "hex": "000000",
             "source": "https://gamemaker.io/en/legal/brand",
@@ -5468,6 +5489,11 @@
             "title": "GitBook",
             "hex": "3884FF",
             "source": "https://github.com/GitbookIO/styleguide/blob/c958388dab901defa3e22978ca01272295627e05/icons/Logo.svg"
+        },
+        {
+            "title": "Gitconnected",
+            "hex": "2E69AE",
+            "source": "https://gitconnected.com/richard-hendricks-demo/resume"
         },
         {
             "title": "Gitea",
@@ -8846,6 +8872,11 @@
             "source": "https://www.metafilter.com"
         },
         {
+            "title": "Metasploit",
+            "hex": "2596CD",
+            "source": "https://github.com/rapid7/metasploit-framework/blob/f8bd7dfd834354c9a2e2c03e1d9f5d53f8881954/docs/assets/images/favicon.png"
+        },
+        {
             "title": "Meteor",
             "hex": "DE4F4F",
             "source": "https://logo.meteorapp.com"
@@ -9414,6 +9445,16 @@
             "hex": "000000",
             "source": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/icons/mumble_small.svg",
             "guidelines": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/LICENSE"
+        },
+        {
+            "title": "MUO",
+            "hex": "C60D0D",
+            "source": "https://www.makeuseof.com",
+            "aliases": {
+                "aka": [
+                    "MakeUseOf"
+                ]
+            }
         },
         {
             "title": "Mural",
@@ -11609,6 +11650,11 @@
             "source": "https://puri.sm/pr/images/"
         },
         {
+            "title": "Pushbullet",
+            "hex": "4AB367",
+            "source": "https://www.pushbullet.com/press"
+        },
+        {
             "title": "Pusher",
             "hex": "300D4F",
             "source": "https://pusher.com"
@@ -12418,6 +12464,11 @@
             }
         },
         {
+            "title": "Rockstar Games",
+            "hex": "FCAF17",
+            "source": "https://www.rockstargames.com"
+        },
+        {
             "title": "Rocky Linux",
             "hex": "10B981",
             "source": "https://github.com/rocky-linux/branding/blob/94e97dd30b87d909cc4f6a6838a2926f77f9ac47/logo/src/icon-black.svg",
@@ -12761,6 +12812,11 @@
             "title": "Sauce Labs",
             "hex": "3DDC91",
             "source": "https://saucelabs.com"
+        },
+        {
+            "title": "Saudia",
+            "hex": "026938",
+            "source": "https://www.saudiatechnic.com/media-center/press-kit"
         },
         {
             "title": "Scala",
@@ -14399,6 +14455,12 @@
             "guidelines": "https://www.ted.com/participate/organize-a-local-tedx-event/tedx-organizer-guide/branding-promotions/logo-and-design/your-tedx-logo"
         },
         {
+            "title": "TeePublic",
+            "hex": "4E64DF",
+            "source": "https://teepublic.design/brand-kit",
+            "guidelines": "https://teepublic.design"
+        },
+        {
             "title": "Teespring",
             "hex": "ED2761",
             "source": "https://teespring.com"
@@ -14787,6 +14849,11 @@
             "hex": "0098EA",
             "source": "https://ton.org/en/brand-assets",
             "guidelines": "https://ton.org/en/brand-assets"
+        },
+        {
+            "title": "Top.gg",
+            "hex": "FF3366",
+            "source": "https://top.gg"
         },
         {
             "title": "Topcoder",
@@ -15288,6 +15355,12 @@
             "guidelines": "https://upcloud.com/brand-assets/"
         },
         {
+            "title": "Uphold",
+            "hex": "49CC68",
+            "source": "https://uphold.com/en-us/brand-assets",
+            "guidelines": "https://uphold.com/en-us/brand-assets"
+        },
+        {
             "title": "UpLabs",
             "hex": "3930D8",
             "source": "https://www.uplabs.com"
@@ -15405,6 +15478,11 @@
             "title": "vBulletin",
             "hex": "184D66",
             "source": "https://commons.wikimedia.org/wiki/File:VBulletin.svg"
+        },
+        {
+            "title": "Vectary",
+            "hex": "6100FF",
+            "source": "https://www.vectary.com"
         },
         {
             "title": "Vector Logo Zone",
@@ -16488,6 +16566,16 @@
             "title": "Zalo",
             "hex": "0068FF",
             "source": "https://zalo.me"
+        },
+        {
+            "title": "ZAP",
+            "hex": "00549E",
+            "source": "https://www.zaproxy.org",
+            "aliases": {
+                "aka": [
+                    "Zed Attack Proxy"
+                ]
+            }
         },
         {
             "title": "Zapier",
