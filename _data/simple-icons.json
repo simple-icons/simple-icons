@@ -32,6 +32,11 @@
             "guidelines": "https://1password.com/press"
         },
         {
+            "title": "2K",
+            "hex": "DD0700",
+            "source": "https://support.2k.com/hc/en-us/articles/203972113-Digital-Copies-of-2K-Manuals"
+        },
+        {
             "title": "3M",
             "hex": "FF0000",
             "source": "https://www.3m.com"
@@ -928,6 +933,11 @@
             "title": "AniList",
             "hex": "02A9FF",
             "source": "https://anilist.co"
+        },
+        {
+            "title": "Animal Planet",
+            "hex": "0073FF",
+            "source": "https://www.animalplanet.com"
         },
         {
             "title": "Ansible",
@@ -5778,8 +5788,8 @@
         },
         {
             "title": "Google Chat",
-            "hex": "00AC47",
-            "source": "https://chat.google.com"
+            "hex": "34A853",
+            "source": "https://support.google.com/chat/answer/9455386"
         },
         {
             "title": "Google Chrome",
@@ -6601,8 +6611,8 @@
         },
         {
             "title": "Hoppscotch",
-            "hex": "10B981",
-            "source": "https://github.com/hoppscotch/hoppscotch/blob/65884293be0f1124c3db0c3fe985fe78b307d787/packages/hoppscotch-common/public/logo.svg"
+            "hex": "09090B",
+            "source": "https://hoppscotch.com"
         },
         {
             "title": "Hostinger",
@@ -7851,6 +7861,11 @@
             "source": "https://kubuntu.org"
         },
         {
+            "title": "KuCoin",
+            "hex": "01BC8D",
+            "source": "https://www.kucoin.com/news/en-kucoin-media-kit"
+        },
+        {
             "title": "Kuma",
             "hex": "290B53",
             "source": "https://cncf-branding.netlify.app/projects/kuma/"
@@ -8482,6 +8497,12 @@
             "title": "Magento",
             "hex": "EE672F",
             "source": "https://magento.com"
+        },
+        {
+            "title": "Magic",
+            "hex": "6851FF",
+            "source": "https://magic.link/brand-assets",
+            "guidelines": "https://magic.link/brand-assets"
         },
         {
             "title": "Magisk",
@@ -9445,6 +9466,16 @@
             "hex": "000000",
             "source": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/icons/mumble_small.svg",
             "guidelines": "https://github.com/mumble-voip/mumble/blob/d40a19eb88cda61084da245a1b6cb8f32ef1b6e4/LICENSE"
+        },
+        {
+            "title": "MUO",
+            "hex": "C60D0D",
+            "source": "https://www.makeuseof.com",
+            "aliases": {
+                "aka": [
+                    "MakeUseOf"
+                ]
+            }
         },
         {
             "title": "Mural",
@@ -11466,6 +11497,11 @@
             "source": "https://prismic.io"
         },
         {
+            "title": "Private Division",
+            "hex": "000000",
+            "source": "https://account.privatedivision.com"
+        },
+        {
             "title": "Private Internet Access",
             "hex": "4BB749",
             "source": "https://www.privateinternetaccess.com/pages/press"
@@ -11638,6 +11674,11 @@
             "title": "Purism",
             "hex": "2D2D2D",
             "source": "https://puri.sm/pr/images/"
+        },
+        {
+            "title": "Pushbullet",
+            "hex": "4AB367",
+            "source": "https://www.pushbullet.com/press"
         },
         {
             "title": "Pusher",
@@ -12487,6 +12528,11 @@
             }
         },
         {
+            "title": "Roon",
+            "hex": "2039F3",
+            "source": "https://help.roonlabs.com/portal/en/home"
+        },
+        {
             "title": "Root Me",
             "hex": "000000",
             "source": "https://www.root-me.org"
@@ -12708,6 +12754,12 @@
             "hex": "00A1E0",
             "source": "https://brand.salesforce.com/content/logo-guidelines",
             "guidelines": "https://brand.salesforce.com/content/logo-guidelines"
+        },
+        {
+            "title": "Salla",
+            "hex": "BAF3E6",
+            "source": "https://brand.salla.com",
+            "guidelines": "https://brand.salla.com"
         },
         {
             "title": "Salt Project",
@@ -14337,6 +14389,11 @@
             "guidelines": "https://tailwindcss.com/brand"
         },
         {
+            "title": "Take-Two Interactive Software",
+            "hex": "000000",
+            "source": "https://www.take2games.com/ir"
+        },
+        {
             "title": "Talend",
             "hex": "FF6D70",
             "source": "https://www.talend.com/blog"
@@ -14738,6 +14795,11 @@
             "source": "https://tiktok.com"
         },
         {
+            "title": "Tilda Publishing",
+            "hex": "FFA282",
+            "source": "https://tilda.cc/mediakit"
+        },
+        {
             "title": "Tile",
             "hex": "000000",
             "source": "https://www.thetileapp.com"
@@ -14860,6 +14922,12 @@
             "title": "Toshiba",
             "hex": "FF0000",
             "source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
+        },
+        {
+            "title": "TOTVS",
+            "hex": "363636",
+            "source": "https://marca.totvs.com/downloads",
+            "guidelines": "https://marca.totvs.com/identidade-visual"
         },
         {
             "title": "TourBox",
@@ -15335,6 +15403,12 @@
             "guidelines": "https://upcloud.com/brand-assets/"
         },
         {
+            "title": "Uphold",
+            "hex": "49CC68",
+            "source": "https://uphold.com/en-us/brand-assets",
+            "guidelines": "https://uphold.com/en-us/brand-assets"
+        },
+        {
             "title": "UpLabs",
             "hex": "3930D8",
             "source": "https://www.uplabs.com"
@@ -15452,6 +15526,11 @@
             "title": "vBulletin",
             "hex": "184D66",
             "source": "https://commons.wikimedia.org/wiki/File:VBulletin.svg"
+        },
+        {
+            "title": "Vectary",
+            "hex": "6100FF",
+            "source": "https://www.vectary.com"
         },
         {
             "title": "Vector Logo Zone",
