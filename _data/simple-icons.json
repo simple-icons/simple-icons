@@ -657,16 +657,6 @@
             }
         },
         {
-            "title": "Amazon AWS",
-            "hex": "232F3E",
-            "source": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg",
-            "aliases": {
-                "aka": [
-                    "AWS"
-                ]
-            }
-        },
-        {
             "title": "Amazon CloudWatch",
             "hex": "FF4F8B",
             "source": "https://aws.amazon.com/architecture/icons",
@@ -842,6 +832,16 @@
                     "Amazon Simple Queue Service",
                     "AWS SQS",
                     "AWS Simple Queue Service"
+                ]
+            }
+        },
+        {
+            "title": "Amazon Web Services",
+            "hex": "232F3E",
+            "source": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "AWS"
                 ]
             }
         },
