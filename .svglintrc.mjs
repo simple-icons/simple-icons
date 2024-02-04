@@ -370,7 +370,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'icon-size';
 
         const iconPath = getIconPath($, filepath);
@@ -399,7 +399,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'icon-precision';
 
         const iconPath = getIconPath($, filepath);
@@ -429,7 +429,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'ineffective-segments';
 
         const iconPath = getIconPath($, filepath);
@@ -601,7 +601,7 @@ export default {
           if (isInvalidSegment(segment.params, index, previousSegmentIsZ)) {
             const [command, x1, y1, ...rest] = segment.params;
 
-            let errorMsg = `Innefective segment "${iconPath.substring(
+            let errorMsg = `Ineffective segment "${iconPath.substring(
                 segment.start,
                 segment.end,
               )}" found`,
@@ -853,7 +853,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'negative-zeros';
 
         const iconPath = getIconPath($, filepath);
@@ -879,7 +879,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'icon-centered';
 
         const iconPath = getIconPath($, filepath);
@@ -906,7 +906,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'path-format';
 
         const iconPath = getIconPath($, filepath);
