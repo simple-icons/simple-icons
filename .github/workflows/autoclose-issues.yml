@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - id: match-title
-        name: Match title
+      - id: match-java
+        name: Match Java
         # if the title contains the word Java (case insensitive)
         # we make sure that this word is the end of the string or is followed by a space character (ex. we do not want to match javascript)
         # we make sure that this word is the beginning of the string or is preceded by a space character (ex. we do not want to match foojava)
@@ -33,7 +33,7 @@ jobs:
       # - we close the issue
       - name: Close the issue
         if: |
-          steps.match-title.outputs.match == 'true' &&
+          steps.match-java.outputs.match == 'true' &&
           contains(steps.get-labels.outputs.labels, 'new icon')
         uses: actions/github-script@v6
         with:
