@@ -23,7 +23,7 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: LitoMore/simple-icons-release-action@b14cfca88575c04ea2a90ef282ca16d275cb2715
+      - uses: simple-icons/release-action@v1
         id: release
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
@@ -67,7 +67,7 @@ jobs:
       - name: Update SDK Typescript definitions
         run: node ./scripts/release/update-sdk-ts-defs.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v4.16.0
+        uses: stefanzweifel/git-auto-commit-action@v5.0.0
         with:
           commit_message: version bump
           commit_user_name: 'github-actions[bot]'
