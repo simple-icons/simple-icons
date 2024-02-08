@@ -157,6 +157,11 @@
             }
         },
         {
+            "title": "Actix",
+            "hex": "000000",
+            "source": "https://github.com/actix/actix-website/issues/18#issuecomment-393581556"
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -1263,6 +1268,12 @@
             "guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
         },
         {
+            "title": "Appium",
+            "hex": "EE376D",
+            "source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
+            "guidelines": "https://github.com/openjs-foundation/artwork/tree/270575392800eb17a02612203f6f0d5868c634a7/projects/appium"
+        },
+        {
             "title": "Apple",
             "hex": "000000",
             "source": "https://www.apple.com"
@@ -2216,6 +2227,11 @@
             "title": "Boxy SVG",
             "hex": "3584E3",
             "source": "https://boxy-svg.com/ideas/7/app-icon-redesign#comment-1953"
+        },
+        {
+            "title": "Braintree",
+            "hex": "000000",
+            "source": "https://www.braintreepayments.com/press"
         },
         {
             "title": "Brandfolder",
@@ -5748,6 +5764,12 @@
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
         },
         {
+            "title": "Gojek",
+            "hex": "00AA13",
+            "source": "https://gojek.com",
+            "guidelines": "https://gojek.design"
+        },
+        {
             "title": "GoLand",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/#logos-and-icons-jetbrains-logos",
@@ -6132,7 +6154,7 @@
         },
         {
             "title": "Grammarly",
-            "hex": "15C39A",
+            "hex": "027E6F",
             "source": "https://www.grammarly.com/media-assets"
         },
         {
@@ -7672,6 +7694,12 @@
                 "type": "custom",
                 "url": "https://www.linuxfoundation.org/trademark-usage"
             }
+        },
+        {
+            "title": "Keenetic",
+            "hex": "009EE2",
+            "source": "https://keenetic.com",
+            "guidelines": "https://keenetic.com/en/legal"
         },
         {
             "title": "Keep a Changelog",
@@ -9878,6 +9906,11 @@
             "guidelines": "https://www.figma.com/community/file/1267584376234254760"
         },
         {
+            "title": "Nexus Mods",
+            "hex": "E6832B",
+            "source": "https://wiki.nexusmods.com/skins/Metrolook/images/nexuslogo.svg"
+        },
+        {
             "title": "NFC",
             "hex": "002E5F",
             "source": "https://nfc-forum.org/our-work/nfc-branding/n-mark/guidelines-and-brand-assets/",
@@ -11890,6 +11923,11 @@
             "title": "Qatar Airways",
             "hex": "5C0D34",
             "source": "https://www.qatarairways.com/press-releases/en-WW/media_kits"
+        },
+        {
+            "title": "qbittorrent",
+            "hex": "2F67BA",
+            "source": "https://github.com/qbittorrent/qBittorrent/blob/73028f9930d9ab9d89edb60ed4aedb66d75669d9/src/icons/qbittorrent-tray-light.svg"
         },
         {
             "title": "QEMU",
