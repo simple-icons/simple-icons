@@ -7,13 +7,13 @@ test('README third party extensions must be alphabetically sorted', async () => 
   assert.ok(thirdPartyExtensions.length > 0);
 
   const thirdPartyExtensionsNames = thirdPartyExtensions.map(
-    (ext) => ext.module.name
+    (ext) => ext.module.name,
   );
 
   const expectedOrder = thirdPartyExtensionsNames.slice().sort();
   assert.deepEqual(
     thirdPartyExtensionsNames,
     expectedOrder,
-    'Wrong alphabetical order of third party extensions in README.'
+    'Wrong alphabetical order of third party extensions in README.',
   );
 });

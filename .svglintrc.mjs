@@ -17,16 +17,16 @@ const htmlNamedEntitiesFile = path.join(
   __dirname,
   'node_modules',
   'named-html-entities-json',
-  'index.json'
+  'index.json',
 );
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
 const data = JSON.parse(await fs.readFile(dataFile, 'utf8'));
 const htmlNamedEntities = JSON.parse(
-  await fs.readFile(htmlNamedEntitiesFile, 'utf8')
+  await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );
 const svglintIgnores = JSON.parse(
-  await fs.readFile(svglintIgnoredFile, 'utf8')
+  await fs.readFile(svglintIgnoredFile, 'utf8'),
 );
 
 const svgRegexp =
@@ -216,7 +216,7 @@ export default {
 
         // avoid character codepoints as hexadecimal representation
         const hexadecimalCodepoints = Array.from(
-          iconTitleText.matchAll(/&#x([A-Fa-f0-9]+);/g)
+          iconTitleText.matchAll(/&#x([A-Fa-f0-9]+);/g),
         );
         if (hexadecimalCodepoints.length > 0) {
           _validCodepointsRepr = false;
@@ -240,14 +240,14 @@ export default {
             reporter.error(
               'Hexadecimal representation of encoded character' +
                 ` "${match[0]}" found at index ${charHexReprIndex}:` +
-                ` replace it with "${charRepr}".`
+                ` replace it with "${charRepr}".`,
             );
           }
         }
 
         // avoid character codepoints as named entities
         const namedEntitiesCodepoints = Array.from(
-          iconTitleText.matchAll(/&([A-Za-z0-9]+);/g)
+          iconTitleText.matchAll(/&([A-Za-z0-9]+);/g),
         );
         if (namedEntitiesCodepoints.length > 0) {
           for (const match of namedEntitiesCodepoints) {
@@ -276,7 +276,7 @@ export default {
               reporter.error(
                 'Named entity representation of encoded character' +
                   ` "${match[0]}" found at index ${namedEntiyReprIndex}.` +
-                  ` Replace it with ${replacement}.`
+                  ` Replace it with ${replacement}.`,
               );
             }
           }
@@ -285,7 +285,7 @@ export default {
         if (_validCodepointsRepr) {
           // compare encoded title with original title and report error if not equal
           const encodingMatches = Array.from(
-              iconTitleText.matchAll(/&(#([0-9]+)|(amp|quot|lt|gt));/g)
+              iconTitleText.matchAll(/&(#([0-9]+)|(amp|quot|lt|gt));/g),
             ),
             encodedBuf = [];
 
@@ -311,7 +311,7 @@ export default {
                     xmlNamedEntities[
                       xmlNamedEntitiesCodepoints.indexOf(charDecimalCode)
                     ]
-                  };`
+                  };`,
                 );
               } else {
                 encodedBuf.unshift(iconTitleText[i]);
@@ -324,7 +324,7 @@ export default {
 
             reporter.error(
               `Unencoded unicode characters found in title "${iconTitleText}":` +
-                ` rewrite it as "${encodedIconTitleText}".`
+                ` rewrite it as "${encodedIconTitleText}".`,
             );
           }
 
@@ -353,18 +353,18 @@ export default {
             reporter.error(
               `Unnecessary encoded character "${match[0]}" found` +
                 ` at index ${decimalCodepointCharIndex}:` +
-                ` replace it with ${replacement}.`
+                ` replace it with ${replacement}.`,
             );
           }
 
           if (_validCodepointsRepr) {
             const iconName = htmlFriendlyToTitle(iconTitleText);
             const iconExists = data.icons.some(
-              (icon) => icon.title === iconName
+              (icon) => icon.title === iconName,
             );
             if (!iconExists) {
               reporter.error(
-                `No icon with title "${iconName}" found in simple-icons.json`
+                `No icon with title "${iconName}" found in simple-icons.json`,
               );
             }
           }
@@ -384,7 +384,7 @@ export default {
 
         if (width === 0 && height === 0) {
           reporter.error(
-            'Path bounds were reported as 0 x 0; check if the path is valid'
+            'Path bounds were reported as 0 x 0; check if the path is valid',
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -392,7 +392,7 @@ export default {
         } else if (width !== iconSize && height !== iconSize) {
           reporter.error(
             `Size of <path> must be exactly ${iconSize} in one dimension;` +
-              ` the size is currently ${width} x ${height}`
+              ` the size is currently ${width} x ${height}`,
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -407,7 +407,7 @@ export default {
 
         for (const segment of segments) {
           const precisionMax = Math.max(
-            ...segment.params.slice(1).map(countDecimals)
+            ...segment.params.slice(1).map(countDecimals),
           );
           if (precisionMax > iconMaxFloatPrecision) {
             let errorMsg =
@@ -415,7 +415,7 @@ export default {
               ` "${iconPath.substring(segment.start, segment.end)}"`;
             if (segment.chained) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.substring(segment.chainStart, segment.chainEnd)
+                iconPath.substring(segment.chainStart, segment.chainEnd),
               );
               errorMsg += ` of chain "${readableChain}"`;
             }
@@ -424,7 +424,7 @@ export default {
             }`;
             reporter.error(
               'Maximum precision should not be greater than' +
-                ` ${iconMaxFloatPrecision}; ${errorMsg}`
+                ` ${iconMaxFloatPrecision}; ${errorMsg}`,
             );
           }
         }
@@ -468,7 +468,7 @@ export default {
         const isInvalidSegment = (
           [command, x1Coord, y1Coord, ...rest],
           index,
-          previousSegmentIsZ
+          previousSegmentIsZ,
         ) => {
           if (commands.includes(command)) {
             // Relative directions (h or v) having a length of 0
@@ -603,7 +603,7 @@ export default {
 
             let errorMsg = `Ineffective segment "${iconPath.substring(
                 segment.start,
-                segment.end
+                segment.end,
               )}" found`,
               resolutionTip = 'should be removed';
 
@@ -615,29 +615,29 @@ export default {
                 (x2 !== 0 || y2 !== 0)
               ) {
                 resolutionTip = `should be "l${removeLeadingZeros(
-                  x2
+                  x2,
                 )} ${removeLeadingZeros(y2)}" or removed`;
               }
               if (command === upperShorthandCurveCommand) {
                 resolutionTip = `should be "L${removeLeadingZeros(
-                  x2
+                  x2,
                 )} ${removeLeadingZeros(y2)}" or removed`;
               }
               if (command === lowerCurveCommand && (x !== 0 || y !== 0)) {
                 resolutionTip = `should be "l${removeLeadingZeros(
-                  x
+                  x,
                 )} ${removeLeadingZeros(y)}" or removed`;
               }
               if (command === upperCurveCommand) {
                 resolutionTip = `should be "L${removeLeadingZeros(
-                  x
+                  x,
                 )} ${removeLeadingZeros(y)}" or removed`;
               }
             }
 
             if (segment.chained) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.substring(segment.chainStart, segment.chainEnd)
+                iconPath.substring(segment.chainStart, segment.chainEnd),
               );
               errorMsg += ` in chain "${readableChain}"`;
             }
@@ -798,11 +798,11 @@ export default {
                     currLine[p][0],
                     currLine[p][1],
                     currLine[p + 1][0],
-                    currLine[p + 1][1]
+                    currLine[p + 1][1],
                   );
                   if (_collinearCoord) {
                     collinearSegments.push(
-                      segments[s - currLine.length + p + 1]
+                      segments[s - currLine.length + p + 1],
                     );
                   }
                 }
@@ -823,11 +823,11 @@ export default {
         for (const segment of collinearSegments) {
           let errorMsg = `Collinear segment "${iconPath.substring(
             segment.start,
-            segment.end
+            segment.end,
           )}" found`;
           if (segment.chained) {
             let readableChain = maybeShortenedWithEllipsis(
-              iconPath.substring(segment.chainStart, segment.chainEnd)
+              iconPath.substring(segment.chainStart, segment.chainEnd),
             );
             errorMsg += ` in chain "${readableChain}"`;
           }
@@ -843,12 +843,12 @@ export default {
         if (!svgRegexp.test(ast.source)) {
           if (ast.source.includes('\n') || ast.source.includes('\r')) {
             reporter.error(
-              'Unexpected newline character(s) detected in SVG markup'
+              'Unexpected newline character(s) detected in SVG markup',
             );
           } else {
             reporter.error(
               'Unexpected character(s), most likely extraneous' +
-                ' whitespace, detected in SVG markup'
+                ' whitespace, detected in SVG markup',
             );
           }
         }
@@ -860,7 +860,7 @@ export default {
 
         // Find negative zeros inside path
         const negativeZeroMatches = Array.from(
-          iconPath.matchAll(negativeZerosRegexp)
+          iconPath.matchAll(negativeZerosRegexp),
         );
         if (negativeZeroMatches.length) {
           // Calculate the index for each match in the file
@@ -874,7 +874,7 @@ export default {
               : '0';
             reporter.error(
               `Found "-0" at index ${negativeZeroFileIndex} (should` +
-                ` be "${replacement}")`
+                ` be "${replacement}")`,
             );
           }
         }
@@ -899,7 +899,7 @@ export default {
         ) {
           reporter.error(
             `<path> must be centered at (${iconTargetCenter}, ${iconTargetCenter});` +
-              ` the center is currently (${centerX}, ${centerY})`
+              ` the center is currently (${centerX}, ${centerY})`,
           );
           if (updateIgnoreFile) {
             ignoreIcon(reporter.name, iconPath, $);
@@ -925,7 +925,7 @@ export default {
 
           const validPathCharacters = SVG_PATH_REGEX.source.replace(
               /[\[\]+^$]/g,
-              ''
+              '',
             ),
             invalidCharactersMsgs = [],
             pathDIndex = getPathDIndex(ast.source);
@@ -933,7 +933,7 @@ export default {
           for (let [i, char] of Object.entries(iconPath)) {
             if (validPathCharacters.indexOf(char) === -1) {
               invalidCharactersMsgs.push(
-                `"${char}" at index ${pathDIndex + parseInt(i)}`
+                `"${char}" at index ${pathDIndex + parseInt(i)}`,
               );
             }
           }
@@ -954,7 +954,7 @@ export default {
         if (ast.source.includes('</path>')) {
           const reason =
             `found a closing "path" tag at index ${ast.source.indexOf(
-              '</path>'
+              '</path>',
             )}. The path should be self-closing,` +
             ' use "/>" instead of "></path>".';
           reporter.error(`Invalid SVG content format: ${reason}`);

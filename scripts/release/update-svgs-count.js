@@ -25,7 +25,7 @@ try {
 } catch (err) {
   console.error(
     'Failed to obtain number of SVG icons of current milestone in README:',
-    err
+    err,
   );
   process.exit(1);
 }

@@ -30,7 +30,7 @@ const updateVersionInReadmeIfNecessary = async (majorVersion) => {
 
   content = content.replace(
     /simple-icons@v[0-9]+/g,
-    `simple-icons@v${majorVersion}`
+    `simple-icons@v${majorVersion}`,
   );
 
   await fs.writeFile(readmeFile, content);

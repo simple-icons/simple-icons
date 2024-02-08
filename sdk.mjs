@@ -28,7 +28,7 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 
 const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
   `[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
-  'g'
+  'g',
 );
 
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
@@ -76,7 +76,7 @@ export const titleToSlug = (title) =>
     .toLowerCase()
     .replace(
       TITLE_TO_SLUG_CHARS_REGEX,
-      (char) => TITLE_TO_SLUG_REPLACEMENTS[char]
+      (char) => TITLE_TO_SLUG_REPLACEMENTS[char],
     )
     .normalize('NFD')
     .replace(TITLE_TO_SLUG_RANGE_REGEX, '');
@@ -119,7 +119,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     .replace(/&#([0-9]+);/g, (_, num) => String.fromCodePoint(parseInt(num)))
     .replace(
       /&(quot|amp|lt|gt);/g,
-      (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' }[ref])
+      (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' })[ref],
     );
 
 /**
@@ -128,7 +128,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
  * @returns {String} Path of *_data/simple-icons.json*
  */
 export const getIconDataPath = (
-  rootDir = getDirnameFromImportMeta(import.meta.url)
+  rootDir = getDirnameFromImportMeta(import.meta.url),
 ) => {
   return path.resolve(rootDir, '_data', 'simple-icons.json');
 };
@@ -139,7 +139,7 @@ export const getIconDataPath = (
  * @returns {String} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
-  rootDir = getDirnameFromImportMeta(import.meta.url)
+  rootDir = getDirnameFromImportMeta(import.meta.url),
 ) => {
   return fs.readFile(getIconDataPath(rootDir), 'utf8');
 };
@@ -150,7 +150,7 @@ export const getIconsDataString = (
  * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
-  rootDir = getDirnameFromImportMeta(import.meta.url)
+  rootDir = getDirnameFromImportMeta(import.meta.url),
 ) => {
   const fileContents = await getIconsDataString(rootDir);
   return JSON.parse(fileContents).icons;
@@ -186,7 +186,10 @@ export const normalizeColor = (text) => {
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
  */
 export const getThirdPartyExtensions = async (
-  readmePath = path.join(getDirnameFromImportMeta(import.meta.url), 'README.md')
+  readmePath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    'README.md',
+  ),
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Extensions\n\n')[1]

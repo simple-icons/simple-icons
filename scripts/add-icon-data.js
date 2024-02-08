@@ -20,7 +20,7 @@ const titleValidator = (text) => {
   if (!text) return 'This field is required';
   if (
     iconsData.icons.find(
-      (x) => x.title === text || titleToSlug(x.title) === titleToSlug(text)
+      (x) => x.title === text || titleToSlug(x.title) === titleToSlug(text),
     )
   )
     return 'This icon title or slug already exist';
@@ -40,7 +40,7 @@ const hexTransformer = (text) => {
     : -1;
   if (luminance === -1) return text.toUpperCase();
   return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
-    text.toUpperCase()
+    text.toUpperCase(),
   );
 };
 
@@ -51,7 +51,7 @@ const aliasesTransformer = (text) =>
     .join(',');
 
 const aliasesChoices = Object.entries(
-  jsonSchema.definitions.brand.properties.aliases.properties
+  jsonSchema.definitions.brand.properties.aliases.properties,
 )
   .filter(([k]) => ['aka', 'old'].includes(k))
   .map(([k, v]) => ({ name: `${k}: ${v.description}`, value: k }));
