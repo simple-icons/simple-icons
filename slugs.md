@@ -13,6 +13,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `1001Tracklists` | `1001tracklists` |
 | `1Password` | `1password` |
 | `2K` | `2k` |
+| `365 Data Science` | `365datascience` |
 | `3M` | `3m` |
 | `42` | `42` |
 | `4chan` | `4chan` |
@@ -356,6 +357,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bloglovin` | `bloglovin` |
 | `Blueprint` | `blueprint` |
 | `Bluesky` | `bluesky` |
+| `Bluesound` | `bluesound` |
 | `Bluetooth` | `bluetooth` |
 | `BMC Software` | `bmcsoftware` |
 | `BMW` | `bmw` |
@@ -768,6 +770,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `edX` | `edx` |
 | `egghead` | `egghead` |
 | `Egnyte` | `egnyte` |
+| `Eight` | `eight` |
 | `Eight Sleep` | `eightsleep` |
 | `EJS` | `ejs` |
 | `El Jueves` | `eljueves` |
@@ -876,6 +879,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
+| `File.io` | `filedotio` |
 | `Files` | `files` |
 | `FileZilla` | `filezilla` |
 | `Fineco` | `fineco` |
@@ -997,6 +1001,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gitpod` | `gitpod` |
 | `Gitter` | `gitter` |
 | `Glassdoor` | `glassdoor` |
+| `Glide` | `glide` |
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
 | `Glovo` | `glovo` |
@@ -1188,6 +1193,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HSBC` | `hsbc` |
 | `HTML Academy` | `htmlacademy` |
 | `HTML5` | `html5` |
+| `htmx` | `htmx` |
 | `htop` | `htop` |
 | `HTTPie` | `httpie` |
 | `Huawei` | `huawei` |
@@ -1204,6 +1210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `i3` | `i3` |
 | `Iata` | `iata` |
 | `iBeacon` | `ibeacon` |
+| `Iberia` | `iberia` |
 | `IBM` | `ibm` |
 | `IBM Cloud` | `ibmcloud` |
 | `IBM Watson` | `ibmwatson` |
@@ -1235,6 +1242,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Imou` | `imou` |
 | `ImprovMX` | `improvmx` |
 | `Indeed` | `indeed` |
+| `Indie Hackers` | `indiehackers` |
 | `IndiGo` | `indigo` |
 | `Inertia` | `inertia` |
 | `INFINITI` | `infiniti` |
@@ -1883,6 +1891,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pandas` | `pandas` |
 | `Pandora` | `pandora` |
 | `Pantheon` | `pantheon` |
+| `Paperless-ngx` | `paperlessngx` |
 | `Paperspace` | `paperspace` |
 | `Paramount+` | `paramountplus` |
 | `Parity Substrate` | `paritysubstrate` |
@@ -2029,6 +2038,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Printables` | `printables` |
 | `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
+| `Private Division` | `privatedivision` |
 | `Private Internet Access` | `privateinternetaccess` |
 | `Pro Tools` | `protools` |
 | `Probot` | `probot` |
@@ -2162,6 +2172,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Relay` | `relay` |
 | `Reliance Industries Limited` | `relianceindustrieslimited` |
 | `remark` | `remark` |
+| `Remedy Entertainment` | `remedyentertainment` |
 | `Remix` | `remix` |
 | `Ren'Py` | `renpy` |
 | `Renault` | `renault` |
@@ -2206,6 +2217,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rocket.Chat` | `rocketdotchat` |
 | `RocksDB` | `rocksdb` |
 | `Rockstar Games` | `rockstargames` |
+| `Rockwell Automation` | `rockwellautomation` |
 | `Rocky Linux` | `rockylinux` |
 | `Roku` | `roku` |
 | `Rolls-Royce` | `rollsroyce` |
@@ -2234,6 +2246,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ruby Sinatra` | `rubysinatra` |
 | `RubyGems` | `rubygems` |
 | `Ruff` | `ruff` |
+| `Rumahweb` | `rumahweb` |
 | `Rumble` | `rumble` |
 | `Rundeck` | `rundeck` |
 | `Runkeeper` | `runkeeper` |
@@ -2642,6 +2655,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tor Browser` | `torbrowser` |
 | `Tor Project` | `torproject` |
 | `Toshiba` | `toshiba` |
+| `TOTVS` | `totvs` |
 | `TourBox` | `tourbox` |
 | `Toyota` | `toyota` |
 | `TP-Link` | `tplink` |
@@ -2950,6 +2964,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zara` | `zara` |
 | `Zazzle` | `zazzle` |
 | `Zcash` | `zcash` |
+| `ZCOOL` | `zcool` |
 | `ZDF` | `zdf` |
 | `ZebPay` | `zebpay` |
 | `Zebra Technologies` | `zebratechnologies` |
