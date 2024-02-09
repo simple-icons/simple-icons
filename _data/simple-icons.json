@@ -157,6 +157,11 @@
             }
         },
         {
+            "title": "Actix",
+            "hex": "000000",
+            "source": "https://github.com/actix/actix-website/issues/18#issuecomment-393581556"
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -1261,6 +1266,12 @@
             "hex": "2322F0",
             "source": "https://appian.com",
             "guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
+        },
+        {
+            "title": "Appium",
+            "hex": "EE376D",
+            "source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
+            "guidelines": "https://github.com/openjs-foundation/artwork/tree/270575392800eb17a02612203f6f0d5868c634a7/projects/appium"
         },
         {
             "title": "Apple",
@@ -3059,6 +3070,11 @@
             "title": "Codeforces",
             "hex": "1F8ACB",
             "source": "https://codeforces.com"
+        },
+        {
+            "title": "Codefresh",
+            "hex": "08B1AB",
+            "source": "https://codefresh.io"
         },
         {
             "title": "CodeIgniter",
@@ -6624,6 +6640,12 @@
             "source": "https://hive.io/brand"
         },
         {
+            "title": "HiveMQ",
+            "hex": "FFC000",
+            "source": "https://www.hivemq.com",
+            "guidelines": "https://www.hivemq.com/company/hivemq-brand-resources"
+        },
+        {
             "title": "Home Assistant",
             "hex": "18BCF2",
             "source": "https://github.com/home-assistant/assets/blob/0f69676da79c3881e7dfca6d6c0a5739f88273d8/logo/home-assistant-logo.zip",
@@ -9646,6 +9668,16 @@
             "source": "https://www.namecheap.com"
         },
         {
+            "title": "Namu Wiki",
+            "hex": "008275",
+            "source": "https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%20%EC%95%84%EC%9D%B4%EC%BD%98.svg",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "나무위키"
+                }
+            }
+        },
+        {
             "title": "Nano",
             "hex": "4A90E2",
             "source": "https://nano.org/resources",
@@ -9887,6 +9919,11 @@
             "hex": "000000",
             "source": "https://nextui.org/figma",
             "guidelines": "https://www.figma.com/community/file/1267584376234254760"
+        },
+        {
+            "title": "Nexus Mods",
+            "hex": "E6832B",
+            "source": "https://wiki.nexusmods.com/skins/Metrolook/images/nexuslogo.svg"
         },
         {
             "title": "NFC",
@@ -12835,6 +12872,11 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
+        },
+        {
+            "title": "RustDesk",
+            "hex": "024EFF",
+            "source": "https://github.com/rustdesk/rustdesk/blob/80857c22c9ee1578b4329aec3250c3e6f285a7d2/res/logo.svg"
         },
         {
             "title": "RxDB",
