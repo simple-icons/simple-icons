@@ -157,6 +157,11 @@
             }
         },
         {
+            "title": "Actix",
+            "hex": "000000",
+            "source": "https://github.com/actix/actix-website/issues/18#issuecomment-393581556"
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -1263,6 +1268,12 @@
             "guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
         },
         {
+            "title": "Appium",
+            "hex": "EE376D",
+            "source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
+            "guidelines": "https://github.com/openjs-foundation/artwork/tree/270575392800eb17a02612203f6f0d5868c634a7/projects/appium"
+        },
+        {
             "title": "Apple",
             "hex": "000000",
             "source": "https://www.apple.com"
@@ -2218,6 +2229,11 @@
             "source": "https://boxy-svg.com/ideas/7/app-icon-redesign#comment-1953"
         },
         {
+            "title": "Braintree",
+            "hex": "000000",
+            "source": "https://www.braintreepayments.com/press"
+        },
+        {
             "title": "Brandfolder",
             "hex": "40D1F5",
             "source": "https://brandfolder.com/brandfolder"
@@ -2339,6 +2355,11 @@
             "title": "Bun",
             "hex": "000000",
             "source": "https://bun.sh/press-kit"
+        },
+        {
+            "title": "Bungie",
+            "hex": "0075BB",
+            "source": "https://www.bungie.net/7/en/Destiny"
         },
         {
             "title": "bunq",
@@ -3049,6 +3070,11 @@
             "title": "Codeforces",
             "hex": "1F8ACB",
             "source": "https://codeforces.com"
+        },
+        {
+            "title": "Codefresh",
+            "hex": "08B1AB",
+            "source": "https://codefresh.io"
         },
         {
             "title": "CodeIgniter",
@@ -5186,6 +5212,11 @@
             }
         },
         {
+            "title": "Formspree",
+            "hex": "E5122E",
+            "source": "https://formspree.io"
+        },
+        {
             "title": "Formstack",
             "hex": "21B573",
             "source": "https://www.formstack.com/brand/guidelines"
@@ -5744,6 +5775,12 @@
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
         },
         {
+            "title": "Gojek",
+            "hex": "00AA13",
+            "source": "https://gojek.com",
+            "guidelines": "https://gojek.design"
+        },
+        {
             "title": "GoLand",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/#logos-and-icons-jetbrains-logos",
@@ -6128,7 +6165,7 @@
         },
         {
             "title": "Grammarly",
-            "hex": "15C39A",
+            "hex": "027E6F",
             "source": "https://www.grammarly.com/media-assets"
         },
         {
@@ -6607,6 +6644,12 @@
             "slug": "hive_blockchain",
             "hex": "E31337",
             "source": "https://hive.io/brand"
+        },
+        {
+            "title": "HiveMQ",
+            "hex": "FFC000",
+            "source": "https://www.hivemq.com",
+            "guidelines": "https://www.hivemq.com/company/hivemq-brand-resources"
         },
         {
             "title": "Home Assistant",
@@ -7664,6 +7707,12 @@
             }
         },
         {
+            "title": "Keenetic",
+            "hex": "009EE2",
+            "source": "https://keenetic.com",
+            "guidelines": "https://keenetic.com/en/legal"
+        },
+        {
             "title": "Keep a Changelog",
             "hex": "E05735",
             "source": "https://keepachangelog.com"
@@ -7819,6 +7868,11 @@
             "title": "Knex.js",
             "hex": "D26B38",
             "source": "https://github.com/knex/documentation/blob/a9c4ce47dbc6001bb1c6aa0649bb668edc78fea7/src/public/knex-logo.png"
+        },
+        {
+            "title": "KNIME",
+            "hex": "FDD800",
+            "source": "https://www.knime.com"
         },
         {
             "title": "KnowledgeBase",
@@ -9620,6 +9674,16 @@
             "source": "https://www.namecheap.com"
         },
         {
+            "title": "Namu Wiki",
+            "hex": "008275",
+            "source": "https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%20%EC%95%84%EC%9D%B4%EC%BD%98.svg",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "나무위키"
+                }
+            }
+        },
+        {
             "title": "Nano",
             "hex": "4A90E2",
             "source": "https://nano.org/resources",
@@ -9861,6 +9925,11 @@
             "hex": "000000",
             "source": "https://nextui.org/figma",
             "guidelines": "https://www.figma.com/community/file/1267584376234254760"
+        },
+        {
+            "title": "Nexus Mods",
+            "hex": "E6832B",
+            "source": "https://wiki.nexusmods.com/skins/Metrolook/images/nexuslogo.svg"
         },
         {
             "title": "NFC",
@@ -11877,6 +11946,11 @@
             "source": "https://www.qatarairways.com/press-releases/en-WW/media_kits"
         },
         {
+            "title": "qbittorrent",
+            "hex": "2F67BA",
+            "source": "https://github.com/qbittorrent/qBittorrent/blob/73028f9930d9ab9d89edb60ed4aedb66d75669d9/src/icons/qbittorrent-tray-light.svg"
+        },
+        {
             "title": "QEMU",
             "hex": "FF6600",
             "source": "https://wiki.qemu.org/Logo"
@@ -12804,6 +12878,11 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
+        },
+        {
+            "title": "RustDesk",
+            "hex": "024EFF",
+            "source": "https://github.com/rustdesk/rustdesk/blob/80857c22c9ee1578b4329aec3250c3e6f285a7d2/res/logo.svg"
         },
         {
             "title": "RxDB",
@@ -15325,6 +15404,12 @@
             "guidelines": "https://styleguide.typo3.com"
         },
         {
+            "title": "Typst",
+            "hex": "239DAD",
+            "source": "https://typst.app",
+            "guidelines": "https://typst.app/legal/brand"
+        },
+        {
             "title": "Uber",
             "hex": "000000",
             "source": "https://assets.uber.com/d/k4nuxdZ8MC7E/logos/collection/151",
@@ -16257,6 +16342,11 @@
             },
             "hex": "000000",
             "source": "https://www.westerndigital.com"
+        },
+        {
+            "title": "Western Union",
+            "hex": "FFDD00",
+            "source": "https://www.westernunion.com"
         },
         {
             "title": "WeTransfer",
