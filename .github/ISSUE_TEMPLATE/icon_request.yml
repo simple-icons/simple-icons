@@ -16,10 +16,15 @@ body:
         (including closed issues) before you continue. If you find one for the brand
         you're requesting then leave a comment on it or add a reaction.
 
+        > [!IMPORTANT]
+        > If you're prompted to log in when trying to obtain a SimilarWeb rank, use the URL format `https://similarweb.com/website/google.com` replacing `google.com` with the TLD you're trying to query. For example, [simpleicons.org].
+
 
         [contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
         [new-icon-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22
+
+        [simpleicons.org]: https://similarweb.com/website/simpleicons.org
 
   - type: input
     attributes:
