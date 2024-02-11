@@ -18,9 +18,4 @@ _Major_ releases are scheduled on a half-year basis, mainly to remove old SVGs. 
 
 ## Deprecation
 
-For approximately 3 months after a _major_ release, the _major_ release preceding it will be supported. After 3 months, the previous _major_ release is deprecated and will no longer be supported.
-
-Support of a _major_ version entails the following:
-
-- SVGs and metadata of brands will be updated on request. This excludes brands that were removed in the new _major_ release.
-- Bugs in the npm library will be updated if reported.
+After a _major_ release, the next _major_ release preceding it will be supported, which includes fixing bugs bugs in the npm library or other APIs.
