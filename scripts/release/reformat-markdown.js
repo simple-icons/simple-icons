@@ -1,6 +1,6 @@
 /**
  * @fileoverview
- * Reformat README to regular markdown.
+ * Rewrite some Markdown files.
  */
 
 import path from 'node:path';
