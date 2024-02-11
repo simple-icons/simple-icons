@@ -15,7 +15,7 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const readmeFile = path.resolve(rootDir, 'README.md');
 const disclaimerFile = path.resolve(rootDir, 'DISCLAIMER.md');
 
-const reforamt = async (filePath) => {
+const reformat = async (filePath) => {
   const fileContent = await readFile(filePath, 'utf8');
   await writeFile(
     filePath,
@@ -38,4 +38,4 @@ const reforamt = async (filePath) => {
   );
 };
 
-await Promise.all([reforamt(readmeFile), reforamt(disclaimerFile)]);
+await Promise.all([reformat(readmeFile), reformat(disclaimerFile)]);
