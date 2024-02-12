@@ -157,6 +157,11 @@
             }
         },
         {
+            "title": "Actix",
+            "hex": "000000",
+            "source": "https://github.com/actix/actix-website/issues/18#issuecomment-393581556"
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -1261,6 +1266,12 @@
             "hex": "2322F0",
             "source": "https://appian.com",
             "guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
+        },
+        {
+            "title": "Appium",
+            "hex": "EE376D",
+            "source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
+            "guidelines": "https://github.com/openjs-foundation/artwork/tree/270575392800eb17a02612203f6f0d5868c634a7/projects/appium"
         },
         {
             "title": "Apple",
@@ -3059,6 +3070,11 @@
             "title": "Codeforces",
             "hex": "1F8ACB",
             "source": "https://codeforces.com"
+        },
+        {
+            "title": "Codefresh",
+            "hex": "08B1AB",
+            "source": "https://codefresh.io"
         },
         {
             "title": "CodeIgniter",
@@ -6624,6 +6640,12 @@
             "source": "https://hive.io/brand"
         },
         {
+            "title": "HiveMQ",
+            "hex": "FFC000",
+            "source": "https://www.hivemq.com",
+            "guidelines": "https://www.hivemq.com/company/hivemq-brand-resources"
+        },
+        {
             "title": "Home Assistant",
             "hex": "18BCF2",
             "source": "https://github.com/home-assistant/assets/blob/0f69676da79c3881e7dfca6d6c0a5739f88273d8/logo/home-assistant-logo.zip",
@@ -8358,6 +8380,11 @@
             "source": "https://linktr.ee"
         },
         {
+            "title": "LintCode",
+            "hex": "13B4FF",
+            "source": "https://www.lintcode.com"
+        },
+        {
             "title": "Linux",
             "hex": "FCC624",
             "source": "https://www.linuxfoundation.org/the-linux-mark/"
@@ -8531,6 +8558,12 @@
             "title": "Lubuntu",
             "hex": "0068C8",
             "source": "https://lubuntu.net"
+        },
+        {
+            "title": "Lucid",
+            "hex": "282C33",
+            "source": "https://lucid.co/brand",
+            "guidelines": "https://lucid.co/brand"
         },
         {
             "title": "Ludwig",
@@ -9646,6 +9679,21 @@
             "source": "https://www.namecheap.com"
         },
         {
+            "title": "NameMC",
+            "hex": "12161A",
+            "source": "https://namemc.com"
+        },
+        {
+            "title": "Namu Wiki",
+            "hex": "008275",
+            "source": "https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%20%EC%95%84%EC%9D%B4%EC%BD%98.svg",
+            "aliases": {
+                "loc": {
+                    "ko-KR": "나무위키"
+                }
+            }
+        },
+        {
             "title": "Nano",
             "hex": "4A90E2",
             "source": "https://nano.org/resources",
@@ -9755,6 +9803,11 @@
             "hex": "056473",
             "source": "https://www.netcup.de/static/assets/images/favicons/favicon.svg",
             "guidelines": "https://www.netcup.eu/ueber-netcup/werbemittel"
+        },
+        {
+            "title": "Netdata",
+            "hex": "00AB44",
+            "source": "https://www.netdata.cloud"
         },
         {
             "title": "NetEase Cloud Music",
@@ -9887,6 +9940,11 @@
             "hex": "000000",
             "source": "https://nextui.org/figma",
             "guidelines": "https://www.figma.com/community/file/1267584376234254760"
+        },
+        {
+            "title": "Nexus Mods",
+            "hex": "E6832B",
+            "source": "https://wiki.nexusmods.com/skins/Metrolook/images/nexuslogo.svg"
         },
         {
             "title": "NFC",
@@ -10784,6 +10842,11 @@
             "title": "Paperless-ngx",
             "hex": "17541F",
             "source": "https://github.com/paperless-ngx/paperless-ngx/blob/e16645b146da24f07004eb772a455450354a37a7/resources/logo/web/svg/square.svg"
+        },
+        {
+            "title": "Papers With Code",
+            "hex": "21CBCE",
+            "source": "https://paperswithcode.com"
         },
         {
             "title": "Paperspace",
@@ -11822,6 +11885,14 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "PyCQA",
+            "hex": "201B44",
+            "source": "https://github.com/PyCQA/meta/blob/ac828d8d7eb55501addefb0ceb6496ab15e85ca5/logo/pycqa1-02.svg",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0"
+            }
+        },
+        {
             "title": "Pydantic",
             "hex": "E92063",
             "source": "https://github.com/pydantic/pydantic/blob/94c748001a32992a587694b999fb1f3d2f1fc1fe/docs/logo-white.svg"
@@ -12094,6 +12165,11 @@
             "title": "Radar",
             "hex": "007AFF",
             "source": "https://radar.io"
+        },
+        {
+            "title": "radarr",
+            "hex": "FFCB3D",
+            "source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
         },
         {
             "title": "RadioPublic",
@@ -12643,6 +12719,11 @@
             "guidelines": "https://docs.roku.com/published/trademarkguidelines/en/ca"
         },
         {
+            "title": "Roll20",
+            "hex": "E10085",
+            "source": "https://roll20.net"
+        },
+        {
             "title": "Rolls-Royce",
             "hex": "281432",
             "source": "https://www.rolls-roycemotorcars.com"
@@ -12835,6 +12916,11 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
+        },
+        {
+            "title": "RustDesk",
+            "hex": "024EFF",
+            "source": "https://github.com/rustdesk/rustdesk/blob/80857c22c9ee1578b4329aec3250c3e6f285a7d2/res/logo.svg"
         },
         {
             "title": "RxDB",
@@ -13699,6 +13785,11 @@
             "hex": "4E9BCD",
             "source": "https://www.sonarqube.org/logos/",
             "guidelines": "https://www.sonarqube.org/logos/"
+        },
+        {
+            "title": "sonarr",
+            "hex": "2596BE",
+            "source": "https://github.com/Sonarr/Sonarr/blob/913b845faadc3c9fc005abfba815426743d01bdf/Logo/Sonarr.svg"
         },
         {
             "title": "Sonatype",
@@ -16762,6 +16853,11 @@
             "title": "Żabka",
             "hex": "006420",
             "source": "https://www.zabka.pl"
+        },
+        {
+            "title": "Zaim",
+            "hex": "50A135",
+            "source": "https://zaim.net"
         },
         {
             "title": "Zalando",
