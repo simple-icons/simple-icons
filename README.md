@@ -2,7 +2,7 @@
 <img src="https://cdn.simpleicons.org/simpleicons/000/fff" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 2800 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 3000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -29,15 +29,15 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 Icons can be served from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/[ICON SLUG].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v10/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v11/icons/[ICON SLUG].svg" />
 ```
 
 Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/simpleicons.svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v10/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v11/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -175,7 +175,7 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 | [Solid package](https://github.com/x64Bits/solid-icons) <img src="https://cdn.simpleicons.org/solid/000/fff" alt="Solid" align=left width=24 height=24> | [@x64Bits](https://github.com/x64Bits) | ![](https://img.shields.io/github/license/x64Bits/solid-icons) | [![v9.0.0](https://img.shields.io/static/v1?label=version&message=v9.0.0&logo=simpleicons&color=yellow)](https://github.com/simple-icons/simple-icons/tree/9.0.0) |
 | [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) | ![](https://img.shields.io/github/license/mackenly/simple-icons-stream-deck) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmackenly%2Fsimple-icons-stream-deck%2Fmain%2Ftemplate%2Fmanifest.json&query=Version&logo=simpleicons&label=version) |
 | [Svelte package](https://github.com/icons-pack/svelte-simple-icons) <img src="https://cdn.simpleicons.org/svelte/000/fff" alt="Svelte" align=left width=24 height=24> | [@wootsbot](https://github.com/wootsbot) | ![](https://img.shields.io/github/license/icons-pack/svelte-simple-icons) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ficons-pack%2Fsvelte-simple-icons%2Fmain%2Fpackage.json&query=%24..%5B'simple-icons'%5D&logo=simpleicons&label=version) |
-| [Vue 3 package](https://github.com/wyatt-herkamp/vue3-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@wyatt-herkamp](https://github.com/wyatt-herkamp) | ![](https://img.shields.io/github/license/wyatt-herkamp/vue3-simple-icons) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwyatt-herkamp%2Fvue3-simple-icons%2Fmain%2Fpackage-lock.json&query=%24..%5B'node_modules%2Fsimple-icons'%5D.version&logo=simpleicons&label=version) |
+| [Vue 3 package](https://github.com/wyatt-herkamp/vue3-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@wyatt-herkamp](https://github.com/wyatt-herkamp) | ![](https://img.shields.io/github/license/wyatt-herkamp/vue3-simple-icons) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fwyatt-herkamp%2Fvue3-simple-icons%2Fmain%2Fsimple-icons.json&query=simpleIconsVersion&logo=simpleicons&label=version) |
 | [Vue package](https://github.com/mainvest/vue-simple-icons) <img src="https://cdn.simpleicons.org/vuedotjs/000/fff" alt="Vue" align=left width=24 height=24> | [@noahlitvin](https://github.com/noahlitvin) | ![](https://img.shields.io/github/license/mainvest/vue-simple-icons) | ![](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmainvest%2Fvue-simple-icons%2Fmaster%2Fpackage.json&query=%24.version&logo=simpleicons&label=version) |
 | [Webflow app](https://webflow.com/apps/detail/simple-icons) <img src="https://cdn.simpleicons.org/webflow/000/fff" alt="Webflow" align=left width=24 height=24> | [@diegoliv](https://github.com/diegoliv) | ![](https://img.shields.io/github/license/diegoliv/wf-simpleicons-search) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdiegoliv%2Fwf-simpleicons-search%2Fmain%2Fpackage.json&query=%24..%5B'simple-icons'%5D&logo=simpleicons&label=version) |
 | [WordPress plugin](https://wordpress.org/plugins/simple-icons/) <img src="https://cdn.simpleicons.org/wordpress/000/fff" alt="WordPress" align=left width=24 height=24> | [@tjtaylo](https://github.com/tjtaylo) | ![](https://img.shields.io/badge/license-GPL_v2-blue.svg) | [![v4.25.0](https://img.shields.io/static/v1?label=version&message=v4.25.0&logo=simpleicons&color=red)](https://github.com/simple-icons/simple-icons/tree/4.25.0) |
@@ -195,3 +195,9 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
 [slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+
+## Contributors
+
+<a href="https://github.com/simple-icons/simple-icons/graphs/contributors">
+  <img src="https://opencollective.com/simple-icons/contributors.svg?width=890&button=false" />
+</a>

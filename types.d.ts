@@ -5,12 +5,12 @@
  */
 export type License = SPDXLicense | CustomLicense;
 
-type SPDXLicense = {
+export type SPDXLicense = {
   type: string;
-  url?: string;
+  url: string;
 };
 
-type CustomLicense = {
+export type CustomLicense = {
   type: 'custom';
   url: string;
 };
