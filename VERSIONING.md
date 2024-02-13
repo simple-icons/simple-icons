@@ -18,4 +18,4 @@ _Major_ releases are scheduled on a half-year basis, mainly to remove old SVGs. 
 
 ## Deprecation
 
-After a _major_ release, the next _major_ release preceding it will be supported, which includes fixing bugs in the npm library or other APIs.
+After a _major_ release, only the _major_ release that immediately preceded it will be supported, which includes fixing bugs in the npm library or other APIs.
