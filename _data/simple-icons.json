@@ -449,7 +449,8 @@
         {
             "title": "Airbus",
             "hex": "00205B",
-            "source": "https://brand.airbus.com/brand-elements/logo.html"
+            "source": "https://brand.airbus.com/en/asset-library/airbus-logo",
+            "guidelines": "https://brand.airbus.com/en/asset-library/airbus-logo"
         },
         {
             "title": "Airbyte",
@@ -8386,6 +8387,11 @@
             "source": "https://linktr.ee"
         },
         {
+            "title": "LintCode",
+            "hex": "13B4FF",
+            "source": "https://www.lintcode.com"
+        },
+        {
             "title": "Linux",
             "hex": "FCC624",
             "source": "https://www.linuxfoundation.org/the-linux-mark/"
@@ -8559,6 +8565,12 @@
             "title": "Lubuntu",
             "hex": "0068C8",
             "source": "https://lubuntu.net"
+        },
+        {
+            "title": "Lucid",
+            "hex": "282C33",
+            "source": "https://lucid.co/brand",
+            "guidelines": "https://lucid.co/brand"
         },
         {
             "title": "Ludwig",
@@ -9674,6 +9686,11 @@
             "source": "https://www.namecheap.com"
         },
         {
+            "title": "NameMC",
+            "hex": "12161A",
+            "source": "https://namemc.com"
+        },
+        {
             "title": "Namu Wiki",
             "hex": "008275",
             "source": "https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%20%EC%95%84%EC%9D%B4%EC%BD%98.svg",
@@ -9793,6 +9810,11 @@
             "hex": "056473",
             "source": "https://www.netcup.de/static/assets/images/favicons/favicon.svg",
             "guidelines": "https://www.netcup.eu/ueber-netcup/werbemittel"
+        },
+        {
+            "title": "Netdata",
+            "hex": "00AB44",
+            "source": "https://www.netdata.cloud"
         },
         {
             "title": "NetEase Cloud Music",
@@ -10827,6 +10849,11 @@
             "title": "Paperless-ngx",
             "hex": "17541F",
             "source": "https://github.com/paperless-ngx/paperless-ngx/blob/e16645b146da24f07004eb772a455450354a37a7/resources/logo/web/svg/square.svg"
+        },
+        {
+            "title": "Papers With Code",
+            "hex": "21CBCE",
+            "source": "https://paperswithcode.com"
         },
         {
             "title": "Paperspace",
@@ -11865,6 +11892,14 @@
             "guidelines": "https://www.jetbrains.com/company/brand/"
         },
         {
+            "title": "PyCQA",
+            "hex": "201B44",
+            "source": "https://github.com/PyCQA/meta/blob/ac828d8d7eb55501addefb0ceb6496ab15e85ca5/logo/pycqa1-02.svg",
+            "license": {
+                "type": "CC-BY-NC-ND-4.0"
+            }
+        },
+        {
             "title": "Pydantic",
             "hex": "E92063",
             "source": "https://github.com/pydantic/pydantic/blob/94c748001a32992a587694b999fb1f3d2f1fc1fe/docs/logo-white.svg"
@@ -12137,6 +12172,11 @@
             "title": "Radar",
             "hex": "007AFF",
             "source": "https://radar.io"
+        },
+        {
+            "title": "radarr",
+            "hex": "FFCB3D",
+            "source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
         },
         {
             "title": "RadioPublic",
@@ -12684,6 +12724,11 @@
             "hex": "662D91",
             "source": "https://www.roku.com",
             "guidelines": "https://docs.roku.com/published/trademarkguidelines/en/ca"
+        },
+        {
+            "title": "Roll20",
+            "hex": "E10085",
+            "source": "https://roll20.net"
         },
         {
             "title": "Rolls-Royce",
@@ -13390,6 +13435,14 @@
             "guidelines": "https://www.shutterstock.com/press/media"
         },
         {
+            "title": "Sidekiq",
+            "hex": "B1003E",
+            "source": "https://sidekiq.org/about.html",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
+        },
+        {
             "title": "SideQuest",
             "hex": "101227",
             "source": "https://sidequestvr.com/branding",
@@ -13739,6 +13792,11 @@
             "hex": "4E9BCD",
             "source": "https://www.sonarqube.org/logos/",
             "guidelines": "https://www.sonarqube.org/logos/"
+        },
+        {
+            "title": "sonarr",
+            "hex": "2596BE",
+            "source": "https://github.com/Sonarr/Sonarr/blob/913b845faadc3c9fc005abfba815426743d01bdf/Logo/Sonarr.svg"
         },
         {
             "title": "Sonatype",
@@ -15392,6 +15450,11 @@
             "source": "https://www.typeform.com"
         },
         {
+            "title": "Typer",
+            "hex": "000000",
+            "source": "https://typer.tiangolo.com"
+        },
+        {
             "title": "TypeScript",
             "hex": "3178C6",
             "source": "https://www.typescriptlang.org/branding",
@@ -16400,6 +16463,12 @@
             "source": "https://commons.wikimedia.org/wiki/File:Commons-logo.svg"
         },
         {
+            "title": "Wikimedia Foundation",
+            "hex": "000000",
+            "source": "https://foundation.wikimedia.org/wiki/File:Wikimedia-logo_black.svg",
+            "guidelines": "https://foundation.wikimedia.org/wiki/Wikimedia_visual_identity_guidelines"
+        },
+        {
             "title": "Wikipedia",
             "hex": "000000",
             "source": "https://commons.wikimedia.org/wiki/File:Wikipedia-logo-v2.svg"
@@ -16802,6 +16871,11 @@
             "title": "Żabka",
             "hex": "006420",
             "source": "https://www.zabka.pl"
+        },
+        {
+            "title": "Zaim",
+            "hex": "50A135",
+            "source": "https://zaim.net"
         },
         {
             "title": "Zalando",
