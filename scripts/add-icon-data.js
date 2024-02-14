@@ -58,7 +58,7 @@ const aliasesChoices = Object.entries(
 
 const getIconDataFromAnswers = (answers) => ({
   title: answers.title,
-  hex: answers.hex.toUpperCase(),
+  hex: normalizeColor(answers.hex),
   source: answers.source,
   ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
   ...(answers.hasLicense
@@ -96,7 +96,6 @@ answers.title = await input({
 answers.hex = await input({
   message: 'Hex',
   validate: hexValidator,
-  filter: (text) => normalizeColor(text),
   transformer: hexTransformer,
 });
 
