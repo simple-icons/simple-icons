@@ -1,10 +1,10 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Script that takes a brand name as argument and outputs the corresponding
  * icon SVG filename to standard output.
  */
 
+import process from 'node:process';
 import { titleToSlug } from '../sdk.mjs';
 
 if (process.argv.length < 3) {

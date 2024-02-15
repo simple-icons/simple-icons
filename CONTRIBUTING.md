@@ -1,6 +1,12 @@
 # Contributing to Simple Icons
 
-> :information_source: We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522good%2520first%2520issue%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=github&label=good%20first%20issues&color=228f6c&labelColor=228f6c&logoColor=white&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr)
+[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
+
+> **Note**\
+> We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
 
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
@@ -33,6 +39,9 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 ## Table of contents
 
 * [Requesting an Icon](#requesting-an-icon)
+  * [Forbidden Brands](#forbidden-brands)
+  * [Assessing Popularity](#assessing-popularity)
+  * [Opening an Issue](#opening-an-issue)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
 * [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
@@ -42,11 +51,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
 * Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-* Is of a _popular_ brand:
-    - For websites, the [Similarweb global rank](https://www.similarweb.com) should be less than 500k.
-        - Note that for brands that have already been added the threshold for continued inclusion rises to 750k.
-    - For GitHub projects, the amount of "stars" should be above 5k.
-    - For anything else, popularity will be judged on a case-by-case basis.
+* Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
 * Doesn't fall into one of the following categories:
     - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
     - Governmental agencies, programs, departments
@@ -59,13 +64,58 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Universities or other educational institutions
     - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
 
+### Forbidden Brands
+
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- BP
 - Disney
+- International Olympic Committee
+- Mattel
+- Microchip Technology Inc.
 - Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
+
+### Assessing Popularity
+
+To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
+
+1. Its website's Similarweb global rank is in the top 500k.
+    - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
+    - For existing icons in our library, the threshold is dropped from 500k to 750k.
+    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
+1. The website's Similarweb rank in any one country is either:
+    - In the top 100, or,
+    - In the top 10k, _with_ a global rank of 1m or better.
+1. The website's Similarweb global rank in any one category is either:
+    - In the top 50, or,
+    - In the top 5k, _with_ a global rank of 1m or better.
+1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
+1. Its packages meet one of the following minimum requirements:
+    - [npm](https://www.npmjs.com): 100k weekly downloads,
+    - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
+    - [crates.io](https://crates.io): 100k weekly downloads,
+    - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
+1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
+    - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
+1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
+    - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
+    - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
+    - Trending equal to or higher than the compared brand will be considered in scope.
+    - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
+1. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
+    - A minimum of 5k GitHub stars will be required for consideration, providing,
+    - The repository is still active, and,
+    - Its [star history](https://star-history.com) is on a consistently upward trajectory.
+
+If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
+
+> [!NOTE]
+> All metrics & cut-offs above are subject to ongoing review and potential change. These current metrics were devised in order to no longer rely on GitHub stars as an indication of a project's popularity. But, for projects that only exist on GitHub, we do still need some way of assessing their popularity so, until we can come up with a better way to do so, we have kept stars for the time being but will not be putting as much weight on them as in the past. If you know of a better way of assessing the popularity of a GitHub project then please create an issue for discussion.
+
+### Opening an Issue
 
 When submitting a request for a new or updated icon include helpful information such as:
 

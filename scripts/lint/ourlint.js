@@ -1,10 +1,10 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Linters for the package that can't easily be implemented in the existing
  * linters (e.g. jsonlint/svglint).
  */
 
+import process from 'node:process';
 import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
 import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
@@ -47,7 +47,7 @@ const TESTS = {
   },
 
   /* Check the formatting of the data file */
-  prettified: async (data, dataString) => {
+  prettified: (data, dataString) => {
     const normalizedDataString = normalizeNewlines(dataString);
     const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
 
@@ -67,8 +67,7 @@ const TESTS = {
     const allUrlFields = [
       ...new Set(
         data.icons
-          .map((icon) => [icon.source, icon.guidelines, icon.license?.url])
-          .flat()
+          .flatMap((icon) => [icon.source, icon.guidelines, icon.license?.url])
           .filter(Boolean),
       ),
     ];
@@ -85,19 +84,14 @@ const TESTS = {
   },
 };
 
-// execute all tests and log all errors
-(async () => {
-  const dataString = await getIconsDataString();
-  const data = JSON.parse(dataString);
+const dataString = await getIconsDataString();
+const data = JSON.parse(dataString);
 
-  const errors = (
-    await Promise.all(
-      Object.keys(TESTS).map((test) => TESTS[test](data, dataString)),
-    )
-  ).filter(Boolean);
+const errors = (
+  await Promise.all(Object.values(TESTS).map((test) => test(data, dataString)))
+).filter(Boolean);
 
-  if (errors.length > 0) {
-    errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
-    process.exit(1);
-  }
-})();
+if (errors.length > 0) {
+  errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
+  process.exit(1);
+}

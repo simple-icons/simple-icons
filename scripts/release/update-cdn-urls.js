@@ -1,11 +1,11 @@
-#!/usr/bin/env node
 /**
  * @fileoverview
  * Updates the CDN URLs in the README.md to match the major version in the
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
-import fs from 'node:fs';
+import process from 'node:process';
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import { getDirnameFromImportMeta } from '../../sdk.mjs';
 
@@ -20,31 +20,31 @@ const getMajorVersion = (semVerVersion) => {
   return parseInt(majorVersionAsString);
 };
 
-const getManifest = () => {
-  const manifestRaw = fs.readFileSync(packageJsonFile, 'utf-8');
+const getManifest = async () => {
+  const manifestRaw = await fs.readFile(packageJsonFile, 'utf-8');
   return JSON.parse(manifestRaw);
 };
 
-const updateVersionInReadmeIfNecessary = (majorVersion) => {
-  let content = fs.readFileSync(readmeFile).toString();
+const updateVersionInReadmeIfNecessary = async (majorVersion) => {
+  let content = await fs.readFile(readmeFile, 'utf8');
 
   content = content.replace(
     /simple-icons@v[0-9]+/g,
     `simple-icons@v${majorVersion}`,
   );
 
-  fs.writeFileSync(readmeFile, content);
+  await fs.writeFile(readmeFile, content);
 };
 
-const main = () => {
+const main = async () => {
   try {
-    const manifest = getManifest();
+    const manifest = await getManifest();
     const majorVersion = getMajorVersion(manifest.version);
-    updateVersionInReadmeIfNecessary(majorVersion);
+    await updateVersionInReadmeIfNecessary(majorVersion);
   } catch (error) {
     console.error('Failed to update CDN version number:', error);
     process.exit(1);
   }
 };
 
-main();
+await main();
