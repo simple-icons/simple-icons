@@ -951,6 +951,11 @@
             "source": "https://www.animalplanet.com"
         },
         {
+            "title": "AnkerMake",
+            "hex": "88F387",
+            "source": "https://www.ankermake.com"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -1075,6 +1080,15 @@
             "title": "Apache Flink",
             "hex": "E6526F",
             "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache FreeMarker",
+            "hex": "326CAC",
+            "source": "https://www.apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
             "license": {
                 "type": "Apache-2.0"
@@ -12039,6 +12053,17 @@
             "title": "QMK",
             "hex": "333333",
             "source": "https://github.com/qmk/qmk.fm/blob/d6f7b646aa03f2941bb3977ba13a07ca351f20ae/assets/images/badge-dark.svg"
+        },
+        {
+            "title": "QNAP",
+            "hex": "0C2E82",
+            "source": "https://marketing.qnap.com/resource/qnap-logo-k100",
+            "guidelines": "https://marketing.qnap.com/resource/qnap-brand-logo-guideline",
+            "aliases": {
+                "aka": [
+                    "Quality Network Appliance Provider"
+                ]
+            }
         },
         {
             "title": "Qt",
