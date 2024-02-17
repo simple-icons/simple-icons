@@ -2,7 +2,7 @@
 <img src="https://cdn.simpleicons.org/simpleicons/000/fff" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 2900 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 3000 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -195,3 +195,9 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
 [slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+
+## Contributors
+
+<a href="https://github.com/simple-icons/simple-icons/graphs/contributors">
+  <img src="https://opencollective.com/simple-icons/contributors.svg?width=890&button=false" />
+</a>
