@@ -195,3 +195,9 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 Information describing how to contribute can be found in the file [CONTRIBUTING.md](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md)
 
 [slug]: https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+
+## Contributors
+
+<a href="https://github.com/simple-icons/simple-icons/graphs/contributors">
+  <img src="https://opencollective.com/simple-icons/contributors.svg?width=890&button=false" />
+</a>
