@@ -642,6 +642,11 @@
             "source": "https://www.alwaysdata.com"
         },
         {
+            "title": "ALX",
+            "hex": "002B56",
+            "source": "https://www.alxafrica.com"
+        },
+        {
             "title": "Amazon",
             "hex": "FF9900",
             "source": "https://www.amazon.com"
@@ -951,6 +956,11 @@
             "source": "https://www.animalplanet.com"
         },
         {
+            "title": "AnkerMake",
+            "hex": "88F387",
+            "source": "https://www.ankermake.com"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -1075,6 +1085,15 @@
             "title": "Apache Flink",
             "hex": "E6526F",
             "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache FreeMarker",
+            "hex": "326CAC",
+            "source": "https://www.apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
             "license": {
                 "type": "Apache-2.0"
@@ -9295,6 +9314,11 @@
             "source": "https://mikrotik.com/aboutus"
         },
         {
+            "title": "Milanote",
+            "hex": "31303A",
+            "source": "https://milanote.com"
+        },
+        {
             "title": "Milvus",
             "hex": "00A1EA",
             "source": "https://github.com/milvus-io/artwork/blob/e30bffa2b0632b0d4cefcdd4e1a2c09fee5b0d28/icon/black/milvus-icon-black.svg"
@@ -12046,6 +12070,17 @@
             "source": "https://github.com/qmk/qmk.fm/blob/d6f7b646aa03f2941bb3977ba13a07ca351f20ae/assets/images/badge-dark.svg"
         },
         {
+            "title": "QNAP",
+            "hex": "0C2E82",
+            "source": "https://marketing.qnap.com/resource/qnap-logo-k100",
+            "guidelines": "https://marketing.qnap.com/resource/qnap-brand-logo-guideline",
+            "aliases": {
+                "aka": [
+                    "Quality Network Appliance Provider"
+                ]
+            }
+        },
+        {
             "title": "Qt",
             "hex": "41CD52",
             "source": "https://www.qt.io",
@@ -14731,6 +14766,11 @@
             "source": "https://www.taxbuzz.com"
         },
         {
+            "title": "Teal",
+            "hex": "005149",
+            "source": "https://www.tealhq.com"
+        },
+        {
             "title": "TeamCity",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos",
@@ -15452,6 +15492,11 @@
             "title": "Twilio",
             "hex": "F22F46",
             "source": "https://www.twilio.com/company/brand"
+        },
+        {
+            "title": "Twinkly",
+            "hex": "FCC15E",
+            "source": "https://help.twinkly.com/en/help/quick-guides"
         },
         {
             "title": "Twitch",
@@ -16615,6 +16660,11 @@
             "title": "Wondershare",
             "hex": "000000",
             "source": "https://www.wondershare.com/news/media-assets.html"
+        },
+        {
+            "title": "Wondershare Filmora",
+            "hex": "07273D",
+            "source": "https://filmora.wondershare.com"
         },
         {
             "title": "Woo",
