@@ -93,9 +93,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - In the top 50, or,
     - In the top 5k, _with_ a global rank of 1m or better.
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
-1. If the brand is a Fediverse project, the following metrics apply:
-    - For **software**, Monthly Active Users (MAU) as listed on [FediDB](https://fedidb.org/software) should be 10,000 or higher.
-    - For **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher **AND** the MAU should be 10,000 or higher.
+1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
+    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
