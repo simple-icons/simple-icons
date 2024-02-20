@@ -2,6 +2,9 @@
   "ignorePatterns": [
     {
       "pattern": "^https://www.similarweb.com"
+    },
+    {
+      "pattern": "^https://chrome.google.com/webstore"
     }
   ]
 }
