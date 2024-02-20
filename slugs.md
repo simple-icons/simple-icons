@@ -2409,7 +2409,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Skillshare` | `skillshare` |
 | `ŠKODA` | `skoda` |
 | `Sky` | `sky` |
-| `Skynet` | `skynet` |
 | `Skypack` | `skypack` |
 | `Skype` | `skype` |
 | `Skype for Business` | `skypeforbusiness` |
