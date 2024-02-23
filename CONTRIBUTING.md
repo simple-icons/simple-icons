@@ -102,6 +102,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
+1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
+    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
     - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
 1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
