@@ -642,6 +642,11 @@
             "source": "https://www.alwaysdata.com"
         },
         {
+            "title": "ALX",
+            "hex": "002B56",
+            "source": "https://www.alxafrica.com"
+        },
+        {
             "title": "Amazon",
             "hex": "FF9900",
             "source": "https://www.amazon.com"
@@ -951,6 +956,11 @@
             "source": "https://www.animalplanet.com"
         },
         {
+            "title": "AnkerMake",
+            "hex": "88F387",
+            "source": "https://www.ankermake.com"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -1075,6 +1085,15 @@
             "title": "Apache Flink",
             "hex": "E6526F",
             "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache FreeMarker",
+            "hex": "326CAC",
+            "source": "https://www.apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
             "license": {
                 "type": "Apache-2.0"
@@ -1616,6 +1635,11 @@
             "source": "https://github.com/postcss/autoprefixer/blob/1341747bc8142a147342f55eea5ed4286a3ca318/logo.svg"
         },
         {
+            "title": "AutoZone",
+            "hex": "D52B1E",
+            "source": "https://www.autozone.com"
+        },
+        {
             "title": "avajs",
             "hex": "4B4B77",
             "source": "https://github.com/avajs/ava/blob/6f8e30c94626238a5b26deadac319089fa43d333/media/logo.svg"
@@ -1830,6 +1854,11 @@
             "title": "Battle.net",
             "hex": "4381C3",
             "source": "https://battle.net"
+        },
+        {
+            "title": "Bazel",
+            "hex": "43A047",
+            "source": "https://bazel.build"
         },
         {
             "title": "Beatport",
@@ -4339,6 +4368,11 @@
             "source": "https://github.com/vert-x3/.github/blob/1ad6612d87f35665e50a00fc32eb9c542556385d/workflow-templates/vertx-favicon.svg"
         },
         {
+            "title": "Ecovacs",
+            "hex": "1E384B",
+            "source": "https://www.ecovacs.com"
+        },
+        {
             "title": "EDEKA",
             "hex": "1B66B3",
             "source": "https://www.edeka.de"
@@ -5510,6 +5544,12 @@
             "hex": "00874D",
             "source": "https://www.geocaching.com/about/logousage.aspx",
             "guidelines": "https://www.geocaching.com/about/logousage.aspx"
+        },
+        {
+            "title": "GeoPandas",
+            "hex": "139C5A",
+            "source": "https://geopandas.org",
+            "guidelines": "https://geopandas.org/en/stable/about/logo.html"
         },
         {
             "title": "Gerrit",
@@ -7281,6 +7321,11 @@
             "source": "https://www.iris.co.uk"
         },
         {
+            "title": "iRobot",
+            "hex": "6CB86A",
+            "source": "https://www.irobot.com"
+        },
+        {
             "title": "ISC2",
             "hex": "468145",
             "source": "https://www.isc2.org",
@@ -7501,6 +7546,11 @@
             "title": "Jordan",
             "hex": "000000",
             "source": "https://www.nike.com/jordan"
+        },
+        {
+            "title": "JOUAV",
+            "hex": "E1B133",
+            "source": "https://www.jouav.com"
         },
         {
             "title": "Jovian",
@@ -9300,6 +9350,11 @@
             "source": "https://mikrotik.com/aboutus"
         },
         {
+            "title": "Milanote",
+            "hex": "31303A",
+            "source": "https://milanote.com"
+        },
+        {
             "title": "Milvus",
             "hex": "00A1EA",
             "source": "https://github.com/milvus-io/artwork/blob/e30bffa2b0632b0d4cefcdd4e1a2c09fee5b0d28/icon/black/milvus-icon-black.svg"
@@ -9731,6 +9786,12 @@
             "title": "National Grid",
             "hex": "00148C",
             "source": "https://www.nationalgrid.com"
+        },
+        {
+            "title": "National Rail",
+            "hex": "003366",
+            "source": "https://www.nationalrailguidelines.co.uk",
+            "guidelines": "https://www.nationalrailguidelines.co.uk"
         },
         {
             "title": "NativeScript",
@@ -11030,6 +11091,11 @@
             "source": "https://github.com/tpf/marketing-materials/blob/6765c6fd71bc5b123d6c1a77b86e08cdd6376078/images/onion-logo/tpf-logo-onion.svg"
         },
         {
+            "title": "Perplexity",
+            "hex": "1FB8CD",
+            "source": "https://www.perplexity.ai"
+        },
+        {
             "title": "Persistent",
             "hex": "FD5F07",
             "source": "https://www.persistent.com/company-overview/branding-guidelines/#nav-persistent-logo",
@@ -12049,6 +12115,17 @@
             "title": "QMK",
             "hex": "333333",
             "source": "https://github.com/qmk/qmk.fm/blob/d6f7b646aa03f2941bb3977ba13a07ca351f20ae/assets/images/badge-dark.svg"
+        },
+        {
+            "title": "QNAP",
+            "hex": "0C2E82",
+            "source": "https://marketing.qnap.com/resource/qnap-logo-k100",
+            "guidelines": "https://marketing.qnap.com/resource/qnap-brand-logo-guideline",
+            "aliases": {
+                "aka": [
+                    "Quality Network Appliance Provider"
+                ]
+            }
         },
         {
             "title": "Qt",
@@ -14736,6 +14813,11 @@
             "source": "https://www.taxbuzz.com"
         },
         {
+            "title": "Teal",
+            "hex": "005149",
+            "source": "https://www.tealhq.com"
+        },
+        {
             "title": "TeamCity",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos",
@@ -15457,6 +15539,11 @@
             "title": "Twilio",
             "hex": "F22F46",
             "source": "https://www.twilio.com/company/brand"
+        },
+        {
+            "title": "Twinkly",
+            "hex": "FCC15E",
+            "source": "https://help.twinkly.com/en/help/quick-guides"
         },
         {
             "title": "Twitch",
@@ -16620,6 +16707,11 @@
             "title": "Wondershare",
             "hex": "000000",
             "source": "https://www.wondershare.com/news/media-assets.html"
+        },
+        {
+            "title": "Wondershare Filmora",
+            "hex": "07273D",
+            "source": "https://filmora.wondershare.com"
         },
         {
             "title": "Woo",
