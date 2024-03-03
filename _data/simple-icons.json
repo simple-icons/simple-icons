@@ -4492,7 +4492,12 @@
         {
             "title": "Eleventy",
             "hex": "000000",
-            "source": "https://www.11ty.io"
+            "source": "https://www.11ty.dev",
+            "aliases": {
+                "aka": [
+                    "11ty"
+                ]
+            }
         },
         {
             "title": "Elgato",
