@@ -593,6 +593,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Contao` | `contao` |
 | `Contentful` | `contentful` |
 | `Contentstack` | `contentstack` |
+| `Contributor Covenant` | `contributorcovenant` |
 | `Conventional Commits` | `conventionalcommits` |
 | `Convertio` | `convertio` |
 | `Cookiecutter` | `cookiecutter` |
@@ -870,6 +871,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fandom` | `fandom` |
 | `Fanfou` | `fanfou` |
 | `Fantom` | `fantom` |
+| `Farcaster` | `farcaster` |
 | `FareHarbor` | `fareharbor` |
 | `FARFETCH` | `farfetch` |
 | `FastAPI` | `fastapi` |
@@ -937,6 +939,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
 | `FontForge` | `fontforge` |
+| `foobar2000` | `foobar2000` |
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
 | `Forgejo` | `forgejo` |
@@ -1058,6 +1061,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Cardboard` | `googlecardboard` |
 | `Google Chat` | `googlechat` |
 | `Google Chrome` | `googlechrome` |
+| `Google Chronicle` | `googlechronicle` |
 | `Google Classroom` | `googleclassroom` |
 | `Google Cloud` | `googlecloud` |
 | `Google Cloud Composer` | `googlecloudcomposer` |
@@ -1257,6 +1261,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `iHeartRadio` | `iheartradio` |
 | `IKEA` | `ikea` |
 | `Île-de-France Mobilités` | `iledefrancemobilites` |
+| `Image.sc` | `imagedotsc` |
 | `ImageJ` | `imagej` |
 | `IMDb` | `imdb` |
 | `Imgur` | `imgur` |
