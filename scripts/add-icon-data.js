@@ -132,7 +132,7 @@ try {
       message: 'License type:',
       source: async (input) => {
         input = (input || '').trim();
-        return Boolean(input)
+        return input
           ? licenseTypes.filter((license) =>
               license.value.toLowerCase().includes(input.toLowerCase()),
             )
