@@ -89,103 +89,99 @@ const getIconDataFromAnswers = (answers) => ({
 
 const answers = {};
 
-try {
-  answers.title = await input({
-    message: 'Title:',
-    validate: titleValidator,
-  });
+answers.title = await input({
+  message: 'Title:',
+  validate: titleValidator,
+});
 
-  answers.hex = await input({
-    message: 'Hex:',
-    validate: hexValidator,
-    transformer: hexTransformer,
-  });
+answers.hex = await input({
+  message: 'Hex:',
+  validate: hexValidator,
+  transformer: hexTransformer,
+});
 
-  answers.source = await input({
-    message: 'Source URL:',
+answers.source = await input({
+  message: 'Source URL:',
+  validate: sourceValidator,
+});
+
+answers.hasGuidelines = await confirm({
+  message: 'The icon has brand guidelines?',
+});
+
+if (answers.hasGuidelines) {
+  answers.guidelines = await input({
+    message: 'Guidelines URL:',
     validate: sourceValidator,
   });
+}
 
-  answers.hasGuidelines = await confirm({
-    message: 'The icon has brand guidelines?',
-  });
+answers.hasLicense = await confirm({
+  message: 'The icon has brand license?',
+});
 
-  if (answers.hasGuidelines) {
-    answers.guidelines = await input({
-      message: 'Guidelines URL:',
-      validate: sourceValidator,
-    });
-  }
-
-  answers.hasLicense = await confirm({
-    message: 'The icon has brand license?',
-  });
-
-  if (answers.hasLicense) {
-    const licenseTypes =
-      jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-        (license) => {
-          return { value: license };
-        },
-      );
-    answers.licenseType = await autocomplete({
-      message: 'License type:',
-      source: async (input) => {
-        input = (input || '').trim();
-        return input
-          ? licenseTypes.filter((license) =>
-              license.value.toLowerCase().includes(input.toLowerCase()),
-            )
-          : licenseTypes;
+if (answers.hasLicense) {
+  const licenseTypes =
+    jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
+      (license) => {
+        return { value: license };
       },
-    });
-
-    answers.licenseUrl = await input({
-      message: `License URL ${chalk.reset('(optional)')}:`,
-      validate: (text) => !Boolean(text) || sourceValidator(text),
-    });
-  }
-
-  answers.hasAliases = await confirm({
-    message: 'This icon has brand aliases?',
-    default: false,
+    );
+  answers.licenseType = await autocomplete({
+    message: 'License type:',
+    source: async (input) => {
+      input = (input || '').trim();
+      return input
+        ? licenseTypes.filter((license) =>
+            license.value.toLowerCase().includes(input.toLowerCase()),
+          )
+        : licenseTypes;
+    },
   });
 
-  if (answers.hasAliases) {
-    answers.aliasesTypes = await checkbox({
-      message: 'What types of aliases do you want to add?',
-      choices: aliasesChoices,
-    });
+  answers.licenseUrl = await input({
+    message: `License URL ${chalk.reset('(optional)')}:`,
+    validate: (text) => !Boolean(text) || sourceValidator(text),
+  });
+}
 
-    for (const x of aliasesChoices) {
-      if (!answers?.aliasesTypes?.includes(x.value)) continue;
-      answers[`${x.value}AliasesList`] = await input({
-        message: x.value + chalk.reset(' (separate with commas)'),
-        validate: (text) => Boolean(text),
-        transformer: aliasesTransformer,
-      });
-    }
-  }
+answers.hasAliases = await confirm({
+  message: 'This icon has brand aliases?',
+  default: false,
+});
 
-  answers.confirmToAdd = await confirm({
-    message: [
-      'About to write the following to simple-icons.json:',
-      chalk.reset(JSON.stringify(getIconDataFromAnswers(answers), null, 4)),
-      chalk.reset('Is this OK?'),
-    ].join('\n\n'),
+if (answers.hasAliases) {
+  answers.aliasesTypes = await checkbox({
+    message: 'What types of aliases do you want to add?',
+    choices: aliasesChoices,
   });
 
-  const icon = getIconDataFromAnswers(answers);
-
-  if (answers.confirmToAdd) {
-    iconsData.icons.push(icon);
-    iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
-    await writeIconsData(iconsData);
-    console.log(chalk.green('\nData written successfully.'));
-  } else {
-    throw new Error('Write data prompt denied');
+  for (const x of aliasesChoices) {
+    if (!answers?.aliasesTypes?.includes(x.value)) continue;
+    answers[`${x.value}AliasesList`] = await input({
+      message: x.value + chalk.reset(' (separate with commas)'),
+      validate: (text) => Boolean(text),
+      transformer: aliasesTransformer,
+    });
   }
-} catch {
+}
+
+answers.confirmToAdd = await confirm({
+  message: [
+    'About to write the following to simple-icons.json:',
+    chalk.reset(JSON.stringify(getIconDataFromAnswers(answers), null, 4)),
+    chalk.reset('Is this OK?'),
+  ].join('\n\n'),
+});
+
+const icon = getIconDataFromAnswers(answers);
+
+if (answers.confirmToAdd) {
+  iconsData.icons.push(icon);
+  iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
+  await writeIconsData(iconsData);
+  console.log(chalk.green('\nData written successfully.'));
+} else {
   console.log(chalk.red('\nAborted.'));
   process.exit(1);
 }
