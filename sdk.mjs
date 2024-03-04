@@ -136,7 +136,7 @@ export const getIconDataPath = (
 /**
  * Get contents of *_data/simple-icons.json*.
  * @param {String} rootDir Path to the root directory of the project
- * @returns {Promise<String>} Content of *_data/simple-icons.json*
+ * @returns {String} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
   rootDir = getDirnameFromImportMeta(import.meta.url),
