@@ -5,17 +5,19 @@ labels: [new icon]
 body:
   - type: markdown
     attributes:
-      value: >-
+      value: |
         We won't add non-brand icons or anything related to illegal services. If in
         doubt, open an issue and we'll have a look. For more details see the
         [Contributing Guidelines].
-
 
         Before opening a new issue, make sure it isn't covered by an existing issue.
         Please search for [issues with the `new icon` label][new-icon-issues]
         (including closed issues) before you continue. If you find one for the brand
         you're requesting then leave a comment on it or add a reaction.
 
+        > [!TIP]
+        > Similarweb is now trying to force users to log in in order to view statistics. You can bypass this by going directly to:
+        > `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on!
 
         [contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
@@ -31,7 +33,7 @@ body:
   - type: input
     attributes:
       label: Website
-      description: >-
+      description: |
         For non-web brands you can add a relevant link. You can put "None" if you don't
         think there's a website.
       placeholder: 'Example: https://simpleicons.org'
@@ -41,15 +43,13 @@ body:
   - type: textarea
     attributes:
       label: Popularity Metric
-      description: >-
-        Provide either a [Similarweb rank], which must range from 0-500,000 to qualify
-        or the number of GitHub stars, which must be above 5,000 to qualify. If
-        Similarweb does not have a rank for your brand or these numbers do not meet
-        our requirements, you can still open the issue. In this case, please provide
-        any information regarding the brand's popularity you think is relevant.
-
+      description: |
+        Provide either a [Similarweb rank], which must be in the top 500,000 to qualify,
+        or failing that another metric from [our contributing guidelines] that we can
+        use to assess the popularity of the requested brand.
 
         [Similarweb rank]: https://www.similarweb.com
+        [our contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity
       placeholder: 'Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org'
     validations:
       required: true
@@ -57,7 +57,7 @@ body:
   - type: textarea
     attributes:
       label: Official Resources for Icon and Color
-      description: >-
+      description: |
         Media kits, brand guidelines, SVG files, etc. You can set
         this to "None" if you are unable to find any resources.
       placeholder: |
