@@ -159,7 +159,7 @@ if (answers.hasAliases) {
     if (!answers?.aliasesTypes?.includes(x.value)) continue;
     answers[`${x.value}AliasesList`] = await input({
       message: x.value + chalk.reset(' (separate with commas)'),
-      validate: (text) => text.length > 0,
+      validate: (text) => text.trim().length > 0,
       transformer: aliasesTransformer,
     });
   }
