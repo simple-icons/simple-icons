@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Run linter
-        run: npm run lint --icons=${{ steps.changes.outputs.icons_files }}
+        run: npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
         env:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
