@@ -9,16 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: npm
       - name: Install dependencies
         run: npm i
       - name: Build NodeJS package
@@ -30,16 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: npm
       - name: Install dependencies
         run: npm i
       - name: Run linter
@@ -48,7 +36,7 @@ jobs:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Detect changed documentation files
-        uses: dorny/paths-filter@v2
+        uses: dorny/paths-filter@v3
         id: changes
         with:
           list-files: shell
@@ -88,16 +76,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 20.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          cache: npm
       - name: Install dependencies
         run: npm i
       - name: Run tests
