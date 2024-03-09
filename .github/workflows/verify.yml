@@ -40,13 +40,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install dependencies
-        run: npm i
-      - name: Run linter
-        run: npm run lint
-        env:
-          # Authorise GitHub API requests for editorconfig-checker
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Detect changed documentation files
         uses: dorny/paths-filter@v2
         id: changes
@@ -56,6 +49,16 @@ jobs:
             docs:
               - '*.md'
               - '.github/**.md'
+            icons:
+              - 'icons/*.svg'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: npm i
+      - name: Run linter
+        run: npm run lint --icons=${{ steps.changes.outputs.icons_files }}
+        env:
+          # Authorise GitHub API requests for editorconfig-checker
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
         if: steps.changes.outputs.docs == 'true'
         run: |
