@@ -40,7 +40,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Detect changed documentation files
+      - name: Detect changed files
         uses: dorny/paths-filter@v2
         id: changes
         with:
