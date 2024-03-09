@@ -14,8 +14,9 @@ jobs:
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 20
           cache: npm
+          cache-dependency-path: '**/package.json'
       - name: Install dependencies
         run: npm i
       - name: Run linters
@@ -34,8 +35,9 @@ jobs:
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 20
           cache: npm
+          cache-dependency-path: '**/package.json'
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Install dependencies
