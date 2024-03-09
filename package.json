@@ -116,7 +116,7 @@
     "our-lint": "node scripts/lint/ourlint.js",
     "jslint": "prettier --cache --check .",
     "jsonlint": "node scripts/lint/jsonlint.js",
-    "svglint": "svglint icons/*.svg --ci",
+    "svglint": "svglint --ci $npm_config_icons",
     "wslint": "editorconfig-checker",
     "prepare": "is-ci || husky",
     "prepublishOnly": "npm run build",
