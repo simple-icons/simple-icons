@@ -60,7 +60,7 @@ jobs:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
-        if: steps.changes.outputs.docs == 'true'
+        if: steps.changes.outputs.docs_count > 0
         run: |
           npx markdown-link-check --retry \
             --config .github/markdown-link-check.json \
