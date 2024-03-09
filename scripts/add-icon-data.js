@@ -3,6 +3,7 @@ import chalk from 'chalk';
 import { input, confirm, checkbox } from '@inquirer/prompts';
 import autocomplete from 'inquirer-autocomplete-standalone';
 import getRelativeLuminance from 'get-relative-luminance';
+import { search } from 'fast-fuzzy';
 import {
   URL_REGEX,
   collator,
@@ -24,7 +25,7 @@ const titleValidator = (text) => {
       (x) => x.title === text || titleToSlug(x.title) === titleToSlug(text),
     )
   )
-    return 'This icon title or slug already exist';
+    return 'This icon title or slug already exists';
   return true;
 };
 
@@ -132,16 +133,14 @@ if (answers.hasLicense) {
     source: async (input) => {
       input = (input || '').trim();
       return input
-        ? licenseTypes.filter((license) =>
-            license.value.toLowerCase().includes(input.toLowerCase()),
-          )
+        ? search(input, licenseTypes, { keySelector: (x) => x.value })
         : licenseTypes;
     },
   });
 
   answers.licenseUrl = await input({
     message: `License URL ${chalk.reset('(optional)')}:`,
-    validate: (text) => !Boolean(text) || sourceValidator(text),
+    validate: (text) => text.length === 0 || sourceValidator(text),
   });
 }
 
@@ -160,7 +159,7 @@ if (answers.hasAliases) {
     if (!answers?.aliasesTypes?.includes(x.value)) continue;
     answers[`${x.value}AliasesList`] = await input({
       message: x.value + chalk.reset(' (separate with commas)'),
-      validate: (text) => Boolean(text),
+      validate: (text) => text.trim().length > 0,
       transformer: aliasesTransformer,
     });
   }
