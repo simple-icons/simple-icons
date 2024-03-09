@@ -649,7 +649,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, { filepath }) => {
         reporter.name = 'collinear-segments';
 
         /**
@@ -669,104 +669,112 @@ export default {
             _resetStartPoint = false;
 
           for (let s = 0; s < segments.length; s++) {
-            let seg = segments[s].params,
-              cmd = seg[0],
+            const seg = segments[s],
+              parms = seg.params,
+              cmd = parms[0],
               nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
             switch (cmd) {
               // Next switch cases have been ordered by frequency
               // of occurrence in the SVG paths of the icons
               case 'M':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
-                startPoint = undefined;
+                currAbsCoord[0] = parms[1];
+                currAbsCoord[1] = parms[2];
+                // SVG 1.1:
+                // If a moveto is followed by multiple pairs of coordinates,
+                // the subsequent pairs are treated as implicit lineto commands.
+                if (!seg.chained || seg.chainStart === seg.start) {
+                  startPoint = undefined;
+                }
                 break;
               case 'm':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[1];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-                startPoint = undefined;
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[2];
+                if (!seg.chained || seg.chainStart === seg.start) {
+                  startPoint = undefined;
+                }
                 break;
               case 'H':
-                currAbsCoord[0] = seg[1];
+                currAbsCoord[0] = parms[1];
                 break;
               case 'h':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[1];
                 break;
               case 'V':
-                currAbsCoord[1] = seg[1];
+                currAbsCoord[1] = parms[1];
                 break;
               case 'v':
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[1];
                 break;
               case 'L':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
+                currAbsCoord[0] = parms[1];
+                currAbsCoord[1] = parms[2];
                 break;
               case 'l':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[1];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[2];
                 break;
               case 'Z':
               case 'z':
-                // Overlapping in Z should be handled in another rule
+                // TODO: Overlapping in Z should be handled in another rule
                 currAbsCoord = [startPoint[0], startPoint[1]];
                 _resetStartPoint = true;
                 break;
               case 'C':
-                currAbsCoord[0] = seg[5];
-                currAbsCoord[1] = seg[6];
+                currAbsCoord[0] = parms[5];
+                currAbsCoord[1] = parms[6];
                 break;
               case 'c':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[5];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[6];
                 break;
               case 'A':
-                currAbsCoord[0] = seg[6];
-                currAbsCoord[1] = seg[7];
+                currAbsCoord[0] = parms[6];
+                currAbsCoord[1] = parms[7];
                 break;
               case 'a':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[6];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[6];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[7];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[7];
                 break;
               case 's':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[1];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[2];
                 break;
               case 'S':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
+                currAbsCoord[0] = parms[1];
+                currAbsCoord[1] = parms[2];
                 break;
               case 't':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[1];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[2];
                 break;
               case 'T':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
+                currAbsCoord[0] = parms[1];
+                currAbsCoord[1] = parms[2];
                 break;
               case 'Q':
-                currAbsCoord[0] = seg[3];
-                currAbsCoord[1] = seg[4];
+                currAbsCoord[0] = parms[3];
+                currAbsCoord[1] = parms[4];
                 break;
               case 'q':
                 currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
+                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + parms[3];
                 currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
+                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + parms[4];
                 break;
               default:
                 throw new Error(`"${cmd}" command not handled`);
@@ -814,8 +822,12 @@ export default {
           return collinearSegments;
         };
 
-        const iconPath = getIconPath($, filepath),
-          collinearSegments = getCollinearSegments(iconPath);
+        const iconPath = getIconPath($, filepath);
+        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
+          return;
+        }
+
+        const collinearSegments = getCollinearSegments(iconPath);
         if (collinearSegments.length === 0) {
           return;
         }
