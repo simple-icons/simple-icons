@@ -111,10 +111,10 @@
   "scripts": {
     "build": "node scripts/build/package.js",
     "clean": "del-cli index.js index.mjs index.d.ts sdk.js",
-    "format": "prettier --write .",
+    "format": "prettier --cache --write .",
     "lint": "run-s our-lint jslint jsonlint svglint wslint",
     "our-lint": "node scripts/lint/ourlint.js",
-    "jslint": "prettier --check .",
+    "jslint": "prettier --cache --check .",
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint --ci ${npm_config_icons}",
     "wslint": "editorconfig-checker",
