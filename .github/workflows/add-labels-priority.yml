@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.action == 'opened'
     steps:
-      - uses: simple-icons/labeler@master
+      - uses: simple-icons/labeler@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
