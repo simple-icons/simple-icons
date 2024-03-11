@@ -506,6 +506,11 @@
             }
         },
         {
+            "title": "Akiflow",
+            "hex": "AF38F9",
+            "source": "https://www.akiflow.com"
+        },
+        {
             "title": "Alacritty",
             "hex": "F46D01",
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg",
@@ -2149,6 +2154,11 @@
             "title": "BoardGameGeek",
             "hex": "FF5100",
             "source": "https://boardgamegeek.com"
+        },
+        {
+            "title": "boAt",
+            "hex": "E20722",
+            "source": "https://www.boat-lifestyle.com"
         },
         {
             "title": "Boehringer Ingelheim",
@@ -4491,8 +4501,13 @@
         },
         {
             "title": "Eleventy",
-            "hex": "000000",
-            "source": "https://www.11ty.io"
+            "hex": "222222",
+            "source": "https://www.11ty.dev",
+            "aliases": {
+                "aka": [
+                    "11ty"
+                ]
+            }
         },
         {
             "title": "Elgato",
@@ -7041,6 +7056,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:IGDB_logo.svg"
         },
         {
+            "title": "IGN",
+            "hex": "BF1313",
+            "source": "https://www.ign.com"
+        },
+        {
             "title": "iHeartRadio",
             "hex": "C6002B",
             "source": "https://brand.iheart.com/logo",
@@ -8306,6 +8326,11 @@
             "hex": "A50034",
             "source": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp",
             "guidelines": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp"
+        },
+        {
+            "title": "Li-Ning",
+            "hex": "C5242C",
+            "source": "https://www.lining.com"
         },
         {
             "title": "Libera.Chat",
@@ -9784,6 +9809,11 @@
             "title": "NameMC",
             "hex": "12161A",
             "source": "https://namemc.com"
+        },
+        {
+            "title": "NameSilo",
+            "hex": "031B4E",
+            "source": "https://www.namesilo.com/support/v2"
         },
         {
             "title": "Namu Wiki",
@@ -11330,6 +11360,11 @@
             "title": "Pixabay",
             "hex": "2EC66D",
             "source": "https://pixabay.com/service/about/"
+        },
+        {
+            "title": "Pixelfed",
+            "hex": "6366F1",
+            "source": "https://pixelfed.org"
         },
         {
             "title": "pixiv",
@@ -15504,8 +15539,8 @@
         },
         {
             "title": "Tubi",
-            "hex": "000000",
-            "source": "https://corporate.tubitv.com/press-releases/"
+            "hex": "7408FF",
+            "source": "https://gdpr.tubi.tv"
         },
         {
             "title": "TUI",
