@@ -5,7 +5,7 @@ do
       if ! echo "$rref" | \
         grep -qsE '^refs/tags/[0-9]+.[0-9]+.[0-9]+$'
       then
-        echo "Git tags for simple-icons must follow the format X.Y.Z"
+        echo "Git tags for simple-icons must follow the format 'X.Y.Z'."
         if echo "$rref" | \
           grep -qsE '^refs/tags/v[0-9]+.[0-9]+.[0-9]+$'
         then
