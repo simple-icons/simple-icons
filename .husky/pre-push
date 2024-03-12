@@ -1,18 +1,1 @@
-while read lref new rref old
-do
-  case $rref in
-    refs/tags/*)
-      if ! echo "$rref" | \
-        grep -qsE '^refs/tags/[0-9]+.[0-9]+.[0-9]+$'
-      then
-        echo "Git tags for simple-icons must follow the format 'X.Y.Z'."
-        if echo "$rref" | \
-          grep -qsE '^refs/tags/v[0-9]+.[0-9]+.[0-9]+$'
-        then
-          echo "You are trying to push a tag with a 'v' prefix. Please remove the 'v' prefix and try again."
-          exit 1
-        fi;
-      fi;;
-    *)
-  esac
-done
+node .husky/pre-push.mjs || exit 1
