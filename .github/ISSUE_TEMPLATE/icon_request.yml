@@ -1,6 +1,7 @@
 name: Icon request
 description: Request a new icon for Simple Icons
 labels: [new icon]
+title: 'Request: <brand-name>'
 
 body:
   - type: markdown
