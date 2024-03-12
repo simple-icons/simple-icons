@@ -30,14 +30,7 @@ jobs:
           node-version: 20
           cache: npm
           cache-dependency-path: '**/package.json'
-      - name: Install dependencies
-        run: npm i
-      - name: Run linter
-        run: npm run lint
-        env:
-          # Authorise GitHub API requests for editorconfig-checker
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Detect changed documentation files
+      - name: Detect changed files
         uses: dorny/paths-filter@v3
         id: changes
         with:
@@ -46,8 +39,18 @@ jobs:
             docs:
               - '*.md'
               - '.github/**.md'
+            icons:
+              - 'icons/*.svg'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: npm i
+      - name: Run linter
+        run: npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
+        env:
+          # Authorise GitHub API requests for editorconfig-checker
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
-        if: steps.changes.outputs.docs == 'true'
+        if: steps.changes.outputs.docs == true
         run: |
           npx markdown-link-check --retry \
             --config .github/markdown-link-check.json \
