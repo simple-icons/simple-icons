@@ -822,12 +822,8 @@ export default {
           return collinearSegments;
         };
 
-        const iconPath = getIconPath($, filepath);
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
-
-        const collinearSegments = getCollinearSegments(iconPath);
+        const iconPath = getIconPath($, filepath),
+          collinearSegments = getCollinearSegments(iconPath);
         if (collinearSegments.length === 0) {
           return;
         }
