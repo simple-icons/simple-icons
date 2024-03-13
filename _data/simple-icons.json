@@ -506,6 +506,11 @@
             }
         },
         {
+            "title": "Akiflow",
+            "hex": "AF38F9",
+            "source": "https://www.akiflow.com"
+        },
+        {
             "title": "Alacritty",
             "hex": "F46D01",
             "source": "https://github.com/alacritty/alacritty/blob/6d8db6b9dfadd6164c4be7a053f25db8ef6b7998/extra/logo/alacritty-simple.svg",
@@ -2151,6 +2156,11 @@
             "source": "https://boardgamegeek.com"
         },
         {
+            "title": "boAt",
+            "hex": "E20722",
+            "source": "https://www.boat-lifestyle.com"
+        },
+        {
             "title": "Boehringer Ingelheim",
             "hex": "00E47C",
             "source": "https://www.boehringer-ingelheim.com",
@@ -2417,6 +2427,11 @@
             "title": "Buy Me A Coffee",
             "hex": "FFDD00",
             "source": "https://www.buymeacoffee.com/brand"
+        },
+        {
+            "title": "BuySellAds",
+            "hex": "EB4714",
+            "source": "https://docs.buysellads.com"
         },
         {
             "title": "BuzzFeed",
@@ -3350,6 +3365,11 @@
                 "type": "custom",
                 "url": "https://www.contentstack.com/legal/terms-of-service"
             }
+        },
+        {
+            "title": "Contributor Covenant",
+            "hex": "5E0D73",
+            "source": "https://www.contributor-covenant.org"
         },
         {
             "title": "Conventional Commits",
@@ -4486,8 +4506,13 @@
         },
         {
             "title": "Eleventy",
-            "hex": "000000",
-            "source": "https://www.11ty.io"
+            "hex": "222222",
+            "source": "https://www.11ty.dev",
+            "aliases": {
+                "aka": [
+                    "11ty"
+                ]
+            }
         },
         {
             "title": "Elgato",
@@ -4861,6 +4886,11 @@
             "source": "https://fantom.foundation"
         },
         {
+            "title": "Farcaster",
+            "hex": "855DCD",
+            "source": "https://www.farcaster.xyz"
+        },
+        {
             "title": "FareHarbor",
             "hex": "0A6ECE",
             "source": "https://help.fareharbor.com/about/logo",
@@ -5232,6 +5262,11 @@
             "title": "FontForge",
             "hex": "F2712B",
             "source": "https://fontforge.org"
+        },
+        {
+            "title": "foobar2000",
+            "hex": "000000",
+            "source": "https://hydrogenaud.io/index.php?topic=55604.0"
         },
         {
             "title": "foodpanda",
@@ -5926,6 +5961,11 @@
             "hex": "4285F4",
             "source": "https://www.google.com/chrome",
             "guidelines": "https://partnermarketinghub.withgoogle.com/brands/chrome"
+        },
+        {
+            "title": "Google Chronicle",
+            "hex": "4285F4",
+            "source": "https://chronicle.security"
         },
         {
             "title": "Google Classroom",
@@ -7021,6 +7061,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:IGDB_logo.svg"
         },
         {
+            "title": "IGN",
+            "hex": "BF1313",
+            "source": "https://www.ign.com"
+        },
+        {
             "title": "iHeartRadio",
             "hex": "C6002B",
             "source": "https://brand.iheart.com/logo",
@@ -7035,6 +7080,11 @@
             "title": "Île-de-France Mobilités",
             "hex": "67B4E7",
             "source": "https://www.iledefrance-mobilites.fr"
+        },
+        {
+            "title": "Image.sc",
+            "hex": "039CB2",
+            "source": "https://forum.image.sc"
         },
         {
             "title": "ImageJ",
@@ -8281,6 +8331,11 @@
             "hex": "A50034",
             "source": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp",
             "guidelines": "https://www.lg.com/global/our-brand/brand-expression/elements/logo/index.jsp"
+        },
+        {
+            "title": "Li-Ning",
+            "hex": "C5242C",
+            "source": "https://www.lining.com"
         },
         {
             "title": "Libera.Chat",
@@ -9770,6 +9825,11 @@
             "title": "NameMC",
             "hex": "12161A",
             "source": "https://namemc.com"
+        },
+        {
+            "title": "NameSilo",
+            "hex": "031B4E",
+            "source": "https://www.namesilo.com/support/v2"
         },
         {
             "title": "Namu Wiki",
@@ -11318,6 +11378,11 @@
             "source": "https://pixabay.com/service/about/"
         },
         {
+            "title": "Pixelfed",
+            "hex": "6366F1",
+            "source": "https://pixelfed.org"
+        },
+        {
             "title": "pixiv",
             "hex": "0096FA",
             "source": "https://policies.pixiv.net/en.html#brand",
@@ -11566,7 +11631,7 @@
         {
             "title": "Pop!_OS",
             "hex": "48B9C7",
-            "source": "https://pop.system76.com"
+            "source": "https://github.com/system76/brand/blob/7a31740b54f929b62a165baa61dfb0b5164261e8/Pop_OS%20branding/Pop_icon.svg"
         },
         {
             "title": "Porkbun",
@@ -15457,6 +15522,11 @@
             "source": "https://www.truenas.com"
         },
         {
+            "title": "TrueUp",
+            "hex": "4E71DA",
+            "source": "https://www.trueup.io"
+        },
+        {
             "title": "trulia",
             "hex": "0A0B09",
             "source": "https://www.trulia.com/newsroom/media/brand-logos",
@@ -15490,8 +15560,8 @@
         },
         {
             "title": "Tubi",
-            "hex": "000000",
-            "source": "https://corporate.tubitv.com/press-releases/"
+            "hex": "7408FF",
+            "source": "https://gdpr.tubi.tv"
         },
         {
             "title": "TUI",
@@ -17078,6 +17148,11 @@
             "title": "Zebra Technologies",
             "hex": "000000",
             "source": "https://www.zebra.com"
+        },
+        {
+            "title": "Zed Industries",
+            "hex": "084CCF",
+            "source": "https://github.com/zed-industries/zed/blob/ccc939124fa2f366b3029926447fd0a0c46a85c7/assets/icons/logo_96.svg"
         },
         {
             "title": "Zelle",
