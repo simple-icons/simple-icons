@@ -19,21 +19,41 @@ const readmeFile = path.resolve(rootDir, 'README.md');
 
 const readmeContent = await fs.readFile(readmeFile, 'utf-8');
 
-let overNIconsInReadme;
-try {
-  overNIconsInReadme = parseInt(regexMatcher.exec(readmeContent)[1]);
-} catch (err) {
+/** @param {String} errorMessage */
+const raiseFailedToObtainNIconsError = (errorMessage) => {
   console.error(
     'Failed to obtain number of SVG icons of current milestone in README:',
+    errorMessage,
+  );
+  process.exit(1);
+};
+
+let overNIconsInReadme;
+try {
+  /** @type {RegExpExecArray | null} */
+  const match = regexMatcher.exec(readmeContent);
+  if (match === null) {
+    raiseFailedToObtainNIconsError('No match found');
+  } else {
+    overNIconsInReadme = parseInt(match[1]);
+
+    const nIcons = (await getIconsData()).length;
+    const newNIcons = overNIconsInReadme + updateRange;
+
+    if (nIcons > newNIcons) {
+      const newContent = readmeContent.replace(
+        regexMatcher,
+        `Over ${newNIcons} `,
+      );
+      await fs.writeFile(readmeFile, newContent);
+    }
+  }
+} catch (err) {
+  console.error(
+    'Failed to update number of SVG icons of current milestone in README:',
+    // TODO: type error
+    // @ts-ignore
     err,
   );
   process.exit(1);
-}
-
-const nIcons = (await getIconsData()).length;
-const newNIcons = overNIconsInReadme + updateRange;
-
-if (nIcons > newNIcons) {
-  const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
-  await fs.writeFile(readmeFile, newContent);
 }

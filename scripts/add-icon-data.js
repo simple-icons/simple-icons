@@ -1,3 +1,12 @@
+/**
+ * @fileoverview
+ * Script to add data for a new icon to the simple-icons dataset.
+ */
+
+/**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
+
 import process from 'node:process';
 import chalk from 'chalk';
 import { input, confirm, checkbox, ExitPromptError } from '@inquirer/prompts';
@@ -15,9 +24,11 @@ import { getJsonSchemaData, writeIconsData } from './utils.js';
 
 const hexPattern = /^#?[a-f0-9]{3,8}$/i;
 
+/** @type {{icons: IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
+/** @param {String} text */
 const titleValidator = (text) => {
   if (!text) return 'This field is required';
   if (
@@ -29,12 +40,15 @@ const titleValidator = (text) => {
   return true;
 };
 
+/** @param {String} text */
 const hexValidator = (text) =>
   hexPattern.test(text) || 'This should be a valid hex code';
 
+/** @param {String} text */
 const sourceValidator = (text) =>
   URL_REGEX.test(text) || 'This should be a secure URL';
 
+/** @param {String} text */
 const hexTransformer = (text) => {
   const color = normalizeColor(text);
   const luminance = hexPattern.test(text)
@@ -46,6 +60,7 @@ const hexTransformer = (text) => {
   );
 };
 
+/** @param {String} text */
 const aliasesTransformer = (text) =>
   text
     .split(',')
@@ -58,35 +73,56 @@ const aliasesChoices = Object.entries(
   .filter(([k]) => ['aka', 'old'].includes(k))
   .map(([k, v]) => ({ name: `${k}: ${v.description}`, value: k }));
 
-const getIconDataFromAnswers = (answers) => ({
-  title: answers.title,
-  hex: normalizeColor(answers.hex),
-  source: answers.source,
-  ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
-  ...(answers.hasLicense
-    ? {
-        license: {
-          type: answers.licenseType,
-          ...(answers.licenseUrl ? { url: answers.licenseUrl } : {}),
-        },
-      }
-    : {}),
-  ...(answers.hasAliases
-    ? {
-        aliases: aliasesChoices.reduce((previous, current) => {
-          const promptKey = `${current.value}AliasesList`;
-          if (answers[promptKey])
-            return {
-              ...previous,
-              [current.value]: answers[promptKey]
-                .split(',')
-                .map((x) => x.trim()),
-            };
-          return previous;
-        }, {}),
-      }
-    : {}),
-});
+/**
+ * @typedef {{
+ *   title: String,
+ *   hex: String,
+ *   source: String,
+ *   guidelines?: String,
+ *   licenseType?: String,
+ *   licenseUrl?: String,
+ *   aliases?: {
+ *    [key: String]: String,
+ *   },
+ * }} Answers
+ */
+
+/**
+ * Build the new icon data from user inputs.
+ * @param {Answers} answers
+ */
+const getIconDataFromAnswers = (answers) => {
+  console.log(answers);
+  return {
+    title: answers.title,
+    hex: normalizeColor(answers.hex),
+    source: answers.source,
+    ...(answers.guidelines ? { guidelines: answers.guidelines } : {}),
+    ...(answers.licenseType
+      ? {
+          license: {
+            type: answers.licenseType,
+            ...(answers.licenseUrl ? { url: answers.licenseUrl } : {}),
+          },
+        }
+      : {}),
+    ...(answers.aliases
+      ? {
+          aliases: aliasesChoices.reduce((previous, current) => {
+            const promptKey = current.value;
+            if (answers.aliases?.hasOwnProperty(promptKey))
+              return {
+                ...previous,
+                [current.value]: answers.aliases[promptKey]
+                  .split(',')
+                  .map((x) => x.trim()),
+              };
+            return previous;
+          }, {}),
+        }
+      : {}),
+  };
+};
 
 const run = async () => {
   const answers = {};
@@ -107,34 +143,44 @@ const run = async () => {
     validate: sourceValidator,
   });
 
-  answers.hasGuidelines = await confirm({
+  const hasGuidelines = await confirm({
     message: 'The icon has brand guidelines?',
   });
 
-  if (answers.hasGuidelines) {
+  if (hasGuidelines) {
     answers.guidelines = await input({
       message: 'Guidelines URL:',
       validate: sourceValidator,
     });
   }
 
-  answers.hasLicense = await confirm({
+  const hasLicense = await confirm({
     message: 'The icon has brand license?',
   });
 
-  if (answers.hasLicense) {
+  if (hasLicense) {
     const licenseTypes =
       jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
+        /**
+         * @param {String} license
+         * @returns {{value: String}}
+         */
         (license) => {
           return { value: license };
         },
       );
+
+    /** @type {String} */
     answers.licenseType = await autocomplete({
       message: 'License type:',
       source: async (input) => {
         input = (input || '').trim();
         return input
-          ? search(input, licenseTypes, { keySelector: (x) => x.value })
+          ? search(input, licenseTypes, {
+              // TODO: treat `licenseTypes T` as `x: T` in fast-fuzzy
+              // @ts-ignore
+              keySelector: (x) => x.value,
+            })
           : licenseTypes;
       },
     });
@@ -145,20 +191,23 @@ const run = async () => {
     });
   }
 
-  answers.hasAliases = await confirm({
+  const hasAliases = await confirm({
     message: 'This icon has brand aliases?',
     default: false,
   });
 
-  if (answers.hasAliases) {
-    answers.aliasesTypes = await checkbox({
+  if (hasAliases) {
+    const aliasesTypes = await checkbox({
       message: 'What types of aliases do you want to add?',
       choices: aliasesChoices,
     });
 
+    /** @type {{[key: String]: String}} */
+    answers.aliases = aliasesTypes.reduce((a, v) => ({ ...a, [v]: '' }), {});
+
     for (const x of aliasesChoices) {
-      if (!answers?.aliasesTypes?.includes(x.value)) continue;
-      answers[`${x.value}AliasesList`] = await input({
+      if (!answers?.aliases?.hasOwnProperty(x.value)) continue;
+      answers.aliases[x.value] = await input({
         message: x.value + chalk.reset(' (separate with commas)'),
         validate: (text) => text.trim().length > 0,
         transformer: aliasesTransformer,
@@ -166,7 +215,7 @@ const run = async () => {
     }
   }
 
-  answers.confirmToAdd = await confirm({
+  const confirmToAdd = await confirm({
     message: [
       'About to write the following to simple-icons.json:',
       chalk.reset(JSON.stringify(getIconDataFromAnswers(answers), null, 4)),
@@ -174,9 +223,8 @@ const run = async () => {
     ].join('\n\n'),
   });
 
-  const icon = getIconDataFromAnswers(answers);
-
-  if (answers.confirmToAdd) {
+  if (confirmToAdd) {
+    const icon = getIconDataFromAnswers(answers);
     iconsData.icons.push(icon);
     iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
     await writeIconsData(iconsData);

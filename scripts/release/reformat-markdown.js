@@ -15,6 +15,7 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const readmeFile = path.resolve(rootDir, 'README.md');
 const disclaimerFile = path.resolve(rootDir, 'DISCLAIMER.md');
 
+/** @param {String} filePath */
 const reformat = async (filePath) => {
   const fileContent = await readFile(filePath, 'utf8');
   await writeFile(

@@ -4,6 +4,12 @@
  * linters (e.g. jsonlint/svglint).
  */
 
+/**
+ * @typedef {import("../../sdk.mjs").IconData} IconData
+ * @typedef {import("../../types.js").CustomLicense} CustomLicense
+ * @typedef {{icons: IconData[]}} IconsData
+ */
+
 import process from 'node:process';
 import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
@@ -11,11 +17,21 @@ import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k:string]: () => (string|undefined)}}
+ * @type {{[k:string]: (arg0: IconsData, arg1: String) => String | undefined}}
  */
 const TESTS = {
-  /* Tests whether our icons are in alphabetical order */
-  alphabetical: (data) => {
+  /**
+   * Tests whether our icons are in alphabetical order
+   */
+  alphabetical: (data, _) => {
+    /**
+     *
+     * @param {IconData[]} invalidEntries
+     * @param {IconData} icon
+     * @param {Number} index
+     * @param {IconData[]} array
+     * @returns IconData[]
+     */
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const prev = array[index - 1];
@@ -32,6 +48,8 @@ const TESTS = {
       }
       return invalidEntries;
     };
+
+    /** @param {IconData} icon */
     const format = (icon) => {
       if (icon.slug) {
         return `${icon.title} (${icon.slug})`;
@@ -40,9 +58,14 @@ const TESTS = {
     };
 
     const invalids = data.icons.reduce(collector, []);
-    if (invalids.length) {
+    if (invalids.length > 0) {
       return `Some icons aren't in alphabetical order:
-        ${invalids.map((icon) => format(icon)).join(', ')}`;
+        ${invalids
+          .map(
+            /** @param {IconData} icon */
+            (icon) => format(icon),
+          )
+          .join(', ')}`;
     }
   },
 
@@ -59,6 +82,7 @@ const TESTS = {
 
   /* Check redundant trailing slash in URL */
   checkUrl: (data) => {
+    /** @param {String} url */
     const hasRedundantTrailingSlash = (url) => {
       const origin = new URL(url).origin;
       return /^\/+$/.test(url.replace(origin, ''));
@@ -67,7 +91,17 @@ const TESTS = {
     const allUrlFields = [
       ...new Set(
         data.icons
-          .flatMap((icon) => [icon.source, icon.guidelines, icon.license?.url])
+          .flatMap((icon) => [
+            icon.source,
+            icon.guidelines,
+            ...(icon.license?.hasOwnProperty('url')
+              ? [
+                  // TODO: Omit doesn't work with hasOwnProperty, investigate
+                  /** @ts-ignore */
+                  icon.license.url,
+                ]
+              : []),
+          ])
           .filter(Boolean),
       ),
     ];
@@ -84,11 +118,14 @@ const TESTS = {
   },
 };
 
-const dataString = await getIconsDataString();
-const data = JSON.parse(dataString);
+const iconsDataString = await getIconsDataString();
+/** @type {IconsData} */
+const iconsData = JSON.parse(iconsDataString);
 
 const errors = (
-  await Promise.all(Object.values(TESTS).map((test) => test(data, dataString)))
+  await Promise.all(
+    Object.values(TESTS).map((test) => test(iconsData, iconsDataString)),
+  )
 ).filter(Boolean);
 
 if (errors.length > 0) {

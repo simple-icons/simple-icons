@@ -1,4 +1,6 @@
 import { getIconsData, getIconSlug, slugToVariableName } from '../sdk.mjs';
+// The index.mjs file is generated on build before running tests
+// @ts-ignore
 import * as simpleIcons from '../index.mjs';
 import { testIcon } from './test-icon.js';
 

@@ -16,7 +16,7 @@ const iconsDir = path.resolve(
 );
 
 /**
- * @typedef {import('..').SimpleIcon} SimpleIcon
+ * @typedef {import('../types.d.ts').SimpleIcon} SimpleIcon
  */
 
 /**
@@ -64,7 +64,7 @@ export const testIcon = (icon, subject, slug) => {
 
     it(`has ${icon.license ? 'the correct' : 'no'} "license"`, () => {
       if (icon.license) {
-        assert.equal(subject.license.type, icon.license.type);
+        assert.equal(subject.license?.type, icon.license.type);
         if (icon.license.type === 'custom') {
           assert.equal(subject.license.url, icon.license.url);
         } else {
