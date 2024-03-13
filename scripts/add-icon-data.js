@@ -1,7 +1,6 @@
 import process from 'node:process';
 import chalk from 'chalk';
-import { input, confirm, checkbox } from '@inquirer/prompts';
-import { ExitPromptError } from '@inquirer/core';
+import { input, confirm, checkbox, ExitPromptError } from '@inquirer/prompts';
 import autocomplete from 'inquirer-autocomplete-standalone';
 import getRelativeLuminance from 'get-relative-luminance';
 import { search } from 'fast-fuzzy';
