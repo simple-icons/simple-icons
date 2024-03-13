@@ -19,24 +19,17 @@ const readmeFile = path.resolve(rootDir, 'README.md');
 
 const readmeContent = await fs.readFile(readmeFile, 'utf-8');
 
-/** @param {String} errorMessage */
-const raiseFailedToObtainNIconsError = (errorMessage) => {
-  console.error(
-    'Failed to obtain number of SVG icons of current milestone in README:',
-    errorMessage,
-  );
-  process.exit(1);
-};
-
-let overNIconsInReadme;
 try {
   /** @type {RegExpExecArray | null} */
   const match = regexMatcher.exec(readmeContent);
   if (match === null) {
-    raiseFailedToObtainNIconsError('No match found');
+    console.error(
+      'Failed to obtain number of SVG icons of current milestone in README:',
+      'No match found',
+    );
+    process.exit(1);
   } else {
-    overNIconsInReadme = parseInt(match[1]);
-
+    const overNIconsInReadme = parseInt(match[1]);
     const nIcons = (await getIconsData()).length;
     const newNIcons = overNIconsInReadme + updateRange;
 
