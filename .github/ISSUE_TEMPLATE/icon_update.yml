@@ -1,6 +1,7 @@
 name: Icon update
 description: Help us improve by reporting outdated icons
 labels: [icon outdated]
+title: 'Update: <brand-name>'
 
 body:
   - type: markdown
