@@ -11,7 +11,7 @@
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 1. Fork this repository
-1. (Optional) Clone the fork
+2. (Optional) Clone the fork
 
    - Using SSH
 
@@ -32,9 +32,9 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
      ```
 
 1. Create a new branch from the latest `develop`
-1. Start hacking on the new branch
-1. Commit and push to the new branch
-1. Make a pull request
+2. Start hacking on the new branch
+3. Commit and push to the new branch
+4. Make a pull request
 
 ## Table of contents
 
@@ -90,28 +90,28 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
     - For existing icons in our library, the threshold is dropped from 500k to 750k.
     - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
-1. The website's Similarweb rank in any one country is either:
+2. The website's Similarweb rank in any one country is either:
     - In the top 100, or,
     - In the top 10k, _with_ a global rank of 1m or better.
-1. The website's Similarweb global rank in any one category is either:
+3. The website's Similarweb global rank in any one category is either:
     - In the top 50, or,
     - In the top 5k, _with_ a global rank of 1m or better.
-1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
-1. Its packages meet one of the following minimum requirements:
+4. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
+5. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
-1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
+6. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
     - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
-1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
+7. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
     - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
-1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
+8. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
     - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
     - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
     - Trending equal to or higher than the compared brand will be considered in scope.
     - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
-1. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
+9. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
     - A minimum of 5k GitHub stars will be required for consideration, providing,
     - The repository is still active, and,
     - Its [star history](https://star-history.com) is on a consistently upward trajectory.
@@ -145,10 +145,10 @@ Most of the icons and brand colors on SimpleIcons have been derived from officia
 Official high quality brand logos and brand colors can usually be found in the following locations:
 
 1. About pages, Press pages, Media Kits, and Brand Guidelines.
-1. Website headers
-1. Favicons
-1. Wikimedia (which should provide a source)
-1. GitHub repositories
+2. Website headers
+3. Favicons
+4. Wikimedia (which should provide a source)
+5. GitHub repositories
 
 It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this.
 Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
@@ -184,13 +184,13 @@ There are many different tools for editing SVG files, some options include:
 Using your preferred tool you should:
 
 1. Isolate the icon from any text or extraneous items.
-1. Merge any overlapping paths.
-1. Compound all paths into one.
-1. Change the icon's viewbox/canvas/page size to 24x24.
-1. Scale the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
-1. Center the icon horizontally and vertically.
-1. Remove all colors. The icon should be monochromatic.
-1. Export the icon as an SVG.
+2. Merge any overlapping paths.
+3. Compound all paths into one.
+4. Change the icon's viewbox/canvas/page size to 24x24.
+5. Scale the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
+6. Center the icon horizontally and vertically.
+7. Remove all colors. The icon should be monochromatic.
+8. Export the icon as an SVG.
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases, the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations, a different gap may be required, but that will be determined on a per-case basis.
 
@@ -269,14 +269,14 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: adobephotoshop.svg
     ```
 
-1. Only use **latin** letters, for example:
+2. Only use **latin** letters, for example:
 
     ```yml
     title: Citroën
     filename: citroen.svg
     ```
 
-1. Replace the following symbols with their alias:
+3. Replace the following symbols with their alias:
 
     | Symbol | Alias |
     | :----: | ----- |
@@ -291,7 +291,7 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
     filename: dotnet.svg
     ```
 
-1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
+4. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
 
     for example:
 
