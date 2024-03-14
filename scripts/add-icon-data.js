@@ -5,7 +5,7 @@ import autocomplete from 'inquirer-autocomplete-standalone';
 import getRelativeLuminance from 'get-relative-luminance';
 import { search } from 'fast-fuzzy';
 import {
-  URL_REGEX,
+  urlRegex,
   collator,
   getIconsDataString,
   titleToSlug,
@@ -32,8 +32,8 @@ const titleValidator = (text) => {
 const hexValidator = (text) =>
   hexPattern.test(text) || 'This should be a valid hex code';
 
-const sourceValidator = (text) =>
-  URL_REGEX.test(text) || 'This should be a secure URL';
+const sourceValidator = async (text) =>
+  (await urlRegex()).test(text) || 'This should be a secure URL';
 
 const hexTransformer = (text) => {
   const color = normalizeColor(text);

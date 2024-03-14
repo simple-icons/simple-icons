@@ -6,13 +6,13 @@ import {
   getDirnameFromImportMeta,
   htmlFriendlyToTitle,
   collator,
+  getIconsData,
 } from './sdk.mjs';
 import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
-const dataFile = path.join(__dirname, '_data', 'simple-icons.json');
 const htmlNamedEntitiesFile = path.join(
   __dirname,
   'node_modules',
@@ -21,7 +21,7 @@ const htmlNamedEntitiesFile = path.join(
 );
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
-const data = JSON.parse(await fs.readFile(dataFile, 'utf8'));
+const icons = await getIconsData();
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );
@@ -359,9 +359,7 @@ export default {
 
           if (_validCodepointsRepr) {
             const iconName = htmlFriendlyToTitle(iconTitleText);
-            const iconExists = data.icons.some(
-              (icon) => icon.title === iconName,
-            );
+            const iconExists = icons.some((icon) => icon.title === iconName);
             if (!iconExists) {
               reporter.error(
                 `No icon with title "${iconName}" found in simple-icons.json`,

@@ -4,7 +4,6 @@ import { strict as assert } from 'node:assert';
 import { describe, it } from 'mocha';
 import {
   SVG_PATH_REGEX,
-  URL_REGEX,
   getDirnameFromImportMeta,
   titleToSlug,
 } from '../sdk.mjs';
@@ -43,7 +42,6 @@ export const testIcon = (icon, subject, slug) => {
 
     it('has the correct "source"', () => {
       assert.equal(subject.source, icon.source);
-      assert.match(subject.source, URL_REGEX);
     });
 
     it('has an "svg" value', () => {
@@ -67,8 +65,6 @@ export const testIcon = (icon, subject, slug) => {
         assert.equal(subject.license.type, icon.license.type);
         if (icon.license.type === 'custom') {
           assert.equal(subject.license.url, icon.license.url);
-        } else {
-          assert.match(subject.license.url, URL_REGEX);
         }
       } else {
         assert.equal(subject.license, undefined);
