@@ -1,3 +1,8 @@
+/**
+ * @fileoverview
+ * Linting rules for SVGLint to check SVG icons.
+ */
+
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
@@ -25,6 +30,7 @@ const data = JSON.parse(await fs.readFile(dataFile, 'utf8'));
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );
+/** @type {{ [key: string]: { [key: string]: string } }} */
 const svglintIgnores = JSON.parse(
   await fs.readFile(svglintIgnoredFile, 'utf8'),
 );
@@ -44,18 +50,27 @@ const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
 const ignoreFile = './.svglint-ignored.json';
 const iconIgnored = !updateIgnoreFile ? svglintIgnores : {};
 
+/**
+ * @param {{ [key: string]: any }} obj
+ * @returns {{ [key: string]: any }}
+ */
 const sortObjectByKey = (obj) => {
   return Object.keys(obj)
     .sort()
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 };
 
+/**
+ * @param {{ [key: string]: any }} obj
+ * @returns {{ [key: string]: any }}
+ */
 const sortObjectByValue = (obj) => {
   return Object.keys(obj)
     .sort((a, b) => collator.compare(obj[a], obj[b]))
     .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
 };
 
+/** @param {Number} number */
 const removeLeadingZeros = (number) => {
   // convert 0.03 to '.03'
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
@@ -64,6 +79,12 @@ const removeLeadingZeros = (number) => {
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
+ * @param {Number} x1 The x coordinate of the first point.
+ * @param {Number} y1 The y coordinate of the first point.
+ * @param {Number} x2 The x coordinate of the second point.
+ * @param {Number} y2 The y coordinate of the second point.
+ * @param {Number} x3 The x coordinate of the third point.
+ * @param {Number} y3 The y coordinate of the third point.
  **/
 const collinear = (x1, y1, x2, y2, x3, y3) => {
   return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
@@ -71,11 +92,11 @@ const collinear = (x1, y1, x2, y2, x3, y3) => {
 
 /**
  * Returns the number of digits after the decimal point.
- * @param num The number of interest.
+ * @param {Number} number
  */
-const countDecimals = (num) => {
-  if (num && num % 1) {
-    let [base, op, trail] = num.toExponential().split(/e([+-])/);
+const countDecimals = (number) => {
+  if (number && number % 1) {
+    let [base, op, trail] = number.toExponential().split(/e([+-])/);
     let elen = parseInt(trail, 10);
     let idx = base.indexOf('.');
     return idx == -1
@@ -87,7 +108,7 @@ const countDecimals = (num) => {
 
 /**
  * Get the index at which the first path value of an SVG starts.
- * @param svgFileContent The raw SVG as text.
+ * @param {String} svgFileContent The raw SVG as text.
  */
 const getPathDIndex = (svgFileContent) => {
   const pathDStart = '<path d="';
@@ -96,7 +117,7 @@ const getPathDIndex = (svgFileContent) => {
 
 /**
  * Get the index at which the text of the first `<title></title>` tag starts.
- * @param svgFileContent The raw SVG as text.
+ * @param {String} svgFileContent The raw SVG as text.
  **/
 const getTitleTextIndex = (svgFileContent) => {
   const titleStart = '<title>';
@@ -105,7 +126,7 @@ const getTitleTextIndex = (svgFileContent) => {
 
 /**
  * Convert a hexadecimal number passed as string to decimal number as integer.
- * @param hex The hexadecimal number representation to convert.
+ * @param {String} hex The hexadecimal number representation to convert.
  **/
 const hexadecimalToDecimal = (hex) => {
   let result = 0,
@@ -117,6 +138,7 @@ const hexadecimalToDecimal = (hex) => {
   return result;
 };
 
+/** @param {String} str */
 const maybeShortenedWithEllipsis = (str) => {
   return str.length > 20 ? `${str.substring(0, 20)}...` : str;
 };
@@ -124,21 +146,24 @@ const maybeShortenedWithEllipsis = (str) => {
 /**
  * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
+ * @param {(arg0: any) => any} func The function to memoize.
  */
 const memoize = (func) => {
+  /** @type {{ [key: string]: any }} */
   const results = {};
 
-  return (arg, defaultKey = null) => {
-    const key = defaultKey || arg;
-
-    if (!results[key]) {
-      results[key] = func(arg);
+  /**
+   * @param {any} arg The argument to memoize.
+   */
+  return (arg) => {
+    if (!results[arg]) {
+      results[arg] = func(arg);
     }
-    return results[key];
+    return results[arg];
   };
 };
 
-const getIconPath = memoize(($icon, filepath) => $icon.find('path').attr('d'));
+const getIconPath = memoize(($icon) => $icon.find('path').attr('d'));
 const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
 const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
 
@@ -156,23 +181,59 @@ if (updateIgnoreFile) {
   });
 }
 
-const isIgnored = (linterName, path) => {
+/**
+ * Check if an icon is ignored by a linter rule.
+ * @param {String} linterRule The name of the linter rule.
+ * @param {String} path SVG path of the icon.
+ * @returns {Boolean} Whether the icon is ignored by the linter rule
+ */
+const isIgnored = (linterRule, path) => {
   return (
-    iconIgnored[linterName] && iconIgnored[linterName].hasOwnProperty(path)
+    iconIgnored[linterRule] && iconIgnored[linterRule].hasOwnProperty(path)
   );
 };
 
-const ignoreIcon = (linterName, path, $) => {
-  if (!iconIgnored[linterName]) {
-    iconIgnored[linterName] = {};
+/**
+ * @typedef {import('cheerio').Cheerio<import('domhandler').Document>} Cheerio
+ * @typedef {import('svglint').Reporter} Reporter
+ * @typedef {import('svglint').AST} AST
+ */
+
+/**
+ * Ignore an icon for a linter rule.
+ * @param {String} linterRule The name of the linter rule.
+ * @param {String} path SVG path of the icon.
+ * @param {Cheerio} $ The SVG object
+ */
+const ignoreIcon = (linterRule, path, $) => {
+  if (!iconIgnored[linterRule]) {
+    iconIgnored[linterRule] = {};
   }
 
   const title = $.find('title').text();
   const iconName = htmlFriendlyToTitle(title);
 
-  iconIgnored[linterName][path] = iconName;
+  iconIgnored[linterRule][path] = iconName;
 };
 
+// TODO: extracted from svglint. Update the types to just import them
+// from svglint with `@type {import('svglint').Config}`
+// when https://github.com/birjj/svglint/pull/93 is released.
+/**
+ * @typedef Config
+ * @property {RulesConfig} [rules={}] The rules to lint by
+ *
+ * @typedef RulesConfig
+ * @property {Object<string, number | boolean>} [elm={}]
+ * @property {Array<Object<string, string | boolean | RegExp>>} [attr=[]]
+ * @property {Array<Function>} [custom=[]]
+ */
+
+/**
+ * @typedef {(reporter: Reporter, $: Cheerio, ast: AST) => void} CustomRule
+ */
+
+/** @type {Config} */
 export default {
   rules: {
     elm: {
@@ -206,6 +267,7 @@ export default {
       },
     ],
     custom: [
+      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'icon-title';
 
@@ -339,6 +401,7 @@ export default {
 
             const decimalCodepointCharIndex =
               getTitleTextIndex(ast.source) + match.index + 1;
+            let replacement;
             if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
               replacement = `"&${
                 xmlNamedEntities[
@@ -370,10 +433,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'icon-size';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
         if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
           return;
         }
@@ -399,10 +463,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'icon-precision';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
         const segments = getIconPathSegments(iconPath);
 
         for (const segment of segments) {
@@ -429,10 +494,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'ineffective-segments';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
         const segments = getIconPathSegments(iconPath);
         const absSegments = svgpath(iconPath).abs().unshort().segments;
 
@@ -649,7 +715,8 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'collinear-segments';
 
         /**
@@ -822,7 +889,7 @@ export default {
           return collinearSegments;
         };
 
-        const iconPath = getIconPath($, filepath),
+        const iconPath = getIconPath($),
           collinearSegments = getCollinearSegments(iconPath);
         if (collinearSegments.length === 0) {
           return;
@@ -845,6 +912,7 @@ export default {
           reporter.error(errorMsg);
         }
       },
+      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'extraneous';
 
@@ -861,10 +929,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'negative-zeros';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
 
         // Find negative zeros inside path
         const negativeZeroMatches = Array.from(
@@ -887,10 +956,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'icon-centered';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
         if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
           return;
         }
@@ -914,10 +984,11 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      /** @type CustomRule */
+      (reporter, $, ast) => {
         reporter.name = 'path-format';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
 
         if (!SVG_PATH_REGEX.test(iconPath)) {
           let errorMsg = 'Invalid path format',
@@ -955,6 +1026,7 @@ export default {
           }
         }
       },
+      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'svg-format';
 

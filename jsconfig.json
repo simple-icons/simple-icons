@@ -8,7 +8,7 @@
     "strict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "include": [".svglintrc.mjs"]
 }
