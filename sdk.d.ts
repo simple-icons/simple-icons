@@ -40,6 +40,7 @@ type DuplicateAlias = {
   title: string;
   hex?: string;
   guidelines?: string;
+  loc?: { [key: string]: string };
 };
 
 /**
