@@ -12,7 +12,7 @@ const rootDirectory = path.resolve(__dirname, '..', '..');
 const files = ['index.js', 'index.mjs', 'index.d.ts', 'sdk.js'];
 
 Promise.all(
-  files.map(file => fs.unlink(path.join(rootDirectory, file)))
+  files.map((file) => fs.unlink(path.join(rootDirectory, file))),
 ).catch((error) => {
   console.error(`Error cleaning files: ${error.message}`);
   process.exit(1);
