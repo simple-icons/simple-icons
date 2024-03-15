@@ -996,6 +996,11 @@
             "source": "https://www.antena3.com"
         },
         {
+            "title": "Anycubic",
+            "hex": "476695",
+            "source": "https://store.anycubic.com/pages/firmware-software"
+        },
+        {
             "title": "AnyDesk",
             "hex": "EF443B",
             "source": "https://anydesk.com"
@@ -2763,6 +2768,14 @@
             "source": "https://www.chedraui.com.mx"
         },
         {
+            "title": "Cheerio",
+            "hex": "E88C1F",
+            "source": "https://github.com/cheeriojs/cheerio/blob/60b538772c34f2dd93e9c62e410b2751d0a69ff3/website/static/img/orange-c.svg",
+            "license": {
+                "type": "MIT"
+            }
+        },
+        {
             "title": "Chef",
             "hex": "F09820",
             "source": "https://www.chef.io"
@@ -4487,6 +4500,11 @@
             "title": "electron-builder",
             "hex": "000000",
             "source": "https://www.electron.build"
+        },
+        {
+            "title": "Elegoo",
+            "hex": "2C3A83",
+            "source": "https://www.elegoo.com/pages/download"
         },
         {
             "title": "Element",
@@ -16607,7 +16625,7 @@
                     "WD"
                 ]
             },
-            "hex": "000000",
+            "hex": "995DFF",
             "source": "https://www.westerndigital.com"
         },
         {
