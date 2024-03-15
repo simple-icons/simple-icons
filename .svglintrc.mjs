@@ -26,6 +26,7 @@ const htmlNamedEntitiesFile = path.join(
 );
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
+/** @type {{icons: import('./sdk.js').IconData[]}} */
 const data = JSON.parse(await fs.readFile(dataFile, 'utf8'));
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
@@ -144,6 +145,15 @@ const maybeShortenedWithEllipsis = (str) => {
 };
 
 /**
+ * Check if a string is a number.
+ * @param {String} maybeNumber
+ * @returns {Boolean}
+ */
+const isNumber = (maybeNumber) => {
+  return '0123456789'.includes(maybeNumber);
+};
+
+/**
  * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
  * @param {(arg0: any) => any} func The function to memoize.
@@ -194,16 +204,10 @@ const isIgnored = (linterRule, path) => {
 };
 
 /**
- * @typedef {import('cheerio').Cheerio<import('domhandler').Document>} Cheerio
- * @typedef {import('svglint').Reporter} Reporter
- * @typedef {import('svglint').AST} AST
- */
-
-/**
  * Ignore an icon for a linter rule.
  * @param {String} linterRule The name of the linter rule.
  * @param {String} path SVG path of the icon.
- * @param {Cheerio} $ The SVG object
+ * @param {import('cheerio').Cheerio<import('domhandler').Document>} $ The SVG object
  */
 const ignoreIcon = (linterRule, path, $) => {
   if (!iconIgnored[linterRule]) {
@@ -216,24 +220,7 @@ const ignoreIcon = (linterRule, path, $) => {
   iconIgnored[linterRule][path] = iconName;
 };
 
-// TODO: extracted from svglint. Update the types to just import them
-// from svglint with `@type {import('svglint').Config}`
-// when https://github.com/birjj/svglint/pull/93 is released.
-/**
- * @typedef Config
- * @property {RulesConfig} [rules={}] The rules to lint by
- *
- * @typedef RulesConfig
- * @property {Object<string, number | boolean>} [elm={}]
- * @property {Array<Object<string, string | boolean | RegExp>>} [attr=[]]
- * @property {Array<Function>} [custom=[]]
- */
-
-/**
- * @typedef {(reporter: Reporter, $: Cheerio, ast: AST) => void} CustomRule
- */
-
-/** @type {Config} */
+/** @type {import('svglint').Config} */
 export default {
   rules: {
     elm: {
@@ -267,7 +254,6 @@ export default {
       },
     ],
     custom: [
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'icon-title';
 
@@ -392,7 +378,7 @@ export default {
 
           // check if there are some other encoded characters in decimal notation
           // which shouldn't be encoded
-          for (const match of encodingMatches.filter((m) => !isNaN(m[2]))) {
+          for (const match of encodingMatches.filter((m) => isNumber(m[2]))) {
             const decimalNumber = parseInt(match[2]);
             if (decimalNumber > 127) {
               continue;
@@ -433,7 +419,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'icon-size';
 
@@ -463,7 +448,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'icon-precision';
 
@@ -494,7 +478,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'ineffective-segments';
 
@@ -715,7 +698,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'collinear-segments';
 
@@ -912,7 +894,6 @@ export default {
           reporter.error(errorMsg);
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'extraneous';
 
@@ -929,7 +910,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'negative-zeros';
 
@@ -956,7 +936,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'icon-centered';
 
@@ -984,7 +963,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'path-format';
 
@@ -1026,7 +1004,6 @@ export default {
           }
         }
       },
-      /** @type CustomRule */
       (reporter, $, ast) => {
         reporter.name = 'svg-format';
 
