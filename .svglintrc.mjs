@@ -173,8 +173,13 @@ const memoize = (func) => {
   };
 };
 
+/** @typedef {import('cheerio').Cheerio<import('domhandler').Document>} Cheerio */
+
+/** @type {($icon: Cheerio) => string} */
 const getIconPath = memoize(($icon) => $icon.find('path').attr('d'));
+/** @type {(iconPath: string) => import('svg-path-segments').Segment[]} */
 const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
+/** @type {(iconPath: string) => import('svg-path-bbox').BBox} */
 const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
 
 if (updateIgnoreFile) {
@@ -207,7 +212,7 @@ const isIgnored = (linterRule, path) => {
  * Ignore an icon for a linter rule.
  * @param {String} linterRule The name of the linter rule.
  * @param {String} path SVG path of the icon.
- * @param {import('cheerio').Cheerio<import('domhandler').Document>} $ The SVG object
+ * @param {Cheerio} $ The SVG object
  */
 const ignoreIcon = (linterRule, path, $) => {
   if (!iconIgnored[linterRule]) {
