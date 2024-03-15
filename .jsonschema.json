@@ -638,6 +638,10 @@
         "guidelines": {
           "description": "The brand guidelines, if different from the original",
           "$ref": "#/definitions/url"
+        },
+        "loc": {
+          "description": "Localized names of the brand",
+          "$ref": "#/definitions/locale"
         }
       },
       "additionalProperties": false
