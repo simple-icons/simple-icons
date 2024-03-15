@@ -15,5 +15,5 @@ Promise.all(
   files.map((file) => fs.unlink(path.join(rootDirectory, file))),
 ).catch((error) => {
   console.error(`Error cleaning files: ${error.message}`);
-  process.exit(1);
+  process.exit(0);
 });
