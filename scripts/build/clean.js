@@ -9,13 +9,11 @@ import { getDirnameFromImportMeta } from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..', '..');
+const files = ['index.js', 'index.mjs', 'index.d.ts', 'sdk.js'];
 
-Promise.all([
-  fs.unlink(path.join(rootDirectory, 'index.js')),
-  fs.unlink(path.join(rootDirectory, 'index.mjs')),
-  fs.unlink(path.join(rootDirectory, 'index.d.ts')),
-  fs.unlink(path.join(rootDirectory, 'sdk.js')),
-]).catch((error) => {
+Promise.all(
+  files.map(file => fs.unlink(path.join(rootDirectory, file)))
+).catch((error) => {
   console.error(`Error cleaning files: ${error.message}`);
   process.exit(1);
 });
