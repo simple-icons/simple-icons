@@ -420,7 +420,7 @@
         },
         {
             "title": "Air India",
-            "hex": "D9000D",
+            "hex": "DA0E29",
             "source": "https://www.airindia.com"
         },
         {
@@ -994,6 +994,11 @@
             "title": "Antena 3",
             "hex": "FF7328",
             "source": "https://www.antena3.com"
+        },
+        {
+            "title": "Anycubic",
+            "hex": "476695",
+            "source": "https://store.anycubic.com/pages/firmware-software"
         },
         {
             "title": "AnyDesk",
@@ -2429,6 +2434,11 @@
             "source": "https://www.buymeacoffee.com/brand"
         },
         {
+            "title": "BuySellAds",
+            "hex": "EB4714",
+            "source": "https://docs.buysellads.com"
+        },
+        {
             "title": "BuzzFeed",
             "hex": "EE3322",
             "source": "https://www.buzzfeed.com/press/assets"
@@ -2756,6 +2766,14 @@
             "title": "Chedraui",
             "hex": "E0832F",
             "source": "https://www.chedraui.com.mx"
+        },
+        {
+            "title": "Cheerio",
+            "hex": "E88C1F",
+            "source": "https://github.com/cheeriojs/cheerio/blob/60b538772c34f2dd93e9c62e410b2751d0a69ff3/website/static/img/orange-c.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Chef",
@@ -4484,6 +4502,11 @@
             "source": "https://www.electron.build"
         },
         {
+            "title": "Elegoo",
+            "hex": "2C3A83",
+            "source": "https://www.elegoo.com/pages/download"
+        },
+        {
             "title": "Element",
             "hex": "0DBD8B",
             "source": "https://element.io"
@@ -4569,6 +4592,11 @@
             "title": "Empire Kred",
             "hex": "72BE50",
             "source": "https://www.empire.kred"
+        },
+        {
+            "title": "EndeavourOS",
+            "hex": "7F7FFF",
+            "source": "https://github.com/endeavouros-team/endeavouros-theming/blob/135f642c980ed8d8fc212783eb478f96226f6c72/endeavouros-logo-text.svg"
         },
         {
             "title": "Engadget",
@@ -5918,6 +5946,11 @@
             "title": "Google Assistant",
             "hex": "4285F4",
             "source": "https://assistant.google.com"
+        },
+        {
+            "title": "Google Authenticator",
+            "hex": "4285F4",
+            "source": "https://commons.wikimedia.org/wiki/File:Google_Authenticator_(April_2023).svg"
         },
         {
             "title": "Google Bard",
@@ -8609,7 +8642,18 @@
         {
             "title": "Logitech",
             "hex": "00B8FC",
-            "source": "https://www.logitech.com/en-us/pr/library"
+            "source": "https://www.logitech.com/en-us/pr/library",
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "Logicool",
+                        "hex": "00BFFF",
+                        "loc": {
+                            "ja-JP": "ロジクール"
+                        }
+                    }
+                ]
+            }
         },
         {
             "title": "Logitech G",
@@ -8821,6 +8865,12 @@
             "title": "MakerBot",
             "hex": "FF1E0D",
             "source": "https://www.makerbot.com/makerbot-press-assets"
+        },
+        {
+            "title": "Malt",
+            "hex": "FC5757",
+            "source": "https://newsroom.malt.com/media-kit-uk",
+            "guidelines": "https://newsroom.malt.com/media-kit-uk"
         },
         {
             "title": "Mamba UI",
@@ -14048,6 +14098,11 @@
             }
         },
         {
+            "title": "Spaceship",
+            "hex": "394EFF",
+            "source": "https://www.spaceship.com"
+        },
+        {
             "title": "SpaceX",
             "hex": "000000",
             "source": "https://www.spacex.com"
@@ -15511,6 +15566,11 @@
             "source": "https://www.truenas.com"
         },
         {
+            "title": "TrueUp",
+            "hex": "4E71DA",
+            "source": "https://www.trueup.io"
+        },
+        {
             "title": "trulia",
             "hex": "0A0B09",
             "source": "https://www.trulia.com/newsroom/media/brand-logos",
@@ -16586,7 +16646,7 @@
                     "WD"
                 ]
             },
-            "hex": "000000",
+            "hex": "995DFF",
             "source": "https://www.westerndigital.com"
         },
         {
@@ -16908,6 +16968,16 @@
             "source": "https://www.xfce.org/download#artwork"
         },
         {
+            "title": "Xiaohongshu",
+            "hex": "FF2442",
+            "source": "https://pro.xiaohongshu.com",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "小红书"
+                }
+            }
+        },
+        {
             "title": "Xiaomi",
             "hex": "FF6900",
             "source": "https://www.mi.com/global"
@@ -17132,6 +17202,11 @@
             "title": "Zebra Technologies",
             "hex": "000000",
             "source": "https://www.zebra.com"
+        },
+        {
+            "title": "Zed Industries",
+            "hex": "084CCF",
+            "source": "https://github.com/zed-industries/zed/blob/ccc939124fa2f366b3029926447fd0a0c46a85c7/assets/icons/logo_96.svg"
         },
         {
             "title": "Zelle",
