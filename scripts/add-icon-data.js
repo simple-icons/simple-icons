@@ -22,6 +22,7 @@ import {
 } from '../sdk.mjs';
 import { getJsonSchemaData, writeIconsData } from './utils.js';
 
+/** @type {{icons: import('../sdk.js').IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
@@ -32,22 +33,26 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
   value: key,
 }));
 
+/** @type {{name: String, value: String}[]} */
 const licenseTypes =
   jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
     (license) => ({ name: license, value: license }),
   );
 
+/** @param {String} input */
 const isValidURL = (input) =>
   URL_REGEX.test(input) || 'Must be a valid and secure (https://) URL.';
 
+/** @param {String} input */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
+/** @param {String} input */
 const isNewIcon = (input) =>
   !iconsData.icons.find(
     (icon) =>
       icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
-  ) || 'This icon title or slug already exists.';
+  );
 
 const previewHexColor = (input) => {
   const color = normalizeColor(input);
@@ -65,7 +70,9 @@ try {
     title: await input({
       message: 'What is the title of this icon?',
       validate: (input) =>
-        input.trim().length > 0 ? isNewIcon(input) : 'This field is required.',
+        input.trim().length > 0
+          ? isNewIcon(input) || 'This icon title or slug already exists.'
+          : 'This field is required.',
     }),
     hex: normalizeColor(
       await input({
