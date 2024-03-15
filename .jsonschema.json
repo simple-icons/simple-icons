@@ -638,6 +638,10 @@
         "guidelines": {
           "description": "The brand guidelines, if different from the original",
           "$ref": "#/definitions/url"
+        },
+        "loc": {
+          "description": "Localized names of the brand",
+          "$ref": "#/definitions/locale"
         }
       },
       "additionalProperties": false
@@ -680,7 +684,7 @@
         "pattern": "^https://github\\.com/(?!(features/actions)|(sponsors)|(logos)$)"
       },
       "then": {
-        "pattern": "^https://github\\.com/[^/]+/[^/]+/(blob/[a-f\\d]{40}/[^\\s]+)|(tree/[a-f\\d]{40}(/[^\\s]+)?)|(((issues)|(pull))/\\d+#issuecomment-\\d+)$"
+        "pattern": "^https://github\\.com/[^/]+/[^/]+/(blob/[a-f\\d]{40}/[^\\s]+)|(tree/[a-f\\d]{40}(/[^\\s]+)?)|(((issues)|(pull)|(discussions))/\\d+#((issuecomment)|(discussioncomment))-\\d+)$"
       },
       "else": {
         "$ref": "#/definitions/url"
