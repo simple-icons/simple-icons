@@ -71,7 +71,7 @@ export default {
       // Sort the attributes on the <svg> tag
       name: 'sortAttrs',
       params: {
-        order: ['role', 'viewBox'],
+        order: ['role', 'viewBox', 'xmlns'],
         xmlnsOrder: 'end',
       },
     },
@@ -80,7 +80,11 @@ export default {
     {
       name: 'removeAttrs',
       params: {
-        attrs: ['svg:(?!(role|viewBox|xmlns))', 'path:(?!d)', 'title:*'],
+        attrs: [
+          'svg:.*(?<!((role)|(viewBox)|(xmlns)))',
+          'path:(?!d)',
+          'title:*',
+        ],
       },
     },
     'removeElementsByAttr',

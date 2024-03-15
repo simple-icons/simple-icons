@@ -1,0 +1,16 @@
+name: Get version
+description: Get the current version of the project
+
+outputs:
+  version:
+    description: The version of the project
+    value: ${{ steps.get-version.outputs.version }}
+
+runs:
+  using: composite
+  steps:
+    - id: get-version
+      shell: sh
+      run: |
+        version="$(grep version -m 1 -i package.json | sed 's/[ \",:version]//g')"
+        echo "version=$version" >> $GITHUB_OUTPUT

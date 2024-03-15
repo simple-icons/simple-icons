@@ -3,7 +3,7 @@
  * Types for Simple Icons SDK.
  */
 
-import type { License } from './types';
+import type { CustomLicense, SPDXLicense } from './types';
 
 /**
  * The data for a third-party extension.
@@ -40,6 +40,7 @@ type DuplicateAlias = {
   title: string;
   hex?: string;
   guidelines?: string;
+  loc?: { [key: string]: string };
 };
 
 /**
@@ -55,7 +56,7 @@ export type IconData = {
   source: string;
   slug?: string;
   guidelines?: string;
-  license?: License;
+  license?: Omit<SPDXLicense, 'url'> | CustomLicense;
   aliases?: Aliases;
 };
 
