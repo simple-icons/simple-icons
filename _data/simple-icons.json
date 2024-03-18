@@ -420,7 +420,7 @@
         },
         {
             "title": "Air India",
-            "hex": "D9000D",
+            "hex": "DA0E29",
             "source": "https://www.airindia.com"
         },
         {
@@ -2996,6 +2996,12 @@
             "guidelines": "https://www.cloudflare.com/trademark/"
         },
         {
+            "title": "Cloudflare Workers",
+            "hex": "F38020",
+            "source": "https://www.cloudflare.com/developer-platform/products/",
+            "guidelines": "https://www.cloudflare.com/trademark/"
+        },
+        {
             "title": "Cloudinary",
             "hex": "3448C5",
             "source": "https://cloudinary.com"
@@ -3015,6 +3021,12 @@
             "title": "Cloudways",
             "hex": "2C39BD",
             "source": "https://www.cloudways.com/en/media-kit.php"
+        },
+        {
+            "title": "Clubforce",
+            "hex": "191176",
+            "source": "https://clubforce.com/media-centre",
+            "guidelines": "https://clubforce.com/media-centre"
         },
         {
             "title": "Clubhouse",
@@ -3766,8 +3778,8 @@
         },
         {
             "title": "DataStax",
-            "hex": "3A3A42",
-            "source": "https://www.datastax.com/brand-resources",
+            "hex": "000000",
+            "source": "https://docs.datastax.com/en/astra/astra-db-vector",
             "guidelines": "https://www.datastax.com/brand-resources"
         },
         {
@@ -4594,6 +4606,11 @@
             "source": "https://www.empire.kred"
         },
         {
+            "title": "EndeavourOS",
+            "hex": "7F7FFF",
+            "source": "https://github.com/endeavouros-team/endeavouros-theming/blob/135f642c980ed8d8fc212783eb478f96226f6c72/endeavouros-logo-text.svg"
+        },
+        {
             "title": "Engadget",
             "hex": "000000",
             "source": "https://www.engadget.com",
@@ -5138,6 +5155,11 @@
             "source": "https://www.fiverr.com/press-kit"
         },
         {
+            "title": "Flashforge",
+            "hex": "000000",
+            "source": "https://www.flashforge.com"
+        },
+        {
             "title": "Flask",
             "hex": "000000",
             "source": "https://github.com/pallets/flask/blob/e6e75e55470a0682ee8370e6d68062e515a248b9/artwork/logo-full.svg",
@@ -5440,6 +5462,11 @@
             "hex": "C83D1E",
             "source": "https://www.fubo.tv",
             "guidelines": "https://www.fubo.tv/press-inquiries"
+        },
+        {
+            "title": "Fueler",
+            "hex": "09C9E3",
+            "source": "https://fueler.io"
         },
         {
             "title": "Fuga Cloud",
@@ -8721,6 +8748,11 @@
             "source": "https://lubuntu.net"
         },
         {
+            "title": "Lucia",
+            "hex": "5F57FF",
+            "source": "https://v2.lucia-auth.com"
+        },
+        {
             "title": "Lucid",
             "hex": "282C33",
             "source": "https://lucid.co/brand",
@@ -8855,6 +8887,12 @@
             "title": "MakerBot",
             "hex": "FF1E0D",
             "source": "https://www.makerbot.com/makerbot-press-assets"
+        },
+        {
+            "title": "Malt",
+            "hex": "FC5757",
+            "source": "https://newsroom.malt.com/media-kit-uk",
+            "guidelines": "https://newsroom.malt.com/media-kit-uk"
         },
         {
             "title": "Mamba UI",
@@ -9432,6 +9470,11 @@
             "title": "MIDI",
             "hex": "000000",
             "source": "https://en.wikipedia.org/wiki/MIDI"
+        },
+        {
+            "title": "Migadu",
+            "hex": "0043CE",
+            "source": "https://migadu.com"
         },
         {
             "title": "Mikrotik",
@@ -12801,6 +12844,11 @@
             "source": "https://github.com/mcneel/compute.rhino3d/blob/2204d998ff0397a1c6a18dd2312a96508ad48bdb/README.md"
         },
         {
+            "title": "Rich",
+            "hex": "FAE742",
+            "source": "https://github.com/Textualize/rich/blob/fd981823644ccf50d685ac9c0cfe8e1e56c9dd35/imgs/logo.svg"
+        },
+        {
             "title": "Rider",
             "hex": "000000",
             "source": "https://www.jetbrains.com/company/brand/logos/",
@@ -14080,6 +14128,11 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
+        },
+        {
+            "title": "Spaceship",
+            "hex": "394EFF",
+            "source": "https://www.spaceship.com"
         },
         {
             "title": "SpaceX",
@@ -16446,6 +16499,11 @@
             "source": "https://github.com/wasmerio/wasmer.io/blob/0d425f5b4ace56496e75278e304f54492c46adde/public/images/icon.svg"
         },
         {
+            "title": "Watchtower",
+            "hex": "416271",
+            "source": "https://containrrr.dev/watchtower"
+        },
+        {
             "title": "Wattpad",
             "hex": "FF500A",
             "source": "https://company.wattpad.com/brandguideline",
@@ -16945,6 +17003,16 @@
             "title": "XFCE",
             "hex": "2284F2",
             "source": "https://www.xfce.org/download#artwork"
+        },
+        {
+            "title": "Xiaohongshu",
+            "hex": "FF2442",
+            "source": "https://pro.xiaohongshu.com",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "小红书"
+                }
+            }
         },
         {
             "title": "Xiaomi",
