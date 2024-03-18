@@ -15,7 +15,7 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Build NodeJS package
         run: npm run build
   lint:
@@ -43,7 +43,7 @@ jobs:
               - 'icons/*.svg'
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run linter
         run: npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
         env:
@@ -87,6 +87,6 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run tests
         run: npm run test
