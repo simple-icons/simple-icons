@@ -19,21 +19,34 @@ const readmeFile = path.resolve(rootDir, 'README.md');
 
 const readmeContent = await fs.readFile(readmeFile, 'utf-8');
 
-let overNIconsInReadme;
 try {
-  overNIconsInReadme = parseInt(regexMatcher.exec(readmeContent)[1]);
+  /** @type {RegExpExecArray | null} */
+  const match = regexMatcher.exec(readmeContent);
+  if (match === null) {
+    console.error(
+      'Failed to obtain number of SVG icons of current milestone in README:',
+      'No match found',
+    );
+    process.exit(1);
+  } else {
+    const overNIconsInReadme = parseInt(match[1]);
+    const nIcons = (await getIconsData()).length;
+    const newNIcons = overNIconsInReadme + updateRange;
+
+    if (nIcons > newNIcons) {
+      const newContent = readmeContent.replace(
+        regexMatcher,
+        `Over ${newNIcons} `,
+      );
+      await fs.writeFile(readmeFile, newContent);
+    }
+  }
 } catch (err) {
   console.error(
-    'Failed to obtain number of SVG icons of current milestone in README:',
+    'Failed to update number of SVG icons of current milestone in README:',
+    // TODO: type error
+    // @ts-ignore
     err,
   );
   process.exit(1);
-}
-
-const nIcons = (await getIconsData()).length;
-const newNIcons = overNIconsInReadme + updateRange;
-
-if (nIcons > newNIcons) {
-  const newContent = readmeContent.replace(regexMatcher, `Over ${newNIcons} `);
-  await fs.writeFile(readmeFile, newContent);
 }

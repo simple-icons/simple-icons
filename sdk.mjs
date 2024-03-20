@@ -8,10 +8,11 @@ import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 /**
- * @typedef {import("./sdk").ThirdPartyExtension} ThirdPartyExtension
- * @typedef {import("./sdk").IconData} IconData
+ * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
+ * @typedef {import("./sdk.d.ts").IconData} IconData
  */
 
+/** @type {{ [key: string]: string }} */
 const TITLE_TO_SLUG_REPLACEMENTS = {
   '+': 'plus',
   '.': 'dot',
@@ -119,6 +120,10 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     .replace(/&#([0-9]+);/g, (_, num) => String.fromCodePoint(parseInt(num)))
     .replace(
       /&(quot|amp|lt|gt);/g,
+      /**
+       * @param _
+       * @param {'quot'| 'amp' | 'lt' | 'gt'} ref
+       */
       (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' })[ref],
     );
 
@@ -141,13 +146,16 @@ export const getIconDataPath = (
 export const getIconsDataString = (
   rootDir = getDirnameFromImportMeta(import.meta.url),
 ) => {
+  // TODO: Remove `// @ts-ignore` on v12 release
+  // @ts-ignore
   return fs.readFile(getIconDataPath(rootDir), 'utf8');
 };
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
  * @param {String} rootDir Path to the root directory of the project
- * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
+ * TODO: Change `@ignore` by `@returns` on v12 release
+ * @ignore {IconData[]} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
   rootDir = getDirnameFromImportMeta(import.meta.url),
@@ -197,24 +205,41 @@ export const getThirdPartyExtensions = async (
     .split('\n')
     .slice(2)
     .map((line) => {
-      let [module, author] = line.split(' | ');
-      module = module.split('<img src="')[0];
+      const [mod, author] = line.split(' | ');
+      const module = mod.split('<img src="')[0];
+      const moduleName = /\[(.+)\]/.exec(module)?.[1];
+      if (moduleName === undefined) {
+        throw new Error(`Module name improperly parsed from line: ${line}`);
+      }
+      const moduleUrl = /\((.+)\)/.exec(module)?.[1];
+      if (moduleUrl === undefined) {
+        throw new Error(`Module URL improperly parsed from line: ${line}`);
+      }
+
+      const authorName = /\[(.+)\]/.exec(author)?.[1];
+      if (authorName === undefined) {
+        throw new Error(`Author improperly parsed from line: ${line}`);
+      }
+      const authorUrl = /\((.+)\)/.exec(author)?.[1];
+      if (authorUrl === undefined) {
+        throw new Error(`Author URL improperly parsed from line: ${line}`);
+      }
+
       return {
         module: {
-          name: /\[(.+)\]/.exec(module)[1],
-          url: /\((.+)\)/.exec(module)[1],
+          name: moduleName,
+          url: moduleUrl,
         },
         author: {
-          name: /\[(.+)\]/.exec(author)[1],
-          url: /\((.+)\)/.exec(author)[1],
+          name: authorName,
+          url: authorUrl,
         },
       };
     });
 
 /**
  * `Intl.Collator` object ready to be used for icon titles sorting.
- * @type {Intl.Collator}
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator Intl.Collator}
+ * @see {@link https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator Intl.Collator}
  **/
 export const collator = new Intl.Collator('en', {
   usage: 'search',

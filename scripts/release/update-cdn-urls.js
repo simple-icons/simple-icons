@@ -15,6 +15,10 @@ const rootDir = path.resolve(__dirname, '..', '..');
 const packageJsonFile = path.resolve(rootDir, 'package.json');
 const readmeFile = path.resolve(rootDir, 'README.md');
 
+/**
+ * @param {String} semVerVersion
+ * @returns {Number}
+ */
 const getMajorVersion = (semVerVersion) => {
   const majorVersionAsString = semVerVersion.split('.')[0];
   return parseInt(majorVersionAsString);
@@ -25,6 +29,9 @@ const getManifest = async () => {
   return JSON.parse(manifestRaw);
 };
 
+/**
+ * @param {Number} majorVersion
+ */
 const updateVersionInReadmeIfNecessary = async (majorVersion) => {
   let content = await fs.readFile(readmeFile, 'utf8');
 

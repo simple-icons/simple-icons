@@ -1,6 +1,6 @@
+/** @type import("svgo").Config */
 export default {
   multipass: true,
-  eol: 'lf',
   plugins: [
     'cleanupAttrs',
     'inlineStyles',
@@ -72,7 +72,6 @@ export default {
       name: 'sortAttrs',
       params: {
         order: ['role', 'viewBox', 'xmlns'],
-        xmlnsOrder: 'end',
       },
     },
     'sortDefsChildren',
@@ -87,7 +86,6 @@ export default {
         ],
       },
     },
-    'removeElementsByAttr',
     {
       // Keep the role="img" attribute and automatically add it
       // to the <svg> tag if it's not there already

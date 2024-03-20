@@ -36,7 +36,10 @@ const generateSdkMts = async () => {
   } catch (error) {
     await fs.writeFile(sdkMjs, originalSdkMjsContent);
     console.log(
+      // TODO: investigate what error is this
+      // @ts-ignore
       `Error ${error.status} generating Typescript` +
+        // @ts-ignore
         ` definitions: '${error.message}'`,
     );
     process.exit(1);
@@ -64,7 +67,10 @@ const generateSdkTs = async () => {
     execSync('npx prettier -w sdk.d.ts');
   } catch (error) {
     console.log(
+      // TODO: investigate what error is this
+      // @ts-ignore
       `Error ${error.status} executing Prettier` +
+        // @ts-ignore
         ` to pretiffy SDK TS definitions: '${error.message}'`,
     );
     process.exit(1);

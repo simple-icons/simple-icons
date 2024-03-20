@@ -5,6 +5,10 @@ import { getDirnameFromImportMeta, getIconDataPath } from '../sdk.mjs';
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
+
+/**
  * Get JSON schema data.
  * @param {String} rootDir Path to the root directory of the project.
  */
@@ -18,7 +22,7 @@ export const getJsonSchemaData = async (
 
 /**
  * Write icons data to _data/simple-icons.json.
- * @param {Object} iconsData Icons data object.
+ * @param {{icons: IconData[]}} iconsData Icons data object.
  * @param {String} rootDir Path to the root directory of the project.
  */
 export const writeIconsData = async (
