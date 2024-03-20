@@ -52,7 +52,7 @@ jobs:
           npm version --no-commit-hooks --no-git-tag-version \
             "${{ needs.release-pr.outputs.new-version }}"
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Update major version in CDN URLs
         run: node ./scripts/release/update-cdn-urls.js
       - name: Update SVGs count milestone
