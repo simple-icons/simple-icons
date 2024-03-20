@@ -1006,6 +1006,11 @@
             "source": "https://anydesk.com"
         },
         {
+            "title": "Anytype",
+            "hex": "FF6A7B",
+            "source": "https://github.com/anyproto/anytype-ts/blob/544498296ceb4b6ed2970414de493f7f72bd0fcf/src/img/logo/symbol.svg"
+        },
+        {
             "title": "AOL",
             "hex": "3399FF",
             "source": "https://www.aol.com"
@@ -2786,6 +2791,12 @@
             "source": "https://vtlogo.com/chemex-coffeemaker-vector-logo-svg/"
         },
         {
+            "title": "Chess.com",
+            "hex": "81B64C",
+            "source": "https://www.chess.com/article/view/chess-com-brand-resources",
+            "guidelines": "https://www.chess.com/article/view/chess-com-brand-resources"
+        },
+        {
             "title": "Chevrolet",
             "hex": "CD9834",
             "source": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/shopping-tools/download-catalog/02-pdf/2019-chevrolet-corvette-catalog.pdf"
@@ -3778,8 +3789,8 @@
         },
         {
             "title": "DataStax",
-            "hex": "3A3A42",
-            "source": "https://www.datastax.com/brand-resources",
+            "hex": "000000",
+            "source": "https://docs.datastax.com/en/astra/astra-db-vector",
             "guidelines": "https://www.datastax.com/brand-resources"
         },
         {
@@ -3813,6 +3824,16 @@
             "title": "DaVinci Resolve",
             "hex": "233A51",
             "source": "https://www.blackmagicdesign.com/media/images/davinci-resolve-logo-square"
+        },
+        {
+            "title": "Dazhong Dianping",
+            "hex": "FF6633",
+            "source": "https://www.meituan.com/media",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "大众点评"
+                }
+            }
         },
         {
             "title": "DAZN",
@@ -5517,6 +5538,11 @@
             "hex": "F05F00",
             "source": "https://www.g2a.co/documents/",
             "guidelines": "https://www.g2a.co/documents/"
+        },
+        {
+            "title": "G2G",
+            "hex": "ED1C24",
+            "source": "https://hydron.holdings/media/media_kit"
         },
         {
             "title": "Galaxus",
@@ -9478,6 +9504,11 @@
             "source": "https://en.wikipedia.org/wiki/MIDI"
         },
         {
+            "title": "Migadu",
+            "hex": "0043CE",
+            "source": "https://migadu.com"
+        },
+        {
             "title": "Mikrotik",
             "hex": "293239",
             "source": "https://mikrotik.com/aboutus"
@@ -10413,6 +10444,11 @@
             "title": "Nunjucks",
             "hex": "1C4913",
             "source": "https://github.com/mozilla/nunjucks/blob/fd500902d7c88672470c87170796de52fc0f791a/docs/img/favicon.png"
+        },
+        {
+            "title": "Nushell",
+            "hex": "4E9A06",
+            "source": "https://github.com/nushell/nushell/blob/3016d7a64ccb2c2eac9f735f6144fc896ea724a5/assets/icons/nushell-original.png"
         },
         {
             "title": "Nutanix",
@@ -14898,6 +14934,11 @@
             "title": "Talenthouse",
             "hex": "000000",
             "source": "https://www.talenthouse.com"
+        },
+        {
+            "title": "Talos",
+            "hex": "FF7300",
+            "source": "https://github.com/siderolabs/talos/blob/e3fda049fee62f3c5cef4ae08eaf848826a6dbed/website/assets/icons/logo.svg"
         },
         {
             "title": "Tamiya",
