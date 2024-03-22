@@ -114,6 +114,11 @@
             "source": "https://www.abstract.com/about"
         },
         {
+            "title": "abuse.ch",
+            "hex": "00465B",
+            "source": "https://abuse.ch"
+        },
+        {
             "title": "Academia",
             "hex": "41454A",
             "source": "https://www.academia.edu"
@@ -3442,6 +3447,11 @@
             "source": "https://www.cora.fr"
         },
         {
+            "title": "CorelDRAW",
+            "hex": "000000",
+            "source": "https://www.coreldraw.com/en/learn/webinars/ebook-embroidery"
+        },
+        {
             "title": "Corona Engine",
             "hex": "F96F29",
             "source": "https://coronalabs.com",
@@ -3572,6 +3582,11 @@
             "title": "CRYENGINE",
             "hex": "000000",
             "source": "https://www.cryengine.com/brand"
+        },
+        {
+            "title": "CryptPad",
+            "hex": "0087FF",
+            "source": "https://cryptpad.org"
         },
         {
             "title": "Crystal",
@@ -3878,6 +3893,12 @@
             "title": "Decap CMS",
             "hex": "FF0082",
             "source": "https://github.com/decaporg/decap-cms/blob/ba158f4a56d6d79869811971bc1bb0ef15197d30/website/static/img/decap-logo.svg"
+        },
+        {
+            "title": "Decentraland",
+            "hex": "FF2D55",
+            "source": "https://github.com/decentraland/catalyst/issues/1726#issuecomment-2078585173",
+            "guidelines": "https://decentraland.org/brand"
         },
         {
             "title": "DeepCool",
@@ -10929,8 +10950,9 @@
         },
         {
             "title": "OSGeo",
-            "hex": "5CAE58",
-            "source": "https://www.osgeo.org"
+            "hex": "4CB05B",
+            "source": "https://www.osgeo.org",
+            "guidelines": "https://www.osgeo.org/about/branding-material/"
         },
         {
             "title": "Oshkosh",
@@ -16310,6 +16332,11 @@
             "title": "Vite",
             "hex": "646CFF",
             "source": "https://vitejs.dev"
+        },
+        {
+            "title": "VitePress",
+            "hex": "5C73E7",
+            "source": "https://github.com/vuejs/vitepress/blob/f7aef3ca23dae39e226c85d7bb2579dbf7c758f3/art/vitepress-logo-mini.svg"
         },
         {
             "title": "Vitess",
