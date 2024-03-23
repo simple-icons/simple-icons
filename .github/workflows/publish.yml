@@ -18,7 +18,7 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run linters
         run: npm run lint
       - name: Build NodeJS package
@@ -41,7 +41,7 @@ jobs:
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Reformat to regular markdown
         run: node ./scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
