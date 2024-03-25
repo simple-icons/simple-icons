@@ -12,11 +12,13 @@ jobs:
         uses: actions/checkout@v4
       - id: match-java
         name: Match Java
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         # if the title contains the word Java (case insensitive)
         # we make sure that this word is the end of the string or is followed by a space character (ex. we do not want to match javascript)
         # we make sure that this word is the beginning of the string or is preceded by a space character (ex. we do not want to match foojava)
         run: |
-          if [[ "${{ github.event.issue.title }}" =~ (^|[[:space:]])([jJ][aA][vV][aA])([[:space:]]|$) ]]; then
+          if [[ "$ISSUE_TITLE" =~ (^|[[:space:]])([jJ][aA][vV][aA])([[:space:]]|$) ]]; then
               echo "match=true" >> $GITHUB_OUTPUT
           fi
 
