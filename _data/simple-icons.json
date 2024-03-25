@@ -114,6 +114,11 @@
             "source": "https://www.abstract.com/about"
         },
         {
+            "title": "abuse.ch",
+            "hex": "00465B",
+            "source": "https://abuse.ch"
+        },
+        {
             "title": "Academia",
             "hex": "41454A",
             "source": "https://www.academia.edu"
@@ -3890,6 +3895,12 @@
             "source": "https://github.com/decaporg/decap-cms/blob/ba158f4a56d6d79869811971bc1bb0ef15197d30/website/static/img/decap-logo.svg"
         },
         {
+            "title": "Decentraland",
+            "hex": "FF2D55",
+            "source": "https://github.com/decentraland/catalyst/issues/1726#issuecomment-2078585173",
+            "guidelines": "https://decentraland.org/brand"
+        },
+        {
             "title": "DeepCool",
             "hex": "068584",
             "source": "https://www.deepcool.com"
@@ -5164,6 +5175,14 @@
             "hex": "0066B3",
             "source": "https://www.firstinspires.org/brand",
             "guidelines": "https://www.firstinspires.org/brand"
+        },
+        {
+            "title": "fish shell",
+            "hex": "34C534",
+            "source": "https://github.com/fish-shell/fish-site/blob/1364b2e794c9aba7492c8962bae0f7fbe4886317/artwork/ascii%20fish.eps",
+            "license": {
+                "type": "GPL-2.0-only"
+            }
         },
         {
             "title": "Fitbit",
@@ -7182,6 +7201,11 @@
             "hex": "F5C518",
             "source": "https://brand.imdb.com/imdb",
             "guidelines": "https://brand.imdb.com/imdb"
+        },
+        {
+            "title": "iMessage",
+            "hex": "34DA50",
+            "source": "https://commons.wikimedia.org/wiki/File:IMessage_logo.svg"
         },
         {
             "title": "Imgur",
@@ -10943,8 +10967,9 @@
         },
         {
             "title": "OSGeo",
-            "hex": "5CAE58",
-            "source": "https://www.osgeo.org"
+            "hex": "4CB05B",
+            "source": "https://www.osgeo.org",
+            "guidelines": "https://www.osgeo.org/about/branding-material/"
         },
         {
             "title": "Oshkosh",
@@ -15757,6 +15782,11 @@
             "title": "TV Time",
             "hex": "FFD400",
             "source": "https://www.tvtime.com"
+        },
+        {
+            "title": "TV4 Play",
+            "hex": "E0001C",
+            "source": "https://tv4play.se"
         },
         {
             "title": "Twilio",
