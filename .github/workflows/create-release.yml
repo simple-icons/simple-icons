@@ -65,6 +65,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: version bump
-          commit_user_name: 'github-actions[bot]'
-          commit_user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
+          commit_user_name: 'simple-icons[bot]'
+          commit_user_email: 'simple-icons[bot]@users.noreply.github.com'
+          commit_author: 'simple-icons[bot] <simple-icons[bot]@users.noreply.github.com>'
