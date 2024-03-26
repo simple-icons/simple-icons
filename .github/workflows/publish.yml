@@ -68,8 +68,8 @@ jobs:
         run: ./scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config user.name "simple-icons[bot]"
+          git config user.email "simple-icons[bot]@users.noreply.github.com"
       # Commit that will only be included in the tag
       - name: Commit CDN theme image links removal
         run: |
