@@ -175,10 +175,8 @@ export const normalizeNewlines = (text) => {
 export const normalizeColor = (text) => {
   let color = text.replace('#', '').toUpperCase();
   if (color.length < 6) {
-    color = color
-      .slice(0, 3)
-      .map((x) => x.repeat(2))
-      .join('');
+    // eslint-disable-next-line unicorn/no-useless-spread
+    color = [...color.slice(0, 3)].map((x) => x.repeat(2)).join('');
   } else if (color.length > 6) {
     color = color.slice(0, 6);
   }
