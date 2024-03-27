@@ -1698,6 +1698,19 @@
             "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
+            "title": "AWS Elastic Load Balancing",
+            "hex": "8C4FFF",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS ELB",
+                    "Amazon ELB",
+                    "Amazon Elastic Load Balancing"
+                ]
+            }
+        },
+        {
             "title": "AWS Fargate",
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons",
