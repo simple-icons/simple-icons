@@ -57,6 +57,11 @@ jobs:
     needs: sanity-check
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Get commit message (for release title and body)
@@ -94,10 +99,15 @@ jobs:
     needs: npm
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Trigger simple-icons-font release
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
   website:
@@ -105,9 +115,14 @@ jobs:
     needs: npm
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Trigger simple-icons-website update
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"master"}' \
             https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches
