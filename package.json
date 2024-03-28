@@ -109,10 +109,10 @@
   "scripts": {
     "build": "./scripts/build/package.js",
     "clean": "./scripts/build/clean.js",
-    "format": "prettier --cache --write --ignore-unknown '**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)' && xo --fix",
+    "format": "prettier --cache --write --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\" && xo --fix",
     "lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint",
     "ourlint": "./scripts/lint/ourlint.js",
-    "prettierlint": "prettier --cache --check --ignore-unknown '**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)'",
+    "prettierlint": "prettier --cache --check --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
     "jslint": "xo",
     "jsonlint": "./scripts/lint/jsonlint.js",
     "svglint": "svglint --ci $npm_config_icons --config svglint.config.mjs",
