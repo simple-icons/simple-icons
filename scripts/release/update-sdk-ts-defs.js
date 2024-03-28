@@ -69,7 +69,7 @@ const generateSdkTs = async () => {
   } catch (error) {
     console.log(
       `Error ${error.status} executing Prettier` +
-        ` to pretiffy SDK TS definitions: '${error.message}'`,
+        ` to prettify SDK TS definitions: '${error.message}'`,
     );
     process.exit(1);
   }
