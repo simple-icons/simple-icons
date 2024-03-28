@@ -699,6 +699,17 @@
             }
         },
         {
+            "title": "Amazon Cognito",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS Cognito"
+                ]
+            }
+        },
+        {
             "title": "Amazon DocumentDB",
             "hex": "C925D1",
             "source": "https://aws.amazon.com/architecture/icons",
@@ -756,6 +767,17 @@
                     "Amazon Elastic Kubernetes Service",
                     "AWS EKS",
                     "AWS Elastic Kubernetes Service"
+                ]
+            }
+        },
+        {
+            "title": "Amazon ElastiCache",
+            "hex": "C925D1",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS ElastiCache"
                 ]
             }
         },
@@ -1698,6 +1720,19 @@
             "guidelines": "https://aws.amazon.com/architecture/icons"
         },
         {
+            "title": "AWS Elastic Load Balancing",
+            "hex": "8C4FFF",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "AWS ELB",
+                    "Amazon ELB",
+                    "Amazon Elastic Load Balancing"
+                ]
+            }
+        },
+        {
             "title": "AWS Fargate",
             "hex": "FF9900",
             "source": "https://aws.amazon.com/architecture/icons",
@@ -1714,6 +1749,17 @@
             "hex": "E7157B",
             "source": "https://aws.amazon.com/architecture/icons",
             "guidelines": "https://aws.amazon.com/architecture/icons"
+        },
+        {
+            "title": "AWS Secrets Manager",
+            "hex": "DD344C",
+            "source": "https://aws.amazon.com/architecture/icons",
+            "guidelines": "https://aws.amazon.com/architecture/icons",
+            "aliases": {
+                "aka": [
+                    "Amazon Secrets Manager"
+                ]
+            }
         },
         {
             "title": "Axios",
@@ -12711,6 +12757,11 @@
             "title": "Red Hat Open Shift",
             "hex": "EE0000",
             "source": "https://www.openshift.com"
+        },
+        {
+            "title": "Redash",
+            "hex": "FF7964",
+            "source": "https://github.com/getredash/website/blob/c454b523fdaa60218845313904c5498cda7e7b7a/static/assets/images/elements/redash-logo.svg"
         },
         {
             "title": "Redbubble",
