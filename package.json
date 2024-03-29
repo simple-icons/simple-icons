@@ -115,7 +115,7 @@
     "prettierlint": "prettier --cache --check --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
     "jslint": "xo",
     "jsonlint": "./scripts/lint/jsonlint.js",
-    "svglint": "svglint --ci $npm_config_icons --config svglint.config.mjs",
+    "svglint": "svglint --ci --config svglint.config.mjs icons/*.svg",
     "wslint": "editorconfig-checker",
     "prepare": "husky",
     "prepublishOnly": "npm run build",

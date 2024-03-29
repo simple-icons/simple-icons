@@ -180,7 +180,7 @@ const ignoreIcon = (linterName, path, $) => {
   iconIgnored[linterName][path] = iconName;
 };
 
-export const config = {
+const config = {
   rules: {
     elm: {
       svg: 1,
@@ -1023,3 +1023,5 @@ export const config = {
     ],
   },
 };
+
+export default config;
