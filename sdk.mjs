@@ -125,7 +125,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
- * Get path of *_data/simpe-icons.json*.
+ * Get path of *_data/simple-icons.json*.
  * @param {String} rootDirectory Path to the root directory of the project
  * @returns {String} Path of *_data/simple-icons.json*
  */
