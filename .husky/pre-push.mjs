@@ -14,7 +14,7 @@ const stdin = stdinBuffer.toString();
 if (!stdin) {
   process.exit(0);
 }
-const ref = stdinBuffer.toString().split(' ')[2];
+const ref = stdin.split(' ')[2];
 
 if (ref.startsWith('refs/tags/')) {
   if (!ref.match(/^refs\/tags\/\d+\.\d+\.\d+$/)) {
