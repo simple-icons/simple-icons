@@ -1,0 +1,33 @@
+name: Check release tag format
+on:
+  release:
+    types: [created]
+
+jobs:
+  check-release-tag-format:
+    runs-on: ubuntu-latest
+    name: Check release tag format
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - id: get-version
+        uses: ./.github/actions/get-version
+      - id: get-tag
+        run: echo "tag=$(echo $GITHUB_REF | sed 's/refs\/tags\///')" >> $GITHUB_OUTPUT
+      - name: Check tag format
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          if [[ ! $GITHUB_REF =~ ^refs/tags/${{ steps.get-version.outputs.version }} ]]; then
+            echo "Tag '${{ steps.get-tag.outputs.tag }}' must be '${{ steps.get-version.outputs.version }}'." >&2
+            echo "Deleting release and tag..." >&2
+            gh release delete ${{ steps.get-tag.outputs.tag }} --yes --cleanup-tag
+            echo "Release and tag '${{ steps.get-tag.outputs.tag }}' deleted."
+            echo "Please, create a new release with the correct tag."
+            exit 1
+          fi
