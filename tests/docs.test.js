@@ -1,16 +1,16 @@
-import { test } from 'mocha';
-import { strict as assert } from 'node:assert';
-import { getThirdPartyExtensions } from '../sdk.mjs';
+import {strict as assert} from 'node:assert';
+import {test} from 'mocha';
+import {getThirdPartyExtensions} from '../sdk.mjs';
 
 test('README third party extensions must be alphabetically sorted', async () => {
   const thirdPartyExtensions = await getThirdPartyExtensions();
   assert.ok(thirdPartyExtensions.length > 0);
 
   const thirdPartyExtensionsNames = thirdPartyExtensions.map(
-    (ext) => ext.module.name,
+    (extension) => extension.module.name,
   );
 
-  const expectedOrder = thirdPartyExtensionsNames.slice().sort();
+  const expectedOrder = [...thirdPartyExtensionsNames].sort();
   assert.deepEqual(
     thirdPartyExtensionsNames,
     expectedOrder,
