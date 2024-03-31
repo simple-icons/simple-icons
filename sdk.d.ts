@@ -3,7 +3,7 @@
  * Types for Simple Icons SDK.
  */
 
-import type { CustomLicense, SPDXLicense } from './types';
+import type {CustomLicense, SPDXLicense} from './types';
 
 /**
  * The data for a third-party extension.
@@ -33,14 +33,14 @@ type ThirdPartyExtensionSubject = {
 export type Aliases = {
   aka?: string[];
   dup?: DuplicateAlias[];
-  loc?: { [key: string]: string };
+  loc?: Record<string, string>;
 };
 
 type DuplicateAlias = {
   title: string;
   hex?: string;
   guidelines?: string;
-  loc?: { [key: string]: string };
+  loc?: Record<string, string>;
 };
 
 /**
@@ -71,9 +71,9 @@ export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
 export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
-export function getIconDataPath(rootDir?: string): string;
-export function getIconsDataString(rootDir?: string): string;
-export function getIconsData(rootDir?: string): IconData[];
+export function getIconDataPath(rootDirectory?: string): string;
+export function getIconsDataString(rootDirectory?: string): string;
+export function getIconsData(rootDirectory?: string): IconData[];
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
