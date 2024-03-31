@@ -2,6 +2,7 @@
   "prettier": true,
   "space": 2,
   "plugins": ["import"],
+  "ignores": ["sdk.d.ts"],
   "rules": {
     "n/no-unsupported-features": "off",
     "n/no-unsupported-features/node-builtins": "off",
