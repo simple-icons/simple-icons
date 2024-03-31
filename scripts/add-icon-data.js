@@ -1,22 +1,23 @@
+#!/usr/bin/env node
 import process from 'node:process';
+import {ExitPromptError, checkbox, confirm, input} from '@inquirer/prompts';
 import chalk from 'chalk';
-import { input, confirm, checkbox, ExitPromptError } from '@inquirer/prompts';
-import autocomplete from 'inquirer-autocomplete-standalone';
+import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import { search } from 'fast-fuzzy';
+import autocomplete from 'inquirer-autocomplete-standalone';
 import {
   URL_REGEX,
   collator,
   getIconsDataString,
-  titleToSlug,
   normalizeColor,
+  titleToSlug,
 } from '../sdk.mjs';
-import { getJsonSchemaData, writeIconsData } from './utils.js';
+import {getJsonSchemaData, writeIconsData} from './utils.js';
 
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
-const HEX_REGEX = /^#?[a-f0-9]{3,8}$/i;
+const HEX_REGEX = /^#?[a-f\d]{3,8}$/i;
 
 const aliasTypes = ['aka', 'old'].map((key) => ({
   name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
@@ -25,7 +26,7 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
 
 const licenseTypes =
   jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-    (license) => ({ name: license, value: license }),
+    (license) => ({name: license, value: license}),
   );
 
 const isValidURL = (input) =>
@@ -35,7 +36,7 @@ const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
 const isNewIcon = (input) =>
-  !iconsData.icons.find(
+  !iconsData.icons.some(
     (icon) =>
       icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
   ) || 'This icon title or slug already exists.';
@@ -83,10 +84,10 @@ try {
       ? {
           type: await autocomplete({
             message: "What is the icon's license?",
-            source: async (input) => {
+            async source(input) {
               input = (input || '').trim();
               return input
-                ? search(input, licenseTypes, { keySelector: (x) => x.value })
+                ? search(input, licenseTypes, {keySelector: (x) => x.value})
                 : licenseTypes;
             },
           }),
@@ -107,12 +108,14 @@ try {
         }).then(async (aliases) => {
           const result = {};
           for (const alias of aliases) {
+            // eslint-disable-next-line no-await-in-loop
             result[alias] = await input({
               message: `What ${alias} aliases would you like to add? (separate with commas)`,
             }).then((aliases) =>
               aliases.split(',').map((alias) => alias.trim()),
             );
           }
+
           return result;
         })
       : undefined,
@@ -136,11 +139,11 @@ try {
     console.log(chalk.red('\nAborted.'));
     process.exit(1);
   }
-} catch (err) {
-  if (err instanceof ExitPromptError) {
+} catch (error) {
+  if (error instanceof ExitPromptError) {
     console.log(chalk.red('\nAborted.'));
     process.exit(1);
   }
 
-  throw err;
+  throw error;
 }
