@@ -6,7 +6,7 @@ inputs:
     description: Issue or pull request number to get labels from
     required: true
   github-token:
-    description: GitHub token
+    description: GitHub token used to authenticate with the GitHub API
     default: ${{ secrets.GITHUB_TOKEN }}
 outputs:
   labels:
