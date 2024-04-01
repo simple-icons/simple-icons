@@ -125,7 +125,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
- * Get path of *_data/simpe-icons.json*.
+ * Get path of *_data/simple-icons.json*.
  * @param {String} rootDirectory Path to the root directory of the project
  * @returns {String} Path of *_data/simple-icons.json*
  */
@@ -175,10 +175,8 @@ export const normalizeNewlines = (text) => {
 export const normalizeColor = (text) => {
   let color = text.replace('#', '').toUpperCase();
   if (color.length < 6) {
-    color = color
-      .slice(0, 3)
-      .map((x) => x.repeat(2))
-      .join('');
+    // eslint-disable-next-line unicorn/no-useless-spread
+    color = [...color.slice(0, 3)].map((x) => x.repeat(2)).join('');
   } else if (color.length > 6) {
     color = color.slice(0, 6);
   }
