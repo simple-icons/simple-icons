@@ -1917,6 +1917,11 @@
             }
         },
         {
+            "title": "bat",
+            "hex": "31369E",
+            "source": "https://github.com/sharkdp/bat/blob/018a4826211b8b486883b720a5daa65eca2d4604/doc/logo-header.svg"
+        },
+        {
             "title": "Bata",
             "hex": "DD282E",
             "source": "https://www.bata.com"
@@ -5396,8 +5401,8 @@
         },
         {
             "title": "Font Awesome",
-            "hex": "528DD7",
-            "source": "https://fontawesome.com/v5.15/icons/font-awesome-flag"
+            "hex": "538DD7",
+            "source": "https://fontawesome.com"
         },
         {
             "title": "FontBase",
@@ -9035,6 +9040,11 @@
             "guidelines": "https://newsroom.malt.com/media-kit-uk"
         },
         {
+            "title": "Malwarebytes",
+            "hex": "0D3ECC",
+            "source": "https://www.malwarebytes.com"
+        },
+        {
             "title": "Mamba UI",
             "hex": "6D28D9",
             "source": "https://github.com/Microwawe/mamba-ui/blob/b4ca2eba570c451886e5822d7ba12a8d78015bba/src/assets/svg/logo.svg"
@@ -11231,6 +11241,11 @@
             "source": "https://substrate.dev"
         },
         {
+            "title": "Parrot Security",
+            "hex": "15E0ED",
+            "source": "https://gitlab.com/parrotsec/project/documentation/-/blob/d1d426b9cb3ea0efd16a2b34056c1ebb21bb9af9/static/img/parrot-logo.svg"
+        },
+        {
             "title": "Parse.ly",
             "hex": "5BA745",
             "source": "https://www.parse.ly/press-kit",
@@ -13082,6 +13097,11 @@
             "license": {
                 "type": "CC-BY-NC-SA-4.0"
             }
+        },
+        {
+            "title": "Rocket",
+            "hex": "D33847",
+            "source": "https://rocket.rs"
         },
         {
             "title": "Rocket.Chat",
