@@ -1,6 +1,7 @@
 name: Icon removal
 description: Report an icon for removal
 labels: [removal request]
+title: 'Removal: <brand-name>'
 
 body:
   - type: markdown
