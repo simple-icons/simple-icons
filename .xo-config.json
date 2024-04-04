@@ -34,7 +34,11 @@
   "overrides": [
     {
       "files": ["sdk.mjs", "sdk.d.ts"],
-      "nodeVersion": ">=14"
+      "nodeVersion": ">=14",
+      "rules": {
+        "eslint-comments/disable-enable-pair": "off",
+        "unicorn/no-abusive-eslint-disable": "off"
+      }
     },
     {
       "files": [
