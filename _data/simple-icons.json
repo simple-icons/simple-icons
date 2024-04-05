@@ -1023,6 +1023,11 @@
             "source": "https://www.antena3.com"
         },
         {
+            "title": "Anthropic",
+            "hex": "191919",
+            "source": "https://www.anthropic.com"
+        },
+        {
             "title": "Anycubic",
             "hex": "476695",
             "source": "https://store.anycubic.com/pages/firmware-software"
@@ -1947,6 +1952,12 @@
             "title": "Beats by Dre",
             "hex": "E01F3D",
             "source": "https://www.beatsbydre.com"
+        },
+        {
+            "title": "BeatStars",
+            "hex": "EB0000",
+            "source": "https://beatstars.world/brand-guidelines",
+            "guidelines": "https://beatstars.world/brand-guidelines"
         },
         {
             "title": "Behance",
@@ -3486,6 +3497,11 @@
             "hex": "1E1E28",
             "source": "https://www.coolermaster.com/branding",
             "guidelines": "https://www.coolermaster.com/branding"
+        },
+        {
+            "title": "Copa Airlines",
+            "hex": "0032A0",
+            "source": "https://www.copaair.com"
         },
         {
             "title": "Coppel",
@@ -7295,6 +7311,11 @@
             "source": "https://indeed.design/resources"
         },
         {
+            "title": "Indian Super League",
+            "hex": "ED2F21",
+            "source": "https://indiansuperleague.com"
+        },
+        {
             "title": "Indie Hackers",
             "hex": "0E2439",
             "source": "https://www.indiehackers.com"
@@ -8275,6 +8296,12 @@
             "title": "KTM",
             "hex": "FF6600",
             "source": "https://ktm.com"
+        },
+        {
+            "title": "Ktor",
+            "hex": "087CFA",
+            "source": "https://www.jetbrains.com/company/brand/#logos-and-icons-product-icons",
+            "guidelines": "https://www.jetbrains.com/company/brand/#brand-guidelines"
         },
         {
             "title": "Kuaishou",
@@ -9302,6 +9329,16 @@
             "aliases": {
                 "loc": {
                     "zh-CN": "美团"
+                }
+            }
+        },
+        {
+            "title": "Meizu",
+            "hex": "FF4132",
+            "source": "https://commons.wikimedia.org/wiki/File:Meizu.svg",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "魅族"
                 }
             }
         },
@@ -12524,6 +12561,11 @@
             "source": "https://about.qwant.com"
         },
         {
+            "title": "Qwik",
+            "hex": "AC7EF4",
+            "source": "https://github.com/BuilderIO/qwik/blob/c88e53d49dc65020899d770338f4e51f3134611e/packages/docs/public/logos/qwik-logo.svg"
+        },
+        {
             "title": "Qwiklabs",
             "hex": "F5CD0E",
             "source": "https://www.cloudskillsboost.google"
@@ -14683,6 +14725,11 @@
             "source": "https://www.stellar.org/press"
         },
         {
+            "title": "Stencil",
+            "hex": "5530FF",
+            "source": "https://ionic.io/ionicons"
+        },
+        {
             "title": "Stencyl",
             "hex": "8E1C04",
             "source": "https://www.stencyl.com/about/press/"
@@ -15529,6 +15576,12 @@
                     "ko-KR": "티스토리"
                 }
             }
+        },
+        {
+            "title": "tldraw",
+            "hex": "FAFAFA",
+            "source": "https://tldraw.dev",
+            "guidelines": "https://github.com/tldraw/tldraw/blob/main/TRADEMARKS.md"
         },
         {
             "title": "tmux",
