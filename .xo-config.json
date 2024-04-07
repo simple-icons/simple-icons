@@ -2,7 +2,6 @@
   "prettier": true,
   "space": 2,
   "plugins": ["import"],
-  "ignores": ["sdk.d.ts"],
   "rules": {
     "n/no-unsupported-features": "off",
     "n/no-unsupported-features/node-builtins": "off",
@@ -35,7 +34,11 @@
   "overrides": [
     {
       "files": ["sdk.mjs", "sdk.d.ts"],
-      "nodeVersion": ">=14"
+      "nodeVersion": ">=14",
+      "rules": {
+        "eslint-comments/disable-enable-pair": "off",
+        "unicorn/no-abusive-eslint-disable": "off"
+      }
     },
     {
       "files": [
