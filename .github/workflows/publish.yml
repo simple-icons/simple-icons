@@ -104,6 +104,7 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+          repositories: 'simple-icons-font'
       - name: Trigger simple-icons-font release
         run: |
           curl -X POST \
@@ -120,6 +121,7 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+          repositories: 'simple-icons-website'
       - name: Trigger simple-icons-website update
         run: |
           curl -X POST \

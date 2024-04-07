@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "11.10.0",
+  "version": "11.12.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -109,13 +109,15 @@
   "scripts": {
     "build": "./scripts/build/package.js",
     "clean": "./scripts/build/clean.js",
-    "format": "prettier --cache --write --ignore-unknown '**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)' && xo --fix",
+    "format": "npm run prettier -- --write && npm run xo:fix",
+    "xo:fix": "xo --fix",
+    "prettier": "prettier --cache --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
     "lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint",
     "ourlint": "./scripts/lint/ourlint.js",
-    "prettierlint": "prettier --cache --check --ignore-unknown '**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)'",
+    "prettierlint": "npm run prettier -- --check",
     "jslint": "xo",
     "jsonlint": "./scripts/lint/jsonlint.js",
-    "svglint": "svglint --ci $npm_config_icons --config svglint.config.mjs",
+    "svglint": "svglint --ci --config svglint.config.mjs icons/*.svg",
     "wslint": "editorconfig-checker",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
