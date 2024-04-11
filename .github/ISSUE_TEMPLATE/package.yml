@@ -1,16 +1,16 @@
 name: Packages
 description: Report problems and suggest ideas for the packages
-labels: [package]
+labels: [meta]
 
 body:
   - type: markdown
     attributes:
       value: |
         Before opening a new issue, make sure it isn't covered by an existing issue.
-        Please search for [issues with the `package` label][package-issues] (including
+        Please search for [issues with the `meta` label][meta-issues] (including
         closed issues) before you continue.
 
-        [package-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Apackage
+        [meta-issues]: https://github.com/simple-icons/simple-icons/labels/meta
 
   - type: dropdown
     attributes:
