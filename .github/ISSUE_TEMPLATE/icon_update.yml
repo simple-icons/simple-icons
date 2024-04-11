@@ -8,11 +8,11 @@ body:
     attributes:
       value: |
         Before opening a new issue, make sure it isn't covered by an existing issue.
-        Please search for [issues with the `icon outdated` label][icon-outdated-issues]
+        Please search for [issues with the `update-icon/data` label][update-icon/data]
         (including closed issues) before you continue. If you find one for the brand
         you're reporting then leave a comment on it or add a reaction.
 
-        [icon-outdated-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22icon+outdated%22
+        [update-icon/data]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22update+icon%2Fdata%22
 
   - type: input
     attributes:
