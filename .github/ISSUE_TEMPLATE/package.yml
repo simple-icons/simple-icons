@@ -1,16 +1,16 @@
 name: Packages
-description: Report problems and suggest ideas for the packages
-labels: [meta]
+description: Report problems and suggest ideas for the NPM and Packagist packages
+labels: [package]
 
 body:
   - type: markdown
     attributes:
       value: |
         Before opening a new issue, make sure it isn't covered by an existing issue.
-        Please search for [issues with the `meta` label][meta-issues] (including
+        Please search for [issues with the `package` label][package-issues] (including
         closed issues) before you continue.
 
-        [meta-issues]: https://github.com/simple-icons/simple-icons/labels/meta
+        [package-issues]: https://github.com/simple-icons/simple-icons/labels/package
 
   - type: dropdown
     attributes:
