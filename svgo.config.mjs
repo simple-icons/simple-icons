@@ -1,4 +1,4 @@
-export default {
+const config = {
   multipass: true,
   eol: 'lf',
   plugins: [
@@ -62,7 +62,7 @@ export default {
       // Convert basic shapes (such as <circle>) to <path>
       name: 'convertShapeToPath',
       params: {
-        // including <arc>
+        // Including <arc>
         convertArcs: true,
       },
     },
@@ -71,7 +71,7 @@ export default {
       // Sort the attributes on the <svg> tag
       name: 'sortAttrs',
       params: {
-        order: ['role', 'viewBox'],
+        order: ['role', 'viewBox', 'xmlns'],
         xmlnsOrder: 'end',
       },
     },
@@ -80,7 +80,11 @@ export default {
     {
       name: 'removeAttrs',
       params: {
-        attrs: ['svg:(?!(role|viewBox|xmlns))', 'path:(?!d)', 'title:*'],
+        attrs: [
+          'svg:.*(?<!((role)|(viewBox)|(xmlns)))',
+          'path:(?!d)',
+          'title:*',
+        ],
       },
     },
     'removeElementsByAttr',
@@ -89,7 +93,7 @@ export default {
       // to the <svg> tag if it's not there already
       name: 'addAttributesToSVGElement',
       params: {
-        attributes: [{ role: 'img', xmlns: 'http://www.w3.org/2000/svg' }],
+        attributes: [{role: 'img', xmlns: 'http://www.w3.org/2000/svg'}],
       },
     },
     'removeOffCanvasPaths',
@@ -98,3 +102,5 @@ export default {
     'reusePaths',
   ],
 };
+
+export default config;
