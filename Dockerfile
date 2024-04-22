@@ -9,4 +9,4 @@ RUN npm install --ignore-scripts --no-audit --no-fund
 
 COPY . .
 
-ENTRYPOINT ["npm", "run", "svgo", "--", "/image.svg"]
+ENTRYPOINT ["npx", "svgo", "/image.svg"]
