@@ -5,12 +5,13 @@
  */
 export type License = SPDXLicense | CustomLicense;
 
-type SPDXLicense = {
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export type SPDXLicense = {
   type: string;
-  url?: string;
+  url: string;
 };
 
-type CustomLicense = {
+export type CustomLicense = {
   type: 'custom';
   url: string;
 };
@@ -18,7 +19,7 @@ type CustomLicense = {
 /**
  * The data for a Simple Icon as is exported by the npm package.
  */
-export interface SimpleIcon {
+export type SimpleIcon = {
   title: string;
   slug: string;
   svg: string;
@@ -27,4 +28,4 @@ export interface SimpleIcon {
   hex: string;
   guidelines?: string;
   license?: License;
-}
+};

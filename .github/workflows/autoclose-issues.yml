@@ -8,21 +8,30 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - id: match-title
-        name: Match title
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - id: match-java
+        name: Match Java
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         # if the title contains the word Java (case insensitive)
         # we make sure that this word is the end of the string or is followed by a space character (ex. we do not want to match javascript)
         # we make sure that this word is the beginning of the string or is preceded by a space character (ex. we do not want to match foojava)
         run: |
-          if [[ "${{ github.event.issue.title }}" =~ (^|[[:space:]])([jJ][aA][vV][aA])([[:space:]]|$) ]]; then
+          if [[ "$ISSUE_TITLE" =~ (^|[[:space:]])([jJ][aA][vV][aA])([[:space:]]|$) ]]; then
               echo "match=true" >> $GITHUB_OUTPUT
           fi
 
       - id: get-labels
-        name: Get labels
-        run: |
-          labels="$(curl --retry 5 -s https://api.github.com/repos/simple-icons/simple-icons/issues/${{ github.event.issue.number }} | jq '.labels[].name' | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
-          echo "labels=$labels" >> $GITHUB_OUTPUT
+        uses: ./.github/actions/get-labels
+        with:
+          issue_number: ${{ github.event.issue.number }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       # if the issue is labeled as a 'new icon' and it matches Java, we
       # - add a comment referring to the removal request
@@ -30,10 +39,11 @@ jobs:
       # - we close the issue
       - name: Close the issue
         if: |
-          steps.match-title.outputs.match == 'true' &&
+          steps.match-java.outputs.match == 'true' &&
           contains(steps.get-labels.outputs.labels, 'new icon')
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
+          github-token: ${{ steps.app-token.outputs.token }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
