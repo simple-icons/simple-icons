@@ -1396,6 +1396,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `JSFiddle` | `jsfiddle` |
 | `JSON` | `json` |
 | `JSON Web Tokens` | `jsonwebtokens` |
+| `JSR` | `jsr` |
 | `JSS` | `jss` |
 | `JUCE` | `juce` |
 | `Juejin` | `juejin` |
@@ -2142,6 +2143,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Progate` | `progate` |
 | `Progress` | `progress` |
 | `Prometheus` | `prometheus` |
+| `Pronouns.page` | `pronounsdotpage` |
 | `ProSieben` | `prosieben` |
 | `Proteus` | `proteus` |
 | `Proto.io` | `protodotio` |
@@ -2390,6 +2392,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Scania` | `scania` |
 | `Schneider Electric` | `schneiderelectric` |
 | `scikit-learn` | `scikitlearn` |
+| `Scilab` | `scilab` |
 | `SciPy` | `scipy` |
 | `Scopus` | `scopus` |
 | `SCP Foundation` | `scpfoundation` |
@@ -2629,6 +2632,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
 | `Sumo Logic` | `sumologic` |
+| `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
 | `Supercrease` | `supercrease` |
