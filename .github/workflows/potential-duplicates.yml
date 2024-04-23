@@ -1,7 +1,7 @@
 name: Potential Duplicates
 on:
   issues:
-    types: [opened, edited]
+    types: [opened]
 
 jobs:
   run:
