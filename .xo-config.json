@@ -3,9 +3,6 @@
   "space": 2,
   "plugins": ["import"],
   "rules": {
-    "n/no-unsupported-features": "off",
-    "n/no-unsupported-features/node-builtins": "off",
-    "n/file-extension-in-import": "off",
     "sort-imports": [
       "error",
       {
@@ -29,7 +26,8 @@
         "warnOnUnassignedImports": true,
         "newlines-between": "never"
       }
-    ]
+    ],
+    "no-console": ["error", {"allow": ["warn", "error"]}]
   },
   "overrides": [
     {
@@ -48,6 +46,16 @@
         "svgo.config.mjs"
       ],
       "nodeVersion": ">=18"
+    },
+    {
+      "files": [
+        "scripts/add-icon-data.js",
+        "scripts/get-filename.js",
+        "scripts/release/update-sdk-ts-defs.js"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
     }
   ]
 }
