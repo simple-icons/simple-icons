@@ -274,6 +274,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aurelia` | `aurelia` |
 | `Auth0` | `auth0` |
 | `Authelia` | `authelia` |
+| `Authentik` | `authentik` |
 | `Authy` | `authy` |
 | `AutoCAD` | `autocad` |
 | `Autodesk` | `autodesk` |
@@ -1017,6 +1018,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Garmin` | `garmin` |
 | `Gatling` | `gatling` |
 | `Gatsby` | `gatsby` |
+| `Gcore` | `gcore` |
 | `GDAL` | `gdal` |
 | `Géant` | `geant` |
 | `GeeksforGeeks` | `geeksforgeeks` |
@@ -2590,6 +2592,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Starship` | `starship` |
 | `STARZ` | `starz` |
 | `Statamic` | `statamic` |
+| `Statista` | `statista` |
 | `Statuspage` | `statuspage` |
 | `Statuspal` | `statuspal` |
 | `Steam` | `steam` |
@@ -2755,6 +2758,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tinder` | `tinder` |
 | `Tindie` | `tindie` |
 | `Tinkercad` | `tinkercad` |
+| `tinygrad` | `tinygrad` |
 | `TinyLetter` | `tinyletter` |
 | `Tistory` | `tistory` |
 | `tldraw` | `tldraw` |
