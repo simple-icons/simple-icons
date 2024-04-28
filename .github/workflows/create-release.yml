@@ -64,13 +64,13 @@ jobs:
       - name: Install dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Update major version in CDN URLs
-        run: ./scripts/release/update-cdn-urls.js
+        run: node scripts/release/update-cdn-urls.js
       - name: Update SVGs count milestone
-        run: ./scripts/release/update-svgs-count.js
+        run: node scripts/release/update-svgs-count.js
       - name: Update slugs table
-        run: ./scripts/release/update-slugs-table.js
+        run: node scripts/release/update-slugs-table.js
       - name: Update SDK Typescript definitions
-        run: ./scripts/release/update-sdk-ts-defs.js
+        run: node scripts/release/update-sdk-ts-defs.js
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
