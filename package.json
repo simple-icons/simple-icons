@@ -84,6 +84,7 @@
     "url": "https://opencollective.com/simple-icons"
   },
   "devDependencies": {
+    "@inquirer/core": "8.1.0",
     "@inquirer/prompts": "5.0.2",
     "chalk": "5.3.0",
     "editorconfig-checker": "5.1.5",

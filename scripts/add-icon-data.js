@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import process from 'node:process';
-import {ExitPromptError, checkbox, confirm, input} from '@inquirer/prompts';
+import {ExitPromptError} from '@inquirer/core';
+import {checkbox, confirm, input} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
