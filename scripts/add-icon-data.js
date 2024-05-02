@@ -121,7 +121,7 @@ try {
       : undefined,
   };
 
-  console.log(
+  process.stdout.write(
     'About to write the following to simple-icons.json:\n' +
       JSON.stringify(answers, null, 4),
   );
@@ -134,14 +134,14 @@ try {
     iconsData.icons.push(answers);
     iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
     await writeIconsData(iconsData);
-    console.log(chalk.green('\nData written successfully.'));
+    process.stdout.write(chalk.green('\nData written successfully.'));
   } else {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.'));
     process.exit(1);
   }
 } catch (error) {
   if (error instanceof ExitPromptError) {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.'));
     process.exit(1);
   }
 
