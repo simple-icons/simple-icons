@@ -15,6 +15,6 @@ if (process.argv.length < 3) {
   const brandName = process.argv[2];
   const filename = titleToSlug(brandName);
   process.stdout.write(
-    `For '${brandName}' use the file 'icons/${filename}.svg'`,
+    `For '${brandName}' use the file 'icons/${filename}.svg'\n`,
   );
 }
