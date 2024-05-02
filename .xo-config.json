@@ -46,16 +46,6 @@
         "svgo.config.mjs"
       ],
       "nodeVersion": ">=18"
-    },
-    {
-      "files": [
-        "scripts/add-icon-data.js",
-        "scripts/get-filename.js",
-        "scripts/release/update-sdk-ts-defs.js"
-      ],
-      "rules": {
-        "no-console": "off"
-      }
     }
   ]
 }
