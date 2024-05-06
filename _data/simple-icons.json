@@ -5557,7 +5557,10 @@
         {
             "title": "freedesktop.org",
             "hex": "3B80AE",
-            "source": "https://commons.wikimedia.org/wiki/File:Freedesktop-logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Freedesktop-logo.svg",
+            "license": {
+                "type": "GPL-2.0-or-later"
+            }
         },
         {
             "title": "Freelancer",
