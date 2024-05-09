@@ -424,9 +424,9 @@ const config = {
             let errorMessage =
               `found ${precisionMax} decimals in segment` +
               ` "${iconPath.slice(segment.start, segment.end)}"`;
-            if (segment.chained) {
+            if (segment.chain !== undefined) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.slice(segment.chainStart, segment.chainEnd),
+                iconPath.slice(segment.chain.start, segment.chain.end),
               );
               errorMessage += ` of chain "${readableChain}"`;
             }
@@ -658,9 +658,9 @@ const config = {
               }
             }
 
-            if (segment.chained) {
+            if (segment.chain !== undefined) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.slice(segment.chainStart, segment.chainEnd),
+                iconPath.slice(segment.chain.start, segment.chain.end),
               );
               errorMessage += ` in chain "${readableChain}"`;
             }
@@ -707,7 +707,7 @@ const config = {
                 // SVG 1.1:
                 // If a moveto is followed by multiple pairs of coordinates,
                 // the subsequent pairs are treated as implicit lineto commands.
-                if (!seg.chained || seg.chainStart === seg.start) {
+                if (seg.chain === undefined || seg.chain.start === seg.start) {
                   startPoint = undefined;
                 }
 
@@ -717,7 +717,7 @@ const config = {
               case 'm': {
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
-                if (!seg.chained || seg.chainStart === seg.start) {
+                if (seg.chain === undefined || seg.chain.start === seg.start) {
                   startPoint = undefined;
                 }
 
@@ -886,9 +886,9 @@ const config = {
             segment.start,
             segment.end,
           )}" found`;
-          if (segment.chained) {
+          if (segment.chain !== undefined) {
             const readableChain = maybeShortenedWithEllipsis(
-              iconPath.slice(segment.chainStart, segment.chainEnd),
+              iconPath.slice(segment.chain.start, segment.chain.end),
             );
             errorMessage += ` in chain "${readableChain}"`;
           }
