@@ -5,7 +5,7 @@
 [![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr)
 [![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
 
-> **Note**\
+> [!IMPORTANT]\
 > We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
 
 Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
@@ -80,6 +80,10 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 ### Assessing Popularity
 
+> [!TIP]\
+> Similarweb is now trying to force users to log in in order to view statistics. You can bypass this by going directly to:
+> `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on!
+
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
 
 1. Its website's Similarweb global rank is in the top 500k.
@@ -98,6 +102,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
+1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
+    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
     - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
 1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
@@ -112,7 +118,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
-> [!NOTE]
+> [!NOTE]\
 > All metrics & cut-offs above are subject to ongoing review and potential change. These current metrics were devised in order to no longer rely on GitHub stars as an indication of a project's popularity. But, for projects that only exist on GitHub, we do still need some way of assessing their popularity so, until we can come up with a better way to do so, we have kept stars for the time being but will not be putting as much weight on them as in the past. If you know of a better way of assessing the popularity of a GitHub project then please create an issue for discussion.
 
 ### Opening an Issue
@@ -129,7 +135,8 @@ If you have an affiliation to the brand you are requesting that allows you to sp
 
 ## Adding or Updating an Icon
 
-**Note**: If you decide to add an icon without requesting it first, the requirements above still apply.
+> [!NOTE]\
+> If you decide to add an icon without requesting it first, the requirements above still apply.
 
 ### 1. Identify Official Logos and Colors
 
@@ -138,7 +145,7 @@ Most of the icons and brand colors on SimpleIcons have been derived from officia
 Official high quality brand logos and brand colors can usually be found in the following locations:
 
 1. About pages, Press pages, Media Kits, and Brand Guidelines.
-1. Website headers (you can use [svg-grabber](https://chrome.google.com/webstore/detail/svg-grabber-get-all-the-s/ndakggdliegnegeclmfgodmgemdokdmg) for Chrome)
+1. Website headers
 1. Favicons
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
@@ -161,7 +168,7 @@ If the icon includes a (registered) trademark icon we follow the guidelines belo
 
 #### Color Guidelines
 
-For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). If an icon's primary color is made up of a gradient, use [Eric Meyer's Color Blender tool](https://meyerweb.com/eric/tools/color-blend/#::1:hex) to pick the color of the calculated midpoint. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
 ### 2. Extract the Icon from the Logo
 
@@ -315,7 +322,7 @@ Here is the object of a fictional brand as an example:
 
 You can use `npm run add-icon-data` to add metadata via a CLI prompt.
 
-Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run ourlint` - this will tell you if any of the JSON data is in the wrong order.
 
 #### Optional Data
 
