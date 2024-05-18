@@ -274,6 +274,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Aurelia` | `aurelia` |
 | `Auth0` | `auth0` |
 | `Authelia` | `authelia` |
+| `Authentik` | `authentik` |
 | `Authy` | `authy` |
 | `AutoCAD` | `autocad` |
 | `Autodesk` | `autodesk` |
@@ -1017,6 +1018,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Garmin` | `garmin` |
 | `Gatling` | `gatling` |
 | `Gatsby` | `gatsby` |
+| `Gcore` | `gcore` |
 | `GDAL` | `gdal` |
 | `Géant` | `geant` |
 | `GeeksforGeeks` | `geeksforgeeks` |
@@ -1396,6 +1398,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `JSFiddle` | `jsfiddle` |
 | `JSON` | `json` |
 | `JSON Web Tokens` | `jsonwebtokens` |
+| `JSR` | `jsr` |
 | `JSS` | `jss` |
 | `JUCE` | `juce` |
 | `Juejin` | `juejin` |
@@ -2142,6 +2145,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Progate` | `progate` |
 | `Progress` | `progress` |
 | `Prometheus` | `prometheus` |
+| `Pronouns.page` | `pronounsdotpage` |
 | `ProSieben` | `prosieben` |
 | `Proteus` | `proteus` |
 | `Proto.io` | `protodotio` |
@@ -2390,6 +2394,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Scania` | `scania` |
 | `Schneider Electric` | `schneiderelectric` |
 | `scikit-learn` | `scikitlearn` |
+| `Scilab` | `scilab` |
 | `SciPy` | `scipy` |
 | `Scopus` | `scopus` |
 | `SCP Foundation` | `scpfoundation` |
@@ -2587,6 +2592,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Starship` | `starship` |
 | `STARZ` | `starz` |
 | `Statamic` | `statamic` |
+| `Statista` | `statista` |
 | `Statuspage` | `statuspage` |
 | `Statuspal` | `statuspal` |
 | `Steam` | `steam` |
@@ -2629,6 +2635,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
 | `Sumo Logic` | `sumologic` |
+| `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
 | `Supercrease` | `supercrease` |
@@ -2751,6 +2758,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tinder` | `tinder` |
 | `Tindie` | `tindie` |
 | `Tinkercad` | `tinkercad` |
+| `tinygrad` | `tinygrad` |
 | `TinyLetter` | `tinyletter` |
 | `Tistory` | `tistory` |
 | `tldraw` | `tldraw` |

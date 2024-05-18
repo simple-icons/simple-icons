@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import process from 'node:process';
-import {ExitPromptError, checkbox, confirm, input} from '@inquirer/prompts';
+import {ExitPromptError} from '@inquirer/core';
+import {checkbox, confirm, input} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
@@ -121,9 +122,10 @@ try {
       : undefined,
   };
 
-  console.log(
+  process.stdout.write(
     'About to write the following to simple-icons.json:\n' +
-      JSON.stringify(answers, null, 4),
+      JSON.stringify(answers, null, 4) +
+      '\n',
   );
 
   if (
@@ -134,14 +136,14 @@ try {
     iconsData.icons.push(answers);
     iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
     await writeIconsData(iconsData);
-    console.log(chalk.green('\nData written successfully.'));
+    process.stdout.write(chalk.green('\nData written successfully.\n'));
   } else {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.\n'));
     process.exit(1);
   }
 } catch (error) {
   if (error instanceof ExitPromptError) {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.\n'));
     process.exit(1);
   }
 
