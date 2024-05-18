@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -32,10 +32,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - id: get-version
@@ -43,9 +43,9 @@ jobs:
       - name: Install dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Reformat to regular markdown
-        run: node ./scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
-        run: node ./scripts/release/update-sdk-ts-defs.js
+        run: node scripts/release/update-sdk-ts-defs.js
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
@@ -57,6 +57,11 @@ jobs:
     needs: sanity-check
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@v4
       - name: Get commit message (for release title and body)
@@ -65,11 +70,11 @@ jobs:
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Reformat to regular markdown
-        run: node ./scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config user.name "simple-icons[bot]"
+          git config user.email "simple-icons[bot]@users.noreply.github.com"
       # Commit that will only be included in the tag
       - name: Commit CDN theme image links removal
         run: |
@@ -84,7 +89,7 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         with:
           tag_name: ${{ steps.get-version.outputs.version }}
           name: ${{ steps.commit.outputs.title }}
@@ -94,10 +99,16 @@ jobs:
     needs: npm
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+          repositories: 'simple-icons-font'
       - name: Trigger simple-icons-font release
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
   website:
@@ -105,9 +116,15 @@ jobs:
     needs: npm
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+          repositories: 'simple-icons-website'
       - name: Trigger simple-icons-website update
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.REMOTE_DISPATCH_TOKEN }}" \
+            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"master"}' \
             https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches
