@@ -1,22 +1,21 @@
 name: Packages
-description: Report problems and suggest ideas for the packages
+description: Report problems and suggest ideas for the NPM and Packagist packages
 labels: [package]
 
 body:
   - type: markdown
     attributes:
-      value: >-
+      value: |
         Before opening a new issue, make sure it isn't covered by an existing issue.
         Please search for [issues with the `package` label][package-issues] (including
         closed issues) before you continue.
 
-
-        [package-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Apackage
+        [package-issues]: https://github.com/simple-icons/simple-icons/labels/package
 
   - type: dropdown
     attributes:
       label: Kind of Issue
-      description: >-
+      description: |
         If your issue type is not here, select "other" and explain in the
         "Description" field below.
       options: [Bug, Feature, Performance, Other]
@@ -41,7 +40,7 @@ body:
   - type: textarea
     attributes:
       label: Other Software
-      description: >-
+      description: |
         The software that you are using the package with (Node.js & NPM, PHP & Packagist,
         Browser(s), other) and their versions. You can put "None" if you are unsure.
       placeholder: |
