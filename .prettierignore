@@ -6,12 +6,3 @@
 
 # We use our own formatting for the data files.
 _data/simple-icons.json
-
-# JavaScript templates are invalid JavaScript so cannot be formatted.
-scripts/build/templates/*.js
-
-# Generated JavaScript files don't need to be formatted
-index.js
-index.mjs
-index.d.ts
-sdk.js

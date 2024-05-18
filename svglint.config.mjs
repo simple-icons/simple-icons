@@ -1,15 +1,16 @@
+/* eslint complexity: off, max-depth: off */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {
-  SVG_PATH_REGEX,
-  getDirnameFromImportMeta,
-  htmlFriendlyToTitle,
-  collator,
-} from './sdk.mjs';
-import svgpath from 'svgpath';
 import svgPathBbox from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
+import svgpath from 'svgpath';
+import {
+  SVG_PATH_REGEX,
+  collator,
+  getDirnameFromImportMeta,
+  htmlFriendlyToTitle,
+} from './sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const dataFile = path.join(__dirname, '_data', 'simple-icons.json');
@@ -30,8 +31,8 @@ const svglintIgnores = JSON.parse(
 );
 
 const svgRegexp =
-  /^<svg( [^\s]*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
-const negativeZerosRegexp = /-0(?=[^\.]|[\s\d\w]|$)/g;
+  /^<svg( \S*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
+const negativeZerosRegexp = /-0(?=[^.]|[\s\d\w]|$)/g;
 
 const iconSize = 24;
 const iconTargetCenter = iconSize / 2;
@@ -39,25 +40,29 @@ const iconFloatPrecision = 3;
 const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
 
-// set env SI_UPDATE_IGNORE to recreate the ignore file
+// Set env SI_UPDATE_IGNORE to recreate the ignore file
 const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
 const ignoreFile = './.svglint-ignored.json';
-const iconIgnored = !updateIgnoreFile ? svglintIgnores : {};
+const iconIgnored = updateIgnoreFile ? {} : svglintIgnores;
 
-const sortObjectByKey = (obj) => {
-  return Object.keys(obj)
-    .sort()
-    .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
+const sortObjectByKey = (object) => {
+  return Object.fromEntries(
+    Object.keys(object)
+      .sort()
+      .map((k) => [k, object[k]]),
+  );
 };
 
-const sortObjectByValue = (obj) => {
-  return Object.keys(obj)
-    .sort((a, b) => collator.compare(obj[a], obj[b]))
-    .reduce((r, k) => Object.assign(r, { [k]: obj[k] }), {});
+const sortObjectByValue = (object) => {
+  return Object.fromEntries(
+    Object.keys(object)
+      .sort((a, b) => collator.compare(object[a], object[b]))
+      .map((k) => [k, object[k]]),
+  );
 };
 
 const removeLeadingZeros = (number) => {
-  // convert 0.03 to '.03'
+  // Convert 0.03 to '.03'
   return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 };
 
@@ -65,6 +70,7 @@ const removeLeadingZeros = (number) => {
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
  **/
+// eslint-disable-next-line max-params
 const collinear = (x1, y1, x2, y2, x3, y3) => {
   return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
 };
@@ -73,15 +79,16 @@ const collinear = (x1, y1, x2, y2, x3, y3) => {
  * Returns the number of digits after the decimal point.
  * @param num The number of interest.
  */
-const countDecimals = (num) => {
-  if (num && num % 1) {
-    let [base, op, trail] = num.toExponential().split(/e([+-])/);
-    let elen = parseInt(trail, 10);
-    let idx = base.indexOf('.');
-    return idx == -1
+const countDecimals = (number_) => {
+  if (number_ && number_ % 1) {
+    const [base, op, trail] = number_.toExponential().split(/e([+-])/);
+    const elen = Number.parseInt(trail, 10);
+    const index = base.indexOf('.');
+    return index === -1
       ? elen
-      : base.length - idx - 1 + (op === '+' ? -elen : elen);
+      : base.length - index - 1 + (op === '+' ? -elen : elen);
   }
+
   return 0;
 };
 
@@ -108,46 +115,48 @@ const getTitleTextIndex = (svgFileContent) => {
  * @param hex The hexadecimal number representation to convert.
  **/
 const hexadecimalToDecimal = (hex) => {
-  let result = 0,
-    digitValue;
+  let result = 0;
+  let digitValue;
   for (const digit of hex.toLowerCase()) {
     digitValue = '0123456789abcdefgh'.indexOf(digit);
     result = result * 16 + digitValue;
   }
+
   return result;
 };
 
-const maybeShortenedWithEllipsis = (str) => {
-  return str.length > 20 ? `${str.substring(0, 20)}...` : str;
+const maybeShortenedWithEllipsis = (string_) => {
+  return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 };
 
 /**
  * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
  */
-const memoize = (func) => {
+const memoize = (function_) => {
   const results = {};
 
-  return (arg, defaultKey = null) => {
-    const key = defaultKey || arg;
+  return (argument, defaultKey = null) => {
+    const key = defaultKey || argument;
 
-    if (!results[key]) {
-      results[key] = func(arg);
-    }
+    results[key] ||= function_(argument);
+
     return results[key];
   };
 };
 
-const getIconPath = memoize(($icon, filepath) => $icon.find('path').attr('d'));
+const getIconPath = memoize(($icon, _filepath) => $icon.find('path').attr('d'));
 const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
 const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
 
 if (updateIgnoreFile) {
   process.on('exit', async () => {
-    // ensure object output order is consistent due to async svglint processing
+    // Ensure object output order is consistent due to async svglint processing
     const sorted = sortObjectByKey(iconIgnored);
     for (const linterName in sorted) {
-      sorted[linterName] = sortObjectByValue(sorted[linterName]);
+      if (linterName) {
+        sorted[linterName] = sortObjectByValue(sorted[linterName]);
+      }
     }
 
     await fs.writeFile(ignoreFile, JSON.stringify(sorted, null, 2) + '\n', {
@@ -158,14 +167,12 @@ if (updateIgnoreFile) {
 
 const isIgnored = (linterName, path) => {
   return (
-    iconIgnored[linterName] && iconIgnored[linterName].hasOwnProperty(path)
+    iconIgnored[linterName] && Object.hasOwn(iconIgnored[linterName], path)
   );
 };
 
 const ignoreIcon = (linterName, path, $) => {
-  if (!iconIgnored[linterName]) {
-    iconIgnored[linterName] = {};
-  }
+  iconIgnored[linterName] ||= {};
 
   const title = $.find('title').text();
   const iconName = htmlFriendlyToTitle(title);
@@ -173,7 +180,7 @@ const ignoreIcon = (linterName, path, $) => {
   iconIgnored[linterName][path] = iconName;
 };
 
-export default {
+const config = {
   rules: {
     elm: {
       svg: 1,
@@ -183,7 +190,7 @@ export default {
     },
     attr: [
       {
-        // ensure that the SVG element has the appropriate attributes
+        // Ensure that the SVG element has the appropriate attributes
         // alphabetically ordered
         role: 'img',
         viewBox: `0 0 ${iconSize} ${iconSize}`,
@@ -193,12 +200,12 @@ export default {
         'rule::order': true,
       },
       {
-        // ensure that the title element has the appropriate attribute
+        // Ensure that the title element has the appropriate attribute
         'rule::selector': 'svg > title',
         'rule::whitelist': true,
       },
       {
-        // ensure that the path element only has the 'd' attribute
+        // Ensure that the path element only has the 'd' attribute
         // (no style, opacity, etc.)
         d: SVG_PATH_REGEX,
         'rule::selector': 'svg > path',
@@ -209,15 +216,15 @@ export default {
       (reporter, $, ast) => {
         reporter.name = 'icon-title';
 
-        const iconTitleText = $.find('title').text(),
-          xmlNamedEntitiesCodepoints = [38, 60, 62],
-          xmlNamedEntities = ['amp', 'lt', 'gt'];
+        const iconTitleText = $.find('title').text();
+        const xmlNamedEntitiesCodepoints = [38, 60, 62];
+        const xmlNamedEntities = ['amp', 'lt', 'gt'];
         let _validCodepointsRepr = true;
 
-        // avoid character codepoints as hexadecimal representation
-        const hexadecimalCodepoints = Array.from(
-          iconTitleText.matchAll(/&#x([A-Fa-f0-9]+);/g),
-        );
+        // Avoid character codepoints as hexadecimal representation
+        const hexadecimalCodepoints = [
+          ...iconTitleText.matchAll(/&#x([A-Fa-f\d]+);/g),
+        ];
         if (hexadecimalCodepoints.length > 0) {
           _validCodepointsRepr = false;
 
@@ -245,10 +252,10 @@ export default {
           }
         }
 
-        // avoid character codepoints as named entities
-        const namedEntitiesCodepoints = Array.from(
-          iconTitleText.matchAll(/&([A-Za-z0-9]+);/g),
-        );
+        // Avoid character codepoints as named entities
+        const namedEntitiesCodepoints = [
+          ...iconTitleText.matchAll(/&([A-Za-z\d]+);/g),
+        ];
         if (namedEntitiesCodepoints.length > 0) {
           for (const match of namedEntitiesCodepoints) {
             const namedEntiyReprIndex =
@@ -261,16 +268,15 @@ export default {
 
               if (
                 namedEntityJsRepr === undefined ||
-                namedEntityJsRepr.length != 1
+                namedEntityJsRepr.length !== 1
               ) {
                 replacement = 'its decimal or literal representation';
               } else {
                 const namedEntityDec = namedEntityJsRepr.codePointAt(0);
-                if (namedEntityDec < 128) {
-                  replacement = `"${namedEntityJsRepr}"`;
-                } else {
-                  replacement = `"&#${namedEntityDec};"`;
-                }
+                replacement =
+                  namedEntityDec < 128
+                    ? `"${namedEntityJsRepr}"`
+                    : `"&#${namedEntityDec};"`;
               }
 
               reporter.error(
@@ -283,11 +289,11 @@ export default {
         }
 
         if (_validCodepointsRepr) {
-          // compare encoded title with original title and report error if not equal
-          const encodingMatches = Array.from(
-              iconTitleText.matchAll(/&(#([0-9]+)|(amp|quot|lt|gt));/g),
-            ),
-            encodedBuf = [];
+          // Compare encoded title with original title and report error if not equal
+          const encodingMatches = [
+            ...iconTitleText.matchAll(/&(#(\d+)|(amp|quot|lt|gt));/g),
+          ];
+          const encodedBuf = [];
 
           const indexesToIgnore = [];
           for (const match of encodingMatches) {
@@ -300,8 +306,8 @@ export default {
             if (indexesToIgnore.includes(i)) {
               encodedBuf.unshift(iconTitleText[i]);
             } else {
-              // encode all non ascii characters plus "'&<> (XML named entities)
-              let charDecimalCode = iconTitleText.charCodeAt(i);
+              // Encode all non ascii characters plus "'&<> (XML named entities)
+              const charDecimalCode = iconTitleText.codePointAt(i);
 
               if (charDecimalCode > 127) {
                 encodedBuf.unshift(`&#${charDecimalCode};`);
@@ -318,6 +324,7 @@ export default {
               }
             }
           }
+
           const encodedIconTitleText = encodedBuf.join('');
           if (encodedIconTitleText !== iconTitleText) {
             _validCodepointsRepr = false;
@@ -328,17 +335,20 @@ export default {
             );
           }
 
-          // check if there are some other encoded characters in decimal notation
+          // Check if there are some other encoded characters in decimal notation
           // which shouldn't be encoded
+          // eslint-disable-next-line unicorn/prefer-number-properties
           for (const match of encodingMatches.filter((m) => !isNaN(m[2]))) {
-            const decimalNumber = parseInt(match[2]);
+            const decimalNumber = Number.parseInt(match[2], 10);
             if (decimalNumber > 127) {
               continue;
             }
+
             _validCodepointsRepr = false;
 
             const decimalCodepointCharIndex =
               getTitleTextIndex(ast.source) + match.index + 1;
+            let replacement;
             if (xmlNamedEntitiesCodepoints.includes(decimalNumber)) {
               replacement = `"&${
                 xmlNamedEntities[
@@ -347,7 +357,7 @@ export default {
               };"`;
             } else {
               replacement = String.fromCodePoint(decimalNumber);
-              replacement = replacement == '"' ? `'"'` : `"${replacement}"`;
+              replacement = replacement === '"' ? `'"'` : `"${replacement}"`;
             }
 
             reporter.error(
@@ -370,7 +380,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'icon-size';
 
         const iconPath = getIconPath($, filepath);
@@ -379,8 +389,8 @@ export default {
         }
 
         const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
-        const width = +(maxX - minX).toFixed(iconFloatPrecision);
-        const height = +(maxY - minY).toFixed(iconFloatPrecision);
+        const width = Number((maxX - minX).toFixed(iconFloatPrecision));
+        const height = Number((maxY - minY).toFixed(iconFloatPrecision));
 
         if (width === 0 && height === 0) {
           reporter.error(
@@ -399,7 +409,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'icon-precision';
 
         const iconPath = getIconPath($, filepath);
@@ -407,29 +417,31 @@ export default {
 
         for (const segment of segments) {
           const precisionMax = Math.max(
+            // eslint-disable-next-line unicorn/no-array-callback-reference
             ...segment.params.slice(1).map(countDecimals),
           );
           if (precisionMax > iconMaxFloatPrecision) {
-            let errorMsg =
+            let errorMessage =
               `found ${precisionMax} decimals in segment` +
-              ` "${iconPath.substring(segment.start, segment.end)}"`;
-            if (segment.chained) {
+              ` "${iconPath.slice(segment.start, segment.end)}"`;
+            if (segment.chain !== undefined) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.substring(segment.chainStart, segment.chainEnd),
+                iconPath.slice(segment.chain.start, segment.chain.end),
               );
-              errorMsg += ` of chain "${readableChain}"`;
+              errorMessage += ` of chain "${readableChain}"`;
             }
-            errorMsg += ` at index ${
+
+            errorMessage += ` at index ${
               segment.start + getPathDIndex(ast.source)
             }`;
             reporter.error(
               'Maximum precision should not be greater than' +
-                ` ${iconMaxFloatPrecision}; ${errorMsg}`,
+                ` ${iconMaxFloatPrecision}; ${errorMessage}`,
             );
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'ineffective-segments';
 
         const iconPath = getIconPath($, filepath);
@@ -446,10 +458,10 @@ export default {
         ];
         const upperMovementCommands = ['M', 'L'];
         const upperHorDirectionCommand = 'H';
-        const upperVerDirectionCommand = 'V';
+        const upperVersionDirectionCommand = 'V';
         const upperDirectionCommands = [
           upperHorDirectionCommand,
-          upperVerDirectionCommand,
+          upperVersionDirectionCommand,
         ];
         const upperCurveCommand = 'C';
         const upperShorthandCurveCommand = 'S';
@@ -458,23 +470,25 @@ export default {
           upperShorthandCurveCommand,
         ];
         const curveCommands = [...lowerCurveCommands, ...upperCurveCommands];
-        const commands = [
+        const commands = new Set([
           ...lowerMovementCommands,
           ...lowerDirectionCommands,
           ...upperMovementCommands,
           ...upperDirectionCommands,
           ...curveCommands,
-        ];
+        ]);
+
         const isInvalidSegment = (
           [command, x1Coord, y1Coord, ...rest],
           index,
           previousSegmentIsZ,
         ) => {
-          if (commands.includes(command)) {
+          if (commands.has(command)) {
             // Relative directions (h or v) having a length of 0
             if (lowerDirectionCommands.includes(command) && x1Coord === 0) {
               return true;
             }
+
             // Relative movement (m or l) having a distance of 0
             if (
               index > 0 &&
@@ -486,6 +500,7 @@ export default {
               // a relative placement (m) as if it were absolute (M)
               return command.toLowerCase() === 'm' ? !previousSegmentIsZ : true;
             }
+
             if (
               lowerCurveCommands.includes(command) &&
               x1Coord === 0 &&
@@ -503,45 +518,49 @@ export default {
                 return true;
               }
             }
+
             if (index > 0) {
-              let [yPrevCoord, xPrevCoord] = [
+              let [yPreviousCoord, xPreviousCoord] = [
                 ...absSegments[index - 1],
               ].reverse();
               // If the previous command was a direction one,
               // we need to iterate back until we find the missing coordinates
-              if (upperDirectionCommands.includes(xPrevCoord)) {
-                xPrevCoord = undefined;
-                yPrevCoord = undefined;
-                let idx = index;
+              if (upperDirectionCommands.includes(xPreviousCoord)) {
+                xPreviousCoord = undefined;
+                yPreviousCoord = undefined;
+                let index_ = index;
                 while (
-                  --idx > 0 &&
-                  (xPrevCoord === undefined || yPrevCoord === undefined)
+                  --index_ > 0 &&
+                  (xPreviousCoord === undefined || yPreviousCoord === undefined)
                 ) {
-                  let [yPrevCoordDeep, xPrevCoordDeep] = [
-                    ...absSegments[idx],
+                  let [yPreviousCoordDeep, xPreviousCoordDeep] = [
+                    ...absSegments[index_],
                   ].reverse();
                   // If the previous command was a horizontal movement,
                   // we need to consider the single coordinate as x
-                  if (upperHorDirectionCommand === xPrevCoordDeep) {
-                    xPrevCoordDeep = yPrevCoordDeep;
-                    yPrevCoordDeep = undefined;
+                  if (upperHorDirectionCommand === xPreviousCoordDeep) {
+                    xPreviousCoordDeep = yPreviousCoordDeep;
+                    yPreviousCoordDeep = undefined;
                   }
+
                   // If the previous command was a vertical movement,
                   // we need to consider the single coordinate as y
-                  if (upperVerDirectionCommand === xPrevCoordDeep) {
-                    xPrevCoordDeep = undefined;
+                  if (upperVersionDirectionCommand === xPreviousCoordDeep) {
+                    xPreviousCoordDeep = undefined;
                   }
+
                   if (
-                    xPrevCoord === undefined &&
-                    xPrevCoordDeep !== undefined
+                    xPreviousCoord === undefined &&
+                    xPreviousCoordDeep !== undefined
                   ) {
-                    xPrevCoord = xPrevCoordDeep;
+                    xPreviousCoord = xPreviousCoordDeep;
                   }
+
                   if (
-                    yPrevCoord === undefined &&
-                    yPrevCoordDeep !== undefined
+                    yPreviousCoord === undefined &&
+                    yPreviousCoordDeep !== undefined
                   ) {
-                    yPrevCoord = yPrevCoordDeep;
+                    yPreviousCoord = yPreviousCoordDeep;
                   }
                 }
               }
@@ -553,20 +572,21 @@ export default {
                 // and a control point equal to the ending point
                 if (
                   upperShorthandCurveCommand === command &&
-                  x1Coord === xPrevCoord &&
-                  y1Coord === yPrevCoord &&
+                  x1Coord === xPreviousCoord &&
+                  y1Coord === yPreviousCoord &&
                   x1Coord === x2Coord &&
                   y1Coord === y2Coord
                 ) {
                   return true;
                 }
+
                 // Absolute bézier curve (C) having
                 // the same coordinate as the previous segment
                 // and last control point equal to the ending point
                 if (
                   upperCurveCommand === command &&
-                  x1Coord === xPrevCoord &&
-                  y1Coord === yPrevCoord &&
+                  x1Coord === xPreviousCoord &&
+                  y1Coord === yPreviousCoord &&
                   x2Coord === xCoord &&
                   y2Coord === yCoord
                 ) {
@@ -578,16 +598,16 @@ export default {
                 // Absolute horizontal direction (H) having
                 // the same x coordinate as the previous segment
                 (upperHorDirectionCommand === command &&
-                  x1Coord === xPrevCoord) ||
+                  x1Coord === xPreviousCoord) ||
                 // Absolute vertical direction (V) having
                 // the same y coordinate as the previous segment
-                (upperVerDirectionCommand === command &&
-                  x1Coord === yPrevCoord) ||
+                (upperVersionDirectionCommand === command &&
+                  x1Coord === yPreviousCoord) ||
                 // Absolute movement (M or L) having the same
                 // coordinate as the previous segment
                 (upperMovementCommands.includes(command) &&
-                  x1Coord === xPrevCoord &&
-                  y1Coord === yPrevCoord)
+                  x1Coord === xPreviousCoord &&
+                  y1Coord === yPreviousCoord)
               );
             }
           }
@@ -599,13 +619,13 @@ export default {
             index > 0 && segments[index - 1].params[0].toLowerCase() === 'z';
 
           if (isInvalidSegment(segment.params, index, previousSegmentIsZ)) {
-            const [command, x1, y1, ...rest] = segment.params;
+            const [command, _x1, _y1, ...rest] = segment.params;
 
-            let errorMsg = `Ineffective segment "${iconPath.substring(
-                segment.start,
-                segment.end,
-              )}" found`,
-              resolutionTip = 'should be removed';
+            let errorMessage = `Ineffective segment "${iconPath.slice(
+              segment.start,
+              segment.end,
+            )}" found`;
+            let resolutionTip = 'should be removed';
 
             if (curveCommands.includes(command)) {
               const [x2, y2, x, y] = rest;
@@ -618,16 +638,19 @@ export default {
                   x2,
                 )} ${removeLeadingZeros(y2)}" or removed`;
               }
+
               if (command === upperShorthandCurveCommand) {
                 resolutionTip = `should be "L${removeLeadingZeros(
                   x2,
                 )} ${removeLeadingZeros(y2)}" or removed`;
               }
+
               if (command === lowerCurveCommand && (x !== 0 || y !== 0)) {
                 resolutionTip = `should be "l${removeLeadingZeros(
                   x,
                 )} ${removeLeadingZeros(y)}" or removed`;
               }
+
               if (command === upperCurveCommand) {
                 resolutionTip = `should be "L${removeLeadingZeros(
                   x,
@@ -635,21 +658,22 @@ export default {
               }
             }
 
-            if (segment.chained) {
+            if (segment.chain !== undefined) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.substring(segment.chainStart, segment.chainEnd),
+                iconPath.slice(segment.chain.start, segment.chain.end),
               );
-              errorMsg += ` in chain "${readableChain}"`;
+              errorMessage += ` in chain "${readableChain}"`;
             }
-            errorMsg += ` at index ${
+
+            errorMessage += ` at index ${
               segment.start + getPathDIndex(ast.source)
             }`;
 
-            reporter.error(`${errorMsg} (${resolutionTip})`);
+            reporter.error(`${errorMessage} (${resolutionTip})`);
           }
         }
       },
-      (reporter, $, ast, filepath) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'collinear-segments';
 
         /**
@@ -657,184 +681,222 @@ export default {
          *   (does not extracts collinear coordinates from curves).
          **/
         const getCollinearSegments = (iconPath) => {
-          const segments = getIconPathSegments(iconPath),
-            collinearSegments = [],
-            straightLineCommands = 'HhVvLlMm';
+          const segments = getIconPathSegments(iconPath);
+          const collinearSegments = [];
+          const straightLineCommands = 'HhVvLlMm';
 
-          let currLine = [],
-            currAbsCoord = [undefined, undefined],
-            startPoint,
-            _inStraightLine = false,
-            _nextInStraightLine = false,
-            _resetStartPoint = false;
+          let currentLine = [];
+          let currentAbsCoord = [undefined, undefined];
+          let startPoint;
+          let _inStraightLine = false;
+          let _nextInStraightLine = false;
+          let _resetStartPoint = false;
 
           for (let s = 0; s < segments.length; s++) {
-            let seg = segments[s].params,
-              cmd = seg[0],
-              nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
+            const seg = segments[s];
+            const parms = seg.params;
+            const cmd = parms[0];
+            const nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
 
             switch (cmd) {
               // Next switch cases have been ordered by frequency
               // of occurrence in the SVG paths of the icons
-              case 'M':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
-                startPoint = undefined;
+              case 'M': {
+                currentAbsCoord[0] = parms[1];
+                currentAbsCoord[1] = parms[2];
+                // SVG 1.1:
+                // If a moveto is followed by multiple pairs of coordinates,
+                // the subsequent pairs are treated as implicit lineto commands.
+                if (seg.chain === undefined || seg.chain.start === seg.start) {
+                  startPoint = undefined;
+                }
+
                 break;
-              case 'm':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
-                startPoint = undefined;
+              }
+
+              case 'm': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
+                if (seg.chain === undefined || seg.chain.start === seg.start) {
+                  startPoint = undefined;
+                }
+
                 break;
-              case 'H':
-                currAbsCoord[0] = seg[1];
+              }
+
+              case 'H': {
+                currentAbsCoord[0] = parms[1];
                 break;
-              case 'h':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
+              }
+
+              case 'h': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
                 break;
-              case 'V':
-                currAbsCoord[1] = seg[1];
+              }
+
+              case 'V': {
+                currentAbsCoord[1] = parms[1];
                 break;
-              case 'v':
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[1];
+              }
+
+              case 'v': {
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[1];
                 break;
-              case 'L':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
+              }
+
+              case 'L': {
+                currentAbsCoord[0] = parms[1];
+                currentAbsCoord[1] = parms[2];
                 break;
-              case 'l':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+              }
+
+              case 'l': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
+              }
+
               case 'Z':
-              case 'z':
-                // Overlapping in Z should be handled in another rule
-                currAbsCoord = [startPoint[0], startPoint[1]];
+              case 'z': {
+                // TODO: Overlapping in Z should be handled in another rule
+                currentAbsCoord = [startPoint[0], startPoint[1]];
                 _resetStartPoint = true;
                 break;
-              case 'C':
-                currAbsCoord[0] = seg[5];
-                currAbsCoord[1] = seg[6];
+              }
+
+              case 'C': {
+                currentAbsCoord[0] = parms[5];
+                currentAbsCoord[1] = parms[6];
                 break;
-              case 'c':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[5];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[6];
+              }
+
+              case 'c': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[5];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[6];
                 break;
-              case 'A':
-                currAbsCoord[0] = seg[6];
-                currAbsCoord[1] = seg[7];
+              }
+
+              case 'A': {
+                currentAbsCoord[0] = parms[6];
+                currentAbsCoord[1] = parms[7];
                 break;
-              case 'a':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[6];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[7];
+              }
+
+              case 'a': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[6];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[7];
                 break;
-              case 's':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+              }
+
+              case 's': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
-              case 'S':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
+              }
+
+              case 'S': {
+                currentAbsCoord[0] = parms[1];
+                currentAbsCoord[1] = parms[2];
                 break;
-              case 't':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[1];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[2];
+              }
+
+              case 't': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
-              case 'T':
-                currAbsCoord[0] = seg[1];
-                currAbsCoord[1] = seg[2];
+              }
+
+              case 'T': {
+                currentAbsCoord[0] = parms[1];
+                currentAbsCoord[1] = parms[2];
                 break;
-              case 'Q':
-                currAbsCoord[0] = seg[3];
-                currAbsCoord[1] = seg[4];
+              }
+
+              case 'Q': {
+                currentAbsCoord[0] = parms[3];
+                currentAbsCoord[1] = parms[4];
                 break;
-              case 'q':
-                currAbsCoord[0] =
-                  (!currAbsCoord[0] ? 0 : currAbsCoord[0]) + seg[3];
-                currAbsCoord[1] =
-                  (!currAbsCoord[1] ? 0 : currAbsCoord[1]) + seg[4];
+              }
+
+              case 'q': {
+                currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[3];
+                currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[4];
                 break;
-              default:
+              }
+
+              default: {
                 throw new Error(`"${cmd}" command not handled`);
+              }
             }
 
             if (startPoint === undefined) {
-              startPoint = [currAbsCoord[0], currAbsCoord[1]];
+              startPoint = [currentAbsCoord[0], currentAbsCoord[1]];
             } else if (_resetStartPoint) {
               startPoint = undefined;
               _resetStartPoint = false;
             }
 
             _nextInStraightLine = straightLineCommands.includes(nextCmd);
-            let _exitingStraightLine = _inStraightLine && !_nextInStraightLine;
+            const _exitingStraightLine =
+              _inStraightLine && !_nextInStraightLine;
             _inStraightLine = straightLineCommands.includes(cmd);
 
             if (_inStraightLine) {
-              currLine.push([currAbsCoord[0], currAbsCoord[1]]);
+              currentLine.push([currentAbsCoord[0], currentAbsCoord[1]]);
             } else {
               if (_exitingStraightLine) {
                 if (straightLineCommands.includes(cmd)) {
-                  currLine.push([currAbsCoord[0], currAbsCoord[1]]);
+                  currentLine.push([currentAbsCoord[0], currentAbsCoord[1]]);
                 }
+
                 // Get collinear coordinates
-                for (let p = 1; p < currLine.length - 1; p++) {
-                  let _collinearCoord = collinear(
-                    currLine[p - 1][0],
-                    currLine[p - 1][1],
-                    currLine[p][0],
-                    currLine[p][1],
-                    currLine[p + 1][0],
-                    currLine[p + 1][1],
+                for (let p = 1; p < currentLine.length - 1; p++) {
+                  const _collinearCoord = collinear(
+                    currentLine[p - 1][0],
+                    currentLine[p - 1][1],
+                    currentLine[p][0],
+                    currentLine[p][1],
+                    currentLine[p + 1][0],
+                    currentLine[p + 1][1],
                   );
                   if (_collinearCoord) {
                     collinearSegments.push(
-                      segments[s - currLine.length + p + 1],
+                      segments[s - currentLine.length + p + 1],
                     );
                   }
                 }
               }
-              currLine = [];
+
+              currentLine = [];
             }
           }
 
           return collinearSegments;
         };
 
-        const iconPath = getIconPath($, filepath),
-          collinearSegments = getCollinearSegments(iconPath);
+        const iconPath = getIconPath($, filepath);
+        const collinearSegments = getCollinearSegments(iconPath);
         if (collinearSegments.length === 0) {
           return;
         }
+
         const pathDIndex = getPathDIndex(ast.source);
         for (const segment of collinearSegments) {
-          let errorMsg = `Collinear segment "${iconPath.substring(
+          let errorMessage = `Collinear segment "${iconPath.slice(
             segment.start,
             segment.end,
           )}" found`;
-          if (segment.chained) {
-            let readableChain = maybeShortenedWithEllipsis(
-              iconPath.substring(segment.chainStart, segment.chainEnd),
+          if (segment.chain !== undefined) {
+            const readableChain = maybeShortenedWithEllipsis(
+              iconPath.slice(segment.chain.start, segment.chain.end),
             );
-            errorMsg += ` in chain "${readableChain}"`;
+            errorMessage += ` in chain "${readableChain}"`;
           }
-          errorMsg += ` at index ${
+
+          errorMessage += ` at index ${
             segment.start + pathDIndex
           } (should be removed)`;
-          reporter.error(errorMsg);
+          reporter.error(errorMessage);
         }
       },
       (reporter, $, ast) => {
@@ -853,16 +915,14 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'negative-zeros';
 
         const iconPath = getIconPath($, filepath);
 
         // Find negative zeros inside path
-        const negativeZeroMatches = Array.from(
-          iconPath.matchAll(negativeZerosRegexp),
-        );
-        if (negativeZeroMatches.length) {
+        const negativeZeroMatches = [...iconPath.matchAll(negativeZerosRegexp)];
+        if (negativeZeroMatches.length > 0) {
           // Calculate the index for each match in the file
           const pathDIndex = getPathDIndex(ast.source);
 
@@ -879,7 +939,7 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'icon-centered';
 
         const iconPath = getIconPath($, filepath);
@@ -888,9 +948,9 @@ export default {
         }
 
         const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
-        const centerX = +((minX + maxX) / 2).toFixed(iconFloatPrecision);
+        const centerX = Number(((minX + maxX) / 2).toFixed(iconFloatPrecision));
         const devianceX = centerX - iconTargetCenter;
-        const centerY = +((minY + maxY) / 2).toFixed(iconFloatPrecision);
+        const centerY = Number(((minY + maxY) / 2).toFixed(iconFloatPrecision));
         const devianceY = centerY - iconTargetCenter;
 
         if (
@@ -906,44 +966,44 @@ export default {
           }
         }
       },
-      (reporter, $, ast, { filepath }) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'path-format';
 
         const iconPath = getIconPath($, filepath);
 
         if (!SVG_PATH_REGEX.test(iconPath)) {
-          let errorMsg = 'Invalid path format',
-            reason;
+          const errorMessage = 'Invalid path format';
+          let reason;
 
           if (!iconPath.startsWith('M') && !iconPath.startsWith('m')) {
-            // doesn't start with moveto
+            // Doesn't start with moveto
             reason =
               'should start with "moveto" command ("M" or "m"),' +
-              ` but starts with \"${iconPath[0]}\"`;
-            reporter.error(`${errorMsg}: ${reason}`);
+              ` but starts with "${iconPath[0]}"`;
+            reporter.error(`${errorMessage}: ${reason}`);
           }
 
-          const validPathCharacters = SVG_PATH_REGEX.source.replace(
-              /[\[\]+^$]/g,
-              '',
-            ),
-            invalidCharactersMsgs = [],
-            pathDIndex = getPathDIndex(ast.source);
+          const validPathCharacters = SVG_PATH_REGEX.source.replaceAll(
+            /[[\]+^$]/g,
+            '',
+          );
+          const invalidCharactersMsgs = [];
+          const pathDIndex = getPathDIndex(ast.source);
 
-          for (let [i, char] of Object.entries(iconPath)) {
-            if (validPathCharacters.indexOf(char) === -1) {
+          for (const [i, char] of Object.entries(iconPath)) {
+            if (!validPathCharacters.includes(char)) {
               invalidCharactersMsgs.push(
-                `"${char}" at index ${pathDIndex + parseInt(i)}`,
+                `"${char}" at index ${pathDIndex + Number.parseInt(i, 10)}`,
               );
             }
           }
 
-          // contains invalid characters
+          // Contains invalid characters
           if (invalidCharactersMsgs.length > 0) {
             reason = `unexpected character${
               invalidCharactersMsgs.length > 1 ? 's' : ''
             } found (${invalidCharactersMsgs.join(', ')})`;
-            reporter.error(`${errorMsg}: ${reason}`);
+            reporter.error(`${errorMessage}: ${reason}`);
           }
         }
       },
@@ -963,3 +1023,5 @@ export default {
     ],
   },
 };
+
+export default config;
