@@ -1,16 +1,21 @@
 name: Potential Duplicates
 on:
   issues:
-    types: [opened, edited]
+    types: [opened]
 
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: wow-actions/potential-duplicates@v1
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          label: potential duplicate
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          label: duplicate
           exclude: |
             adding
             add
@@ -24,6 +29,7 @@ jobs:
             miss
             needing
             need
+            new
             please
             requesting
             request
@@ -35,7 +41,7 @@ jobs:
             for
             from
           state: all
-          threshold: 0.7
+          threshold: 0.8
           comment: |
             This issue is potentially a duplicate of one of the following issues:
             {{#issues}}

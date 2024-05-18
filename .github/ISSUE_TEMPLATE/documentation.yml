@@ -5,18 +5,17 @@ labels: [docs]
 body:
   - type: markdown
     attributes:
-      value: >-
+      value: |
         Before opening a new issue, make sure it isn't covered by an existing issue.
         Please search for [issues with the `docs` label][docs-issues] (including
         closed issues) before you continue.
 
-
-        [docs-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Adocs
+        [docs-issues]: https://github.com/simple-icons/simple-icons/labels/docs
 
   - type: dropdown
     attributes:
       label: Kind of Issue
-      description: >-
+      description: |
         If your issue type is not here, select "other" and explain in the
         "Description" field below.
       options: [Improvement, Mistake, Other]
@@ -31,17 +30,5 @@ body:
         - A (perma)link to the docs in question
         - Suggestions for how to change the docs
       placeholder: "Example: The documentation doesn't cover my use case of the NPM package..."
-    validations:
-      required: true
-
-  - type: dropdown
-    attributes:
-      label: Contributing
-      description: >-
-        This is an open source project and we welcome contributions. Do you want to
-        work on this issue?
-      options:
-        - 'Yes'
-        - 'No'
     validations:
       required: true
