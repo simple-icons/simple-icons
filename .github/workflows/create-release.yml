@@ -51,10 +51,10 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           # Ensure we are checked out on the develop branch
           ref: develop
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Bump version
