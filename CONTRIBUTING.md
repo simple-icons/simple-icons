@@ -168,7 +168,7 @@ If the icon includes a (registered) trademark icon we follow the guidelines belo
 
 #### Color Guidelines
 
-For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). If an icon's primary color is made up of a gradient, use [Eric Meyer's Color Blender tool](https://meyerweb.com/eric/tools/color-blend/#::1:hex) to pick the color of the calculated midpoint. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
 ### 2. Extract the Icon from the Logo
 
