@@ -3,9 +3,6 @@
   "space": 2,
   "plugins": ["import"],
   "rules": {
-    "n/no-unsupported-features": "off",
-    "n/no-unsupported-features/node-builtins": "off",
-    "n/file-extension-in-import": "off",
     "sort-imports": [
       "error",
       {
@@ -29,12 +26,17 @@
         "warnOnUnassignedImports": true,
         "newlines-between": "never"
       }
-    ]
+    ],
+    "no-console": ["error", {"allow": ["warn", "error"]}]
   },
   "overrides": [
     {
       "files": ["sdk.mjs", "sdk.d.ts"],
-      "nodeVersion": ">=14"
+      "nodeVersion": ">=14",
+      "rules": {
+        "eslint-comments/disable-enable-pair": "off",
+        "unicorn/no-abusive-eslint-disable": "off"
+      }
     },
     {
       "files": [
