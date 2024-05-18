@@ -47,8 +47,8 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue][removal-issues] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria] twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
 
 [meet our criteria]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon
-[icon-outdated-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=icon+outdated&template=icon_update.yml&title=Update%3A+
-[removal-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=removal+request&template=icon_removal.yml&title=Remove%3A+
+[icon-outdated-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=update+icon%2Fdata&template=icon_update.yml&title=Update%3A+
+[removal-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=breaking+change&template=icon_removal.yml&title=Remove%3A+
 [the simple icons contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#icon-guidelines
 [the simple icons github repository]: https://github.com/simple-icons/simple-icons
 [the simple icons website]: https://simpleicons.org/
