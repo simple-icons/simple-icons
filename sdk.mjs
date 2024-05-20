@@ -197,8 +197,8 @@ export const getThirdPartyExtensions = async (
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Extensions')[1]
-    .split('\n\n')[2]
-    .split('\n')
+    .split('|\n\n')[0]
+    .split('|\n|')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');
@@ -228,8 +228,8 @@ export const getThirdPartyLibraries = async (
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
     .split('## Third-Party Libraries')[1]
-    .split('\n\n')[2]
-    .split('\n')
+    .split('|\n\n')[0]
+    .split('|\n|')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');
