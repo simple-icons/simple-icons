@@ -1,6 +1,6 @@
-import { getIconsData, getIconSlug, slugToVariableName } from '../sdk.mjs';
 import * as simpleIcons from '../index.mjs';
-import { testIcon } from './test-icon.js';
+import {getIconSlug, getIconsData, slugToVariableName} from '../sdk.mjs';
+import {testIcon} from './test-icon.js';
 
 for (const icon of await getIconsData()) {
   const slug = getIconSlug(icon);
