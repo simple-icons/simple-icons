@@ -72,9 +72,9 @@ export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
 export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
-export function getIconDataPath(rootDir?: string): string;
-export function getIconsDataString(rootDir?: string): Promise<string>;
-export function getIconsData(rootDir?: string): Promise<IconData[]>;
+export function getIconDataPath(rootDirectory?: string): string;
+export function getIconsDataString(rootDirectory?: string): string;
+export function getIconsData(rootDirectory?: string): IconData[];
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
