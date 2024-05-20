@@ -1,5 +1,10 @@
 name: Verify Source
-on: [pull_request, push]
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
   build:
@@ -8,19 +13,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 22
+          cache: npm
+          cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Build NodeJS package
         run: npm run build
   lint:
@@ -29,26 +29,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install dependencies
-        run: npm i
-      - name: Run linter
-        run: npm run lint
-        env:
-          # Authorise GitHub API requests for editorconfig-checker
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Detect changed documentation files
-        uses: dorny/paths-filter@v2
+          node-version: 22
+          cache: npm
+          cache-dependency-path: '**/package.json'
+      - name: Detect changed files
+        uses: dorny/paths-filter@v3
         id: changes
         with:
           list-files: shell
@@ -56,8 +44,20 @@ jobs:
             docs:
               - '*.md'
               - '.github/**.md'
+            icons:
+              - 'icons/*.svg'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: npm i --ignore-scripts --no-audit --no-fund
+      - name: Run linter
+        run: |
+          sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
+          npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
+        env:
+          # Authorise GitHub API requests for editorconfig-checker
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
-        if: steps.changes.outputs.docs == 'true'
+        if: steps.changes.outputs.docs == true
         run: |
           npx markdown-link-check --retry \
             --config .github/markdown-link-check.json \
@@ -87,18 +87,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
-        uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20.x
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 22
+          cache: npm
+          cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm i
+        run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run tests
         run: npm run test

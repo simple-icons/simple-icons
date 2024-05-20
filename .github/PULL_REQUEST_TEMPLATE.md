@@ -8,11 +8,10 @@ https://wasm.simpleicons.org/preview
 
 **Issue:** closes #
 
-**Similarweb rank:**
+**Popularity metric:**
 
 <!--
-The Similarweb rank can be retrieved at https://www.similarweb.com
-Please see our contributing guidelines for more details on how we assess a brand's popularity.
+Regardless of whether or not the linked issue (if there is one) has a metric, please include the metric here for PR reviewers to validate. See our contributing guidelines at https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity for more details on how we assess a brand's popularity.
 -->
 
 ### Checklist
