@@ -93,9 +93,6 @@ To be considered popular enough to be within our scope, a brand must be in exist
 1. The website's Similarweb rank in any one country is either:
     - In the top 100, or,
     - In the top 10k, _with_ a global rank of 1m or better.
-1. The website's Similarweb global rank in any one category is either:
-    - In the top 50, or,
-    - In the top 5k, _with_ a global rank of 1m or better.
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
