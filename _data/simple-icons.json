@@ -444,7 +444,7 @@
             "source": "https://www.airbnb.com"
         },
         {
-            "title": "Airbrake.io",
+            "title": "Airbrake",
             "hex": "FFA500",
             "source": "https://github.com/airbrake/slate/blob/c116f2968bcf4dfda126511de0a2d0f0dc8b6a8e/source/images/logo.svg",
             "license": {
@@ -678,16 +678,6 @@
             }
         },
         {
-            "title": "Amazon AWS",
-            "hex": "232F3E",
-            "source": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg",
-            "aliases": {
-                "aka": [
-                    "AWS"
-                ]
-            }
-        },
-        {
             "title": "Amazon CloudWatch",
             "hex": "FF4F8B",
             "source": "https://aws.amazon.com/architecture/icons",
@@ -885,6 +875,16 @@
                     "Amazon Simple Queue Service",
                     "AWS SQS",
                     "AWS Simple Queue Service"
+                ]
+            }
+        },
+        {
+            "title": "Amazon Web Services",
+            "hex": "232F3E",
+            "source": "https://commons.wikimedia.org/wiki/File:Amazon_Web_Services_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "AWS"
                 ]
             }
         },
@@ -5287,11 +5287,6 @@
             "source": "https://www.fitbit.com/uk/home"
         },
         {
-            "title": "FITE",
-            "hex": "CA0404",
-            "source": "https://www.fite.tv"
-        },
-        {
             "title": "FiveM",
             "hex": "F40552",
             "source": "https://fivem.net"
@@ -5338,11 +5333,6 @@
             "license": {
                 "type": "CC-BY-3.0"
             }
-        },
-        {
-            "title": "Flattr",
-            "hex": "000000",
-            "source": "https://flattr.com"
         },
         {
             "title": "Flickr",
@@ -6143,11 +6133,6 @@
             "title": "Google Authenticator",
             "hex": "4285F4",
             "source": "https://commons.wikimedia.org/wiki/File:Google_Authenticator_(April_2023).svg"
-        },
-        {
-            "title": "Google Bard",
-            "hex": "886FBF",
-            "source": "https://bard.google.com"
         },
         {
             "title": "Google BigQuery",
@@ -7491,11 +7476,6 @@
             "hex": "2A7BA0",
             "source": "https://www.instructure.com/about/brand-guide/download-logos",
             "guidelines": "https://www.instructure.com/canvas/resources/noram-guides/instructure-brand-guide-2022"
-        },
-        {
-            "title": "Integromat",
-            "hex": "2F8CBB",
-            "source": "https://www.integromat.com"
         },
         {
             "title": "Intel",
@@ -10478,11 +10458,6 @@
             }
         },
         {
-            "title": "Niantic",
-            "hex": "000000",
-            "source": "https://nianticlabs.com/press"
-        },
-        {
             "title": "niconico",
             "hex": "231815",
             "source": "https://www.nicovideo.jp"
@@ -10517,11 +10492,6 @@
             "title": "Nintendo GameCube",
             "hex": "6A5FBB",
             "source": "https://www.nintendo.com/consumer/systems/nintendogamecube/index.jsp"
-        },
-        {
-            "title": "Nintendo Network",
-            "hex": "FF7D00",
-            "source": "https://id.nintendo.net/login"
         },
         {
             "title": "Nintendo Switch",
@@ -13319,15 +13289,6 @@
             "source": "https://rollupjs.org"
         },
         {
-            "title": "Rome",
-            "hex": "27272A",
-            "source": "https://github.com/rome/tools/blob/261c3f3bdc21439777f78b6551f707cce0c8d04a/assets/SVG/logomark_black.svg",
-            "guidelines": "https://github.com/rome/tools/tree/main/assets",
-            "license": {
-                "type": "CC-BY-NC-SA-4.0"
-            }
-        },
-        {
             "title": "Roon",
             "hex": "2039F3",
             "source": "https://help.roonlabs.com/portal/en/home"
@@ -13998,11 +13959,6 @@
             "guidelines": "https://www.shortcut.com/branding"
         },
         {
-            "title": "Shotcut",
-            "hex": "115C77",
-            "source": "https://shotcut.com/media/"
-        },
-        {
             "title": "Showpad",
             "hex": "2D2E83",
             "source": "https://www.showpad.com"
@@ -14165,12 +14121,6 @@
             "title": "Sky",
             "hex": "0072C9",
             "source": "https://www.skysports.com"
-        },
-        {
-            "title": "Skynet",
-            "hex": "00C65E",
-            "source": "https://support.siasky.net/key-concepts/skynet-brand-guidelines",
-            "guidelines": "https://support.siasky.net/key-concepts/skynet-brand-guidelines"
         },
         {
             "title": "Skypack",
@@ -16113,12 +16063,6 @@
             "hex": "9146FF",
             "source": "https://brand.twitch.tv",
             "guidelines": "https://brand.twitch.tv"
-        },
-        {
-            "title": "Twitter",
-            "hex": "1D9BF0",
-            "source": "https://brand.twitter.com",
-            "guidelines": "https://about.twitter.com/en/who-we-are/brand-toolkit"
         },
         {
             "title": "Typeform",
