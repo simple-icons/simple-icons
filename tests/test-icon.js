@@ -1,14 +1,14 @@
+import {strict as assert} from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { strict as assert } from 'node:assert';
-import { describe, it } from 'mocha';
+import {describe, it} from 'mocha';
 import {
   SVG_PATH_REGEX,
   getDirnameFromImportMeta,
   titleToSlug,
 } from '../sdk.mjs';
 
-const iconsDir = path.resolve(
+const iconsDirectory = path.resolve(
   getDirnameFromImportMeta(import.meta.url),
   '..',
   'icons',
@@ -25,7 +25,7 @@ const iconsDir = path.resolve(
  * @param {String} slug Icon data slug
  */
 export const testIcon = (icon, subject, slug) => {
-  const svgPath = path.resolve(iconsDir, `${slug}.svg`);
+  const svgPath = path.resolve(iconsDirectory, `${slug}.svg`);
 
   describe(icon.title, () => {
     it('has the correct "title"', () => {
@@ -77,7 +77,7 @@ export const testIcon = (icon, subject, slug) => {
     });
 
     if (icon.slug) {
-      // if an icon data has a slug, it must be different to the
+      // If an icon data has a slug, it must be different to the
       // slug inferred from the title, which prevents adding
       // unnecessary slugs to icons data
       it(`'${icon.title}' slug must be necessary`, () => {
