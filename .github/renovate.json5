@@ -1,4 +1,5 @@
 {
+  repositories: ['simple-icons/simple-icons'],
   extends: [
     'config:base',
 
@@ -16,5 +17,5 @@
   separateMajorMinor: false,
 
   // We manually update digest dependencies (eg. hashes in Github actions)
-  digest: { enabled: false },
+  digest: {enabled: false},
 }
