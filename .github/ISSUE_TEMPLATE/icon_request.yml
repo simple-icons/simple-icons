@@ -1,6 +1,7 @@
 name: Icon request
 description: Request a new icon for Simple Icons
 labels: [new icon]
+title: 'Request: <brand-name>'
 
 body:
   - type: markdown
@@ -16,8 +17,8 @@ body:
         you're requesting then leave a comment on it or add a reaction.
 
         > [!TIP]
-        > Similarweb is now trying to force users to log in in order to view statistics. You can bypass this by going directly to:
-        > `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on!
+        > In order to view website rankings on `similarweb.com`:
+        > Go to `https://similarweb.com/website`, enter the website address, and click on Analyze Traffic.
 
         [contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
