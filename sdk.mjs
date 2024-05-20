@@ -196,7 +196,42 @@ export const getThirdPartyExtensions = async (
   ),
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
-    .split('## Third-Party Extensions\n\n')[1]
+    .split(
+      '## Third-Party Extensions\n\nThe below are known extensions to third-party tools.\n\n',
+    )[1]
+    .split('\n\n', 1)[0]
+    .split('\n')
+    .slice(2)
+    .map((line) => {
+      let [module, author] = line.split(' | ');
+      module = module.split('<img src="')[0];
+      return {
+        module: {
+          name: /\[(.+)]/.exec(module)[1],
+          url: /\((.+)\)/.exec(module)[1],
+        },
+        author: {
+          name: /\[(.+)]/.exec(author)[1],
+          url: /\((.+)\)/.exec(author)[1],
+        },
+      };
+    });
+
+/**
+ * Get information about third party extensions from the README table.
+ * @param {String} readmePath Path to the README file
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
+ */
+export const getThirdPartyLibraries = async (
+  readmePath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    'README.md',
+  ),
+) =>
+  normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
+    .split(
+      '## Third-Party Libraries\n\nThe below are known third-party libraries for use in your own projects. We only keep items in the list that are at least up to date with our previous major version.\n\n',
+    )[1]
     .split('\n\n', 1)[0]
     .split('\n')
     .slice(2)
