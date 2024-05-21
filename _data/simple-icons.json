@@ -1611,6 +1611,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Audio-technica.svg"
         },
         {
+            "title": "Audiobookshelf",
+            "hex": "82612C",
+            "source": "https://github.com/advplyr/audiobookshelf/blob/0d9d2fa4be9b642f0948e52ddff71ff370fd524d/images/banner.svg"
+        },
+        {
             "title": "Audioboom",
             "hex": "007CE2",
             "source": "https://audioboom.com/about/brand-guidelines"
@@ -5078,7 +5083,7 @@
         {
             "title": "FastAPI",
             "hex": "009688",
-            "source": "https://github.com/tiangolo/fastapi/blob/6205935323ded4767438ee81623892621b353415/docs/en/docs/img/icon-white.svg"
+            "source": "https://github.com/tiangolo/fastapi/blob/ffb4f77a11f83132b521ba0aac6c95792c19e797/docs/en/docs/img/icon-white.svg"
         },
         {
             "title": "Fastify",
@@ -5655,6 +5660,12 @@
             "title": "Furry Network",
             "hex": "2E75B4",
             "source": "https://furrynetwork.com"
+        },
+        {
+            "title": "FusionAuth",
+            "hex": "F58320",
+            "source": "https://fusionauth.io/brand-logo-guidelines",
+            "guidelines": "https://fusionauth.io/brand-logo-guidelines"
         },
         {
             "title": "FutureLearn",
@@ -7107,6 +7118,12 @@
             "guidelines": "https://www.hubspot.com/style-guide"
         },
         {
+            "title": "Hugging Face",
+            "hex": "FFD21E",
+            "source": "https://huggingface.co/brand",
+            "guidelines": "https://huggingface.co/brand"
+        },
+        {
             "title": "Hugo",
             "hex": "FF4088",
             "source": "https://gohugo.io"
@@ -7963,6 +7980,11 @@
             "hex": "20BEFF",
             "source": "https://www.kaggle.com/brand-guidelines",
             "guidelines": "https://www.kaggle.com/brand-guidelines"
+        },
+        {
+            "title": "Kagi",
+            "hex": "FFB319",
+            "source": "https://kagi.com"
         },
         {
             "title": "Kahoot!",
@@ -10123,6 +10145,11 @@
             "source": "https://n26.com"
         },
         {
+            "title": "n8n",
+            "hex": "EA4B71",
+            "source": "https://n8n.io/press"
+        },
+        {
             "title": "Namebase",
             "hex": "0068FF",
             "source": "https://www.namebase.io"
@@ -10451,11 +10478,6 @@
                     "National Hockey League"
                 ]
             }
-        },
-        {
-            "title": "Niantic",
-            "hex": "000000",
-            "source": "https://nianticlabs.com/press"
         },
         {
             "title": "niconico",
@@ -13598,6 +13620,11 @@
             "source": "https://www.sap.com"
         },
         {
+            "title": "Sartorius",
+            "hex": "FFED00",
+            "source": "https://www.sartorius.com"
+        },
+        {
             "title": "Sass",
             "hex": "CC6699",
             "source": "https://sass-lang.com/styleguide/brand",
@@ -16151,6 +16178,12 @@
             "source": "https://getuikit.com"
         },
         {
+            "title": "UiPath",
+            "hex": "FA4616",
+            "source": "https://www.uipath.com/newsroom",
+            "guidelines": "https://brandguidelines.uipath.com"
+        },
+        {
             "title": "Ulule",
             "hex": "18A5D6",
             "source": "https://ulule.frontify.com/d/EX3dK8qsXgqh/branding-guidelines"
@@ -16250,6 +16283,11 @@
             "title": "UnoCSS",
             "hex": "333333",
             "source": "https://github.com/unocss/unocss/blob/fc2ed5bb6019b45565ff5293d4b650522f1b79b4/playground/public/icon.svg"
+        },
+        {
+            "title": "unpkg",
+            "hex": "000000",
+            "source": "https://github.com/mjackson/unpkg/blob/af8c8db00fdacd77961ab2a8c3edb45a27d3a6a3/public/favicon.ico"
         },
         {
             "title": "Unraid",
