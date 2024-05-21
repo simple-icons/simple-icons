@@ -80,4 +80,7 @@ export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
   readmePath?: string,
 ): Promise<ThirdPartyExtension[]>;
+export function getThirdPartyLibraries(
+  readmePath?: string,
+): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
