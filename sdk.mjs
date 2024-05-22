@@ -34,11 +34,6 @@ const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
 
 /**
- * Regex to validate HTTPs URLs.
- */
-export const URL_REGEX = /^https:\/\/[^\s"']+$/;
-
-/**
  * Regex to validate SVG paths.
  */
 export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
@@ -51,6 +46,24 @@ export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
+
+/**
+ * Build a regex to validate HTTPs URLs.
+ * @param {String} jsonschemaPath Path to the *.jsonschema.json* file
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs
+ */
+export const urlRegex = async (
+  jsonschemaPath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    '.jsonschema.json',
+  ),
+) => {
+  return new RegExp(
+    JSON.parse(
+      await fs.readFile(jsonschemaPath, 'utf8'),
+    ).definitions.url.pattern,
+  );
+};
 
 /**
  * Get the slug/filename for an icon.
