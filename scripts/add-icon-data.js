@@ -7,11 +7,11 @@ import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
 import autocomplete from 'inquirer-autocomplete-standalone';
 import {
-  URL_REGEX,
   collator,
   getIconsDataString,
   normalizeColor,
   titleToSlug,
+  urlRegex,
 } from '../sdk.mjs';
 import {getJsonSchemaData, writeIconsData} from './utils.js';
 
@@ -30,8 +30,10 @@ const licenseTypes =
     (license) => ({name: license, value: license}),
   );
 
-const isValidURL = (input) =>
-  URL_REGEX.test(input) || 'Must be a valid and secure (https://) URL.';
+const isValidURL = async (input) => {
+  const regex = await urlRegex();
+  return regex.test(input) || 'Must be a valid and secure (https://) URL.';
+};
 
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';

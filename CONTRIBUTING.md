@@ -458,7 +458,7 @@ A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to mak
 ```typescript
 import { getIconsData, type IconData } from 'simple-icons/sdk';
 
-const iconsData: IconData[] = getIconsData();
+const iconsData: Promise<IconData[]> = getIconsData();
 ```
 
 ```javascript
@@ -466,6 +466,6 @@ import { getIconsData } from 'simple-icons/sdk';
 
 /* @typedef {import("./simple-icons/sdk").IconData} IconData */
 
-/* @type {IconData[]} */
+/* @type {Promise<IconData[]>} */
 const iconsData = getIconsData();
 ```
