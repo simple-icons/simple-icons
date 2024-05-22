@@ -93,9 +93,6 @@ To be considered popular enough to be within our scope, a brand must be in exist
 1. The website's Similarweb rank in any one country is either:
     - In the top 100, or,
     - In the top 10k, _with_ a global rank of 1m or better.
-1. The website's Similarweb global rank in any one category is either:
-    - In the top 50, or,
-    - In the top 5k, _with_ a global rank of 1m or better.
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
@@ -168,7 +165,7 @@ If the icon includes a (registered) trademark icon we follow the guidelines belo
 
 #### Color Guidelines
 
-For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). If an icon's primary color is made up of a gradient, use [Eric Meyer's Color Blender tool](https://meyerweb.com/eric/tools/color-blend/#::1:hex) to pick the color of the calculated midpoint. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
 
 ### 2. Extract the Icon from the Logo
 
@@ -322,7 +319,7 @@ Here is the object of a fictional brand as an example:
 
 You can use `npm run add-icon-data` to add metadata via a CLI prompt.
 
-Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run our-lint` - this will tell you if any of the JSON data is in the wrong order.
+Make sure the icon is added in alphabetical order. If you're in doubt, you can always run `npm run ourlint` - this will tell you if any of the JSON data is in the wrong order.
 
 #### Optional Data
 
@@ -461,7 +458,7 @@ A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to mak
 ```typescript
 import { getIconsData, type IconData } from 'simple-icons/sdk';
 
-const iconsData: IconData[] = getIconsData();
+const iconsData: Promise<IconData[]> = getIconsData();
 ```
 
 ```javascript
@@ -469,6 +466,6 @@ import { getIconsData } from 'simple-icons/sdk';
 
 /* @typedef {import("./simple-icons/sdk").IconData} IconData */
 
-/* @type {IconData[]} */
+/* @type {Promise<IconData[]>} */
 const iconsData = getIconsData();
 ```
