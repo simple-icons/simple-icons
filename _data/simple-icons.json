@@ -1777,6 +1777,11 @@
             }
         },
         {
+            "title": "Awwwards",
+            "hex": "222222",
+            "source": "https://www.awwwards.com"
+        },
+        {
             "title": "Axios",
             "hex": "5A29E4",
             "source": "https://github.com/axios/axios-docs/blob/ba35d67160f94419c1b0292831cd1a4b378adb42/assets/logo.svg"
@@ -7005,6 +7010,11 @@
             "source": "https://github.com/homebridge/branding/blob/6ef3a1685e79f79a2ecdcc83824e53775ec0475d/logos/homebridge-silhouette-round-black.svg"
         },
         {
+            "title": "Homepage",
+            "hex": "009BD5",
+            "source": "https://github.com/gethomepage/homepage/blob/e56dccc7f17144a53b97a315c2e4f622fa07e58d/public/safari-pinned-tab.svg"
+        },
+        {
             "title": "homify",
             "hex": "7DCDA3",
             "source": "https://www.homify.com"
@@ -12020,6 +12030,17 @@
             "source": "https://portswigger.net"
         },
         {
+            "title": "Posit",
+            "hex": "447099",
+            "source": "https://docs.posit.co",
+            "guidelines": "https://posit.co/about/trademark-guidelines",
+            "aliases": {
+                "old": [
+                    "RStudio"
+                ]
+            }
+        },
+        {
             "title": "PostCSS",
             "hex": "DD3A0A",
             "source": "https://postcss.org"
@@ -12844,6 +12865,11 @@
             }
         },
         {
+            "title": "React Bootstrap",
+            "hex": "41E0FD",
+            "source": "https://github.com/react-bootstrap/react-bootstrap/blob/be23c304fa40ddb209919b0faac1e5dd8cef53ad/www/static/img/logo.svg"
+        },
+        {
             "title": "React Hook Form",
             "hex": "EC5990",
             "source": "https://github.com/react-hook-form/documentation/blob/d049ffe923336ce7a5bf58990c54c07f39ab2429/src/images/Logo.svg"
@@ -13048,7 +13074,8 @@
         {
             "title": "RenovateBot",
             "hex": "1A1F6C",
-            "source": "https://avatars1.githubusercontent.com/u/38656520"
+            "source": "https://avatars1.githubusercontent.com/u/38656520",
+            "guidelines": "https://docs.renovatebot.com/logo-brand-guidelines"
         },
         {
             "title": "Renren",
