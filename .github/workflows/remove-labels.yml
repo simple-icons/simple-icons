@@ -13,9 +13,14 @@ jobs:
     if: github.event.pull_request.merged
     runs-on: ubuntu-latest
     steps:
-      - uses: mondeja/remove-labels-gh-action@v1
+      - uses: actions/create-github-app-token@v1
+        id: app-token
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: mondeja/remove-labels-gh-action@v2
+        with:
+          token: ${{ steps.app-token.outputs.token }}
           labels: |
             assessing
             awaiting reply
@@ -31,9 +36,14 @@ jobs:
     if: github.event_name == 'pull_request_target' && (! github.event.pull_request.merged)
     runs-on: ubuntu-latest
     steps:
-      - uses: mondeja/remove-labels-gh-action@v1
+      - uses: actions/create-github-app-token@v1
+        id: app-token
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: mondeja/remove-labels-gh-action@v2
+        with:
+          token: ${{ steps.app-token.outputs.token }}
           labels: |
             in discussion
             pending
@@ -43,9 +53,14 @@ jobs:
     if: github.event.issue.state == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - uses: mondeja/remove-labels-gh-action@v1
+      - uses: actions/create-github-app-token@v1
+        id: app-token
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: mondeja/remove-labels-gh-action@v2
+        with:
+          token: ${{ steps.app-token.outputs.token }}
           labels: |
             in discussion
             pending
