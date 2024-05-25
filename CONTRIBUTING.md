@@ -43,6 +43,7 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
   * [Assessing Popularity](#assessing-popularity)
   * [Opening an Issue](#opening-an-issue)
 * [Adding or Updating an Icon](#adding-or-updating-an-icon)
+  * [Requesting Permission](#requesting-permission)
 * [Testing Package Locally](#testing-package-locally)
 * [Using Docker](#using-docker)
 
@@ -429,6 +430,28 @@ Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_
 Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
+
+### Requesting Permission
+
+If a brand's terms and conditions state that we need permission to include their brand, we will tag related issues and PRs with `permission required`. Anybody creating a PR for one of these icons is responsible (even if we discover permission requirements during PR review) for obtaining said permission.
+
+If a contributor have been asked to obtain permission, they have 2 weeks to confirm they've reached out to the brand. If they do not confirm they have done this during that time, the PR will be closed.
+
+If the contributor _has_ confirmed they've reached out to the brand, we will wait a maximum of 2 months for a response. If the response is an outright 'no' or is ambiguous, both the PR and issue will be closed, and the issue will marked as `will not add`. If the brand does not respond, we may close the PR or mark it as a draft, depending on whether the contributor is still actively pursuing a response. If the brand approves usage, the contributor should add the email response to the comments of the PR, and we will continue to merge the icon into the collection.
+
+#### Example Email
+
+```text
+Dear [Brand Name],
+
+I am contributing to the Simple Icons project on GitHub (https://github.com/simple-icons/simple-icons) and would like to add your brand's icon.
+One of the maintainers has requested - as per your Terms and Conditions - that I reach out to formally obtain permission prior to accepting it into their collection.
+Could you please let me know at your earliest convenience whether or not we are okay to include your brand's icon in the project?
+
+Kind regards,
+
+[Your name]
+```
 
 ## Testing Package Locally
 
