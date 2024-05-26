@@ -67,6 +67,14 @@ Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://dev
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons/eee/_" />
 ```
 
+You can use a `viewbox=auto` parameter to get a auto-sized viewbox. This is useful if you want all icons rendered with consistent size:
+
+```html
+<img height="20" src="https://cdn.simpleicons.org/github?viewbox=auto" />
+<img height="20" src="https://cdn.simpleicons.org/simpleicons?viewbox=auto" />
+<img height="20" src="https://cdn.simpleicons.org/awesomelists?viewbox=auto" />
+```
+
 ### Node Usage <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
 
 The icons are also available through our npm package. To install, simply run:
