@@ -993,6 +993,7 @@ const config = {
         if (!SVG_PATH_REGEX.test(iconPath)) {
           const errorMessage = 'Invalid path format';
           let reason;
+
           if (!iconPath.startsWith('M') && !iconPath.startsWith('m')) {
             // Doesn't start with moveto
             reason =
