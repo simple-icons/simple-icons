@@ -1,11 +1,16 @@
 name: Remove Outdated Labels
+
 on:
-  pull_request_target:
+  pull_request:
     types:
       - closed
   issues:
     types:
       - closed
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
   remove-merged-pr-labels:
@@ -31,9 +36,10 @@ jobs:
             pending
             permission required
             won't add
+
   remove-closed-pr-labels:
     name: Remove closed pull request labels
-    if: github.event_name == 'pull_request_target' && (! github.event.pull_request.merged)
+    if: github.event_name == 'pull_request' && (! github.event.pull_request.merged)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/create-github-app-token@v1
@@ -48,6 +54,7 @@ jobs:
             in discussion
             pending
             assessing
+
   remove-closed-issue-labels:
     name: Remove closed issue labels
     if: github.event.issue.state == 'closed'
