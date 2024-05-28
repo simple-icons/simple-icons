@@ -1173,6 +1173,15 @@
             }
         },
         {
+            "title": "Apache HBase",
+            "hex": "BE160C",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
             "title": "Apache Hive",
             "hex": "FDEE21",
             "source": "https://apache.org/logos",
@@ -1285,6 +1294,15 @@
             "hex": "225593",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache Superset",
+            "hex": "20A6C9",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks/",
             "license": {
                 "type": "Apache-2.0"
             }
@@ -1825,6 +1843,11 @@
             "title": "Babelio",
             "hex": "FBB91E",
             "source": "https://www.babelio.com"
+        },
+        {
+            "title": "Babylon.js",
+            "hex": "BB464B",
+            "source": "https://github.com/BabylonJS/Brand-Toolkit/blob/8583d4d9bf252a233fa480fa02ac6f367d5207a1/babylon_logo/monochrome/babylon_logo_monochrome_dark.svg"
         },
         {
             "title": "Backblaze",
@@ -3697,6 +3720,11 @@
             "source": "https://crystal-lang.org/media/"
         },
         {
+            "title": "CSS Design Awards",
+            "hex": "280FEE",
+            "source": "https://www.cssdesignawards.com"
+        },
+        {
             "title": "CSS Modules",
             "hex": "000000",
             "source": "https://github.com/css-modules/logos/blob/32e4717062e4328ed861fa92d5d9cfd47859362f/css-modules-logo.svg"
@@ -4177,6 +4205,11 @@
             "source": "https://wiki.diasporafoundation.org/Branding"
         },
         {
+            "title": "Dictionary.com",
+            "hex": "0049D7",
+            "source": "https://www.dictionary.com"
+        },
+        {
             "title": "Digg",
             "hex": "000000",
             "source": "https://digg.com"
@@ -4341,6 +4374,12 @@
             "title": "Dovecot",
             "hex": "54BCAB",
             "source": "https://commons.wikimedia.org/wiki/File:Dovecot_logo.svg"
+        },
+        {
+            "title": "Dovetail",
+            "hex": "190041",
+            "source": "https://dovetail.com/help/press-kit",
+            "guidelines": "https://dovetail.com/help/press-kit"
         },
         {
             "title": "Doxygen",
@@ -8528,6 +8567,11 @@
             "source": "https://sourceforge.net/projects/lazarus/"
         },
         {
+            "title": "LazyVim",
+            "hex": "2E7DE9",
+            "source": "https://github.com/LazyVim/lazyvim.github.io/blob/db7f1bd035de3f41a75a29f65f36819f6ac152af/static/img/icon.svg"
+        },
+        {
             "title": "LBRY",
             "hex": "2F9176",
             "source": "https://lbry.com/press-kit",
@@ -10721,6 +10765,11 @@
             "title": "NVIDIA",
             "hex": "76B900",
             "source": "https://www.nvidia.com/en-us"
+        },
+        {
+            "title": "nvm",
+            "hex": "F4DD4B",
+            "source": "https://github.com/nvm-sh/logos/blob/bf1f9618e83e5098024b18c73ada1b0f542db5f8/nvm-logo-black.svg"
         },
         {
             "title": "Nx",
