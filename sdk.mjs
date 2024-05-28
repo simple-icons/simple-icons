@@ -34,11 +34,6 @@ const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
 
 /**
- * Regex to validate HTTPs URLs.
- */
-export const URL_REGEX = /^https:\/\/[^\s"']+$/;
-
-/**
  * Regex to validate SVG paths.
  */
 export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
@@ -51,6 +46,24 @@ export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
+
+/**
+ * Build a regex to validate HTTPs URLs.
+ * @param {String} jsonschemaPath Path to the *.jsonschema.json* file
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs
+ */
+export const urlRegex = async (
+  jsonschemaPath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    '.jsonschema.json',
+  ),
+) => {
+  return new RegExp(
+    JSON.parse(
+      await fs.readFile(jsonschemaPath, 'utf8'),
+    ).definitions.url.pattern,
+  );
+};
 
 /**
  * Get the slug/filename for an icon.
@@ -125,7 +138,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     );
 
 /**
- * Get path of *_data/simpe-icons.json*.
+ * Get path of *_data/simple-icons.json*.
  * @param {String} rootDirectory Path to the root directory of the project
  * @returns {String} Path of *_data/simple-icons.json*
  */
@@ -175,10 +188,8 @@ export const normalizeNewlines = (text) => {
 export const normalizeColor = (text) => {
   let color = text.replace('#', '').toUpperCase();
   if (color.length < 6) {
-    color = color
-      .slice(0, 3)
-      .map((x) => x.repeat(2))
-      .join('');
+    // eslint-disable-next-line unicorn/no-useless-spread
+    color = [...color.slice(0, 3)].map((x) => x.repeat(2)).join('');
   } else if (color.length > 6) {
     color = color.slice(0, 6);
   }
@@ -198,9 +209,40 @@ export const getThirdPartyExtensions = async (
   ),
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
-    .split('## Third-Party Extensions\n\n')[1]
-    .split('\n\n', 1)[0]
-    .split('\n')
+    .split('## Third-Party Extensions')[1]
+    .split('|\n\n')[0]
+    .split('|\n|')
+    .slice(2)
+    .map((line) => {
+      let [module, author] = line.split(' | ');
+      module = module.split('<img src="')[0];
+      return {
+        module: {
+          name: /\[(.+)]/.exec(module)[1],
+          url: /\((.+)\)/.exec(module)[1],
+        },
+        author: {
+          name: /\[(.+)]/.exec(author)[1],
+          url: /\((.+)\)/.exec(author)[1],
+        },
+      };
+    });
+
+/**
+ * Get information about third party libraries from the README table.
+ * @param {String} readmePath Path to the README file
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries
+ */
+export const getThirdPartyLibraries = async (
+  readmePath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    'README.md',
+  ),
+) =>
+  normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
+    .split('## Third-Party Libraries')[1]
+    .split('|\n\n')[0]
+    .split('|\n|')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');

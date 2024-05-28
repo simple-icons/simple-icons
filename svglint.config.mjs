@@ -9,11 +9,11 @@ import {
   SVG_PATH_REGEX,
   collator,
   getDirnameFromImportMeta,
+  getIconsData,
   htmlFriendlyToTitle,
 } from './sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
-const dataFile = path.join(__dirname, '_data', 'simple-icons.json');
 const htmlNamedEntitiesFile = path.join(
   __dirname,
   'node_modules',
@@ -22,7 +22,7 @@ const htmlNamedEntitiesFile = path.join(
 );
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
-const data = JSON.parse(await fs.readFile(dataFile, 'utf8'));
+const icons = await getIconsData();
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );
@@ -180,7 +180,7 @@ const ignoreIcon = (linterName, path, $) => {
   iconIgnored[linterName][path] = iconName;
 };
 
-export const config = {
+const config = {
   rules: {
     elm: {
       svg: 1,
@@ -369,9 +369,7 @@ export const config = {
 
           if (_validCodepointsRepr) {
             const iconName = htmlFriendlyToTitle(iconTitleText);
-            const iconExists = data.icons.some(
-              (icon) => icon.title === iconName,
-            );
+            const iconExists = icons.some((icon) => icon.title === iconName);
             if (!iconExists) {
               reporter.error(
                 `No icon with title "${iconName}" found in simple-icons.json`,
@@ -424,9 +422,9 @@ export const config = {
             let errorMessage =
               `found ${precisionMax} decimals in segment` +
               ` "${iconPath.slice(segment.start, segment.end)}"`;
-            if (segment.chained) {
+            if (segment.chain !== undefined) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.slice(segment.chainStart, segment.chainEnd),
+                iconPath.slice(segment.chain.start, segment.chain.end),
               );
               errorMessage += ` of chain "${readableChain}"`;
             }
@@ -658,9 +656,9 @@ export const config = {
               }
             }
 
-            if (segment.chained) {
+            if (segment.chain !== undefined) {
               const readableChain = maybeShortenedWithEllipsis(
-                iconPath.slice(segment.chainStart, segment.chainEnd),
+                iconPath.slice(segment.chain.start, segment.chain.end),
               );
               errorMessage += ` in chain "${readableChain}"`;
             }
@@ -707,7 +705,7 @@ export const config = {
                 // SVG 1.1:
                 // If a moveto is followed by multiple pairs of coordinates,
                 // the subsequent pairs are treated as implicit lineto commands.
-                if (!seg.chained || seg.chainStart === seg.start) {
+                if (seg.chain === undefined || seg.chain.start === seg.start) {
                   startPoint = undefined;
                 }
 
@@ -717,7 +715,7 @@ export const config = {
               case 'm': {
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
-                if (!seg.chained || seg.chainStart === seg.start) {
+                if (seg.chain === undefined || seg.chain.start === seg.start) {
                   startPoint = undefined;
                 }
 
@@ -886,9 +884,9 @@ export const config = {
             segment.start,
             segment.end,
           )}" found`;
-          if (segment.chained) {
+          if (segment.chain !== undefined) {
             const readableChain = maybeShortenedWithEllipsis(
-              iconPath.slice(segment.chainStart, segment.chainEnd),
+              iconPath.slice(segment.chain.start, segment.chain.end),
             );
             errorMessage += ` in chain "${readableChain}"`;
           }
@@ -1023,3 +1021,5 @@ export const config = {
     ],
   },
 };
+
+export default config;
