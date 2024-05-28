@@ -995,7 +995,11 @@
         {
             "title": "Anki",
             "hex": "80C2EE",
-            "source": "https://commons.wikimedia.org/wiki/File:Anki-icon.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Anki-icon.svg",
+            "license": {
+                "type": "AGPL-3.0-only"
+            },
+            "guidelines": "https://github.com/ankitects/anki/blob/4ab0db3127af8508317f84174aff9d20faedc41a/LICENSE"
         },
         {
             "title": "Ansible",
