@@ -979,7 +979,7 @@ const config = {
           const pathDIndex = getPathDIndex(ast.source);
           const index = pathDIndex + lastSegment.start + 2;
           const errorMessage =
-            `Invalid characters "${ending}" after the final` +
+            `Invalid character(s) "${ending}" after the final` +
             ` closepath command "${closepath}" at index ${index}` +
             ` (should be removed)`;
           reporter.error(errorMessage);
