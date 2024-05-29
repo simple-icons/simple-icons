@@ -965,6 +965,27 @@ const config = {
         }
       },
       (reporter, $, ast, {filepath}) => {
+        reporter.name = 'final-closepath';
+
+        const iconPath = getIconPath($, filepath);
+        const segments = getIconPathSegments(iconPath);
+
+        // Unnecessary characters after the final closepath
+        const lastSegment = segments.at(-1);
+        const endsWithZ = ['z', 'Z'].includes(lastSegment.params.at(0));
+        if (endsWithZ && lastSegment.end - lastSegment.start > 1) {
+          const ending = iconPath.slice(lastSegment.start + 1);
+          const closepath = iconPath.at(lastSegment.start);
+          const pathDIndex = getPathDIndex(ast.source);
+          const index = pathDIndex + lastSegment.start + 2;
+          const errorMessage =
+            `Invalid character(s) "${ending}" after the final` +
+            ` closepath command "${closepath}" at index ${index}` +
+            ` (should be removed)`;
+          reporter.error(errorMessage);
+        }
+      },
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'path-format';
 
         const iconPath = getIconPath($, filepath);
