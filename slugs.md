@@ -195,6 +195,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache Groovy` | `apachegroovy` |
 | `Apache Guacamole` | `apacheguacamole` |
 | `Apache Hadoop` | `apachehadoop` |
+| `Apache HBase` | `apachehbase` |
 | `Apache Hive` | `apachehive` |
 | `Apache JMeter` | `apachejmeter` |
 | `Apache Kafka` | `apachekafka` |
@@ -208,6 +209,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache Solr` | `apachesolr` |
 | `Apache Spark` | `apachespark` |
 | `Apache Storm` | `apachestorm` |
+| `Apache Superset` | `apachesuperset` |
 | `Apache Tomcat` | `apachetomcat` |
 | `Aparat` | `aparat` |
 | `Apifox` | `apifox` |
@@ -308,6 +310,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `B&R Automation` | `bandrautomation` |
 | `Babel` | `babel` |
 | `Babelio` | `babelio` |
+| `Babylon.js` | `babylondotjs` |
 | `Backblaze` | `backblaze` |
 | `Backbone.js` | `backbonedotjs` |
 | `Backendless` | `backendless` |
@@ -579,6 +582,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CodeNewbie` | `codenewbie` |
 | `CodePen` | `codepen` |
 | `CodeProject` | `codeproject` |
+| `Coder` | `coder` |
 | `CodersRank` | `codersrank` |
 | `Coderwall` | `coderwall` |
 | `CodeSandbox` | `codesandbox` |
@@ -653,6 +657,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CRYENGINE` | `cryengine` |
 | `CryptPad` | `cryptpad` |
 | `Crystal` | `crystal` |
+| `CSS Design Awards` | `cssdesignawards` |
 | `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
 | `CSS3` | `css3` |
@@ -737,6 +742,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `diagrams.net` | `diagramsdotnet` |
 | `Dialogflow` | `dialogflow` |
 | `Diaspora` | `diaspora` |
+| `Dictionary.com` | `dictionarydotcom` |
 | `Digg` | `digg` |
 | `Digi-Key Electronics` | `digikeyelectronics` |
 | `DigitalOcean` | `digitalocean` |
@@ -768,6 +774,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Douban` | `douban` |
 | `Douban Read` | `doubanread` |
 | `Dovecot` | `dovecot` |
+| `Dovetail` | `dovetail` |
 | `Doxygen` | `doxygen` |
 | `DPD` | `dpd` |
 | `Dragonframe` | `dragonframe` |
@@ -1471,6 +1478,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Knative` | `knative` |
 | `Knex.js` | `knexdotjs` |
 | `KNIME` | `knime` |
+| `Knip` | `knip` |
 | `KnowledgeBase` | `knowledgebase` |
 | `Known` | `known` |
 | `Ko-fi` | `kofi` |
@@ -1513,6 +1521,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LaTeX` | `latex` |
 | `Launchpad` | `launchpad` |
 | `Lazarus` | `lazarus` |
+| `LazyVim` | `lazyvim` |
 | `LBRY` | `lbry` |
 | `Leader Price` | `leaderprice` |
 | `Leaflet` | `leaflet` |
@@ -1746,6 +1755,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MobX-State-Tree` | `mobxstatetree` |
 | `Mocha` | `mocha` |
 | `Mock Service Worker` | `mockserviceworker` |
+| `Modal` | `modal` |
 | `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
@@ -1889,6 +1899,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nutanix` | `nutanix` |
 | `Nuxt.js` | `nuxtdotjs` |
 | `NVIDIA` | `nvidia` |
+| `nvm` | `nvm` |
 | `Nx` | `nx` |
 | `NXP` | `nxp` |
 | `NZXT` | `nzxt` |
@@ -2264,6 +2275,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Raylib` | `raylib` |
 | `Razer` | `razer` |
 | `Razorpay` | `razorpay` |
+| `Rclone` | `rclone` |
 | `React` | `react` |
 | `React Bootstrap` | `reactbootstrap` |
 | `React Hook Form` | `reacthookform` |
@@ -2695,6 +2707,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tails` | `tails` |
 | `Tailscale` | `tailscale` |
 | `Tailwind CSS` | `tailwindcss` |
+| `Taipy` | `taipy` |
 | `Take-Two Interactive Software` | `taketwointeractivesoftware` |
 | `Talend` | `talend` |
 | `Talenthouse` | `talenthouse` |
@@ -3031,6 +3044,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Western Union` | `westernunion` |
 | `WeTransfer` | `wetransfer` |
 | `WezTerm` | `wezterm` |
+| `wgpu` | `wgpu` |
 | `WhatsApp` | `whatsapp` |
 | `When I Work` | `wheniwork` |
 | `Wii` | `wii` |
