@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 import process from 'node:process';
-import {ExitPromptError, checkbox, confirm, input} from '@inquirer/prompts';
+import {ExitPromptError} from '@inquirer/core';
+import {checkbox, confirm, input} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
 import autocomplete from 'inquirer-autocomplete-standalone';
 import {
-  URL_REGEX,
   collator,
   getIconsDataString,
   normalizeColor,
   titleToSlug,
+  urlRegex,
 } from '../sdk.mjs';
 import {getJsonSchemaData, writeIconsData} from './utils.js';
 
@@ -29,8 +30,10 @@ const licenseTypes =
     (license) => ({name: license, value: license}),
   );
 
-const isValidURL = (input) =>
-  URL_REGEX.test(input) || 'Must be a valid and secure (https://) URL.';
+const isValidURL = async (input) => {
+  const regex = await urlRegex();
+  return regex.test(input) || 'Must be a valid and secure (https://) URL.';
+};
 
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
@@ -121,9 +124,10 @@ try {
       : undefined,
   };
 
-  console.log(
+  process.stdout.write(
     'About to write the following to simple-icons.json:\n' +
-      JSON.stringify(answers, null, 4),
+      JSON.stringify(answers, null, 4) +
+      '\n',
   );
 
   if (
@@ -134,14 +138,14 @@ try {
     iconsData.icons.push(answers);
     iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
     await writeIconsData(iconsData);
-    console.log(chalk.green('\nData written successfully.'));
+    process.stdout.write(chalk.green('\nData written successfully.\n'));
   } else {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.\n'));
     process.exit(1);
   }
 } catch (error) {
   if (error instanceof ExitPromptError) {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.\n'));
     process.exit(1);
   }
 
