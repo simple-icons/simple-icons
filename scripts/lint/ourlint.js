@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * @fileoverview
  * Linters for the package that can't easily be implemented in the existing
@@ -5,9 +6,8 @@
  */
 
 import process from 'node:process';
-import { URL } from 'node:url';
 import fakeDiff from 'fake-diff';
-import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
+import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -15,39 +15,43 @@ import { getIconsDataString, normalizeNewlines, collator } from '../../sdk.mjs';
  */
 const TESTS = {
   /* Tests whether our icons are in alphabetical order */
-  alphabetical: (data) => {
+  alphabetical(data) {
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
-        const prev = array[index - 1];
-        const comparison = collator.compare(icon.title, prev.title);
+        const previous = array[index - 1];
+        const comparison = collator.compare(icon.title, previous.title);
         if (comparison < 0) {
           invalidEntries.push(icon);
-        } else if (comparison === 0) {
-          if (prev.slug) {
-            if (!icon.slug || collator.compare(icon.slug, prev.slug) < 0) {
-              invalidEntries.push(icon);
-            }
-          }
+        } else if (
+          comparison === 0 &&
+          previous.slug &&
+          (!icon.slug || collator.compare(icon.slug, previous.slug) < 0)
+        ) {
+          invalidEntries.push(icon);
         }
       }
+
       return invalidEntries;
     };
+
     const format = (icon) => {
       if (icon.slug) {
         return `${icon.title} (${icon.slug})`;
       }
+
       return icon.title;
     };
 
+    // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
     const invalids = data.icons.reduce(collector, []);
-    if (invalids.length) {
+    if (invalids.length > 0) {
       return `Some icons aren't in alphabetical order:
         ${invalids.map((icon) => format(icon)).join(', ')}`;
     }
   },
 
   /* Check the formatting of the data file */
-  prettified: (data, dataString) => {
+  prettified(data, dataString) {
     const normalizedDataString = normalizeNewlines(dataString);
     const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
 
@@ -58,9 +62,9 @@ const TESTS = {
   },
 
   /* Check redundant trailing slash in URL */
-  checkUrl: (data) => {
+  checkUrl(data) {
     const hasRedundantTrailingSlash = (url) => {
-      const origin = new URL(url).origin;
+      const {origin} = new global.URL(url);
       return /^\/+$/.test(url.replace(origin, ''));
     };
 
@@ -89,9 +93,11 @@ const data = JSON.parse(dataString);
 
 const errors = (
   await Promise.all(Object.values(TESTS).map((test) => test(data, dataString)))
-).filter(Boolean);
+)
+  // eslint-disable-next-line unicorn/no-await-expression-member
+  .filter(Boolean);
 
 if (errors.length > 0) {
-  errors.forEach((error) => console.error(`\u001b[31m${error}\u001b[0m`));
+  for (const error of errors) console.error(`\u001B[31m${error}\u001B[0m`);
   process.exit(1);
 }

@@ -3,9 +3,9 @@
  * Simple Icons SDK.
  */
 
-import path from 'node:path';
 import fs from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 /**
  * @typedef {import("./sdk").ThirdPartyExtension} ThirdPartyExtension
@@ -26,22 +26,17 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
   ŧ: 't',
 };
 
-const TITLE_TO_SLUG_CHARS_REGEX = RegExp(
+const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
   `[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
   'g',
 );
 
-const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z0-9]/g;
-
-/**
- * Regex to validate HTTPs URLs.
- */
-export const URL_REGEX = /^https:\/\/[^\s"']+$/;
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
 
 /**
  * Regex to validate SVG paths.
  */
-export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae0-9,. ]+$/i;
+export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
 
 /**
  * Get the directory name where this file is located from `import.meta.url`,
@@ -51,6 +46,24 @@ export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae0-9,. ]+$/i;
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
+
+/**
+ * Build a regex to validate HTTPs URLs.
+ * @param {String} jsonschemaPath Path to the *.jsonschema.json* file
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs
+ */
+export const urlRegex = async (
+  jsonschemaPath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    '.jsonschema.json',
+  ),
+) => {
+  return new RegExp(
+    JSON.parse(
+      await fs.readFile(jsonschemaPath, 'utf8'),
+    ).definitions.url.pattern,
+  );
+};
 
 /**
  * Get the slug/filename for an icon.
@@ -74,12 +87,12 @@ export const svgToPath = (svg) => svg.split('"', 8)[7];
 export const titleToSlug = (title) =>
   title
     .toLowerCase()
-    .replace(
+    .replaceAll(
       TITLE_TO_SLUG_CHARS_REGEX,
       (char) => TITLE_TO_SLUG_REPLACEMENTS[char],
     )
     .normalize('NFD')
-    .replace(TITLE_TO_SLUG_RANGE_REGEX, '');
+    .replaceAll(TITLE_TO_SLUG_RANGE_REGEX, '');
 
 /**
  * Converts a slug into a variable name that can be exported.
@@ -99,12 +112,12 @@ export const slugToVariableName = (slug) => {
  */
 export const titleToHtmlFriendly = (brandTitle) =>
   brandTitle
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/./g, (char) => {
-      const charCode = char.charCodeAt(0);
+    .replaceAll('&', '&amp;')
+    .replaceAll('"', '&quot;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll(/./g, (char) => {
+      const charCode = char.codePointAt(0);
       return charCode > 127 ? `&#${charCode};` : char;
     });
 
@@ -116,43 +129,45 @@ export const titleToHtmlFriendly = (brandTitle) =>
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
   htmlFriendlyTitle
-    .replace(/&#([0-9]+);/g, (_, num) => String.fromCodePoint(parseInt(num)))
-    .replace(
+    .replaceAll(/&#(\d+);/g, (_, number_) =>
+      String.fromCodePoint(Number.parseInt(number_, 10)),
+    )
+    .replaceAll(
       /&(quot|amp|lt|gt);/g,
-      (_, ref) => ({ quot: '"', amp: '&', lt: '<', gt: '>' })[ref],
+      (_, reference) => ({quot: '"', amp: '&', lt: '<', gt: '>'})[reference],
     );
 
 /**
- * Get path of *_data/simpe-icons.json*.
- * @param {String} rootDir Path to the root directory of the project
+ * Get path of *_data/simple-icons.json*.
+ * @param {String} rootDirectory Path to the root directory of the project
  * @returns {String} Path of *_data/simple-icons.json*
  */
 export const getIconDataPath = (
-  rootDir = getDirnameFromImportMeta(import.meta.url),
+  rootDirectory = getDirnameFromImportMeta(import.meta.url),
 ) => {
-  return path.resolve(rootDir, '_data', 'simple-icons.json');
+  return path.resolve(rootDirectory, '_data', 'simple-icons.json');
 };
 
 /**
  * Get contents of *_data/simple-icons.json*.
- * @param {String} rootDir Path to the root directory of the project
+ * @param {String} rootDirectory Path to the root directory of the project
  * @returns {String} Content of *_data/simple-icons.json*
  */
 export const getIconsDataString = (
-  rootDir = getDirnameFromImportMeta(import.meta.url),
+  rootDirectory = getDirnameFromImportMeta(import.meta.url),
 ) => {
-  return fs.readFile(getIconDataPath(rootDir), 'utf8');
+  return fs.readFile(getIconDataPath(rootDirectory), 'utf8');
 };
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
- * @param {String} rootDir Path to the root directory of the project
+ * @param {String} rootDirectory Path to the root directory of the project
  * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
-  rootDir = getDirnameFromImportMeta(import.meta.url),
+  rootDirectory = getDirnameFromImportMeta(import.meta.url),
 ) => {
-  const fileContents = await getIconsDataString(rootDir);
+  const fileContents = await getIconsDataString(rootDirectory);
   return JSON.parse(fileContents).icons;
 };
 
@@ -162,7 +177,7 @@ export const getIconsData = async (
  * @returns {String} The text with Windows newline characters replaced by Unix ones
  */
 export const normalizeNewlines = (text) => {
-  return text.replace(/\r\n/g, '\n');
+  return text.replaceAll('\r\n', '\n');
 };
 
 /**
@@ -173,10 +188,12 @@ export const normalizeNewlines = (text) => {
 export const normalizeColor = (text) => {
   let color = text.replace('#', '').toUpperCase();
   if (color.length < 6) {
+    // eslint-disable-next-line unicorn/no-useless-spread
     color = [...color.slice(0, 3)].map((x) => x.repeat(2)).join('');
   } else if (color.length > 6) {
     color = color.slice(0, 6);
   }
+
   return color;
 };
 
@@ -192,20 +209,51 @@ export const getThirdPartyExtensions = async (
   ),
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
-    .split('## Third-Party Extensions\n\n')[1]
-    .split('\n\n', 1)[0]
-    .split('\n')
+    .split('## Third-Party Extensions')[1]
+    .split('|\n\n')[0]
+    .split('|\n|')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');
       module = module.split('<img src="')[0];
       return {
         module: {
-          name: /\[(.+)\]/.exec(module)[1],
+          name: /\[(.+)]/.exec(module)[1],
           url: /\((.+)\)/.exec(module)[1],
         },
         author: {
-          name: /\[(.+)\]/.exec(author)[1],
+          name: /\[(.+)]/.exec(author)[1],
+          url: /\((.+)\)/.exec(author)[1],
+        },
+      };
+    });
+
+/**
+ * Get information about third party libraries from the README table.
+ * @param {String} readmePath Path to the README file
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries
+ */
+export const getThirdPartyLibraries = async (
+  readmePath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    'README.md',
+  ),
+) =>
+  normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
+    .split('## Third-Party Libraries')[1]
+    .split('|\n\n')[0]
+    .split('|\n|')
+    .slice(2)
+    .map((line) => {
+      let [module, author] = line.split(' | ');
+      module = module.split('<img src="')[0];
+      return {
+        module: {
+          name: /\[(.+)]/.exec(module)[1],
+          url: /\((.+)\)/.exec(module)[1],
+        },
+        author: {
+          name: /\[(.+)]/.exec(author)[1],
           url: /\((.+)\)/.exec(author)[1],
         },
       };
