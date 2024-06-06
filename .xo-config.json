@@ -47,6 +47,12 @@
         "svgo.config.mjs"
       ],
       "nodeVersion": ">=18"
+    },
+    {
+      "files": ["svglint.config.mjs"],
+      "rules": {
+        "max-depth": "off"
+      }
     }
   ]
 }

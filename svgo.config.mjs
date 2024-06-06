@@ -1,4 +1,4 @@
-/** @type import("svgo").Config */
+/** @type {import("svgo").Config} */
 const config = {
   multipass: true,
   plugins: [

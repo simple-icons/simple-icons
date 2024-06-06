@@ -21,7 +21,6 @@ const readmeFile = path.resolve(rootDirectory, 'README.md');
 const readmeContent = await fs.readFile(readmeFile, 'utf8');
 
 try {
-  /** @type {RegExpExecArray | null} */
   const match = regexMatcher.exec(readmeContent);
   if (match === null) {
     console.error(

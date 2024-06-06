@@ -40,24 +40,36 @@ const licenseTypes =
     (/** @type {string} */ license) => ({name: license, value: license}),
   );
 
-/** @param {string} input */
+/**
+ * @param {string} input URL input
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL
+ */
 const isValidURL = async (input) => {
   const regex = await urlRegex();
   return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
-/** @param {string} input */
+/**
+ * @param {string} input Hex color
+ * @returns {boolean|string} Whether the input is a valid hex color
+ */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
-/** @param {string} input */
+/**
+ * @param {string} input New icon input
+ * @returns {boolean} Whether the icon is new
+ */
 const isNewIcon = (input) =>
   !iconsData.icons.some(
     (icon) =>
       icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
   );
 
-/** @param {string} input */
+/**
+ * @param {string} input Color input
+ * @returns {string} Preview of the color
+ */
 const previewHexColor = (input) => {
   const color = normalizeColor(input);
   const luminance = HEX_REGEX.test(input)
@@ -127,6 +139,7 @@ try {
         }).then(async (aliases) => {
           const result = {};
           for (const alias of aliases) {
+            // @ts-ignore
             // eslint-disable-next-line no-await-in-loop
             result[alias] = await input({
               message: `What ${alias} aliases would you like to add? (separate with commas)`,

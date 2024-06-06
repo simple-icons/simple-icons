@@ -11,6 +11,7 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 /**
  * Get JSON schema data.
  * @param {string} rootDirectory Path to the root directory of the project.
+ * @returns {Promise<any>} JSON schema data.
  */
 export const getJsonSchemaData = async (
   rootDirectory = path.resolve(__dirname, '..'),

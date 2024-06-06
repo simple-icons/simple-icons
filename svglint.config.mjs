@@ -51,8 +51,8 @@ const ignoreFile = './.svglint-ignored.json';
 const iconIgnored = updateIgnoreFile ? {} : svglintIgnores;
 
 /**
- * @param {{ [key: string]: any }} object
- * @returns {{ [key: string]: any }}
+ * @param {{ [key: string]: any }} object Object to sort by key
+ * @returns {{ [key: string]: any }} Object sorted by key
  */
 const sortObjectByKey = (object) => {
   return Object.fromEntries(
@@ -63,8 +63,8 @@ const sortObjectByKey = (object) => {
 };
 
 /**
- * @param {{ [key: string]: any }} object
- * @returns {{ [key: string]: any }}
+ * @param {{ [key: string]: any }} object Object to sort by value
+ * @returns {{ [key: string]: any }} Object sorted by value
  */
 const sortObjectByValue = (object) => {
   return Object.fromEntries(
@@ -74,10 +74,14 @@ const sortObjectByValue = (object) => {
   );
 };
 
-/** @param {number} number_ */
-const removeLeadingZeros = (number_) => {
+/**
+ * Remove leading zeros from a number as a string.
+ * @param {number | string} numberOrString The number or string to remove leading zeros from.
+ * @returns {string} The number as a string without leading zeros.
+ */
+const removeLeadingZeros = (numberOrString) => {
   // Convert 0.03 to '.03'
-  return number_.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
+  return numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 };
 
 /**
@@ -89,6 +93,7 @@ const removeLeadingZeros = (number_) => {
  * @param {number} y2 The y coordinate of the second point.
  * @param {number} x3 The x coordinate of the third point.
  * @param {number} y3 The y coordinate of the third point.
+ * @returns {boolean} Whether the middle point is collinear to the line.
  */
 // eslint-disable-next-line max-params
 const collinear = (x1, y1, x2, y2, x3, y3) => {
@@ -97,7 +102,8 @@ const collinear = (x1, y1, x2, y2, x3, y3) => {
 
 /**
  * Returns the number of digits after the decimal point.
- * @param {number} number_
+ * @param {number} number_ The number to count the decimals of.
+ * @returns {number} The number of digits after the decimal point.
  */
 const countDecimals = (number_) => {
   if (number_ && number_ % 1) {
@@ -115,6 +121,7 @@ const countDecimals = (number_) => {
 /**
  * Get the index at which the first path value of an SVG starts.
  * @param {string} svgFileContent The raw SVG as text.
+ * @returns {number} The index at which the path value starts.
  */
 const getPathDIndex = (svgFileContent) => {
   const pathDStart = '<path d="';
@@ -124,6 +131,7 @@ const getPathDIndex = (svgFileContent) => {
 /**
  * Get the index at which the text of the first `<title></title>` tag starts.
  * @param {string} svgFileContent The raw SVG as text.
+ * @returns {number} The index at which the title text starts.
  */
 const getTitleTextIndex = (svgFileContent) => {
   const titleStart = '<title>';
@@ -133,6 +141,7 @@ const getTitleTextIndex = (svgFileContent) => {
 /**
  * Convert a hexadecimal number passed as string to decimal number as integer.
  * @param {string} hex The hexadecimal number representation to convert.
+ * @returns {number} The decimal number representation.
  */
 const hexadecimalToDecimal = (hex) => {
   let result = 0;
@@ -145,7 +154,11 @@ const hexadecimalToDecimal = (hex) => {
   return result;
 };
 
-/** @param {string} string_ */
+/**
+ * Shorten a string with ellipsis if it exceeds 20 characters.
+ * @param {string} string_ The string to shorten.
+ * @returns {string} The shortened string.
+ */
 const maybeShortenedWithEllipsis = (string_) => {
   return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 };
@@ -154,13 +167,16 @@ const maybeShortenedWithEllipsis = (string_) => {
  * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
  * @param {(arg0: any) => any} function_ The function to memoize.
+ * @returns {(arg0: any) => any} The memoized function.
  */
 const memoize = (function_) => {
   /** @type {{ [key: string]: any }} */
   const results = {};
 
   /**
+   * Memoized function.
    * @param {any} argument The argument to memoize.
+   * @returns {any} The result of the memoized function.
    */
   return (argument) => {
     results[argument] ||= function_(argument);
@@ -350,6 +366,8 @@ const config = {
               encodedBuf.unshift(iconTitleText[i]);
             } else {
               // Encode all non ascii characters plus "'&<> (XML named entities)
+              /** @type {number} */
+              // @ts-ignore Coerce to number
               const charDecimalCode = iconTitleText.codePointAt(i);
 
               if (charDecimalCode > 127) {
@@ -380,8 +398,12 @@ const config = {
 
           // Check if there are some other encoded characters in decimal notation
           // which shouldn't be encoded
-          // eslint-disable-next-line unicorn/prefer-number-properties
-          for (const match of encodingMatches.filter((m) => !isNaN(m[2]))) {
+          for (const match of encodingMatches.filter((m) => {
+            // TODO: this fails using `Number.isNaN`, investigate
+            // @ts-ignore
+            // eslint-disable-next-line unicorn/prefer-number-properties
+            return !isNaN(m[2]);
+          })) {
             const decimalNumber = Number.parseInt(match[2], 10);
             if (decimalNumber > 127) {
               continue;
@@ -457,9 +479,12 @@ const config = {
         const segments = getIconPathSegments(iconPath);
 
         for (const segment of segments) {
+          /** @type {number[]} */
+          // @ts-ignore
+          const numberParameters = segment.params.slice(1);
           const precisionMax = Math.max(
             // eslint-disable-next-line unicorn/no-array-callback-reference
-            ...segment.params.slice(1).map(countDecimals),
+            ...numberParameters.map(countDecimals),
           );
           if (precisionMax > iconMaxFloatPrecision) {
             let errorMessage =
@@ -487,6 +512,11 @@ const config = {
 
         const iconPath = getIconPath($);
         const segments = getIconPathSegments(iconPath);
+
+        /** @type {import('svg-path-segments').Segment[]} */
+        // TODO: svgpath does not includes the segment property on the interface,
+        //       see https://github.com/fontello/svgpath/pull/67/files
+        // @ts-ignore
         const absSegments = svgpath(iconPath).abs().unshort().segments;
 
         const lowerMovementCommands = ['m', 'l'];
@@ -521,9 +551,10 @@ const config = {
 
         /**
          * Check if a segment is ineffective.
-         * @param {import('svg-path-segments').Segment} segment
-         * @param {number} index
-         * @param {boolean} previousSegmentIsZ
+         * @param {import('svg-path-segments').Segment} segment The segment to check.
+         * @param {number} index The index of the segment in the path.
+         * @param {boolean} previousSegmentIsZ Whether the previous segment is a Z command.
+         * @returns {boolean} Whether the segment is ineffective.
          */
         // eslint-disable-next-line complexity
         const isInvalidSegment = (segment, index, previousSegmentIsZ) => {
@@ -657,6 +688,8 @@ const config = {
               );
             }
           }
+
+          return false;
         };
 
         for (let index = 0; index < segments.length; index++) {
@@ -724,7 +757,8 @@ const config = {
         /**
          * Extracts collinear coordinates from SVG path straight lines
          * (does not extracts collinear coordinates from curves).
-         * @param {string} iconPath
+         * @param {string} iconPath The SVG path of the icon.
+         * @returns {import('svg-path-segments').Segment[]} The collinear segments.
          */
         // eslint-disable-next-line complexity
         const getCollinearSegments = (iconPath) => {
@@ -743,7 +777,8 @@ const config = {
             const seg = segments[s];
             const parms = seg.params;
             const cmd = parms[0];
-            const nextCmd = s + 1 < segments.length ? segments[s + 1][0] : null;
+            const nextCmd =
+              s + 1 < segments.length ? segments[s + 1].params[0] : null;
 
             switch (cmd) {
               // Next switch cases have been ordered by frequency
@@ -1020,8 +1055,10 @@ const config = {
         const segments = getIconPathSegments(iconPath);
 
         // Unnecessary characters after the final closepath
+        /** @type {import('svg-path-segments').Segment} */
+        // @ts-ignore
         const lastSegment = segments.at(-1);
-        const endsWithZ = ['z', 'Z'].includes(lastSegment.params.at(0));
+        const endsWithZ = ['z', 'Z'].includes(lastSegment.params[0]);
         if (endsWithZ && lastSegment.end - lastSegment.start > 1) {
           const ending = iconPath.slice(lastSegment.start + 1);
           const closepath = iconPath.at(lastSegment.start);

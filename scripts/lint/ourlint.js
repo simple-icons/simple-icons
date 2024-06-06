@@ -22,17 +22,17 @@ import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
 const TESTS = {
   /**
    * Tests whether our icons are in alphabetical order
-   * @param data
-   * @param _
+   * @param {{icons: IconsData}} data Icons data
+   * @returns {string|undefined} Error message or undefined
    */
-  alphabetical(data, _) {
+  alphabetical(data) {
     /**
-     *
-     * @param {IconData[]} invalidEntries
-     * @param {IconData} icon
-     * @param {number} index
-     * @param {IconData[]} array
-     * @returns IconData[]
+     * Collects invalid alphabet ordered icons
+     * @param {IconData[]} invalidEntries Invalid icons reference
+     * @param {IconData} icon Icon to check
+     * @param {number} index Index of the icon
+     * @param {IconData[]} array Array of icons
+     * @returns {IconData[]} Invalid icons
      */
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
@@ -52,7 +52,11 @@ const TESTS = {
       return invalidEntries;
     };
 
-    /** @param {IconData} icon */
+    /**
+     * Format an icon for display in the error message
+     * @param {IconData} icon Icon to format
+     * @returns {string} Formatted icon
+     */
     const format = (icon) => {
       if (icon.slug) {
         return `${icon.title} (${icon.slug})`;
@@ -65,12 +69,7 @@ const TESTS = {
     const invalids = data.icons.reduce(collector, []);
     if (invalids.length > 0) {
       return `Some icons aren't in alphabetical order:
-        ${invalids
-          .map(
-            /** @param {IconData} icon */
-            (icon) => format(icon),
-          )
-          .join(', ')}`;
+        ${invalids.map((icon) => format(icon)).join(', ')}`;
     }
   },
 
@@ -87,7 +86,11 @@ const TESTS = {
 
   /* Check redundant trailing slash in URL */
   checkUrl(data) {
-    /** @param {string} url */
+    /**
+     * Check if an URL has a redundant trailing slash.
+     * @param {string} url URL to check
+     * @returns {boolean} Whether the URL has a redundant trailing slash
+     */
     const hasRedundantTrailingSlash = (url) => {
       const {origin} = new global.URL(url);
       return /^\/+$/.test(url.replace(origin, ''));

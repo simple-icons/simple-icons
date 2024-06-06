@@ -44,12 +44,18 @@ const iconObjectTemplateFile = path.resolve(
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
-/** @param {string} value */
+/**
+ * @param {string} value The value to escape
+ * @returns {string} The escaped value
+ */
 const escape = (value) => {
   return value.replaceAll(/(?<!\\)'/g, "\\'");
 };
 
-/** @param {License} license */
+/**
+ * @param {License} license The license object or URL
+ * @returns {License} The license object with a URL
+ */
 const licenseToObject = (license) => {
   if (license.url === undefined) {
     license.url = `https://spdx.org/licenses/${license.type}`;
@@ -77,10 +83,9 @@ const iconToJsObject = (icon) => {
 };
 
 /**
- * @param {string} filepath
- * @param {string} rawJavaScript
- * @param {EsBuildTransformOptions | null} opts
- * @param options
+ * @param {string} filepath The path to the file to write
+ * @param {string} rawJavaScript The raw JavaScript content to write to the file
+ * @param {EsBuildTransformOptions | null} options The options to pass to esbuild
  */
 const writeJs = async (filepath, rawJavaScript, options = null) => {
   options = options === null ? {minify: true} : options;
@@ -89,8 +94,8 @@ const writeJs = async (filepath, rawJavaScript, options = null) => {
 };
 
 /**
- * @param {string} filepath
- * @param {string} rawTypeScript
+ * @param {string} filepath The path to the file to write
+ * @param {string} rawTypeScript The raw TypeScript content to write to the file
  */
 const writeTs = async (filepath, rawTypeScript) => {
   await fs.writeFile(filepath, rawTypeScript);

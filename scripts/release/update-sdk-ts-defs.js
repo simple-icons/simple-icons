@@ -38,7 +38,7 @@ const generateSdkMts = async () => {
       'npx tsc sdk.mjs' +
         ' --declaration --emitDeclarationOnly --allowJs --removeComments',
     );
-  } catch (/** @type unknown */ error) {
+  } catch (/** @type {unknown} */ error) {
     await fs.writeFile(sdkMjs, originalSdkMjsContent);
 
     let errorMessage = error;
@@ -61,8 +61,8 @@ const generateSdkMts = async () => {
  * We must remove the duplicated export types that tsc generates from
  * JSDoc `typedef` comments.
  * See https://github.com/microsoft/TypeScript/issues/46011
- * @param {string} content
- * @returns {string}
+ * @param {string} content Content of the file
+ * @returns {string} The content without duplicated export types
  */
 const removeDuplicatedExportTypes = (content) => {
   const newContent = [];
