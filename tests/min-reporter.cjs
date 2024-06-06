@@ -1,5 +1,8 @@
 /**
  * @file Custom mocha reporter.
+ *
+ * Serves to clear the console after the test run is finished.
+ * See {@link https://github.com/mochajs/mocha/issues/2312}
  */
 
 const {reporters, Runner} = require('mocha');
