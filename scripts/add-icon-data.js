@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Script to add data for a new icon to the simple-icons dataset.
  */
 
@@ -34,7 +34,7 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
   value: key,
 }));
 
-/** @type {{name: String, value: String}[]} */
+/** @type {{name: string, value: string}[]} */
 const licenseTypes =
   jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
     (/** @type {string} */ license) => ({name: license, value: license}),

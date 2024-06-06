@@ -1,6 +1,5 @@
 /**
  * The license for a Simple Icon.
- *
  * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#optional-data Optional Data}
  */
 export type License = SPDXLicense | CustomLicense;

@@ -2,6 +2,7 @@
   "prettier": true,
   "space": 2,
   "plugins": ["import"],
+  "extends": ["plugin:jsdoc/recommended"],
   "rules": {
     "sort-imports": [
       "error",

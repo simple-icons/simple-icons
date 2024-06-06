@@ -1,5 +1,5 @@
 /**
- * @fileoverview
+ * @file
  * Types for Simple Icons SDK.
  */
 
@@ -10,7 +10,6 @@ import type {CustomLicense, SPDXLicense} from './types';
  *
  * Includes the module and author of the extension,
  * both including a name and URL.
- *
  * @see {@link https://github.com/simple-icons/simple-icons#third-party-extensions Third-Party Extensions}
  */
 export type ThirdPartyExtension = {
@@ -27,7 +26,6 @@ type ThirdPartyExtensionSubject = {
  * The aliases for a Simple Icon.
  *
  * Corresponds to the `aliases` property in the *_data/simple-icons.json* file.
- *
  * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#aliases Aliases}
  */
 export type Aliases = {
@@ -47,7 +45,6 @@ type DuplicateAlias = {
  * The data for a Simple Icon.
  *
  * Corresponds to the data stored for each icon in the *_data/simple-icons.json* file.
- *
  * @see {@link https://github.com/mondeja/simple-icons/blob/utils-entrypoint/CONTRIBUTING.md#7-update-the-json-data-for-simpleiconsorg Update the JSON Data for SimpleIcons.org}
  */
 export type IconData = {

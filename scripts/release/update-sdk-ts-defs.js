@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Updates the SDK Typescript definitions located in the file sdk.d.ts
  * to match the current definitions of functions of sdk.mjs.
  */
@@ -61,7 +61,6 @@ const generateSdkMts = async () => {
  * We must remove the duplicated export types that tsc generates from
  * JSDoc `typedef` comments.
  * See https://github.com/microsoft/TypeScript/issues/46011
- *
  * @param {string} content
  * @returns {string}
  */

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Linters for the package that can't easily be implemented in the existing
  * linters (e.g. jsonlint/svglint).
  */
@@ -17,11 +17,13 @@ import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k:string]: (arg0: {icons: IconsData}, arg1: String) => String | undefined}}
+ * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => string | undefined}}
  */
 const TESTS = {
   /**
    * Tests whether our icons are in alphabetical order
+   * @param data
+   * @param _
    */
   alphabetical(data, _) {
     /**

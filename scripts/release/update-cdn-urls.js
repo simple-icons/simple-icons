@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Updates the CDN URLs in the README.md to match the major version in the
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
@@ -18,7 +18,7 @@ const readmeFile = path.resolve(rootDirectory, 'README.md');
 
 /**
  * @param {string} semVersion
- * @returns {Number}
+ * @returns {number}
  */
 const getMajorVersion = (semVersion) => {
   const majorVersionAsString = semVersion.split('.')[0];

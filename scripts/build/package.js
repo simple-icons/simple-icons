@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Simple Icons package build script.
  */
 
@@ -80,6 +80,7 @@ const iconToJsObject = (icon) => {
  * @param {string} filepath
  * @param {string} rawJavaScript
  * @param {EsBuildTransformOptions | null} opts
+ * @param options
  */
 const writeJs = async (filepath, rawJavaScript, options = null) => {
   options = options === null ? {minify: true} : options;
