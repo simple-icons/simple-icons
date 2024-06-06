@@ -7,11 +7,6 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-/**
- * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
- * @typedef {import("./sdk.d.ts").IconData} IconData
- */
-
 /** @type {{ [key: string]: string }} */
 const TITLE_TO_SLUG_REPLACEMENTS = {
   '+': 'plus',
@@ -68,7 +63,7 @@ export const urlRegex = async (
 
 /**
  * Get the slug/filename for an icon.
- * @param {IconData} icon The icon data as it appears in *_data/simple-icons.json*
+ * @param {import("./sdk.d.ts").IconData} icon The icon data as it appears in *_data/simple-icons.json*
  * @returns {String} The slug/filename for the icon
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
@@ -163,7 +158,7 @@ export const getIconsDataString = (
 /**
  * Get icons data as object from *_data/simple-icons.json*.
  * @param {String} rootDirectory Path to the root directory of the project
- * @returns {Promise<IconData[]>} Icons data as array from *_data/simple-icons.json*
+ * @returns {Promise<import("./sdk.d.ts").IconData[]>} Icons data as array from *_data/simple-icons.json*
  */
 export const getIconsData = async (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
@@ -201,7 +196,7 @@ export const normalizeColor = (text) => {
 /**
  * Get information about third party extensions from the README table.
  * @param {String} readmePath Path to the README file
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
+ * @returns {Promise<import("./sdk.d.ts").ThirdPartyExtension[]>} Information about third party extensions
  */
 export const getThirdPartyExtensions = async (
   readmePath = path.join(
@@ -252,7 +247,7 @@ export const getThirdPartyExtensions = async (
 /**
  * Get information about third party libraries from the README table.
  * @param {String} readmePath Path to the README file
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries
+ * @returns {Promise<import("./sdk.d.ts").ThirdPartyExtension[]>} Information about third party libraries
  */
 export const getThirdPartyLibraries = async (
   readmePath = path.join(

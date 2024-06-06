@@ -8,7 +8,7 @@
 /**
  * @typedef {import("../../sdk.mjs").IconData} IconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
- * @typedef {{icons: IconData[]}} IconsData
+ * @typedef {IconData[]} IconsData
  */
 
 import process from 'node:process';
@@ -94,11 +94,14 @@ const TESTS = {
     const allUrlFields = [
       ...new Set(
         data.icons
-          .flatMap((icon) => [
-            icon.source,
-            icon.guidelines,
-            ...(icon.license?.hasOwn('url') ? [icon.license.url] : []),
-          ])
+          .flatMap((icon) => {
+            const license =
+              icon.license && icon.license.hasOwn('url')
+                ? [icon.license.url]
+                : [];
+            return [icon.source, icon.guidelines, ...license];
+          })
+
           .filter(Boolean),
       ),
     ];

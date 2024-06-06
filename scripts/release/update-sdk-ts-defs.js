@@ -11,6 +11,10 @@ import path from 'node:path';
 import process from 'node:process';
 import {getDirnameFromImportMeta} from '../../sdk.mjs';
 
+/**
+ * @typedef {import("node:child_process").ExecFileException } ThirdPartyExtension
+ */
+
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..', '..');
 
@@ -34,13 +38,19 @@ const generateSdkMts = async () => {
       'npx tsc sdk.mjs' +
         ' --declaration --emitDeclarationOnly --allowJs --removeComments',
     );
-  } catch (error) {
+  } catch (/** @type unknown */ error) {
     await fs.writeFile(sdkMjs, originalSdkMjsContent);
+
+    let errorMessage = error;
+    if (error instanceof Error) {
+      // The `execSync` function throws a generic Node.js Error
+      errorMessage = error.message;
+    }
+
     process.stdout.write(
-      `Error ${error.status} generating Typescript` +
-        ` definitions: '${error.message}'` +
-        '\n',
+      `Error generating Typescript definitions: '${errorMessage}'\n`,
     );
+
     process.exit(1);
   }
 

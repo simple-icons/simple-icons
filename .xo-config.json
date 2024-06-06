@@ -1,7 +1,7 @@
 {
   "prettier": true,
   "space": 2,
-  "plugins": ["import"],
+  "plugins": ["import", "jsdoc"],
   "rules": {
     "sort-imports": [
       "error",
