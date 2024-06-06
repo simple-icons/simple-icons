@@ -1,5 +1,5 @@
 /** @type import("svgo").Config */
-export default {
+const config = {
   multipass: true,
   plugins: [
     'cleanupAttrs',
@@ -62,7 +62,7 @@ export default {
       // Convert basic shapes (such as <circle>) to <path>
       name: 'convertShapeToPath',
       params: {
-        // including <arc>
+        // Including <arc>
         convertArcs: true,
       },
     },
@@ -91,7 +91,7 @@ export default {
       // to the <svg> tag if it's not there already
       name: 'addAttributesToSVGElement',
       params: {
-        attributes: [{ role: 'img', xmlns: 'http://www.w3.org/2000/svg' }],
+        attributes: [{role: 'img', xmlns: 'http://www.w3.org/2000/svg'}],
       },
     },
     'removeOffCanvasPaths',
@@ -100,3 +100,5 @@ export default {
     'reusePaths',
   ],
 };
+
+export default config;

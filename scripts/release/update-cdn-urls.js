@@ -1,31 +1,32 @@
+#!/usr/bin/env node
 /**
  * @fileoverview
  * Updates the CDN URLs in the README.md to match the major version in the
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
 
-import process from 'node:process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { getDirnameFromImportMeta } from '../../sdk.mjs';
+import process from 'node:process';
+import {getDirnameFromImportMeta} from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
-const rootDir = path.resolve(__dirname, '..', '..');
-const packageJsonFile = path.resolve(rootDir, 'package.json');
-const readmeFile = path.resolve(rootDir, 'README.md');
+const rootDirectory = path.resolve(__dirname, '..', '..');
+const packageJsonFile = path.resolve(rootDirectory, 'package.json');
+const readmeFile = path.resolve(rootDirectory, 'README.md');
 
 /**
  * @param {String} semVerVersion
  * @returns {Number}
  */
-const getMajorVersion = (semVerVersion) => {
-  const majorVersionAsString = semVerVersion.split('.')[0];
-  return parseInt(majorVersionAsString);
+const getMajorVersion = (semVersion) => {
+  const majorVersionAsString = semVersion.split('.')[0];
+  return Number.parseInt(majorVersionAsString, 10);
 };
 
 const getManifest = async () => {
-  const manifestRaw = await fs.readFile(packageJsonFile, 'utf-8');
+  const manifestRaw = await fs.readFile(packageJsonFile, 'utf8');
   return JSON.parse(manifestRaw);
 };
 
@@ -35,8 +36,8 @@ const getManifest = async () => {
 const updateVersionInReadmeIfNecessary = async (majorVersion) => {
   let content = await fs.readFile(readmeFile, 'utf8');
 
-  content = content.replace(
-    /simple-icons@v[0-9]+/g,
+  content = content.replaceAll(
+    /simple-icons@v\d+/g,
     `simple-icons@v${majorVersion}`,
   );
 
