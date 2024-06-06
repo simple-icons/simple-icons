@@ -252,7 +252,7 @@ export const getThirdPartyExtensions = async (
 /**
  * Get information about third party libraries from the README table.
  * @param {string} readmePath Path to the README file
- * @returns {Promise<ThirdPartyExtension>} Information about third party libraries
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries
  */
 export const getThirdPartyLibraries = async (
   readmePath = path.join(

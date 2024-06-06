@@ -79,5 +79,5 @@ export function getThirdPartyExtensions(
 ): Promise<ThirdPartyExtension[]>;
 export function getThirdPartyLibraries(
   readmePath?: string,
-): Promise<ThirdPartyExtension>;
+): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;

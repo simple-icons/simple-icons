@@ -11,10 +11,6 @@ import path from 'node:path';
 import process from 'node:process';
 import {getDirnameFromImportMeta} from '../../sdk.mjs';
 
-/**
- * @typedef {import("node:child_process").ExecFileException } ThirdPartyExtension
- */
-
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..', '..');
 
@@ -60,7 +56,7 @@ const generateSdkMts = async () => {
 /**
  * We must remove the duplicated export types that tsc generates from
  * JSDoc `typedef` comments.
- * See https://github.com/microsoft/TypeScript/issues/46011
+ * See {@link https://github.com/microsoft/TypeScript/issues/46011}
  * @param {string} content Content of the file
  * @returns {string} The content without duplicated export types
  */
