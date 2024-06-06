@@ -66,7 +66,7 @@ export type IconData = {
 export const SVG_PATH_REGEX: RegExp;
 export function getDirnameFromImportMeta(importMetaUrl: string): string;
 export function urlRegex(jsonschemaPath?: string): Promise<RegExp>;
-export function getIconSlug(icon: import('./sdk.d.ts').IconData): string;
+export function getIconSlug(icon: IconData): string;
 export function svgToPath(svg: string): string;
 export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
@@ -74,9 +74,7 @@ export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
 export function getIconDataPath(rootDirectory?: string): string;
 export function getIconsDataString(rootDirectory?: string): Promise<string>;
-export function getIconsData(
-  rootDirectory?: string,
-): Promise<import('./sdk.d.ts').IconData[]>;
+export function getIconsData(rootDirectory?: string): Promise<IconData[]>;
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(

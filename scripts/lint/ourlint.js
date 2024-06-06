@@ -28,7 +28,7 @@ const TESTS = {
      *
      * @param {IconData[]} invalidEntries
      * @param {IconData} icon
-     * @param {Number} index
+     * @param {number} index
      * @param {IconData[]} array
      * @returns IconData[]
      */
@@ -85,7 +85,7 @@ const TESTS = {
 
   /* Check redundant trailing slash in URL */
   checkUrl(data) {
-    /** @param {String} url */
+    /** @param {string} url */
     const hasRedundantTrailingSlash = (url) => {
       const {origin} = new global.URL(url);
       return /^\/+$/.test(url.replace(origin, ''));
@@ -95,9 +95,12 @@ const TESTS = {
       ...new Set(
         data.icons
           .flatMap((icon) => {
+            // TODO: `Omit` is not working smoothly here
             const license =
+              // @ts-ignore
               icon.license && icon.license.hasOwn('url')
-                ? [icon.license.url]
+                ? // @ts-ignore
+                  [icon.license.url]
                 : [];
             return [icon.source, icon.guidelines, ...license];
           })

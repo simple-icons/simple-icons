@@ -22,7 +22,7 @@ const iconsDirectory = path.resolve(
  * Checks if icon data matches a subject icon.
  * @param {SimpleIcon} icon Icon data
  * @param {SimpleIcon} subject Icon to check against icon data
- * @param {String} slug Icon data slug
+ * @param {string} slug Icon data slug
  */
 export const testIcon = (icon, subject, slug) => {
   const svgPath = path.resolve(iconsDirectory, `${slug}.svg`);

@@ -74,7 +74,7 @@ const sortObjectByValue = (object) => {
   );
 };
 
-/** @param {Number} number_ */
+/** @param {number} number_ */
 const removeLeadingZeros = (number_) => {
   // Convert 0.03 to '.03'
   return number_.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
@@ -83,12 +83,12 @@ const removeLeadingZeros = (number_) => {
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
- * @param {Number} x1 The x coordinate of the first point.
- * @param {Number} y1 The y coordinate of the first point.
- * @param {Number} x2 The x coordinate of the second point.
- * @param {Number} y2 The y coordinate of the second point.
- * @param {Number} x3 The x coordinate of the third point.
- * @param {Number} y3 The y coordinate of the third point.
+ * @param {number} x1 The x coordinate of the first point.
+ * @param {number} y1 The y coordinate of the first point.
+ * @param {number} x2 The x coordinate of the second point.
+ * @param {number} y2 The y coordinate of the second point.
+ * @param {number} x3 The x coordinate of the third point.
+ * @param {number} y3 The y coordinate of the third point.
  **/
 // eslint-disable-next-line max-params
 const collinear = (x1, y1, x2, y2, x3, y3) => {
@@ -97,7 +97,7 @@ const collinear = (x1, y1, x2, y2, x3, y3) => {
 
 /**
  * Returns the number of digits after the decimal point.
- * @param {Number} number_
+ * @param {number} number_
  */
 const countDecimals = (number_) => {
   if (number_ && number_ % 1) {
@@ -114,7 +114,7 @@ const countDecimals = (number_) => {
 
 /**
  * Get the index at which the first path value of an SVG starts.
- * @param {String} svgFileContent The raw SVG as text.
+ * @param {string} svgFileContent The raw SVG as text.
  */
 const getPathDIndex = (svgFileContent) => {
   const pathDStart = '<path d="';
@@ -123,7 +123,7 @@ const getPathDIndex = (svgFileContent) => {
 
 /**
  * Get the index at which the text of the first `<title></title>` tag starts.
- * @param {String} svgFileContent The raw SVG as text.
+ * @param {string} svgFileContent The raw SVG as text.
  **/
 const getTitleTextIndex = (svgFileContent) => {
   const titleStart = '<title>';
@@ -132,7 +132,7 @@ const getTitleTextIndex = (svgFileContent) => {
 
 /**
  * Convert a hexadecimal number passed as string to decimal number as integer.
- * @param {String} hex The hexadecimal number representation to convert.
+ * @param {string} hex The hexadecimal number representation to convert.
  **/
 const hexadecimalToDecimal = (hex) => {
   let result = 0;
@@ -145,7 +145,7 @@ const hexadecimalToDecimal = (hex) => {
   return result;
 };
 
-/** @param {String} string_ */
+/** @param {string} string_ */
 const maybeShortenedWithEllipsis = (string_) => {
   return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 };
@@ -196,8 +196,8 @@ if (updateIgnoreFile) {
 
 /**
  * Check if an icon is ignored by a linter rule.
- * @param {String} linterRule The name of the linter rule.
- * @param {String} path SVG path of the icon.
+ * @param {string} linterRule The name of the linter rule.
+ * @param {string} path SVG path of the icon.
  * @returns {Boolean} Whether the icon is ignored by the linter rule
  */
 const isIgnored = (linterRule, path) => {
@@ -208,8 +208,8 @@ const isIgnored = (linterRule, path) => {
 
 /**
  * Ignore an icon for a linter rule.
- * @param {String} linterRule The name of the linter rule.
- * @param {String} path SVG path of the icon.
+ * @param {string} linterRule The name of the linter rule.
+ * @param {string} path SVG path of the icon.
  * @param {Cheerio} $ The SVG object
  */
 const ignoreIcon = (linterRule, path, $) => {
@@ -519,12 +519,15 @@ const config = {
           ...curveCommands,
         ]);
 
+        /**
+         * Check if a segment is ineffective.
+         * @param {import('svg-path-segments').Segment} segment
+         * @param {number} index
+         * @param {boolean} previousSegmentIsZ
+         **/
         // eslint-disable-next-line complexity
-        const isInvalidSegment = (
-          [command, x1Coord, y1Coord, ...rest],
-          index,
-          previousSegmentIsZ,
-        ) => {
+        const isInvalidSegment = (segment, index, previousSegmentIsZ) => {
+          const [command, x1Coord, y1Coord, ...rest] = segment.params;
           if (commands.has(command)) {
             // Relative directions (h or v) having a length of 0
             if (lowerDirectionCommands.includes(command) && x1Coord === 0) {
@@ -661,7 +664,7 @@ const config = {
           const previousSegmentIsZ =
             index > 0 && segments[index - 1].params[0].toLowerCase() === 'z';
 
-          if (isInvalidSegment(segment.params, index, previousSegmentIsZ)) {
+          if (isInvalidSegment(segment, index, previousSegmentIsZ)) {
             const [command, _x1, _y1, ...rest] = segment.params;
 
             let errorMessage = `Ineffective segment "${iconPath.slice(
@@ -721,6 +724,8 @@ const config = {
         /**
          * Extracts collinear coordinates from SVG path straight lines
          *   (does not extracts collinear coordinates from curves).
+         *
+         * @param {string} iconPath
          **/
         // eslint-disable-next-line complexity
         const getCollinearSegments = (iconPath) => {

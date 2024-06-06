@@ -37,26 +37,27 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
 /** @type {{name: String, value: String}[]} */
 const licenseTypes =
   jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-    (license) => ({name: license, value: license}),
+    (/** @type {string} */ license) => ({name: license, value: license}),
   );
 
-/** @param {String} input */
+/** @param {string} input */
 const isValidURL = async (input) => {
   const regex = await urlRegex();
   return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
-/** @param {String} input */
+/** @param {string} input */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
-/** @param {String} input */
+/** @param {string} input */
 const isNewIcon = (input) =>
   !iconsData.icons.some(
     (icon) =>
       icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
   );
 
+/** @param {string} input */
 const previewHexColor = (input) => {
   const color = normalizeColor(input);
   const luminance = HEX_REGEX.test(input)

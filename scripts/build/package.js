@@ -44,7 +44,7 @@ const iconObjectTemplateFile = path.resolve(
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
-/** @param {String} value */
+/** @param {string} value */
 const escape = (value) => {
   return value.replaceAll(/(?<!\\)'/g, "\\'");
 };
@@ -77,8 +77,8 @@ const iconToJsObject = (icon) => {
 };
 
 /**
- * @param {String} filepath
- * @param {String} rawJavaScript
+ * @param {string} filepath
+ * @param {string} rawJavaScript
  * @param {EsBuildTransformOptions | null} opts
  */
 const writeJs = async (filepath, rawJavaScript, options = null) => {
@@ -88,8 +88,8 @@ const writeJs = async (filepath, rawJavaScript, options = null) => {
 };
 
 /**
- * @param {String} filepath
- * @param {String} rawTypeScript
+ * @param {string} filepath
+ * @param {string} rawTypeScript
  */
 const writeTs = async (filepath, rawTypeScript) => {
   await fs.writeFile(filepath, rawTypeScript);
