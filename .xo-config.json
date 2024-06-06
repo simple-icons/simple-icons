@@ -2,6 +2,7 @@
   "prettier": true,
   "space": 2,
   "plugins": ["import"],
+  "extends": ["plugin:jsdoc/recommended"],
   "rules": {
     "sort-imports": [
       "error",
@@ -27,7 +28,8 @@
         "newlines-between": "never"
       }
     ],
-    "no-console": ["error", {"allow": ["warn", "error"]}]
+    "no-console": ["error", {"allow": ["warn", "error"]}],
+    "jsdoc/require-file-overview": "error"
   },
   "overrides": [
     {
@@ -46,6 +48,12 @@
         "svgo.config.mjs"
       ],
       "nodeVersion": ">=18"
+    },
+    {
+      "files": ["svglint.config.mjs"],
+      "rules": {
+        "max-depth": "off"
+      }
     }
   ]
 }
