@@ -17,7 +17,7 @@ const packageJsonFile = path.resolve(rootDirectory, 'package.json');
 const readmeFile = path.resolve(rootDirectory, 'README.md');
 
 /**
- * @param {String} semVerVersion
+ * @param {String} semVersion
  * @returns {Number}
  */
 const getMajorVersion = (semVersion) => {

@@ -73,8 +73,8 @@ export function slugToVariableName(slug: string): string;
 export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
 export function getIconDataPath(rootDirectory?: string): string;
-export function getIconsDataString(rootDirectory?: string): string;
-export function getIconsData(rootDirectory?: string): IconData[];
+export function getIconsDataString(rootDirectory?: string): Promise<string>;
+export function getIconsData(rootDirectory?: string): Promise<IconData[]>;
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
@@ -84,3 +84,5 @@ export function getThirdPartyLibraries(
   readmePath?: string,
 ): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
+export type ThirdPartyExtension = import('./sdk.d.ts').ThirdPartyExtension;
+export type IconData = import('./sdk.d.ts').IconData;

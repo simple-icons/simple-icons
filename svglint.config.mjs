@@ -51,7 +51,7 @@ const ignoreFile = './.svglint-ignored.json';
 const iconIgnored = updateIgnoreFile ? {} : svglintIgnores;
 
 /**
- * @param {{ [key: string]: any }} obj
+ * @param {{ [key: string]: any }} object
  * @returns {{ [key: string]: any }}
  */
 const sortObjectByKey = (object) => {
@@ -63,7 +63,7 @@ const sortObjectByKey = (object) => {
 };
 
 /**
- * @param {{ [key: string]: any }} obj
+ * @param {{ [key: string]: any }} object
  * @returns {{ [key: string]: any }}
  */
 const sortObjectByValue = (object) => {
@@ -74,10 +74,10 @@ const sortObjectByValue = (object) => {
   );
 };
 
-/** @param {Number} number */
-const removeLeadingZeros = (number) => {
+/** @param {Number} number_ */
+const removeLeadingZeros = (number_) => {
   // Convert 0.03 to '.03'
-  return number.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
+  return number_.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 };
 
 /**
@@ -97,7 +97,7 @@ const collinear = (x1, y1, x2, y2, x3, y3) => {
 
 /**
  * Returns the number of digits after the decimal point.
- * @param {Number} number
+ * @param {Number} number_
  */
 const countDecimals = (number_) => {
   if (number_ && number_ % 1) {
@@ -145,7 +145,7 @@ const hexadecimalToDecimal = (hex) => {
   return result;
 };
 
-/** @param {String} str */
+/** @param {String} string_ */
 const maybeShortenedWithEllipsis = (string_) => {
   return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 };
@@ -153,7 +153,7 @@ const maybeShortenedWithEllipsis = (string_) => {
 /**
  * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
- * @param {(arg0: any) => any} func The function to memoize.
+ * @param {(arg0: any) => any} function_ The function to memoize.
  */
 const memoize = (function_) => {
   /** @type {{ [key: string]: any }} */

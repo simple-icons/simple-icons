@@ -9,7 +9,6 @@ import {execSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {sys} from 'typescript';
 import {getDirnameFromImportMeta} from '../../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -37,7 +36,7 @@ const generateSdkMts = async () => {
     );
   } catch (error) {
     await fs.writeFile(sdkMjs, originalSdkMjsContent);
-    sys.stdout.write(
+    process.stdout.write(
       `Error ${error.status} generating Typescript` +
         ` definitions: '${error.message}'` +
         '\n',
