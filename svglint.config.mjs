@@ -784,7 +784,11 @@ const config = {
               // Next switch cases have been ordered by frequency
               // of occurrence in the SVG paths of the icons
               case 'M': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 // SVG 1.1:
                 // If a moveto is followed by multiple pairs of coordinates,
@@ -797,7 +801,11 @@ const config = {
               }
 
               case 'm': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 if (seg.chain === undefined || seg.chain.start === seg.start) {
                   startPoint = undefined;
@@ -807,33 +815,49 @@ const config = {
               }
 
               case 'H': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[1];
                 break;
               }
 
               case 'h': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
                 break;
               }
 
               case 'V': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[1];
                 break;
               }
 
               case 'v': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[1];
                 break;
               }
 
               case 'L': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 'l': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
@@ -847,61 +871,101 @@ const config = {
               }
 
               case 'C': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[5];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[6];
                 break;
               }
 
               case 'c': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[5];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[6];
                 break;
               }
 
               case 'A': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[6];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[7];
                 break;
               }
 
               case 'a': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[6];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[7];
                 break;
               }
 
               case 's': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
 
               case 'S': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 't': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
 
               case 'T': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[1];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 'Q': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = parms[3];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = parms[4];
                 break;
               }
 
               case 'q': {
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[3];
+                /** @type {number} */
+                // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[4];
                 break;
               }

@@ -118,6 +118,8 @@ export const titleToHtmlFriendly = (brandTitle) =>
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll(/./g, (char) => {
+      /** @type {number} */
+      // @ts-ignore
       const charCode = char.codePointAt(0);
       return charCode > 127 ? `&#${charCode};` : char;
     });
@@ -135,6 +137,11 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     )
     .replaceAll(
       /&(quot|amp|lt|gt);/g,
+      /**
+       * @param {string} _ Full match
+       * @param {'quot' | 'amp' | 'lt' | 'gt'} reference Reference to replace
+       * @returns {string} Replacement for the reference
+       */
       (_, reference) => ({quot: '"', amp: '&', lt: '<', gt: '>'})[reference],
     );
 
