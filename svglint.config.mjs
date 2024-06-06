@@ -716,7 +716,7 @@ const config = {
           }
         }
       },
-      (reporter, $, ast, {filepath}) => {
+      (reporter, $, ast) => {
         reporter.name = 'collinear-segments';
         /**
          * Extracts collinear coordinates from SVG path straight lines
@@ -917,7 +917,7 @@ const config = {
           return collinearSegments;
         };
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
         const collinearSegments = getCollinearSegments(iconPath);
         if (collinearSegments.length === 0) {
           return;
@@ -1009,10 +1009,10 @@ const config = {
           }
         }
       },
-      (reporter, $, ast, {filepath}) => {
+      (reporter, $, ast) => {
         reporter.name = 'final-closepath';
 
-        const iconPath = getIconPath($, filepath);
+        const iconPath = getIconPath($);
         const segments = getIconPathSegments(iconPath);
 
         // Unnecessary characters after the final closepath
