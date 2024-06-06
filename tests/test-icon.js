@@ -19,13 +19,9 @@ const iconsDirectory = path.resolve(
 );
 
 /**
- * @typedef {import('../types.d.ts').SimpleIcon} SimpleIcon
- */
-
-/**
  * Checks if icon data matches a subject icon.
- * @param {SimpleIcon} icon Icon data
- * @param {SimpleIcon} subject Icon to check against icon data
+ * @param {import('../sdk.d.ts').IconData} icon Icon data
+ * @param {import('../types.d.ts').SimpleIcon} subject Icon object to check against icon data
  * @param {string} slug Icon data slug
  */
 export const testIcon = (icon, subject, slug) => {
@@ -68,6 +64,8 @@ export const testIcon = (icon, subject, slug) => {
       if (icon.license) {
         assert.equal(subject.license?.type, icon.license.type);
         if (icon.license.type === 'custom') {
+          // TODO: Omit not working smoothly here
+          // @ts-ignore
           assert.equal(subject.license.url, icon.license.url);
         }
       } else {

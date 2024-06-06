@@ -11,6 +11,8 @@ import {testIcon} from './test-icon.js';
 for (const icon of await getIconsData()) {
   const slug = getIconSlug(icon);
   const variableName = slugToVariableName(slug);
+  /** @type {import('../types.d.ts').SimpleIcon} */
+  // @ts-ignore
   const subject = simpleIcons[variableName];
 
   testIcon(icon, subject, slug);
