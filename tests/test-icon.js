@@ -64,7 +64,7 @@ export const testIcon = (icon, subject, slug) => {
       if (icon.license) {
         assert.equal(subject.license?.type, icon.license.type);
         if (icon.license.type === 'custom') {
-          // TODO: Omit not working smoothly here
+          // TODO: `Omit` not working smoothly here
           // @ts-ignore
           assert.equal(subject.license.url, icon.license.url);
         }
