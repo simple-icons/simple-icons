@@ -98,7 +98,7 @@ const TESTS = {
             // TODO: `Omit` is not working smoothly here
             const license =
               // @ts-ignore
-              icon.license && icon.license.hasOwn('url')
+              icon.license && icon.license.url
                 ? // @ts-ignore
                   [icon.license.url]
                 : [];
