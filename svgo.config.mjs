@@ -1,3 +1,7 @@
+/**
+ * @file SVGO configuration for Simple Icons.
+ */
+
 /** @type {import("svgo").Config} */
 const config = {
   multipass: true,

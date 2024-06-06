@@ -1,3 +1,10 @@
+/**
+ * @file Internal utilities.
+ *
+ * Here resides all the functionality that does not qualifies to reside
+ * in the SDK because is not publicly exposed.
+ */
+
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {getDirnameFromImportMeta, getIconDataPath} from '../sdk.mjs';

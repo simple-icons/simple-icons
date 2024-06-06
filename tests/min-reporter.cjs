@@ -1,3 +1,7 @@
+/**
+ * @file Custom mocha reporter.
+ */
+
 const {reporters, Runner} = require('mocha');
 
 const {EVENT_RUN_END} = Runner.constants;

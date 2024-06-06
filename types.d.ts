@@ -1,4 +1,8 @@
 /**
+ * @file Types for Simple Icons package.
+ */
+
+/**
  * The license for a Simple Icon.
  * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#optional-data Optional Data}
  */

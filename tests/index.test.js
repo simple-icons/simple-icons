@@ -1,3 +1,7 @@
+/**
+ * @file Tests for the index file of npm package.
+ */
+
 // The index.mjs file is generated on build before running tests
 // @ts-ignore
 import * as simpleIcons from '../index.mjs';
