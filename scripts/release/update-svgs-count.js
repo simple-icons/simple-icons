@@ -46,8 +46,6 @@ try {
 } catch (error) {
   console.error(
     'Failed to update number of SVG icons of current milestone in README:',
-    // TODO: type error
-    // @ts-ignore
     error,
   );
   process.exit(1);

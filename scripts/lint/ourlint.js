@@ -17,7 +17,7 @@ import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k:string]: (arg0: IconsData, arg1: String) => String | undefined}}
+ * @type {{[k:string]: (arg0: {icons: IconsData}, arg1: String) => String | undefined}}
  */
 const TESTS = {
   /**
@@ -116,7 +116,6 @@ const TESTS = {
 };
 
 const iconsDataString = await getIconsDataString();
-/** @type {IconsData} */
 const iconsData = JSON.parse(iconsDataString);
 
 const errors = (

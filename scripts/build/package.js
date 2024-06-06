@@ -5,9 +5,6 @@
  */
 
 /**
- * // TODO: not needed on v12 release
- * @typedef {import("../../sdk.mjs").IconData} IconData
- *
  * @typedef {import('../../types.js').License} License
  * @typedef {import('esbuild').TransformOptions} EsBuildTransformOptions
  */
@@ -44,9 +41,6 @@ const iconObjectTemplateFile = path.resolve(
   'icon-object.js.template',
 );
 
-// TODO: This type definition will not be needed on v12 release
-//       (see `getIconsData` on `sdk.mjs`)
-/** @type {IconData[]} */
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
