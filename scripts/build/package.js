@@ -41,6 +41,14 @@ const iconObjectTemplateFile = path.resolve(
   'icon-object.js.template',
 );
 
+/**
+ * Merged type from icon data and icon JS object needed to build by reference
+ * to not decrease performance in the build process.
+ * @typedef {import('../../types.js').SimpleIcon & import('../../sdk.d.ts').IconData} IconDataAndObject
+ */
+
+/** @type {IconDataAndObject[]} */
+// @ts-ignore
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
@@ -64,8 +72,11 @@ const licenseToObject = (license) => {
   return license;
 };
 
-// TODO: Find a way to type this object without decreasing performance
-// @ts-ignore
+/**
+ * Converts an icon object to a JavaScript object.
+ * @param {IconDataAndObject} icon The icon object
+ * @returns {string} The JavaScript object
+ */
 const iconToJsObject = (icon) => {
   return util.format(
     iconObjectTemplate,
@@ -106,10 +117,7 @@ const build = async () => {
     icons.map(async (icon) => {
       const filename = getIconSlug(icon);
       const svgFilepath = path.resolve(iconsDirectory, `${filename}.svg`);
-      // TODO: Find a way to type these objects without decreasing performance
-      // @ts-ignore
       icon.svg = await fs.readFile(svgFilepath, UTF8);
-      // @ts-ignore
       icon.path = svgToPath(icon.svg);
       icon.slug = filename;
       const iconObject = iconToJsObject(icon);
