@@ -164,6 +164,14 @@ const maybeShortenedWithEllipsis = (string_) => {
 };
 
 /**
+ * Check if a string is a number.
+ * @param {string} string_ The string to check.
+ * @returns {boolean} Whether the string is a number.
+ */
+const isNumber = (string_) =>
+  [...string_].every((character) => '0123456789'.includes(character));
+
+/**
  * Memoize a function which accepts a single argument.
  * A second argument can be passed to be used as key.
  * @param {(arg0: any) => any} function_ The function to memoize.
@@ -367,7 +375,7 @@ const config = {
             } else {
               // Encode all non ascii characters plus "'&<> (XML named entities)
               /** @type {number} */
-              // @ts-ignore Coerce to number
+              // @ts-ignore
               const charDecimalCode = iconTitleText.codePointAt(i);
 
               if (charDecimalCode > 127) {
@@ -398,12 +406,10 @@ const config = {
 
           // Check if there are some other encoded characters in decimal notation
           // which shouldn't be encoded
-          for (const match of encodingMatches.filter((m) => {
-            // TODO: this fails using `Number.isNaN`, investigate
-            // @ts-ignore
-            // eslint-disable-next-line unicorn/prefer-number-properties
-            return !isNaN(m[2]);
-          })) {
+          const numberMatches = encodingMatches.filter(
+            (m) => m[2] !== undefined && isNumber(m[2]),
+          );
+          for (const match of numberMatches) {
             const decimalNumber = Number.parseInt(match[2], 10);
             if (decimalNumber > 127) {
               continue;
@@ -514,7 +520,7 @@ const config = {
         const segments = getIconPathSegments(iconPath);
 
         /** @type {import('svg-path-segments').Segment[]} */
-        // TODO: svgpath does not includes the segment property on the interface,
+        // TODO: svgpath does not includes the `segments` property on the interface,
         //       see https://github.com/fontello/svgpath/pull/67/files
         // @ts-ignore
         const absSegments = svgpath(iconPath).abs().unshort().segments;
