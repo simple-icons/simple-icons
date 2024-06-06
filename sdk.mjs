@@ -201,7 +201,7 @@ export const normalizeColor = (text) => {
 /**
  * Get information about third party extensions from the README table.
  * @param {string} readmePath Path to the README file
- * @returns {Promise<import("./sdk.d.ts").ThirdPartyExtension[]>} Information about third party extensions
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
  */
 export const getThirdPartyExtensions = async (
   readmePath = path.join(
@@ -252,7 +252,7 @@ export const getThirdPartyExtensions = async (
 /**
  * Get information about third party libraries from the README table.
  * @param {string} readmePath Path to the README file
- * @returns {Promise<import("./sdk.d.ts").ThirdPartyExtension[]>} Information about third party libraries
+ * @returns {Promise<ThirdPartyExtension>} Information about third party libraries
  */
 export const getThirdPartyLibraries = async (
   readmePath = path.join(

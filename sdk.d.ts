@@ -79,8 +79,8 @@ export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
   readmePath?: string,
-): Promise<import('./sdk.d.ts').ThirdPartyExtension[]>;
+): Promise<ThirdPartyExtension[]>;
 export function getThirdPartyLibraries(
   readmePath?: string,
-): Promise<import('./sdk.d.ts').ThirdPartyExtension[]>;
+): Promise<ThirdPartyExtension>;
 export const collator: Intl.Collator;
