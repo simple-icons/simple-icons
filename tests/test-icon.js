@@ -1,3 +1,7 @@
+/**
+ * @file Icon tester.
+ */
+
 import {strict as assert} from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -15,14 +19,10 @@ const iconsDirectory = path.resolve(
 );
 
 /**
- * @typedef {import('..').SimpleIcon} SimpleIcon
- */
-
-/**
  * Checks if icon data matches a subject icon.
- * @param {SimpleIcon} icon Icon data
- * @param {SimpleIcon} subject Icon to check against icon data
- * @param {String} slug Icon data slug
+ * @param {import('../sdk.d.ts').IconData} icon Icon data
+ * @param {import('../types.d.ts').SimpleIcon} subject Icon object to check against icon data
+ * @param {string} slug Icon data slug
  */
 export const testIcon = (icon, subject, slug) => {
   const svgPath = path.resolve(iconsDirectory, `${slug}.svg`);
@@ -62,8 +62,10 @@ export const testIcon = (icon, subject, slug) => {
 
     it(`has ${icon.license ? 'the correct' : 'no'} "license"`, () => {
       if (icon.license) {
-        assert.equal(subject.license.type, icon.license.type);
+        assert.equal(subject.license?.type, icon.license.type);
         if (icon.license.type === 'custom') {
+          // TODO: `Omit` not working smoothly here
+          // @ts-ignore
           assert.equal(subject.license.url, icon.license.url);
         }
       } else {
