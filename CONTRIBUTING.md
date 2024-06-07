@@ -72,6 +72,7 @@ Some companies and organizations are excessively protective with their brands, s
 - BP
 - Disney
 - International Olympic Committee
+- LEGO
 - Mattel
 - Microchip Technology Inc.
 - Oracle
