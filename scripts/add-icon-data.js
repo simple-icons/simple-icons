@@ -1,19 +1,29 @@
 #!/usr/bin/env node
+/**
+ * @file
+ * Script to add data for a new icon to the simple-icons dataset.
+ */
+
+/**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
 import process from 'node:process';
-import {ExitPromptError, checkbox, confirm, input} from '@inquirer/prompts';
+import {ExitPromptError} from '@inquirer/core';
+import {checkbox, confirm, input} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
 import autocomplete from 'inquirer-autocomplete-standalone';
 import {
-  URL_REGEX,
   collator,
   getIconsDataString,
   normalizeColor,
   titleToSlug,
+  urlRegex,
 } from '../sdk.mjs';
 import {getJsonSchemaData, writeIconsData} from './utils.js';
 
+/** @type {{icons: import('../sdk.js').IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
@@ -24,23 +34,42 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
   value: key,
 }));
 
+/** @type {{name: string, value: string}[]} */
 const licenseTypes =
   jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-    (license) => ({name: license, value: license}),
+    (/** @type {string} */ license) => ({name: license, value: license}),
   );
 
-const isValidURL = (input) =>
-  URL_REGEX.test(input) || 'Must be a valid and secure (https://) URL.';
+/**
+ * @param {string} input URL input
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL
+ */
+const isValidURL = async (input) => {
+  const regex = await urlRegex();
+  return regex.test(input) || 'Must be a valid and secure (https://) URL.';
+};
 
+/**
+ * @param {string} input Hex color
+ * @returns {boolean|string} Whether the input is a valid hex color
+ */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
+/**
+ * @param {string} input New icon input
+ * @returns {boolean} Whether the icon is new
+ */
 const isNewIcon = (input) =>
   !iconsData.icons.some(
     (icon) =>
       icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
-  ) || 'This icon title or slug already exists.';
+  );
 
+/**
+ * @param {string} input Color input
+ * @returns {string} Preview of the color
+ */
 const previewHexColor = (input) => {
   const color = normalizeColor(input);
   const luminance = HEX_REGEX.test(input)
@@ -57,7 +86,9 @@ try {
     title: await input({
       message: 'What is the title of this icon?',
       validate: (input) =>
-        input.trim().length > 0 ? isNewIcon(input) : 'This field is required.',
+        input.trim().length > 0
+          ? isNewIcon(input) || 'This icon title or slug already exists.'
+          : 'This field is required.',
     }),
     hex: normalizeColor(
       await input({
@@ -108,6 +139,7 @@ try {
         }).then(async (aliases) => {
           const result = {};
           for (const alias of aliases) {
+            // @ts-ignore
             // eslint-disable-next-line no-await-in-loop
             result[alias] = await input({
               message: `What ${alias} aliases would you like to add? (separate with commas)`,
@@ -121,9 +153,10 @@ try {
       : undefined,
   };
 
-  console.log(
+  process.stdout.write(
     'About to write the following to simple-icons.json:\n' +
-      JSON.stringify(answers, null, 4),
+      JSON.stringify(answers, null, 4) +
+      '\n',
   );
 
   if (
@@ -134,14 +167,14 @@ try {
     iconsData.icons.push(answers);
     iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
     await writeIconsData(iconsData);
-    console.log(chalk.green('\nData written successfully.'));
+    process.stdout.write(chalk.green('\nData written successfully.\n'));
   } else {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.\n'));
     process.exit(1);
   }
 } catch (error) {
   if (error instanceof ExitPromptError) {
-    console.log(chalk.red('\nAborted.'));
+    process.stdout.write(chalk.red('\nAborted.\n'));
     process.exit(1);
   }
 
