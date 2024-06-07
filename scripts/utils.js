@@ -1,3 +1,10 @@
+/**
+ * @file Internal utilities.
+ *
+ * Here resides all the functionality that does not qualifies to reside
+ * in the SDK because is not publicly exposed.
+ */
+
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {getDirnameFromImportMeta, getIconDataPath} from '../sdk.mjs';
@@ -5,8 +12,13 @@ import {getDirnameFromImportMeta, getIconDataPath} from '../sdk.mjs';
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
+
+/**
  * Get JSON schema data.
- * @param {String} rootDirectory Path to the root directory of the project.
+ * @param {string} rootDirectory Path to the root directory of the project.
+ * @returns {Promise<any>} JSON schema data.
  */
 export const getJsonSchemaData = async (
   rootDirectory = path.resolve(__dirname, '..'),
@@ -18,8 +30,8 @@ export const getJsonSchemaData = async (
 
 /**
  * Write icons data to _data/simple-icons.json.
- * @param {Object} iconsData Icons data object.
- * @param {String} rootDirectory Path to the root directory of the project.
+ * @param {{icons: IconData[]}} iconsData Icons data object.
+ * @param {string} rootDirectory Path to the root directory of the project.
  */
 export const writeIconsData = async (
   iconsData,
