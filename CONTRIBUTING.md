@@ -58,6 +58,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Governmental agencies, programs, departments
        - Allowed: International organizations and NGOs with supranational interests
        - Allowed: Space agencies
+    - Military-related brands and organizations
     - Symbols, including flags and banners
     - Sport clubs
        - Allowed: Sports organizations
