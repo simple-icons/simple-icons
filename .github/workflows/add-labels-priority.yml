@@ -6,7 +6,9 @@ on:
 jobs:
   triage:
     runs-on: ubuntu-latest
-    if: github.event.action == 'opened'
+    if: |
+      github.event.action == 'opened' &&
+      github.event.pull_request.base.ref != 'master'
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
@@ -20,7 +22,9 @@ jobs:
   assign-to-project:
     runs-on: ubuntu-latest
     name: Assign to Project
-    if: github.event.action == 'opened'
+    if: |
+      github.event.action == 'opened' &&
+      github.event.pull_request.base.ref != 'master'
     needs: triage
     steps:
       - uses: actions/create-github-app-token@v1
@@ -66,9 +70,7 @@ jobs:
         uses: srggrs/assign-one-project-github-action@1.3.1
         env:
           MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-        if: |
-          contains(steps.get-labels.outputs.labels, 'update icon/data') &&
-          contains(steps.get-labels.outputs.labels, 'release') == false
+        if: contains(steps.get-labels.outputs.labels, 'update icon/data')
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 1
@@ -83,8 +85,7 @@ jobs:
         if: |
           contains(steps.get-labels.outputs.labels, 'new icon') &&
           join(steps.get-linked-issues.outputs.issues) != '' &&
-          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == false &&
-          contains(steps.get-labels.outputs.labels, 'release') == false
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == false
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 2
@@ -99,8 +100,7 @@ jobs:
         if: |
           contains(steps.get-labels.outputs.labels, 'new icon') &&
           join(steps.get-linked-issues.outputs.issues) != '' &&
-          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == true &&
-          contains(steps.get-labels.outputs.labels, 'release') == false
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == true
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 3
@@ -115,8 +115,7 @@ jobs:
         if: |
           contains(steps.get-labels.outputs.labels, 'new icon') &&
           join(steps.get-linked-issues.outputs.issues) == '' &&
-          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == true &&
-          contains(steps.get-labels.outputs.labels, 'release') == false
+          contains(steps.get-si-members.outputs.members, github.event.pull_request.user.login) == true
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Priority 4
@@ -139,7 +138,8 @@ jobs:
     name: Unassign from Project
     if: |
       github.event.action != 'opened' &&
-      github.event.pull_request.merged == false
+      github.event.pull_request.merged == false &&
+      github.event.pull_request.base.ref != 'master'
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
