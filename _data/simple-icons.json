@@ -1009,6 +1009,15 @@
             "source": "https://www.ankermake.com"
         },
         {
+            "title": "Anki",
+            "hex": "80C2EE",
+            "source": "https://commons.wikimedia.org/wiki/File:Anki-icon.svg",
+            "license": {
+                "type": "AGPL-3.0-only"
+            },
+            "guidelines": "https://github.com/ankitects/anki/blob/4ab0db3127af8508317f84174aff9d20faedc41a/LICENSE"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -5323,9 +5332,9 @@
         },
         {
             "title": "Firebase",
-            "hex": "FFCA28",
-            "source": "https://firebase.google.com/brand-guidelines/",
-            "guidelines": "https://firebase.google.com/brand-guidelines/"
+            "hex": "DD2C00",
+            "source": "https://firebase.google.com/brand-guidelines",
+            "guidelines": "https://firebase.google.com/brand-guidelines"
         },
         {
             "title": "Firefish",
@@ -15986,6 +15995,12 @@
             "title": "TourBox",
             "hex": "231F20",
             "source": "https://www.tourboxtech.com"
+        },
+        {
+            "title": "Tower",
+            "hex": "00CAF4",
+            "source": "https://www.git-tower.com/company/press",
+            "guidelines": "https://www.git-tower.com/company/press"
         },
         {
             "title": "Toyota",
