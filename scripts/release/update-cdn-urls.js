@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Updates the CDN URLs in the README.md to match the major version in the
  * NPM package manifest. Does nothing if the README.md is already up-to-date.
  */
@@ -16,16 +16,27 @@ const rootDirectory = path.resolve(__dirname, '..', '..');
 const packageJsonFile = path.resolve(rootDirectory, 'package.json');
 const readmeFile = path.resolve(rootDirectory, 'README.md');
 
+/**
+ * @param {string} semVersion A semantic version string.
+ * @returns {number} The major version number.
+ */
 const getMajorVersion = (semVersion) => {
   const majorVersionAsString = semVersion.split('.')[0];
   return Number.parseInt(majorVersionAsString, 10);
 };
 
+/**
+ * Get the package.json manifest.
+ * @returns {Promise<{version: string}>} The package.json manifest.
+ */
 const getManifest = async () => {
   const manifestRaw = await fs.readFile(packageJsonFile, 'utf8');
   return JSON.parse(manifestRaw);
 };
 
+/**
+ * @param {number} majorVersion The major version number.
+ */
 const updateVersionInReadmeIfNecessary = async (majorVersion) => {
   let content = await fs.readFile(readmeFile, 'utf8');
 
