@@ -55,10 +55,10 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
 * Doesn't fall into one of the following categories:
     - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
+    - Military-related brands and organizations
     - Governmental agencies, programs, departments
        - Allowed: International organizations and NGOs with supranational interests
        - Allowed: Space agencies
-    - Military-related brands and organizations
     - Symbols, including flags and banners
     - Sport clubs
        - Allowed: Sports organizations
