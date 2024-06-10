@@ -75,7 +75,8 @@ const config = {
       // Sort the attributes on the <svg> tag
       name: 'sortAttrs',
       params: {
-        order: ['role', 'viewBox', 'xmlns'],
+        order: ['role', 'viewBox'],
+        xmlnsOrder: 'alphabetical',
       },
     },
     'sortDefsChildren',
