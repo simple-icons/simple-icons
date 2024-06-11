@@ -1009,6 +1009,15 @@
             "source": "https://www.ankermake.com"
         },
         {
+            "title": "Anki",
+            "hex": "80C2EE",
+            "source": "https://commons.wikimedia.org/wiki/File:Anki-icon.svg",
+            "license": {
+                "type": "AGPL-3.0-only"
+            },
+            "guidelines": "https://github.com/ankitects/anki/blob/4ab0db3127af8508317f84174aff9d20faedc41a/LICENSE"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -1596,6 +1605,11 @@
             "title": "Aston Martin",
             "hex": "00665E",
             "source": "https://www.astonmartin.com"
+        },
+        {
+            "title": "Astra",
+            "hex": "5C2EDE",
+            "source": "https://wpastra.com/brand-assets"
         },
         {
             "title": "Astral",
@@ -4354,6 +4368,11 @@
             "source": "https://github.com/docsifyjs/docsify/blob/d01841fd9d829adeeae6cde1d5818ce8798c7e58/docs/_media/icon.svg"
         },
         {
+            "title": "Doctrine",
+            "hex": "FC6A31",
+            "source": "https://www.doctrine-project.org"
+        },
+        {
             "title": "Docusaurus",
             "hex": "3ECC5F",
             "source": "https://github.com/facebook/docusaurus/blob/67c40069d1062b5aae530b696e6f66bf9618a696/website/static/img/docusaurus.svg"
@@ -4530,6 +4549,11 @@
             "hex": "58CC02",
             "source": "https://design.duolingo.com",
             "guidelines": "https://design.duolingo.com"
+        },
+        {
+            "title": "Duplicati",
+            "hex": "1E3A8A",
+            "source": "https://duplicati.com"
         },
         {
             "title": "DVC",
@@ -11811,6 +11835,11 @@
             "source": "https://www.picpay.com/site/sobre-nos"
         },
         {
+            "title": "Picrew",
+            "hex": "FFBD16",
+            "source": "https://picrew.me"
+        },
+        {
             "title": "Picxy",
             "hex": "2E3192",
             "source": "https://www.picxy.com"
@@ -11836,6 +11865,11 @@
             "hex": "FFF000",
             "source": "https://www.pingdom.com/resources/brand-assets/",
             "guidelines": "https://www.pingdom.com/resources/brand-assets/"
+        },
+        {
+            "title": "pino",
+            "hex": "687634",
+            "source": "https://github.com/pinojs/pino/blob/bb31ed77568959670cce62ca2847234b3f2cb87f/pino-tree.png"
         },
         {
             "title": "Pinterest",
@@ -13211,7 +13245,7 @@
         },
         {
             "title": "Render",
-            "hex": "46E3B7",
+            "hex": "000000",
             "source": "https://render.com"
         },
         {
@@ -15993,6 +16027,12 @@
             "source": "https://www.tourboxtech.com"
         },
         {
+            "title": "Tower",
+            "hex": "00CAF4",
+            "source": "https://www.git-tower.com/company/press",
+            "guidelines": "https://www.git-tower.com/company/press"
+        },
+        {
             "title": "Toyota",
             "hex": "EB0A1E",
             "source": "https://www.toyota.com/brandguidelines/logo/",
@@ -16280,6 +16320,14 @@
             "title": "Typeform",
             "hex": "262627",
             "source": "https://www.typeform.com"
+        },
+        {
+            "title": "TypeORM",
+            "hex": "FE0803",
+            "source": "https://github.com/typeorm/typeorm/blob/e7649d2746f907ff36b1efb600402dedd5f5a499/resources/logo_big.png",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Typer",
@@ -17008,6 +17056,11 @@
             "title": "Wacom",
             "hex": "000000",
             "source": "https://support.wacom.com/hc/en-us"
+        },
+        {
+            "title": "Wagmi",
+            "hex": "000000",
+            "source": "https://wagmi.sh"
         },
         {
             "title": "Wagtail",
@@ -17754,6 +17807,11 @@
             "title": "Yubico",
             "hex": "84BD00",
             "source": "https://www.yubico.com/wp-content/themes/coronado/img/icon.svg"
+        },
+        {
+            "title": "YunoHost",
+            "hex": "000000",
+            "source": "https://github.com/YunoHost/doc/blob/0157b052481407b3c06cc2892de225f14c42520b/images/ynh_logo_black.svg"
         },
         {
             "title": "Żabka",
