@@ -2600,6 +2600,22 @@
             "source": "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg"
         },
         {
+            "title": "C#",
+            "slug": "csharp",
+            "hex": "512BD4",
+            "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1",
+            "aliases": {
+                "aka": [
+                    "C sharp"
+                ]
+            }
+        },
+        {
+            "title": "C++",
+            "hex": "00599C",
+            "source": "https://github.com/isocpp/logos/tree/64ef037049f87ac74875dbe72695e59118b52186"
+        },
+        {
             "title": "C++ Builder",
             "hex": "E62431",
             "source": "https://www.embarcadero.com/news/logo",
@@ -5019,6 +5035,18 @@
             "title": "F-Secure",
             "hex": "00BAFF",
             "source": "https://vip.f-secure.com/en/marketing/logos"
+        },
+        {
+            "title": "F#",
+            "hex": "378BBA",
+            "slug": "fsharp",
+            "source": "https://foundation.fsharp.org/logo",
+            "guidelines": "https://foundation.fsharp.org/logo",
+            "aliases": {
+                "aka": [
+                    "F sharp"
+                ]
+            }
         },
         {
             "title": "F1",
