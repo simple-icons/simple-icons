@@ -6,7 +6,9 @@ on:
 jobs:
   triage:
     runs-on: ubuntu-latest
-    if: github.event.action == 'opened'
+    if: |
+      github.event.action == 'opened' &&
+      github.event.pull_request.base.ref != 'master'
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token
@@ -20,7 +22,9 @@ jobs:
   assign-to-project:
     runs-on: ubuntu-latest
     name: Assign to Project
-    if: github.event.action == 'opened'
+    if: |
+      github.event.action == 'opened' &&
+      github.event.pull_request.base.ref != 'master'
     needs: triage
     steps:
       - uses: actions/create-github-app-token@v1
@@ -134,7 +138,8 @@ jobs:
     name: Unassign from Project
     if: |
       github.event.action != 'opened' &&
-      github.event.pull_request.merged == false
+      github.event.pull_request.merged == false &&
+      github.event.pull_request.base.ref != 'master'
     steps:
       - uses: actions/create-github-app-token@v1
         id: app-token

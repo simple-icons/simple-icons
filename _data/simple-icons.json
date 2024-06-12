@@ -326,6 +326,11 @@
             "guidelines": "https://www.adyen.com/press-and-media/presskit"
         },
         {
+            "title": "Aegis Authenticator",
+            "hex": "005E9D",
+            "source": "https://getaegis.app/aegis.svg"
+        },
+        {
             "title": "Aer Lingus",
             "hex": "006272",
             "source": "https://www.aerlingus.com"
@@ -1004,6 +1009,15 @@
             "source": "https://www.ankermake.com"
         },
         {
+            "title": "Anki",
+            "hex": "80C2EE",
+            "source": "https://commons.wikimedia.org/wiki/File:Anki-icon.svg",
+            "license": {
+                "type": "AGPL-3.0-only"
+            },
+            "guidelines": "https://github.com/ankitects/anki/blob/4ab0db3127af8508317f84174aff9d20faedc41a/LICENSE"
+        },
+        {
             "title": "Ansible",
             "hex": "EE0000",
             "source": "https://www.ansible.com/logos"
@@ -1583,9 +1597,19 @@
             "source": "https://www.assemblyscript.org"
         },
         {
+            "title": "Asterisk",
+            "hex": "F68F1E",
+            "source": "https://commons.wikimedia.org/wiki/File:Asterisk_logo.svg"
+        },
+        {
             "title": "Aston Martin",
             "hex": "00665E",
             "source": "https://www.astonmartin.com"
+        },
+        {
+            "title": "Astra",
+            "hex": "5C2EDE",
+            "source": "https://wpastra.com/brand-assets"
         },
         {
             "title": "Astral",
@@ -3982,6 +4006,11 @@
             "source": "https://date-fns.org"
         },
         {
+            "title": "DATEV",
+            "hex": "9BD547",
+            "source": "https://commons.wikimedia.org/wiki/File:Datev.svg"
+        },
+        {
             "title": "DatoCMS",
             "hex": "FF7751",
             "source": "https://www.datocms.com/company/brand-assets",
@@ -4344,6 +4373,11 @@
             "source": "https://github.com/docsifyjs/docsify/blob/d01841fd9d829adeeae6cde1d5818ce8798c7e58/docs/_media/icon.svg"
         },
         {
+            "title": "Doctrine",
+            "hex": "FC6A31",
+            "source": "https://www.doctrine-project.org"
+        },
+        {
             "title": "Docusaurus",
             "hex": "3ECC5F",
             "source": "https://github.com/facebook/docusaurus/blob/67c40069d1062b5aae530b696e6f66bf9618a696/website/static/img/docusaurus.svg"
@@ -4520,6 +4554,11 @@
             "hex": "58CC02",
             "source": "https://design.duolingo.com",
             "guidelines": "https://design.duolingo.com"
+        },
+        {
+            "title": "Duplicati",
+            "hex": "1E3A8A",
+            "source": "https://duplicati.com"
         },
         {
             "title": "DVC",
@@ -5318,9 +5357,9 @@
         },
         {
             "title": "Firebase",
-            "hex": "FFCA28",
-            "source": "https://firebase.google.com/brand-guidelines/",
-            "guidelines": "https://firebase.google.com/brand-guidelines/"
+            "hex": "DD2C00",
+            "source": "https://firebase.google.com/brand-guidelines",
+            "guidelines": "https://firebase.google.com/brand-guidelines"
         },
         {
             "title": "Firefish",
@@ -10602,6 +10641,12 @@
             }
         },
         {
+            "title": "NiceHash",
+            "hex": "FBC342",
+            "source": "https://www.nicehash.com/nicehash-media",
+            "guidelines": "https://www.nicehash.com/nicehash-media"
+        },
+        {
             "title": "niconico",
             "hex": "231815",
             "source": "https://www.nicovideo.jp"
@@ -10760,6 +10805,11 @@
                     "Nullsoft Scriptable Install System"
                 ]
             }
+        },
+        {
+            "title": "ntfy",
+            "hex": "317F6F",
+            "source": "https://ntfy.sh"
         },
         {
             "title": "Nubank",
@@ -11790,6 +11840,11 @@
             "source": "https://www.picpay.com/site/sobre-nos"
         },
         {
+            "title": "Picrew",
+            "hex": "FFBD16",
+            "source": "https://picrew.me"
+        },
+        {
             "title": "Picxy",
             "hex": "2E3192",
             "source": "https://www.picxy.com"
@@ -11815,6 +11870,11 @@
             "hex": "FFF000",
             "source": "https://www.pingdom.com/resources/brand-assets/",
             "guidelines": "https://www.pingdom.com/resources/brand-assets/"
+        },
+        {
+            "title": "pino",
+            "hex": "687634",
+            "source": "https://github.com/pinojs/pino/blob/bb31ed77568959670cce62ca2847234b3f2cb87f/pino-tree.png"
         },
         {
             "title": "Pinterest",
@@ -13190,7 +13250,7 @@
         },
         {
             "title": "Render",
-            "hex": "46E3B7",
+            "hex": "000000",
             "source": "https://render.com"
         },
         {
@@ -13333,6 +13393,11 @@
             "hex": "0A222E",
             "source": "https://www.rimac-automobili.com/media/",
             "guidelines": "https://www.rimac-automobili.com/media/"
+        },
+        {
+            "title": "Rime",
+            "hex": "000000",
+            "source": "https://github.com/rime/home/blob/65738f446c7e6c56a560fdaa0c0f02937b8e51d0/blog/source/images/logo.svg"
         },
         {
             "title": "Ring",
@@ -14414,6 +14479,11 @@
             "hex": "CA0939",
             "source": "https://www.sncf.com",
             "guidelines": "https://www.sncf.com/fr/groupe/marques/sncf/identite"
+        },
+        {
+            "title": "Snort",
+            "hex": "F6A7AA",
+            "source": "https://snort.org"
         },
         {
             "title": "Snowflake",
@@ -15967,6 +16037,12 @@
             "source": "https://www.tourboxtech.com"
         },
         {
+            "title": "Tower",
+            "hex": "00CAF4",
+            "source": "https://www.git-tower.com/company/press",
+            "guidelines": "https://www.git-tower.com/company/press"
+        },
+        {
             "title": "Toyota",
             "hex": "EB0A1E",
             "source": "https://www.toyota.com/brandguidelines/logo/",
@@ -16254,6 +16330,14 @@
             "title": "Typeform",
             "hex": "262627",
             "source": "https://www.typeform.com"
+        },
+        {
+            "title": "TypeORM",
+            "hex": "FE0803",
+            "source": "https://github.com/typeorm/typeorm/blob/e7649d2746f907ff36b1efb600402dedd5f5a499/resources/logo_big.png",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "Typer",
@@ -16984,6 +17068,11 @@
             "source": "https://support.wacom.com/hc/en-us"
         },
         {
+            "title": "Wagmi",
+            "hex": "000000",
+            "source": "https://wagmi.sh"
+        },
+        {
             "title": "Wagtail",
             "hex": "43B1B0",
             "source": "https://github.com/wagtail/wagtail/blob/e3e46e23b780aa2b1b521de081cb81872f77466d/wagtail/admin/static_src/wagtailadmin/images/wagtail-logo.svg"
@@ -17622,6 +17711,11 @@
             "source": "https://www.ycombinator.com/press"
         },
         {
+            "title": "yabai",
+            "hex": "00364B",
+            "source": "https://github.com/koekeishiya/yabai/blob/86c759186d7c588dfd8c6a84aac1ebc4730e988e/assets/icon/icon.svg"
+        },
+        {
             "title": "Yale",
             "hex": "FFD900",
             "source": "https://yalehome.com"
@@ -17728,6 +17822,11 @@
             "title": "Yubico",
             "hex": "84BD00",
             "source": "https://www.yubico.com/wp-content/themes/coronado/img/icon.svg"
+        },
+        {
+            "title": "YunoHost",
+            "hex": "000000",
+            "source": "https://github.com/YunoHost/doc/blob/0157b052481407b3c06cc2892de225f14c42520b/images/ynh_logo_black.svg"
         },
         {
             "title": "Żabka",
