@@ -32,12 +32,12 @@
             "aka": {
               "description": "The brand is also known as (e.g. full length name or abbreviation)",
               "type": "array",
-              "items": { "type": "string" }
+              "items": {"type": "string"}
             },
             "dup": {
               "description": "Different brands that use the exact same icon",
               "type": "array",
-              "items": { "$ref": "#/definitions/duplicate" }
+              "items": {"$ref": "#/definitions/duplicate"}
             },
             "loc": {
               "description": "Localized names of the brand",
@@ -46,7 +46,7 @@
             "old": {
               "description": "Old names, for backwards compatibility",
               "type": "array",
-              "items": { "type": "string" }
+              "items": {"type": "string"}
             }
           },
           "minProperties": 1,
@@ -599,9 +599,8 @@
               "required": ["type", "url"],
               "properties": {
                 "type": {
-                  "description": "The license name or 'custom'",
-                  "type": "string",
-                  "enum": ["custom"]
+                  "description": "Custom license type",
+                  "const": "custom"
                 },
                 "url": {
                   "description": "The URL to the license text by the brand",
@@ -617,7 +616,7 @@
     },
     "duplicate": {
       "$id": "#duplicate",
-      "description": "A \"dup\" brand",
+      "description": "A brand that uses the same icon",
       "type": "object",
       "required": ["title"],
       "properties": {
@@ -638,6 +637,10 @@
         "guidelines": {
           "description": "The brand guidelines, if different from the original",
           "$ref": "#/definitions/url"
+        },
+        "loc": {
+          "description": "Localized names of the brand",
+          "$ref": "#/definitions/locale"
         }
       },
       "additionalProperties": false
@@ -698,7 +701,7 @@
     "icons": {
       "description": "A list of brands",
       "type": "array",
-      "items": { "$ref": "#/definitions/brand" }
+      "items": {"$ref": "#/definitions/brand"}
     }
   },
   "additionalProperties": false,
