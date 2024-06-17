@@ -6,20 +6,33 @@ on:
 jobs:
   triage:
     runs-on: ubuntu-latest
-    if: github.event.action == 'opened'
+    if: |
+      github.event.action == 'opened' &&
+      github.event.pull_request.base.ref != 'master'
     steps:
-      - uses: ericcornelissen/labeler@label-based-on-status
+      - uses: actions/create-github-app-token@v1
+        id: app-token
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: simple-icons/labeler@v1
+        with:
+          repo-token: ${{ steps.app-token.outputs.token }}
 
   assign-to-project:
     runs-on: ubuntu-latest
     name: Assign to Project
-    if: github.event.action == 'opened'
+    if: |
+      github.event.action == 'opened' &&
+      github.event.pull_request.base.ref != 'master'
     needs: triage
-    env:
-      MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -27,13 +40,12 @@ jobs:
         uses: ./.github/actions/get-labels
         with:
           issue_number: ${{ github.event.pull_request.number }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - id: get-si-members
         name: Get simple-icons members
         run: |
-          members="$(curl -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
+          members="$(curl -H 'Authorization: Bearer ${{ steps.app-token.outputs.token }}' --retry 5 -s https://api.github.com/orgs/simple-icons/members | jq .[].login | tr '\n' ',' | sed -e 's/"//g' -e 's/,$//')"
           echo "members=$members" >> $GITHUB_OUTPUT
 
       - id: get-linked-issues
@@ -56,6 +68,8 @@ jobs:
       - id: priority-1
         name: Assign `update icon/data` pull requests to "Priority 1"
         uses: srggrs/assign-one-project-github-action@1.3.1
+        env:
+          MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         if: contains(steps.get-labels.outputs.labels, 'update icon/data')
         with:
           project: https://github.com/orgs/simple-icons/projects/2
@@ -64,6 +78,8 @@ jobs:
       - id: priority-2
         name: Assign `new icon` pull requests to "Priority 2"
         uses: srggrs/assign-one-project-github-action@1.3.1
+        env:
+          MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         # the PR has the `new icon` label along with a linked issue and
         # the opener is not a member of simple-icons organization
         if: |
@@ -77,6 +93,8 @@ jobs:
       - id: priority-3
         name: Assign `new icon` pull requests by maintainers to "Priority 3"
         uses: srggrs/assign-one-project-github-action@1.3.1
+        env:
+          MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         # the PR has the `new icon` label along with a linked issue and
         # the opener is a member of the simple-icons organisation
         if: |
@@ -90,6 +108,8 @@ jobs:
       - id: priority-4
         name: Assign `new icon` pull requests by maintainers without an issue to "Priority 4"
         uses: srggrs/assign-one-project-github-action@1.3.1
+        env:
+          MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         # the PR has the `new icon` label but with no linked issue and
         # the opener is a member of the simple-icons organisation
         if: |
@@ -102,6 +122,8 @@ jobs:
 
       - name: Assign pull requests to "Unprioritised"
         uses: srggrs/assign-one-project-github-action@1.3.1
+        env:
+          MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         if: |
           steps.priority-1.conclusion == 'skipped' &&
           steps.priority-2.conclusion == 'skipped' &&
@@ -116,12 +138,18 @@ jobs:
     name: Unassign from Project
     if: |
       github.event.action != 'opened' &&
-      github.event.pull_request.merged == false
-    env:
-      MY_GITHUB_TOKEN: ${{ secrets.AUTO_ASSIGN_WORKFLOW_TOKEN }}
+      github.event.pull_request.merged == false &&
+      github.event.pull_request.base.ref != 'master'
     steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Assign closed pull requests to "Completed or Abandoned"
         uses: srggrs/assign-one-project-github-action@1.3.1
+        env:
+          MY_GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         with:
           project: https://github.com/orgs/simple-icons/projects/2
           column_name: Completed or Abandoned

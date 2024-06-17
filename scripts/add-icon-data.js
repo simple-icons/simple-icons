@@ -1,172 +1,182 @@
+#!/usr/bin/env node
+/**
+ * @file
+ * Script to add data for a new icon to the simple-icons dataset.
+ */
+
+/**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
 import process from 'node:process';
+import {ExitPromptError} from '@inquirer/core';
+import {checkbox, confirm, input} from '@inquirer/prompts';
 import chalk from 'chalk';
-import { input, confirm, checkbox } from '@inquirer/prompts';
+import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
+import autocomplete from 'inquirer-autocomplete-standalone';
 import {
-  URL_REGEX,
   collator,
   getIconsDataString,
-  titleToSlug,
   normalizeColor,
+  titleToSlug,
+  urlRegex,
 } from '../sdk.mjs';
-import { getJsonSchemaData, writeIconsData } from './utils.js';
+import {getJsonSchemaData, writeIconsData} from './utils.js';
 
-const hexPattern = /^#?[a-f0-9]{3,8}$/i;
-
+/** @type {{icons: import('../sdk.js').IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
-const titleValidator = (text) => {
-  if (!text) return 'This field is required';
-  if (
-    iconsData.icons.find(
-      (x) => x.title === text || titleToSlug(x.title) === titleToSlug(text),
-    )
-  )
-    return 'This icon title or slug already exist';
-  return true;
+const HEX_REGEX = /^#?[a-f\d]{3,8}$/i;
+
+const aliasTypes = ['aka', 'old'].map((key) => ({
+  name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
+  value: key,
+}));
+
+/** @type {{name: string, value: string}[]} */
+const licenseTypes =
+  jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
+    (/** @type {string} */ license) => ({name: license, value: license}),
+  );
+
+/**
+ * @param {string} input URL input
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL
+ */
+const isValidURL = async (input) => {
+  const regex = await urlRegex();
+  return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
-const hexValidator = (text) =>
-  hexPattern.test(text) || 'This should be a valid hex code';
+/**
+ * @param {string} input Hex color
+ * @returns {boolean|string} Whether the input is a valid hex color
+ */
+const isValidHexColor = (input) =>
+  HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
-const sourceValidator = (text) =>
-  URL_REGEX.test(text) || 'This should be a secure URL';
+/**
+ * @param {string} input New icon input
+ * @returns {boolean} Whether the icon is new
+ */
+const isNewIcon = (input) =>
+  !iconsData.icons.some(
+    (icon) =>
+      icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
+  );
 
-const hexTransformer = (text) => {
-  const color = normalizeColor(text);
-  const luminance = hexPattern.test(text)
+/**
+ * @param {string} input Color input
+ * @returns {string} Preview of the color
+ */
+const previewHexColor = (input) => {
+  const color = normalizeColor(input);
+  const luminance = HEX_REGEX.test(input)
     ? getRelativeLuminance.default(`#${color}`)
     : -1;
-  if (luminance === -1) return text.toUpperCase();
+  if (luminance === -1) return input.toUpperCase();
   return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
-    text.toUpperCase(),
+    input.toUpperCase(),
   );
 };
 
-const aliasesTransformer = (text) =>
-  text
-    .split(',')
-    .map((x) => chalk.cyan(x))
-    .join(',');
+try {
+  const answers = {
+    title: await input({
+      message: 'What is the title of this icon?',
+      validate: (input) =>
+        input.trim().length > 0
+          ? isNewIcon(input) || 'This icon title or slug already exists.'
+          : 'This field is required.',
+    }),
+    hex: normalizeColor(
+      await input({
+        message: 'What is the brand color of this icon?',
+        validate: isValidHexColor,
+        transformer: previewHexColor,
+      }),
+    ),
+    source: await input({
+      message: 'What is the source URL of the icon?',
+      validate: isValidURL,
+    }),
+    guidelines: (await confirm({
+      message: 'Does this icon have brand guidelines?',
+    }))
+      ? await input({
+          message: 'What is the URL for the brand guidelines?',
+          validate: isValidURL,
+        })
+      : undefined,
+    license: (await confirm({
+      message: 'Does this icon have a license?',
+    }))
+      ? {
+          type: await autocomplete({
+            message: "What is the icon's license?",
+            async source(input) {
+              input = (input || '').trim();
+              return input
+                ? search(input, licenseTypes, {keySelector: (x) => x.value})
+                : licenseTypes;
+            },
+          }),
+          url:
+            (await input({
+              message: `What is the URL for the license? (optional)`,
+              validate: (input) => input.length === 0 || isValidURL(input),
+            })) || undefined,
+        }
+      : undefined,
+    aliases: (await confirm({
+      message: 'Does this icon have brand aliases?',
+      default: false,
+    }))
+      ? await checkbox({
+          message: 'What types of aliases do you want to add?',
+          choices: aliasTypes,
+        }).then(async (aliases) => {
+          const result = {};
+          for (const alias of aliases) {
+            // @ts-ignore
+            // eslint-disable-next-line no-await-in-loop
+            result[alias] = await input({
+              message: `What ${alias} aliases would you like to add? (separate with commas)`,
+            }).then((aliases) =>
+              aliases.split(',').map((alias) => alias.trim()),
+            );
+          }
 
-const aliasesChoices = Object.entries(
-  jsonSchema.definitions.brand.properties.aliases.properties,
-)
-  .filter(([k]) => ['aka', 'old'].includes(k))
-  .map(([k, v]) => ({ name: `${k}: ${v.description}`, value: k }));
+          return result;
+        })
+      : undefined,
+  };
 
-const getIconDataFromAnswers = (answers) => ({
-  title: answers.title,
-  hex: normalizeColor(answers.hex),
-  source: answers.source,
-  ...(answers.hasGuidelines ? { guidelines: answers.guidelines } : {}),
-  ...(answers.hasLicense
-    ? {
-        license: {
-          type: answers.licenseType,
-          ...(answers.licenseUrl ? { url: answers.licenseUrl } : {}),
-        },
-      }
-    : {}),
-  ...(answers.hasAliases
-    ? {
-        aliases: aliasesChoices.reduce((previous, current) => {
-          const promptKey = `${current.value}AliasesList`;
-          if (answers[promptKey])
-            return {
-              ...previous,
-              [current.value]: answers[promptKey]
-                .split(',')
-                .map((x) => x.trim()),
-            };
-          return previous;
-        }, {}),
-      }
-    : {}),
-});
+  process.stdout.write(
+    'About to write the following to simple-icons.json:\n' +
+      JSON.stringify(answers, null, 4) +
+      '\n',
+  );
 
-const answers = {};
-
-answers.title = await input({
-  message: 'Title',
-  validate: titleValidator,
-});
-
-answers.hex = await input({
-  message: 'Hex',
-  validate: hexValidator,
-  transformer: hexTransformer,
-});
-
-answers.source = await input({
-  message: 'Source',
-  validate: sourceValidator,
-});
-
-answers.hasGuidelines = await confirm({
-  message: 'The icon has brand guidelines?',
-});
-
-if (answers.hasGuidelines) {
-  answers.guidelines = await input({
-    message: 'Guidelines',
-    validate: sourceValidator,
-  });
-}
-
-answers.hasLicense = await confirm({
-  message: 'The icon has brand license?',
-});
-
-if (answers.hasLicense) {
-  answers.licenseType = await input({
-    message: 'License type',
-    validate: (text) => Boolean(text),
-  });
-
-  answers.licenseUrl = await input({
-    message: 'License URL' + chalk.reset(' (optional)'),
-    validate: (text) => !Boolean(text) || sourceValidator(text),
-  });
-}
-
-answers.hasAliases = await confirm({
-  message: 'This icon has brands aliases?',
-  default: false,
-});
-
-if (answers.hasAliases) {
-  answers.aliasesTypes = await checkbox({
-    message: 'What types of aliases do you want to add?',
-    choices: aliasesChoices,
-  });
-
-  for (const x of aliasesChoices) {
-    if (!answers?.aliasesTypes?.includes(x.value)) continue;
-    answers[`${x.value}AliasesList`] = await input({
-      message: x.value + chalk.reset(' (separate with commas)'),
-      validate: (text) => Boolean(text),
-      transformer: aliasesTransformer,
-    });
+  if (
+    await confirm({
+      message: 'Is this OK?',
+    })
+  ) {
+    iconsData.icons.push(answers);
+    iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
+    await writeIconsData(iconsData);
+    process.stdout.write(chalk.green('\nData written successfully.\n'));
+  } else {
+    process.stdout.write(chalk.red('\nAborted.\n'));
+    process.exit(1);
   }
-}
+} catch (error) {
+  if (error instanceof ExitPromptError) {
+    process.stdout.write(chalk.red('\nAborted.\n'));
+    process.exit(1);
+  }
 
-answers.confirmToAdd = await confirm({
-  message: [
-    'About to write to simple-icons.json',
-    chalk.reset(JSON.stringify(getIconDataFromAnswers(answers), null, 4)),
-    chalk.reset('Is this OK?'),
-  ].join('\n\n'),
-});
-
-const icon = getIconDataFromAnswers(answers);
-
-if (answers.confirmToAdd) {
-  iconsData.icons.push(icon);
-  iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
-  await writeIconsData(iconsData);
-} else {
-  console.log('Aborted.');
-  process.exit(1);
+  throw error;
 }

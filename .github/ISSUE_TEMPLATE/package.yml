@@ -1,5 +1,5 @@
 name: Packages
-description: Report problems and suggest ideas for the packages
+description: Report problems and suggest ideas for the NPM and Packagist packages
 labels: [package]
 
 body:
@@ -10,7 +10,7 @@ body:
         Please search for [issues with the `package` label][package-issues] (including
         closed issues) before you continue.
 
-        [package-issues]: https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3Apackage
+        [package-issues]: https://github.com/simple-icons/simple-icons/labels/package
 
   - type: dropdown
     attributes:

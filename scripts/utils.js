@@ -1,32 +1,44 @@
-import path from 'node:path';
+/**
+ * @file Internal utilities.
+ *
+ * Here resides all the functionality that does not qualifies to reside
+ * in the SDK because is not publicly exposed.
+ */
+
 import fs from 'node:fs/promises';
-import { getDirnameFromImportMeta, getIconDataPath } from '../sdk.mjs';
+import path from 'node:path';
+import {getDirnameFromImportMeta, getIconDataPath} from '../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
+
+/**
  * Get JSON schema data.
- * @param {String} rootDir Path to the root directory of the project.
+ * @param {string} rootDirectory Path to the root directory of the project.
+ * @returns {Promise<any>} JSON schema data.
  */
 export const getJsonSchemaData = async (
-  rootDir = path.resolve(__dirname, '..'),
+  rootDirectory = path.resolve(__dirname, '..'),
 ) => {
-  const jsonSchemaPath = path.resolve(rootDir, '.jsonschema.json');
+  const jsonSchemaPath = path.resolve(rootDirectory, '.jsonschema.json');
   const jsonSchemaString = await fs.readFile(jsonSchemaPath, 'utf8');
   return JSON.parse(jsonSchemaString);
 };
 
 /**
  * Write icons data to _data/simple-icons.json.
- * @param {Object} iconsData Icons data object.
- * @param {String} rootDir Path to the root directory of the project.
+ * @param {{icons: IconData[]}} iconsData Icons data object.
+ * @param {string} rootDirectory Path to the root directory of the project.
  */
 export const writeIconsData = async (
   iconsData,
-  rootDir = path.resolve(__dirname, '..'),
+  rootDirectory = path.resolve(__dirname, '..'),
 ) => {
   await fs.writeFile(
-    getIconDataPath(rootDir),
+    getIconDataPath(rootDirectory),
     `${JSON.stringify(iconsData, null, 4)}\n`,
     'utf8',
   );
