@@ -1090,7 +1090,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Globus` | `globus` |
 | `Glovo` | `glovo` |
 | `Gmail` | `gmail` |
-| `GMC`   | `gmc`   |
+| `GMC` | `gmc` |
 | `GNOME` | `gnome` |
 | `GNOME Terminal` | `gnometerminal` |
 | `GNU` | `gnu` |
