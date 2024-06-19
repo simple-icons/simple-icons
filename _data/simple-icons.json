@@ -3096,7 +3096,10 @@
         {
             "title": "CKEditor 5",
             "hex": "1EBC61",
-            "source": "https://github.com/ckeditor/ckeditor5/blob/50c09aab32c0ae7e50ca1d211d5d07021b329b15/docs/assets/img/project-logo.svg"
+            "source": "https://github.com/ckeditor/ckeditor5/blob/50c09aab32c0ae7e50ca1d211d5d07021b329b15/docs/assets/img/project-logo.svg",
+            "license": {
+                "type": "GPL-2.0-or-later"
+            }
         },
         {
             "title": "Clarifai",
