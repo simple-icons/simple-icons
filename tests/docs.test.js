@@ -1,3 +1,7 @@
+/**
+ * @file Tests for the documentation.
+ */
+
 import {strict as assert} from 'node:assert';
 import {test} from 'mocha';
 import {getThirdPartyExtensions, getThirdPartyLibraries} from '../sdk.mjs';

@@ -1,6 +1,10 @@
+/**
+ * @file SVGO configuration for Simple Icons.
+ */
+
+/** @type {import("svgo").Config} */
 const config = {
   multipass: true,
-  eol: 'lf',
   plugins: [
     'cleanupAttrs',
     'inlineStyles',
@@ -71,8 +75,8 @@ const config = {
       // Sort the attributes on the <svg> tag
       name: 'sortAttrs',
       params: {
-        order: ['role', 'viewBox', 'xmlns'],
-        xmlnsOrder: 'end',
+        order: ['role', 'viewBox'],
+        xmlnsOrder: 'alphabetical',
       },
     },
     'sortDefsChildren',
@@ -87,7 +91,6 @@ const config = {
         ],
       },
     },
-    'removeElementsByAttr',
     {
       // Keep the role="img" attribute and automatically add it
       // to the <svg> tag if it's not there already

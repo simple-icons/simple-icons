@@ -599,9 +599,8 @@
               "required": ["type", "url"],
               "properties": {
                 "type": {
-                  "description": "The license name or 'custom'",
-                  "type": "string",
-                  "enum": ["custom"]
+                  "description": "Custom license type",
+                  "const": "custom"
                 },
                 "url": {
                   "description": "The URL to the license text by the brand",
@@ -617,7 +616,7 @@
     },
     "duplicate": {
       "$id": "#duplicate",
-      "description": "A \"dup\" brand",
+      "description": "A brand that uses the same icon",
       "type": "object",
       "required": ["title"],
       "properties": {
