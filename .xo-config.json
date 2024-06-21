@@ -1,0 +1,59 @@
+{
+  "prettier": true,
+  "space": 2,
+  "plugins": ["import"],
+  "extends": ["plugin:jsdoc/recommended"],
+  "rules": {
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": false
+      }
+    ],
+    "import/no-named-as-default": "off",
+    "import/extensions": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": true,
+        "newlines-between": "never"
+      }
+    ],
+    "no-console": ["error", {"allow": ["warn", "error"]}],
+    "jsdoc/require-file-overview": "error"
+  },
+  "overrides": [
+    {
+      "files": ["sdk.mjs", "sdk.d.ts"],
+      "nodeVersion": ">=14",
+      "rules": {
+        "eslint-comments/disable-enable-pair": "off",
+        "unicorn/no-abusive-eslint-disable": "off"
+      }
+    },
+    {
+      "files": [
+        "scripts/**/*",
+        "tests/**/*",
+        "svglint.config.mjs",
+        "svgo.config.mjs"
+      ],
+      "nodeVersion": ">=18"
+    },
+    {
+      "files": ["svglint.config.mjs"],
+      "rules": {
+        "max-depth": "off"
+      }
+    }
+  ]
+}

@@ -1,21 +1,24 @@
 name: Icon request
 description: Request a new icon for Simple Icons
 labels: [new icon]
+title: 'Request: <brand-name>'
 
 body:
   - type: markdown
     attributes:
-      value: >-
+      value: |
         We won't add non-brand icons or anything related to illegal services. If in
         doubt, open an issue and we'll have a look. For more details see the
         [Contributing Guidelines].
-
 
         Before opening a new issue, make sure it isn't covered by an existing issue.
         Please search for [issues with the `new icon` label][new-icon-issues]
         (including closed issues) before you continue. If you find one for the brand
         you're requesting then leave a comment on it or add a reaction.
 
+        > [!TIP]
+        > In order to view website rankings on `similarweb.com`:
+        > Go to `https://similarweb.com/website`, enter the website address, and click on Analyze Traffic.
 
         [contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
@@ -31,7 +34,7 @@ body:
   - type: input
     attributes:
       label: Website
-      description: >-
+      description: |
         For non-web brands you can add a relevant link. You can put "None" if you don't
         think there's a website.
       placeholder: 'Example: https://simpleicons.org'
@@ -41,15 +44,13 @@ body:
   - type: textarea
     attributes:
       label: Popularity Metric
-      description: >-
-        Provide either a [Similarweb rank], which must range from 0-500,000 to qualify
-        or the number of GitHub stars, which must be above 5,000 to qualify. If
-        Similarweb does not have a rank for your brand or these numbers do not meet
-        our requirements, you can still open the issue. In this case, please provide
-        any information regarding the brand's popularity you think is relevant.
-
+      description: |
+        Provide either a [Similarweb rank], which must be in the top 500,000 to qualify,
+        or failing that another metric from [our contributing guidelines] that we can
+        use to assess the popularity of the requested brand.
 
         [Similarweb rank]: https://www.similarweb.com
+        [our contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity
       placeholder: 'Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org'
     validations:
       required: true
@@ -57,13 +58,13 @@ body:
   - type: textarea
     attributes:
       label: Official Resources for Icon and Color
-      description: >-
+      description: |
         Media kits, brand guidelines, SVG files, etc. You can set
         this to "None" if you are unable to find any resources.
       placeholder: |
         Example:
-        svg: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
-        color: `#111111`, from the website header
+        - SVG: https://github.com/simple-icons/simple-icons/blob/develop/icons/simpleicons.svg
+        - Color: `#111111`, from the website header
     validations:
       required: true
 
@@ -76,15 +77,3 @@ body:
         - Is the icon released under a license?
         - If you think the brand might not be accepted, why do you think it should be considered?
       placeholder: 'Example: There are two variants of this icon...'
-
-  - type: dropdown
-    attributes:
-      label: Contributing
-      description: >-
-        This is an open source project and we welcome contributions. Do you want to
-        add this icon?
-      options:
-        - 'Yes'
-        - 'No'
-    validations:
-      required: true
