@@ -10,6 +10,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `.ENV` | `dotenv` |
 | `.NET` | `dotnet` |
 | `/e/` | `e` |
+| `1.1.1.1` | `1dot1dot1dot1` |
 | `1001Tracklists` | `1001tracklists` |
 | `1Panel` | `1panel` |
 | `1Password` | `1password` |
@@ -287,6 +288,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Authentik` | `authentik` |
 | `Authy` | `authy` |
 | `AutoCAD` | `autocad` |
+| `AutoCannon` | `autocannon` |
 | `Autodesk` | `autodesk` |
 | `Autodesk Maya` | `autodeskmaya` |
 | `Autodesk Revit` | `autodeskrevit` |
@@ -345,6 +347,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Beats` | `beats` |
 | `Beats by Dre` | `beatsbydre` |
 | `BeatStars` | `beatstars` |
+| `Beekeeper Studio` | `beekeeperstudio` |
 | `Behance` | `behance` |
 | `Beijing Subway` | `beijingsubway` |
 | `BEM` | `bem` |
@@ -1069,6 +1072,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GIPHY` | `giphy` |
 | `Git` | `git` |
 | `Git Extensions` | `gitextensions` |
+| `Git for Windows` | `gitforwindows` |
 | `Git LFS` | `gitlfs` |
 | `GitBook` | `gitbook` |
 | `Gitconnected` | `gitconnected` |
@@ -1204,6 +1208,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gumtree` | `gumtree` |
 | `Gunicorn` | `gunicorn` |
 | `Gurobi` | `gurobi` |
+| `Gusto` | `gusto` |
 | `Gutenberg` | `gutenberg` |
 | `H&M` | `handm` |
 | `H3` | `h3` |
@@ -1298,6 +1303,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
 | `Hypothesis` | `hypothesis` |
+| `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
 | `i18next` | `i18next` |
 | `i3` | `i3` |
@@ -1572,6 +1578,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LibreOffice Impress` | `libreofficeimpress` |
 | `LibreOffice Math` | `libreofficemath` |
 | `LibreOffice Writer` | `libreofficewriter` |
+| `LibreWolf` | `librewolf` |
 | `libuv` | `libuv` |
 | `Lichess` | `lichess` |
 | `Lidl` | `lidl` |
@@ -1758,6 +1765,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Minetest` | `minetest` |
 | `Mini` | `mini` |
 | `MinIO` | `minio` |
+| `Mintlify` | `mintlify` |
 | `Minutemailer` | `minutemailer` |
 | `Miraheze` | `miraheze` |
 | `Miro` | `miro` |
@@ -2127,6 +2135,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Plesk` | `plesk` |
 | `Plex` | `plex` |
 | `Plotly` | `plotly` |
+| `Plume` | `plume` |
 | `Pluralsight` | `pluralsight` |
 | `Plurk` | `plurk` |
 | `Plus Codes` | `pluscodes` |
@@ -2183,6 +2192,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
+| `PrimeNG` | `primeng` |
+| `PrimeReact` | `primereact` |
 | `Printables` | `printables` |
 | `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
@@ -2692,6 +2703,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
 | `Sumo Logic` | `sumologic` |
+| `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
@@ -2865,6 +2877,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Trino` | `trino` |
 | `Trip.com` | `tripdotcom` |
 | `Tripadvisor` | `tripadvisor` |
+| `trivago` | `trivago` |
 | `Trivy` | `trivy` |
 | `Trove` | `trove` |
 | `tRPC` | `trpc` |
@@ -3118,6 +3131,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
+| `Wykop` | `wykop` |
 | `Wyze` | `wyze` |
 | `X` | `x` |
 | `X.Org` | `xdotorg` |
