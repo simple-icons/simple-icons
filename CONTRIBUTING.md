@@ -55,6 +55,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
 * Doesn't fall into one of the following categories:
     - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
+    - Military-related brands and organizations
     - Governmental agencies, programs, departments
        - Allowed: International organizations and NGOs with supranational interests
        - Allowed: Space agencies
@@ -74,6 +75,7 @@ Some companies and organizations are excessively protective with their brands, s
 - International Olympic Committee
 - Mattel
 - Microchip Technology Inc.
+- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
 - Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
