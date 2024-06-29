@@ -1,5 +1,10 @@
 name: Verify Source
-on: [pull_request, push]
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
   build:
@@ -8,10 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -24,10 +29,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Detect changed files
@@ -45,7 +50,9 @@ jobs:
       - name: Install dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run linter
-        run: npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
+        run: |
+          sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
+          npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
         env:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -80,10 +87,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
