@@ -2600,6 +2600,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `StackHawk` | `stackhawk` |
 | `StackPath` | `stackpath` |
 | `StackShare` | `stackshare` |
+| `Stadia` | `stadia` |
 | `Staffbase` | `staffbase` |
 | `Stagetimer` | `stagetimer` |
 | `Standard Resume` | `standardresume` |
