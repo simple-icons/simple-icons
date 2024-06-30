@@ -104,7 +104,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
     - [pkg.go.dev](https://pkg.go.dev): 100k importers,
     - [Homebrew Formulae](https://formulae.brew.sh): 100k weekly downloads,
-    - [Arch linux User Repository](https://aur.archlinux.org): popularity of 7.00,
+    - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00,
     - [Chocolatey](https://community.chocolatey.org): 1m downloads
     - [Clojars](https://clojars.org): 1m downloads or,
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
