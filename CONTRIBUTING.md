@@ -105,7 +105,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - [pkg.go.dev](https://pkg.go.dev): 100k importers,
     - [Homebrew Formulae](https://formulae.brew.sh): 100k weekly downloads,
     - [Arch linux User Repository](https://aur.archlinux.org): popularity of 7.00,
-    - [Chocolatey](https://community.chocolatey.org): 1m downloads or,
+    - [Chocolatey](https://community.chocolatey.org): 1m downloads
+    - [Clojars](https://clojars.org): 1m downloads or,
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
     - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
