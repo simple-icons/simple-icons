@@ -103,7 +103,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
     - [pkg.go.dev](https://pkg.go.dev): 100k importers,
-    - [Homebrew Formulae](https://formulae.brew.sh): 100k weekly downloads,
+    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
     - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00,
     - [Chocolatey](https://community.chocolatey.org): 1m downloads
     - [Clojars](https://clojars.org): 1m downloads or,
