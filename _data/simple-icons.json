@@ -8983,12 +8983,15 @@
         },
         {
             "title": "Lobsters",
-            "hex": "AC130D",
-            "source": "https://github.com/lobsters/lobsters/blob/dcd56c1d3f7190e33a73b86b77e7feb2665ddc50/app/assets/images/logo-color.svg",
             "aliases": {
                 "aka": [
                     "Lobste.rs"
                 ]
+            },
+            "hex": "AC130D",
+            "source": "https://github.com/lobsters/lobsters/blob/dcd56c1d3f7190e33a73b86b77e7feb2665ddc50/app/assets/images/logo-color.svg",
+            "license": {
+                "type": "BSD-3-Clause"
             }
         },
         {
