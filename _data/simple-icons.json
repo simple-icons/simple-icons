@@ -11802,6 +11802,16 @@
             "source": "https://www.playstation.com/en-us/ps5/"
         },
         {
+            "title": "PlayStation Portable",
+            "aliases": {
+                "aka": [
+                    "PSP"
+                ]
+            },
+            "hex": "003791",
+            "source": "https://commons.wikimedia.org/wiki/File:PSP_Logo.svg"
+        },
+        {
             "title": "PlayStation Vita",
             "hex": "003791",
             "source": "https://commons.wikimedia.org/wiki/File:PlayStation_Vita_logo.svg"
@@ -16766,7 +16776,7 @@
         },
         {
             "title": "Vulkan",
-            "hex": "AC162C",
+            "hex": "A41E22",
             "source": "https://www.khronos.org/legal/trademarks",
             "guidelines": "https://www.khronos.org/legal/trademarks"
         },
@@ -16959,6 +16969,14 @@
             "hex": "990000",
             "source": "https://www.khronos.org/legal/trademarks",
             "guidelines": "https://www.khronos.org/legal/trademarks"
+        },
+        {
+            "title": "WebGPU",
+            "hex": "005A9C",
+            "source": "https://www.w3.org/2023/02/webgpu-logos.html",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Weblate",
