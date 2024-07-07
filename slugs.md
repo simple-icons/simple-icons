@@ -517,6 +517,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `China Southern Airlines` | `chinasouthernairlines` |
 | `Chocolatey` | `chocolatey` |
 | `Chromatic` | `chromatic` |
+| `Chrome Web Store` | `chromewebstore` |
 | `Chromecast` | `chromecast` |
 | `Chrysler` | `chrysler` |
 | `Chupa Chups` | `chupachups` |
@@ -1488,6 +1489,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Koc` | `koc` |
 | `Kodak` | `kodak` |
 | `Kodi` | `kodi` |
+| `Koenigsegg` | `koenigsegg` |
 | `Kofax` | `kofax` |
 | `Komoot` | `komoot` |
 | `Konami` | `konami` |
@@ -2090,6 +2092,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PlayStation 3` | `playstation3` |
 | `PlayStation 4` | `playstation4` |
 | `PlayStation 5` | `playstation5` |
+| `PlayStation Portable` | `playstationportable` |
 | `PlayStation Vita` | `playstationvita` |
 | `Pleroma` | `pleroma` |
 | `Plesk` | `plesk` |
@@ -2715,6 +2718,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TeamCity` | `teamcity` |
 | `TeamSpeak` | `teamspeak` |
 | `TeamViewer` | `teamviewer` |
+| `TechCrunch` | `techcrunch` |
 | `TED` | `ted` |
 | `TeePublic` | `teepublic` |
 | `Teespring` | `teespring` |
@@ -2890,6 +2894,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `United Airlines` | `unitedairlines` |
 | `United Nations` | `unitednations` |
 | `Unity` | `unity` |
+| `UnJS` | `unjs` |
 | `Unlicense` | `unlicense` |
 | `UnoCSS` | `unocss` |
 | `unpkg` | `unpkg` |
@@ -3015,6 +3020,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Webex` | `webex` |
 | `Webflow` | `webflow` |
 | `WebGL` | `webgl` |
+| `WebGPU` | `webgpu` |
 | `Weblate` | `weblate` |
 | `Webmin` | `webmin` |
 | `WebMoney` | `webmoney` |
