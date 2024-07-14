@@ -11161,6 +11161,11 @@
             "source": "https://www.ottogroup.com/en/presse/material.php"
         },
         {
+            "title": "Outline",
+            "hex": "000000",
+            "source": "https://www.getoutline.com"
+        },
+        {
             "title": "Overcast",
             "hex": "FC7E0F",
             "source": "https://overcast.fm"
@@ -11800,6 +11805,16 @@
             "title": "PlayStation 5",
             "hex": "003791",
             "source": "https://www.playstation.com/en-us/ps5/"
+        },
+        {
+            "title": "PlayStation Portable",
+            "aliases": {
+                "aka": [
+                    "PSP"
+                ]
+            },
+            "hex": "003791",
+            "source": "https://commons.wikimedia.org/wiki/File:PSP_Logo.svg"
         },
         {
             "title": "PlayStation Vita",
@@ -16959,6 +16974,14 @@
             "hex": "990000",
             "source": "https://www.khronos.org/legal/trademarks",
             "guidelines": "https://www.khronos.org/legal/trademarks"
+        },
+        {
+            "title": "WebGPU",
+            "hex": "005A9C",
+            "source": "https://www.w3.org/2023/02/webgpu-logos.html",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Weblate",
