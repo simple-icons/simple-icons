@@ -298,6 +298,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Autoprefixer` | `autoprefixer` |
 | `AutoZone` | `autozone` |
 | `avajs` | `avajs` |
+| `Avalonia UI` | `avaloniaui` |
 | `Avast` | `avast` |
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
