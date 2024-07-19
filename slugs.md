@@ -453,6 +453,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Byju's` | `byjus` |
 | `ByteDance` | `bytedance` |
 | `C` | `c` |
+| `C#` | `csharp` |
 | `C++` | `cplusplus` |
 | `C++ Builder` | `cplusplusbuilder` |
 | `Cachet` | `cachet` |
