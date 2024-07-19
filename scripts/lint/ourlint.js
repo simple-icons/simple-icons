@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Linters for the package that can't easily be implemented in the existing
  * linters (e.g. jsonlint/svglint).
+ */
+
+/**
+ * @typedef {import("../../sdk.mjs").IconData} IconData
+ * @typedef {import("../../types.js").CustomLicense} CustomLicense
+ * @typedef {IconData[]} IconsData
  */
 
 import process from 'node:process';
@@ -11,11 +17,23 @@ import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k:string]: () => (string|undefined)}}
+ * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => string | undefined}}
  */
 const TESTS = {
-  /* Tests whether our icons are in alphabetical order */
+  /**
+   * Tests whether our icons are in alphabetical order
+   * @param {{icons: IconsData}} data Icons data
+   * @returns {string|undefined} Error message or undefined
+   */
   alphabetical(data) {
+    /**
+     * Collects invalid alphabet ordered icons
+     * @param {IconData[]} invalidEntries Invalid icons reference
+     * @param {IconData} icon Icon to check
+     * @param {number} index Index of the icon
+     * @param {IconData[]} array Array of icons
+     * @returns {IconData[]} Invalid icons
+     */
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
         const previous = array[index - 1];
@@ -34,6 +52,11 @@ const TESTS = {
       return invalidEntries;
     };
 
+    /**
+     * Format an icon for display in the error message
+     * @param {IconData} icon Icon to format
+     * @returns {string} Formatted icon
+     */
     const format = (icon) => {
       if (icon.slug) {
         return `${icon.title} (${icon.slug})`;
@@ -63,6 +86,11 @@ const TESTS = {
 
   /* Check redundant trailing slash in URL */
   checkUrl(data) {
+    /**
+     * Check if an URL has a redundant trailing slash.
+     * @param {string} url URL to check
+     * @returns {boolean} Whether the URL has a redundant trailing slash
+     */
     const hasRedundantTrailingSlash = (url) => {
       const {origin} = new global.URL(url);
       return /^\/+$/.test(url.replace(origin, ''));
@@ -70,9 +98,21 @@ const TESTS = {
 
     const allUrlFields = [
       ...new Set(
-        data.icons
-          .flatMap((icon) => [icon.source, icon.guidelines, icon.license?.url])
-          .filter(Boolean),
+        data.icons.flatMap((icon) => {
+          /** @type {string[]} */
+          const license =
+            icon.license !== undefined && Object.hasOwn(icon.license, 'url')
+              ? [
+                  // TODO: `hasOwn` is not currently supported by TS.
+                  // See https://github.com/microsoft/TypeScript/issues/44253
+                  /** @type {string} */
+                  // @ts-ignore
+                  icon.license.url,
+                ]
+              : [];
+          const guidelines = icon.guidelines ? [icon.guidelines] : [];
+          return [icon.source, ...guidelines, ...license];
+        }),
       ),
     ];
 
@@ -88,11 +128,13 @@ const TESTS = {
   },
 };
 
-const dataString = await getIconsDataString();
-const data = JSON.parse(dataString);
+const iconsDataString = await getIconsDataString();
+const iconsData = JSON.parse(iconsDataString);
 
 const errors = (
-  await Promise.all(Object.values(TESTS).map((test) => test(data, dataString)))
+  await Promise.all(
+    Object.values(TESTS).map((test) => test(iconsData, iconsDataString)),
+  )
 )
   // eslint-disable-next-line unicorn/no-await-expression-member
   .filter(Boolean);
