@@ -1083,6 +1083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
 | `Glovo` | `glovo` |
+| `glTF` | `gltf` |
 | `Gmail` | `gmail` |
 | `GNOME` | `gnome` |
 | `GNOME Terminal` | `gnometerminal` |
@@ -1589,12 +1590,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `listmonk` | `listmonk` |
 | `Lit` | `lit` |
 | `Litecoin` | `litecoin` |
+| `Literal` | `literal` |
 | `LITIENGINE` | `litiengine` |
 | `LiveChat` | `livechat` |
 | `LiveJournal` | `livejournal` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lobsters` | `lobsters` |
 | `Local` | `local` |
 | `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
@@ -1974,6 +1977,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
 | `Otto` | `otto` |
+| `Outline` | `outline` |
 | `Overcast` | `overcast` |
 | `Overleaf` | `overleaf` |
 | `OVH` | `ovh` |
