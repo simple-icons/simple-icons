@@ -5695,7 +5695,7 @@
         {
             "title": "FreeTube",
             "hex": "000000",
-            "source": "https://github.com/FreeTubeApp/FreeTube/blob/development/_icons/iconBlackSmall.svg"
+            "source": "https://raw.githubusercontent.com/FreeTubeApp/FreeTube/development/_icons/iconBlackSmall.svg"
         },
         {
             "title": "Frontend Mentor",
@@ -6070,6 +6070,12 @@
             "title": "Glovo",
             "hex": "F2CC38",
             "source": "https://about.glovoapp.com/press"
+        },
+        {
+            "title": "glTF",
+            "hex": "87C540",
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/files/legal/Khronos-Logo-Usage-Guide.pdf"
         },
         {
             "title": "Gmail",
@@ -8914,8 +8920,8 @@
         },
         {
             "title": "Linux Mint",
-            "hex": "87CF3E",
-            "source": "https://commons.wikimedia.org/wiki/File:Linux_Mint_logo_without_wordmark.svg"
+            "hex": "86BE43",
+            "source": "https://github.com/linuxmint/brand-logo/blob/540ac3b08e987866d77a340f557f994c988ac2ae/ring-mono-green.svg"
         },
         {
             "title": "Linux Professional Institute",
@@ -8956,6 +8962,11 @@
             "guidelines": "https://litecoin-foundation.org/litecoin-branding-guidelines/"
         },
         {
+            "title": "Literal",
+            "hex": "000000",
+            "source": "https://literal.club/pages/press"
+        },
+        {
             "title": "LITIENGINE",
             "hex": "00A5BC",
             "source": "https://litiengine.com"
@@ -8985,6 +8996,14 @@
             "title": "LMMS",
             "hex": "10B146",
             "source": "https://lmms.io/branding"
+        },
+        {
+            "title": "Lobsters",
+            "hex": "AC130D",
+            "source": "https://github.com/lobsters/lobsters/blob/dcd56c1d3f7190e33a73b86b77e7feb2665ddc50/app/assets/images/logo-color.svg",
+            "license": {
+                "type": "BSD-3-Clause"
+            }
         },
         {
             "title": "Local",
@@ -11159,6 +11178,11 @@
             "title": "Otto",
             "hex": "D4021D",
             "source": "https://www.ottogroup.com/en/presse/material.php"
+        },
+        {
+            "title": "Outline",
+            "hex": "000000",
+            "source": "https://www.getoutline.com"
         },
         {
             "title": "Overcast",
@@ -17636,6 +17660,12 @@
             "title": "Zerodha",
             "hex": "387ED1",
             "source": "https://zerodha.com"
+        },
+        {
+            "title": "ZeroTier",
+            "hex": "FFB441",
+            "source": "https://www.zerotier.com",
+            "guidelines": "https://www.zerotier.com/media-kit"
         },
         {
             "title": "Zerply",
