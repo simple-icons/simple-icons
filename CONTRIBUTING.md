@@ -84,8 +84,7 @@ If you are in doubt, feel free to submit it and we'll have a look.
 ### Assessing Popularity
 
 > [!TIP]\
-> Similarweb is now trying to force users to log in in order to view statistics. You can bypass this by going directly to:
-> `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on!
+> Similarweb now makes users log in, in order to view statistics. You must create a free acount.
 
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
 
