@@ -54,7 +54,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.4
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Bump version
