@@ -3143,6 +3143,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zenodo` | `zenodo` |
 | `Zensar` | `zensar` |
 | `Zerodha` | `zerodha` |
+| `ZeroTier` | `zerotier` |
 | `Zerply` | `zerply` |
 | `Zettlr` | `zettlr` |
 | `Zhihu` | `zhihu` |
