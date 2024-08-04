@@ -1728,6 +1728,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Milvus` | `milvus` |
 | `Minds` | `minds` |
 | `Minetest` | `minetest` |
+| `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
