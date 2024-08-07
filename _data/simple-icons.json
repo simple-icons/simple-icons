@@ -10355,16 +10355,18 @@
             "hex": "E05E00",
             "source": "https://www.newegg.com"
         },
-		{
-            "title": "Nextauth",
-            "hex": "#9023D9 #6614D9 #22B7F2 #30D9A9 #F25C05",
-            "source": "https://authjs.dev/"
-        },
+		
         {
             "title": "Next.js",
             "hex": "000000",
             "source": "https://vercel.com/design/brands#next-js",
             "guidelines": "https://vercel.com/design/brands#next-js"
+        },
+		{
+            "title": "Nextauth",
+            "hex": "#9023D9 #6614D9 #22B7F2 #30D9A9 #F25C05",
+            "source": "https://authjs.dev",
+			"guidelines":"https://authjs.dev"
         },
         {
             "title": "NextBillion.ai",
