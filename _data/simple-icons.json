@@ -1694,6 +1694,11 @@
             "hex": "ED2B88",
             "source": "https://aurelia.io"
         },
+		{
+            "title": "Auth.js",
+            "hex": "#9023D9 #6614D9 #22B7F2 #30D9A9 #F25C05",
+            "source": "https://authjs.dev"
+        },
         {
             "title": "Auth0",
             "hex": "EB5424",
@@ -1714,6 +1719,7 @@
             "hex": "EC1C24",
             "source": "https://authy.com"
         },
+		
         {
             "title": "AutoCAD",
             "hex": "E51050",
@@ -10361,11 +10367,6 @@
             "hex": "000000",
             "source": "https://vercel.com/design/brands#next-js",
             "guidelines": "https://vercel.com/design/brands#next-js"
-        },
-		{
-            "title": "Nextauth",
-            "hex": "#9023D9 #6614D9 #22B7F2 #30D9A9 #F25C05",
-            "source": "https://authjs.dev"
         },
         {
             "title": "NextBillion.ai",
