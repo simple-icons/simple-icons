@@ -1517,6 +1517,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
@@ -1914,6 +1915,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
