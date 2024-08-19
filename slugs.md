@@ -517,6 +517,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `China Southern Airlines` | `chinasouthernairlines` |
 | `Chocolatey` | `chocolatey` |
 | `Chromatic` | `chromatic` |
+| `Chrome Web Store` | `chromewebstore` |
 | `Chromecast` | `chromecast` |
 | `Chrysler` | `chrysler` |
 | `Chupa Chups` | `chupachups` |
@@ -1082,6 +1083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
 | `Glovo` | `glovo` |
+| `glTF` | `gltf` |
 | `Gmail` | `gmail` |
 | `GNOME` | `gnome` |
 | `GNOME Terminal` | `gnometerminal` |
@@ -1488,6 +1490,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Koc` | `koc` |
 | `Kodak` | `kodak` |
 | `Kodi` | `kodi` |
+| `Koenigsegg` | `koenigsegg` |
 | `Kofax` | `kofax` |
 | `Komoot` | `komoot` |
 | `Konami` | `konami` |
@@ -1514,6 +1517,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
@@ -1587,12 +1591,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `listmonk` | `listmonk` |
 | `Lit` | `lit` |
 | `Litecoin` | `litecoin` |
+| `Literal` | `literal` |
 | `LITIENGINE` | `litiengine` |
 | `LiveChat` | `livechat` |
 | `LiveJournal` | `livejournal` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lobsters` | `lobsters` |
 | `Local` | `local` |
 | `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
@@ -1723,6 +1729,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Milvus` | `milvus` |
 | `Minds` | `minds` |
 | `Minetest` | `minetest` |
+| `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
@@ -1908,6 +1915,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
@@ -1972,6 +1980,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
 | `Otto` | `otto` |
+| `Outline` | `outline` |
 | `Overcast` | `overcast` |
 | `Overleaf` | `overleaf` |
 | `OVH` | `ovh` |
@@ -2090,6 +2099,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `PlayStation 3` | `playstation3` |
 | `PlayStation 4` | `playstation4` |
 | `PlayStation 5` | `playstation5` |
+| `PlayStation Portable` | `playstationportable` |
 | `PlayStation Vita` | `playstationvita` |
 | `Pleroma` | `pleroma` |
 | `Plesk` | `plesk` |
@@ -2715,6 +2725,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TeamCity` | `teamcity` |
 | `TeamSpeak` | `teamspeak` |
 | `TeamViewer` | `teamviewer` |
+| `TechCrunch` | `techcrunch` |
 | `TED` | `ted` |
 | `TeePublic` | `teepublic` |
 | `Teespring` | `teespring` |
@@ -2890,6 +2901,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `United Airlines` | `unitedairlines` |
 | `United Nations` | `unitednations` |
 | `Unity` | `unity` |
+| `UnJS` | `unjs` |
 | `Unlicense` | `unlicense` |
 | `UnoCSS` | `unocss` |
 | `unpkg` | `unpkg` |
@@ -3015,6 +3027,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Webex` | `webex` |
 | `Webflow` | `webflow` |
 | `WebGL` | `webgl` |
+| `WebGPU` | `webgpu` |
 | `Weblate` | `weblate` |
 | `Webmin` | `webmin` |
 | `WebMoney` | `webmoney` |
@@ -3101,6 +3114,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yeti` | `yeti` |
+| `Yii` | `yii` |
 | `Yoast` | `yoast` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
@@ -3133,6 +3147,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zenodo` | `zenodo` |
 | `Zensar` | `zensar` |
 | `Zerodha` | `zerodha` |
+| `ZeroTier` | `zerotier` |
 | `Zerply` | `zerply` |
 | `Zettlr` | `zettlr` |
 | `Zhihu` | `zhihu` |
