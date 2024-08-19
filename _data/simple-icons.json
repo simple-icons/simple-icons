@@ -21,6 +21,11 @@
             "source": "https://doc.e.foundation"
         },
         {
+            "title": "1.1.1.1",
+            "hex": "221E68",
+            "source": "https://one.one.one.one"
+        },
+        {
             "title": "1001Tracklists",
             "hex": "40AEF0",
             "source": "https://www.1001tracklists.com"
@@ -1607,6 +1612,11 @@
             "source": "https://www.astonmartin.com"
         },
         {
+            "title": "Astra",
+            "hex": "5C2EDE",
+            "source": "https://wpastra.com/brand-assets"
+        },
+        {
             "title": "Astral",
             "hex": "261230",
             "source": "https://brandpad.io/astral",
@@ -1708,6 +1718,11 @@
             "title": "AutoCAD",
             "hex": "E51050",
             "source": "https://www.autodesk.com/blogs/autocad"
+        },
+        {
+            "title": "AutoCannon",
+            "hex": "3BA4B7",
+            "source": "https://github.com/mcollina/autocannon/blob/feeec71a7483153bd382de1c7ce5dfc31fa3c16f/autocannon-logo-icon-1000px.png"
         },
         {
             "title": "Autodesk",
@@ -1839,31 +1854,6 @@
             "title": "Axios",
             "hex": "5A29E4",
             "source": "https://github.com/axios/axios-docs/blob/ba35d67160f94419c1b0292831cd1a4b378adb42/assets/logo.svg"
-        },
-        {
-            "title": "Azure Artifacts",
-            "hex": "CB2E6D",
-            "source": "https://azure.microsoft.com/products/devops"
-        },
-        {
-            "title": "Azure Data Explorer",
-            "hex": "0078D4",
-            "source": "https://azure.microsoft.com/pricing/details/data-explorer"
-        },
-        {
-            "title": "Azure DevOps",
-            "hex": "0078D7",
-            "source": "https://azure.microsoft.com/products/devops"
-        },
-        {
-            "title": "Azure Functions",
-            "hex": "0062AD",
-            "source": "https://learn.microsoft.com/azure/architecture/icons"
-        },
-        {
-            "title": "Azure Pipelines",
-            "hex": "2560E0",
-            "source": "https://azure.microsoft.com/products/devops"
         },
         {
             "title": "B&R Automation",
@@ -2042,6 +2032,12 @@
             "hex": "EB0000",
             "source": "https://beatstars.world/brand-guidelines",
             "guidelines": "https://beatstars.world/brand-guidelines"
+        },
+        {
+            "title": "Beekeeper Studio",
+            "hex": "FAD83B",
+            "source": "https://www.beekeeperstudio.io/press",
+            "guidelines": "https://www.beekeeperstudio.io/legal/trademark"
         },
         {
             "title": "Behance",
@@ -2484,6 +2480,11 @@
             }
         },
         {
+            "title": "Bruno",
+            "hex": "F4AA41",
+            "source": "https://www.usebruno.com"
+        },
+        {
             "title": "BSD",
             "hex": "AB2B28",
             "source": "https://freebsdfoundation.org/about-us/about-the-foundation/project",
@@ -2628,17 +2629,6 @@
             "title": "C",
             "hex": "A8B9CC",
             "source": "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg"
-        },
-        {
-            "title": "C#",
-            "slug": "csharp",
-            "hex": "512BD4",
-            "source": "https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1",
-            "aliases": {
-                "aka": [
-                    "C sharp"
-                ]
-            }
         },
         {
             "title": "C++",
@@ -2996,6 +2986,11 @@
             "title": "Chromatic",
             "hex": "FC521F",
             "source": "https://www.chromatic.com"
+        },
+        {
+            "title": "Chrome Web Store",
+            "hex": "4285F4",
+            "source": "https://chromewebstore.google.com"
         },
         {
             "title": "Chromecast",
@@ -3467,6 +3462,11 @@
             "source": "https://comicfury.com/images/gator-icon-black.png"
         },
         {
+            "title": "comma",
+            "hex": "51FF00",
+            "source": "https://comma.ai"
+        },
+        {
             "title": "Commerzbank",
             "hex": "FFCC33",
             "source": "https://commons.wikimedia.org/wiki/Category:Commerzbank_logos"
@@ -3882,12 +3882,6 @@
             "source": "https://careers.dailymotion.com"
         },
         {
-            "title": "Daimler",
-            "hex": "E6E6E6",
-            "source": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype_Black_DTP",
-            "guidelines": "https://designnavigator.daimler.com/Daimler_Corporate_Logotype"
-        },
-        {
             "title": "DaisyUI",
             "hex": "5A0EF8",
             "source": "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg"
@@ -3986,19 +3980,14 @@
             "guidelines": "https://www.datastax.com/brand-resources"
         },
         {
-            "title": "Dataverse",
-            "hex": "088142",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
             "title": "date-fns",
             "hex": "770C56",
             "source": "https://date-fns.org"
+        },
+        {
+            "title": "DATEV",
+            "hex": "9BD547",
+            "source": "https://commons.wikimedia.org/wiki/File:Datev.svg"
         },
         {
             "title": "DatoCMS",
@@ -4172,11 +4161,6 @@
             "title": "Der Spiegel",
             "hex": "E64415",
             "source": "https://www.spiegel.de"
-        },
-        {
-            "title": "Designer News",
-            "hex": "2D72D9",
-            "source": "https://www.designernews.co"
         },
         {
             "title": "Deutsche Bahn",
@@ -4373,11 +4357,6 @@
             "source": "https://github.com/facebook/docusaurus/blob/67c40069d1062b5aae530b696e6f66bf9618a696/website/static/img/docusaurus.svg"
         },
         {
-            "title": "DocuSign",
-            "hex": "FFCC22",
-            "source": "https://www.docusign.com/sites/all/themes/custom/docusign/favicons/mstile-310x310.png"
-        },
-        {
             "title": "Dogecoin",
             "hex": "C2A633",
             "source": "https://cryptologos.cc/dogecoin"
@@ -4546,6 +4525,11 @@
             "guidelines": "https://design.duolingo.com"
         },
         {
+            "title": "Duplicati",
+            "hex": "1E3A8A",
+            "source": "https://duplicati.com"
+        },
+        {
             "title": "DVC",
             "aliases": {
                 "aka": [
@@ -4560,16 +4544,6 @@
             "title": "dwm",
             "hex": "1177AA",
             "source": "https://dwm.suckless.org"
-        },
-        {
-            "title": "Dynamics 365",
-            "hex": "0B53CE",
-            "source": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/dynamics365/get-started/icons"
-            }
         },
         {
             "title": "Dynatrace",
@@ -5986,6 +5960,11 @@
             "source": "https://github.com/gitextensions/gitextensions/blob/273a0f6fd3e07858f837cdc19d50827871e32319/Logo/Artwork/git-extensions-logo.svg"
         },
         {
+            "title": "Git for Windows",
+            "hex": "80B3FF",
+            "source": "https://github.com/git-for-windows/git-for-windows.github.io/blob/db9a134ed0fd484568124c1f79cb011eddb9a21d/img/gwindows_logo.svg"
+        },
+        {
             "title": "Git LFS",
             "hex": "F64935",
             "source": "https://git-lfs.github.com"
@@ -6091,6 +6070,12 @@
             "title": "Glovo",
             "hex": "F2CC38",
             "source": "https://about.glovoapp.com/press"
+        },
+        {
+            "title": "glTF",
+            "hex": "87C540",
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/files/legal/Khronos-Logo-Usage-Guide.pdf"
         },
         {
             "title": "Gmail",
@@ -6377,11 +6362,6 @@
             "source": "https://www.google.com/docs/about"
         },
         {
-            "title": "Google Domains",
-            "hex": "4285F4",
-            "source": "https://domains.google"
-        },
-        {
             "title": "Google Drive",
             "hex": "4285F4",
             "source": "https://developers.google.com/drive/web/branding"
@@ -6422,11 +6402,6 @@
             }
         },
         {
-            "title": "Google Hangouts",
-            "hex": "0C9D58",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Hangouts_icon.svg"
-        },
-        {
             "title": "Google Home",
             "hex": "4285F4",
             "source": "https://home.google.com/welcome/"
@@ -6462,11 +6437,6 @@
             "source": "https://messages.google.com"
         },
         {
-            "title": "Google My Business",
-            "hex": "4285F4",
-            "source": "https://business.google.com"
-        },
-        {
             "title": "Google Nearby",
             "hex": "4285F4",
             "source": "https://developers.google.com/nearby/developer-guidelines"
@@ -6476,11 +6446,6 @@
             "hex": "174EA6",
             "source": "https://partnermarketinghub.withgoogle.com/brands/google-news/",
             "guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-news/legal-and-trademarks/legal-requirements/"
-        },
-        {
-            "title": "Google Optimize",
-            "hex": "B366F6",
-            "source": "https://marketingplatform.google.com/about/optimize/"
         },
         {
             "title": "Google Pay",
@@ -6498,11 +6463,6 @@
             "hex": "414141",
             "source": "https://partnermarketinghub.withgoogle.com/brands/google-play/visual-identity/primary-logos/",
             "guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-play/visual-identity/primary-logos/"
-        },
-        {
-            "title": "Google Podcasts",
-            "hex": "4285F4",
-            "source": "https://developers.google.com/search/docs/data-types/podcast"
         },
         {
             "title": "Google Pub/Sub",
@@ -6762,6 +6722,11 @@
             "title": "Gurobi",
             "hex": "EE3524",
             "source": "https://cdn.gurobi.com/wp-content/uploads/2021/02/Gurobi-Optimization_Corporate-Brochure.pdf"
+        },
+        {
+            "title": "Gusto",
+            "hex": "F45D48",
+            "source": "https://gusto.com"
         },
         {
             "title": "Gutenberg",
@@ -7260,6 +7225,11 @@
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
         },
         {
+            "title": "HumHub",
+            "hex": "1B8291",
+            "source": "https://github.com/humhub/documentation/blob/e7844d7373ddf351cc7603fe9b7449009fa7c3b0/static/img/logo.svg"
+        },
+        {
             "title": "Hungry Jack's",
             "hex": "D0021B",
             "source": "https://www.hungryjacks.com.au"
@@ -7283,6 +7253,11 @@
             "title": "Hypothesis",
             "hex": "BD1C2B",
             "source": "https://web.hypothes.is/brand/"
+        },
+        {
+            "title": "Hyprland",
+            "hex": "58E1FF",
+            "source": "https://hyprland.org"
         },
         {
             "title": "Hyundai",
@@ -7313,22 +7288,6 @@
             "title": "Iberia",
             "hex": "D7192D",
             "source": "https://iberia.com"
-        },
-        {
-            "title": "IBM",
-            "hex": "052FAD",
-            "source": "https://www.ibm.com/design/language/ibm-logos/8-bar/",
-            "guidelines": "https://www.ibm.com/design/language/ibm-logos/8-bar/"
-        },
-        {
-            "title": "IBM Cloud",
-            "hex": "1261FE",
-            "source": "https://www.ibm.com/brand/systems/cloud/brand/logo"
-        },
-        {
-            "title": "IBM Watson",
-            "hex": "BE95FF",
-            "source": "https://www.ibm.com/brand/systems/watson/brand/"
         },
         {
             "title": "Iced",
@@ -7673,12 +7632,6 @@
                     "Internet Computer Protocol"
                 ]
             }
-        },
-        {
-            "title": "Internet Explorer",
-            "hex": "0076D6",
-            "source": "https://compass-ssl.microsoft.com/assets/c8/67/c867db4c-f328-45b8-817c-33834c70aae6.svg?n=IE.svg",
-            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1qeRY"
         },
         {
             "title": "Intigriti",
@@ -8436,6 +8389,11 @@
             "source": "https://kodi.tv"
         },
         {
+            "title": "Koenigsegg",
+            "hex": "000000",
+            "source": "https://www.koenigsegg.com"
+        },
+        {
             "title": "Kofax",
             "hex": "00558C",
             "source": "https://www.kofax.com"
@@ -8581,6 +8539,11 @@
             "title": "LangChain",
             "hex": "1C3C3C",
             "source": "https://www.langchain.com"
+        },
+        {
+            "title": "LanguageTool",
+            "hex": "45A1FC",
+            "source": "https://languagetool.org"
         },
         {
             "title": "Lapce",
@@ -8850,6 +8813,11 @@
             }
         },
         {
+            "title": "LibreWolf",
+            "hex": "00ACFF",
+            "source": "https://librewolf.net"
+        },
+        {
             "title": "libuv",
             "hex": "403C3D",
             "source": "https://github.com/libuv/libuv/blob/e4087dedf837f415056a45a838f639a3d9dc3ced/img/logos.svg"
@@ -8962,8 +8930,8 @@
         },
         {
             "title": "Linux Mint",
-            "hex": "87CF3E",
-            "source": "https://commons.wikimedia.org/wiki/File:Linux_Mint_logo_without_wordmark.svg"
+            "hex": "86BE43",
+            "source": "https://github.com/linuxmint/brand-logo/blob/540ac3b08e987866d77a340f557f994c988ac2ae/ring-mono-green.svg"
         },
         {
             "title": "Linux Professional Institute",
@@ -9004,6 +8972,11 @@
             "guidelines": "https://litecoin-foundation.org/litecoin-branding-guidelines/"
         },
         {
+            "title": "Literal",
+            "hex": "000000",
+            "source": "https://literal.club/pages/press"
+        },
+        {
             "title": "LITIENGINE",
             "hex": "00A5BC",
             "source": "https://litiengine.com"
@@ -9033,6 +9006,14 @@
             "title": "LMMS",
             "hex": "10B146",
             "source": "https://lmms.io/branding"
+        },
+        {
+            "title": "Lobsters",
+            "hex": "AC130D",
+            "source": "https://github.com/lobsters/lobsters/blob/dcd56c1d3f7190e33a73b86b77e7feb2665ddc50/app/assets/images/logo-color.svg",
+            "license": {
+                "type": "BSD-3-Clause"
+            }
         },
         {
             "title": "Local",
@@ -9395,7 +9376,8 @@
         {
             "title": "Mastodon",
             "hex": "6364FF",
-            "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg"
+            "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg",
+            "guidelines": "https://joinmastodon.org/branding"
         },
         {
             "title": "Material Design",
@@ -9707,163 +9689,6 @@
             "source": "https://commons.wikimedia.org/wiki/File:MicroPython_new_logo.svg"
         },
         {
-            "title": "Microsoft",
-            "hex": "5E5E5E",
-            "source": "https://developer.microsoft.com",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Academic",
-            "hex": "2D9FD9",
-            "source": "https://academic.microsoft.com",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Access",
-            "hex": "A4373A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Azure",
-            "hex": "0078D4",
-            "source": "https://github.com/microsoft/vscode-azureresourcegroups/blob/0a06362e82170fd7f8dc2496286825b1a69cc42b/resources/azure.svg",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Bing",
-            "hex": "258FFA",
-            "source": "https://www.bing.com/covid/",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Edge",
-            "hex": "0078D7",
-            "source": "https://support.microsoft.com/en-us/help/17171/microsoft-edge-get-to-know",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Excel",
-            "hex": "217346",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Exchange",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft OneDrive",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft OneNote",
-            "hex": "7719AA",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Outlook",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/outlook/docs",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft PowerPoint",
-            "hex": "B7472A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft SharePoint",
-            "hex": "0078D4",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft SQL Server",
-            "hex": "CC2927",
-            "source": "https://de.wikipedia.org/wiki/Datei:Microsoft_SQL_Server_Logo.svg"
-        },
-        {
-            "title": "Microsoft Store",
-            "hex": "005FB8",
-            "source": "https://github.com/microsoft/fluentui-system-icons/blob/4c58d8fb4d8549b9af9f7db8764d5d154df796c2/assets/Store%20Microsoft/SVG/ic_fluent_store_microsoft_24_regular.svg",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Teams",
-            "hex": "6264A7",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Translator",
-            "hex": "057B00",
-            "source": "https://translator.microsoft.com",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
-        },
-        {
-            "title": "Microsoft Visio",
-            "hex": "3955A3",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
-            "title": "Microsoft Word",
-            "hex": "2B579A",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
-        },
-        {
             "title": "Microstation",
             "hex": "62BB47",
             "source": "https://www.bentley.com/software/microstation"
@@ -9908,14 +9733,14 @@
             }
         },
         {
-            "title": "Minecraft",
-            "hex": "3C8527",
-            "source": "https://www.minecraft.net"
-        },
-        {
             "title": "Minetest",
             "hex": "53AC56",
             "source": "https://www.minetest.net"
+        },
+        {
+            "title": "MinGW-w64",
+            "hex": "000000",
+            "source": "https://www.mingw-w64.org"
         },
         {
             "title": "Mini",
@@ -9927,6 +9752,11 @@
             "hex": "C72E49",
             "source": "https://min.io",
             "guidelines": "https://min.io/logo"
+        },
+        {
+            "title": "Mintlify",
+            "hex": "18E299",
+            "source": "https://mintlify.com"
         },
         {
             "title": "Minutemailer",
@@ -10029,11 +9859,6 @@
             "source": "https://docs.modx.com"
         },
         {
-            "title": "Mojang Studios",
-            "hex": "EF323D",
-            "source": "https://www.minecraft.net"
-        },
-        {
             "title": "Moleculer",
             "hex": "3CAFCE",
             "source": "https://moleculer.services"
@@ -10125,6 +9950,11 @@
             "title": "Moonrepo",
             "hex": "6F53F3",
             "source": "https://moonrepo.dev"
+        },
+        {
+            "title": "Moq",
+            "hex": "F4BE00",
+            "source": "https://github.com/devlooped/moq/blob/1f31df466bf5513b32ef0a0338e242bc51180c7f/assets/img/moq-icon.png"
         },
         {
             "title": "Moqups",
@@ -10980,6 +10810,11 @@
             "guidelines": "https://www.okta.com/terms-of-use-for-okta-content/"
         },
         {
+            "title": "Ollama",
+            "hex": "000000",
+            "source": "https://github.com/ollama/ollama/issues/2152#issuecomment-1905286922"
+        },
+        {
             "title": "OnePlus",
             "hex": "F5010C",
             "source": "https://www.oneplus.com/ca_en/brand/asset"
@@ -11305,6 +11140,11 @@
             "source": "https://orgmode.org"
         },
         {
+            "title": "Organic Maps",
+            "hex": "006C35",
+            "source": "https://organicmaps.app"
+        },
+        {
             "title": "Origin",
             "hex": "F56C2D",
             "source": "https://www.origin.com/gbr/en-us/store"
@@ -11359,6 +11199,11 @@
             "title": "Otto",
             "hex": "D4021D",
             "source": "https://www.ottogroup.com/en/presse/material.php"
+        },
+        {
+            "title": "Outline",
+            "hex": "000000",
+            "source": "https://www.getoutline.com"
         },
         {
             "title": "Overcast",
@@ -12002,14 +11847,19 @@
             "source": "https://www.playstation.com/en-us/ps5/"
         },
         {
+            "title": "PlayStation Portable",
+            "aliases": {
+                "aka": [
+                    "PSP"
+                ]
+            },
+            "hex": "003791",
+            "source": "https://commons.wikimedia.org/wiki/File:PSP_Logo.svg"
+        },
+        {
             "title": "PlayStation Vita",
             "hex": "003791",
             "source": "https://commons.wikimedia.org/wiki/File:PlayStation_Vita_logo.svg"
-        },
-        {
-            "title": "Playwright",
-            "hex": "2EAD33",
-            "source": "https://github.com/microsoft/playwright.dev/blob/768c59464e5b3270db26fa6a839d022a7e0dd064/static/img/playwright-logo.svg"
         },
         {
             "title": "Pleroma",
@@ -12036,6 +11886,12 @@
             "title": "Plotly",
             "hex": "3F4F75",
             "source": "https://plotly.com"
+        },
+        {
+            "title": "Plume",
+            "hex": "7C5CDF",
+            "source": "https://www.plume.com",
+            "guidelines": "https://www.plume.com/legal/trademarks"
         },
         {
             "title": "Pluralsight",
@@ -12225,84 +12081,9 @@
             "source": "https://postmates.com/press-and-media"
         },
         {
-            "title": "Power Apps",
-            "hex": "742774",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Automate",
-            "hex": "0066FF",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "aliases": {
-                "aka": [
-                    "Microsoft Flow"
-                ]
-            },
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power BI",
-            "hex": "F2C811",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Fx",
-            "hex": "7F2157",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Pages",
-            "hex": "A493E7",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "aliases": {
-                "aka": [
-                    "Power Apps Portals"
-                ]
-            },
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
-            "title": "Power Virtual Agents",
-            "hex": "0B556A",
-            "source": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "guidelines": "https://docs.microsoft.com/en-us/power-platform/guidance/icons",
-            "license": {
-                "type": "custom",
-                "url": "https://docs.microsoft.com/en-us/power-platform/guidance/icons"
-            }
-        },
-        {
             "title": "POWERS",
             "hex": "E74536",
             "source": "https://www.powerswhiskey.com"
-        },
-        {
-            "title": "PowerShell",
-            "hex": "5391FE",
-            "source": "https://github.com/PowerShell/PowerShell/tree/11d7587f9b934cf27013d318886f97fb95c811cf"
         },
         {
             "title": "pr.co",
@@ -12375,6 +12156,18 @@
             "hex": "1F2E3E",
             "source": "https://videodirect.amazon.com/home/help?topicId=GT7W7GJBTDJW6Z8W#G8T2JFQZXPMHJLRZ",
             "guidelines": "https://videodirect.amazon.com/home/help?topicId=GT7W7GJBTDJW6Z8W#G8T2JFQZXPMHJLRZ"
+        },
+        {
+            "title": "PrimeNG",
+            "hex": "DD0031",
+            "source": "https://www.primefaces.org/press-kit",
+            "guidelines": "https://www.primefaces.org/press-kit"
+        },
+        {
+            "title": "PrimeReact",
+            "hex": "03C4E8",
+            "source": "https://www.primefaces.org/press-kit",
+            "guidelines": "https://www.primefaces.org/press-kit"
         },
         {
             "title": "Printables",
@@ -13166,6 +12959,11 @@
             "source": "https://github.com/redox-os/assets/blob/4935a777cd7aa44323d3c263b1e0bb4ae864a027/logos/redox/vectorized_logo.svg"
         },
         {
+            "title": "Redsys",
+            "hex": "DC7C26",
+            "source": "https://redsys.es"
+        },
+        {
             "title": "Redux",
             "hex": "764ABC",
             "source": "https://github.com/reduxjs/redux/blob/abb5f892f7e46849e5ca9bc13e75cfbc944a71b6/logo/logo.svg"
@@ -13239,7 +13037,7 @@
             "source": "https://render.com"
         },
         {
-            "title": "RenovateBot",
+            "title": "Renovate",
             "hex": "1A1F6C",
             "source": "https://avatars1.githubusercontent.com/u/38656520",
             "guidelines": "https://docs.renovatebot.com/logo-brand-guidelines"
@@ -13378,6 +13176,11 @@
             "hex": "0A222E",
             "source": "https://www.rimac-automobili.com/media/",
             "guidelines": "https://www.rimac-automobili.com/media/"
+        },
+        {
+            "title": "Rime",
+            "hex": "000000",
+            "source": "https://github.com/rime/home/blob/65738f446c7e6c56a560fdaa0c0f02937b8e51d0/blog/source/images/logo.svg"
         },
         {
             "title": "Ring",
@@ -14354,16 +14157,6 @@
             "source": "https://skypack.dev"
         },
         {
-            "title": "Skype",
-            "hex": "00AFF0",
-            "source": "https://blogs.skype.com/?attachment_id=56273"
-        },
-        {
-            "title": "Skype for Business",
-            "hex": "00AFF0",
-            "source": "https://en.wikipedia.org/wiki/Skype_for_Business_Server"
-        },
-        {
             "title": "Skyrock",
             "hex": "009AFF",
             "source": "https://www.svgrepo.com/svg/54507/skyrock-logo"
@@ -15212,6 +15005,11 @@
             "guidelines": "https://sites.google.com/sumologic.com/sumo-logic-brand/home"
         },
         {
+            "title": "Suno",
+            "hex": "000000",
+            "source": "https://suno.com"
+        },
+        {
             "title": "Sunrise",
             "hex": "DA291C",
             "source": "https://www.sunrise.ch"
@@ -15544,6 +15342,11 @@
             "title": "TeamViewer",
             "hex": "004680",
             "source": "https://www.teamviewer.com/en-us"
+        },
+        {
+            "title": "TechCrunch",
+            "hex": "029F00",
+            "source": "https://commons.wikimedia.org/wiki/File:TechCrunch_logo.svg"
         },
         {
             "title": "TED",
@@ -16164,6 +15967,12 @@
             "guidelines": "https://tripadvisor.mediaroom.com/logo-guidelines"
         },
         {
+            "title": "trivago",
+            "hex": "E32851",
+            "source": "https://company.trivago.com/press-media",
+            "guidelines": "https://company.trivago.com/press-media"
+        },
+        {
             "title": "Trivy",
             "hex": "1904DA",
             "source": "https://www.aquasec.com/brand",
@@ -16496,6 +16305,17 @@
             "hex": "FFFFFF",
             "source": "https://brand.unity.com",
             "guidelines": "https://brand.unity.com"
+        },
+        {
+            "title": "UnJS",
+            "hex": "ECDC5A",
+            "source": "https://unjs.io",
+            "guidelines": "https://unjs.io/design-kit",
+            "aliases": {
+                "aka": [
+                    "Unified JavaScript"
+                ]
+            }
         },
         {
             "title": "Unlicense",
@@ -16850,27 +16670,6 @@
             "source": "https://merchantsignageeu.visa.com/product.asp?dptID=696"
         },
         {
-            "title": "Visual Basic",
-            "hex": "512BD4",
-            "source": "https://aka.ms/fluentui-icons",
-            "guidelines": "https://aka.ms/fluentui-assets-license"
-        },
-        {
-            "title": "Visual Studio",
-            "hex": "5C2D91",
-            "source": "https://visualstudio.microsoft.com"
-        },
-        {
-            "title": "Visual Studio App Center",
-            "hex": "CB2E6D",
-            "source": "https://learn.microsoft.com/en-us/visualstudio/subscriptions"
-        },
-        {
-            "title": "Visual Studio Code",
-            "hex": "007ACC",
-            "source": "https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
-        },
-        {
             "title": "visx",
             "hex": "FF1231",
             "source": "https://airbnb.io/visx"
@@ -17022,7 +16821,7 @@
         },
         {
             "title": "Vulkan",
-            "hex": "AC162C",
+            "hex": "A41E22",
             "source": "https://www.khronos.org/legal/trademarks",
             "guidelines": "https://www.khronos.org/legal/trademarks"
         },
@@ -17046,6 +16845,11 @@
             "title": "Wacom",
             "hex": "000000",
             "source": "https://support.wacom.com/hc/en-us"
+        },
+        {
+            "title": "Wagmi",
+            "hex": "000000",
+            "source": "https://wagmi.sh"
         },
         {
             "title": "Wagtail",
@@ -17210,6 +17014,14 @@
             "hex": "990000",
             "source": "https://www.khronos.org/legal/trademarks",
             "guidelines": "https://www.khronos.org/legal/trademarks"
+        },
+        {
+            "title": "WebGPU",
+            "hex": "005A9C",
+            "source": "https://www.w3.org/2023/02/webgpu-logos.html",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
         },
         {
             "title": "Weblate",
@@ -17400,38 +17212,6 @@
             "source": "https://www.winamp.com"
         },
         {
-            "title": "Windows",
-            "hex": "0078D4",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
-            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
-        },
-        {
-            "title": "Windows 10",
-            "hex": "0078D6",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_10_Logo.svg"
-        },
-        {
-            "title": "Windows 11",
-            "hex": "0078D4",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2021_(Black).svg",
-            "guidelines": "https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1voQq"
-        },
-        {
-            "title": "Windows 95",
-            "hex": "008080",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_Logo_(1992-2001).svg"
-        },
-        {
-            "title": "Windows Terminal",
-            "hex": "4D4D4D",
-            "source": "https://github.com/microsoft/terminal/blob/a90289548f8548bf5c370a4b141b4b815c22616b/res/terminal/Terminal_HC.svg"
-        },
-        {
-            "title": "Windows XP",
-            "hex": "003399",
-            "source": "https://commons.wikimedia.org/wiki/File:Windows_logo_-_2002%E2%80%932012_(Multicolored).svg"
-        },
-        {
             "title": "Wipro",
             "hex": "341C53",
             "source": "https://www.wipro.com/content/dam/nexus/en/service-lines/applications/latest-thinking/state-of-cybersecurity-report-2019.pdf"
@@ -17569,6 +17349,11 @@
             "guidelines": "https://www.audiokinetic.com/resources/credits/"
         },
         {
+            "title": "Wykop",
+            "hex": "367DA9",
+            "source": "https://wykop.pl"
+        },
+        {
             "title": "Wyze",
             "hex": "1DF0BB",
             "source": "https://www.wyze.com"
@@ -17590,25 +17375,9 @@
             "source": "https://commons.wikimedia.org/wiki/File:X.Org_Logo.svg"
         },
         {
-            "title": "Xamarin",
-            "hex": "3498DB",
-            "source": "https://github.com/dotnet-foundation/swag/blob/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin/Xamagon/svg/Xamagon.svg",
-            "guidelines": "https://github.com/dotnet-foundation/swag/tree/e095ca0c1f57b2dcb15e012951e69cbe4c43527a/xamarin"
-        },
-        {
-            "title": "XAML",
-            "hex": "0C54C2",
-            "source": "https://github.com/microsoft/microsoft-ui-xaml/issues/1185#issuecomment-529731046"
-        },
-        {
             "title": "XAMPP",
             "hex": "FB7A24",
             "source": "https://www.apachefriends.org/en/"
-        },
-        {
-            "title": "Xbox",
-            "hex": "107C10",
-            "source": "https://www.xbox.com/en-US/consoles"
         },
         {
             "title": "Xcode",
@@ -17686,6 +17455,11 @@
             "source": "https://www.ycombinator.com/press"
         },
         {
+            "title": "yabai",
+            "hex": "00364B",
+            "source": "https://github.com/koekeishiya/yabai/blob/86c759186d7c588dfd8c6a84aac1ebc4730e988e/assets/icon/icon.svg"
+        },
+        {
             "title": "Yale",
             "hex": "FFD900",
             "source": "https://yalehome.com"
@@ -17704,16 +17478,6 @@
             "title": "YAML",
             "hex": "CB171E",
             "source": "https://commons.wikimedia.org/wiki/File:Official_YAML_Logo.svg"
-        },
-        {
-            "title": "Yammer",
-            "hex": "106EBE",
-            "source": "https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/products",
-            "guidelines": "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks",
-            "license": {
-                "type": "custom",
-                "url": "https://aka.ms/fluentui-assets-license"
-            }
         },
         {
             "title": "Yandex Cloud",
@@ -17740,6 +17504,11 @@
             "title": "Yeti",
             "hex": "00263C",
             "source": "https://www.yeti.com"
+        },
+        {
+            "title": "Yii",
+            "hex": "40B3D8",
+            "source": "https://www.yiiframework.com"
         },
         {
             "title": "Yoast",
@@ -17917,6 +17686,12 @@
             "title": "Zerodha",
             "hex": "387ED1",
             "source": "https://zerodha.com"
+        },
+        {
+            "title": "ZeroTier",
+            "hex": "FFB441",
+            "source": "https://www.zerotier.com",
+            "guidelines": "https://www.zerotier.com/media-kit"
         },
         {
             "title": "Zerply",
