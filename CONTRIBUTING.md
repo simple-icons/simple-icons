@@ -219,7 +219,7 @@ After optimizing the icon, double-check it against your original version to ensu
 
 Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
 
-* An svg element with:
+* An svg element with the following attributes, ordered respectively:
   * An img role attribute.
     * `role="img"`
   * A 24x24 viewbox.
