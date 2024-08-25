@@ -332,6 +332,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Baremetrics` | `baremetrics` |
 | `Barmenia` | `barmenia` |
 | `Basecamp` | `basecamp` |
+| `Baserow` | `baserow` |
 | `Basic Attention Token` | `basicattentiontoken` |
 | `Bastyon` | `bastyon` |
 | `bat` | `bat` |
@@ -1284,6 +1285,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hugging Face` | `huggingface` |
 | `Hugo` | `hugo` |
 | `Humble Bundle` | `humblebundle` |
+| `HumHub` | `humhub` |
 | `Hungry Jack's` | `hungryjacks` |
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
@@ -2751,6 +2753,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Textpattern` | `textpattern` |
 | `TGA` | `tga` |
 | `Thangs` | `thangs` |
+| `Thanos` | `thanos` |
 | `The Algorithms` | `thealgorithms` |
 | `The Boring Company` | `theboringcompany` |
 | `The Conversation` | `theconversation` |
