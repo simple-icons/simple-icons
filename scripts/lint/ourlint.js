@@ -101,14 +101,8 @@ const TESTS = {
         data.icons.flatMap((icon) => {
           /** @type {string[]} */
           const license =
-            icon.license !== undefined && Object.hasOwn(icon.license, 'url')
-              ? [
-                  // TODO: `hasOwn` is not currently supported by TS.
-                  // See https://github.com/microsoft/TypeScript/issues/44253
-                  /** @type {string} */
-                  // @ts-ignore
-                  icon.license.url,
-                ]
+            icon.license !== undefined && 'url' in icon.license
+              ? [icon.license.url]
               : [];
           const guidelines = icon.guidelines ? [icon.guidelines] : [];
           return [icon.source, ...guidelines, ...license];
