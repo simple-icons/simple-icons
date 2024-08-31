@@ -332,6 +332,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Baremetrics` | `baremetrics` |
 | `Barmenia` | `barmenia` |
 | `Basecamp` | `basecamp` |
+| `Baserow` | `baserow` |
 | `Basic Attention Token` | `basicattentiontoken` |
 | `Bastyon` | `bastyon` |
 | `bat` | `bat` |
@@ -1284,6 +1285,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hugging Face` | `huggingface` |
 | `Hugo` | `hugo` |
 | `Humble Bundle` | `humblebundle` |
+| `HumHub` | `humhub` |
 | `Hungry Jack's` | `hungryjacks` |
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
@@ -1517,6 +1519,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
@@ -1728,6 +1731,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Milvus` | `milvus` |
 | `Minds` | `minds` |
 | `Minetest` | `minetest` |
+| `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
@@ -1913,6 +1917,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
@@ -2748,6 +2753,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Textpattern` | `textpattern` |
 | `TGA` | `tga` |
 | `Thangs` | `thangs` |
+| `Thanos` | `thanos` |
 | `The Algorithms` | `thealgorithms` |
 | `The Boring Company` | `theboringcompany` |
 | `The Conversation` | `theconversation` |
@@ -3111,6 +3117,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yeti` | `yeti` |
+| `Yii` | `yii` |
 | `Yoast` | `yoast` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
