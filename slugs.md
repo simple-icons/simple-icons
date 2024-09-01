@@ -979,6 +979,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
 | `Fluxus` | `fluxus` |
+| `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
@@ -1332,6 +1333,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Indian Super League` | `indiansuperleague` |
 | `Indie Hackers` | `indiehackers` |
 | `IndiGo` | `indigo` |
+| `Inductive Automation` | `inductiveautomation` |
 | `Inertia` | `inertia` |
 | `INFINITI` | `infiniti` |
 | `InfluxDB` | `influxdb` |
@@ -1537,6 +1539,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `League of Legends` | `leagueoflegends` |
 | `Leanpub` | `leanpub` |
 | `LeetCode` | `leetcode` |
+| `Lefthook` | `lefthook` |
 | `Legacy Games` | `legacygames` |
 | `Leica` | `leica` |
 | `Lemmy` | `lemmy` |
@@ -2299,6 +2302,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Redis` | `redis` |
 | `Redmine` | `redmine` |
 | `Redox` | `redox` |
+| `Redragon` | `redragon` |
 | `Redsys` | `redsys` |
 | `Redux` | `redux` |
 | `Redux-Saga` | `reduxsaga` |
