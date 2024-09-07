@@ -332,6 +332,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Baremetrics` | `baremetrics` |
 | `Barmenia` | `barmenia` |
 | `Basecamp` | `basecamp` |
+| `Baserow` | `baserow` |
 | `Basic Attention Token` | `basicattentiontoken` |
 | `Bastyon` | `bastyon` |
 | `bat` | `bat` |
@@ -978,6 +979,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
 | `Fluxus` | `fluxus` |
+| `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
@@ -1083,6 +1085,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
 | `Glovo` | `glovo` |
+| `glTF` | `gltf` |
 | `Gmail` | `gmail` |
 | `GNOME` | `gnome` |
 | `GNOME Terminal` | `gnometerminal` |
@@ -1283,6 +1286,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hugging Face` | `huggingface` |
 | `Hugo` | `hugo` |
 | `Humble Bundle` | `humblebundle` |
+| `HumHub` | `humhub` |
 | `Hungry Jack's` | `hungryjacks` |
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
@@ -1329,6 +1333,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Indian Super League` | `indiansuperleague` |
 | `Indie Hackers` | `indiehackers` |
 | `IndiGo` | `indigo` |
+| `Inductive Automation` | `inductiveautomation` |
 | `Inertia` | `inertia` |
 | `INFINITI` | `infiniti` |
 | `InfluxDB` | `influxdb` |
@@ -1516,6 +1521,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
@@ -1533,6 +1539,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `League of Legends` | `leagueoflegends` |
 | `Leanpub` | `leanpub` |
 | `LeetCode` | `leetcode` |
+| `Lefthook` | `lefthook` |
 | `Legacy Games` | `legacygames` |
 | `Leica` | `leica` |
 | `Lemmy` | `lemmy` |
@@ -1589,12 +1596,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `listmonk` | `listmonk` |
 | `Lit` | `lit` |
 | `Litecoin` | `litecoin` |
+| `Literal` | `literal` |
 | `LITIENGINE` | `litiengine` |
 | `LiveChat` | `livechat` |
 | `LiveJournal` | `livejournal` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lobsters` | `lobsters` |
 | `Local` | `local` |
 | `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
@@ -1725,6 +1734,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Milvus` | `milvus` |
 | `Minds` | `minds` |
 | `Minetest` | `minetest` |
+| `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
@@ -1910,6 +1920,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
@@ -1974,6 +1985,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
 | `Otto` | `otto` |
+| `Outline` | `outline` |
 | `Overcast` | `overcast` |
 | `Overleaf` | `overleaf` |
 | `OVH` | `ovh` |
@@ -2290,6 +2302,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Redis` | `redis` |
 | `Redmine` | `redmine` |
 | `Redox` | `redox` |
+| `Redragon` | `redragon` |
 | `Redsys` | `redsys` |
 | `Redux` | `redux` |
 | `Redux-Saga` | `reduxsaga` |
@@ -2744,6 +2757,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Textpattern` | `textpattern` |
 | `TGA` | `tga` |
 | `Thangs` | `thangs` |
+| `Thanos` | `thanos` |
 | `The Algorithms` | `thealgorithms` |
 | `The Boring Company` | `theboringcompany` |
 | `The Conversation` | `theconversation` |
@@ -3107,6 +3121,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yeti` | `yeti` |
+| `Yii` | `yii` |
 | `Yoast` | `yoast` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
@@ -3139,6 +3154,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zenodo` | `zenodo` |
 | `Zensar` | `zensar` |
 | `Zerodha` | `zerodha` |
+| `ZeroTier` | `zerotier` |
 | `Zerply` | `zerply` |
 | `Zettlr` | `zettlr` |
 | `Zhihu` | `zhihu` |
