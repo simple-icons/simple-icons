@@ -439,6 +439,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bugsnag` | `bugsnag` |
 | `Buhl` | `buhl` |
 | `Buildkite` | `buildkite` |
+| `BuiltByBit` | `builtbybit` |
 | `Bukalapak` | `bukalapak` |
 | `Bulma` | `bulma` |
 | `Bun` | `bun` |
@@ -1641,6 +1642,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mahindra` | `mahindra` |
 | `mail.com` | `maildotcom` |
 | `Mail.Ru` | `maildotru` |
+| `mailbox.org` | `mailboxdotorg` |
 | `MailChimp` | `mailchimp` |
 | `Mailgun` | `mailgun` |
 | `Mailtrap` | `mailtrap` |
