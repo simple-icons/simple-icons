@@ -1966,6 +1966,11 @@
             "source": "https://basecamp.com/about/press"
         },
         {
+            "title": "Baserow",
+            "hex": "5190EF",
+            "source": "https://baserow.io"
+        },
+        {
             "title": "Basic Attention Token",
             "hex": "80247B",
             "source": "https://brave.com/media-assets",
@@ -2541,6 +2546,12 @@
             "hex": "14CC80",
             "source": "https://buildkite.com/brand-assets",
             "guidelines": "https://buildkite.com/brand-assets"
+        },
+        {
+            "title": "BuiltByBit",
+            "hex": "2D87C3",
+            "source": "https://builtbybit.com/wiki/branding",
+            "guidelines": "https://builtbybit.com/wiki/branding"
         },
         {
             "title": "Bukalapak",
@@ -3766,6 +3777,11 @@
             "source": "https://crystal-lang.org/media/"
         },
         {
+            "title": "CSDN",
+            "hex": "FC5531",
+            "source": "https://www.csdn.net/company/index.html"
+        },
+        {
             "title": "CSS Design Awards",
             "hex": "280FEE",
             "source": "https://www.cssdesignawards.com"
@@ -4410,6 +4426,11 @@
             "hex": "190041",
             "source": "https://dovetail.com/help/press-kit",
             "guidelines": "https://dovetail.com/help/press-kit"
+        },
+        {
+            "title": "Downdetector",
+            "hex": "FF160A",
+            "source": "https://downdetector.com"
         },
         {
             "title": "Doxygen",
@@ -5488,6 +5509,12 @@
             "title": "Fluxus",
             "hex": "FFFFFF",
             "source": "https://github.com/YieldingFluxus/fluxuswebsite/blob/651d798b8753786dcc51644c3b048a4f399db166/public/icon-svg.svg"
+        },
+        {
+            "title": "Fly.io",
+            "hex": "24175B",
+            "source": "https://fly.io/docs/about/brand",
+            "guidelines": "https://fly.io/docs/about/brand"
         },
         {
             "title": "Flyway",
@@ -7225,6 +7252,11 @@
             "source": "https://support.humblebundle.com/hc/en-us/articles/202742060-Bundle-Logos"
         },
         {
+            "title": "HumHub",
+            "hex": "1B8291",
+            "source": "https://github.com/humhub/documentation/blob/e7844d7373ddf351cc7603fe9b7449009fa7c3b0/static/img/logo.svg"
+        },
+        {
             "title": "Hungry Jack's",
             "hex": "D0021B",
             "source": "https://www.hungryjacks.com.au"
@@ -7459,6 +7491,12 @@
             "title": "IndiGo",
             "hex": "09009B",
             "source": "https://www.goindigo.in"
+        },
+        {
+            "title": "Inductive Automation",
+            "hex": "445C6D",
+            "source": "https://brand.inductiveautomation.com",
+            "guidelines": "https://brand.inductiveautomation.com"
         },
         {
             "title": "Inertia",
@@ -8536,6 +8574,11 @@
             "source": "https://www.langchain.com"
         },
         {
+            "title": "LanguageTool",
+            "hex": "45A1FC",
+            "source": "https://languagetool.org"
+        },
+        {
             "title": "Lapce",
             "hex": "3B82F6",
             "source": "https://github.com/lapce/lapce/blob/95c4cf2d87083e348c0b621d0be0ea17f79ed703/extra/images/logo.svg"
@@ -8626,6 +8669,11 @@
             "title": "LeetCode",
             "hex": "FFA116",
             "source": "https://leetcode.com/store"
+        },
+        {
+            "title": "Lefthook",
+            "hex": "FF1E1E",
+            "source": "https://github.com/evilmartians/lefthook/blob/c44511f070ef2785fecb215862c4f2ff1ed8dccb/logo_sign.svg"
         },
         {
             "title": "Legacy Games",
@@ -9215,6 +9263,11 @@
             "source": "https://my.mail.ru"
         },
         {
+            "title": "mailbox.org",
+            "hex": "76BB21",
+            "source": "https://mailbox.org/en/press"
+        },
+        {
             "title": "MailChimp",
             "hex": "FFE01B",
             "source": "https://mailchimp.com/about/brand-assets",
@@ -9366,7 +9419,8 @@
         {
             "title": "Mastodon",
             "hex": "6364FF",
-            "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg"
+            "source": "https://github.com/mastodon/mastodon/blob/7ccf7a73f1c47a8c03712c39f7c591e837cf6d08/app/javascript/images/logo-symbol-icon.svg",
+            "guidelines": "https://joinmastodon.org/branding"
         },
         {
             "title": "Material Design",
@@ -9482,6 +9536,11 @@
             "title": "MediaMarkt",
             "hex": "DF0000",
             "source": "https://www.mediamarkt.de"
+        },
+        {
+            "title": "MediaPipe",
+            "hex": "0097A7",
+            "source": "https://developers.google.com/static/mediapipe/images/mediapipe_icon.svg"
         },
         {
             "title": "MediaTek",
@@ -9725,6 +9784,11 @@
             "title": "Minetest",
             "hex": "53AC56",
             "source": "https://www.minetest.net"
+        },
+        {
+            "title": "MinGW-w64",
+            "hex": "000000",
+            "source": "https://www.mingw-w64.org"
         },
         {
             "title": "Mini",
@@ -10792,6 +10856,11 @@
             "hex": "007DC1",
             "source": "https://www.okta.com/press-room/media-assets/",
             "guidelines": "https://www.okta.com/terms-of-use-for-okta-content/"
+        },
+        {
+            "title": "Ollama",
+            "hex": "000000",
+            "source": "https://github.com/ollama/ollama/issues/2152#issuecomment-1905286922"
         },
         {
             "title": "OnePlus",
@@ -12893,6 +12962,11 @@
             "source": "https://www.redbull.com"
         },
         {
+            "title": "Red Candle Games",
+            "hex": "D23735",
+            "source": "https://shop.redcandlegames.com"
+        },
+        {
             "title": "Red Hat",
             "hex": "EE0000",
             "source": "https://www.redhat.com/en/about/brand/new-brand/details"
@@ -12936,6 +13010,11 @@
             "title": "Redox",
             "hex": "000000",
             "source": "https://github.com/redox-os/assets/blob/4935a777cd7aa44323d3c263b1e0bb4ae864a027/logos/redox/vectorized_logo.svg"
+        },
+        {
+            "title": "Redragon",
+            "hex": "E60012",
+            "source": "https://redragonshop.com"
         },
         {
             "title": "Redsys",
@@ -13223,6 +13302,11 @@
             "title": "Roblox Studio",
             "hex": "00A2FF",
             "source": "https://create.roblox.com"
+        },
+        {
+            "title": "Roboflow",
+            "hex": "6706CE",
+            "source": "https://roboflow.com/press"
         },
         {
             "title": "Robot Framework",
@@ -15261,6 +15345,11 @@
             "source": "https://www.target.com"
         },
         {
+            "title": "TAROM",
+            "hex": "003366",
+            "source": "https://www.tarom.ro"
+        },
+        {
             "title": "Task",
             "hex": "29BEB0",
             "source": "https://github.com/go-task/task/blob/84ad0056e49e2206bf5903863cdf972a7305072c/docs/static/img/logo_mono.svg"
@@ -15471,6 +15560,11 @@
             "source": "https://thangs.com"
         },
         {
+            "title": "Thanos",
+            "hex": "6D41FF",
+            "source": "https://thanos.io"
+        },
+        {
             "title": "The Algorithms",
             "hex": "00BCB4",
             "source": "https://github.com/TheAlgorithms/website/blob/f4e439578c88fed3b21c70898605238602975d2d/public/logo_t.svg"
@@ -15489,6 +15583,11 @@
             "title": "THE FINALS",
             "hex": "D31F3C",
             "source": "https://www.embark-studios.com/press"
+        },
+        {
+            "title": "The Guardian",
+            "hex": "052962",
+            "source": "https://www.theguardian.com/international"
         },
         {
             "title": "The Irish Times",
@@ -17485,6 +17584,11 @@
             "source": "https://www.yeti.com"
         },
         {
+            "title": "Yii",
+            "hex": "40B3D8",
+            "source": "https://www.yiiframework.com"
+        },
+        {
             "title": "Yoast",
             "hex": "A61E69",
             "source": "https://yoast.com/brand",
@@ -17660,6 +17764,12 @@
             "title": "Zerodha",
             "hex": "387ED1",
             "source": "https://zerodha.com"
+        },
+        {
+            "title": "ZeroTier",
+            "hex": "FFB441",
+            "source": "https://www.zerotier.com",
+            "guidelines": "https://www.zerotier.com/media-kit"
         },
         {
             "title": "Zerply",
