@@ -2,7 +2,7 @@
 <img src="https://cdn.simpleicons.org/simpleicons/000/fff" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
 <p align="center">
-Over 3200 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
+Over 3100 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -165,7 +165,7 @@ The below are known extensions to third-party tools.
 | [Blender add-on](https://github.com/mondeja/simple-icons-blender) <img src="https://cdn.simpleicons.org/blender/000/fff" alt="Blender" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Boxy SVG library](https://boxy-svg.com/ideas/298/simple-icons-library-provider) <img src="https://cdn.simpleicons.org/boxysvg/000/fff" alt="Boxy SVG" align=left width=24 height=24> | [@Jarek](https://boxy-svg.com/profiles/0000000000/jarek) |
 | [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
-| [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908/Simple-Icons) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
+| [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Miro app](https://miro.com/marketplace/brand-icons/) <img src="https://cdn.simpleicons.org/miro/000/fff" alt="Miro" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Raycast extension](https://www.raycast.com/litomore/simple-icons) <img src="https://cdn.simpleicons.org/raycast/000/fff" alt="Raycast" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) | ![](https://img.shields.io/github/license/mackenly/simple-icons-stream-deck) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmackenly%2Fsimple-icons-stream-deck%2Fmain%2Ftemplate%2Fmanifest.json&query=Version&logo=simpleicons&label=version) |
@@ -179,6 +179,7 @@ The below are known third-party libraries for use in your own projects. We only 
 
 | Library | Author | License | Simple Icons Version |
 | :-- | :-- | :-: | :-: |
+| [Astro package](https://github.com/dzeiocom/simple-icons-astro) <img src="https://cdn.simpleicons.org/astro/000/fff" alt="Astro" align=left width=24 height=24> | [@Aviortheking](https://github.com/aviortheking)  | ![](https://img.shields.io/github/license/dzeiocom/simple-icons-astro) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdzeiocom%2Fsimple-icons-astro%2Fmaster%2Fpackage.json&query=%24.version&logo=simpleicons&label=version) |
 | [Blazor Nuget package](https://github.com/TimeWarpEngineering/timewarp-simple-icons) <img src="https://cdn.simpleicons.org/blazor/000/fff" alt="Blazor" align=left width=24 height=24> | [@TimeWarpEngineering](https://github.com/TimeWarpEngineering)  | ![](https://img.shields.io/github/license/TimeWarpEngineering/timewarp-simple-icons) | ![](https://img.shields.io/badge/dynamic/xml?url=https%3A%2F%2Fraw.githubusercontent.com%2FTimeWarpEngineering%2Ftimewarp-simple-icons%2Fmain%2Fsource%2Ftimewarp-simple-icons%2Ftimewarp-simple-icons.csproj&query=%2FProject%2FPropertyGroup%2FVersion&logo=simpleicons&label=version) |
 | [Flutter package](https://github.com/jlnrrg/simple_icons) <img src="https://cdn.simpleicons.org/flutter/000/fff" alt="Flutter" align=left width=24 height=24> | [@jlnrrg](https://github.com/jlnrrg) | ![](https://img.shields.io/github/license/jlnrrg/simple_icons) | ![](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjlnrrg%2Fsimple_icons%2Fmaster%2Fpubspec.yaml&query=%24.version&logo=simpleicons&logoColor=white&label=version)
 | [Framer component](https://github.com/LitoMore/simple-icons-framer) <img src="https://cdn.simpleicons.org/framer/000/fff" alt="Framer" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) | ![](https://img.shields.io/github/license/LitoMore/simple-icons-framer) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimple-icons%2Fsimple-icons%2Fmaster%2Fpackage.json&query=%24.version&logo=simpleicons&label=version) |
