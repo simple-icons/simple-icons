@@ -332,6 +332,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Baremetrics` | `baremetrics` |
 | `Barmenia` | `barmenia` |
 | `Basecamp` | `basecamp` |
+| `Baserow` | `baserow` |
 | `Basic Attention Token` | `basicattentiontoken` |
 | `Bastyon` | `bastyon` |
 | `bat` | `bat` |
@@ -438,6 +439,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bugsnag` | `bugsnag` |
 | `Buhl` | `buhl` |
 | `Buildkite` | `buildkite` |
+| `BuiltByBit` | `builtbybit` |
 | `Bukalapak` | `bukalapak` |
 | `Bulma` | `bulma` |
 | `Bun` | `bun` |
@@ -978,6 +980,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
 | `Fluxus` | `fluxus` |
+| `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
@@ -1284,6 +1287,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hugging Face` | `huggingface` |
 | `Hugo` | `hugo` |
 | `Humble Bundle` | `humblebundle` |
+| `HumHub` | `humhub` |
 | `Hungry Jack's` | `hungryjacks` |
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
@@ -1330,6 +1334,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Indian Super League` | `indiansuperleague` |
 | `Indie Hackers` | `indiehackers` |
 | `IndiGo` | `indigo` |
+| `Inductive Automation` | `inductiveautomation` |
 | `Inertia` | `inertia` |
 | `INFINITI` | `infiniti` |
 | `InfluxDB` | `influxdb` |
@@ -1517,6 +1522,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
@@ -1534,6 +1540,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `League of Legends` | `leagueoflegends` |
 | `Leanpub` | `leanpub` |
 | `LeetCode` | `leetcode` |
+| `Lefthook` | `lefthook` |
 | `Legacy Games` | `legacygames` |
 | `Leica` | `leica` |
 | `Lemmy` | `lemmy` |
@@ -1635,6 +1642,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mahindra` | `mahindra` |
 | `mail.com` | `maildotcom` |
 | `Mail.Ru` | `maildotru` |
+| `mailbox.org` | `mailboxdotorg` |
 | `MailChimp` | `mailchimp` |
 | `Mailgun` | `mailgun` |
 | `Mailtrap` | `mailtrap` |
@@ -1914,6 +1922,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
@@ -2295,6 +2304,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Redis` | `redis` |
 | `Redmine` | `redmine` |
 | `Redox` | `redox` |
+| `Redragon` | `redragon` |
 | `Redsys` | `redsys` |
 | `Redux` | `redux` |
 | `Redux-Saga` | `reduxsaga` |
@@ -2749,6 +2759,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Textpattern` | `textpattern` |
 | `TGA` | `tga` |
 | `Thangs` | `thangs` |
+| `Thanos` | `thanos` |
 | `The Algorithms` | `thealgorithms` |
 | `The Boring Company` | `theboringcompany` |
 | `The Conversation` | `theconversation` |
@@ -3112,6 +3123,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yeti` | `yeti` |
+| `Yii` | `yii` |
 | `Yoast` | `yoast` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
