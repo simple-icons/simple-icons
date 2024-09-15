@@ -9820,6 +9820,11 @@
             "source": "https://migadu.com"
         },
         {
+            "title": "miHoYo",
+            "hex": "4EA4DD",
+            "source": "https://en.wikipedia.org/wiki/File:MiHoYo.svg"
+        },
+        {
             "title": "Mikrotik",
             "hex": "293239",
             "source": "https://mikrotik.com/aboutus"
@@ -10270,6 +10275,14 @@
             "hex": "4A90E2",
             "source": "https://nano.org/resources",
             "guidelines": "https://nano.org/resources"
+        },
+        {
+            "title": "Nano Stores",
+            "hex": "000000",
+            "source": "https://github.com/nanostores/nanostores/blob/7fb5cd871fa00f484ebc866fdf330b56cab2aa20/img/logo-auto.svg",
+            "license": {
+                "type": "MIT"
+            }
         },
         {
             "title": "NASA",
