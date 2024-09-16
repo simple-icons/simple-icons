@@ -16,6 +16,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `1Password` | `1password` |
 | `2FAS` | `2fas` |
 | `2K` | `2k` |
+| `30 seconds of code` | `30secondsofcode` |
 | `365 Data Science` | `365datascience` |
 | `3M` | `3m` |
 | `42` | `42` |
@@ -193,6 +194,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache CloudStack` | `apachecloudstack` |
 | `Apache Cordova` | `apachecordova` |
 | `Apache CouchDB` | `apachecouchdb` |
+| `Apache DolphinScheduler` | `apachedolphinscheduler` |
 | `Apache Druid` | `apachedruid` |
 | `Apache ECharts` | `apacheecharts` |
 | `Apache Flink` | `apacheflink` |
@@ -207,6 +209,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache Kylin` | `apachekylin` |
 | `Apache Maven` | `apachemaven` |
 | `Apache NetBeans IDE` | `apachenetbeanside` |
+| `Apache NiFi` | `apachenifi` |
 | `Apache OpenOffice` | `apacheopenoffice` |
 | `Apache Parquet` | `apacheparquet` |
 | `Apache Pulsar` | `apachepulsar` |
@@ -474,6 +477,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Canva` | `canva` |
 | `Canvas` | `canvas` |
 | `Capacitor` | `capacitor` |
+| `CapRover` | `caprover` |
 | `Car Throttle` | `carthrottle` |
 | `Cardano` | `cardano` |
 | `Carlsberg Group` | `carlsberggroup` |
@@ -625,6 +629,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Confluence` | `confluence` |
 | `Construct 3` | `construct3` |
 | `Consul` | `consul` |
+| `Contabo` | `contabo` |
 | `Contactless Payment` | `contactlesspayment` |
 | `containerd` | `containerd` |
 | `Contao` | `contao` |
@@ -647,6 +652,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CountingWorks PRO` | `countingworkspro` |
 | `Coursera` | `coursera` |
 | `Coveralls` | `coveralls` |
+| `Coze` | `coze` |
 | `cPanel` | `cpanel` |
 | `Craft CMS` | `craftcms` |
 | `Craftsman` | `craftsman` |
@@ -667,6 +673,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CRYENGINE` | `cryengine` |
 | `CryptPad` | `cryptpad` |
 | `Crystal` | `crystal` |
+| `CSDN` | `csdn` |
 | `CSS Design Awards` | `cssdesignawards` |
 | `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
@@ -783,6 +790,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Douban Read` | `doubanread` |
 | `Dovecot` | `dovecot` |
 | `Dovetail` | `dovetail` |
+| `Downdetector` | `downdetector` |
 | `Doxygen` | `doxygen` |
 | `DPD` | `dpd` |
 | `Dragonframe` | `dragonframe` |
@@ -1192,6 +1200,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GTK` | `gtk` |
 | `Guangzhou Metro` | `guangzhoumetro` |
 | `Guilded` | `guilded` |
+| `Guitar Pro` | `guitarpro` |
 | `gulp` | `gulp` |
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
@@ -1460,6 +1469,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Keenetic` | `keenetic` |
 | `Keep a Changelog` | `keepachangelog` |
 | `KeePassXC` | `keepassxc` |
+| `KeeWeb` | `keeweb` |
 | `Kentico` | `kentico` |
 | `Keras` | `keras` |
 | `Keybase` | `keybase` |
@@ -1568,6 +1578,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LibreOffice Impress` | `libreofficeimpress` |
 | `LibreOffice Math` | `libreofficemath` |
 | `LibreOffice Writer` | `libreofficewriter` |
+| `LibreTranslate` | `libretranslate` |
+| `LibreTube` | `libretube` |
 | `LibreWolf` | `librewolf` |
 | `libuv` | `libuv` |
 | `Lichess` | `lichess` |
@@ -1624,6 +1636,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lubuntu` | `lubuntu` |
 | `Lucia` | `lucia` |
 | `Lucid` | `lucid` |
+| `Lucide` | `lucide` |
 | `Ludwig` | `ludwig` |
 | `Lufthansa` | `lufthansa` |
 | `Lumen` | `lumen` |
@@ -1693,6 +1706,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MDX` | `mdx` |
 | `MediaFire` | `mediafire` |
 | `MediaMarkt` | `mediamarkt` |
+| `MediaPipe` | `mediapipe` |
 | `MediaTek` | `mediatek` |
 | `MediBang Paint` | `medibangpaint` |
 | `Medium` | `medium` |
@@ -1731,6 +1745,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MicroStrategy` | `microstrategy` |
 | `MIDI` | `midi` |
 | `Migadu` | `migadu` |
+| `miHoYo` | `mihoyo` |
 | `Mikrotik` | `mikrotik` |
 | `Milanote` | `milanote` |
 | `Milvus` | `milvus` |
@@ -1811,6 +1826,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NameSilo` | `namesilo` |
 | `Namu Wiki` | `namuwiki` |
 | `Nano` | `nano` |
+| `Nano Stores` | `nanostores` |
 | `NASA` | `nasa` |
 | `National Grid` | `nationalgrid` |
 | `National Rail` | `nationalrail` |
@@ -2162,8 +2178,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
+| `PrimeFaces` | `primefaces` |
 | `PrimeNG` | `primeng` |
 | `PrimeReact` | `primereact` |
+| `PrimeVue` | `primevue` |
 | `Printables` | `printables` |
 | `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
@@ -2296,6 +2314,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Recoil` | `recoil` |
 | `Red` | `red` |
 | `Red Bull` | `redbull` |
+| `Red Candle Games` | `redcandlegames` |
 | `Red Hat` | `redhat` |
 | `Red Hat Open Shift` | `redhatopenshift` |
 | `Redash` | `redash` |
@@ -2358,6 +2377,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Robinhood` | `robinhood` |
 | `Roblox` | `roblox` |
 | `Roblox Studio` | `robloxstudio` |
+| `Roboflow` | `roboflow` |
 | `Robot Framework` | `robotframework` |
 | `Rocket` | `rocket` |
 | `Rocket.Chat` | `rocketdotchat` |
@@ -2687,8 +2707,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SVG` | `svg` |
 | `SVG.js` | `svgdotjs` |
 | `SVGO` | `svgo` |
+| `SvgTrace` | `svgtrace` |
 | `Swagger` | `swagger` |
 | `Swarm` | `swarm` |
+| `Sway` | `sway` |
 | `SWC` | `swc` |
 | `Swift` | `swift` |
 | `Swiggy` | `swiggy` |
@@ -2723,6 +2745,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
 | `Target` | `target` |
+| `TAROM` | `tarom` |
 | `Task` | `task` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
@@ -2764,6 +2787,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Boring Company` | `theboringcompany` |
 | `The Conversation` | `theconversation` |
 | `THE FINALS` | `thefinals` |
+| `The Guardian` | `theguardian` |
 | `The Irish Times` | `theirishtimes` |
 | `The Mighty` | `themighty` |
 | `The Models Resource` | `themodelsresource` |
@@ -2774,6 +2798,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Sounds Resource` | `thesoundsresource` |
 | `The Spriters Resource` | `thespritersresource` |
 | `The Washington Post` | `thewashingtonpost` |
+| `The Weather Channel` | `theweatherchannel` |
 | `Thingiverse` | `thingiverse` |
 | `ThinkPad` | `thinkpad` |
 | `thirdweb` | `thirdweb` |
@@ -2996,6 +3021,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Voron Design` | `vorondesign` |
 | `Vowpal Wabbit` | `vowpalwabbit` |
 | `VOX` | `vox` |
+| `VRChat` | `vrchat` |
 | `VSCO` | `vsco` |
 | `VSCodium` | `vscodium` |
 | `VTEX` | `vtex` |
@@ -3113,6 +3139,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `XRP` | `xrp` |
 | `XSplit` | `xsplit` |
 | `XState` | `xstate` |
+| `Xubuntu` | `xubuntu` |
 | `Y Combinator` | `ycombinator` |
 | `yabai` | `yabai` |
 | `Yale` | `yale` |
