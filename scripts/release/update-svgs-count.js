@@ -32,12 +32,12 @@ try {
     const overNIconsInReadme = Number.parseInt(match[1], 10);
     const iconsData = await getIconsData();
     const nIcons = iconsData.length;
-    const newNIcons = overNIconsInReadme + updateRange;
+    const nIconsRounded = Math.floor(nIcons / updateRange) * updateRange;
 
-    if (nIcons > newNIcons) {
+    if (overNIconsInReadme !== nIconsRounded) {
       const newContent = readmeContent.replace(
         regexMatcher,
-        `Over ${newNIcons} `,
+        `Over ${nIconsRounded} `,
       );
       await fs.writeFile(readmeFile, newContent);
     }
