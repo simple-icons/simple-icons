@@ -99,7 +99,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
-    - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
+    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
@@ -219,7 +219,7 @@ After optimizing the icon, double-check it against your original version to ensu
 
 Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
 
-* An svg element with:
+* An svg element with the following attributes, ordered respectively:
   * An img role attribute.
     * `role="img"`
   * A 24x24 viewbox.
