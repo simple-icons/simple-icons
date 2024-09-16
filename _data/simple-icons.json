@@ -53,6 +53,14 @@
             "source": "https://support.2k.com/hc/en-us/articles/203972113-Digital-Copies-of-2K-Manuals"
         },
         {
+            "title": "30 seconds of code",
+            "hex": "5395FD",
+            "source": "https://github.com/Chalarangelo/30-seconds-of-code/blob/44c0ba94857a7796026c6795c47e964126876d5a/logo/logo-resources/logo.svg",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
+        },
+        {
             "title": "365 Data Science",
             "hex": "000C1F",
             "source": "https://365datascience.com"
@@ -1141,6 +1149,15 @@
             }
         },
         {
+            "title": "Apache DolphinScheduler",
+            "hex": "85CDF0",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
             "title": "Apache Druid",
             "hex": "29F1FB",
             "source": "https://apache.org/logos",
@@ -1259,6 +1276,15 @@
         {
             "title": "Apache NetBeans IDE",
             "hex": "1B6AC6",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache NiFi",
+            "hex": "728E9B",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
             "license": {
@@ -5735,6 +5761,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Freepik.svg"
         },
         {
+            "title": "Fresh",
+            "hex": "FFDB1E",
+            "source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
+        },
+        {
             "title": "Frontend Mentor",
             "hex": "3F54A3",
             "source": "https://www.frontendmentor.io"
@@ -8877,6 +8908,16 @@
             }
         },
         {
+            "title": "LibreTranslate",
+            "hex": "1565C0",
+            "source": "https://libretranslate.com"
+        },
+        {
+            "title": "LibreTube",
+            "hex": "FF9699",
+            "source": "https://github.com/libre-tube/libre-tube.github.io/blob/e5e10090cab71ee7c0abdfbf2789977025733eb7/assets/icons/icon.svg"
+        },
+        {
             "title": "LibreWolf",
             "hex": "00ACFF",
             "source": "https://librewolf.net"
@@ -9789,6 +9830,11 @@
             "source": "https://migadu.com"
         },
         {
+            "title": "miHoYo",
+            "hex": "4EA4DD",
+            "source": "https://en.wikipedia.org/wiki/File:MiHoYo.svg"
+        },
+        {
             "title": "Mikrotik",
             "hex": "293239",
             "source": "https://mikrotik.com/aboutus"
@@ -10241,6 +10287,14 @@
             "guidelines": "https://nano.org/resources"
         },
         {
+            "title": "Nano Stores",
+            "hex": "000000",
+            "source": "https://github.com/nanostores/nanostores/blob/7fb5cd871fa00f484ebc866fdf330b56cab2aa20/img/logo-auto.svg",
+            "license": {
+                "type": "MIT"
+            }
+        },
+        {
             "title": "NASA",
             "hex": "E03C31",
             "source": "https://commons.wikimedia.org/wiki/File:NASA_Worm_logo.svg",
@@ -10449,6 +10503,11 @@
             "title": "Newegg",
             "hex": "E05E00",
             "source": "https://www.newegg.com"
+        },
+        {
+            "title": "Nexon",
+            "hex": "000000",
+            "source": "https://www.nexon.com"
         },
         {
             "title": "Next.js",
@@ -11902,7 +11961,7 @@
         },
         {
             "title": "PlayStation",
-            "hex": "003791",
+            "hex": "0070D1",
             "source": "https://www.playstation.com/en-us/"
         },
         {
@@ -12251,6 +12310,12 @@
         {
             "title": "PrimeReact",
             "hex": "03C4E8",
+            "source": "https://www.primefaces.org/press-kit",
+            "guidelines": "https://www.primefaces.org/press-kit"
+        },
+        {
+            "title": "PrimeVue",
+            "hex": "41B883",
             "source": "https://www.primefaces.org/press-kit",
             "guidelines": "https://www.primefaces.org/press-kit"
         },
@@ -15191,6 +15256,11 @@
             "source": "https://github.com/svg/svgo/blob/93a5db197ca32990131bf41becf2e002bb0841bf/logo/isotype.svg"
         },
         {
+            "title": "SvgTrace",
+            "hex": "F453C4",
+            "source": "https://svgtrace.com"
+        },
+        {
             "title": "Swagger",
             "hex": "85EA2D",
             "source": "https://swagger.io"
@@ -15199,6 +15269,16 @@
             "title": "Swarm",
             "hex": "FFA633",
             "source": "https://foursquare.com/about/logos"
+        },
+        {
+            "title": "Sway",
+            "hex": "68751C",
+            "source": "https://github.com/swaywm/sway/blob/77b9ddabe2a97c5d04c30929b0f8cbde3470fdd7/assets/Sway_Tree.svg",
+            "aliases": {
+                "aka": [
+                    "SwayWM"
+                ]
+            }
         },
         {
             "title": "SWC",
@@ -16693,6 +16773,11 @@
             "guidelines": "https://www.piaggiogroup.com/en/archive/document/logo-guide"
         },
         {
+            "title": "Vestel",
+            "hex": "DD052B",
+            "source": "https://commons.wikimedia.org/wiki/File:Vestel_logo.svg"
+        },
+        {
             "title": "VEXXHOST",
             "hex": "2A1659",
             "source": "https://vexxhost.com"
@@ -17579,6 +17664,11 @@
             "title": "XState",
             "hex": "2C3E50",
             "source": "https://github.com/davidkpiano/xstate/blob/544df7f00e2ef49603b5e5ff2f0d183ff6bd5e7c/docs/.vuepress/public/logo.svg"
+        },
+        {
+            "title": "Xubuntu",
+            "hex": "0044AA",
+            "source": "https://commons.wikimedia.org/wiki/File:Xubuntu_Icon.svg"
         },
         {
             "title": "Y Combinator",
