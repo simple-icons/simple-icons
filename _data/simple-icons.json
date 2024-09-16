@@ -53,6 +53,14 @@
             "source": "https://support.2k.com/hc/en-us/articles/203972113-Digital-Copies-of-2K-Manuals"
         },
         {
+            "title": "30 seconds of code",
+            "hex": "5395FD",
+            "source": "https://github.com/Chalarangelo/30-seconds-of-code/blob/44c0ba94857a7796026c6795c47e964126876d5a/logo/logo-resources/logo.svg",
+            "license": {
+                "type": "CC-BY-4.0"
+            }
+        },
+        {
             "title": "365 Data Science",
             "hex": "000C1F",
             "source": "https://365datascience.com"
@@ -1141,6 +1149,15 @@
             }
         },
         {
+            "title": "Apache DolphinScheduler",
+            "hex": "85CDF0",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
             "title": "Apache Druid",
             "hex": "29F1FB",
             "source": "https://apache.org/logos",
@@ -1259,6 +1276,15 @@
         {
             "title": "Apache NetBeans IDE",
             "hex": "1B6AC6",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
+            "title": "Apache NiFi",
+            "hex": "728E9B",
             "source": "https://apache.org/logos",
             "guidelines": "https://www.apache.org/foundation/marks",
             "license": {
@@ -2742,6 +2768,11 @@
             "source": "https://github.com/ionic-team/ionicons-site/blob/b0c97018d737b763301154231b34e1b882c0c84d/docs/ionicons/svg/logo-capacitor.svg"
         },
         {
+            "title": "CapRover",
+            "hex": "ED5B26",
+            "source": "https://github.com/caprover/caprover-website/blob/3ddf18f00923a89639193c578a8f25418b30c0b6/graphics/logo.svg"
+        },
+        {
             "title": "Car Throttle",
             "hex": "FF9C42",
             "source": "https://www.carthrottle.com"
@@ -3675,6 +3706,11 @@
             "title": "Coveralls",
             "hex": "3F5767",
             "source": "https://coveralls.io"
+        },
+        {
+            "title": "Coze",
+            "hex": "4D53E8",
+            "source": "https://www.coze.com/home"
         },
         {
             "title": "cPanel",
@@ -6722,6 +6758,12 @@
             "guidelines": "https://www.guilded.gg/brand"
         },
         {
+            "title": "Guitar Pro",
+            "hex": "569FFF",
+            "source": "https://www.guitar-pro.com/c/12-visual-resources",
+            "guidelines": "https://www.guitar-pro.com/c/12-visual-resources"
+        },
+        {
             "title": "gulp",
             "hex": "CF4647",
             "source": "https://github.com/gulpjs/artwork/blob/4e14158817ac88e9a5c02b3b307e6f630fe222fb/gulp-white-text.svg",
@@ -7942,7 +7984,7 @@
         {
             "title": "Jitsi",
             "hex": "97979A",
-            "source": "https://github.com/jitsi/jitsi-meet/blob/f8a41aea9c32796646c0fea11064775a4e5c3523/images/watermark.svg"
+            "source": "https://github.com/jitsi/jitsi-meet/blob/767101497c9a52abf8cef7893e8d6e7e4283bbfc/images/watermark.svg"
         },
         {
             "title": "John Deere",
@@ -8854,6 +8896,16 @@
             "license": {
                 "type": "MPL-2.0"
             }
+        },
+        {
+            "title": "LibreTranslate",
+            "hex": "1565C0",
+            "source": "https://libretranslate.com"
+        },
+        {
+            "title": "LibreTube",
+            "hex": "FF9699",
+            "source": "https://github.com/libre-tube/libre-tube.github.io/blob/e5e10090cab71ee7c0abdfbf2789977025733eb7/assets/icons/icon.svg"
         },
         {
             "title": "LibreWolf",
@@ -9768,6 +9820,11 @@
             "source": "https://migadu.com"
         },
         {
+            "title": "miHoYo",
+            "hex": "4EA4DD",
+            "source": "https://en.wikipedia.org/wiki/File:MiHoYo.svg"
+        },
+        {
             "title": "Mikrotik",
             "hex": "293239",
             "source": "https://mikrotik.com/aboutus"
@@ -10220,6 +10277,14 @@
             "guidelines": "https://nano.org/resources"
         },
         {
+            "title": "Nano Stores",
+            "hex": "000000",
+            "source": "https://github.com/nanostores/nanostores/blob/7fb5cd871fa00f484ebc866fdf330b56cab2aa20/img/logo-auto.svg",
+            "license": {
+                "type": "MIT"
+            }
+        },
+        {
             "title": "NASA",
             "hex": "E03C31",
             "source": "https://commons.wikimedia.org/wiki/File:NASA_Worm_logo.svg",
@@ -10428,6 +10493,11 @@
             "title": "Newegg",
             "hex": "E05E00",
             "source": "https://www.newegg.com"
+        },
+        {
+            "title": "Nexon",
+            "hex": "000000",
+            "source": "https://www.nexon.com"
         },
         {
             "title": "Next.js",
@@ -11881,7 +11951,7 @@
         },
         {
             "title": "PlayStation",
-            "hex": "003791",
+            "hex": "0070D1",
             "source": "https://www.playstation.com/en-us/"
         },
         {
@@ -12230,6 +12300,12 @@
         {
             "title": "PrimeReact",
             "hex": "03C4E8",
+            "source": "https://www.primefaces.org/press-kit",
+            "guidelines": "https://www.primefaces.org/press-kit"
+        },
+        {
+            "title": "PrimeVue",
+            "hex": "41B883",
             "source": "https://www.primefaces.org/press-kit",
             "guidelines": "https://www.primefaces.org/press-kit"
         },
@@ -15170,6 +15246,11 @@
             "source": "https://github.com/svg/svgo/blob/93a5db197ca32990131bf41becf2e002bb0841bf/logo/isotype.svg"
         },
         {
+            "title": "SvgTrace",
+            "hex": "F453C4",
+            "source": "https://svgtrace.com"
+        },
+        {
             "title": "Swagger",
             "hex": "85EA2D",
             "source": "https://swagger.io"
@@ -15178,6 +15259,16 @@
             "title": "Swarm",
             "hex": "FFA633",
             "source": "https://foursquare.com/about/logos"
+        },
+        {
+            "title": "Sway",
+            "hex": "68751C",
+            "source": "https://github.com/swaywm/sway/blob/77b9ddabe2a97c5d04c30929b0f8cbde3470fdd7/assets/Sway_Tree.svg",
+            "aliases": {
+                "aka": [
+                    "SwayWM"
+                ]
+            }
         },
         {
             "title": "SWC",
@@ -16896,6 +16987,12 @@
             "source": "https://commons.wikimedia.org/wiki/File:VOX_Logo_2013.svg"
         },
         {
+            "title": "VRChat",
+            "hex": "000000",
+            "source": "https://hello.vrchat.com/press",
+            "guidelines": "https://hello.vrchat.com/press"
+        },
+        {
             "title": "VSCO",
             "hex": "000000",
             "source": "https://vscopress.co/media-kit"
@@ -17557,6 +17654,11 @@
             "title": "XState",
             "hex": "2C3E50",
             "source": "https://github.com/davidkpiano/xstate/blob/544df7f00e2ef49603b5e5ff2f0d183ff6bd5e7c/docs/.vuepress/public/logo.svg"
+        },
+        {
+            "title": "Xubuntu",
+            "hex": "0044AA",
+            "source": "https://commons.wikimedia.org/wiki/File:Xubuntu_Icon.svg"
         },
         {
             "title": "Y Combinator",

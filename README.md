@@ -26,7 +26,7 @@ Icons can be downloaded as SVGs directly from [our website](https://simpleicons.
 
 ### CDN Usage
 
-Icons can be served from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [Unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+Icons can be served from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
 <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/[ICON SLUG].svg" />
@@ -165,7 +165,7 @@ The below are known extensions to third-party tools.
 | [Blender add-on](https://github.com/mondeja/simple-icons-blender) <img src="https://cdn.simpleicons.org/blender/000/fff" alt="Blender" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Boxy SVG library](https://boxy-svg.com/ideas/298/simple-icons-library-provider) <img src="https://cdn.simpleicons.org/boxysvg/000/fff" alt="Boxy SVG" align=left width=24 height=24> | [@Jarek](https://boxy-svg.com/profiles/0000000000/jarek) |
 | [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
-| [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908/Simple-Icons) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
+| [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Miro app](https://miro.com/marketplace/brand-icons/) <img src="https://cdn.simpleicons.org/miro/000/fff" alt="Miro" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Raycast extension](https://www.raycast.com/litomore/simple-icons) <img src="https://cdn.simpleicons.org/raycast/000/fff" alt="Raycast" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) | ![](https://img.shields.io/github/license/mackenly/simple-icons-stream-deck) | ![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmackenly%2Fsimple-icons-stream-deck%2Fmain%2Ftemplate%2Fmanifest.json&query=Version&logo=simpleicons&label=version) |
