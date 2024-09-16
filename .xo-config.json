@@ -34,7 +34,7 @@
   "overrides": [
     {
       "files": ["sdk.mjs", "sdk.d.ts"],
-      "nodeVersion": ">=14",
+      "nodeVersion": ">=14.13.1",
       "rules": {
         "eslint-comments/disable-enable-pair": "off",
         "unicorn/no-abusive-eslint-disable": "off"
@@ -47,7 +47,7 @@
         "svglint.config.mjs",
         "svgo.config.mjs"
       ],
-      "nodeVersion": ">=18"
+      "nodeVersion": ">=18.4"
     },
     {
       "files": ["svglint.config.mjs"],
