@@ -103,6 +103,7 @@ const TESTS = {
           const license =
             icon.license !== undefined && Object.hasOwn(icon.license, 'url')
               ? [
+                  // eslint-disable-next-line no-warning-comments
                   // TODO: `hasOwn` is not currently supported by TS.
                   // See https://github.com/microsoft/TypeScript/issues/44253
                   /** @type {string} */

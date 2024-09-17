@@ -13,11 +13,14 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..', '..');
 const files = ['index.js', 'index.mjs', 'index.d.ts', 'sdk.js'];
 
-const fileExists = (fpath) =>
-  fs
-    .access(fpath, fs.constants.F_OK)
-    .then(() => true)
-    .catch(() => false);
+const fileExists = async (fpath) => {
+  try {
+    await fs.access(fpath);
+    return true;
+  } catch {
+    return false;
+  }
+};
 
 try {
   Promise.all(
