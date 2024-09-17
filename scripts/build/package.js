@@ -11,7 +11,7 @@
 
 import {promises as fs} from 'node:fs';
 import path from 'node:path';
-import util from 'node:util';
+import {format} from 'node:util';
 import {transform as esbuildTransform} from 'esbuild';
 import {
   collator,
@@ -78,7 +78,7 @@ const licenseToObject = (license) => {
  * @returns {string} The JavaScript object
  */
 const iconToJsObject = (icon) => {
-  return util.format(
+  return format(
     iconObjectTemplate,
     escape(icon.title),
     escape(icon.slug),
