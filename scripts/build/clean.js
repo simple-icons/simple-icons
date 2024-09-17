@@ -15,7 +15,7 @@ const files = ['index.js', 'index.mjs', 'index.d.ts', 'sdk.js'];
 
 const fileExists = async (fpath) => {
   try {
-    await fs.access(fpath, fs.constants.F_OK);
+    await fs.access(fpath);
     return true;
   } catch {
     return false;
