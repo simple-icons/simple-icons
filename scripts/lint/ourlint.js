@@ -11,6 +11,7 @@
  * @typedef {IconData[]} IconsData
  */
 
+import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
 import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
@@ -88,13 +89,27 @@ const TESTS = {
   checkUrl(data) {
     /**
      * Check if an URL has a redundant trailing slash.
-     * @param {string} url URL to check
+     * @param {URL} $url URL instance
+     * @param {string} url Original URL string
      * @returns {boolean} Whether the URL has a redundant trailing slash
      */
-    const hasRedundantTrailingSlash = (url) => {
-      const {origin} = new global.URL(url);
-      return /^\/+$/.test(url.replace(origin, ''));
-    };
+    const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
+
+    /**
+     * Check if an URL is static wikimedia asset URL.
+     * @param {URL} $url URL instance
+     * @returns {boolean} Whether the URL is static wikimedia asset URL
+     */
+    const isStaticWikimediaAssetUrl = ($url) =>
+      $url.hostname === 'upload.wikimedia.org';
+
+    /**
+     * Check if an URL is raw GitHub asset URL.
+     * @param {string} $url URL instance
+     * @returns {boolean} Whether the URL is raw GitHub asset URL
+     */
+    const isRawGithubAssetUrl = ($url) =>
+      $url.hostname === 'raw.githubusercontent.com';
 
     const allUrlFields = [
       ...new Set(
@@ -103,6 +118,7 @@ const TESTS = {
           const license =
             icon.license !== undefined && Object.hasOwn(icon.license, 'url')
               ? [
+                  // eslint-disable-next-line no-warning-comments
                   // TODO: `hasOwn` is not currently supported by TS.
                   // See https://github.com/microsoft/TypeScript/issues/44253
                   /** @type {string} */
@@ -116,14 +132,29 @@ const TESTS = {
       ),
     ];
 
-    const invalidUrls = allUrlFields.filter((url) =>
-      hasRedundantTrailingSlash(url),
-    );
+    const invalidUrls = [];
+    for (const url of allUrlFields) {
+      const $url = new global.URL(url);
+
+      if (hasRedundantTrailingSlash($url, url)) {
+        invalidUrls.push(fakeDiff(url, $url.origin));
+      }
+
+      if (isStaticWikimediaAssetUrl($url)) {
+        const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
+        invalidUrls.push(fakeDiff(url, expectedUrl));
+      }
+
+      if (isRawGithubAssetUrl($url)) {
+        // https://github.com/LitoMore/simple-icons-cdn/blob/main/media/imgcat-screenshot.webp
+        const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
+        const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
+        invalidUrls.push(fakeDiff(url, expectedUrl));
+      }
+    }
 
     if (invalidUrls.length > 0) {
-      return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
-        '\n',
-      )}`;
+      return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
     }
   },
 };

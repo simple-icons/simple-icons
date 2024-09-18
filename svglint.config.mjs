@@ -520,6 +520,7 @@ const config = {
         const segments = getIconPathSegments(iconPath);
 
         /** @type {import('svg-path-segments').Segment[]} */
+        // eslint-disable-next-line no-warning-comments
         // TODO: svgpath does not includes the `segments` property on the interface,
         //       see https://github.com/fontello/svgpath/pull/67/files
         // @ts-ignore
@@ -870,6 +871,7 @@ const config = {
 
               case 'Z':
               case 'z': {
+                // eslint-disable-next-line no-warning-comments
                 // TODO: Overlapping in Z should be handled in another rule
                 currentAbsCoord = [startPoint[0], startPoint[1]];
                 _resetStartPoint = true;

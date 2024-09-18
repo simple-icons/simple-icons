@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "13.1.0",
+  "version": "13.10.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -107,7 +107,7 @@
     "svgo": "3.2.0",
     "svgpath": "2.6.0",
     "typescript": "5.4.5",
-    "xo": "0.58.0"
+    "xo": "0.59.3"
   },
   "scripts": {
     "build": "node scripts/build/package.js",
