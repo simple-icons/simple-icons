@@ -2796,7 +2796,7 @@
         {
             "title": "Carrefour",
             "hex": "004E9F",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Carrefour_logo.svg"
+            "source": "https://en.wikipedia.org/wiki/File:Carrefour_logo_no_tag.svg"
         },
         {
             "title": "Carto",
@@ -3276,7 +3276,7 @@
         {
             "title": "Coca Cola",
             "hex": "D00013",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Coca-Cola_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Coca-Cola_logo.svg"
         },
         {
             "title": "Cockpit",
@@ -3345,6 +3345,11 @@
             "title": "Codecov",
             "hex": "F01F7A",
             "source": "https://codecov.io"
+        },
+        {
+            "title": "CodeCrafters",
+            "hex": "171920",
+            "source": "https://github.com/codecrafters-io/frontend/blob/2f15115b73843fea57a412ce243ff1cedb5e69f7/public/assets/images/logo/logomark-color.svg"
         },
         {
             "title": "CodeFactor",
@@ -3936,12 +3941,12 @@
         {
             "title": "DaisyUI",
             "hex": "5A0EF8",
-            "source": "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg"
+            "source": "https://github.com/saadeghi/files/blob/5c82a1f4428b7c0af6ecfe921a424ebc9d92dc2c/daisyui/logo-4.svg"
         },
         {
             "title": "Dapr",
             "hex": "0D2192",
-            "source": "https://raw.githubusercontent.com/dapr/dapr/18575823c74318c811d6cd6f57ffac76d5debe93/img/dapr_logo.svg"
+            "source": "https://github.com/dapr/dapr/blob/18575823c74318c811d6cd6f57ffac76d5debe93/img/dapr_logo.svg"
         },
         {
             "title": "Dark Reader",
@@ -4229,6 +4234,11 @@
             "hex": "FFCC00",
             "source": "https://www.deutschepost.de",
             "guidelines": "https://www.dpdhl-brands.com/de/dp/logo"
+        },
+        {
+            "title": "Deutsche Welle",
+            "hex": "05B2FC",
+            "source": "https://www.dw.com"
         },
         {
             "title": "dev.to",
@@ -5761,6 +5771,11 @@
             "source": "https://commons.wikimedia.org/wiki/File:Freepik.svg"
         },
         {
+            "title": "Fresh",
+            "hex": "FFDB1E",
+            "source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
+        },
+        {
             "title": "Frontend Mentor",
             "hex": "3F54A3",
             "source": "https://www.frontendmentor.io"
@@ -5850,7 +5865,7 @@
         {
             "title": "Game & Watch",
             "hex": "000000",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Game_and_watch_logo.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Game_and_watch_logo.svg"
         },
         {
             "title": "Game Developer",
@@ -6482,7 +6497,7 @@
         {
             "title": "Google Maps",
             "hex": "4285F4",
-            "source": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Google_Maps_icon.svg"
+            "source": "https://commons.wikimedia.org/wiki/File:Google_Maps_icon.svg"
         },
         {
             "title": "Google Marketing Platform",
@@ -7002,6 +7017,11 @@
             "title": "Helium",
             "hex": "0ACF83",
             "source": "https://www.helium.com"
+        },
+        {
+            "title": "Helix",
+            "hex": "281733",
+            "source": "https://helix-editor.com"
         },
         {
             "title": "HelloFresh",
@@ -8226,6 +8246,12 @@
             "title": "KDE",
             "hex": "1D99F3",
             "source": "https://kde.org/stuff/clipart/"
+        },
+        {
+            "title": "KDE Plasma",
+            "hex": "1D99F3",
+            "source": "https://kde.org/stuff/clipart/",
+            "guidelines": "https://kde.org/stuff/clipart/"
         },
         {
             "title": "Kdenlive",
@@ -10493,6 +10519,11 @@
             "title": "Newegg",
             "hex": "E05E00",
             "source": "https://www.newegg.com"
+        },
+        {
+            "title": "Nexon",
+            "hex": "000000",
+            "source": "https://www.nexon.com"
         },
         {
             "title": "Next.js",
@@ -16756,6 +16787,11 @@
             "hex": "85B09A",
             "source": "https://www.piaggiogroup.com/en/archive/document/logo-guide",
             "guidelines": "https://www.piaggiogroup.com/en/archive/document/logo-guide"
+        },
+        {
+            "title": "Vestel",
+            "hex": "DD052B",
+            "source": "https://commons.wikimedia.org/wiki/File:Vestel_logo.svg"
         },
         {
             "title": "VEXXHOST",
