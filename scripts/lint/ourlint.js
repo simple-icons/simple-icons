@@ -10,10 +10,16 @@
  * @typedef {IconData[]} IconsData
  */
 
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
-import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
+import {
+  collator,
+  getIconsDataString,
+  normalizeNewlines,
+  titleToSlug,
+} from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -176,7 +182,6 @@ const TESTS = {
       }
 
       if (isRawGithubAssetUrl($url)) {
-        // https://github.com/LitoMore/simple-icons-cdn/blob/main/media/imgcat-screenshot.webp
         const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
         const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
         invalidUrls.push(fakeDiff(url, expectedUrl));
@@ -197,6 +202,37 @@ const TESTS = {
 
     if (invalidUrls.length > 0) {
       return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
+    }
+  },
+
+  /* Check if all licenses are valid SPDX identifiers */
+  async checkLicense(data) {
+    const spdxLicenseIds = JSON.parse(
+      await fs.readFile(
+        path.join(
+          import.meta.dirname,
+          '..',
+          '..',
+          'node_modules/spdx-license-ids/index.json',
+        ),
+        'utf8',
+      ),
+    );
+    const badLicenses = [];
+    for (const {title, slug, license} of data.icons) {
+      if (
+        license &&
+        license.type !== 'custom' &&
+        !spdxLicenseIds.includes(license.type)
+      ) {
+        badLicenses.push(
+          `${title} (${slug ?? titleToSlug(title)}) has an bad license: ${license.type}`,
+        );
+      }
+    }
+
+    if (badLicenses.length > 0) {
+      return `Bad licenses:\n\n${badLicenses.join('\n')}`;
     }
   },
 };
