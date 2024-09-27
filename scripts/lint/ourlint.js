@@ -105,35 +105,67 @@ const TESTS = {
 
     /**
      * Check if an URL is raw GitHub asset URL.
-     * @param {string} $url URL instance
+     * @param {URL} $url URL instance
      * @returns {boolean} Whether the URL is raw GitHub asset URL
      */
     const isRawGithubAssetUrl = ($url) =>
       $url.hostname === 'raw.githubusercontent.com';
 
-    const allUrlFields = [
-      ...new Set(
-        data.icons.flatMap((icon) => {
-          /** @type {string[]} */
-          const license =
-            icon.license !== undefined && Object.hasOwn(icon.license, 'url')
-              ? [
-                  // eslint-disable-next-line no-warning-comments
-                  // TODO: `hasOwn` is not currently supported by TS.
-                  // See https://github.com/microsoft/TypeScript/issues/44253
-                  /** @type {string} */
-                  // @ts-ignore
-                  icon.license.url,
-                ]
-              : [];
-          const guidelines = icon.guidelines ? [icon.guidelines] : [];
-          return [icon.source, ...guidelines, ...license];
-        }),
-      ),
-    ];
+    /**
+     * Check if an URL is a GitHub URL.
+     * @param {URL} $url URL instance
+     * @returns {boolean} Whether the URL is a GitHub URL
+     */
+    const isGitHubUrl = ($url) => $url.hostname === 'github.com';
+
+    /**
+     * Regex to match a permalink GitHub URL for a file.
+     */
+    const permalinkGitHubRegex =
+      /^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+
+    /**
+     * URLs excluded from the GitHub URL check as are used by GitHub brands.
+     */
+    const gitHubExcludedUrls = new Set([
+      'https://github.com/logos',
+      'https://github.com/features/actions',
+      'https://github.com/sponsors',
+    ]);
+
+    /**
+     * Check if an URL is a permanent GitHub URL for a file.
+     * @param {string} url URL string
+     * @returns {boolean} Whether the URL is a GitHub URL for a file
+     */
+    const isPermalinkGitHubFileUrl = (url) => permalinkGitHubRegex.test(url);
+
+    /**
+     * Url fields with a boolean indicating if is an icon source URL.
+     * @type {[boolean, string][]}
+     */
+    const allUrlFields = [];
+    for (const icon of data.icons) {
+      allUrlFields.push([true, icon.source]);
+      if (icon.guidelines) {
+        allUrlFields.push([false, icon.guidelines]);
+      }
+
+      if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
+        allUrlFields.push([
+          false,
+          // eslint-disable-next-line no-warning-comments
+          // TODO: `hasOwn` is not currently supported by TS.
+          // See https://github.com/microsoft/TypeScript/issues/44253
+          /** @type {string} */
+          // @ts-ignore
+          icon.license.url,
+        ]);
+      }
+    }
 
     const invalidUrls = [];
-    for (const url of allUrlFields) {
+    for (const [isSourceUrl, url] of allUrlFields) {
       const $url = new global.URL(url);
 
       if (hasRedundantTrailingSlash($url, url)) {
@@ -150,6 +182,18 @@ const TESTS = {
         const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
         const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
         invalidUrls.push(fakeDiff(url, expectedUrl));
+      }
+
+      if (
+        isSourceUrl &&
+        isGitHubUrl($url) &&
+        !isPermalinkGitHubFileUrl(url) &&
+        !gitHubExcludedUrls.has(url)
+      ) {
+        invalidUrls.push(
+          `'${url}' must be a permalink GitHub URL. Expecting something like` +
+            " 'https://github.com/<owner>/<repo>/blob/<hash>/<file/path.ext>'.",
+        );
       }
     }
 
