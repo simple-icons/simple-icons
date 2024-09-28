@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /**
  * @file
- * Linters for the package that can't easily be implemented in the existing
- * linters (e.g. jsonlint/svglint).
+ * Linters for the package that can't easily be implemented in the existing ones.
  */
 
 /**
@@ -22,18 +21,18 @@ import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
  */
 const TESTS = {
   /**
-   * Tests whether our icons are in alphabetical order
-   * @param {{icons: IconsData}} data Icons data
-   * @returns {string|undefined} Error message or undefined
+   * Tests whether our icons are in alphabetical order.
+   * @param {{icons: IconsData}} data Icons data.
+   * @returns {string|undefined} Error message or undefined.
    */
   alphabetical(data) {
     /**
-     * Collects invalid alphabet ordered icons
-     * @param {IconData[]} invalidEntries Invalid icons reference
-     * @param {IconData} icon Icon to check
-     * @param {number} index Index of the icon
-     * @param {IconData[]} array Array of icons
-     * @returns {IconData[]} Invalid icons
+     * Collects invalid alphabet ordered icons.
+     * @param {IconData[]} invalidEntries Invalid icons reference.
+     * @param {IconData} icon Icon to check.
+     * @param {number} index Index of the icon.
+     * @param {IconData[]} array Array of icons.
+     * @returns {IconData[]} Invalid icons.
      */
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
@@ -54,9 +53,9 @@ const TESTS = {
     };
 
     /**
-     * Format an icon for display in the error message
-     * @param {IconData} icon Icon to format
-     * @returns {string} Formatted icon
+     * Format an icon for display in the error message.
+     * @param {IconData} icon Icon to format.
+     * @returns {string} Formatted icon.
      */
     const format = (icon) => {
       if (icon.slug) {
@@ -89,32 +88,32 @@ const TESTS = {
   checkUrl(data) {
     /**
      * Check if an URL has a redundant trailing slash.
-     * @param {URL} $url URL instance
-     * @param {string} url Original URL string
-     * @returns {boolean} Whether the URL has a redundant trailing slash
+     * @param {URL} $url URL instance.
+     * @param {string} url Original URL string.
+     * @returns {boolean} Whether the URL has a redundant trailing slash.
      */
     const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
 
     /**
      * Check if an URL is static wikimedia asset URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is static wikimedia asset URL
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is static wikimedia asset URL.
      */
     const isStaticWikimediaAssetUrl = ($url) =>
       $url.hostname === 'upload.wikimedia.org';
 
     /**
      * Check if an URL is raw GitHub asset URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is raw GitHub asset URL
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is raw GitHub asset URL.
      */
     const isRawGithubAssetUrl = ($url) =>
       $url.hostname === 'raw.githubusercontent.com';
 
     /**
      * Check if an URL is a GitHub URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is a GitHub URL
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is a GitHub URL.
      */
     const isGitHubUrl = ($url) => $url.hostname === 'github.com';
 
@@ -135,8 +134,8 @@ const TESTS = {
 
     /**
      * Check if an URL is a permanent GitHub URL for a file.
-     * @param {string} url URL string
-     * @returns {boolean} Whether the URL is a GitHub URL for a file
+     * @param {string} url URL string.
+     * @returns {boolean} Whether the URL is a GitHub URL for a file.
      */
     const isPermalinkGitHubFileUrl = (url) => permalinkGitHubRegex.test(url);
 
@@ -154,7 +153,6 @@ const TESTS = {
       if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
         allUrlFields.push([
           false,
-          // eslint-disable-next-line no-warning-comments
           // TODO: `hasOwn` is not currently supported by TS.
           // See https://github.com/microsoft/TypeScript/issues/44253
           /** @type {string} */
