@@ -19,7 +19,7 @@ const disclaimerFile = path.resolve(rootDirectory, 'DISCLAIMER.md');
 
 /**
  * Reformat a file.
- * @param {string} filePath Path to the file
+ * @param {string} filePath Path to the file.
  */
 const reformat = async (filePath) => {
   const fileContent = await readFile(filePath, 'utf8');
