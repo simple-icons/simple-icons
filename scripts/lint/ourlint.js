@@ -16,6 +16,7 @@ import process from 'node:process';
 import fakeDiff from 'fake-diff';
 import {
   collator,
+  getDirnameFromImportMeta,
   getIconsDataString,
   normalizeNewlines,
   titleToSlug,
@@ -23,7 +24,7 @@ import {
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => string | undefined}}
+ * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
   /**
@@ -210,7 +211,7 @@ const TESTS = {
     const spdxLicenseIds = JSON.parse(
       await fs.readFile(
         path.join(
-          import.meta.dirname,
+          getDirnameFromImportMeta(import.meta.url),
           '..',
           '..',
           'node_modules/spdx-license-ids/index.json',
