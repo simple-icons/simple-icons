@@ -32,14 +32,16 @@ export const getJsonSchemaData = async (
  * Write icons data to _data/simple-icons.json.
  * @param {{icons: IconData[]}} iconsData Icons data object.
  * @param {string} rootDirectory Path to the root directory of the project.
+ * @param {boolean} minify Whether to minify the JSON output.
  */
 export const writeIconsData = async (
   iconsData,
   rootDirectory = path.resolve(__dirname, '..'),
+  minify,
 ) => {
   await fs.writeFile(
     getIconDataPath(rootDirectory),
-    `${JSON.stringify(iconsData, null, 4)}\n`,
+    `${JSON.stringify(iconsData, null, minify ? 0 : 4)}\n`,
     'utf8',
   );
 };
