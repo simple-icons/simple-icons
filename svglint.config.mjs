@@ -51,8 +51,9 @@ const ignoreFile = './.svglint-ignored.json';
 const iconIgnored = updateIgnoreFile ? {} : svglintIgnores;
 
 /**
- * @param {{ [key: string]: any }} object Object to sort by key
- * @returns {{ [key: string]: any }} Object sorted by key
+ * Sort an object alphabetically by key converting it to an array.
+ * @param {{ [key: string]: any }} object Object to sort by key.
+ * @returns {{ [key: string]: any }} Object sorted by key.
  */
 const sortObjectByKey = (object) => {
   return Object.fromEntries(
@@ -63,8 +64,9 @@ const sortObjectByKey = (object) => {
 };
 
 /**
- * @param {{ [key: string]: any }} object Object to sort by value
- * @returns {{ [key: string]: any }} Object sorted by value
+ * Sort an object alphabetically by value converting it to an array.
+ * @param {{ [key: string]: any }} object Object to sort by value.
+ * @returns {{ [key: string]: any }} Object sorted by value.
  */
 const sortObjectByValue = (object) => {
   return Object.fromEntries(
@@ -222,7 +224,7 @@ if (updateIgnoreFile) {
  * Check if an icon is ignored by a linter rule.
  * @param {string} linterRule The name of the linter rule.
  * @param {string} path SVG path of the icon.
- * @returns {boolean} Whether the icon is ignored by the linter rule
+ * @returns {boolean} Whether the icon is ignored by the linter rule.
  */
 const isIgnored = (linterRule, path) => {
   return (
@@ -234,7 +236,7 @@ const isIgnored = (linterRule, path) => {
  * Ignore an icon for a linter rule.
  * @param {string} linterRule The name of the linter rule.
  * @param {string} path SVG path of the icon.
- * @param {Cheerio} $ The SVG object
+ * @param {Cheerio} $ The SVG object.
  */
 const ignoreIcon = (linterRule, path, $) => {
   iconIgnored[linterRule] ||= {};
@@ -522,8 +524,12 @@ const config = {
         /** @type {import('svg-path-segments').Segment[]} */
         // TODO: svgpath does not includes the `segments` property on the interface,
         //       see https://github.com/fontello/svgpath/pull/67/files
-        // @ts-ignore
-        const absSegments = svgpath(iconPath).abs().unshort().segments;
+        //
+        /** @typedef {[string, ...number[]]} Segment  */
+        /** @type {Segment[]} */
+        const absSegments =
+          // @ts-ignore
+          svgpath(iconPath).abs().unshort().segments;
 
         const lowerMovementCommands = ['m', 'l'];
         const lowerDirectionCommands = ['h', 'v'];
@@ -607,8 +613,11 @@ const config = {
               ].reverse();
               // If the previous command was a direction one,
               // we need to iterate back until we find the missing coordinates
+              // @ts-ignore
               if (upperDirectionCommands.includes(xPreviousCoord)) {
+                // @ts-ignore
                 xPreviousCoord = undefined;
+                // @ts-ignore
                 yPreviousCoord = undefined;
                 let index_ = index;
                 while (
@@ -623,12 +632,14 @@ const config = {
                   // we need to consider the single coordinate as x
                   if (upperHorDirectionCommand === xPreviousCoordDeep) {
                     xPreviousCoordDeep = yPreviousCoordDeep;
+                    // @ts-ignore
                     yPreviousCoordDeep = undefined;
                   }
 
                   // If the previous command was a vertical movement,
                   // we need to consider the single coordinate as y
                   if (upperVersionDirectionCommand === xPreviousCoordDeep) {
+                    // @ts-ignore
                     xPreviousCoordDeep = undefined;
                   }
 
@@ -790,10 +801,8 @@ const config = {
               // Next switch cases have been ordered by frequency
               // of occurrence in the SVG paths of the icons
               case 'M': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 // SVG 1.1:
@@ -807,10 +816,8 @@ const config = {
               }
 
               case 'm': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 if (seg.chain === undefined || seg.chain.start === seg.start) {
@@ -821,48 +828,40 @@ const config = {
               }
 
               case 'H': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
                 break;
               }
 
               case 'h': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
                 break;
               }
 
               case 'V': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[1];
                 break;
               }
 
               case 'v': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[1];
                 break;
               }
 
               case 'L': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 'l': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
@@ -871,106 +870,87 @@ const config = {
               case 'Z':
               case 'z': {
                 // TODO: Overlapping in Z should be handled in another rule
+                // @ts-ignore
                 currentAbsCoord = [startPoint[0], startPoint[1]];
                 _resetStartPoint = true;
                 break;
               }
 
               case 'C': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[5];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[6];
                 break;
               }
 
               case 'c': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[5];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[6];
                 break;
               }
 
               case 'A': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[6];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[7];
                 break;
               }
 
               case 'a': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[6];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[7];
                 break;
               }
 
               case 's': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
 
               case 'S': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 't': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
 
               case 'T': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 'Q': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[3];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[4];
                 break;
               }
 
               case 'q': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[3];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[4];
                 break;
@@ -988,6 +968,7 @@ const config = {
               _resetStartPoint = false;
             }
 
+            // @ts-ignore
             _nextInStraightLine = straightLineCommands.includes(nextCmd);
             const _exitingStraightLine =
               _inStraightLine && !_nextInStraightLine;
@@ -1004,6 +985,7 @@ const config = {
                 // Get collinear coordinates
                 for (let p = 1; p < currentLine.length - 1; p++) {
                   const _collinearCoord = collinear(
+                    // @ts-ignore
                     currentLine[p - 1][0],
                     currentLine[p - 1][1],
                     currentLine[p][0],

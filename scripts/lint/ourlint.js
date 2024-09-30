@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /**
  * @file
- * Linters for the package that can't easily be implemented in the existing
- * linters (e.g. jsonlint/svglint).
+ * Linters for the package that can't easily be implemented in the existing ones.
  */
 
 /**
@@ -11,6 +10,7 @@
  * @typedef {IconData[]} IconsData
  */
 
+import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
 import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
@@ -21,18 +21,18 @@ import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
  */
 const TESTS = {
   /**
-   * Tests whether our icons are in alphabetical order
-   * @param {{icons: IconsData}} data Icons data
-   * @returns {string|undefined} Error message or undefined
+   * Tests whether our icons are in alphabetical order.
+   * @param {{icons: IconsData}} data Icons data.
+   * @returns {string|undefined} Error message or undefined.
    */
   alphabetical(data) {
     /**
-     * Collects invalid alphabet ordered icons
-     * @param {IconData[]} invalidEntries Invalid icons reference
-     * @param {IconData} icon Icon to check
-     * @param {number} index Index of the icon
-     * @param {IconData[]} array Array of icons
-     * @returns {IconData[]} Invalid icons
+     * Collects invalid alphabet ordered icons.
+     * @param {IconData[]} invalidEntries Invalid icons reference.
+     * @param {IconData} icon Icon to check.
+     * @param {number} index Index of the icon.
+     * @param {IconData[]} array Array of icons.
+     * @returns {IconData[]} Invalid icons.
      */
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
@@ -53,9 +53,9 @@ const TESTS = {
     };
 
     /**
-     * Format an icon for display in the error message
-     * @param {IconData} icon Icon to format
-     * @returns {string} Formatted icon
+     * Format an icon for display in the error message.
+     * @param {IconData} icon Icon to format.
+     * @returns {string} Formatted icon.
      */
     const format = (icon) => {
       if (icon.slug) {
@@ -88,42 +88,115 @@ const TESTS = {
   checkUrl(data) {
     /**
      * Check if an URL has a redundant trailing slash.
-     * @param {string} url URL to check
-     * @returns {boolean} Whether the URL has a redundant trailing slash
+     * @param {URL} $url URL instance.
+     * @param {string} url Original URL string.
+     * @returns {boolean} Whether the URL has a redundant trailing slash.
      */
-    const hasRedundantTrailingSlash = (url) => {
-      const {origin} = new global.URL(url);
-      return /^\/+$/.test(url.replace(origin, ''));
-    };
+    const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
 
-    const allUrlFields = [
-      ...new Set(
-        data.icons.flatMap((icon) => {
-          /** @type {string[]} */
-          const license =
-            icon.license !== undefined && Object.hasOwn(icon.license, 'url')
-              ? [
-                  // TODO: `hasOwn` is not currently supported by TS.
-                  // See https://github.com/microsoft/TypeScript/issues/44253
-                  /** @type {string} */
-                  // @ts-ignore
-                  icon.license.url,
-                ]
-              : [];
-          const guidelines = icon.guidelines ? [icon.guidelines] : [];
-          return [icon.source, ...guidelines, ...license];
-        }),
-      ),
-    ];
+    /**
+     * Check if an URL is static wikimedia asset URL.
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is static wikimedia asset URL.
+     */
+    const isStaticWikimediaAssetUrl = ($url) =>
+      $url.hostname === 'upload.wikimedia.org';
 
-    const invalidUrls = allUrlFields.filter((url) =>
-      hasRedundantTrailingSlash(url),
-    );
+    /**
+     * Check if an URL is raw GitHub asset URL.
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is raw GitHub asset URL.
+     */
+    const isRawGithubAssetUrl = ($url) =>
+      $url.hostname === 'raw.githubusercontent.com';
+
+    /**
+     * Check if an URL is a GitHub URL.
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is a GitHub URL.
+     */
+    const isGitHubUrl = ($url) => $url.hostname === 'github.com';
+
+    /**
+     * Regex to match a permalink GitHub URL for a file.
+     */
+    const permalinkGitHubRegex =
+      /^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+
+    /**
+     * URLs excluded from the GitHub URL check as are used by GitHub brands.
+     */
+    const gitHubExcludedUrls = new Set([
+      'https://github.com/logos',
+      'https://github.com/features/actions',
+      'https://github.com/sponsors',
+    ]);
+
+    /**
+     * Check if an URL is a permanent GitHub URL for a file.
+     * @param {string} url URL string.
+     * @returns {boolean} Whether the URL is a GitHub URL for a file.
+     */
+    const isPermalinkGitHubFileUrl = (url) => permalinkGitHubRegex.test(url);
+
+    /**
+     * Url fields with a boolean indicating if is an icon source URL.
+     * @type {[boolean, string][]}
+     */
+    const allUrlFields = [];
+    for (const icon of data.icons) {
+      allUrlFields.push([true, icon.source]);
+      if (icon.guidelines) {
+        allUrlFields.push([false, icon.guidelines]);
+      }
+
+      if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
+        allUrlFields.push([
+          false,
+          // TODO: `hasOwn` is not currently supported by TS.
+          // See https://github.com/microsoft/TypeScript/issues/44253
+          /** @type {string} */
+          // @ts-ignore
+          icon.license.url,
+        ]);
+      }
+    }
+
+    const invalidUrls = [];
+    for (const [isSourceUrl, url] of allUrlFields) {
+      const $url = new global.URL(url);
+
+      if (hasRedundantTrailingSlash($url, url)) {
+        invalidUrls.push(fakeDiff(url, $url.origin));
+      }
+
+      if (isStaticWikimediaAssetUrl($url)) {
+        const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
+        invalidUrls.push(fakeDiff(url, expectedUrl));
+      }
+
+      if (isRawGithubAssetUrl($url)) {
+        // https://github.com/LitoMore/simple-icons-cdn/blob/main/media/imgcat-screenshot.webp
+        const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
+        const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
+        invalidUrls.push(fakeDiff(url, expectedUrl));
+      }
+
+      if (
+        isSourceUrl &&
+        isGitHubUrl($url) &&
+        !isPermalinkGitHubFileUrl(url) &&
+        !gitHubExcludedUrls.has(url)
+      ) {
+        invalidUrls.push(
+          `'${url}' must be a permalink GitHub URL. Expecting something like` +
+            " 'https://github.com/<owner>/<repo>/blob/<hash>/<file/path.ext>'.",
+        );
+      }
+    }
 
     if (invalidUrls.length > 0) {
-      return `Some URLs have a redundant trailing slash:\n\n${invalidUrls.join(
-        '\n',
-      )}`;
+      return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
     }
   },
 };
