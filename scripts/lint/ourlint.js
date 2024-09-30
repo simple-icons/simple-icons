@@ -224,16 +224,16 @@ const TESTS = {
       if (
         license &&
         license.type !== 'custom' &&
-        !spdxLicenseIds.includes(license.type)
+        spdxLicenseIds.includes(license.type)
       ) {
         badLicenses.push(
-          `${title} (${slug ?? titleToSlug(title)}) has an bad license: ${license.type}`,
+          `${title} (${slug ?? titleToSlug(title)}) has not a valid SPDX license.`,
         );
       }
     }
 
     if (badLicenses.length > 0) {
-      return `Bad licenses:\n\n${badLicenses.join('\n')}`;
+      return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
     }
   },
 };
