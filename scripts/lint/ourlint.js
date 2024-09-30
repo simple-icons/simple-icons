@@ -208,15 +208,17 @@ const TESTS = {
 
   /* Check if all licenses are valid SPDX identifiers */
   async checkLicense(data) {
-    const spdxLicenseIds = JSON.parse(
-      await fs.readFile(
-        path.join(
-          getDirnameFromImportMeta(import.meta.url),
-          '..',
-          '..',
-          'node_modules/spdx-license-ids/index.json',
+    const spdxLicenseIds = new Set(
+      JSON.parse(
+        await fs.readFile(
+          path.join(
+            getDirnameFromImportMeta(import.meta.url),
+            '..',
+            '..',
+            'node_modules/spdx-license-ids/index.json',
+          ),
+          'utf8',
         ),
-        'utf8',
       ),
     );
     const badLicenses = [];
@@ -224,7 +226,7 @@ const TESTS = {
       if (
         license &&
         license.type !== 'custom' &&
-        !spdxLicenseIds.includes(license.type)
+        !spdxLicenseIds.has(license.type)
       ) {
         badLicenses.push(
           `${title} (${slug ?? titleToSlug(title)}) has not a valid SPDX license.`,
