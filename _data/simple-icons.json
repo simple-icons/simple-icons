@@ -191,6 +191,11 @@
             "source": "https://github.com/actix/actix-website/issues/18#issuecomment-393581556"
         },
         {
+            "title": "Actual Budget",
+            "hex": "6B46C1",
+            "source": "https://github.com/actualbudget/actual/blob/84af8b76be6bb6c866c32a5be6e8c7a092ab9e38/packages/desktop-client/src/icons/logo/logo.svg"
+        },
+        {
             "title": "Acura",
             "hex": "000000",
             "source": "https://www.acura.com",
@@ -566,7 +571,7 @@
             "title": "Alby",
             "hex": "FFDF6F",
             "source": "https://github.com/getAlby/media/blob/c24fee4a3f76d6cd000343a972f10590d3913b25/Alby-logo-icons/Alby-logo-head/alby.svg",
-            "guidelines": "https://github.com/getAlby/lightning-browser-extension/wiki/Open-Design"
+            "guidelines": "https://github.com/getAlby/lightning-browser-extension/wiki/Open-Design/9e8ebe4d3e7707742d227554c4ee27b29983a1b6"
         },
         {
             "title": "Alchemy",
@@ -4692,6 +4697,12 @@
             "title": "Eclipse Vert.x",
             "hex": "782A90",
             "source": "https://github.com/vert-x3/.github/blob/1ad6612d87f35665e50a00fc32eb9c542556385d/workflow-templates/vertx-favicon.svg"
+        },
+        {
+            "title": "Ecosia",
+            "hex": "5DD25E",
+            "source": "https://www.ecosia.org",
+            "guidelines": "https://www.ecosia.org/imprint"
         },
         {
             "title": "Ecovacs",
@@ -10380,6 +10391,11 @@
             "source": "https://near.org/brand"
         },
         {
+            "title": "Nebula",
+            "hex": "2CADFE",
+            "source": "https://nebula.tv"
+        },
+        {
             "title": "NEC",
             "hex": "1414A0",
             "source": "https://commons.wikimedia.org/wiki/File:NEC_logo.svg"
@@ -10869,6 +10885,12 @@
             "hex": "D3002D",
             "source": "https://www.oreilly.com/about/logos/",
             "guidelines": "https://www.oreilly.com/about/logos/"
+        },
+        {
+            "title": "O2",
+            "hex": "0050FF",
+            "source": "https://www.telefonica.de/presse/fotos/logos.html",
+            "guidelines": "https://www.telefonica.de/presse/fotos/logos.html"
         },
         {
             "title": "OBS Studio",
@@ -17660,6 +17682,16 @@
             "title": "Xing",
             "hex": "006567",
             "source": "https://dev.xing.com/logo_rules"
+        },
+        {
+            "title": "XML",
+            "hex": "005FAD",
+            "source": "https://www.w3.org/Icons/XML",
+            "aliases": {
+                "aka": [
+                    "Extensible Markup Language"
+                ]
+            }
         },
         {
             "title": "XMPP",

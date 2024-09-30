@@ -42,6 +42,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Activision` | `activision` |
 | `ActivityPub` | `activitypub` |
 | `Actix` | `actix` |
+| `Actual Budget` | `actualbudget` |
 | `Acura` | `acura` |
 | `Adafruit` | `adafruit` |
 | `AdBlock` | `adblock` |
@@ -584,6 +585,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CodeceptJS` | `codeceptjs` |
 | `CodeChef` | `codechef` |
 | `Codecov` | `codecov` |
+| `CodeCrafters` | `codecrafters` |
 | `CodeFactor` | `codefactor` |
 | `Codeforces` | `codeforces` |
 | `Codefresh` | `codefresh` |
@@ -747,6 +749,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Bahn` | `deutschebahn` |
 | `Deutsche Bank` | `deutschebank` |
 | `Deutsche Post` | `deutschepost` |
+| `Deutsche Welle` | `deutschewelle` |
 | `dev.to` | `devdotto` |
 | `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
@@ -1028,6 +1031,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `freelancermap` | `freelancermap` |
 | `FreeNAS` | `freenas` |
 | `Freepik` | `freepik` |
+| `Fresh` | `fresh` |
 | `Frontend Mentor` | `frontendmentor` |
 | `Frontify` | `frontify` |
 | `Fubo` | `fubo` |
@@ -1243,6 +1247,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `hearthis.at` | `hearthisdotat` |
 | `Hedera` | `hedera` |
 | `Helium` | `helium` |
+| `Helix` | `helix` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
 | `Helm` | `helm` |
@@ -1464,6 +1469,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Katana` | `katana` |
 | `Kaufland` | `kaufland` |
 | `KDE` | `kde` |
+| `KDE Plasma` | `kdeplasma` |
 | `Kdenlive` | `kdenlive` |
 | `Kedro` | `kedro` |
 | `Keenetic` | `keenetic` |
@@ -1838,6 +1844,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NBC` | `nbc` |
 | `NDR` | `ndr` |
 | `NEAR` | `near` |
+| `Nebula` | `nebula` |
 | `NEC` | `nec` |
 | `Neo4j` | `neo4j` |
 | `Neovim` | `neovim` |
@@ -1859,6 +1866,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `New Relic` | `newrelic` |
 | `New York Times` | `newyorktimes` |
 | `Newegg` | `newegg` |
+| `Nexon` | `nexon` |
 | `Next.js` | `nextdotjs` |
 | `NextBillion.ai` | `nextbilliondotai` |
 | `Nextcloud` | `nextcloud` |
@@ -1921,6 +1929,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NXP` | `nxp` |
 | `NZXT` | `nzxt` |
 | `O'Reilly` | `oreilly` |
+| `O2` | `o2` |
 | `OBS Studio` | `obsstudio` |
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
@@ -2982,6 +2991,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Veritas` | `veritas` |
 | `Verizon` | `verizon` |
 | `Vespa` | `vespa` |
+| `Vestel` | `vestel` |
 | `VEXXHOST` | `vexxhost` |
 | `vFairs` | `vfairs` |
 | `Viadeo` | `viadeo` |
@@ -3134,6 +3144,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xiaohongshu` | `xiaohongshu` |
 | `Xiaomi` | `xiaomi` |
 | `Xing` | `xing` |
+| `XML` | `xml` |
 | `XMPP` | `xmpp` |
 | `XO` | `xo` |
 | `XRP` | `xrp` |
