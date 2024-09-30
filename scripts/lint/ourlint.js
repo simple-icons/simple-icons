@@ -224,7 +224,7 @@ const TESTS = {
       if (
         license &&
         license.type !== 'custom' &&
-        spdxLicenseIds.includes(license.type)
+        !spdxLicenseIds.includes(license.type)
       ) {
         badLicenses.push(
           `${title} (${slug ?? titleToSlug(title)}) has not a valid SPDX license.`,
