@@ -41,8 +41,9 @@ const licenseTypes =
   );
 
 /**
- * @param {string} input URL input
- * @returns {Promise<boolean|string>} Whether the input is a valid URL
+ * Whether an input is a valid URL.
+ * @param {string} input URL input.
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL.
  */
 const isValidURL = async (input) => {
   const regex = await urlRegex();
@@ -50,15 +51,17 @@ const isValidURL = async (input) => {
 };
 
 /**
- * @param {string} input Hex color
- * @returns {boolean|string} Whether the input is a valid hex color
+ * Whether an input is a valid hex color.
+ * @param {string} input Hex color.
+ * @returns {boolean|string} Whether the input is a valid hex color.
  */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
 /**
- * @param {string} input New icon input
- * @returns {boolean} Whether the icon is new
+ * Whether an icon is not already in the dataset.
+ * @param {string} input New icon input.
+ * @returns {boolean} Whether the icon is new.
  */
 const isNewIcon = (input) =>
   !iconsData.icons.some(
@@ -67,8 +70,9 @@ const isNewIcon = (input) =>
   );
 
 /**
- * @param {string} input Color input
- * @returns {string} Preview of the color
+ * Compute a preview of a color to use in prompt background.
+ * @param {string} input Color input.
+ * @returns {string} Preview of the color.
  */
 const previewHexColor = (input) => {
   const color = normalizeColor(input);

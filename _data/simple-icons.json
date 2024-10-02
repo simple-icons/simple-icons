@@ -571,7 +571,7 @@
             "title": "Alby",
             "hex": "FFDF6F",
             "source": "https://github.com/getAlby/media/blob/c24fee4a3f76d6cd000343a972f10590d3913b25/Alby-logo-icons/Alby-logo-head/alby.svg",
-            "guidelines": "https://github.com/getAlby/lightning-browser-extension/wiki/Open-Design"
+            "guidelines": "https://github.com/getAlby/lightning-browser-extension/wiki/Open-Design/9e8ebe4d3e7707742d227554c4ee27b29983a1b6"
         },
         {
             "title": "Alchemy",
@@ -4699,6 +4699,12 @@
             "source": "https://github.com/vert-x3/.github/blob/1ad6612d87f35665e50a00fc32eb9c542556385d/workflow-templates/vertx-favicon.svg"
         },
         {
+            "title": "Ecosia",
+            "hex": "5DD25E",
+            "source": "https://www.ecosia.org",
+            "guidelines": "https://www.ecosia.org/imprint"
+        },
+        {
             "title": "Ecovacs",
             "hex": "1E384B",
             "source": "https://www.ecovacs.com"
@@ -7063,6 +7069,11 @@
             "title": "HERE",
             "hex": "00AFAA",
             "source": "https://www.here.com/company/media-assets"
+        },
+        {
+            "title": "Hermes",
+            "hex": "0091CD",
+            "source": "https://www.myhermes.de/assets/touchicons/favicon.svg"
         },
         {
             "title": "Heroku",
@@ -10378,6 +10389,11 @@
             "title": "NEAR",
             "hex": "000000",
             "source": "https://near.org/brand"
+        },
+        {
+            "title": "Nebula",
+            "hex": "2CADFE",
+            "source": "https://nebula.tv"
         },
         {
             "title": "NEC",
@@ -17700,6 +17716,16 @@
             "title": "Xing",
             "hex": "006567",
             "source": "https://dev.xing.com/logo_rules"
+        },
+        {
+            "title": "XML",
+            "hex": "005FAD",
+            "source": "https://www.w3.org/Icons/XML",
+            "aliases": {
+                "aka": [
+                    "Extensible Markup Language"
+                ]
+            }
         },
         {
             "title": "XMPP",
