@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /**
  * @file
- * Linters for the package that can't easily be implemented in the existing
- * linters (e.g. jsonlint/svglint).
+ * Linters for the package that can't easily be implemented in the existing ones.
  */
 
 /**
@@ -11,29 +10,36 @@
  * @typedef {IconData[]} IconsData
  */
 
+import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
-import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
+import {
+  collator,
+  getDirnameFromImportMeta,
+  getIconsDataString,
+  normalizeNewlines,
+  titleToSlug,
+} from '../../sdk.mjs';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => string | undefined}}
+ * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
   /**
-   * Tests whether our icons are in alphabetical order
-   * @param {{icons: IconsData}} data Icons data
-   * @returns {string|undefined} Error message or undefined
+   * Tests whether our icons are in alphabetical order.
+   * @param {{icons: IconsData}} data Icons data.
+   * @returns {string|undefined} Error message or undefined.
    */
   alphabetical(data) {
     /**
-     * Collects invalid alphabet ordered icons
-     * @param {IconData[]} invalidEntries Invalid icons reference
-     * @param {IconData} icon Icon to check
-     * @param {number} index Index of the icon
-     * @param {IconData[]} array Array of icons
-     * @returns {IconData[]} Invalid icons
+     * Collects invalid alphabet ordered icons.
+     * @param {IconData[]} invalidEntries Invalid icons reference.
+     * @param {IconData} icon Icon to check.
+     * @param {number} index Index of the icon.
+     * @param {IconData[]} array Array of icons.
+     * @returns {IconData[]} Invalid icons.
      */
     const collector = (invalidEntries, icon, index, array) => {
       if (index > 0) {
@@ -54,9 +60,9 @@ const TESTS = {
     };
 
     /**
-     * Format an icon for display in the error message
-     * @param {IconData} icon Icon to format
-     * @returns {string} Formatted icon
+     * Format an icon for display in the error message.
+     * @param {IconData} icon Icon to format.
+     * @returns {string} Formatted icon.
      */
     const format = (icon) => {
       if (icon.slug) {
@@ -89,32 +95,32 @@ const TESTS = {
   checkUrl(data) {
     /**
      * Check if an URL has a redundant trailing slash.
-     * @param {URL} $url URL instance
-     * @param {string} url Original URL string
-     * @returns {boolean} Whether the URL has a redundant trailing slash
+     * @param {URL} $url URL instance.
+     * @param {string} url Original URL string.
+     * @returns {boolean} Whether the URL has a redundant trailing slash.
      */
     const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
 
     /**
      * Check if an URL is static wikimedia asset URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is static wikimedia asset URL
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is static wikimedia asset URL.
      */
     const isStaticWikimediaAssetUrl = ($url) =>
       $url.hostname === 'upload.wikimedia.org';
 
     /**
      * Check if an URL is raw GitHub asset URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is raw GitHub asset URL
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is raw GitHub asset URL.
      */
     const isRawGithubAssetUrl = ($url) =>
       $url.hostname === 'raw.githubusercontent.com';
 
     /**
      * Check if an URL is a GitHub URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is a GitHub URL
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is a GitHub URL.
      */
     const isGitHubUrl = ($url) => $url.hostname === 'github.com';
 
@@ -135,8 +141,8 @@ const TESTS = {
 
     /**
      * Check if an URL is a permanent GitHub URL for a file.
-     * @param {string} url URL string
-     * @returns {boolean} Whether the URL is a GitHub URL for a file
+     * @param {string} url URL string.
+     * @returns {boolean} Whether the URL is a GitHub URL for a file.
      */
     const isPermalinkGitHubFileUrl = (url) => permalinkGitHubRegex.test(url);
 
@@ -154,7 +160,6 @@ const TESTS = {
       if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
         allUrlFields.push([
           false,
-          // eslint-disable-next-line no-warning-comments
           // TODO: `hasOwn` is not currently supported by TS.
           // See https://github.com/microsoft/TypeScript/issues/44253
           /** @type {string} */
@@ -178,7 +183,6 @@ const TESTS = {
       }
 
       if (isRawGithubAssetUrl($url)) {
-        // https://github.com/LitoMore/simple-icons-cdn/blob/main/media/imgcat-screenshot.webp
         const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
         const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
         invalidUrls.push(fakeDiff(url, expectedUrl));
@@ -199,6 +203,39 @@ const TESTS = {
 
     if (invalidUrls.length > 0) {
       return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
+    }
+  },
+
+  /* Check if all licenses are valid SPDX identifiers */
+  async checkLicense(data) {
+    const spdxLicenseIds = new Set(
+      JSON.parse(
+        await fs.readFile(
+          path.join(
+            getDirnameFromImportMeta(import.meta.url),
+            '..',
+            '..',
+            'node_modules/spdx-license-ids/index.json',
+          ),
+          'utf8',
+        ),
+      ),
+    );
+    const badLicenses = [];
+    for (const {title, slug, license} of data.icons) {
+      if (
+        license &&
+        license.type !== 'custom' &&
+        !spdxLicenseIds.has(license.type)
+      ) {
+        badLicenses.push(
+          `${title} (${slug ?? titleToSlug(title)}) has not a valid SPDX license.`,
+        );
+      }
+    }
+
+    if (badLicenses.length > 0) {
+      return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
     }
   },
 };

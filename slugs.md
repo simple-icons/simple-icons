@@ -42,6 +42,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Activision` | `activision` |
 | `ActivityPub` | `activitypub` |
 | `Actix` | `actix` |
+| `Actual Budget` | `actualbudget` |
 | `Acura` | `acura` |
 | `Adafruit` | `adafruit` |
 | `AdBlock` | `adblock` |
@@ -1843,6 +1844,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NBC` | `nbc` |
 | `NDR` | `ndr` |
 | `NEAR` | `near` |
+| `Nebula` | `nebula` |
 | `NEC` | `nec` |
 | `Neo4j` | `neo4j` |
 | `Neovim` | `neovim` |
@@ -1927,6 +1929,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NXP` | `nxp` |
 | `NZXT` | `nzxt` |
 | `O'Reilly` | `oreilly` |
+| `O2` | `o2` |
 | `OBS Studio` | `obsstudio` |
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
@@ -3141,6 +3144,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xiaohongshu` | `xiaohongshu` |
 | `Xiaomi` | `xiaomi` |
 | `Xing` | `xing` |
+| `XML` | `xml` |
 | `XMPP` | `xmpp` |
 | `XO` | `xo` |
 | `XRP` | `xrp` |
