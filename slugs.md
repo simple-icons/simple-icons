@@ -833,6 +833,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eclipse Jetty` | `eclipsejetty` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevertdotx` |
+| `Ecosia` | `ecosia` |
 | `Ecovacs` | `ecovacs` |
 | `EDEKA` | `edeka` |
 | `Edge Impulse` | `edgeimpulse` |
@@ -1255,6 +1256,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HelpDesk` | `helpdesk` |
 | `Hepsiemlak` | `hepsiemlak` |
 | `HERE` | `here` |
+| `Hermes` | `hermes` |
 | `Heroku` | `heroku` |
 | `Hetzner` | `hetzner` |
 | `Hevy` | `hevy` |
