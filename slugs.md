@@ -347,6 +347,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Beats` | `beats` |
 | `Beats by Dre` | `beatsbydre` |
 | `BeatStars` | `beatstars` |
+| `Beecrowd` | `beecrowd` |
 | `Beekeeper Studio` | `beekeeperstudio` |
 | `Behance` | `behance` |
 | `Beijing Subway` | `beijingsubway` |
