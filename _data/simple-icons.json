@@ -4241,6 +4241,22 @@
             "guidelines": "https://www.dpdhl-brands.com/de/dp/logo"
         },
         {
+            "title": "Deutsche Telekom",
+            "hex": "E20074",
+            "source": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal",
+            "guidelines": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal",
+            "aliases": {
+                "aka": [
+                    "T-Mobile",
+                    "Telekom"
+                ],
+                "loc": {
+                    "de-AT": "Magenta Telekom",
+                    "mk-MK": "Македонски Телеком"
+                }
+            }
+        },
+        {
             "title": "Deutsche Welle",
             "hex": "05B2FC",
             "source": "https://www.dw.com"
@@ -15612,22 +15628,6 @@
             "title": "Telegraph",
             "hex": "FAFAFA",
             "source": "https://telegra.ph"
-        },
-        {
-            "title": "Telekom",
-            "hex": "E20074",
-            "source": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal",
-            "guidelines": "https://tmap.t-mobile.com/portals/pro74u7a/EXTBrandPortal",
-            "aliases": {
-                "aka": [
-                    "Deutsche Telekom",
-                    "T-Mobile"
-                ],
-                "loc": {
-                    "de-AT": "Magenta Telekom",
-                    "mk-MK": "Македонски Телеком"
-                }
-            }
         },
         {
             "title": "Temporal",
