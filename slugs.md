@@ -605,6 +605,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Codeship` | `codeship` |
 | `CodeSignal` | `codesignal` |
 | `CodeStream` | `codestream` |
+| `CodeTime` | `codetime` |
 | `Codewars` | `codewars` |
 | `Coding Ninjas` | `codingninjas` |
 | `CodinGame` | `codingame` |
