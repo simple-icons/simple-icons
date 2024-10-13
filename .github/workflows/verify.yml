@@ -60,7 +60,7 @@ jobs:
         if: steps.changes.outputs.docs == 'true'
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --exclude ^https://www.similarweb.com -- ${{ steps.changes.outputs.docs_files }}
+          args: -- ${{ steps.changes.outputs.docs_files }}
           fail: ${{ github.ref != 'refs/heads/develop' }}
           jobSummary: true
           format: markdown
