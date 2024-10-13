@@ -57,7 +57,7 @@ jobs:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
-        if: steps.changes.outputs.docs == true
+        if: steps.changes.outputs.docs == 'true'
         uses: lycheeverse/lychee-action@v2
         with:
           args: --exclude ^https://www.similarweb.com -- \
