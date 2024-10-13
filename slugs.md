@@ -128,6 +128,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlmaLinux` | `almalinux` |
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
+| `AlternativeTo` | `alternativeto` |
 | `Alteryx` | `alteryx` |
 | `Altium Designer` | `altiumdesigner` |
 | `Alwaysdata` | `alwaysdata` |
@@ -277,6 +278,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ASUS` | `asus` |
 | `AT&T` | `atandt` |
 | `Atari` | `atari` |
+| `AtlasOS` | `atlasos` |
 | `Atlassian` | `atlassian` |
 | `Auchan` | `auchan` |
 | `Audacity` | `audacity` |
@@ -530,6 +532,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chupa Chups` | `chupachups` |
 | `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
+| `Cinnamon` | `cinnamon` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
 | `CircuitVerse` | `circuitverse` |
@@ -833,6 +836,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eclipse Jetty` | `eclipsejetty` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevertdotx` |
+| `Ecosia` | `ecosia` |
 | `Ecovacs` | `ecovacs` |
 | `EDEKA` | `edeka` |
 | `Edge Impulse` | `edgeimpulse` |
@@ -1255,6 +1259,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HelpDesk` | `helpdesk` |
 | `Hepsiemlak` | `hepsiemlak` |
 | `HERE` | `here` |
+| `Hermes` | `hermes` |
 | `Heroku` | `heroku` |
 | `Hetzner` | `hetzner` |
 | `Hevy` | `hevy` |
@@ -1405,6 +1410,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jamboard` | `jamboard` |
 | `Jameson` | `jameson` |
 | `Jamstack` | `jamstack` |
+| `Japan Airlines` | `japanairlines` |
 | `Jasmine` | `jasmine` |
 | `JavaScript` | `javascript` |
 | `JBL` | `jbl` |
@@ -2496,6 +2502,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Semrush` | `semrush` |
 | `SemVer` | `semver` |
 | `Sencha` | `sencha` |
+| `SendGrid` | `sendgrid` |
 | `Sennheiser` | `sennheiser` |
 | `Sensu` | `sensu` |
 | `Sentry` | `sentry` |

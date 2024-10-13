@@ -58,11 +58,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
         if: steps.changes.outputs.docs == true
-        run: |
-          npx markdown-link-check --retry \
-            --config .github/markdown-link-check.json \
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --exclude ^https://www.similarweb.com -- \
             ${{ steps.changes.outputs.docs_files }}
-        continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
+          fail: ${{ github.ref != 'refs/heads/develop' }}
+          jobSummary: true
+          format: markdown
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"

@@ -53,18 +53,20 @@ const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
 /**
- * @param {string} value The value to escape
- * @returns {string} The escaped value
+ * Escape a string for use in a JavaScript string.
+ * @param {string} value The value to escape.
+ * @returns {string} The escaped value.
  */
 const escape = (value) => {
   return value.replaceAll(/(?<!\\)'/g, "\\'");
 };
 
 /**
- * @param {License} license The license object or URL
- * @returns {License} The license object with a URL
+ * Converts a license object to a URL if the URL is not defined.
+ * @param {License} license The license object or URL.
+ * @returns {License} The license object with a URL.
  */
-const licenseToObject = (license) => {
+const licenseToString = (license) => {
   if (license.url === undefined) {
     license.url = `https://spdx.org/licenses/${license.type}`;
   }
@@ -74,8 +76,8 @@ const licenseToObject = (license) => {
 
 /**
  * Converts an icon object to a JavaScript object.
- * @param {IconDataAndObject} icon The icon object
- * @returns {string} The JavaScript object
+ * @param {IconDataAndObject} icon The icon object.
+ * @returns {string} The JavaScript object.
  */
 const iconToJsObject = (icon) => {
   return format(
@@ -89,14 +91,15 @@ const iconToJsObject = (icon) => {
     icon.guidelines ? `\n  guidelines: '${escape(icon.guidelines)}',` : '',
     icon.license === undefined
       ? ''
-      : `\n  license: ${JSON.stringify(licenseToObject(icon.license))},`,
+      : `\n  license: ${JSON.stringify(licenseToString(icon.license))},`,
   );
 };
 
 /**
- * @param {string} filepath The path to the file to write
- * @param {string} rawJavaScript The raw JavaScript content to write to the file
- * @param {EsBuildTransformOptions | null} options The options to pass to esbuild
+ * Write JavaScript content to a file.
+ * @param {string} filepath The path to the file to write.
+ * @param {string} rawJavaScript The raw JavaScript content to write to the file.
+ * @param {EsBuildTransformOptions | null} options The options to pass to esbuild.
  */
 const writeJs = async (filepath, rawJavaScript, options = null) => {
   options = options === null ? {minify: true} : options;
@@ -105,8 +108,9 @@ const writeJs = async (filepath, rawJavaScript, options = null) => {
 };
 
 /**
- * @param {string} filepath The path to the file to write
- * @param {string} rawTypeScript The raw TypeScript content to write to the file
+ * Write TypeScript content to a file.
+ * @param {string} filepath The path to the file to write.
+ * @param {string} rawTypeScript The raw TypeScript content to write to the file.
  */
 const writeTs = async (filepath, rawTypeScript) => {
   await fs.writeFile(filepath, rawTypeScript);
