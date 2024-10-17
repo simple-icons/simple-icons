@@ -15,6 +15,7 @@ import {
   getDirnameFromImportMeta,
   getIconsData,
   htmlFriendlyToTitle,
+  titleToSlug,
 } from './sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -27,6 +28,9 @@ const htmlNamedEntitiesFile = path.join(
 const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
 const icons = await getIconsData();
+const iconMap = new Map(
+  icons.map((icon) => [icon.slug ?? titleToSlug(icon.title), icon]),
+);
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );
@@ -266,10 +270,26 @@ const config = {
     ],
     custom: [
       // eslint-disable-next-line complexity
-      (reporter, $, ast) => {
+      (reporter, $, ast, {filepath}) => {
         reporter.name = 'icon-title';
 
         const iconTitleText = $.find('title').text();
+        const friendlyTitle = htmlFriendlyToTitle(iconTitleText);
+        const filename = path.basename(filepath, '.svg');
+
+        if (iconMap.has(filename)) {
+          const icon = iconMap.get(filename);
+          if (icon.title !== friendlyTitle) {
+            reporter.error(
+              `Title "${friendlyTitle}" does not match icon title "${icon.title}" in simple-icons.json.`,
+            );
+          }
+        } else {
+          reporter.error(
+            `${friendlyTitle} (${filename}) icon data not found in simple-icons.json.`,
+          );
+        }
+
         const xmlNamedEntitiesCodepoints = [38, 60, 62];
         const xmlNamedEntities = ['amp', 'lt', 'gt'];
         let _validCodepointsRepr = true;
