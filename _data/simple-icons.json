@@ -17261,7 +17261,12 @@
         {
             "title": "WebAssembly",
             "hex": "654FF0",
-            "source": "https://webassembly.org"
+            "source": "https://webassembly.org",
+            "aliases": {
+                "aka": [
+                    "Wasm"
+                ]
+            }
         },
         {
             "title": "WebAuthn",
