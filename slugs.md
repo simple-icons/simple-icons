@@ -2708,6 +2708,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subtitle Edit` | `subtitleedit` |
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
+| `Sui` | `sui` |
 | `Sumo Logic` | `sumologic` |
 | `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
