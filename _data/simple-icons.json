@@ -440,7 +440,7 @@
         {
             "title": "Aiqfome",
             "hex": "7A1FA2",
-            "source": "https://aiqfome.com"
+            "source": "https://github.com/aiqfome/aiq-design-system/blob/457a104c6cb1a42975908fdb05b2e0b83f3fabb4/public/logo.svg"
         },
         {
             "title": "Air Canada",
@@ -12869,7 +12869,7 @@
         },
         {
             "title": "Qwant",
-            "hex": "5C97FF",
+            "hex": "282B2F",
             "source": "https://about.qwant.com"
         },
         {
@@ -15239,6 +15239,12 @@
             "source": "https://suckless.org"
         },
         {
+            "title": "Sui",
+            "hex": "4DA2FF",
+            "source": "https://sui.io/media-kit",
+            "guidelines": "https://sui.io/media-kit"
+        },
+        {
             "title": "Sumo Logic",
             "hex": "000099",
             "source": "https://sites.google.com/sumologic.com/sumo-logic-brand/home",
@@ -17266,7 +17272,12 @@
         {
             "title": "WebAssembly",
             "hex": "654FF0",
-            "source": "https://webassembly.org"
+            "source": "https://webassembly.org",
+            "aliases": {
+                "aka": [
+                    "Wasm"
+                ]
+            }
         },
         {
             "title": "WebAuthn",
