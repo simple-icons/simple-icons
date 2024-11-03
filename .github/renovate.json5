@@ -19,6 +19,6 @@
   // We manually update digest dependencies (eg. hashes in GitHub Actions)
   digest: {enabled: false},
 
-  // We use a custom PR title
+  // PR title and commit message when updating dependencies
   commitMessage: 'Update dependencies',
 }
