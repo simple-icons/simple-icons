@@ -731,6 +731,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DC Entertainment` | `dcentertainment` |
 | `De'Longhi` | `delonghi` |
 | `Debian` | `debian` |
+| `Debrid-Link` | `debridlink` |
 | `Decap CMS` | `decapcms` |
 | `Decentraland` | `decentraland` |
 | `DeepCool` | `deepcool` |
@@ -1311,6 +1312,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
+| `HyperX` | `hyperx` |
 | `Hypothesis` | `hypothesis` |
 | `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
@@ -1953,6 +1955,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `OKX` | `okx` |
 | `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
@@ -2971,6 +2974,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
 | `uTorrent` | `utorrent` |
+| `uv` | `uv` |
 | `V` | `v` |
 | `V2EX` | `v2ex` |
 | `V8` | `v8` |
