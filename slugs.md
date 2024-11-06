@@ -2568,7 +2568,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Slint`                             | `slint`                        |
 | `smart`                             | `smart`                        |
 | `SmartThings`                       | `smartthings`                  |
-| `start.gg`                          | `startdotgg`                   |
 | `Smashing Magazine`                 | `smashingmagazine`             |
 | `SMRT`                              | `smrt`                         |
 | `SmugMug`                           | `smugmug`                      |
@@ -2664,6 +2663,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stardock`                          | `stardock`                     |
 | `Starling Bank`                     | `starlingbank`                 |
 | `Starship`                          | `starship`                     |
+| `start.gg`                          | `startdotgg`                   |
 | `STARZ`                             | `starz`                        |
 | `Statamic`                          | `statamic`                     |
 | `Statista`                          | `statista`                     |
