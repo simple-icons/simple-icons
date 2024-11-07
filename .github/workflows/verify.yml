@@ -62,6 +62,7 @@ jobs:
         with:
           args: -- ${{ steps.changes.outputs.docs_files }}
           fail: ${{ github.ref != 'refs/heads/develop' }}
+          failIfEmpty: false
           jobSummary: true
           format: markdown
           token: ${{ secrets.GITHUB_TOKEN }}

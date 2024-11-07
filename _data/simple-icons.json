@@ -440,7 +440,7 @@
         {
             "title": "Aiqfome",
             "hex": "7A1FA2",
-            "source": "https://aiqfome.com"
+            "source": "https://github.com/aiqfome/aiq-design-system/blob/457a104c6cb1a42975908fdb05b2e0b83f3fabb4/public/logo.svg"
         },
         {
             "title": "Air Canada",
@@ -4134,6 +4134,12 @@
             }
         },
         {
+            "title": "Debrid-Link",
+            "hex": "264E70",
+            "source": "https://debrid-link.com/brand",
+            "guidelines": "https://debrid-link.com/brand"
+        },
+        {
             "title": "Decap CMS",
             "hex": "FF0082",
             "source": "https://github.com/decaporg/decap-cms/blob/ba158f4a56d6d79869811971bc1bb0ef15197d30/website/static/img/decap-logo.svg"
@@ -7369,6 +7375,11 @@
             "title": "Hyperskill",
             "hex": "8C5AFF",
             "source": "https://hyperskill.org"
+        },
+        {
+            "title": "HyperX",
+            "hex": "E21836",
+            "source": "https://ca.hyperx.com/cdn/shop/files/image_placeholder.svg"
         },
         {
             "title": "Hypothesis",
@@ -11012,6 +11023,11 @@
             "guidelines": "https://www.okta.com/terms-of-use-for-okta-content/"
         },
         {
+            "title": "OKX",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:OKX_logo.svg"
+        },
+        {
             "title": "Ollama",
             "hex": "000000",
             "source": "https://github.com/ollama/ollama/issues/2152#issuecomment-1905286922"
@@ -12864,7 +12880,7 @@
         },
         {
             "title": "Qwant",
-            "hex": "5C97FF",
+            "hex": "282B2F",
             "source": "https://about.qwant.com"
         },
         {
@@ -15234,6 +15250,12 @@
             "source": "https://suckless.org"
         },
         {
+            "title": "Sui",
+            "hex": "4DA2FF",
+            "source": "https://sui.io/media-kit",
+            "guidelines": "https://sui.io/media-kit"
+        },
+        {
             "title": "Sumo Logic",
             "hex": "000099",
             "source": "https://sites.google.com/sumologic.com/sumo-logic-brand/home",
@@ -16686,6 +16708,11 @@
             "source": "https://www.utorrent.com"
         },
         {
+            "title": "uv",
+            "hex": "DE5FE9",
+            "source": "https://docs.astral.sh/uv/"
+        },
+        {
             "title": "V",
             "hex": "5D87BF",
             "source": "https://github.com/vlang/v-logo/blob/eec050c901ed3afefce8cbe56092d55ed6770706/dist/v-logo.svg",
@@ -17261,7 +17288,12 @@
         {
             "title": "WebAssembly",
             "hex": "654FF0",
-            "source": "https://webassembly.org"
+            "source": "https://webassembly.org",
+            "aliases": {
+                "aka": [
+                    "Wasm"
+                ]
+            }
         },
         {
             "title": "WebAuthn",
