@@ -4855,6 +4855,12 @@
             "guidelines": "https://elementor.com/logos/"
         },
         {
+            "title": "ElevenLabs",
+            "hex": "000000",
+            "source": "https://elevenlabs.io/brand",
+            "guidelines": "https://elevenlabs.io/brand"
+        },
+        {
             "title": "Eleventy",
             "hex": "222222",
             "source": "https://www.11ty.dev",
@@ -14292,8 +14298,9 @@
         },
         {
             "title": "Signal",
-            "hex": "3A76F0",
-            "source": "https://github.com/signalapp/Signal-Desktop/blob/9db8765b6cf270195e45a7f251374d4e53d54c95/images/signal-logo.svg"
+            "hex": "3B45FD",
+            "source": "https://signal.org/brand",
+            "guidelines": "https://signal.org/brand"
         },
         {
             "title": "Similarweb",
@@ -14502,6 +14509,16 @@
             "source": "https://github.com/snapcore/snap-store-badges/tree/eda2cb0495ef7f4d479e231079967c9d27f2bc70",
             "license": {
                 "type": "CC-BY-ND-2.0"
+            }
+        },
+        {
+            "title": "Snapdragon",
+            "hex": "C33139",
+            "source": "https://commons.wikimedia.org/wiki/File:Snapdragon_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "Qualcomm Snapdragon"
+                ]
             }
         },
         {
