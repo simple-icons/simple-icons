@@ -42,6 +42,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Activision` | `activision` |
 | `ActivityPub` | `activitypub` |
 | `Actix` | `actix` |
+| `Actual Budget` | `actualbudget` |
 | `Acura` | `acura` |
 | `Adafruit` | `adafruit` |
 | `AdBlock` | `adblock` |
@@ -127,6 +128,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlmaLinux` | `almalinux` |
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
+| `AlternativeTo` | `alternativeto` |
 | `Alteryx` | `alteryx` |
 | `Altium Designer` | `altiumdesigner` |
 | `Alwaysdata` | `alwaysdata` |
@@ -276,6 +278,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ASUS` | `asus` |
 | `AT&T` | `atandt` |
 | `Atari` | `atari` |
+| `AtlasOS` | `atlasos` |
 | `Atlassian` | `atlassian` |
 | `Auchan` | `auchan` |
 | `Audacity` | `audacity` |
@@ -529,6 +532,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chupa Chups` | `chupachups` |
 | `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
+| `Cinnamon` | `cinnamon` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
 | `CircuitVerse` | `circuitverse` |
@@ -727,6 +731,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DC Entertainment` | `dcentertainment` |
 | `De'Longhi` | `delonghi` |
 | `Debian` | `debian` |
+| `Debrid-Link` | `debridlink` |
 | `Decap CMS` | `decapcms` |
 | `Decentraland` | `decentraland` |
 | `DeepCool` | `deepcool` |
@@ -832,6 +837,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eclipse Jetty` | `eclipsejetty` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevertdotx` |
+| `Ecosia` | `ecosia` |
 | `Ecovacs` | `ecovacs` |
 | `EDEKA` | `edeka` |
 | `Edge Impulse` | `edgeimpulse` |
@@ -1254,6 +1260,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HelpDesk` | `helpdesk` |
 | `Hepsiemlak` | `hepsiemlak` |
 | `HERE` | `here` |
+| `Hermes` | `hermes` |
 | `Heroku` | `heroku` |
 | `Hetzner` | `hetzner` |
 | `Hevy` | `hevy` |
@@ -1305,6 +1312,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
+| `HyperX` | `hyperx` |
 | `Hypothesis` | `hypothesis` |
 | `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
@@ -1404,6 +1412,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jamboard` | `jamboard` |
 | `Jameson` | `jameson` |
 | `Jamstack` | `jamstack` |
+| `Japan Airlines` | `japanairlines` |
 | `Jasmine` | `jasmine` |
 | `JavaScript` | `javascript` |
 | `JBL` | `jbl` |
@@ -1843,6 +1852,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NBC` | `nbc` |
 | `NDR` | `ndr` |
 | `NEAR` | `near` |
+| `Nebula` | `nebula` |
 | `NEC` | `nec` |
 | `Neo4j` | `neo4j` |
 | `Neovim` | `neovim` |
@@ -1927,6 +1937,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NXP` | `nxp` |
 | `NZXT` | `nzxt` |
 | `O'Reilly` | `oreilly` |
+| `O2` | `o2` |
 | `OBS Studio` | `obsstudio` |
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
@@ -1944,6 +1955,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `OKX` | `okx` |
 | `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
@@ -2493,6 +2505,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Semrush` | `semrush` |
 | `SemVer` | `semver` |
 | `Sencha` | `sencha` |
+| `SendGrid` | `sendgrid` |
 | `Sennheiser` | `sennheiser` |
 | `Sensu` | `sensu` |
 | `Sentry` | `sentry` |
@@ -2698,6 +2711,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subtitle Edit` | `subtitleedit` |
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
+| `Sui` | `sui` |
 | `Sumo Logic` | `sumologic` |
 | `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
@@ -2960,6 +2974,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
 | `uTorrent` | `utorrent` |
+| `uv` | `uv` |
 | `V` | `v` |
 | `V2EX` | `v2ex` |
 | `V8` | `v8` |
@@ -3141,6 +3156,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xiaohongshu` | `xiaohongshu` |
 | `Xiaomi` | `xiaomi` |
 | `Xing` | `xing` |
+| `XML` | `xml` |
 | `XMPP` | `xmpp` |
 | `XO` | `xo` |
 | `XRP` | `xrp` |
