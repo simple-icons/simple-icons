@@ -1,12 +1,6 @@
 {
     "icons": [
         {
-            "title": "Lime",
-            "hex": "00dd00",
-            "source": "https://drive.google.com/file/d/1trEI0INLMCBYnemoc4O-zDTLm5H8s9cc/view",
-            "svg": "M790.383 3874.27H622.485V4369.24H790.383V3874.27Z"
-        },
-        {
             "title": ".ENV",
             "hex": "ECD53F",
             "source": "https://github.com/motdotla/dotenv/blob/40e75440337d1de2345dc8326d6108331f583fd8/dotenv.svg",
@@ -9039,6 +9033,11 @@
             "title": "Lightning",
             "hex": "792EE5",
             "source": "https://github.com/Lightning-AI/lightning/blob/a584196abf820179adb0758ef67ddae91c44e7bc/docs/source/_static/images/icon.svg"
+        },
+        {
+            "title": "Lime",
+            "hex": "00dd00",
+            "source": "https://www.li.me/about/press"
         },
         {
             "title": "LimeSurvey",
