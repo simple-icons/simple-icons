@@ -7,7 +7,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 
 | Brand name | Brand slug |
 | :--- | :--- |
-| `.ENV` | `foo` |
+| `.ENV` | `dotenv` |
 | `.NET` | `dotnet` |
 | `/e/` | `e` |
 | `1.1.1.1` | `1dot1dot1dot1` |
