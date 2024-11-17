@@ -81,8 +81,55 @@ const TESTS = {
 
   /* Check the formatting of the data file */
   prettified(data, dataString) {
+    /**
+     * Prettify the data file.
+     * @param {{icons: IconsData}} data Data to prettify.
+     * @returns {string} Prettified data.
+     */
+    const prettify = (data) => {
+      const indentSpaces = 4;
+      const json = `${JSON.stringify(data, null, indentSpaces)}\n`;
+
+      // Make `old` and `aka` icons fields to render in single line
+      // if they have only one item.
+      const prettified = [];
+      const lines = json.split('\n');
+      const fieldsDeep = 4;
+      const fieldsIndent = ' '.repeat(indentSpaces * fieldsDeep);
+
+      let skips = 0;
+      for (const [i, line] of lines.entries()) {
+        if (skips > 0) {
+          skips--;
+          continue;
+        }
+
+        if (
+          line.startsWith(fieldsIndent) &&
+          (line.endsWith('"aka": [') || line.endsWith('"old": ['))
+        ) {
+          const next2Line = lines[i + 2];
+          if (
+            next2Line.startsWith(fieldsIndent) &&
+            (next2Line.endsWith(']') || next2Line.endsWith('],'))
+          ) {
+            const nextLine = lines[i + 1];
+            const newLine = `${line}${nextLine.trim()}${next2Line.trim()}`;
+            prettified.push(newLine);
+            skips += 2;
+          } else {
+            prettified.push(line);
+          }
+        } else {
+          prettified.push(line);
+        }
+      }
+
+      return prettified.join('\n');
+    };
+
     const normalizedDataString = normalizeNewlines(dataString);
-    const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
+    const dataPretty = prettify(data);
 
     if (normalizedDataString !== dataPretty) {
       const dataDiff = fakeDiff(normalizedDataString, dataPretty);
