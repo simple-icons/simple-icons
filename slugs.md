@@ -496,6 +496,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CBS` | `cbs` |
 | `CCleaner` | `ccleaner` |
 | `CD Projekt` | `cdprojekt` |
+| `CE` | `ce` |
 | `Celery` | `celery` |
 | `Celestron` | `celestron` |
 | `CentOS` | `centos` |
@@ -862,6 +863,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Element` | `element` |
 | `elementary` | `elementary` |
 | `Elementor` | `elementor` |
+| `ElevenLabs` | `elevenlabs` |
 | `Eleventy` | `eleventy` |
 | `Elgato` | `elgato` |
 | `Elixir` | `elixir` |
@@ -945,6 +947,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fathom` | `fathom` |
 | `Fauna` | `fauna` |
 | `Favro` | `favro` |
+| `FCC` | `fcc` |
 | `FeatHub` | `feathub` |
 | `FedEx` | `fedex` |
 | `Fedora` | `fedora` |
@@ -2577,6 +2580,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SmugMug` | `smugmug` |
 | `Snapchat` | `snapchat` |
 | `Snapcraft` | `snapcraft` |
+| `Snapdragon` | `snapdragon` |
 | `SNCF` | `sncf` |
 | `Snort` | `snort` |
 | `Snowflake` | `snowflake` |
