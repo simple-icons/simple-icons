@@ -2889,6 +2889,12 @@
             "source": "https://www.cdprojekt.com/en/media/logotypes/"
         },
         {
+            "title": "CE",
+            "hex": "000000",
+            "source": "https://single-market-economy.ec.europa.eu/single-market/ce-marking_en",
+            "guidelines": "https://single-market-economy.ec.europa.eu/single-market/ce-marking_en"
+        },
+        {
             "title": "Celery",
             "hex": "37814A",
             "source": "https://github.com/celery/celery/blob/4d77ddddb10797011dc10dd2e4e1e7a7467b8431/docs/images/favicon.ico"
@@ -4858,6 +4864,12 @@
             "guidelines": "https://elementor.com/logos/"
         },
         {
+            "title": "ElevenLabs",
+            "hex": "000000",
+            "source": "https://elevenlabs.io/brand",
+            "guidelines": "https://elevenlabs.io/brand"
+        },
+        {
             "title": "Eleventy",
             "hex": "222222",
             "source": "https://www.11ty.dev",
@@ -5303,6 +5315,21 @@
             "title": "Favro",
             "hex": "512DA8",
             "source": "https://favro.com/login"
+        },
+        {
+            "title": "FCC",
+            "hex": "1C3664",
+            "source": "https://www.fcc.gov/logos",
+            "guidelines": "https://apps.fcc.gov/oetcf/kdb/forms/FTSSearchResultPage.cfm?id=27980&switch=P",
+            "license": {
+                "type": "custom",
+                "url": "https://www.fcc.gov/licensing"
+            },
+            "aliases": {
+                "aka": [
+                    "Federal Communications Commission"
+                ]
+            }
         },
         {
             "title": "FeatHub",
@@ -8847,8 +8874,8 @@
         },
         {
             "title": "Lerna",
-            "hex": "334155",
-            "source": "https://github.com/lerna/website/blob/dcef9c248b2b67bdd2214058beca437732690226/images/lerna-logo-dark.svg"
+            "hex": "C084FC",
+            "source": "https://user-images.githubusercontent.com/900523/173044458-fd0b57f6-6374-4265-98b5-eb8f55fe1fb3.svg"
         },
         {
             "title": "Leroy Merlin",
@@ -14295,8 +14322,9 @@
         },
         {
             "title": "Signal",
-            "hex": "3A76F0",
-            "source": "https://github.com/signalapp/Signal-Desktop/blob/9db8765b6cf270195e45a7f251374d4e53d54c95/images/signal-logo.svg"
+            "hex": "3B45FD",
+            "source": "https://signal.org/brand",
+            "guidelines": "https://signal.org/brand"
         },
         {
             "title": "Similarweb",
@@ -14505,6 +14533,16 @@
             "source": "https://github.com/snapcore/snap-store-badges/tree/eda2cb0495ef7f4d479e231079967c9d27f2bc70",
             "license": {
                 "type": "CC-BY-ND-2.0"
+            }
+        },
+        {
+            "title": "Snapdragon",
+            "hex": "C33139",
+            "source": "https://commons.wikimedia.org/wiki/File:Snapdragon_Logo.svg",
+            "aliases": {
+                "aka": [
+                    "Qualcomm Snapdragon"
+                ]
             }
         },
         {
