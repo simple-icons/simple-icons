@@ -56,9 +56,9 @@ const generateSdkMts = async () => {
 /**
  * We must remove the duplicated export types that tsc generates from
  * JSDoc `typedef` comments.
- * See {@link https://github.com/microsoft/TypeScript/issues/46011}
- * @param {string} content Content of the file
- * @returns {string} The content without duplicated export types
+ * See {@link https://github.com/microsoft/TypeScript/issues/46011}.
+ * @param {string} content Content of the file.
+ * @returns {string} The content without duplicated export types.
  */
 const removeDuplicatedExportTypes = (content) => {
   const newContent = [];

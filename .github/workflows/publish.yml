@@ -46,6 +46,8 @@ jobs:
         run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
+      - name: Minify icons data file
+        run: node scripts/release/minify-icons-data.js
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
