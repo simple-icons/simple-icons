@@ -10756,6 +10756,21 @@
             "source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
         },
         {
+            "title": "NOAA",
+            "aliases": {
+                "aka": [
+                    "National Oceanic and Atmospheric Administration"
+                ]
+            },
+            "hex": "003087",
+            "source": "https://www.noaa.gov/themes/custom/noaa_guswds/images/noaa_digital_logo.svg",
+            "guidelines": "https://www.noaa.gov/office-of-communication/about-noaa-emblem-and-logo",
+            "license": {
+                "type": "custom",
+                "url": "https://www.noaa.gov/noaa-emblem-usage-and-licensing"
+            }
+        },
+        {
             "title": "Node-RED",
             "hex": "8F0000",
             "source": "https://nodered.org/about/resources/"
