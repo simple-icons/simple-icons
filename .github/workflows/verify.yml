@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Don't edit slugs.md in pull requests
         if: |
-          github.base_ref != 'refs/heads/master' &&
+          github.base_ref != 'master' &&
           github.event_name == 'pull_request' &&
           steps.changes.outputs.slugs == 'true'
         run: |
