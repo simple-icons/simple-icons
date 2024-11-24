@@ -1275,6 +1275,15 @@
             }
         },
         {
+            "title": "Apache Lucene",
+            "hex": "019B8F",
+            "source": "https://apache.org/logos",
+            "guidelines": "https://www.apache.org/foundation/marks",
+            "license": {
+                "type": "Apache-2.0"
+            }
+        },
+        {
             "title": "Apache Maven",
             "hex": "C71A36",
             "source": "https://apache.org/logos",
@@ -11016,6 +11025,11 @@
             "hex": "1C1E20",
             "source": "https://en.facebookbrand.com/oculus/assets/oculus?audience=oculus-landing",
             "guidelines": "https://en.facebookbrand.com/oculus/"
+        },
+        {
+            "title": "Odin",
+            "hex": "3882D2",
+            "source": "https://github.com/odin-lang/artwork/blob/5f887a73f3cc5a4b61971ec15854ae456b886426/logo/emblem-without-background.svg"
         },
         {
             "title": "Odnoklassniki",
