@@ -209,6 +209,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache JMeter` | `apachejmeter` |
 | `Apache Kafka` | `apachekafka` |
 | `Apache Kylin` | `apachekylin` |
+| `Apache Lucene` | `apachelucene` |
 | `Apache Maven` | `apachemaven` |
 | `Apache NetBeans IDE` | `apachenetbeanside` |
 | `Apache NiFi` | `apachenifi` |
@@ -1952,6 +1953,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OctoPrint` | `octoprint` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
+| `Odin` | `odin` |
 | `Odnoklassniki` | `odnoklassniki` |
 | `Odoo` | `odoo` |
 | `Odysee` | `odysee` |
