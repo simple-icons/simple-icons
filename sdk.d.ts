@@ -26,7 +26,7 @@ type ThirdPartyExtensionSubject = {
  * The aliases for a Simple Icon.
  *
  * Corresponds to the `aliases` property in the *_data/simple-icons.json* file.
- * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#aliases Aliases}
+ * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/hello.md#aliases Aliases}
  */
 export type Aliases = {
   aka?: string[];
