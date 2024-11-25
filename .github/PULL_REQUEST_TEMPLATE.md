@@ -11,7 +11,11 @@ https://wasm.simpleicons.org/preview
 **Popularity metric:**
 
 <!--
-Regardless of whether or not the linked issue (if there is one) has a metric, please include the metric here for PR reviewers to validate. See our contributing guidelines at https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity for more details on how we assess a brand's popularity.
+Regardless of whether or not the linked issue (if there is one) has a metric,
+please include the metric here for PR reviewers to validate. See our
+contributing guidelines at
+https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity
+or more details on how we assess a brand's popularity.
 -->
 
 ### Checklist
