@@ -124,6 +124,14 @@ const TESTS = {
     const isGitHubUrl = ($url) => $url.hostname === 'github.com';
 
     /**
+     * Check if an URL is an 'user-images.githubusercontent.com' URL.
+     * @param {URL} $url URL instance.
+     * @returns {boolean} Whether the URL is an 'user-images.githubusercontent.com' URL.
+     */
+    const isUserImagesGitHubUrl = ($url) =>
+      $url.hostname === 'user-images.githubusercontent.com';
+
+    /**
      * Regex to match a permalink GitHub URL for a file.
      */
     const permalinkGitHubRegex =
@@ -188,10 +196,11 @@ const TESTS = {
       }
 
       if (
-        isSourceUrl &&
-        isGitHubUrl($url) &&
-        !isPermalinkGitHubFileUrl(url) &&
-        !gitHubExcludedUrls.has(url)
+        (isSourceUrl &&
+          isGitHubUrl($url) &&
+          !isPermalinkGitHubFileUrl(url) &&
+          !gitHubExcludedUrls.has(url)) ||
+        isUserImagesGitHubUrl($url)
       ) {
         invalidUrls.push(
           `'${url}' must be a permalink GitHub URL. Expecting something like` +
