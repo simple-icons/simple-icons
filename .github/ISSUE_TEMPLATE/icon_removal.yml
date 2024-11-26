@@ -30,5 +30,6 @@ body:
       placeholder: >-
         Example: [this blogpost](https://example.com) announced the brand has been discontinued...
 
+
     validations:
       required: true
