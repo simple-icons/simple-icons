@@ -58,13 +58,12 @@ export const urlRegex = async (
     getDirnameFromImportMeta(import.meta.url),
     '.jsonschema.json',
   ),
-) => {
-  return new RegExp(
+) =>
+  new RegExp(
     JSON.parse(
       await fs.readFile(jsonschemaPath, 'utf8'),
     ).definitions.url.pattern,
   );
-};
 
 /**
  * Get the slug/filename for an icon.
@@ -100,10 +99,8 @@ export const titleToSlug = (title) =>
  * @param {string} slug The slug to convert.
  * @returns {string} The variable name for the slug.
  */
-export const slugToVariableName = (slug) => {
-  const slugFirstLetter = slug[0].toUpperCase();
-  return `si${slugFirstLetter}${slug.slice(1)}`;
-};
+export const slugToVariableName = (slug) =>
+  `si${slug[0].toUpperCase()}${slug.slice(1)}`;
 
 /**
  * Converts a brand title as defined in *_data/simple-icons.json* into a brand
@@ -151,7 +148,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
  * @param {string} rootDirectory Path to the root directory of the project.
  * @returns {string} Path of *_data/simple-icons.json*.
  */
-export const getIconDataPath = (
+export const getIconsDataPath = (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
 ) => {
   return path.resolve(rootDirectory, '_data', 'simple-icons.json');
@@ -165,7 +162,7 @@ export const getIconDataPath = (
 export const getIconsDataString = (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
 ) => {
-  return fs.readFile(getIconDataPath(rootDirectory), 'utf8');
+  return fs.readFile(getIconsDataPath(rootDirectory), 'utf8');
 };
 
 /**
