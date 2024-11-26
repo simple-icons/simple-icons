@@ -8,6 +8,16 @@ docs:
   - any: ['*.md']
     status: modified
 meta:
-  - any: ['.github/*', 'scripts/*', 'tests/*', '*']
-  - all: ['!*.md', '!icons/*.svg', '!_data/*', '!package.json']
+  - any:
+      [
+        '.github/*',
+        'scripts/*',
+        'tests/*',
+        '.husky/*',
+        '*.mjs',
+        '*.d.ts',
+        '*.json',
+        '*.toml',
+        '*',
+      ]
     status: modified

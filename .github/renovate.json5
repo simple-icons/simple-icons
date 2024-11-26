@@ -21,4 +21,7 @@
 
   // PR title and commit message when updating dependencies
   commitMessage: 'Update dependencies',
+
+  // Simplify PR body when updating dependencies
+  prBodyTemplate: '{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}',
 }
