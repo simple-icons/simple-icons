@@ -1,9 +1,8 @@
 <p align="center">
 <img src="https://cdn.simpleicons.org/simpleicons/000/fff" alt="Simple Icons" width=70>
 <h3 align="center">Simple Icons</h3>
-<p align="center">Over 3200 Free SVG icons for popular brands. See them all on one
-page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections
-& requests can be made on GitHub.</p>
+<p align="center">
+Over 3200 Free SVG icons for popular brands. See them all on one page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, corrections & requests can be made on GitHub.</p>
 </p>
 
 <p align="center">
@@ -19,9 +18,7 @@ page at <a href="https://simpleicons.org">SimpleIcons.org</a>. Contributions, co
 ## Usage
 
 > [!IMPORTANT]\
-> We ask that all users read our [legal disclaimer] before using icons from Simple Icons.
-
-[legal disclaimer]: https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md
+> We ask that all users read our [legal disclaimer](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md) before using icons from Simple Icons.
 
 ### General Usage
 
@@ -29,7 +26,7 @@ Icons can be downloaded as SVGs directly from <https://simpleicons.org/> - simpl
 
 ### CDN Usage
 
-Icons can be served from a CDN such as [jsDelivr] or [unpkg]. Simply use the `simple-icons` npm package and specify a version in the URL like the following:
+Icons can be served from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
 <img
@@ -61,9 +58,6 @@ Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for e
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
 
-[jsDelivr]: https://www.jsdelivr.com/package/npm/simple-icons
-[unpkg]: https://unpkg.com/browse/simple-icons/
-
 #### CDN with colors
 
 We also provide a CDN service which allows you to use colors.
@@ -82,7 +76,7 @@ We also provide a CDN service which allows you to use colors.
 />
 ```
 
-Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to use. The color is defaulted to the HEX color of the icon shown in [simpleicons.org website](https://simpleicons.org). `[DARK_MODE_COLOR]` is used for dark mode. The [CSS prefers-color-scheme] will be used when a value is specified. For example:
+Where `[COLOR]` is optional, and can be replaced by the [hex colors](https://developer.mozilla.org/en-US/docs/Web/CSS/hex-color) or [CSS keywords](https://www.w3.org/wiki/CSS/Properties/color/keywords) of the icon you want to use. The color is defaulted to the HEX color of the icon shown in [simpleicons.org website](https://simpleicons.org). `[DARK_MODE_COLOR]` is used for dark mode. The [CSS prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) will be used when a value is specified. For example:
 
 ```html
 <img height="32" width="32" src="https://cdn.simpleicons.org/simpleicons" />
@@ -136,8 +130,6 @@ You can use a `viewbox=auto` parameter to get a auto-sized viewbox. This is usef
 <img height="20" src="https://cdn.simpleicons.org/simpleicons?viewbox=auto" />
 <img height="20" src="https://cdn.simpleicons.org/awesomelists?viewbox=auto" />
 ```
-
-[CSS prefers-color-scheme]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 
 ### Node Usage <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
 
