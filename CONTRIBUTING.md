@@ -338,8 +338,6 @@ Additionally, each icon in the `_data/simple-icons.json` file may be given any o
 
 Here is the object of the fictional brand from before, but with all optional values, as an example:
 
-<!-- prettier-ignore-start -->
-
 ```json
 {
     "title": "A Fictional Brand",
@@ -353,8 +351,6 @@ Here is the object of the fictional brand from before, but with all optional val
     }
 }
 ```
-
-<!-- prettier-ignore-end -->
 
 > Non secured HTTP URLs are forbidden. If a brand's website only supports HTTP, you must still declare the URL using the `https://` protocol.
 
@@ -397,8 +393,6 @@ Where the string is **different** from the original title as well as all other s
 
 We collect the names of duplicates, brands that use the same icon but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
 
-<!-- prettier-ignore-start -->
-
 ```json5
 {
     "title": "the original title",
@@ -415,8 +409,6 @@ We collect the names of duplicates, brands that use the same icon but have a dif
 }
 ```
 
-<!-- prettier-ignore-end -->
-
 Where the nested `title` is the name of the duplicate brand. The other fields, `hex` and `guidelines`, are only provided if they differ from the original.
 
 ##### Localization
@@ -425,12 +417,12 @@ We collect localized names to make it possible to find the brand by it's local n
 
 ```json
 {
-  "title": "the original title",
-  "aliases": {
-    "loc": {
-      "en-US": "A different title"
+    "title": "the original title",
+    "aliases": {
+        "loc": {
+            "en-US": "A different title"
+        }
     }
-  }
 }
 ```
 
