@@ -13,16 +13,15 @@ icon in their project.
 ## Licenses, Copyrights & Trademarks
 
 > [!IMPORTANT]\
-> The addition of licenses to Simple Icons is an ongoing project. Hence, the
-> absence of licence data for a particular icon does not imply that the icon is
-> not released under a license.
+> The addition of licenses to Simple Icons is an ongoing project. Hence, the absence
+> of licence data for a particular icon does not imply that the icon is not released
+> under a license.
 
 <!-- makdownlint-disable-next-line no-blanks-blockquote -->
 
 > [!NOTE]\
-> Simple Icons is released under CC0 - though that doesn't mean to imply that
-> all icons within the project are also CC0. Please see individual licenses
-> where available.
+> Simple Icons is released under CC0 - though that doesn't mean to imply that all
+> icons within the project are also CC0. Please see individual licenses where available.
 
 Simple Icons provides data on the license under which icons are available. We
 ask users to carefully consider this when using an icon. As licenses are subject
@@ -49,11 +48,11 @@ permissions to use the icons relevant to their project.
 ## Brand Guidelines
 
 > [!NOTE]\
-> The addition of guidelines to Simple Icons is an ongoing project. In the
-> meantime, users of Simple Icons are instead encouraged to check the `source`
-> URL as, in some cases, the icon will have been sourced from official
-> guidelines. The lack of a `guidelines` entry for a particular brand does not
-> imply that the brand has no guidelines.
+> The addition of guidelines to Simple Icons is an ongoing project. In the meantime,
+> users of Simple Icons are instead encouraged to check the `source` URL as, in some
+> cases, the icon will have been sourced from official guidelines. The lack of a
+> `guidelines` entry for a particular brand does not imply that the brand has no
+> guidelines.
 
 Simple Icons provides a link to a brand's _branding guidelines_ (or similar) if
 the brand provides one. We ask our users read these guidelines and ensure their

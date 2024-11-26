@@ -6,8 +6,8 @@
 [![Documentation issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
 
 > [!IMPORTANT]\
-> We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before
-> contributing to Simple Icons.
+> We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing
+> to Simple Icons.
 
 Simple Icons welcomes contributions and corrections. Before contributing, please
 make sure you have read the guidelines below. If you decide to contribute
@@ -96,10 +96,10 @@ If you are in doubt, feel free to submit it and we'll have a look.
 ### Assessing Popularity
 
 > [!TIP]\
-> Similarweb is now trying to force users to log in to view statistics. You can
-> bypass this by going directly to `https://similarweb.com/website/google.com`,
-> replacing `google.com` with the TLD you would like to get the stats on. You
-> may need to use incognito mode if you visit these ranking pages often.
+> Similarweb is now trying to force users to log in to view statistics. You can bypass
+> this by going directly to `https://similarweb.com/website/google.com`, replacing
+> `google.com` with the TLD you would like to get the stats on. You may need to use
+> incognito mode if you visit these ranking pages often.
 
 To be considered popular enough to be within our scope, a brand must be in
 existence for at least one year (from date of first stable release, where
@@ -161,14 +161,13 @@ popular. If you can provide a _particularly_ good metric that can be applied to
 other brands then it will be added to this list.
 
 > [!NOTE]\
-> All metrics & cut-offs above are subject to ongoing review and potential
-> change. These current metrics were devised in order to no longer rely on
-> GitHub stars as an indication of a project's popularity. But, for projects
-> that only exist on GitHub, we do still need some way of assessing their
-> popularity so, until we can come up with a better way to do so, we have kept
-> stars for the time being but will not be putting as much weight on them as in
-> the past. If you know of a better way of assessing the popularity of a GitHub
-> project then please create an issue for discussion.
+> All metrics & cut-offs above are subject to ongoing review and potential change.
+> These current metrics were devised in order to no longer rely on GitHub stars as
+> an indication of a project's popularity. But, for projects that only exist on GitHub,
+> we do still need some way of assessing their popularity so, until we can come up
+> with a better way to do so, we have kept stars for the time being but will not
+> be putting as much weight on them as in the past. If you know of a better way of
+> assessing the popularity of a GitHub project then please create an issue for discussion.
 
 ### Opening an Issue
 
@@ -190,8 +189,8 @@ speed up our research process.
 ## Adding or Updating an Icon
 
 > [!NOTE]\
-> If you decide to add an icon without requesting it first, the requirements
-> above still apply.
+> If you decide to add an icon without requesting it first, the requirements above
+> still apply.
 
 ### 1. Identify Official Logos and Colors
 
@@ -296,8 +295,8 @@ ask your question if you did not find an answer.
 
 ### 3. Optimize the Icon
 
-All icons in Simple Icons have been optimized with the [SVGO tool]. This can be done
-in one of three ways:
+All icons in Simple Icons have been optimized with the [SVGO tool]. This can be
+done in one of three ways:
 
 - The [SVGO Command Line Tool](https://github.com/svg/svgo)
   - Run the following command `npx svgo icons/file-to-optimize.svg`
