@@ -397,21 +397,25 @@ Where the string is **different** from the original title as well as all other s
 
 We collect the names of duplicates, brands that use the same icon but have a different name, to prevent duplicating an SVG while at the same time making the SVG available under the name of the duplicate. To add a duplicate you add the following to the icon data:
 
+<!-- prettier-ignore-start -->
+
 ```json5
 {
-  title: 'the original title',
-  hex: '123456',
-  aliases: {
-    dup: [
-      {
-        title: "the duplicate's title",
-        hex: '654321', // Only if different from original's color
-        guidelines: '...', // Only if different from original's guidelines
-      },
-    ],
-  },
+    "title": "the original title",
+    "hex": "123456",
+    "aliases": {
+        "dup": [
+            {
+                "title": "the duplicate's title",
+                "hex": "654321", // Only if different from original's color
+                "guidelines": "..." // Only if different from original's guidelines
+            }
+        ]
+    }
 }
 ```
+
+<!-- prettier-ignore-end -->
 
 Where the nested `title` is the name of the duplicate brand. The other fields, `hex` and `guidelines`, are only provided if they differ from the original.
 
