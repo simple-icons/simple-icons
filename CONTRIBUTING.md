@@ -338,19 +338,23 @@ Additionally, each icon in the `_data/simple-icons.json` file may be given any o
 
 Here is the object of the fictional brand from before, but with all optional values, as an example:
 
+<!-- prettier-ignore-start -->
+
 ```json
 {
-  "title": "A Fictional Brand",
-  "slug": "afictionalbrand_modifier",
-  "hex": "123456",
-  "source": "https://www.a-fictional-brand.org/logo",
-  "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
-  "license": {
-    "type": "CC0-1.0",
-    "url": "https://www.a-fictional-brand.org/logo/license"
-  }
+    "title": "A Fictional Brand",
+    "slug": "afictionalbrand_modifier",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo",
+    "guidelines": "https://www.a-fictional-brand.org/brand-guidelines",
+    "license": {
+        "type": "CC0-1.0",
+        "url": "https://www.a-fictional-brand.org/logo/license"
+    }
 }
 ```
+
+<!-- prettier-ignore-end -->
 
 > Non secured HTTP URLs are forbidden. If a brand's website only supports HTTP, you must still declare the URL using the `https://` protocol.
 
