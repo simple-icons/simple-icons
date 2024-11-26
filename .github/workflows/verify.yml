@@ -42,11 +42,23 @@ jobs:
           list-files: shell
           filters: |
             docs:
-              - '*.md'
+              - '*!(slugs).md'
               - '.github/**.md'
             icons:
               - 'icons/*.svg'
+            slugs:
+              - 'slugs.md'
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Don't edit slugs.md in pull requests
+        if: |
+          github.base_ref != 'master' &&
+          github.event_name == 'pull_request' &&
+          steps.changes.outputs.slugs == 'true'
+        run: |
+          echo -ne "Detected slugs.md file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the slugs.md" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
       - name: Install dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run linter
@@ -57,12 +69,15 @@ jobs:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
-        if: steps.changes.outputs.docs == true
-        run: |
-          npx markdown-link-check --retry \
-            --config .github/markdown-link-check.json \
-            ${{ steps.changes.outputs.docs_files }}
-        continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
+        if: steps.changes.outputs.docs == 'true'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: -- ${{ steps.changes.outputs.docs_files }}
+          fail: ${{ github.ref != 'refs/heads/develop' }}
+          failIfEmpty: false
+          jobSummary: true
+          format: markdown
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
