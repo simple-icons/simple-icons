@@ -150,9 +150,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
  */
 export const getIconsDataPath = (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
-) => {
-  return path.resolve(rootDirectory, '_data', 'simple-icons.json');
-};
+) => path.resolve(rootDirectory, '_data', 'simple-icons.json');
 
 /**
  * Get contents of *_data/simple-icons.json*.
@@ -161,9 +159,7 @@ export const getIconsDataPath = (
  */
 export const getIconsDataString = (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
-) => {
-  return fs.readFile(getIconsDataPath(rootDirectory), 'utf8');
-};
+) => fs.readFile(getIconsDataPath(rootDirectory), 'utf8');
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
@@ -182,9 +178,7 @@ export const getIconsData = async (
  * @param {string} text The text to replace.
  * @returns {string} The text with Windows newline characters replaced by Unix ones.
  */
-export const normalizeNewlines = (text) => {
-  return text.replaceAll('\r\n', '\n');
-};
+export const normalizeNewlines = (text) => text.replaceAll('\r\n', '\n');
 
 /**
  * Convert non-6-digit hex color to 6-digit with the character `#` stripped.
