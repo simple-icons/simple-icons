@@ -318,9 +318,9 @@ Here is the object of a fictional brand as an example:
 
 ```json
 {
-  "title": "A Fictional Brand",
-  "hex": "123456",
-  "source": "https://www.a-fictional-brand.org/logo"
+    "title": "A Fictional Brand",
+    "hex": "123456",
+    "source": "https://www.a-fictional-brand.org/logo"
 }
 ```
 
