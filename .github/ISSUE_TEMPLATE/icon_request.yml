@@ -51,7 +51,9 @@ body:
 
         [Similarweb rank]: https://www.similarweb.com
         [our contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity
-      placeholder: 'Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org'
+      placeholder:
+        'Example: The Similarweb rank is 261,758. See
+        https://www.similarweb.com/website/simpleicons.org'
     validations:
       required: true
 
