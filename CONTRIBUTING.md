@@ -380,10 +380,13 @@ We collect "also known as" names to make it easier to find brands that are known
 
 ```json
 {
-  "title": "the original title",
-  "aliases": {
-    "aka": ["tot", "thetitle"]
-  }
+    "title": "the original title",
+    "aliases": {
+        "aka": [
+            "tot",
+            "thetitle"
+        ]
+    }
 }
 ```
 
