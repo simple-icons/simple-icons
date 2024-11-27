@@ -17,6 +17,7 @@ const packageJsonFile = path.resolve(rootDirectory, 'package.json');
 const readmeFile = path.resolve(rootDirectory, 'README.md');
 
 /**
+ * Get the major version number from a semantic version string.
  * @param {string} semVersion A semantic version string.
  * @returns {number} The major version number.
  */
@@ -35,6 +36,7 @@ const getManifest = async () => {
 };
 
 /**
+ * Update the version number in the README.md.
  * @param {number} majorVersion The major version number.
  */
 const updateVersionInReadmeIfNecessary = async (majorVersion) => {

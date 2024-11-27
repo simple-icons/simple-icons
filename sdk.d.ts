@@ -2,7 +2,7 @@
  * @file
  * Types for Simple Icons SDK.
  */
-
+// eslint-disable-next-line n/file-extension-in-import
 import type {CustomLicense, SPDXLicense} from './types';
 
 /**
