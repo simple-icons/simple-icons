@@ -13,11 +13,17 @@
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
-import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
+import {
+  collator,
+  getIconsDataString,
+  normalizeNewlines,
+  titleToSlug,
+} from '../../sdk.mjs';
+import {getSpdxLicenseIds} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => string | undefined}}
+ * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
   /**
@@ -176,7 +182,6 @@ const TESTS = {
       }
 
       if (isRawGithubAssetUrl($url)) {
-        // https://github.com/LitoMore/simple-icons-cdn/blob/main/media/imgcat-screenshot.webp
         const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
         const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
         invalidUrls.push(fakeDiff(url, expectedUrl));
@@ -197,6 +202,27 @@ const TESTS = {
 
     if (invalidUrls.length > 0) {
       return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
+    }
+  },
+
+  /* Check if all licenses are valid SPDX identifiers */
+  async checkLicense(data) {
+    const spdxLicenseIds = new Set(await getSpdxLicenseIds());
+    const badLicenses = [];
+    for (const {title, slug, license} of data.icons) {
+      if (
+        license &&
+        license.type !== 'custom' &&
+        !spdxLicenseIds.has(license.type)
+      ) {
+        badLicenses.push(
+          `${title} (${slug ?? titleToSlug(title)}) has not a valid SPDX license.`,
+        );
+      }
+    }
+
+    if (badLicenses.length > 0) {
+      return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
     }
   },
 };
