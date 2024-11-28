@@ -370,13 +370,13 @@
         },
         {
             "title": "AEW",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:AEW_Logo_(simplified).svg",
             "aliases": {
                 "aka": [
                     "All Elite Wrestling"
                 ]
-            },
-            "hex": "000000",
-            "source": "https://commons.wikimedia.org/wiki/File:AEW_Logo_(simplified).svg"
+            }
         },
         {
             "title": "AFFiNE",
@@ -1040,10 +1040,10 @@
             "title": "Anki",
             "hex": "80C2EE",
             "source": "https://commons.wikimedia.org/wiki/File:Anki-icon.svg",
+            "guidelines": "https://github.com/ankitects/anki/blob/4ab0db3127af8508317f84174aff9d20faedc41a/LICENSE",
             "license": {
                 "type": "AGPL-3.0-only"
-            },
-            "guidelines": "https://github.com/ankitects/anki/blob/4ab0db3127af8508317f84174aff9d20faedc41a/LICENSE"
+            }
         },
         {
             "title": "Ansible",
@@ -4652,14 +4652,14 @@
         },
         {
             "title": "DVC",
+            "hex": "13ADC7",
+            "source": "https://iterative.ai/brand/",
+            "guidelines": "https://iterative.ai/brand/",
             "aliases": {
                 "aka": [
                     "Data Version Control"
                 ]
-            },
-            "hex": "13ADC7",
-            "source": "https://iterative.ai/brand/",
-            "guidelines": "https://iterative.ai/brand/"
+            }
         },
         {
             "title": "dwm",
@@ -5190,8 +5190,8 @@
         },
         {
             "title": "F#",
-            "hex": "378BBA",
             "slug": "fsharp",
+            "hex": "378BBA",
             "source": "https://foundation.fsharp.org/logo",
             "guidelines": "https://foundation.fsharp.org/logo",
             "aliases": {
@@ -6372,14 +6372,14 @@
         },
         {
             "title": "Google",
+            "hex": "4285F4",
+            "source": "https://partnermarketinghub.withgoogle.com",
+            "guidelines": "https://about.google/brand-resource-center/brand-elements/",
             "aliases": {
                 "loc": {
                     "ko-KR": "구글"
                 }
-            },
-            "hex": "4285F4",
-            "source": "https://partnermarketinghub.withgoogle.com",
-            "guidelines": "https://about.google/brand-resource-center/brand-elements/"
+            }
         },
         {
             "title": "Google AdMob",
@@ -8286,23 +8286,23 @@
         },
         {
             "title": "Kakao",
+            "hex": "FFCD00",
+            "source": "https://www.kakaocorp.com/kakao/introduce/ci",
             "aliases": {
                 "loc": {
                     "ko-KR": "카카오"
                 }
-            },
-            "hex": "FFCD00",
-            "source": "https://www.kakaocorp.com/kakao/introduce/ci"
+            }
         },
         {
             "title": "KakaoTalk",
+            "hex": "FFCD00",
+            "source": "https://commons.wikimedia.org/wiki/File:KakaoTalk_logo.svg",
             "aliases": {
                 "loc": {
                     "ko-KR": "카카오톡"
                 }
-            },
-            "hex": "FFCD00",
-            "source": "https://commons.wikimedia.org/wiki/File:KakaoTalk_logo.svg"
+            }
         },
         {
             "title": "Kali Linux",
@@ -8494,13 +8494,13 @@
         },
         {
             "title": "Kingston Technology",
+            "hex": "000000",
+            "source": "https://www.kingston.com",
             "aliases": {
                 "aka": [
                     "Kingston"
                 ]
-            },
-            "hex": "000000",
-            "source": "https://www.kingston.com"
+            }
         },
         {
             "title": "Kinopoisk",
@@ -8646,14 +8646,14 @@
         },
         {
             "title": "Kotlin",
+            "hex": "7F52FF",
+            "source": "https://www.jetbrains.com/company/brand/logos/",
+            "guidelines": "https://www.jetbrains.com/company/brand/",
             "aliases": {
                 "loc": {
                     "ko-KR": "코틀린"
                 }
-            },
-            "hex": "7F52FF",
-            "source": "https://www.jetbrains.com/company/brand/logos/",
-            "guidelines": "https://www.jetbrains.com/company/brand/"
+            }
         },
         {
             "title": "Koyeb",
@@ -9094,15 +9094,15 @@
         },
         {
             "title": "LINE",
+            "hex": "00C300",
+            "source": "https://line.me/en/logo",
+            "guidelines": "https://line.me/en/logo",
             "aliases": {
                 "loc": {
                     "ko-KR": "라인",
                     "ja-JP": "ライン"
                 }
-            },
-            "hex": "00C300",
-            "source": "https://line.me/en/logo",
-            "guidelines": "https://line.me/en/logo"
+            }
         },
         {
             "title": "LineageOS",
@@ -9915,14 +9915,14 @@
         },
         {
             "title": "MG",
+            "hex": "FF0000",
+            "source": "https://www.mg.co.uk/themes/custom/mg/assets/images/svg/mg-logo-desktop.svg",
+            "guidelines": "https://www.mg.co.uk/terms-and-conditions",
             "aliases": {
                 "aka": [
                     "Morris Garages"
                 ]
-            },
-            "hex": "FF0000",
-            "source": "https://www.mg.co.uk/themes/custom/mg/assets/images/svg/mg-logo-desktop.svg",
-            "guidelines": "https://www.mg.co.uk/terms-and-conditions"
+            }
         },
         {
             "title": "Micro Editor",
@@ -10159,8 +10159,8 @@
         },
         {
             "title": "Mongoose",
-            "hex": "F04D35",
             "slug": "mongoosedotws",
+            "hex": "F04D35",
             "source": "https://mongoose.ws"
         },
         {
@@ -10260,13 +10260,13 @@
         },
         {
             "title": "MSI",
+            "hex": "FF0000",
+            "source": "https://www.msi.com/page/brochure",
             "aliases": {
                 "aka": [
                     "Micro-Star International"
                 ]
-            },
-            "hex": "FF0000",
-            "source": "https://www.msi.com/page/brochure"
+            }
         },
         {
             "title": "MSI Business",
@@ -10290,13 +10290,13 @@
         },
         {
             "title": "MUI",
+            "hex": "007FFF",
+            "source": "https://github.com/mui-org/material-ui/blob/353cecb5391571163eb6bd8cbf36d2dd299aaf56/docs/src/icons/SvgMuiLogo.tsx",
             "aliases": {
                 "aka": [
                     "Material-UI"
                 ]
-            },
-            "hex": "007FFF",
-            "source": "https://github.com/mui-org/material-ui/blob/353cecb5391571163eb6bd8cbf36d2dd299aaf56/docs/src/icons/SvgMuiLogo.tsx"
+            }
         },
         {
             "title": "Mulesoft",
@@ -12155,13 +12155,13 @@
         },
         {
             "title": "PlayStation Portable",
+            "hex": "003791",
+            "source": "https://commons.wikimedia.org/wiki/File:PSP_Logo.svg",
             "aliases": {
                 "aka": [
                     "PSP"
                 ]
-            },
-            "hex": "003791",
-            "source": "https://commons.wikimedia.org/wiki/File:PSP_Logo.svg"
+            }
         },
         {
             "title": "PlayStation Vita",
@@ -13388,14 +13388,14 @@
         },
         {
             "title": "Republic of Gamers",
+            "hex": "FF0029",
+            "source": "https://rog.asus.com",
             "aliases": {
                 "aka": [
                     "ASUS ROG",
                     "ROG"
                 ]
-            },
-            "hex": "FF0029",
-            "source": "https://rog.asus.com"
+            }
         },
         {
             "title": "ReScript",
@@ -14873,13 +14873,13 @@
         {
             "title": "Sphere Online Judge",
             "slug": "spoj",
+            "hex": "337AB7",
+            "source": "https://www.spoj.com",
             "aliases": {
                 "aka": [
                     "SPOJ"
                 ]
-            },
-            "hex": "337AB7",
-            "source": "https://www.spoj.com"
+            }
         },
         {
             "title": "Sphinx",
@@ -15849,13 +15849,13 @@
         {
             "title": "Tether",
             "hex": "50AF95",
+            "source": "https://tether.to/branding/",
+            "guidelines": "https://tether.to/branding/",
             "aliases": {
                 "aka": [
                     "USDt"
                 ]
-            },
-            "source": "https://tether.to/branding/",
-            "guidelines": "https://tether.to/branding/"
+            }
         },
         {
             "title": "Textpattern",
@@ -15924,13 +15924,13 @@
         },
         {
             "title": "The Movie Database",
+            "hex": "01B4E4",
+            "source": "https://www.themoviedb.org/about/logos-attribution",
             "aliases": {
                 "aka": [
                     "TMDB"
                 ]
-            },
-            "hex": "01B4E4",
-            "source": "https://www.themoviedb.org/about/logos-attribution"
+            }
         },
         {
             "title": "The North Face",
@@ -17022,6 +17022,9 @@
         },
         {
             "title": "VictoriaMetrics",
+            "hex": "621773",
+            "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
+            "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo",
             "aliases": {
                 "aka": [
                     "VM"
@@ -17029,10 +17032,7 @@
                 "loc": {
                     "ko-KR": "빅토리아메트릭스"
                 }
-            },
-            "hex": "621773",
-            "source": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/24d61bf19374b42ef9839c13c7d35ce8888170e0/docs/assets/images/vm_logo.svg",
-            "guidelines": "https://docs.victoriametrics.com/#victoriametrics-logo"
+            }
         },
         {
             "title": "Victron Energy",
@@ -17058,13 +17058,13 @@
         },
         {
             "title": "Virgin",
+            "hex": "E10A0A",
+            "source": "https://www.virgin.com/img/virgin-logo-square.svg",
             "aliases": {
                 "aka": [
                     "Virgin Group"
                 ]
-            },
-            "hex": "E10A0A",
-            "source": "https://www.virgin.com/img/virgin-logo-square.svg"
+            }
         },
         {
             "title": "Virgin Atlantic",
@@ -17529,13 +17529,13 @@
         },
         {
             "title": "Welcome to the Jungle",
+            "hex": "FFCD00",
+            "source": "https://www.welcometothejungle.com",
             "aliases": {
                 "aka": [
                     "WTTJ"
                 ]
-            },
-            "hex": "FFCD00",
-            "source": "https://www.welcometothejungle.com"
+            }
         },
         {
             "title": "Wellfound",
@@ -17554,13 +17554,13 @@
         },
         {
             "title": "Western Digital",
+            "hex": "995DFF",
+            "source": "https://www.westerndigital.com",
             "aliases": {
                 "aka": [
                     "WD"
                 ]
-            },
-            "hex": "995DFF",
-            "source": "https://www.westerndigital.com"
+            }
         },
         {
             "title": "Western Union",
@@ -18074,14 +18074,14 @@
         },
         {
             "title": "Zcash",
+            "hex": "F3B724",
+            "source": "https://z.cash",
+            "guidelines": "https://zfnd.org/trademark-policy",
             "aliases": {
                 "aka": [
                     "ZEC"
                 ]
-            },
-            "hex": "F3B724",
-            "source": "https://z.cash",
-            "guidelines": "https://zfnd.org/trademark-policy"
+            }
         },
         {
             "title": "ZCOOL",
