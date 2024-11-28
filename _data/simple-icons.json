@@ -6286,15 +6286,15 @@
         },
         {
             "title": "GNU Free Documentation License",
-            "aliases": {
-                "aka": [
-                    "GFDL"
-                ]
-            },
             "hex": "2E439B",
             "source": "https://www.gnu.org/graphics/license-logos.html",
             "license": {
                 "type": "GFDL-1.3-only"
+            },
+            "aliases": {
+                "aka": [
+                    "GFDL"
+                ]
             }
         },
         {
