@@ -17041,8 +17041,13 @@
         },
         {
             "title": "VirtualBox",
-            "hex": "183A61",
-            "source": "https://commons.wikimedia.org/wiki/File:Virtualbox_logo.png"
+            "hex": "2F61B4",
+            "source": "https://www.virtualbox.org/svn/vbox/trunk/src/VBox/Artwork/OSE",
+            "aliases": {
+                "aka": [
+                    "Oracle VirtualBox"
+                ]
+            }
         },
         {
             "title": "VirusTotal",
