@@ -21,7 +21,7 @@ import {
   titleToSlug,
   urlRegex,
 } from '../sdk.mjs';
-import {getJsonSchemaData, writeIconsData} from './utils.js';
+import {getJsonSchemaData, getSpdxLicenseIds, writeIconsData} from './utils.js';
 
 /** @type {{icons: import('../sdk.js').IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
@@ -34,15 +34,13 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
   value: key,
 }));
 
-/** @type {{name: string, value: string}[]} */
-const licenseTypes =
-  jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-    (/** @type {string} */ license) => ({name: license, value: license}),
-  );
+const spdxLicenseIds = await getSpdxLicenseIds();
+const licenseTypes = spdxLicenseIds.map((id) => ({name: id, value: id}));
 
 /**
- * @param {string} input URL input
- * @returns {Promise<boolean|string>} Whether the input is a valid URL
+ * Whether an input is a valid URL.
+ * @param {string} input URL input.
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL.
  */
 const isValidURL = async (input) => {
   const regex = await urlRegex();
@@ -50,15 +48,17 @@ const isValidURL = async (input) => {
 };
 
 /**
- * @param {string} input Hex color
- * @returns {boolean|string} Whether the input is a valid hex color
+ * Whether an input is a valid hex color.
+ * @param {string} input Hex color.
+ * @returns {boolean|string} Whether the input is a valid hex color.
  */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
 /**
- * @param {string} input New icon input
- * @returns {boolean} Whether the icon is new
+ * Whether an icon is not already in the dataset.
+ * @param {string} input New icon input.
+ * @returns {boolean} Whether the icon is new.
  */
 const isNewIcon = (input) =>
   !iconsData.icons.some(
@@ -67,8 +67,9 @@ const isNewIcon = (input) =>
   );
 
 /**
- * @param {string} input Color input
- * @returns {string} Preview of the color
+ * Compute a preview of a color to use in prompt background.
+ * @param {string} input Color input.
+ * @returns {string} Preview of the color.
  */
 const previewHexColor = (input) => {
   const color = normalizeColor(input);
