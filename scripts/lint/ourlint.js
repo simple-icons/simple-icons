@@ -227,7 +227,7 @@ const TESTS = {
   },
 
   /* Ensure that all fields are sorted in the same way for all icons */
-  fieldsSorted(_, dataString) {
+  fieldsSorted({icons}) {
     const expectedOrder = [
       'title',
       'slug',
@@ -238,40 +238,22 @@ const TESTS = {
       'aliases',
     ];
 
-    let fields = [];
-    let title = '';
-    let slug = '';
     const errors = [];
-    for (const line of normalizeNewlines(dataString).split('\n')) {
-      if (line.startsWith('            "')) {
-        const lineSplit = line.split('"');
-        const field = lineSplit[1];
-        if (field === 'title') {
-          title = lineSplit[3];
-        } else if (field === 'slug') {
-          slug = lineSplit[3];
-        }
-
-        fields.push(field);
-      } else if (line.startsWith('        }')) {
-        const previousFields = [...fields];
-        fields.sort(
-          (a, b) => expectedOrder.indexOf(a) - expectedOrder.indexOf(b),
+    for (const icon of icons) {
+      const fields = Object.keys(icon);
+      const previousFields = [...fields];
+      fields.sort(
+        (a, b) => expectedOrder.indexOf(a) - expectedOrder.indexOf(b),
+      );
+      const previousFieldsString = JSON.stringify(previousFields);
+      const fieldsString = JSON.stringify(fields);
+      if (previousFieldsString !== fieldsString) {
+        const subject = icon.slug ? `${icon.title} (${icon.slug})` : icon.title;
+        errors.push(
+          `${subject} fields are not sorted.` +
+            ` Found ${previousFieldsString.replaceAll(',', ', ')},` +
+            ` but expected ${fieldsString.replaceAll(',', ', ')}`,
         );
-        const previousFieldsString = JSON.stringify(previousFields);
-        const fieldsString = JSON.stringify(fields);
-        if (previousFieldsString !== fieldsString) {
-          const icon = slug ? `${title} (${slug})` : title;
-          errors.push(
-            `${icon} fields are not sorted.` +
-              ` Found ${previousFieldsString.replaceAll(',', ', ')},` +
-              ` but expected ${fieldsString.replaceAll(',', ', ')}`,
-          );
-        }
-
-        fields = [];
-        title = '';
-        slug = '';
       }
     }
 
