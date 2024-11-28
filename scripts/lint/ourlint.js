@@ -226,7 +226,7 @@ const TESTS = {
     }
   },
 
-  /* Ensure that all fields are sorted in the same way for all icons */
+  /* Ensure that fields are sorted in the same way for all icons */
   fieldsSorted({icons}) {
     const expectedOrder = [
       'title',
