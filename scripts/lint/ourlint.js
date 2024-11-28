@@ -240,12 +240,15 @@ const TESTS = {
 
     let fields = [];
     let title = '';
+    let slug = '';
     const errors = [];
     for (const line of normalizeNewlines(iconsDataString).split('\n')) {
       if (line.startsWith('            "')) {
         const field = line.split('"')[1];
         if (field === 'title') {
           title = line.split('"')[3];
+        } else if (field === 'slug') {
+          slug = line.split('"')[3];
         }
 
         fields.push(field);
@@ -260,8 +263,9 @@ const TESTS = {
         const previousFieldsString = JSON.stringify(previousFields);
         const fieldsString = JSON.stringify(fields);
         if (previousFieldsString !== fieldsString) {
+          const icon = slug ? `${title} (${slug})` : title;
           errors.push(
-            `${title} fields are not sorted.` +
+            `${icon} fields are not sorted.` +
               ` Found ${previousFieldsString.replaceAll(',', ', ')},` +
               ` but expected ${fieldsString.replaceAll(',', ', ')}`,
           );
@@ -269,6 +273,7 @@ const TESTS = {
 
         fields = [];
         title = '';
+        slug = '';
       }
     }
 
