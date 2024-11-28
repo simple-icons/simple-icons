@@ -244,11 +244,12 @@ const TESTS = {
     const errors = [];
     for (const line of normalizeNewlines(iconsDataString).split('\n')) {
       if (line.startsWith('            "')) {
-        const field = line.split('"')[1];
+        const lineSplit = line.split('"');
+        const field = lineSplit[1];
         if (field === 'title') {
-          title = line.split('"')[3];
+          title = lineSplit[3];
         } else if (field === 'slug') {
-          slug = line.split('"')[3];
+          slug = lineSplit[3];
         }
 
         fields.push(field);
