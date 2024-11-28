@@ -23,7 +23,7 @@ import {getSpdxLicenseIds} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (data: {icons: IconsData}, iconsDataString: string) => Promise<string | undefined> | string | undefined}}
+ * @type {{[k: string]: (data: {icons: IconsData}, dataString: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
   /**
@@ -227,7 +227,7 @@ const TESTS = {
   },
 
   /* Ensure that all fields are sorted in the same way for all icons */
-  fieldsSorted(_, iconsDataString) {
+  fieldsSorted(_, dataString) {
     const expectedOrder = [
       'title',
       'slug',
@@ -242,7 +242,7 @@ const TESTS = {
     let title = '';
     let slug = '';
     const errors = [];
-    for (const line of normalizeNewlines(iconsDataString).split('\n')) {
+    for (const line of normalizeNewlines(dataString).split('\n')) {
       if (line.startsWith('            "')) {
         const lineSplit = line.split('"');
         const field = lineSplit[1];
