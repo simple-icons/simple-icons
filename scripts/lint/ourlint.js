@@ -252,10 +252,7 @@ const TESTS = {
         }
 
         fields.push(field);
-      } else if (
-        line.startsWith('        },') ||
-        line.startsWith('        }')
-      ) {
+      } else if (line.startsWith('        }')) {
         const previousFields = [...fields];
         fields.sort(
           (a, b) => expectedOrder.indexOf(a) - expectedOrder.indexOf(b),
