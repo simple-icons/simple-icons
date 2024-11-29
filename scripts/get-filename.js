@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Script that takes a brand name as argument and outputs the corresponding
  * icon SVG filename to standard output.
  */

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Rewrite some Markdown files.
  */
 
@@ -17,6 +17,10 @@ const rootDirectory = path.resolve(__dirname, '..', '..');
 const readmeFile = path.resolve(rootDirectory, 'README.md');
 const disclaimerFile = path.resolve(rootDirectory, 'DISCLAIMER.md');
 
+/**
+ * Reformat a file.
+ * @param {string} filePath Path to the file.
+ */
 const reformat = async (filePath) => {
   const fileContent = await readFile(filePath, 'utf8');
   await writeFile(
