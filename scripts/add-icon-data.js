@@ -1,4 +1,12 @@
 #!/usr/bin/env node
+/**
+ * @file
+ * Script to add data for a new icon to the simple-icons dataset.
+ */
+
+/**
+ * @typedef {import("../sdk.js").IconData} IconData
+ */
 import process from 'node:process';
 import {ExitPromptError} from '@inquirer/core';
 import {checkbox, confirm, input} from '@inquirer/prompts';
@@ -13,8 +21,9 @@ import {
   titleToSlug,
   urlRegex,
 } from '../sdk.mjs';
-import {getJsonSchemaData, writeIconsData} from './utils.js';
+import {getJsonSchemaData, getSpdxLicenseIds, writeIconsData} from './utils.js';
 
+/** @type {{icons: import('../sdk.js').IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
@@ -25,25 +34,43 @@ const aliasTypes = ['aka', 'old'].map((key) => ({
   value: key,
 }));
 
-const licenseTypes =
-  jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-    (license) => ({name: license, value: license}),
-  );
+const spdxLicenseIds = await getSpdxLicenseIds();
+const licenseTypes = spdxLicenseIds.map((id) => ({name: id, value: id}));
 
+/**
+ * Whether an input is a valid URL.
+ * @param {string} input URL input.
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL.
+ */
 const isValidURL = async (input) => {
   const regex = await urlRegex();
   return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
+/**
+ * Whether an input is a valid hex color.
+ * @param {string} input Hex color.
+ * @returns {boolean|string} Whether the input is a valid hex color.
+ */
 const isValidHexColor = (input) =>
   HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
+/**
+ * Whether an icon is not already in the dataset.
+ * @param {string} input New icon input.
+ * @returns {boolean} Whether the icon is new.
+ */
 const isNewIcon = (input) =>
   !iconsData.icons.some(
     (icon) =>
       icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
-  ) || 'This icon title or slug already exists.';
+  );
 
+/**
+ * Compute a preview of a color to use in prompt background.
+ * @param {string} input Color input.
+ * @returns {string} Preview of the color.
+ */
 const previewHexColor = (input) => {
   const color = normalizeColor(input);
   const luminance = HEX_REGEX.test(input)
@@ -60,7 +87,9 @@ try {
     title: await input({
       message: 'What is the title of this icon?',
       validate: (input) =>
-        input.trim().length > 0 ? isNewIcon(input) : 'This field is required.',
+        input.trim().length > 0
+          ? isNewIcon(input) || 'This icon title or slug already exists.'
+          : 'This field is required.',
     }),
     hex: normalizeColor(
       await input({
@@ -111,6 +140,7 @@ try {
         }).then(async (aliases) => {
           const result = {};
           for (const alias of aliases) {
+            // @ts-ignore
             // eslint-disable-next-line no-await-in-loop
             result[alias] = await input({
               message: `What ${alias} aliases would you like to add? (separate with commas)`,

@@ -55,6 +55,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 * Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
 * Doesn't fall into one of the following categories:
     - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
+    - Military-related brands and organizations
     - Governmental agencies, programs, departments
        - Allowed: International organizations and NGOs with supranational interests
        - Allowed: Space agencies
@@ -74,6 +75,7 @@ Some companies and organizations are excessively protective with their brands, s
 - International Olympic Committee
 - Mattel
 - Microchip Technology Inc.
+- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
 - Oracle
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
@@ -82,8 +84,7 @@ If you are in doubt, feel free to submit it and we'll have a look.
 ### Assessing Popularity
 
 > [!TIP]\
-> Similarweb is now trying to force users to log in in order to view statistics. You can bypass this by going directly to:
-> `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on!
+> Similarweb is now trying to force users to log in to view statistics. You can bypass this by going directly to `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on. You may need to use incognito mode if you visit these ranking pages often.
 
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
 
@@ -97,7 +98,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
     - [npm](https://www.npmjs.com): 100k weekly downloads,
-    - [JSDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
+    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
     - [crates.io](https://crates.io): 100k weekly downloads,
     - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
@@ -217,7 +218,7 @@ After optimizing the icon, double-check it against your original version to ensu
 
 Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
 
-* An svg element with:
+* An svg element with the following attributes, ordered respectively:
   * An img role attribute.
     * `role="img"`
   * A 24x24 viewbox.
