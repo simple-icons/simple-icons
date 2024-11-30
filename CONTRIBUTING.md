@@ -95,12 +95,12 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - In the top 10k, _with_ a global rank of 1m or better.
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
-    - [npm](https://www.npmjs.com): 100k weekly downloads,
-    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
-    - [crates.io](https://crates.io): 100k weekly downloads,
-    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
-    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
-    - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
+   - [npm](https://www.npmjs.com): 100k weekly downloads,
+   - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
+   - [crates.io](https://crates.io): 100k weekly downloads,
+   - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
+   - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
