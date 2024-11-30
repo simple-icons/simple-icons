@@ -79,14 +79,14 @@ jobs:
           github.event_name == 'pull_request' &&
           steps.changes.outputs.icons == 'true'
         run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
-      - name: Prepare docs
+      - name: Prepare docs (docs changed)
         # only lint changed docs
         if: |
           github.base_ref != 'master' &&
           github.event_name == 'pull_request' &&
           steps.changes.outputs.docs == 'true'
         run: sed -i "s/'\*\*\/\*\.md'/"'$npm_config_docs'"/" package.json
-      - name: Prepare docs
+      - name: Prepare docs (no docs changed)
         # only lint README.md if no changes in docs
         if: |
           github.base_ref != 'master' &&
