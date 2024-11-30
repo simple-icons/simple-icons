@@ -72,7 +72,7 @@ jobs:
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Reformat to regular markdown
-        run: node scripts/release/reformat-markdown.js "${{steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
         run: |
           git config user.name "simple-icons[bot]"
