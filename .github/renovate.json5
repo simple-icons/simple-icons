@@ -18,4 +18,10 @@
 
   // We manually update digest dependencies (eg. hashes in GitHub Actions)
   digest: {enabled: false},
+
+  // PR title and commit message when updating dependencies
+  commitMessage: 'Update dependencies',
+
+  // Simplify PR body when updating dependencies
+  prBodyTemplate: '{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}',
 }
