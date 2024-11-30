@@ -4728,6 +4728,16 @@
             "source": "https://www.ea.com"
         },
         {
+            "title": "EAC",
+            "hex": "000000",
+            "source": "https://commons.wikimedia.org/wiki/File:EAC-black-on-white.svg",
+            "aliases": {
+                "aka": [
+                    "Eurasian Conformity"
+                ]
+            }
+        },
+        {
             "title": "Eagle",
             "hex": "0072EF",
             "source": "https://en.eagle.cool"
@@ -7326,6 +7336,11 @@
             "title": "Honey",
             "hex": "FF6801",
             "source": "https://www.joinhoney.com"
+        },
+        {
+            "title": "Honeybadger",
+            "hex": "EA5937",
+            "source": "https://www.honeybadger.io/assets"
         },
         {
             "title": "Honeygain",
@@ -15178,6 +15193,11 @@
             "source": "https://starship.rs"
         },
         {
+            "title": "Startpage",
+            "hex": "6563FF",
+            "source": "https://startpage.com/en/about-us"
+        },
+        {
             "title": "STARZ",
             "hex": "082125",
             "source": "https://www.starz.com/takethelead"
@@ -16679,6 +16699,12 @@
             "guidelines": "https://brandguidelines.uipath.com"
         },
         {
+            "title": "UKCA",
+            "hex": "000000",
+            "source": "https://www.gov.uk/guidance/using-the-ukca-marking",
+            "guidelines": "https://www.gov.uk/guidance/using-the-ukca-marking"
+        },
+        {
             "title": "Ulule",
             "hex": "18A5D6",
             "source": "https://ulule.frontify.com/d/EX3dK8qsXgqh/branding-guidelines"
@@ -17000,6 +17026,11 @@
             "title": "Velog",
             "hex": "20C997",
             "source": "https://github.com/velopert/velog-client/blob/8fbbb371f4b4525b6747e54d0c608900ea8bf03e/src/static/svg/velog-icon.svg"
+        },
+        {
+            "title": "Vencord",
+            "hex": "D3859B",
+            "source": "https://github.com/Vencord/Vesktop/blob/ccff1ac3efde2b4fc826d2f411d79e42d80dcb70/build/icon.png"
         },
         {
             "title": "Venmo",
