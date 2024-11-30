@@ -26,6 +26,11 @@
             "source": "https://one.one.one.one"
         },
         {
+            "title": "1&1",
+            "hex": "003D8F",
+            "source": "https://www.united-internet.de/en/newsroom/media-center/logos.html"
+        },
+        {
             "title": "1001Tracklists",
             "hex": "40AEF0",
             "source": "https://www.1001tracklists.com"
@@ -2894,6 +2899,17 @@
             "title": "CBS",
             "hex": "033963",
             "source": "https://www.cbs.com"
+        },
+        {
+            "title": "CCC",
+            "hex": "000000",
+            "source": "https://www.cqc.com.cn/www/chinese/c/2018-03-20/553293.shtml",
+            "guidelines": "https://www.cqc.com.cn/www/chinese/c/2018-11-15/553292.shtml",
+            "aliases": {
+                "aka": [
+                    "China Compulsory Certificate"
+                ]
+            }
         },
         {
             "title": "CCleaner",
@@ -9733,6 +9749,11 @@
             "title": "Mazda",
             "hex": "101010",
             "source": "https://www.mazda.com/en/about/profile/library/"
+        },
+        {
+            "title": "Maze",
+            "hex": "000000",
+            "source": "https://mazedesign.notion.site/Press-Kit-421d405e76154662a547ce9ef2a3f018"
         },
         {
             "title": "McAfee",
