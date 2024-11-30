@@ -1,5 +1,10 @@
 name: Verify Source
-on: [pull_request, push]
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
 
 jobs:
   build:
@@ -8,10 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -24,10 +29,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Detect changed files
@@ -37,25 +42,54 @@ jobs:
           list-files: shell
           filters: |
             docs:
-              - '*.md'
+              - '*!(slugs).md'
               - '.github/**.md'
             icons:
               - 'icons/*.svg'
+            slugs:
+              - 'slugs.md'
+            sdkts:
+              - 'sdk.d.ts'
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Don't edit slugs.md in pull requests
+        if: |
+          github.base_ref != 'master' &&
+          github.event_name == 'pull_request' &&
+          steps.changes.outputs.slugs == 'true'
+        run: |
+          echo -ne "Detected slugs.md file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the slugs.md" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
+      - name: Don't edit sdk.d.ts in pull requests
+        if: |
+          github.base_ref != 'master' &&
+          github.event_name == 'pull_request' &&
+          steps.changes.outputs.sdkts == 'true'
+        run: |
+          echo -ne "Detected sdk.d.ts file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the sdk.d.ts" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
       - name: Install dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run linter
-        run: npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
+        run: |
+          sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
+          npm run lint --icons='${{ steps.changes.outputs.icons_files }}'
         env:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
-        if: steps.changes.outputs.docs == true
-        run: |
-          npx markdown-link-check --retry \
-            --config .github/markdown-link-check.json \
-            ${{ steps.changes.outputs.docs_files }}
-        continue-on-error: ${{ github.ref == 'refs/heads/develop' }}
+        if: steps.changes.outputs.docs == 'true'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: -- ${{ steps.changes.outputs.docs_files }}
+          fail: ${{ github.ref != 'refs/heads/develop' }}
+          failIfEmpty: false
+          jobSummary: true
+          format: markdown
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Verify file permissions
         run: |
           CHECK_DIRS="icons/ _data/"
@@ -80,10 +114,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies

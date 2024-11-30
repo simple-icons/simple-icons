@@ -1,6 +1,10 @@
-export default {
+/**
+ * @file SVGO configuration for Simple Icons.
+ */
+
+/** @type {import("svgo").Config} */
+const config = {
   multipass: true,
-  eol: 'lf',
   plugins: [
     'cleanupAttrs',
     'inlineStyles',
@@ -62,7 +66,7 @@ export default {
       // Convert basic shapes (such as <circle>) to <path>
       name: 'convertShapeToPath',
       params: {
-        // including <arc>
+        // Including <arc>
         convertArcs: true,
       },
     },
@@ -71,8 +75,8 @@ export default {
       // Sort the attributes on the <svg> tag
       name: 'sortAttrs',
       params: {
-        order: ['role', 'viewBox', 'xmlns'],
-        xmlnsOrder: 'end',
+        order: ['role', 'viewBox'],
+        xmlnsOrder: 'alphabetical',
       },
     },
     'sortDefsChildren',
@@ -87,13 +91,12 @@ export default {
         ],
       },
     },
-    'removeElementsByAttr',
     {
       // Keep the role="img" attribute and automatically add it
       // to the <svg> tag if it's not there already
       name: 'addAttributesToSVGElement',
       params: {
-        attributes: [{ role: 'img', xmlns: 'http://www.w3.org/2000/svg' }],
+        attributes: [{role: 'img', xmlns: 'http://www.w3.org/2000/svg'}],
       },
     },
     'removeOffCanvasPaths',
@@ -102,3 +105,5 @@ export default {
     'reusePaths',
   ],
 };
+
+export default config;
