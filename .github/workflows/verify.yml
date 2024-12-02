@@ -42,11 +42,35 @@ jobs:
           list-files: shell
           filters: |
             docs:
-              - '*.md'
+              - '*!(slugs).md'
               - '.github/**.md'
             icons:
               - 'icons/*.svg'
+            slugs:
+              - 'slugs.md'
+            sdkts:
+              - 'sdk.d.ts'
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Don't edit slugs.md in pull requests
+        if: |
+          github.base_ref != 'master' &&
+          github.event_name == 'pull_request' &&
+          steps.changes.outputs.slugs == 'true'
+        run: |
+          echo -ne "Detected slugs.md file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the slugs.md" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
+      - name: Don't edit sdk.d.ts in pull requests
+        if: |
+          github.base_ref != 'master' &&
+          github.event_name == 'pull_request' &&
+          steps.changes.outputs.sdkts == 'true'
+        run: |
+          echo -ne "Detected sdk.d.ts file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the sdk.d.ts" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
       - name: Install dependencies
         run: npm i --ignore-scripts --no-audit --no-fund
       - name: Run linter
