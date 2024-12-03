@@ -39,7 +39,9 @@ jobs:
 
   remove-closed-pr-labels:
     name: Remove closed pull request labels
-    if: github.event_name == 'pull_request_target' && (! github.event.pull_request.merged)
+    if: |
+      github.event_name == 'pull_request_target' &&
+      (!github.event.pull_request.merged)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/create-github-app-token@v1
