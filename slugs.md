@@ -11,11 +11,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `.NET` | `dotnet` |
 | `/e/` | `e` |
 | `1.1.1.1` | `1dot1dot1dot1` |
+| `1&1` | `1and1` |
 | `1001Tracklists` | `1001tracklists` |
 | `1Panel` | `1panel` |
 | `1Password` | `1password` |
 | `2FAS` | `2fas` |
 | `2K` | `2k` |
+| `30 seconds of code` | `30secondsofcode` |
 | `365 Data Science` | `365datascience` |
 | `3M` | `3m` |
 | `42` | `42` |
@@ -35,12 +37,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Academia` | `academia` |
 | `Accenture` | `accenture` |
 | `Accusoft` | `accusoft` |
+| `AccuWeather` | `accuweather` |
 | `Acer` | `acer` |
 | `ACM` | `acm` |
 | `ActiGraph` | `actigraph` |
 | `Activision` | `activision` |
 | `ActivityPub` | `activitypub` |
 | `Actix` | `actix` |
+| `Actual Budget` | `actualbudget` |
 | `Acura` | `acura` |
 | `Adafruit` | `adafruit` |
 | `AdBlock` | `adblock` |
@@ -79,6 +83,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Affinity Photo` | `affinityphoto` |
 | `Affinity Publisher` | `affinitypublisher` |
 | `Afterpay` | `afterpay` |
+| `AfterShip` | `aftership` |
 | `Agora` | `agora` |
 | `AI Dungeon` | `aidungeon` |
 | `AIB` | `aib` |
@@ -101,6 +106,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Airtel` | `airtel` |
 | `Ajv` | `ajv` |
 | `Akamai` | `akamai` |
+| `Akasa Air` | `akasaair` |
 | `Akaunting` | `akaunting` |
 | `Akiflow` | `akiflow` |
 | `Alacritty` | `alacritty` |
@@ -126,6 +132,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlmaLinux` | `almalinux` |
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
+| `AlternativeTo` | `alternativeto` |
 | `Alteryx` | `alteryx` |
 | `Altium Designer` | `altiumdesigner` |
 | `Alwaysdata` | `alwaysdata` |
@@ -193,6 +200,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache CloudStack` | `apachecloudstack` |
 | `Apache Cordova` | `apachecordova` |
 | `Apache CouchDB` | `apachecouchdb` |
+| `Apache DolphinScheduler` | `apachedolphinscheduler` |
 | `Apache Druid` | `apachedruid` |
 | `Apache ECharts` | `apacheecharts` |
 | `Apache Flink` | `apacheflink` |
@@ -205,8 +213,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache JMeter` | `apachejmeter` |
 | `Apache Kafka` | `apachekafka` |
 | `Apache Kylin` | `apachekylin` |
+| `Apache Lucene` | `apachelucene` |
 | `Apache Maven` | `apachemaven` |
 | `Apache NetBeans IDE` | `apachenetbeanside` |
+| `Apache NiFi` | `apachenifi` |
 | `Apache OpenOffice` | `apacheopenoffice` |
 | `Apache Parquet` | `apacheparquet` |
 | `Apache Pulsar` | `apachepulsar` |
@@ -273,6 +283,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ASUS` | `asus` |
 | `AT&T` | `atandt` |
 | `Atari` | `atari` |
+| `AtlasOS` | `atlasos` |
 | `Atlassian` | `atlassian` |
 | `Auchan` | `auchan` |
 | `Audacity` | `audacity` |
@@ -316,6 +327,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Babelio` | `babelio` |
 | `Babylon.js` | `babylondotjs` |
 | `Backblaze` | `backblaze` |
+| `Backbone` | `backbone` |
 | `Backbone.js` | `backbonedotjs` |
 | `Backendless` | `backendless` |
 | `Backstage` | `backstage` |
@@ -332,6 +344,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Baremetrics` | `baremetrics` |
 | `Barmenia` | `barmenia` |
 | `Basecamp` | `basecamp` |
+| `Baserow` | `baserow` |
 | `Basic Attention Token` | `basicattentiontoken` |
 | `Bastyon` | `bastyon` |
 | `bat` | `bat` |
@@ -438,6 +451,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bugsnag` | `bugsnag` |
 | `Buhl` | `buhl` |
 | `Buildkite` | `buildkite` |
+| `BuiltByBit` | `builtbybit` |
 | `Bukalapak` | `bukalapak` |
 | `Bulma` | `bulma` |
 | `Bun` | `bun` |
@@ -472,6 +486,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Canva` | `canva` |
 | `Canvas` | `canvas` |
 | `Capacitor` | `capacitor` |
+| `CapRover` | `caprover` |
 | `Car Throttle` | `carthrottle` |
 | `Cardano` | `cardano` |
 | `Carlsberg Group` | `carlsberggroup` |
@@ -485,8 +500,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Caterpillar` | `caterpillar` |
 | `CBC` | `cbc` |
 | `CBS` | `cbs` |
+| `CCC` | `ccc` |
 | `CCleaner` | `ccleaner` |
 | `CD Projekt` | `cdprojekt` |
+| `CE` | `ce` |
 | `Celery` | `celery` |
 | `Celestron` | `celestron` |
 | `CentOS` | `centos` |
@@ -523,6 +540,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chupa Chups` | `chupachups` |
 | `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
+| `Cinnamon` | `cinnamon` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
 | `CircuitVerse` | `circuitverse` |
@@ -536,6 +554,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clarifai` | `clarifai` |
 | `Claris` | `claris` |
 | `Clarivate` | `clarivate` |
+| `Claude` | `claude` |
 | `Clerk` | `clerk` |
 | `Clever Cloud` | `clevercloud` |
 | `ClickHouse` | `clickhouse` |
@@ -578,6 +597,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CodeceptJS` | `codeceptjs` |
 | `CodeChef` | `codechef` |
 | `Codecov` | `codecov` |
+| `CodeCrafters` | `codecrafters` |
 | `CodeFactor` | `codefactor` |
 | `Codeforces` | `codeforces` |
 | `Codefresh` | `codefresh` |
@@ -603,6 +623,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CoffeeScript` | `coffeescript` |
 | `Coggle` | `coggle` |
 | `Cognizant` | `cognizant` |
+| `cohost` | `cohost` |
 | `Coil` | `coil` |
 | `Coinbase` | `coinbase` |
 | `CoinMarketCap` | `coinmarketcap` |
@@ -623,11 +644,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Confluence` | `confluence` |
 | `Construct 3` | `construct3` |
 | `Consul` | `consul` |
+| `Contabo` | `contabo` |
 | `Contactless Payment` | `contactlesspayment` |
 | `containerd` | `containerd` |
 | `Contao` | `contao` |
 | `Contentful` | `contentful` |
 | `Contentstack` | `contentstack` |
+| `Continente` | `continente` |
 | `Contributor Covenant` | `contributorcovenant` |
 | `Conventional Commits` | `conventionalcommits` |
 | `Convertio` | `convertio` |
@@ -645,6 +668,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CountingWorks PRO` | `countingworkspro` |
 | `Coursera` | `coursera` |
 | `Coveralls` | `coveralls` |
+| `Coze` | `coze` |
 | `cPanel` | `cpanel` |
 | `Craft CMS` | `craftcms` |
 | `Craftsman` | `craftsman` |
@@ -665,6 +689,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CRYENGINE` | `cryengine` |
 | `CryptPad` | `cryptpad` |
 | `Crystal` | `crystal` |
+| `CSDN` | `csdn` |
 | `CSS Design Awards` | `cssdesignawards` |
 | `CSS Modules` | `cssmodules` |
 | `CSS Wizardry` | `csswizardry` |
@@ -717,6 +742,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DC Entertainment` | `dcentertainment` |
 | `De'Longhi` | `delonghi` |
 | `Debian` | `debian` |
+| `Debrid-Link` | `debridlink` |
 | `Decap CMS` | `decapcms` |
 | `Decentraland` | `decentraland` |
 | `DeepCool` | `deepcool` |
@@ -738,6 +764,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Bahn` | `deutschebahn` |
 | `Deutsche Bank` | `deutschebank` |
 | `Deutsche Post` | `deutschepost` |
+| `Deutsche Welle` | `deutschewelle` |
 | `dev.to` | `devdotto` |
 | `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
@@ -781,6 +808,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Douban Read` | `doubanread` |
 | `Dovecot` | `dovecot` |
 | `Dovetail` | `dovetail` |
+| `Downdetector` | `downdetector` |
 | `Doxygen` | `doxygen` |
 | `DPD` | `dpd` |
 | `Dragonframe` | `dragonframe` |
@@ -809,6 +837,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `E.Leclerc` | `edotleclerc` |
 | `E3` | `e3` |
 | `EA` | `ea` |
+| `EAC` | `eac` |
 | `Eagle` | `eagle` |
 | `EasyEDA` | `easyeda` |
 | `easyJet` | `easyjet` |
@@ -820,6 +849,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eclipse Jetty` | `eclipsejetty` |
 | `Eclipse Mosquitto` | `eclipsemosquitto` |
 | `Eclipse Vert.x` | `eclipsevertdotx` |
+| `Ecosia` | `ecosia` |
 | `Ecovacs` | `ecovacs` |
 | `EDEKA` | `edeka` |
 | `Edge Impulse` | `edgeimpulse` |
@@ -844,6 +874,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Element` | `element` |
 | `elementary` | `elementary` |
 | `Elementor` | `elementor` |
+| `ElevenLabs` | `elevenlabs` |
 | `Eleventy` | `eleventy` |
 | `Elgato` | `elgato` |
 | `Elixir` | `elixir` |
@@ -927,6 +958,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fathom` | `fathom` |
 | `Fauna` | `fauna` |
 | `Favro` | `favro` |
+| `FCC` | `fcc` |
 | `FeatHub` | `feathub` |
 | `FedEx` | `fedex` |
 | `Fedora` | `fedora` |
@@ -943,6 +975,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Figma` | `figma` |
 | `figshare` | `figshare` |
 | `Fila` | `fila` |
+| `Filament` | `filament` |
 | `File.io` | `filedotio` |
 | `Files` | `files` |
 | `FileZilla` | `filezilla` |
@@ -978,6 +1011,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
 | `Fluxus` | `fluxus` |
+| `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
@@ -1017,6 +1051,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `freelancermap` | `freelancermap` |
 | `FreeNAS` | `freenas` |
 | `Freepik` | `freepik` |
+| `Fresh` | `fresh` |
 | `Frontend Mentor` | `frontendmentor` |
 | `Frontify` | `frontify` |
 | `Fubo` | `fubo` |
@@ -1036,6 +1071,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Game & Watch` | `gameandwatch` |
 | `Game Developer` | `gamedeveloper` |
 | `Game Jolt` | `gamejolt` |
+| `Game Science` | `gamescience` |
 | `GameBanana` | `gamebanana` |
 | `Gameloft` | `gameloft` |
 | `Gamemaker` | `gamemaker` |
@@ -1083,6 +1119,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
 | `Glovo` | `glovo` |
+| `glTF` | `gltf` |
 | `Gmail` | `gmail` |
 | `GNOME` | `gnome` |
 | `GNOME Terminal` | `gnometerminal` |
@@ -1188,6 +1225,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GTK` | `gtk` |
 | `Guangzhou Metro` | `guangzhoumetro` |
 | `Guilded` | `guilded` |
+| `Guitar Pro` | `guitarpro` |
 | `gulp` | `gulp` |
 | `Gumroad` | `gumroad` |
 | `Gumtree` | `gumtree` |
@@ -1230,6 +1268,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `hearthis.at` | `hearthisdotat` |
 | `Hedera` | `hedera` |
 | `Helium` | `helium` |
+| `Helix` | `helix` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
 | `Helm` | `helm` |
@@ -1237,6 +1276,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HelpDesk` | `helpdesk` |
 | `Hepsiemlak` | `hepsiemlak` |
 | `HERE` | `here` |
+| `Hermes` | `hermes` |
 | `Heroku` | `heroku` |
 | `Hetzner` | `hetzner` |
 | `Hevy` | `hevy` |
@@ -1261,6 +1301,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `homify` | `homify` |
 | `Honda` | `honda` |
 | `Honey` | `honey` |
+| `Honeybadger` | `honeybadger` |
+| `Honeygain` | `honeygain` |
 | `Hono` | `hono` |
 | `Honor` | `honor` |
 | `Hootsuite` | `hootsuite` |
@@ -1273,6 +1315,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Houzz` | `houzz` |
 | `HP` | `hp` |
 | `HSBC` | `hsbc` |
+| `HTC` | `htc` |
+| `HTC Vive` | `htcvive` |
 | `HTML Academy` | `htmlacademy` |
 | `HTML5` | `html5` |
 | `htmx` | `htmx` |
@@ -1283,10 +1327,12 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hugging Face` | `huggingface` |
 | `Hugo` | `hugo` |
 | `Humble Bundle` | `humblebundle` |
+| `HumHub` | `humhub` |
 | `Hungry Jack's` | `hungryjacks` |
 | `Husqvarna` | `husqvarna` |
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
+| `HyperX` | `hyperx` |
 | `Hypothesis` | `hypothesis` |
 | `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
@@ -1329,6 +1375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Indian Super League` | `indiansuperleague` |
 | `Indie Hackers` | `indiehackers` |
 | `IndiGo` | `indigo` |
+| `Inductive Automation` | `inductiveautomation` |
 | `Inertia` | `inertia` |
 | `INFINITI` | `infiniti` |
 | `InfluxDB` | `influxdb` |
@@ -1385,6 +1432,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jamboard` | `jamboard` |
 | `Jameson` | `jameson` |
 | `Jamstack` | `jamstack` |
+| `Japan Airlines` | `japanairlines` |
 | `Jasmine` | `jasmine` |
 | `JavaScript` | `javascript` |
 | `JBL` | `jbl` |
@@ -1449,11 +1497,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Katana` | `katana` |
 | `Kaufland` | `kaufland` |
 | `KDE` | `kde` |
+| `KDE Plasma` | `kdeplasma` |
 | `Kdenlive` | `kdenlive` |
 | `Kedro` | `kedro` |
 | `Keenetic` | `keenetic` |
 | `Keep a Changelog` | `keepachangelog` |
 | `KeePassXC` | `keepassxc` |
+| `KeeWeb` | `keeweb` |
 | `Kentico` | `kentico` |
 | `Keras` | `keras` |
 | `Keybase` | `keybase` |
@@ -1516,6 +1566,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
 | `Laravel` | `laravel` |
@@ -1533,6 +1584,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `League of Legends` | `leagueoflegends` |
 | `Leanpub` | `leanpub` |
 | `LeetCode` | `leetcode` |
+| `Lefthook` | `lefthook` |
 | `Legacy Games` | `legacygames` |
 | `Leica` | `leica` |
 | `Lemmy` | `lemmy` |
@@ -1560,6 +1612,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LibreOffice Impress` | `libreofficeimpress` |
 | `LibreOffice Math` | `libreofficemath` |
 | `LibreOffice Writer` | `libreofficewriter` |
+| `LibreTranslate` | `libretranslate` |
+| `LibreTube` | `libretube` |
 | `LibreWolf` | `librewolf` |
 | `libuv` | `libuv` |
 | `Lichess` | `lichess` |
@@ -1589,12 +1643,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `listmonk` | `listmonk` |
 | `Lit` | `lit` |
 | `Litecoin` | `litecoin` |
+| `Literal` | `literal` |
 | `LITIENGINE` | `litiengine` |
 | `LiveChat` | `livechat` |
 | `LiveJournal` | `livejournal` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
+| `Lobsters` | `lobsters` |
 | `Local` | `local` |
 | `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
@@ -1614,6 +1670,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lubuntu` | `lubuntu` |
 | `Lucia` | `lucia` |
 | `Lucid` | `lucid` |
+| `Lucide` | `lucide` |
 | `Ludwig` | `ludwig` |
 | `Lufthansa` | `lufthansa` |
 | `Lumen` | `lumen` |
@@ -1632,6 +1689,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mahindra` | `mahindra` |
 | `mail.com` | `maildotcom` |
 | `Mail.Ru` | `maildotru` |
+| `mailbox.org` | `mailboxdotorg` |
 | `MailChimp` | `mailchimp` |
 | `Mailgun` | `mailgun` |
 | `Mailtrap` | `mailtrap` |
@@ -1648,7 +1706,9 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Manjaro` | `manjaro` |
 | `Mantine` | `mantine` |
 | `Mapbox` | `mapbox` |
+| `Mapillary` | `mapillary` |
 | `MapLibre` | `maplibre` |
+| `MapTiler` | `maptiler` |
 | `MariaDB` | `mariadb` |
 | `MariaDB Foundation` | `mariadbfoundation` |
 | `Markdown` | `markdown` |
@@ -1674,6 +1734,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Max-Planck-Gesellschaft` | `maxplanckgesellschaft` |
 | `Maytag` | `maytag` |
 | `Mazda` | `mazda` |
+| `Maze` | `maze` |
 | `McAfee` | `mcafee` |
 | `McDonald's` | `mcdonalds` |
 | `McLaren` | `mclaren` |
@@ -1682,6 +1743,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MDX` | `mdx` |
 | `MediaFire` | `mediafire` |
 | `MediaMarkt` | `mediamarkt` |
+| `MediaPipe` | `mediapipe` |
 | `MediaTek` | `mediatek` |
 | `MediBang Paint` | `medibangpaint` |
 | `Medium` | `medium` |
@@ -1720,11 +1782,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MicroStrategy` | `microstrategy` |
 | `MIDI` | `midi` |
 | `Migadu` | `migadu` |
+| `miHoYo` | `mihoyo` |
 | `Mikrotik` | `mikrotik` |
 | `Milanote` | `milanote` |
 | `Milvus` | `milvus` |
 | `Minds` | `minds` |
 | `Minetest` | `minetest` |
+| `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
@@ -1799,6 +1863,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NameSilo` | `namesilo` |
 | `Namu Wiki` | `namuwiki` |
 | `Nano` | `nano` |
+| `Nano Stores` | `nanostores` |
 | `NASA` | `nasa` |
 | `National Grid` | `nationalgrid` |
 | `National Rail` | `nationalrail` |
@@ -1810,6 +1875,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NBC` | `nbc` |
 | `NDR` | `ndr` |
 | `NEAR` | `near` |
+| `Nebula` | `nebula` |
 | `NEC` | `nec` |
 | `Neo4j` | `neo4j` |
 | `Neovim` | `neovim` |
@@ -1831,6 +1897,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `New Relic` | `newrelic` |
 | `New York Times` | `newyorktimes` |
 | `Newegg` | `newegg` |
+| `Nexon` | `nexon` |
 | `Next.js` | `nextdotjs` |
 | `NextBillion.ai` | `nextbilliondotai` |
 | `Nextcloud` | `nextcloud` |
@@ -1893,6 +1960,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NXP` | `nxp` |
 | `NZXT` | `nzxt` |
 | `O'Reilly` | `oreilly` |
+| `O2` | `o2` |
 | `OBS Studio` | `obsstudio` |
 | `Observable` | `observable` |
 | `Obsidian` | `obsidian` |
@@ -1904,12 +1972,15 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OctoPrint` | `octoprint` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
+| `Odin` | `odin` |
 | `Odnoklassniki` | `odnoklassniki` |
 | `Odoo` | `odoo` |
 | `Odysee` | `odysee` |
 | `Oh Dear` | `ohdear` |
 | `okcupid` | `okcupid` |
 | `Okta` | `okta` |
+| `OKX` | `okx` |
+| `Ollama` | `ollama` |
 | `OnePlus` | `oneplus` |
 | `OnlyFans` | `onlyfans` |
 | `ONLYOFFICE` | `onlyoffice` |
@@ -1974,6 +2045,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
 | `Otto` | `otto` |
+| `Outline` | `outline` |
 | `Overcast` | `overcast` |
 | `Overleaf` | `overleaf` |
 | `OVH` | `ovh` |
@@ -2059,6 +2131,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Picnic` | `picnic` |
 | `PicPay` | `picpay` |
 | `Picrew` | `picrew` |
+| `Picsart` | `picsart` |
 | `Picxy` | `picxy` |
 | `Pimcore` | `pimcore` |
 | `Pinboard` | `pinboard` |
@@ -2148,8 +2221,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Prezi` | `prezi` |
 | `Prime` | `prime` |
 | `Prime Video` | `primevideo` |
+| `PrimeFaces` | `primefaces` |
 | `PrimeNG` | `primeng` |
 | `PrimeReact` | `primereact` |
+| `PrimeVue` | `primevue` |
 | `Printables` | `printables` |
 | `Prisma` | `prisma` |
 | `Prismic` | `prismic` |
@@ -2282,6 +2357,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Recoil` | `recoil` |
 | `Red` | `red` |
 | `Red Bull` | `redbull` |
+| `Red Candle Games` | `redcandlegames` |
 | `Red Hat` | `redhat` |
 | `Red Hat Open Shift` | `redhatopenshift` |
 | `Redash` | `redash` |
@@ -2290,12 +2366,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Redis` | `redis` |
 | `Redmine` | `redmine` |
 | `Redox` | `redox` |
+| `Redragon` | `redragon` |
 | `Redsys` | `redsys` |
 | `Redux` | `redux` |
 | `Redux-Saga` | `reduxsaga` |
 | `RedwoodJS` | `redwoodjs` |
 | `Reebok` | `reebok` |
 | `Refine` | `refine` |
+| `Refined GitHub` | `refinedgithub` |
 | `Relay` | `relay` |
 | `Reliance Industries Limited` | `relianceindustrieslimited` |
 | `remark` | `remark` |
@@ -2343,6 +2421,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Robinhood` | `robinhood` |
 | `Roblox` | `roblox` |
 | `Roblox Studio` | `robloxstudio` |
+| `Roboflow` | `roboflow` |
 | `Robot Framework` | `robotframework` |
 | `Rocket` | `rocket` |
 | `Rocket.Chat` | `rocketdotchat` |
@@ -2452,6 +2531,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Semrush` | `semrush` |
 | `SemVer` | `semver` |
 | `Sencha` | `sencha` |
+| `SendGrid` | `sendgrid` |
 | `Sennheiser` | `sennheiser` |
 | `Sensu` | `sensu` |
 | `Sentry` | `sentry` |
@@ -2487,12 +2567,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Siemens` | `siemens` |
 | `SiFive` | `sifive` |
 | `Signal` | `signal` |
+| `Silver Airways` | `silverairways` |
 | `Similarweb` | `similarweb` |
 | `Simkl` | `simkl` |
 | `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
 | `SimpleLogin` | `simplelogin` |
 | `Simplenote` | `simplenote` |
+| `SimpleX` | `simplex` |
 | `Sina Weibo` | `sinaweibo` |
 | `Singapore Airlines` | `singaporeairlines` |
 | `SingleStore` | `singlestore` |
@@ -2523,6 +2605,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SmugMug` | `smugmug` |
 | `Snapchat` | `snapchat` |
 | `Snapcraft` | `snapcraft` |
+| `Snapdragon` | `snapdragon` |
 | `SNCF` | `sncf` |
 | `Snort` | `snort` |
 | `Snowflake` | `snowflake` |
@@ -2613,6 +2696,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Stardock` | `stardock` |
 | `Starling Bank` | `starlingbank` |
 | `Starship` | `starship` |
+| `Startpage` | `startpage` |
 | `STARZ` | `starz` |
 | `Statamic` | `statamic` |
 | `Statista` | `statista` |
@@ -2657,6 +2741,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subtitle Edit` | `subtitleedit` |
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
+| `Sui` | `sui` |
 | `Sumo Logic` | `sumologic` |
 | `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
@@ -2672,8 +2757,10 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SVG` | `svg` |
 | `SVG.js` | `svgdotjs` |
 | `SVGO` | `svgo` |
+| `SvgTrace` | `svgtrace` |
 | `Swagger` | `swagger` |
 | `Swarm` | `swarm` |
+| `Sway` | `sway` |
 | `SWC` | `swc` |
 | `Swift` | `swift` |
 | `Swiggy` | `swiggy` |
@@ -2708,6 +2795,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
 | `Target` | `target` |
+| `TAROM` | `tarom` |
 | `Task` | `task` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
@@ -2744,10 +2832,12 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Textpattern` | `textpattern` |
 | `TGA` | `tga` |
 | `Thangs` | `thangs` |
+| `Thanos` | `thanos` |
 | `The Algorithms` | `thealgorithms` |
 | `The Boring Company` | `theboringcompany` |
 | `The Conversation` | `theconversation` |
 | `THE FINALS` | `thefinals` |
+| `The Guardian` | `theguardian` |
 | `The Irish Times` | `theirishtimes` |
 | `The Mighty` | `themighty` |
 | `The Models Resource` | `themodelsresource` |
@@ -2758,6 +2848,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Sounds Resource` | `thesoundsresource` |
 | `The Spriters Resource` | `thespritersresource` |
 | `The Washington Post` | `thewashingtonpost` |
+| `The Weather Channel` | `theweatherchannel` |
 | `Thingiverse` | `thingiverse` |
 | `ThinkPad` | `thinkpad` |
 | `thirdweb` | `thirdweb` |
@@ -2830,6 +2921,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Trilium` | `trilium` |
 | `Triller` | `triller` |
 | `TrillerTV` | `trillertv` |
+| `Trimble` | `trimble` |
 | `Trino` | `trino` |
 | `Trip.com` | `tripdotcom` |
 | `Tripadvisor` | `tripadvisor` |
@@ -2867,6 +2959,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TypeScript` | `typescript` |
 | `TYPO3` | `typo3` |
 | `Typst` | `typst` |
+| `U.S. News` | `udotsdotnews` |
 | `Uber` | `uber` |
 | `Uber Eats` | `ubereats` |
 | `Ubiquiti` | `ubiquiti` |
@@ -2879,6 +2972,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `UFC` | `ufc` |
 | `UIkit` | `uikit` |
 | `UiPath` | `uipath` |
+| `UKCA` | `ukca` |
 | `Ulule` | `ulule` |
 | `Umami` | `umami` |
 | `Umbraco` | `umbraco` |
@@ -2913,6 +3007,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Upwork` | `upwork` |
 | `USPS` | `usps` |
 | `uTorrent` | `utorrent` |
+| `uv` | `uv` |
 | `V` | `v` |
 | `V2EX` | `v2ex` |
 | `V8` | `v8` |
@@ -2935,12 +3030,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vega` | `vega` |
 | `VEGAS` | `vegas` |
 | `Velog` | `velog` |
+| `Vencord` | `vencord` |
 | `Venmo` | `venmo` |
 | `Vercel` | `vercel` |
 | `Verdaccio` | `verdaccio` |
 | `Veritas` | `veritas` |
 | `Verizon` | `verizon` |
 | `Vespa` | `vespa` |
+| `Vestel` | `vestel` |
 | `VEXXHOST` | `vexxhost` |
 | `vFairs` | `vfairs` |
 | `Viadeo` | `viadeo` |
@@ -2980,6 +3077,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Voron Design` | `vorondesign` |
 | `Vowpal Wabbit` | `vowpalwabbit` |
 | `VOX` | `vox` |
+| `VRChat` | `vrchat` |
 | `VSCO` | `vsco` |
 | `VSCodium` | `vscodium` |
 | `VTEX` | `vtex` |
@@ -3054,6 +3152,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wikiquote` | `wikiquote` |
 | `Wikivoyage` | `wikivoyage` |
 | `Winamp` | `winamp` |
+| `Wine` | `wine` |
 | `Wipro` | `wipro` |
 | `Wire` | `wire` |
 | `WireGuard` | `wireguard` |
@@ -3092,11 +3191,13 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xiaohongshu` | `xiaohongshu` |
 | `Xiaomi` | `xiaomi` |
 | `Xing` | `xing` |
+| `XML` | `xml` |
 | `XMPP` | `xmpp` |
 | `XO` | `xo` |
 | `XRP` | `xrp` |
 | `XSplit` | `xsplit` |
 | `XState` | `xstate` |
+| `Xubuntu` | `xubuntu` |
 | `Y Combinator` | `ycombinator` |
 | `yabai` | `yabai` |
 | `Yale` | `yale` |
@@ -3107,6 +3208,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yarn` | `yarn` |
 | `Yelp` | `yelp` |
 | `Yeti` | `yeti` |
+| `Yii` | `yii` |
 | `Yoast` | `yoast` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
@@ -3139,6 +3241,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zenodo` | `zenodo` |
 | `Zensar` | `zensar` |
 | `Zerodha` | `zerodha` |
+| `ZeroTier` | `zerotier` |
 | `Zerply` | `zerply` |
 | `Zettlr` | `zettlr` |
 | `Zhihu` | `zhihu` |
