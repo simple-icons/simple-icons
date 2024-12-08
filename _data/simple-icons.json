@@ -4512,7 +4512,12 @@
         {
             "title": "dm",
             "hex": "002878",
-            "source": "https://www.dm.de"
+            "source": "https://www.dmtech.tech",
+            "aliases": {
+                "aka": [
+                    "dm-drogerie markt"
+                ]
+            }
         },
         {
             "title": "Docker",
