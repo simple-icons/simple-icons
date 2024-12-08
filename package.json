@@ -1,6 +1,6 @@
 {
   "name": "simple-icons",
-  "version": "13.19.0",
+  "version": "13.20.0",
   "description": "SVG icons for popular brands https://simpleicons.org",
   "homepage": "https://simpleicons.org",
   "keywords": [
@@ -123,7 +123,7 @@
     "jsonlint": "node scripts/lint/jsonlint.js",
     "svglint": "svglint --ci --config svglint.config.mjs icons/*.svg",
     "wslint": "editorconfig-checker",
-    "markdownlint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "markdownlint": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "postpublish": "npm run clean",
