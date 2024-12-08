@@ -170,7 +170,7 @@ const TESTS = {
 
     const invalidUrls = [];
     for (const [isSourceUrl, url] of allUrlFields) {
-      const $url = new global.URL(url);
+      const $url = new globalThis.URL(url);
 
       if (hasRedundantTrailingSlash($url, url)) {
         invalidUrls.push(fakeDiff(url, $url.origin));
