@@ -1107,6 +1107,11 @@
             "source": "https://www.anthropic.com"
         },
         {
+            "title": "AntV",
+            "hex": "8B5DFF",
+            "source": "https://antv.vision"
+        },
+        {
             "title": "Anycubic",
             "hex": "476695",
             "source": "https://store.anycubic.com/pages/firmware-software"
@@ -12104,6 +12109,11 @@
             }
         },
         {
+            "title": "phpBB",
+            "hex": "009BDF",
+            "source": "https://www.phpbb.com/about/logos"
+        },
+        {
             "title": "phpMyAdmin",
             "hex": "6C78AF",
             "source": "https://github.com/phpmyadmin/data/blob/b7d3bdb9bb973beff4726541b87d3a4c8a950b4b/brand/phpMyAdmin-Logo-Symbol.svg"
@@ -13558,7 +13568,7 @@
         },
         {
             "title": "Renovate",
-            "hex": "1A1F6C",
+            "hex": "308BE3",
             "source": "https://avatars1.githubusercontent.com/u/38656520",
             "guidelines": "https://docs.renovatebot.com/logo-brand-guidelines"
         },
@@ -14836,9 +14846,23 @@
             "source": "https://society6.com"
         },
         {
+            "title": "Socket",
+            "hex": "C93CD7",
+            "source": "https://github.com/SocketDev/vscode-socket-security/blob/06c5fdc59fad40ae87b3d42c5c42cd17c6edaf17/logo-red.svg"
+        },
+        {
             "title": "Socket.io",
             "hex": "010101",
             "source": "https://socket.io"
+        },
+        {
+            "title": "Softcatalà",
+            "hex": "BA2626",
+            "source": "https://www.softcatala.org/uploads/2016/03/SC_marca.svg",
+            "guidelines": "https://www.softcatala.org/premsa/imatge-corporativa",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Softpedia",
@@ -15601,6 +15625,11 @@
             "title": "Supermicro",
             "hex": "151F6D",
             "source": "https://www.supermicro.com/manuals/supermicro_logo_guidelines.pdf"
+        },
+        {
+            "title": "Surfshark",
+            "hex": "1EBFBF",
+            "source": "https://surfshark.com/press/assets"
         },
         {
             "title": "SurrealDB",
@@ -17617,6 +17646,11 @@
             "title": "Weasyl",
             "hex": "990000",
             "source": "https://www.weasyl.com"
+        },
+        {
+            "title": "WEB.DE",
+            "hex": "FFD800",
+            "source": "https://web.de"
         },
         {
             "title": "Web3.js",
