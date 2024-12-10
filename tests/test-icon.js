@@ -20,9 +20,10 @@ const iconsDirectory = path.resolve(
 
 /**
  * Checks if icon data matches a subject icon.
- * @param {import('../sdk.d.ts').IconData} icon Icon data
- * @param {import('../types.d.ts').SimpleIcon} subject Icon object to check against icon data
- * @param {string} slug Icon data slug
+ * @param {import('../sdk.d.ts').IconData} icon Icon data.
+ * @param {import('../types.d.ts').SimpleIcon} subject
+ * Icon object to check against icon data.
+ * @param {string} slug Icon data slug.
  */
 export const testIcon = (icon, subject, slug) => {
   const svgPath = path.resolve(iconsDirectory, `${slug}.svg`);
