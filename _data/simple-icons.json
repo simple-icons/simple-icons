@@ -11583,10 +11583,19 @@
             "guidelines": "https://newsroom.paypal-corp.com/media-resources"
         },
         {
-            "title": "paysafecard",
-            "hex": "3200FF",
-            "source": "https://brand.paysafe.com/paysafecard/all-downloads",
-            "guidelines": "https://brand.paysafe.com/paysafecard"
+            "title": "Paysafe",
+            "hex": "5A28FF",
+            "source": https://brand.paysafe.com,
+            "guidelines": "https://brand.paysafe.com"
+            "aliases": {
+                "dup": [
+                    {
+                        "title": "PaysafeCard",
+                        "hex": "0036C2",
+                        "guidelines": "https://brand.paysafe.com/paysafecard"
+                    }
+                ]
+            }
         },
         {
             "title": "Paytm",
