@@ -5,13 +5,11 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import process from 'node:process';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
 import {
   SVG_PATH_REGEX,
-  collator,
   getDirnameFromImportMeta,
   getIconsData,
   htmlFriendlyToTitle,
@@ -24,15 +22,10 @@ const htmlNamedEntitiesFile = path.join(
   'named-html-entities-json',
   'index.json',
 );
-const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
 const icons = await getIconsData();
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
-);
-/** @type {{ [key: string]: { [key: string]: string } }} */
-const svglintIgnores = JSON.parse(
-  await fs.readFile(svglintIgnoredFile, 'utf8'),
 );
 
 const svgRegexp =
@@ -44,35 +37,6 @@ const iconTargetCenter = iconSize / 2;
 const iconFloatPrecision = 3;
 const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
-
-// Set env SI_UPDATE_IGNORE to recreate the ignore file
-const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
-const ignoreFile = './.svglint-ignored.json';
-const iconIgnored = updateIgnoreFile ? {} : svglintIgnores;
-
-/**
- * @param {{ [key: string]: any }} object Object to sort by key
- * @returns {{ [key: string]: any }} Object sorted by key
- */
-const sortObjectByKey = (object) => {
-  return Object.fromEntries(
-    Object.keys(object)
-      .sort()
-      .map((k) => [k, object[k]]),
-  );
-};
-
-/**
- * @param {{ [key: string]: any }} object Object to sort by value
- * @returns {{ [key: string]: any }} Object sorted by value
- */
-const sortObjectByValue = (object) => {
-  return Object.fromEntries(
-    Object.keys(object)
-      .sort((a, b) => collator.compare(object[a], object[b]))
-      .map((k) => [k, object[k]]),
-  );
-};
 
 /**
  * Remove leading zeros from a number as a string.
@@ -139,22 +103,6 @@ const getTitleTextIndex = (svgFileContent) => {
 };
 
 /**
- * Convert a hexadecimal number passed as string to decimal number as integer.
- * @param {string} hex The hexadecimal number representation to convert.
- * @returns {number} The decimal number representation.
- */
-const hexadecimalToDecimal = (hex) => {
-  let result = 0;
-  let digitValue;
-  for (const digit of hex.toLowerCase()) {
-    digitValue = '0123456789abcdefgh'.indexOf(digit);
-    result = result * 16 + digitValue;
-  }
-
-  return result;
-};
-
-/**
  * Shorten a string with ellipsis if it exceeds 20 characters.
  * @param {string} string_ The string to shorten.
  * @returns {string} The shortened string.
@@ -201,49 +149,6 @@ const getIconPath = memoize(($icon) => $icon.find('path').attr('d'));
 const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
 /** @type {(iconPath: string) => import('svg-path-bbox').BBox} */
 const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
-
-if (updateIgnoreFile) {
-  process.on('exit', async () => {
-    // Ensure object output order is consistent due to async svglint processing
-    const sorted = sortObjectByKey(iconIgnored);
-    for (const linterName in sorted) {
-      if (linterName) {
-        sorted[linterName] = sortObjectByValue(sorted[linterName]);
-      }
-    }
-
-    await fs.writeFile(ignoreFile, JSON.stringify(sorted, null, 2) + '\n', {
-      flag: 'w',
-    });
-  });
-}
-
-/**
- * Check if an icon is ignored by a linter rule.
- * @param {string} linterRule The name of the linter rule.
- * @param {string} path SVG path of the icon.
- * @returns {boolean} Whether the icon is ignored by the linter rule
- */
-const isIgnored = (linterRule, path) => {
-  return (
-    iconIgnored[linterRule] && Object.hasOwn(iconIgnored[linterRule], path)
-  );
-};
-
-/**
- * Ignore an icon for a linter rule.
- * @param {string} linterRule The name of the linter rule.
- * @param {string} path SVG path of the icon.
- * @param {Cheerio} $ The SVG object
- */
-const ignoreIcon = (linterRule, path, $) => {
-  iconIgnored[linterRule] ||= {};
-
-  const title = $.find('title').text();
-  const iconName = htmlFriendlyToTitle(title);
-
-  iconIgnored[linterRule][path] = iconName;
-};
 
 /** @type {import('svglint').Config} */
 const config = {
@@ -298,7 +203,7 @@ const config = {
           for (const match of hexadecimalCodepoints) {
             const charHexReprIndex =
               getTitleTextIndex(ast.source) + match.index + 1;
-            const charDec = hexadecimalToDecimal(match[1]);
+            const charDec = Number.parseInt(match[1], 16);
 
             let charRepr;
             if (xmlNamedEntitiesCodepoints.includes(charDec)) {
@@ -453,9 +358,6 @@ const config = {
         reporter.name = 'icon-size';
 
         const iconPath = getIconPath($);
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
 
         const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const width = Number((maxX - minX).toFixed(iconFloatPrecision));
@@ -465,17 +367,11 @@ const config = {
           reporter.error(
             'Path bounds were reported as 0 x 0; check if the path is valid',
           );
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         } else if (width !== iconSize && height !== iconSize) {
           reporter.error(
             `Size of <path> must be exactly ${iconSize} in one dimension;` +
               ` the size is currently ${width} x ${height}`,
           );
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         }
       },
       (reporter, $, ast) => {
@@ -522,8 +418,12 @@ const config = {
         /** @type {import('svg-path-segments').Segment[]} */
         // TODO: svgpath does not includes the `segments` property on the interface,
         //       see https://github.com/fontello/svgpath/pull/67/files
-        // @ts-ignore
-        const absSegments = svgpath(iconPath).abs().unshort().segments;
+        //
+        /** @typedef {[string, ...number[]]} Segment  */
+        /** @type {Segment[]} */
+        const absSegments =
+          // @ts-ignore
+          svgpath(iconPath).abs().unshort().segments;
 
         const lowerMovementCommands = ['m', 'l'];
         const lowerDirectionCommands = ['h', 'v'];
@@ -607,8 +507,11 @@ const config = {
               ].reverse();
               // If the previous command was a direction one,
               // we need to iterate back until we find the missing coordinates
+              // @ts-ignore
               if (upperDirectionCommands.includes(xPreviousCoord)) {
+                // @ts-ignore
                 xPreviousCoord = undefined;
+                // @ts-ignore
                 yPreviousCoord = undefined;
                 let index_ = index;
                 while (
@@ -623,12 +526,14 @@ const config = {
                   // we need to consider the single coordinate as x
                   if (upperHorDirectionCommand === xPreviousCoordDeep) {
                     xPreviousCoordDeep = yPreviousCoordDeep;
+                    // @ts-ignore
                     yPreviousCoordDeep = undefined;
                   }
 
                   // If the previous command was a vertical movement,
                   // we need to consider the single coordinate as y
                   if (upperVersionDirectionCommand === xPreviousCoordDeep) {
+                    // @ts-ignore
                     xPreviousCoordDeep = undefined;
                   }
 
@@ -790,10 +695,8 @@ const config = {
               // Next switch cases have been ordered by frequency
               // of occurrence in the SVG paths of the icons
               case 'M': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 // SVG 1.1:
@@ -807,10 +710,8 @@ const config = {
               }
 
               case 'm': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 if (seg.chain === undefined || seg.chain.start === seg.start) {
@@ -821,48 +722,40 @@ const config = {
               }
 
               case 'H': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
                 break;
               }
 
               case 'h': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
                 break;
               }
 
               case 'V': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[1];
                 break;
               }
 
               case 'v': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[1];
                 break;
               }
 
               case 'L': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 'l': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
@@ -871,106 +764,87 @@ const config = {
               case 'Z':
               case 'z': {
                 // TODO: Overlapping in Z should be handled in another rule
+                // @ts-ignore
                 currentAbsCoord = [startPoint[0], startPoint[1]];
                 _resetStartPoint = true;
                 break;
               }
 
               case 'C': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[5];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[6];
                 break;
               }
 
               case 'c': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[5];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[6];
                 break;
               }
 
               case 'A': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[6];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[7];
                 break;
               }
 
               case 'a': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[6];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[7];
                 break;
               }
 
               case 's': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
 
               case 'S': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 't': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
                 break;
               }
 
               case 'T': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[1];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[2];
                 break;
               }
 
               case 'Q': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = parms[3];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = parms[4];
                 break;
               }
 
               case 'q': {
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[3];
-                /** @type {number} */
                 // @ts-ignore
                 currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[4];
                 break;
@@ -988,6 +862,7 @@ const config = {
               _resetStartPoint = false;
             }
 
+            // @ts-ignore
             _nextInStraightLine = straightLineCommands.includes(nextCmd);
             const _exitingStraightLine =
               _inStraightLine && !_nextInStraightLine;
@@ -1004,6 +879,7 @@ const config = {
                 // Get collinear coordinates
                 for (let p = 1; p < currentLine.length - 1; p++) {
                   const _collinearCoord = collinear(
+                    // @ts-ignore
                     currentLine[p - 1][0],
                     currentLine[p - 1][1],
                     currentLine[p][0],
@@ -1095,10 +971,6 @@ const config = {
         reporter.name = 'icon-centered';
 
         const iconPath = getIconPath($);
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
-
         const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const centerX = Number(((minX + maxX) / 2).toFixed(iconFloatPrecision));
         const devianceX = centerX - iconTargetCenter;
@@ -1113,9 +985,6 @@ const config = {
             `<path> must be centered at (${iconTargetCenter}, ${iconTargetCenter});` +
               ` the center is currently (${centerX}, ${centerY})`,
           );
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         }
       },
       (reporter, $, ast) => {
