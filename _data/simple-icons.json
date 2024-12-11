@@ -1,11 +1,6 @@
 {
     "icons": [
         {
-            "title": ".NET",
-            "hex": "512BD4",
-            "source": "https://github.com/dotnet/brand/blob/defe0408e765b48223a434a0d9a94213edc062f8/logo/dotnet-logo.svg"
-        },
-        {
             "title": ".ENV",
             "hex": "ECD53F",
             "source": "https://github.com/motdotla/dotenv/blob/40e75440337d1de2345dc8326d6108331f583fd8/dotenv.svg",
@@ -14,6 +9,11 @@
                     "Dotenv"
                 ]
             }
+        },
+        {
+            "title": ".NET",
+            "hex": "512BD4",
+            "source": "https://github.com/dotnet/brand/blob/defe0408e765b48223a434a0d9a94213edc062f8/logo/dotnet-logo.svg"
         },
         {
             "title": "/e/",

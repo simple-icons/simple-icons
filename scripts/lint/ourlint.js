@@ -71,16 +71,13 @@ const TESTS = {
       return icon.title;
     };
 
-    const expectedOrder = [...icons].sort((a, b) =>
-      collator.compare(a.title, b.title),
-    );
-
     /**
      * Find the expected position of an icon.
+     * @param {IconData[]} expectedOrder Expected order of the icons.
      * @param {IconData} targetIcon Icon to find.
      * @returns {string} Expected position of the icon.
      */
-    const findPositon = (targetIcon) => {
+    const findPositon = (expectedOrder, targetIcon) => {
       const foundIndex = expectedOrder.findIndex(
         (icon) =>
           targetIcon.title === icon.title && targetIcon.slug === icon.slug,
@@ -95,8 +92,12 @@ const TESTS = {
     // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
     const invalids = icons.reduce(collector, []);
     if (invalids.length > 0) {
+      const expectedOrder = [...icons].sort((a, b) =>
+        collator.compare(a.title, b.title),
+      );
+
       return `Some icons aren't in alphabetical order:
-${invalids.map((icon) => `${format(icon)} ${findPositon(icon)}`).join('\n')}`;
+${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
     }
   },
 
