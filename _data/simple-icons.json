@@ -1107,6 +1107,11 @@
             "source": "https://www.anthropic.com"
         },
         {
+            "title": "AntV",
+            "hex": "8B5DFF",
+            "source": "https://antv.vision"
+        },
+        {
             "title": "Anycubic",
             "hex": "476695",
             "source": "https://store.anycubic.com/pages/firmware-software"
@@ -5237,6 +5242,11 @@
             "source": "https://github.com/openjs-foundation/artwork/blob/ac43961d1157f973c54f210cf5e0c9c45e3d3f10/projects/express/express-icon-black.svg"
         },
         {
+            "title": "Express.com",
+            "hex": "000000",
+            "source": "https://www.express.com"
+        },
+        {
             "title": "ExpressVPN",
             "hex": "DA3940",
             "source": "https://www.expressvpn.com/press",
@@ -8205,6 +8215,11 @@
             "source": "https://github.com/pallets/jinja/blob/1c240154865a7b6034033027e3c2ca8a2fa53fc2/artwork/jinjalogo.svg"
         },
         {
+            "title": "Jio",
+            "hex": "0A2885",
+            "source": "https://commons.wikimedia.org/wiki/File:Reliance_Jio_Logo.svg"
+        },
+        {
             "title": "Jira",
             "hex": "0052CC",
             "source": "https://atlassian.design/resources/logo-library",
@@ -8705,7 +8720,7 @@
         },
         {
             "title": "Ko-fi",
-            "hex": "FF5E5B",
+            "hex": "FF6433",
             "source": "https://more.ko-fi.com/brand-assets",
             "guidelines": "https://more.ko-fi.com/brand-assets"
         },
@@ -11212,6 +11227,12 @@
             }
         },
         {
+            "title": "OCLC",
+            "hex": "007DBA",
+            "source": "https://oclc.org",
+            "guidelines": "https://oclc.org/en/news/media-kit.html"
+        },
+        {
             "title": "oclif",
             "hex": "000000",
             "source": "https://github.com/oclif/oclif.github.io/blob/2356a96dbaf0d3791ec2ddce3b08ccd78408e0a0/website/static/img/oclif.svg"
@@ -11299,6 +11320,11 @@
             "title": "Ollama",
             "hex": "000000",
             "source": "https://github.com/ollama/ollama/issues/2152#issuecomment-1905286922"
+        },
+        {
+            "title": "Omada Cloud",
+            "hex": "10C1D0",
+            "source": "https://omada.tplinkcloud.com"
         },
         {
             "title": "OnePlus",
@@ -12102,6 +12128,11 @@
             "license": {
                 "type": "CC-BY-SA-4.0"
             }
+        },
+        {
+            "title": "phpBB",
+            "hex": "009BDF",
+            "source": "https://www.phpbb.com/about/logos"
         },
         {
             "title": "phpMyAdmin",
@@ -13558,7 +13589,7 @@
         },
         {
             "title": "Renovate",
-            "hex": "1A1F6C",
+            "hex": "308BE3",
             "source": "https://avatars1.githubusercontent.com/u/38656520",
             "guidelines": "https://docs.renovatebot.com/logo-brand-guidelines"
         },
@@ -13566,6 +13597,11 @@
             "title": "Renren",
             "hex": "217DC6",
             "source": "https://seeklogo.com/vector-logo/184137/renren-inc"
+        },
+        {
+            "title": "Replicate",
+            "hex": "000000",
+            "source": "https://replicate.com"
         },
         {
             "title": "Replit",
@@ -14836,9 +14872,23 @@
             "source": "https://society6.com"
         },
         {
+            "title": "Socket",
+            "hex": "C93CD7",
+            "source": "https://github.com/SocketDev/vscode-socket-security/blob/06c5fdc59fad40ae87b3d42c5c42cd17c6edaf17/logo-red.svg"
+        },
+        {
             "title": "Socket.io",
             "hex": "010101",
             "source": "https://socket.io"
+        },
+        {
+            "title": "Softcatalà",
+            "hex": "BA2626",
+            "source": "https://www.softcatala.org/uploads/2016/03/SC_marca.svg",
+            "guidelines": "https://www.softcatala.org/premsa/imatge-corporativa",
+            "license": {
+                "type": "CC-BY-SA-4.0"
+            }
         },
         {
             "title": "Softpedia",
@@ -15481,8 +15531,8 @@
         },
         {
             "title": "Stripe",
-            "hex": "008CDD",
-            "source": "https://stripe.com/about/resources"
+            "hex": "635BFF",
+            "source": "https://stripe.com/newsroom/information"
         },
         {
             "title": "strongSwan",
@@ -15601,6 +15651,11 @@
             "title": "Supermicro",
             "hex": "151F6D",
             "source": "https://www.supermicro.com/manuals/supermicro_logo_guidelines.pdf"
+        },
+        {
+            "title": "Surfshark",
+            "hex": "1EBFBF",
+            "source": "https://surfshark.com/press/assets"
         },
         {
             "title": "SurrealDB",
@@ -15927,8 +15982,8 @@
         },
         {
             "title": "TeamViewer",
-            "hex": "004680",
-            "source": "https://www.teamviewer.com/en-us"
+            "hex": "050A52",
+            "source": "https://www.teamviewer.com"
         },
         {
             "title": "TechCrunch",
@@ -15967,6 +16022,11 @@
             "title": "Télé-Québec",
             "hex": "1343FB",
             "source": "https://www.telequebec.tv/societe/logo-et-normes-techniques"
+        },
+        {
+            "title": "Telefónica",
+            "hex": "0066FF",
+            "source": "https://commons.wikimedia.org/wiki/File:Telef%C3%B3nica_2021_logo.svg"
         },
         {
             "title": "Telegram",
@@ -17619,6 +17679,11 @@
             "source": "https://www.weasyl.com"
         },
         {
+            "title": "WEB.DE",
+            "hex": "FFD800",
+            "source": "https://web.de"
+        },
+        {
             "title": "Web3.js",
             "hex": "F16822",
             "source": "https://github.com/ChainSafe/web3.js/blob/fdbda4958cbdbaebe8ed5ea59183582b07fac254/assets/logo/web3js.svg"
@@ -17818,7 +17883,7 @@
         },
         {
             "title": "Wii U",
-            "hex": "8B8B8B",
+            "hex": "0096C8",
             "source": "https://commons.wikipedia.org/wiki/File:WiiU.svg"
         },
         {
