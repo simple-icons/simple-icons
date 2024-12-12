@@ -3,7 +3,7 @@
  * Types for Simple Icons SDK.
  */
 
-import type {CustomLicense, SPDXLicense} from './types.js';
+import type {CustomLicense, SPDXLicense} from './types';
 
 /**
  * The data for a third-party extension.
