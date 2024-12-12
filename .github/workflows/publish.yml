@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -32,10 +32,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use Node.js 20.x
+      - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
           cache-dependency-path: '**/package.json'
       - id: get-version
@@ -46,6 +46,8 @@ jobs:
         run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
+      - name: Minify icons data file
+        run: node scripts/release/minify-icons-data.js
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM

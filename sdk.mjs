@@ -1,5 +1,5 @@
 /**
- * @fileoverview
+ * @file
  * Simple Icons SDK.
  */
 
@@ -8,10 +8,11 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 /**
- * @typedef {import("./sdk").ThirdPartyExtension} ThirdPartyExtension
- * @typedef {import("./sdk").IconData} IconData
+ * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
+ * @typedef {import("./sdk.d.ts").IconData} IconData
  */
 
+/** @type {{ [key: string]: string }} */
 const TITLE_TO_SLUG_REPLACEMENTS = {
   '+': 'plus',
   '.': 'dot',
@@ -34,11 +35,6 @@ const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
 const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
 
 /**
- * Regex to validate HTTPs URLs.
- */
-export const URL_REGEX = /^https:\/\/[^\s"']+$/;
-
-/**
  * Regex to validate SVG paths.
  */
 export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
@@ -46,30 +42,48 @@ export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
 /**
  * Get the directory name where this file is located from `import.meta.url`,
  * equivalent to the `__dirname` global variable in CommonJS.
- * @param {String} importMetaUrl import.meta.url
- * @returns {String} Directory name in which this file is located
+ * @param {string} importMetaUrl Relative `import.meta.url` value of the caller.
+ * @returns {string} Directory name in which this file is located.
  */
 export const getDirnameFromImportMeta = (importMetaUrl) =>
   path.dirname(fileURLToPath(importMetaUrl));
 
 /**
+ * Build a regex to validate HTTPs URLs.
+ * @param {string} jsonschemaPath Path to the *.jsonschema.json* file.
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
+ */
+export const urlRegex = async (
+  jsonschemaPath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    '.jsonschema.json',
+  ),
+) => {
+  return new RegExp(
+    JSON.parse(
+      await fs.readFile(jsonschemaPath, 'utf8'),
+    ).definitions.url.pattern,
+  );
+};
+
+/**
  * Get the slug/filename for an icon.
- * @param {IconData} icon The icon data as it appears in *_data/simple-icons.json*
- * @returns {String} The slug/filename for the icon
+ * @param {IconData} icon The icon data as it appears in *_data/simple-icons.json*.
+ * @returns {string} The slug/filename for the icon.
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
 
 /**
  * Extract the path from an icon SVG content.
- * @param {String} svg The icon SVG content
- * @returns {String} The path from the icon SVG content
- **/
+ * @param {string} svg The icon SVG content.
+ * @returns {string} The path from the icon SVG content.
+ */
 export const svgToPath = (svg) => svg.split('"', 8)[7];
 
 /**
  * Converts a brand title into a slug/filename.
- * @param {String} title The title to convert
- * @returns {String} The slug/filename for the title
+ * @param {string} title The title to convert.
+ * @returns {string} The slug/filename for the title.
  */
 export const titleToSlug = (title) =>
   title
@@ -83,8 +97,8 @@ export const titleToSlug = (title) =>
 
 /**
  * Converts a slug into a variable name that can be exported.
- * @param {String} slug The slug to convert
- * @returns {String} The variable name for the slug
+ * @param {string} slug The slug to convert.
+ * @returns {string} The variable name for the slug.
  */
 export const slugToVariableName = (slug) => {
   const slugFirstLetter = slug[0].toUpperCase();
@@ -94,8 +108,8 @@ export const slugToVariableName = (slug) => {
 /**
  * Converts a brand title as defined in *_data/simple-icons.json* into a brand
  * title in HTML/SVG friendly format.
- * @param {String} brandTitle The title to convert
- * @returns {String} The brand title in HTML/SVG friendly format
+ * @param {string} brandTitle The title to convert.
+ * @returns {string} The brand title in HTML/SVG friendly format.
  */
 export const titleToHtmlFriendly = (brandTitle) =>
   brandTitle
@@ -104,15 +118,17 @@ export const titleToHtmlFriendly = (brandTitle) =>
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll(/./g, (char) => {
+      /** @type {number} */
+      // @ts-ignore
       const charCode = char.codePointAt(0);
       return charCode > 127 ? `&#${charCode};` : char;
     });
 
 /**
  * Converts a brand title in HTML/SVG friendly format into a brand title (as
- * it is seen in *_data/simple-icons.json*)
- * @param {String} htmlFriendlyTitle The title to convert
- * @returns {String} The brand title in HTML/SVG friendly format
+ * it is seen in *_data/simple-icons.json*).
+ * @param {string} htmlFriendlyTitle The title to convert.
+ * @returns {string} The brand title in HTML/SVG friendly format.
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
   htmlFriendlyTitle
@@ -121,13 +137,19 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
     )
     .replaceAll(
       /&(quot|amp|lt|gt);/g,
+      /**
+       * Replace HTML entity references with their respective decoded characters.
+       * @param {string} _ Full match.
+       * @param {'quot' | 'amp' | 'lt' | 'gt'} reference Reference to replace.
+       * @returns {string} Replacement for the reference.
+       */
       (_, reference) => ({quot: '"', amp: '&', lt: '<', gt: '>'})[reference],
     );
 
 /**
  * Get path of *_data/simple-icons.json*.
- * @param {String} rootDirectory Path to the root directory of the project
- * @returns {String} Path of *_data/simple-icons.json*
+ * @param {string} rootDirectory Path to the root directory of the project.
+ * @returns {string} Path of *_data/simple-icons.json*.
  */
 export const getIconDataPath = (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
@@ -137,8 +159,8 @@ export const getIconDataPath = (
 
 /**
  * Get contents of *_data/simple-icons.json*.
- * @param {String} rootDirectory Path to the root directory of the project
- * @returns {String} Content of *_data/simple-icons.json*
+ * @param {string} rootDirectory Path to the root directory of the project.
+ * @returns {Promise<string>} Content of *_data/simple-icons.json*.
  */
 export const getIconsDataString = (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
@@ -148,8 +170,8 @@ export const getIconsDataString = (
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
- * @param {String} rootDirectory Path to the root directory of the project
- * @returns {IconData[]} Icons data as array from *_data/simple-icons.json*
+ * @param {string} rootDirectory Path to the root directory of the project.
+ * @returns {Promise<IconData[]>} Icons data as array from *_data/simple-icons.json*.
  */
 export const getIconsData = async (
   rootDirectory = getDirnameFromImportMeta(import.meta.url),
@@ -160,8 +182,8 @@ export const getIconsData = async (
 
 /**
  * Replace Windows newline characters by Unix ones.
- * @param {String} text The text to replace
- * @returns {String} The text with Windows newline characters replaced by Unix ones
+ * @param {string} text The text to replace.
+ * @returns {string} The text with Windows newline characters replaced by Unix ones.
  */
 export const normalizeNewlines = (text) => {
   return text.replaceAll('\r\n', '\n');
@@ -169,8 +191,8 @@ export const normalizeNewlines = (text) => {
 
 /**
  * Convert non-6-digit hex color to 6-digit with the character `#` stripped.
- * @param {String} text The color text
- * @returns {String} The color text in 6-digit hex format
+ * @param {string} text The color text.
+ * @returns {string} The color text in 6-digit hex format.
  */
 export const normalizeColor = (text) => {
   let color = text.replace('#', '').toUpperCase();
@@ -186,8 +208,8 @@ export const normalizeColor = (text) => {
 
 /**
  * Get information about third party extensions from the README table.
- * @param {String} readmePath Path to the README file
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions
+ * @param {string} readmePath Path to the README file.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions.
  */
 export const getThirdPartyExtensions = async (
   readmePath = path.join(
@@ -196,30 +218,100 @@ export const getThirdPartyExtensions = async (
   ),
 ) =>
   normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
-    .split('## Third-Party Extensions\n\n')[1]
-    .split('\n\n', 1)[0]
-    .split('\n')
+    .split('## Third-Party Extensions')[1]
+    .split('|\n\n')[0]
+    .split('|\n|')
+    .slice(2)
+    .map((line) => {
+      const [module_, author] = line.split(' | ');
+      const module = module_.split('<img src="')[0];
+      const moduleName = /\[(.+)]/.exec(module)?.[1];
+      if (moduleName === undefined) {
+        throw new Error(`Module name improperly parsed from line: ${line}`);
+      }
+
+      const moduleUrl = /\((.+)\)/.exec(module)?.[1];
+      if (moduleUrl === undefined) {
+        throw new Error(`Module URL improperly parsed from line: ${line}`);
+      }
+
+      const authorName = /\[(.+)]/.exec(author)?.[1];
+      if (authorName === undefined) {
+        throw new Error(`Author improperly parsed from line: ${line}`);
+      }
+
+      const authorUrl = /\((.+)\)/.exec(author)?.[1];
+      if (authorUrl === undefined) {
+        throw new Error(`Author URL improperly parsed from line: ${line}`);
+      }
+
+      return {
+        module: {
+          name: moduleName,
+          url: moduleUrl,
+        },
+        author: {
+          name: authorName,
+          url: authorUrl,
+        },
+      };
+    });
+
+/**
+ * Get information about third party libraries from the README table.
+ * @param {string} readmePath Path to the README file.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries.
+ */
+export const getThirdPartyLibraries = async (
+  readmePath = path.join(
+    getDirnameFromImportMeta(import.meta.url),
+    'README.md',
+  ),
+) =>
+  normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
+    .split('## Third-Party Libraries')[1]
+    .split('|\n\n')[0]
+    .split('|\n|')
     .slice(2)
     .map((line) => {
       let [module, author] = line.split(' | ');
       module = module.split('<img src="')[0];
+      const moduleName = /\[(.+)]/.exec(module)?.[1];
+      if (moduleName === undefined) {
+        throw new Error(`Module name improperly parsed from line: ${line}`);
+      }
+
+      const moduleUrl = /\((.+)\)/.exec(module)?.[1];
+      if (moduleUrl === undefined) {
+        throw new Error(`Module URL improperly parsed from line: ${line}`);
+      }
+
+      const authorName = /\[(.+)]/.exec(author)?.[1];
+      if (authorName === undefined) {
+        throw new Error(`Author improperly parsed from line: ${line}`);
+      }
+
+      const authorUrl = /\((.+)\)/.exec(author)?.[1];
+      if (authorUrl === undefined) {
+        throw new Error(`Author URL improperly parsed from line: ${line}`);
+      }
+
       return {
         module: {
-          name: /\[(.+)]/.exec(module)[1],
-          url: /\((.+)\)/.exec(module)[1],
+          name: moduleName,
+          url: moduleUrl,
         },
         author: {
-          name: /\[(.+)]/.exec(author)[1],
-          url: /\((.+)\)/.exec(author)[1],
+          name: authorName,
+          url: authorUrl,
         },
       };
     });
 
 /**
  * `Intl.Collator` object ready to be used for icon titles sorting.
- * @type {Intl.Collator}
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator Intl.Collator}
- **/
+ * @see {@link https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator Intl.Collator}
+ */
 export const collator = new Intl.Collator('en', {
   usage: 'search',
   caseFirst: 'upper',
