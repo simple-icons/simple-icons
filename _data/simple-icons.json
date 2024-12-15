@@ -2789,6 +2789,11 @@
             "source": "https://en.wikipedia.org/wiki/File:Cairo_metro_logo2012.svg"
         },
         {
+            "title": "CaixaBank",
+            "hex": "007EAE",
+            "source": "https://www.caixabank.es/deployedfiles/particulares/Estaticos/Imagenes/Geolocalizador_CXB.svg"
+        },
+        {
             "title": "CakePHP",
             "hex": "D33C43",
             "source": "https://cakephp.org/logos"
@@ -3379,7 +3384,7 @@
             "source": "https://www.co-operative.coop/media/assets"
         },
         {
-            "title": "Coca Cola",
+            "title": "Coca-Cola",
             "hex": "D00013",
             "source": "https://commons.wikimedia.org/wiki/File:Coca-Cola_logo.svg"
         },
@@ -3607,6 +3612,18 @@
             "title": "CoinMarketCap",
             "hex": "17181B",
             "source": "https://www.coinmarketcap.com"
+        },
+        {
+            "title": "Collabora Online",
+            "hex": "5C2983",
+            "source": "https://www.collaboraonline.com/branding-guidelines",
+            "guidelines": "https://www.collaboraonline.com/branding-guidelines",
+            "aliases": {
+                "aka": [
+                    "Collabora Office",
+                    "Collabora Productivity"
+                ]
+            }
         },
         {
             "title": "ComicFury",
@@ -3921,6 +3938,11 @@
             "title": "CRYENGINE",
             "hex": "000000",
             "source": "https://www.cryengine.com/brand"
+        },
+        {
+            "title": "Cryptomator",
+            "hex": "49B04A",
+            "source": "https://github.com/cryptomator/docs/blob/795a5a414b7e848cbfd4502a4ff63cfdb3adfb15/source/img/logo-mono-white.svg"
         },
         {
             "title": "CryptPad",
@@ -5173,6 +5195,16 @@
             "title": "Etsy",
             "hex": "F16521",
             "source": "https://www.etsy.com/uk/press"
+        },
+        {
+            "title": "European Union",
+            "hex": "003399",
+            "source": "https://europa.eu",
+            "aliases": {
+                "aka": [
+                    "EU"
+                ]
+            }
         },
         {
             "title": "Event Store",
@@ -8579,8 +8611,8 @@
         {
             "title": "Khronos Group",
             "hex": "CC3333",
-            "source": "https://www.khronos.org/legal/trademarks/",
-            "guidelines": "https://www.khronos.org/legal/trademarks/"
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/files/legal/Khronos-Logo-Usage-Guide.pdf"
         },
         {
             "title": "Kia",
@@ -10869,6 +10901,11 @@
             "source": "https://about.nextdoor.com/us-media/"
         },
         {
+            "title": "Nextflow",
+            "hex": "0DC09D",
+            "source": "https://github.com/seqeralabs/logos/blob/a8d4906b8fa7359541e520882f93a4bf029af44c/nextflow/nextflow_icon_color.svg"
+        },
+        {
             "title": "Nextra",
             "hex": "000000",
             "source": "https://nextra.site",
@@ -10961,6 +10998,11 @@
             "title": "Nintendo 3DS",
             "hex": "D12228",
             "source": "https://www.nintendo.de"
+        },
+        {
+            "title": "Nintendo DS",
+            "hex": "929497",
+            "source": "https://www.nintendo.com/en-gb/Support/Nintendo-DS/Nintendo-DS-manual-and-additional-documents/Nintendo-DS-manual-and-additional-documents/Nintendo-DS-manual-and-additional-documents-619797.html"
         },
         {
             "title": "Nintendo GameCube",
@@ -11222,6 +11264,12 @@
             }
         },
         {
+            "title": "OCLC",
+            "hex": "007DBA",
+            "source": "https://oclc.org",
+            "guidelines": "https://oclc.org/en/news/media-kit.html"
+        },
+        {
             "title": "oclif",
             "hex": "000000",
             "source": "https://github.com/oclif/oclif.github.io/blob/2356a96dbaf0d3791ec2ddce3b08ccd78408e0a0/website/static/img/oclif.svg"
@@ -11427,7 +11475,8 @@
         {
             "title": "OpenGL",
             "hex": "5586A4",
-            "source": "https://www.khronos.org/legal/trademarks/"
+            "source": "https://www.khronos.org/legal/trademarks",
+            "guidelines": "https://www.khronos.org/files/legal/Khronos-Logo-Usage-Guide.pdf"
         },
         {
             "title": "openHAB",
@@ -11866,6 +11915,11 @@
             "title": "Paperspace",
             "hex": "000000",
             "source": "https://docs.paperspace.com/img/ps-logo-light.svg"
+        },
+        {
+            "title": "Paradox Interactive",
+            "hex": "101010",
+            "source": "https://www.paradoxinteractive.com"
         },
         {
             "title": "Paramount+",
@@ -14216,6 +14270,11 @@
             "source": "https://www.scala-lang.org"
         },
         {
+            "title": "Scalar",
+            "hex": "1A1A1A",
+            "source": "https://scalar.com"
+        },
+        {
             "title": "Scaleway",
             "hex": "4F0599",
             "source": "https://ultraviolet.scaleway.com",
@@ -15152,7 +15211,7 @@
         },
         {
             "title": "Spotify",
-            "hex": "1DB954",
+            "hex": "1ED760",
             "source": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo",
             "guidelines": "https://developer.spotify.com/documentation/general/design-and-branding/#using-our-logo"
         },
@@ -16428,6 +16487,12 @@
             "source": "https://tomorrowland.com"
         },
         {
+            "title": "TomTom",
+            "hex": "DF1B12",
+            "source": "https://brandguide.tomtom.com/design/logo",
+            "guidelines": "https://brandguide.tomtom.com"
+        },
+        {
             "title": "TON",
             "hex": "0098EA",
             "source": "https://ton.org/en/brand-assets",
@@ -17529,7 +17594,7 @@
             "title": "Vulkan",
             "hex": "A41E22",
             "source": "https://www.khronos.org/legal/trademarks",
-            "guidelines": "https://www.khronos.org/legal/trademarks"
+            "guidelines": "https://www.khronos.org/files/legal/Khronos-Logo-Usage-Guide.pdf"
         },
         {
             "title": "Vultr",
@@ -17729,7 +17794,7 @@
             "title": "WebGL",
             "hex": "990000",
             "source": "https://www.khronos.org/legal/trademarks",
-            "guidelines": "https://www.khronos.org/legal/trademarks"
+            "guidelines": "https://www.khronos.org/files/legal/Khronos-Logo-Usage-Guide.pdf"
         },
         {
             "title": "WebGPU",
