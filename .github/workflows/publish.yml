@@ -101,6 +101,7 @@ jobs:
         env:
           DISCORD_RELEASES_ROLE: ${{ secrets.DISCORD_RELEASES_ROLE }}
           DISCORD_RELEASES_WEBHOOK_URL: ${{ secrets.DISCORD_RELEASES_WEBHOOK_URL }}
+        continue-on-error: true
   font:
     name: Trigger simple-icons-font release
     needs: npm

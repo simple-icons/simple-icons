@@ -1,7 +1,9 @@
+#!/usr/bin/env node
 /**
  * @file
  * Send release message to Discord #releases channel.
  */
+
 import process from 'node:process';
 
 const releaseVersion = process.argv[2];
@@ -21,4 +23,5 @@ try {
   });
 } catch {
   console.error('Failed to send release message to Discord.');
+  process.exit(1);
 }
