@@ -46,6 +46,8 @@ jobs:
         run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
+      - name: Minify icons data file
+        run: node scripts/release/minify-icons-data.js
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
@@ -94,6 +96,12 @@ jobs:
           tag_name: ${{ steps.get-version.outputs.version }}
           name: ${{ steps.commit.outputs.title }}
           body: ${{ steps.commit.outputs.body }}
+      - name: Send release to Discord
+        run: node scripts/release/discord-release-message.js "${{ steps.get-version.outputs.version }}"
+        env:
+          DISCORD_RELEASES_ROLE: ${{ secrets.DISCORD_RELEASES_ROLE }}
+          DISCORD_RELEASES_WEBHOOK_URL: ${{ secrets.DISCORD_RELEASES_WEBHOOK_URL }}
+        continue-on-error: true
   font:
     name: Trigger simple-icons-font release
     needs: npm
