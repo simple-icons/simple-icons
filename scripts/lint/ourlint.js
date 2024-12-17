@@ -10,21 +10,20 @@
  * @typedef {IconData[]} IconsData
  */
 
-import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
 import {
   collator,
-  getDirnameFromImportMeta,
   getIconsDataString,
   normalizeNewlines,
   titleToSlug,
 } from '../../sdk.mjs';
+import {getSpdxLicenseIds} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => Promise<string | undefined> | string | undefined}}
+ * @type {{[k: string]: (data: {icons: IconsData}, dataString: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
   /**
@@ -32,7 +31,7 @@ const TESTS = {
    * @param {{icons: IconsData}} data Icons data.
    * @returns {string|undefined} Error message or undefined.
    */
-  alphabetical(data) {
+  alphabetical({icons}) {
     /**
      * Collects invalid alphabet ordered icons.
      * @param {IconData[]} invalidEntries Invalid icons reference.
@@ -72,11 +71,33 @@ const TESTS = {
       return icon.title;
     };
 
+    /**
+     * Find the expected position of an icon.
+     * @param {IconData[]} expectedOrder Expected order of the icons.
+     * @param {IconData} targetIcon Icon to find.
+     * @returns {string} Expected position of the icon.
+     */
+    const findPositon = (expectedOrder, targetIcon) => {
+      const foundIndex = expectedOrder.findIndex(
+        (icon) =>
+          targetIcon.title === icon.title && targetIcon.slug === icon.slug,
+      );
+      const before = expectedOrder[foundIndex - 1];
+      const after = expectedOrder[foundIndex + 1];
+      if (before) return `should be after ${format(before)}`;
+      if (after) return `should be before ${format(after)}`;
+      return 'not found';
+    };
+
     // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
-    const invalids = data.icons.reduce(collector, []);
+    const invalids = icons.reduce(collector, []);
     if (invalids.length > 0) {
+      const expectedOrder = [...icons].sort((a, b) =>
+        collator.compare(a.title, b.title),
+      );
+
       return `Some icons aren't in alphabetical order:
-        ${invalids.map((icon) => format(icon)).join(', ')}`;
+${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
     }
   },
 
@@ -92,7 +113,7 @@ const TESTS = {
   },
 
   /* Check redundant trailing slash in URL */
-  checkUrl(data) {
+  checkUrl({icons}) {
     /**
      * Check if an URL has a redundant trailing slash.
      * @param {URL} $url URL instance.
@@ -151,7 +172,7 @@ const TESTS = {
      * @type {[boolean, string][]}
      */
     const allUrlFields = [];
-    for (const icon of data.icons) {
+    for (const icon of icons) {
       allUrlFields.push([true, icon.source]);
       if (icon.guidelines) {
         allUrlFields.push([false, icon.guidelines]);
@@ -171,7 +192,7 @@ const TESTS = {
 
     const invalidUrls = [];
     for (const [isSourceUrl, url] of allUrlFields) {
-      const $url = new global.URL(url);
+      const $url = new globalThis.URL(url);
 
       if (hasRedundantTrailingSlash($url, url)) {
         invalidUrls.push(fakeDiff(url, $url.origin));
@@ -207,22 +228,10 @@ const TESTS = {
   },
 
   /* Check if all licenses are valid SPDX identifiers */
-  async checkLicense(data) {
-    const spdxLicenseIds = new Set(
-      JSON.parse(
-        await fs.readFile(
-          path.join(
-            getDirnameFromImportMeta(import.meta.url),
-            '..',
-            '..',
-            'node_modules/spdx-license-ids/index.json',
-          ),
-          'utf8',
-        ),
-      ),
-    );
+  async checkLicense({icons}) {
+    const spdxLicenseIds = new Set(await getSpdxLicenseIds());
     const badLicenses = [];
-    for (const {title, slug, license} of data.icons) {
+    for (const {title, slug, license} of icons) {
       if (
         license &&
         license.type !== 'custom' &&
@@ -236,6 +245,45 @@ const TESTS = {
 
     if (badLicenses.length > 0) {
       return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
+    }
+  },
+
+  /* Ensure that fields are sorted in the same way for all icons */
+  fieldsSorted({icons}) {
+    const expectedOrder = [
+      'title',
+      'slug',
+      'hex',
+      'source',
+      'guidelines',
+      'license',
+      'aliases',
+    ];
+
+    const errors = [];
+    for (const icon of icons) {
+      const fields = Object.keys(icon);
+      const previousFields = [...fields];
+      fields.sort(
+        (a, b) => expectedOrder.indexOf(a) - expectedOrder.indexOf(b),
+      );
+      const previousFieldsString = JSON.stringify(previousFields);
+      const fieldsString = JSON.stringify(fields);
+      if (previousFieldsString !== fieldsString) {
+        const subject = icon.slug ? `${icon.title} (${icon.slug})` : icon.title;
+        errors.push(
+          `${subject} fields are not sorted.` +
+            ` Found ${previousFieldsString.replaceAll(',', ', ')},` +
+            ` but expected ${fieldsString.replaceAll(',', ', ')}`,
+        );
+      }
+    }
+
+    if (errors.length > 0) {
+      return (
+        'Wrong order of fields in _data/simple-icons.json icons:\n' +
+        `- ${errors.join('\n- ')}`
+      );
     }
   },
 };
