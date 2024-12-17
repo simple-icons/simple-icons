@@ -248,90 +248,6 @@
             "source": "https://www.adminer.org"
         },
         {
-            "title": "Adobe",
-            "hex": "FF0000",
-            "source": "https://www.adobe.com",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Acrobat Reader",
-            "hex": "EC1C24",
-            "source": "https://acrobat.adobe.com",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe After Effects",
-            "hex": "9999FF",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Audition",
-            "hex": "9999FF",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Creative Cloud",
-            "hex": "DA1F26",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Dreamweaver",
-            "hex": "FF61F6",
-            "source": "https://www.adobe.com/products/catalog.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Fonts",
-            "hex": "000B1D",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Illustrator",
-            "hex": "FF9A00",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe InDesign",
-            "hex": "FF3366",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Lightroom",
-            "hex": "31A8FF",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Lightroom Classic",
-            "hex": "31A8FF",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Photoshop",
-            "hex": "31A8FF",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe Premiere Pro",
-            "hex": "9999FF",
-            "source": "https://www.adobe.com/creativecloud.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
-            "title": "Adobe XD",
-            "hex": "FF61F6",
-            "source": "https://helpx.adobe.com/support/xd.html",
-            "guidelines": "https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/branding_guidelines"
-        },
-        {
             "title": "AdonisJS",
             "hex": "5A45FF",
             "source": "https://adonisjs.com",
@@ -2773,12 +2689,6 @@
             "source": "https://en.wikipedia.org/wiki/CafePress#/media/File:CafePress_logo.svg"
         },
         {
-            "title": "Caffeine",
-            "hex": "0000FF",
-            "source": "https://www.caffeine.tv",
-            "guidelines": "https://www.caffeine.tv/newsroom.html"
-        },
-        {
             "title": "Cairo Graphics",
             "hex": "F39914",
             "source": "https://github.com/freedesktop/cairo/blob/44f808fce9f437e14f2b0ef4e1583def8ab578ae/doc/tutorial/slides/cairo-title.svg"
@@ -3588,12 +3498,6 @@
             "source": "https://cohost.org"
         },
         {
-            "title": "Coil",
-            "hex": "000000",
-            "source": "https://coil.com/press/brand-guidelines",
-            "guidelines": "https://coil.com/press/brand-guidelines"
-        },
-        {
             "title": "Coinbase",
             "hex": "0052FF",
             "source": "https://www.coinbase.com/press"
@@ -4040,9 +3944,14 @@
             "source": "https://www.dwavesys.com"
         },
         {
-            "title": "D3.js",
+            "title": "D3",
             "hex": "F9A03C",
-            "source": "https://github.com/d3/d3-logo/tree/6d9c471aa852033501d00ca63fe73d9f8be82d1d"
+            "source": "https://github.com/d3/d3-logo/tree/6d9c471aa852033501d00ca63fe73d9f8be82d1d",
+            "aliases": {
+                "aka": [
+                    "D3.js"
+                ]
+            }
         },
         {
             "title": "Dacia",
@@ -4281,17 +4190,6 @@
             "title": "Deepnote",
             "hex": "3793EF",
             "source": "https://deepnote.com"
-        },
-        {
-            "title": "del.icio.us",
-            "slug": "delicious",
-            "hex": "0000FF",
-            "source": "https://del.icio.us",
-            "aliases": {
-                "aka": [
-                    "Delicious"
-                ]
-            }
         },
         {
             "title": "Deliveroo",
@@ -8459,11 +8357,6 @@
             "source": "https://www.kaspersky.com"
         },
         {
-            "title": "Katacoda",
-            "hex": "F48220",
-            "source": "https://katacoda.com/press-kit"
-        },
-        {
             "title": "Katana",
             "hex": "000000",
             "source": "https://www.foundry.com/products/katana"
@@ -9579,11 +9472,6 @@
             "source": "https://www.magasins-u.com"
         },
         {
-            "title": "Magento",
-            "hex": "EE672F",
-            "source": "https://magento.com"
-        },
-        {
             "title": "Magic",
             "hex": "6851FF",
             "source": "https://magic.link/brand-assets",
@@ -9740,11 +9628,6 @@
             "license": {
                 "type": "CC0-1.0"
             }
-        },
-        {
-            "title": "Marketo",
-            "hex": "5C4C9F",
-            "source": "https://www.marketo.com"
         },
         {
             "title": "Marko",
@@ -11631,12 +11514,6 @@
             "source": "https://github.com/ethereum-optimism/brand-kit/blob/71ea3bb1ea24e87968804b388e99bed0b52e2a4b/assets/svg/Profile-Logo.svg"
         },
         {
-            "title": "Oracle",
-            "hex": "F80000",
-            "source": "https://www.oracle.com/opn/index.html",
-            "guidelines": "https://www.oracle.com/legal/logos.html"
-        },
-        {
             "title": "Orange",
             "hex": "FF7900",
             "source": "https://brand.orange.com",
@@ -13092,6 +12969,12 @@
             }
         },
         {
+            "title": "QQ",
+            "hex": "1EBAFC",
+            "source": "https://en.wikipedia.org/wiki/File:Tencent_QQ.svg",
+            "guidelines": "https://qq.design/brand/BrandDesign/Logo"
+        },
+        {
             "title": "Qt",
             "hex": "41CD52",
             "source": "https://www.qt.io",
@@ -13255,11 +13138,6 @@
             "title": "radarr",
             "hex": "FFCB3D",
             "source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
-        },
-        {
-            "title": "RadioPublic",
-            "hex": "CE262F",
-            "source": "https://help.radiopublic.com/hc/en-us/articles/360002546754-RadioPublic-logos"
         },
         {
             "title": "Radix UI",
@@ -15295,12 +15173,6 @@
             "source": "https://www.stackhawk.com/press/"
         },
         {
-            "title": "StackPath",
-            "hex": "000000",
-            "source": "https://www.stackpath.com/company/logo-and-branding/",
-            "guidelines": "https://www.stackpath.com/company/logo-and-branding/"
-        },
-        {
             "title": "StackShare",
             "hex": "0690FA",
             "source": "https://stackshare.io/branding"
@@ -15802,12 +15674,6 @@
             }
         },
         {
-            "title": "Tableau",
-            "hex": "E97627",
-            "source": "https://www.tableau.com/about/media-kit/brand-assets",
-            "guidelines": "https://www.salesforce.com/company/legal/intellectual/tmcusageguidelines"
-        },
-        {
             "title": "TableCheck",
             "hex": "7935D2",
             "source": "https://www.tablecheck.com/join"
@@ -16022,12 +15888,6 @@
             "title": "Temporal",
             "hex": "000000",
             "source": "https://github.com/temporalio/temporaldotio/blob/b6b5f3ed1fda818d5d6c07e27ec15d51a61f2267/public/images/icons/temporal-no-text.svg"
-        },
-        {
-            "title": "Tencent QQ",
-            "hex": "1EBAFC",
-            "source": "https://en.wikipedia.org/wiki/File:Tencent_QQ.svg",
-            "guidelines": "https://qq.design/brand/BrandDesign/Logo"
         },
         {
             "title": "TensorFlow",
