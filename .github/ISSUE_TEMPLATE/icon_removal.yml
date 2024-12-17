@@ -28,7 +28,8 @@ body:
         - If the brand no longer exists, include a link supporting that claim.
         - If the brand should be removed for another reason, explain why.
       placeholder: >-
-        Example: [this blogpost](https://example.com) announced the brand has been
-        discontinued...
+        Example: [this blogpost](https://example.com) announced the brand has been discontinued...
+
+
     validations:
       required: true
