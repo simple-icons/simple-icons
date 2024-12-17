@@ -15,13 +15,17 @@ import {search} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
 import autocomplete from 'inquirer-autocomplete-standalone';
 import {
-  collator,
   getIconsDataString,
   normalizeColor,
   titleToSlug,
   urlRegex,
 } from '../sdk.mjs';
-import {getJsonSchemaData, getSpdxLicenseIds, writeIconsData} from './utils.js';
+import {
+  getJsonSchemaData,
+  getSpdxLicenseIds,
+  sortIconsCompare,
+  writeIconsData,
+} from './utils.js';
 
 /** @type {{icons: import('../sdk.js').IconData[]}} */
 const iconsData = JSON.parse(await getIconsDataString());
@@ -166,7 +170,7 @@ try {
     })
   ) {
     iconsData.icons.push(answers);
-    iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
+    iconsData.icons.sort(sortIconsCompare);
     await writeIconsData(iconsData);
     process.stdout.write(chalk.green('\nData written successfully.\n'));
   } else {

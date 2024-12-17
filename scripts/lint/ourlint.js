@@ -19,7 +19,7 @@ import {
   normalizeNewlines,
   titleToSlug,
 } from '../../sdk.mjs';
-import {getSpdxLicenseIds} from '../utils.js';
+import {getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -92,9 +92,7 @@ const TESTS = {
     // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
     const invalids = icons.reduce(collector, []);
     if (invalids.length > 0) {
-      const expectedOrder = [...icons].sort((a, b) =>
-        collator.compare(a.title, b.title),
-      );
+      const expectedOrder = [...icons].sort(sortIconsCompare);
 
       return `Some icons aren't in alphabetical order:
 ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
