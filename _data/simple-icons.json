@@ -12734,7 +12734,12 @@
         {
             "title": "Private Internet Access",
             "hex": "1E811F",
-            "source": "https://www.privateinternetaccess.com"
+            "source": "https://www.privateinternetaccess.com",
+            "aliases": {
+                "aka": [
+                    "PIA"
+                ]
+            }
         },
         {
             "title": "Pro Tools",
