@@ -21,11 +21,11 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
  * @returns {Promise<any>} JSON schema data.
  */
 export const getJsonSchemaData = async (
-  rootDirectory = path.resolve(__dirname, '..'),
+	rootDirectory = path.resolve(__dirname, '..'),
 ) =>
-  JSON.parse(
-    await fs.readFile(path.resolve(rootDirectory, '.jsonschema.json'), 'utf8'),
-  );
+	JSON.parse(
+		await fs.readFile(path.resolve(rootDirectory, '.jsonschema.json'), 'utf8'),
+	);
 
 /**
  * Write icons data to _data/simple-icons.json.
@@ -34,15 +34,15 @@ export const getJsonSchemaData = async (
  * @param {boolean} minify Whether to minify the JSON output.
  */
 export const writeIconsData = async (
-  iconsData,
-  rootDirectory = path.resolve(__dirname, '..'),
-  minify,
+	iconsData,
+	rootDirectory = path.resolve(__dirname, '..'),
+	minify,
 ) => {
-  await fs.writeFile(
-    getIconsDataPath(rootDirectory),
-    `${JSON.stringify(iconsData, null, minify ? 0 : 4)}\n`,
-    'utf8',
-  );
+	await fs.writeFile(
+		getIconsDataPath(rootDirectory),
+		`${JSON.stringify(iconsData, null, minify ? 0 : '\t')}\n`,
+		'utf8',
+	);
 };
 
 /**
@@ -51,16 +51,16 @@ export const writeIconsData = async (
  * @returns {Promise<string[]>} Set of SPDX license IDs.
  */
 export const getSpdxLicenseIds = async (
-  rootDirectory = path.resolve(__dirname, '..'),
+	rootDirectory = path.resolve(__dirname, '..'),
 ) =>
-  JSON.parse(
-    await fs.readFile(
-      path.resolve(
-        rootDirectory,
-        'node_modules',
-        'spdx-license-ids',
-        'index.json',
-      ),
-      'utf8',
-    ),
-  );
+	JSON.parse(
+		await fs.readFile(
+			path.resolve(
+				rootDirectory,
+				'node_modules',
+				'spdx-license-ids',
+				'index.json',
+			),
+			'utf8',
+		),
+	);
