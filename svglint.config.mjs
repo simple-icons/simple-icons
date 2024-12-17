@@ -5,13 +5,11 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import process from 'node:process';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
 import {
   SVG_PATH_REGEX,
-  collator,
   getDirnameFromImportMeta,
   getIconsData,
   htmlFriendlyToTitle,
@@ -24,15 +22,10 @@ const htmlNamedEntitiesFile = path.join(
   'named-html-entities-json',
   'index.json',
 );
-const svglintIgnoredFile = path.join(__dirname, '.svglint-ignored.json');
 
 const icons = await getIconsData();
 const htmlNamedEntities = JSON.parse(
   await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
-);
-/** @type {{ [key: string]: { [key: string]: string } }} */
-const svglintIgnores = JSON.parse(
-  await fs.readFile(svglintIgnoredFile, 'utf8'),
 );
 
 const svgRegexp =
@@ -44,37 +37,6 @@ const iconTargetCenter = iconSize / 2;
 const iconFloatPrecision = 3;
 const iconMaxFloatPrecision = 5;
 const iconTolerance = 0.001;
-
-// Set env SI_UPDATE_IGNORE to recreate the ignore file
-const updateIgnoreFile = process.env.SI_UPDATE_IGNORE === 'true';
-const ignoreFile = './.svglint-ignored.json';
-const iconIgnored = updateIgnoreFile ? {} : svglintIgnores;
-
-/**
- * Sort an object alphabetically by key converting it to an array.
- * @param {{ [key: string]: any }} object Object to sort by key.
- * @returns {{ [key: string]: any }} Object sorted by key.
- */
-const sortObjectByKey = (object) => {
-  return Object.fromEntries(
-    Object.keys(object)
-      .sort()
-      .map((k) => [k, object[k]]),
-  );
-};
-
-/**
- * Sort an object alphabetically by value converting it to an array.
- * @param {{ [key: string]: any }} object Object to sort by value.
- * @returns {{ [key: string]: any }} Object sorted by value.
- */
-const sortObjectByValue = (object) => {
-  return Object.fromEntries(
-    Object.keys(object)
-      .sort((a, b) => collator.compare(object[a], object[b]))
-      .map((k) => [k, object[k]]),
-  );
-};
 
 /**
  * Remove leading zeros from a number as a string.
@@ -187,49 +149,6 @@ const getIconPath = memoize(($icon) => $icon.find('path').attr('d'));
 const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
 /** @type {(iconPath: string) => import('svg-path-bbox').BBox} */
 const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
-
-if (updateIgnoreFile) {
-  process.on('exit', async () => {
-    // Ensure object output order is consistent due to async svglint processing
-    const sorted = sortObjectByKey(iconIgnored);
-    for (const linterName in sorted) {
-      if (linterName) {
-        sorted[linterName] = sortObjectByValue(sorted[linterName]);
-      }
-    }
-
-    await fs.writeFile(ignoreFile, JSON.stringify(sorted, null, 2) + '\n', {
-      flag: 'w',
-    });
-  });
-}
-
-/**
- * Check if an icon is ignored by a linter rule.
- * @param {string} linterRule The name of the linter rule.
- * @param {string} path SVG path of the icon.
- * @returns {boolean} Whether the icon is ignored by the linter rule.
- */
-const isIgnored = (linterRule, path) => {
-  return (
-    iconIgnored[linterRule] && Object.hasOwn(iconIgnored[linterRule], path)
-  );
-};
-
-/**
- * Ignore an icon for a linter rule.
- * @param {string} linterRule The name of the linter rule.
- * @param {string} path SVG path of the icon.
- * @param {Cheerio} $ The SVG object.
- */
-const ignoreIcon = (linterRule, path, $) => {
-  iconIgnored[linterRule] ||= {};
-
-  const title = $.find('title').text();
-  const iconName = htmlFriendlyToTitle(title);
-
-  iconIgnored[linterRule][path] = iconName;
-};
 
 /** @type {import('svglint').Config} */
 const config = {
@@ -439,9 +358,6 @@ const config = {
         reporter.name = 'icon-size';
 
         const iconPath = getIconPath($);
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
 
         const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const width = Number((maxX - minX).toFixed(iconFloatPrecision));
@@ -451,17 +367,11 @@ const config = {
           reporter.error(
             'Path bounds were reported as 0 x 0; check if the path is valid',
           );
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         } else if (width !== iconSize && height !== iconSize) {
           reporter.error(
             `Size of <path> must be exactly ${iconSize} in one dimension;` +
               ` the size is currently ${width} x ${height}`,
           );
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         }
       },
       (reporter, $, ast) => {
@@ -1061,10 +971,6 @@ const config = {
         reporter.name = 'icon-centered';
 
         const iconPath = getIconPath($);
-        if (!updateIgnoreFile && isIgnored(reporter.name, iconPath)) {
-          return;
-        }
-
         const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
         const centerX = Number(((minX + maxX) / 2).toFixed(iconFloatPrecision));
         const devianceX = centerX - iconTargetCenter;
@@ -1079,9 +985,6 @@ const config = {
             `<path> must be centered at (${iconTargetCenter}, ${iconTargetCenter});` +
               ` the center is currently (${centerX}, ${centerY})`,
           );
-          if (updateIgnoreFile) {
-            ignoreIcon(reporter.name, iconPath, $);
-          }
         }
       },
       (reporter, $, ast) => {
