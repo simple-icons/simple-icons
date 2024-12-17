@@ -11143,10 +11143,15 @@
             "source": "https://www.nutanix.com/content/dam/nutanix/en/cmn/documents/nutanix-brandbook.pdf"
         },
         {
-            "title": "Nuxt.js",
+            "title": "Nuxt",
             "hex": "00DC82",
             "source": "https://nuxt.com/design-kit",
-            "guidelines": "https://nuxt.com/design-kit"
+            "guidelines": "https://nuxt.com/design-kit",
+            "aliases": {
+                "aka": [
+                    "Nuxt.js"
+                ]
+            }
         },
         {
             "title": "NVIDIA",
