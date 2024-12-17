@@ -76,10 +76,11 @@ export const getSpdxLicenseIds = async (
  * @param {IconData} b Icon B.
  * @returns {number} Comparison result.
  */
-export const sortIconsCompare = (a, b) =>
-  a.title === b.title
+export const sortIconsCompare = (a, b) => {
+  return a.title === b.title
     ? collator.compare(
         a.slug ?? titleToSlug(a.title),
         b.slug ?? titleToSlug(b.title),
       )
     : collator.compare(a.title, b.title);
+};

@@ -134,7 +134,7 @@ const build = async () => {
   const iconsBarrelJs = [];
   const iconsBarrelMjs = [];
 
-  buildIcons.sort(sortIconsCompare);
+  buildIcons.sort((a, b) => sortIconsCompare(a.icon, b.icon));
   for (const {iconObject, iconExportName} of buildIcons) {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
