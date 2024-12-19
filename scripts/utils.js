@@ -7,7 +7,12 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {getDirnameFromImportMeta, getIconsDataPath} from '../sdk.mjs';
+import {
+  collator,
+  getDirnameFromImportMeta,
+  getIconsDataPath,
+  titleToSlug,
+} from '../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -64,3 +69,18 @@ export const getSpdxLicenseIds = async (
       'utf8',
     ),
   );
+
+/**
+ * The compare function for sortng icons in _data/simple-icons.json.
+ * @param {IconData} a Icon A.
+ * @param {IconData} b Icon B.
+ * @returns {number} Comparison result.
+ */
+export const sortIconsCompare = (a, b) => {
+  return a.title === b.title
+    ? collator.compare(
+        a.slug ?? titleToSlug(a.title),
+        b.slug ?? titleToSlug(b.title),
+      )
+    : collator.compare(a.title, b.title);
+};

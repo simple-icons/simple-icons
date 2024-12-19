@@ -113,7 +113,8 @@
   "scripts": {
     "build": "node scripts/build/package.js",
     "clean": "node scripts/build/clean.js",
-    "format": "npm run prettier -- --write && npm run xo:fix",
+    "format:icondata": "node scripts/format-icon-data.js",
+    "format": "npm run format:icondata && npm run prettier -- --write && npm run xo:fix",
     "xo:fix": "xo --fix",
     "prettier": "prettier --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
     "lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run markdownlint",
