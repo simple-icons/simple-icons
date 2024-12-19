@@ -315,6 +315,17 @@
             }
         },
         {
+            "title": "AFDIAN",
+            "hex": "946CE6",
+            "source": "https://afdian.com/album/248b4bb2c9b111e9a9bb52540025c377/c3d32ae4b5f311eab4a952540025c377",
+            "guidelines": "https://afdian.com/album/248b4bb2c9b111e9a9bb52540025c377/c3d32ae4b5f311eab4a952540025c377",
+            "aliases": {
+                "loc": {
+                    "zh-CN": "爱发电"
+                }
+            }
+        },
+        {
             "title": "AFFiNE",
             "hex": "1E96EB",
             "source": "https://affine.pro"
@@ -3784,8 +3795,9 @@
         },
         {
             "title": "Creative Commons",
-            "hex": "EF9421",
-            "source": "https://creativecommons.org"
+            "hex": "ED592F",
+            "source": "https://creativecommons.org/mission/downloads",
+            "guidelines": "https://creativecommons.org/mission/downloads"
         },
         {
             "title": "Creative Technology",
@@ -5943,11 +5955,6 @@
             "title": "Galaxus",
             "hex": "000000",
             "source": "https://www.galaxus.de"
-        },
-        {
-            "title": "Game & Watch",
-            "hex": "000000",
-            "source": "https://commons.wikimedia.org/wiki/File:Game_and_watch_logo.svg"
         },
         {
             "title": "Game Developer",
@@ -10835,31 +10842,6 @@
             "source": "https://nim-lang.org"
         },
         {
-            "title": "Nintendo",
-            "hex": "E60012",
-            "source": "https://www.nintendo.com"
-        },
-        {
-            "title": "Nintendo 3DS",
-            "hex": "D12228",
-            "source": "https://www.nintendo.de"
-        },
-        {
-            "title": "Nintendo DS",
-            "hex": "929497",
-            "source": "https://www.nintendo.com/en-gb/Support/Nintendo-DS/Nintendo-DS-manual-and-additional-documents/Nintendo-DS-manual-and-additional-documents/Nintendo-DS-manual-and-additional-documents-619797.html"
-        },
-        {
-            "title": "Nintendo GameCube",
-            "hex": "6A5FBB",
-            "source": "https://www.nintendo.com/consumer/systems/nintendogamecube/index.jsp"
-        },
-        {
-            "title": "Nintendo Switch",
-            "hex": "E60012",
-            "source": "https://www.nintendo.com/switch/"
-        },
-        {
             "title": "Nissan",
             "hex": "C3002F",
             "source": "https://www.nissan.ie"
@@ -12379,11 +12361,6 @@
             "title": "Pointy",
             "hex": "009DE0",
             "source": "https://www.pointy.com/ie/vend"
-        },
-        {
-            "title": "Pokémon",
-            "hex": "FFCB05",
-            "source": "https://commons.wikimedia.org/wiki/File:International_Pok%C3%A9mon_logo.svg"
         },
         {
             "title": "Polars",
@@ -17731,16 +17708,6 @@
             "title": "When I Work",
             "hex": "51A33D",
             "source": "https://wheniwork.com"
-        },
-        {
-            "title": "Wii",
-            "hex": "8B8B8B",
-            "source": "https://commons.wikimedia.org/wiki/File:Wii.svg"
-        },
-        {
-            "title": "Wii U",
-            "hex": "0096C8",
-            "source": "https://commons.wikipedia.org/wiki/File:WiiU.svg"
         },
         {
             "title": "wiki.gg",
