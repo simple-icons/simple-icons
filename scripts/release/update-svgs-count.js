@@ -21,31 +21,31 @@ const readmeFile = path.resolve(rootDirectory, 'README.md');
 const readmeContent = await fs.readFile(readmeFile, 'utf8');
 
 try {
-  const match = regexMatcher.exec(readmeContent);
-  if (match === null) {
-    console.error(
-      'Failed to obtain number of SVG icons of current milestone in README:',
-      'No match found',
-    );
-    process.exit(1);
-  } else {
-    const overNIconsInReadme = Number.parseInt(match[1], 10);
-    const iconsData = await getIconsData();
-    const nIcons = iconsData.length;
-    const nIconsRounded = Math.floor(nIcons / updateRange) * updateRange;
+	const match = regexMatcher.exec(readmeContent);
+	if (match === null) {
+		console.error(
+			'Failed to obtain number of SVG icons of current milestone in README:',
+			'No match found',
+		);
+		process.exit(1);
+	} else {
+		const overNIconsInReadme = Number.parseInt(match[1], 10);
+		const iconsData = await getIconsData();
+		const nIcons = iconsData.length;
+		const nIconsRounded = Math.floor(nIcons / updateRange) * updateRange;
 
-    if (overNIconsInReadme !== nIconsRounded) {
-      const newContent = readmeContent.replace(
-        regexMatcher,
-        `Over ${nIconsRounded} `,
-      );
-      await fs.writeFile(readmeFile, newContent);
-    }
-  }
+		if (overNIconsInReadme !== nIconsRounded) {
+			const newContent = readmeContent.replace(
+				regexMatcher,
+				`Over ${nIconsRounded} `,
+			);
+			await fs.writeFile(readmeFile, newContent);
+		}
+	}
 } catch (error) {
-  console.error(
-    'Failed to update number of SVG icons of current milestone in README:',
-    error,
-  );
-  process.exit(1);
+	console.error(
+		'Failed to update number of SVG icons of current milestone in README:',
+		error,
+	);
+	process.exit(1);
 }
