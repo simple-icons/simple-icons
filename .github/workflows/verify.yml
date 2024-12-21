@@ -38,7 +38,7 @@ jobs:
       - name: Is normal pull request
         # check if is not a release pull request
         id: pr
-        run: echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' }})" >> $GITHUB_OUTPUT
+        run: echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == 'false' }})" >> $GITHUB_OUTPUT
       - name: Detect changed files
         uses: dorny/paths-filter@v3
         id: changes
