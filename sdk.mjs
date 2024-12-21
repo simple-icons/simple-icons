@@ -170,7 +170,7 @@ export const getIconsData = async (
 	rootDirectory = getDirnameFromImportMeta(import.meta.url),
 ) => {
 	const fileContents = await getIconsDataString(rootDirectory);
-	return JSON.parse(fileContents).icons;
+	return JSON.parse(fileContents);
 };
 
 /**

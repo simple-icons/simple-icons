@@ -6,4 +6,4 @@ import {getIconsData} from '../../sdk.mjs';
 import {writeIconsData} from '../utils.js';
 
 const icons = await getIconsData();
-await writeIconsData({icons}, undefined, true);
+await writeIconsData(icons, undefined, true);

@@ -159,14 +159,6 @@
 			"pattern": "^https://[^\\s]+$"
 		}
 	},
-	"type": "object",
-	"properties": {
-		"icons": {
-			"description": "A list of brands",
-			"type": "array",
-			"items": {"$ref": "#/definitions/brand"}
-		}
-	},
-	"additionalProperties": false,
-	"required": ["icons"]
+	"type": "array",
+	"items": {"$ref": "#/definitions/brand"}
 }

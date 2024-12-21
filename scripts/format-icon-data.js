@@ -6,5 +6,5 @@ import {getIconsDataString} from '../sdk.mjs';
 import {sortIconsCompare, writeIconsData} from './utils.js';
 
 const iconsData = JSON.parse(await getIconsDataString());
-iconsData.icons.sort(sortIconsCompare);
+iconsData.sort(sortIconsCompare);
 writeIconsData(iconsData);
