@@ -1,6 +1,6 @@
 name: Add Pull Request Labels and Assign to Project
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, closed]
 
 jobs:
