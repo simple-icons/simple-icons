@@ -14,7 +14,6 @@ import path from 'node:path';
 import {format} from 'node:util';
 import {transform as esbuildTransform} from 'esbuild';
 import {
-  collator,
   getDirnameFromImportMeta,
   getIconSlug,
   getIconsData,
@@ -22,6 +21,7 @@ import {
   svgToPath,
   titleToHtmlFriendly,
 } from '../../sdk.mjs';
+import {sortIconsCompare} from '../utils.js';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -134,7 +134,7 @@ const build = async () => {
   const iconsBarrelJs = [];
   const iconsBarrelMjs = [];
 
-  buildIcons.sort((a, b) => collator.compare(a.icon.title, b.icon.title));
+  buildIcons.sort((a, b) => sortIconsCompare(a.icon, b.icon));
   for (const {iconObject, iconExportName} of buildIcons) {
     iconsBarrelDts.push(`export const ${iconExportName}:I;`);
     iconsBarrelJs.push(`${iconExportName}:${iconObject},`);

@@ -7,7 +7,12 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {getDirnameFromImportMeta, getIconDataPath} from '../sdk.mjs';
+import {
+  collator,
+  getDirnameFromImportMeta,
+  getIconsDataPath,
+  titleToSlug,
+} from '../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 
@@ -22,11 +27,10 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
  */
 export const getJsonSchemaData = async (
   rootDirectory = path.resolve(__dirname, '..'),
-) => {
-  const jsonSchemaPath = path.resolve(rootDirectory, '.jsonschema.json');
-  const jsonSchemaString = await fs.readFile(jsonSchemaPath, 'utf8');
-  return JSON.parse(jsonSchemaString);
-};
+) =>
+  JSON.parse(
+    await fs.readFile(path.resolve(rootDirectory, '.jsonschema.json'), 'utf8'),
+  );
 
 /**
  * Write icons data to _data/simple-icons.json.
@@ -40,7 +44,7 @@ export const writeIconsData = async (
   minify,
 ) => {
   await fs.writeFile(
-    getIconDataPath(rootDirectory),
+    getIconsDataPath(rootDirectory),
     `${JSON.stringify(iconsData, null, minify ? 0 : 4)}\n`,
     'utf8',
   );
@@ -53,13 +57,30 @@ export const writeIconsData = async (
  */
 export const getSpdxLicenseIds = async (
   rootDirectory = path.resolve(__dirname, '..'),
-) => {
-  const getSpdxLicenseJson = path.resolve(
-    rootDirectory,
-    'node_modules',
-    'spdx-license-ids',
-    'index.json',
+) =>
+  JSON.parse(
+    await fs.readFile(
+      path.resolve(
+        rootDirectory,
+        'node_modules',
+        'spdx-license-ids',
+        'index.json',
+      ),
+      'utf8',
+    ),
   );
-  const getSpdxLicenseString = await fs.readFile(getSpdxLicenseJson, 'utf8');
-  return JSON.parse(getSpdxLicenseString);
+
+/**
+ * The compare function for sortng icons in _data/simple-icons.json.
+ * @param {IconData} a Icon A.
+ * @param {IconData} b Icon B.
+ * @returns {number} Comparison result.
+ */
+export const sortIconsCompare = (a, b) => {
+  return a.title === b.title
+    ? collator.compare(
+        a.slug ?? titleToSlug(a.title),
+        b.slug ?? titleToSlug(b.title),
+      )
+    : collator.compare(a.title, b.title);
 };
