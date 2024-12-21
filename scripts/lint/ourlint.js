@@ -7,7 +7,6 @@
 /**
  * @typedef {import("../../sdk.mjs").IconData} IconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
- * @typedef {IconData[]} IconsData
  */
 
 import path from 'node:path';
@@ -23,15 +22,15 @@ import {getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (data: {icons: IconsData}, dataString: string) => Promise<string | undefined> | string | undefined}}
+ * @type {{[k: string]: (data: IconData[], dataString: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
 	/**
 	 * Tests whether our icons are in alphabetical order.
-	 * @param {{icons: IconsData}} data Icons data.
+	 * @param {IconData[]} icons Icons data.
 	 * @returns {string|undefined} Error message or undefined.
 	 */
-	alphabetical({icons}) {
+	alphabetical(icons) {
 		/**
 		 * Collects invalid alphabet ordered icons.
 		 * @param {IconData[]} invalidEntries Invalid icons reference.
@@ -111,7 +110,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Check redundant trailing slash in URL */
-	checkUrl({icons}) {
+	checkUrl(icons) {
 		/**
 		 * Check if an URL has a redundant trailing slash.
 		 * @param {URL} $url URL instance.
@@ -226,7 +225,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Check if all licenses are valid SPDX identifiers */
-	async checkLicense({icons}) {
+	async checkLicense(icons) {
 		const spdxLicenseIds = new Set(await getSpdxLicenseIds());
 		const badLicenses = [];
 		for (const {title, slug, license} of icons) {
@@ -247,7 +246,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Ensure that fields are sorted in the same way for all icons */
-	fieldsSorted({icons}) {
+	fieldsSorted(icons) {
 		const expectedOrder = [
 			'title',
 			'slug',

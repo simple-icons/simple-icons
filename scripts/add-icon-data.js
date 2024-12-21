@@ -27,7 +27,7 @@ import {
 	writeIconsData,
 } from './utils.js';
 
-/** @type {{icons: import('../sdk.js').IconData[]}} */
+/** @type {import('../sdk.js').IconData[]} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
@@ -65,7 +65,7 @@ const isValidHexColor = (input) =>
  * @returns {boolean} Whether the icon is new.
  */
 const isNewIcon = (input) =>
-	!iconsData.icons.some(
+	!iconsData.some(
 		(icon) =>
 			icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
 	);
@@ -169,8 +169,8 @@ try {
 			message: 'Is this OK?',
 		})
 	) {
-		iconsData.icons.push(answers);
-		iconsData.icons.sort(sortIconsCompare);
+		iconsData.push(answers);
+		iconsData.sort(sortIconsCompare);
 		await writeIconsData(iconsData);
 		process.stdout.write(chalk.green('\nData written successfully.\n'));
 	} else {

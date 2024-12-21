@@ -34,7 +34,7 @@ export const getJsonSchemaData = async (
 
 /**
  * Write icons data to _data/simple-icons.json.
- * @param {{icons: IconData[]}} iconsData Icons data object.
+ * @param {IconData[]} iconsData Icons data array.
  * @param {string} rootDirectory Path to the root directory of the project.
  * @param {boolean} minify Whether to minify the JSON output.
  */
