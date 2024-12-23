@@ -22,7 +22,7 @@ Over 3200 Free SVG icons for popular brands. See them all on one page at <a href
 
 ### General Usage
 
-Icons can be downloaded as SVGs directly from <https://simpleicons.org/> - simply click the download button of the icon you want, and the download will start automatically.
+Icons can be downloaded as SVGs directly from [simpleicons.org](https://simpleicons.org) - simply click the download button of the icon you want, and the download will start automatically.
 
 ### CDN Usage
 
