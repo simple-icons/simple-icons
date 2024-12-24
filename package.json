@@ -67,6 +67,12 @@
 				"types": "./sdk.d.ts",
 				"default": "./sdk.js"
 			}
+		},
+		"./icons.json": {
+			"import": "./_data/simple-icons.json",
+			"module": "./_data/simple-icons.json",
+			"require": "./_data/simple-icons.json",
+			"default": "./_data/simple-icons.json"
 		}
 	},
 	"sideEffects": false,
