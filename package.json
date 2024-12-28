@@ -92,7 +92,9 @@
 	"devDependencies": {
 		"@inquirer/core": "10.0.1",
 		"@inquirer/prompts": "7.0.1",
+		"@types/jsonschema": "0.0.5",
 		"@types/node": "22.8.6",
+		"@types/normalize-package-data": "2.4.4",
 		"chalk": "5.3.0",
 		"editorconfig-checker": "6.0.0",
 		"esbuild": "0.24.0",
