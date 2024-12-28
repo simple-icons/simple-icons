@@ -4454,7 +4454,12 @@
 	{
 		"title": "dm",
 		"hex": "002878",
-		"source": "https://www.dm.de"
+		"source": "https://www.dm.de",
+		"aliases": {
+			"aka": [
+				"dm-drogerie markt"
+			]
+		}
 	},
 	{
 		"title": "Docker",
