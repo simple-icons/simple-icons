@@ -2239,7 +2239,8 @@
 	{
 		"title": "Bitwarden",
 		"hex": "175DDC",
-		"source": "https://github.com/bitwarden/brand/blob/6182cd64321d810c6f6255db08c2a17804d2b724/icons/icon.svg"
+		"source": "https://bitwarden.com/brand",
+		"guidelines": "https://bitwarden.com/brand"
 	},
 	{
 		"title": "Bitwig",
@@ -4453,7 +4454,12 @@
 	{
 		"title": "dm",
 		"hex": "002878",
-		"source": "https://www.dm.de"
+		"source": "https://www.dm.de",
+		"aliases": {
+			"aka": [
+				"dm-drogerie markt"
+			]
+		}
 	},
 	{
 		"title": "Docker",
