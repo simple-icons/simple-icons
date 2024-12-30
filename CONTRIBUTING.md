@@ -86,7 +86,7 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
 
-1. Its website's [Similarweb global rank](https://www.similarweb.com/website/) is in the top 500k.
+1. Its website's Similarweb global rank is in the top 500k.
    - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
    - For existing icons in our library, the threshold is dropped from 500k to 750k.
    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
