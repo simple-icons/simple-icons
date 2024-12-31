@@ -13,9 +13,9 @@ const icons = await getIconsData();
 const schema = await getJsonSchemaData();
 
 const validator = new Validator();
-const result = validator.validate({icons}, schema);
+const result = validator.validate(icons, schema);
 if (result.errors.length > 0) {
-  for (const error of result.errors) console.error(error);
-  console.error(`Found ${result.errors.length} error(s) in simple-icons.json`);
-  process.exit(1);
+	for (const error of result.errors) console.error(error);
+	console.error(`Found ${result.errors.length} error(s) in simple-icons.json`);
+	process.exit(1);
 }
