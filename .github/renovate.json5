@@ -1,23 +1,27 @@
 {
-  extends: [
-    'config:base',
+	repositories: ['simple-icons/simple-icons'],
+	extends: [
+		'config:recommended',
 
-    // Make sure we get a single PR combining all updates
-    'group:all',
-  ],
+		// Make sure we get a single PR combining all updates
+		'group:all',
+	],
 
-  // Disable dependency dashboard
-  dependencyDashboard: false,
+	// Disable Dependency Dashboard
+	dependencyDashboard: false,
 
-  // Use our labelling system
-  labels: ['dependencies'],
+	// Use our labelling system
+	labels: ['dependencies'],
 
-  // Schedule the PRs to interleave with our release schedule
-  schedule: 'on the 2nd and 4th day instance on sunday after 11pm',
+	// We generally always want the major version
+	separateMajorMinor: false,
 
-  // We generally always want the major version
-  separateMajorMinor: false,
+	// We manually update digest dependencies (eg. hashes in GitHub Actions)
+	digest: {enabled: false},
 
-  // We manually update digest dependencies (eg. hashes in Github actions)
-  digest: { enabled: false },
+	// PR title and commit message when updating dependencies
+	commitMessage: 'Update dependencies',
+
+	// Simplify PR body when updating dependencies
+	prBodyTemplate: '{{{header}}}{{{table}}}{{{warnings}}}{{{notes}}}{{{changelogs}}}',
 }
