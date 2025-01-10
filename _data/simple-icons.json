@@ -3555,6 +3555,11 @@
 		"source": "https://commodore.inc"
 	},
 	{
+		"title": "Common Lisp",
+		"hex": "000000",
+		"source": "https://commons.wikimedia.org/wiki/File:Lisp_logo.svg"
+	},
+	{
 		"title": "Common Workflow Language",
 		"hex": "B5314C",
 		"source": "https://github.com/common-workflow-language/logo/blob/54b1624bc88df6730fa7b6c928a05fc9c939e47e/CWL-Logo-nofonts.svg"
@@ -10786,6 +10791,12 @@
 		"source": "https://wiki.nexusmods.com/skins/Metrolook/images/nexuslogo.svg"
 	},
 	{
+		"title": "nf-core",
+		"hex": "24B064",
+		"source": "https://github.com/nf-core/logos/blob/c9c0e328d2a1b2b584a017d97cae0921ab998299/nf-core-logos/nf-core-logo-square-mono.svg",
+		"guidelines": "https://nf-co.re/docs/guidelines/graphic_design/logo"
+	},
+	{
 		"title": "NFC",
 		"hex": "002E5F",
 		"source": "https://nfc-forum.org/our-work/nfc-branding/n-mark/guidelines-and-brand-assets/",
@@ -16953,6 +16964,11 @@
 		}
 	},
 	{
+		"title": "v0",
+		"hex": "000000",
+		"source": "https://v0.dev"
+	},
+	{
 		"title": "V2EX",
 		"hex": "1F1F1F",
 		"source": "https://www.v2ex.com"
@@ -17917,6 +17933,11 @@
 		"hex": "00549F",
 		"source": "https://www.audiokinetic.com/resources/credits/",
 		"guidelines": "https://www.audiokinetic.com/resources/credits/"
+	},
+	{
+		"title": "WXT",
+		"hex": "67D55E",
+		"source": "https://github.com/wxt-dev/wxt/blob/0d540a6df9c1bf55bb8209c4d881715719fa03b1/docs/public/logo.svg"
 	},
 	{
 		"title": "Wykop",
