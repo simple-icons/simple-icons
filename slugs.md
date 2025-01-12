@@ -1052,6 +1052,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Furry Network` | `furrynetwork` |
 | `FusionAuth` | `fusionauth` |
 | `FutureLearn` | `futurelearn` |
+| `Fyle` | `fyle` |
 | `G2` | `g2` |
 | `G2A` | `g2a` |
 | `G2G` | `g2g` |
@@ -1185,6 +1186,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Translate` | `googletranslate` |
 | `GoToMeeting` | `gotomeeting` |
 | `Grab` | `grab` |
+| `Gradio` | `gradio` |
 | `Gradle` | `gradle` |
 | `Gradle Play Publisher` | `gradleplaypublisher` |
 | `Grafana` | `grafana` |
@@ -3001,6 +3003,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `uTorrent` | `utorrent` |
 | `uv` | `uv` |
 | `V` | `v` |
+| `v0` | `v0` |
 | `V2EX` | `v2ex` |
 | `V8` | `v8` |
 | `Vaadin` | `vaadin` |
@@ -3171,6 +3174,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
+| `WXT` | `wxt` |
 | `Wykop` | `wykop` |
 | `Wyze` | `wyze` |
 | `X` | `x` |
