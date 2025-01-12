@@ -620,6 +620,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Commerzbank` | `commerzbank` |
 | `commitlint` | `commitlint` |
 | `Commodore` | `commodore` |
+| `Common Lisp` | `commonlisp` |
 | `Common Workflow Language` | `commonworkflowlanguage` |
 | `Compiler Explorer` | `compilerexplorer` |
 | `Composer` | `composer` |
@@ -1051,6 +1052,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Furry Network` | `furrynetwork` |
 | `FusionAuth` | `fusionauth` |
 | `FutureLearn` | `futurelearn` |
+| `Fyle` | `fyle` |
 | `G2` | `g2` |
 | `G2A` | `g2a` |
 | `G2G` | `g2g` |
@@ -1184,6 +1186,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Translate` | `googletranslate` |
 | `GoToMeeting` | `gotomeeting` |
 | `Grab` | `grab` |
+| `Gradio` | `gradio` |
 | `Gradle` | `gradle` |
 | `Gradle Play Publisher` | `gradleplaypublisher` |
 | `Grafana` | `grafana` |
@@ -1899,6 +1902,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nextra` | `nextra` |
 | `NextUI` | `nextui` |
 | `Nexus Mods` | `nexusmods` |
+| `nf-core` | `nfcore` |
 | `NFC` | `nfc` |
 | `NGINX` | `nginx` |
 | `Nginx Proxy Manager` | `nginxproxymanager` |
@@ -2999,6 +3003,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `uTorrent` | `utorrent` |
 | `uv` | `uv` |
 | `V` | `v` |
+| `v0` | `v0` |
 | `V2EX` | `v2ex` |
 | `V8` | `v8` |
 | `Vaadin` | `vaadin` |
@@ -3169,6 +3174,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Write.as` | `writedotas` |
 | `WWE` | `wwe` |
 | `Wwise` | `wwise` |
+| `WXT` | `wxt` |
 | `Wykop` | `wykop` |
 | `Wyze` | `wyze` |
 | `X` | `x` |
