@@ -2075,6 +2075,11 @@
 		"source": "https://betterstack.com"
 	},
 	{
+		"title": "BetterDiscord",
+		"hex": "3E82E5",
+		"source": "https://github.com/BetterDiscord/docs/blob/a6ba3a369c7149bdce099eca1df6330cc09ac472/static/branding/logo_small.svg"
+	},
+	{
 		"title": "Bevy",
 		"hex": "232326",
 		"source": "https://github.com/bevyengine/bevy/blob/371c90f6faecf318ff66e3c6efa6f9f48781f63f/assets/branding/bevy_bird_simpleicons.svg"
@@ -13592,6 +13597,15 @@
 		"title": "rollup.js",
 		"hex": "EC4A3F",
 		"source": "https://rollupjs.org"
+	},
+	{
+		"title": "Rook",
+		"hex": "2AC6EA",
+		"source": "https://github.com/rook/artwork/blob/d252db9f43753e6abf64db0ce12d38916a5de464/logo/Rook_Icon.svg",
+		"guidelines": "https://www.linuxfoundation.org/legal/trademark-usage",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Roon",
