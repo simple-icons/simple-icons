@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "14.0.0",
+	"version": "14.2.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"homepage": "https://simpleicons.org",
 	"keywords": [
@@ -67,6 +67,12 @@
 				"types": "./sdk.d.ts",
 				"default": "./sdk.js"
 			}
+		},
+		"./icons.json": {
+			"import": "./_data/simple-icons.json",
+			"module": "./_data/simple-icons.json",
+			"require": "./_data/simple-icons.json",
+			"default": "./_data/simple-icons.json"
 		}
 	},
 	"sideEffects": false,
