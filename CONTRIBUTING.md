@@ -467,10 +467,10 @@ Kind regards,
 
 ## Testing Package Locally
 
-- Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `^12.20.0 || ^14.13.1 || >=16.0.0` is required.
-- Install the dependencies using `$ npm install`.
-- Build and test the package using `$ npm test`.
-- Run the project linting process using `$ npm run lint`.
+- Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `>=18.18.0` is required.
+- Install the dependencies using `npm install`.
+- Build and test the package using `npm test`.
+- Run the project linting process using `npm run lint`.
 
 ## Using Docker
 
