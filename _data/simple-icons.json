@@ -2118,6 +2118,11 @@
 		"source": "https://betterstack.com"
 	},
 	{
+		"title": "BetterDiscord",
+		"hex": "3E82E5",
+		"source": "https://github.com/BetterDiscord/docs/blob/a6ba3a369c7149bdce099eca1df6330cc09ac472/static/branding/logo_small.svg"
+	},
+	{
 		"title": "Bevy",
 		"hex": "232326",
 		"source": "https://github.com/bevyengine/bevy/blob/371c90f6faecf318ff66e3c6efa6f9f48781f63f/assets/branding/bevy_bird_simpleicons.svg"
@@ -5946,6 +5951,11 @@
 		"source": "https://www.futurelearn.com"
 	},
 	{
+		"title": "Fyle",
+		"hex": "FF2E63",
+		"source": "https://www.fylehq.com"
+	},
+	{
 		"title": "G2",
 		"hex": "FF492C",
 		"source": "https://www.g2.com",
@@ -6713,6 +6723,11 @@
 		"title": "Grab",
 		"hex": "00B14F",
 		"source": "https://en.wikipedia.org/wiki/File:Grab_(application)_logo.svg"
+	},
+	{
+		"title": "Gradio",
+		"hex": "F97316",
+		"source": "https://www.gradio.app"
 	},
 	{
 		"title": "Gradle",
@@ -10732,9 +10747,10 @@
 		"source": "https://www.newegg.com"
 	},
 	{
-		"title": "Nexon",
+		"title": "NEXON",
 		"hex": "000000",
-		"source": "https://www.nexon.com"
+		"source": "https://brand.nexon.com/en/ci-brand-guidelines/primary-identity",
+		"guidelines": "https://brand.nexon.com"
 	},
 	{
 		"title": "Next.js",
@@ -11924,8 +11940,8 @@
 	},
 	{
 		"title": "Perl",
-		"hex": "39457E",
-		"source": "https://github.com/tpf/marketing-materials/blob/6765c6fd71bc5b123d6c1a77b86e08cdd6376078/images/onion-logo/tpf-logo-onion.svg"
+		"hex": "0073A1",
+		"source": "https://github.com/metacpan/perl-assets/blob/56b555711934dde8fd0b20ec29ecc3bf81a3d493/blessed/src/010.svg"
 	},
 	{
 		"title": "Perplexity",
@@ -13753,6 +13769,15 @@
 		"title": "rollup.js",
 		"hex": "EC4A3F",
 		"source": "https://rollupjs.org"
+	},
+	{
+		"title": "Rook",
+		"hex": "2AC6EA",
+		"source": "https://github.com/rook/artwork/blob/d252db9f43753e6abf64db0ce12d38916a5de464/logo/Rook_Icon.svg",
+		"guidelines": "https://www.linuxfoundation.org/legal/trademark-usage",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Roon",
@@ -16965,6 +16990,11 @@
 		}
 	},
 	{
+		"title": "v0",
+		"hex": "000000",
+		"source": "https://v0.dev"
+	},
+	{
 		"title": "V2EX",
 		"hex": "1F1F1F",
 		"source": "https://www.v2ex.com"
@@ -17929,6 +17959,11 @@
 		"hex": "00549F",
 		"source": "https://www.audiokinetic.com/resources/credits/",
 		"guidelines": "https://www.audiokinetic.com/resources/credits/"
+	},
+	{
+		"title": "WXT",
+		"hex": "67D55E",
+		"source": "https://github.com/wxt-dev/wxt/blob/0d540a6df9c1bf55bb8209c4d881715719fa03b1/docs/public/logo.svg"
 	},
 	{
 		"title": "Wykop",
