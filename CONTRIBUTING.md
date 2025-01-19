@@ -180,6 +180,7 @@ There are many different tools for editing SVG files, some options include:
 | Name | Description | Platform | Price |
 | :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
 | [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
@@ -466,10 +467,14 @@ Kind regards,
 
 ## Testing Package Locally
 
-- Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `^12.20.0 || ^14.13.1 || >=16.0.0` is required.
-- Install the dependencies using `$ npm install`.
-- Build and test the package using `$ npm test`.
-- Run the project linting process using `$ npm run lint`.
+- Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `>=18.18.0` is required.
+- Install the dependencies using `npm install`.
+- Build and test the package using `npm test`.
+- Run the project linting process using `npm run lint`.
+
+## Using Dev Container
+
+We have a pre-configured Node.js runtime for [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers). You can also use the [GitHub Codespaces](https://github.com/features/codespaces) to code from any device.
 
 ## Using Docker
 
