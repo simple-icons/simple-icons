@@ -472,6 +472,10 @@ Kind regards,
 - Build and test the package using `npm test`.
 - Run the project linting process using `npm run lint`.
 
+## Using Dev Container
+
+We have a pre-configured Node.js runtime for [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers). You can also use the [GitHub Codespaces](https://github.com/features/codespaces) to code from any device.
+
 ## Using Docker
 
 You can build a Docker image for this project which can be used as a development environment and allows you to run SVGO safely. First, build the Docker image for simple-icons (if you haven't yet):
