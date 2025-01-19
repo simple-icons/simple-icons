@@ -3825,6 +3825,11 @@
 		"source": "https://www.crew-united.com"
 	},
 	{
+		"title": "CrewAI",
+		"hex": "FF5A50",
+		"source": "https://github.com/crewAIInc/crewAI/blob/a7696d5aed7a85333735dde370fd9f0547aaabf5/docs/favicon.svg"
+	},
+	{
 		"title": "Critical Role",
 		"hex": "000000",
 		"source": "https://critrole.com"
@@ -8829,6 +8834,16 @@
 		"source": "https://www.langchain.com"
 	},
 	{
+		"title": "Langflow",
+		"hex": "000000",
+		"source": "https://github.com/langflow-ai/langflow/blob/a5f5f3e3e30ee1740b696e3ad1823287ba27870c/docs/static/img/langflow-icon-black-transparent.svg"
+	},
+	{
+		"title": "LangGraph",
+		"hex": "1C3C3C",
+		"source": "https://www.langchain.com/langgraph"
+	},
+	{
 		"title": "LanguageTool",
 		"hex": "45A1FC",
 		"source": "https://languagetool.org"
@@ -10044,7 +10059,7 @@
 		"source": "https://en.wikipedia.org/wiki/File:MiHoYo.svg"
 	},
 	{
-		"title": "Mikrotik",
+		"title": "MikroTik",
 		"hex": "293239",
 		"source": "https://mikrotik.com/aboutus"
 	},
@@ -18147,6 +18162,12 @@
 		"hex": "A61E69",
 		"source": "https://yoast.com/brand",
 		"guidelines": "https://yoast.com/brand"
+	},
+	{
+		"title": "YOLO",
+		"hex": "111F68",
+		"source": "https://www.ultralytics.com/brand",
+		"guidelines": "https://www.ultralytics.com/brand"
 	},
 	{
 		"title": "YouHodler",
