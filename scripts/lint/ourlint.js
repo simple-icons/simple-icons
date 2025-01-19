@@ -133,7 +133,9 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 * @returns {boolean} Whether the URL is raw GitHub asset URL.
 		 */
 		const isRawGithubAssetUrl = ($url) =>
-			$url.hostname === 'raw.githubusercontent.com';
+			$url.hostname === 'raw.githubusercontent.com' ||
+			($url.hostname === 'gihtub.com' &&
+				$url.pathname.startsWith('/user-attachments/assets'));
 
 		/**
 		 * Check if an URL is a GitHub URL.
