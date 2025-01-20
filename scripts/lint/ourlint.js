@@ -134,7 +134,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 */
 		const isRawGithubAssetUrl = ($url) =>
 			$url.hostname === 'raw.githubusercontent.com' ||
-			($url.hostname === 'gihtub.com' &&
+			($url.hostname === 'github.com' &&
 				$url.pathname.startsWith('/user-attachments/assets'));
 
 		/**
