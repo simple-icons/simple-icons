@@ -58,7 +58,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @returns {string} The escaped value.
  */
 const escape = (value) => {
-	return value.replaceAll(/(?<!\\)'/g, "\\'");
+	return typeof value === 'string' ? value.replaceAll(/(?<!\\)'/g, "\\'") : '';
 };
 
 /**
