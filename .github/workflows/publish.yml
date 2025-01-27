@@ -123,7 +123,7 @@ jobs:
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
   website:
-    name: Trigger simple-icons-website update
+    name: Trigger simpleicons.org website update
     needs: npm
     runs-on: ubuntu-latest
     steps:
@@ -132,10 +132,10 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-          repositories: 'simple-icons-website'
-      - name: Trigger simple-icons-website update
+          repositories: 'simple-icons-website-rs'
+      - name: Trigger simpleicons.org website update
         run: |
           curl -X POST \
             -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"master"}' \
-            https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches
+            https://api.github.com/repos/simple-icons/simple-icons-website-rs/actions/workflows/auto-release.yml/dispatches
