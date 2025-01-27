@@ -356,6 +356,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BeReal` | `bereal` |
 | `Betfair` | `betfair` |
 | `Better Stack` | `betterstack` |
+| `BetterDiscord` | `betterdiscord` |
 | `Bevy` | `bevy` |
 | `Big Cartel` | `bigcartel` |
 | `bigbasket` | `bigbasket` |
@@ -670,6 +671,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Credly` | `credly` |
 | `Crehana` | `crehana` |
 | `Crew United` | `crewunited` |
+| `CrewAI` | `crewai` |
 | `Critical Role` | `criticalrole` |
 | `Crowdin` | `crowdin` |
 | `Crowdsource` | `crowdsource` |
@@ -1559,6 +1561,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `Langflow` | `langflow` |
+| `LangGraph` | `langgraph` |
 | `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
 | `Laragon` | `laragon` |
@@ -1658,6 +1662,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Loot Crate` | `lootcrate` |
 | `Lospec` | `lospec` |
 | `LOT Polish Airlines` | `lotpolishairlines` |
+| `LottieFiles` | `lottiefiles` |
 | `LTspice` | `ltspice` |
 | `Lua` | `lua` |
 | `Lubuntu` | `lubuntu` |
@@ -1774,7 +1779,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MIDI` | `midi` |
 | `Migadu` | `migadu` |
 | `miHoYo` | `mihoyo` |
-| `Mikrotik` | `mikrotik` |
+| `MikroTik` | `mikrotik` |
 | `Milanote` | `milanote` |
 | `Milvus` | `milvus` |
 | `Minds` | `minds` |
@@ -1892,7 +1897,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `New Relic` | `newrelic` |
 | `New York Times` | `newyorktimes` |
 | `Newegg` | `newegg` |
-| `Nexon` | `nexon` |
+| `NEXON` | `nexon` |
 | `Next.js` | `nextdotjs` |
 | `NextBillion.ai` | `nextbilliondotai` |
 | `Nextcloud` | `nextcloud` |
@@ -2429,6 +2434,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Roll20` | `roll20` |
 | `Rolls-Royce` | `rollsroyce` |
 | `rollup.js` | `rollupdotjs` |
+| `Rook` | `rook` |
 | `Roon` | `roon` |
 | `Root Me` | `rootme` |
 | `Roots` | `roots` |
@@ -2968,6 +2974,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `UIkit` | `uikit` |
 | `UiPath` | `uipath` |
 | `UKCA` | `ukca` |
+| `Ultralytics` | `ultralytics` |
 | `Ulule` | `ulule` |
 | `Umami` | `umami` |
 | `Umbraco` | `umbraco` |
@@ -3207,6 +3214,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yeti` | `yeti` |
 | `Yii` | `yii` |
 | `Yoast` | `yoast` |
+| `YOLO` | `yolo` |
 | `YouHodler` | `youhodler` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |

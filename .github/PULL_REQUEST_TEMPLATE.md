@@ -3,7 +3,7 @@ Before opening your pull request, have a quick look at our contribution guidelin
 https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
 Consider adding a preview image of your submission using:
-https://wasm.simpleicons.org/preview
+https://simpleicons.org/preview
 -->
 
 **Issue:** closes #

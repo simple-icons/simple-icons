@@ -136,6 +136,15 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			$url.hostname === 'raw.githubusercontent.com';
 
 		/**
+		 * Check if URl is user attachment URL.
+		 * @param {URL} $url URL instance.
+		 * @returns {boolean} Whether the URL is user attachment URL.
+		 */
+		const isGitHubUserAttachmentUrl = ($url) =>
+			$url.hostname === 'github.com' &&
+			$url.pathname.startsWith('/user-attachments/assets');
+
+		/**
 		 * Check if an URL is a GitHub URL.
 		 * @param {URL} $url URL instance.
 		 * @returns {boolean} Whether the URL is a GitHub URL.
@@ -209,6 +218,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			if (
 				isSourceUrl &&
 				isGitHubUrl($url) &&
+				!isGitHubUserAttachmentUrl &&
 				!isPermalinkGitHubFileUrl(url) &&
 				!gitHubExcludedUrls.has(url)
 			) {
