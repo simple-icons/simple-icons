@@ -1,4 +1,7 @@
 {
-  "singleQuote": true,
-  "bracketSpacing": false
+	"useTabs": true,
+	"singleQuote": true,
+	"bracketSpacing": false,
+	"proseWrap": "never",
+	"embeddedLanguageFormatting": "off"
 }
