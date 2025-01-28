@@ -29,6 +29,8 @@ jobs:
     name: NPM Package
     needs: sanity-check
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,12 +48,15 @@ jobs:
         run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
+      - name: Minify icons data file
+        run: node scripts/release/minify-icons-data.js
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
         uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
+          provenance: true
   github:
     name: GitHub release
     needs: sanity-check
@@ -94,6 +99,12 @@ jobs:
           tag_name: ${{ steps.get-version.outputs.version }}
           name: ${{ steps.commit.outputs.title }}
           body: ${{ steps.commit.outputs.body }}
+      - name: Send release to Discord
+        run: node scripts/release/discord-release-message.js "${{ steps.get-version.outputs.version }}"
+        env:
+          DISCORD_RELEASES_ROLE_ID: ${{ secrets.DISCORD_RELEASES_ROLE_ID }}
+          DISCORD_RELEASES_WEBHOOK_URL: ${{ secrets.DISCORD_RELEASES_WEBHOOK_URL }}
+        continue-on-error: true
   font:
     name: Trigger simple-icons-font release
     needs: npm
@@ -112,7 +123,7 @@ jobs:
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
   website:
-    name: Trigger simple-icons-website update
+    name: Trigger simpleicons.org website update
     needs: npm
     runs-on: ubuntu-latest
     steps:
@@ -121,10 +132,10 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-          repositories: 'simple-icons-website'
-      - name: Trigger simple-icons-website update
+          repositories: 'simple-icons-website-rs'
+      - name: Trigger simpleicons.org website update
         run: |
           curl -X POST \
             -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"master"}' \
-            https://api.github.com/repos/simple-icons/simple-icons-website/actions/workflows/auto-release.yml/dispatches
+            https://api.github.com/repos/simple-icons/simple-icons-website-rs/actions/workflows/auto-release.yml/dispatches
