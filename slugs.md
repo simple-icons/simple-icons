@@ -1248,7 +1248,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Haskell` | `haskell` |
 | `Hasura` | `hasura` |
 | `Hatena Bookmark` | `hatenabookmark` |
-| `haveibeenpwned` | `haveibeenpwned` |
+| `Have I Been Pawned` | `haveibeenpwned` |
 | `Haxe` | `haxe` |
 | `HBO` | `hbo` |
 | `HCL` | `hcl` |
