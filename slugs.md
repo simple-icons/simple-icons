@@ -1561,6 +1561,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `Langflow` | `langflow` |
 | `LangGraph` | `langgraph` |
 | `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
@@ -1661,6 +1662,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Loot Crate` | `lootcrate` |
 | `Lospec` | `lospec` |
 | `LOT Polish Airlines` | `lotpolishairlines` |
+| `LottieFiles` | `lottiefiles` |
 | `LTspice` | `ltspice` |
 | `Lua` | `lua` |
 | `Lubuntu` | `lubuntu` |
@@ -3212,6 +3214,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yeti` | `yeti` |
 | `Yii` | `yii` |
 | `Yoast` | `yoast` |
+| `YOLO` | `yolo` |
 | `YouHodler` | `youhodler` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |
