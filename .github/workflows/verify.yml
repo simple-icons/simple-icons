@@ -100,7 +100,6 @@ jobs:
           jobSummary: true
           format: markdown
           token: ${{ secrets.GITHUB_TOKEN }}
-
   test:
     name: Test package
     runs-on: ubuntu-latest
