@@ -43,7 +43,7 @@ jobs:
           echo ${{ github.base_ref }}
           echo ${{ github.event_name }}
           echo ${{ contains(github.event.pull_request.labels.*.name, 'meta') }}
-          echo ${{ contains(github.event.pull_request.labels.*.name, 'meta') == 'false' }}
+          echo ${{ contains(github.event.pull_request.labels.*.name, 'meta') == false }}
       - name: Detect changed files
         uses: dorny/paths-filter@v3
         id: changes
