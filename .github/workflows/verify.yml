@@ -39,7 +39,7 @@ jobs:
         # check if is not a release pull request
         id: pr
         run: |
-          echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == 'false' }})" >> $GITHUB_OUTPUT
+          echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == false }})" >> $GITHUB_OUTPUT
           echo ${{ github.base_ref }}
           echo ${{ github.event_name }}
           echo ${{ contains(github.event.pull_request.labels.*.name, 'meta') }}
