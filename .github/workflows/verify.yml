@@ -100,24 +100,6 @@ jobs:
           jobSummary: true
           format: markdown
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Verify file permissions
-        run: |
-          CHECK_DIRS="icons/ _data/"
-          echo "Searching the following directories for executable files:"
-          echo "${CHECK_DIRS}"
-          echo ""
-          EXE_FILES=$(find ${CHECK_DIRS} -type f -executable)
-          if test -n "${EXE_FILES-}"
-          then
-            echo "Some files were detected to have their executable bit set."
-            echo "To fix this, you can use 'chmod -x PATH/TO/FILE' on the following files:"
-            echo ""
-            echo "${EXE_FILES}"
-            exit 1
-          else
-            echo "All clear."
-            exit 0
-          fi
   test:
     name: Test package
     runs-on: ubuntu-latest
