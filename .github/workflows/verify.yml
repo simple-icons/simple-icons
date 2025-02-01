@@ -13,10 +13,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - id: get-node-version
+        uses: ./.github/actions/get-node-version
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ steps.get-node-version.outputs.version }}
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -29,10 +31,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - id: get-node-version
+        uses: ./.github/actions/get-node-version
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ steps.get-node-version.outputs.version }}
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Is normal pull request
@@ -106,10 +110,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - id: get-node-version
+        uses: ./.github/actions/get-node-version
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ steps.get-node-version.outputs.version }}
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
