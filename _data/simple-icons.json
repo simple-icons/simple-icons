@@ -4329,6 +4329,11 @@
 		"source": "https://dev.to"
 	},
 	{
+		"title": "Devbox",
+		"hex": "280459",
+		"source": "https://github.com/jetify-com/devbox/blob/c3cab01d7375726f0121a25fc0f5c838484246f7/docs/app/static/img/devbox_logo_light.svg"
+	},
+	{
 		"title": "DevExpress",
 		"hex": "FF7200",
 		"source": "https://www.devexpress.com/aboutus/"
@@ -5200,8 +5205,9 @@
 	},
 	{
 		"title": "Expo",
-		"hex": "000020",
-		"source": "https://expo.io/brand/"
+		"hex": "1C2024",
+		"source": "https://expo.dev/brand/",
+		"guidelines": "https://expo.dev/brand/"
 	},
 	{
 		"title": "Express",
@@ -5490,6 +5496,11 @@
 		"title": "File.io",
 		"hex": "3D3C9D",
 		"source": "https://www.file.io"
+	},
+	{
+		"title": "Filen",
+		"hex": "000000",
+		"source": "https://github.com/FilenCloudDienste/filen-drive-legacy/issues/166#issue-2139393162"
 	},
 	{
 		"title": "Files",
@@ -6241,6 +6252,11 @@
 		"title": "Gitter",
 		"hex": "ED1965",
 		"source": "https://gitter.im"
+	},
+	{
+		"title": "GL.iNet",
+		"hex": "636363",
+		"source": "https://www.gl-inet.com/press/"
 	},
 	{
 		"title": "Glassdoor",
@@ -11335,6 +11351,11 @@
 		"guidelines": "https://opensource.org/logo-usage-guidelines"
 	},
 	{
+		"title": "Open3D",
+		"hex": "000000",
+		"source": "https://github.com/isl-org/Open3D/blob/2ae042aa74ad3917afd891e36798ffe687513662/cpp/apps/Open3DViewer/icon.svg"
+	},
+	{
 		"title": "OpenAI",
 		"hex": "412991",
 		"source": "https://openai.com/brand",
@@ -16370,6 +16391,11 @@
 		"source": "https://styleguide.torproject.org/brand-assets"
 	},
 	{
+		"title": "Torizon",
+		"hex": "FAAF00",
+		"source": "https://toradex.com/torizon"
+	},
+	{
 		"title": "Toshiba",
 		"hex": "FF0000",
 		"source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
@@ -17128,6 +17154,11 @@
 		"title": "VEGAS",
 		"hex": "1A1A1A",
 		"source": "https://www.vegascreativesoftware.com"
+	},
+	{
+		"title": "Velocity",
+		"hex": "1BBAE0",
+		"source": "https://github.com/PaperMC/website/blob/cc46d6922f4eeef595685808672694521a58bdc6/assets/brand/velocity.svg"
 	},
 	{
 		"title": "Velog",
