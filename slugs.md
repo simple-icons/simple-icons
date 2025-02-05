@@ -759,6 +759,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Telekom` | `deutschetelekom` |
 | `Deutsche Welle` | `deutschewelle` |
 | `dev.to` | `devdotto` |
+| `Devbox` | `devbox` |
 | `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
@@ -969,6 +970,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fila` | `fila` |
 | `Filament` | `filament` |
 | `File.io` | `filedotio` |
+| `Filen` | `filen` |
 | `Files` | `files` |
 | `FileZilla` | `filezilla` |
 | `Fineco` | `fineco` |
@@ -1103,6 +1105,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GitLab` | `gitlab` |
 | `Gitpod` | `gitpod` |
 | `Gitter` | `gitter` |
+| `GL.iNet` | `gldotinet` |
 | `Glassdoor` | `glassdoor` |
 | `Glide` | `glide` |
 | `Glitch` | `glitch` |
@@ -1996,6 +1999,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Open Containers Initiative` | `opencontainersinitiative` |
 | `Open Source Hardware` | `opensourcehardware` |
 | `Open Source Initiative` | `opensourceinitiative` |
+| `Open3D` | `open3d` |
 | `OpenAI` | `openai` |
 | `OpenAI Gym` | `openaigym` |
 | `OpenAPI Initiative` | `openapiinitiative` |
@@ -2895,6 +2899,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Toptal` | `toptal` |
 | `Tor Browser` | `torbrowser` |
 | `Tor Project` | `torproject` |
+| `Torizon` | `torizon` |
 | `Toshiba` | `toshiba` |
 | `TOTVS` | `totvs` |
 | `TourBox` | `tourbox` |
@@ -3031,6 +3036,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Veepee` | `veepee` |
 | `Vega` | `vega` |
 | `VEGAS` | `vegas` |
+| `Velocity` | `velocity` |
 | `Velog` | `velog` |
 | `Vencord` | `vencord` |
 | `Venmo` | `venmo` |
