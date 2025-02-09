@@ -89,8 +89,10 @@ jobs:
         run: |
           set -e
           tag="${{ steps.get-version.outputs.version }}"
-          git tag -a "${tag}" -m "${{ steps.commit.outputs.git-message }}"
+          git tag -a "${tag}" -m "$GIT_MESSAGE"
           git push origin "${tag}"
+        env:
+          GIT_MESSAGE: ${{ steps.commit.outputs.git-message }}
       - name: Create release
         uses: softprops/action-gh-release@v2
         env:

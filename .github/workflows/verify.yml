@@ -83,11 +83,10 @@ jobs:
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs != 'true'
         run: sed -i "s/'\*\*\/\*\.md'/README.md/" package.json
       - name: Run linter
-        run: |
-          npm run lint \
-            --icons='${{ steps.changes.outputs.icons_files }}' \
-            --docs='${{ steps.changes.outputs.docs_files }}'
+        run: npm run lint --icons="$ICONS_FILES" --docs='$DOCS_FILES'
         env:
+          ICONS_FILES: ${{ steps.changes.outputs.icons_files }}
+          DOCS_FILES: ${{ steps.changes.outputs.docs_files }}
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
