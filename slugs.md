@@ -569,6 +569,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clyp` | `clyp` |
 | `CMake` | `cmake` |
 | `CNCF` | `cncf` |
+| `CNES` | `cnes` |
 | `CNET` | `cnet` |
 | `CNN` | `cnn` |
 | `Co-op` | `coop` |
@@ -1741,6 +1742,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `mdBook` | `mdbook` |
 | `MDN Web Docs` | `mdnwebdocs` |
 | `MDX` | `mdx` |
+| `Mealie` | `mealie` |
 | `MediaFire` | `mediafire` |
 | `MediaMarkt` | `mediamarkt` |
 | `MediaPipe` | `mediapipe` |
