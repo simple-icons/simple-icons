@@ -1,3 +1,8 @@
 {
-  "singleQuote": true
+	"plugins": ["prettier-plugin-packagejson"],
+	"useTabs": true,
+	"singleQuote": true,
+	"bracketSpacing": false,
+	"proseWrap": "never",
+	"embeddedLanguageFormatting": "off"
 }
