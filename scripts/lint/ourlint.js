@@ -155,7 +155,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 * Regex to match a permalink GitHub URL for a file.
 		 */
 		const permalinkGitHubRegex =
-			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
 
 		/**
 		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
@@ -204,6 +204,8 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				invalidUrls.push(fakeDiff(url, $url.origin));
 			}
 
+			if (isGitHubUserAttachmentUrl($url)) continue;
+
 			if (isStaticWikimediaAssetUrl($url)) {
 				const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
 				invalidUrls.push(fakeDiff(url, expectedUrl));
@@ -218,7 +220,6 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			if (
 				isSourceUrl &&
 				isGitHubUrl($url) &&
-				!isGitHubUserAttachmentUrl &&
 				!isPermalinkGitHubFileUrl(url) &&
 				!gitHubExcludedUrls.has(url)
 			) {
