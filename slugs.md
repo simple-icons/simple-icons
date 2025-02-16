@@ -1252,7 +1252,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Haskell` | `haskell` |
 | `Hasura` | `hasura` |
 | `Hatena Bookmark` | `hatenabookmark` |
-| `haveibeenpwned` | `haveibeenpwned` |
+| `Have I Been Pwned` | `haveibeenpwned` |
 | `Haxe` | `haxe` |
 | `HBO` | `hbo` |
 | `HCL` | `hcl` |
@@ -3210,6 +3210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `XSplit` | `xsplit` |
 | `XState` | `xstate` |
 | `Xubuntu` | `xubuntu` |
+| `xyflow` | `xyflow` |
 | `Y Combinator` | `ycombinator` |
 | `yabai` | `yabai` |
 | `Yale` | `yale` |
