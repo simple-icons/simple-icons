@@ -1157,6 +1157,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Cloud Storage` | `googlecloudstorage` |
 | `Google Colab` | `googlecolab` |
 | `Google Container Optimized OS` | `googlecontaineroptimizedos` |
+| `Google Data Studio` | `googledatastudio` |
 | `Google Dataflow` | `googledataflow` |
 | `Google Dataproc` | `googledataproc` |
 | `Google Display & Video 360` | `googledisplayandvideo360` |
