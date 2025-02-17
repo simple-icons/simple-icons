@@ -1131,7 +1131,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GOG.com` | `gogdotcom` |
 | `Gojek` | `gojek` |
 | `GoLand` | `goland` |
-| `GoldenLine` | `goldenline` |
 | `Goldman Sachs` | `goldmansachs` |
 | `Goodreads` | `goodreads` |
 | `Google` | `google` |
