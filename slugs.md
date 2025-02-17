@@ -1425,6 +1425,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Jabber` | `jabber` |
 | `Jaeger` | `jaeger` |
 | `Jaguar` | `jaguar` |
+| `Jamboard` | `jamboard` |
 | `Jameson` | `jameson` |
 | `Jamstack` | `jamstack` |
 | `Japan Airlines` | `japanairlines` |
