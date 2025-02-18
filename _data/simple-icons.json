@@ -14063,7 +14063,10 @@
 	{
 		"title": "SageMath",
 		"hex": "3333FF",
-		"source": "https://github.com/sagemath/artwork/blob/dc51186a48f46ac9ff29e453491b8daf4c52ca15/sage-logo-2018.svg"
+		"source": "https://github.com/sagemath/artwork/blob/dc51186a48f46ac9ff29e453491b8daf4c52ca15/sage-logo-2018.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Sahibinden",
