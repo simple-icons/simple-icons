@@ -569,6 +569,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clyp` | `clyp` |
 | `CMake` | `cmake` |
 | `CNCF` | `cncf` |
+| `CNES` | `cnes` |
 | `CNET` | `cnet` |
 | `CNN` | `cnn` |
 | `Co-op` | `coop` |
@@ -759,6 +760,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Telekom` | `deutschetelekom` |
 | `Deutsche Welle` | `deutschewelle` |
 | `dev.to` | `devdotto` |
+| `Devbox` | `devbox` |
 | `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
@@ -969,6 +971,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fila` | `fila` |
 | `Filament` | `filament` |
 | `File.io` | `filedotio` |
+| `Filen` | `filen` |
 | `Files` | `files` |
 | `FileZilla` | `filezilla` |
 | `Fineco` | `fineco` |
@@ -1103,6 +1106,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GitLab` | `gitlab` |
 | `Gitpod` | `gitpod` |
 | `Gitter` | `gitter` |
+| `GL.iNet` | `gldotinet` |
 | `Glassdoor` | `glassdoor` |
 | `Glide` | `glide` |
 | `Glitch` | `glitch` |
@@ -1248,7 +1252,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Haskell` | `haskell` |
 | `Hasura` | `hasura` |
 | `Hatena Bookmark` | `hatenabookmark` |
-| `haveibeenpwned` | `haveibeenpwned` |
+| `Have I Been Pwned` | `haveibeenpwned` |
 | `Haxe` | `haxe` |
 | `HBO` | `hbo` |
 | `HCL` | `hcl` |
@@ -1561,6 +1565,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lamborghini` | `lamborghini` |
 | `Land Rover` | `landrover` |
 | `LangChain` | `langchain` |
+| `Langflow` | `langflow` |
 | `LangGraph` | `langgraph` |
 | `LanguageTool` | `languagetool` |
 | `Lapce` | `lapce` |
@@ -1661,6 +1666,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Loot Crate` | `lootcrate` |
 | `Lospec` | `lospec` |
 | `LOT Polish Airlines` | `lotpolishairlines` |
+| `LottieFiles` | `lottiefiles` |
 | `LTspice` | `ltspice` |
 | `Lua` | `lua` |
 | `Lubuntu` | `lubuntu` |
@@ -1736,6 +1742,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `mdBook` | `mdbook` |
 | `MDN Web Docs` | `mdnwebdocs` |
 | `MDX` | `mdx` |
+| `Mealie` | `mealie` |
 | `MediaFire` | `mediafire` |
 | `MediaMarkt` | `mediamarkt` |
 | `MediaPipe` | `mediapipe` |
@@ -1994,6 +2001,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Open Containers Initiative` | `opencontainersinitiative` |
 | `Open Source Hardware` | `opensourcehardware` |
 | `Open Source Initiative` | `opensourceinitiative` |
+| `Open3D` | `open3d` |
 | `OpenAI` | `openai` |
 | `OpenAI Gym` | `openaigym` |
 | `OpenAPI Initiative` | `openapiinitiative` |
@@ -2893,6 +2901,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Toptal` | `toptal` |
 | `Tor Browser` | `torbrowser` |
 | `Tor Project` | `torproject` |
+| `Torizon` | `torizon` |
 | `Toshiba` | `toshiba` |
 | `TOTVS` | `totvs` |
 | `TourBox` | `tourbox` |
@@ -3029,6 +3038,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Veepee` | `veepee` |
 | `Vega` | `vega` |
 | `VEGAS` | `vegas` |
+| `Velocity` | `velocity` |
 | `Velog` | `velog` |
 | `Vencord` | `vencord` |
 | `Venmo` | `venmo` |
@@ -3200,6 +3210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `XSplit` | `xsplit` |
 | `XState` | `xstate` |
 | `Xubuntu` | `xubuntu` |
+| `xyflow` | `xyflow` |
 | `Y Combinator` | `ycombinator` |
 | `yabai` | `yabai` |
 | `Yale` | `yale` |
@@ -3212,6 +3223,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yeti` | `yeti` |
 | `Yii` | `yii` |
 | `Yoast` | `yoast` |
+| `YOLO` | `yolo` |
 | `YouHodler` | `youhodler` |
 | `YouTube` | `youtube` |
 | `YouTube Gaming` | `youtubegaming` |

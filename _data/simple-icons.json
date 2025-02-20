@@ -3284,6 +3284,11 @@
 		"guidelines": "https://www.cncf.io/brand-guidelines/"
 	},
 	{
+		"title": "CNES",
+		"hex": "204F8C",
+		"source": "https://fr.m.wikipedia.org/wiki/Fichier:Logo_CNES_2017_triangulaire_bleu.png"
+	},
+	{
 		"title": "CNET",
 		"hex": "E71D1D",
 		"source": "https://www.cnet.com"
@@ -4324,6 +4329,11 @@
 		"source": "https://dev.to"
 	},
 	{
+		"title": "Devbox",
+		"hex": "280459",
+		"source": "https://github.com/jetify-com/devbox/blob/c3cab01d7375726f0121a25fc0f5c838484246f7/docs/app/static/img/devbox_logo_light.svg"
+	},
+	{
 		"title": "DevExpress",
 		"hex": "FF7200",
 		"source": "https://www.devexpress.com/aboutus/"
@@ -5195,8 +5205,9 @@
 	},
 	{
 		"title": "Expo",
-		"hex": "000020",
-		"source": "https://expo.io/brand/"
+		"hex": "1C2024",
+		"source": "https://expo.dev/brand/",
+		"guidelines": "https://expo.dev/brand/"
 	},
 	{
 		"title": "Express",
@@ -5485,6 +5496,11 @@
 		"title": "File.io",
 		"hex": "3D3C9D",
 		"source": "https://www.file.io"
+	},
+	{
+		"title": "Filen",
+		"hex": "000000",
+		"source": "https://github.com/FilenCloudDienste/filen-drive-legacy/issues/166#issue-2139393162"
 	},
 	{
 		"title": "Files",
@@ -5845,8 +5861,9 @@
 	},
 	{
 		"title": "FreeCAD",
-		"hex": "729FCF",
-		"source": "https://www.freecad.org"
+		"hex": "418FDE",
+		"source": "https://fpa.freecad.org/handbook/process/logo.html",
+		"guidelines": "https://fpa.freecad.org/handbook/process/logo.html"
 	},
 	{
 		"title": "freeCodeCamp",
@@ -6236,6 +6253,11 @@
 		"title": "Gitter",
 		"hex": "ED1965",
 		"source": "https://gitter.im"
+	},
+	{
+		"title": "GL.iNet",
+		"hex": "636363",
+		"source": "https://www.gl-inet.com/press/"
 	},
 	{
 		"title": "Glassdoor",
@@ -7081,7 +7103,7 @@
 		"source": "https://hatenacorp.jp/press/resource"
 	},
 	{
-		"title": "haveibeenpwned",
+		"title": "Have I Been Pwned",
 		"hex": "2A6379",
 		"source": "https://haveibeenpwned.com"
 	},
@@ -8593,6 +8615,14 @@
 		"source": "https://kitsu.io"
 	},
 	{
+		"title": "Kiwix",
+		"hex": "000000",
+		"source": "https://wiki.kiwix.org/wiki/Logo",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Klarna",
 		"hex": "FFB3C7",
 		"source": "https://klarna.design"
@@ -9417,6 +9447,11 @@
 		"source": "https://www.lot.com/us/en/kaleidoscope-inflight-magazine"
 	},
 	{
+		"title": "LottieFiles",
+		"hex": "00DDB3",
+		"source": "https://lottiefiles.github.io/lottie-docs/"
+	},
+	{
 		"title": "LTspice",
 		"hex": "900028",
 		"source": "https://www.analog.com/media/en/news-marketing-collateral/solutions-bulletins-brochures/ltspice-keyboard-shortcuts.pdf",
@@ -9826,6 +9861,11 @@
 		"title": "MDX",
 		"hex": "1B1F24",
 		"source": "https://github.com/mdx-js/mdx/blob/b8a76c95deb14f7297bafdac1aa3eddd2b0fbb8f/docs/_static/icon.svg"
+	},
+	{
+		"title": "Mealie",
+		"hex": "E58325",
+		"source": "https://github.com/mealie-recipes/mealie.io/blob/5519cac801c116a5688c63d8126c3bf1ce568c58/components/App/Toolbar.vue"
 	},
 	{
 		"title": "MediaFire",
@@ -11323,6 +11363,11 @@
 		"hex": "3DA639",
 		"source": "https://opensource.org/logo-usage-guidelines",
 		"guidelines": "https://opensource.org/logo-usage-guidelines"
+	},
+	{
+		"title": "Open3D",
+		"hex": "000000",
+		"source": "https://github.com/isl-org/Open3D/blob/2ae042aa74ad3917afd891e36798ffe687513662/cpp/apps/Open3DViewer/icon.svg"
 	},
 	{
 		"title": "OpenAI",
@@ -14022,6 +14067,14 @@
 		"source": "https://www.sage.com"
 	},
 	{
+		"title": "SageMath",
+		"hex": "3333FF",
+		"source": "https://github.com/sagemath/artwork/blob/dc51186a48f46ac9ff29e453491b8daf4c52ca15/sage-logo-2018.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Sahibinden",
 		"hex": "FFE800",
 		"source": "https://www.sahibinden.com/favicon.ico"
@@ -16365,6 +16418,11 @@
 		"source": "https://styleguide.torproject.org/brand-assets"
 	},
 	{
+		"title": "Torizon",
+		"hex": "FAAF00",
+		"source": "https://toradex.com/torizon"
+	},
+	{
 		"title": "Toshiba",
 		"hex": "FF0000",
 		"source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
@@ -17123,6 +17181,11 @@
 		"title": "VEGAS",
 		"hex": "1A1A1A",
 		"source": "https://www.vegascreativesoftware.com"
+	},
+	{
+		"title": "Velocity",
+		"hex": "1BBAE0",
+		"source": "https://github.com/PaperMC/website/blob/cc46d6922f4eeef595685808672694521a58bdc6/assets/brand/velocity.svg"
 	},
 	{
 		"title": "Velog",
@@ -18100,6 +18163,17 @@
 		"title": "Xubuntu",
 		"hex": "0044AA",
 		"source": "https://commons.wikimedia.org/wiki/File:Xubuntu_Icon.svg"
+	},
+	{
+		"title": "xyflow",
+		"hex": "1A192B",
+		"source": "https://github.com/xyflow/web/blob/fe6af5d1c78de492fc64a39ab8a2085f1eb7164d/sites/xyflow.com/public/img/favicon.svg",
+		"aliases": {
+			"aka": [
+				"reactflow",
+				"svelteflow"
+			]
+		}
 	},
 	{
 		"title": "Y Combinator",

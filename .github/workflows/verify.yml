@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -32,13 +32,13 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Is normal pull request
         # check if is not a release pull request
         id: pr
-        run: echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == 'false' }})" >> $GITHUB_OUTPUT
+        run: echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == false }})" >> $GITHUB_OUTPUT
       - name: Detect changed files
         uses: dorny/paths-filter@v3
         id: changes
@@ -83,11 +83,10 @@ jobs:
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs != 'true'
         run: sed -i "s/'\*\*\/\*\.md'/README.md/" package.json
       - name: Run linter
-        run: |
-          npm run lint \
-            --icons='${{ steps.changes.outputs.icons_files }}' \
-            --docs='${{ steps.changes.outputs.docs_files }}'
+        run: npm run lint --icons="$ICONS_FILES" --docs='$DOCS_FILES'
         env:
+          ICONS_FILES: ${{ steps.changes.outputs.icons_files }}
+          DOCS_FILES: ${{ steps.changes.outputs.docs_files }}
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
@@ -100,24 +99,6 @@ jobs:
           jobSummary: true
           format: markdown
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Verify file permissions
-        run: |
-          CHECK_DIRS="icons/ _data/"
-          echo "Searching the following directories for executable files:"
-          echo "${CHECK_DIRS}"
-          echo ""
-          EXE_FILES=$(find ${CHECK_DIRS} -type f -executable)
-          if test -n "${EXE_FILES-}"
-          then
-            echo "Some files were detected to have their executable bit set."
-            echo "To fix this, you can use 'chmod -x PATH/TO/FILE' on the following files:"
-            echo ""
-            echo "${EXE_FILES}"
-            exit 1
-          else
-            echo "All clear."
-            exit 0
-          fi
   test:
     name: Test package
     runs-on: ubuntu-latest
@@ -127,7 +108,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
