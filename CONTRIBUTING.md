@@ -437,6 +437,23 @@ Where the `locale` is an [IETF language tag] and `title` is a **different** titl
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
+##### Old Names
+
+We collect old names to make it possible to find the brand by it's old name. To add an old name you add the following to the icon data:
+
+```json
+{
+    "title": "the title",
+    "aliases": {
+        "old": [
+            "the old title"
+        ]
+    }
+}
+```
+
+Where each old title is **different** from the current title.
+
 ### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
