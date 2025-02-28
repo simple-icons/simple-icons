@@ -4747,8 +4747,13 @@
 	},
 	{
 		"title": "EasyEDA",
-		"hex": "1765F6",
-		"source": "https://easyeda.com"
+		"hex": "5588FF",
+		"source": "https://lceda.cn/fonts/blue-logo-cn.svg",
+		"aliases": {
+			"loc": {
+				"zh-CN": "嘉立创EDA"
+			}
+		}
 	},
 	{
 		"title": "easyJet",
@@ -8943,23 +8948,6 @@
 		"hex": "2F9176",
 		"source": "https://lbry.com/press-kit",
 		"guidelines": "https://lbry.com/faq/acceptable-use-policy"
-	},
-	{
-		"title": "LCEDA",
-		"hex": "5588FF",
-		"source": "https://lceda.cn/fonts/blue-logo-cn.svg",
-		"aliases": {
-			"dup": [
-				{
-					"title": "EasyEDA",
-					"hex": "1765F6"
-				}
-			],
-			"loc": {
-				"en-US": "EasyEDA",
-				"zh-CN": "嘉立创EDA"
-			}
-		}
 	},
 	{
 		"title": "Leader Price",
