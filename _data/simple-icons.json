@@ -8945,6 +8945,23 @@
 		"guidelines": "https://lbry.com/faq/acceptable-use-policy"
 	},
 	{
+		"title": "LCEDA",
+		"hex": "5588FF",
+		"source": "https://lceda.cn/fonts/blue-logo-cn.svg",
+		"aliases": {
+			"dup": [
+				{
+					"title": "EasyEDA",
+					"hex": "#1765F6"
+				}
+			],
+			"loc": {
+				"en-US": "EasyEDA",
+				"zh-CN": "嘉立创EDA"
+			}
+		}
+	},
+	{
 		"title": "Leader Price",
 		"hex": "E50005",
 		"source": "https://www.leaderprice.fr"
