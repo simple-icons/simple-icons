@@ -4748,7 +4748,12 @@
 	{
 		"title": "EasyEDA",
 		"hex": "1765F6",
-		"source": "https://easyeda.com"
+		"source": "https://easyeda.com",
+		"aliases": {
+			"loc": {
+				"zh-CN": "嘉立创EDA"
+			}
+		}
 	},
 	{
 		"title": "easyJet",
