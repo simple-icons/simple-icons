@@ -3061,6 +3061,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vim` | `vim` |
 | `Vimeo` | `vimeo` |
 | `Vimeo Livestream` | `vimeolivestream` |
+| `Vinted` | `vinted` |
 | `Virgin` | `virgin` |
 | `Virgin Atlantic` | `virginatlantic` |
 | `Virgin Media` | `virginmedia` |
