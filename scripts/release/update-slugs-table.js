@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Generates a MarkDown file that lists every brand name and their slug.

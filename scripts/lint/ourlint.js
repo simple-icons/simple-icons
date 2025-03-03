@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Linters for the package that can't easily be implemented in the existing ones.
@@ -239,14 +240,14 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	async checkLicense(icons) {
 		const spdxLicenseIds = new Set(await getSpdxLicenseIds());
 		const badLicenses = [];
-		for (const {title, slug, license} of icons) {
+		for (const icon of icons) {
 			if (
-				license &&
-				license.type !== 'custom' &&
-				!spdxLicenseIds.has(license.type)
+				icon.license &&
+				icon.license.type !== 'custom' &&
+				!spdxLicenseIds.has(icon.license.type)
 			) {
 				badLicenses.push(
-					`${title} (${getIconSlug({title, slug})}) has not a valid SPDX license.`,
+					`${icon.title} (${getIconSlug(icon)}) has not a valid SPDX license.`,
 				);
 			}
 		}
@@ -258,7 +259,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 
 	/* Ensure that fields are sorted in the same way for all icons */
 	fieldsSorted(icons) {
-		const formatted = formatIconData(icons, true);
+		const formatted = formatIconData(icons);
 		const previous = JSON.stringify(icons, null, '\t');
 		const sorted = JSON.stringify(formatted, null, '\t');
 		if (previous !== sorted) {

@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Internal utilities.
  *
@@ -35,13 +36,13 @@ export const getJsonSchemaData = async (
 /**
  * Write icons data to _data/simple-icons.json.
  * @param {IconData[]} iconsData Icons data array.
- * @param {string} rootDirectory Path to the root directory of the project.
- * @param {boolean} minify Whether to minify the JSON output.
+ * @param {boolean} [minify] Whether to minify the JSON output.
+ * @param {string} [rootDirectory] Path to the root directory of the project.
  */
 export const writeIconsData = async (
 	iconsData,
+	minify = false,
 	rootDirectory = path.resolve(__dirname, '..'),
-	minify,
 ) => {
 	await fs.writeFile(
 		getIconsDataPath(rootDirectory),
@@ -99,11 +100,13 @@ const sortIcon = (icon) => {
 		// This is not appears in icon data but it's in the alias object.
 		'loc',
 	];
+
 	const sortedIcon = Object.fromEntries(
 		Object.entries(icon).sort(
 			([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 		),
 	);
+	// @ts-ignore
 	return sortedIcon;
 };
 
@@ -120,6 +123,7 @@ const sortLicense = (license) => {
 			([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 		),
 	);
+	// @ts-ignore
 	return sortedLicense;
 };
 
@@ -150,13 +154,20 @@ export const formatIconData = (iconsData) => {
 				? sortAlphabetically({
 						aka: icon.aliases.aka?.sort(collator.compare),
 						dup: icon.aliases.dup
-							? icon.aliases.dup.sort(sortIconsCompare).map((d) =>
-									sortIcon({
-										...d,
-										loc: sortAlphabetically(d.loc),
-									}),
-								)
+							? icon.aliases.dup
+									.sort(
+										// @ts-ignore
+										sortIconsCompare,
+									)
+									.map((d) =>
+										sortIcon({
+											...d,
+											// @ts-ignore
+											loc: sortAlphabetically(d.loc),
+										}),
+									)
 							: undefined,
+						// @ts-ignore
 						loc: sortAlphabetically(icon.aliases.loc),
 						old: icon.aliases.old?.sort(collator.compare),
 					})

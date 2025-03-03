@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Updates the SDK Typescript definitions located in the file sdk.d.ts

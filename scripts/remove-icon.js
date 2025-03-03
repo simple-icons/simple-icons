@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script to remove an icon and its data.
@@ -27,7 +28,6 @@ const icons = iconsData.map((icon, index) => {
 
 const found = await autocomplete({
 	message: 'Select an icon to remove:',
-	name: 'icon',
 	async source(input) {
 		if (!input) return icons;
 		return search(input, icons, {
