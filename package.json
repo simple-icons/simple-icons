@@ -98,7 +98,7 @@
 		"get-filename": "node scripts/get-filename.js",
 		"jslint": "xo",
 		"jsonlint": "node scripts/lint/jsonlint.js",
-		"lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run markdownlint",
+		"lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run tslint && npm run markdownlint",
 		"markdownlint": "markdownlint-cli2 '**/*.md' '#node_modules'",
 		"ourlint": "node scripts/lint/ourlint.js",
 		"prepare": "husky",
@@ -111,6 +111,7 @@
 		"pretest": "npm run prepublishOnly",
 		"test": "mocha tests --reporter tests/min-reporter.cjs --inline-diffs",
 		"posttest": "npm run postpublish",
+		"tslint": "tsc -p jsconfig.json",
 		"wslint": "editorconfig-checker",
 		"xo:fix": "xo --fix"
 	},
