@@ -23,7 +23,7 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
  * Get JSON schema data.
- * @param {string} rootDirectory Path to the root directory of the project.
+ * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<any>} JSON schema data.
  */
 export const getJsonSchemaData = async (
@@ -53,7 +53,7 @@ export const writeIconsData = async (
 
 /**
  * Get SPDX license IDs from `spdx-license-ids` package.
- * @param {string} rootDirectory Path to the root directory of the project.
+ * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<string[]>} Set of SPDX license IDs.
  */
 export const getSpdxLicenseIds = async (
