@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file SVGO configuration for Simple Icons.
  */

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Simple Icons package build script.
@@ -99,10 +100,10 @@ const iconToJsObject = (icon) => {
  * Write JavaScript content to a file.
  * @param {string} filepath The path to the file to write.
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {EsBuildTransformOptions | null} options The options to pass to esbuild.
+ * @param {EsBuildTransformOptions} [options] The options to pass to esbuild.
  */
-const writeJs = async (filepath, rawJavaScript, options = null) => {
-	options = options === null ? {minify: true} : options;
+const writeJs = async (filepath, rawJavaScript, options = undefined) => {
+	options = options === undefined ? {minify: true} : options;
 	const {code} = await esbuildTransform(rawJavaScript, options);
 	await fs.writeFile(filepath, code);
 };
