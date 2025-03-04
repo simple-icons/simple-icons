@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script to add data for a new icon to the simple-icons dataset.

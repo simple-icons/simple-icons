@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Simple Icons package build script.

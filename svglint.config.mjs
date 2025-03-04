@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file
  * Linting rules for SVGLint to check SVG icons.
