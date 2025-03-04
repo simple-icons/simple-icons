@@ -102,7 +102,7 @@ const iconToJsObject = (icon) => {
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
  * @param {EsBuildTransformOptions} [options] The options to pass to esbuild.
  */
-const writeJs = async (filepath, rawJavaScript, options) => {
+const writeJs = async (filepath, rawJavaScript, options = undefined) => {
 	options = options === undefined ? {minify: true} : options;
 	const {code} = await esbuildTransform(rawJavaScript, options);
 	await fs.writeFile(filepath, code);
