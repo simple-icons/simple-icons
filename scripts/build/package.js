@@ -43,11 +43,9 @@ const iconObjectTemplateFile = path.resolve(
 );
 
 /**
- * @typedef {import('../../sdk.d.ts').IconData} IconData
- *
  * Merged type from icon data and icon JS object needed to build by reference
  * to not decrease performance in the build process.
- * @typedef {import('../../types.js').SimpleIcon & IconData} IconDataAndObject
+ * @typedef {import('../../types.js').SimpleIcon & import('../../sdk.d.ts').IconData} IconDataAndObject
  */
 
 const icons = await getIconsData();
