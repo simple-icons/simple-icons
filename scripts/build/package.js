@@ -43,13 +43,13 @@ const iconObjectTemplateFile = path.resolve(
 );
 
 /**
+ * @typedef {import('../../sdk.d.ts').IconData} IconData
+ *
  * Merged type from icon data and icon JS object needed to build by reference
  * to not decrease performance in the build process.
- * @typedef {import('../../types.js').SimpleIcon & import('../../sdk.d.ts').IconData} IconDataAndObject
+ * @typedef {import('../../types.js').SimpleIcon & IconData} IconDataAndObject
  */
 
-/** @type {IconDataAndObject[]} */
-// @ts-ignore
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
@@ -80,7 +80,7 @@ const licenseToString = (license) => {
  * @param {IconDataAndObject} icon The icon object.
  * @returns {string} The JavaScript object.
  */
-const iconToJsObject = (icon) => {
+const iconDataAndObjectToJsRepr = (icon) => {
 	return format(
 		iconObjectTemplate,
 		escape(icon.title),
@@ -117,29 +117,44 @@ const writeTs = async (filepath, rawTypeScript) => {
 	await fs.writeFile(filepath, rawTypeScript);
 };
 
-const build = async () => {
-	const buildIcons = await Promise.all(
-		icons.map(async (icon) => {
-			const filename = getIconSlug(icon);
-			const svgFilepath = path.resolve(iconsDirectory, `${filename}.svg`);
-			icon.svg = await fs.readFile(svgFilepath, UTF8);
-			icon.path = svgToPath(icon.svg);
-			icon.slug = filename;
-			const iconObject = iconToJsObject(icon);
-			const iconExportName = slugToVariableName(icon.slug);
-			return {icon, iconObject, iconExportName};
+/**
+ * Build icons intermediate instances.
+ * @returns {Promise<{
+ * 	icon: IconDataAndObject,
+ * 	iconObjectRepr: string,
+ * 	iconExportName: string
+ * }[]>} Merged icon data and object instances.
+ */
+const buildIcons = async () =>
+	Promise.all(
+		icons.map(async (iconData) => {
+			const slug = getIconSlug(iconData);
+			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
+			const svg = await fs.readFile(svgFilepath, UTF8);
+			/** @type {IconDataAndObject} */
+			const icon = {};
+			Object.assign(icon, iconData);
+			icon.svg = svg;
+			icon.path = svgToPath(svg);
+			icon.slug = slug;
+			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
+			const iconExportName = slugToVariableName(slug);
+			return {icon, iconObjectRepr, iconExportName};
 		}),
 	);
+
+const build = async () => {
+	const builtIcons = await buildIcons();
 
 	const iconsBarrelDts = [];
 	const iconsBarrelJs = [];
 	const iconsBarrelMjs = [];
 
-	buildIcons.sort((a, b) => sortIconsCompare(a.icon, b.icon));
-	for (const {iconObject, iconExportName} of buildIcons) {
+	builtIcons.sort((a, b) => sortIconsCompare(a.icon, b.icon));
+	for (const {iconObjectRepr, iconExportName} of builtIcons) {
 		iconsBarrelDts.push(`export const ${iconExportName}:I;`);
-		iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
-		iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
+		iconsBarrelJs.push(`${iconExportName}:${iconObjectRepr},`);
+		iconsBarrelMjs.push(`export const ${iconExportName}=${iconObjectRepr}`);
 	}
 
 	// Constants used in templates to reduce package size
