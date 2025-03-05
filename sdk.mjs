@@ -11,6 +11,7 @@ import {fileURLToPath} from 'node:url';
 /**
  * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
  * @typedef {import("./sdk.d.ts").IconData} IconData
+ * @typedef {import("./sdk.d.ts").DuplicateAlias} DuplicateAlias
  */
 
 /** @type {{ [key: string]: string }} */
@@ -116,9 +117,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
 		.replaceAll(/./g, (char) => {
-			/** @type {number} */
-			// @ts-ignore
-			const charCode = char.codePointAt(0);
+			const charCode = char.codePointAt(0) || 0;
 			return charCode > 127 ? `&#${charCode};` : char;
 		});
 
