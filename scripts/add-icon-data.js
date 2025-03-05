@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script to add data for a new icon to the simple-icons dataset.
@@ -142,9 +143,9 @@ try {
 					message: 'What types of aliases do you want to add?',
 					choices: aliasTypes,
 				}).then(async (aliases) => {
+					/** @type {{[_: string]: string[]}} */
 					const result = {};
 					for (const alias of aliases) {
-						// @ts-ignore
 						// eslint-disable-next-line no-await-in-loop
 						result[alias] = await input({
 							message: `What ${alias} aliases would you like to add? (separate with commas)`,

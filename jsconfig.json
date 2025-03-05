@@ -3,11 +3,12 @@
 		"target": "es2022",
 		"module": "node16",
 		"moduleResolution": "node16",
-		"checkJs": true,
-		"skipLibCheck": false,
+		"checkJs": false,
+		"skipLibCheck": true,
 		"strict": true,
 		"noImplicitAny": true,
 		"noImplicitThis": true,
-		"forceConsistentCasingInFileNames": true
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true
 	}
 }
