@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script to remove an icon and its data.
@@ -7,10 +8,19 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {search} from 'fast-fuzzy';
-import autocomplete from 'inquirer-autocomplete-standalone';
+import {search} from '@inquirer/prompts';
+import {search as fuzzySearch} from 'fast-fuzzy';
 import {getDirnameFromImportMeta, getIconSlug, getIconsData} from '../sdk.mjs';
 import {writeIconsData} from './utils.js';
+
+process.on('uncaughtException', (error) => {
+	if (error instanceof Error && error.name === 'ExitPromptError') {
+		process.stdout.write('\nAborted\n');
+		process.exit(1);
+	} else {
+		throw error;
+	}
+});
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..');
@@ -25,12 +35,11 @@ const icons = iconsData.map((icon, index) => {
 	};
 });
 
-const found = await autocomplete({
-	message: 'Select an icon to remove:',
-	name: 'icon',
+const found = await search({
+	message: 'Search for an icon to remove:',
 	async source(input) {
-		if (!input) return icons;
-		return search(input, icons, {
+		if (!input) return [];
+		return fuzzySearch(input, icons, {
 			keySelector: (icon) => [icon.value.title, icon.value.slug],
 		});
 	},

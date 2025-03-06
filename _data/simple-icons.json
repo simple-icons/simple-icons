@@ -954,9 +954,12 @@
 	},
 	{
 		"title": "Android",
-		"hex": "34A853",
+		"hex": "3DDC84",
 		"source": "https://partnermarketinghub.withgoogle.com/brands/android/visual-identity/visual-identity/logo-lock-ups",
-		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/android"
+		"guidelines": "https://developer.android.com/distribute/marketing-tools/brand-guidelines#brand-android",
+		"license": {
+			"type": "CC-BY-3.0"
+		}
 	},
 	{
 		"title": "Android Auto",
@@ -16888,6 +16891,11 @@
 		"source": "https://umbraco.com"
 	},
 	{
+		"title": "Umbrel",
+		"hex": "5351FB",
+		"source": "https://umbrel.com"
+	},
+	{
 		"title": "UML",
 		"hex": "FABD14",
 		"source": "https://www.uml.org",
@@ -17211,8 +17219,8 @@
 	{
 		"title": "Vercel",
 		"hex": "000000",
-		"source": "https://vercel.com/design/brands",
-		"guidelines": "https://vercel.com/design/brands"
+		"source": "https://vercel.com/geist/brands",
+		"guidelines": "https://vercel.com/geist/brands"
 	},
 	{
 		"title": "Verdaccio",
@@ -18536,7 +18544,7 @@
 	{
 		"title": "Zsh",
 		"hex": "F15A24",
-		"source": "https://github.com/Zsh-art/logo/blob/253927e62bd2a640d29915ad7a794880b787eda8/svg/black_vertical_icon.svg"
+		"source": "https://github.com/Zsh-art/logo/blob/17617f2f6c70c65943a48745c91d997e7561f19d/svg/white_logomark.svg"
 	},
 	{
 		"title": "Zulip",
