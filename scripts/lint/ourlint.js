@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Linters for the package that can't easily be implemented in the existing ones.
@@ -18,7 +19,7 @@ import {
 	getIconsDataString,
 	normalizeNewlines,
 } from '../../sdk.mjs';
-import {getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
+import {formatIconData, getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -136,6 +137,15 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			$url.hostname === 'raw.githubusercontent.com';
 
 		/**
+		 * Check if URl is user attachment URL.
+		 * @param {URL} $url URL instance.
+		 * @returns {boolean} Whether the URL is user attachment URL.
+		 */
+		const isGitHubUserAttachmentUrl = ($url) =>
+			$url.hostname === 'github.com' &&
+			$url.pathname.startsWith('/user-attachments/assets');
+
+		/**
 		 * Check if an URL is a GitHub URL.
 		 * @param {URL} $url URL instance.
 		 * @returns {boolean} Whether the URL is a GitHub URL.
@@ -146,7 +156,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 * Regex to match a permalink GitHub URL for a file.
 		 */
 		const permalinkGitHubRegex =
-			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
 
 		/**
 		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
@@ -195,6 +205,8 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				invalidUrls.push(fakeDiff(url, $url.origin));
 			}
 
+			if (isGitHubUserAttachmentUrl($url)) continue;
+
 			if (isStaticWikimediaAssetUrl($url)) {
 				const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
 				invalidUrls.push(fakeDiff(url, expectedUrl));
@@ -228,14 +240,14 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	async checkLicense(icons) {
 		const spdxLicenseIds = new Set(await getSpdxLicenseIds());
 		const badLicenses = [];
-		for (const {title, slug, license} of icons) {
+		for (const icon of icons) {
 			if (
-				license &&
-				license.type !== 'custom' &&
-				!spdxLicenseIds.has(license.type)
+				icon.license &&
+				icon.license.type !== 'custom' &&
+				!spdxLicenseIds.has(icon.license.type)
 			) {
 				badLicenses.push(
-					`${title} (${getIconSlug({title, slug})}) has not a valid SPDX license.`,
+					`${icon.title} (${getIconSlug(icon)}) has not a valid SPDX license.`,
 				);
 			}
 		}
@@ -247,40 +259,12 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 
 	/* Ensure that fields are sorted in the same way for all icons */
 	fieldsSorted(icons) {
-		const expectedOrder = [
-			'title',
-			'slug',
-			'hex',
-			'source',
-			'guidelines',
-			'license',
-			'aliases',
-		];
-
-		const errors = [];
-		for (const icon of icons) {
-			const fields = Object.keys(icon);
-			const previousFields = [...fields];
-			fields.sort(
-				(a, b) => expectedOrder.indexOf(a) - expectedOrder.indexOf(b),
-			);
-			const previousFieldsString = JSON.stringify(previousFields);
-			const fieldsString = JSON.stringify(fields);
-			if (previousFieldsString !== fieldsString) {
-				const subject = icon.slug ? `${icon.title} (${icon.slug})` : icon.title;
-				errors.push(
-					`${subject} fields are not sorted.` +
-						` Found ${previousFieldsString.replaceAll(',', ', ')},` +
-						` but expected ${fieldsString.replaceAll(',', ', ')}`,
-				);
-			}
-		}
-
-		if (errors.length > 0) {
-			return (
-				'Wrong order of fields in _data/simple-icons.json icons:\n' +
-				`- ${errors.join('\n- ')}`
-			);
+		const formatted = formatIconData(icons);
+		const previous = JSON.stringify(icons, null, '\t');
+		const sorted = JSON.stringify(formatted, null, '\t');
+		if (previous !== sorted) {
+			const diff = fakeDiff(previous, sorted);
+			return `Fields are not sorted in the same way for all icons:\n\n${diff}`;
 		}
 	},
 };

@@ -65,7 +65,6 @@ export const testIcon = (icon, subject, slug) => {
 			if (icon.license) {
 				assert.equal(subject.license?.type, icon.license.type);
 				if (icon.license.type === 'custom') {
-					// @ts-ignore
 					assert.equal(subject.license.url, icon.license.url);
 				}
 			} else {

@@ -873,8 +873,8 @@
 		"aliases": {
 			"aka": [
 				"Amazon Simple Queue Service",
-				"AWS SQS",
-				"AWS Simple Queue Service"
+				"AWS Simple Queue Service",
+				"AWS SQS"
 			]
 		}
 	},
@@ -954,9 +954,12 @@
 	},
 	{
 		"title": "Android",
-		"hex": "34A853",
+		"hex": "3DDC84",
 		"source": "https://partnermarketinghub.withgoogle.com/brands/android/visual-identity/visual-identity/logo-lock-ups",
-		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/android"
+		"guidelines": "https://developer.android.com/distribute/marketing-tools/brand-guidelines#brand-android",
+		"license": {
+			"type": "CC-BY-3.0"
+		}
 	},
 	{
 		"title": "Android Auto",
@@ -1832,9 +1835,9 @@
 		"guidelines": "https://aws.amazon.com/architecture/icons",
 		"aliases": {
 			"aka": [
-				"AWS ELB",
+				"Amazon Elastic Load Balancing",
 				"Amazon ELB",
-				"Amazon Elastic Load Balancing"
+				"AWS ELB"
 			]
 		}
 	},
@@ -3284,6 +3287,11 @@
 		"guidelines": "https://www.cncf.io/brand-guidelines/"
 	},
 	{
+		"title": "CNES",
+		"hex": "204F8C",
+		"source": "https://fr.m.wikipedia.org/wiki/Fichier:Logo_CNES_2017_triangulaire_bleu.png"
+	},
+	{
 		"title": "CNET",
 		"hex": "E71D1D",
 		"source": "https://www.cnet.com"
@@ -3825,6 +3833,11 @@
 		"source": "https://www.crew-united.com"
 	},
 	{
+		"title": "CrewAI",
+		"hex": "FF5A50",
+		"source": "https://github.com/crewAIInc/crewAI/blob/a7696d5aed7a85333735dde370fd9f0547aaabf5/docs/favicon.svg"
+	},
+	{
 		"title": "Critical Role",
 		"hex": "000000",
 		"source": "https://critrole.com"
@@ -4319,6 +4332,11 @@
 		"source": "https://dev.to"
 	},
 	{
+		"title": "Devbox",
+		"hex": "280459",
+		"source": "https://github.com/jetify-com/devbox/blob/c3cab01d7375726f0121a25fc0f5c838484246f7/docs/app/static/img/devbox_logo_light.svg"
+	},
+	{
 		"title": "DevExpress",
 		"hex": "FF7200",
 		"source": "https://www.devexpress.com/aboutus/"
@@ -4733,7 +4751,12 @@
 	{
 		"title": "EasyEDA",
 		"hex": "1765F6",
-		"source": "https://easyeda.com"
+		"source": "https://easyeda.com",
+		"aliases": {
+			"loc": {
+				"zh-CN": "嘉立创EDA"
+			}
+		}
 	},
 	{
 		"title": "easyJet",
@@ -5190,8 +5213,9 @@
 	},
 	{
 		"title": "Expo",
-		"hex": "000020",
-		"source": "https://expo.io/brand/"
+		"hex": "1C2024",
+		"source": "https://expo.dev/brand/",
+		"guidelines": "https://expo.dev/brand/"
 	},
 	{
 		"title": "Express",
@@ -5429,8 +5453,8 @@
 		"source": "https://fi.money",
 		"aliases": {
 			"aka": [
-				"Fi.Money",
-				"epiFi"
+				"epiFi",
+				"Fi.Money"
 			]
 		}
 	},
@@ -5480,6 +5504,11 @@
 		"title": "File.io",
 		"hex": "3D3C9D",
 		"source": "https://www.file.io"
+	},
+	{
+		"title": "Filen",
+		"hex": "000000",
+		"source": "https://github.com/FilenCloudDienste/filen-drive-legacy/issues/166#issue-2139393162"
 	},
 	{
 		"title": "Files",
@@ -5840,8 +5869,9 @@
 	},
 	{
 		"title": "FreeCAD",
-		"hex": "729FCF",
-		"source": "https://www.freecad.org"
+		"hex": "418FDE",
+		"source": "https://fpa.freecad.org/handbook/process/logo.html",
+		"guidelines": "https://fpa.freecad.org/handbook/process/logo.html"
 	},
 	{
 		"title": "freeCodeCamp",
@@ -6231,6 +6261,11 @@
 		"title": "Gitter",
 		"hex": "ED1965",
 		"source": "https://gitter.im"
+	},
+	{
+		"title": "GL.iNet",
+		"hex": "636363",
+		"source": "https://www.gl-inet.com/press/"
 	},
 	{
 		"title": "Glassdoor",
@@ -7076,7 +7111,7 @@
 		"source": "https://hatenacorp.jp/press/resource"
 	},
 	{
-		"title": "haveibeenpwned",
+		"title": "Have I Been Pwned",
 		"hex": "2A6379",
 		"source": "https://haveibeenpwned.com"
 	},
@@ -7520,7 +7555,7 @@
 		"source": "https://github.com/i3/i3/blob/d6e2a38b5cdf200c0fb82fc4cf7fff7dbcdeb605/logo.svg"
 	},
 	{
-		"title": "Iata",
+		"title": "IATA",
 		"hex": "004E81",
 		"source": "https://commons.wikimedia.org/wiki/File:IATAlogo.svg"
 	},
@@ -8588,6 +8623,14 @@
 		"source": "https://kitsu.io"
 	},
 	{
+		"title": "Kiwix",
+		"hex": "000000",
+		"source": "https://wiki.kiwix.org/wiki/Logo",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Klarna",
 		"hex": "FFB3C7",
 		"source": "https://klarna.design"
@@ -8827,6 +8870,11 @@
 		"title": "LangChain",
 		"hex": "1C3C3C",
 		"source": "https://www.langchain.com"
+	},
+	{
+		"title": "Langflow",
+		"hex": "000000",
+		"source": "https://github.com/langflow-ai/langflow/blob/a5f5f3e3e30ee1740b696e3ad1823287ba27870c/docs/static/img/langflow-icon-black-transparent.svg"
 	},
 	{
 		"title": "LangGraph",
@@ -9173,8 +9221,8 @@
 		"guidelines": "https://line.me/en/logo",
 		"aliases": {
 			"loc": {
-				"ko-KR": "라인",
-				"ja-JP": "ライン"
+				"ja-JP": "ライン",
+				"ko-KR": "라인"
 			}
 		}
 	},
@@ -9405,6 +9453,11 @@
 		"title": "LOT Polish Airlines",
 		"hex": "11397E",
 		"source": "https://www.lot.com/us/en/kaleidoscope-inflight-magazine"
+	},
+	{
+		"title": "LottieFiles",
+		"hex": "00DDB3",
+		"source": "https://lottiefiles.github.io/lottie-docs/"
 	},
 	{
 		"title": "LTspice",
@@ -9818,6 +9871,11 @@
 		"source": "https://github.com/mdx-js/mdx/blob/b8a76c95deb14f7297bafdac1aa3eddd2b0fbb8f/docs/_static/icon.svg"
 	},
 	{
+		"title": "Mealie",
+		"hex": "E58325",
+		"source": "https://github.com/mealie-recipes/mealie.io/blob/5519cac801c116a5688c63d8126c3bf1ce568c58/components/App/Toolbar.vue"
+	},
+	{
 		"title": "MediaFire",
 		"hex": "1299F3",
 		"source": "https://www.mediafire.com/developers/brand_assets/mediafire_brand_assets/",
@@ -10049,7 +10107,7 @@
 		"source": "https://en.wikipedia.org/wiki/File:MiHoYo.svg"
 	},
 	{
-		"title": "Mikrotik",
+		"title": "MikroTik",
 		"hex": "293239",
 		"source": "https://mikrotik.com/aboutus"
 	},
@@ -10570,8 +10628,8 @@
 		"guidelines": "https://developers.naver.com/docs/login/bi/bi.md",
 		"aliases": {
 			"loc": {
-				"ko-KR": "네이버",
-				"ja-JP": "ネイバー"
+				"ja-JP": "ネイバー",
+				"ko-KR": "네이버"
 			}
 		}
 	},
@@ -11313,6 +11371,11 @@
 		"hex": "3DA639",
 		"source": "https://opensource.org/logo-usage-guidelines",
 		"guidelines": "https://opensource.org/logo-usage-guidelines"
+	},
+	{
+		"title": "Open3D",
+		"hex": "000000",
+		"source": "https://github.com/isl-org/Open3D/blob/2ae042aa74ad3917afd891e36798ffe687513662/cpp/apps/Open3DViewer/icon.svg"
 	},
 	{
 		"title": "OpenAI",
@@ -13498,7 +13561,7 @@
 	{
 		"title": "Renovate",
 		"hex": "308BE3",
-		"source": "https://avatars1.githubusercontent.com/u/38656520",
+		"source": "https://github.com/user-attachments/assets/8533178e-b2c4-4e15-bb3d-8df9e19e3760",
 		"guidelines": "https://docs.renovatebot.com/logo-brand-guidelines"
 	},
 	{
@@ -14005,6 +14068,14 @@
 		"title": "Sage",
 		"hex": "00D639",
 		"source": "https://www.sage.com"
+	},
+	{
+		"title": "SageMath",
+		"hex": "3333FF",
+		"source": "https://github.com/sagemath/artwork/blob/dc51186a48f46ac9ff29e453491b8daf4c52ca15/sage-logo-2018.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Sahibinden",
@@ -16350,6 +16421,11 @@
 		"source": "https://styleguide.torproject.org/brand-assets"
 	},
 	{
+		"title": "Torizon",
+		"hex": "FAAF00",
+		"source": "https://toradex.com/torizon"
+	},
+	{
 		"title": "Toshiba",
 		"hex": "FF0000",
 		"source": "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg"
@@ -16810,6 +16886,11 @@
 		"source": "https://umbraco.com"
 	},
 	{
+		"title": "Umbrel",
+		"hex": "5351FB",
+		"source": "https://umbrel.com"
+	},
+	{
 		"title": "UML",
 		"hex": "FABD14",
 		"source": "https://www.uml.org",
@@ -17110,6 +17191,11 @@
 		"source": "https://www.vegascreativesoftware.com"
 	},
 	{
+		"title": "Velocity",
+		"hex": "1BBAE0",
+		"source": "https://github.com/PaperMC/website/blob/cc46d6922f4eeef595685808672694521a58bdc6/assets/brand/velocity.svg"
+	},
+	{
 		"title": "Velog",
 		"hex": "20C997",
 		"source": "https://github.com/velopert/velog-client/blob/8fbbb371f4b4525b6747e54d0c608900ea8bf03e/src/static/svg/velog-icon.svg"
@@ -17224,6 +17310,11 @@
 		"title": "Vimeo Livestream",
 		"hex": "0A0A20",
 		"source": "https://livestream.com"
+	},
+	{
+		"title": "Vinted",
+		"hex": "007782",
+		"source": "https://www.vinted.com"
 	},
 	{
 		"title": "Virgin",
@@ -18087,6 +18178,17 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Xubuntu_Icon.svg"
 	},
 	{
+		"title": "xyflow",
+		"hex": "1A192B",
+		"source": "https://github.com/xyflow/web/blob/fe6af5d1c78de492fc64a39ab8a2085f1eb7164d/sites/xyflow.com/public/img/favicon.svg",
+		"aliases": {
+			"aka": [
+				"reactflow",
+				"svelteflow"
+			]
+		}
+	},
+	{
 		"title": "Y Combinator",
 		"hex": "F0652F",
 		"source": "https://www.ycombinator.com/press"
@@ -18152,6 +18254,12 @@
 		"hex": "A61E69",
 		"source": "https://yoast.com/brand",
 		"guidelines": "https://yoast.com/brand"
+	},
+	{
+		"title": "YOLO",
+		"hex": "111F68",
+		"source": "https://www.ultralytics.com/brand",
+		"guidelines": "https://www.ultralytics.com/brand"
 	},
 	{
 		"title": "YouHodler",

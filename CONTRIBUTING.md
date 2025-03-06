@@ -97,7 +97,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 1. Its packages meet one of the following minimum requirements:
    - [npm](https://www.npmjs.com): 100k weekly downloads,
    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
-   - [crates.io](https://crates.io): 100k weekly downloads,
+   - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
    - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
@@ -437,6 +437,23 @@ Where the `locale` is an [IETF language tag] and `title` is a **different** titl
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
+##### Old Names
+
+We collect old names to make it possible to find the brand by it's old name. To add an old name you add the following to the icon data:
+
+```json
+{
+    "title": "the title",
+    "aliases": {
+        "old": [
+            "the old title"
+        ]
+    }
+}
+```
+
+Where each old title is **different** from the current title.
+
 ### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
@@ -471,6 +488,10 @@ Kind regards,
 - Install the dependencies using `npm install`.
 - Build and test the package using `npm test`.
 - Run the project linting process using `npm run lint`.
+
+## Using Dev Container
+
+We have a pre-configured Node.js runtime for [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers). You can also use the [GitHub Codespaces](https://github.com/features/codespaces) to code from any device.
 
 ## Using Docker
 
