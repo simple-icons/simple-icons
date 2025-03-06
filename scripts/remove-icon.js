@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script to remove an icon and its data.
@@ -16,6 +17,14 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..');
 const svgFilesDirectory = path.resolve(rootDirectory, 'icons');
 
+// Ctrl+C to abort
+process.stdin.on('data', (key) => {
+	if (key.toString() === '\u0003') {
+		process.stdout.write('Aborted\n');
+		process.exit(1);
+	}
+});
+
 const iconsData = await getIconsData();
 const icons = iconsData.map((icon, index) => {
 	const slug = getIconSlug(icon);
@@ -27,7 +36,6 @@ const icons = iconsData.map((icon, index) => {
 
 const found = await autocomplete({
 	message: 'Select an icon to remove:',
-	name: 'icon',
 	async source(input) {
 		if (!input) return icons;
 		return search(input, icons, {
