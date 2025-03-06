@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Replaces the SVG count milestone "Over <NUMBER> SVG icons..." located

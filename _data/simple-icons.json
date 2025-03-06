@@ -873,8 +873,8 @@
 		"aliases": {
 			"aka": [
 				"Amazon Simple Queue Service",
-				"AWS SQS",
-				"AWS Simple Queue Service"
+				"AWS Simple Queue Service",
+				"AWS SQS"
 			]
 		}
 	},
@@ -954,9 +954,12 @@
 	},
 	{
 		"title": "Android",
-		"hex": "34A853",
+		"hex": "3DDC84",
 		"source": "https://partnermarketinghub.withgoogle.com/brands/android/visual-identity/visual-identity/logo-lock-ups",
-		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/android"
+		"guidelines": "https://developer.android.com/distribute/marketing-tools/brand-guidelines#brand-android",
+		"license": {
+			"type": "CC-BY-3.0"
+		}
 	},
 	{
 		"title": "Android Auto",
@@ -1832,9 +1835,9 @@
 		"guidelines": "https://aws.amazon.com/architecture/icons",
 		"aliases": {
 			"aka": [
-				"AWS ELB",
+				"Amazon Elastic Load Balancing",
 				"Amazon ELB",
-				"Amazon Elastic Load Balancing"
+				"AWS ELB"
 			]
 		}
 	},
@@ -4748,7 +4751,12 @@
 	{
 		"title": "EasyEDA",
 		"hex": "1765F6",
-		"source": "https://easyeda.com"
+		"source": "https://easyeda.com",
+		"aliases": {
+			"loc": {
+				"zh-CN": "嘉立创EDA"
+			}
+		}
 	},
 	{
 		"title": "easyJet",
@@ -5445,8 +5453,8 @@
 		"source": "https://fi.money",
 		"aliases": {
 			"aka": [
-				"Fi.Money",
-				"epiFi"
+				"epiFi",
+				"Fi.Money"
 			]
 		}
 	},
@@ -7547,7 +7555,7 @@
 		"source": "https://github.com/i3/i3/blob/d6e2a38b5cdf200c0fb82fc4cf7fff7dbcdeb605/logo.svg"
 	},
 	{
-		"title": "Iata",
+		"title": "IATA",
 		"hex": "004E81",
 		"source": "https://commons.wikimedia.org/wiki/File:IATAlogo.svg"
 	},
@@ -9213,8 +9221,8 @@
 		"guidelines": "https://line.me/en/logo",
 		"aliases": {
 			"loc": {
-				"ko-KR": "라인",
-				"ja-JP": "ライン"
+				"ja-JP": "ライン",
+				"ko-KR": "라인"
 			}
 		}
 	},
@@ -10620,8 +10628,8 @@
 		"guidelines": "https://developers.naver.com/docs/login/bi/bi.md",
 		"aliases": {
 			"loc": {
-				"ko-KR": "네이버",
-				"ja-JP": "ネイバー"
+				"ja-JP": "ネイバー",
+				"ko-KR": "네이버"
 			}
 		}
 	},
@@ -16878,6 +16886,11 @@
 		"source": "https://umbraco.com"
 	},
 	{
+		"title": "Umbrel",
+		"hex": "5351FB",
+		"source": "https://umbrel.com"
+	},
+	{
 		"title": "UML",
 		"hex": "FABD14",
 		"source": "https://www.uml.org",
@@ -17297,6 +17310,11 @@
 		"title": "Vimeo Livestream",
 		"hex": "0A0A20",
 		"source": "https://livestream.com"
+	},
+	{
+		"title": "Vinted",
+		"hex": "007782",
+		"source": "https://www.vinted.com"
 	},
 	{
 		"title": "Virgin",
