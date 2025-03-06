@@ -11,7 +11,6 @@ import {fileURLToPath} from 'node:url';
 /**
  * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
  * @typedef {import("./sdk.d.ts").IconData} IconData
- * @typedef {import("./sdk.d.ts").DuplicateAlias} DuplicateAlias
  */
 
 /** @type {{ [key: string]: string }} */
