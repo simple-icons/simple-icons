@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script that takes a brand name as argument and outputs the corresponding
