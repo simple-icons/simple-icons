@@ -94,7 +94,6 @@ const previewHexColor = (input) => {
 	);
 };
 
-// Try {
 const answers = {
 	title: await input({
 		message: 'What is the title of this icon?',
@@ -185,11 +184,3 @@ if (
 	process.stdout.write(chalk.red('\nAborted.\n'));
 	process.exit(1);
 }
-// } catch (error) {
-// 	if (error instanceof ExitPromptError) {
-// 		process.stdout.write(chalk.red('\nAborted.\n'));
-// 		process.exit(1);
-// 	}
-
-// 	throw error;
-// }
