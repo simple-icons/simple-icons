@@ -116,8 +116,7 @@
 		"xo:fix": "xo --fix"
 	},
 	"devDependencies": {
-		"@inquirer/core": "10.0.1",
-		"@inquirer/prompts": "7.0.1",
+		"@inquirer/prompts": "7.3.2",
 		"@types/node": "22.8.6",
 		"chalk": "5.3.0",
 		"editorconfig-checker": "6.0.0",
@@ -128,7 +127,6 @@
 		"fast-fuzzy": "1.12.0",
 		"get-relative-luminance": "1.0.0",
 		"husky": "9.1.6",
-		"inquirer-autocomplete-standalone": "0.8.1",
 		"jsonschema": "1.4.1",
 		"markdownlint-cli2": "0.15.0",
 		"mocha": "10.8.2",
