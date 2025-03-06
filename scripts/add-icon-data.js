@@ -9,7 +9,6 @@
  * @typedef {import("../sdk.js").IconData} IconData
  */
 import process from 'node:process';
-import {ExitPromptError} from '@inquirer/core';
 import {checkbox, confirm, input, search} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
@@ -28,7 +27,7 @@ import {
 } from './utils.js';
 
 process.on('uncaughtException', (error) => {
-	if (error instanceof ExitPromptError) {
+	if (error instanceof Error && error.name === 'ExitPromptError') {
 		process.stdout.write('\nAborted\n');
 		process.exit(1);
 	} else {

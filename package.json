@@ -116,7 +116,6 @@
 		"xo:fix": "xo --fix"
 	},
 	"devDependencies": {
-		"@inquirer/core": "10.1.7",
 		"@inquirer/prompts": "7.3.2",
 		"@types/node": "22.8.6",
 		"chalk": "5.3.0",

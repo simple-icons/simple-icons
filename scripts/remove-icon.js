@@ -8,14 +8,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {ExitPromptError} from '@inquirer/core';
 import {search} from '@inquirer/prompts';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import {getDirnameFromImportMeta, getIconSlug, getIconsData} from '../sdk.mjs';
 import {writeIconsData} from './utils.js';
 
 process.on('uncaughtException', (error) => {
-	if (error instanceof ExitPromptError) {
+	if (error instanceof Error && error.name === 'ExitPromptError') {
 		process.stdout.write('\nAborted\n');
 		process.exit(1);
 	} else {
