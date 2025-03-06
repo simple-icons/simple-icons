@@ -28,6 +28,14 @@ import {
 	writeIconsData,
 } from './utils.js';
 
+// Ctrl+C to abort
+process.stdin.on('data', (key) => {
+	if (key.toString() === '\u0003') {
+		process.stdout.write('Aborted\n');
+		process.exit();
+	}
+});
+
 /** @type {import('../sdk.js').IconData[]} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();

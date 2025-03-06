@@ -17,6 +17,14 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..');
 const svgFilesDirectory = path.resolve(rootDirectory, 'icons');
 
+// Ctrl+C to abort
+process.stdin.on('data', (key) => {
+	if (key.toString() === '\u0003') {
+		process.stdout.write('Aborted\n');
+		process.exit();
+	}
+});
+
 const iconsData = await getIconsData();
 const icons = iconsData.map((icon, index) => {
 	const slug = getIconSlug(icon);
