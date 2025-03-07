@@ -5792,6 +5792,11 @@
 		"source": "https://www.fortinet.com"
 	},
 	{
+		"title": "Fortnite",
+		"hex": "000000",
+		"source": "https://www.fortnite.com"
+	},
+	{
 		"title": "Fortran",
 		"hex": "734F96",
 		"source": "https://github.com/fortran-lang/fortran-lang.org/blob/5469465d08d3fcbf16d048e651ca5c9ba050839c/assets/img/fortran-logo.svg"
@@ -8793,6 +8798,11 @@
 		"title": "Kubernetes",
 		"hex": "326CE5",
 		"source": "https://github.com/kubernetes/kubernetes/tree/cac53883f4714452f3084a22e4be20d042a9df33/logo"
+	},
+	{
+		"title": "Kubespray",
+		"hex": "3D647F",
+		"source": "https://github.com/kubernetes-sigs/kubespray/blob/1b2e66cd305d1349daed85c8e356a5a8de5cc1f3/logo/logo-dark.svg"
 	},
 	{
 		"title": "Kubuntu",
@@ -17214,8 +17224,8 @@
 	{
 		"title": "Vercel",
 		"hex": "000000",
-		"source": "https://vercel.com/design/brands",
-		"guidelines": "https://vercel.com/design/brands"
+		"source": "https://vercel.com/geist/brands",
+		"guidelines": "https://vercel.com/geist/brands"
 	},
 	{
 		"title": "Verdaccio",
@@ -18539,7 +18549,7 @@
 	{
 		"title": "Zsh",
 		"hex": "F15A24",
-		"source": "https://github.com/Zsh-art/logo/blob/253927e62bd2a640d29915ad7a794880b787eda8/svg/black_vertical_icon.svg"
+		"source": "https://github.com/Zsh-art/logo/blob/17617f2f6c70c65943a48745c91d997e7561f19d/svg/white_logomark.svg"
 	},
 	{
 		"title": "Zulip",
