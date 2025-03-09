@@ -6,7 +6,7 @@
  * to match the current definitions of functions of sdk.mjs.
  */
 
-import {execSync} from 'node:child_process';
+import {spawnSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
@@ -30,20 +30,32 @@ const generateSdkMts = async () => {
 		})
 		.join('\n');
 	await fs.writeFile(sdkMjs, temporarySdkMjsContent);
+
+	let cmd;
+	let error = false;
 	try {
-		execSync(
-			'npx tsc sdk.mjs' +
-				' --declaration --emitDeclarationOnly --allowJs --removeComments',
+		cmd = spawnSync(
+			'npx',
+			[
+				'tsc',
+				'-p',
+				path.join('scripts', 'release', 'sdk-ts-defs-jsconfig.json'),
+				'--declaration',
+				'--emitDeclarationOnly',
+			],
+			{stdio: 'inherit'},
 		);
-	} catch (/** @type {unknown} */ error) {
+	} catch {
 		await fs.writeFile(sdkMjs, originalSdkMjsContent);
+		error = true;
+	}
 
-		let errorMessage = error;
-		if (error instanceof Error) {
-			// The `execSync` function throws a generic Node.js Error
-			errorMessage = error.message;
-		}
+	let errorMessage = "Command 'npx tsc sdk.mjs' failed for an unknown reason";
+	if (cmd && cmd.stderr) {
+		errorMessage = cmd.stderr.toString();
+	}
 
+	if (error || cmd === undefined) {
 		process.stdout.write(
 			`Error generating Typescript definitions: '${errorMessage}'\n`,
 		);
@@ -100,19 +112,24 @@ const generateSdkTs = async () => {
 	await fs.writeFile(sdkTs, removeDuplicatedExportTypes(newSdkTsContent));
 	await fs.unlink(sdkMts);
 
+	let cmd;
+	let error = false;
 	try {
-		execSync('npx prettier -w sdk.d.ts');
-	} catch (error) {
-		let errorMessage = error;
-		if (error instanceof Error) {
-			// The `execSync` function throws a generic Node.js Error
-			errorMessage = error.message;
-		}
+		cmd = spawnSync('npx', ['prettier', '-w', 'sdk.d.ts'], {stdio: 'inherit'});
+	} catch {
+		error = true;
+	}
 
+	let errorMessage =
+		"Command 'npx prettier -w sdk.d.ts' failed for an unknown reason";
+	if (cmd && cmd.stderr) {
+		errorMessage = cmd.stderr.toString();
+	}
+
+	if (error || cmd === undefined) {
 		process.stdout.write(
 			'Error executing Prettier to prettify' +
-				` SDK TS definitions: '${errorMessage}'` +
-				'\n',
+				` SDK TS definitions: '${errorMessage}'\n`,
 		);
 		process.exit(1);
 	}
