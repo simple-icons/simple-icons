@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file
  * Simple Icons SDK.
@@ -50,7 +51,7 @@ export const getDirnameFromImportMeta = (importMetaUrl) =>
 
 /**
  * Build a regex to validate HTTPs URLs.
- * @param {string} jsonschemaPath Path to the *.jsonschema.json* file.
+ * @param {string} [jsonschemaPath] Path to the *.jsonschema.json* file.
  * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
  */
 export const urlRegex = async (
@@ -115,9 +116,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
 		.replaceAll(/./g, (char) => {
-			/** @type {number} */
-			// @ts-ignore
-			const charCode = char.codePointAt(0);
+			const charCode = char.codePointAt(0) || 0;
 			return charCode > 127 ? `&#${charCode};` : char;
 		});
 
@@ -145,7 +144,7 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 
 /**
  * Get path of *_data/simple-icons.json*.
- * @param {string} rootDirectory Path to the root directory of the project.
+ * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {string} Path of *_data/simple-icons.json*.
  */
 export const getIconsDataPath = (
@@ -154,7 +153,7 @@ export const getIconsDataPath = (
 
 /**
  * Get contents of *_data/simple-icons.json*.
- * @param {string} rootDirectory Path to the root directory of the project.
+ * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<string>} Content of *_data/simple-icons.json*.
  */
 export const getIconsDataString = (
@@ -163,7 +162,7 @@ export const getIconsDataString = (
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
- * @param {string} rootDirectory Path to the root directory of the project.
+ * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<IconData[]>} Icons data as array from *_data/simple-icons.json*.
  */
 export const getIconsData = async (
@@ -199,7 +198,7 @@ export const normalizeColor = (text) => {
 
 /**
  * Get information about third party extensions from the README table.
- * @param {string} readmePath Path to the README file.
+ * @param {string} [readmePath] Path to the README file.
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions.
  */
 export const getThirdPartyExtensions = async (
@@ -250,7 +249,7 @@ export const getThirdPartyExtensions = async (
 
 /**
  * Get information about third party libraries from the README table.
- * @param {string} readmePath Path to the README file.
+ * @param {string} [readmePath] Path to the README file.
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries.
  */
 export const getThirdPartyLibraries = async (
