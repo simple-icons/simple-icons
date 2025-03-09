@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es2022",
+		"lib": ["es2022"],
+		"module": "es2022",
+		"allowJs": true,
+		"skipLibCheck": true,
+		"removeComments": true,
+		"esModuleInterop": true,
+		"checkJs": false,
+		"strict": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["../../sdk.mjs"]
+}

@@ -64,22 +64,26 @@ export type IconData = {
 
 export const SVG_PATH_REGEX: RegExp;
 export function getDirnameFromImportMeta(importMetaUrl: string): string;
-export function urlRegex(jsonschemaPath?: string): Promise<RegExp>;
+export function urlRegex(jsonschemaPath?: string | undefined): Promise<RegExp>;
 export function getIconSlug(icon: IconData): string;
 export function svgToPath(svg: string): string;
 export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
 export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
-export function getIconsDataPath(rootDirectory?: string): string;
-export function getIconsDataString(rootDirectory?: string): Promise<string>;
-export function getIconsData(rootDirectory?: string): Promise<IconData[]>;
+export function getIconsDataPath(rootDirectory?: string | undefined): string;
+export function getIconsDataString(
+	rootDirectory?: string | undefined,
+): Promise<string>;
+export function getIconsData(
+	rootDirectory?: string | undefined,
+): Promise<IconData[]>;
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(
-	readmePath?: string,
+	readmePath?: string | undefined,
 ): Promise<ThirdPartyExtension[]>;
 export function getThirdPartyLibraries(
-	readmePath?: string,
+	readmePath?: string | undefined,
 ): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
