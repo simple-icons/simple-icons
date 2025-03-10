@@ -9,12 +9,10 @@
  * @typedef {import("../sdk.js").IconData} IconData
  */
 import process from 'node:process';
-import {ExitPromptError} from '@inquirer/core';
-import {checkbox, confirm, input} from '@inquirer/prompts';
+import {checkbox, confirm, input, search} from '@inquirer/prompts';
 import chalk from 'chalk';
-import {search} from 'fast-fuzzy';
+import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import autocomplete from 'inquirer-autocomplete-standalone';
 import {
 	getIconsDataString,
 	normalizeColor,
@@ -28,11 +26,12 @@ import {
 	writeIconsData,
 } from './utils.js';
 
-// Ctrl+C to abort
-process.stdin.on('data', (key) => {
-	if (key.toString() === '\u0003') {
-		process.stdout.write('Aborted\n');
+process.on('uncaughtException', (error) => {
+	if (error instanceof Error && error.name === 'ExitPromptError') {
+		process.stdout.write('\nAborted\n');
 		process.exit(1);
+	} else {
+		throw error;
 	}
 });
 
@@ -95,102 +94,93 @@ const previewHexColor = (input) => {
 	);
 };
 
-try {
-	const answers = {
-		title: await input({
-			message: 'What is the title of this icon?',
-			validate: (input) =>
-				input.trim().length > 0
-					? isNewIcon(input) || 'This icon title or slug already exists.'
-					: 'This field is required.',
+const answers = {
+	title: await input({
+		message: 'What is the title of this icon?',
+		validate: (input) =>
+			input.trim().length > 0
+				? isNewIcon(input) || 'This icon title or slug already exists.'
+				: 'This field is required.',
+	}),
+	hex: normalizeColor(
+		await input({
+			message: 'What is the brand color of this icon?',
+			validate: isValidHexColor,
+			transformer: previewHexColor,
 		}),
-		hex: normalizeColor(
-			await input({
-				message: 'What is the brand color of this icon?',
-				validate: isValidHexColor,
-				transformer: previewHexColor,
-			}),
-		),
-		source: await input({
-			message: 'What is the source URL of the icon?',
-			validate: isValidURL,
-		}),
-		guidelines: (await confirm({
-			message: 'Does this icon have brand guidelines?',
-		}))
-			? await input({
-					message: 'What is the URL for the brand guidelines?',
-					validate: isValidURL,
-				})
-			: undefined,
-		license: (await confirm({
-			message: 'Does this icon have a license?',
-		}))
-			? {
-					type: await autocomplete({
-						message: "What is the icon's license?",
-						async source(input) {
-							input = (input || '').trim();
-							return input
-								? search(input, licenseTypes, {keySelector: (x) => x.value})
-								: licenseTypes;
-						},
-					}),
-					url:
-						(await input({
-							message: `What is the URL for the license? (optional)`,
-							validate: (input) => input.length === 0 || isValidURL(input),
-						})) || undefined,
+	),
+	source: await input({
+		message: 'What is the source URL of the icon?',
+		validate: isValidURL,
+	}),
+	guidelines: (await confirm({
+		message: 'Does this icon have brand guidelines?',
+	}))
+		? await input({
+				message: 'What is the URL for the brand guidelines?',
+				validate: isValidURL,
+			})
+		: undefined,
+	license: (await confirm({
+		message: 'Does this icon have a license?',
+	}))
+		? {
+				type: await search({
+					message: "What is the icon's license?",
+					async source(input) {
+						input = (input || '').trim();
+						return input
+							? fuzzySearch(input, licenseTypes, {
+									keySelector: (x) => x.value,
+								})
+							: licenseTypes;
+					},
+				}),
+				url:
+					(await input({
+						message: `What is the URL for the license? (optional)`,
+						validate: (input) => input.length === 0 || isValidURL(input),
+					})) || undefined,
+			}
+		: undefined,
+	aliases: (await confirm({
+		message: 'Does this icon have brand aliases?',
+		default: false,
+	}))
+		? await checkbox({
+				message: 'What types of aliases do you want to add?',
+				choices: aliasTypes,
+			}).then(async (aliases) => {
+				/** @type {{[_: string]: string[]}} */
+				const result = {};
+				for (const alias of aliases) {
+					// eslint-disable-next-line no-await-in-loop
+					result[alias] = await input({
+						message: `What ${alias} aliases would you like to add? (separate with commas)`,
+					}).then((aliases) => aliases.split(',').map((alias) => alias.trim()));
 				}
-			: undefined,
-		aliases: (await confirm({
-			message: 'Does this icon have brand aliases?',
-			default: false,
-		}))
-			? await checkbox({
-					message: 'What types of aliases do you want to add?',
-					choices: aliasTypes,
-				}).then(async (aliases) => {
-					/** @type {{[_: string]: string[]}} */
-					const result = {};
-					for (const alias of aliases) {
-						// eslint-disable-next-line no-await-in-loop
-						result[alias] = await input({
-							message: `What ${alias} aliases would you like to add? (separate with commas)`,
-						}).then((aliases) =>
-							aliases.split(',').map((alias) => alias.trim()),
-						);
-					}
 
-					return result;
-				})
-			: undefined,
-	};
+				return result;
+			})
+		: undefined,
+};
 
-	process.stdout.write(
-		'About to write the following to simple-icons.json:\n' +
-			JSON.stringify(answers, null, '\t') +
-			'\n',
-	);
+process.stdout.write(
+	'About to write the following to simple-icons.json:\n' +
+		JSON.stringify(answers, null, '\t') +
+		'\n',
+);
 
-	if (
-		await confirm({
-			message: 'Is this OK?',
-		})
-	) {
-		iconsData.push(answers);
-		iconsData.sort(sortIconsCompare);
-		await writeIconsData(iconsData);
-		process.stdout.write(chalk.green('\nData written successfully.\n'));
-	} else {
-		process.stdout.write(chalk.red('\nAborted.\n'));
-		process.exit(1);
-	}
-} catch (error) {
-	if (error instanceof ExitPromptError) {
-		process.stdout.write(chalk.red('\nAborted.\n'));
-		process.exit(1);
-	}
-
-	throw error;
+if (
+	await confirm({
+		message: 'Is this OK?',
+	})
+) {
+	iconsData.push(answers);
+	iconsData.sort(sortIconsCompare);
+	await writeIconsData(iconsData);
+	process.stdout.write(chalk.green('\nData written successfully.\n'));
+} else {
+	process.stdout.write(chalk.red('\nAborted.\n'));
+	process.exit(1);
 }

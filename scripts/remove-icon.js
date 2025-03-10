@@ -8,22 +8,23 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {search} from 'fast-fuzzy';
-import autocomplete from 'inquirer-autocomplete-standalone';
+import {search} from '@inquirer/prompts';
+import {search as fuzzySearch} from 'fast-fuzzy';
 import {getDirnameFromImportMeta, getIconSlug, getIconsData} from '../sdk.mjs';
 import {writeIconsData} from './utils.js';
+
+process.on('uncaughtException', (error) => {
+	if (error instanceof Error && error.name === 'ExitPromptError') {
+		process.stdout.write('\nAborted\n');
+		process.exit(1);
+	} else {
+		throw error;
+	}
+});
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
 const rootDirectory = path.resolve(__dirname, '..');
 const svgFilesDirectory = path.resolve(rootDirectory, 'icons');
-
-// Ctrl+C to abort
-process.stdin.on('data', (key) => {
-	if (key.toString() === '\u0003') {
-		process.stdout.write('Aborted\n');
-		process.exit(1);
-	}
-});
 
 const iconsData = await getIconsData();
 const icons = iconsData.map((icon, index) => {
@@ -34,11 +35,11 @@ const icons = iconsData.map((icon, index) => {
 	};
 });
 
-const found = await autocomplete({
-	message: 'Select an icon to remove:',
+const found = await search({
+	message: 'Search for an icon to remove:',
 	async source(input) {
-		if (!input) return icons;
-		return search(input, icons, {
+		if (!input) return [];
+		return fuzzySearch(input, icons, {
 			keySelector: (icon) => [icon.value.title, icon.value.slug],
 		});
 	},
