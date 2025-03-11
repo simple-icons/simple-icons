@@ -1022,6 +1022,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Formspree` | `formspree` |
 | `Formstack` | `formstack` |
 | `Fortinet` | `fortinet` |
+| `Fortnite` | `fortnite` |
 | `Fortran` | `fortran` |
 | `Fossa` | `fossa` |
 | `Fossil SCM` | `fossilscm` |
@@ -1334,7 +1335,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hyundai` | `hyundai` |
 | `i18next` | `i18next` |
 | `i3` | `i3` |
-| `Iata` | `iata` |
+| `IATA` | `iata` |
 | `iBeacon` | `ibeacon` |
 | `Iberia` | `iberia` |
 | `Iced` | `iced` |
@@ -1522,6 +1523,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kirby` | `kirby` |
 | `Kit` | `kit` |
 | `Kitsu` | `kitsu` |
+| `Kiwix` | `kiwix` |
 | `Klarna` | `klarna` |
 | `Kleinanzeigen` | `kleinanzeigen` |
 | `KLM` | `klm` |
@@ -1551,6 +1553,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ktor` | `ktor` |
 | `Kuaishou` | `kuaishou` |
 | `Kubernetes` | `kubernetes` |
+| `Kubespray` | `kubespray` |
 | `Kubuntu` | `kubuntu` |
 | `KuCoin` | `kucoin` |
 | `Kueski` | `kueski` |
@@ -2480,6 +2483,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sabanci` | `sabanci` |
 | `Safari` | `safari` |
 | `Sage` | `sage` |
+| `SageMath` | `sagemath` |
 | `Sahibinden` | `sahibinden` |
 | `Sailfish OS` | `sailfishos` |
 | `Sails.js` | `sailsdotjs` |
@@ -2985,6 +2989,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ulule` | `ulule` |
 | `Umami` | `umami` |
 | `Umbraco` | `umbraco` |
+| `Umbrel` | `umbrel` |
 | `UML` | `uml` |
 | `Unacademy` | `unacademy` |
 | `Under Armour` | `underarmour` |
@@ -3059,6 +3064,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Vim` | `vim` |
 | `Vimeo` | `vimeo` |
 | `Vimeo Livestream` | `vimeolivestream` |
+| `Vinted` | `vinted` |
 | `Virgin` | `virgin` |
 | `Virgin Atlantic` | `virginatlantic` |
 | `Virgin Media` | `virginmedia` |

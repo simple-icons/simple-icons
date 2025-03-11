@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * CLI tool to run jsonschema on the simple-icons.json data file.
