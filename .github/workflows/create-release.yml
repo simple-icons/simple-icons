@@ -54,7 +54,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Bump version
@@ -74,7 +74,7 @@ jobs:
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: version bump
+          commit_message: Bump version
           commit_user_name: 'simple-icons[bot]'
           commit_user_email: 'simple-icons[bot]@users.noreply.github.com'
           commit_author: 'simple-icons[bot] <simple-icons[bot]@users.noreply.github.com>'
