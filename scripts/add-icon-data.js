@@ -26,6 +26,7 @@ import {
 	writeIconsData,
 } from './utils.js';
 
+process.exitCode = 1;
 process.on('uncaughtException', (error) => {
 	if (error instanceof Error && error.name === 'ExitPromptError') {
 		process.stdout.write('\nAborted\n');
@@ -180,6 +181,7 @@ if (
 	iconsData.sort(sortIconsCompare);
 	await writeIconsData(iconsData);
 	process.stdout.write(chalk.green('\nData written successfully.\n'));
+	process.exit(0);
 } else {
 	process.stdout.write(chalk.red('\nAborted.\n'));
 	process.exit(1);
