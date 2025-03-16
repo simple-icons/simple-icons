@@ -1022,6 +1022,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Formspree` | `formspree` |
 | `Formstack` | `formstack` |
 | `Fortinet` | `fortinet` |
+| `Fortnite` | `fortnite` |
 | `Fortran` | `fortran` |
 | `Fossa` | `fossa` |
 | `Fossil SCM` | `fossilscm` |
@@ -1108,6 +1109,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gitter` | `gitter` |
 | `GL.iNet` | `gldotinet` |
 | `Glassdoor` | `glassdoor` |
+| `Gleam` | `gleam` |
 | `Glide` | `glide` |
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
@@ -1552,6 +1554,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ktor` | `ktor` |
 | `Kuaishou` | `kuaishou` |
 | `Kubernetes` | `kubernetes` |
+| `Kubespray` | `kubespray` |
 | `Kubuntu` | `kubuntu` |
 | `KuCoin` | `kucoin` |
 | `Kueski` | `kueski` |
@@ -2207,6 +2210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pop!_OS` | `popos` |
 | `Porkbun` | `porkbun` |
 | `Porsche` | `porsche` |
+| `PortableApps.com` | `portableappsdotcom` |
 | `Portainer` | `portainer` |
 | `PortSwigger` | `portswigger` |
 | `Posit` | `posit` |
@@ -2987,6 +2991,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ulule` | `ulule` |
 | `Umami` | `umami` |
 | `Umbraco` | `umbraco` |
+| `Umbrel` | `umbrel` |
 | `UML` | `uml` |
 | `Unacademy` | `unacademy` |
 | `Under Armour` | `underarmour` |

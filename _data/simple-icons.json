@@ -4658,7 +4658,8 @@
 	{
 		"title": "DuckDuckGo",
 		"hex": "DE5833",
-		"source": "https://duckduckgo.com"
+		"source": "https://github.com/duckduckgo/duckduckgo-privacy-extension/blob/5c6ac8d6a07421adbfb97ee2ff855dd7655f8d71/shared/img/logo-small-grayscale.svg",
+		"guidelines": "https://duckduckgo.com/press#press-materials"
 	},
 	{
 		"title": "Dungeons & Dragons",
@@ -6277,6 +6278,15 @@
 		"hex": "00A162",
 		"source": "https://www.glassdoor.com/about/newsroom",
 		"guidelines": "https://www.glassdoor.com/about/newsroom"
+	},
+	{
+		"title": "Gleam",
+		"hex": "FFAFF3",
+		"source": "https://gleam.run",
+		"guidelines": "https://gleam.run/branding",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Glide",
@@ -9998,9 +10008,9 @@
 	},
 	{
 		"title": "Messenger",
-		"hex": "00B2FF",
-		"source": "https://about.meta.com/brand/resources/messenger/messenger-brand",
-		"guidelines": "https://about.meta.com/brand/resources/messenger/messenger-brand"
+		"hex": "0866FF",
+		"source": "https://about.meta.com/brand/resources/facebook/messenger-icon",
+		"guidelines": "https://about.meta.com/brand/resources/facebook/messenger-icon"
 	},
 	{
 		"title": "Meta",
@@ -12535,6 +12545,11 @@
 		"title": "Porsche",
 		"hex": "B12B28",
 		"source": "https://www.porsche.com"
+	},
+	{
+		"title": "PortableApps.com",
+		"hex": "818F95",
+		"source": "https://github.com/simple-icons/simple-icons/pull/12366#issuecomment-2551561301"
 	},
 	{
 		"title": "Portainer",

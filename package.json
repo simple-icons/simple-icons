@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "14.9.0",
+	"version": "14.11.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -111,7 +111,9 @@
 		"pretest": "npm run prepublishOnly",
 		"test": "mocha tests --reporter tests/min-reporter.cjs --inline-diffs",
 		"posttest": "npm run postpublish",
-		"tslint": "tsc -p jsconfig.json",
+		"tslint": "npm run tslint:main && npm run tslint:sdk",
+		"tslint:main": "tsc -p jsconfig.json",
+		"tslint:sdk": "tsc -p scripts/release/sdk-ts-defs-jsconfig.json --noEmit",
 		"wslint": "editorconfig-checker",
 		"xo:fix": "xo --fix"
 	},
