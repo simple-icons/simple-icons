@@ -12426,7 +12426,13 @@
 	{
 		"title": "Plus Codes",
 		"hex": "4285F4",
-		"source": "https://maps.google.com/pluscodes/"
+		"source": "https://maps.google.com/pluscodes",
+		"guidelines": "https://maps.google.com/pluscodes/brand-guidelines",
+		"aliases": {
+			"aka": [
+				"Google Plus Codes"
+			]
+		}
 	},
 	{
 		"title": "PM2",
