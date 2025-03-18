@@ -13,6 +13,7 @@ import {search as fuzzySearch} from 'fast-fuzzy';
 import {getDirnameFromImportMeta, getIconSlug, getIconsData} from '../sdk.mjs';
 import {writeIconsData} from './utils.js';
 
+process.exitCode = 1;
 process.on('uncaughtException', (error) => {
 	if (error instanceof Error && error.name === 'ExitPromptError') {
 		process.stdout.write('\nAborted\n');
@@ -54,3 +55,4 @@ iconsData.splice(found.index, 1);
 await writeIconsData(iconsData);
 await fs.unlink(path.resolve(svgFilesDirectory, `${found.slug}.svg`));
 process.stdout.write(`Icon "${found.title} (${found.slug}.svg)" removed.\n`);
+process.exit(0);
