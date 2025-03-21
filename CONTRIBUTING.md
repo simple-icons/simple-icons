@@ -1,9 +1,6 @@
 # Contributing to Simple Icons
 
-[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522good%2520first%2520issue%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=github&label=good%20first%20issues&color=228f6c&labelColor=228f6c&logoColor=white&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr)
-[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22)
-[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr)
-[![](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
+[![Good first issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522good%2520first%2520issue%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=github&label=good%20first%20issues&color=228f6c&labelColor=228f6c&logoColor=white&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr) [![Icon issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22) [![Code issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr) [![Documentation issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
 
 > [!IMPORTANT]\
 > We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
@@ -38,33 +35,34 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 ## Table of contents
 
-* [Requesting an Icon](#requesting-an-icon)
-  * [Forbidden Brands](#forbidden-brands)
-  * [Assessing Popularity](#assessing-popularity)
-  * [Opening an Issue](#opening-an-issue)
-* [Adding or Updating an Icon](#adding-or-updating-an-icon)
-  * [Requesting Permission](#requesting-permission)
-* [Testing Package Locally](#testing-package-locally)
-* [Using Docker](#using-docker)
+- [Requesting an Icon](#requesting-an-icon)
+  - [Forbidden Brands](#forbidden-brands)
+  - [Assessing Popularity](#assessing-popularity)
+  - [Opening an Issue](#opening-an-issue)
+- [Adding or Updating an Icon](#adding-or-updating-an-icon)
+  - [Requesting Permission](#requesting-permission)
+- [Testing Package Locally](#testing-package-locally)
+- [Using Docker](#using-docker)
 
 ## Requesting an Icon
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
 
-* Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
-* Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
-* Doesn't fall into one of the following categories:
-    - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
-    - Military-related brands and organizations
-    - Governmental agencies, programs, departments
-       - Allowed: International organizations and NGOs with supranational interests
-       - Allowed: Space agencies
-    - Symbols, including flags and banners
-    - Sport clubs
-       - Allowed: Sports organizations
-    - Yearly releases
-    - Universities or other educational institutions
-    - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
+- Has not already been requested. If you find an existing issue or pull request for the brand you're looking for then please add a reaction or comment to show your support.
+- Is of a _popular_ brand - see "[Assessing Popularity](#assessing-popularity)" below.
+- Doesn't fall into one of the following categories:
+  - Illegal services (e.g. piracy, malware, threatening material, spam, etc.)
+  - Military-related brands and organizations
+  - Governmental agencies, programs, departments
+    - Allowed: International organizations and NGOs with supranational interests
+    - Allowed: Space agencies
+  - Symbols, including flags and banners
+    - Allowed: standards like FCC, CE, CCC, RoHS...
+  - Sport clubs
+    - Allowed: Sports organizations
+  - Yearly releases
+  - Universities or other educational institutions
+  - Any brands representing individuals rather than an organization, company, or product. This includes musicians, bands, and social media personalities.
 
 ### Forbidden Brands
 
@@ -89,31 +87,33 @@ If you are in doubt, feel free to submit it and we'll have a look.
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
 
 1. Its website's Similarweb global rank is in the top 500k.
-    - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
-    - For existing icons in our library, the threshold is dropped from 500k to 750k.
-    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
+   - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
+   - For existing icons in our library, the threshold is dropped from 500k to 750k.
+   - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
 1. The website's Similarweb rank in any one country is either:
-    - In the top 100, or,
-    - In the top 10k, _with_ a global rank of 1m or better.
+   - In the top 100, or,
+   - In the top 10k, _with_ a global rank of 1m or better.
 1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
-    - [npm](https://www.npmjs.com): 100k weekly downloads,
-    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
-    - [crates.io](https://crates.io): 100k weekly downloads,
-    - [PyPi Stats](https://pypistats.org): 100k weekly downloads, or,
+   - [npm](https://www.npmjs.com): 100k weekly downloads,
+   - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
+   - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
+   - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
+   - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
-    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
+   - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
-    - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
+   - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
 1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
-    - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
-    - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
-    - Trending equal to or higher than the compared brand will be considered in scope.
-    - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
+   - Must be with a similar brand that is already in our library and still within our scope, or that would qualify under any metric.
+   - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
+   - Trending equal to or higher than the compared brand will be considered in scope.
+   - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
 1. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
-    - A minimum of 5k GitHub stars will be required for consideration, providing,
-    - The repository is still active, and,
-    - Its [star history](https://star-history.com) is on a consistently upward trajectory.
+   - A minimum of 5k GitHub stars will be required for consideration, providing,
+   - The repository is still active, and,
+   - Its [star history](https://star-history.com) is on a consistently upward trajectory.
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
@@ -124,11 +124,12 @@ If all else fails, though, feel free to make a good case for the popularity of t
 
 When submitting a request for a new or updated icon include helpful information such as:
 
-* **Issue Title:** The brand name. For example:
-  * New Icons: `Request: GitHub Icon`
-  * Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
+- **Issue Title:** The brand name. For example:
 
-* **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files, etc.)
+  - New Icons: `Request: GitHub Icon`
+  - Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
+
+- **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files, etc.)
 
 If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
@@ -149,8 +150,7 @@ Official high quality brand logos and brand colors can usually be found in the f
 1. Wikimedia (which should provide a source)
 1. GitHub repositories
 
-It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this.
-Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
+It may be the case that no official source exists, but an unofficial icon has gained widespread acceptance and popularity. In such cases the unofficial icon can be included, but the details will be judged on a case-by-case basis. The JavaScript icon is an example of this. Notice that an unofficial source will never supersede an official one, even if it is more popular. An unofficial icon will only be accepted if no official option exists.
 
 #### Icon Guidelines
 
@@ -158,24 +158,29 @@ Working with an SVG version of the logo is best. In the absence of an SVG versio
 
 If the icon includes a (registered) trademark icon we follow the guidelines below to decide whether to include the symbol or not:
 
-* If brand guidelines explicitly require including the symbol, it must be included.
-* If the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
-* If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups](https://github.com/simple-icons/simple-icons/blob/develop/icons/chupachups.svg)), it must be included.
-* If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
-* If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
-* If there is no explicit requirement that a symbol must be included, it must not be included.
+- If brand guidelines explicitly require including the symbol, it must be included.
+- If the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
+- If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups]), it must be included.
+- If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
+- If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
+- If there is no explicit requirement that a symbol must be included, it must not be included.
+
+[Chupa Chups]: https://github.com/simple-icons/simple-icons/blob/develop/icons/chupachups.svg
 
 #### Color Guidelines
 
-For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). If an icon's primary color is made up of a gradient, use [Eric Meyer's Color Blender tool](https://meyerweb.com/eric/tools/color-blend/#::1:hex) to pick the color of the calculated midpoint. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+For color, the brand's primary color should be used. The official color of a brand is usually found in their brand guidelines, media kits, or some of the other locations mentioned above. If no official color can be identified, use the brand's primary web color or the most prominent color in the logo itself (please indicate why you choose the particular color in your pull request). If an icon's primary color is made up of a gradient, use [Eric Meyer's Color Blender tool] to pick the color of the calculated midpoint. Simple Icons stores brand colors in the standard 6 character hexadecimal format.
+
+[Eric Meyer's Color Blender tool]: https://meyerweb.com/eric/tools/color-blend/#::1:hex
 
 ### 2. Extract the Icon from the Logo
 
 There are many different tools for editing SVG files, some options include:
 
 | Name | Description | Platform | Price |
-| :---- | :---- | :----: | :----: |
+| :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
 | [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
@@ -193,40 +198,44 @@ Using your preferred tool you should:
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases, the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations, a different gap may be required, but that will be determined on a per-case basis.
 
-If you have any problems or questions while creating the SVG, check out [the GitHub Discussions](https://github.com/simple-icons/simple-icons/discussions/categories/help-with-svgs). You may find an answer to your question there or you can ask your question if you did not find an answer.
+If you have any problems or questions while creating the SVG, check out [the GitHub Discussions]. You may find an answer to your question there or you can ask your question if you did not find an answer.
+
+[the GitHub Discussions]: https://github.com/simple-icons/simple-icons/discussions/categories/help-with-svgs
 
 ### 3. Optimize the Icon
 
-All icons in Simple Icons have been optimized with the [SVGO tool](https://github.com/svg/svgo). This can be done in one of three ways:
+All icons in Simple Icons have been optimized with the [SVGO tool]. This can be done in one of three ways:
 
-* The [SVGO Command Line Tool](https://github.com/svg/svgo)
-  * Run the following command `npx svgo icons/file-to-optimize.svg`
-  * Check if there is a loss of quality in the output, if so increase the precision.
-* The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
-  * Click "Open SVG" and select an SVG file.
-  * Set the precision to about 3, depending on if there is a loss of quality.
-  * Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
-  * Click the download button.
-* The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
-  * If none of the options above work for you, it is possible to build a Docker image for compressing the images.
-  * Build: `docker build . -t simple-icons`
-  * Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
+- The [SVGO Command Line Tool](https://github.com/svg/svgo)
+  - Run the following command `npx svgo icons/file-to-optimize.svg`
+  - Check if there is a loss of quality in the output, if so increase the precision.
+- The [SVGOMG Online Tool](https://jakearchibald.github.io/svgomg/)
+  - Click "Open SVG" and select an SVG file.
+  - Set the precision to about 3, depending on if there is a loss of quality.
+  - Leave the remaining settings untouched (or reset them with the button at the bottom of the settings).
+  - Click the download button.
+- The [SVGO Command Line Tool](https://github.com/svg/svgo) in Docker
+  - If none of the options above work for you, it is possible to build a Docker image for compressing the images.
+  - Build: `docker build . -t simple-icons`
+  - Run: `docker run --rm -v ${PWD}/icons/file-to-optimize.svg:/image.svg simple-icons`
 
 After optimizing the icon, double-check it against your original version to ensure no visual imperfections have crept in. Also, make sure that the dimensions of the path have not been changed so that the icon no longer fits exactly within the canvas. We currently check the dimensions up to a precision of 3 decimal points.
+
+[SVGO tool]: https://github.com/svg/svgo
 
 ### 4. Annotate the Icon
 
 Each icon in Simple Icons has been annotated with a number of attributes and elements to increase accessibility. These include:
 
-* An svg element with the following attributes, ordered respectively:
-  * An img role attribute.
-    * `role="img"`
-  * A 24x24 viewbox.
-    * `viewBox="0 0 24 24"`
-  * The svg namespace.
-    * `xmlns="http://www.w3.org/2000/svg"`
-* A title element containing the brand name.
-  * `<title>Adobe Photoshop</title>`
+- An svg element with the following attributes, ordered respectively:
+  - An img role attribute.
+    - `role="img"`
+  - A 24x24 viewbox.
+    - `viewBox="0 0 24 24"`
+  - The svg namespace.
+    - `xmlns="http://www.w3.org/2000/svg"`
+- A title element containing the brand name.
+  - `<title>Adobe Photoshop</title>`
 
 Here is _part of_ the svg for the Adobe Photoshop icon as an example:
 
@@ -238,18 +247,18 @@ Here is _part of_ the svg for the Adobe Photoshop icon as an example:
 
 The final icon should:
 
-* Be properly annotated [as discussed above](#4-annotate-the-icon).
-* Be monochromatic.
-  * Remove all fill colors so that icon defaults to black.
-* Be scaled to fit the viewbox, while preserving the icon's original proportions.
-  * This means the icon should be touching at least two sides of the viewbox.
-* Be vertically and horizontally centered.
-* Be minified to a single line with no formatting.
-* Contain only a single `path` element.
-* Not contain extraneous elements.
-  * This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
-* Not contain extraneous attributes.
-  * This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
+- Be properly annotated [as discussed above](#4-annotate-the-icon).
+- Be monochromatic.
+  - Remove all fill colors so that icon defaults to black.
+- Be scaled to fit the viewbox, while preserving the icon's original proportions.
+  - This means the icon should be touching at least two sides of the viewbox.
+- Be vertically and horizontally centered.
+- Be minified to a single line with no formatting.
+- Contain only a single `path` element.
+- Not contain extraneous elements.
+  - This includes: `circle`, `ellipse`, `rect`, `polygon`, `line`, `g`, etc.
+- Not contain extraneous attributes.
+  - This includes: `width`, `height`, `fill`, `stroke`, `clip`, `font`, etc.
 
 Here is the svg for the Adobe Photoshop icon as an example:
 
@@ -263,49 +272,49 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
 
 1. Use **lowercase letters** without **whitespace**, for example:
 
-    ```yml
-    title: Adobe Photoshop
-    filename: adobephotoshop.svg
-    ```
+   ```yml
+   title: Adobe Photoshop
+   filename: adobephotoshop.svg
+   ```
 
 1. Only use **latin** letters, for example:
 
-    ```yml
-    title: Citroën
-    filename: citroen.svg
-    ```
+   ```yml
+   title: Citroën
+   filename: citroen.svg
+   ```
 
 1. Replace the following symbols with their alias:
 
-    | Symbol | Alias |
-    | :----: | ----- |
-    |   +    | plus  |
-    |   .    | dot   |
-    |   &    | and   |
+   | Symbol | Alias |
+   | :----: | ----- |
+   |   +    | plus  |
+   |   .    | dot   |
+   |   &    | and   |
 
-    for example:
+   for example:
 
-    ```yml
-    title: .Net
-    filename: dotnet.svg
-    ```
+   ```yml
+   title: .Net
+   filename: dotnet.svg
+   ```
 
 1. On rare occasions the resulting name will clash with the name of an existing SVG file in our collection. To resolve such conflicts append `_[MODIFIER]` to the name, where `[MODIFIER]` is a short descriptor of the brand or the service they provide and follows the same rules of construction as above.
 
-    for example:
+   for example:
 
-    ```yml
-    title: Hive
-    filename: hive_blockchain.svg
-    ```
+   ```yml
+   title: Hive
+   filename: hive_blockchain.svg
+   ```
 
 ### 7. Update the JSON Data for SimpleIcons.org
 
 Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
 
-* The `title` of the new SVG.
-* A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
-* The `source` URL of the logo being used. There are [more details below](#source-guidelines).
+- The `title` of the new SVG.
+- A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
+- The `source` URL of the logo being used. There are [more details below](#source-guidelines).
 
 There are also [optional values](#optional-data) that may be provided for each icon, which are listed below.
 
@@ -327,9 +336,9 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
 
-* The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an existing icon's name.
-* The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
-* The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be an [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
+- The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an existing icon's name.
+- The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
+- The `license` may be used to specify the license under which the icon is available. This is an object with a `type` and `url`. The `type` should be a [SPDX License ID](https://spdx.org/licenses/) or `"custom"`, the `url` is optional unless the `type` is `"custom"`.
 
 Here is the object of the fictional brand from before, but with all optional values, as an example:
 
@@ -424,11 +433,30 @@ We collect localized names to make it possible to find the brand by it's local n
 }
 ```
 
-Where the `locale` is an [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag) and `title` is a **different** title from the original title.
+Where the `locale` is an [IETF language tag] and `title` is a **different** title from the original title.
+
+[IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
+
+##### Old Names
+
+We collect old names to make it possible to find the brand by it's old name. To add an old name you add the following to the icon data:
+
+```json
+{
+    "title": "the title",
+    "aliases": {
+        "old": [
+            "the old title"
+        ]
+    }
+}
+```
+
+Where each old title is **different** from the current title.
 
 ### 8. Create a Pull Request
 
-Once you've completed the previous steps, create a pull request to merge your edits into the *develop* branch. You can run `npm run lint` to check if there are any issues you still need to address.
+Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
@@ -456,10 +484,14 @@ Kind regards,
 
 ## Testing Package Locally
 
-* Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `^12.20.0 || ^14.13.1 || >=16.0.0` is required.
-* Install the dependencies using `$ npm install`.
-* Build and test the package using `$ npm test`.
-* Run the project linting process using `$ npm run lint`.
+- Make sure you have [Node.js](https://nodejs.org/en/download/) installed. At least version `>=18.18.0` is required.
+- Install the dependencies using `npm install`.
+- Build and test the package using `npm test`.
+- Run the project linting process using `npm run lint`.
+
+## Using Dev Container
+
+We have a pre-configured Node.js runtime for [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers). You can also use the [GitHub Codespaces](https://github.com/features/codespaces) to code from any device.
 
 ## Using Docker
 
@@ -480,13 +512,13 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 
 ```typescript
-import { getIconsData, type IconData } from 'simple-icons/sdk';
+import {getIconsData, type IconData} from 'simple-icons/sdk';
 
 const iconsData: Promise<IconData[]> = getIconsData();
 ```
 
 ```javascript
-import { getIconsData } from 'simple-icons/sdk';
+import {getIconsData} from 'simple-icons/sdk';
 
 /* @typedef {import("./simple-icons/sdk").IconData} IconData */
 

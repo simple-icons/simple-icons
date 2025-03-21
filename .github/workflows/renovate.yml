@@ -19,6 +19,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup node
         uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
       - name: Renovate
         uses: renovatebot/github-action@v40.3.4
         with:
