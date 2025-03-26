@@ -1109,6 +1109,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gitter` | `gitter` |
 | `GL.iNet` | `gldotinet` |
 | `Glassdoor` | `glassdoor` |
+| `Gleam` | `gleam` |
 | `Glide` | `glide` |
 | `Glitch` | `glitch` |
 | `Globus` | `globus` |
@@ -2209,6 +2210,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pop!_OS` | `popos` |
 | `Porkbun` | `porkbun` |
 | `Porsche` | `porsche` |
+| `PortableApps.com` | `portableappsdotcom` |
 | `Portainer` | `portainer` |
 | `PortSwigger` | `portswigger` |
 | `Posit` | `posit` |
