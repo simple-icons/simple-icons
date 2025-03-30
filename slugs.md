@@ -1069,6 +1069,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GameBanana` | `gamebanana` |
 | `Gameloft` | `gameloft` |
 | `Gamemaker` | `gamemaker` |
+| `Gandi` | `gandi` |
 | `Garmin` | `garmin` |
 | `Gatling` | `gatling` |
 | `Gatsby` | `gatsby` |
@@ -1232,6 +1233,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gusto` | `gusto` |
 | `Gutenberg` | `gutenberg` |
 | `H&M` | `handm` |
+| `H2 Database` | `h2database` |
 | `H3` | `h3` |
 | `Habr` | `habr` |
 | `Hack Club` | `hackclub` |
@@ -2053,6 +2055,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OSF` | `osf` |
 | `OSGeo` | `osgeo` |
 | `Oshkosh` | `oshkosh` |
+| `OsmAnd` | `osmand` |
 | `OSMC` | `osmc` |
 | `osu!` | `osu` |
 | `Otto` | `otto` |
@@ -3258,6 +3261,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zebra Technologies` | `zebratechnologies` |
 | `Zed Industries` | `zedindustries` |
 | `Zelle` | `zelle` |
+| `Zen Browser` | `zenbrowser` |
 | `Zend` | `zend` |
 | `Zendesk` | `zendesk` |
 | `Zenn` | `zenn` |
