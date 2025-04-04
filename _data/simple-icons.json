@@ -10666,7 +10666,10 @@
 	{
 		"title": "Navidrome",
 		"hex": "0084FF",
-		"source": "https://www.navidrome.org"
+		"source": "https://www.navidrome.org",
+		"license": {
+		    "type": "GPL-3.0-only"
+		}
 	},
 	{
 		"title": "NBA",
