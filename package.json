@@ -124,7 +124,7 @@
 		"editorconfig-checker": "6.0.0",
 		"esbuild": "0.25.0",
 		"eslint-plugin-import": "2.31.0",
-		"eslint-plugin-jsdoc": "50.4.3",
+		"eslint-plugin-jsdoc": "50.6.9",
 		"fake-diff": "1.0.0",
 		"fast-fuzzy": "1.12.0",
 		"get-relative-luminance": "1.0.0",
@@ -141,7 +141,7 @@
 		"svgo": "3.3.2",
 		"svgpath": "2.6.0",
 		"typescript": "5.6.3",
-		"xo": "0.60.0"
+		"xo": "0.61.0-2"
 	},
 	"engines": {
 		"node": ">=0.12.18"
