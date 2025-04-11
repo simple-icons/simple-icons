@@ -57,10 +57,11 @@
 			"files": [
 				"scripts/**/*",
 				"tests/**/*",
+				"autoclose.rules.mjs",
 				"svglint.config.mjs",
 				"svgo.config.mjs"
 			],
-			"nodeVersion": ">=18"
+			"nodeVersion": ">=22"
 		},
 		{
 			"files": ["svglint.config.mjs"],
