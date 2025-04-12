@@ -25,6 +25,7 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 	ł: 'l',
 	ß: 'ss',
 	ŧ: 't',
+	ø: 'o',
 };
 
 const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
