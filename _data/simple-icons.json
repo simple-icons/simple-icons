@@ -11412,7 +11412,14 @@
 		"title": "OpenAI",
 		"hex": "412991",
 		"source": "https://openai.com/brand",
-		"guidelines": "https://openai.com/brand"
+		"guidelines": "https://openai.com/brand",
+		"aliases": {
+			"dup": [
+				{
+					"title": "ChatGPT"
+				}
+			]
+		}
 	},
 	{
 		"title": "OpenAI Gym",
