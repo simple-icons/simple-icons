@@ -55,7 +55,7 @@ const githubFetch = async (url, options) => {
 	});
 	if (!response.ok) {
 		throw new Error(
-			`Failed to fetch: ${response.status} (${response.statusText}).`,
+			`Failed to fetch ${url}: ${response.status} (${response.statusText}).`,
 		);
 	}
 
@@ -70,11 +70,6 @@ const githubFetch = async (url, options) => {
 const checkIfCanBeClosed = async () => {
 	const url = `https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}`;
 	const response = await githubFetch(url, {method: 'GET'});
-	if (!response.ok) {
-		throw new Error(
-			`Failed to fetch: ${response.status} (${response.statusText}).`,
-		);
-	}
 
 	/** @type {Issue} */
 	const json = await response.json();
