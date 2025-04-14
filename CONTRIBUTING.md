@@ -133,7 +133,7 @@ When submitting a request for a new or updated icon include helpful information 
 
 If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
-Don't submit multiple requests in one issue. If you want to request multiple icon additions or updates, please create a separate issue for each one.
+Don't submit multiple requests in one issue. If you want to request multiple icons, please create a separate issue for each one.
 
 ## Adding or Updating an Icon
 
