@@ -19,4 +19,4 @@ jobs:
         run: node scripts/autoclose-issues/autoclose.app.js
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-          ISSUE_NUMBER: ${{ github.event.number }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
