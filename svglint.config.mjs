@@ -422,7 +422,7 @@ const config = {
 
 				/** @type {Segment['segments']} */
 				const absSegments =
-					// @ts-ignore
+					// @ts-expect-error
 					svgpath(iconPath).abs().unshort().segments;
 
 				const lowerMovementCommands = ['m', 'l'];

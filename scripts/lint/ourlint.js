@@ -191,7 +191,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 					// TODO: `hasOwn` is not currently supported by TS.
 					// See https://github.com/microsoft/TypeScript/issues/44253
 					/** @type {string} */
-					// @ts-ignore
+					// @ts-expect-error
 					icon.license.url,
 				]);
 			}

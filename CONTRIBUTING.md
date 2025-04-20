@@ -133,6 +133,8 @@ When submitting a request for a new or updated icon include helpful information 
 
 If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
 
+Don't submit multiple requests in one issue. If you want to request multiple icons, please create a separate issue for each one.
+
 ## Adding or Updating an Icon
 
 > [!NOTE]\
@@ -459,6 +461,8 @@ Where each old title is **different** from the current title.
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
+
+Don't submit multiple icon additions or updates in one pull request. If you want to add or update multiple icons, please create a separate pull request for each one.
 
 ### Requesting Permission
 
