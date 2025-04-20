@@ -158,7 +158,7 @@ if (
 	};
 
 	if (answers.license.type === 'custom') {
-		// @ts-ignore
+		// @ts-expect-error
 		answers.license.url = await input({
 			message: `What is the URL for the license? (optional)`,
 			validate: (input) => input.length === 0 || isValidURL(input),
