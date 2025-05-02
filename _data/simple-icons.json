@@ -10884,10 +10884,14 @@
 		"guidelines": "https://nextra.site/about#design-assets"
 	},
 	{
-		"title": "NextUI",
+		"title": "HeroUI",
 		"hex": "000000",
-		"source": "https://nextui.org/figma",
-		"guidelines": "https://www.figma.com/community/file/1267584376234254760"
+		"source": "https://www.heroui.com",
+		"aliases": {
+			"old": [
+				"NextUI"
+			]
+		}
 	},
 	{
 		"title": "Nexus Mods",
