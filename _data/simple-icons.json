@@ -7256,6 +7256,16 @@
 		"guidelines": "https://devcenter.heroku.com/articles/heroku-brand-guidelines"
 	},
 	{
+		"title": "HeroUI",
+		"hex": "000000",
+		"source": "https://www.heroui.com",
+		"aliases": {
+			"old": [
+				"NextUI"
+			]
+		}
+	},
+	{
 		"title": "Hetzner",
 		"hex": "D50C2D",
 		"source": "https://www.hetzner.com"
@@ -10882,16 +10892,6 @@
 		"hex": "000000",
 		"source": "https://nextra.site",
 		"guidelines": "https://nextra.site/about#design-assets"
-	},
-	{
-		"title": "HeroUI",
-		"hex": "000000",
-		"source": "https://www.heroui.com",
-		"aliases": {
-			"old": [
-				"NextUI"
-			]
-		}
 	},
 	{
 		"title": "Nexus Mods",
