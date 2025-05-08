@@ -1727,7 +1727,11 @@
 	{
 		"title": "Authelia",
 		"hex": "113155",
-		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg"
+		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg",
+		"guidelines": "https://www.authelia.com/reference/guides/branding",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Authentik",
