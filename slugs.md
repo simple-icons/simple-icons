@@ -1789,6 +1789,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MicroStrategy` | `microstrategy` |
 | `MIDI` | `midi` |
 | `Migadu` | `migadu` |
+| `Mihon` | `mihon` |
 | `miHoYo` | `mihoyo` |
 | `MikroTik` | `mikrotik` |
 | `Milanote` | `milanote` |
@@ -2342,6 +2343,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Railway` | `railway` |
 | `Rainmeter` | `rainmeter` |
 | `Rakuten` | `rakuten` |
+| `Rakuten Kobo` | `rakutenkobo` |
 | `Ram` | `ram` |
 | `Rancher` | `rancher` |
 | `Rapid` | `rapid` |
