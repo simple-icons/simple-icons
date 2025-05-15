@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Types for Simple Icons package.
  */
@@ -10,25 +11,25 @@ export type License = SPDXLicense | CustomLicense;
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export type SPDXLicense = {
-  type: string;
-  url: string;
+	type: string;
+	url: string;
 };
 
 export type CustomLicense = {
-  type: 'custom';
-  url: string;
+	type: 'custom';
+	url: string;
 };
 
 /**
  * The data for a Simple Icon as is exported by the npm package.
  */
 export type SimpleIcon = {
-  title: string;
-  slug: string;
-  svg: string;
-  path: string;
-  source: string;
-  hex: string;
-  guidelines?: string;
-  license?: License;
+	title: string;
+	slug: string;
+	svg: string;
+	path: string;
+	source: string;
+	hex: string;
+	guidelines?: string;
+	license?: License;
 };
