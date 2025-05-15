@@ -9851,6 +9851,12 @@
 		"source": "https://cycling74.com"
 	},
 	{
+		"title": "Max",
+		"slug": "max_streaming",
+		"hex": "000000",
+		"source": "https://commons.wikimedia.org/wiki/File:Max_2025_logo.svg"
+	},
+	{
 		"title": "Max-Planck-Gesellschaft",
 		"hex": "006C66",
 		"source": "https://www.mpg.de"
@@ -10773,6 +10779,11 @@
 		"guidelines": "https://www.netgear.com/about/trademarks"
 	},
 	{
+		"title": "Netim",
+		"hex": "FE8427",
+		"source": "https://www.netim.com"
+	},
+	{
 		"title": "Netlify",
 		"hex": "00C7B7",
 		"source": "https://www.netlify.com/press/",
@@ -10843,6 +10854,11 @@
 		"title": "Newegg",
 		"hex": "E05E00",
 		"source": "https://www.newegg.com"
+	},
+	{
+		"title": "NewPipe",
+		"hex": "CD201F",
+		"source": "https://github.com/TeamNewPipe/NewPipe/blob/f3858e70a3af90b0ad3c6731482924567ec807f9/.idea/icon.svg"
 	},
 	{
 		"title": "NEXON",
@@ -11434,6 +11450,11 @@
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
+	},
+	{
+		"title": "OpenCritic",
+		"hex": "FC3E04",
+		"source": "https://commons.wikimedia.org/wiki/File:OpenCritic_logo.svg"
 	},
 	{
 		"title": "OpenCV",
@@ -13277,6 +13298,36 @@
 		"title": "radarr",
 		"hex": "FFCB3D",
 		"source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
+	},
+	{
+		"title": "Radio France",
+		"hex": "2B00E7",
+		"source": "https://charte.radiofrance.fr/radiofrance.php",
+		"guidelines": "https://charte.radiofrance.fr",
+		"aliases": {
+			"dup": [
+				{
+					"title": "France Inter",
+					"hex": "E20134"
+				},
+				{
+					"title": "France Culture",
+					"hex": "762B84"
+				},
+				{
+					"title": "France Musique",
+					"hex": "A90042"
+				},
+				{
+					"title": "Fip",
+					"hex": "E2007A"
+				},
+				{
+					"title": "Mouv'",
+					"hex": "5DFFA6"
+				}
+			]
+		}
 	},
 	{
 		"title": "Radix UI",
