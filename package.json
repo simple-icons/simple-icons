@@ -1,0 +1,149 @@
+{
+	"name": "simple-icons",
+	"version": "14.13.0",
+	"description": "SVG icons for popular brands https://simpleicons.org",
+	"keywords": [
+		"svg",
+		"icons"
+	],
+	"homepage": "https://simpleicons.org",
+	"bugs": {
+		"url": "https://github.com/simple-icons/simple-icons/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/simple-icons/simple-icons.git"
+	},
+	"funding": {
+		"type": "opencollective",
+		"url": "https://opencollective.com/simple-icons"
+	},
+	"license": "CC0-1.0",
+	"author": "Simple Icons Collaborators",
+	"sideEffects": false,
+	"type": "commonjs",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./index.d.ts",
+				"default": "./index.mjs"
+			},
+			"module": {
+				"types": "./index.d.ts",
+				"default": "./index.mjs"
+			},
+			"require": {
+				"types": "./index.d.ts",
+				"default": "./index.js"
+			},
+			"default": {
+				"types": "./index.d.ts",
+				"default": "./index.js"
+			}
+		},
+		"./icons": {
+			"import": {
+				"types": "./index.d.ts",
+				"default": "./index.mjs"
+			},
+			"module": {
+				"types": "./index.d.ts",
+				"default": "./index.mjs"
+			},
+			"require": {
+				"types": "./index.d.ts",
+				"default": "./index.js"
+			},
+			"default": {
+				"types": "./index.d.ts",
+				"default": "./index.js"
+			}
+		},
+		"./icons/*": [
+			"./icons/*"
+		],
+		"./sdk": {
+			"import": {
+				"types": "./sdk.d.ts",
+				"default": "./sdk.mjs"
+			},
+			"module": {
+				"types": "./sdk.d.ts",
+				"default": "./sdk.mjs"
+			},
+			"require": {
+				"types": "./sdk.d.ts",
+				"default": "./sdk.js"
+			},
+			"default": {
+				"types": "./sdk.d.ts",
+				"default": "./sdk.js"
+			}
+		},
+		"./icons.json": {
+			"import": "./_data/simple-icons.json",
+			"module": "./_data/simple-icons.json",
+			"require": "./_data/simple-icons.json",
+			"default": "./_data/simple-icons.json"
+		}
+	},
+	"main": "index.js",
+	"types": "index.d.ts",
+	"scripts": {
+		"add-icon-data": "node scripts/add-icon-data.js",
+		"build": "node scripts/build/package.js",
+		"clean": "node scripts/build/clean.js",
+		"format": "npm run format:icondata && npm run prettier -- --write && npm run xo:fix",
+		"format:icondata": "node scripts/format-icon-data.js",
+		"get-filename": "node scripts/get-filename.js",
+		"jslint": "xo",
+		"jsonlint": "node scripts/lint/jsonlint.js",
+		"lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run tslint && npm run markdownlint",
+		"markdownlint": "markdownlint-cli2 '**/*.md' '#node_modules'",
+		"ourlint": "node scripts/lint/ourlint.js",
+		"prepare": "husky",
+		"prepublishOnly": "npm run build",
+		"prettier": "prettier --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
+		"prettierlint": "npm run prettier -- --check --cache",
+		"postpublish": "npm run clean",
+		"remove-icon": "node scripts/remove-icon.js",
+		"svglint": "svglint --ci --config svglint.config.mjs icons/*.svg",
+		"pretest": "npm run prepublishOnly",
+		"test": "mocha tests --reporter tests/min-reporter.cjs --inline-diffs",
+		"posttest": "npm run postpublish",
+		"tslint": "npm run tslint:main && npm run tslint:sdk",
+		"tslint:main": "tsc -p jsconfig.json",
+		"tslint:sdk": "tsc -p scripts/release/sdk-ts-defs-jsconfig.json --noEmit",
+		"wslint": "editorconfig-checker",
+		"xo:fix": "xo --fix"
+	},
+	"devDependencies": {
+		"@inquirer/prompts": "7.5.0",
+		"@types/node": "22.15.3",
+		"chalk": "5.4.1",
+		"editorconfig-checker": "6.0.1",
+		"esbuild": "0.25.3",
+		"eslint-plugin-import": "2.31.0",
+		"eslint-plugin-jsdoc": "50.6.11",
+		"fake-diff": "1.0.0",
+		"fast-fuzzy": "1.12.0",
+		"get-relative-luminance": "1.0.0",
+		"husky": "9.1.7",
+		"jsonschema": "1.5.0",
+		"markdownlint-cli2": "0.17.2",
+		"mocha": "11.1.0",
+		"named-html-entities-json": "1.0.0",
+		"prettier-plugin-packagejson": "2.5.10",
+		"spdx-license-ids": "3.0.21",
+		"svg-path-bbox": "2.1.0",
+		"svg-path-segments": "2.0.1",
+		"svglint": "3.1.0",
+		"svgo": "3.3.2",
+		"svgpath": "2.6.0",
+		"typescript": "5.8.3",
+		"xo": "0.60.0"
+	},
+	"engines": {
+		"node": ">=0.12.18"
+	}
+}
