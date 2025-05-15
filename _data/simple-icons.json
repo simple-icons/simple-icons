@@ -13285,17 +13285,13 @@
 	{
 		"title": "Radio France",
 		"hex": "2B00E7",
-		"source": "https://charte.radiofrance.fr/images/radiofrance/radio-france-entreprise-avatar.svg",
-		"guidelines": "https://charte.radiofrance.fr/radiofrance.php",
+		"source": "https://charte.radiofrance.fr/radiofrance.php",
+		"guidelines": "https://charte.radiofrance.fr",
 		"aliases": {
 			"dup": [
 				{
 					"title": "France Inter",
 					"hex": "E20134"
-				},
-				{
-					"title": "France Bleu",
-					"hex": "0077D7"
 				},
 				{
 					"title": "France Culture",
