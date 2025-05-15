@@ -13283,6 +13283,36 @@
 		"source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
 	},
 	{
+		"title": "Radio France",
+		"hex": "2B00E7",
+		"source": "https://charte.radiofrance.fr/radiofrance.php",
+		"guidelines": "https://charte.radiofrance.fr",
+		"aliases": {
+			"dup": [
+				{
+					"title": "France Inter",
+					"hex": "E20134"
+				},
+				{
+					"title": "France Culture",
+					"hex": "762B84"
+				},
+				{
+					"title": "France Musique",
+					"hex": "A90042"
+				},
+				{
+					"title": "Fip",
+					"hex": "E2007A"
+				},
+				{
+					"title": "Mouv'",
+					"hex": "5DFFA6"
+				}
+			]
+		}
+	},
+	{
 		"title": "Radix UI",
 		"hex": "161618",
 		"source": "https://www.radix-ui.com"
