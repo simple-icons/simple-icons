@@ -12,5 +12,5 @@ runs:
     - id: get-version
       shell: sh
       run: |
-        version="$(grep version -m 1 -i package.json | sed 's/[ \",:version]//g')"
+        version="$(grep version -m 1 -i package.json | cut -d '"' -f4)"
         echo "version=$version" >> $GITHUB_OUTPUT
