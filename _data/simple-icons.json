@@ -7162,6 +7162,11 @@
 		"source": "https://www.hbo.com"
 	},
 	{
+		"title": "HBO Max",
+		"hex": "000000",
+		"source": "https://commons.wikimedia.org/wiki/File:Max_2025_logo.svg"
+	},
+	{
 		"title": "HCL",
 		"hex": "006BB6",
 		"source": "https://www.hcl.com/brand-guidelines",
@@ -9859,12 +9864,6 @@
 		"title": "Max",
 		"hex": "525252",
 		"source": "https://cycling74.com"
-	},
-	{
-		"title": "Max",
-		"slug": "max_streaming",
-		"hex": "000000",
-		"source": "https://commons.wikimedia.org/wiki/File:Max_2025_logo.svg"
 	},
 	{
 		"title": "Max-Planck-Gesellschaft",
@@ -13311,20 +13310,20 @@
 		"aliases": {
 			"dup": [
 				{
-					"title": "France Inter",
-					"hex": "E20134"
+					"title": "Fip",
+					"hex": "E2007A"
 				},
 				{
 					"title": "France Culture",
 					"hex": "762B84"
 				},
 				{
-					"title": "France Musique",
-					"hex": "A90042"
+					"title": "France Inter",
+					"hex": "E20134"
 				},
 				{
-					"title": "Fip",
-					"hex": "E2007A"
+					"title": "France Musique",
+					"hex": "A90042"
 				},
 				{
 					"title": "Mouv'",
