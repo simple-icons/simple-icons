@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Script to add data for a new icon to the simple-icons dataset.
@@ -8,175 +9,203 @@
  * @typedef {import("../sdk.js").IconData} IconData
  */
 import process from 'node:process';
-import {ExitPromptError} from '@inquirer/core';
-import {checkbox, confirm, input} from '@inquirer/prompts';
+import {checkbox, confirm, input, search} from '@inquirer/prompts';
 import chalk from 'chalk';
-import {search} from 'fast-fuzzy';
+import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import autocomplete from 'inquirer-autocomplete-standalone';
 import {
-  collator,
-  getIconsDataString,
-  normalizeColor,
-  titleToSlug,
-  urlRegex,
+	getIconsDataString,
+	normalizeColor,
+	titleToSlug,
+	urlRegex,
 } from '../sdk.mjs';
-import {getJsonSchemaData, writeIconsData} from './utils.js';
+import {
+	formatIconData,
+	getJsonSchemaData,
+	getSpdxLicenseIds,
+	sortIconsCompare,
+	writeIconsData,
+} from './utils.js';
 
-/** @type {{icons: import('../sdk.js').IconData[]}} */
+process.exitCode = 1;
+process.on('uncaughtException', (error) => {
+	if (error instanceof Error && error.name === 'ExitPromptError') {
+		process.stdout.write('\nAborted\n');
+		process.exit(1);
+	} else {
+		throw error;
+	}
+});
+
+/** @type {import('../sdk.js').IconData[]} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
 const HEX_REGEX = /^#?[a-f\d]{3,8}$/i;
 
 const aliasTypes = ['aka', 'old'].map((key) => ({
-  name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
-  value: key,
+	name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
+	value: key,
 }));
 
-/** @type {{name: string, value: string}[]} */
-const licenseTypes =
-  jsonSchema.definitions.brand.properties.license.oneOf[0].properties.type.enum.map(
-    (/** @type {string} */ license) => ({name: license, value: license}),
-  );
+const spdxLicenseIds = await getSpdxLicenseIds();
+const licenseTypes = [
+	{name: 'Custom', value: 'custom'},
+	...spdxLicenseIds.map((id) => ({name: id, value: id})),
+];
 
 /**
- * @param {string} input URL input
- * @returns {Promise<boolean|string>} Whether the input is a valid URL
+ * Whether an input is a valid URL.
+ * @param {string} input URL input.
+ * @returns {Promise<boolean|string>} Whether the input is a valid URL.
  */
 const isValidURL = async (input) => {
-  const regex = await urlRegex();
-  return regex.test(input) || 'Must be a valid and secure (https://) URL.';
+	const regex = await urlRegex();
+	return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
 /**
- * @param {string} input Hex color
- * @returns {boolean|string} Whether the input is a valid hex color
+ * Whether an input is a valid hex color.
+ * @param {string} input Hex color.
+ * @returns {boolean|string} Whether the input is a valid hex color.
  */
 const isValidHexColor = (input) =>
-  HEX_REGEX.test(input) || 'Must be a valid hex code.';
+	HEX_REGEX.test(input) || 'Must be a valid hex code.';
 
 /**
- * @param {string} input New icon input
- * @returns {boolean} Whether the icon is new
+ * Whether an icon is not already in the dataset.
+ * @param {string} input New icon input.
+ * @returns {boolean} Whether the icon is new.
  */
 const isNewIcon = (input) =>
-  !iconsData.icons.some(
-    (icon) =>
-      icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
-  );
+	!iconsData.some(
+		(icon) =>
+			icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
+	);
 
 /**
- * @param {string} input Color input
- * @returns {string} Preview of the color
+ * Compute a preview of a color to use in prompt background.
+ * @param {string} input Color input.
+ * @returns {string} Preview of the color.
  */
 const previewHexColor = (input) => {
-  const color = normalizeColor(input);
-  const luminance = HEX_REGEX.test(input)
-    ? getRelativeLuminance.default(`#${color}`)
-    : -1;
-  if (luminance === -1) return input.toUpperCase();
-  return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
-    input.toUpperCase(),
-  );
+	const color = normalizeColor(input);
+	const luminance = HEX_REGEX.test(input)
+		? getRelativeLuminance.default(`#${color}`)
+		: -1;
+	if (luminance === -1) return input.toUpperCase();
+	return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
+		input.toUpperCase(),
+	);
 };
 
-try {
-  const answers = {
-    title: await input({
-      message: 'What is the title of this icon?',
-      validate: (input) =>
-        input.trim().length > 0
-          ? isNewIcon(input) || 'This icon title or slug already exists.'
-          : 'This field is required.',
-    }),
-    hex: normalizeColor(
-      await input({
-        message: 'What is the brand color of this icon?',
-        validate: isValidHexColor,
-        transformer: previewHexColor,
-      }),
-    ),
-    source: await input({
-      message: 'What is the source URL of the icon?',
-      validate: isValidURL,
-    }),
-    guidelines: (await confirm({
-      message: 'Does this icon have brand guidelines?',
-    }))
-      ? await input({
-          message: 'What is the URL for the brand guidelines?',
-          validate: isValidURL,
-        })
-      : undefined,
-    license: (await confirm({
-      message: 'Does this icon have a license?',
-    }))
-      ? {
-          type: await autocomplete({
-            message: "What is the icon's license?",
-            async source(input) {
-              input = (input || '').trim();
-              return input
-                ? search(input, licenseTypes, {keySelector: (x) => x.value})
-                : licenseTypes;
-            },
-          }),
-          url:
-            (await input({
-              message: `What is the URL for the license? (optional)`,
-              validate: (input) => input.length === 0 || isValidURL(input),
-            })) || undefined,
-        }
-      : undefined,
-    aliases: (await confirm({
-      message: 'Does this icon have brand aliases?',
-      default: false,
-    }))
-      ? await checkbox({
-          message: 'What types of aliases do you want to add?',
-          choices: aliasTypes,
-        }).then(async (aliases) => {
-          const result = {};
-          for (const alias of aliases) {
-            // @ts-ignore
-            // eslint-disable-next-line no-await-in-loop
-            result[alias] = await input({
-              message: `What ${alias} aliases would you like to add? (separate with commas)`,
-            }).then((aliases) =>
-              aliases.split(',').map((alias) => alias.trim()),
-            );
-          }
+/** @type {IconData} */
+const answers = {
+	title: '',
+	hex: '',
+	source: '',
+};
 
-          return result;
-        })
-      : undefined,
-  };
+answers.title = await input({
+	message: 'What is the title of this icon?',
+	validate: (input) =>
+		input.trim().length > 0
+			? isNewIcon(input) || 'This icon title or slug already exists.'
+			: 'This field is required.',
+});
 
-  process.stdout.write(
-    'About to write the following to simple-icons.json:\n' +
-      JSON.stringify(answers, null, 4) +
-      '\n',
-  );
+answers.hex = normalizeColor(
+	await input({
+		message: 'What is the brand color of this icon?',
+		validate: isValidHexColor,
+		transformer: previewHexColor,
+	}),
+);
 
-  if (
-    await confirm({
-      message: 'Is this OK?',
-    })
-  ) {
-    iconsData.icons.push(answers);
-    iconsData.icons.sort((a, b) => collator.compare(a.title, b.title));
-    await writeIconsData(iconsData);
-    process.stdout.write(chalk.green('\nData written successfully.\n'));
-  } else {
-    process.stdout.write(chalk.red('\nAborted.\n'));
-    process.exit(1);
-  }
-} catch (error) {
-  if (error instanceof ExitPromptError) {
-    process.stdout.write(chalk.red('\nAborted.\n'));
-    process.exit(1);
-  }
+answers.source = await input({
+	message: 'What is the source URL of the icon?',
+	validate: isValidURL,
+});
 
-  throw error;
+if (
+	await confirm({
+		message: 'Does this icon have brand guidelines?',
+	})
+) {
+	answers.guidelines = await input({
+		message: 'What is the URL for the brand guidelines?',
+		validate: isValidURL,
+	});
+}
+
+if (
+	await confirm({
+		message: 'Does this icon have a license?',
+	})
+) {
+	answers.license = {
+		type: await search({
+			message: "What is the icon's license?",
+			async source(input) {
+				input = (input || '').trim();
+				return input
+					? fuzzySearch(input, licenseTypes, {
+							keySelector: (x) => x.value,
+						})
+					: licenseTypes;
+			},
+		}),
+	};
+
+	if (answers.license.type === 'custom') {
+		// @ts-expect-error
+		answers.license.url = await input({
+			message: `What is the URL for the license? (optional)`,
+			validate: (input) => input.length === 0 || isValidURL(input),
+		});
+	}
+}
+
+if (
+	await confirm({
+		message: 'Does this icon have brand aliases?',
+		default: false,
+	})
+) {
+	answers.aliases = await checkbox({
+		message: 'What types of aliases do you want to add?',
+		choices: aliasTypes,
+	}).then(async (aliases) => {
+		/** @type {{[_: string]: string[]}} */
+		const result = {};
+		for (const alias of aliases) {
+			// eslint-disable-next-line no-await-in-loop
+			result[alias] = await input({
+				message: `What ${alias} aliases would you like to add? (separate with commas)`,
+			}).then((aliases) => aliases.split(',').map((alias) => alias.trim()));
+		}
+
+		return aliases.length > 0 ? result : undefined;
+	});
+}
+
+process.stdout.write(
+	'About to write the following to simple-icons.json:\n' +
+		JSON.stringify(answers, null, '\t') +
+		'\n',
+);
+
+if (
+	await confirm({
+		message: 'Is this OK?',
+	})
+) {
+	iconsData.push(answers);
+	iconsData.sort(sortIconsCompare);
+	await writeIconsData(formatIconData(iconsData));
+	process.stdout.write(chalk.green('\nData written successfully.\n'));
+	process.exit(0);
+} else {
+	process.stdout.write(chalk.red('\nAborted.\n'));
+	process.exit(1);
 }
