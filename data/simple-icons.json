@@ -120,6 +120,19 @@
 		"source": "https://aframe.io/docs"
 	},
 	{
+		"title": "AB Download Manager",
+		"hex": "897BFF",
+		"source": "https://abdownloadmanager.com",
+		"license": {
+			"type": "Apache-2.0"
+		},
+		"aliases": {
+			"aka": [
+				"ABDM"
+			]
+		}
+	},
+	{
 		"title": "ABB",
 		"hex": "FF000F",
 		"source": "https://global.abb"
@@ -133,11 +146,6 @@
 		"title": "Abbvie",
 		"hex": "071D49",
 		"source": "https://www.abbvie.com"
-	},
-	{
-		"title": "AB Download Manager",
-		"hex": "7994FF",
-		"source": "https://abdownloadmanager.com"
 	},
 	{
 		"title": "About.me",
