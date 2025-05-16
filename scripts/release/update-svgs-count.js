@@ -1,7 +1,8 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
- * Replaces the SVG count milestone "Over <NUMBER> Free SVG icons..." located
+ * Replaces the SVG count milestone "Over <NUMBER> SVG icons..." located
  * at README every time the number of current icons is more than `updateRange`
  * more than the previous milestone.
  */

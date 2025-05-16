@@ -1,10 +1,11 @@
+#!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Format _data/simple-icons.json.
  */
-import {getIconsDataString} from '../sdk.mjs';
-import {sortIconsCompare, writeIconsData} from './utils.js';
+import {getIconsData} from '../sdk.mjs';
+import {formatIconData, writeIconsData} from './utils.js';
 
-const iconsData = JSON.parse(await getIconsDataString());
-iconsData.sort(sortIconsCompare);
-writeIconsData(iconsData);
+const icons = await getIconsData();
+writeIconsData(formatIconData(icons));
