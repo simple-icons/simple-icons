@@ -4297,6 +4297,11 @@
 		"source": "https://www.spiegel.de"
 	},
 	{
+		"title": "Detekt",
+		"hex": "45413C",
+		"source": "https://detekt.dev"
+	},
+	{
 		"title": "Deutsche Bahn",
 		"hex": "F01414",
 		"source": "https://www.bahn.de"
@@ -13332,20 +13337,20 @@
 		"aliases": {
 			"dup": [
 				{
-					"title": "France Inter",
-					"hex": "E20134"
+					"title": "Fip",
+					"hex": "E2007A"
 				},
 				{
 					"title": "France Culture",
 					"hex": "762B84"
 				},
 				{
-					"title": "France Musique",
-					"hex": "A90042"
+					"title": "France Inter",
+					"hex": "E20134"
 				},
 				{
-					"title": "Fip",
-					"hex": "E2007A"
+					"title": "France Musique",
+					"hex": "A90042"
 				},
 				{
 					"title": "Mouv'",
