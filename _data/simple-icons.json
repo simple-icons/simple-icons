@@ -658,8 +658,13 @@
 	},
 	{
 		"title": "Amazon",
-		"hex": "FF9900",
-		"source": "https://www.amazon.com"
+		"hex": "FF6200",
+		"source": "https://www.amazon.com",
+		"aliases": {
+			"aka": [
+				"Amazon.com"
+			]
+		}
 	},
 	{
 		"title": "Amazon Alexa",
