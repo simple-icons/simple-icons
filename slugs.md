@@ -321,6 +321,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Backbone.js` | `backbonedotjs` |
 | `Backendless` | `backendless` |
 | `Backstage` | `backstage` |
+| `Backstage` | `backstage_casting` |
 | `Badoo` | `badoo` |
 | `Baidu` | `baidu` |
 | `Bakaláři` | `bakalari` |
@@ -1046,6 +1047,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FreeNAS` | `freenas` |
 | `freenet` | `freenet` |
 | `Freepik` | `freepik` |
+| `FreeTube` | `freetube` |
 | `Fresh` | `fresh` |
 | `Frontend Mentor` | `frontendmentor` |
 | `Frontify` | `frontify` |
@@ -1193,6 +1195,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Tag Manager` | `googletagmanager` |
 | `Google Tasks` | `googletasks` |
 | `Google Translate` | `googletranslate` |
+| `Google TV` | `googletv` |
 | `GoToMeeting` | `gotomeeting` |
 | `Grab` | `grab` |
 | `Gradio` | `gradio` |
@@ -1219,6 +1222,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grubhub` | `grubhub` |
 | `Grunt` | `grunt` |
 | `GSK` | `gsk` |
+| `GSMA` | `gsma` |
 | `GSMArena.com` | `gsmarenadotcom` |
 | `GStreamer` | `gstreamer` |
 | `GTK` | `gtk` |
@@ -1259,6 +1263,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Have I Been Pwned` | `haveibeenpwned` |
 | `Haxe` | `haxe` |
 | `HBO` | `hbo` |
+| `HBO Max` | `hbomax` |
 | `HCL` | `hcl` |
 | `HDFC Bank` | `hdfcbank` |
 | `Headless UI` | `headlessui` |
@@ -1497,6 +1502,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Katana` | `katana` |
 | `Kaufland` | `kaufland` |
 | `KDE` | `kde` |
+| `KDE neon` | `kdeneon` |
 | `KDE Plasma` | `kdeplasma` |
 | `Kdenlive` | `kdenlive` |
 | `Kedro` | `kedro` |
@@ -1900,6 +1906,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NetEase Cloud Music` | `neteasecloudmusic` |
 | `Netflix` | `netflix` |
 | `NETGEAR` | `netgear` |
+| `Netim` | `netim` |
 | `Netlify` | `netlify` |
 | `Nette` | `nette` |
 | `Netto` | `netto` |
@@ -1909,6 +1916,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `New Relic` | `newrelic` |
 | `New York Times` | `newyorktimes` |
 | `Newegg` | `newegg` |
+| `NewPipe` | `newpipe` |
 | `NEXON` | `nexon` |
 | `Next.js` | `nextdotjs` |
 | `NextBillion.ai` | `nextbilliondotai` |
@@ -2013,6 +2021,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenAI Gym` | `openaigym` |
 | `OpenAPI Initiative` | `openapiinitiative` |
 | `OpenBSD` | `openbsd` |
+| `OpenCritic` | `opencritic` |
 | `OpenCV` | `opencv` |
 | `OpenFaaS` | `openfaas` |
 | `OpenGL` | `opengl` |
@@ -2228,6 +2237,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pre-commit` | `precommit` |
 | `Preact` | `preact` |
 | `Prefect` | `prefect` |
+| `PreMiD` | `premid` |
 | `Premier League` | `premierleague` |
 | `PrepBytes` | `prepbytes` |
 | `PrestaShop` | `prestashop` |
@@ -2339,6 +2349,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RAD Studio` | `radstudio` |
 | `Radar` | `radar` |
 | `radarr` | `radarr` |
+| `Radio France` | `radiofrance` |
 | `Radix UI` | `radixui` |
 | `Railway` | `railway` |
 | `Rainmeter` | `rainmeter` |
