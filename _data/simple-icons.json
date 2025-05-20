@@ -1727,7 +1727,11 @@
 	{
 		"title": "Authelia",
 		"hex": "113155",
-		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg"
+		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg",
+		"guidelines": "https://www.authelia.com/reference/guides/branding",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Authentik",
@@ -3865,7 +3869,7 @@
 	},
 	{
 		"title": "Crunchyroll",
-		"hex": "F47521",
+		"hex": "FF5E00",
 		"source": "https://www.crunchyroll.com"
 	},
 	{
@@ -6166,10 +6170,15 @@
 	},
 	{
 		"title": "GIMP",
-		"hex": "5C5543",
-		"source": "https://www.gimp.org/about/linking.html#wilber-the-gimp-mascot",
+		"hex": "8C8073",
+		"source": "https://gitlab.gnome.org/GNOME/gimp-data/-/blob/e62f1905dcef7ec831ea6c052bb035eb37eaa69e/images/logo/gimp-logo-unicolor.svg",
 		"license": {
-			"type": "CC-BY-SA-3.0"
+			"type": "CC-BY-SA-4.0"
+		},
+		"aliases": {
+			"aka": [
+				"GNU Image Manipulation Program"
+			]
 		}
 	},
 	{
@@ -8493,7 +8502,13 @@
 	{
 		"title": "KDE",
 		"hex": "1D99F3",
-		"source": "https://kde.org/stuff/clipart/"
+		"source": "https://kde.org/stuff/clipart",
+		"guidelines": "https://kde.org/stuff/clipart",
+		"aliases": {
+			"old": [
+				"K Desktop Environment"
+			]
+		}
 	},
 	{
 		"title": "KDE neon",
@@ -13927,7 +13942,8 @@
 	{
 		"title": "Rocket.Chat",
 		"hex": "F5455C",
-		"source": "https://docs.rocket.chat/docs/media-kit"
+		"source": "https://docs.rocket.chat/docs/media-kit",
+		"guidelines": "https://docs.rocket.chat/docs/brand-and-visual-guidelines"
 	},
 	{
 		"title": "RocksDB",
