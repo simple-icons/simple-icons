@@ -2,19 +2,19 @@ root=true
 
 [*]
 charset=utf-8
-indent_size=2
-indent_style=space
+indent_style=tab
 insert_final_newline=true
 trim_trailing_whitespace=true
 
 [*.md]
+indent_style = space
 indent_size=unset
 
 [*.svg]
 insert_final_newline=false
 
+[*.yml]
+indent_style=space
+
 [.github/**/*.md]
 trim_trailing_whitespace=false # Templates with trailing whitespace are more usable
-
-[_data/simple-icons.json]
-indent_size=4

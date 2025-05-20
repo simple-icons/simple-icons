@@ -10,7 +10,7 @@ jobs:
       github.event.action == 'opened' &&
       github.event.pull_request.base.ref != 'master'
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ vars.BOT_APP_ID }}

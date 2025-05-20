@@ -1,5 +1,5 @@
 name: Get issue/pull request labels
-description: Get the current labels of an issue or pull request through the GitHub API
+description: Get the current labels of an issue or pull request
 
 inputs:
   issue_number:

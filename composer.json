@@ -1,21 +1,24 @@
 {
-  "name": "simple-icons/simple-icons",
-  "description": "SVG icons for popular brands",
-  "homepage": "https://simpleicons.org/",
-  "keywords": [
-    "svg",
-    "icons"
-  ],
-  "support": {
-    "issues": "https://github.com/simple-icons/simple-icons/issues",
-    "source": "https://github.com/simple-icons/simple-icons",
-    "docs": "https://github.com/simple-icons/simple-icons#php-usage-"
-  },
-  "license": "CC0-1.0",
-  "funding": [
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/simple-icons"
-    }
-  ]
+	"name": "simple-icons/simple-icons",
+	"description": "SVG icons for popular brands",
+	"homepage": "https://simpleicons.org/",
+	"keywords": [
+		"svg",
+		"icons"
+	],
+	"support": {
+		"issues": "https://github.com/simple-icons/simple-icons/issues",
+		"source": "https://github.com/simple-icons/simple-icons",
+		"docs": "https://github.com/simple-icons/simple-icons#php-usage-",
+		"chat": "https://discord.gg/vUXFa7t5xJ",
+		"forum": "https://github.com/simple-icons/simple-icons/discussions",
+		"security": "https://github.com/simple-icons/simple-icons/security/policy"
+	},
+	"license": "CC0-1.0",
+	"funding": [
+		{
+			"type": "opencollective",
+			"url": "https://opencollective.com/simple-icons"
+		}
+	]
 }
