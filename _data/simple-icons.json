@@ -8502,7 +8502,13 @@
 	{
 		"title": "KDE",
 		"hex": "1D99F3",
-		"source": "https://kde.org/stuff/clipart/"
+		"source": "https://kde.org/stuff/clipart",
+		"guidelines": "https://kde.org/stuff/clipart",
+		"aliases": {
+			"old": [
+				"K Desktop Environment"
+			]
+		}
 	},
 	{
 		"title": "KDE neon",
