@@ -1481,7 +1481,7 @@
 	},
 	{
 		"title": "ArangoDB",
-		"hex": "DDE072",
+		"hex": "DDDF72",
 		"source": "https://www.arangodb.com/resources/logos",
 		"guidelines": "https://www.arangodb.com/resources/logos"
 	},
@@ -1930,6 +1930,12 @@
 		"hex": "9BF0E1",
 		"source": "https://github.com/backstage/backstage/blob/862f2517188849dd7467d059edeb8692e6933c35/microsite/static/logo_assets/svg/Icon_Teal.svg",
 		"guidelines": "https://backstage.io/logo_assets/Backstage_Identity_Assets_Overview.pdf"
+	},
+	{
+		"title": "Backstage",
+		"slug": "backstage_casting",
+		"hex": "000000",
+		"source": "https://backstage.com"
 	},
 	{
 		"title": "Badoo",
@@ -4551,7 +4557,7 @@
 	},
 	{
 		"title": "Douban Read",
-		"hex": "389EAC",
+		"hex": "24D2C8",
 		"source": "https://read.douban.com",
 		"license": {
 			"type": "custom",
@@ -5922,6 +5928,11 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Freepik.svg"
 	},
 	{
+		"title": "FreeTube",
+		"hex": "F04242",
+		"source": "https://github.com/FreeTubeApp/FreeTube/blob/45053d084104e8566b8f16263cafd9df0c013e7f/_icons/iconBlackSmall.svg"
+	},
+	{
 		"title": "Fresh",
 		"hex": "FFDB1E",
 		"source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
@@ -6761,6 +6772,12 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Google_Translate_logo.svg"
 	},
 	{
+		"title": "Google TV",
+		"hex": "4285F4",
+		"source": "https://partnermarketinghub.withgoogle.com/brands/google-tv/visual-identity/visual-identity/",
+		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-tv/visual-identity/visual-identity/"
+	},
+	{
 		"title": "GoToMeeting",
 		"hex": "F68D2E",
 		"source": "https://www.gotomeeting.com",
@@ -6921,6 +6938,11 @@
 				"GlaxoSmithKline"
 			]
 		}
+	},
+	{
+		"title": "GSMA",
+		"hex": "DC002B",
+		"source": "https://www.gsma.com"
 	},
 	{
 		"title": "GSMArena.com",
@@ -7150,6 +7172,11 @@
 		"title": "HBO",
 		"hex": "000000",
 		"source": "https://www.hbo.com"
+	},
+	{
+		"title": "HBO Max",
+		"hex": "000000",
+		"source": "https://commons.wikimedia.org/wiki/File:Max_2025_logo.svg"
 	},
 	{
 		"title": "HCL",
@@ -8469,6 +8496,11 @@
 		"source": "https://kde.org/stuff/clipart/"
 	},
 	{
+		"title": "KDE neon",
+		"hex": "3DC08D",
+		"source": "https://community.kde.org/Neon"
+	},
+	{
 		"title": "KDE Plasma",
 		"hex": "1D99F3",
 		"source": "https://kde.org/stuff/clipart/",
@@ -9700,7 +9732,7 @@
 	},
 	{
 		"title": "Manjaro",
-		"hex": "35BF5C",
+		"hex": "35BFA4",
 		"source": "https://manjaro.org"
 	},
 	{
@@ -10130,6 +10162,11 @@
 		"title": "Migadu",
 		"hex": "0043CE",
 		"source": "https://migadu.com"
+	},
+	{
+		"title": "Mihon",
+		"hex": "0058A0",
+		"source": "https://github.com/mihonapp/mihon/blob/0cb1925cf158155665f3173bccb93f39d84b71e0/app/src/main/res/drawable/ic_mihon.xml"
 	},
 	{
 		"title": "miHoYo",
@@ -10768,6 +10805,11 @@
 		"guidelines": "https://www.netgear.com/about/trademarks"
 	},
 	{
+		"title": "Netim",
+		"hex": "FE8427",
+		"source": "https://www.netim.com"
+	},
+	{
 		"title": "Netlify",
 		"hex": "00C7B7",
 		"source": "https://www.netlify.com/press/",
@@ -10838,6 +10880,11 @@
 		"title": "Newegg",
 		"hex": "E05E00",
 		"source": "https://www.newegg.com"
+	},
+	{
+		"title": "NewPipe",
+		"hex": "CD201F",
+		"source": "https://github.com/TeamNewPipe/NewPipe/blob/f3858e70a3af90b0ad3c6731482924567ec807f9/.idea/icon.svg"
 	},
 	{
 		"title": "NEXON",
@@ -11429,6 +11476,11 @@
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
+	},
+	{
+		"title": "OpenCritic",
+		"hex": "FC3E04",
+		"source": "https://commons.wikimedia.org/wiki/File:OpenCritic_logo.svg"
 	},
 	{
 		"title": "OpenCV",
@@ -12641,6 +12693,11 @@
 		"source": "https://www.prefect.io"
 	},
 	{
+		"title": "PreMiD",
+		"hex": "7289DA",
+		"source": "https://cdn.rcd.gg/PreMiD-icon.svg"
+	},
+	{
 		"title": "Premier League",
 		"hex": "360D3A",
 		"source": "https://www.premierleague.com"
@@ -13268,6 +13325,36 @@
 		"source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
 	},
 	{
+		"title": "Radio France",
+		"hex": "2B00E7",
+		"source": "https://charte.radiofrance.fr/radiofrance.php",
+		"guidelines": "https://charte.radiofrance.fr",
+		"aliases": {
+			"dup": [
+				{
+					"title": "France Inter",
+					"hex": "E20134"
+				},
+				{
+					"title": "France Culture",
+					"hex": "762B84"
+				},
+				{
+					"title": "France Musique",
+					"hex": "A90042"
+				},
+				{
+					"title": "Fip",
+					"hex": "E2007A"
+				},
+				{
+					"title": "Mouv'",
+					"hex": "5DFFA6"
+				}
+			]
+		}
+	},
+	{
 		"title": "Radix UI",
 		"hex": "161618",
 		"source": "https://www.radix-ui.com"
@@ -13287,6 +13374,11 @@
 		"hex": "BF0000",
 		"source": "https://global.rakuten.com/corp/news/media",
 		"guidelines": "https://global.rakuten.com/corp/news/media"
+	},
+	{
+		"title": "Rakuten Kobo",
+		"hex": "BF0000",
+		"source": "https://www.kobo.com"
 	},
 	{
 		"title": "Ram",
