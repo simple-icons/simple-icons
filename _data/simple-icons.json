@@ -182,8 +182,8 @@
 	},
 	{
 		"title": "ActiGraph",
-		"hex": "0B2C4A",
-		"source": "https://www.actigraphcorp.com"
+		"hex": "3A4259",
+		"source": "https://theactigraph.com"
 	},
 	{
 		"title": "Activision",
@@ -1727,7 +1727,11 @@
 	{
 		"title": "Authelia",
 		"hex": "113155",
-		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg"
+		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg",
+		"guidelines": "https://www.authelia.com/reference/guides/branding",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Authentik",
@@ -1930,6 +1934,12 @@
 		"hex": "9BF0E1",
 		"source": "https://github.com/backstage/backstage/blob/862f2517188849dd7467d059edeb8692e6933c35/microsite/static/logo_assets/svg/Icon_Teal.svg",
 		"guidelines": "https://backstage.io/logo_assets/Backstage_Identity_Assets_Overview.pdf"
+	},
+	{
+		"title": "Backstage",
+		"slug": "backstage_casting",
+		"hex": "000000",
+		"source": "https://backstage.com"
 	},
 	{
 		"title": "Badoo",
@@ -3859,7 +3869,7 @@
 	},
 	{
 		"title": "Crunchyroll",
-		"hex": "F47521",
+		"hex": "FF5E00",
 		"source": "https://www.crunchyroll.com"
 	},
 	{
@@ -5172,6 +5182,12 @@
 		"guidelines": "https://evernote.com/about-us"
 	},
 	{
+		"title": "Every.org",
+		"hex": "2BD7B0",
+		"source": "https://www.every.org/brand",
+		"guidelines": "https://www.every.org/brand"
+	},
+	{
 		"title": "Excalidraw",
 		"hex": "6965DB",
 		"source": "https://excalidraw.com"
@@ -5922,9 +5938,19 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Freepik.svg"
 	},
 	{
+		"title": "FreeTube",
+		"hex": "F04242",
+		"source": "https://github.com/FreeTubeApp/FreeTube/blob/45053d084104e8566b8f16263cafd9df0c013e7f/_icons/iconBlackSmall.svg"
+	},
+	{
 		"title": "Fresh",
 		"hex": "FFDB1E",
 		"source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
+	},
+	{
+		"title": "Frigate",
+		"hex": "000000",
+		"source": "https://frigate.video"
 	},
 	{
 		"title": "Frontend Mentor",
@@ -6155,10 +6181,15 @@
 	},
 	{
 		"title": "GIMP",
-		"hex": "5C5543",
-		"source": "https://www.gimp.org/about/linking.html#wilber-the-gimp-mascot",
+		"hex": "8C8073",
+		"source": "https://gitlab.gnome.org/GNOME/gimp-data/-/blob/e62f1905dcef7ec831ea6c052bb035eb37eaa69e/images/logo/gimp-logo-unicolor.svg",
 		"license": {
-			"type": "CC-BY-SA-3.0"
+			"type": "CC-BY-SA-4.0"
+		},
+		"aliases": {
+			"aka": [
+				"GNU Image Manipulation Program"
+			]
 		}
 	},
 	{
@@ -6761,6 +6792,12 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Google_Translate_logo.svg"
 	},
 	{
+		"title": "Google TV",
+		"hex": "4285F4",
+		"source": "https://partnermarketinghub.withgoogle.com/brands/google-tv/visual-identity/visual-identity/",
+		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-tv/visual-identity/visual-identity/"
+	},
+	{
 		"title": "GoToMeeting",
 		"hex": "F68D2E",
 		"source": "https://www.gotomeeting.com",
@@ -6921,6 +6958,11 @@
 				"GlaxoSmithKline"
 			]
 		}
+	},
+	{
+		"title": "GSMA",
+		"hex": "DC002B",
+		"source": "https://www.gsma.com"
 	},
 	{
 		"title": "GSMArena.com",
@@ -7150,6 +7192,11 @@
 		"title": "HBO",
 		"hex": "000000",
 		"source": "https://www.hbo.com"
+	},
+	{
+		"title": "HBO Max",
+		"hex": "000000",
+		"source": "https://commons.wikimedia.org/wiki/File:Max_2025_logo.svg"
 	},
 	{
 		"title": "HCL",
@@ -8466,7 +8513,18 @@
 	{
 		"title": "KDE",
 		"hex": "1D99F3",
-		"source": "https://kde.org/stuff/clipart/"
+		"source": "https://kde.org/stuff/clipart",
+		"guidelines": "https://kde.org/stuff/clipart",
+		"aliases": {
+			"old": [
+				"K Desktop Environment"
+			]
+		}
+	},
+	{
+		"title": "KDE neon",
+		"hex": "3DC08D",
+		"source": "https://community.kde.org/Neon"
 	},
 	{
 		"title": "KDE Plasma",
@@ -10547,7 +10605,12 @@
 	{
 		"title": "MyAnimeList",
 		"hex": "2E51A2",
-		"source": "https://myanimelist.net/forum/?topicid=1575618"
+		"source": "https://myanimelist.net/forum/?topicid=1575618",
+		"aliases": {
+			"aka": [
+				"MAL"
+			]
+		}
 	},
 	{
 		"title": "MyGet",
@@ -10773,6 +10836,11 @@
 		"guidelines": "https://www.netgear.com/about/trademarks"
 	},
 	{
+		"title": "Netim",
+		"hex": "FE8427",
+		"source": "https://www.netim.com"
+	},
+	{
 		"title": "Netlify",
 		"hex": "00C7B7",
 		"source": "https://www.netlify.com/press/",
@@ -10843,6 +10911,11 @@
 		"title": "Newegg",
 		"hex": "E05E00",
 		"source": "https://www.newegg.com"
+	},
+	{
+		"title": "NewPipe",
+		"hex": "CD201F",
+		"source": "https://github.com/TeamNewPipe/NewPipe/blob/f3858e70a3af90b0ad3c6731482924567ec807f9/.idea/icon.svg"
 	},
 	{
 		"title": "NEXON",
@@ -11039,6 +11112,11 @@
 		"title": "Norwegian",
 		"hex": "D81939",
 		"source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
+	},
+	{
+		"title": "NotebookLM",
+		"hex": "000000",
+		"source": "https://notebooklm.google"
 	},
 	{
 		"title": "Notepad++",
@@ -11434,6 +11512,11 @@
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
+	},
+	{
+		"title": "OpenCritic",
+		"hex": "FC3E04",
+		"source": "https://commons.wikimedia.org/wiki/File:OpenCritic_logo.svg"
 	},
 	{
 		"title": "OpenCV",
@@ -12646,6 +12729,11 @@
 		"source": "https://www.prefect.io"
 	},
 	{
+		"title": "PreMiD",
+		"hex": "7289DA",
+		"source": "https://cdn.rcd.gg/PreMiD-icon.svg"
+	},
+	{
 		"title": "Premier League",
 		"hex": "360D3A",
 		"source": "https://www.premierleague.com"
@@ -13273,6 +13361,36 @@
 		"source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
 	},
 	{
+		"title": "Radio France",
+		"hex": "2B00E7",
+		"source": "https://charte.radiofrance.fr/radiofrance.php",
+		"guidelines": "https://charte.radiofrance.fr",
+		"aliases": {
+			"dup": [
+				{
+					"title": "Fip",
+					"hex": "E2007A"
+				},
+				{
+					"title": "France Culture",
+					"hex": "762B84"
+				},
+				{
+					"title": "France Inter",
+					"hex": "E20134"
+				},
+				{
+					"title": "France Musique",
+					"hex": "A90042"
+				},
+				{
+					"title": "Mouv'",
+					"hex": "5DFFA6"
+				}
+			]
+		}
+	},
+	{
 		"title": "Radix UI",
 		"hex": "161618",
 		"source": "https://www.radix-ui.com"
@@ -13840,7 +13958,8 @@
 	{
 		"title": "Rocket.Chat",
 		"hex": "F5455C",
-		"source": "https://docs.rocket.chat/docs/media-kit"
+		"source": "https://docs.rocket.chat/docs/media-kit",
+		"guidelines": "https://docs.rocket.chat/docs/brand-and-visual-guidelines"
 	},
 	{
 		"title": "RocksDB",
@@ -16301,7 +16420,7 @@
 		"source": "https://ticktick.com"
 	},
 	{
-		"title": "Tidal",
+		"title": "TIDAL",
 		"hex": "000000",
 		"source": "https://tidal.com/press"
 	},
