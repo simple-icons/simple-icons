@@ -182,8 +182,8 @@
 	},
 	{
 		"title": "ActiGraph",
-		"hex": "0B2C4A",
-		"source": "https://www.actigraphcorp.com"
+		"hex": "3A4259",
+		"source": "https://theactigraph.com"
 	},
 	{
 		"title": "Activision",
@@ -1035,6 +1035,11 @@
 		"source": "https://www.antena3.com"
 	},
 	{
+		"title": "AntennaPod",
+		"hex": "364FF3",
+		"source": "https://github.com/AntennaPod/Branding/blob/115dc180bb562eab4e5edc55eccfbdc11cd56873/Logo/logo-icon-white-out.svg"
+	},
+	{
 		"title": "Anthropic",
 		"hex": "191919",
 		"source": "https://www.anthropic.com"
@@ -1727,7 +1732,11 @@
 	{
 		"title": "Authelia",
 		"hex": "113155",
-		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg"
+		"source": "https://github.com/authelia/authelia/blob/8316cd4eb7a6f0778c8f480c61ad76a88416fc3a/docs/static/images/branding/logo.svg",
+		"guidelines": "https://www.authelia.com/reference/guides/branding",
+		"license": {
+			"type": "Apache-2.0"
+		}
 	},
 	{
 		"title": "Authentik",
@@ -1930,6 +1939,12 @@
 		"hex": "9BF0E1",
 		"source": "https://github.com/backstage/backstage/blob/862f2517188849dd7467d059edeb8692e6933c35/microsite/static/logo_assets/svg/Icon_Teal.svg",
 		"guidelines": "https://backstage.io/logo_assets/Backstage_Identity_Assets_Overview.pdf"
+	},
+	{
+		"title": "Backstage",
+		"slug": "backstage_casting",
+		"hex": "000000",
+		"source": "https://backstage.com"
 	},
 	{
 		"title": "Badoo",
@@ -2467,6 +2482,12 @@
 		"title": "Braintree",
 		"hex": "000000",
 		"source": "https://www.braintreepayments.com/press"
+	},
+	{
+		"title": "Brandfetch",
+		"hex": "0084FF",
+		"source": "https://brandfetch.com/brandfetch.com",
+		"guidelines": "https://brandfetch.com/brandfetch.com"
 	},
 	{
 		"title": "Brandfolder",
@@ -3859,7 +3880,7 @@
 	},
 	{
 		"title": "Crunchyroll",
-		"hex": "F47521",
+		"hex": "FF5E00",
 		"source": "https://www.crunchyroll.com"
 	},
 	{
@@ -4493,6 +4514,12 @@
 				"dm-drogerie markt"
 			]
 		}
+	},
+	{
+		"title": "DMM",
+		"hex": "000000",
+		"source": "https://dmm-corp.com/presskit",
+		"guidelines": "https://dmm-corp.com/presskit"
 	},
 	{
 		"title": "Docker",
@@ -5175,6 +5202,12 @@
 		"hex": "00A82D",
 		"source": "https://evernote.com/about-us",
 		"guidelines": "https://evernote.com/about-us"
+	},
+	{
+		"title": "Every.org",
+		"hex": "2BD7B0",
+		"source": "https://www.every.org/brand",
+		"guidelines": "https://www.every.org/brand"
 	},
 	{
 		"title": "Excalidraw",
@@ -5927,9 +5960,19 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Freepik.svg"
 	},
 	{
+		"title": "FreeTube",
+		"hex": "F04242",
+		"source": "https://github.com/FreeTubeApp/FreeTube/blob/45053d084104e8566b8f16263cafd9df0c013e7f/_icons/iconBlackSmall.svg"
+	},
+	{
 		"title": "Fresh",
 		"hex": "FFDB1E",
 		"source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
+	},
+	{
+		"title": "Frigate",
+		"hex": "000000",
+		"source": "https://frigate.video"
 	},
 	{
 		"title": "Frontend Mentor",
@@ -6160,10 +6203,15 @@
 	},
 	{
 		"title": "GIMP",
-		"hex": "5C5543",
-		"source": "https://www.gimp.org/about/linking.html#wilber-the-gimp-mascot",
+		"hex": "8C8073",
+		"source": "https://gitlab.gnome.org/GNOME/gimp-data/-/blob/e62f1905dcef7ec831ea6c052bb035eb37eaa69e/images/logo/gimp-logo-unicolor.svg",
 		"license": {
-			"type": "CC-BY-SA-3.0"
+			"type": "CC-BY-SA-4.0"
+		},
+		"aliases": {
+			"aka": [
+				"GNU Image Manipulation Program"
+			]
 		}
 	},
 	{
@@ -6766,6 +6814,12 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Google_Translate_logo.svg"
 	},
 	{
+		"title": "Google TV",
+		"hex": "4285F4",
+		"source": "https://partnermarketinghub.withgoogle.com/brands/google-tv/visual-identity/visual-identity/",
+		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-tv/visual-identity/visual-identity/"
+	},
+	{
 		"title": "GoToMeeting",
 		"hex": "F68D2E",
 		"source": "https://www.gotomeeting.com",
@@ -6926,6 +6980,11 @@
 				"GlaxoSmithKline"
 			]
 		}
+	},
+	{
+		"title": "GSMA",
+		"hex": "DC002B",
+		"source": "https://www.gsma.com"
 	},
 	{
 		"title": "GSMArena.com",
@@ -7142,8 +7201,16 @@
 	},
 	{
 		"title": "Have I Been Pwned",
-		"hex": "2A6379",
-		"source": "https://haveibeenpwned.com"
+		"hex": "030304",
+		"source": "https://github.com/HaveIBeenPwned/Branding/blob/d5a5d3c252a461c6c7e2ae60942fc80e50d2755d/Logos/Icon/Icon.svg",
+		"license": {
+			"type": "BSD-3-Clause"
+		},
+		"aliases": {
+			"aka": [
+				"HIBP"
+			]
+		}
 	},
 	{
 		"title": "Haxe",
@@ -7155,6 +7222,11 @@
 		"title": "HBO",
 		"hex": "000000",
 		"source": "https://www.hbo.com"
+	},
+	{
+		"title": "HBO Max",
+		"hex": "000000",
+		"source": "https://commons.wikimedia.org/wiki/File:Max_2025_logo.svg"
 	},
 	{
 		"title": "HCL",
@@ -8130,6 +8202,11 @@
 		"source": "https://www.global.jcb/en/about-us/brand-concept/"
 	},
 	{
+		"title": "JDoodle",
+		"hex": "FD5200",
+		"source": "https://www.jdoodle.com/online-java-compiler"
+	},
+	{
 		"title": "Jeep",
 		"hex": "000000",
 		"source": "https://commons.wikimedia.org/wiki/File:Jeep_logo.svg"
@@ -8471,7 +8548,18 @@
 	{
 		"title": "KDE",
 		"hex": "1D99F3",
-		"source": "https://kde.org/stuff/clipart/"
+		"source": "https://kde.org/stuff/clipart",
+		"guidelines": "https://kde.org/stuff/clipart",
+		"aliases": {
+			"old": [
+				"K Desktop Environment"
+			]
+		}
+	},
+	{
+		"title": "KDE neon",
+		"hex": "3DC08D",
+		"source": "https://community.kde.org/Neon"
 	},
 	{
 		"title": "KDE Plasma",
@@ -10552,7 +10640,12 @@
 	{
 		"title": "MyAnimeList",
 		"hex": "2E51A2",
-		"source": "https://myanimelist.net/forum/?topicid=1575618"
+		"source": "https://myanimelist.net/forum/?topicid=1575618",
+		"aliases": {
+			"aka": [
+				"MAL"
+			]
+		}
 	},
 	{
 		"title": "MyGet",
@@ -11054,6 +11147,11 @@
 		"title": "Norwegian",
 		"hex": "D81939",
 		"source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
+	},
+	{
+		"title": "NotebookLM",
+		"hex": "000000",
+		"source": "https://notebooklm.google"
 	},
 	{
 		"title": "Notepad++",
@@ -12666,6 +12764,11 @@
 		"source": "https://www.prefect.io"
 	},
 	{
+		"title": "PreMiD",
+		"hex": "7289DA",
+		"source": "https://cdn.rcd.gg/PreMiD-icon.svg"
+	},
+	{
 		"title": "Premier League",
 		"hex": "360D3A",
 		"source": "https://www.premierleague.com"
@@ -13890,7 +13993,8 @@
 	{
 		"title": "Rocket.Chat",
 		"hex": "F5455C",
-		"source": "https://docs.rocket.chat/docs/media-kit"
+		"source": "https://docs.rocket.chat/docs/media-kit",
+		"guidelines": "https://docs.rocket.chat/docs/brand-and-visual-guidelines"
 	},
 	{
 		"title": "RocksDB",
@@ -15822,6 +15926,11 @@
 		"source": "https://swiperjs.com"
 	},
 	{
+		"title": "Swisscows",
+		"hex": "000000",
+		"source": "https://blog.swisscows.com"
+	},
+	{
 		"title": "SWR",
 		"hex": "000000",
 		"source": "https://swr.vercel.app"
@@ -16351,7 +16460,7 @@
 		"source": "https://ticktick.com"
 	},
 	{
-		"title": "Tidal",
+		"title": "TIDAL",
 		"hex": "000000",
 		"source": "https://tidal.com/press"
 	},
@@ -18014,6 +18123,12 @@
 		"title": "Winamp",
 		"hex": "F93821",
 		"source": "https://www.winamp.com"
+	},
+	{
+		"title": "Windsurf",
+		"hex": "0B100F",
+		"source": "https://windsurf.com/brand",
+		"guidelines": "https://windsurf.com/brand"
 	},
 	{
 		"title": "Wine",
