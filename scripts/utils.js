@@ -170,7 +170,8 @@ const sortAlphabetically = (object) => {
  * @returns {IconData[]} The sorted icons data.
  */
 export const formatIconData = (iconsData) => {
-	const icons = iconsData.map((icon) => {
+	const iconsDataCopy = structuredClone(iconsData);
+	const icons = iconsDataCopy.map((icon) => {
 		return sortIconOrDuplicate({
 			...icon,
 			license: sortLicense(icon.license),
