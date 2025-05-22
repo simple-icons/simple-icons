@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file
  * Types for Simple Icons SDK.
@@ -32,6 +33,7 @@ export type Aliases = {
 	aka?: string[];
 	dup?: DuplicateAlias[];
 	loc?: Record<string, string>;
+	old?: string[];
 };
 
 type DuplicateAlias = {

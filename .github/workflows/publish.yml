@@ -14,7 +14,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
@@ -37,7 +37,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
           cache-dependency-path: '**/package.json'
       - id: get-version
@@ -62,7 +62,7 @@ jobs:
     needs: sanity-check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ vars.BOT_APP_ID }}
@@ -89,8 +89,10 @@ jobs:
         run: |
           set -e
           tag="${{ steps.get-version.outputs.version }}"
-          git tag -a "${tag}" -m "${{ steps.commit.outputs.git-message }}"
+          git tag -a "${tag}" -m "$GIT_MESSAGE"
           git push origin "${tag}"
+        env:
+          GIT_MESSAGE: ${{ steps.commit.outputs.git-message }}
       - name: Create release
         uses: softprops/action-gh-release@v2
         env:
@@ -110,7 +112,7 @@ jobs:
     needs: npm
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ vars.BOT_APP_ID }}
@@ -127,7 +129,7 @@ jobs:
     needs: npm
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ vars.BOT_APP_ID }}
