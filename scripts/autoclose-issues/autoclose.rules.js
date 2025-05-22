@@ -43,7 +43,7 @@ const rules = [
 	},
 	{
 		patterns: [/amazon/i, /aws/i],
-		reason: autocloseTerm + '#13056'
+		reason: autocloseTerm + '#13056',
 	},
 ];
 
