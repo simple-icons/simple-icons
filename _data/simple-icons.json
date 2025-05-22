@@ -7185,8 +7185,16 @@
 	},
 	{
 		"title": "Have I Been Pwned",
-		"hex": "2A6379",
-		"source": "https://haveibeenpwned.com"
+		"hex": "030304",
+		"source": "https://github.com/HaveIBeenPwned/Branding/blob/d5a5d3c252a461c6c7e2ae60942fc80e50d2755d/Logos/Icon/Icon.svg",
+		"license": {
+			"type": "BSD-3-Clause"
+		},
+		"aliases": {
+			"aka": [
+				"HIBP"
+			]
+		}
 	},
 	{
 		"title": "Haxe",
