@@ -4,7 +4,8 @@ RUN apk add --no-cache git
 
 WORKDIR /simple-icons
 COPY package.json /simple-icons/
-RUN npm install --no-audit --no-fund --include=dev --include=optional
+COPY package-lock.json /simple-icons/
+RUN npm ci --ignore-scripts --no-audit --no-fund --include=dev --include=optional
 
 COPY . .
 
