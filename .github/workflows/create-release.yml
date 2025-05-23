@@ -56,7 +56,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Bump version
         run: |
           npm version --no-commit-hooks --no-git-tag-version \

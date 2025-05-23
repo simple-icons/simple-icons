@@ -16,7 +16,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run linters
@@ -39,7 +39,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Install dependencies
