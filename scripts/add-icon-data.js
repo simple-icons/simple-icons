@@ -8,17 +8,14 @@
 /**
  * @typedef {import("../sdk.js").IconData} IconData
  */
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import process from 'node:process';
 import {checkbox, confirm, input, search} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import {
-	getIconsDataString,
-	normalizeColor,
-	titleToSlug,
-	urlRegex,
-} from '../sdk.mjs';
+import {getIconsDataString, normalizeColor, titleToSlug} from '../sdk.mjs';
 import {
 	formatIconData,
 	getJsonSchemaData,
@@ -53,6 +50,20 @@ const licenseTypes = [
 	{name: 'Custom', value: 'custom'},
 	...spdxLicenseIds.map((id) => ({name: id, value: id})),
 ];
+
+/**
+ * Build a regex to validate HTTPs URLs.
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
+ */
+const urlRegex = async () =>
+	new RegExp(
+		JSON.parse(
+			await fs.readFile(
+				path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
+				'utf8',
+			),
+		).definitions.url.pattern,
+	);
 
 /**
  * Whether an input is a valid URL.

@@ -8,15 +8,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {
-	collator,
-	getDirnameFromImportMeta,
-	getIconSlug,
-	getIconsDataPath,
-	titleToSlug,
-} from '../sdk.mjs';
-
-const __dirname = getDirnameFromImportMeta(import.meta.url);
+import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
 
 /**
  * @typedef {import("../sdk.js").IconData} IconData
@@ -25,29 +17,24 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
  * Get JSON schema data.
- * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<any>} JSON schema data.
  */
-export const getJsonSchemaData = async (
-	rootDirectory = path.resolve(__dirname, '..'),
-) =>
+export const getJsonSchemaData = async () =>
 	JSON.parse(
-		await fs.readFile(path.resolve(rootDirectory, '.jsonschema.json'), 'utf8'),
+		await fs.readFile(
+			path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
+			'utf8',
+		),
 	);
 
 /**
  * Write icons data to _data/simple-icons.json.
  * @param {IconData[]} iconsData Icons data array.
  * @param {boolean} [minify] Whether to minify the JSON output.
- * @param {string} [rootDirectory] Path to the root directory of the project.
  */
-export const writeIconsData = async (
-	iconsData,
-	minify = false,
-	rootDirectory = path.resolve(__dirname, '..'),
-) => {
+export const writeIconsData = async (iconsData, minify = false) => {
 	await fs.writeFile(
-		getIconsDataPath(rootDirectory),
+		getIconsDataPath(),
 		`${JSON.stringify(iconsData, null, minify ? 0 : '\t')}\n`,
 		'utf8',
 	);
@@ -55,16 +42,14 @@ export const writeIconsData = async (
 
 /**
  * Get SPDX license IDs from `spdx-license-ids` package.
- * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<string[]>} Set of SPDX license IDs.
  */
-export const getSpdxLicenseIds = async (
-	rootDirectory = path.resolve(__dirname, '..'),
-) =>
+export const getSpdxLicenseIds = async () =>
 	JSON.parse(
 		await fs.readFile(
 			path.resolve(
-				rootDirectory,
+				import.meta.dirname,
+				'..',
 				'node_modules',
 				'spdx-license-ids',
 				'index.json',
