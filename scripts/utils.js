@@ -79,11 +79,10 @@ export const getSpdxLicenseIds = async (
  * @param {IconData} b Icon B.
  * @returns {number} Comparison result.
  */
-export const sortIconsCompare = (a, b) => {
-	return a.title === b.title
+export const sortIconsCompare = (a, b) =>
+	a.title === b.title
 		? collator.compare(getIconSlug(a), getIconSlug(b))
 		: collator.compare(a.title, b.title);
-};
 
 /**
  * The compare function for sorting icon duplicate aliases in *_data/simple-icons.json*.
@@ -91,11 +90,10 @@ export const sortIconsCompare = (a, b) => {
  * @param {DuplicateAlias} b Duplicate alias B.
  * @returns {number} Comparison result.
  */
-const sortDuplicatesCompare = (a, b) => {
-	return a.title === b.title
+const sortDuplicatesCompare = (a, b) =>
+	a.title === b.title
 		? collator.compare(titleToSlug(a.title), titleToSlug(b.title))
 		: collator.compare(a.title, b.title);
-};
 
 /**
  * Sort icon data or duplicate alias object.
@@ -171,8 +169,8 @@ const sortAlphabetically = (object) => {
  */
 export const formatIconData = (iconsData) => {
 	const iconsDataCopy = structuredClone(iconsData);
-	const icons = iconsDataCopy.map((icon) => {
-		return sortIconOrDuplicate({
+	const icons = iconsDataCopy.map((icon) =>
+		sortIconOrDuplicate({
 			...icon,
 			license: sortLicense(icon.license),
 			aliases: icon.aliases
@@ -190,8 +188,8 @@ export const formatIconData = (iconsData) => {
 						old: icon.aliases.old?.sort(collator.compare),
 					})
 				: undefined,
-		});
-	});
+		}),
+	);
 	icons.sort(sortIconsCompare);
 	return icons;
 };

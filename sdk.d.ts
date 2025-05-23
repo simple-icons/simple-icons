@@ -3,8 +3,8 @@
  * @file
  * Types for Simple Icons SDK.
  */
-// eslint-disable-next-line n/file-extension-in-import
-import type {CustomLicense, SPDXLicense} from './types';
+
+import type {CustomLicense, SPDXLicense} from './types.js';
 
 /**
  * The data for a third-party extension.
