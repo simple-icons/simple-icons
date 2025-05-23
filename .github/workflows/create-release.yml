@@ -62,7 +62,7 @@ jobs:
           npm version --no-commit-hooks --no-git-tag-version \
             "${{ needs.release-pr.outputs.new-version }}"
       - name: Install dependencies
-        run: npm ci --no-audit --no-fund --include=dev --include=optional
+        run: npm ci --ignore-scripts --no-audit --no-fund --include=dev --include=optional
       - name: Update major version in CDN URLs
         run: node scripts/release/update-cdn-urls.js
       - name: Update SVGs count milestone
