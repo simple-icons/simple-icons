@@ -40,17 +40,6 @@ const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
 export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
 
 /**
- * Build a regex to validate HTTPs URLs.
- * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
- */
-export const urlRegex = async () =>
-	new RegExp(
-		JSON.parse(
-			await fs.readFile(path.resolve('..', '.jsonschema.json'), 'utf8'),
-		).definitions.url.pattern,
-	);
-
-/**
  * Get the slug/filename for an icon.
  * @param {IconData} icon The icon data as it appears in *_data/simple-icons.json*.
  * @returns {string} The slug/filename for the icon.
