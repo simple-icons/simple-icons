@@ -20,7 +20,7 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --no-fund --include=dev --include=optional
+        run: npm ci --no-audit --no-fund
       - name: Build NodeJS package
         run: npm run build
   lint:
@@ -70,7 +70,7 @@ jobs:
           echo -ne " file automatically at releases.\n" 1>&2
           exit 1
       - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --no-fund --include=dev --include=optional
+        run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
         run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
@@ -112,6 +112,6 @@ jobs:
           cache: npm
           cache-dependency-path: '**/package.json'
       - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --no-fund --include=dev --include=optional
+        run: npm ci --no-audit --no-fund
       - name: Run tests
         run: npm run test
