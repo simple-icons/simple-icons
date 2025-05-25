@@ -68,6 +68,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- [Amazon / AWS](https://github.com/simple-icons/simple-icons/pull/13056)
 - BP
 - Disney
 - International Olympic Committee

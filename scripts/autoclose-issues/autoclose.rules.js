@@ -41,6 +41,10 @@ const rules = [
 		patterns: [/linked\s*in/i],
 		reason: autocloseTerm + '#11236 #11372.',
 	},
+	{
+		patterns: [/amazon/i, /aws/i],
+		reason: autocloseTerm + '#13056.',
+	},
 ];
 
 export default rules;
