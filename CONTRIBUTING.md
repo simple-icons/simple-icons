@@ -76,6 +76,7 @@ Some companies and organizations are excessively protective with their brands, s
 - Microchip Technology Inc.
 - [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
 - Oracle
+- [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
