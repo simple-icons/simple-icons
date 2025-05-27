@@ -3650,11 +3650,6 @@
 		"source": "https://csswizardry.com"
 	},
 	{
-		"title": "CSS3",
-		"hex": "1572B6",
-		"source": "https://www.w3.org/html/logo/"
-	},
-	{
 		"title": "CTS",
 		"hex": "E53236",
 		"source": "https://commons.wikimedia.org/wiki/File:Logo_Compagnie_des_transports_strasbourgeois.svg",
@@ -10774,6 +10769,11 @@
 		}
 	},
 	{
+		"title": "Nhost",
+		"hex": "0052CD",
+		"source": "https://nhost.io"
+	},
+	{
 		"title": "NiceHash",
 		"hex": "FBC342",
 		"source": "https://www.nicehash.com/nicehash-media",
@@ -14536,6 +14536,12 @@
 		}
 	},
 	{
+		"title": "SimpleLocalize",
+		"hex": "222B33",
+		"source": "https://simplelocalize.io",
+		"guidelines": "https://simplelocalize.io/brand"
+	},
+	{
 		"title": "SimpleLogin",
 		"hex": "EA319F",
 		"source": "https://simplelogin.io/press"
@@ -16971,6 +16977,11 @@
 		"source": "https://www.upwork.com/press/"
 	},
 	{
+		"title": "UserVoice",
+		"hex": "FF6720",
+		"source": "https://www.uservoice.com"
+	},
+	{
 		"title": "USPS",
 		"hex": "333366",
 		"source": "https://www.usps.com"
@@ -17816,6 +17827,11 @@
 		"title": "Wikiquote",
 		"hex": "006699",
 		"source": "https://commons.wikimedia.org/wiki/File:Wikiquote-logo.svg"
+	},
+	{
+		"title": "Wikisource",
+		"hex": "006699",
+		"source": "https://en.wikipedia.org/w/index.php?search=Wikisource&fulltext=1"
 	},
 	{
 		"title": "Wikiversity",
