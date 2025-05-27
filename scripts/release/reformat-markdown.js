@@ -33,7 +33,7 @@ const reformat = async (filePath) => {
 			// Reference: https://github.com/orgs/community/discussions/16925
 			.replaceAll(
 				/\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)](?!\()/g,
-				function (string_, $0) {
+				(string_, $0) => {
 					const capital = $0.slice(0, 1);
 					const body = $0.slice(1).toLowerCase();
 					return `**${capital + body}**`;

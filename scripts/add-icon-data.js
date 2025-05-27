@@ -186,18 +186,22 @@ if (
 	answers.aliases = await checkbox({
 		message: 'What types of aliases do you want to add?',
 		choices: aliasTypes,
-	}).then(async (aliases) => {
-		/** @type {{[_: string]: string[]}} */
-		const result = {};
-		for (const alias of aliases) {
-			// eslint-disable-next-line no-await-in-loop
-			result[alias] = await input({
-				message: `What ${alias} aliases would you like to add? (separate with commas)`,
-			}).then((aliases) => aliases.split(',').map((alias) => alias.trim()));
-		}
+	})
+		// eslint-disable-next-line promise/prefer-await-to-then
+		.then(async (aliases) => {
+			/** @type {{[_: string]: string[]}} */
+			const result = {};
+			for (const alias of aliases) {
+				// eslint-disable-next-line no-await-in-loop
+				result[alias] = await input({
+					message: `What ${alias} aliases would you like to add? (separate with commas)`,
+				})
+					// eslint-disable-next-line promise/prefer-await-to-then
+					.then((aliases) => aliases.split(',').map((alias) => alias.trim()));
+			}
 
-		return aliases.length > 0 ? result : undefined;
-	});
+			return aliases.length > 0 ? result : undefined;
+		});
 }
 
 process.stdout.write(
