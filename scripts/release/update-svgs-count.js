@@ -1,7 +1,8 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
- * Replaces the SVG count milestone "Over <NUMBER> Free SVG icons..." located
+ * Replaces the SVG count milestone "Over <NUMBER> SVG icons..." located
  * at README every time the number of current icons is more than `updateRange`
  * more than the previous milestone.
  */
@@ -9,13 +10,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {getDirnameFromImportMeta, getIconsData} from '../../sdk.mjs';
+import {getIconsData} from '../../sdk.mjs';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
-const rootDirectory = path.resolve(__dirname, '..', '..');
+const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const readmeFile = path.resolve(rootDirectory, 'README.md');
 
 const readmeContent = await fs.readFile(readmeFile, 'utf8');

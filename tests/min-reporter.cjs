@@ -16,11 +16,7 @@ class EvenMoreMin extends reporters.Base {
 	 */
 	constructor(runner) {
 		super(runner);
-		runner.once(EVENT_RUN_END, () => {
-			// TODO: mocha's base reporters are not typed
-			// @ts-ignore
-			return this.epilogue();
-		});
+		runner.once(EVENT_RUN_END, () => this.epilogue());
 	}
 }
 

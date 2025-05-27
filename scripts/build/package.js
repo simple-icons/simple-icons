@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Simple Icons package build script.
@@ -14,7 +15,6 @@ import path from 'node:path';
 import {format} from 'node:util';
 import {transform as esbuildTransform} from 'esbuild';
 import {
-	getDirnameFromImportMeta,
 	getIconSlug,
 	getIconsData,
 	slugToVariableName,
@@ -23,11 +23,9 @@ import {
 } from '../../sdk.mjs';
 import {sortIconsCompare} from '../utils.js';
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
-
 const UTF8 = 'utf8';
 
-const rootDirectory = path.resolve(__dirname, '..', '..');
+const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const iconsDirectory = path.resolve(rootDirectory, 'icons');
 const indexJsFile = path.resolve(rootDirectory, 'index.js');
 const indexMjsFile = path.resolve(rootDirectory, 'index.mjs');
@@ -35,7 +33,7 @@ const sdkJsFile = path.resolve(rootDirectory, 'sdk.js');
 const sdkMjsFile = path.resolve(rootDirectory, 'sdk.mjs');
 const indexDtsFile = path.resolve(rootDirectory, 'index.d.ts');
 
-const templatesDirectory = path.resolve(__dirname, 'templates');
+const templatesDirectory = path.resolve(import.meta.dirname, 'templates');
 const iconObjectTemplateFile = path.resolve(
 	templatesDirectory,
 	'icon-object.js.template',
@@ -47,8 +45,6 @@ const iconObjectTemplateFile = path.resolve(
  * @typedef {import('../../types.js').SimpleIcon & import('../../sdk.d.ts').IconData} IconDataAndObject
  */
 
-/** @type {IconDataAndObject[]} */
-// @ts-ignore
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
@@ -79,7 +75,7 @@ const licenseToString = (license) => {
  * @param {IconDataAndObject} icon The icon object.
  * @returns {string} The JavaScript object.
  */
-const iconToJsObject = (icon) => {
+const iconDataAndObjectToJsRepr = (icon) => {
 	return format(
 		iconObjectTemplate,
 		escape(icon.title),
@@ -99,10 +95,10 @@ const iconToJsObject = (icon) => {
  * Write JavaScript content to a file.
  * @param {string} filepath The path to the file to write.
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {EsBuildTransformOptions | null} options The options to pass to esbuild.
+ * @param {EsBuildTransformOptions} [options] The options to pass to esbuild.
  */
-const writeJs = async (filepath, rawJavaScript, options = null) => {
-	options = options === null ? {minify: true} : options;
+const writeJs = async (filepath, rawJavaScript, options = undefined) => {
+	options = options === undefined ? {minify: true} : options;
 	const {code} = await esbuildTransform(rawJavaScript, options);
 	await fs.writeFile(filepath, code);
 };
@@ -116,29 +112,44 @@ const writeTs = async (filepath, rawTypeScript) => {
 	await fs.writeFile(filepath, rawTypeScript);
 };
 
-const build = async () => {
-	const buildIcons = await Promise.all(
-		icons.map(async (icon) => {
-			const filename = getIconSlug(icon);
-			const svgFilepath = path.resolve(iconsDirectory, `${filename}.svg`);
-			icon.svg = await fs.readFile(svgFilepath, UTF8);
-			icon.path = svgToPath(icon.svg);
-			icon.slug = filename;
-			const iconObject = iconToJsObject(icon);
-			const iconExportName = slugToVariableName(icon.slug);
-			return {icon, iconObject, iconExportName};
+/**
+ * Build icons intermediate instances.
+ * @returns {Promise<{
+ * 	icon: IconDataAndObject,
+ * 	iconObjectRepr: string,
+ * 	iconExportName: string
+ * }[]>} Merged icon data and object instances.
+ */
+const buildIcons = async () =>
+	Promise.all(
+		icons.map(async (iconData) => {
+			const slug = getIconSlug(iconData);
+			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
+			const svg = await fs.readFile(svgFilepath, UTF8);
+			/** @type {IconDataAndObject} */
+			const icon = {};
+			Object.assign(icon, iconData);
+			icon.svg = svg;
+			icon.path = svgToPath(svg);
+			icon.slug = slug;
+			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
+			const iconExportName = slugToVariableName(slug);
+			return {icon, iconObjectRepr, iconExportName};
 		}),
 	);
+
+const build = async () => {
+	const builtIcons = await buildIcons();
 
 	const iconsBarrelDts = [];
 	const iconsBarrelJs = [];
 	const iconsBarrelMjs = [];
 
-	buildIcons.sort((a, b) => sortIconsCompare(a.icon, b.icon));
-	for (const {iconObject, iconExportName} of buildIcons) {
+	builtIcons.sort((a, b) => sortIconsCompare(a.icon, b.icon));
+	for (const {iconObjectRepr, iconExportName} of builtIcons) {
 		iconsBarrelDts.push(`export const ${iconExportName}:I;`);
-		iconsBarrelJs.push(`${iconExportName}:${iconObject},`);
-		iconsBarrelMjs.push(`export const ${iconExportName}=${iconObject}`);
+		iconsBarrelJs.push(`${iconExportName}:${iconObjectRepr},`);
+		iconsBarrelMjs.push(`export const ${iconExportName}=${iconObjectRepr}`);
 	}
 
 	// Constants used in templates to reduce package size
