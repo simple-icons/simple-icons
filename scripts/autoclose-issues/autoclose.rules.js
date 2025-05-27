@@ -45,6 +45,10 @@ const rules = [
 		patterns: [/amazon/i, /aws/i],
 		reason: autocloseTerm + '#13056.',
 	},
+	{
+		patterns: [/yahoo/i, /engadget/i, /aol/i],
+		reason: autocloseTerm + '#9861.',
+	},
 ];
 
 export default rules;
