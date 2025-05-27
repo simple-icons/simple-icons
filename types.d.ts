@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Types for Simple Icons package.
  */
