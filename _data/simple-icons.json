@@ -14821,7 +14821,12 @@
 	{
 		"title": "SonarQube Server",
 		"hex": "126ED3",
-		"source": "https://www.sonarsource.com/company/press-kit"
+		"source": "https://www.sonarsource.com/company/press-kit",
+		"aliases": {
+			"old": [
+				"SonarQube"
+			]
+		}
 	},
 	{
 		"title": "sonarr",
