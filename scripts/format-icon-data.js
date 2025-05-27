@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Format _data/simple-icons.json.

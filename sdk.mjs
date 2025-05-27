@@ -1,11 +1,10 @@
+// @ts-check
 /**
  * @file
  * Simple Icons SDK.
  */
-
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {fileURLToPath} from 'node:url';
 
 /**
  * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
@@ -25,6 +24,7 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 	ł: 'l',
 	ß: 'ss',
 	ŧ: 't',
+	ø: 'o',
 };
 
 const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
@@ -38,32 +38,6 @@ const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
  * Regex to validate SVG paths.
  */
 export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
-
-/**
- * Get the directory name where this file is located from `import.meta.url`,
- * equivalent to the `__dirname` global variable in CommonJS.
- * @param {string} importMetaUrl Relative `import.meta.url` value of the caller.
- * @returns {string} Directory name in which this file is located.
- */
-export const getDirnameFromImportMeta = (importMetaUrl) =>
-	path.dirname(fileURLToPath(importMetaUrl));
-
-/**
- * Build a regex to validate HTTPs URLs.
- * @param {string} jsonschemaPath Path to the *.jsonschema.json* file.
- * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
- */
-export const urlRegex = async (
-	jsonschemaPath = path.join(
-		getDirnameFromImportMeta(import.meta.url),
-		'.jsonschema.json',
-	),
-) =>
-	new RegExp(
-		JSON.parse(
-			await fs.readFile(jsonschemaPath, 'utf8'),
-		).definitions.url.pattern,
-	);
 
 /**
  * Get the slug/filename for an icon.
@@ -115,9 +89,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
 		.replaceAll(/./g, (char) => {
-			/** @type {number} */
-			// @ts-ignore
-			const charCode = char.codePointAt(0);
+			const charCode = char.codePointAt(0) || 0;
 			return charCode > 127 ? `&#${charCode};` : char;
 		});
 
@@ -145,31 +117,23 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 
 /**
  * Get path of *_data/simple-icons.json*.
- * @param {string} rootDirectory Path to the root directory of the project.
  * @returns {string} Path of *_data/simple-icons.json*.
  */
-export const getIconsDataPath = (
-	rootDirectory = getDirnameFromImportMeta(import.meta.url),
-) => path.resolve(rootDirectory, '_data', 'simple-icons.json');
+export const getIconsDataPath = () =>
+	path.resolve(import.meta.dirname, '_data', 'simple-icons.json');
 
 /**
  * Get contents of *_data/simple-icons.json*.
- * @param {string} rootDirectory Path to the root directory of the project.
  * @returns {Promise<string>} Content of *_data/simple-icons.json*.
  */
-export const getIconsDataString = (
-	rootDirectory = getDirnameFromImportMeta(import.meta.url),
-) => fs.readFile(getIconsDataPath(rootDirectory), 'utf8');
+export const getIconsDataString = () => fs.readFile(getIconsDataPath(), 'utf8');
 
 /**
  * Get icons data as object from *_data/simple-icons.json*.
- * @param {string} rootDirectory Path to the root directory of the project.
  * @returns {Promise<IconData[]>} Icons data as array from *_data/simple-icons.json*.
  */
-export const getIconsData = async (
-	rootDirectory = getDirnameFromImportMeta(import.meta.url),
-) => {
-	const fileContents = await getIconsDataString(rootDirectory);
+export const getIconsData = async () => {
+	const fileContents = await getIconsDataString();
 	return JSON.parse(fileContents);
 };
 
@@ -199,16 +163,12 @@ export const normalizeColor = (text) => {
 
 /**
  * Get information about third party extensions from the README table.
- * @param {string} readmePath Path to the README file.
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions.
  */
-export const getThirdPartyExtensions = async (
-	readmePath = path.join(
-		getDirnameFromImportMeta(import.meta.url),
-		'README.md',
-	),
-) =>
-	normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
+export const getThirdPartyExtensions = async () =>
+	normalizeNewlines(
+		await fs.readFile(path.join(import.meta.dirname, 'README.md'), 'utf8'),
+	)
 		.split('## Third-Party Extensions')[1]
 		.split('|\n\n')[0]
 		.split('|\n|')
@@ -250,16 +210,12 @@ export const getThirdPartyExtensions = async (
 
 /**
  * Get information about third party libraries from the README table.
- * @param {string} readmePath Path to the README file.
  * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries.
  */
-export const getThirdPartyLibraries = async (
-	readmePath = path.join(
-		getDirnameFromImportMeta(import.meta.url),
-		'README.md',
-	),
-) =>
-	normalizeNewlines(await fs.readFile(readmePath, 'utf8'))
+export const getThirdPartyLibraries = async () =>
+	normalizeNewlines(
+		await fs.readFile(path.join(import.meta.dirname, 'README.md'), 'utf8'),
+	)
 		.split('## Third-Party Libraries')[1]
 		.split('|\n\n')[0]
 		.split('|\n|')
