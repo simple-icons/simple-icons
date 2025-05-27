@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Updates the CDN URLs in the README.md to match the major version in the
