@@ -9,12 +9,7 @@ import path from 'node:path';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
-import {
-	SVG_PATH_REGEX,
-	getDirnameFromImportMeta,
-	getIconsData,
-	htmlFriendlyToTitle,
-} from './sdk.mjs';
+import {SVG_PATH_REGEX, getIconsData, htmlFriendlyToTitle} from './sdk.mjs';
 
 /**
  * The svgpath library does not includes a `segments` property on their interface.
@@ -22,9 +17,8 @@ import {
  * @typedef {import('svg-path-segments').Segment & {segments: [string, ...number[]][]}} Segment
  */
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
 const htmlNamedEntitiesFile = path.join(
-	__dirname,
+	import.meta.dirname,
 	'node_modules',
 	'named-html-entities-json',
 	'index.json',
@@ -422,7 +416,7 @@ const config = {
 
 				/** @type {Segment['segments']} */
 				const absSegments =
-					// @ts-ignore
+					// @ts-expect-error
 					svgpath(iconPath).abs().unshort().segments;
 
 				const lowerMovementCommands = ['m', 'l'];
