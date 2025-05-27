@@ -2799,16 +2799,6 @@
 		"source": "https://chromewebstore.google.com"
 	},
 	{
-		"title": "Chromecast",
-		"hex": "999999",
-		"source": "https://www.google.com/intl/en_us/chromecast/built-in/",
-		"aliases": {
-			"aka": [
-				"Google Cast"
-			]
-		}
-	},
-	{
 		"title": "Chrysler",
 		"hex": "000000",
 		"source": "https://www.stellantis.com/en/brands/chrysler"
@@ -6283,6 +6273,17 @@
 		"title": "Google Cardboard",
 		"hex": "FF7143",
 		"source": "https://arvr.google.com/cardboard/images/header/vr-home.svg"
+	},
+	{
+		"title": "Google Cast",
+		"hex": "4285F4",
+		"source": "https://partnermarketinghub.withgoogle.com/brands/google-cast/visual-identity/visual-identity",
+		"guidelines": "https://partnermarketinghub.withgoogle.com/brands/google-cast",
+		"aliases": {
+			"old": [
+				"Chromecast"
+			]
+		}
 	},
 	{
 		"title": "Google Chat",
