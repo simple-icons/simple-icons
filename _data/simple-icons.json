@@ -2306,11 +2306,6 @@
 		"guidelines": "https://www.bugcrowd.com/about/press-kit"
 	},
 	{
-		"title": "Bugsnag",
-		"hex": "4949E4",
-		"source": "https://www.bugsnag.com"
-	},
-	{
 		"title": "Buhl",
 		"hex": "023E84",
 		"source": "https://buhl.de"
@@ -14804,15 +14799,20 @@
 		"source": "https://www.sonarsource.com"
 	},
 	{
-		"title": "SonarCloud",
-		"hex": "F3702A",
-		"source": "https://sonarcloud.io/about"
-	},
-	{
 		"title": "SonarQube",
 		"hex": "4E9BCD",
 		"source": "https://www.sonarqube.org/logos/",
 		"guidelines": "https://www.sonarqube.org/logos/"
+	},
+	{
+		"title": "SonarQube Cloud",
+		"hex": "126ED3",
+		"source": "https://www.sonarsource.com/company/press-kit",
+		"aliases": {
+			"old": [
+				"SonarCloud"
+			]
+		}
 	},
 	{
 		"title": "SonarQube for IDE",
