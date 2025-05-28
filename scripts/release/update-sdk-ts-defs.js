@@ -10,10 +10,8 @@ import {spawnSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {getDirnameFromImportMeta} from '../../sdk.mjs';
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
-const rootDirectory = path.resolve(__dirname, '..', '..');
+const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 
 const sdkTs = path.resolve(rootDirectory, 'sdk.d.ts');
 const sdkMts = path.resolve(rootDirectory, 'sdk.d.mts');
@@ -25,9 +23,7 @@ const generateSdkMts = async () => {
 	const originalSdkMjsContent = await fs.readFile(sdkMjs, 'utf8');
 	const temporarySdkMjsContent = originalSdkMjsContent
 		.split('\n')
-		.filter((line) => {
-			return !line.startsWith(' * @typedef {import("./sdk")');
-		})
+		.filter((line) => !line.startsWith(' * @typedef {import("./sdk")'))
 		.join('\n');
 	await fs.writeFile(sdkMjs, temporarySdkMjsContent);
 
@@ -97,7 +93,9 @@ const removeDuplicatedExportTypes = (content) => {
 const generateSdkTs = async () => {
 	const fileExists = await fs
 		.access(sdkMts)
+		// eslint-disable-next-line promise/prefer-await-to-then
 		.then(() => true)
+		// eslint-disable-next-line promise/prefer-await-to-then
 		.catch(() => false);
 	if (fileExists) await fs.unlink(sdkMts);
 	await generateSdkMts();
