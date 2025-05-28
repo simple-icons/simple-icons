@@ -6645,11 +6645,6 @@
 		"guidelines": "https://about.groupon.com/press/"
 	},
 	{
-		"title": "Grubhub",
-		"hex": "F63440",
-		"source": "https://www.grubhub.com"
-	},
-	{
 		"title": "Grunt",
 		"hex": "FAA918",
 		"source": "https://github.com/gruntjs/gruntjs.com/blob/70f43898d9ce8e6cc862ad72bf8a7aee5ca199a9/src/media/grunt-logo-no-wordmark.svg",
@@ -8122,8 +8117,26 @@
 	},
 	{
 		"title": "Just Eat",
-		"hex": "F36D00",
-		"source": "https://justeattakeaway.com/newsroom/en-WW/media_kits/"
+		"hex": "FF8000",
+		"source": "https://brand-box.marketing.just-eat.com",
+		"guidelines": "https://brand-box.marketing.just-eat.com",
+		"aliases": {
+			"aka": [
+				"Just Eat Takeaway.com"
+			],
+			"loc": {
+				"bg-BG": "Takeaway.com",
+				"de-AT": "Lieferando.at",
+				"de-DE": "Lieferando.de",
+				"en-AU": "Menulog",
+				"en-US": "Grubhub",
+				"fr-CA": "Skip",
+				"he-IL": "10bis",
+				"nl-NL": "Thuisbezorgd.nl",
+				"pl-PL": "Pyszne.pl",
+				"sk-SK": "Bistro.sk"
+			}
+		}
 	},
 	{
 		"title": "JustGiving",
@@ -16077,6 +16090,11 @@
 		"title": "The Spriters Resource",
 		"hex": "BE3939",
 		"source": "https://www.spriters-resource.com"
+	},
+	{
+		"title": "The StoryGraph",
+		"hex": "000000",
+		"source": "https://thestorygraph.com"
 	},
 	{
 		"title": "The Washington Post",
