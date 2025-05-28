@@ -2669,8 +2669,8 @@
 	},
 	{
 		"title": "Chakra UI",
-		"hex": "319795",
-		"source": "https://github.com/chakra-ui/chakra-ui/blob/327e1624d22936abb43068e1f57054e43c9c6819/logo/logomark-colored.svg"
+		"hex": "1BB2A9",
+		"source": "https://github.com/chakra-ui/chakra-ui/blob/e08025b359146d80ab46f1d35da82a11780c5316/media/logomark-colored.svg"
 	},
 	{
 		"title": "Channel 4",
@@ -3175,6 +3175,12 @@
 		"hex": "000000",
 		"source": "https://github.com/coder/presskit/blob/f9dccc00b062cf130ba237bfcefd1fcda4d253c8/logos/coder_logo_transparent_black.svg",
 		"guidelines": "https://github.com/coder/presskit"
+	},
+	{
+		"title": "CodeRabbit",
+		"hex": "FF570A",
+		"source": "https://www.coderabbit.ai/brand",
+		"guidelines": "https://www.coderabbit.ai/brand"
 	},
 	{
 		"title": "CodersRank",
@@ -6488,6 +6494,16 @@
 		"guidelines": "https://developers.google.com/streetview/ready/branding"
 	},
 	{
+		"title": "Google Summer of Code",
+		"hex": "F9AB00",
+		"source": "https://summerofcode.withgoogle.com",
+		"aliases": {
+			"aka": [
+				"GSoC"
+			]
+		}
+	},
+	{
 		"title": "Google Tag Manager",
 		"hex": "246FDB",
 		"source": "https://tagmanager.google.com/#/home"
@@ -6649,11 +6665,6 @@
 		"hex": "53A318",
 		"source": "https://about.groupon.com/press/",
 		"guidelines": "https://about.groupon.com/press/"
-	},
-	{
-		"title": "Grubhub",
-		"hex": "F63440",
-		"source": "https://www.grubhub.com"
 	},
 	{
 		"title": "Grunt",
@@ -8128,8 +8139,26 @@
 	},
 	{
 		"title": "Just Eat",
-		"hex": "F36D00",
-		"source": "https://justeattakeaway.com/newsroom/en-WW/media_kits/"
+		"hex": "FF8000",
+		"source": "https://brand-box.marketing.just-eat.com",
+		"guidelines": "https://brand-box.marketing.just-eat.com",
+		"aliases": {
+			"aka": [
+				"Just Eat Takeaway.com"
+			],
+			"loc": {
+				"bg-BG": "Takeaway.com",
+				"de-AT": "Lieferando.at",
+				"de-DE": "Lieferando.de",
+				"en-AU": "Menulog",
+				"en-US": "Grubhub",
+				"fr-CA": "Skip",
+				"he-IL": "10bis",
+				"nl-NL": "Thuisbezorgd.nl",
+				"pl-PL": "Pyszne.pl",
+				"sk-SK": "Bistro.sk"
+			}
+		}
 	},
 	{
 		"title": "JustGiving",
@@ -10348,8 +10377,8 @@
 	},
 	{
 		"title": "MYOB",
-		"hex": "6100A5",
-		"source": "https://myob-identikit.frontify.com/d/JK2D4WFOdAwV/for-developers"
+		"hex": "7B14EF",
+		"source": "https://www.myob.com"
 	},
 	{
 		"title": "Myspace",
@@ -12267,11 +12296,6 @@
 		"guidelines": "https://www.plurk.com/brandInfo"
 	},
 	{
-		"title": "Plus Codes",
-		"hex": "4285F4",
-		"source": "https://maps.google.com/pluscodes/"
-	},
-	{
 		"title": "PM2",
 		"hex": "2B037A",
 		"source": "https://pm2.keymetrics.io"
@@ -14027,11 +14051,6 @@
 		"title": "San Francisco Municipal Railway",
 		"hex": "BA0C2F",
 		"source": "https://www.actransit.org/wp-content/uploads/HSP_CC-sched.pdf"
-	},
-	{
-		"title": "SanDisk",
-		"hex": "ED1C24",
-		"source": "https://kb.sandisk.com"
 	},
 	{
 		"title": "Sanic",
@@ -16083,6 +16102,11 @@
 		"title": "The Spriters Resource",
 		"hex": "BE3939",
 		"source": "https://www.spriters-resource.com"
+	},
+	{
+		"title": "The StoryGraph",
+		"hex": "000000",
+		"source": "https://thestorygraph.com"
 	},
 	{
 		"title": "The Washington Post",
