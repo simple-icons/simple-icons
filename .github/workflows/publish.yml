@@ -16,9 +16,9 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Run linters
         run: npm run lint
       - name: Build NodeJS package
@@ -39,11 +39,11 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Reformat to regular markdown
         run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
