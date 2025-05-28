@@ -15,7 +15,6 @@ import path from 'node:path';
 import {format} from 'node:util';
 import {transform as esbuildTransform} from 'esbuild';
 import {
-	getDirnameFromImportMeta,
 	getIconSlug,
 	getIconsData,
 	slugToVariableName,
@@ -24,11 +23,9 @@ import {
 } from '../../sdk.mjs';
 import {sortIconsCompare} from '../utils.js';
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
-
 const UTF8 = 'utf8';
 
-const rootDirectory = path.resolve(__dirname, '..', '..');
+const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const iconsDirectory = path.resolve(rootDirectory, 'icons');
 const indexJsFile = path.resolve(rootDirectory, 'index.js');
 const indexMjsFile = path.resolve(rootDirectory, 'index.mjs');
@@ -36,7 +33,7 @@ const sdkJsFile = path.resolve(rootDirectory, 'sdk.js');
 const sdkMjsFile = path.resolve(rootDirectory, 'sdk.mjs');
 const indexDtsFile = path.resolve(rootDirectory, 'index.d.ts');
 
-const templatesDirectory = path.resolve(__dirname, 'templates');
+const templatesDirectory = path.resolve(import.meta.dirname, 'templates');
 const iconObjectTemplateFile = path.resolve(
 	templatesDirectory,
 	'icon-object.js.template',
@@ -56,9 +53,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @param {string} value The value to escape.
  * @returns {string} The escaped value.
  */
-const escape = (value) => {
-	return value.replaceAll(/(?<!\\)'/g, "\\'");
-};
+const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
@@ -78,8 +73,8 @@ const licenseToString = (license) => {
  * @param {IconDataAndObject} icon The icon object.
  * @returns {string} The JavaScript object.
  */
-const iconDataAndObjectToJsRepr = (icon) => {
-	return format(
+const iconDataAndObjectToJsRepr = (icon) =>
+	format(
 		iconObjectTemplate,
 		escape(icon.title),
 		escape(icon.slug),
@@ -92,7 +87,6 @@ const iconDataAndObjectToJsRepr = (icon) => {
 			? ''
 			: `\n  license: ${JSON.stringify(licenseToString(icon.license))},`,
 	);
-};
 
 /**
  * Write JavaScript content to a file.
