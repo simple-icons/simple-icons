@@ -1,9 +1,10 @@
+// @ts-check
 /**
  * @file
  * Types for Simple Icons SDK.
  */
-// eslint-disable-next-line n/file-extension-in-import
-import type {CustomLicense, SPDXLicense} from './types';
+
+import type {CustomLicense, SPDXLicense} from './types.js';
 
 /**
  * The data for a third-party extension.
@@ -32,6 +33,7 @@ export type Aliases = {
 	aka?: string[];
 	dup?: DuplicateAlias[];
 	loc?: Record<string, string>;
+	old?: string[];
 };
 
 type DuplicateAlias = {
@@ -61,23 +63,17 @@ export type IconData = {
 /* eslint-disable */
 
 export const SVG_PATH_REGEX: RegExp;
-export function getDirnameFromImportMeta(importMetaUrl: string): string;
-export function urlRegex(jsonschemaPath?: string): Promise<RegExp>;
 export function getIconSlug(icon: IconData): string;
 export function svgToPath(svg: string): string;
 export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
 export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
-export function getIconsDataPath(rootDirectory?: string): string;
-export function getIconsDataString(rootDirectory?: string): Promise<string>;
-export function getIconsData(rootDirectory?: string): Promise<IconData[]>;
+export function getIconsDataPath(): string;
+export function getIconsDataString(): Promise<string>;
+export function getIconsData(): Promise<IconData[]>;
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
-export function getThirdPartyExtensions(
-	readmePath?: string,
-): Promise<ThirdPartyExtension[]>;
-export function getThirdPartyLibraries(
-	readmePath?: string,
-): Promise<ThirdPartyExtension[]>;
+export function getThirdPartyExtensions(): Promise<ThirdPartyExtension[]>;
+export function getThirdPartyLibraries(): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
