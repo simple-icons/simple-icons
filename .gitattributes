@@ -6,5 +6,8 @@
 # Don't diff machine generated files
 slugs.md           -diff
 
+# Don't diff package lock files
+package-lock.json  -diff
+
 # Don't export/archive these files
 .github            export-ignore
