@@ -16,6 +16,7 @@ Regardless of whether or not the linked issue (if there is one) has a metric, pl
 
 ### Checklist
 
+- [ ] I have reviewed the brand's terms of service, and am confident we can add this icon
 - [ ] I updated the JSON data in `_data/simple-icons.json`
 - [ ] I optimized the icon with SVGO or SVGOMG
 - [ ] The SVG `viewbox` is `0 0 24 24`
