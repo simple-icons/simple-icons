@@ -2096,6 +2096,11 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
 	},
 	{
+		"title": "Bohemia Interactive",
+		"hex": "6BA539",
+		"source": "https://www.bohemia.net/press"
+	},
+	{
 		"title": "Bombardier",
 		"hex": "000000",
 		"source": "https://bombardier.com",
@@ -2664,8 +2669,8 @@
 	},
 	{
 		"title": "Chakra UI",
-		"hex": "319795",
-		"source": "https://github.com/chakra-ui/chakra-ui/blob/327e1624d22936abb43068e1f57054e43c9c6819/logo/logomark-colored.svg"
+		"hex": "1BB2A9",
+		"source": "https://github.com/chakra-ui/chakra-ui/blob/e08025b359146d80ab46f1d35da82a11780c5316/media/logomark-colored.svg"
 	},
 	{
 		"title": "Channel 4",
@@ -3175,6 +3180,12 @@
 		"hex": "000000",
 		"source": "https://github.com/coder/presskit/blob/f9dccc00b062cf130ba237bfcefd1fcda4d253c8/logos/coder_logo_transparent_black.svg",
 		"guidelines": "https://github.com/coder/presskit"
+	},
+	{
+		"title": "CodeRabbit",
+		"hex": "FF570A",
+		"source": "https://www.coderabbit.ai/brand",
+		"guidelines": "https://www.coderabbit.ai/brand"
 	},
 	{
 		"title": "CodersRank",
@@ -6482,6 +6493,16 @@
 		"guidelines": "https://developers.google.com/streetview/ready/branding"
 	},
 	{
+		"title": "Google Summer of Code",
+		"hex": "F9AB00",
+		"source": "https://summerofcode.withgoogle.com",
+		"aliases": {
+			"aka": [
+				"GSoC"
+			]
+		}
+	},
+	{
 		"title": "Google Tag Manager",
 		"hex": "246FDB",
 		"source": "https://tagmanager.google.com/#/home"
@@ -6643,11 +6664,6 @@
 		"hex": "53A318",
 		"source": "https://about.groupon.com/press/",
 		"guidelines": "https://about.groupon.com/press/"
-	},
-	{
-		"title": "Grubhub",
-		"hex": "F63440",
-		"source": "https://www.grubhub.com"
 	},
 	{
 		"title": "Grunt",
@@ -8122,8 +8138,26 @@
 	},
 	{
 		"title": "Just Eat",
-		"hex": "F36D00",
-		"source": "https://justeattakeaway.com/newsroom/en-WW/media_kits/"
+		"hex": "FF8000",
+		"source": "https://brand-box.marketing.just-eat.com",
+		"guidelines": "https://brand-box.marketing.just-eat.com",
+		"aliases": {
+			"aka": [
+				"Just Eat Takeaway.com"
+			],
+			"loc": {
+				"bg-BG": "Takeaway.com",
+				"de-AT": "Lieferando.at",
+				"de-DE": "Lieferando.de",
+				"en-AU": "Menulog",
+				"en-US": "Grubhub",
+				"fr-CA": "Skip",
+				"he-IL": "10bis",
+				"nl-NL": "Thuisbezorgd.nl",
+				"pl-PL": "Pyszne.pl",
+				"sk-SK": "Bistro.sk"
+			}
+		}
 	},
 	{
 		"title": "JustGiving",
@@ -10342,8 +10376,8 @@
 	},
 	{
 		"title": "MYOB",
-		"hex": "6100A5",
-		"source": "https://myob-identikit.frontify.com/d/JK2D4WFOdAwV/for-developers"
+		"hex": "7B14EF",
+		"source": "https://www.myob.com"
 	},
 	{
 		"title": "Myspace",
@@ -10488,6 +10522,12 @@
 		"title": "NEC",
 		"hex": "1414A0",
 		"source": "https://commons.wikimedia.org/wiki/File:NEC_logo.svg"
+	},
+	{
+		"title": "Nederlandse Spoorwegen",
+		"hex": "003082",
+		"source": "https://www.ns.nl/platform/fundamentals/icons.html",
+		"guidelines": "https://www.ns.nl/platform/fundamentals"
 	},
 	{
 		"title": "Neo4j",
@@ -10776,6 +10816,11 @@
 		"title": "NixOS",
 		"hex": "5277C3",
 		"source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
+	},
+	{
+		"title": "Nobara Linux",
+		"hex": "000000",
+		"source": "https://wiki.nobaraproject.org"
 	},
 	{
 		"title": "Node-RED",
@@ -12248,11 +12293,6 @@
 		"hex": "FF574D",
 		"source": "https://www.plurk.com/brandInfo",
 		"guidelines": "https://www.plurk.com/brandInfo"
-	},
-	{
-		"title": "Plus Codes",
-		"hex": "4285F4",
-		"source": "https://maps.google.com/pluscodes/"
 	},
 	{
 		"title": "PM2",
@@ -14010,11 +14050,6 @@
 		"title": "San Francisco Municipal Railway",
 		"hex": "BA0C2F",
 		"source": "https://www.actransit.org/wp-content/uploads/HSP_CC-sched.pdf"
-	},
-	{
-		"title": "SanDisk",
-		"hex": "ED1C24",
-		"source": "https://kb.sandisk.com"
 	},
 	{
 		"title": "Sanic",
@@ -16068,6 +16103,11 @@
 		"source": "https://www.spriters-resource.com"
 	},
 	{
+		"title": "The StoryGraph",
+		"hex": "000000",
+		"source": "https://thestorygraph.com"
+	},
+	{
 		"title": "The Washington Post",
 		"hex": "231F20",
 		"source": "https://www.washingtonpost.com/brand-studio/archive/"
@@ -16446,6 +16486,11 @@
 		"title": "Trend Micro",
 		"hex": "D71921",
 		"source": "https://www.trendmicro.com"
+	},
+	{
+		"title": "Tresorit",
+		"hex": "00A9E2",
+		"source": "https://tresorit.com/press"
 	},
 	{
 		"title": "Treyarch",

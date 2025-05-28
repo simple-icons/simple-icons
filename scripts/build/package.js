@@ -53,9 +53,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @param {string} value The value to escape.
  * @returns {string} The escaped value.
  */
-const escape = (value) => {
-	return value.replaceAll(/(?<!\\)'/g, "\\'");
-};
+const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
@@ -75,8 +73,8 @@ const licenseToString = (license) => {
  * @param {IconDataAndObject} icon The icon object.
  * @returns {string} The JavaScript object.
  */
-const iconDataAndObjectToJsRepr = (icon) => {
-	return format(
+const iconDataAndObjectToJsRepr = (icon) =>
+	format(
 		iconObjectTemplate,
 		escape(icon.title),
 		escape(icon.slug),
@@ -89,7 +87,6 @@ const iconDataAndObjectToJsRepr = (icon) => {
 			? ''
 			: `\n  license: ${JSON.stringify(licenseToString(icon.license))},`,
 	);
-};
 
 /**
  * Write JavaScript content to a file.
