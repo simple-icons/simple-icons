@@ -597,6 +597,11 @@
 		"guidelines": "https://global.alipay.com/docs/ac/website_hk/design"
 	},
 	{
+		"title": "AList",
+		"hex": "70C6BE",
+		"source": "https://alistgo.com"
+	},
+	{
 		"title": "Allegro",
 		"hex": "FF5A00",
 		"source": "https://allegro.pl"
@@ -3141,16 +3146,6 @@
 		"source": "https://www.codeigniter.com/help/legal"
 	},
 	{
-		"title": "Codeium",
-		"hex": "09B6A2",
-		"source": "https://github.com/Exafunction/codeium.vim/blob/e03c410a7673dbbe7f64afbc9a08f423363ded81/codeium-simple-logo.svg",
-		"aliases": {
-			"aka": [
-				"Exafunction"
-			]
-		}
-	},
-	{
 		"title": "Codemagic",
 		"hex": "F45E3F",
 		"source": "https://codemagic.io"
@@ -4892,11 +4887,6 @@
 		"title": "Event Store",
 		"hex": "5AB552",
 		"source": "https://github.com/EventStore/Brand/tree/319d6f8dadc2881062917ea5a6dafa675775ea85"
-	},
-	{
-		"title": "Eventbrite",
-		"hex": "F05537",
-		"source": "https://www.eventbrite.com/signin/"
 	},
 	{
 		"title": "Evernote",
@@ -7830,6 +7820,16 @@
 		"aliases": {
 			"aka": [
 				"(ISC)²"
+			]
+		}
+	},
+	{
+		"title": "ISRO",
+		"hex": "F58220",
+		"source": "https://www.isro.gov.in/publications.html",
+		"aliases": {
+			"aka": [
+				"Indian Space Research Organization"
 			]
 		}
 	},
@@ -17922,7 +17922,12 @@
 		"title": "Windsurf",
 		"hex": "0B100F",
 		"source": "https://windsurf.com/brand",
-		"guidelines": "https://windsurf.com/brand"
+		"guidelines": "https://windsurf.com/brand",
+		"aliases": {
+			"old": [
+				"Codeium"
+			]
+		}
 	},
 	{
 		"title": "Wine",
