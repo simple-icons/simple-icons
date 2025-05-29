@@ -3146,16 +3146,6 @@
 		"source": "https://www.codeigniter.com/help/legal"
 	},
 	{
-		"title": "Codeium",
-		"hex": "09B6A2",
-		"source": "https://github.com/Exafunction/codeium.vim/blob/e03c410a7673dbbe7f64afbc9a08f423363ded81/codeium-simple-logo.svg",
-		"aliases": {
-			"aka": [
-				"Exafunction"
-			]
-		}
-	},
-	{
 		"title": "Codemagic",
 		"hex": "F45E3F",
 		"source": "https://codemagic.io"
@@ -17942,7 +17932,12 @@
 		"title": "Windsurf",
 		"hex": "0B100F",
 		"source": "https://windsurf.com/brand",
-		"guidelines": "https://windsurf.com/brand"
+		"guidelines": "https://windsurf.com/brand",
+		"aliases": {
+			"old": [
+				"Codeium"
+			]
+		}
 	},
 	{
 		"title": "Wine",
