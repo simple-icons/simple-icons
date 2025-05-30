@@ -3249,8 +3249,13 @@
 	},
 	{
 		"title": "Cognizant",
-		"hex": "1A4CA1",
-		"source": "https://www.cognizant.com"
+		"hex": "000048",
+		"source": "https://www.cognizant.com",
+		"aliases": {
+			"aka": [
+				"CTS"
+			]
+		}
 	},
 	{
 		"title": "Coinbase",
