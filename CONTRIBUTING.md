@@ -437,7 +437,7 @@ We collect localized names to make it possible to find the brand by it's local n
 }
 ```
 
-Where the `locale` is an [IETF language tag] and each title is **different** from the original one.
+Where the `locale` is an [IETF language tag] and each localized title is **different** from the original one.
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
