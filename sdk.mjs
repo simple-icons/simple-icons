@@ -119,9 +119,8 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
  * Get path of *data/simple-icons.json*.
  * @returns {string} Path of *data/simple-icons.json*.
  */
-export const getIconsDataPath = (
-	rootDirectory = getDirnameFromImportMeta(import.meta.url),
-) => path.resolve(rootDirectory, 'data', 'simple-icons.json');
+export const getIconsDataPath = () =>
+	path.resolve(import.meta.dirname, 'data', 'simple-icons.json');
 
 /**
  * Get contents of *data/simple-icons.json*.
