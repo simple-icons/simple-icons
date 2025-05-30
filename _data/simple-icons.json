@@ -14868,12 +14868,6 @@
 		"source": "https://www.sonarsource.com"
 	},
 	{
-		"title": "SonarQube",
-		"hex": "4E9BCD",
-		"source": "https://www.sonarqube.org/logos/",
-		"guidelines": "https://www.sonarqube.org/logos/"
-	},
-	{
 		"title": "SonarQube Cloud",
 		"hex": "126ED3",
 		"source": "https://www.sonarsource.com/company/press-kit",
@@ -14890,6 +14884,16 @@
 		"aliases": {
 			"old": [
 				"SonarLint"
+			]
+		}
+	},
+	{
+		"title": "SonarQube Server",
+		"hex": "126ED3",
+		"source": "https://www.sonarsource.com/company/press-kit",
+		"aliases": {
+			"old": [
+				"SonarQube"
 			]
 		}
 	},
