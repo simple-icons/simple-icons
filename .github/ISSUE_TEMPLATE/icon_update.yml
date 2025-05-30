@@ -21,6 +21,13 @@ body:
     validations:
       required: true
 
+  - type: input
+    attributes:
+      label: Terms of Service
+      description: |
+        A lot of websites specify whether or not we can use their brand assets in their Terms of Service.
+        Please ensure you include the link here where relevant.
+
   - type: textarea
     attributes:
       label: Official Resources for Icon and Color

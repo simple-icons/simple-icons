@@ -437,7 +437,7 @@ We collect localized names to make it possible to find the brand by it's local n
 }
 ```
 
-Where the `locale` is an [IETF language tag] and `title` is a **different** title from the original title.
+Where the `locale` is an [IETF language tag] and each localized title is **different** from the original one.
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
@@ -456,7 +456,7 @@ We collect old names to make it possible to find the brand by it's old name. To 
 }
 ```
 
-Where each old title is **different** from the current title.
+Where each old title is **different** from the current title as well as all other strings in the list.
 
 ### 8. Create a Pull Request
 

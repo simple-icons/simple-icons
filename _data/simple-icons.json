@@ -597,6 +597,11 @@
 		"guidelines": "https://global.alipay.com/docs/ac/website_hk/design"
 	},
 	{
+		"title": "AList",
+		"hex": "70C6BE",
+		"source": "https://alistgo.com"
+	},
+	{
 		"title": "Allegro",
 		"hex": "FF5A00",
 		"source": "https://allegro.pl"
@@ -1605,6 +1610,11 @@
 		"source": "https://github.com/axios/axios-docs/blob/ba35d67160f94419c1b0292831cd1a4b378adb42/assets/logo.svg"
 	},
 	{
+		"title": "Axis Bank",
+		"hex": "971A4D",
+		"source": "https://www.axisbank.com/shareholders-corner/shareholders-information/annual-reports"
+	},
+	{
 		"title": "B&R Automation",
 		"hex": "FF8800",
 		"source": "https://www.br-automation.com"
@@ -2094,6 +2104,11 @@
 		"title": "Boeing",
 		"hex": "1D439C",
 		"source": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg"
+	},
+	{
+		"title": "Bohemia Interactive",
+		"hex": "6BA539",
+		"source": "https://www.bohemia.net/press"
 	},
 	{
 		"title": "Bombardier",
@@ -2664,8 +2679,8 @@
 	},
 	{
 		"title": "Chakra UI",
-		"hex": "319795",
-		"source": "https://github.com/chakra-ui/chakra-ui/blob/327e1624d22936abb43068e1f57054e43c9c6819/logo/logomark-colored.svg"
+		"hex": "1BB2A9",
+		"source": "https://github.com/chakra-ui/chakra-ui/blob/e08025b359146d80ab46f1d35da82a11780c5316/media/logomark-colored.svg"
 	},
 	{
 		"title": "Channel 4",
@@ -3028,6 +3043,11 @@
 		"source": "https://www.co-operative.coop/media/assets"
 	},
 	{
+		"title": "cobalt",
+		"hex": "FFFFFF",
+		"source": "https://cobalt.tools"
+	},
+	{
 		"title": "Coca-Cola",
 		"hex": "D00013",
 		"source": "https://commons.wikimedia.org/wiki/File:Coca-Cola_logo.svg"
@@ -3126,16 +3146,6 @@
 		"source": "https://www.codeigniter.com/help/legal"
 	},
 	{
-		"title": "Codeium",
-		"hex": "09B6A2",
-		"source": "https://github.com/Exafunction/codeium.vim/blob/e03c410a7673dbbe7f64afbc9a08f423363ded81/codeium-simple-logo.svg",
-		"aliases": {
-			"aka": [
-				"Exafunction"
-			]
-		}
-	},
-	{
 		"title": "Codemagic",
 		"hex": "F45E3F",
 		"source": "https://codemagic.io"
@@ -3170,6 +3180,12 @@
 		"hex": "000000",
 		"source": "https://github.com/coder/presskit/blob/f9dccc00b062cf130ba237bfcefd1fcda4d253c8/logos/coder_logo_transparent_black.svg",
 		"guidelines": "https://github.com/coder/presskit"
+	},
+	{
+		"title": "CodeRabbit",
+		"hex": "FF570A",
+		"source": "https://www.coderabbit.ai/brand",
+		"guidelines": "https://www.coderabbit.ai/brand"
 	},
 	{
 		"title": "CodersRank",
@@ -4166,6 +4182,12 @@
 		"source": "https://disroot.org/en"
 	},
 	{
+		"title": "Distrobox",
+		"hex": "4F433C",
+		"source": "https://github.com/89luca89/distrobox/blob/71cf8295fb74bb2805904cb3fb497556331ec169/docs/assets/brand/svg/distrobox-logomark-light-mono.svg",
+		"guidelines": "https://github.com/89luca89/distrobox/blob/71cf8295fb74bb2805904cb3fb497556331ec169/docs/assets/brand/distrobox-logo-guidelines.pdf"
+	},
+	{
 		"title": "Distrokid",
 		"hex": "231F20",
 		"source": "https://distrokid.com/logo"
@@ -4867,11 +4889,6 @@
 		"source": "https://github.com/EventStore/Brand/tree/319d6f8dadc2881062917ea5a6dafa675775ea85"
 	},
 	{
-		"title": "Eventbrite",
-		"hex": "F05537",
-		"source": "https://www.eventbrite.com/signin/"
-	},
-	{
 		"title": "Evernote",
 		"hex": "00A82D",
 		"source": "https://evernote.com/about-us",
@@ -4958,11 +4975,6 @@
 		"license": {
 			"type": "CC-BY-SA-3.0"
 		}
-	},
-	{
-		"title": "F-Secure",
-		"hex": "00BAFF",
-		"source": "https://vip.f-secure.com/en/marketing/logos"
 	},
 	{
 		"title": "F#",
@@ -5377,6 +5389,14 @@
 		"title": "Flood",
 		"hex": "4285F4",
 		"source": "https://flood.io"
+	},
+	{
+		"title": "Floorp",
+		"hex": "5309E8",
+		"source": "https://github.com/Floorp-Projects/Floorp/discussions/1676#discussioncomment-12697472",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Fluent Bit",
@@ -6477,6 +6497,16 @@
 		"guidelines": "https://developers.google.com/streetview/ready/branding"
 	},
 	{
+		"title": "Google Summer of Code",
+		"hex": "F9AB00",
+		"source": "https://summerofcode.withgoogle.com",
+		"aliases": {
+			"aka": [
+				"GSoC"
+			]
+		}
+	},
+	{
 		"title": "Google Tag Manager",
 		"hex": "246FDB",
 		"source": "https://tagmanager.google.com/#/home"
@@ -6638,11 +6668,6 @@
 		"hex": "53A318",
 		"source": "https://about.groupon.com/press/",
 		"guidelines": "https://about.groupon.com/press/"
-	},
-	{
-		"title": "Grubhub",
-		"hex": "F63440",
-		"source": "https://www.grubhub.com"
 	},
 	{
 		"title": "Grunt",
@@ -6953,6 +6978,15 @@
 		"hex": "222222",
 		"source": "https://brand.hedera.com",
 		"guidelines": "https://brand.hedera.com"
+	},
+	{
+		"title": "HedgeDoc",
+		"hex": "B51F08",
+		"source": "https://github.com/hedgedoc/hedgedoc-logo/blob/ddc01f74e0260340fa7c2a9d59cf4f21d08aa2c4/LOGOTYPE/SVG/HedgeDoc-Logo%20Small%20size.svg",
+		"guidelines": "https://github.com/hedgedoc/hedgedoc-logo",
+		"license": {
+			"type": "AGPL-3.0-or-later"
+		}
 	},
 	{
 		"title": "Helium",
@@ -7790,6 +7824,16 @@
 		}
 	},
 	{
+		"title": "ISRO",
+		"hex": "F58220",
+		"source": "https://www.isro.gov.in/publications.html",
+		"aliases": {
+			"aka": [
+				"Indian Space Research Organization"
+			]
+		}
+	},
+	{
 		"title": "Issuu",
 		"hex": "F36D5D",
 		"source": "https://issuu.com/press",
@@ -8117,8 +8161,26 @@
 	},
 	{
 		"title": "Just Eat",
-		"hex": "F36D00",
-		"source": "https://justeattakeaway.com/newsroom/en-WW/media_kits/"
+		"hex": "FF8000",
+		"source": "https://brand-box.marketing.just-eat.com",
+		"guidelines": "https://brand-box.marketing.just-eat.com",
+		"aliases": {
+			"aka": [
+				"Just Eat Takeaway.com"
+			],
+			"loc": {
+				"bg-BG": "Takeaway.com",
+				"de-AT": "Lieferando.at",
+				"de-DE": "Lieferando.de",
+				"en-AU": "Menulog",
+				"en-US": "Grubhub",
+				"fr-CA": "Skip",
+				"he-IL": "10bis",
+				"nl-NL": "Thuisbezorgd.nl",
+				"pl-PL": "Pyszne.pl",
+				"sk-SK": "Bistro.sk"
+			}
+		}
 	},
 	{
 		"title": "JustGiving",
@@ -9774,11 +9836,6 @@
 		"source": "https://www.mercadopago.com"
 	},
 	{
-		"title": "Mercedes",
-		"hex": "242424",
-		"source": "https://www.mercedes-benz.com"
-	},
-	{
 		"title": "Merck",
 		"hex": "007A73",
 		"source": "https://www.merck.com"
@@ -9824,6 +9881,11 @@
 		"title": "MetaFilter",
 		"hex": "065A8F",
 		"source": "https://www.metafilter.com"
+	},
+	{
+		"title": "MetaGer",
+		"hex": "F47216",
+		"source": "https://metager.de"
 	},
 	{
 		"title": "Metasploit",
@@ -10342,8 +10404,8 @@
 	},
 	{
 		"title": "MYOB",
-		"hex": "6100A5",
-		"source": "https://myob-identikit.frontify.com/d/JK2D4WFOdAwV/for-developers"
+		"hex": "7B14EF",
+		"source": "https://www.myob.com"
 	},
 	{
 		"title": "Myspace",
@@ -10488,6 +10550,12 @@
 		"title": "NEC",
 		"hex": "1414A0",
 		"source": "https://commons.wikimedia.org/wiki/File:NEC_logo.svg"
+	},
+	{
+		"title": "Nederlandse Spoorwegen",
+		"hex": "003082",
+		"source": "https://www.ns.nl/platform/fundamentals/icons.html",
+		"guidelines": "https://www.ns.nl/platform/fundamentals"
 	},
 	{
 		"title": "Neo4j",
@@ -10776,6 +10844,11 @@
 		"title": "NixOS",
 		"hex": "5277C3",
 		"source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
+	},
+	{
+		"title": "Nobara Linux",
+		"hex": "000000",
+		"source": "https://wiki.nobaraproject.org"
 	},
 	{
 		"title": "Node-RED",
@@ -11136,6 +11209,12 @@
 		"title": "OnePlus",
 		"hex": "F5010C",
 		"source": "https://www.oneplus.com/ca_en/brand/asset"
+	},
+	{
+		"title": "OneStream",
+		"hex": "000000",
+		"source": "https://brand.onestream.com/logo",
+		"guidelines": "https://brand.onestream.com/logo"
 	},
 	{
 		"title": "OnlyFans",
@@ -12248,11 +12327,6 @@
 		"hex": "FF574D",
 		"source": "https://www.plurk.com/brandInfo",
 		"guidelines": "https://www.plurk.com/brandInfo"
-	},
-	{
-		"title": "Plus Codes",
-		"hex": "4285F4",
-		"source": "https://maps.google.com/pluscodes/"
 	},
 	{
 		"title": "PM2",
@@ -14010,11 +14084,6 @@
 		"title": "San Francisco Municipal Railway",
 		"hex": "BA0C2F",
 		"source": "https://www.actransit.org/wp-content/uploads/HSP_CC-sched.pdf"
-	},
-	{
-		"title": "SanDisk",
-		"hex": "ED1C24",
-		"source": "https://kb.sandisk.com"
 	},
 	{
 		"title": "Sanic",
@@ -15888,6 +15957,16 @@
 		"source": "https://telegra.ph"
 	},
 	{
+		"title": "Telenor",
+		"hex": "00C8FF",
+		"source": "https://www.telenor.no",
+		"aliases": {
+			"loc": {
+				"bn-BD": "Grameenphone"
+			}
+		}
+	},
+	{
 		"title": "Temporal",
 		"hex": "000000",
 		"source": "https://github.com/temporalio/temporaldotio/blob/b6b5f3ed1fda818d5d6c07e27ec15d51a61f2267/public/images/icons/temporal-no-text.svg"
@@ -16047,6 +16126,11 @@
 		"source": "https://www.theodinproject.com"
 	},
 	{
+		"title": "The Planetary Society",
+		"hex": "000000",
+		"source": "https://www.planetary.org"
+	},
+	{
 		"title": "The Register",
 		"hex": "FF0000",
 		"source": "https://www.theregister.co.uk"
@@ -16060,6 +16144,11 @@
 		"title": "The Spriters Resource",
 		"hex": "BE3939",
 		"source": "https://www.spriters-resource.com"
+	},
+	{
+		"title": "The StoryGraph",
+		"hex": "000000",
+		"source": "https://thestorygraph.com"
 	},
 	{
 		"title": "The Washington Post",
@@ -16442,6 +16531,11 @@
 		"source": "https://www.trendmicro.com"
 	},
 	{
+		"title": "Tresorit",
+		"hex": "00A9E2",
+		"source": "https://tresorit.com/press"
+	},
+	{
 		"title": "Treyarch",
 		"hex": "000000",
 		"source": "https://en.wikipedia.org/wiki/File:Treyarch_logo.svg"
@@ -16626,6 +16720,11 @@
 		"title": "TV4 Play",
 		"hex": "E0001C",
 		"source": "https://tv4play.se"
+	},
+	{
+		"title": "Twenty",
+		"hex": "000000",
+		"source": "https://twenty.com"
 	},
 	{
 		"title": "Twilio",
@@ -17827,7 +17926,12 @@
 		"title": "Windsurf",
 		"hex": "0B100F",
 		"source": "https://windsurf.com/brand",
-		"guidelines": "https://windsurf.com/brand"
+		"guidelines": "https://windsurf.com/brand",
+		"aliases": {
+			"old": [
+				"Codeium"
+			]
+		}
 	},
 	{
 		"title": "Wine",
