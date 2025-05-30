@@ -9,12 +9,7 @@ import path from 'node:path';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
-import {
-	SVG_PATH_REGEX,
-	getDirnameFromImportMeta,
-	getIconsData,
-	htmlFriendlyToTitle,
-} from './sdk.mjs';
+import {SVG_PATH_REGEX, getIconsData, htmlFriendlyToTitle} from './sdk.mjs';
 
 /**
  * The svgpath library does not includes a `segments` property on their interface.
@@ -22,9 +17,8 @@ import {
  * @typedef {import('svg-path-segments').Segment & {segments: [string, ...number[]][]}} Segment
  */
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
 const htmlNamedEntitiesFile = path.join(
-	__dirname,
+	import.meta.dirname,
 	'node_modules',
 	'named-html-entities-json',
 	'index.json',
@@ -50,11 +44,9 @@ const iconTolerance = 0.001;
  * @param {number | string} numberOrString The number or string to remove leading zeros from.
  * @returns {string} The number as a string without leading zeros.
  */
-const removeLeadingZeros = (numberOrString) => {
+const removeLeadingZeros = (numberOrString) =>
 	// Convert 0.03 to '.03'
-	return numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
-};
-
+	numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
@@ -67,9 +59,8 @@ const removeLeadingZeros = (numberOrString) => {
  * @returns {boolean} Whether the middle point is collinear to the line.
  */
 // eslint-disable-next-line max-params
-const collinear = (x1, y1, x2, y2, x3, y3) => {
-	return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
-};
+const collinear = (x1, y1, x2, y2, x3, y3) =>
+	x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
 
 /**
  * Returns the number of digits after the decimal point.
@@ -114,9 +105,8 @@ const getTitleTextIndex = (svgFileContent) => {
  * @param {string} string_ The string to shorten.
  * @returns {string} The shortened string.
  */
-const maybeShortenedWithEllipsis = (string_) => {
-	return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
-};
+const maybeShortenedWithEllipsis = (string_) =>
+	string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 
 /**
  * Check if a string is a number.
