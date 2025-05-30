@@ -111,7 +111,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Check redundant trailing slash in URL */
-	checkUrl(icons) {
+	checkUrls(icons) {
 		/**
 		 * Check if an URL has a redundant trailing slash.
 		 * @param {URL} $url URL instance.
@@ -266,6 +266,72 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			const diff = fakeDiff(previous, sorted);
 			return `Fields are not sorted in the same way for all icons:\n\n${diff}`;
 		}
+	},
+
+	/* Ensure that aliases constraints are enforced. */
+	checkAliases(icons) {
+		const errors = [];
+
+		for (const icon of icons) {
+			// Old aliases must be different from the title
+			const oldAliases = icon.aliases?.old || [];
+			for (const oldAlias of oldAliases) {
+				if (oldAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has an alias "old" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// AKA aliases must be different from the title
+			const akaAliases = icon.aliases?.aka || [];
+			for (const akaAlias of akaAliases) {
+				if (akaAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has an alias "aka" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// Duplicate aliases titles must be different from the title
+			const duplicateAliases = icon.aliases?.dup || [];
+			for (const {title: duplicateAliasTitle} of duplicateAliases) {
+				if (duplicateAliasTitle === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has a duplicate alias "${duplicateAliasTitle}" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// Duplicate aliases must be different from each other
+			// based on the title of each one.
+			const duplicateAliasesTitles = duplicateAliases.map(
+				(duplicateAlias) => duplicateAlias.title,
+			);
+			const uniqueDuplicateAliasesTitles = new Set(duplicateAliasesTitles);
+			if (uniqueDuplicateAliasesTitles.size !== duplicateAliasesTitles.length) {
+				errors.push(
+					`Icon "${icon.title}" has duplicate aliases with the same title.` +
+						' Please ensure that all duplicate aliases have unique titles.',
+				);
+			}
+
+			// Localized aliases must be different from the title
+			const locAliases = icon.aliases?.loc || {};
+			for (const [lang, locAlias] of Object.entries(locAliases)) {
+				if (locAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has a localized alias "${lang}" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+		}
+
+		return errors.join('\n') || undefined;
 	},
 };
 
