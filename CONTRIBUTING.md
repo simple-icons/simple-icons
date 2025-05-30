@@ -68,6 +68,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- [Amazon / AWS](https://github.com/simple-icons/simple-icons/pull/13056)
 - BP
 - Disney
 - International Olympic Committee
@@ -75,6 +76,7 @@ Some companies and organizations are excessively protective with their brands, s
 - Microchip Technology Inc.
 - [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
 - Oracle
+- [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
@@ -435,7 +437,7 @@ We collect localized names to make it possible to find the brand by it's local n
 }
 ```
 
-Where the `locale` is an [IETF language tag] and `title` is a **different** title from the original title.
+Where the `locale` is an [IETF language tag] and each localized title is **different** from the original one.
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
@@ -454,7 +456,9 @@ We collect old names to make it possible to find the brand by it's old name. To 
 }
 ```
 
-Where each old title is **different** from the current title.
+Where each old title is **different** from the current title as well as all other strings in the list.
+
+Old names may be retained indefinitely, but can be removed at any time, ideally when they no longer serve a meaningful purpose.
 
 ### 8. Create a Pull Request
 

@@ -177,6 +177,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Ant Design` | `antdesign` |
 | `Anta` | `anta` |
 | `Antena 3` | `antena3` |
+| `AntennaPod` | `antennapod` |
 | `Anthropic` | `anthropic` |
 | `AntV` | `antv` |
 | `Anycubic` | `anycubic` |
@@ -421,6 +422,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Box` | `box` |
 | `Boxy SVG` | `boxysvg` |
 | `Braintree` | `braintree` |
+| `Brandfetch` | `brandfetch` |
 | `Brandfolder` | `brandfolder` |
 | `Brave` | `brave` |
 | `Breaker` | `breaker` |
@@ -790,6 +792,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dlib` | `dlib` |
 | `DLNA` | `dlna` |
 | `dm` | `dm` |
+| `DMM` | `dmm` |
 | `Docker` | `docker` |
 | `Docs.rs` | `docsdotrs` |
 | `Docsify` | `docsify` |
@@ -914,6 +917,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Event Store` | `eventstore` |
 | `Eventbrite` | `eventbrite` |
 | `Evernote` | `evernote` |
+| `Every.org` | `everydotorg` |
 | `Excalidraw` | `excalidraw` |
 | `Exercism` | `exercism` |
 | `Exordo` | `exordo` |
@@ -1019,6 +1023,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `foodpanda` | `foodpanda` |
 | `Ford` | `ford` |
 | `Forgejo` | `forgejo` |
+| `Formbricks` | `formbricks` |
 | `Formik` | `formik` |
 | `Formspree` | `formspree` |
 | `Formstack` | `formstack` |
@@ -1049,6 +1054,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Freepik` | `freepik` |
 | `FreeTube` | `freetube` |
 | `Fresh` | `fresh` |
+| `Frigate` | `frigate` |
 | `Frontend Mentor` | `frontendmentor` |
 | `Frontify` | `frontify` |
 | `Fubo` | `fubo` |
@@ -1442,6 +1448,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `JavaScript` | `javascript` |
 | `JBL` | `jbl` |
 | `JCB` | `jcb` |
+| `JDoodle` | `jdoodle` |
 | `Jeep` | `jeep` |
 | `Jekyll` | `jekyll` |
 | `Jellyfin` | `jellyfin` |
@@ -1934,6 +1941,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ngrok` | `ngrok` |
 | `NgRx` | `ngrx` |
 | `NHL` | `nhl` |
+| `Nhost` | `nhost` |
 | `NiceHash` | `nicehash` |
 | `niconico` | `niconico` |
 | `Nike` | `nike` |
@@ -1952,6 +1960,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Normalize.css` | `normalizedotcss` |
 | `Norton` | `norton` |
 | `Norwegian` | `norwegian` |
+| `NotebookLM` | `notebooklm` |
 | `Notepad++` | `notepadplusplus` |
 | `Notion` | `notion` |
 | `Notist` | `notist` |
@@ -2603,6 +2612,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Simkl` | `simkl` |
 | `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
+| `SimpleLocalize` | `simplelocalize` |
 | `SimpleLogin` | `simplelogin` |
 | `Simplenote` | `simplenote` |
 | `SimpleX` | `simplex` |
@@ -2795,6 +2805,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Swift` | `swift` |
 | `Swiggy` | `swiggy` |
 | `Swiper` | `swiper` |
+| `Swisscows` | `swisscows` |
 | `SWR` | `swr` |
 | `Symantec` | `symantec` |
 | `Symbolab` | `symbolab` |
@@ -2891,7 +2902,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Thymeleaf` | `thymeleaf` |
 | `Ticketmaster` | `ticketmaster` |
 | `TickTick` | `ticktick` |
-| `Tidal` | `tidal` |
+| `TIDAL` | `tidal` |
 | `TiddlyWiki` | `tiddlywiki` |
 | `Tide` | `tide` |
 | `Tidyverse` | `tidyverse` |
@@ -3187,6 +3198,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wikiversity` | `wikiversity` |
 | `Wikivoyage` | `wikivoyage` |
 | `Winamp` | `winamp` |
+| `Windsurf` | `windsurf` |
 | `Wine` | `wine` |
 | `Wipro` | `wipro` |
 | `Wire` | `wire` |
