@@ -4942,6 +4942,16 @@
 		"source": "https://www.experts-exchange.com"
 	},
 	{
+		"title": "Exploit Database",
+		"hex": "FD8A19",
+		"source": "https://www.kali.org/tools/exploitdb",
+		"aliases": {
+			"aka": [
+				"exploitdb"
+			]
+		}
+	},
+	{
 		"title": "Expo",
 		"hex": "1C2024",
 		"source": "https://expo.dev/brand/",
