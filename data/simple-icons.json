@@ -120,6 +120,19 @@
 		"source": "https://aframe.io/docs"
 	},
 	{
+		"title": "AB Download Manager",
+		"hex": "897BFF",
+		"source": "https://abdownloadmanager.com",
+		"license": {
+			"type": "Apache-2.0"
+		},
+		"aliases": {
+			"aka": [
+				"ABDM"
+			]
+		}
+	},
+	{
 		"title": "ABB",
 		"hex": "FF000F",
 		"source": "https://global.abb"
@@ -6928,6 +6941,11 @@
 		}
 	},
 	{
+		"title": "Havells",
+		"hex": "ED1C24",
+		"source": "https://havells.com"
+	},
+	{
 		"title": "Haxe",
 		"hex": "EA8220",
 		"source": "https://haxe.org/foundation/branding.html",
@@ -7049,6 +7067,11 @@
 		"title": "Hermes",
 		"hex": "0091CD",
 		"source": "https://www.myhermes.de/assets/touchicons/favicon.svg"
+	},
+	{
+		"title": "Heroic Games Launcher",
+		"hex": "4B93FF",
+		"source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/blob/aefe212367acbce1964491c8e254826b124e34cb/src/frontend/assets/heroic-icon.svg"
 	},
 	{
 		"title": "Heroku",
@@ -7662,6 +7685,11 @@
 		"hex": "1875F3",
 		"source": "https://www.inoreader.com/brand-portal",
 		"guidelines": "https://www.inoreader.com/brand-portal"
+	},
+	{
+		"title": "Inquirer",
+		"hex": "F0DB4F",
+		"source": "https://github.com/SBoudrias/Inquirer.js/blob/c73953e9f8d7f5cc91f07b80ddcef67d09ba380e/assets/inquirer_readme.svg"
 	},
 	{
 		"title": "Insomnia",
@@ -9566,6 +9594,16 @@
 		"title": "ManageIQ",
 		"hex": "EF2929",
 		"source": "https://www.manageiq.org/logo/"
+	},
+	{
+		"title": "MangaUpdates",
+		"hex": "FF8C15",
+		"source": "https://www.mangaupdates.com",
+		"aliases": {
+			"aka": [
+				"Baka-Updates Manga"
+			]
+		}
 	},
 	{
 		"title": "Manjaro",
@@ -13007,6 +13045,17 @@
 		"guidelines": "https://www.qt.io/brand"
 	},
 	{
+		"title": "Quad9",
+		"hex": "DC205E",
+		"source": "https://github.com/Quad9DNS/documentation/blob/185e1289a33781e23ccea6c952f14e9b8c69234e/docs/images/favicon.svg",
+		"aliases": {
+			"aka": [
+				"9.9.9.9",
+				"Quad9 DNS"
+			]
+		}
+	},
+	{
 		"title": "Qualcomm",
 		"hex": "3253DC",
 		"source": "https://www.qualcomm.com"
@@ -14278,6 +14327,11 @@
 		"hex": "6CD5E7",
 		"source": "https://www.scylladb.com/media-kit",
 		"guidelines": "https://www.scylladb.com/media-kit"
+	},
+	{
+		"title": "Seafile",
+		"hex": "FF9800",
+		"source": "https://de.seafile.com"
 	},
 	{
 		"title": "Seagate",
