@@ -458,6 +458,8 @@ We collect old names to make it possible to find the brand by it's old name. To 
 
 Where each old title is **different** from the current title as well as all other strings in the list.
 
+Old names may be retained indefinitely, but can be removed at any time, ideally when they no longer serve a meaningful purpose.
+
 ### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.

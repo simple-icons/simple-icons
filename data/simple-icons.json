@@ -2022,6 +2022,11 @@
 		"guidelines": "https://www.blender.org/about/logo"
 	},
 	{
+		"title": "Blibli",
+		"hex": "0072FF",
+		"source": "https://www.blibli.com"
+	},
+	{
 		"title": "Blockbench",
 		"hex": "1E93D9",
 		"source": "https://www.blockbench.net/wiki/blockbench/logos",
@@ -2227,7 +2232,8 @@
 	{
 		"title": "Brave",
 		"hex": "FB542B",
-		"source": "https://brave.com/brave-branding-assets"
+		"source": "https://brave.com/brave-branding-assets",
+		"guidelines": "https://brave.com/brave-branding-assets"
 	},
 	{
 		"title": "Breaker",
@@ -2681,6 +2687,11 @@
 		"title": "Chakra UI",
 		"hex": "1BB2A9",
 		"source": "https://github.com/chakra-ui/chakra-ui/blob/e08025b359146d80ab46f1d35da82a11780c5316/media/logomark-colored.svg"
+	},
+	{
+		"title": "Change Detection",
+		"hex": "3056D3",
+		"source": "https://changedetection.io"
 	},
 	{
 		"title": "Channel 4",
@@ -7504,6 +7515,11 @@
 		"source": "https://www.iledefrance-mobilites.fr"
 	},
 	{
+		"title": "iLovePDF",
+		"hex": "E5322D",
+		"source": "https://www.ilovepdf.com/press"
+	},
+	{
 		"title": "Image.sc",
 		"hex": "039CB2",
 		"source": "https://forum.image.sc"
@@ -7585,6 +7601,11 @@
 		"title": "INFINITI",
 		"hex": "020B24",
 		"source": "https://www.infiniti.com"
+	},
+	{
+		"title": "InfinityFree",
+		"hex": "7738C8",
+		"source": "https://www.infinityfree.com"
 	},
 	{
 		"title": "InfluxDB",
@@ -8613,6 +8634,11 @@
 		"title": "Konva",
 		"hex": "0D83CD",
 		"source": "https://github.com/konvajs/konvajs.github.io/blob/2cfe67461dfe32076ba56c88a75fe8e99d068130/icon.png"
+	},
+	{
+		"title": "KOReader",
+		"hex": "00A89C",
+		"source": "https://github.com/koreader/koreader/blob/58860f65ddd7c6e14807fde55a445953a46754d5/resources/koreader.svg"
 	},
 	{
 		"title": "Kotlin",
@@ -10390,7 +10416,7 @@
 	{
 		"title": "MyAnimeList",
 		"hex": "2E51A2",
-		"source": "https://myanimelist.net/forum/?topicid=1575618",
+		"source": "https://myanimelist.net",
 		"aliases": {
 			"aka": [
 				"MAL"
@@ -10617,8 +10643,8 @@
 	{
 		"title": "Netflix",
 		"hex": "E50914",
-		"source": "https://brand.netflix.com/en/assets/brand-symbol",
-		"guidelines": "https://brand.netflix.com/en/assets/brand-symbol"
+		"source": "https://brand.netflix.com/en/assets/logos",
+		"guidelines": "https://brand.netflix.com/en/assets/logos"
 	},
 	{
 		"title": "NETGEAR",
@@ -12170,8 +12196,8 @@
 	},
 	{
 		"title": "Pixabay",
-		"hex": "2EC66D",
-		"source": "https://pixabay.com/service/about/"
+		"hex": "191B26",
+		"source": "https://pixabay.com"
 	},
 	{
 		"title": "Pixelfed",
@@ -17435,6 +17461,11 @@
 		"title": "Vodafone",
 		"hex": "E60000",
 		"source": "https://web.vodafone.com.eg"
+	},
+	{
+		"title": "voelkner",
+		"hex": "94C125",
+		"source": "https://www.voelkner.de"
 	},
 	{
 		"title": "Void Linux",
