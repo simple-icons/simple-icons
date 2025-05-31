@@ -120,6 +120,19 @@
 		"source": "https://aframe.io/docs"
 	},
 	{
+		"title": "AB Download Manager",
+		"hex": "897BFF",
+		"source": "https://abdownloadmanager.com",
+		"license": {
+			"type": "Apache-2.0"
+		},
+		"aliases": {
+			"aka": [
+				"ABDM"
+			]
+		}
+	},
+	{
 		"title": "ABB",
 		"hex": "FF000F",
 		"source": "https://global.abb"
@@ -7056,6 +7069,11 @@
 		"source": "https://www.myhermes.de/assets/touchicons/favicon.svg"
 	},
 	{
+		"title": "Heroic Games Launcher",
+		"hex": "4B93FF",
+		"source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/blob/aefe212367acbce1964491c8e254826b124e34cb/src/frontend/assets/heroic-icon.svg"
+	},
+	{
 		"title": "Heroku",
 		"hex": "430098",
 		"source": "https://devcenter.heroku.com/articles/heroku-brand-guidelines#logos",
@@ -13010,6 +13028,17 @@
 		"hex": "41CD52",
 		"source": "https://www.qt.io",
 		"guidelines": "https://www.qt.io/brand"
+	},
+	{
+		"title": "Quad9",
+		"hex": "DC205E",
+		"source": "https://github.com/Quad9DNS/documentation/blob/185e1289a33781e23ccea6c952f14e9b8c69234e/docs/images/favicon.svg",
+		"aliases": {
+			"aka": [
+				"9.9.9.9",
+				"Quad9 DNS"
+			]
+		}
 	},
 	{
 		"title": "Qualcomm",
