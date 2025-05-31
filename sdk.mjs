@@ -41,7 +41,7 @@ export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
 
 /**
  * Get the slug/filename for an icon.
- * @param {IconData} icon The icon data as it appears in *_data/simple-icons.json*.
+ * @param {IconData} icon The icon data as it appears in *data/simple-icons.json*.
  * @returns {string} The slug/filename for the icon.
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
@@ -77,7 +77,7 @@ export const slugToVariableName = (slug) =>
 	`si${slug[0].toUpperCase()}${slug.slice(1)}`;
 
 /**
- * Converts a brand title as defined in *_data/simple-icons.json* into a brand
+ * Converts a brand title as defined in *data/simple-icons.json* into a brand
  * title in HTML/SVG friendly format.
  * @param {string} brandTitle The title to convert.
  * @returns {string} The brand title in HTML/SVG friendly format.
@@ -95,7 +95,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 
 /**
  * Converts a brand title in HTML/SVG friendly format into a brand title (as
- * it is seen in *_data/simple-icons.json*).
+ * it is seen in *data/simple-icons.json*).
  * @param {string} htmlFriendlyTitle The title to convert.
  * @returns {string} The brand title in HTML/SVG friendly format.
  */
@@ -116,21 +116,21 @@ export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 		);
 
 /**
- * Get path of *_data/simple-icons.json*.
- * @returns {string} Path of *_data/simple-icons.json*.
+ * Get path of *data/simple-icons.json*.
+ * @returns {string} Path of *data/simple-icons.json*.
  */
 export const getIconsDataPath = () =>
-	path.resolve(import.meta.dirname, '_data', 'simple-icons.json');
+	path.resolve(import.meta.dirname, 'data', 'simple-icons.json');
 
 /**
- * Get contents of *_data/simple-icons.json*.
- * @returns {Promise<string>} Content of *_data/simple-icons.json*.
+ * Get contents of *data/simple-icons.json*.
+ * @returns {Promise<string>} Content of *data/simple-icons.json*.
  */
 export const getIconsDataString = () => fs.readFile(getIconsDataPath(), 'utf8');
 
 /**
- * Get icons data as object from *_data/simple-icons.json*.
- * @returns {Promise<IconData[]>} Icons data as array from *_data/simple-icons.json*.
+ * Get icons data as object from *data/simple-icons.json*.
+ * @returns {Promise<IconData[]>} Icons data as array from *data/simple-icons.json*.
  */
 export const getIconsData = async () => {
 	const fileContents = await getIconsDataString();

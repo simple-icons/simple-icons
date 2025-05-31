@@ -81,10 +81,10 @@
 			}
 		},
 		"./icons.json": {
-			"import": "./_data/simple-icons.json",
-			"module": "./_data/simple-icons.json",
-			"require": "./_data/simple-icons.json",
-			"default": "./_data/simple-icons.json"
+			"import": "./data/simple-icons.json",
+			"module": "./data/simple-icons.json",
+			"require": "./data/simple-icons.json",
+			"default": "./data/simple-icons.json"
 		}
 	},
 	"main": "index.js",
