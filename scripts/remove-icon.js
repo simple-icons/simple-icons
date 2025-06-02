@@ -10,7 +10,7 @@ import path from 'node:path';
 import process from 'node:process';
 import {search} from '@inquirer/prompts';
 import {search as fuzzySearch} from 'fast-fuzzy';
-import {getDirnameFromImportMeta, getIconSlug, getIconsData} from '../sdk.mjs';
+import {getIconSlug, getIconsData} from '../sdk.mjs';
 import {writeIconsData} from './utils.js';
 
 process.exitCode = 1;
@@ -23,8 +23,7 @@ process.on('uncaughtException', (error) => {
 	}
 });
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
-const rootDirectory = path.resolve(__dirname, '..');
+const rootDirectory = path.resolve(import.meta.dirname, '..');
 const svgFilesDirectory = path.resolve(rootDirectory, 'icons');
 
 const iconsData = await getIconsData();
