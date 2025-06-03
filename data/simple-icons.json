@@ -9724,6 +9724,11 @@
 		"source": "https://www.luanti.org/press",
 		"license": {
 			"type": "CC-BY-SA-3.0"
+		},
+		"aliases": {
+			"old": [
+				"Minetest"
+			]
 		}
 	},
 	{
@@ -10419,11 +10424,6 @@
 		"license": {
 			"type": "CC-BY-SA-4.0"
 		}
-	},
-	{
-		"title": "Minetest",
-		"hex": "53AC56",
-		"source": "https://www.minetest.net"
 	},
 	{
 		"title": "MinGW-w64",
