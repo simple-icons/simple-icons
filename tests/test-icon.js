@@ -6,17 +6,9 @@ import {strict as assert} from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {describe, it} from 'mocha';
-import {
-	SVG_PATH_REGEX,
-	getDirnameFromImportMeta,
-	titleToSlug,
-} from '../sdk.mjs';
+import {SVG_PATH_REGEX, titleToSlug} from '../sdk.mjs';
 
-const iconsDirectory = path.resolve(
-	getDirnameFromImportMeta(import.meta.url),
-	'..',
-	'icons',
-);
+const iconsDirectory = path.resolve(import.meta.dirname, '..', 'icons');
 
 /**
  * Checks if icon data matches a subject icon.
@@ -65,7 +57,6 @@ export const testIcon = (icon, subject, slug) => {
 			if (icon.license) {
 				assert.equal(subject.license?.type, icon.license.type);
 				if (icon.license.type === 'custom') {
-					// @ts-ignore
 					assert.equal(subject.license.url, icon.license.url);
 				}
 			} else {

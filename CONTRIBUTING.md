@@ -68,6 +68,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
 
 Some companies and organizations are excessively protective with their brands, so please don't consider them:
 
+- [Amazon / AWS](https://github.com/simple-icons/simple-icons/pull/13056)
 - BP
 - Disney
 - International Olympic Committee
@@ -75,6 +76,7 @@ Some companies and organizations are excessively protective with their brands, s
 - Microchip Technology Inc.
 - [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
 - Oracle
+- [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
 If you are in doubt, feel free to submit it and we'll have a look.
@@ -97,7 +99,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 1. Its packages meet one of the following minimum requirements:
    - [npm](https://www.npmjs.com): 100k weekly downloads,
    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
-   - [crates.io](https://crates.io): 100k weekly downloads,
+   - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
    - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
@@ -132,6 +134,8 @@ When submitting a request for a new or updated icon include helpful information 
 - **Issue Body:** Links to official sources for the brand's icon and colors (e.g. media kits, brand guidelines, SVG files, etc.)
 
 If you have an affiliation to the brand you are requesting that allows you to speak on their behalf then please disclose that in your issue as it can help speed up our research process.
+
+Don't submit multiple requests in one issue. If you want to request multiple icons, please create a separate issue for each one.
 
 ## Adding or Updating an Icon
 
@@ -310,7 +314,7 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
 
 ### 7. Update the JSON Data for SimpleIcons.org
 
-Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
+Icon metadata should be added to the `data/simple-icons.json` file. Each icon in the array has three required values:
 
 - The `title` of the new SVG.
 - A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
@@ -334,7 +338,7 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 #### Optional Data
 
-Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
+Additionally, each icon in the `data/simple-icons.json` file may be given any of the following optional values:
 
 - The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an existing icon's name.
 - The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
@@ -433,7 +437,7 @@ We collect localized names to make it possible to find the brand by it's local n
 }
 ```
 
-Where the `locale` is an [IETF language tag] and `title` is a **different** title from the original title.
+Where the `locale` is an [IETF language tag] and each localized title is **different** from the original one.
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
@@ -452,13 +456,17 @@ We collect old names to make it possible to find the brand by it's old name. To 
 }
 ```
 
-Where each old title is **different** from the current title.
+Where each old title is **different** from the current title as well as all other strings in the list.
+
+Old names may be retained indefinitely, but can be removed at any time, ideally when they no longer serve a meaningful purpose.
 
 ### 8. Create a Pull Request
 
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
 If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
+
+Don't submit multiple icon additions or updates in one pull request. If you want to add or update multiple icons, please create a separate pull request for each one.
 
 ### Requesting Permission
 

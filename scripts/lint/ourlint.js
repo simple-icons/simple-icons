@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Linters for the package that can't easily be implemented in the existing ones.
@@ -110,7 +111,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Check redundant trailing slash in URL */
-	checkUrl(icons) {
+	checkUrls(icons) {
 		/**
 		 * Check if an URL has a redundant trailing slash.
 		 * @param {URL} $url URL instance.
@@ -190,7 +191,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 					// TODO: `hasOwn` is not currently supported by TS.
 					// See https://github.com/microsoft/TypeScript/issues/44253
 					/** @type {string} */
-					// @ts-ignore
+					// @ts-expect-error
 					icon.license.url,
 				]);
 			}
@@ -239,14 +240,14 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	async checkLicense(icons) {
 		const spdxLicenseIds = new Set(await getSpdxLicenseIds());
 		const badLicenses = [];
-		for (const {title, slug, license} of icons) {
+		for (const icon of icons) {
 			if (
-				license &&
-				license.type !== 'custom' &&
-				!spdxLicenseIds.has(license.type)
+				icon.license &&
+				icon.license.type !== 'custom' &&
+				!spdxLicenseIds.has(icon.license.type)
 			) {
 				badLicenses.push(
-					`${title} (${getIconSlug({title, slug})}) has not a valid SPDX license.`,
+					`${icon.title} (${getIconSlug(icon)}) has not a valid SPDX license.`,
 				);
 			}
 		}
@@ -258,13 +259,79 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 
 	/* Ensure that fields are sorted in the same way for all icons */
 	fieldsSorted(icons) {
-		const formatted = formatIconData(icons, true);
+		const formatted = formatIconData(icons);
 		const previous = JSON.stringify(icons, null, '\t');
 		const sorted = JSON.stringify(formatted, null, '\t');
 		if (previous !== sorted) {
 			const diff = fakeDiff(previous, sorted);
 			return `Fields are not sorted in the same way for all icons:\n\n${diff}`;
 		}
+	},
+
+	/* Ensure that aliases constraints are enforced. */
+	checkAliases(icons) {
+		const errors = [];
+
+		for (const icon of icons) {
+			// Old aliases must be different from the title
+			const oldAliases = icon.aliases?.old || [];
+			for (const oldAlias of oldAliases) {
+				if (oldAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has an alias "old" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// AKA aliases must be different from the title
+			const akaAliases = icon.aliases?.aka || [];
+			for (const akaAlias of akaAliases) {
+				if (akaAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has an alias "aka" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// Duplicate aliases titles must be different from the title
+			const duplicateAliases = icon.aliases?.dup || [];
+			for (const {title: duplicateAliasTitle} of duplicateAliases) {
+				if (duplicateAliasTitle === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has a duplicate alias "${duplicateAliasTitle}" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// Duplicate aliases must be different from each other
+			// based on the title of each one.
+			const duplicateAliasesTitles = duplicateAliases.map(
+				(duplicateAlias) => duplicateAlias.title,
+			);
+			const uniqueDuplicateAliasesTitles = new Set(duplicateAliasesTitles);
+			if (uniqueDuplicateAliasesTitles.size !== duplicateAliasesTitles.length) {
+				errors.push(
+					`Icon "${icon.title}" has duplicate aliases with the same title.` +
+						' Please ensure that all duplicate aliases have unique titles.',
+				);
+			}
+
+			// Localized aliases must be different from the title
+			const locAliases = icon.aliases?.loc || {};
+			for (const [lang, locAlias] of Object.entries(locAliases)) {
+				if (locAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has a localized alias "${lang}" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+		}
+
+		return errors.join('\n') || undefined;
 	},
 };
 
