@@ -125,10 +125,10 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
 
 As a last resort, after exhausting all other options above, and where applicable, the primary repository for the brand's GitHub project will be considered provided it meets the following requirements (see note below):
-   - It is active and receiving regular commits,
-   - It has a minimum of 5k GitHub stars,
-   - It has an average of 1k stars for each year of its existence (e.g., a project started 10 years ago would require a minimum of 10k stars), and,
-   - Its [star history](https://star-history.com) is on a consistently upward trajectory.
+- It is active and receiving regular commits,
+- It has a minimum of 5k GitHub stars,
+- It has an average of 1k stars for each year of its existence (e.g., a project started 10 years ago would require a minimum of 10k stars), and,
+- Its [star history](https://star-history.com) is on a consistently upward trajectory.
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
