@@ -327,7 +327,7 @@ The filename of the SVG should correspond to the `<title>` used in the markup fi
 
 ### 7. Update the JSON Data for SimpleIcons.org
 
-Icon metadata should be added to the `_data/simple-icons.json` file. Each icon in the array has three required values:
+Icon metadata should be added to the `data/simple-icons.json` file. Each icon in the array has three required values:
 
 - The `title` of the new SVG.
 - A `hex` color value that matches the brand's primary color. All uppercase and without the `#` symbol.
@@ -351,7 +351,7 @@ Make sure the icon is added in alphabetical order. If you're in doubt, you can a
 
 #### Optional Data
 
-Additionally, each icon in the `_data/simple-icons.json` file may be given any of the following optional values:
+Additionally, each icon in the `data/simple-icons.json` file may be given any of the following optional values:
 
 - The `slug` must be used to specify the icon's file name in cases where a modifier has been added to it in order to resolve a clash with an existing icon's name.
 - The `guidelines` may be used to specify the URL of the brand's guidelines/press kit/etc. This is useful if the SVG file was sourced from a different place, still if the SVG file was sourced from the guidelines, the URL should be duplicated here.
@@ -450,7 +450,7 @@ We collect localized names to make it possible to find the brand by it's local n
 }
 ```
 
-Where the `locale` is an [IETF language tag] and `title` is a **different** title from the original title.
+Where the `locale` is an [IETF language tag] and each localized title is **different** from the original one.
 
 [IETF language tag]: https://en.wikipedia.org/wiki/IETF_language_tag
 
@@ -469,7 +469,9 @@ We collect old names to make it possible to find the brand by it's old name. To 
 }
 ```
 
-Where each old title is **different** from the current title.
+Where each old title is **different** from the current title as well as all other strings in the list.
+
+Old names may be retained indefinitely, but can be removed at any time, ideally when they no longer serve a meaningful purpose.
 
 ### 8. Create a Pull Request
 
