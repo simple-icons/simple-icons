@@ -85,13 +85,13 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 > [!NOTE]\
 > Please make your way through the following metrics _in order_, only moving on to the next metric if the current metric is not applicable to the brand being assessed or if it would put the brand outside our scope. In particular, please do not jump straight to GitHub stars as a measure of popularity as that is a last resort metric.
-
+<!----->
 > [!TIP]\
 > Similarweb is now trying to force users to log in to view statistics. You can bypass this by going directly to:
 > - `https://similarweb.com/website/google.com` for websites, replacing `google.com` with the TLD you would like to get the stats on,
 > - `https://www.similarweb.com/app/google/com.android.chrome` for Android apps, replacing `com.android.chrome` with the Google Play package ID of the app you would like to get the stats on, or,
 > - `https://www.similarweb.com/app/apple/535886823` for iOS apps, replacing `535886823` with the numerical Apple Store ID of the app you would like to get stats on.
-> <!---->
+>
 > You may need to use incognito mode if you visit these ranking pages often. Regular contributors may find the [Similarweb browser extensions](https://www.similarweb.com/corp/extension/) to be of use as they provide the global rank at a glance, without any rate limiting.
 
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
