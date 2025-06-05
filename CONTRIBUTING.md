@@ -92,6 +92,7 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 > [!TIP]\
 > Similarweb is now trying to force users to log in to view statistics. You can bypass this by going directly to:
+>
 > - `https://similarweb.com/website/google.com` for websites, replacing `google.com` with the TLD you would like to get the stats on,
 > - `https://www.similarweb.com/app/google/com.android.chrome` for Android apps, replacing `com.android.chrome` with the Google Play package ID of the app you would like to get the stats on, or,
 > - `https://www.similarweb.com/app/apple/535886823` for iOS apps, replacing `535886823` with the numerical Apple Store ID of the app you would like to get stats on.
