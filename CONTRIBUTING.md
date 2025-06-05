@@ -87,7 +87,6 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 > [!NOTE]\
 > Please make your way through the following metrics _in order_, only moving on to the next metric if the current metric is not applicable to the brand being assessed or if it would put the brand outside our scope. In particular, please do not jump straight to GitHub stars as a measure of popularity as that is a last resort metric.
-
 <!---->
 
 > [!TIP]\
