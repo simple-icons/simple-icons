@@ -69,6 +69,7 @@ const config = {
 			params: {
 				// Including <arc>
 				convertArcs: true,
+				floatPrecision: 5,
 			},
 		},
 		'convertEllipseToCircle',
