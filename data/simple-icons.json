@@ -11428,7 +11428,11 @@
 	{
 		"title": "OpenJDK",
 		"hex": "000000",
-		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1"
+		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1",
+		"guidelines": "https://wiki.openjdk.org/display/duke/Main",
+		"license": {
+			"type": "BSD-3-Clause"
+		}
 	},
 	{
 		"title": "OpenJS Foundation",
