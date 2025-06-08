@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "15.0.0",
+	"version": "15.1.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -14,10 +14,16 @@
 		"type": "git",
 		"url": "git+ssh://git@github.com/simple-icons/simple-icons.git"
 	},
-	"funding": {
-		"type": "opencollective",
-		"url": "https://opencollective.com/simple-icons"
-	},
+	"funding": [
+		{
+			"type": "opencollective",
+			"url": "https://opencollective.com/simple-icons"
+		},
+		{
+			"type": "github",
+			"url": "https://github.com/sponsors/simple-icons"
+		}
+	],
 	"license": "CC0-1.0",
 	"author": "Simple Icons Collaborators",
 	"sideEffects": false,
