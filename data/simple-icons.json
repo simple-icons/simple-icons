@@ -7550,7 +7550,21 @@
 	{
 		"title": "iLovePDF",
 		"hex": "E5322D",
-		"source": "https://www.ilovepdf.com/press"
+		"source": "https://www.ilovepdf.com/press",
+		"aliases": {
+			"dup": [
+				{
+					"title": "iLoveAPI",
+					"hex": "26AEBA",
+					"source": "https://www.iloveapi.com"
+				},
+				{
+					"title": "iLoveIMG",
+					"hex": "4D90FE",
+					"source": "https://www.iloveimg.com/press"
+				}
+			]
+		}
 	},
 	{
 		"title": "Image.sc",
@@ -7813,6 +7827,11 @@
 		"hex": "236CFF",
 		"source": "https://www.intuit.com",
 		"guidelines": "https://www.intuit.com/company/press-room/logos"
+	},
+	{
+		"title": "Invidious",
+		"hex": "00B6F0",
+		"source": "https://github.com/iv-org/invidious-redirect/blob/d5e4d97f4f998b8c2512c51ed9961a8d989a7ce0/src/assets/img/invidious-logo-light.svg"
 	},
 	{
 		"title": "InVision",
@@ -11775,6 +11794,12 @@
 		"source": "https://www.paddypower.com"
 	},
 	{
+		"title": "Padlet",
+		"hex": "FF4081",
+		"source": "https://legal.padlet.com/trademark",
+		"guidelines": "https://legal.padlet.com/trademark"
+	},
+	{
 		"title": "Pagekit",
 		"hex": "212121",
 		"source": "https://pagekit.com/logo-guide",
@@ -13684,6 +13709,11 @@
 		"source": "https://revealjs.com"
 	},
 	{
+		"title": "RevenueCat",
+		"hex": "F2545B",
+		"source": "https://www.revenuecat.com/integrations"
+	},
+	{
 		"title": "ReverbNation",
 		"hex": "E43526",
 		"source": "https://www.reverbnation.com"
@@ -15470,8 +15500,9 @@
 	},
 	{
 		"title": "Stellar",
-		"hex": "7D00FF",
-		"source": "https://www.stellar.org/press"
+		"hex": "FDDA24",
+		"source": "https://stellar.org/brand-resources",
+		"guidelines": "https://stellar.org/brand-resources"
 	},
 	{
 		"title": "Stencil",
