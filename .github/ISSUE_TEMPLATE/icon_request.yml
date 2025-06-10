@@ -55,6 +55,20 @@ body:
     validations:
       required: true
 
+  - type: checkboxes
+    attributes:
+      label: Forbidden Brands
+      options:
+        - label: I have reviewed the list of [forbidden brands](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#forbidden-brands) and can confirm the brand I am requesting is not one of them, nor is it a subsidiary of one of them.
+          required: true
+
+  - type: input
+    attributes:
+      label: Terms of Service
+      description: |
+        A lot of websites specify whether or not we can use their brand assets in their Terms of Service.
+        Please ensure you include the link here where relevant.
+
   - type: textarea
     attributes:
       label: Official Resources for Icon and Color

@@ -23,12 +23,12 @@ jobs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: simple-icons/release-action@v1
+      - uses: simple-icons/release-action@v2
         id: release
         with:
           repo-token: ${{ steps.app-token.outputs.token }}
@@ -39,7 +39,7 @@ jobs:
       github.event_name != 'push' &&
       needs.release-pr.outputs.did-create-pr == 'true'
     steps:
-      - uses: actions/create-github-app-token@v1
+      - uses: actions/create-github-app-token@v2
         id: app-token
         with:
           app-id: ${{ vars.BOT_APP_ID }}
@@ -54,15 +54,15 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Bump version
         run: |
           npm version --no-commit-hooks --no-git-tag-version \
             "${{ needs.release-pr.outputs.new-version }}"
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Update major version in CDN URLs
         run: node scripts/release/update-cdn-urls.js
       - name: Update SVGs count milestone
@@ -74,7 +74,7 @@ jobs:
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: version bump
+          commit_message: Bump version
           commit_user_name: 'simple-icons[bot]'
           commit_user_email: 'simple-icons[bot]@users.noreply.github.com'
           commit_author: 'simple-icons[bot] <simple-icons[bot]@users.noreply.github.com>'
