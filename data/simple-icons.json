@@ -120,6 +120,19 @@
 		"source": "https://aframe.io/docs"
 	},
 	{
+		"title": "AB Download Manager",
+		"hex": "897BFF",
+		"source": "https://abdownloadmanager.com",
+		"license": {
+			"type": "Apache-2.0"
+		},
+		"aliases": {
+			"aka": [
+				"ABDM"
+			]
+		}
+	},
+	{
 		"title": "ABB",
 		"hex": "FF000F",
 		"source": "https://global.abb"
@@ -2022,6 +2035,11 @@
 		"guidelines": "https://www.blender.org/about/logo"
 	},
 	{
+		"title": "Blibli",
+		"hex": "0072FF",
+		"source": "https://www.blibli.com"
+	},
+	{
 		"title": "Blockbench",
 		"hex": "1E93D9",
 		"source": "https://www.blockbench.net/wiki/blockbench/logos",
@@ -2227,7 +2245,8 @@
 	{
 		"title": "Brave",
 		"hex": "FB542B",
-		"source": "https://brave.com/brave-branding-assets"
+		"source": "https://brave.com/brave-branding-assets",
+		"guidelines": "https://brave.com/brave-branding-assets"
 	},
 	{
 		"title": "Breaker",
@@ -2683,6 +2702,11 @@
 		"source": "https://github.com/chakra-ui/chakra-ui/blob/e08025b359146d80ab46f1d35da82a11780c5316/media/logomark-colored.svg"
 	},
 	{
+		"title": "Change Detection",
+		"hex": "3056D3",
+		"source": "https://changedetection.io"
+	},
+	{
 		"title": "Channel 4",
 		"hex": "AAFF89",
 		"source": "https://mediaassets.channel4.com/guidelines/guide/34286b7b-ea25-404d-a43b-e912fc85b0e0/page/8a2dd59a-51df-4f47-aa37-c235a761455e",
@@ -3098,7 +3122,11 @@
 	{
 		"title": "Codeberg",
 		"hex": "2185D0",
-		"source": "https://codeberg.org"
+		"source": "https://codeberg.org/Codeberg/Design/src/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/special/codeberg-logo_special_fake-transaprency.svg",
+		"guidelines": "https://codeberg.org/Codeberg/Design",
+		"license": {
+			"type": "CC0-1.0"
+		}
 	},
 	{
 		"title": "Codecademy",
@@ -4743,6 +4771,12 @@
 		"title": "Enpass",
 		"hex": "0D47A1",
 		"source": "https://www.enpass.io/press/"
+	},
+	{
+		"title": "ENS",
+		"hex": "0080BC",
+		"source": "https://ens.domains/brand",
+		"guidelines": "https://ens.domains/brand"
 	},
 	{
 		"title": "Ente",
@@ -6922,6 +6956,11 @@
 		}
 	},
 	{
+		"title": "Havells",
+		"hex": "ED1C24",
+		"source": "https://havells.com"
+	},
+	{
 		"title": "Haxe",
 		"hex": "EA8220",
 		"source": "https://haxe.org/foundation/branding.html",
@@ -7043,6 +7082,11 @@
 		"title": "Hermes",
 		"hex": "0091CD",
 		"source": "https://www.myhermes.de/assets/touchicons/favicon.svg"
+	},
+	{
+		"title": "Heroic Games Launcher",
+		"hex": "4B93FF",
+		"source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/blob/aefe212367acbce1964491c8e254826b124e34cb/src/frontend/assets/heroic-icon.svg"
 	},
 	{
 		"title": "Heroku",
@@ -7509,6 +7553,11 @@
 		"source": "https://www.iledefrance-mobilites.fr"
 	},
 	{
+		"title": "iLovePDF",
+		"hex": "E5322D",
+		"source": "https://www.ilovepdf.com/press"
+	},
+	{
 		"title": "Image.sc",
 		"hex": "039CB2",
 		"source": "https://forum.image.sc"
@@ -7592,6 +7641,11 @@
 		"source": "https://www.infiniti.com"
 	},
 	{
+		"title": "InfinityFree",
+		"hex": "7738C8",
+		"source": "https://dash.infinityfree.com/login"
+	},
+	{
 		"title": "InfluxDB",
 		"hex": "22ADF6",
 		"source": "https://influxdata.github.io/branding/logo/downloads/",
@@ -7646,6 +7700,11 @@
 		"hex": "1875F3",
 		"source": "https://www.inoreader.com/brand-portal",
 		"guidelines": "https://www.inoreader.com/brand-portal"
+	},
+	{
+		"title": "Inquirer",
+		"hex": "F0DB4F",
+		"source": "https://github.com/SBoudrias/Inquirer.js/blob/c73953e9f8d7f5cc91f07b80ddcef67d09ba380e/assets/inquirer_readme.svg"
 	},
 	{
 		"title": "Insomnia",
@@ -7759,6 +7818,11 @@
 		"hex": "236CFF",
 		"source": "https://www.intuit.com",
 		"guidelines": "https://www.intuit.com/company/press-room/logos"
+	},
+	{
+		"title": "Invidious",
+		"hex": "00B6F0",
+		"source": "https://github.com/iv-org/invidious-redirect/blob/d5e4d97f4f998b8c2512c51ed9961a8d989a7ce0/src/assets/img/invidious-logo-light.svg"
 	},
 	{
 		"title": "InVision",
@@ -8618,6 +8682,11 @@
 		"title": "Konva",
 		"hex": "0D83CD",
 		"source": "https://github.com/konvajs/konvajs.github.io/blob/2cfe67461dfe32076ba56c88a75fe8e99d068130/icon.png"
+	},
+	{
+		"title": "KOReader",
+		"hex": "00A89C",
+		"source": "https://github.com/koreader/koreader/blob/58860f65ddd7c6e14807fde55a445953a46754d5/resources/koreader.svg"
 	},
 	{
 		"title": "Kotlin",
@@ -9547,6 +9616,16 @@
 		"source": "https://www.manageiq.org/logo/"
 	},
 	{
+		"title": "MangaUpdates",
+		"hex": "FF8C15",
+		"source": "https://www.mangaupdates.com",
+		"aliases": {
+			"aka": [
+				"Baka-Updates Manga"
+			]
+		}
+	},
+	{
 		"title": "Manjaro",
 		"hex": "35BFA4",
 		"source": "https://manjaro.org"
@@ -10395,7 +10474,7 @@
 	{
 		"title": "MyAnimeList",
 		"hex": "2E51A2",
-		"source": "https://myanimelist.net/forum/?topicid=1575618",
+		"source": "https://myanimelist.net",
 		"aliases": {
 			"aka": [
 				"MAL"
@@ -10465,9 +10544,8 @@
 	},
 	{
 		"title": "Nano",
-		"hex": "4A90E2",
-		"source": "https://nano.org/resources",
-		"guidelines": "https://nano.org/resources"
+		"hex": "209CE9",
+		"source": "https://nano.org/en/currency"
 	},
 	{
 		"title": "Nano Stores",
@@ -10622,8 +10700,8 @@
 	{
 		"title": "Netflix",
 		"hex": "E50914",
-		"source": "https://brand.netflix.com/en/assets/brand-symbol",
-		"guidelines": "https://brand.netflix.com/en/assets/brand-symbol"
+		"source": "https://brand.netflix.com/en/assets/logos",
+		"guidelines": "https://brand.netflix.com/en/assets/logos"
 	},
 	{
 		"title": "NETGEAR",
@@ -11504,10 +11582,9 @@
 		"guidelines": "https://brand.opera.com"
 	},
 	{
-		"title": "OPNSense",
-		"hex": "D94F00",
-		"source": "https://opnsense.org/about/legal-notices/",
-		"guidelines": "https://opnsense.org/about/legal-notices/"
+		"title": "OPNsense",
+		"hex": "E44A20",
+		"source": "https://github.com/opnsense/core/blob/f4b69b9b565d2747eb40d7d23e060f4a3c81a071/src/opnsense/www/themes/opnsense/build/images/icon-logo.svg"
 	},
 	{
 		"title": "OPPO",
@@ -12175,8 +12252,8 @@
 	},
 	{
 		"title": "Pixabay",
-		"hex": "2EC66D",
-		"source": "https://pixabay.com/service/about/"
+		"hex": "191B26",
+		"source": "https://pixabay.com"
 	},
 	{
 		"title": "Pixelfed",
@@ -12984,6 +13061,17 @@
 		"hex": "41CD52",
 		"source": "https://www.qt.io",
 		"guidelines": "https://www.qt.io/brand"
+	},
+	{
+		"title": "Quad9",
+		"hex": "DC205E",
+		"source": "https://github.com/Quad9DNS/documentation/blob/185e1289a33781e23ccea6c952f14e9b8c69234e/docs/images/favicon.svg",
+		"aliases": {
+			"aka": [
+				"9.9.9.9",
+				"Quad9 DNS"
+			]
+		}
 	},
 	{
 		"title": "Qualcomm",
@@ -14259,6 +14347,11 @@
 		"guidelines": "https://www.scylladb.com/media-kit"
 	},
 	{
+		"title": "Seafile",
+		"hex": "FF9800",
+		"source": "https://de.seafile.com"
+	},
+	{
 		"title": "Seagate",
 		"hex": "6EBE49",
 		"source": "https://branding.seagate.com/productpage/3fc51aba-c35a-4eff-a833-a258b0440bd2"
@@ -14461,7 +14554,7 @@
 	{
 		"title": "Shields.io",
 		"hex": "000000",
-		"source": "https://shields.io"
+		"source": "https://github.com/badges/shields/blob/2b4d17177e9f2a2a94038e268a903dba07f9c25d/frontend/static/img/icon.svg"
 	},
 	{
 		"title": "Shikimori",
@@ -14750,10 +14843,10 @@
 	},
 	{
 		"title": "Snapcraft",
-		"hex": "82BEA0",
-		"source": "https://github.com/snapcore/snap-store-badges/tree/eda2cb0495ef7f4d479e231079967c9d27f2bc70",
+		"hex": "E95420",
+		"source": "https://design.ubuntu.com/resources",
 		"license": {
-			"type": "CC-BY-ND-2.0"
+			"type": "CC-BY-SA-3.0"
 		}
 	},
 	{
@@ -15382,8 +15475,9 @@
 	},
 	{
 		"title": "Stellar",
-		"hex": "7D00FF",
-		"source": "https://www.stellar.org/press"
+		"hex": "FDDA24",
+		"source": "https://stellar.org/brand-resources",
+		"guidelines": "https://stellar.org/brand-resources"
 	},
 	{
 		"title": "Stencil",
@@ -16686,8 +16780,9 @@
 	},
 	{
 		"title": "Turborepo",
-		"hex": "EF4444",
-		"source": "https://github.com/vercel/turborepo/blob/7312e316629a2138f895a90c9704045891be817b/docs/public/logo-light.svg"
+		"hex": "FF1E56",
+		"source": "https://vercel.com/geist/brands",
+		"guidelines": "https://vercel.com/geist/brands"
 	},
 	{
 		"title": "TurboSquid",
@@ -16715,6 +16810,12 @@
 				"Tutanota"
 			]
 		}
+	},
+	{
+		"title": "TUXEDO Computers",
+		"hex": "000000",
+		"source": "https://www.tuxedocomputers.com/Infos/Press/Corporate-Design-Guidelines",
+		"guidelines": "https://www.tuxedocomputers.com/Infos/Press/Corporate-Design-Guidelines"
 	},
 	{
 		"title": "TV Time",
@@ -17440,6 +17541,11 @@
 		"title": "Vodafone",
 		"hex": "E60000",
 		"source": "https://web.vodafone.com.eg"
+	},
+	{
+		"title": "voelkner",
+		"hex": "94C125",
+		"source": "https://www.voelkner.de"
 	},
 	{
 		"title": "Void Linux",
