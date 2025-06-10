@@ -1,176 +1,352 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
- * Linters for the package that can't easily be implemented in the existing
- * linters (e.g. jsonlint/svglint).
+ * Linters for the package that can't easily be implemented in the existing ones.
  */
 
 /**
  * @typedef {import("../../sdk.mjs").IconData} IconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
- * @typedef {IconData[]} IconsData
  */
 
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
-import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
+import {
+	collator,
+	getIconSlug,
+	getIconsDataString,
+	normalizeNewlines,
+} from '../../sdk.mjs';
+import {formatIconData, getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (arg0: {icons: IconsData}, arg1: string) => string | undefined}}
+ * @type {{[k: string]: (data: IconData[], dataString: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
-  /**
-   * Tests whether our icons are in alphabetical order
-   * @param {{icons: IconsData}} data Icons data
-   * @returns {string|undefined} Error message or undefined
-   */
-  alphabetical(data) {
-    /**
-     * Collects invalid alphabet ordered icons
-     * @param {IconData[]} invalidEntries Invalid icons reference
-     * @param {IconData} icon Icon to check
-     * @param {number} index Index of the icon
-     * @param {IconData[]} array Array of icons
-     * @returns {IconData[]} Invalid icons
-     */
-    const collector = (invalidEntries, icon, index, array) => {
-      if (index > 0) {
-        const previous = array[index - 1];
-        const comparison = collator.compare(icon.title, previous.title);
-        if (comparison < 0) {
-          invalidEntries.push(icon);
-        } else if (
-          comparison === 0 &&
-          previous.slug &&
-          (!icon.slug || collator.compare(icon.slug, previous.slug) < 0)
-        ) {
-          invalidEntries.push(icon);
-        }
-      }
+	/**
+	 * Tests whether our icons are in alphabetical order.
+	 * @param {IconData[]} icons Icons data.
+	 * @returns {string|undefined} Error message or undefined.
+	 */
+	alphabetical(icons) {
+		/**
+		 * Collects invalid alphabet ordered icons.
+		 * @param {IconData[]} invalidEntries Invalid icons reference.
+		 * @param {IconData} icon Icon to check.
+		 * @param {number} index Index of the icon.
+		 * @param {IconData[]} array Array of icons.
+		 * @returns {IconData[]} Invalid icons.
+		 */
+		const collector = (invalidEntries, icon, index, array) => {
+			if (index > 0) {
+				const previous = array[index - 1];
+				const comparison = collator.compare(icon.title, previous.title);
+				if (comparison < 0) {
+					invalidEntries.push(icon);
+				} else if (
+					comparison === 0 &&
+					previous.slug &&
+					(!icon.slug || collator.compare(icon.slug, previous.slug) < 0)
+				) {
+					invalidEntries.push(icon);
+				}
+			}
 
-      return invalidEntries;
-    };
+			return invalidEntries;
+		};
 
-    /**
-     * Format an icon for display in the error message
-     * @param {IconData} icon Icon to format
-     * @returns {string} Formatted icon
-     */
-    const format = (icon) => {
-      if (icon.slug) {
-        return `${icon.title} (${icon.slug})`;
-      }
+		/**
+		 * Format an icon for display in the error message.
+		 * @param {IconData} icon Icon to format.
+		 * @returns {string} Formatted icon.
+		 */
+		const format = (icon) => {
+			if (icon.slug) {
+				return `${icon.title} (${icon.slug})`;
+			}
 
-      return icon.title;
-    };
+			return icon.title;
+		};
 
-    // eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
-    const invalids = data.icons.reduce(collector, []);
-    if (invalids.length > 0) {
-      return `Some icons aren't in alphabetical order:
-        ${invalids.map((icon) => format(icon)).join(', ')}`;
-    }
-  },
+		/**
+		 * Find the expected position of an icon.
+		 * @param {IconData[]} expectedOrder Expected order of the icons.
+		 * @param {IconData} targetIcon Icon to find.
+		 * @returns {string} Expected position of the icon.
+		 */
+		const findPositon = (expectedOrder, targetIcon) => {
+			const foundIndex = expectedOrder.findIndex(
+				(icon) =>
+					targetIcon.title === icon.title && targetIcon.slug === icon.slug,
+			);
+			const before = expectedOrder[foundIndex - 1];
+			const after = expectedOrder[foundIndex + 1];
+			if (before) return `should be after ${format(before)}`;
+			if (after) return `should be before ${format(after)}`;
+			return 'not found';
+		};
 
-  /* Check the formatting of the data file */
-  prettified(data, dataString) {
-    const normalizedDataString = normalizeNewlines(dataString);
-    const dataPretty = `${JSON.stringify(data, null, 4)}\n`;
+		// eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
+		const invalids = icons.reduce(collector, []);
+		if (invalids.length > 0) {
+			const expectedOrder = [...icons].sort(sortIconsCompare);
 
-    if (normalizedDataString !== dataPretty) {
-      const dataDiff = fakeDiff(normalizedDataString, dataPretty);
-      return `Data file is formatted incorrectly:\n\n${dataDiff}`;
-    }
-  },
+			return `Some icons aren't in alphabetical order:
+${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
+		}
+	},
 
-  /* Check redundant trailing slash in URL */
-  checkUrl(data) {
-    /**
-     * Check if an URL has a redundant trailing slash.
-     * @param {URL} $url URL instance
-     * @param {string} url Original URL string
-     * @returns {boolean} Whether the URL has a redundant trailing slash
-     */
-    const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
+	/* Check the formatting of the data file */
+	prettified(data, dataString) {
+		const normalizedDataString = normalizeNewlines(dataString);
+		const dataPretty = `${JSON.stringify(data, null, '\t')}\n`;
 
-    /**
-     * Check if an URL is static wikimedia asset URL.
-     * @param {URL} $url URL instance
-     * @returns {boolean} Whether the URL is static wikimedia asset URL
-     */
-    const isStaticWikimediaAssetUrl = ($url) =>
-      $url.hostname === 'upload.wikimedia.org';
+		if (normalizedDataString !== dataPretty) {
+			const dataDiff = fakeDiff(normalizedDataString, dataPretty);
+			return `Data file is formatted incorrectly:\n\n${dataDiff}`;
+		}
+	},
 
-    /**
-     * Check if an URL is raw GitHub asset URL.
-     * @param {string} $url URL instance
-     * @returns {boolean} Whether the URL is raw GitHub asset URL
-     */
-    const isRawGithubAssetUrl = ($url) =>
-      $url.hostname === 'raw.githubusercontent.com';
+	/* Check redundant trailing slash in URL */
+	checkUrls(icons) {
+		/**
+		 * Check if an URL has a redundant trailing slash.
+		 * @param {URL} $url URL instance.
+		 * @param {string} url Original URL string.
+		 * @returns {boolean} Whether the URL has a redundant trailing slash.
+		 */
+		const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
 
-    const allUrlFields = [
-      ...new Set(
-        data.icons.flatMap((icon) => {
-          /** @type {string[]} */
-          const license =
-            icon.license !== undefined && Object.hasOwn(icon.license, 'url')
-              ? [
-                  // eslint-disable-next-line no-warning-comments
-                  // TODO: `hasOwn` is not currently supported by TS.
-                  // See https://github.com/microsoft/TypeScript/issues/44253
-                  /** @type {string} */
-                  // @ts-ignore
-                  icon.license.url,
-                ]
-              : [];
-          const guidelines = icon.guidelines ? [icon.guidelines] : [];
-          return [icon.source, ...guidelines, ...license];
-        }),
-      ),
-    ];
+		/**
+		 * Check if an URL is static wikimedia asset URL.
+		 * @param {URL} $url URL instance.
+		 * @returns {boolean} Whether the URL is static wikimedia asset URL.
+		 */
+		const isStaticWikimediaAssetUrl = ($url) =>
+			$url.hostname === 'upload.wikimedia.org';
 
-    const invalidUrls = [];
-    for (const url of allUrlFields) {
-      const $url = new global.URL(url);
+		/**
+		 * Check if an URL is raw GitHub asset URL.
+		 * @param {URL} $url URL instance.
+		 * @returns {boolean} Whether the URL is raw GitHub asset URL.
+		 */
+		const isRawGithubAssetUrl = ($url) =>
+			$url.hostname === 'raw.githubusercontent.com';
 
-      if (hasRedundantTrailingSlash($url, url)) {
-        invalidUrls.push(fakeDiff(url, $url.origin));
-      }
+		/**
+		 * Check if URl is user attachment URL.
+		 * @param {URL} $url URL instance.
+		 * @returns {boolean} Whether the URL is user attachment URL.
+		 */
+		const isGitHubUserAttachmentUrl = ($url) =>
+			$url.hostname === 'github.com' &&
+			$url.pathname.startsWith('/user-attachments/assets');
 
-      if (isStaticWikimediaAssetUrl($url)) {
-        const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
-        invalidUrls.push(fakeDiff(url, expectedUrl));
-      }
+		/**
+		 * Check if an URL is a GitHub URL.
+		 * @param {URL} $url URL instance.
+		 * @returns {boolean} Whether the URL is a GitHub URL.
+		 */
+		const isGitHubUrl = ($url) => $url.hostname === 'github.com';
 
-      if (isRawGithubAssetUrl($url)) {
-        // https://github.com/LitoMore/simple-icons-cdn/blob/main/media/imgcat-screenshot.webp
-        const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
-        const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
-        invalidUrls.push(fakeDiff(url, expectedUrl));
-      }
-    }
+		/**
+		 * Regex to match a permalink GitHub URL for a file.
+		 */
+		const permalinkGitHubRegex =
+			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
 
-    if (invalidUrls.length > 0) {
-      return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
-    }
-  },
+		/**
+		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
+		 */
+		const gitHubExcludedUrls = new Set([
+			'https://github.com/logos',
+			'https://github.com/features/actions',
+			'https://github.com/sponsors',
+		]);
+
+		/**
+		 * Check if an URL is a permanent GitHub URL for a file.
+		 * @param {string} url URL string.
+		 * @returns {boolean} Whether the URL is a GitHub URL for a file.
+		 */
+		const isPermalinkGitHubFileUrl = (url) => permalinkGitHubRegex.test(url);
+
+		/**
+		 * Url fields with a boolean indicating if is an icon source URL.
+		 * @type {[boolean, string][]}
+		 */
+		const allUrlFields = [];
+		for (const icon of icons) {
+			allUrlFields.push([true, icon.source]);
+			if (icon.guidelines) {
+				allUrlFields.push([false, icon.guidelines]);
+			}
+
+			if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
+				allUrlFields.push([
+					false,
+					// TODO: `hasOwn` is not currently supported by TS.
+					// See https://github.com/microsoft/TypeScript/issues/44253
+					/** @type {string} */
+					// @ts-expect-error
+					icon.license.url,
+				]);
+			}
+		}
+
+		const invalidUrls = [];
+		for (const [isSourceUrl, url] of allUrlFields) {
+			const $url = new globalThis.URL(url);
+
+			if (hasRedundantTrailingSlash($url, url)) {
+				invalidUrls.push(fakeDiff(url, $url.origin));
+			}
+
+			if (isGitHubUserAttachmentUrl($url)) continue;
+
+			if (isStaticWikimediaAssetUrl($url)) {
+				const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
+				invalidUrls.push(fakeDiff(url, expectedUrl));
+			}
+
+			if (isRawGithubAssetUrl($url)) {
+				const [, owner, repo, hash, ...directory] = $url.pathname.split('/');
+				const expectedUrl = `https://github.com/${owner}/${repo}/blob/${hash}/${directory.join('/')}`;
+				invalidUrls.push(fakeDiff(url, expectedUrl));
+			}
+
+			if (
+				isSourceUrl &&
+				isGitHubUrl($url) &&
+				!isPermalinkGitHubFileUrl(url) &&
+				!gitHubExcludedUrls.has(url)
+			) {
+				invalidUrls.push(
+					`'${url}' must be a permalink GitHub URL. Expecting something like` +
+						" 'https://github.com/<owner>/<repo>/blob/<hash>/<file/path.ext>'.",
+				);
+			}
+		}
+
+		if (invalidUrls.length > 0) {
+			return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
+		}
+	},
+
+	/* Check if all licenses are valid SPDX identifiers */
+	async checkLicense(icons) {
+		const spdxLicenseIds = new Set(await getSpdxLicenseIds());
+		const badLicenses = [];
+		for (const icon of icons) {
+			if (
+				icon.license &&
+				icon.license.type !== 'custom' &&
+				!spdxLicenseIds.has(icon.license.type)
+			) {
+				badLicenses.push(
+					`${icon.title} (${getIconSlug(icon)}) has not a valid SPDX license.`,
+				);
+			}
+		}
+
+		if (badLicenses.length > 0) {
+			return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
+		}
+	},
+
+	/* Ensure that fields are sorted in the same way for all icons */
+	fieldsSorted(icons) {
+		const formatted = formatIconData(icons);
+		const previous = JSON.stringify(icons, null, '\t');
+		const sorted = JSON.stringify(formatted, null, '\t');
+		if (previous !== sorted) {
+			const diff = fakeDiff(previous, sorted);
+			return `Fields are not sorted in the same way for all icons:\n\n${diff}`;
+		}
+	},
+
+	/* Ensure that aliases constraints are enforced. */
+	checkAliases(icons) {
+		const errors = [];
+
+		for (const icon of icons) {
+			// Old aliases must be different from the title
+			const oldAliases = icon.aliases?.old || [];
+			for (const oldAlias of oldAliases) {
+				if (oldAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has an alias "old" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// AKA aliases must be different from the title
+			const akaAliases = icon.aliases?.aka || [];
+			for (const akaAlias of akaAliases) {
+				if (akaAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has an alias "aka" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// Duplicate aliases titles must be different from the title
+			const duplicateAliases = icon.aliases?.dup || [];
+			for (const {title: duplicateAliasTitle} of duplicateAliases) {
+				if (duplicateAliasTitle === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has a duplicate alias "${duplicateAliasTitle}" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+
+			// Duplicate aliases must be different from each other
+			// based on the title of each one.
+			const duplicateAliasesTitles = duplicateAliases.map(
+				(duplicateAlias) => duplicateAlias.title,
+			);
+			const uniqueDuplicateAliasesTitles = new Set(duplicateAliasesTitles);
+			if (uniqueDuplicateAliasesTitles.size !== duplicateAliasesTitles.length) {
+				errors.push(
+					`Icon "${icon.title}" has duplicate aliases with the same title.` +
+						' Please ensure that all duplicate aliases have unique titles.',
+				);
+			}
+
+			// Localized aliases must be different from the title
+			const locAliases = icon.aliases?.loc || {};
+			for (const [lang, locAlias] of Object.entries(locAliases)) {
+				if (locAlias === icon.title) {
+					errors.push(
+						`Icon "${icon.title}" has a localized alias "${lang}" that is the same as its title.` +
+							' Please remove the alias or change the title.',
+					);
+				}
+			}
+		}
+
+		return errors.join('\n') || undefined;
+	},
 };
 
 const iconsDataString = await getIconsDataString();
 const iconsData = JSON.parse(iconsDataString);
 
 const errors = (
-  await Promise.all(
-    Object.values(TESTS).map((test) => test(iconsData, iconsDataString)),
-  )
+	await Promise.all(
+		Object.values(TESTS).map((test) => test(iconsData, iconsDataString)),
+	)
 )
-  // eslint-disable-next-line unicorn/no-await-expression-member
-  .filter(Boolean);
+	// eslint-disable-next-line unicorn/no-await-expression-member
+	.filter(Boolean);
 
 if (errors.length > 0) {
-  for (const error of errors) console.error(`\u001B[31m${error}\u001B[0m`);
-  process.exit(1);
+	for (const error of errors) console.error(`\u001B[31m${error}\u001B[0m`);
+	process.exit(1);
 }
