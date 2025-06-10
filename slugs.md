@@ -857,6 +857,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Emlakjet` | `emlakjet` |
 | `EndeavourOS` | `endeavouros` |
 | `Enpass` | `enpass` |
+| `ENS` | `ens` |
 | `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
 | `Envoy Proxy` | `envoyproxy` |
@@ -1393,6 +1394,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Internet Computer` | `internetcomputer` |
 | `Intigriti` | `intigriti` |
 | `Intuit` | `intuit` |
+| `Invidious` | `invidious` |
 | `InVision` | `invision` |
 | `Invoice Ninja` | `invoiceninja` |
 | `ioBroker` | `iobroker` |
@@ -2039,7 +2041,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenZFS` | `openzfs` |
 | `Opera` | `opera` |
 | `Opera GX` | `operagx` |
-| `OPNSense` | `opnsense` |
+| `OPNsense` | `opnsense` |
 | `OPPO` | `oppo` |
 | `Opsgenie` | `opsgenie` |
 | `OpsLevel` | `opslevel` |
@@ -2968,6 +2970,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Turkish Airlines` | `turkishairlines` |
 | `Turso` | `turso` |
 | `Tuta` | `tuta` |
+| `TUXEDO Computers` | `tuxedocomputers` |
 | `TV Time` | `tvtime` |
 | `TV4 Play` | `tv4play` |
 | `Twenty` | `twenty` |
