@@ -7555,7 +7555,21 @@
 	{
 		"title": "iLovePDF",
 		"hex": "E5322D",
-		"source": "https://www.ilovepdf.com/press"
+		"source": "https://www.ilovepdf.com/press",
+		"aliases": {
+			"dup": [
+				{
+					"title": "iLoveAPI",
+					"hex": "26AEBA",
+					"source": "https://www.iloveapi.com"
+				},
+				{
+					"title": "iLoveIMG",
+					"hex": "4D90FE",
+					"source": "https://www.iloveimg.com/press"
+				}
+			]
+		}
 	},
 	{
 		"title": "Image.sc",
@@ -10007,6 +10021,11 @@
 		"source": "https://mewe.com"
 	},
 	{
+		"title": "Mezmo",
+		"hex": "E9FF92",
+		"source": "https://www.mezmo.com"
+	},
+	{
 		"title": "MG",
 		"hex": "FF0000",
 		"source": "https://www.mg.co.uk/themes/custom/mg/assets/images/svg/mg-logo-desktop.svg",
@@ -11778,6 +11797,12 @@
 		"title": "Paddy Power",
 		"hex": "004833",
 		"source": "https://www.paddypower.com"
+	},
+	{
+		"title": "Padlet",
+		"hex": "FF4081",
+		"source": "https://legal.padlet.com/trademark",
+		"guidelines": "https://legal.padlet.com/trademark"
 	},
 	{
 		"title": "Pagekit",
@@ -13687,6 +13712,11 @@
 		"title": "reveal.js",
 		"hex": "F2E142",
 		"source": "https://revealjs.com"
+	},
+	{
+		"title": "RevenueCat",
+		"hex": "F2545B",
+		"source": "https://www.revenuecat.com/integrations"
 	},
 	{
 		"title": "ReverbNation",
