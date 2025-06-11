@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+// @ts-check
 /**
  * @file
- * Minify _data/simple-icons.json file.
+ * Minify data/simple-icons.json file.
  */
 import {getIconsData} from '../../sdk.mjs';
 import {writeIconsData} from '../utils.js';
 
 const icons = await getIconsData();
-await writeIconsData({icons}, undefined, true);
+await writeIconsData(icons, true);

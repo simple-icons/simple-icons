@@ -1,0 +1,17 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "22"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig",
+				"esbenp.prettier-vscode",
+				"samverschueren.linter-xo"
+			]
+		}
+	}
+}
