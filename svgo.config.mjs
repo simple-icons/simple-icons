@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file SVGO configuration for Simple Icons.
  */
@@ -68,6 +69,7 @@ const config = {
 			params: {
 				// Including <arc>
 				convertArcs: true,
+				floatPrecision: 5,
 			},
 		},
 		'convertEllipseToCircle',

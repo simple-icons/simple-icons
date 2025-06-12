@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file
  * Linting rules for SVGLint to check SVG icons.
@@ -8,16 +9,16 @@ import path from 'node:path';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
-import {
-	SVG_PATH_REGEX,
-	getDirnameFromImportMeta,
-	getIconsData,
-	htmlFriendlyToTitle,
-} from './sdk.mjs';
+import {SVG_PATH_REGEX, getIconsData, htmlFriendlyToTitle} from './sdk.mjs';
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
+/**
+ * The svgpath library does not includes a `segments` property on their interface.
+ * See https://github.com/fontello/svgpath/pull/67/files for more information.
+ * @typedef {import('svg-path-segments').Segment & {segments: [string, ...number[]][]}} Segment
+ */
+
 const htmlNamedEntitiesFile = path.join(
-	__dirname,
+	import.meta.dirname,
 	'node_modules',
 	'named-html-entities-json',
 	'index.json',
@@ -43,11 +44,9 @@ const iconTolerance = 0.001;
  * @param {number | string} numberOrString The number or string to remove leading zeros from.
  * @returns {string} The number as a string without leading zeros.
  */
-const removeLeadingZeros = (numberOrString) => {
+const removeLeadingZeros = (numberOrString) =>
 	// Convert 0.03 to '.03'
-	return numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
-};
-
+	numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
@@ -60,9 +59,8 @@ const removeLeadingZeros = (numberOrString) => {
  * @returns {boolean} Whether the middle point is collinear to the line.
  */
 // eslint-disable-next-line max-params
-const collinear = (x1, y1, x2, y2, x3, y3) => {
-	return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
-};
+const collinear = (x1, y1, x2, y2, x3, y3) =>
+	x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
 
 /**
  * Returns the number of digits after the decimal point.
@@ -107,9 +105,8 @@ const getTitleTextIndex = (svgFileContent) => {
  * @param {string} string_ The string to shorten.
  * @returns {string} The shortened string.
  */
-const maybeShortenedWithEllipsis = (string_) => {
-	return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
-};
+const maybeShortenedWithEllipsis = (string_) =>
+	string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 
 /**
  * Check if a string is a number.
@@ -120,38 +117,20 @@ const isNumber = (string_) =>
 	[...string_].every((character) => '0123456789'.includes(character));
 
 /**
- * Memoize a function which accepts a single argument.
- * A second argument can be passed to be used as key.
- * @param {(arg0: any) => any} function_ The function to memoize.
- * @returns {(arg0: any) => any} The memoized function.
+ * @typedef {{fixtures: {
+ *     iconPath: string,
+ *     segments: import('svg-path-segments').Segment[],
+ *     bbox: import('svg-path-bbox').BBox
+ * }}} Info
  */
-const memoize = (function_) => {
-	/** @type {{ [key: string]: any }} */
-	const results = {};
-
-	/**
-	 * Memoized function.
-	 * @param {any} argument The argument to memoize.
-	 * @returns {any} The result of the memoized function.
-	 */
-	return (argument) => {
-		results[argument] ||= function_(argument);
-
-		return results[argument];
-	};
-};
-
-/** @typedef {import('cheerio').Cheerio<import('domhandler').Document>} Cheerio */
-
-/** @type {($icon: Cheerio) => string} */
-const getIconPath = memoize(($icon) => $icon.find('path').attr('d'));
-/** @type {(iconPath: string) => import('svg-path-segments').Segment[]} */
-const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
-/** @type {(iconPath: string) => import('svg-path-bbox').BBox} */
-const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
-
 /** @type {import('svglint').Config} */
 const config = {
+	fixtures(_, $) {
+		const iconPath = $.find('path').attr('d');
+		const segments = parsePath(iconPath);
+		const bbox = svgPathBbox(iconPath);
+		return {iconPath, segments, bbox};
+	},
 	rules: {
 		elm: {
 			svg: 1,
@@ -279,9 +258,7 @@ const config = {
 							encodedBuf.unshift(iconTitleText[i]);
 						} else {
 							// Encode all non ascii characters plus "'&<> (XML named entities)
-							/** @type {number} */
-							// @ts-ignore
-							const charDecimalCode = iconTitleText.codePointAt(i);
+							const charDecimalCode = iconTitleText.codePointAt(i) || 0;
 
 							if (charDecimalCode > 127) {
 								encodedBuf.unshift(`&#${charDecimalCode};`);
@@ -293,6 +270,8 @@ const config = {
 										]
 									};`,
 								);
+							} else if (charDecimalCode === 0) {
+								throw new Error('Null character found in title');
 							} else {
 								encodedBuf.unshift(iconTitleText[i]);
 							}
@@ -354,12 +333,10 @@ const config = {
 					}
 				}
 			},
-			(reporter, $) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {bbox}}) => {
 				reporter.name = 'icon-size';
 
-				const iconPath = getIconPath($);
-
-				const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
+				const [minX, minY, maxX, maxY] = bbox;
 				const width = Number((maxX - minX).toFixed(iconFloatPrecision));
 				const height = Number((maxY - minY).toFixed(iconFloatPrecision));
 
@@ -374,16 +351,16 @@ const config = {
 					);
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'icon-precision';
 
-				const iconPath = getIconPath($);
-				const segments = getIconPathSegments(iconPath);
-
 				for (const segment of segments) {
-					/** @type {number[]} */
-					// @ts-ignore
-					const numberParameters = segment.params.slice(1);
+					const [_, ...numberParameters] = segment.params;
 					const precisionMax = Math.max(
 						// eslint-disable-next-line unicorn/no-array-callback-reference
 						...numberParameters.map(countDecimals),
@@ -409,21 +386,30 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'ineffective-segments';
 
-				const iconPath = getIconPath($);
-				const segments = getIconPathSegments(iconPath);
+				/** @type {Segment['segments'] | null} */
+				let memoizedAbsSegments = null;
+				/**
+				 * Get abs segments of the icon path.
+				 * @returns {Segment['segments']} Absolutized segments of the icon path.
+				 */
+				const getAbsSegments = () => {
+					if (memoizedAbsSegments !== null) {
+						return memoizedAbsSegments;
+					}
 
-				/** @type {import('svg-path-segments').Segment[]} */
-				// TODO: svgpath does not includes the `segments` property on the interface,
-				//       see https://github.com/fontello/svgpath/pull/67/files
-				//
-				/** @typedef {[string, ...number[]]} Segment  */
-				/** @type {Segment[]} */
-				const absSegments =
-					// @ts-ignore
-					svgpath(iconPath).abs().unshort().segments;
+					// @ts-expect-error
+					const {segments} = svgpath(iconPath).abs().unshort();
+					memoizedAbsSegments = segments;
+					return segments;
+				};
 
 				const lowerMovementCommands = ['m', 'l'];
 				const lowerDirectionCommands = ['h', 'v'];
@@ -436,6 +422,7 @@ const config = {
 				const upperMovementCommands = ['M', 'L'];
 				const upperHorDirectionCommand = 'H';
 				const upperVersionDirectionCommand = 'V';
+				/** @type {(string | number | undefined)[]} */
 				const upperDirectionCommands = [
 					upperHorDirectionCommand,
 					upperVersionDirectionCommand,
@@ -502,38 +489,34 @@ const config = {
 						}
 
 						if (index > 0) {
-							let [yPreviousCoord, xPreviousCoord] = [
-								...absSegments[index - 1],
-							].reverse();
+							const absSegments = getAbsSegments();
+							const previousSegment = absSegments[index - 1];
+							let yPreviousCoord = previousSegment.at(-1);
+							let xPreviousCoord = previousSegment.at(-2);
 							// If the previous command was a direction one,
 							// we need to iterate back until we find the missing coordinates
-							// @ts-ignore
 							if (upperDirectionCommands.includes(xPreviousCoord)) {
-								// @ts-ignore
 								xPreviousCoord = undefined;
-								// @ts-ignore
 								yPreviousCoord = undefined;
 								let index_ = index;
 								while (
 									--index_ > 0 &&
 									(xPreviousCoord === undefined || yPreviousCoord === undefined)
 								) {
-									let [yPreviousCoordDeep, xPreviousCoordDeep] = [
-										...absSegments[index_],
-									].reverse();
+									const segment_ = absSegments[index_];
+									let yPreviousCoordDeep = segment_.at(-1);
+									let xPreviousCoordDeep = segment_.at(-2);
 
 									// If the previous command was a horizontal movement,
 									// we need to consider the single coordinate as x
 									if (upperHorDirectionCommand === xPreviousCoordDeep) {
 										xPreviousCoordDeep = yPreviousCoordDeep;
-										// @ts-ignore
 										yPreviousCoordDeep = undefined;
 									}
 
 									// If the previous command was a vertical movement,
 									// we need to consider the single coordinate as y
 									if (upperVersionDirectionCommand === xPreviousCoordDeep) {
-										// @ts-ignore
 										xPreviousCoordDeep = undefined;
 									}
 
@@ -663,41 +646,42 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'collinear-segments';
 				/**
 				 * Extracts collinear coordinates from SVG path straight lines
 				 * (does not extracts collinear coordinates from curves).
-				 * @param {string} iconPath The SVG path of the icon.
 				 * @returns {import('svg-path-segments').Segment[]} The collinear segments.
 				 */
 				// eslint-disable-next-line complexity
-				const getCollinearSegments = (iconPath) => {
-					const segments = getIconPathSegments(iconPath);
+				const getCollinearSegments = () => {
 					const collinearSegments = [];
 					const straightLineCommands = 'HhVvLlMm';
 
 					let currentLine = [];
-					let currentAbsCoord = [undefined, undefined];
+					let currentAbsCoord = [0, 0];
 					let startPoint;
-					let _inStraightLine = false;
-					let _nextInStraightLine = false;
-					let _resetStartPoint = false;
+					let inStraightLine_ = false;
+					let nextInStraightLine_ = false;
+					let resetStartPoint_ = false;
 
 					for (let s = 0; s < segments.length; s++) {
 						const seg = segments[s];
 						const parms = seg.params;
 						const cmd = parms[0];
 						const nextCmd =
-							s + 1 < segments.length ? segments[s + 1].params[0] : null;
+							s + 1 < segments.length ? segments[s + 1].params[0] : undefined;
 
 						switch (cmd) {
 							// Next switch cases have been ordered by frequency
 							// of occurrence in the SVG paths of the icons
 							case 'M': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[2];
 								// SVG 1.1:
 								// If a moveto is followed by multiple pairs of coordinates,
@@ -710,9 +694,7 @@ const config = {
 							}
 
 							case 'm': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
 								if (seg.chain === undefined || seg.chain.start === seg.start) {
 									startPoint = undefined;
@@ -722,41 +704,33 @@ const config = {
 							}
 
 							case 'H': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[1];
 								break;
 							}
 
 							case 'h': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
 								break;
 							}
 
 							case 'V': {
-								// @ts-ignore
 								currentAbsCoord[1] = parms[1];
 								break;
 							}
 
 							case 'v': {
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[1];
 								break;
 							}
 
 							case 'L': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[2];
 								break;
 							}
 
 							case 'l': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
 								break;
 							}
@@ -764,88 +738,70 @@ const config = {
 							case 'Z':
 							case 'z': {
 								// TODO: Overlapping in Z should be handled in another rule
-								// @ts-ignore
-								currentAbsCoord = [startPoint[0], startPoint[1]];
-								_resetStartPoint = true;
+								if (startPoint !== undefined) {
+									currentAbsCoord = [startPoint[0], startPoint[1]];
+									resetStartPoint_ = true;
+								}
+
 								break;
 							}
 
 							case 'C': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[5];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[6];
 								break;
 							}
 
 							case 'c': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[5];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[6];
 								break;
 							}
 
 							case 'A': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[6];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[7];
 								break;
 							}
 
 							case 'a': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[6];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[7];
 								break;
 							}
 
 							case 's': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
 								break;
 							}
 
 							case 'S': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[2];
 								break;
 							}
 
 							case 't': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
 								break;
 							}
 
 							case 'T': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[1];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[2];
 								break;
 							}
 
 							case 'Q': {
-								// @ts-ignore
 								currentAbsCoord[0] = parms[3];
-								// @ts-ignore
 								currentAbsCoord[1] = parms[4];
 								break;
 							}
 
 							case 'q': {
-								// @ts-ignore
 								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[3];
-								// @ts-ignore
 								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[4];
 								break;
 							}
@@ -857,18 +813,18 @@ const config = {
 
 						if (startPoint === undefined) {
 							startPoint = [currentAbsCoord[0], currentAbsCoord[1]];
-						} else if (_resetStartPoint) {
+						} else if (resetStartPoint_) {
 							startPoint = undefined;
-							_resetStartPoint = false;
+							resetStartPoint_ = false;
 						}
 
-						// @ts-ignore
-						_nextInStraightLine = straightLineCommands.includes(nextCmd);
+						nextInStraightLine_ =
+							nextCmd !== undefined && straightLineCommands.includes(nextCmd);
 						const _exitingStraightLine =
-							_inStraightLine && !_nextInStraightLine;
-						_inStraightLine = straightLineCommands.includes(cmd);
+							inStraightLine_ && !nextInStraightLine_;
+						inStraightLine_ = straightLineCommands.includes(cmd);
 
-						if (_inStraightLine) {
+						if (inStraightLine_) {
 							currentLine.push([currentAbsCoord[0], currentAbsCoord[1]]);
 						} else {
 							if (_exitingStraightLine) {
@@ -879,7 +835,6 @@ const config = {
 								// Get collinear coordinates
 								for (let p = 1; p < currentLine.length - 1; p++) {
 									const _collinearCoord = collinear(
-										// @ts-ignore
 										currentLine[p - 1][0],
 										currentLine[p - 1][1],
 										currentLine[p][0],
@@ -902,8 +857,7 @@ const config = {
 					return collinearSegments;
 				};
 
-				const iconPath = getIconPath($);
-				const collinearSegments = getCollinearSegments(iconPath);
+				const collinearSegments = getCollinearSegments();
 				if (collinearSegments.length === 0) {
 					return;
 				}
@@ -943,10 +897,8 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {iconPath}}) => {
 				reporter.name = 'negative-zeros';
-
-				const iconPath = getIconPath($);
 
 				// Find negative zeros inside path
 				const negativeZeroMatches = [...iconPath.matchAll(negativeZerosRegexp)];
@@ -967,11 +919,10 @@ const config = {
 					}
 				}
 			},
-			(reporter, $) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {bbox}}) => {
 				reporter.name = 'icon-centered';
 
-				const iconPath = getIconPath($);
-				const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
+				const [minX, minY, maxX, maxY] = bbox;
 				const centerX = Number(((minX + maxX) / 2).toFixed(iconFloatPrecision));
 				const devianceX = centerX - iconTargetCenter;
 				const centerY = Number(((minY + maxY) / 2).toFixed(iconFloatPrecision));
@@ -987,16 +938,21 @@ const config = {
 					);
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'final-closepath';
 
-				const iconPath = getIconPath($);
-				const segments = getIconPathSegments(iconPath);
-
-				// Unnecessary characters after the final closepath
-				/** @type {import('svg-path-segments').Segment} */
-				// @ts-ignore
 				const lastSegment = segments.at(-1);
+				if (lastSegment === undefined) {
+					reporter.error('No path segments found');
+					return;
+				}
+
+				// Unnecessary characters after the final closepath command
 				const endsWithZ = ['z', 'Z'].includes(lastSegment.params[0]);
 				if (endsWithZ && lastSegment.end - lastSegment.start > 1) {
 					const ending = iconPath.slice(lastSegment.start + 1);
@@ -1010,10 +966,8 @@ const config = {
 					reporter.error(errorMessage);
 				}
 			},
-			(reporter, $, ast) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {iconPath}}) => {
 				reporter.name = 'path-format';
-
-				const iconPath = getIconPath($);
 
 				if (!SVG_PATH_REGEX.test(iconPath)) {
 					const errorMessage = 'Invalid path format';
