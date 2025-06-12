@@ -1603,6 +1603,12 @@
 		"guidelines": "https://www.avira.com/en/media-library"
 	},
 	{
+		"title": "AVM",
+		"hex": "E2001A",
+		"source": "https://en.fritz.com/about-avm/press/press-media",
+		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
+	},
+	{
 		"title": "Awesome Lists",
 		"hex": "FC60A8",
 		"source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media/logo.svg"
@@ -3122,7 +3128,11 @@
 	{
 		"title": "Codeberg",
 		"hex": "2185D0",
-		"source": "https://codeberg.org"
+		"source": "https://codeberg.org/Codeberg/Design/src/commit/ac514aa9aaa2457d4af3c3e13df3ab136d22a49a/logo/special/codeberg-logo_special_fake-transaprency.svg",
+		"guidelines": "https://codeberg.org/Codeberg/Design",
+		"license": {
+			"type": "CC0-1.0"
+		}
 	},
 	{
 		"title": "Codecademy",
@@ -4186,6 +4196,11 @@
 		"guidelines": "https://discord.com/branding"
 	},
 	{
+		"title": "discord.js",
+		"hex": "5865F2",
+		"source": "https://github.com/discordjs/discord.js/blob/8e03af6eaff15a234569c8bccdb8719a8bf282ae/apps/guide/public/logo.svg"
+	},
+	{
 		"title": "Discourse",
 		"hex": "000000",
 		"source": "https://www.discourse.org"
@@ -4292,6 +4307,14 @@
 		"title": "Dolby",
 		"hex": "000000",
 		"source": "https://www.dolby.com"
+	},
+	{
+		"title": "Dolibarr",
+		"hex": "263C5C",
+		"source": "https://github.com/Dolibarr/dolibarr-foundation/blob/39f562651f88c4c4a4cd5754c18a7a2cd3dd5e59/logo-cliparts/dolibarr_256x256_color.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "DoorDash",
@@ -4767,6 +4790,12 @@
 		"title": "Enpass",
 		"hex": "0D47A1",
 		"source": "https://www.enpass.io/press/"
+	},
+	{
+		"title": "ENS",
+		"hex": "0080BC",
+		"source": "https://ens.domains/brand",
+		"guidelines": "https://ens.domains/brand"
 	},
 	{
 		"title": "EnterpriseDB",
@@ -5696,6 +5725,12 @@
 		"title": "Frigate",
 		"hex": "000000",
 		"source": "https://frigate.video"
+	},
+	{
+		"title": "FRITZ!",
+		"hex": "E2001A",
+		"source": "https://fritz.com",
+		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
 	},
 	{
 		"title": "Frontend Mentor",
@@ -7540,7 +7575,21 @@
 	{
 		"title": "iLovePDF",
 		"hex": "E5322D",
-		"source": "https://www.ilovepdf.com/press"
+		"source": "https://www.ilovepdf.com/press",
+		"aliases": {
+			"dup": [
+				{
+					"title": "iLoveAPI",
+					"hex": "26AEBA",
+					"source": "https://www.iloveapi.com"
+				},
+				{
+					"title": "iLoveIMG",
+					"hex": "4D90FE",
+					"source": "https://www.iloveimg.com/press"
+				}
+			]
+		}
 	},
 	{
 		"title": "Image.sc",
@@ -7803,6 +7852,11 @@
 		"hex": "236CFF",
 		"source": "https://www.intuit.com",
 		"guidelines": "https://www.intuit.com/company/press-room/logos"
+	},
+	{
+		"title": "Invidious",
+		"hex": "00B6F0",
+		"source": "https://github.com/iv-org/invidious-redirect/blob/d5e4d97f4f998b8c2512c51ed9961a8d989a7ce0/src/assets/img/invidious-logo-light.svg"
 	},
 	{
 		"title": "InVision",
@@ -9484,6 +9538,11 @@
 		"source": "https://macpaw.com"
 	},
 	{
+		"title": "MacPorts",
+		"hex": "1E79E9",
+		"source": "https://github.com/macports/macports-www/blob/8de17ad57e97d5ff87b16c084cef36059fa6c2f4/img/macports-avatar.svg"
+	},
+	{
 		"title": "Macy's",
 		"hex": "E21A2C",
 		"source": "https://www.macysinc.com/news-media/media-assets"
@@ -9985,6 +10044,11 @@
 		"title": "MeWe",
 		"hex": "17377F",
 		"source": "https://mewe.com"
+	},
+	{
+		"title": "Mezmo",
+		"hex": "E9FF92",
+		"source": "https://www.mezmo.com"
 	},
 	{
 		"title": "MG",
@@ -10524,9 +10588,8 @@
 	},
 	{
 		"title": "Nano",
-		"hex": "4A90E2",
-		"source": "https://nano.org/resources",
-		"guidelines": "https://nano.org/resources"
+		"hex": "209CE9",
+		"source": "https://nano.org/en/currency"
 	},
 	{
 		"title": "Nano Stores",
@@ -10924,6 +10987,14 @@
 		"hex": "5FA04E",
 		"source": "https://nodejs.org/en/about/branding",
 		"guidelines": "https://nodejs.org/en/about/branding"
+	},
+	{
+		"title": "NodeBB",
+		"hex": "1E5EBC",
+		"source": "https://github.com/NodeBB/assets/blob/c59a6d8db0d1be9b2666419e49b330d7b780f2b3/bb-svg/bb.svg",
+		"license": {
+			"type": "CC-BY-NC-4.0"
+		}
 	},
 	{
 		"title": "Nodemon",
@@ -11414,7 +11485,10 @@
 	{
 		"title": "OpenJDK",
 		"hex": "000000",
-		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1"
+		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg",
+		"license": {
+			"type": "BSD-3-Clause"
+		}
 	},
 	{
 		"title": "OpenJS Foundation",
@@ -11563,10 +11637,9 @@
 		"guidelines": "https://brand.opera.com"
 	},
 	{
-		"title": "OPNSense",
-		"hex": "D94F00",
-		"source": "https://opnsense.org/about/legal-notices/",
-		"guidelines": "https://opnsense.org/about/legal-notices/"
+		"title": "OPNsense",
+		"hex": "E44A20",
+		"source": "https://github.com/opnsense/core/blob/f4b69b9b565d2747eb40d7d23e060f4a3c81a071/src/opnsense/www/themes/opnsense/build/images/icon-logo.svg"
 	},
 	{
 		"title": "OPPO",
@@ -11762,6 +11835,12 @@
 		"source": "https://www.paddypower.com"
 	},
 	{
+		"title": "Padlet",
+		"hex": "FF4081",
+		"source": "https://legal.padlet.com/trademark",
+		"guidelines": "https://legal.padlet.com/trademark"
+	},
+	{
 		"title": "Pagekit",
 		"hex": "212121",
 		"source": "https://pagekit.com/logo-guide",
@@ -11904,6 +11983,21 @@
 		"hex": "003087",
 		"source": "https://www.paypal.com",
 		"guidelines": "https://newsroom.paypal-corp.com/media-resources"
+	},
+	{
+		"title": "Paysafe",
+		"hex": "5A28FF",
+		"source": "https://brand.paysafe.com",
+		"guidelines": "https://brand.paysafe.com",
+		"aliases": {
+			"dup": [
+				{
+					"title": "PaysafeCard",
+					"hex": "0036C2",
+					"guidelines": "https://brand.paysafe.com/paysafecard"
+				}
+			]
+		}
 	},
 	{
 		"title": "Paytm",
@@ -13033,6 +13127,11 @@
 		}
 	},
 	{
+		"title": "Qodo",
+		"hex": "7968FA",
+		"source": "https://www.qodo.ai/media-kit"
+	},
+	{
 		"title": "QQ",
 		"hex": "1EBAFC",
 		"source": "https://en.wikipedia.org/wiki/File:Tencent_QQ.svg",
@@ -13669,6 +13768,11 @@
 		"title": "reveal.js",
 		"hex": "F2E142",
 		"source": "https://revealjs.com"
+	},
+	{
+		"title": "RevenueCat",
+		"hex": "F2545B",
+		"source": "https://www.revenuecat.com/integrations"
 	},
 	{
 		"title": "ReverbNation",
@@ -14825,10 +14929,10 @@
 	},
 	{
 		"title": "Snapcraft",
-		"hex": "82BEA0",
-		"source": "https://github.com/snapcore/snap-store-badges/tree/eda2cb0495ef7f4d479e231079967c9d27f2bc70",
+		"hex": "E95420",
+		"source": "https://design.ubuntu.com/resources",
 		"license": {
-			"type": "CC-BY-ND-2.0"
+			"type": "CC-BY-SA-3.0"
 		}
 	},
 	{
@@ -15457,8 +15561,9 @@
 	},
 	{
 		"title": "Stellar",
-		"hex": "7D00FF",
-		"source": "https://www.stellar.org/press"
+		"hex": "FDDA24",
+		"source": "https://stellar.org/brand-resources",
+		"guidelines": "https://stellar.org/brand-resources"
 	},
 	{
 		"title": "Stencil",
@@ -16761,8 +16866,9 @@
 	},
 	{
 		"title": "Turborepo",
-		"hex": "EF4444",
-		"source": "https://github.com/vercel/turborepo/blob/7312e316629a2138f895a90c9704045891be817b/docs/public/logo-light.svg"
+		"hex": "FF1E56",
+		"source": "https://vercel.com/geist/brands",
+		"guidelines": "https://vercel.com/geist/brands"
 	},
 	{
 		"title": "TurboSquid",
@@ -16790,6 +16896,12 @@
 				"Tutanota"
 			]
 		}
+	},
+	{
+		"title": "TUXEDO Computers",
+		"hex": "000000",
+		"source": "https://www.tuxedocomputers.com/Infos/Press/Corporate-Design-Guidelines",
+		"guidelines": "https://www.tuxedocomputers.com/Infos/Press/Corporate-Design-Guidelines"
 	},
 	{
 		"title": "TV Time",
@@ -17934,6 +18046,12 @@
 		"title": "wgpu",
 		"hex": "40E0D0",
 		"source": "https://wgpu.rs"
+	},
+	{
+		"title": "what3words",
+		"hex": "E11F26",
+		"source": "https://developer.what3words.com/design/symbol-logo",
+		"guidelines": "https://developer.what3words.com/design"
 	},
 	{
 		"title": "WhatsApp",
