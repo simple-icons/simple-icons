@@ -1,18 +1,17 @@
 #!/usr/bin/env node
+// @ts-check
 /**
  * @file
  * Updates the SDK Typescript definitions located in the file sdk.d.ts
  * to match the current definitions of functions of sdk.mjs.
  */
 
-import {execSync} from 'node:child_process';
+import {spawnSync} from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {getDirnameFromImportMeta} from '../../sdk.mjs';
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
-const rootDirectory = path.resolve(__dirname, '..', '..');
+const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 
 const sdkTs = path.resolve(rootDirectory, 'sdk.d.ts');
 const sdkMts = path.resolve(rootDirectory, 'sdk.d.mts');
@@ -24,25 +23,35 @@ const generateSdkMts = async () => {
 	const originalSdkMjsContent = await fs.readFile(sdkMjs, 'utf8');
 	const temporarySdkMjsContent = originalSdkMjsContent
 		.split('\n')
-		.filter((line) => {
-			return !line.startsWith(' * @typedef {import("./sdk")');
-		})
+		.filter((line) => !line.startsWith(' * @typedef {import("./sdk")'))
 		.join('\n');
 	await fs.writeFile(sdkMjs, temporarySdkMjsContent);
+
+	let cmd;
+	let error = false;
 	try {
-		execSync(
-			'npx tsc sdk.mjs' +
-				' --declaration --emitDeclarationOnly --allowJs --removeComments',
+		cmd = spawnSync(
+			'npx',
+			[
+				'tsc',
+				'-p',
+				path.join('scripts', 'release', 'sdk-ts-defs-jsconfig.json'),
+				'--declaration',
+				'--emitDeclarationOnly',
+			],
+			{stdio: 'inherit'},
 		);
-	} catch (/** @type {unknown} */ error) {
+	} catch {
 		await fs.writeFile(sdkMjs, originalSdkMjsContent);
+		error = true;
+	}
 
-		let errorMessage = error;
-		if (error instanceof Error) {
-			// The `execSync` function throws a generic Node.js Error
-			errorMessage = error.message;
-		}
+	let errorMessage = "Command 'npx tsc sdk.mjs' failed for an unknown reason";
+	if (cmd && cmd.stderr) {
+		errorMessage = cmd.stderr.toString();
+	}
 
+	if (error || cmd === undefined) {
 		process.stdout.write(
 			`Error generating Typescript definitions: '${errorMessage}'\n`,
 		);
@@ -84,7 +93,9 @@ const removeDuplicatedExportTypes = (content) => {
 const generateSdkTs = async () => {
 	const fileExists = await fs
 		.access(sdkMts)
+		// eslint-disable-next-line promise/prefer-await-to-then
 		.then(() => true)
+		// eslint-disable-next-line promise/prefer-await-to-then
 		.catch(() => false);
 	if (fileExists) await fs.unlink(sdkMts);
 	await generateSdkMts();
@@ -99,19 +110,24 @@ const generateSdkTs = async () => {
 	await fs.writeFile(sdkTs, removeDuplicatedExportTypes(newSdkTsContent));
 	await fs.unlink(sdkMts);
 
+	let cmd;
+	let error = false;
 	try {
-		execSync('npx prettier -w sdk.d.ts');
-	} catch (error) {
-		let errorMessage = error;
-		if (error instanceof Error) {
-			// The `execSync` function throws a generic Node.js Error
-			errorMessage = error.message;
-		}
+		cmd = spawnSync('npx', ['prettier', '-w', 'sdk.d.ts'], {stdio: 'inherit'});
+	} catch {
+		error = true;
+	}
 
+	let errorMessage =
+		"Command 'npx prettier -w sdk.d.ts' failed for an unknown reason";
+	if (cmd && cmd.stderr) {
+		errorMessage = cmd.stderr.toString();
+	}
+
+	if (error || cmd === undefined) {
 		process.stdout.write(
 			'Error executing Prettier to prettify' +
-				` SDK TS definitions: '${errorMessage}'` +
-				'\n',
+				` SDK TS definitions: '${errorMessage}'\n`,
 		);
 		process.exit(1);
 	}

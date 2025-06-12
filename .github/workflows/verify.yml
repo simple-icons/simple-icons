@@ -18,9 +18,9 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Build NodeJS package
         run: npm run build
   lint:
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Is normal pull request
         # check if is not a release pull request
         id: pr
@@ -70,7 +70,7 @@ jobs:
           echo -ne " file automatically at releases.\n" 1>&2
           exit 1
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
         run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
@@ -83,7 +83,7 @@ jobs:
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs != 'true'
         run: sed -i "s/'\*\*\/\*\.md'/README.md/" package.json
       - name: Run linter
-        run: npm run lint --icons="$ICONS_FILES" --docs='$DOCS_FILES'
+        run: npm run lint --icons="$ICONS_FILES" --docs="$DOCS_FILES"
         env:
           ICONS_FILES: ${{ steps.changes.outputs.icons_files }}
           DOCS_FILES: ${{ steps.changes.outputs.docs_files }}
@@ -110,8 +110,8 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Run tests
         run: npm run test
