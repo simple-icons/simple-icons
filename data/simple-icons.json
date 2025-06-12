@@ -1603,6 +1603,12 @@
 		"guidelines": "https://www.avira.com/en/media-library"
 	},
 	{
+		"title": "AVM",
+		"hex": "E2001A",
+		"source": "https://en.fritz.com/about-avm/press/press-media",
+		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
+	},
+	{
 		"title": "Awesome Lists",
 		"hex": "FC60A8",
 		"source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media/logo.svg"
@@ -4190,6 +4196,11 @@
 		"guidelines": "https://discord.com/branding"
 	},
 	{
+		"title": "discord.js",
+		"hex": "5865F2",
+		"source": "https://github.com/discordjs/discord.js/blob/8e03af6eaff15a234569c8bccdb8719a8bf282ae/apps/guide/public/logo.svg"
+	},
+	{
 		"title": "Discourse",
 		"hex": "000000",
 		"source": "https://www.discourse.org"
@@ -4296,6 +4307,14 @@
 		"title": "Dolby",
 		"hex": "000000",
 		"source": "https://www.dolby.com"
+	},
+	{
+		"title": "Dolibarr",
+		"hex": "263C5C",
+		"source": "https://github.com/Dolibarr/dolibarr-foundation/blob/39f562651f88c4c4a4cd5754c18a7a2cd3dd5e59/logo-cliparts/dolibarr_256x256_color.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "DoorDash",
@@ -5706,6 +5725,12 @@
 		"title": "Frigate",
 		"hex": "000000",
 		"source": "https://frigate.video"
+	},
+	{
+		"title": "FRITZ!",
+		"hex": "E2001A",
+		"source": "https://fritz.com",
+		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
 	},
 	{
 		"title": "Frontend Mentor",
@@ -7550,7 +7575,21 @@
 	{
 		"title": "iLovePDF",
 		"hex": "E5322D",
-		"source": "https://www.ilovepdf.com/press"
+		"source": "https://www.ilovepdf.com/press",
+		"aliases": {
+			"dup": [
+				{
+					"title": "iLoveAPI",
+					"hex": "26AEBA",
+					"source": "https://www.iloveapi.com"
+				},
+				{
+					"title": "iLoveIMG",
+					"hex": "4D90FE",
+					"source": "https://www.iloveimg.com/press"
+				}
+			]
+		}
 	},
 	{
 		"title": "Image.sc",
@@ -9499,6 +9538,11 @@
 		"source": "https://macpaw.com"
 	},
 	{
+		"title": "MacPorts",
+		"hex": "1E79E9",
+		"source": "https://github.com/macports/macports-www/blob/8de17ad57e97d5ff87b16c084cef36059fa6c2f4/img/macports-avatar.svg"
+	},
+	{
 		"title": "Macy's",
 		"hex": "E21A2C",
 		"source": "https://www.macysinc.com/news-media/media-assets"
@@ -10000,6 +10044,11 @@
 		"title": "MeWe",
 		"hex": "17377F",
 		"source": "https://mewe.com"
+	},
+	{
+		"title": "Mezmo",
+		"hex": "E9FF92",
+		"source": "https://www.mezmo.com"
 	},
 	{
 		"title": "MG",
@@ -10940,6 +10989,14 @@
 		"guidelines": "https://nodejs.org/en/about/branding"
 	},
 	{
+		"title": "NodeBB",
+		"hex": "1E5EBC",
+		"source": "https://github.com/NodeBB/assets/blob/c59a6d8db0d1be9b2666419e49b330d7b780f2b3/bb-svg/bb.svg",
+		"license": {
+			"type": "CC-BY-NC-4.0"
+		}
+	},
+	{
 		"title": "Nodemon",
 		"hex": "76D04B",
 		"source": "https://nodemon.io"
@@ -11428,7 +11485,10 @@
 	{
 		"title": "OpenJDK",
 		"hex": "000000",
-		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1"
+		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg",
+		"license": {
+			"type": "BSD-3-Clause"
+		}
 	},
 	{
 		"title": "OpenJS Foundation",
@@ -13067,6 +13127,11 @@
 		}
 	},
 	{
+		"title": "Qodo",
+		"hex": "7968FA",
+		"source": "https://www.qodo.ai/media-kit"
+	},
+	{
 		"title": "QQ",
 		"hex": "1EBAFC",
 		"source": "https://en.wikipedia.org/wiki/File:Tencent_QQ.svg",
@@ -13703,6 +13768,11 @@
 		"title": "reveal.js",
 		"hex": "F2E142",
 		"source": "https://revealjs.com"
+	},
+	{
+		"title": "RevenueCat",
+		"hex": "F2545B",
+		"source": "https://www.revenuecat.com/integrations"
 	},
 	{
 		"title": "ReverbNation",
@@ -17976,6 +18046,12 @@
 		"title": "wgpu",
 		"hex": "40E0D0",
 		"source": "https://wgpu.rs"
+	},
+	{
+		"title": "what3words",
+		"hex": "E11F26",
+		"source": "https://developer.what3words.com/design/symbol-logo",
+		"guidelines": "https://developer.what3words.com/design"
 	},
 	{
 		"title": "WhatsApp",
