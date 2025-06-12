@@ -129,7 +129,7 @@ To be considered popular enough to be within our scope, a brand must be in exist
 
 As a last resort, after exhausting all other options above, and where applicable, the primary repository for the brand's GitHub project will be considered provided it meets the following requirements (see note below):
 
-- It is active and receiving regular commits,
+- It is active,
 - It has a minimum of 5k GitHub stars,
 - It has an average of 1k stars for each year of its existence (e.g., a project started 10 years ago would require a minimum of 10k stars), and,
 - Its [star history](https://star-history.com) is on a consistently upward trajectory.
