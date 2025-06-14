@@ -2,13 +2,13 @@
 # ^^^^^^^^^^^^^^^ Husky doesn't require this shebang,
 # but code editors need it to recognize the file as a script.
 
-# Format add the changes to the staging area
+# Format and add the changes to the staging area
 npm run format
 git add -u
 
 # POSIX shell (sh) run time parameters.
 #   -e: Exit immediately if a command exits with a non-zero status.
-#   -u: Treat unset variables as an error when substituting.
+#   -u: Treat unset variables as errors when substituting.
 set -eu
 
 # Track exit code in case that we want to add other lints in the future
