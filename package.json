@@ -125,6 +125,7 @@
 	},
 	"devDependencies": {
 		"@inquirer/prompts": "7.5.0",
+		"@types/mocha": "10.0.10",
 		"@types/node": "22.15.3",
 		"chalk": "5.4.1",
 		"editorconfig-checker": "6.0.1",
