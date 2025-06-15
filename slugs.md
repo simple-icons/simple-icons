@@ -47,6 +47,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Actix` | `actix` |
 | `Actual Budget` | `actualbudget` |
 | `Acura` | `acura` |
+| `Ada` | `ada` |
 | `Adafruit` | `adafruit` |
 | `AdBlock` | `adblock` |
 | `Adblock Plus` | `adblockplus` |
@@ -278,6 +279,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Avast` | `avast` |
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
+| `AVM` | `avm` |
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
 | `Awwwards` | `awwwards` |
@@ -752,6 +754,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Directus` | `directus` |
 | `Discogs` | `discogs` |
 | `Discord` | `discord` |
+| `discord.js` | `discorddotjs` |
 | `Discourse` | `discourse` |
 | `Discover` | `discover` |
 | `Disqus` | `disqus` |
@@ -772,6 +775,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dogecoin` | `dogecoin` |
 | `DOI` | `doi` |
 | `Dolby` | `dolby` |
+| `Dolibarr` | `dolibarr` |
 | `DoorDash` | `doordash` |
 | `Dota 2` | `dota2` |
 | `Douban` | `douban` |
@@ -1024,6 +1028,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FreeTube` | `freetube` |
 | `Fresh` | `fresh` |
 | `Frigate` | `frigate` |
+| `FRITZ!` | `fritz` |
 | `Frontend Mentor` | `frontendmentor` |
 | `Frontify` | `frontify` |
 | `Fubo` | `fubo` |
@@ -1681,6 +1686,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MAAS` | `maas` |
 | `macOS` | `macos` |
 | `MacPaw` | `macpaw` |
+| `MacPorts` | `macports` |
 | `Macy's` | `macys` |
 | `Magasins U` | `magasinsu` |
 | `Magic` | `magic` |
@@ -1772,6 +1778,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Metro de Madrid` | `metrodemadrid` |
 | `Métro de Paris` | `metrodeparis` |
 | `MeWe` | `mewe` |
+| `Mezmo` | `mezmo` |
 | `MG` | `mg` |
 | `Micro Editor` | `microeditor` |
 | `micro:bit` | `microbit` |
@@ -1906,6 +1913,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NewPipe` | `newpipe` |
 | `NEXON` | `nexon` |
 | `Next.js` | `nextdotjs` |
+| `nextbike` | `nextbike` |
 | `NextBillion.ai` | `nextbilliondotai` |
 | `Nextcloud` | `nextcloud` |
 | `NextDNS` | `nextdns` |
@@ -1931,6 +1939,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nobara Linux` | `nobaralinux` |
 | `Node-RED` | `nodered` |
 | `Node.js` | `nodedotjs` |
+| `NodeBB` | `nodebb` |
 | `Nodemon` | `nodemon` |
 | `Nokia` | `nokia` |
 | `Nomad` | `nomad` |
@@ -2075,6 +2084,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Paddle` | `paddle` |
 | `PaddlePaddle` | `paddlepaddle` |
 | `Paddy Power` | `paddypower` |
+| `Padlet` | `padlet` |
 | `Pagekit` | `pagekit` |
 | `PagerDuty` | `pagerduty` |
 | `PageSpeed Insights` | `pagespeedinsights` |
@@ -2102,6 +2112,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Payload CMS` | `payloadcms` |
 | `Payoneer` | `payoneer` |
 | `PayPal` | `paypal` |
+| `Paysafe` | `paysafe` |
 | `Paytm` | `paytm` |
 | `PCGamingWiki` | `pcgamingwiki` |
 | `PDM` | `pdm` |
@@ -2305,6 +2316,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qlik` | `qlik` |
 | `QMK` | `qmk` |
 | `QNAP` | `qnap` |
+| `Qodo` | `qodo` |
 | `QQ` | `qq` |
 | `Qt` | `qt` |
 | `Quad9` | `quad9` |
@@ -2414,6 +2426,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RetroPie` | `retropie` |
 | `ReVanced` | `revanced` |
 | `reveal.js` | `revealdotjs` |
+| `RevenueCat` | `revenuecat` |
 | `ReverbNation` | `reverbnation` |
 | `Revolt.chat` | `revoltdotchat` |
 | `Revolut` | `revolut` |
@@ -3171,6 +3184,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WeTransfer` | `wetransfer` |
 | `WezTerm` | `wezterm` |
 | `wgpu` | `wgpu` |
+| `what3words` | `what3words` |
 | `WhatsApp` | `whatsapp` |
 | `When I Work` | `wheniwork` |
 | `wiki.gg` | `wikidotgg` |
