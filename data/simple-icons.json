@@ -9768,8 +9768,13 @@
 	},
 	{
 		"title": "Material Design",
-		"hex": "757575",
-		"source": "https://material.io/design/"
+		"hex": "6442D6",
+		"source": "https://m3.material.io",
+		"aliases" : {
+			"aka": [
+				"MD3"
+			]
+		}
 	},
 	{
 		"title": "Material Design Icons",
