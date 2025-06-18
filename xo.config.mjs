@@ -1,7 +1,6 @@
 /**
  * @file XO Flat config file.
  */
-import {importX} from 'eslint-plugin-import-x';
 import jsdoc from 'eslint-plugin-jsdoc';
 
 const xoConfig = [
@@ -10,7 +9,7 @@ const xoConfig = [
 	},
 	jsdoc.configs['flat/recommended'],
 	{
-		plugins: {jsdoc, 'import-x': importX},
+		plugins: {jsdoc},
 		rules: {
 			'sort-imports': [
 				'error',
