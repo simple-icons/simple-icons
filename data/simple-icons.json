@@ -7538,8 +7538,11 @@
 	},
 	{
 		"title": "Iconify",
-		"hex": "1769AA",
-		"source": "https://iconify.design"
+		"hex": "026C9C",
+		"source": "https://iconify.design",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "IconJar",
@@ -9792,8 +9795,8 @@
 	},
 	{
 		"title": "Material Design",
-		"hex": "757575",
-		"source": "https://material.io/design/"
+		"hex": "6750A4",
+		"source": "https://m3.material.io"
 	},
 	{
 		"title": "Material Design Icons",
