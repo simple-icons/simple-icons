@@ -11,7 +11,7 @@ const xoConfig = [
 		prettier: true,
 	},
 	/** @type {import('xo').XoConfigItem} */
-	jsdoc.configs['flat/recommended'],
+	(jsdoc.configs['flat/recommended']),
 	{
 		plugins: {jsdoc, headers},
 		rules: {
