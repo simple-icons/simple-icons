@@ -5,6 +5,7 @@
 
 const autocloseTerm = 'This issue was automatically closed. Please refer to ';
 
+/** @type {import('./autoclose.app.js').Config} */
 const rules = [
 	{
 		patterns: [/matlab/i],
