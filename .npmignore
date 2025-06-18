@@ -1,7 +1,7 @@
 # Ignore all files in root
 /*
 # Except the ones we want to publish
-!_data/
+!data/
 !icons/
 !package.json
 !DISCLAIMER.md
