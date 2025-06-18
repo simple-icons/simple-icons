@@ -1,8 +1,10 @@
+// @ts-check
 /**
  * @file Tests for the index file of npm package.
  */
 
 // The index.mjs file is generated on build before running tests
+// @ts-expect-error
 import * as simpleIcons from '../index.mjs';
 import {getIconSlug, getIconsData, slugToVariableName} from '../sdk.mjs';
 import {testIcon} from './test-icon.js';

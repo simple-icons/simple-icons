@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Auto-close rules for closing won't add icons.
  */
