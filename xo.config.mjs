@@ -5,10 +5,12 @@
 import headers from 'eslint-plugin-headers';
 import jsdoc from 'eslint-plugin-jsdoc';
 
+/** @type {import('xo').FlatXoConfig} */
 const xoConfig = [
 	{
 		prettier: true,
 	},
+	/** @type {import('xo').XoConfigItem} */
 	jsdoc.configs['flat/recommended'],
 	{
 		plugins: {jsdoc, headers},

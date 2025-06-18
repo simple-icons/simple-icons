@@ -14,7 +14,7 @@ import process from 'node:process';
 
 /**
  * @typedef {object} Issue
- * @property {{name: string}[]} labels - Isesue labels.
+ * @property {{name: string}[]} labels - Issue labels.
  * @property {string} state - Issue state, possible values are 'open' and 'closed'.
  * @property {string} title - Issue title.
  * @property {string} body - Issue body.
