@@ -199,6 +199,19 @@
 		"source": "https://theactigraph.com"
 	},
 	{
+		"title": "Activeloop",
+		"hex": "FFB746",
+		"source": "https://github.com/simple-icons/simple-icons/issues/11387#issuecomment-2208988862",
+		"guidelines": "https://www.figma.com/design/BkHRpmCiMOqY1iJMniKC6F/Activeloop-Brandbook--final-?node-id=3-91",
+		"aliases": {
+			"dup": [
+				{
+					"title": "Deep Lake"
+				}
+			]
+		}
+	},
+	{
 		"title": "Activision",
 		"hex": "000000",
 		"source": "https://www.activision.com"
@@ -228,9 +241,23 @@
 		"guidelines": "https://www.honda.com/privacy/terms-and-conditions"
 	},
 	{
+		"title": "Ada",
+		"hex": "000000",
+		"source": "https://ada-lang-io.github.io/ada-logo-editor/",
+		"guidelines": "https://blog.adacore.com/our-contribution-to-the-ada-logo-discussion",
+		"license": {
+			"type": "CC0-1.0"
+		}
+	},
+	{
 		"title": "Adafruit",
 		"hex": "000000",
 		"source": "https://www.adafruit.com"
+	},
+	{
+		"title": "AdAway",
+		"hex": "B71C1C",
+		"source": "https://github.com/AdAway/adaway.github.io/blob/afbe891b58ab5d0207a98a4a2fac410a55710914/assets/img/logo.svg"
 	},
 	{
 		"title": "AdBlock",
@@ -923,6 +950,15 @@
 		}
 	},
 	{
+		"title": "Apache Doris",
+		"hex": "444FD9",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
 		"title": "Apache Druid",
 		"hex": "29F1FB",
 		"source": "https://apache.org/logos",
@@ -1603,6 +1639,12 @@
 		"guidelines": "https://www.avira.com/en/media-library"
 	},
 	{
+		"title": "AVM",
+		"hex": "E2001A",
+		"source": "https://en.fritz.com/about-avm/press/press-media",
+		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
+	},
+	{
 		"title": "Awesome Lists",
 		"hex": "FC60A8",
 		"source": "https://github.com/sindresorhus/awesome/tree/52b6dbacde01c2595f2133a5378cb8d2f89906fa/media/logo.svg"
@@ -1867,6 +1909,11 @@
 		"title": "Betfair",
 		"hex": "FFB80B",
 		"source": "https://www.betfair.com"
+	},
+	{
+		"title": "Better Auth",
+		"hex": "FFFFFF",
+		"source": "https://github.com/better-auth/better-auth/blob/fd62eba1d0ec71b3abb17ece92a4aae0c3c85270/docs/public/branding/better-auth-logo-light.svg"
 	},
 	{
 		"title": "Better Stack",
@@ -2382,6 +2429,11 @@
 		"title": "Bungie",
 		"hex": "0075BB",
 		"source": "https://www.bungie.net/7/en/Destiny"
+	},
+	{
+		"title": "bunny.net",
+		"hex": "FFAA49",
+		"source": "https://bunny.net"
 	},
 	{
 		"title": "bunq",
@@ -2970,6 +3022,11 @@
 		"hex": "0C9ED5",
 		"source": "https://www.cloudfoundry.org",
 		"guidelines": "https://www.cloudfoundry.org/logo/"
+	},
+	{
+		"title": "Cloud Native Build",
+		"hex": "F76945",
+		"source": "https://docs.cnb.cool/en/logo.html"
 	},
 	{
 		"title": "CloudBees",
@@ -4196,6 +4253,11 @@
 		"guidelines": "https://discord.com/branding"
 	},
 	{
+		"title": "discord.js",
+		"hex": "5865F2",
+		"source": "https://github.com/discordjs/discord.js/blob/8e03af6eaff15a234569c8bccdb8719a8bf282ae/apps/guide/public/logo.svg"
+	},
+	{
 		"title": "Discourse",
 		"hex": "000000",
 		"source": "https://www.discourse.org"
@@ -4302,6 +4364,14 @@
 		"title": "Dolby",
 		"hex": "000000",
 		"source": "https://www.dolby.com"
+	},
+	{
+		"title": "Dolibarr",
+		"hex": "263C5C",
+		"source": "https://github.com/Dolibarr/dolibarr-foundation/blob/39f562651f88c4c4a4cd5754c18a7a2cd3dd5e59/logo-cliparts/dolibarr_256x256_color.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "DoorDash",
@@ -5712,6 +5782,12 @@
 		"title": "Frigate",
 		"hex": "000000",
 		"source": "https://frigate.video"
+	},
+	{
+		"title": "FRITZ!",
+		"hex": "E2001A",
+		"source": "https://fritz.com",
+		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
 	},
 	{
 		"title": "Frontend Mentor",
@@ -7486,8 +7562,11 @@
 	},
 	{
 		"title": "Iconify",
-		"hex": "1769AA",
-		"source": "https://iconify.design"
+		"hex": "026C9C",
+		"source": "https://iconify.design",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "IconJar",
@@ -7556,7 +7635,21 @@
 	{
 		"title": "iLovePDF",
 		"hex": "E5322D",
-		"source": "https://www.ilovepdf.com/press"
+		"source": "https://www.ilovepdf.com/press",
+		"aliases": {
+			"dup": [
+				{
+					"title": "iLoveAPI",
+					"hex": "26AEBA",
+					"source": "https://www.iloveapi.com"
+				},
+				{
+					"title": "iLoveIMG",
+					"hex": "4D90FE",
+					"source": "https://www.iloveimg.com/press"
+				}
+			]
+		}
 	},
 	{
 		"title": "Image.sc",
@@ -7821,6 +7914,11 @@
 		"guidelines": "https://www.intuit.com/company/press-room/logos"
 	},
 	{
+		"title": "Invidious",
+		"hex": "00B6F0",
+		"source": "https://github.com/iv-org/invidious-redirect/blob/d5e4d97f4f998b8c2512c51ed9961a8d989a7ce0/src/assets/img/invidious-logo-light.svg"
+	},
+	{
 		"title": "InVision",
 		"hex": "FF3366",
 		"source": "https://www.invisionapp.com/resources/brand",
@@ -8076,8 +8174,8 @@
 	},
 	{
 		"title": "Jinja",
-		"hex": "B41717",
-		"source": "https://github.com/pallets/jinja/blob/1c240154865a7b6034033027e3c2ca8a2fa53fc2/artwork/jinjalogo.svg"
+		"hex": "7E0C1B",
+		"source": "https://jinja.palletsprojects.com"
 	},
 	{
 		"title": "Jio",
@@ -9500,6 +9598,11 @@
 		"source": "https://macpaw.com"
 	},
 	{
+		"title": "MacPorts",
+		"hex": "1E79E9",
+		"source": "https://github.com/macports/macports-www/blob/8de17ad57e97d5ff87b16c084cef36059fa6c2f4/img/macports-avatar.svg"
+	},
+	{
 		"title": "Macy's",
 		"hex": "E21A2C",
 		"source": "https://www.macysinc.com/news-media/media-assets"
@@ -9716,8 +9819,8 @@
 	},
 	{
 		"title": "Material Design",
-		"hex": "757575",
-		"source": "https://material.io/design/"
+		"hex": "6750A4",
+		"source": "https://m3.material.io"
 	},
 	{
 		"title": "Material Design Icons",
@@ -10001,6 +10104,11 @@
 		"title": "MeWe",
 		"hex": "17377F",
 		"source": "https://mewe.com"
+	},
+	{
+		"title": "Mezmo",
+		"hex": "E9FF92",
+		"source": "https://www.mezmo.com"
 	},
 	{
 		"title": "MG",
@@ -10800,6 +10908,12 @@
 		"guidelines": "https://vercel.com/design/brands#next-js"
 	},
 	{
+		"title": "nextbike",
+		"hex": "0046D7",
+		"source": "https://www.nextbike.net/en/press",
+		"guidelines": "https://www.nextbike.net/style-guide"
+	},
+	{
 		"title": "NextBillion.ai",
 		"hex": "8D5A9E",
 		"source": "https://nextbillion.ai"
@@ -10939,6 +11053,14 @@
 		"hex": "5FA04E",
 		"source": "https://nodejs.org/en/about/branding",
 		"guidelines": "https://nodejs.org/en/about/branding"
+	},
+	{
+		"title": "NodeBB",
+		"hex": "1E5EBC",
+		"source": "https://github.com/NodeBB/assets/blob/c59a6d8db0d1be9b2666419e49b330d7b780f2b3/bb-svg/bb.svg",
+		"license": {
+			"type": "CC-BY-NC-4.0"
+		}
 	},
 	{
 		"title": "Nodemon",
@@ -11429,7 +11551,10 @@
 	{
 		"title": "OpenJDK",
 		"hex": "000000",
-		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg#l1"
+		"source": "https://hg.openjdk.java.net/duke/duke/file/ca00f100dafc/vector/Agent.svg",
+		"license": {
+			"type": "BSD-3-Clause"
+		}
 	},
 	{
 		"title": "OpenJS Foundation",
@@ -11776,6 +11901,12 @@
 		"source": "https://www.paddypower.com"
 	},
 	{
+		"title": "Padlet",
+		"hex": "FF4081",
+		"source": "https://legal.padlet.com/trademark",
+		"guidelines": "https://legal.padlet.com/trademark"
+	},
+	{
 		"title": "Pagekit",
 		"hex": "212121",
 		"source": "https://pagekit.com/logo-guide",
@@ -11918,6 +12049,21 @@
 		"hex": "003087",
 		"source": "https://www.paypal.com",
 		"guidelines": "https://newsroom.paypal-corp.com/media-resources"
+	},
+	{
+		"title": "Paysafe",
+		"hex": "5A28FF",
+		"source": "https://brand.paysafe.com",
+		"guidelines": "https://brand.paysafe.com",
+		"aliases": {
+			"dup": [
+				{
+					"title": "PaysafeCard",
+					"hex": "0036C2",
+					"guidelines": "https://brand.paysafe.com/paysafecard"
+				}
+			]
+		}
 	},
 	{
 		"title": "Paytm",
@@ -12386,8 +12532,9 @@
 	},
 	{
 		"title": "Plotly",
-		"hex": "3F4F75",
-		"source": "https://plotly.com"
+		"hex": "7A76FF",
+		"source": "https://plotly.com/brand-guidelines",
+		"guidelines": "https://plotly.com/brand-guidelines"
 	},
 	{
 		"title": "Plume",
@@ -13047,6 +13194,11 @@
 		}
 	},
 	{
+		"title": "Qodo",
+		"hex": "7968FA",
+		"source": "https://www.qodo.ai/media-kit"
+	},
+	{
 		"title": "QQ",
 		"hex": "1EBAFC",
 		"source": "https://en.wikipedia.org/wiki/File:Tencent_QQ.svg",
@@ -13683,6 +13835,11 @@
 		"title": "reveal.js",
 		"hex": "F2E142",
 		"source": "https://revealjs.com"
+	},
+	{
+		"title": "RevenueCat",
+		"hex": "F2545B",
+		"source": "https://www.revenuecat.com/integrations"
 	},
 	{
 		"title": "ReverbNation",
@@ -15471,8 +15628,9 @@
 	},
 	{
 		"title": "Stellar",
-		"hex": "7D00FF",
-		"source": "https://www.stellar.org/press"
+		"hex": "FDDA24",
+		"source": "https://stellar.org/brand-resources",
+		"guidelines": "https://stellar.org/brand-resources"
 	},
 	{
 		"title": "Stencil",
@@ -17955,6 +18113,12 @@
 		"title": "wgpu",
 		"hex": "40E0D0",
 		"source": "https://wgpu.rs"
+	},
+	{
+		"title": "what3words",
+		"hex": "E11F26",
+		"source": "https://developer.what3words.com/design/symbol-logo",
+		"guidelines": "https://developer.what3words.com/design"
 	},
 	{
 		"title": "WhatsApp",
