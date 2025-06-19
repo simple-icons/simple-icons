@@ -26,7 +26,7 @@ type ThirdPartyExtensionSubject = {
 /**
  * The aliases for a Simple Icon.
  *
- * Corresponds to the `aliases` property in the *_data/simple-icons.json* file.
+ * Corresponds to the `aliases` property in the *data/simple-icons.json* file.
  * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#aliases Aliases}
  */
 export type Aliases = {
@@ -46,7 +46,7 @@ type DuplicateAlias = {
 /**
  * The data for a Simple Icon.
  *
- * Corresponds to the data stored for each icon in the *_data/simple-icons.json* file.
+ * Corresponds to the data stored for each icon in the *data/simple-icons.json* file.
  * @see {@link https://github.com/mondeja/simple-icons/blob/utils-entrypoint/CONTRIBUTING.md#7-update-the-json-data-for-simpleiconsorg Update the JSON Data for SimpleIcons.org}
  */
 export type IconData = {
