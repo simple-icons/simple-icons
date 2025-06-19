@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Custom mocha reporter.
  *
