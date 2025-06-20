@@ -1,9 +1,11 @@
+// @ts-check
 /**
  * @file Auto-close rules for closing won't add icons.
  */
 
 const autocloseTerm = 'This issue was automatically closed. Please refer to ';
 
+/** @type {import('./autoclose.app.js').Config} */
 const rules = [
 	{
 		patterns: [/matlab/i],
@@ -40,6 +42,14 @@ const rules = [
 	{
 		patterns: [/linked\s*in/i],
 		reason: autocloseTerm + '#11236 #11372.',
+	},
+	{
+		patterns: [/amazon/i, /aws/i],
+		reason: autocloseTerm + '#13056.',
+	},
+	{
+		patterns: [/yahoo/i, /engadget/i, /aol/i],
+		reason: autocloseTerm + '#9861.',
 	},
 ];
 
