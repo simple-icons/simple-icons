@@ -1,0 +1,6 @@
+import type {IconData} from '../types.js';
+
+declare type Icons = IconData[];
+
+export default Icons;
+export = Icons;
