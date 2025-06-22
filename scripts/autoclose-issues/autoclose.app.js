@@ -13,14 +13,18 @@ import process from 'node:process';
  */
 
 /**
+ * @typedef {Rule[]} Config
+ */
+
+/**
  * @typedef {object} Issue
- * @property {{name: string}[]} labels - Isesue labels.
+ * @property {{name: string}[]} labels - Issue labels.
  * @property {string} state - Issue state, possible values are 'open' and 'closed'.
  * @property {string} title - Issue title.
  * @property {string} body - Issue body.
  */
 
-/** @type {Rule[]} */
+/** @type {Config} */
 const rules = await import(
 	path.join(import.meta.dirname, 'autoclose.rules.js')
 ).then((module) => module.default);
