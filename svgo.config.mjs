@@ -6,6 +6,7 @@
 /** @type {import("svgo").Config} */
 const config = {
 	multipass: true,
+	floatPrecision: 3,
 	plugins: [
 		'cleanupAttrs',
 		'inlineStyles',
@@ -24,8 +25,6 @@ const config = {
 		{
 			name: 'convertPathData',
 			params: {
-				// 3 decimals of precision in floating point numbers
-				floatPrecision: 3,
 				// Some editors (e.g. Adobe Illustrator and Sketch) cannot parse flags
 				// without space wrapping
 				noSpaceAfterFlags: false,
@@ -67,9 +66,7 @@ const config = {
 			// Convert basic shapes (such as <circle>) to <path>
 			name: 'convertShapeToPath',
 			params: {
-				// Including <arc>
 				convertArcs: true,
-				floatPrecision: 5,
 			},
 		},
 		'convertEllipseToCircle',
@@ -103,7 +100,7 @@ const config = {
 		},
 		'removeOffCanvasPaths',
 		'removeStyleElement',
-		'removeScriptElement',
+		'removeScripts',
 		'reusePaths',
 	],
 };
