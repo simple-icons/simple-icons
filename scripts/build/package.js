@@ -171,9 +171,7 @@ const build = async () => {
 		format: 'cjs',
 	});
 
-	// Build deprecated `simple-icons/icons` entrypoint. Re-exports
-	// from index adding a warning with `console.log`.
-	//
+	// Build deprecated `simple-icons/icons` entrypoint.
 	// TODO: This must be removed at v17.
 	const deprecatedMessage =
 		`⚠️ The entrypoint 'simple-icons/icons' is deprecated and` +
