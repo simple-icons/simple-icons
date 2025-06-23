@@ -60,6 +60,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Allowed: Space agencies
   - Symbols, including flags and banners
     - Allowed: standards like FCC, CE, CCC, RoHS...
+    - Allowed: licenses like CC, Unlicense, MIT...
   - Sport clubs
     - Allowed: Sports organizations
   - Yearly releases
