@@ -386,7 +386,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			if (titleToSlug(title) === slug) {
 				errors.push(
 					`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from its title.` +
-						' Please, remove the slug or change the title.',
+						' Please, remove the slug.',
 				);
 				continue;
 			}
