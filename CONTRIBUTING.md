@@ -65,6 +65,7 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
     - Allowed: Brands where religion or faith are part of the corporate culture
   - Symbols, including flags and banners
     - Allowed: standards like FCC, CE, CCC, RoHS...
+    - Allowed: licenses like CC, Unlicense, MIT...
   - Sport clubs
     - Allowed: Sports organizations
   - Yearly releases
