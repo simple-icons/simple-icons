@@ -199,6 +199,19 @@
 		"source": "https://theactigraph.com"
 	},
 	{
+		"title": "Activeloop",
+		"hex": "FFB746",
+		"source": "https://github.com/simple-icons/simple-icons/issues/11387#issuecomment-2208988862",
+		"guidelines": "https://www.figma.com/design/BkHRpmCiMOqY1iJMniKC6F/Activeloop-Brandbook--final-?node-id=3-91",
+		"aliases": {
+			"dup": [
+				{
+					"title": "Deep Lake"
+				}
+			]
+		}
+	},
+	{
 		"title": "Activision",
 		"hex": "000000",
 		"source": "https://www.activision.com"
@@ -240,6 +253,11 @@
 		"title": "Adafruit",
 		"hex": "000000",
 		"source": "https://www.adafruit.com"
+	},
+	{
+		"title": "AdAway",
+		"hex": "B71C1C",
+		"source": "https://github.com/AdAway/adaway.github.io/blob/afbe891b58ab5d0207a98a4a2fac410a55710914/assets/img/logo.svg"
 	},
 	{
 		"title": "AdBlock",
@@ -925,6 +943,15 @@
 	{
 		"title": "Apache DolphinScheduler",
 		"hex": "85CDF0",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
+		"title": "Apache Doris",
+		"hex": "444FD9",
 		"source": "https://apache.org/logos",
 		"guidelines": "https://www.apache.org/foundation/marks",
 		"license": {
@@ -1884,6 +1911,11 @@
 		"source": "https://www.betfair.com"
 	},
 	{
+		"title": "Better Auth",
+		"hex": "FFFFFF",
+		"source": "https://github.com/better-auth/better-auth/blob/fd62eba1d0ec71b3abb17ece92a4aae0c3c85270/docs/public/branding/better-auth-logo-light.svg"
+	},
+	{
 		"title": "Better Stack",
 		"hex": "000000",
 		"source": "https://betterstack.com"
@@ -2160,6 +2192,12 @@
 		"source": "https://insights.bookbub.com/bookbub-follow-bookmark-buttons-for-authors-websites"
 	},
 	{
+		"title": "Booking.com",
+		"hex": "003A9A",
+		"source": "https://www.bookingholdings.com/media-room",
+		"guidelines": "https://www.bookingholdings.com/media-room"
+	},
+	{
 		"title": "Bookmeter",
 		"hex": "64BC4B",
 		"source": "https://bookmeter.com"
@@ -2391,6 +2429,11 @@
 		"title": "Bungie",
 		"hex": "0075BB",
 		"source": "https://www.bungie.net/7/en/Destiny"
+	},
+	{
+		"title": "bunny.net",
+		"hex": "FFAA49",
+		"source": "https://bunny.net"
 	},
 	{
 		"title": "bunq",
@@ -2979,6 +3022,11 @@
 		"hex": "0C9ED5",
 		"source": "https://www.cloudfoundry.org",
 		"guidelines": "https://www.cloudfoundry.org/logo/"
+	},
+	{
+		"title": "Cloud Native Build",
+		"hex": "F76945",
+		"source": "https://docs.cnb.cool/en/logo.html"
 	},
 	{
 		"title": "CloudBees",
@@ -4326,6 +4374,11 @@
 		}
 	},
 	{
+		"title": "Dolphin",
+		"hex": "00AAFF",
+		"source": "https://github.com/dolphin-emu/dolphin/blob/6851ed73f41f43b9a2da23e7f4cb58f58a904fe2/Data/dolphin-emu.svg"
+	},
+	{
 		"title": "DoorDash",
 		"hex": "FF3008",
 		"source": "https://www.doordash.com/about/"
@@ -4805,6 +4858,11 @@
 		"hex": "0080BC",
 		"source": "https://ens.domains/brand",
 		"guidelines": "https://ens.domains/brand"
+	},
+	{
+		"title": "Ente",
+		"hex": "00BC45",
+		"source": "https://ente.io"
 	},
 	{
 		"title": "EnterpriseDB",
@@ -5396,12 +5454,8 @@
 	},
 	{
 		"title": "Flask",
-		"hex": "000000",
-		"source": "https://github.com/pallets/flask/blob/e6e75e55470a0682ee8370e6d68062e515a248b9/artwork/logo-full.svg",
-		"license": {
-			"type": "custom",
-			"url": "https://github.com/pallets/flask/blob/master/artwork/LICENSE.rst"
-		}
+		"hex": "3BABC3",
+		"source": "https://github.com/pallets/flask/blob/85c5d93cbd049c4bd0679c36fd1ddcae8c37b642/docs/_static/flask-icon.svg"
 	},
 	{
 		"title": "Flat",
@@ -7006,6 +7060,11 @@
 		"guidelines": "https://haxe.org/foundation/branding.html"
 	},
 	{
+		"title": "Haystack",
+		"hex": "0EAF9C",
+		"source": "https://github.com/simple-icons/simple-icons/issues/12288#issuecomment-2567870921"
+	},
+	{
 		"title": "HBO",
 		"hex": "000000",
 		"source": "https://www.hbo.com"
@@ -7524,8 +7583,11 @@
 	},
 	{
 		"title": "Iconify",
-		"hex": "1769AA",
-		"source": "https://iconify.design"
+		"hex": "026C9C",
+		"source": "https://iconify.design",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "IconJar",
@@ -8133,8 +8195,8 @@
 	},
 	{
 		"title": "Jinja",
-		"hex": "B41717",
-		"source": "https://github.com/pallets/jinja/blob/1c240154865a7b6034033027e3c2ca8a2fa53fc2/artwork/jinjalogo.svg"
+		"hex": "7E0C1B",
+		"source": "https://jinja.palletsprojects.com"
 	},
 	{
 		"title": "Jio",
@@ -8476,6 +8538,11 @@
 		"title": "KeeWeb",
 		"hex": "528BFF",
 		"source": "https://github.com/keeweb/keeweb/blob/44432eb66d5b771d5867cdd74f2500d00e006783/graphics/svg/keeweb.svg"
+	},
+	{
+		"title": "Kenmei",
+		"hex": "545C64",
+		"source": "https://www.kenmei.co"
 	},
 	{
 		"title": "Kentico",
@@ -8929,12 +8996,9 @@
 	},
 	{
 		"title": "Launchpad",
-		"hex": "F8C300",
-		"source": "https://help.launchpad.net/logo/submissions",
-		"guidelines": "https://help.launchpad.net/Legal",
-		"license": {
-			"type": "CC-BY-ND-2.0"
-		}
+		"hex": "E95420",
+		"source": "https://launchpad.net",
+		"guidelines": "https://design.ubuntu.com/brand"
 	},
 	{
 		"title": "Lazarus",
@@ -9778,8 +9842,8 @@
 	},
 	{
 		"title": "Material Design",
-		"hex": "757575",
-		"source": "https://material.io/design/"
+		"hex": "6750A4",
+		"source": "https://m3.material.io"
 	},
 	{
 		"title": "Material Design Icons",
@@ -10204,6 +10268,11 @@
 		}
 	},
 	{
+		"title": "Mistral AI",
+		"hex": "FA520F",
+		"source": "https://chat.mistral.ai"
+	},
+	{
 		"title": "Mitsubishi",
 		"hex": "E60012",
 		"source": "https://www.mitsubishi.com"
@@ -10553,6 +10622,11 @@
 		"title": "MYOB",
 		"hex": "7B14EF",
 		"source": "https://www.myob.com"
+	},
+	{
+		"title": "MyShows",
+		"hex": "CC0000",
+		"source": "https://myshows.me"
 	},
 	{
 		"title": "Myspace",
@@ -12491,8 +12565,9 @@
 	},
 	{
 		"title": "Plotly",
-		"hex": "3F4F75",
-		"source": "https://plotly.com"
+		"hex": "7A76FF",
+		"source": "https://plotly.com/brand-guidelines",
+		"guidelines": "https://plotly.com/brand-guidelines"
 	},
 	{
 		"title": "Plume",
@@ -12563,7 +12638,7 @@
 	},
 	{
 		"title": "Polars",
-		"hex": "CD792C",
+		"hex": "0075FF",
 		"source": "https://pola.rs"
 	},
 	{
@@ -17339,6 +17414,11 @@
 		"title": "Valve",
 		"hex": "F74843",
 		"source": "https://www.valvesoftware.com"
+	},
+	{
+		"title": "Vanilla Extract",
+		"hex": "F786AD",
+		"source": "https://github.com/vanilla-extract-css/vanilla-extract/blob/7d1c4d8f34f07cea7980f7197978f2127d890be7/site/logo.svg"
 	},
 	{
 		"title": "Vapor",
