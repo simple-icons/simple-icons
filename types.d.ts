@@ -33,3 +33,16 @@ export type SimpleIcon = {
 	guidelines?: string;
 	license?: License;
 };
+
+/**
+ * The type data item from the simple-icons.json file.
+ */
+export type IconData = {
+	title: string;
+	hex: string;
+	source: string;
+	slug?: string;
+	guidelines?: string;
+	license?: Omit<SPDXLicense, 'url'> | CustomLicense;
+	aliases?: Aliases;
+};

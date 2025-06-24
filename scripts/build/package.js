@@ -32,11 +32,20 @@ const indexMjsFile = path.resolve(rootDirectory, 'index.mjs');
 const sdkJsFile = path.resolve(rootDirectory, 'sdk.js');
 const sdkMjsFile = path.resolve(rootDirectory, 'sdk.mjs');
 const indexDtsFile = path.resolve(rootDirectory, 'index.d.ts');
+const iconsJsonDtsFile = path.resolve(
+	rootDirectory,
+	'data',
+	'simple-icons.json.d.ts',
+);
 
 const templatesDirectory = path.resolve(import.meta.dirname, 'templates');
 const iconObjectTemplateFile = path.resolve(
 	templatesDirectory,
 	'icon-object.js.template',
+);
+const iconsJsonTypesTempalteFile = path.resolve(
+	templatesDirectory,
+	'icons-json.d.ts.template',
 );
 
 /**
@@ -47,6 +56,10 @@ const iconObjectTemplateFile = path.resolve(
 
 const icons = await getIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
+const iconsJsonTypesTemplate = await fs.readFile(
+	iconsJsonTypesTempalteFile,
+	UTF8,
+);
 
 /**
  * Escape a string for use in a JavaScript string.
@@ -165,6 +178,7 @@ const build = async () => {
 		'',
 	)}`;
 	await writeTs(indexDtsFile, rawIndexDts);
+	await writeTs(iconsJsonDtsFile, iconsJsonTypesTemplate);
 
 	// Create a CommonJS SDK file
 	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
