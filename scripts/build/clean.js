@@ -9,14 +9,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 
-const files = [
-	'index.js',
-	'index-icons.js',
-	'index.mjs',
-	'index-icons.mjs',
-	'index.d.ts',
-	'sdk.js',
-];
+const files = ['index.js', 'index.mjs', 'index.d.ts', 'sdk.js'];
 
 /**
  * Check if a file exists.
