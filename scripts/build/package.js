@@ -7,7 +7,6 @@
 
 /**
  * @typedef {import('../../types.js').License} License
- * @typedef {import('esbuild').TransformOptions} EsBuildTransformOptions
  */
 
 import {promises as fs} from 'node:fs';
@@ -90,14 +89,24 @@ const iconDataAndObjectToJsRepr = (icon) =>
 
 /**
  * Write JavaScript content to a file.
+ *
+ * ESBuild by default uses `ascii` encoding for JavaScript files, so the titles of icons
+ * are encoded using escape sequences (eg. "Aerom\xE9xico" instead of "Aeroméxico").
+ * See {@link https://esbuild.github.io/api/#charset}.
+ * Although this adds a minimal size overhead, it is needed to ensure that our distributed
+ * JavaScript files are compatible with all JavaScript environments. Especially, browsers
+ * that are not using `<meta charset="utf-8">` in their HTML. As we support browsers
+ * without meta charset in SVG `<title>` elements, we need to ensure the same for scripts.
  * @param {string} filepath The path to the file to write.
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {EsBuildTransformOptions} [options] The options to pass to esbuild.
+ * @param {'cjs'} [format] The format of the resulting JavaScript file.
  */
-const writeJs = async (filepath, rawJavaScript, options = undefined) => {
-	options = options === undefined ? {minify: true} : options;
+const writeJs = async (filepath, rawJavaScript, format = undefined) => {
+	/** @type {import('esbuild').TransformOptions} */
+	const options = {minify: true, charset: 'ascii', format};
 	const {code} = await esbuildTransform(rawJavaScript, options);
-	await fs.writeFile(filepath, code);
+	// ESBuild adds a trailing newline to the end of the file
+	await fs.writeFile(filepath, code.trimEnd());
 };
 
 /**
@@ -167,9 +176,7 @@ const build = async () => {
 	await writeTs(indexDtsFile, rawIndexDts);
 
 	// Create a CommonJS SDK file
-	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
-		format: 'cjs',
-	});
+	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), 'cjs');
 
 	// Build deprecated `simple-icons/icons` entrypoint.
 	// TODO: This must be removed at v17.
