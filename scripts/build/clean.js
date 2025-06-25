@@ -8,6 +8,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
+import {fileExists} from '../utils.js';
 
 const files = [
 	'index.js',
@@ -17,20 +18,6 @@ const files = [
 	'index.d.ts',
 	'sdk.js',
 ];
-
-/**
- * Check if a file exists.
- * @param {string} fpath File path to check.
- * @returns {Promise<boolean>} True if the file exists, false otherwise.
- */
-const fileExists = async (fpath) => {
-	try {
-		await fs.access(fpath);
-		return true;
-	} catch {
-		return false;
-	}
-};
 
 try {
 	Promise.all(
