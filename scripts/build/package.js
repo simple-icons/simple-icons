@@ -176,7 +176,7 @@ const build = async () => {
 	await writeTs(indexDtsFile, rawIndexDts);
 
 	// Create a CommonJS SDK file
-  await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), 'cjs');
+	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), 'cjs');
 
 	// Build deprecated `simple-icons/icons` entrypoint.
 	// TODO: This must be removed at v17.
@@ -202,4 +202,4 @@ const build = async () => {
 	await writeJs(iconsIndexMjsFile, iconsIndexMjs);
 }
 
-build();
+await build();
