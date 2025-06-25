@@ -10,7 +10,14 @@ import path from 'node:path';
 import process from 'node:process';
 import {fileExists} from '../utils.js';
 
-const files = ['index.js', 'index.mjs', 'index.d.ts', 'sdk.js'];
+const files = [
+	'index.js',
+	'index-icons.js',
+	'index.mjs',
+	'index-icons.mjs',
+	'index.d.ts',
+	'sdk.js',
+];
 
 try {
 	Promise.all(
