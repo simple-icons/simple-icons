@@ -200,6 +200,6 @@ const build = async () => {
 		`export * from './index.mjs';`;
 	const iconsIndexMjsFile = path.resolve(rootDirectory, 'index-icons.mjs');
 	await writeJs(iconsIndexMjsFile, iconsIndexMjs);
-}
+};
 
 await build();
