@@ -6,6 +6,8 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
