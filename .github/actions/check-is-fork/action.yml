@@ -20,10 +20,12 @@ runs:
   steps:
     - id: check-is-fork
       shell: bash
+      env:
+        IN_FORK_MESSAGE: ${{ inputs.in-fork-message }}
       run: |
         if [ "${{ github.repository_owner }}" != "simple-icons" ]; then
           echo "is-fork=true" >> $GITHUB_OUTPUT
-          echo "${{ inputs.in-fork-message }}"
+          echo "$IN_FORK_MESSAGE"
         else
           echo "is-fork=false" >> $GITHUB_OUTPUT
         fi
