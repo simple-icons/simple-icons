@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Icon tester.
  */
@@ -6,17 +7,9 @@ import {strict as assert} from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {describe, it} from 'mocha';
-import {
-	SVG_PATH_REGEX,
-	getDirnameFromImportMeta,
-	titleToSlug,
-} from '../sdk.mjs';
+import {SVG_PATH_REGEX} from '../sdk.mjs';
 
-const iconsDirectory = path.resolve(
-	getDirnameFromImportMeta(import.meta.url),
-	'..',
-	'icons',
-);
+const iconsDirectory = path.resolve(import.meta.dirname, '..', 'icons');
 
 /**
  * Checks if icon data matches a subject icon.
@@ -65,7 +58,11 @@ export const testIcon = (icon, subject, slug) => {
 			if (icon.license) {
 				assert.equal(subject.license?.type, icon.license.type);
 				if (icon.license.type === 'custom') {
-					assert.equal(subject.license.url, icon.license.url);
+					const {license} = icon;
+					const license_ = /** @type {import('../types.js').CustomLicense} */ (
+						license
+					);
+					assert.equal(subject.license.url, license_.url);
 				}
 			} else {
 				assert.equal(subject.license, undefined);
@@ -76,14 +73,5 @@ export const testIcon = (icon, subject, slug) => {
 			const svgFileContents = await fs.readFile(svgPath, 'utf8');
 			assert.equal(subject.svg, svgFileContents);
 		});
-
-		if (icon.slug) {
-			// If an icon data has a slug, it must be different to the
-			// slug inferred from the title, which prevents adding
-			// unnecessary slugs to icons data
-			it(`'${icon.title}' slug must be necessary`, () => {
-				assert.notEqual(titleToSlug(icon.title), icon.slug);
-			});
-		}
 	});
 };

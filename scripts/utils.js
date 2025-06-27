@@ -8,15 +8,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {
-	collator,
-	getDirnameFromImportMeta,
-	getIconSlug,
-	getIconsDataPath,
-	titleToSlug,
-} from '../sdk.mjs';
-
-const __dirname = getDirnameFromImportMeta(import.meta.url);
+import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
 
 /**
  * @typedef {import("../sdk.js").IconData} IconData
@@ -25,29 +17,24 @@ const __dirname = getDirnameFromImportMeta(import.meta.url);
 
 /**
  * Get JSON schema data.
- * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<any>} JSON schema data.
  */
-export const getJsonSchemaData = async (
-	rootDirectory = path.resolve(__dirname, '..'),
-) =>
+export const getJsonSchemaData = async () =>
 	JSON.parse(
-		await fs.readFile(path.resolve(rootDirectory, '.jsonschema.json'), 'utf8'),
+		await fs.readFile(
+			path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
+			'utf8',
+		),
 	);
 
 /**
- * Write icons data to _data/simple-icons.json.
+ * Write icons data to data/simple-icons.json.
  * @param {IconData[]} iconsData Icons data array.
  * @param {boolean} [minify] Whether to minify the JSON output.
- * @param {string} [rootDirectory] Path to the root directory of the project.
  */
-export const writeIconsData = async (
-	iconsData,
-	minify = false,
-	rootDirectory = path.resolve(__dirname, '..'),
-) => {
+export const writeIconsData = async (iconsData, minify = false) => {
 	await fs.writeFile(
-		getIconsDataPath(rootDirectory),
+		getIconsDataPath(),
 		`${JSON.stringify(iconsData, null, minify ? 0 : '\t')}\n`,
 		'utf8',
 	);
@@ -55,16 +42,14 @@ export const writeIconsData = async (
 
 /**
  * Get SPDX license IDs from `spdx-license-ids` package.
- * @param {string} [rootDirectory] Path to the root directory of the project.
  * @returns {Promise<string[]>} Set of SPDX license IDs.
  */
-export const getSpdxLicenseIds = async (
-	rootDirectory = path.resolve(__dirname, '..'),
-) =>
+export const getSpdxLicenseIds = async () =>
 	JSON.parse(
 		await fs.readFile(
 			path.resolve(
-				rootDirectory,
+				import.meta.dirname,
+				'..',
 				'node_modules',
 				'spdx-license-ids',
 				'index.json',
@@ -74,33 +59,31 @@ export const getSpdxLicenseIds = async (
 	);
 
 /**
- * The compare function for sorting icons in *_data/simple-icons.json*.
+ * The compare function for sorting icons in *data/simple-icons.json*.
  * @param {IconData} a Icon A.
  * @param {IconData} b Icon B.
  * @returns {number} Comparison result.
  */
-export const sortIconsCompare = (a, b) => {
-	return a.title === b.title
+export const sortIconsCompare = (a, b) =>
+	a.title === b.title
 		? collator.compare(getIconSlug(a), getIconSlug(b))
 		: collator.compare(a.title, b.title);
-};
 
 /**
- * The compare function for sorting icon duplicate aliases in *_data/simple-icons.json*.
+ * The compare function for sorting icon duplicate aliases in *data/simple-icons.json*.
  * @param {DuplicateAlias} a Duplicate alias A.
  * @param {DuplicateAlias} b Duplicate alias B.
  * @returns {number} Comparison result.
  */
-const sortDuplicatesCompare = (a, b) => {
-	return a.title === b.title
+const sortDuplicatesCompare = (a, b) =>
+	a.title === b.title
 		? collator.compare(titleToSlug(a.title), titleToSlug(b.title))
 		: collator.compare(a.title, b.title);
-};
 
 /**
  * Sort icon data or duplicate alias object.
  * @template {IconData | DuplicateAlias} T Either icon data or duplicate alias.
- * @param {T} icon The icon data or duplicate alias as it appears in *_data/simple-icons.json*.
+ * @param {T} icon The icon data or duplicate alias as it appears in *data/simple-icons.json*.
  * @returns {T} The sorted icon data or duplicate alias.
  */
 const sortIconOrDuplicate = (icon) => {
@@ -130,7 +113,7 @@ const sortIconOrDuplicate = (icon) => {
 
 /**
  * Sort license object.
- * @param {IconData['license']} license The license object as it appears in *_data/simple-icons.json*.
+ * @param {IconData['license']} license The license object as it appears in *data/simple-icons.json*.
  * @returns {IconData['license']} The sorted license object.
  */
 const sortLicense = (license) => {
@@ -151,7 +134,7 @@ const sortLicense = (license) => {
 
 /**
  * Sort object key alphabetically.
- * @param {IconData['aliases']} object The aliases object as it appears in *_data/simple-icons.json*.
+ * @param {IconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
  * @returns {{[_: string]: string} | undefined} The sorted aliases object.
  */
 const sortAlphabetically = (object) => {
@@ -166,12 +149,13 @@ const sortAlphabetically = (object) => {
 
 /**
  * Sort icons data.
- * @param {IconData[]} iconsData The icons data as it appears in *_data/simple-icons.json*.
+ * @param {IconData[]} iconsData The icons data as it appears in *data/simple-icons.json*.
  * @returns {IconData[]} The sorted icons data.
  */
 export const formatIconData = (iconsData) => {
-	const icons = iconsData.map((icon) => {
-		return sortIconOrDuplicate({
+	const iconsDataCopy = structuredClone(iconsData);
+	const icons = iconsDataCopy.map((icon) =>
+		sortIconOrDuplicate({
 			...icon,
 			license: sortLicense(icon.license),
 			aliases: icon.aliases
@@ -189,8 +173,22 @@ export const formatIconData = (iconsData) => {
 						old: icon.aliases.old?.sort(collator.compare),
 					})
 				: undefined,
-		});
-	});
+		}),
+	);
 	icons.sort(sortIconsCompare);
 	return icons;
+};
+
+/**
+ * Check if a file exists.
+ * @param {string} fpath File path to check.
+ * @returns {Promise<boolean>} True if the file exists, false otherwise.
+ */
+export const fileExists = async (fpath) => {
+	try {
+		await fs.access(fpath);
+		return true;
+	} catch {
+		return false;
+	}
 };
