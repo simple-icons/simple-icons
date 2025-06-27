@@ -50,19 +50,19 @@
 		"./icons": {
 			"import": {
 				"types": "./index.d.ts",
-				"default": "./index.mjs"
+				"default": "./index-icons.mjs"
 			},
 			"module": {
 				"types": "./index.d.ts",
-				"default": "./index.mjs"
+				"default": "./index-icons.mjs"
 			},
 			"require": {
 				"types": "./index.d.ts",
-				"default": "./index.js"
+				"default": "./index-icons.js"
 			},
 			"default": {
 				"types": "./index.d.ts",
-				"default": "./index.js"
+				"default": "./index-icons.js"
 			}
 		},
 		"./icons/*": [
