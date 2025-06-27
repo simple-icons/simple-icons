@@ -3,8 +3,8 @@
  * @file
  * Types for Simple Icons SDK.
  */
-// eslint-disable-next-line n/file-extension-in-import
-import type {CustomLicense, SPDXLicense} from './types';
+
+import type {CustomLicense, SPDXLicense} from './types.js';
 
 /**
  * The data for a third-party extension.
@@ -26,7 +26,7 @@ type ThirdPartyExtensionSubject = {
 /**
  * The aliases for a Simple Icon.
  *
- * Corresponds to the `aliases` property in the *_data/simple-icons.json* file.
+ * Corresponds to the `aliases` property in the *data/simple-icons.json* file.
  * @see {@link https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#aliases Aliases}
  */
 export type Aliases = {
@@ -45,9 +45,6 @@ type DuplicateAlias = {
 
 /**
  * The data for a Simple Icon.
- *
- * Corresponds to the data stored for each icon in the *_data/simple-icons.json* file.
- * @see {@link https://github.com/mondeja/simple-icons/blob/utils-entrypoint/CONTRIBUTING.md#7-update-the-json-data-for-simpleiconsorg Update the JSON Data for SimpleIcons.org}
  */
 export type IconData = {
 	title: string;
@@ -63,27 +60,17 @@ export type IconData = {
 /* eslint-disable */
 
 export const SVG_PATH_REGEX: RegExp;
-export function getDirnameFromImportMeta(importMetaUrl: string): string;
-export function urlRegex(jsonschemaPath?: string | undefined): Promise<RegExp>;
 export function getIconSlug(icon: IconData): string;
 export function svgToPath(svg: string): string;
 export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
 export function titleToHtmlFriendly(brandTitle: string): string;
 export function htmlFriendlyToTitle(htmlFriendlyTitle: string): string;
-export function getIconsDataPath(rootDirectory?: string | undefined): string;
-export function getIconsDataString(
-	rootDirectory?: string | undefined,
-): Promise<string>;
-export function getIconsData(
-	rootDirectory?: string | undefined,
-): Promise<IconData[]>;
+export function getIconsDataPath(): string;
+export function getIconsDataString(): Promise<string>;
+export function getIconsData(): Promise<IconData[]>;
 export function normalizeNewlines(text: string): string;
 export function normalizeColor(text: string): string;
-export function getThirdPartyExtensions(
-	readmePath?: string | undefined,
-): Promise<ThirdPartyExtension[]>;
-export function getThirdPartyLibraries(
-	readmePath?: string | undefined,
-): Promise<ThirdPartyExtension[]>;
+export function getThirdPartyExtensions(): Promise<ThirdPartyExtension[]>;
+export function getThirdPartyLibraries(): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
