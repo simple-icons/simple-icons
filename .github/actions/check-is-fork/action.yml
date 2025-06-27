@@ -1,6 +1,7 @@
-# If some workflows are executed in a fork, we don't want to run them
-# because would fail due to missing permissions and will generate
-# noise for activity watchers.
+# When working in a fork, some workflows should not be executed
+# as they do not have the necessary permissions. This causes
+# them to fail and only serve to generate noise for people
+# watching the fork's activity.
 
 name: Check if running in a fork
 description: Check if a workflow is running in a forked repository and set an output accordingly.
