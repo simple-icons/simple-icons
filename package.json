@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "15.2.0",
+	"version": "15.3.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -50,19 +50,19 @@
 		"./icons": {
 			"import": {
 				"types": "./index.d.ts",
-				"default": "./index.mjs"
+				"default": "./index-icons.mjs"
 			},
 			"module": {
 				"types": "./index.d.ts",
-				"default": "./index.mjs"
+				"default": "./index-icons.mjs"
 			},
 			"require": {
 				"types": "./index.d.ts",
-				"default": "./index.js"
+				"default": "./index-icons.js"
 			},
 			"default": {
 				"types": "./index.d.ts",
-				"default": "./index.js"
+				"default": "./index-icons.js"
 			}
 		},
 		"./icons/*": [
@@ -125,10 +125,12 @@
 	},
 	"devDependencies": {
 		"@inquirer/prompts": "7.5.0",
+		"@types/mocha": "10.0.10",
 		"@types/node": "22.15.3",
 		"chalk": "5.4.1",
 		"editorconfig-checker": "6.0.1",
 		"esbuild": "0.25.3",
+		"eslint-plugin-headers": "1.3.3",
 		"eslint-plugin-jsdoc": "50.6.11",
 		"fake-diff": "1.0.0",
 		"fast-fuzzy": "1.12.0",
@@ -143,7 +145,7 @@
 		"svg-path-bbox": "2.1.0",
 		"svg-path-segments": "2.0.1",
 		"svglint": "4.1.0",
-		"svgo": "3.3.2",
+		"svgo": "4.0.0",
 		"svgpath": "2.6.0",
 		"typescript": "5.8.3",
 		"xo": "1.0.0"
