@@ -16,9 +16,23 @@ on:
 # Replacing <token> by a personal access token with scope `public_repo`
 
 jobs:
+  check-is-fork:
+    name: Check if running in a fork
+    runs-on: ubuntu-latest
+    outputs:
+      is-fork: ${{ steps.check.outputs.is-fork }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/check-is-fork
+        id: check
+        with:
+          in-fork-message: 'Create Release Pull Request workflow only can run in the main repository, skipping.'
   release-pr:
     runs-on: ubuntu-latest
-    if: github.event_name != 'push'
+    needs: check-is-fork
+    if: |
+      github.event_name != 'push' &&
+      needs.check-is-fork.outputs.is-fork != 'true'
     outputs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
