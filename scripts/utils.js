@@ -178,3 +178,17 @@ export const formatIconData = (iconsData) => {
 	icons.sort(sortIconsCompare);
 	return icons;
 };
+
+/**
+ * Check if a file exists.
+ * @param {string} fpath File path to check.
+ * @returns {Promise<boolean>} True if the file exists, false otherwise.
+ */
+export const fileExists = async (fpath) => {
+	try {
+		await fs.access(fpath);
+		return true;
+	} catch {
+		return false;
+	}
+};
