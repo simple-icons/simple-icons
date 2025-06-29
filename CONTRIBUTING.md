@@ -103,7 +103,7 @@ If you are in doubt, feel free to submit it and we'll have a look.
 >
 > You may need to use incognito mode if you visit these ranking pages often. Regular contributors may find the [Similarweb browser extensions](https://www.similarweb.com/corp/extension/) to be of use as they provide the global rank at a glance, without any rate limiting.
 
-To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
+To be considered popular enough to be within our scope, a brand must be in existence for at least one year and meet one of the following metrics of popularity, in order of preference:
 
 1. Its website's Similarweb global rank is in the top 500k.
    - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
