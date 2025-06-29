@@ -1,16 +1,17 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
-			"version": "22"
-		}
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": "..",
+		"target": "base"
 	},
+	"postCreateCommand": "npm ci --no-audit --no-fund",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"EditorConfig.EditorConfig",
 				"esbenp.prettier-vscode",
-				"samverschueren.linter-xo"
+				"samverschueren.linter-xo",
+				"davidanson.vscode-markdownlint"
 			]
 		}
 	}
