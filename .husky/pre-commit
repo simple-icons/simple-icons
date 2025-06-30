@@ -4,6 +4,7 @@
 
 # Format and add the changes to the staging area
 npm run format
+git add --update
 
 # POSIX shell (sh) run time parameters.
 #   -e: Exit immediately if a command exits with a non-zero status.
