@@ -103,7 +103,7 @@ If you are in doubt, feel free to submit it and we'll have a look.
 >
 > You may need to use incognito mode if you visit these ranking pages often. Regular contributors may find the [Similarweb browser extensions](https://www.similarweb.com/corp/extension/) to be of use as they provide the global rank at a glance, without any rate limiting.
 
-To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
+To be considered popular enough to be within our scope, a brand must be in existence for at least one year and meet one of the following metrics of popularity, in order of preference:
 
 1. Its website's Similarweb global rank is in the top 500k.
    - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
@@ -122,7 +122,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
-   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00, or,
+   - [Docker](https://www.docker.com): 500k weekly downloads.
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
