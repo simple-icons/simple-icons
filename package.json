@@ -30,63 +30,31 @@
 	"type": "commonjs",
 	"exports": {
 		".": {
-			"import": {
-				"types": "./index.d.ts",
-				"default": "./index.mjs"
-			},
-			"module": {
-				"types": "./index.d.ts",
-				"default": "./index.mjs"
-			},
-			"require": {
-				"types": "./index.d.ts",
-				"default": "./index.js"
-			},
-			"default": {
-				"types": "./index.d.ts",
-				"default": "./index.js"
-			}
+			"types": "./index.d.ts",
+			"import": "./index.mjs",
+			"module": "./index.mjs",
+			"require": "./index.js",
+			"default": "./index.js"
 		},
 		"./icons": {
-			"import": {
-				"types": "./index.d.ts",
-				"default": "./index-icons.mjs"
-			},
-			"module": {
-				"types": "./index.d.ts",
-				"default": "./index-icons.mjs"
-			},
-			"require": {
-				"types": "./index.d.ts",
-				"default": "./index-icons.js"
-			},
-			"default": {
-				"types": "./index.d.ts",
-				"default": "./index-icons.js"
-			}
+			"types": "./index.d.ts",
+			"import": "./index-icons.mjs",
+			"module": "./index-icons.mjs",
+			"require": "./index-icons.js",
+			"default": "./index-icons.js"
 		},
 		"./icons/*": [
 			"./icons/*"
 		],
 		"./sdk": {
-			"import": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.mjs"
-			},
-			"module": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.mjs"
-			},
-			"require": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.js"
-			},
-			"default": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.js"
-			}
+			"types": "./sdk.d.ts",
+			"import": "./sdk.mjs",
+			"module": "./sdk.mjs",
+			"require": "./sdk.js",
+			"default": "./sdk.js"
 		},
 		"./icons.json": {
+			"types": "./data/simple-icons.d.ts",
 			"import": "./data/simple-icons.json",
 			"module": "./data/simple-icons.json",
 			"require": "./data/simple-icons.json",
