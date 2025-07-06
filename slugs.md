@@ -359,6 +359,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BitTorrent` | `bittorrent` |
 | `Bitwarden` | `bitwarden` |
 | `Bitwig` | `bitwig` |
+| `Black` | `black` |
 | `Blackberry` | `blackberry` |
 | `Blackmagic Design` | `blackmagicdesign` |
 | `Blazemeter` | `blazemeter` |
@@ -401,6 +402,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Box` | `box` |
 | `Boxy SVG` | `boxysvg` |
 | `Braintree` | `braintree` |
+| `Braintrust` | `braintrust` |
 | `Brandfetch` | `brandfetch` |
 | `Brandfolder` | `brandfolder` |
 | `Brave` | `brave` |
@@ -462,6 +464,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CapRover` | `caprover` |
 | `Car Throttle` | `carthrottle` |
 | `Cardano` | `cardano` |
+| `Cardmarket` | `cardmarket` |
 | `Carlsberg Group` | `carlsberggroup` |
 | `Carrd` | `carrd` |
 | `Carrefour` | `carrefour` |
@@ -783,6 +786,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DOI` | `doi` |
 | `Dolby` | `dolby` |
 | `Dolibarr` | `dolibarr` |
+| `Dolphin` | `dolphin` |
 | `DoorDash` | `doordash` |
 | `Dota 2` | `dota2` |
 | `Douban` | `douban` |
@@ -869,6 +873,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `EndeavourOS` | `endeavouros` |
 | `Enpass` | `enpass` |
 | `ENS` | `ens` |
+| `Ente` | `ente` |
 | `EnterpriseDB` | `enterprisedb` |
 | `Envato` | `envato` |
 | `Envoy Proxy` | `envoyproxy` |
@@ -1184,6 +1189,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Translate` | `googletranslate` |
 | `Google TV` | `googletv` |
 | `GoToMeeting` | `gotomeeting` |
+| `GPLv3` | `gplv3` |
 | `Grab` | `grab` |
 | `Gradio` | `gradio` |
 | `Gradle` | `gradle` |
@@ -1680,6 +1686,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LottieFiles` | `lottiefiles` |
 | `LTspice` | `ltspice` |
 | `Lua` | `lua` |
+| `Luau` | `luau` |
 | `Lubuntu` | `lubuntu` |
 | `Lucia` | `lucia` |
 | `Lucid` | `lucid` |
@@ -2118,6 +2125,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Passport` | `passport` |
 | `Pastebin` | `pastebin` |
 | `Patreon` | `patreon` |
+| `PAYBACK` | `payback` |
 | `Paychex` | `paychex` |
 | `Payhip` | `payhip` |
 | `Payload CMS` | `payloadcms` |
@@ -2470,6 +2478,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rocky Linux` | `rockylinux` |
 | `Roku` | `roku` |
 | `Roll20` | `roll20` |
+| `Rollbar` | `rollbar` |
 | `Rolls-Royce` | `rollsroyce` |
 | `rollup.js` | `rollupdotjs` |
 | `Rook` | `rook` |
@@ -3100,6 +3109,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Viblo` | `viblo` |
 | `VictoriaMetrics` | `victoriametrics` |
 | `Victron Energy` | `victronenergy` |
+| `Vikunja` | `vikunja` |
 | `Vim` | `vim` |
 | `Vimeo` | `vimeo` |
 | `Vimeo Livestream` | `vimeolivestream` |
@@ -3261,6 +3271,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Xubuntu` | `xubuntu` |
 | `xyflow` | `xyflow` |
 | `Y Combinator` | `ycombinator` |
+| `Yaak` | `yaak` |
 | `yabai` | `yabai` |
 | `Yale` | `yale` |
 | `Yamaha Corporation` | `yamahacorporation` |
