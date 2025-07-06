@@ -34,7 +34,7 @@ process.on('uncaughtException', (error) => {
 	}
 });
 
-/** @type {import('../sdk.js').IconData[]} */
+/** @type {import('../types.d.ts').IconData[]} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
