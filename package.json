@@ -67,6 +67,7 @@
 		"add-icon-data": "node scripts/add-icon-data.js",
 		"build": "node scripts/build/package.js",
 		"clean": "node scripts/build/clean.js",
+		"generate-theme": "node scripts/theme-generator.js",
 		"format": "npm run format:icondata && npm run prettier -- --write && npm run xo:fix",
 		"format:icondata": "node scripts/format-icon-data.js",
 		"get-filename": "node scripts/get-filename.js",
