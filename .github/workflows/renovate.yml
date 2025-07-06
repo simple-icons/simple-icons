@@ -6,8 +6,21 @@ on:
   workflow_dispatch:
 
 jobs:
+  check-is-fork:
+    name: Check if running in a fork
+    runs-on: ubuntu-latest
+    outputs:
+      is-fork: ${{ steps.check.outputs.is-fork }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/check-is-fork
+        id: check
+        with:
+          in-fork-message: 'Renovate workflow only can run in the main repository, skipping.'
   renovate:
     runs-on: ubuntu-latest
+    needs: check-is-fork
+    if: needs.check-is-fork.outputs.is-fork != 'true'
     timeout-minutes: 15
     steps:
       - uses: actions/create-github-app-token@v2

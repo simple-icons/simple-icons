@@ -2056,6 +2056,11 @@
 		"source": "https://www.bitwig.com"
 	},
 	{
+		"title": "Black",
+		"hex": "000000",
+		"source": "https://black.readthedocs.io"
+	},
+	{
 		"title": "Blackberry",
 		"hex": "000000",
 		"source": "https://www.blackberry.com"
@@ -2283,6 +2288,11 @@
 		"title": "Braintree",
 		"hex": "000000",
 		"source": "https://www.braintreepayments.com/press"
+	},
+	{
+		"title": "Braintrust",
+		"hex": "000000",
+		"source": "https://github.com/simple-icons/simple-icons/issues/13497#issuecomment-2992162934"
 	},
 	{
 		"title": "Brandfetch",
@@ -2615,6 +2625,11 @@
 		"title": "Cardano",
 		"hex": "0133AD",
 		"source": "https://cardano.org/brand-assets/"
+	},
+	{
+		"title": "Cardmarket",
+		"hex": "012169",
+		"source": "https://github.com/simple-icons/simple-icons/issues/13380#issuecomment-2993697122"
 	},
 	{
 		"title": "Carlsberg Group",
@@ -4374,6 +4389,11 @@
 		}
 	},
 	{
+		"title": "Dolphin",
+		"hex": "00AAFF",
+		"source": "https://github.com/dolphin-emu/dolphin/blob/6851ed73f41f43b9a2da23e7f4cb58f58a904fe2/Data/dolphin-emu.svg"
+	},
+	{
 		"title": "DoorDash",
 		"hex": "FF3008",
 		"source": "https://www.doordash.com/about/"
@@ -4853,6 +4873,11 @@
 		"hex": "0080BC",
 		"source": "https://ens.domains/brand",
 		"guidelines": "https://ens.domains/brand"
+	},
+	{
+		"title": "Ente",
+		"hex": "00BC45",
+		"source": "https://ente.io"
 	},
 	{
 		"title": "EnterpriseDB",
@@ -5444,12 +5469,8 @@
 	},
 	{
 		"title": "Flask",
-		"hex": "000000",
-		"source": "https://github.com/pallets/flask/blob/e6e75e55470a0682ee8370e6d68062e515a248b9/artwork/logo-full.svg",
-		"license": {
-			"type": "custom",
-			"url": "https://github.com/pallets/flask/blob/master/artwork/LICENSE.rst"
-		}
+		"hex": "3BABC3",
+		"source": "https://github.com/pallets/flask/blob/85c5d93cbd049c4bd0679c36fd1ddcae8c37b642/docs/_static/flask-icon.svg"
 	},
 	{
 		"title": "Flat",
@@ -6662,6 +6683,11 @@
 				}
 			]
 		}
+	},
+	{
+		"title": "GPLv3",
+		"hex": "BD0000",
+		"source": "https://www.gnu.org/graphics/license-logos.html"
 	},
 	{
 		"title": "Grab",
@@ -9525,6 +9551,11 @@
 		"guidelines": "https://www.lua.org/images/"
 	},
 	{
+		"title": "Luau",
+		"hex": "00A2FF",
+		"source": "https://github.com/luau-lang/site/blob/96af82d9c8a22f337908676facf999310f4d87ba/logo.svg"
+	},
+	{
 		"title": "Lubuntu",
 		"hex": "0068C8",
 		"source": "https://lubuntu.net"
@@ -12047,6 +12078,11 @@
 		"guidelines": "https://www.patreon.com/brand"
 	},
 	{
+		"title": "PAYBACK",
+		"hex": "003EB0",
+		"source": "https://www.payback.de/filialen-prospekte"
+	},
+	{
 		"title": "Paychex",
 		"hex": "004B8D",
 		"source": "https://www.paychex.com"
@@ -12627,7 +12663,7 @@
 	},
 	{
 		"title": "Polars",
-		"hex": "CD792C",
+		"hex": "0075FF",
 		"source": "https://pola.rs"
 	},
 	{
@@ -14044,6 +14080,11 @@
 		"title": "Roll20",
 		"hex": "E10085",
 		"source": "https://roll20.net"
+	},
+	{
+		"title": "Rollbar",
+		"hex": "3569F3",
+		"source": "https://rollbar.com/about"
 	},
 	{
 		"title": "Rolls-Royce",
@@ -16625,6 +16666,11 @@
 		"guidelines": "https://toggl.com/track/media-toolkit"
 	},
 	{
+		"title": "Tokio",
+		"hex": "000000",
+		"source": "https://tokio.rs/img/icons/tokio.svg"
+	},
+	{
 		"title": "Tokyo Metro",
 		"hex": "149DD3",
 		"source": "https://commons.wikimedia.org/wiki/File:Tokyo_Metro_combined_logo.svg"
@@ -17585,6 +17631,11 @@
 		"guidelines": "https://www.victronenergy.com/information/press"
 	},
 	{
+		"title": "Vikunja",
+		"hex": "196AFF",
+		"source": "https://github.com/go-vikunja/website/blob/45328fa981e7b038cd957a995528706617069420/public/favicon.svg"
+	},
+	{
 		"title": "Vim",
 		"hex": "019733",
 		"source": "https://commons.wikimedia.org/wiki/File:Vimlogo.svg"
@@ -18508,6 +18559,11 @@
 		"title": "Y Combinator",
 		"hex": "F0652F",
 		"source": "https://www.ycombinator.com/press"
+	},
+	{
+		"title": "Yaak",
+		"hex": "814EDF",
+		"source": "https://yaak.app"
 	},
 	{
 		"title": "yabai",
