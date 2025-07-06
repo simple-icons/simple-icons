@@ -43,3 +43,4 @@ export function normalizeColor(text: string): string;
 export function getThirdPartyExtensions(): Promise<ThirdPartyExtension[]>;
 export function getThirdPartyLibraries(): Promise<ThirdPartyExtension[]>;
 export const collator: Intl.Collator;
+export type IconData = import('./types.js').IconData;

@@ -359,6 +359,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BitTorrent` | `bittorrent` |
 | `Bitwarden` | `bitwarden` |
 | `Bitwig` | `bitwig` |
+| `Black` | `black` |
 | `Blackberry` | `blackberry` |
 | `Blackmagic Design` | `blackmagicdesign` |
 | `Blazemeter` | `blazemeter` |
@@ -463,6 +464,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `CapRover` | `caprover` |
 | `Car Throttle` | `carthrottle` |
 | `Cardano` | `cardano` |
+| `Cardmarket` | `cardmarket` |
 | `Carlsberg Group` | `carlsberggroup` |
 | `Carrd` | `carrd` |
 | `Carrefour` | `carrefour` |
@@ -2123,6 +2125,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Passport` | `passport` |
 | `Pastebin` | `pastebin` |
 | `Patreon` | `patreon` |
+| `PAYBACK` | `payback` |
 | `Paychex` | `paychex` |
 | `Payhip` | `payhip` |
 | `Payload CMS` | `payloadcms` |
@@ -2475,6 +2478,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rocky Linux` | `rockylinux` |
 | `Roku` | `roku` |
 | `Roll20` | `roll20` |
+| `Rollbar` | `rollbar` |
 | `Rolls-Royce` | `rollsroyce` |
 | `rollup.js` | `rollupdotjs` |
 | `Rook` | `rook` |
