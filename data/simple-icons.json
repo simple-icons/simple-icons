@@ -2627,6 +2627,11 @@
 		"source": "https://cardano.org/brand-assets/"
 	},
 	{
+		"title": "Cardmarket",
+		"hex": "012169",
+		"source": "https://github.com/simple-icons/simple-icons/issues/13380#issuecomment-2993697122"
+	},
+	{
 		"title": "Carlsberg Group",
 		"hex": "00321E",
 		"source": "https://www.carlsberggroup.com/who-we-are/about-the-carlsberg-group/design-guide",
@@ -5585,6 +5590,11 @@
 		"title": "Folium",
 		"hex": "77B829",
 		"source": "https://python-visualization.github.io/folium/"
+	},
+	{
+		"title": "Folo",
+		"hex": "FF5C00",
+		"source": "https://app.follow.is/icon.svg"
 	},
 	{
 		"title": "Fonoma",
@@ -10345,6 +10355,16 @@
 		"source": "https://modal.com"
 	},
 	{
+		"title": "Model Context Protocol",
+		"hex": "000000",
+		"source": "https://github.com/modelcontextprotocol/docs/blob/573dc60c2e7aab2605b29d0bf27194aa7b02e4fb/logo/light.svg",
+		"aliases": {
+			"aka": [
+				"MCP"
+			]
+		}
+	},
+	{
 		"title": "Modin",
 		"hex": "001729",
 		"source": "https://modin.org"
@@ -12066,6 +12086,11 @@
 		"hex": "000000",
 		"source": "https://www.patreon.com/brand",
 		"guidelines": "https://www.patreon.com/brand"
+	},
+	{
+		"title": "PAYBACK",
+		"hex": "003EB0",
+		"source": "https://www.payback.de/filialen-prospekte"
 	},
 	{
 		"title": "Paychex",
@@ -14065,6 +14090,11 @@
 		"title": "Roll20",
 		"hex": "E10085",
 		"source": "https://roll20.net"
+	},
+	{
+		"title": "Rollbar",
+		"hex": "3569F3",
+		"source": "https://rollbar.com/about"
 	},
 	{
 		"title": "Rolls-Royce",
@@ -16644,6 +16674,11 @@
 		"hex": "E57CD8",
 		"source": "https://toggl.com/track/media-toolkit",
 		"guidelines": "https://toggl.com/track/media-toolkit"
+	},
+	{
+		"title": "Tokio",
+		"hex": "000000",
+		"source": "https://tokio.rs/img/icons/tokio.svg"
 	},
 	{
 		"title": "Tokyo Metro",

@@ -78,12 +78,18 @@ Some companies and organizations are excessively protective with their brands, s
 
 - [Amazon / AWS](https://github.com/simple-icons/simple-icons/pull/13056)
 - BP
-- Disney
+- Disney, including, but not limited to:
+  - Marvel
 - International Olympic Committee
 - Mattel
 - Microchip Technology Inc.
-- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
-- Oracle
+- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236), including, but not limited to:
+  - C#
+  - LinkedIn
+  - Playwright
+  - Visual Studio
+- Oracle, including, but not limited to:
+  - Java
 - [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
@@ -122,7 +128,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
-   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00, or,
+   - [Docker](https://www.docker.com): 500k weekly downloads.
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
