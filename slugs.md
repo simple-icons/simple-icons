@@ -1000,6 +1000,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
 | `Folium` | `folium` |
+| `Folo` | `folo` |
 | `Fonoma` | `fonoma` |
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
@@ -1831,6 +1832,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mocha` | `mocha` |
 | `Mock Service Worker` | `mockserviceworker` |
 | `Modal` | `modal` |
+| `Model Context Protocol` | `modelcontextprotocol` |
 | `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
@@ -2937,6 +2939,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Todoist` | `todoist` |
 | `Toggl` | `toggl` |
 | `Toggl Track` | `toggltrack` |
+| `Tokio` | `tokio` |
 | `Tokyo Metro` | `tokyometro` |
 | `Toll` | `toll` |
 | `TOML` | `toml` |
