@@ -26,3 +26,6 @@ meta:
         '*',
       ]
     status: modified
+dependencies:
+  - all: ['package-lock.json']
+    status: modified
