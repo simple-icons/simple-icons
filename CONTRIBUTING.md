@@ -9,7 +9,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 1. Fork this repository
 1. (Optional) Clone the fork
-
    - Using SSH
 
      ```shell
@@ -125,7 +124,6 @@ If all else fails, though, feel free to make a good case for the popularity of t
 When submitting a request for a new or updated icon include helpful information such as:
 
 - **Issue Title:** The brand name. For example:
-
   - New Icons: `Request: GitHub Icon`
   - Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
