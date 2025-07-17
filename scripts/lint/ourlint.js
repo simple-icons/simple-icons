@@ -14,9 +14,9 @@ import process from 'node:process';
 import fakeDiff from 'fake-diff';
 import {
 	collator,
+	getIconSlug,
 	getIconsDataString,
 	normalizeNewlines,
-	titleToSlug,
 } from '../../sdk.mjs';
 import {getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
 
@@ -235,7 +235,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				!spdxLicenseIds.has(license.type)
 			) {
 				badLicenses.push(
-					`${title} (${slug ?? titleToSlug(title)}) has not a valid SPDX license.`,
+					`${title} (${getIconSlug({title, slug})}) has not a valid SPDX license.`,
 				);
 			}
 		}

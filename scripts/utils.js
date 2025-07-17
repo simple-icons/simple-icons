@@ -10,8 +10,8 @@ import path from 'node:path';
 import {
 	collator,
 	getDirnameFromImportMeta,
+	getIconSlug,
 	getIconsDataPath,
-	titleToSlug,
 } from '../sdk.mjs';
 
 const __dirname = getDirnameFromImportMeta(import.meta.url);
@@ -78,9 +78,6 @@ export const getSpdxLicenseIds = async (
  */
 export const sortIconsCompare = (a, b) => {
 	return a.title === b.title
-		? collator.compare(
-				a.slug ?? titleToSlug(a.title),
-				b.slug ?? titleToSlug(b.title),
-			)
+		? collator.compare(getIconSlug(a), getIconSlug(b))
 		: collator.compare(a.title, b.title);
 };

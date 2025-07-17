@@ -620,6 +620,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Commerzbank` | `commerzbank` |
 | `commitlint` | `commitlint` |
 | `Commodore` | `commodore` |
+| `Common Lisp` | `commonlisp` |
 | `Common Workflow Language` | `commonworkflowlanguage` |
 | `Compiler Explorer` | `compilerexplorer` |
 | `Composer` | `composer` |
@@ -1899,6 +1900,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nextra` | `nextra` |
 | `NextUI` | `nextui` |
 | `Nexus Mods` | `nexusmods` |
+| `nf-core` | `nfcore` |
 | `NFC` | `nfc` |
 | `NGINX` | `nginx` |
 | `Nginx Proxy Manager` | `nginxproxymanager` |
