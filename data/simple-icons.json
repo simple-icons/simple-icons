@@ -5592,6 +5592,11 @@
 		"source": "https://python-visualization.github.io/folium/"
 	},
 	{
+		"title": "Folo",
+		"hex": "FF5C00",
+		"source": "https://app.follow.is/icon.svg"
+	},
+	{
 		"title": "Fonoma",
 		"hex": "02B78F",
 		"source": "https://en.fonoma.com"
@@ -6091,6 +6096,11 @@
 		"title": "GitBook",
 		"hex": "BBDDE5",
 		"source": "https://www.gitbook.com"
+	},
+	{
+		"title": "GitCode",
+		"hex": "DA203E",
+		"source": "https://cdn-static.gitcode.com/doc/logo.svg"
 	},
 	{
 		"title": "Gitconnected",
@@ -10348,6 +10358,16 @@
 		"title": "Modal",
 		"hex": "7FEE64",
 		"source": "https://modal.com"
+	},
+	{
+		"title": "Model Context Protocol",
+		"hex": "000000",
+		"source": "https://github.com/modelcontextprotocol/docs/blob/573dc60c2e7aab2605b29d0bf27194aa7b02e4fb/logo/light.svg",
+		"aliases": {
+			"aka": [
+				"MCP"
+			]
+		}
 	},
 	{
 		"title": "Modin",
@@ -16664,6 +16684,11 @@
 		"hex": "E57CD8",
 		"source": "https://toggl.com/track/media-toolkit",
 		"guidelines": "https://toggl.com/track/media-toolkit"
+	},
+	{
+		"title": "Tokio",
+		"hex": "000000",
+		"source": "https://tokio.rs/img/icons/tokio.svg"
 	},
 	{
 		"title": "Tokyo Metro",
