@@ -1090,6 +1090,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Git for Windows` | `gitforwindows` |
 | `Git LFS` | `gitlfs` |
 | `GitBook` | `gitbook` |
+| `GitCode` | `gitcode` |
 | `Gitconnected` | `gitconnected` |
 | `Gitea` | `gitea` |
 | `Gitee` | `gitee` |
@@ -2381,6 +2382,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rarible` | `rarible` |
 | `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
+| `Ratatui` | `ratatui` |
 | `Ravelry` | `ravelry` |
 | `Ray` | `ray` |
 | `Raycast` | `raycast` |
