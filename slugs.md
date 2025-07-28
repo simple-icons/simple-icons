@@ -279,6 +279,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Autoprefixer` | `autoprefixer` |
 | `AutoZone` | `autozone` |
 | `avajs` | `avajs` |
+| `AvaloniaUI` | `avaloniaui` |
 | `Avast` | `avast` |
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
@@ -1090,6 +1091,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Git for Windows` | `gitforwindows` |
 | `Git LFS` | `gitlfs` |
 | `GitBook` | `gitbook` |
+| `GitCode` | `gitcode` |
 | `Gitconnected` | `gitconnected` |
 | `Gitea` | `gitea` |
 | `Gitee` | `gitee` |
@@ -2278,6 +2280,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pro Tools` | `protools` |
 | `Probot` | `probot` |
 | `Processing Foundation` | `processingfoundation` |
+| `ProcessOn` | `processon` |
 | `ProcessWire` | `processwire` |
 | `Product Hunt` | `producthunt` |
 | `Progate` | `progate` |
@@ -2381,6 +2384,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rarible` | `rarible` |
 | `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
+| `Ratatui` | `ratatui` |
 | `Ravelry` | `ravelry` |
 | `Ray` | `ray` |
 | `Raycast` | `raycast` |
