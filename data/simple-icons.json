@@ -9480,6 +9480,9 @@
 		"title": "LocalSend",
 		"hex": "008080",
 		"source": "https://localsend.org/"
+		"license":{
+			"type": "Apache License 2.0"
+		}
 	},
 	{
 		"title": "Lodash",
