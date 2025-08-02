@@ -1,12 +1,13 @@
 name: Autocloser
 on:
   issues:
-    # we allow 'reopend' and 'edited' in case the issue was closed by accident
     types: [opened]
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
