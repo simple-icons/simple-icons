@@ -115,6 +115,7 @@ const answers = {
 	title: '',
 	hex: '',
 	source: '',
+	slug: '',
 };
 
 answers.title = await input({

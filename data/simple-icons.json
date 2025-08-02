@@ -1622,6 +1622,12 @@
 		"source": "https://github.com/avajs/ava/blob/6f8e30c94626238a5b26deadac319089fa43d333/media/logo.svg"
 	},
 	{
+		"title": "AvaloniaUI",
+		"hex": "165BFF",
+		"source": "https://avaloniaui.net",
+		"guidelines": "https://avaloniaui.net/brand"
+	},
+	{
 		"title": "Avast",
 		"hex": "FF7800",
 		"source": "https://press.avast.com/media-materials#logos-and-brand-guidelines",
@@ -6344,7 +6350,7 @@
 	},
 	{
 		"title": "Goodreads",
-		"hex": "372213",
+		"hex": "1E1914",
 		"source": "https://www.goodreads.com/about/press"
 	},
 	{
@@ -6826,6 +6832,17 @@
 		"hex": "FAA918",
 		"source": "https://github.com/gruntjs/gruntjs.com/blob/70f43898d9ce8e6cc862ad72bf8a7aee5ca199a9/src/media/grunt-logo-no-wordmark.svg",
 		"guidelines": "https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md"
+	},
+	{
+		"title": "GSAP",
+		"hex": "0AE448",
+		"source": "https://gsap.com/brand/",
+		"guidelines": "https://gsap.com/brand/",
+		"aliases": {
+			"aka": [
+				"GreenSock Animation Platform"
+			]
+		}
 	},
 	{
 		"title": "GSK",
@@ -8570,6 +8587,11 @@
 		"source": "https://www.kentico.com"
 	},
 	{
+		"title": "Keploy",
+		"hex": "FF914D",
+		"source": "https://keploy.io/docs"
+	},
+	{
 		"title": "Keras",
 		"hex": "D00000",
 		"source": "https://keras.io"
@@ -9851,8 +9873,8 @@
 	{
 		"title": "MasterCard",
 		"hex": "EB001B",
-		"source": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark/downloads.html",
-		"guidelines": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark.html"
+		"source": "https://www.mastercard.com/brandcenter/us/en/download-artwork.html",
+		"guidelines": "https://www.mastercard.com/brandcenter/us/en/brand-requirements/mastercard.html"
 	},
 	{
 		"title": "mastercomfig",
@@ -12119,8 +12141,8 @@
 	},
 	{
 		"title": "PayPal",
-		"hex": "003087",
-		"source": "https://www.paypal.com",
+		"hex": "002991",
+		"source": "https://www.paypal.com/us",
 		"guidelines": "https://newsroom.paypal-corp.com/media-resources"
 	},
 	{
@@ -12225,8 +12247,8 @@
 	},
 	{
 		"title": "Perforce",
-		"hex": "404040",
-		"source": "https://www.perforce.com"
+		"hex": "4C00FF",
+		"source": "https://brandfolder.com/perforce/public-logos"
 	},
 	{
 		"title": "Perl",
@@ -12930,6 +12952,11 @@
 		"title": "Processing Foundation",
 		"hex": "006699",
 		"source": "https://processingfoundation.org"
+	},
+	{
+		"title": "ProcessOn",
+		"hex": "067BEF",
+		"source": "https://www.processon.com/assets/imgs/logo_small.svg"
 	},
 	{
 		"title": "ProcessWire",
@@ -14710,6 +14737,11 @@
 		"title": "Sequelize",
 		"hex": "52B0E7",
 		"source": "https://github.com/sequelize/website/blob/e6a482fa58a839b15ace80e3c8901ed2887be45e/static/img/logo-simple.svg"
+	},
+	{
+		"title": "ServBay",
+		"hex": "00103C",
+		"source": "https://www.servbay.com"
 	},
 	{
 		"title": "Server Fault",
