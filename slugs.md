@@ -1216,6 +1216,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GroupMe` | `groupme` |
 | `Groupon` | `groupon` |
 | `Grunt` | `grunt` |
+| `GSAP` | `gsap` |
 | `GSK` | `gsk` |
 | `GSMA` | `gsma` |
 | `GSMArena.com` | `gsmarenadotcom` |
@@ -1518,6 +1519,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `KeeWeb` | `keeweb` |
 | `Kenmei` | `kenmei` |
 | `Kentico` | `kentico` |
+| `Keploy` | `keploy` |
 | `Keras` | `keras` |
 | `Keybase` | `keybase` |
 | `KeyCDN` | `keycdn` |
@@ -2594,6 +2596,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sentry` | `sentry` |
 | `SEPA` | `sepa` |
 | `Sequelize` | `sequelize` |
+| `ServBay` | `servbay` |
 | `Server Fault` | `serverfault` |
 | `Serverless` | `serverless` |
 | `Session` | `session` |
