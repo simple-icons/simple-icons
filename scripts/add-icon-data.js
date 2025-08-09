@@ -111,11 +111,11 @@ const previewHexColor = (input) => {
 };
 
 /** @type {IconData} */
+// @ts-expect-error: `slug` is not required in our source simple-icons.json file.
 const answers = {
 	title: '',
 	hex: '',
 	source: '',
-	slug: '',
 };
 
 answers.title = await input({
