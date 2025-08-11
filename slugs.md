@@ -1375,6 +1375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `iMessage` | `imessage` |
 | `Imgur` | `imgur` |
 | `Immer` | `immer` |
+| `Immersive Translate` | `immersivetranslate` |
 | `Immich` | `immich` |
 | `Imou` | `imou` |
 | `ImprovMX` | `improvmx` |
@@ -3341,6 +3342,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zod` | `zod` |
 | `Zoho` | `zoho` |
 | `Zoiper` | `zoiper` |
+| `Zola` | `zola` |
 | `Zomato` | `zomato` |
 | `Zoom` | `zoom` |
 | `Zorin` | `zorin` |
