@@ -1,0 +1,8 @@
+{
+	"extends": "@sindresorhus/tsconfig",
+	"compilerOptions": {
+		"rootDir": ".",
+		"allowImportingTsExtensions": true,
+		"noEmit": true
+	}
+}

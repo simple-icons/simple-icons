@@ -1,28 +1,26 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Script to add data for a new icon to the simple-icons dataset.
  */
 
-/**
- * @typedef {import("../sdk.js").IconData} IconData
- */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import {checkbox, confirm, input, search} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
+// @ts-expect-error: The `get-relative-luminance` package does not have types.
 import getRelativeLuminance from 'get-relative-luminance';
-import {getIconsDataString, normalizeColor, titleToSlug} from '../sdk.mjs';
+import type {IconData} from '../data/simple-icons.d.ts';
+import {getIconsDataString, normalizeColor, titleToSlug} from '../sdk.mts';
 import {
 	formatIconData,
 	getJsonSchemaData,
 	getSpdxLicenseIds,
 	sortIconsCompare,
 	writeIconsData,
-} from './utils.js';
+} from './utils.mts';
 
 process.exitCode = 1;
 process.on('uncaughtException', (error) => {
@@ -34,11 +32,11 @@ process.on('uncaughtException', (error) => {
 	}
 });
 
-/** @type {import('../types.d.ts').IconData[]} */
-const iconsData = JSON.parse(await getIconsDataString());
+const iconsData = JSON.parse(await getIconsDataString()) as IconData[];
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const jsonSchema = await getJsonSchemaData();
 
-const HEX_REGEX = /^#?[a-f\d]{3,8}$/i;
+const hexRegex = /^#?[a-f\d]{3,8}$/i;
 
 const aliasTypes = ['aka', 'old'].map((key) => ({
 	name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
@@ -53,7 +51,7 @@ const licenseTypes = [
 
 /**
  * Build a regex to validate HTTPs URLs.
- * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
+ * @returns Regex to validate HTTPs URLs.
  */
 const urlRegex = async () =>
 	new RegExp(
@@ -62,33 +60,33 @@ const urlRegex = async () =>
 				path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
 				'utf8',
 			),
-		).definitions.url.pattern,
+		).definitions.url.pattern as string,
 	);
 
 /**
  * Whether an input is a valid URL.
- * @param {string} input URL input.
- * @returns {Promise<boolean|string>} Whether the input is a valid URL.
+ * @param input URL input.
+ * @returns Whether the input is a valid URL.
  */
-const isValidURL = async (input) => {
+const isValidUrl = async (input: string) => {
 	const regex = await urlRegex();
 	return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
 /**
  * Whether an input is a valid hex color.
- * @param {string} input Hex color.
- * @returns {boolean|string} Whether the input is a valid hex color.
+ * @param input Hex color.
+ * @returns Whether the input is a valid hex color.
  */
-const isValidHexColor = (input) =>
-	HEX_REGEX.test(input) || 'Must be a valid hex code.';
+const isValidHexColor = (input: string) =>
+	hexRegex.test(input) || 'Must be a valid hex code.';
 
 /**
  * Whether an icon is not already in the dataset.
- * @param {string} input New icon input.
- * @returns {boolean} Whether the icon is new.
+ * @param input New icon input.
+ * @returns Whether the icon is new.
  */
-const isNewIcon = (input) =>
+const isNewIcon = (input: string) =>
 	!iconsData.some(
 		(icon) =>
 			icon.title === input || titleToSlug(icon.title) === titleToSlug(input),
@@ -96,13 +94,15 @@ const isNewIcon = (input) =>
 
 /**
  * Compute a preview of a color to use in prompt background.
- * @param {string} input Color input.
- * @returns {string} Preview of the color.
+ * @param input Color input.
+ * @returns Preview of the color.
  */
-const previewHexColor = (input) => {
+const previewHexColor = (input: string) => {
 	const color = normalizeColor(input);
-	const luminance = HEX_REGEX.test(input)
-		? getRelativeLuminance.default(`#${color}`)
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+	const luminance = hexRegex.test(input)
+		? // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+			getRelativeLuminance.default(`#${color}`)
 		: -1;
 	if (luminance === -1) return input.toUpperCase();
 	return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
@@ -110,9 +110,8 @@ const previewHexColor = (input) => {
 	);
 };
 
-/** @type {IconData} */
-// @ts-expect-error: `slug` is not required in our source simple-icons.json file.
-const answers = {
+// @ts-expect-error: The `slug` field is only available in the distribution file.
+const answers: IconData = {
 	title: '',
 	hex: '',
 	source: '',
@@ -136,7 +135,7 @@ answers.hex = normalizeColor(
 
 answers.source = await input({
 	message: 'What is the source URL of the icon?',
-	validate: isValidURL,
+	validate: isValidUrl,
 });
 
 if (
@@ -146,7 +145,7 @@ if (
 ) {
 	answers.guidelines = await input({
 		message: 'What is the URL for the brand guidelines?',
-		validate: isValidURL,
+		validate: isValidUrl,
 	});
 }
 
@@ -159,7 +158,7 @@ if (
 		type: await search({
 			message: "What is the icon's license?",
 			async source(input) {
-				input = (input || '').trim();
+				input = (input ?? '').trim();
 				return input
 					? fuzzySearch(input, licenseTypes, {
 							keySelector: (x) => x.value,
@@ -170,10 +169,10 @@ if (
 	};
 
 	if (answers.license.type === 'custom') {
-		// @ts-expect-error
+		// @ts-expect-error: To build the object.
 		answers.license.url = await input({
 			message: `What is the URL for the license? (optional)`,
-			validate: (input) => input.length === 0 || isValidURL(input),
+			validate: async (input) => input.length === 0 || isValidUrl(input),
 		});
 	}
 }
@@ -193,6 +192,7 @@ if (
 			/** @type {{[_: string]: string[]}} */
 			const result = {};
 			for (const alias of aliases) {
+				// @ts-expect-error: To build the object.
 				// eslint-disable-next-line no-await-in-loop
 				result[alias] = await input({
 					message: `What ${alias} aliases would you like to add? (separate with commas)`,

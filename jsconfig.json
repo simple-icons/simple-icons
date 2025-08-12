@@ -1,4 +1,5 @@
 {
+	"exclude": ["**/*.mts", "**/*.ts", "**/*.d.ts"],
 	"compilerOptions": {
 		"target": "es2022",
 		"module": "node16",
@@ -9,6 +10,7 @@
 		"noImplicitAny": true,
 		"noImplicitThis": true,
 		"forceConsistentCasingInFileNames": true,
+		"allowImportingTsExtensions": true,
 		"noEmit": true
 	}
 }

@@ -1,28 +1,29 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Simple Icons package build script.
  */
 
-/**
- * @typedef {import('../../types.js').License} License
- */
-
 import {promises as fs} from 'node:fs';
 import path from 'node:path';
 import {format} from 'node:util';
-import {transform as esbuildTransform} from 'esbuild';
+import {
+	type Format,
+	type TransformOptions,
+	transform as esbuildTransform,
+} from 'esbuild';
+import type {IconData, License} from '../../data/simple-icons.d.ts';
 import {
 	getIconSlug,
 	getIconsData,
 	slugToVariableName,
 	svgToPath,
 	titleToHtmlFriendly,
-} from '../../sdk.mjs';
-import {sortIconsCompare} from '../utils.js';
+} from '../../sdk.mts';
+import {type SimpleIcon} from '../../types.ts';
+import {sortIconsCompare} from '../utils.mts';
 
-const UTF8 = 'utf8';
+const fileEncoding = 'utf8';
 
 const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const iconsDirectory = path.resolve(rootDirectory, 'icons');
@@ -38,41 +39,37 @@ const iconObjectTemplateFile = path.resolve(
 	'icon-object.js.template',
 );
 
-/**
- * Merged type from icon data and icon JS object needed to build by reference
- * to not decrease performance in the build process.
- * @typedef {import('../../types.js').SimpleIcon & import('../../types.d.ts').IconData} IconDataAndObject
- */
+type IconDataAndObject = SimpleIcon & IconData;
 
 const icons = await getIconsData();
-const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
+const iconObjectTemplate = await fs.readFile(
+	iconObjectTemplateFile,
+	fileEncoding,
+);
 
 /**
  * Escape a string for use in a JavaScript string.
- * @param {string} value The value to escape.
- * @returns {string} The escaped value.
+ * @param value The value to escape.
+ * @returns The escaped value.
  */
-const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
+const escape = (value: string) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
- * @param {License} license The license object or URL.
- * @returns {License} The license object with a URL.
+ * @param license The license object or URL.
+ * @returns The license object with a URL.
  */
-const licenseToString = (license) => {
-	if (license.url === undefined) {
-		license.url = `https://spdx.org/licenses/${license.type}`;
-	}
-
+const licenseToString = (license: License) => {
+	license.url ||= `https://spdx.org/licenses/${license.type}`;
 	return license;
 };
 
 /**
  * Converts an icon object to a JavaScript object.
- * @param {IconDataAndObject} icon The icon object.
- * @returns {string} The JavaScript object.
+ * @param icon The icon object.
+ * @returns The JavaScript object.
  */
-const iconDataAndObjectToJsRepr = (icon) =>
+const iconDataAndObjectToJsRepr = (icon: IconDataAndObject) =>
 	format(
 		iconObjectTemplate,
 		escape(icon.title),
@@ -97,13 +94,16 @@ const iconDataAndObjectToJsRepr = (icon) =>
  * JavaScript files are compatible with all JavaScript environments. Especially, browsers
  * that are not using `<meta charset="utf-8">` in their HTML. As we support browsers
  * without meta charset in SVG `<title>` elements, we need to ensure the same for scripts.
- * @param {string} filepath The path to the file to write.
- * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {'cjs'} [format] The format of the resulting JavaScript file.
+ * @param filepath The path to the file to write.
+ * @param rawJavaScript The raw JavaScript content to write to the file.
+ * @param format The format of the resulting JavaScript file.
  */
-const writeJs = async (filepath, rawJavaScript, format = undefined) => {
-	/** @type {import('esbuild').TransformOptions} */
-	const options = {minify: true, charset: 'ascii', format};
+const writeJs = async (
+	filepath: string,
+	rawJavaScript: string,
+	format: Format = 'cjs',
+) => {
+	const options: TransformOptions = {minify: true, charset: 'ascii', format};
 	const {code} = await esbuildTransform(rawJavaScript, options);
 	// ESBuild adds a trailing newline to the end of the file
 	await fs.writeFile(filepath, code.trimEnd());
@@ -111,30 +111,25 @@ const writeJs = async (filepath, rawJavaScript, format = undefined) => {
 
 /**
  * Write TypeScript content to a file.
- * @param {string} filepath The path to the file to write.
- * @param {string} rawTypeScript The raw TypeScript content to write to the file.
+ * @param filepath The path to the file to write.
+ * @param rawTypeScript The raw TypeScript content to write to the file.
  */
-const writeTs = async (filepath, rawTypeScript) => {
+const writeTs = async (filepath: string, rawTypeScript: string) => {
 	await fs.writeFile(filepath, rawTypeScript);
 };
 
 /**
  * Build icons intermediate instances.
- * @returns {Promise<{
- * 	icon: IconDataAndObject,
- * 	iconObjectRepr: string,
- * 	iconExportName: string
- * }[]>} Merged icon data and object instances.
+ * @returns Merged icon data and object instances.
  */
 const buildIcons = async () =>
 	Promise.all(
 		icons.map(async (iconData) => {
 			const slug = getIconSlug(iconData);
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
-			const svg = await fs.readFile(svgFilepath, UTF8);
-			/** @type {IconDataAndObject} */
-			const icon = {};
-			Object.assign(icon, iconData);
+			const svg = await fs.readFile(svgFilepath, fileEncoding);
+			// @ts-expect-error: Constructing icon object.
+			const icon: IconDataAndObject = {...iconData};
 			icon.svg = svg;
 			icon.path = svgToPath(svg);
 			icon.slug = slug;
@@ -176,7 +171,7 @@ const build = async () => {
 	await writeTs(indexDtsFile, rawIndexDts);
 
 	// Create a CommonJS SDK file
-	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), 'cjs');
+	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, fileEncoding), 'cjs');
 
 	// Build deprecated `simple-icons/icons` entrypoint.
 	// TODO: This must be removed at v17.

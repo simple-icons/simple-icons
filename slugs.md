@@ -1,6 +1,6 @@
 <!--
 
-update the script at 'scripts/release/update-slugs-table.js'.
+update the script at 'scripts/release/update-slugs-table.mts'.
 -->
 
 # Simple Icons slugs
