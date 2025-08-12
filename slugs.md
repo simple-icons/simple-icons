@@ -1,6 +1,6 @@
 <!--
 
-update the script at 'scripts/release/update-slugs-table.js'.
+update the script at 'scripts/release/update-slugs-table.mts'.
 -->
 
 # Simple Icons slugs
@@ -2488,6 +2488,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Roku` | `roku` |
 | `Roll20` | `roll20` |
 | `Rollbar` | `rollbar` |
+| `Rolldown` | `rolldown` |
 | `Rolls-Royce` | `rollsroyce` |
 | `rollup.js` | `rollupdotjs` |
 | `Rook` | `rook` |
