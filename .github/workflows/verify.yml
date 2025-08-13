@@ -1,0 +1,124 @@
+name: Verify Source
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  build:
+    name: Build package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build NodeJS package
+        run: npm run build
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+      - name: Is normal pull request
+        # check if is not a release pull request
+        id: pr
+        run: echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == false }})" >> $GITHUB_OUTPUT
+      - name: Detect changed files
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          list-files: shell
+          filters: |
+            docs:
+              - '*!(slugs).md'
+              - '.github/**.md'
+            icons:
+              - 'icons/*.svg'
+            slugs:
+              - 'slugs.md'
+            sdkts:
+              - 'sdk.d.ts'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Don't edit slugs.md in pull requests
+        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.slugs == 'true'
+        run: |
+          echo -ne "Detected slugs.md file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the slugs.md" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
+      - name: Don't edit sdk.d.ts in pull requests
+        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.sdkts == 'true'
+        run: |
+          echo -ne "Detected sdk.d.ts file edition in PR.\n" 1>&2
+          echo -ne "Please revert it, we build the sdk.d.ts" 1>&2
+          echo -ne " file automatically at releases.\n" 1>&2
+          exit 1
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Prepare icons
+        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
+        run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
+      - name: Prepare docs (docs changed)
+        # only lint changed docs
+        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs == 'true'
+        run: sed -i "s/'\*\*\/\*\.md'/"'$npm_config_docs'"/" package.json
+      - name: Prepare docs (no docs changed)
+        # only lint README.md if no changes in docs
+        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs != 'true'
+        run: sed -i "s/'\*\*\/\*\.md'/README.md/" package.json
+      - name: Run linter
+        run: npm run lint --icons="$ICONS_FILES" --docs="$DOCS_FILES"
+        env:
+          ICONS_FILES: ${{ steps.changes.outputs.icons_files }}
+          DOCS_FILES: ${{ steps.changes.outputs.docs_files }}
+          # Authorise GitHub API requests for editorconfig-checker
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check documentation links
+        if: steps.changes.outputs.docs == 'true'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: -- ${{ steps.changes.outputs.docs_files }}
+          fail: ${{ github.ref != 'refs/heads/develop' }}
+          failIfEmpty: false
+          jobSummary: true
+          format: markdown
+          token: ${{ secrets.GITHUB_TOKEN }}
+  test:
+    name: Test package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run tests
+        run: npm run test
