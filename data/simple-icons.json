@@ -11948,8 +11948,11 @@
 	{
 		"title": "Oxc",
 		"hex": "FF915C",
-		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/anchor.svg",
-		"guidelines": "https://oxc.rs/branding.html"
+		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
+		"guidelines": "https://oxc.rs/branding.html",
+		"license": {
+			"type": "CC0-1.0"
+		}
 	},
 	{
 		"title": "Oxygen",
