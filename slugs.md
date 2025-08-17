@@ -1676,6 +1676,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LMMS` | `lmms` |
 | `Lobsters` | `lobsters` |
 | `Local` | `local` |
+| `LocalSend` | `localsend` |
+| `LocalXpose` | `localxpose` |
 | `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
 | `Logitech G` | `logitechg` |
@@ -2100,6 +2102,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OWASP` | `owasp` |
 | `OWASP Dependency-Check` | `dependencycheck` |
 | `ownCloud` | `owncloud` |
+| `Oxc` | `oxc` |
 | `Oxygen` | `oxygen` |
 | `OYO` | `oyo` |
 | `p5.js` | `p5dotjs` |
@@ -2488,6 +2491,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Roku` | `roku` |
 | `Roll20` | `roll20` |
 | `Rollbar` | `rollbar` |
+| `Rolldown` | `rolldown` |
 | `Rolls-Royce` | `rollsroyce` |
 | `rollup.js` | `rollupdotjs` |
 | `Rook` | `rook` |

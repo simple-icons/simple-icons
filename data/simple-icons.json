@@ -9492,6 +9492,16 @@
 		"source": "https://localwp.com"
 	},
 	{
+		"title": "LocalSend",
+		"hex": "008080",
+		"source": "https://github.com/localsend/localsend/blob/f57cae55616e6d2f0ab20cad41e0697cba7885e5/app/assets/img/logo-512.png"
+	},
+	{
+		"title": "LocalXpose",
+		"hex": "6023C0",
+		"source": "https://localxpose.io"
+	},
+	{
 		"title": "Lodash",
 		"hex": "3492FF",
 		"source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
@@ -11949,6 +11959,15 @@
 		"title": "ownCloud",
 		"hex": "041E42",
 		"source": "https://owncloud.com"
+	},
+	{
+		"title": "Oxc",
+		"hex": "FF915C",
+		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
+		"guidelines": "https://oxc.rs/branding.html",
+		"license": {
+			"type": "CC0-1.0"
+		}
 	},
 	{
 		"title": "Oxygen",
