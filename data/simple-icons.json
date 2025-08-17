@@ -1622,6 +1622,12 @@
 		"source": "https://github.com/avajs/ava/blob/6f8e30c94626238a5b26deadac319089fa43d333/media/logo.svg"
 	},
 	{
+		"title": "AvaloniaUI",
+		"hex": "165BFF",
+		"source": "https://avaloniaui.net",
+		"guidelines": "https://avaloniaui.net/brand"
+	},
+	{
 		"title": "Avast",
 		"hex": "FF7800",
 		"source": "https://press.avast.com/media-materials#logos-and-brand-guidelines",
@@ -3283,9 +3289,9 @@
 	},
 	{
 		"title": "Coder",
-		"hex": "000000",
-		"source": "https://github.com/coder/presskit/blob/f9dccc00b062cf130ba237bfcefd1fcda4d253c8/logos/coder_logo_transparent_black.svg",
-		"guidelines": "https://github.com/coder/presskit"
+		"hex": "090B0B",
+		"source": "https://coder.together.agency/#3-logos",
+		"guidelines": "https://coder.together.agency"
 	},
 	{
 		"title": "CodeRabbit",
@@ -4058,6 +4064,16 @@
 		"title": "DeepL",
 		"hex": "0F2B46",
 		"source": "https://www.deepl.com/press.html"
+	},
+	{
+		"title": "DeepMind",
+		"hex": "4285F4",
+		"source": "https://deepmind.google",
+		"aliases": {
+			"aka": [
+				"Google DeepMind"
+			]
+		}
 	},
 	{
 		"title": "Deepnote",
@@ -6098,6 +6114,11 @@
 		"source": "https://www.gitbook.com"
 	},
 	{
+		"title": "GitCode",
+		"hex": "DA203E",
+		"source": "https://cdn-static.gitcode.com/doc/logo.svg"
+	},
+	{
 		"title": "Gitconnected",
 		"hex": "2E69AE",
 		"source": "https://gitconnected.com/richard-hendricks-demo/resume"
@@ -6339,7 +6360,7 @@
 	},
 	{
 		"title": "Goodreads",
-		"hex": "372213",
+		"hex": "1E1914",
 		"source": "https://www.goodreads.com/about/press"
 	},
 	{
@@ -6821,6 +6842,17 @@
 		"hex": "FAA918",
 		"source": "https://github.com/gruntjs/gruntjs.com/blob/70f43898d9ce8e6cc862ad72bf8a7aee5ca199a9/src/media/grunt-logo-no-wordmark.svg",
 		"guidelines": "https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md"
+	},
+	{
+		"title": "GSAP",
+		"hex": "0AE448",
+		"source": "https://gsap.com/brand/",
+		"guidelines": "https://gsap.com/brand/",
+		"aliases": {
+			"aka": [
+				"GreenSock Animation Platform"
+			]
+		}
 	},
 	{
 		"title": "GSK",
@@ -7720,6 +7752,11 @@
 		"source": "https://github.com/immerjs/immer/blob/7a5382899bc8b0bf5e21972a1c7db63f53e1d697/website/static/img/immer-logo.svg"
 	},
 	{
+		"title": "Immersive Translate",
+		"hex": "EA4C89",
+		"source": "https://immersivetranslate.com"
+	},
+	{
 		"title": "Immich",
 		"hex": "4250AF",
 		"source": "https://github.com/immich-app/immich/blob/25c9b779e4d19bc34551f8b137266a459e0d70e1/design/immich-logo.svg"
@@ -8514,8 +8551,8 @@
 	{
 		"title": "Kdenlive",
 		"hex": "527EB2",
-		"source": "https://kdenlive.org/en/trademark-logo/",
-		"guidelines": "https://kdenlive.org/en/trademark-logo/"
+		"source": "https://kdenlive.org/trademark-logo/",
+		"guidelines": "https://kdenlive.org/trademark-logo/"
 	},
 	{
 		"title": "Kedro",
@@ -8563,6 +8600,11 @@
 		"title": "Kentico",
 		"hex": "F05A22",
 		"source": "https://www.kentico.com"
+	},
+	{
+		"title": "Keploy",
+		"hex": "FF914D",
+		"source": "https://keploy.io/docs"
 	},
 	{
 		"title": "Keras",
@@ -9455,6 +9497,16 @@
 		"source": "https://localwp.com"
 	},
 	{
+		"title": "LocalSend",
+		"hex": "008080",
+		"source": "https://github.com/localsend/localsend/blob/f57cae55616e6d2f0ab20cad41e0697cba7885e5/app/assets/img/logo-512.png"
+	},
+	{
+		"title": "LocalXpose",
+		"hex": "6023C0",
+		"source": "https://localxpose.io"
+	},
+	{
 		"title": "Lodash",
 		"hex": "3492FF",
 		"source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
@@ -9851,8 +9903,8 @@
 	{
 		"title": "MasterCard",
 		"hex": "EB001B",
-		"source": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark/downloads.html",
-		"guidelines": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark.html"
+		"source": "https://www.mastercard.com/brandcenter/us/en/download-artwork.html",
+		"guidelines": "https://www.mastercard.com/brandcenter/us/en/brand-requirements/mastercard.html"
 	},
 	{
 		"title": "mastercomfig",
@@ -11919,6 +11971,15 @@
 		"source": "https://owncloud.com"
 	},
 	{
+		"title": "Oxc",
+		"hex": "FF915C",
+		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
+		"guidelines": "https://oxc.rs/branding.html",
+		"license": {
+			"type": "CC0-1.0"
+		}
+	},
+	{
 		"title": "Oxygen",
 		"hex": "3A209E",
 		"source": "https://oxygenbuilder.com",
@@ -12119,8 +12180,8 @@
 	},
 	{
 		"title": "PayPal",
-		"hex": "003087",
-		"source": "https://www.paypal.com",
+		"hex": "002991",
+		"source": "https://www.paypal.com/us",
 		"guidelines": "https://newsroom.paypal-corp.com/media-resources"
 	},
 	{
@@ -12225,8 +12286,8 @@
 	},
 	{
 		"title": "Perforce",
-		"hex": "404040",
-		"source": "https://www.perforce.com"
+		"hex": "4C00FF",
+		"source": "https://brandfolder.com/perforce/public-logos"
 	},
 	{
 		"title": "Perl",
@@ -12932,6 +12993,11 @@
 		"source": "https://processingfoundation.org"
 	},
 	{
+		"title": "ProcessOn",
+		"hex": "067BEF",
+		"source": "https://www.processon.com/assets/imgs/logo_small.svg"
+	},
+	{
 		"title": "ProcessWire",
 		"hex": "2480E6",
 		"source": "https://processwire.com"
@@ -13543,6 +13609,11 @@
 		"guidelines": "https://www.raspberrypi.org/trademark-rules"
 	},
 	{
+		"title": "Ratatui",
+		"hex": "000000",
+		"source": "https://github.com/ratatui/ratatui/blob/8e3bd11d60472734cfe0b5221cd3472acb435317/assets/logo-simple.svg"
+	},
+	{
 		"title": "Ravelry",
 		"hex": "EE6E62",
 		"source": "https://www.ravelry.com/help/logos",
@@ -14100,6 +14171,11 @@
 		"title": "Rollbar",
 		"hex": "3569F3",
 		"source": "https://rollbar.com/about"
+	},
+	{
+		"title": "Rolldown",
+		"hex": "FF7E17",
+		"source": "https://rolldown.rs/lightning-down.svg"
 	},
 	{
 		"title": "Rolls-Royce",
@@ -14705,6 +14781,11 @@
 		"title": "Sequelize",
 		"hex": "52B0E7",
 		"source": "https://github.com/sequelize/website/blob/e6a482fa58a839b15ace80e3c8901ed2887be45e/static/img/logo-simple.svg"
+	},
+	{
+		"title": "ServBay",
+		"hex": "00103C",
+		"source": "https://www.servbay.com"
 	},
 	{
 		"title": "Server Fault",
@@ -17301,7 +17382,7 @@
 		"title": "Unity",
 		"hex": "FFFFFF",
 		"source": "https://brand.unity.com",
-		"guidelines": "https://brand.unity.com"
+		"guidelines": "https://unity.com/legal/branding-trademarks"
 	},
 	{
 		"title": "UnJS",
@@ -18906,6 +18987,14 @@
 		"title": "Zoiper",
 		"hex": "F47920",
 		"source": "https://www.zoiper.com/en/products"
+	},
+	{
+		"title": "Zola",
+		"hex": "EAE7D6",
+		"source": "https://github.com/getzola/zola/blob/c3a3d78dfddd34debf5254d293558e8fa045fd51/docs/static/logos/Zola-icon-cream-on-coffee.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Zomato",

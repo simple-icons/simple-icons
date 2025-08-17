@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "15.5.0",
+	"version": "15.11.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -75,7 +75,7 @@
 		"lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run tslint && npm run markdownlint",
 		"markdownlint": "markdownlint-cli2 '**/*.md' '#node_modules'",
 		"ourlint": "node scripts/lint/ourlint.js",
-		"prepare": "node -e 'process.exit(process.env.CI ? 0 : 1)' || husky",
+		"prepare": "node -e \"process.exit(process.env.CI ? 0 : 1)\" || husky",
 		"prepublishOnly": "npm run build",
 		"prettier": "prettier --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
 		"prettierlint": "npm run prettier -- --check --cache",

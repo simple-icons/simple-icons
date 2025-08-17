@@ -10,7 +10,7 @@ export type IconData = {
 	title: string;
 	hex: string;
 	source: string;
-	slug?: string;
+	slug: string;
 	guidelines?: string;
 	license?: Omit<SPDXLicense, 'url'> | CustomLicense;
 	aliases?: Aliases;

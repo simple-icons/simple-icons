@@ -279,6 +279,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Autoprefixer` | `autoprefixer` |
 | `AutoZone` | `autozone` |
 | `avajs` | `avajs` |
+| `AvaloniaUI` | `avaloniaui` |
 | `Avast` | `avast` |
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
@@ -1000,6 +1001,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FMOD` | `fmod` |
 | `Fnac` | `fnac` |
 | `Folium` | `folium` |
+| `Folo` | `folo` |
 | `Fonoma` | `fonoma` |
 | `Font Awesome` | `fontawesome` |
 | `FontBase` | `fontbase` |
@@ -1089,6 +1091,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Git for Windows` | `gitforwindows` |
 | `Git LFS` | `gitlfs` |
 | `GitBook` | `gitbook` |
+| `GitCode` | `gitcode` |
 | `Gitconnected` | `gitconnected` |
 | `Gitea` | `gitea` |
 | `Gitee` | `gitee` |
@@ -1213,6 +1216,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GroupMe` | `groupme` |
 | `Groupon` | `groupon` |
 | `Grunt` | `grunt` |
+| `GSAP` | `gsap` |
 | `GSK` | `gsk` |
 | `GSMA` | `gsma` |
 | `GSMArena.com` | `gsmarenadotcom` |
@@ -1371,6 +1375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `iMessage` | `imessage` |
 | `Imgur` | `imgur` |
 | `Immer` | `immer` |
+| `Immersive Translate` | `immersivetranslate` |
 | `Immich` | `immich` |
 | `Imou` | `imou` |
 | `ImprovMX` | `improvmx` |
@@ -1515,6 +1520,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `KeeWeb` | `keeweb` |
 | `Kenmei` | `kenmei` |
 | `Kentico` | `kentico` |
+| `Keploy` | `keploy` |
 | `Keras` | `keras` |
 | `Keybase` | `keybase` |
 | `KeyCDN` | `keycdn` |
@@ -1670,6 +1676,8 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LMMS` | `lmms` |
 | `Lobsters` | `lobsters` |
 | `Local` | `local` |
+| `LocalSend` | `localsend` |
+| `LocalXpose` | `localxpose` |
 | `Lodash` | `lodash` |
 | `Logitech` | `logitech` |
 | `Logitech G` | `logitechg` |
@@ -1831,6 +1839,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mocha` | `mocha` |
 | `Mock Service Worker` | `mockserviceworker` |
 | `Modal` | `modal` |
+| `Model Context Protocol` | `modelcontextprotocol` |
 | `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
@@ -2093,6 +2102,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OWASP` | `owasp` |
 | `OWASP Dependency-Check` | `dependencycheck` |
 | `ownCloud` | `owncloud` |
+| `Oxc` | `oxc` |
 | `Oxygen` | `oxygen` |
 | `OYO` | `oyo` |
 | `p5.js` | `p5dotjs` |
@@ -2276,6 +2286,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pro Tools` | `protools` |
 | `Probot` | `probot` |
 | `Processing Foundation` | `processingfoundation` |
+| `ProcessOn` | `processon` |
 | `ProcessWire` | `processwire` |
 | `Product Hunt` | `producthunt` |
 | `Progate` | `progate` |
@@ -2379,6 +2390,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rarible` | `rarible` |
 | `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
+| `Ratatui` | `ratatui` |
 | `Ravelry` | `ravelry` |
 | `Ray` | `ray` |
 | `Raycast` | `raycast` |
@@ -2479,6 +2491,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Roku` | `roku` |
 | `Roll20` | `roll20` |
 | `Rollbar` | `rollbar` |
+| `Rolldown` | `rolldown` |
 | `Rolls-Royce` | `rollsroyce` |
 | `rollup.js` | `rollupdotjs` |
 | `Rook` | `rook` |
@@ -2588,6 +2601,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sentry` | `sentry` |
 | `SEPA` | `sepa` |
 | `Sequelize` | `sequelize` |
+| `ServBay` | `servbay` |
 | `Server Fault` | `serverfault` |
 | `Serverless` | `serverless` |
 | `Session` | `session` |
@@ -2937,6 +2951,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Todoist` | `todoist` |
 | `Toggl` | `toggl` |
 | `Toggl Track` | `toggltrack` |
+| `Tokio` | `tokio` |
 | `Tokyo Metro` | `tokyometro` |
 | `Toll` | `toll` |
 | `TOML` | `toml` |
@@ -3331,6 +3346,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zod` | `zod` |
 | `Zoho` | `zoho` |
 | `Zoiper` | `zoiper` |
+| `Zola` | `zola` |
 | `Zomato` | `zomato` |
 | `Zoom` | `zoom` |
 | `Zorin` | `zorin` |
