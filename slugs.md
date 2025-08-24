@@ -729,6 +729,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deepgram` | `deepgram` |
 | `deepin` | `deepin` |
 | `DeepL` | `deepl` |
+| `DeepMind` | `deepmind` |
 | `Deepnote` | `deepnote` |
 | `Deliveroo` | `deliveroo` |
 | `Dell` | `dell` |
@@ -1041,6 +1042,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Freepik` | `freepik` |
 | `FreeTube` | `freetube` |
 | `Fresh` | `fresh` |
+| `FreshRSS` | `freshrss` |
 | `Frigate` | `frigate` |
 | `FRITZ!` | `fritz` |
 | `Frontend Mentor` | `frontendmentor` |
@@ -1976,6 +1978,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Normalize.css` | `normalizedotcss` |
 | `Norton` | `norton` |
 | `Norwegian` | `norwegian` |
+| `Note` | `note` |
 | `NotebookLM` | `notebooklm` |
 | `Notepad++` | `notepadplusplus` |
 | `Notion` | `notion` |
@@ -2382,6 +2385,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Radix UI` | `radixui` |
 | `Railway` | `railway` |
 | `Rainmeter` | `rainmeter` |
+| `RainYun` | `rainyun` |
 | `Rakuten` | `rakuten` |
 | `Rakuten Kobo` | `rakutenkobo` |
 | `Ram` | `ram` |
@@ -2806,6 +2810,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Subversion` | `subversion` |
 | `suckless` | `suckless` |
 | `Sui` | `sui` |
+| `Suitest` | `suitest` |
 | `Sumo Logic` | `sumologic` |
 | `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
@@ -3216,6 +3221,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Wellfound` | `wellfound` |
 | `Wells Fargo` | `wellsfargo` |
 | `WEMO` | `wemo` |
+| `WeRead` | `weread` |
 | `Western Digital` | `westerndigital` |
 | `Western Union` | `westernunion` |
 | `WeTransfer` | `wetransfer` |
