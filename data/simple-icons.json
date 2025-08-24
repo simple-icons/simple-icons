@@ -3290,8 +3290,8 @@
 	{
 		"title": "Coder",
 		"hex": "090B0B",
-		"source": "https://coder.together.agency/#3-logos",
-		"guidelines": "https://coder.together.agency"
+		"source": "https://coder.com/brand#3-logos",
+		"guidelines": "https://coder.com/brand"
 	},
 	{
 		"title": "CodeRabbit",
@@ -4064,6 +4064,16 @@
 		"title": "DeepL",
 		"hex": "0F2B46",
 		"source": "https://www.deepl.com/press.html"
+	},
+	{
+		"title": "DeepMind",
+		"hex": "4285F4",
+		"source": "https://deepmind.google",
+		"aliases": {
+			"aka": [
+				"Google DeepMind"
+			]
+		}
 	},
 	{
 		"title": "Deepnote",
@@ -5811,6 +5821,11 @@
 		"source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
 	},
 	{
+		"title": "FreshRSS",
+		"hex": "0062BE",
+		"source": "https://freshrss.org/images/icon.svg"
+	},
+	{
 		"title": "Frigate",
 		"hex": "000000",
 		"source": "https://frigate.video"
@@ -5927,7 +5942,7 @@
 	{
 		"title": "Game Science",
 		"hex": "000000",
-		"source": "https://gamesci.com.cn"
+		"source": "https://gamesci.cn"
 	},
 	{
 		"title": "GameBanana",
@@ -11215,6 +11230,12 @@
 		"source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
 	},
 	{
+		"title": "Note",
+		"hex": "000000",
+		"source": "https://www.help-note.com/hc/ja/articles/360000235582",
+		"guidelines": "https://note.jp/n/nfd19f7246947"
+	},
+	{
 		"title": "NotebookLM",
 		"hex": "000000",
 		"source": "https://notebooklm.google"
@@ -13548,6 +13569,11 @@
 		"title": "Rainmeter",
 		"hex": "19519B",
 		"source": "https://github.com/rainmeter/rainmeter-www/blob/867fd905fda8d1b1083730adcb7f49f1775cb5b0/source/img/logo_blue.ai"
+	},
+	{
+		"title": "RainYun",
+		"hex": "DAD9D9",
+		"source": "https://www.rainyun.com"
 	},
 	{
 		"title": "Rakuten",
@@ -15937,6 +15963,11 @@
 		"guidelines": "https://sui.io/media-kit"
 	},
 	{
+		"title": "Suitest",
+		"hex": "F06060",
+		"source": "https://suite.st"
+	},
+	{
 		"title": "Sumo Logic",
 		"hex": "000099",
 		"source": "https://sites.google.com/sumologic.com/sumo-logic-brand/home",
@@ -18244,6 +18275,11 @@
 		"source": "https://commons.wikimedia.org/wiki/File:WeMoApp.svg"
 	},
 	{
+		"title": "WeRead",
+		"hex": "37A7FF",
+		"source": "https://cdn.weread.qq.com/web/wrwebnjlogic/image/web_nav_logo_hover.091f61ee.svg"
+	},
+	{
 		"title": "Western Digital",
 		"hex": "995DFF",
 		"source": "https://www.westerndigital.com",
@@ -18957,8 +18993,8 @@
 	},
 	{
 		"title": "Zod",
-		"hex": "3E67B1",
-		"source": "https://zod.dev",
+		"hex": "408AFF",
+		"source": "https://github.com/colinhacks/zod/blob/ff89187172ac6aa4a6264592980d1628ee785242/logo/Logo%20White.ai",
 		"license": {
 			"type": "MIT"
 		}
