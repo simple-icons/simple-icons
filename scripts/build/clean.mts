@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Clean files built by the build process.
@@ -8,7 +7,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {fileExists} from '../utils.js';
+import {fileExists} from '../utils.mts';
 
 const files = [
 	'index.js',
@@ -20,7 +19,7 @@ const files = [
 ];
 
 try {
-	Promise.all(
+	await Promise.all(
 		files.map(async (file) => {
 			const filepath = path.resolve(import.meta.dirname, '..', '..', file);
 			if (!(await fileExists(filepath))) {

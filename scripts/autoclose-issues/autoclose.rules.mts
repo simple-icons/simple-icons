@@ -1,12 +1,12 @@
-// @ts-check
 /**
  * @file Auto-close rules for closing won't add icons.
  */
 
+import {type Rule} from './autoclose.types.mts';
+
 const autocloseTerm = 'This issue was automatically closed. Please refer to ';
 
-/** @type {import('./autoclose.app.js').Config} */
-const rules = [
+const rules: Rule[] = [
 	{
 		patterns: [/matlab/i],
 		reason: autocloseTerm + '#1233.',

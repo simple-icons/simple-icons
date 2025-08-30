@@ -5,17 +5,31 @@
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import type {IconData} from './data/simple-icons.d.ts';
 
 /**
- * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
- * @typedef {import("./types.js").IconData} IconData
+ * The data for a third-party extension.
+ *
+ * Includes the module and author of the extension,
+ * both including a name and URL.
+ * @see {@link https://github.com/simple-icons/simple-icons#third-party-extensions Third-Party Extensions}
  */
+export type ThirdPartyExtension = {
+	module: ThirdPartyExtensionSubject;
+	author: ThirdPartyExtensionSubject;
+};
 
-/** @type {{ [key: string]: string }} */
-const TITLE_TO_SLUG_REPLACEMENTS = {
+type ThirdPartyExtensionSubject = {
+	name: string;
+	url: string;
+};
+
+const titleToSlugReplacements = {
+	/* eslint-disable @typescript-eslint/naming-convention */
 	'+': 'plus',
 	'.': 'dot',
 	'&': 'and',
+	/* eslint-enable @typescript-eslint/naming-convention */
 	đ: 'd',
 	ħ: 'h',
 	ı: 'i',
@@ -27,129 +41,142 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 	ø: 'o',
 };
 
-const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
-	`[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
+const titleToSlugCharsRegex = new RegExp(
+	`[${Object.keys(titleToSlugReplacements).join('')}]`,
 	'g',
 );
 
-const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
+const titleToSlugRangeRegex = /[^a-z\d]/g;
+
+/**
+ * Regex to validate SVG paths.
+ * @deprecated Use `svgPathRegex` instead.
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
 
 /**
  * Regex to validate SVG paths.
  */
-export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
+// eslint-disable-next-line @typescript-eslint/no-deprecated
+export const svgPathRegex = SVG_PATH_REGEX;
 
 /**
  * Get the slug/filename for an icon.
  * @param {IconData} icon The icon data as it appears in *data/simple-icons.json*.
  * @returns {string} The slug/filename for the icon.
  */
-export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
+export const getIconSlug = (icon: IconData) =>
+	icon.slug ?? titleToSlug(icon.title);
 
 /**
  * Extract the path from an icon SVG content.
- * @param {string} svg The icon SVG content.
- * @returns {string} The path from the icon SVG content.
+ * @param svg The icon SVG content.
+ * @returns The path from the icon SVG content.
  */
-export const svgToPath = (svg) => svg.split('"', 8)[7];
+export const svgToPath = (svg: string) => svg.split('"', 8)[7] ?? '';
 
 /**
  * Converts a brand title into a slug/filename.
- * @param {string} title The title to convert.
- * @returns {string} The slug/filename for the title.
+ * @param title The title to convert.
+ * @returns The slug/filename for the title.
  */
-export const titleToSlug = (title) =>
+export const titleToSlug = (title: string) =>
 	title
 		.toLowerCase()
 		.replaceAll(
-			TITLE_TO_SLUG_CHARS_REGEX,
-			(char) => TITLE_TO_SLUG_REPLACEMENTS[char],
+			titleToSlugCharsRegex,
+			(char) =>
+				titleToSlugReplacements[char as keyof typeof titleToSlugReplacements],
 		)
 		.normalize('NFD')
-		.replaceAll(TITLE_TO_SLUG_RANGE_REGEX, '');
+		.replaceAll(titleToSlugRangeRegex, '');
 
 /**
  * Converts a slug into a variable name that can be exported.
- * @param {string} slug The slug to convert.
- * @returns {string} The variable name for the slug.
+ * @param slug The slug to convert.
+ * @returns The variable name for the slug.
  */
-export const slugToVariableName = (slug) =>
-	`si${slug[0].toUpperCase()}${slug.slice(1)}`;
+export const slugToVariableName = (slug: string) =>
+	`si${slug.slice(0, 1).toUpperCase()}${slug.slice(1)}`;
 
 /**
  * Converts a brand title as defined in *data/simple-icons.json* into a brand
  * title in HTML/SVG friendly format.
- * @param {string} brandTitle The title to convert.
- * @returns {string} The brand title in HTML/SVG friendly format.
+ * @param brandTitle The title to convert.
+ * @returns The brand title in HTML/SVG friendly format.
  */
-export const titleToHtmlFriendly = (brandTitle) =>
+export const titleToHtmlFriendly = (brandTitle: string) =>
 	brandTitle
 		.replaceAll('&', '&amp;')
 		.replaceAll('"', '&quot;')
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
 		.replaceAll(/./g, (char) => {
-			const charCode = char.codePointAt(0) || 0;
+			const charCode = char.codePointAt(0) ?? 0;
 			return charCode > 127 ? `&#${charCode};` : char;
 		});
 
 /**
  * Converts a brand title in HTML/SVG friendly format into a brand title (as
  * it is seen in *data/simple-icons.json*).
- * @param {string} htmlFriendlyTitle The title to convert.
- * @returns {string} The brand title in HTML/SVG friendly format.
+ * @param htmlFriendlyTitle The title to convert.
+ * @returns The brand title in HTML/SVG friendly format.
  */
-export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
+export const htmlFriendlyToTitle = (htmlFriendlyTitle: string) =>
 	htmlFriendlyTitle
-		.replaceAll(/&#(\d+);/g, (_, number_) =>
+		.replaceAll(/&#(\d+);/g, (_, number_: string) =>
 			String.fromCodePoint(Number.parseInt(number_, 10)),
 		)
 		.replaceAll(
 			/&(quot|amp|lt|gt);/g,
 			/**
 			 * Replace HTML entity references with their respective decoded characters.
-			 * @param {string} _ Full match.
-			 * @param {'quot' | 'amp' | 'lt' | 'gt'} reference Reference to replace.
-			 * @returns {string} Replacement for the reference.
+			 * @param _ Full match.
+			 * @param reference Reference to replace.
+			 * @returns Replacement for the reference.
 			 */
-			(_, reference) => ({quot: '"', amp: '&', lt: '<', gt: '>'})[reference],
+			(_, reference: 'quot' | 'amp' | 'lt' | 'gt') =>
+				({quot: '"', amp: '&', lt: '<', gt: '>'})[reference],
 		);
 
 /**
  * Get path of *data/simple-icons.json*.
- * @returns {string} Path of *data/simple-icons.json*.
+ * @returns Path of *data/simple-icons.json*.
  */
 export const getIconsDataPath = () =>
 	path.resolve(import.meta.dirname, 'data', 'simple-icons.json');
 
 /**
  * Get contents of *data/simple-icons.json*.
- * @returns {Promise<string>} Content of *data/simple-icons.json*.
+ * @returns Content of *data/simple-icons.json*.
  */
-export const getIconsDataString = () => fs.readFile(getIconsDataPath(), 'utf8');
+export const getIconsDataString = async () =>
+	fs.readFile(getIconsDataPath(), 'utf8');
 
 /**
  * Get icons data as object from *data/simple-icons.json*.
- * @returns {Promise<IconData[]>} Icons data as array from *data/simple-icons.json*.
+ * @returns Icons data as array from *data/simple-icons.json*.
  */
 export const getIconsData = async () => {
 	const fileContents = await getIconsDataString();
-	return JSON.parse(fileContents);
+	return JSON.parse(fileContents) as IconData[];
 };
 
 /**
  * Replace Windows newline characters by Unix ones.
- * @param {string} text The text to replace.
- * @returns {string} The text with Windows newline characters replaced by Unix ones.
+ * @param text The text to replace.
+ * @returns The text with Windows newline characters replaced by Unix ones.
  */
-export const normalizeNewlines = (text) => text.replaceAll('\r\n', '\n');
+export const normalizeNewlines = (text: string) =>
+	text.replaceAll('\r\n', '\n');
 
 /**
  * Convert non-6-digit hex color to 6-digit with the character `#` stripped.
- * @param {string} text The color text.
- * @returns {string} The color text in 6-digit hex format.
+ * @param text The color text.
+ * @returns The color text in 6-digit hex format.
  */
-export const normalizeColor = (text) => {
+export const normalizeColor = (text: string) => {
 	let color = text.replace('#', '').toUpperCase();
 	if (color.length < 6) {
 		// eslint-disable-next-line unicorn/no-useless-spread
@@ -163,19 +190,19 @@ export const normalizeColor = (text) => {
 
 /**
  * Get information about third party extensions from the README table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions.
+ * @returns Information about third party extensions.
  */
 export const getThirdPartyExtensions = async () =>
 	normalizeNewlines(
 		await fs.readFile(path.join(import.meta.dirname, 'README.md'), 'utf8'),
 	)
-		.split('## Third-Party Extensions')[1]
-		.split('|\n\n')[0]
+		.split('## Third-Party Extensions')[1]!
+		.split('|\n\n')[0]!
 		.split('|\n|')
 		.slice(2)
 		.map((line) => {
 			const [module_, author] = line.split(' | ');
-			const module = module_.split('<img src="')[0];
+			const module = module_!.split('<img src="')[0]!;
 			const moduleName = /\[(.+)]/.exec(module)?.[1];
 			if (moduleName === undefined) {
 				throw new Error(`Module name improperly parsed from line: ${line}`);
@@ -186,12 +213,12 @@ export const getThirdPartyExtensions = async () =>
 				throw new Error(`Module URL improperly parsed from line: ${line}`);
 			}
 
-			const authorName = /\[(.+)]/.exec(author)?.[1];
+			const authorName = /\[(.+)]/.exec(author!)?.[1];
 			if (authorName === undefined) {
 				throw new Error(`Author improperly parsed from line: ${line}`);
 			}
 
-			const authorUrl = /\((.+)\)/.exec(author)?.[1];
+			const authorUrl = /\((.+)\)/.exec(author!)?.[1];
 			if (authorUrl === undefined) {
 				throw new Error(`Author URL improperly parsed from line: ${line}`);
 			}
@@ -206,23 +233,23 @@ export const getThirdPartyExtensions = async () =>
 					url: authorUrl,
 				},
 			};
-		});
+		}) as ThirdPartyExtension[];
 
 /**
  * Get information about third party libraries from the README table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries.
+ * @returns Information about third party libraries.
  */
 export const getThirdPartyLibraries = async () =>
 	normalizeNewlines(
 		await fs.readFile(path.join(import.meta.dirname, 'README.md'), 'utf8'),
 	)
-		.split('## Third-Party Libraries')[1]
-		.split('|\n\n')[0]
+		.split('## Third-Party Libraries')[1]!
+		.split('|\n\n')[0]!
 		.split('|\n|')
 		.slice(2)
 		.map((line) => {
 			let [module, author] = line.split(' | ');
-			module = module.split('<img src="')[0];
+			module = module!.split('<img src="')[0]!;
 			const moduleName = /\[(.+)]/.exec(module)?.[1];
 			if (moduleName === undefined) {
 				throw new Error(`Module name improperly parsed from line: ${line}`);
@@ -233,12 +260,12 @@ export const getThirdPartyLibraries = async () =>
 				throw new Error(`Module URL improperly parsed from line: ${line}`);
 			}
 
-			const authorName = /\[(.+)]/.exec(author)?.[1];
+			const authorName = /\[(.+)]/.exec(author!)?.[1];
 			if (authorName === undefined) {
 				throw new Error(`Author improperly parsed from line: ${line}`);
 			}
 
-			const authorUrl = /\((.+)\)/.exec(author)?.[1];
+			const authorUrl = /\((.+)\)/.exec(author!)?.[1];
 			if (authorUrl === undefined) {
 				throw new Error(`Author URL improperly parsed from line: ${line}`);
 			}
@@ -253,7 +280,7 @@ export const getThirdPartyLibraries = async () =>
 					url: authorUrl,
 				},
 			};
-		});
+		}) as ThirdPartyExtension[];
 
 /**
  * `Intl.Collator` object ready to be used for icon titles sorting.
