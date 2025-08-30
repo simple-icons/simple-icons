@@ -3289,9 +3289,9 @@
 	},
 	{
 		"title": "Coder",
-		"hex": "000000",
-		"source": "https://github.com/coder/presskit/blob/f9dccc00b062cf130ba237bfcefd1fcda4d253c8/logos/coder_logo_transparent_black.svg",
-		"guidelines": "https://github.com/coder/presskit"
+		"hex": "090B0B",
+		"source": "https://coder.com/brand#3-logos",
+		"guidelines": "https://coder.com/brand"
 	},
 	{
 		"title": "CodeRabbit",
@@ -4064,6 +4064,16 @@
 		"title": "DeepL",
 		"hex": "0F2B46",
 		"source": "https://www.deepl.com/press.html"
+	},
+	{
+		"title": "DeepMind",
+		"hex": "4285F4",
+		"source": "https://deepmind.google",
+		"aliases": {
+			"aka": [
+				"Google DeepMind"
+			]
+		}
 	},
 	{
 		"title": "Deepnote",
@@ -5811,6 +5821,11 @@
 		"source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
 	},
 	{
+		"title": "FreshRSS",
+		"hex": "0062BE",
+		"source": "https://freshrss.org/images/icon.svg"
+	},
+	{
 		"title": "Frigate",
 		"hex": "000000",
 		"source": "https://frigate.video"
@@ -5927,7 +5942,7 @@
 	{
 		"title": "Game Science",
 		"hex": "000000",
-		"source": "https://gamesci.com.cn"
+		"source": "https://gamesci.cn"
 	},
 	{
 		"title": "GameBanana",
@@ -7742,6 +7757,11 @@
 		"source": "https://github.com/immerjs/immer/blob/7a5382899bc8b0bf5e21972a1c7db63f53e1d697/website/static/img/immer-logo.svg"
 	},
 	{
+		"title": "Immersive Translate",
+		"hex": "EA4C89",
+		"source": "https://immersivetranslate.com"
+	},
+	{
 		"title": "Immich",
 		"hex": "4250AF",
 		"source": "https://github.com/immich-app/immich/blob/25c9b779e4d19bc34551f8b137266a459e0d70e1/design/immich-logo.svg"
@@ -9482,6 +9502,16 @@
 		"source": "https://localwp.com"
 	},
 	{
+		"title": "LocalSend",
+		"hex": "008080",
+		"source": "https://github.com/localsend/localsend/blob/f57cae55616e6d2f0ab20cad41e0697cba7885e5/app/assets/img/logo-512.png"
+	},
+	{
+		"title": "LocalXpose",
+		"hex": "6023C0",
+		"source": "https://localxpose.io"
+	},
+	{
 		"title": "Lodash",
 		"hex": "3492FF",
 		"source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
@@ -11200,6 +11230,12 @@
 		"source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
 	},
 	{
+		"title": "Note",
+		"hex": "000000",
+		"source": "https://www.help-note.com/hc/ja/articles/360000235582",
+		"guidelines": "https://note.jp/n/nfd19f7246947"
+	},
+	{
 		"title": "NotebookLM",
 		"hex": "000000",
 		"source": "https://notebooklm.google"
@@ -11939,6 +11975,15 @@
 		"title": "ownCloud",
 		"hex": "041E42",
 		"source": "https://owncloud.com"
+	},
+	{
+		"title": "Oxc",
+		"hex": "FF915C",
+		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
+		"guidelines": "https://oxc.rs/branding.html",
+		"license": {
+			"type": "CC0-1.0"
+		}
 	},
 	{
 		"title": "Oxygen",
@@ -13526,6 +13571,11 @@
 		"source": "https://github.com/rainmeter/rainmeter-www/blob/867fd905fda8d1b1083730adcb7f49f1775cb5b0/source/img/logo_blue.ai"
 	},
 	{
+		"title": "RainYun",
+		"hex": "DAD9D9",
+		"source": "https://www.rainyun.com"
+	},
+	{
 		"title": "Rakuten",
 		"hex": "BF0000",
 		"source": "https://global.rakuten.com/corp/news/media",
@@ -14132,6 +14182,11 @@
 		"title": "Rollbar",
 		"hex": "3569F3",
 		"source": "https://rollbar.com/about"
+	},
+	{
+		"title": "Rolldown",
+		"hex": "FF7E17",
+		"source": "https://rolldown.rs/lightning-down.svg"
 	},
 	{
 		"title": "Rolls-Royce",
@@ -15906,6 +15961,11 @@
 		"hex": "4DA2FF",
 		"source": "https://sui.io/media-kit",
 		"guidelines": "https://sui.io/media-kit"
+	},
+	{
+		"title": "Suitest",
+		"hex": "F06060",
+		"source": "https://suite.st"
 	},
 	{
 		"title": "Sumo Logic",
@@ -18220,6 +18280,11 @@
 		"source": "https://commons.wikimedia.org/wiki/File:WeMoApp.svg"
 	},
 	{
+		"title": "WeRead",
+		"hex": "37A7FF",
+		"source": "https://cdn.weread.qq.com/web/wrwebnjlogic/image/web_nav_logo_hover.091f61ee.svg"
+	},
+	{
 		"title": "Western Digital",
 		"hex": "995DFF",
 		"source": "https://www.westerndigital.com",
@@ -18933,8 +18998,8 @@
 	},
 	{
 		"title": "Zod",
-		"hex": "3E67B1",
-		"source": "https://zod.dev",
+		"hex": "408AFF",
+		"source": "https://github.com/colinhacks/zod/blob/ff89187172ac6aa4a6264592980d1628ee785242/logo/Logo%20White.ai",
 		"license": {
 			"type": "MIT"
 		}
