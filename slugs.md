@@ -3140,6 +3140,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `VirtualBox` | `virtualbox` |
 | `VirusTotal` | `virustotal` |
 | `Visa` | `visa` |
+| `Visual Paradigm` | `visualparadigm` |
 | `visx` | `visx` |
 | `Vite` | `vite` |
 | `VitePress` | `vitepress` |
