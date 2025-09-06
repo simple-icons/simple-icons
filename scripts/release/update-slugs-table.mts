@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Generates a MarkDown file that lists every brand name and their slug.
@@ -7,7 +6,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {getIconSlug, getIconsData} from '../../sdk.mjs';
+import {getIconSlug, getIconsData} from '../../sdk.mts';
 
 const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const slugsFile = path.resolve(rootDirectory, 'slugs.md');
