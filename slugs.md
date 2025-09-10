@@ -3170,6 +3170,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `VTEX` | `vtex` |
 | `Vue.js` | `vuedotjs` |
 | `Vuetify` | `vuetify` |
+| `VueUse` | `vueuse` |
 | `Vulkan` | `vulkan` |
 | `Vultr` | `vultr` |
 | `Vyond` | `vyond` |
