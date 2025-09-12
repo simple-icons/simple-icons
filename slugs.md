@@ -1720,7 +1720,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mahindra` | `mahindra` |
 | `mail.com` | `maildotcom` |
 | `Mail.Ru` | `maildotru` |
-| `mailbox` | `mailbox` |
+| `mailbox.org` | `mailboxdotorg` |
 | `MailChimp` | `mailchimp` |
 | `Mailgun` | `mailgun` |
 | `Mailtrap` | `mailtrap` |
