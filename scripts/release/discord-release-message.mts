@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Send release message to Discord #releases channel.
@@ -8,9 +7,14 @@
 import process from 'node:process';
 
 const releaseVersion = process.argv[2];
-const discordReleasesRoleId = process.env.DISCORD_RELEASES_ROLE_ID;
-const discordReleasesWebhookUrl = process.env.DISCORD_RELEASES_WEBHOOK_URL;
+const discordReleasesRoleId = process.env['DISCORD_RELEASES_ROLE_ID'];
+const discordReleasesWebhookUrl = process.env['DISCORD_RELEASES_WEBHOOK_URL'];
 const githubReleaseUrl = `https://github.com/simple-icons/simple-icons/releases/tag/${releaseVersion}`;
+
+if (!releaseVersion) {
+	console.error('Release version is required as the first argument.');
+	process.exit(1);
+}
 
 if (discordReleasesRoleId === undefined) {
 	console.error('DISCORD_RELEASES_ROLE_ID environment variable is not set.');

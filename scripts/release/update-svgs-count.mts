@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Replaces the SVG count milestone "Over <NUMBER> SVG icons..." located
@@ -10,7 +9,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {getIconsData} from '../../sdk.mjs';
+import {getIconsData} from '../../sdk.mts';
 
 const regexMatcher = /Over\s(\d+)\s/;
 const updateRange = 100;
@@ -29,12 +28,12 @@ try {
 		);
 		process.exit(1);
 	} else {
-		const overNIconsInReadme = Number.parseInt(match[1], 10);
+		const overNumberIconsInReadme = Number.parseInt(match[1]!, 10);
 		const iconsData = await getIconsData();
 		const nIcons = iconsData.length;
 		const nIconsRounded = Math.floor(nIcons / updateRange) * updateRange;
 
-		if (overNIconsInReadme !== nIconsRounded) {
+		if (overNumberIconsInReadme !== nIconsRounded) {
 			const newContent = readmeContent.replace(
 				regexMatcher,
 				`Over ${nIconsRounded} `,
