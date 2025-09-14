@@ -22,7 +22,7 @@ jobs:
     outputs:
       is-fork: ${{ steps.check.outputs.is-fork }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/check-is-fork
         id: check
         with:
@@ -59,14 +59,14 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ steps.app-token.outputs.token }}
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm

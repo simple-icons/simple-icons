@@ -1439,7 +1439,7 @@
 	},
 	{
 		"title": "AssemblyScript",
-		"hex": "007AAC",
+		"hex": "007ACC",
 		"source": "https://www.assemblyscript.org"
 	},
 	{
@@ -1620,6 +1620,12 @@
 		"title": "avajs",
 		"hex": "4B4B77",
 		"source": "https://github.com/avajs/ava/blob/6f8e30c94626238a5b26deadac319089fa43d333/media/logo.svg"
+	},
+	{
+		"title": "AvaloniaUI",
+		"hex": "165BFF",
+		"source": "https://avaloniaui.net",
+		"guidelines": "https://avaloniaui.net/brand"
 	},
 	{
 		"title": "Avast",
@@ -3283,9 +3289,9 @@
 	},
 	{
 		"title": "Coder",
-		"hex": "000000",
-		"source": "https://github.com/coder/presskit/blob/f9dccc00b062cf130ba237bfcefd1fcda4d253c8/logos/coder_logo_transparent_black.svg",
-		"guidelines": "https://github.com/coder/presskit"
+		"hex": "090B0B",
+		"source": "https://coder.com/brand#3-logos",
+		"guidelines": "https://coder.com/brand"
 	},
 	{
 		"title": "CodeRabbit",
@@ -4058,6 +4064,16 @@
 		"title": "DeepL",
 		"hex": "0F2B46",
 		"source": "https://www.deepl.com/press.html"
+	},
+	{
+		"title": "DeepMind",
+		"hex": "4285F4",
+		"source": "https://deepmind.google",
+		"aliases": {
+			"aka": [
+				"Google DeepMind"
+			]
+		}
 	},
 	{
 		"title": "Deepnote",
@@ -5805,6 +5821,11 @@
 		"source": "https://github.com/denoland/fresh/blob/7e4a22f7af55192a53d90ec6e6bfeacd213c169d/www/static/logo.svg"
 	},
 	{
+		"title": "FreshRSS",
+		"hex": "0062BE",
+		"source": "https://freshrss.org/images/icon.svg"
+	},
+	{
 		"title": "Frigate",
 		"hex": "000000",
 		"source": "https://frigate.video"
@@ -5921,7 +5942,7 @@
 	{
 		"title": "Game Science",
 		"hex": "000000",
-		"source": "https://gamesci.com.cn"
+		"source": "https://gamesci.cn"
 	},
 	{
 		"title": "GameBanana",
@@ -6096,6 +6117,11 @@
 		"title": "GitBook",
 		"hex": "BBDDE5",
 		"source": "https://www.gitbook.com"
+	},
+	{
+		"title": "GitCode",
+		"hex": "DA203E",
+		"source": "https://cdn-static.gitcode.com/doc/logo.svg"
 	},
 	{
 		"title": "Gitconnected",
@@ -6339,7 +6365,7 @@
 	},
 	{
 		"title": "Goodreads",
-		"hex": "372213",
+		"hex": "1E1914",
 		"source": "https://www.goodreads.com/about/press"
 	},
 	{
@@ -6791,6 +6817,11 @@
 		"source": "https://greensock.com"
 	},
 	{
+		"title": "GreptimeDB",
+		"hex": "8322FF",
+		"source": "https://github.com/GreptimeTeam/greptimedb-grafana-datasource/blob/ead7c1dd1a589c313fb9e3635bd0a9fee93ee795/src/img/greptimedb_logo.svg"
+	},
+	{
 		"title": "Grid.ai",
 		"hex": "78FF96",
 		"source": "https://github.com/gridai/logos/blob/1e12c83b77abdc22a41566cab232f4db40223895/GridAI-icons/icon-white-48.svg"
@@ -6821,6 +6852,17 @@
 		"hex": "FAA918",
 		"source": "https://github.com/gruntjs/gruntjs.com/blob/70f43898d9ce8e6cc862ad72bf8a7aee5ca199a9/src/media/grunt-logo-no-wordmark.svg",
 		"guidelines": "https://github.com/gruntjs/grunt-docs/blob/main/Grunt-Brand-Guide.md"
+	},
+	{
+		"title": "GSAP",
+		"hex": "0AE448",
+		"source": "https://gsap.com/brand/",
+		"guidelines": "https://gsap.com/brand/",
+		"aliases": {
+			"aka": [
+				"GreenSock Animation Platform"
+			]
+		}
 	},
 	{
 		"title": "GSK",
@@ -7720,6 +7762,11 @@
 		"source": "https://github.com/immerjs/immer/blob/7a5382899bc8b0bf5e21972a1c7db63f53e1d697/website/static/img/immer-logo.svg"
 	},
 	{
+		"title": "Immersive Translate",
+		"hex": "EA4C89",
+		"source": "https://immersivetranslate.com"
+	},
+	{
 		"title": "Immich",
 		"hex": "4250AF",
 		"source": "https://github.com/immich-app/immich/blob/25c9b779e4d19bc34551f8b137266a459e0d70e1/design/immich-logo.svg"
@@ -8514,8 +8561,8 @@
 	{
 		"title": "Kdenlive",
 		"hex": "527EB2",
-		"source": "https://kdenlive.org/en/trademark-logo/",
-		"guidelines": "https://kdenlive.org/en/trademark-logo/"
+		"source": "https://kdenlive.org/trademark-logo/",
+		"guidelines": "https://kdenlive.org/trademark-logo/"
 	},
 	{
 		"title": "Kedro",
@@ -8563,6 +8610,11 @@
 		"title": "Kentico",
 		"hex": "F05A22",
 		"source": "https://www.kentico.com"
+	},
+	{
+		"title": "Keploy",
+		"hex": "FF914D",
+		"source": "https://keploy.io/docs"
 	},
 	{
 		"title": "Keras",
@@ -9461,6 +9513,16 @@
 		"source": "https://localwp.com"
 	},
 	{
+		"title": "LocalSend",
+		"hex": "008080",
+		"source": "https://github.com/localsend/localsend/blob/f57cae55616e6d2f0ab20cad41e0697cba7885e5/app/assets/img/logo-512.png"
+	},
+	{
+		"title": "LocalXpose",
+		"hex": "6023C0",
+		"source": "https://localxpose.io"
+	},
+	{
 		"title": "Lodash",
 		"hex": "3492FF",
 		"source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
@@ -9852,8 +9914,8 @@
 	{
 		"title": "MasterCard",
 		"hex": "EB001B",
-		"source": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark/downloads.html",
-		"guidelines": "https://brand.mastercard.com/brandcenter/mastercard-brand-mark.html"
+		"source": "https://www.mastercard.com/brandcenter/us/en/download-artwork.html",
+		"guidelines": "https://www.mastercard.com/brandcenter/us/en/brand-requirements/mastercard.html"
 	},
 	{
 		"title": "mastercomfig",
@@ -11179,6 +11241,12 @@
 		"source": "https://www.norwegian.com/ie/travel-info/on-board/in-flight-entertainment/magazine/"
 	},
 	{
+		"title": "Note",
+		"hex": "000000",
+		"source": "https://www.help-note.com/hc/ja/articles/360000235582",
+		"guidelines": "https://note.jp/n/nfd19f7246947"
+	},
+	{
 		"title": "NotebookLM",
 		"hex": "000000",
 		"source": "https://notebooklm.google"
@@ -11920,6 +11988,15 @@
 		"source": "https://owncloud.com"
 	},
 	{
+		"title": "Oxc",
+		"hex": "FF915C",
+		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
+		"guidelines": "https://oxc.rs/branding.html",
+		"license": {
+			"type": "CC0-1.0"
+		}
+	},
+	{
 		"title": "Oxygen",
 		"hex": "3A209E",
 		"source": "https://oxygenbuilder.com",
@@ -12120,8 +12197,8 @@
 	},
 	{
 		"title": "PayPal",
-		"hex": "003087",
-		"source": "https://www.paypal.com",
+		"hex": "002991",
+		"source": "https://www.paypal.com/us",
 		"guidelines": "https://newsroom.paypal-corp.com/media-resources"
 	},
 	{
@@ -12226,8 +12303,8 @@
 	},
 	{
 		"title": "Perforce",
-		"hex": "404040",
-		"source": "https://www.perforce.com"
+		"hex": "4C00FF",
+		"source": "https://brandfolder.com/perforce/public-logos"
 	},
 	{
 		"title": "Perl",
@@ -12933,6 +13010,11 @@
 		"source": "https://processingfoundation.org"
 	},
 	{
+		"title": "ProcessOn",
+		"hex": "067BEF",
+		"source": "https://www.processon.com/assets/imgs/logo_small.svg"
+	},
+	{
 		"title": "ProcessWire",
 		"hex": "2480E6",
 		"source": "https://processwire.com"
@@ -13500,6 +13582,11 @@
 		"source": "https://github.com/rainmeter/rainmeter-www/blob/867fd905fda8d1b1083730adcb7f49f1775cb5b0/source/img/logo_blue.ai"
 	},
 	{
+		"title": "RainYun",
+		"hex": "DAD9D9",
+		"source": "https://www.rainyun.com"
+	},
+	{
 		"title": "Rakuten",
 		"hex": "BF0000",
 		"source": "https://global.rakuten.com/corp/news/media",
@@ -13542,6 +13629,11 @@
 		"hex": "A22846",
 		"source": "https://www.raspberrypi.org/trademark-rules",
 		"guidelines": "https://www.raspberrypi.org/trademark-rules"
+	},
+	{
+		"title": "Ratatui",
+		"hex": "000000",
+		"source": "https://github.com/ratatui/ratatui/blob/8e3bd11d60472734cfe0b5221cd3472acb435317/assets/logo-simple.svg"
 	},
 	{
 		"title": "Ravelry",
@@ -14103,6 +14195,11 @@
 		"source": "https://rollbar.com/about"
 	},
 	{
+		"title": "Rolldown",
+		"hex": "FF7E17",
+		"source": "https://rolldown.rs/lightning-down.svg"
+	},
+	{
 		"title": "Rolls-Royce",
 		"hex": "281432",
 		"source": "https://www.rolls-roycemotorcars.com"
@@ -14537,7 +14634,7 @@
 	},
 	{
 		"title": "Scratch",
-		"hex": "4D97FF",
+		"hex": "855CD6",
 		"source": "https://github.com/LLK/scratch-link/blob/027e3754ba6db976495e905023d5ac5e730dccfc/Assets/Windows/SVG/Windows%20Tray%20400x400.svg"
 	},
 	{
@@ -14706,6 +14803,11 @@
 		"title": "Sequelize",
 		"hex": "52B0E7",
 		"source": "https://github.com/sequelize/website/blob/e6a482fa58a839b15ace80e3c8901ed2887be45e/static/img/logo-simple.svg"
+	},
+	{
+		"title": "ServBay",
+		"hex": "00103C",
+		"source": "https://www.servbay.com"
 	},
 	{
 		"title": "Server Fault",
@@ -15870,6 +15972,11 @@
 		"hex": "4DA2FF",
 		"source": "https://sui.io/media-kit",
 		"guidelines": "https://sui.io/media-kit"
+	},
+	{
+		"title": "Suitest",
+		"hex": "F06060",
+		"source": "https://suite.st"
 	},
 	{
 		"title": "Sumo Logic",
@@ -17302,7 +17409,7 @@
 		"title": "Unity",
 		"hex": "FFFFFF",
 		"source": "https://brand.unity.com",
-		"guidelines": "https://brand.unity.com"
+		"guidelines": "https://unity.com/legal/branding-trademarks"
 	},
 	{
 		"title": "UnJS",
@@ -17713,6 +17820,11 @@
 		"source": "https://merchantsignageeu.visa.com/product.asp?dptID=696"
 	},
 	{
+		"title": "Visual Paradigm",
+		"hex": "CC3333",
+		"source": "https://forums.visual-paradigm.com/c/general-questions-discussions/9"
+	},
+	{
 		"title": "visx",
 		"hex": "FF1231",
 		"source": "https://airbnb.io/visx"
@@ -17872,6 +17984,11 @@
 		"license": {
 			"type": "MIT"
 		}
+	},
+	{
+		"title": "VueUse",
+		"hex": "41B883",
+		"source": "https://github.com/vueuse/vueuse/blob/b2aa062cfafc448d6942cee3916b695f032aceef/packages/public/favicon.svg"
 	},
 	{
 		"title": "Vulkan",
@@ -18177,6 +18294,11 @@
 		"title": "WEMO",
 		"hex": "72D44C",
 		"source": "https://commons.wikimedia.org/wiki/File:WeMoApp.svg"
+	},
+	{
+		"title": "WeRead",
+		"hex": "37A7FF",
+		"source": "https://cdn.weread.qq.com/web/wrwebnjlogic/image/web_nav_logo_hover.091f61ee.svg"
 	},
 	{
 		"title": "Western Digital",
@@ -18892,8 +19014,8 @@
 	},
 	{
 		"title": "Zod",
-		"hex": "3E67B1",
-		"source": "https://zod.dev",
+		"hex": "408AFF",
+		"source": "https://github.com/colinhacks/zod/blob/ff89187172ac6aa4a6264592980d1628ee785242/logo/Logo%20White.ai",
 		"license": {
 			"type": "MIT"
 		}
@@ -18907,6 +19029,14 @@
 		"title": "Zoiper",
 		"hex": "F47920",
 		"source": "https://www.zoiper.com/en/products"
+	},
+	{
+		"title": "Zola",
+		"hex": "EAE7D6",
+		"source": "https://github.com/getzola/zola/blob/c3a3d78dfddd34debf5254d293558e8fa045fd51/docs/static/logos/Zola-icon-cream-on-coffee.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Zomato",
