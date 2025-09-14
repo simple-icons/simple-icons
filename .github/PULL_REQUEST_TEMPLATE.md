@@ -14,7 +14,7 @@ https://simpleicons.org/preview
 Regardless of whether or not the linked issue (if there is one) has a metric, please include the metric here for PR reviewers to validate. See our contributing guidelines at https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity for more details on how we assess a brand's popularity.
 -->
 
-**Terms of Service link:** 
+**Terms of Service link:**
 
 <!--
 As part of the checklist below, you acknowledge you have reviewed the terms of service of a brand, to ensure we are granted permission to include this brand. Please link here to the terms you have reviewed, to make maintainer review easier. Ideally link to a section and/or paragraph.
