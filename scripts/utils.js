@@ -11,8 +11,8 @@ import path from 'node:path';
 import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
 
 /**
- * @typedef {import("../sdk.js").IconData} IconData
- * @typedef {import("../sdk.js").DuplicateAlias} DuplicateAlias
+ * @typedef {import("../types.js").IconData} IconData
+ * @typedef {import("../types.js").DuplicateAlias} DuplicateAlias
  */
 
 /**
@@ -177,4 +177,18 @@ export const formatIconData = (iconsData) => {
 	);
 	icons.sort(sortIconsCompare);
 	return icons;
+};
+
+/**
+ * Check if a file exists.
+ * @param {string} fpath File path to check.
+ * @returns {Promise<boolean>} True if the file exists, false otherwise.
+ */
+export const fileExists = async (fpath) => {
+	try {
+		await fs.access(fpath);
+		return true;
+	} catch {
+		return false;
+	}
 };
