@@ -6,7 +6,7 @@
  */
 
 /**
- * @typedef {import("../../sdk.mjs").IconData} IconData
+ * @typedef {import("../../types.js").IconData} IconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
  */
 
@@ -18,8 +18,16 @@ import {
 	getIconSlug,
 	getIconsDataString,
 	normalizeNewlines,
+	titleToSlug,
 } from '../../sdk.mjs';
-import {formatIconData, getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
+import {
+	fileExists,
+	formatIconData,
+	getSpdxLicenseIds,
+	sortIconsCompare,
+} from '../utils.js';
+
+const iconsDirectory = path.resolve(import.meta.dirname, '..', '..', 'icons');
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -326,6 +334,106 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 					errors.push(
 						`Icon "${icon.title}" has a localized alias "${lang}" that is the same as its title.` +
 							' Please remove the alias or change the title.',
+					);
+				}
+			}
+		}
+
+		return errors.join('\n') || undefined;
+	},
+
+	/* Ensure that titles constraints are enforced. */
+	checkTitles(icons) {
+		const titles = new Set();
+		const duplicateTitles = [];
+		for (const icon of icons) {
+			const {title, slug} = icon;
+
+			// Titles of icons that do not have slug must be unique.
+			if (slug === undefined) {
+				if (titles.has(title)) {
+					duplicateTitles.push(title);
+				} else {
+					titles.add(title);
+				}
+			}
+		}
+
+		const errors = [];
+		if (duplicateTitles.length > 0) {
+			const message =
+				`Found duplicate title for icons that do not have slug: ${duplicateTitles.join(', ')}.` +
+				`\nPlease, ensure that all titles are unique or these icons have proper slugs.`;
+			errors.push(message);
+		}
+
+		return errors.join('\n') || undefined;
+	},
+
+	/* Ensure that slugs constraints are enforced. */
+	async checkSlugs(icons) {
+		const errors = [];
+
+		for (const icon of icons) {
+			const {slug, title} = icon;
+
+			if (slug === undefined) {
+				continue;
+			}
+
+			// Custom slugs must be necessary. If a title is converted to a slug
+			// and it is the same as the slug, then it is not necessary.
+			if (titleToSlug(title) === slug) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from its title.` +
+						' Please, remove the slug.',
+				);
+				continue;
+			}
+
+			// Custom slugs must be normalized with almost the same rules that
+			// are used for slugs inferred from titles. We allow underscores in
+			// custom slugs to ensure that they are unique.
+			const normalizedSlug = titleToSlug(slug);
+			const slugWithoutUnderscores = slug.replaceAll('_', '');
+			if (normalizedSlug !== slugWithoutUnderscores) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" that is not normalized according to the rules used for titles.` +
+						` Please, rewrite as "${normalizedSlug}" or use another slug.`,
+				);
+				continue;
+			}
+
+			// Icons with custom slugs must have the corresponding icon file.
+			const iconFilePath = path.resolve(iconsDirectory, `${slug}.svg`);
+			// eslint-disable-next-line no-await-in-loop
+			const iconFilePathExists = await fileExists(iconFilePath);
+			if (!iconFilePathExists) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" but the corresponding icon file "icons/${slug}.svg" does not exist.` +
+						' Please, create the icon file or remove the slug.',
+				);
+				continue;
+			}
+
+			for (const otherIcon of icons) {
+				if (otherIcon.title === title) {
+					continue;
+				}
+
+				// Custom slugs must be unique.
+				if (otherIcon.slug === slug) {
+					errors.push(
+						`Icon "${title}" has a slug "${slug}" that is not unique.` +
+							` It is already used by "${otherIcon.title}". Please, ensure that all slugs are unique.`,
+					);
+				}
+
+				// Custom slugs must be different from slugs inferred from titles.
+				if (slug === titleToSlug(otherIcon.title)) {
+					errors.push(
+						`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from the title of the icon "${otherIcon.title}".` +
+							' Please, ensure that all slugs are unique.',
 					);
 				}
 			}

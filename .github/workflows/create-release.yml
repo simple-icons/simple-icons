@@ -16,9 +16,23 @@ on:
 # Replacing <token> by a personal access token with scope `public_repo`
 
 jobs:
+  check-is-fork:
+    name: Check if running in a fork
+    runs-on: ubuntu-latest
+    outputs:
+      is-fork: ${{ steps.check.outputs.is-fork }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/check-is-fork
+        id: check
+        with:
+          in-fork-message: 'Create Release Pull Request workflow only can run in the main repository, skipping.'
   release-pr:
     runs-on: ubuntu-latest
-    if: github.event_name != 'push'
+    needs: check-is-fork
+    if: |
+      github.event_name != 'push' &&
+      needs.check-is-fork.outputs.is-fork != 'true'
     outputs:
       did-create-pr: ${{ steps.release.outputs.did-create-pr }}
       new-version: ${{ steps.release.outputs.new-version }}
@@ -28,7 +42,7 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: simple-icons/release-action@v1
+      - uses: simple-icons/release-action@v2
         id: release
         with:
           repo-token: ${{ steps.app-token.outputs.token }}
@@ -45,14 +59,14 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
           token: ${{ steps.app-token.outputs.token }}
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
