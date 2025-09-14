@@ -1212,6 +1212,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Great Learning` | `greatlearning` |
 | `Greenhouse` | `greenhouse` |
 | `GreenSock` | `greensock` |
+| `GreptimeDB` | `greptimedb` |
 | `Grid.ai` | `griddotai` |
 | `Gridsome` | `gridsome` |
 | `Grocy` | `grocy` |
