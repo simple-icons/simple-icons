@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "15.3.0",
+	"version": "15.15.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -30,63 +30,31 @@
 	"type": "commonjs",
 	"exports": {
 		".": {
-			"import": {
-				"types": "./index.d.ts",
-				"default": "./index.mjs"
-			},
-			"module": {
-				"types": "./index.d.ts",
-				"default": "./index.mjs"
-			},
-			"require": {
-				"types": "./index.d.ts",
-				"default": "./index.js"
-			},
-			"default": {
-				"types": "./index.d.ts",
-				"default": "./index.js"
-			}
+			"types": "./index.d.ts",
+			"import": "./index.mjs",
+			"module": "./index.mjs",
+			"require": "./index.js",
+			"default": "./index.js"
 		},
 		"./icons": {
-			"import": {
-				"types": "./index.d.ts",
-				"default": "./index.mjs"
-			},
-			"module": {
-				"types": "./index.d.ts",
-				"default": "./index.mjs"
-			},
-			"require": {
-				"types": "./index.d.ts",
-				"default": "./index.js"
-			},
-			"default": {
-				"types": "./index.d.ts",
-				"default": "./index.js"
-			}
+			"types": "./index.d.ts",
+			"import": "./index-icons.mjs",
+			"module": "./index-icons.mjs",
+			"require": "./index-icons.js",
+			"default": "./index-icons.js"
 		},
 		"./icons/*": [
 			"./icons/*"
 		],
 		"./sdk": {
-			"import": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.mjs"
-			},
-			"module": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.mjs"
-			},
-			"require": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.js"
-			},
-			"default": {
-				"types": "./sdk.d.ts",
-				"default": "./sdk.js"
-			}
+			"types": "./sdk.d.ts",
+			"import": "./sdk.mjs",
+			"module": "./sdk.mjs",
+			"require": "./sdk.js",
+			"default": "./sdk.js"
 		},
 		"./icons.json": {
+			"types": "./data/simple-icons.d.ts",
 			"import": "./data/simple-icons.json",
 			"module": "./data/simple-icons.json",
 			"require": "./data/simple-icons.json",
@@ -107,7 +75,7 @@
 		"lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run tslint && npm run markdownlint",
 		"markdownlint": "markdownlint-cli2 '**/*.md' '#node_modules'",
 		"ourlint": "node scripts/lint/ourlint.js",
-		"prepare": "node -e 'process.exit(process.env.CI ? 0 : 1)' || husky",
+		"prepare": "node -e \"process.exit(process.env.CI ? 0 : 1)\" || husky",
 		"prepublishOnly": "npm run build",
 		"prettier": "prettier --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
 		"prettierlint": "npm run prettier -- --check --cache",

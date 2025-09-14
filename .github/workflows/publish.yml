@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
@@ -33,9 +33,9 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
@@ -68,7 +68,7 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v3
