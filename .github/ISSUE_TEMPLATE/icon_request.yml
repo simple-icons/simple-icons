@@ -60,8 +60,7 @@ body:
       label: Forbidden Brands
       options:
         - label: I have reviewed the list of [forbidden brands](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#forbidden-brands) and can confirm the brand I am requesting is not one of them, nor is it a subsidiary of one of them.
-    validations:
-      required: true
+          required: true
 
   - type: input
     attributes:
