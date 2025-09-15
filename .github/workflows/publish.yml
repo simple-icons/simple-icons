@@ -8,6 +8,8 @@ jobs:
   sanity-check:
     name: Pre-publish checks
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -30,6 +32,7 @@ jobs:
     needs: sanity-check
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       id-token: write # for OIDC authentication
     steps:
       - name: Checkout
@@ -58,6 +61,8 @@ jobs:
     name: GitHub release
     needs: sanity-check
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
@@ -108,6 +113,8 @@ jobs:
     name: Trigger simple-icons-font release
     needs: npm
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
@@ -125,6 +132,8 @@ jobs:
     name: Trigger simpleicons.org website update
     needs: npm
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
