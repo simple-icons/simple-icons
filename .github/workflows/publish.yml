@@ -30,7 +30,7 @@ jobs:
     needs: sanity-check
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      id-token: write # for OIDC authentication
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -53,10 +53,7 @@ jobs:
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          provenance: true
+        run: npm publish
   github:
     name: GitHub release
     needs: sanity-check
