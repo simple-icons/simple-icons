@@ -56,10 +56,7 @@ jobs:
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          provenance: true
+        run: npm publish
   github:
     name: GitHub release
     needs: sanity-check
