@@ -29,7 +29,7 @@ meta:
 dependencies:
   - all: ['package-lock.json']
     status: modified
-permission in review:
+permissions in review:
   - any: [icons/*.svg]
     status: added
   - any: [icons/*.svg]
