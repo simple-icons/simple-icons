@@ -19,6 +19,7 @@ jobs:
   check-is-fork:
     name: Check if running in a fork
     runs-on: ubuntu-latest
+    permissions: {}
     outputs:
       is-fork: ${{ steps.check.outputs.is-fork }}
     steps:
@@ -30,6 +31,10 @@ jobs:
   release-pr:
     runs-on: ubuntu-latest
     needs: check-is-fork
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
     if: |
       github.event_name != 'push' &&
       needs.check-is-fork.outputs.is-fork != 'true'
@@ -49,6 +54,8 @@ jobs:
   version-bump:
     runs-on: ubuntu-latest
     needs: release-pr
+    permissions:
+      contents: write
     if: |
       github.event_name != 'push' &&
       needs.release-pr.outputs.did-create-pr == 'true'
