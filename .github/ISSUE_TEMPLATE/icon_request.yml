@@ -1,6 +1,6 @@
 name: Icon request
 description: Request a new icon for Simple Icons
-labels: [new icon]
+labels: [new icon, permissions in review]
 title: 'Request: <brand-name>'
 
 body:
@@ -52,6 +52,22 @@ body:
         [Similarweb rank]: https://www.similarweb.com
         [our contributing guidelines]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity
       placeholder: 'Example: The Similarweb rank is 261,758. See https://www.similarweb.com/website/simpleicons.org'
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Forbidden Brands
+      options:
+        - label: I have reviewed the list of [forbidden brands](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#forbidden-brands) and can confirm the brand I am requesting is not one of them, nor is it a subsidiary of one of them.
+          required: true
+
+  - type: input
+    attributes:
+      label: Terms of Service
+      description: |
+        A lot of websites specify whether or not we can use their brand assets in their Terms of Service.
+        Please ensure you include the link here where relevant.
     validations:
       required: true
 

@@ -10,31 +10,36 @@ jobs:
   build:
     name: Build package
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Build NodeJS package
         run: npm run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Is normal pull request
         # check if is not a release pull request
         id: pr
@@ -70,7 +75,7 @@ jobs:
           echo -ne " file automatically at releases.\n" 1>&2
           exit 1
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
         run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
@@ -102,16 +107,18 @@ jobs:
   test:
     name: Test package
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Run tests
         run: npm run test
