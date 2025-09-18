@@ -1212,6 +1212,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Great Learning` | `greatlearning` |
 | `Greenhouse` | `greenhouse` |
 | `GreenSock` | `greensock` |
+| `GreptimeDB` | `greptimedb` |
 | `Grid.ai` | `griddotai` |
 | `Gridsome` | `gridsome` |
 | `Grocy` | `grocy` |
@@ -3140,6 +3141,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `VirtualBox` | `virtualbox` |
 | `VirusTotal` | `virustotal` |
 | `Visa` | `visa` |
+| `Visual Paradigm` | `visualparadigm` |
 | `visx` | `visx` |
 | `Vite` | `vite` |
 | `VitePress` | `vitepress` |
@@ -3169,6 +3171,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `VTEX` | `vtex` |
 | `Vue.js` | `vuedotjs` |
 | `Vuetify` | `vuetify` |
+| `VueUse` | `vueuse` |
 | `Vulkan` | `vulkan` |
 | `Vultr` | `vultr` |
 | `Vyond` | `vyond` |
