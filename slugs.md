@@ -148,6 +148,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Angular` | `angular` |
 | `AniList` | `anilist` |
 | `Animal Planet` | `animalplanet` |
+| `Anime.js` | `animedotjs` |
 | `AnkerMake` | `ankermake` |
 | `Anki` | `anki` |
 | `Ansible` | `ansible` |
@@ -1069,6 +1070,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gamemaker` | `gamemaker` |
 | `Gandi` | `gandi` |
 | `Garmin` | `garmin` |
+| `Garuda Linux` | `garudalinux` |
 | `Gatling` | `gatling` |
 | `Gatsby` | `gatsby` |
 | `Gcore` | `gcore` |
@@ -1674,6 +1676,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LITIENGINE` | `litiengine` |
 | `LiveChat` | `livechat` |
 | `LiveJournal` | `livejournal` |
+| `LiveKit` | `livekit` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
 | `LMMS` | `lmms` |
@@ -2086,6 +2089,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Opsgenie` | `opsgenie` |
 | `OpsLevel` | `opslevel` |
 | `Optimism` | `optimism` |
+| `Optuna` | `optuna` |
 | `Orange` | `orange` |
 | `ORCID` | `orcid` |
 | `Org` | `org` |
@@ -2197,6 +2201,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Pinboard` | `pinboard` |
 | `Pine Script` | `pinescript` |
 | `Pingdom` | `pingdom` |
+| `Pinia` | `pinia` |
 | `pino` | `pino` |
 | `Pinterest` | `pinterest` |
 | `Pioneer DJ` | `pioneerdj` |
@@ -2653,6 +2658,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SitePoint` | `sitepoint` |
 | `SiYuan` | `siyuan` |
 | `Skaffold` | `skaffold` |
+| `Skeleton` | `skeleton` |
 | `Sketch` | `sketch` |
 | `Sketchfab` | `sketchfab` |
 | `SketchUp` | `sketchup` |
@@ -2670,6 +2676,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `smart` | `smart` |
 | `SmartThings` | `smartthings` |
 | `Smashing Magazine` | `smashingmagazine` |
+| `Smoothcomp` | `smoothcomp` |
 | `SMRT` | `smrt` |
 | `SmugMug` | `smugmug` |
 | `Snapchat` | `snapchat` |
@@ -3076,6 +3083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Unraid` | `unraid` |
 | `Unreal Engine` | `unrealengine` |
 | `Unsplash` | `unsplash` |
+| `Unstop` | `unstop` |
 | `Untappd` | `untappd` |
 | `UpCloud` | `upcloud` |
 | `Uphold` | `uphold` |
