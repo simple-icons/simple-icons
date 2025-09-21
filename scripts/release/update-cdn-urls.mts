@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Updates the CDN URLs in the README.md to match the major version in the
@@ -16,28 +15,28 @@ const readmeFile = path.resolve(rootDirectory, 'README.md');
 
 /**
  * Get the major version number from a semantic version string.
- * @param {string} semVersion A semantic version string.
- * @returns {number} The major version number.
+ * @param semVersion A semantic version string.
+ * @returns The major version number.
  */
-const getMajorVersion = (semVersion) => {
-	const majorVersionAsString = semVersion.split('.')[0];
+const getMajorVersion = (semVersion: string) => {
+	const majorVersionAsString = semVersion.split('.')[0]!;
 	return Number.parseInt(majorVersionAsString, 10);
 };
 
 /**
  * Get the package.json manifest.
- * @returns {Promise<{version: string}>} The package.json manifest.
+ * @returns The package.json manifest.
  */
 const getManifest = async () => {
 	const manifestRaw = await fs.readFile(packageJsonFile, 'utf8');
-	return JSON.parse(manifestRaw);
+	return JSON.parse(manifestRaw) as {version: string};
 };
 
 /**
  * Update the version number in the README.md.
- * @param {number} majorVersion The major version number.
+ * @param majorVersion The major version number.
  */
-const updateVersionInReadmeIfNecessary = async (majorVersion) => {
+const updateVersionInReadmeIfNecessary = async (majorVersion: number) => {
 	let content = await fs.readFile(readmeFile, 'utf8');
 
 	content = content.replaceAll(
@@ -48,15 +47,11 @@ const updateVersionInReadmeIfNecessary = async (majorVersion) => {
 	await fs.writeFile(readmeFile, content);
 };
 
-const main = async () => {
-	try {
-		const manifest = await getManifest();
-		const majorVersion = getMajorVersion(manifest.version);
-		await updateVersionInReadmeIfNecessary(majorVersion);
-	} catch (error) {
-		console.error('Failed to update CDN version number:', error);
-		process.exit(1);
-	}
-};
-
-await main();
+try {
+	const manifest = await getManifest();
+	const majorVersion = getMajorVersion(manifest.version);
+	await updateVersionInReadmeIfNecessary(majorVersion);
+} catch (error) {
+	console.error('Failed to update CDN version number:', error);
+	process.exit(1);
+}

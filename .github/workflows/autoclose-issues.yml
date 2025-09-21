@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Autoclose Issues
-        run: node scripts/autoclose-issues/autoclose.app.js
+        run: node scripts/autoclose-issues/autoclose.app.ts
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
