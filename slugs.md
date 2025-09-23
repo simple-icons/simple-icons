@@ -57,6 +57,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AdGuard` | `adguard` |
 | `Adidas` | `adidas` |
 | `Adminer` | `adminer` |
+| `AdobeXD` | `adobexd` |
 | `AdonisJS` | `adonisjs` |
 | `ADP` | `adp` |
 | `Adroll` | `adroll` |
@@ -288,6 +289,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
 | `Awwwards` | `awwwards` |
+| `AWSS3` | `awss3` |
 | `Axios` | `axios` |
 | `Axis Bank` | `axisbank` |
 | `B&R Automation` | `bandrautomation` |
