@@ -78,11 +78,11 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
-        run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
+        run: sed -i 's/\\"icons\/\*\.svg\\"/$npm_config_icons/' package.json
       - name: Prepare docs (docs changed)
         # only lint changed docs
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs == 'true'
-        run: sed -i "s/'\*\*\/\\\\\*\.md'/"'$npm_config_docs'"/" package.json
+        run: sed -i "s/'\*\*\/\*\.md'/"'$npm_config_docs'"/" package.json
       - name: Prepare docs (no docs changed)
         # only lint README.md if no changes in docs
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs != 'true'
