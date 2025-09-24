@@ -120,7 +120,7 @@ const setLabels = async () => {
 	await githubFetch(url, {
 		method: 'PUT',
 		body: JSON.stringify({
-			labels: ['duplicate', "won't add"],
+			labels: ['duplicate', 'new icon', "won't add"],
 		}),
 	});
 };
