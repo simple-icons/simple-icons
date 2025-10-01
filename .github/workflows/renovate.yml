@@ -9,10 +9,11 @@ jobs:
   check-is-fork:
     name: Check if running in a fork
     runs-on: ubuntu-latest
+    permissions: {}
     outputs:
       is-fork: ${{ steps.check.outputs.is-fork }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/check-is-fork
         id: check
         with:
@@ -22,6 +23,12 @@ jobs:
     needs: check-is-fork
     if: needs.check-is-fork.outputs.is-fork != 'true'
     timeout-minutes: 15
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      checks: write
+      statuses: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
@@ -29,9 +36,9 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: .node-version
       - name: Renovate
