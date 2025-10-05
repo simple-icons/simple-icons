@@ -15,12 +15,7 @@ set -eu
 EXITCODE=0
 
 # If there are changed icons, lint them with SVGLint
-changed_icons="$(git diff --cached --name-only | grep '^icons/' | xargs)"
-if [ -n "$changed_icons" ]; then
-	# Extract svglint command (without file arguments) from package.json using Node.js
-	svglint_script_no_icons="$(node -p "const s=require('./package.json').scripts.svglint.split(' '); s.pop(); s.join(' ')")"
-	echo "+ npx $svglint_script_no_icons $changed_icons"
-	npx $svglint_script_no_icons $changed_icons || EXITCODE=$?
-fi
+changed_icons=$(git diff --cached --name-only --diff-filter=ACM 'icons/' | xargs)
+[ -n "$changed_icons" ] && { npm run svglint:base -- $changed_icons || EXITCODE=$?; }
 
 exit $EXITCODE
