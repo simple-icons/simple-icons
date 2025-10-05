@@ -112,15 +112,15 @@ const closeAsNotPlanned = async () => {
 };
 
 /**
- * Add labels to the issue.
- * GitHub REST API: https://docs.github.com/en/rest/issues/labels?apiVersion=2022-11-28#add-labels-to-an-issue.
+ * Set labels for the issue.
+ * GitHub REST API: https://docs.github.com/en/rest/issues/labels?apiVersion=2022-11-28#set-labels-for-an-issue.
  */
-const addLabels = async () => {
+const setLabels = async () => {
 	const url = `https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}/labels`;
 	await githubFetch(url, {
-		method: 'POST',
+		method: 'PUT',
 		body: JSON.stringify({
-			labels: ['duplicate', "won't add"],
+			labels: ['duplicate', 'new icon', "won't add"],
 		}),
 	});
 };
@@ -144,7 +144,7 @@ try {
 	const reason = await checkIfCanBeClosed();
 	if (reason) {
 		await closeAsNotPlanned();
-		await addLabels();
+		await setLabels();
 		await commentWithReason(reason);
 	}
 } catch (error) {
