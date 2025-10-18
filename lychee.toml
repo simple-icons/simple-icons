@@ -1,4 +1,5 @@
 exclude = [
+	'^https://www\.npmjs\.com',
 	'^https://www\.figma\.com/community/plugin',
 	'^https://www\.adobe\.com/products/illustrator\.html',
 ]
