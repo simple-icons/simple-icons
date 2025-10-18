@@ -100,28 +100,19 @@ If you are in doubt, feel free to submit it and we'll have a look.
 > [!NOTE]\
 > Please make your way through the following metrics _in order_, only moving on to the next metric if the current metric is not applicable to the brand being assessed or if it would put the brand outside our scope.
 
-> [!TIP]\
-> Similarweb is now trying to force users to log in to view statistics. You can bypass this by going directly to:
->
-> - `https://similarweb.com/website/google.com` for websites, replacing `google.com` with the TLD you would like to get the stats on,
-> - `https://www.similarweb.com/app/google/com.android.chrome` for Android apps, replacing `com.android.chrome` with the Google Play package ID of the app you would like to get the stats on, or,
-> - `https://www.similarweb.com/app/apple/535886823` for iOS apps, replacing `535886823` with the numerical Apple Store ID of the app you would like to get stats on.
->
-> You may need to use incognito mode if you visit these ranking pages often. Regular contributors may find the [Similarweb browser extensions](https://www.similarweb.com/corp/extension/) to be of use as they provide the global rank at a glance, without any rate limiting.
-
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year and meet one of the following metrics of popularity, in order of preference:
 
-1. Its website's Similarweb global rank is in the top 500k.
-   - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
+1. Its website's Traffic.cv global rank is in the top 500k.
+   - As Traffic.cv updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
    - For existing icons in our library, the threshold is dropped from 500k to 750k.
    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
-1. The website's Similarweb rank in any one country is either:
+1. The website's Traffic.cv rank in any one country is either:
    - In the top 100, or,
    - In the top 10k, _with_ a global rank of 1m or better.
-1. Its app's Similarweb country rank, in any one country, is in the top 1k for either Android or iOS.
+1. Its app's Traffic.cv country rank, in any one country, is in the top 1k for either Android or iOS.
    - Android apps should be assessed by their usage rank, rather than their store rank.
    - Category ranks will not be accepted.
-1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
+1. In cases where a brand does not have its own website the Traffic.cv rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
    - [npm](https://www.npmjs.com): 100k weekly downloads,
    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
