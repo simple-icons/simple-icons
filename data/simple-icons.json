@@ -1277,7 +1277,10 @@
 	{
 		"title": "AppManager",
 		"hex": "DCAF74",
-		"source": "https://github.com/muntashirakon/AppManager/blob/1a46b0296dae1bc2cf62beedba44ed3bb5e89243/arts/icon_v2/icon.svg"
+		"source": "https://github.com/muntashirakon/AppManager/blob/1a46b0296dae1bc2cf62beedba44ed3bb5e89243/arts/icon_v2/icon.svg",
+		"license": {
+			"type": "GPL-3.0-or-later"
+		}
 	},
 	{
 		"title": "AppSignal",
