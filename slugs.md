@@ -1709,6 +1709,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Lufthansa` | `lufthansa` |
 | `Lumen` | `lumen` |
 | `Lunacy` | `lunacy` |
+| `Luogu` | `luogu` |
 | `Lutris` | `lutris` |
 | `LVGL` | `lvgl` |
 | `Lydia` | `lydia` |
