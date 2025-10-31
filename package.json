@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "15.15.0",
+	"version": "15.18.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -81,7 +81,8 @@
 		"prettierlint": "npm run prettier -- --check --cache",
 		"postpublish": "npm run clean",
 		"remove-icon": "node scripts/remove-icon.js",
-		"svglint": "svglint --ci --config svglint.config.mjs icons/*.svg",
+		"svglint": "npm run svglint:base -- \"icons/*.svg\"",
+		"svglint:base": "svglint --ci --config svglint.config.mjs",
 		"pretest": "npm run prepublishOnly",
 		"test": "mocha tests --reporter tests/min-reporter.cjs --inline-diffs",
 		"posttest": "npm run postpublish",

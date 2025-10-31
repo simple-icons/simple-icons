@@ -910,6 +910,15 @@
 		}
 	},
 	{
+		"title": "Apache Avro",
+		"hex": "30638E",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
 		"title": "Apache Cassandra",
 		"hex": "1287B1",
 		"source": "https://www.apache.org/logos",
@@ -2131,8 +2140,9 @@
 	},
 	{
 		"title": "Bluesky",
-		"hex": "0285FF",
-		"source": "https://github.com/FortAwesome/Font-Awesome/issues/19810#issuecomment-1854999604",
+		"hex": "1185FE",
+		"source": "https://bsky.social/about/blog/press-faq",
+		"guidelines": "https://bsky.social/about/blog/press-faq",
 		"aliases": {
 			"aka": [
 				"bsky"
@@ -3552,6 +3562,11 @@
 		"hex": "1E1E28",
 		"source": "https://www.coolermaster.com/branding",
 		"guidelines": "https://www.coolermaster.com/branding"
+	},
+	{
+		"title": "Coolify",
+		"hex": "6B16ED",
+		"source": "https://github.com/coollabsio/coolify/blob/ac1d98f6035caff10f36fa10508326b4791dec07/public/coolify-logo-monochrome.svg"
 	},
 	{
 		"title": "Copa Airlines",
@@ -5454,6 +5469,12 @@
 		"hex": "0066B3",
 		"source": "https://www.firstinspires.org/brand",
 		"guidelines": "https://www.firstinspires.org/brand"
+	},
+	{
+		"title": "Fish Audio",
+		"hex": "9B90E8",
+		"source": "https://docs.fish.audio/brand",
+		"guidelines": "https://docs.fish.audio/brand"
 	},
 	{
 		"title": "fish shell",
@@ -8988,6 +9009,12 @@
 		"source": "https://commons.wikimedia.org/wiki/File:L_Equipe_Logo.svg"
 	},
 	{
+		"title": "LabEx",
+		"hex": "2E7EEE",
+		"source": "https://labex.io",
+		"guidelines": "https://labex.io/questions/labex-logo-guidelines-162947"
+	},
+	{
 		"title": "LabVIEW",
 		"hex": "FFDB00",
 		"source": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987",
@@ -9460,6 +9487,11 @@
 		"guidelines": "https://www.liquibase.com/brand"
 	},
 	{
+		"title": "ListenHub",
+		"hex": "000000",
+		"source": "https://listenhub.ai"
+	},
+	{
 		"title": "listmonk",
 		"hex": "0055D4",
 		"source": "https://listmonk.app"
@@ -9632,7 +9664,7 @@
 	},
 	{
 		"title": "Lua",
-		"hex": "2C2D72",
+		"hex": "000080",
 		"source": "https://www.lua.org/images/",
 		"guidelines": "https://www.lua.org/images/"
 	},
@@ -9681,6 +9713,11 @@
 		"title": "Lunacy",
 		"hex": "179DE3",
 		"source": "https://icons8.com/lunacy"
+	},
+	{
+		"title": "Luogu",
+		"hex": "5B9BD5",
+		"source": "https://fecdn.luogu.com.cn/columba/static.325908fec383795b.logo-single-color.svg"
 	},
 	{
 		"title": "Lutris",
