@@ -148,7 +148,7 @@
 		"source": "https://www.abbvie.com"
 	},
 	{
-		"title": "About.me",
+		"title": "about.me",
 		"hex": "333333",
 		"source": "https://about.me/assets",
 		"guidelines": "https://about.me/assets"
@@ -232,7 +232,7 @@
 	{
 		"title": "Actual Budget",
 		"hex": "6B46C1",
-		"source": "https://github.com/actualbudget/actual/blob/84af8b76be6bb6c866c32a5be6e8c7a092ab9e38/packages/desktop-client/src/icons/logo/logo.svg"
+		"source": "https://github.com/actualbudget/actual/blob/f9f6917fcdeadd138f5e21c7bd24e475778c4263/packages/component-library/src/icons/logo/logo.svg"
 	},
 	{
 		"title": "Acura",
@@ -403,7 +403,8 @@
 	{
 		"title": "Agora",
 		"hex": "099DFD",
-		"source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg"
+		"source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg",
+		"guidelines": "https://www.agora.io/en/terms-of-service/"
 	},
 	{
 		"title": "AI Dungeon",
@@ -512,7 +513,7 @@
 	{
 		"title": "Airtable",
 		"hex": "18BFFF",
-		"source": "https://airtable.com/press"
+		"source": "https://airtable.com/newsroom"
 	},
 	{
 		"title": "Airtel",
@@ -571,7 +572,7 @@
 	{
 		"title": "Alby",
 		"hex": "FFDF6F",
-		"source": "https://github.com/getAlby/media/blob/c24fee4a3f76d6cd000343a972f10590d3913b25/Alby-logo-icons/Alby-logo-head/alby.svg",
+		"source": "https://github.com/getAlby/media/blob/79cf8fc9a95e49ffa69792190d66b4b017bb80c0/Logos/Alby/Alby%20Head/alby.svg",
 		"guidelines": "https://github.com/getAlby/lightning-browser-extension/wiki/Open-Design/9e8ebe4d3e7707742d227554c4ee27b29983a1b6"
 	},
 	{
@@ -602,7 +603,8 @@
 	{
 		"title": "Algolia",
 		"hex": "003DFF",
-		"source": "https://algolia.frontify.com/d/1AZwVNcFZiu7/style-guide"
+		"source": "https://algolia.frontify.com/d/1AZwVNcFZiu7/style-guide",
+		"guidelines": "https://algolia.frontify.com/d/1AZwVNcFZiu7/style-guide"
 	},
 	{
 		"title": "Algorand",
@@ -664,7 +666,8 @@
 	{
 		"title": "AlmaLinux",
 		"hex": "000000",
-		"source": "https://almalinux.org"
+		"source": "https://almalinux.org",
+		"guidelines": "https://almalinux.org/p/the-almalinux-os-trademark-usage-policy/"
 	},
 	{
 		"title": "Alpine Linux",
