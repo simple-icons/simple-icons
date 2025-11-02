@@ -205,21 +205,21 @@ There are many different tools for editing SVG files, some options include:
 | Name | Description | Platform | Price |
 | :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity](https://www.affinity.studio/) | Vector Graphics Editor | Windows, Mac | Free |
 | [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
-| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 
 Using your preferred tool you should:
 
 1. Isolate the icon from any text or extraneous items.
-1. Merge any overlapping paths.
-1. Compound all paths into one.
-1. Change the icon's viewbox/canvas/page size to 24x24.
-1. Scale the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
-1. Center the icon horizontally and vertically.
-1. Remove all colors. The icon should be monochromatic.
-1. Export the icon as an SVG.
+2. Merge any overlapping paths.
+3. Compound all paths into one.
+4. Change the icon's viewbox/canvas/page size to 24x24.
+5. Scale the icon to fit the viewbox, while preserving the icon's original proportions. This means the icon should be touching at least two sides of the viewbox.
+6. Center the icon horizontally and vertically.
+7. Remove all colors. The icon should be monochromatic.
+8. Export the icon as an SVG.
 
 Some icons can't be easily converted to a monochromatic version due to colour changes, shadows, or other effects. For such cases, the addition of gaps is the recommended approach, with a preferred width of 0.5px. In some situations, a different gap may be required, but that will be determined on a per-case basis.
 
