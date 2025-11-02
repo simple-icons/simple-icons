@@ -9,12 +9,7 @@ import path from 'node:path';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
-import {
-	SVG_PATH_REGEX,
-	getDirnameFromImportMeta,
-	getIconsData,
-	htmlFriendlyToTitle,
-} from './sdk.mjs';
+import {SVG_PATH_REGEX, getIconsData, htmlFriendlyToTitle} from './sdk.mjs';
 
 /**
  * The svgpath library does not includes a `segments` property on their interface.
@@ -22,9 +17,8 @@ import {
  * @typedef {import('svg-path-segments').Segment & {segments: [string, ...number[]][]}} Segment
  */
 
-const __dirname = getDirnameFromImportMeta(import.meta.url);
 const htmlNamedEntitiesFile = path.join(
-	__dirname,
+	import.meta.dirname,
 	'node_modules',
 	'named-html-entities-json',
 	'index.json',
@@ -50,11 +44,9 @@ const iconTolerance = 0.001;
  * @param {number | string} numberOrString The number or string to remove leading zeros from.
  * @returns {string} The number as a string without leading zeros.
  */
-const removeLeadingZeros = (numberOrString) => {
+const removeLeadingZeros = (numberOrString) =>
 	// Convert 0.03 to '.03'
-	return numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
-};
-
+	numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
@@ -67,9 +59,8 @@ const removeLeadingZeros = (numberOrString) => {
  * @returns {boolean} Whether the middle point is collinear to the line.
  */
 // eslint-disable-next-line max-params
-const collinear = (x1, y1, x2, y2, x3, y3) => {
-	return x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
-};
+const collinear = (x1, y1, x2, y2, x3, y3) =>
+	x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2) === 0;
 
 /**
  * Returns the number of digits after the decimal point.
@@ -114,9 +105,8 @@ const getTitleTextIndex = (svgFileContent) => {
  * @param {string} string_ The string to shorten.
  * @returns {string} The shortened string.
  */
-const maybeShortenedWithEllipsis = (string_) => {
-	return string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
-};
+const maybeShortenedWithEllipsis = (string_) =>
+	string_.length > 20 ? `${string_.slice(0, 20)}...` : string_;
 
 /**
  * Check if a string is a number.
@@ -127,38 +117,20 @@ const isNumber = (string_) =>
 	[...string_].every((character) => '0123456789'.includes(character));
 
 /**
- * Memoize a function which accepts a single argument.
- * A second argument can be passed to be used as key.
- * @param {(arg0: any) => any} function_ The function to memoize.
- * @returns {(arg0: any) => any} The memoized function.
+ * @typedef {{fixtures: {
+ *     iconPath: string,
+ *     segments: import('svg-path-segments').Segment[],
+ *     bbox: import('svg-path-bbox').BBox
+ * }}} Info
  */
-const memoize = (function_) => {
-	/** @type {{ [key: string]: any }} */
-	const results = {};
-
-	/**
-	 * Memoized function.
-	 * @param {any} argument The argument to memoize.
-	 * @returns {any} The result of the memoized function.
-	 */
-	return (argument) => {
-		results[argument] ||= function_(argument);
-
-		return results[argument];
-	};
-};
-
-/** @typedef {import('cheerio').Cheerio<import('domhandler').Document>} Cheerio */
-
-/** @type {($icon: Cheerio) => string} */
-const getIconPath = memoize(($icon) => $icon.find('path').attr('d'));
-/** @type {(iconPath: string) => import('svg-path-segments').Segment[]} */
-const getIconPathSegments = memoize((iconPath) => parsePath(iconPath));
-/** @type {(iconPath: string) => import('svg-path-bbox').BBox} */
-const getIconPathBbox = memoize((iconPath) => svgPathBbox(iconPath));
-
 /** @type {import('svglint').Config} */
 const config = {
+	fixtures(_, $) {
+		const iconPath = $.find('path').attr('d');
+		const segments = parsePath(iconPath);
+		const bbox = svgPathBbox(iconPath);
+		return {iconPath, segments, bbox};
+	},
 	rules: {
 		elm: {
 			svg: 1,
@@ -361,12 +333,10 @@ const config = {
 					}
 				}
 			},
-			(reporter, $) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {bbox}}) => {
 				reporter.name = 'icon-size';
 
-				const iconPath = getIconPath($);
-
-				const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
+				const [minX, minY, maxX, maxY] = bbox;
 				const width = Number((maxX - minX).toFixed(iconFloatPrecision));
 				const height = Number((maxY - minY).toFixed(iconFloatPrecision));
 
@@ -381,11 +351,13 @@ const config = {
 					);
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'icon-precision';
-
-				const iconPath = getIconPath($);
-				const segments = getIconPathSegments(iconPath);
 
 				for (const segment of segments) {
 					const [_, ...numberParameters] = segment.params;
@@ -414,16 +386,30 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'ineffective-segments';
 
-				const iconPath = getIconPath($);
-				const segments = getIconPathSegments(iconPath);
+				/** @type {Segment['segments'] | null} */
+				let memoizedAbsSegments = null;
+				/**
+				 * Get abs segments of the icon path.
+				 * @returns {Segment['segments']} Absolutized segments of the icon path.
+				 */
+				const getAbsSegments = () => {
+					if (memoizedAbsSegments !== null) {
+						return memoizedAbsSegments;
+					}
 
-				/** @type {Segment['segments']} */
-				const absSegments =
-					// @ts-ignore
-					svgpath(iconPath).abs().unshort().segments;
+					// @ts-expect-error
+					const {segments} = svgpath(iconPath).abs().unshort();
+					memoizedAbsSegments = segments;
+					return segments;
+				};
 
 				const lowerMovementCommands = ['m', 'l'];
 				const lowerDirectionCommands = ['h', 'v'];
@@ -503,6 +489,7 @@ const config = {
 						}
 
 						if (index > 0) {
+							const absSegments = getAbsSegments();
 							const previousSegment = absSegments[index - 1];
 							let yPreviousCoord = previousSegment.at(-1);
 							let xPreviousCoord = previousSegment.at(-2);
@@ -659,17 +646,20 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'collinear-segments';
 				/**
 				 * Extracts collinear coordinates from SVG path straight lines
 				 * (does not extracts collinear coordinates from curves).
-				 * @param {string} iconPath The SVG path of the icon.
 				 * @returns {import('svg-path-segments').Segment[]} The collinear segments.
 				 */
 				// eslint-disable-next-line complexity
-				const getCollinearSegments = (iconPath) => {
-					const segments = getIconPathSegments(iconPath);
+				const getCollinearSegments = () => {
 					const collinearSegments = [];
 					const straightLineCommands = 'HhVvLlMm';
 
@@ -867,8 +857,7 @@ const config = {
 					return collinearSegments;
 				};
 
-				const iconPath = getIconPath($);
-				const collinearSegments = getCollinearSegments(iconPath);
+				const collinearSegments = getCollinearSegments();
 				if (collinearSegments.length === 0) {
 					return;
 				}
@@ -908,10 +897,8 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {iconPath}}) => {
 				reporter.name = 'negative-zeros';
-
-				const iconPath = getIconPath($);
 
 				// Find negative zeros inside path
 				const negativeZeroMatches = [...iconPath.matchAll(negativeZerosRegexp)];
@@ -932,11 +919,10 @@ const config = {
 					}
 				}
 			},
-			(reporter, $) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {bbox}}) => {
 				reporter.name = 'icon-centered';
 
-				const iconPath = getIconPath($);
-				const [minX, minY, maxX, maxY] = getIconPathBbox(iconPath);
+				const [minX, minY, maxX, maxY] = bbox;
 				const centerX = Number(((minX + maxX) / 2).toFixed(iconFloatPrecision));
 				const devianceX = centerX - iconTargetCenter;
 				const centerY = Number(((minY + maxY) / 2).toFixed(iconFloatPrecision));
@@ -952,11 +938,13 @@ const config = {
 					);
 				}
 			},
-			(reporter, $, ast) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {segments, iconPath}},
+			) => {
 				reporter.name = 'final-closepath';
-
-				const iconPath = getIconPath($);
-				const segments = getIconPathSegments(iconPath);
 
 				const lastSegment = segments.at(-1);
 				if (lastSegment === undefined) {
@@ -978,10 +966,8 @@ const config = {
 					reporter.error(errorMessage);
 				}
 			},
-			(reporter, $, ast) => {
+			(reporter, $, ast, /** @type {Info} */ {fixtures: {iconPath}}) => {
 				reporter.name = 'path-format';
-
-				const iconPath = getIconPath($);
 
 				if (!SVG_PATH_REGEX.test(iconPath)) {
 					const errorMessage = 'Invalid path format';
