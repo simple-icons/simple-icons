@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @file Tests for the documentation.
  */

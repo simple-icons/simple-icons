@@ -1,0 +1,31 @@
+# When working in a fork, some workflows should not be executed
+# as they do not have the necessary permissions. This causes
+# them to fail and only serve to generate noise for people
+# watching the fork's activity.
+
+name: Check if running in a fork
+description: Check if a workflow is running in a forked repository and set an output accordingly.
+
+inputs:
+  in-fork-message:
+    description: Message to display when the workflow is running in a fork.
+    required: true
+outputs:
+  is-fork:
+    description: Indicates if the current repository is a fork.
+    value: ${{ steps.check-is-fork.outputs.is-fork }}
+
+runs:
+  using: composite
+  steps:
+    - id: check-is-fork
+      shell: bash
+      env:
+        IN_FORK_MESSAGE: ${{ inputs.in-fork-message }}
+      run: |
+        if [ "${{ github.repository_owner }}" != "simple-icons" ]; then
+          echo "is-fork=true" >> $GITHUB_OUTPUT
+          echo "$IN_FORK_MESSAGE"
+        else
+          echo "is-fork=false" >> $GITHUB_OUTPUT
+        fi
