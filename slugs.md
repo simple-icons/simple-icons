@@ -1591,6 +1591,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `KX` | `kx` |
 | `Kyocera` | `kyocera` |
 | `L'Équipe` | `lequipe` |
+| `LabEx` | `labex` |
 | `LabVIEW` | `labview` |
 | `LADA` | `lada` |
 | `Lamborghini` | `lamborghini` |
