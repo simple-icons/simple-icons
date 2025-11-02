@@ -1,6 +1,6 @@
 name: Icon update
 description: Help us improve by reporting outdated icons
-labels: [update icon/data]
+labels: [update icon/data, permissions in review]
 title: 'Update: <brand-name>'
 
 body:
@@ -18,6 +18,15 @@ body:
     attributes:
       label: Brand Name
       placeholder: 'Example: Simple Icons'
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Terms of Service
+      description: |
+        A lot of websites specify whether or not we can use their brand assets in their Terms of Service.
+        Please ensure you include the link here where relevant.
     validations:
       required: true
 
