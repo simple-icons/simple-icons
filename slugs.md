@@ -682,6 +682,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cultura` | `cultura` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
+| `Cursor` | `cursor` |
 | `Custom Ink` | `customink` |
 | `CyberDefenders` | `cyberdefenders` |
 | `Cycling '74` | `cycling74` |
