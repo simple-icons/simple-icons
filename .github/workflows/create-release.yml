@@ -73,7 +73,7 @@ jobs:
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Use Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
@@ -93,7 +93,7 @@ jobs:
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Bump version
           commit_user_name: 'simple-icons[bot]'
