@@ -910,6 +910,15 @@
 		}
 	},
 	{
+		"title": "Apache Avro",
+		"hex": "30638E",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
 		"title": "Apache Cassandra",
 		"hex": "1287B1",
 		"source": "https://www.apache.org/logos",
@@ -3563,6 +3572,11 @@
 		"guidelines": "https://www.coolermaster.com/branding"
 	},
 	{
+		"title": "Coolify",
+		"hex": "6B16ED",
+		"source": "https://github.com/coollabsio/coolify/blob/ac1d98f6035caff10f36fa10508326b4791dec07/public/coolify-logo-monochrome.svg"
+	},
+	{
 		"title": "Copa Airlines",
 		"hex": "0032A0",
 		"source": "https://www.copaair.com"
@@ -3795,6 +3809,11 @@
 		"title": "CurseForge",
 		"hex": "F16436",
 		"source": "https://www.curseforge.com"
+	},
+	{
+		"title": "Cursor",
+		"hex": "000000",
+		"source": "https://cursor.com/brand"
 	},
 	{
 		"title": "Custom Ink",
@@ -5463,6 +5482,12 @@
 		"hex": "0066B3",
 		"source": "https://www.firstinspires.org/brand",
 		"guidelines": "https://www.firstinspires.org/brand"
+	},
+	{
+		"title": "Fish Audio",
+		"hex": "9B90E8",
+		"source": "https://docs.fish.audio/brand",
+		"guidelines": "https://docs.fish.audio/brand"
 	},
 	{
 		"title": "fish shell",
@@ -8997,6 +9022,12 @@
 		"source": "https://commons.wikimedia.org/wiki/File:L_Equipe_Logo.svg"
 	},
 	{
+		"title": "LabEx",
+		"hex": "2E7EEE",
+		"source": "https://labex.io",
+		"guidelines": "https://labex.io/questions/labex-logo-guidelines-162947"
+	},
+	{
 		"title": "LabVIEW",
 		"hex": "FFDB00",
 		"source": "https://forums.ni.com/t5/NI-Partner-Network/New-Partner-Co-Marketing-Style-Guide/ba-p/3786987",
@@ -9464,6 +9495,11 @@
 		"guidelines": "https://www.liquibase.com/brand"
 	},
 	{
+		"title": "ListenHub",
+		"hex": "000000",
+		"source": "https://listenhub.ai"
+	},
+	{
 		"title": "listmonk",
 		"hex": "0055D4",
 		"source": "https://listmonk.app"
@@ -9685,6 +9721,11 @@
 		"title": "Lunacy",
 		"hex": "179DE3",
 		"source": "https://icons8.com/lunacy"
+	},
+	{
+		"title": "Luogu",
+		"hex": "5B9BD5",
+		"source": "https://fecdn.luogu.com.cn/columba/static.325908fec383795b.logo-single-color.svg"
 	},
 	{
 		"title": "Lutris",
@@ -10342,6 +10383,15 @@
 		"title": "Mini",
 		"hex": "000000",
 		"source": "https://mini.com"
+	},
+	{
+		"title": "MiniMax",
+		"hex": "E73562",
+		"source": "https://github.com/MiniMax-AI/MiniMax-01/blob/57cf223b177e99636c7711a0f179e9fdc9c38e8a/figures/minimax.svg",
+		"license": {
+			"type": "custom",
+			"url": "https://github.com/simple-icons/simple-icons/pull/13982#issuecomment-3531627803"
+		}
 	},
 	{
 		"title": "MinIO",
