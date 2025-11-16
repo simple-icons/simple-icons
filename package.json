@@ -27,7 +27,6 @@
 	"license": "CC0-1.0",
 	"author": "Simple Icons Collaborators",
 	"sideEffects": false,
-	"type": "commonjs",
 	"exports": {
 		".": {
 			"types": "./index.d.ts",
