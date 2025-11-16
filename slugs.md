@@ -1834,6 +1834,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Minetest` | `minetest` |
 | `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
+| `MiniMax` | `minimax` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
 | `Minutemailer` | `minutemailer` |
