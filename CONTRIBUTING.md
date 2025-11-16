@@ -87,6 +87,7 @@ Some companies and organizations are excessively protective with their brands, s
   - LinkedIn
   - Playwright
   - Visual Studio
+- [Twilio](https://github.com/simple-icons/simple-icons/issues/13386)
 - Oracle, including, but not limited to:
   - Java
 - [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
