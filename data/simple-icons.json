@@ -1287,6 +1287,14 @@
 		"source": "https://en.wikipedia.org/wiki/File:Apple_TV_(logo).svg"
 	},
 	{
+		"title": "AppManager",
+		"hex": "DCAF74",
+		"source": "https://github.com/muntashirakon/AppManager/blob/1a46b0296dae1bc2cf62beedba44ed3bb5e89243/arts/icon_v2/icon.svg",
+		"license": {
+			"type": "GPL-3.0-or-later"
+		}
+	},
+	{
 		"title": "AppSignal",
 		"hex": "21375A",
 		"source": "https://appsignal.com"
@@ -10378,6 +10386,15 @@
 		"title": "Mini",
 		"hex": "000000",
 		"source": "https://mini.com"
+	},
+	{
+		"title": "MiniMax",
+		"hex": "E73562",
+		"source": "https://github.com/MiniMax-AI/MiniMax-01/blob/57cf223b177e99636c7711a0f179e9fdc9c38e8a/figures/minimax.svg",
+		"license": {
+			"type": "custom",
+			"url": "https://github.com/simple-icons/simple-icons/pull/13982#issuecomment-3531627803"
+		}
 	},
 	{
 		"title": "MinIO",
