@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // @ts-check
+/* eslint jsdoc/reject-any-type: off */
 /**
  * @file Auto-close script for closing won't add icons.
  */

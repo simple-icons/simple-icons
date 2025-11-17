@@ -682,6 +682,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cultura` | `cultura` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
+| `Cursor` | `cursor` |
 | `Custom Ink` | `customink` |
 | `CyberDefenders` | `cyberdefenders` |
 | `Cycling '74` | `cycling74` |
@@ -1833,6 +1834,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Minetest` | `minetest` |
 | `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
+| `MiniMax` | `minimax` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
 | `Minutemailer` | `minutemailer` |
