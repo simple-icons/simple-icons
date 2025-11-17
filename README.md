@@ -157,6 +157,10 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 ?>
 ```
 
+### Font Usage
+
+See [simple-icons-font](https://github.com/simple-icons/simple-icons-font) to learn how to use our font distribution.
+
 ## Third-Party Extensions
 
 The below are known extensions to third-party tools.

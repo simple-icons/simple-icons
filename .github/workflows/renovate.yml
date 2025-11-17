@@ -38,11 +38,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Setup node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
       - name: Renovate
-        uses: renovatebot/github-action@v41.0.22
+        uses: renovatebot/github-action@v43.0.19
         with:
           configurationFile: .github/renovate.json5
           token: ${{ steps.app-token.outputs.token }}
