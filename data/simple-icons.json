@@ -194,6 +194,11 @@
 		"source": "https://identitystandards.acm.org"
 	},
 	{
+		"title": "Acode",
+		"hex": "3499FE",
+		"source": "https://github.com/Acode-Foundation/acode.app/blob/b54aa548716a029871249cc5c3ad9ca0657aa734/client/res/logo.svg"
+	},
+	{
 		"title": "ActiGraph",
 		"hex": "3A4259",
 		"source": "https://theactigraph.com"
@@ -14327,6 +14332,14 @@
 		"title": "Roon",
 		"hex": "2039F3",
 		"source": "https://help.roonlabs.com/portal/en/home"
+	},
+	{
+		"title": "ROOT",
+		"hex": "1ED3E4",
+		"source": "https://root.cern/assets/images/logos/svg/ROOT.svg",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Root Me",
