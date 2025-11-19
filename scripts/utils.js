@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint jsdoc/reject-any-type: off */
 /**
  * @file Internal utilities.
  *
