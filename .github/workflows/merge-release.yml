@@ -15,6 +15,6 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: simple-icons/release-action@v2
+      - uses: simple-icons/release-action@v3
         with:
           repo-token: ${{ steps.app-token.outputs.token }}
