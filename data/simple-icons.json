@@ -9798,7 +9798,8 @@
 	{
 		"title": "MAAS",
 		"hex": "E95420",
-		"source": "https://design.ubuntu.com/downloads/",
+		"source": "https://design.ubuntu.com/resources",
+		"guidelines": "https://design.ubuntu.com/brand/",
 		"license": {
 			"type": "CC-BY-SA-3.0"
 		}
@@ -11838,6 +11839,11 @@
 		"title": "OpenProject",
 		"hex": "0770B8",
 		"source": "https://www.openproject.org/press/"
+	},
+	{
+		"title": "OpenRouter",
+		"hex": "94A3B8",
+		"source": "https://openrouter.ai"
 	},
 	{
 		"title": "OpenSCAD",
