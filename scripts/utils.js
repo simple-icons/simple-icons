@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint jsdoc/reject-any-type: off */
 /**
  * @file Internal utilities.
  *
@@ -11,8 +12,8 @@ import path from 'node:path';
 import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
 
 /**
- * @typedef {import("../sdk.js").IconData} IconData
- * @typedef {import("../sdk.js").DuplicateAlias} DuplicateAlias
+ * @typedef {import("../types.js").IconData} IconData
+ * @typedef {import("../types.js").DuplicateAlias} DuplicateAlias
  */
 
 /**
@@ -28,7 +29,7 @@ export const getJsonSchemaData = async () =>
 	);
 
 /**
- * Write icons data to _data/simple-icons.json.
+ * Write icons data to data/simple-icons.json.
  * @param {IconData[]} iconsData Icons data array.
  * @param {boolean} [minify] Whether to minify the JSON output.
  */
@@ -59,7 +60,7 @@ export const getSpdxLicenseIds = async () =>
 	);
 
 /**
- * The compare function for sorting icons in *_data/simple-icons.json*.
+ * The compare function for sorting icons in *data/simple-icons.json*.
  * @param {IconData} a Icon A.
  * @param {IconData} b Icon B.
  * @returns {number} Comparison result.
@@ -70,7 +71,7 @@ export const sortIconsCompare = (a, b) =>
 		: collator.compare(a.title, b.title);
 
 /**
- * The compare function for sorting icon duplicate aliases in *_data/simple-icons.json*.
+ * The compare function for sorting icon duplicate aliases in *data/simple-icons.json*.
  * @param {DuplicateAlias} a Duplicate alias A.
  * @param {DuplicateAlias} b Duplicate alias B.
  * @returns {number} Comparison result.
@@ -83,7 +84,7 @@ const sortDuplicatesCompare = (a, b) =>
 /**
  * Sort icon data or duplicate alias object.
  * @template {IconData | DuplicateAlias} T Either icon data or duplicate alias.
- * @param {T} icon The icon data or duplicate alias as it appears in *_data/simple-icons.json*.
+ * @param {T} icon The icon data or duplicate alias as it appears in *data/simple-icons.json*.
  * @returns {T} The sorted icon data or duplicate alias.
  */
 const sortIconOrDuplicate = (icon) => {
@@ -113,7 +114,7 @@ const sortIconOrDuplicate = (icon) => {
 
 /**
  * Sort license object.
- * @param {IconData['license']} license The license object as it appears in *_data/simple-icons.json*.
+ * @param {IconData['license']} license The license object as it appears in *data/simple-icons.json*.
  * @returns {IconData['license']} The sorted license object.
  */
 const sortLicense = (license) => {
@@ -134,7 +135,7 @@ const sortLicense = (license) => {
 
 /**
  * Sort object key alphabetically.
- * @param {IconData['aliases']} object The aliases object as it appears in *_data/simple-icons.json*.
+ * @param {IconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
  * @returns {{[_: string]: string} | undefined} The sorted aliases object.
  */
 const sortAlphabetically = (object) => {
@@ -149,7 +150,7 @@ const sortAlphabetically = (object) => {
 
 /**
  * Sort icons data.
- * @param {IconData[]} iconsData The icons data as it appears in *_data/simple-icons.json*.
+ * @param {IconData[]} iconsData The icons data as it appears in *data/simple-icons.json*.
  * @returns {IconData[]} The sorted icons data.
  */
 export const formatIconData = (iconsData) => {
@@ -177,4 +178,18 @@ export const formatIconData = (iconsData) => {
 	);
 	icons.sort(sortIconsCompare);
 	return icons;
+};
+
+/**
+ * Check if a file exists.
+ * @param {string} fpath File path to check.
+ * @returns {Promise<boolean>} True if the file exists, false otherwise.
+ */
+export const fileExists = async (fpath) => {
+	try {
+		await fs.access(fpath);
+		return true;
+	} catch {
+		return false;
+	}
 };
