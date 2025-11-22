@@ -11735,6 +11735,12 @@
 		"guidelines": "https://opensource.org/logo-usage-guidelines"
 	},
 	{
+		"title": "Open WebUI",
+		"slug": "openwebui",
+		"hex": "000000",
+		"source": "https://github.com/open-webui/open-webui"
+	},
+	{
 		"title": "Open3D",
 		"hex": "000000",
 		"source": "https://github.com/isl-org/Open3D/blob/2ae042aa74ad3917afd891e36798ffe687513662/cpp/apps/Open3DViewer/icon.svg"
@@ -19225,6 +19231,7 @@
 	},
 	{
 		"title": "Zyte",
+		"slug": "zyte",
 		"hex": "B02CCE",
 		"source": "https://www.zyte.com"
 	}
