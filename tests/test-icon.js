@@ -73,5 +73,21 @@ export const testIcon = (icon, subject, slug) => {
 			const svgFileContents = await fs.readFile(svgPath, 'utf8');
 			assert.equal(subject.svg, svgFileContents);
 		});
+
+		/**
+		 * NEW TEST:
+		 * Reject SVGs containing any fill="" attributes.
+		 */
+		it('does not contain any fill attributes', async () => {
+			const svg = await fs.readFile(svgPath, 'utf8');
+
+			// Detect fill="", but NOT fill-rule="" or fillRule=""
+			const fillRegex = /fill(?!-rule|\brule)\s*=\s*["'][^"']*["']/i;
+
+			assert.ok(
+				!fillRegex.test(svg),
+				`Icon "${slug}.svg" contains a disallowed fill attribute.`,
+			);
+		});
 	});
 };
