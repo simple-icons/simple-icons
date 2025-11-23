@@ -3933,6 +3933,11 @@
 		"guidelines": "https://www.dash.org/brand-guidelines/"
 	},
 	{
+		"title": "Dash0",
+		"hex": "EA3D3B",
+		"source": "https://www.dash0.com"
+	},
+	{
 		"title": "Dashlane",
 		"hex": "0E353D",
 		"source": "https://brandfolder.com/dashlane/brandkitpartners"
@@ -9714,6 +9719,14 @@
 		"guidelines": "https://www.lua.org/images/"
 	},
 	{
+		"title": "Luanti",
+		"hex": "53AC56",
+		"source": "https://www.luanti.org/press",
+		"license": {
+			"type": "CC-BY-SA-3.0"
+		}
+	},
+	{
 		"title": "Luau",
 		"hex": "00A2FF",
 		"source": "https://github.com/luau-lang/site/blob/96af82d9c8a22f337908676facf999310f4d87ba/logo.svg"
@@ -9793,7 +9806,8 @@
 	{
 		"title": "MAAS",
 		"hex": "E95420",
-		"source": "https://design.ubuntu.com/downloads/",
+		"source": "https://design.ubuntu.com/resources",
+		"guidelines": "https://design.ubuntu.com/brand/",
 		"license": {
 			"type": "CC-BY-SA-3.0"
 		}
