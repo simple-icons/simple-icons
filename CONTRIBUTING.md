@@ -1,3 +1,5 @@
+<!-- markdownlint-disable no-blanks-blockquote -->
+
 # Contributing to Simple Icons
 
 [![Good first issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522good%2520first%2520issue%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=github&label=good%20first%20issues&color=228f6c&labelColor=228f6c&logoColor=white&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr) [![Icon issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22) [![Code issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr) [![Documentation issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
@@ -9,7 +11,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 1. Fork this repository
 1. (Optional) Clone the fork
-
    - Using SSH
 
      ```shell
@@ -56,8 +57,14 @@ We welcome icon requests. Before you submit a new issue please make sure the ico
   - Governmental agencies, programs, departments
     - Allowed: International organizations and NGOs with supranational interests
     - Allowed: Space agencies
+    - Allowed: Meteorological services
+    - Allowed: State owned media (unless engaged in propaganda)
+  - Religious institutions and organisations
+  - Brands that operate in service of a religion or faith
+    - Allowed: Brands where religion or faith are part of the corporate culture
   - Symbols, including flags and banners
     - Allowed: standards like FCC, CE, CCC, RoHS...
+    - Allowed: licenses like CC, Unlicense, MIT...
   - Sport clubs
     - Allowed: Sports organizations
   - Yearly releases
@@ -70,12 +77,18 @@ Some companies and organizations are excessively protective with their brands, s
 
 - [Amazon / AWS](https://github.com/simple-icons/simple-icons/pull/13056)
 - BP
-- Disney
+- Disney, including, but not limited to:
+  - Marvel
 - International Olympic Committee
 - Mattel
 - Microchip Technology Inc.
-- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
-- Oracle
+- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236), including, but not limited to:
+  - C#
+  - LinkedIn
+  - Playwright
+  - Visual Studio
+- Oracle, including, but not limited to:
+  - Java
 - [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
@@ -83,26 +96,30 @@ If you are in doubt, feel free to submit it and we'll have a look.
 
 ### Assessing Popularity
 
-> [!TIP]\
-> Similarweb is now trying to force users to log in to view statistics. You can bypass this by going directly to `https://similarweb.com/website/google.com`, replacing `google.com` with the TLD you would like to get the stats on. You may need to use incognito mode if you visit these ranking pages often.
+> [!NOTE]\
+> Please make your way through the following metrics _in order_, only moving on to the next metric if the current metric is not applicable to the brand being assessed or if it would put the brand outside our scope.
 
-To be considered popular enough to be within our scope, a brand must be in existence for at least one year (from date of first stable release, where applicable) and meet one of the following metrics of popularity, in order of preference:
+To be considered popular enough to be within our scope, a brand must be in existence for at least one year and meet one of the following metrics of popularity, in order of preference:
 
-1. Its website's Similarweb global rank is in the top 500k.
-   - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
+1. Its website's Traffic.cv global rank is in the top 500k.
+   - As Traffic.cv updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
    - For existing icons in our library, the threshold is dropped from 500k to 750k.
    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
-1. The website's Similarweb rank in any one country is either:
+1. The website's Traffic.cv rank in any one country is either:
    - In the top 100, or,
    - In the top 10k, _with_ a global rank of 1m or better.
-1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
+1. Its app's Traffic.cv country rank, in any one country, is in the top 1k for either Android or iOS.
+   - Android apps should be assessed by their usage rank, rather than their store rank.
+   - Category ranks will not be accepted.
+1. In cases where a brand does not have its own website the Traffic.cv rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
    - [npm](https://www.npmjs.com): 100k weekly downloads,
    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
    - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
-   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00, or,
+   - [Docker](https://www.docker.com): 500k weekly downloads.
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
@@ -112,10 +129,13 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - Must be unambiguous (i.e., it's not a suitable metric for brands with generic words for names).
    - Trending equal to or higher than the compared brand will be considered in scope.
    - Trending lower than the compared brand but with an upward trajectory will require the consensus of the person providing the comparison and at least 2 project maintainers.
-1. Where applicable, the primary repository for the brand's GitHub project meets the following requirements (see note below):
-   - A minimum of 5k GitHub stars will be required for consideration, providing,
-   - The repository is still active, and,
-   - Its [star history](https://star-history.com) is on a consistently upward trajectory.
+
+As a last resort, after exhausting all other options above, and where applicable, the primary repository for the brand's GitHub project will be considered provided it meets the following requirements (see note below):
+
+- It is active,
+- It has a minimum of 5k GitHub stars,
+- It has an average of 1k stars for each year of its existence (e.g., a project started 10 years ago would require a minimum of 10k stars), and,
+- Its [star history](https://star-history.com) is on a consistently upward trajectory.
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
@@ -127,7 +147,6 @@ If all else fails, though, feel free to make a good case for the popularity of t
 When submitting a request for a new or updated icon include helpful information such as:
 
 - **Issue Title:** The brand name. For example:
-
   - New Icons: `Request: GitHub Icon`
   - Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
@@ -472,7 +491,7 @@ Don't submit multiple icon additions or updates in one pull request. If you want
 
 If a brand's terms and conditions state that we need permission to include their brand, we will tag related issues and PRs with `permission required`. Anybody creating a PR for one of these icons is responsible (even if we discover permission requirements during PR review) for obtaining said permission.
 
-If a contributor have been asked to obtain permission, they have 2 weeks to confirm they've reached out to the brand. If they do not confirm they have done this during that time, the PR will be closed.
+If a contributor has been asked to obtain permission, they have 2 weeks to confirm they've reached out to the brand. If they do not confirm they have done this during that time, the PR will be closed.
 
 If the contributor _has_ confirmed they've reached out to the brand, we will wait a maximum of 2 months for a response. If the response is an outright 'no' or is ambiguous, both the PR and issue will be closed, and the issue will marked as `will not add`. If the brand does not respond, we may close the PR or mark it as a draft, depending on whether the contributor is still actively pursuing a response. If the brand approves usage, the contributor should add the email response to the comments of the PR, and we will continue to merge the icon into the collection.
 
@@ -517,7 +536,7 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Developing Third-Party Extensions
 
-A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
+An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 
 ```typescript
 import {getIconsData, type IconData} from 'simple-icons/sdk';
