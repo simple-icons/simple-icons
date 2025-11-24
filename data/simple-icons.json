@@ -14193,8 +14193,7 @@
 	},
 	{
 		"title": "Rich",
-		"hex": "FAE742",
-		"source": "https://github.com/Textualize/rich/blob/fd981823644ccf50d685ac9c0cfe8e1e56c9dd35/imgs/logo.svg"
+		"hex": "FAE742"
 	},
 	{
 		"title": "Rider",
@@ -16653,7 +16652,10 @@
 	{
 		"title": "Textual",
 		"hex": "FFFFFF",
-		"source": "https://github.com/Textualize/textual/blob/e66c098588360515864ce88982de494c64d2c097/docs/images/icons/logo%20light%20transparent.svg"
+		"source": "https://github.com/Textualize/textual/blob/e66c098588360515864ce88982de494c64d2c097/docs/images/icons/logo%20light%20transparent.svg",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "TGA",
