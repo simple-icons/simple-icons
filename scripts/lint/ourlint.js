@@ -6,7 +6,7 @@
  */
 
 /**
- * @typedef {import("../../sdk.mjs").IconData} IconData
+ * @typedef {import("../../types.js").IconData} IconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
  */
 
