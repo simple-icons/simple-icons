@@ -3939,6 +3939,11 @@
 		"guidelines": "https://www.dash.org/brand-guidelines/"
 	},
 	{
+		"title": "Dash0",
+		"hex": "EA3D3B",
+		"source": "https://www.dash0.com"
+	},
+	{
 		"title": "Dashlane",
 		"hex": "0E353D",
 		"source": "https://brandfolder.com/dashlane/brandkitpartners"
@@ -9720,6 +9725,14 @@
 		"guidelines": "https://www.lua.org/images/"
 	},
 	{
+		"title": "Luanti",
+		"hex": "53AC56",
+		"source": "https://www.luanti.org/press",
+		"license": {
+			"type": "CC-BY-SA-3.0"
+		}
+	},
+	{
 		"title": "Luau",
 		"hex": "00A2FF",
 		"source": "https://github.com/luau-lang/site/blob/96af82d9c8a22f337908676facf999310f4d87ba/logo.svg"
@@ -9799,7 +9812,8 @@
 	{
 		"title": "MAAS",
 		"hex": "E95420",
-		"source": "https://design.ubuntu.com/downloads/",
+		"source": "https://design.ubuntu.com/resources",
+		"guidelines": "https://design.ubuntu.com/brand/",
 		"license": {
 			"type": "CC-BY-SA-3.0"
 		}
@@ -10127,6 +10141,11 @@
 		"title": "McLaren",
 		"hex": "FF0000",
 		"source": "https://cars.mclaren.com"
+	},
+	{
+		"title": "MDBList",
+		"hex": "4284CA",
+		"source": "https://mdblist.com/static/safari-pinned-tab.svg"
 	},
 	{
 		"title": "mdBook",
@@ -11839,6 +11858,11 @@
 		"title": "OpenProject",
 		"hex": "0770B8",
 		"source": "https://www.openproject.org/press/"
+	},
+	{
+		"title": "OpenRouter",
+		"hex": "94A3B8",
+		"source": "https://openrouter.ai"
 	},
 	{
 		"title": "OpenSCAD",
@@ -14107,6 +14131,11 @@
 		"title": "Retool",
 		"hex": "3D3D3D",
 		"source": "https://retool.com"
+	},
+	{
+		"title": "Retro Achievements",
+		"hex": "1065DF",
+		"source": "https://github.com/RetroAchievements/RAWeb/blob/0eddbe33a61492f7dacc3d8a7d4db5f90c9a0919/public/assets/images/favicon.webp"
 	},
 	{
 		"title": "RetroArch",
