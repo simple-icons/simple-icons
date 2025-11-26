@@ -157,6 +157,10 @@ echo file_get_contents('path/to/package/icons/simpleicons.svg');
 ?>
 ```
 
+### Font Usage
+
+See [simple-icons-font](https://github.com/simple-icons/simple-icons-font) to learn how to use our font distribution.
+
 ## Third-Party Extensions
 
 The below are known extensions to third-party tools.
@@ -168,7 +172,7 @@ The below are known extensions to third-party tools.
 | [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Jekyll plugin](https://github.com/pirafrank/jekyll-simple-icons) <img src="https://cdn.simpleicons.org/jekyll/000/fff" alt="Jekyll" align=left width=24 height=24> | [@pirafrank](https://github.com/pirafrank) |
-| [Kando icon theme](https://kando.menu/icon-themes#built-in-icon-themes) <img src="https://brands.deno.dev/kando/000/fff" alt="Kando" align=left width=24 height=24> | [@Schneegans](https://github.com/Schneegans) |
+| [Kando icon theme](https://kando.menu/icon-themes#built-in-icon-themes) <img src="https://cdn.simpleicons.org/kando/000/fff" alt="Kando" align=left width=24 height=24> | [@Schneegans](https://github.com/Schneegans) |
 | [Miro app](https://miro.com/marketplace/brand-icons/) <img src="https://cdn.simpleicons.org/miro/000/fff" alt="Miro" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Raycast extension](https://www.raycast.com/litomore/simple-icons) <img src="https://cdn.simpleicons.org/raycast/000/fff" alt="Raycast" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) |
