@@ -3,7 +3,7 @@ Before opening your pull request, have a quick look at our contribution guidelin
 https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md
 
 Consider adding a preview image of your submission using:
-https://wasm.simpleicons.org/preview
+https://simpleicons.org/preview
 -->
 
 **Issue:** closes #
@@ -14,9 +14,17 @@ https://wasm.simpleicons.org/preview
 Regardless of whether or not the linked issue (if there is one) has a metric, please include the metric here for PR reviewers to validate. See our contributing guidelines at https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#assessing-popularity for more details on how we assess a brand's popularity.
 -->
 
+**Terms of Service link:**
+
+<!--
+As part of the checklist below, you acknowledge you have reviewed the terms of service of a brand, to ensure we are granted permission to include this brand. Please link here to the terms you have reviewed, to make maintainer review easier. Ideally link to a section and/or paragraph.
+-->
+
 ### Checklist
 
-- [ ] I updated the JSON data in `_data/simple-icons.json`
+- [ ] I have reviewed the [forbidden brands](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#forbidden-brands) list and confirm the brand I am submitting a PR for is not one of them, nor is it a subsidiary of one of those brands
+- [ ] I have reviewed the brand's terms of service, and am confident we can add this icon
+- [ ] I updated the JSON data in `data/simple-icons.json`
 - [ ] I optimized the icon with SVGO or SVGOMG
 - [ ] The SVG `viewbox` is `0 0 24 24`
 
