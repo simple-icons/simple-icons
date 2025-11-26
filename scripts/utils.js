@@ -1,4 +1,5 @@
 // @ts-check
+/* eslint jsdoc/reject-any-type: off */
 /**
  * @file Internal utilities.
  *
@@ -11,8 +12,8 @@ import path from 'node:path';
 import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
 
 /**
- * @typedef {import("../sdk.js").IconData} IconData
- * @typedef {import("../sdk.js").DuplicateAlias} DuplicateAlias
+ * @typedef {import("../types.js").IconData} IconData
+ * @typedef {import("../types.js").DuplicateAlias} DuplicateAlias
  */
 
 /**
