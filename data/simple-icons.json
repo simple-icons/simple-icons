@@ -2024,7 +2024,10 @@
 		"title": "Bioconductor",
 		"hex": "1A81C2",
 		"source": "https://github.com/Bioconductor/BiocStickers/blob/6f5355283e16f8663ef88bbcf2627f86233c9edc/Bioconductor/Bioconductor-note.png",
-		"guidelines": "https://bioconductor.org/about/logo/"
+		"guidelines": "https://bioconductor.org/about/logo/",
+		"license": {
+			"type": "CC-BY-SA 4.0"
+		}
 	},
 	{
 		"title": "Biome",
