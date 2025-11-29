@@ -19,6 +19,7 @@ jobs:
   check-is-fork:
     name: Check if running in a fork
     runs-on: ubuntu-latest
+    permissions: {}
     outputs:
       is-fork: ${{ steps.check.outputs.is-fork }}
     steps:
@@ -30,6 +31,10 @@ jobs:
   release-pr:
     runs-on: ubuntu-latest
     needs: check-is-fork
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
     if: |
       github.event_name != 'push' &&
       needs.check-is-fork.outputs.is-fork != 'true'
@@ -42,13 +47,15 @@ jobs:
         with:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: simple-icons/release-action@v2
+      - uses: simple-icons/release-action@v3
         id: release
         with:
           repo-token: ${{ steps.app-token.outputs.token }}
   version-bump:
     runs-on: ubuntu-latest
     needs: release-pr
+    permissions:
+      contents: write
     if: |
       github.event_name != 'push' &&
       needs.release-pr.outputs.did-create-pr == 'true'
@@ -66,7 +73,7 @@ jobs:
           # Ensure we are checked out on the develop branch
           ref: develop
       - name: Use Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
@@ -86,7 +93,7 @@ jobs:
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
       - name: Commit version bump
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Bump version
           commit_user_name: 'simple-icons[bot]'
