@@ -11,7 +11,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 1. Fork this repository
 1. (Optional) Clone the fork
-
    - Using SSH
 
      ```shell
@@ -148,7 +147,6 @@ If all else fails, though, feel free to make a good case for the popularity of t
 When submitting a request for a new or updated icon include helpful information such as:
 
 - **Issue Title:** The brand name. For example:
-
   - New Icons: `Request: GitHub Icon`
   - Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
@@ -205,9 +203,9 @@ There are many different tools for editing SVG files, some options include:
 | Name | Description | Platform | Price |
 | :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity](https://www.affinity.studio/) | Vector Graphics Editor | Windows, Mac | Free |
 | [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
-| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 
 Using your preferred tool you should:
@@ -538,7 +536,7 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Developing Third-Party Extensions
 
-A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
+An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 
 ```typescript
 import {getIconsData, type IconData} from 'simple-icons/sdk';
