@@ -34,6 +34,7 @@ jobs:
             invalid
             out of scope
             pending
+            permission in review
             permission required
             won't add
 
@@ -56,6 +57,7 @@ jobs:
             in discussion
             pending
             assessing
+            permission in review
 
   remove-closed-issue-labels:
     name: Remove closed issue labels
@@ -74,3 +76,4 @@ jobs:
             in discussion
             pending
             assessing
+            permission in review
