@@ -51,6 +51,10 @@ const rules = [
 		patterns: [/yahoo/i, /engadget/i, /aol/i],
 		reason: autocloseTerm + '#9861.',
 	},
+	{
+		patterns: [/twilio/i, /sendgrid/i, /authy/i, /segment/i],
+		reason: autocloseTerm + '#13386.',
+	},
 ];
 
 export default rules;
