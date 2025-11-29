@@ -41,6 +41,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AccuWeather` | `accuweather` |
 | `Acer` | `acer` |
 | `ACM` | `acm` |
+| `Acode` | `acode` |
 | `ActiGraph` | `actigraph` |
 | `Activeloop` | `activeloop` |
 | `Activision` | `activision` |
@@ -214,6 +215,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apple Pay` | `applepay` |
 | `Apple Podcasts` | `applepodcasts` |
 | `Apple TV` | `appletv` |
+| `AppManager` | `appmanager` |
 | `AppSignal` | `appsignal` |
 | `Appsmith` | `appsmith` |
 | `AppVeyor` | `appveyor` |
@@ -266,6 +268,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Audioboom` | `audioboom` |
 | `Audiomack` | `audiomack` |
 | `Aurelia` | `aurelia` |
+| `Autentique` | `autentique` |
 | `Auth0` | `auth0` |
 | `Authelia` | `authelia` |
 | `Authentik` | `authentik` |
@@ -682,6 +685,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cultura` | `cultura` |
 | `curl` | `curl` |
 | `CurseForge` | `curseforge` |
+| `Cursor` | `cursor` |
 | `Custom Ink` | `customink` |
 | `CyberDefenders` | `cyberdefenders` |
 | `Cycling '74` | `cycling74` |
@@ -702,6 +706,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Darty` | `darty` |
 | `Das Erste` | `daserste` |
 | `Dash` | `dash` |
+| `Dash0` | `dash0` |
 | `Dashlane` | `dashlane` |
 | `Dask` | `dask` |
 | `Dassault Systèmes` | `dassaultsystemes` |
@@ -787,6 +792,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Docsify` | `docsify` |
 | `Doctrine` | `doctrine` |
 | `Docusaurus` | `docusaurus` |
+| `Dodo Payments` | `dodopayments` |
 | `Dogecoin` | `dogecoin` |
 | `DOI` | `doi` |
 | `Dolby` | `dolby` |
@@ -1113,6 +1119,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gitpod` | `gitpod` |
 | `Gitter` | `gitter` |
 | `GL.iNet` | `gldotinet` |
+| `Glance` | `glance` |
 | `Glassdoor` | `glassdoor` |
 | `Gleam` | `gleam` |
 | `Glide` | `glide` |
@@ -1259,6 +1266,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HappyCow` | `happycow` |
 | `Harbor` | `harbor` |
 | `HarmonyOS` | `harmonyos` |
+| `Hashcat` | `hashcat` |
 | `HashiCorp` | `hashicorp` |
 | `Hashnode` | `hashnode` |
 | `Haskell` | `haskell` |
@@ -1509,6 +1517,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `KakaoTalk` | `kakaotalk` |
 | `Kali Linux` | `kalilinux` |
 | `Kamailio` | `kamailio` |
+| `Kando` | `kando` |
 | `Kaniko` | `kaniko` |
 | `Karlsruher Verkehrsverbund` | `karlsruherverkehrsverbund` |
 | `Kasa Smart` | `kasasmart` |
@@ -1833,6 +1842,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Minetest` | `minetest` |
 | `MinGW-w64` | `mingww64` |
 | `Mini` | `mini` |
+| `MiniMax` | `minimax` |
 | `MinIO` | `minio` |
 | `Mintlify` | `mintlify` |
 | `Minutemailer` | `minutemailer` |
@@ -2073,6 +2083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenMined` | `openmined` |
 | `OpenNebula` | `opennebula` |
 | `OpenProject` | `openproject` |
+| `OpenRouter` | `openrouter` |
 | `OpenSCAD` | `openscad` |
 | `OpenSea` | `opensea` |
 | `OpenSearch` | `opensearch` |
@@ -2469,6 +2480,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ReSharper` | `resharper` |
 | `Resurrection Remix OS` | `resurrectionremixos` |
 | `Retool` | `retool` |
+| `Retro Achievements` | `retroachievements` |
 | `RetroArch` | `retroarch` |
 | `RetroPie` | `retropie` |
 | `ReVanced` | `revanced` |
@@ -2512,6 +2524,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `rollup.js` | `rollupdotjs` |
 | `Rook` | `rook` |
 | `Roon` | `roon` |
+| `ROOT` | `root` |
 | `Root Me` | `rootme` |
 | `Roots` | `roots` |
 | `Roots Bedrock` | `rootsbedrock` |
