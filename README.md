@@ -29,15 +29,15 @@ Icons can be downloaded as SVGs directly from [simpleicons.org](https://simpleic
 Icons can be served from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/simple-icons) or [unpkg](https://unpkg.com/browse/simple-icons/). Simply use the `simple-icons` npm package and specify a version in the URL like the following:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/[ICON SLUG].svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v15/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/[ICON SLUG].svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v16/icons/[ICON SLUG].svg" />
 ```
 
 Where `[ICON SLUG]` is replaced by the [slug] of the icon you want to use, for example:
 
 ```html
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/simpleicons.svg" />
-<img height="32" width="32" src="https://unpkg.com/simple-icons@v15/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/simpleicons.svg" />
+<img height="32" width="32" src="https://unpkg.com/simple-icons@v16/icons/simpleicons.svg" />
 ```
 
 These examples use the latest major version. This means you won't receive any updates following the next major release. You can use `@latest` instead to receive updates indefinitely. However, this will result in a `404` error if the icon is removed.
@@ -172,7 +172,7 @@ The below are known extensions to third-party tools.
 | [Drawio library](https://github.com/mondeja/simple-icons-drawio) <img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24> | [@mondeja](https://github.com/mondeja) |
 | [Figma plugin](https://www.figma.com/community/plugin/1149614463603005908) <img src="https://cdn.simpleicons.org/figma/000/fff" alt="Figma" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Jekyll plugin](https://github.com/pirafrank/jekyll-simple-icons) <img src="https://cdn.simpleicons.org/jekyll/000/fff" alt="Jekyll" align=left width=24 height=24> | [@pirafrank](https://github.com/pirafrank) |
-| [Kando icon theme](https://kando.menu/icon-themes#built-in-icon-themes) <img src="https://brands.deno.dev/kando/000/fff" alt="Kando" align=left width=24 height=24> | [@Schneegans](https://github.com/Schneegans) |
+| [Kando icon theme](https://kando.menu/icon-themes#built-in-icon-themes) <img src="https://cdn.simpleicons.org/kando/000/fff" alt="Kando" align=left width=24 height=24> | [@Schneegans](https://github.com/Schneegans) |
 | [Miro app](https://miro.com/marketplace/brand-icons/) <img src="https://cdn.simpleicons.org/miro/000/fff" alt="Miro" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Raycast extension](https://www.raycast.com/litomore/simple-icons) <img src="https://cdn.simpleicons.org/raycast/000/fff" alt="Raycast" align=left width=24 height=24> | [@LitoMore](https://github.com/LitoMore) |
 | [Stream Deck icon pack](https://github.com/mackenly/simple-icons-stream-deck) <img src="https://cdn.simpleicons.org/elgato/000/fff" alt="Stream Deck" align=left width=24 height=24> | [@mackenly](https://github.com/mackenly) |
