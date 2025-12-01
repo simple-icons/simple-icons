@@ -17,6 +17,21 @@ import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
  */
 
 /**
+ * Regex to match a permalink GitHub URL for a file.
+ */
+export const permalinkGitHubRegex =
+	/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+
+/**
+ * URLs excluded from the GitHub URL check as are used by GitHub brands.
+ */
+export const gitHubExcludedUrls = new Set([
+	'https://github.com/logos',
+	'https://github.com/features/actions',
+	'https://github.com/sponsors',
+]);
+
+/**
  * Get JSON schema data.
  * @returns {Promise<any>} JSON schema data.
  */

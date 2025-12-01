@@ -20,6 +20,8 @@ import {
 	formatIconData,
 	getJsonSchemaData,
 	getSpdxLicenseIds,
+	gitHubExcludedUrls,
+	permalinkGitHubRegex,
 	sortIconsCompare,
 	writeIconsData,
 } from './utils.js';
@@ -72,7 +74,19 @@ const urlRegex = async () =>
  */
 const isValidURL = async (input) => {
 	const regex = await urlRegex();
-	return regex.test(input) || 'Must be a valid and secure (https://) URL.';
+	if (!regex.test(input)) {
+		return 'Must be a valid and secure (https://) URL.';
+	}
+
+	if (
+		input.startsWith('https://github.com/') &&
+		!gitHubExcludedUrls.has(input) &&
+		!permalinkGitHubRegex.test(input)
+	) {
+		return 'GitHub URLs must be permalinks (e.g. blob/<hash>/...).';
+	}
+
+	return true;
 };
 
 /**

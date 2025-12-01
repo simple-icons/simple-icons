@@ -24,6 +24,8 @@ import {
 	fileExists,
 	formatIconData,
 	getSpdxLicenseIds,
+	gitHubExcludedUrls,
+	permalinkGitHubRegex,
 	sortIconsCompare,
 } from '../utils.js';
 
@@ -159,21 +161,6 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 * @returns {boolean} Whether the URL is a GitHub URL.
 		 */
 		const isGitHubUrl = ($url) => $url.hostname === 'github.com';
-
-		/**
-		 * Regex to match a permalink GitHub URL for a file.
-		 */
-		const permalinkGitHubRegex =
-			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
-
-		/**
-		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
-		 */
-		const gitHubExcludedUrls = new Set([
-			'https://github.com/logos',
-			'https://github.com/features/actions',
-			'https://github.com/sponsors',
-		]);
 
 		/**
 		 * Check if an URL is a permanent GitHub URL for a file.
