@@ -17757,6 +17757,16 @@
 		"guidelines": "https://www.victronenergy.com/information/press"
 	},
 	{
+		"title": "Vike",
+		"hex": "F5F5F5",
+		"source": "https://github.com/vikejs/vike/blob/main/docs/assets/logo/vike.svg",
+		"guidelines": "https://vike.dev",
+		"license": {
+			"type": "MIT",
+			"url": "https://github.com/vikejs/vike/blob/main/LICENSE.md"
+		}
+	},
+	{
 		"title": "Vikunja",
 		"hex": "196AFF",
 		"source": "https://github.com/go-vikunja/website/blob/45328fa981e7b038cd957a995528706617069420/public/favicon.svg"
