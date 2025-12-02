@@ -78,6 +78,20 @@ const isValidURL = async (input) => {
 		return 'Must be a valid and secure (https://) URL.';
 	}
 
+	return true;
+};
+
+/**
+ * Whether an input is a valid source URL.
+ * @param {string} input URL input.
+ * @returns {Promise<boolean|string>} Whether the input is a valid source URL.
+ */
+const isValidSourceURL = async (input) => {
+	const urlValidation = await isValidURL(input);
+	if (urlValidation !== true) {
+		return urlValidation;
+	}
+
 	if (
 		input.startsWith('https://github.com/') &&
 		!gitHubExcludedUrls.has(input) &&
@@ -150,7 +164,7 @@ answers.hex = normalizeColor(
 
 answers.source = await input({
 	message: 'What is the source URL of the icon?',
-	validate: isValidURL,
+	validate: isValidSourceURL,
 });
 
 if (
