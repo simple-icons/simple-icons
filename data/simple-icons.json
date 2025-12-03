@@ -11182,6 +11182,11 @@
 		}
 	},
 	{
+		"title": "NodeGui",
+		"hex": "000000",
+		"source": "https://github.com/nodegui/nodegui/blob/740a371981b555e94d4e7aaa734a80532cecfb16/extras/logo/nodegui.svg"
+	},
+	{
 		"title": "Nodemon",
 		"hex": "76D04B",
 		"source": "https://nodemon.io"
@@ -14844,6 +14849,15 @@
 		"title": "Setapp",
 		"hex": "E6C3A5",
 		"source": "https://setapp.com"
+	},
+	{
+		"title": "Setuptools",
+		"hex": "336790",
+		"source": "https://github.com/pypa/setuptools/blob/c3f486f0f7ebf8fa141dfd7314cbcaba7370db0b/docs/images/logo.svg",
+		"guidelines": "https://setuptools.pypa.io/en/latest/artwork.html",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "SFML",
