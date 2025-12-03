@@ -14846,6 +14846,15 @@
 		"source": "https://setapp.com"
 	},
 	{
+		"title": "Setuptools",
+		"hex": "336790",
+		"source": "https://github.com/pypa/setuptools/blob/c3f486f0f7ebf8fa141dfd7314cbcaba7370db0b/docs/images/logo.svg",
+		"guidelines": "https://setuptools.pypa.io/en/latest/artwork.html",
+		"license": {
+			"type": "MIT"
+		}
+	},
+	{
 		"title": "SFML",
 		"hex": "8CC445",
 		"source": "https://www.sfml-dev.org/download/goodies/"
