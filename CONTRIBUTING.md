@@ -11,7 +11,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 
 1. Fork this repository
 1. (Optional) Clone the fork
-
    - Using SSH
 
      ```shell
@@ -78,12 +77,19 @@ Some companies and organizations are excessively protective with their brands, s
 
 - [Amazon / AWS](https://github.com/simple-icons/simple-icons/pull/13056)
 - BP
-- Disney
+- Disney, including, but not limited to:
+  - Marvel
 - International Olympic Committee
 - Mattel
 - Microchip Technology Inc.
-- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236)
-- Oracle
+- [Microsoft](https://github.com/simple-icons/simple-icons/issues/11236), including, but not limited to:
+  - C#
+  - LinkedIn
+  - Playwright
+  - Visual Studio
+- [Twilio](https://github.com/simple-icons/simple-icons/issues/13386)
+- Oracle, including, but not limited to:
+  - Java
 - [Yahoo!](https://github.com/simple-icons/simple-icons/pull/9861#issuecomment-1819664495)
 - Do you know more? Please, [report them](https://github.com/simple-icons/simple-icons/issues/new?labels=docs&template=documentation.yml).
 
@@ -94,35 +100,27 @@ If you are in doubt, feel free to submit it and we'll have a look.
 > [!NOTE]\
 > Please make your way through the following metrics _in order_, only moving on to the next metric if the current metric is not applicable to the brand being assessed or if it would put the brand outside our scope.
 
-> [!TIP]\
-> Similarweb is now trying to force users to log in to view statistics. You can bypass this by going directly to:
->
-> - `https://similarweb.com/website/google.com` for websites, replacing `google.com` with the TLD you would like to get the stats on,
-> - `https://www.similarweb.com/app/google/com.android.chrome` for Android apps, replacing `com.android.chrome` with the Google Play package ID of the app you would like to get the stats on, or,
-> - `https://www.similarweb.com/app/apple/535886823` for iOS apps, replacing `535886823` with the numerical Apple Store ID of the app you would like to get stats on.
->
-> You may need to use incognito mode if you visit these ranking pages often. Regular contributors may find the [Similarweb browser extensions](https://www.similarweb.com/corp/extension/) to be of use as they provide the global rank at a glance, without any rate limiting.
-
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year and meet one of the following metrics of popularity, in order of preference:
 
-1. Its website's Similarweb global rank is in the top 500k.
-   - As Similarweb updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
+1. Its website's Traffic.cv global rank is in the top 500k.
+   - As Traffic.cv updates its data only once every month, there will be a monitoring window for websites ranked between 450k & 550k until the next update, _unless_ the brand is within scope on any other metric below.
    - For existing icons in our library, the threshold is dropped from 500k to 750k.
    - A rank lower than 2m, without any other metric being provided, will result in the brand being declared outside our scope.
-1. The website's Similarweb rank in any one country is either:
+1. The website's Traffic.cv rank in any one country is either:
    - In the top 100, or,
    - In the top 10k, _with_ a global rank of 1m or better.
-1. Its app's Similarweb country rank, in any one country, is in the top 1k for either Android or iOS.
+1. Its app's Traffic.cv country rank, in any one country, is in the top 1k for either Android or iOS.
    - Android apps should be assessed by their usage rank, rather than their store rank.
    - Category ranks will not be accepted.
-1. In cases where a brand does not have its own website the Similarweb rank of its parent company will be accepted _if_ the brand is that company's primary product.
+1. In cases where a brand does not have its own website the Traffic.cv rank of its parent company will be accepted _if_ the brand is that company's primary product.
 1. Its packages meet one of the following minimum requirements:
    - [npm](https://www.npmjs.com): 100k weekly downloads,
    - [jsDelivr](https://www.jsdelivr.com): 1m daily or 35m monthly requests,
    - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
-   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00 or,
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00, or,
+   - [Docker](https://www.docker.com): 500k weekly downloads.
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
@@ -150,7 +148,6 @@ If all else fails, though, feel free to make a good case for the popularity of t
 When submitting a request for a new or updated icon include helpful information such as:
 
 - **Issue Title:** The brand name. For example:
-
   - New Icons: `Request: GitHub Icon`
   - Icon Updates: `Update: GitHub Color` or `Update: GitHub Icon`
 
@@ -207,9 +204,9 @@ There are many different tools for editing SVG files, some options include:
 | Name | Description | Platform | Price |
 | :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
+| [Affinity](https://www.affinity.studio/) | Vector Graphics Editor | Windows, Mac | Free |
 | [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
-| [Affinity Designer](https://affinity.serif.com/designer/) | Vector Graphics Editor | Windows, Mac | $ |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 
 Using your preferred tool you should:
@@ -540,7 +537,7 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Developing Third-Party Extensions
 
-A SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
+An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 
 ```typescript
 import {getIconsData, type IconData} from 'simple-icons/sdk';
