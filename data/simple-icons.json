@@ -3525,11 +3525,6 @@
 		"source": "https://www.cora.fr"
 	},
 	{
-		"title": "Coreboot",
-		"hex": "000000",
-		"source": "https://coreboot.org/assets/images/banner.svg"
-	},
-	{
 		"title": "CorelDRAW",
 		"hex": "000000",
 		"source": "https://www.coreldraw.com/en/learn/webinars/ebook-embroidery"
@@ -7140,6 +7135,11 @@
 				"HDB"
 			]
 		}
+	},
+	{
+		"title": "HeadHunter",
+		"hex": "D71920",
+		"source": "https://dev.hh.ru/articles/logos"
 	},
 	{
 		"title": "Headless UI",
