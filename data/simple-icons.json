@@ -1186,6 +1186,11 @@
 		"guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
 	},
 	{
+		"title": "AppImage",
+		"hex": "739FB9",
+		"source": "https://appimage.org"
+	},
+	{
 		"title": "Appium",
 		"hex": "EE376D",
 		"source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
@@ -4806,6 +4811,11 @@
 		"source": "https://github.com/elixir-lang/elixir-lang.github.com/tree/031746384ee23b9be19298c92a9699c56cc05845/images/logo"
 	},
 	{
+		"title": "Elk",
+		"hex": "EA9E44",
+		"source": "https://github.com/elk-zone/elk/blob/d601a117c049458bc032258cc86df76387d51b43/public/logo.svg"
+	},
+	{
 		"title": "Elm",
 		"hex": "1293D8",
 		"source": "https://github.com/elm/foundation.elm-lang.org/blob/2d097b317d8af2aaeab49284830260a32d817305/assets/elm_logo.svg"
@@ -6043,6 +6053,11 @@
 		"hex": "00AEF0",
 		"source": "https://www.ghostery.com",
 		"guidelines": "https://www.ghostery.com/press/"
+	},
+	{
+		"title": "Ghostty",
+		"hex": "3551F3",
+		"source": "https://github.com/ghostty-org/website/blob/7093f052a2f35e0247fcb828ede644ed74a749a0/public/ghostty-logo.svg"
 	},
 	{
 		"title": "GIMP",
@@ -9805,6 +9820,11 @@
 		"source": "https://www.manageiq.org/logo/"
 	},
 	{
+		"title": "Mangacollec",
+		"hex": "DA1F05",
+		"source": "https://www.mangacollec.com"
+	},
+	{
 		"title": "MangaUpdates",
 		"hex": "FF8C15",
 		"source": "https://www.mangaupdates.com",
@@ -11170,6 +11190,11 @@
 		"license": {
 			"type": "CC-BY-NC-4.0"
 		}
+	},
+	{
+		"title": "NodeGui",
+		"hex": "000000",
+		"source": "https://github.com/nodegui/nodegui/blob/740a371981b555e94d4e7aaa734a80532cecfb16/extras/logo/nodegui.svg"
 	},
 	{
 		"title": "Nodemon",
@@ -14829,6 +14854,15 @@
 		"title": "Setapp",
 		"hex": "E6C3A5",
 		"source": "https://setapp.com"
+	},
+	{
+		"title": "Setuptools",
+		"hex": "336790",
+		"source": "https://github.com/pypa/setuptools/blob/c3f486f0f7ebf8fa141dfd7314cbcaba7370db0b/docs/images/logo.svg",
+		"guidelines": "https://setuptools.pypa.io/en/latest/artwork.html",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "SFML",

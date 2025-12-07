@@ -195,6 +195,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `App Store` | `appstore` |
 | `AppGallery` | `appgallery` |
 | `Appian` | `appian` |
+| `AppImage` | `appimage` |
 | `Appium` | `appium` |
 | `Apple` | `apple` |
 | `Apple Arcade` | `applearcade` |
@@ -857,6 +858,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eleventy` | `eleventy` |
 | `Elgato` | `elgato` |
 | `Elixir` | `elixir` |
+| `Elk` | `elk` |
 | `Elm` | `elm` |
 | `Elsevier` | `elsevier` |
 | `Embarcadero` | `embarcadero` |
@@ -1079,6 +1081,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GetX` | `getx` |
 | `Ghost` | `ghost` |
 | `Ghostery` | `ghostery` |
+| `Ghostty` | `ghostty` |
 | `GIMP` | `gimp` |
 | `Gin` | `gin` |
 | `GIPHY` | `giphy` |
@@ -1729,6 +1732,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MAMP` | `mamp` |
 | `MAN` | `man` |
 | `ManageIQ` | `manageiq` |
+| `Mangacollec` | `mangacollec` |
 | `MangaUpdates` | `mangaupdates` |
 | `Manjaro` | `manjaro` |
 | `Mantine` | `mantine` |
@@ -1963,6 +1967,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Node-RED` | `nodered` |
 | `Node.js` | `nodedotjs` |
 | `NodeBB` | `nodebb` |
+| `NodeGui` | `nodegui` |
 | `Nodemon` | `nodemon` |
 | `Nokia` | `nokia` |
 | `Nomad` | `nomad` |
@@ -2608,6 +2613,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Session` | `session` |
 | `Sessionize` | `sessionize` |
 | `Setapp` | `setapp` |
+| `Setuptools` | `setuptools` |
 | `SFML` | `sfml` |
 | `shadcn/ui` | `shadcnui` |
 | `Shadow` | `shadow` |
