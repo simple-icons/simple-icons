@@ -1186,6 +1186,11 @@
 		"guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
 	},
 	{
+		"title": "AppImage",
+		"hex": "739FB9",
+		"source": "https://appimage.org"
+	},
+	{
 		"title": "Appium",
 		"hex": "EE376D",
 		"source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
@@ -1952,6 +1957,15 @@
 		"title": "Bio Link",
 		"hex": "000000",
 		"source": "https://bio.link"
+	},
+	{
+		"title": "Bioconductor",
+		"hex": "1A81C2",
+		"source": "https://github.com/Bioconductor/BiocStickers/blob/2e3af2dd45ce43e18110c91b687ebcb996cffae9/Bioconductor/Bioconductor-note.svg",
+		"guidelines": "https://bioconductor.org/about/logo/",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Biome",
@@ -9815,6 +9829,11 @@
 		"source": "https://www.manageiq.org/logo/"
 	},
 	{
+		"title": "Mangacollec",
+		"hex": "DA1F05",
+		"source": "https://www.mangacollec.com"
+	},
+	{
 		"title": "MangaUpdates",
 		"hex": "FF8C15",
 		"source": "https://www.mangaupdates.com",
@@ -12577,6 +12596,11 @@
 		"title": "pkgsrc",
 		"hex": "FF6600",
 		"source": "https://pkgsrc.org"
+	},
+	{
+		"title": "Plane",
+		"hex": "121212",
+		"source": "https://plane.so/brand-logos/logo-with-wordmark.svg"
 	},
 	{
 		"title": "Planet",
