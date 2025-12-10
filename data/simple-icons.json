@@ -1186,6 +1186,11 @@
 		"guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
 	},
 	{
+		"title": "AppImage",
+		"hex": "739FB9",
+		"source": "https://appimage.org"
+	},
+	{
 		"title": "Appium",
 		"hex": "EE376D",
 		"source": "https://github.com/openjs-foundation/artwork/blob/270575392800eb17a02612203f6f0d5868c634a7/projects/appium/appium-icon-mono.svg",
@@ -9824,6 +9829,11 @@
 		"source": "https://www.manageiq.org/logo/"
 	},
 	{
+		"title": "Mangacollec",
+		"hex": "DA1F05",
+		"source": "https://www.mangacollec.com"
+	},
+	{
 		"title": "MangaUpdates",
 		"hex": "FF8C15",
 		"source": "https://www.mangaupdates.com",
@@ -11189,6 +11199,11 @@
 		"license": {
 			"type": "CC-BY-NC-4.0"
 		}
+	},
+	{
+		"title": "NodeGui",
+		"hex": "000000",
+		"source": "https://github.com/nodegui/nodegui/blob/740a371981b555e94d4e7aaa734a80532cecfb16/extras/logo/nodegui.svg"
 	},
 	{
 		"title": "Nodemon",
@@ -12581,6 +12596,11 @@
 		"title": "pkgsrc",
 		"hex": "FF6600",
 		"source": "https://pkgsrc.org"
+	},
+	{
+		"title": "Plane",
+		"hex": "121212",
+		"source": "https://plane.so/brand-logos/logo-with-wordmark.svg"
 	},
 	{
 		"title": "Planet",
@@ -14848,6 +14868,15 @@
 		"title": "Setapp",
 		"hex": "E6C3A5",
 		"source": "https://setapp.com"
+	},
+	{
+		"title": "Setuptools",
+		"hex": "336790",
+		"source": "https://github.com/pypa/setuptools/blob/c3f486f0f7ebf8fa141dfd7314cbcaba7370db0b/docs/images/logo.svg",
+		"guidelines": "https://setuptools.pypa.io/en/latest/artwork.html",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "SFML",
