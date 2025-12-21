@@ -340,6 +340,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BIM` | `bim` |
 | `Binance` | `binance` |
 | `Bio Link` | `biolink` |
+| `Bioconductor` | `bioconductor` |
 | `Biome` | `biome` |
 | `BisectHosting` | `bisecthosting` |
 | `Bit` | `bit` |
@@ -2211,6 +2212,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pixiv` | `pixiv` |
 | `Pixlr` | `pixlr` |
 | `pkgsrc` | `pkgsrc` |
+| `Plane` | `plane` |
 | `Planet` | `planet` |
 | `PlanetScale` | `planetscale` |
 | `PlanGrid` | `plangrid` |
