@@ -8,7 +8,7 @@ import path from 'node:path';
 
 /**
  * @typedef {import("./sdk.d.ts").ThirdPartyExtension} ThirdPartyExtension
- * @typedef {import("./sdk.d.ts").IconData} IconData
+ * @typedef {import("./types.js").IconData} IconData
  */
 
 /** @type {{ [key: string]: string }} */
