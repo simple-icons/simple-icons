@@ -1959,6 +1959,15 @@
 		"source": "https://bio.link"
 	},
 	{
+		"title": "Bioconductor",
+		"hex": "1A81C2",
+		"source": "https://github.com/Bioconductor/BiocStickers/blob/2e3af2dd45ce43e18110c91b687ebcb996cffae9/Bioconductor/Bioconductor-note.svg",
+		"guidelines": "https://bioconductor.org/about/logo/",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Biome",
 		"hex": "60A5FA",
 		"source": "https://github.com/biomejs/resources/blob/551f36498dfe34b24bc7755fcdd0fa501b757cf4/svg/icon-light-mono.svg",
@@ -6571,6 +6580,11 @@
 		"source": "https://home.google.com/welcome/"
 	},
 	{
+		"title": "Google Jules",
+		"hex": "715CD7",
+		"source": "https://jules.google"
+	},
+	{
 		"title": "Google Keep",
 		"hex": "FFBB00",
 		"source": "https://about.google/brand-resource-center/logos-list/"
@@ -8392,6 +8406,11 @@
 		"hex": "F37626",
 		"source": "https://github.com/jupyter/design/blob/80716ee75dd7b2a6ec6abcd89922d020483589b1/logos/Logo%20Mark/logomark-whitebody-whitemoons/logomark-whitebody-whitemoons.svg",
 		"guidelines": "https://github.com/jupyter/design"
+	},
+	{
+		"title": "Just",
+		"hex": "000000",
+		"source": "https://just.systems"
 	},
 	{
 		"title": "Just Eat",
@@ -12820,6 +12839,11 @@
 		"title": "Polywork",
 		"hex": "543DE0",
 		"source": "https://www.polywork.com"
+	},
+	{
+		"title": "Pomerium",
+		"hex": "6F43E7",
+		"source": "https://www.pomerium.com/static-img/logo-light-icon.svg"
 	},
 	{
 		"title": "Pond5",
