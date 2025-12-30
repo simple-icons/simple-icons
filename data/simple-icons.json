@@ -6791,7 +6791,11 @@
 		"slug": "graphite_editor",
 		"hex": "473A3A",
 		"source": "https://graphite.art/logo",
-		"guidelines": "https://graphite.art/logo"
+		"guidelines": "https://graphite.art/logo",
+		"license": {
+		    "type": "custom",
+		    "url": "https://graphite.art/license/#branding"
+		}
 	},
 	{
 		"title": "GraphQL",
