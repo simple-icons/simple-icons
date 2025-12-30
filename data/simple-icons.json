@@ -3834,9 +3834,10 @@
 		"source": "https://careers.dailymotion.com"
 	},
 	{
-		"title": "DaisyUI",
-		"hex": "1AD1A5",
-		"source": "https://daisyui.com"
+		"title": "daisyUI",
+		"hex": "FFC63A",
+		"source": "https://daisyui.com/brand",
+		"guidelines": "https://daisyui.com/brand"
 	},
 	{
 		"title": "Dapr",
@@ -6785,6 +6786,17 @@
 		"title": "Graphite",
 		"hex": "000000",
 		"source": "https://graphite.dev"
+	},
+	{
+		"title": "Graphite",
+		"slug": "graphite_editor",
+		"hex": "473A3A",
+		"source": "https://graphite.art/logo",
+		"guidelines": "https://graphite.art/logo",
+		"license": {
+			"type": "custom",
+			"url": "https://graphite.art/license/#branding"
+		}
 	},
 	{
 		"title": "GraphQL",
@@ -10479,6 +10491,11 @@
 				"MCP"
 			]
 		}
+	},
+	{
+		"title": "ModelScope",
+		"hex": "624AFF",
+		"source": "https://modelscope.cn/models/modelscope/logos/resolve/master/svg/modelscope-simple.svg"
 	},
 	{
 		"title": "Modin",
