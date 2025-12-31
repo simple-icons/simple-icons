@@ -195,6 +195,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `App Store` | `appstore` |
 | `AppGallery` | `appgallery` |
 | `Appian` | `appian` |
+| `AppImage` | `appimage` |
 | `Appium` | `appium` |
 | `Apple` | `apple` |
 | `Apple Arcade` | `applearcade` |
@@ -339,6 +340,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `BIM` | `bim` |
 | `Binance` | `binance` |
 | `Bio Link` | `biolink` |
+| `Bioconductor` | `bioconductor` |
 | `Biome` | `biome` |
 | `BisectHosting` | `bisecthosting` |
 | `Bit` | `bit` |
@@ -857,6 +859,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Eleventy` | `eleventy` |
 | `Elgato` | `elgato` |
 | `Elixir` | `elixir` |
+| `Elk` | `elk` |
 | `Elm` | `elm` |
 | `Elsevier` | `elsevier` |
 | `Embarcadero` | `embarcadero` |
@@ -958,6 +961,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Filen` | `filen` |
 | `Files` | `files` |
 | `FileZilla` | `filezilla` |
+| `Fillout` | `fillout` |
 | `Fineco` | `fineco` |
 | `Fing` | `fing` |
 | `Firebase` | `firebase` |
@@ -1079,6 +1083,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GetX` | `getx` |
 | `Ghost` | `ghost` |
 | `Ghostery` | `ghostery` |
+| `Ghostty` | `ghostty` |
 | `GIMP` | `gimp` |
 | `Gin` | `gin` |
 | `GIPHY` | `giphy` |
@@ -1165,6 +1170,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Google Forms` | `googleforms` |
 | `Google Gemini` | `googlegemini` |
 | `Google Home` | `googlehome` |
+| `Google Jules` | `googlejules` |
 | `Google Keep` | `googlekeep` |
 | `Google Lens` | `googlelens` |
 | `Google Maps` | `googlemaps` |
@@ -1240,6 +1246,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `HackerEarth` | `hackerearth` |
 | `HackerOne` | `hackerone` |
 | `HackerRank` | `hackerrank` |
+| `HackMD` | `hackmd` |
 | `Hackster` | `hackster` |
 | `HAL` | `hal` |
 | `Handlebars.js` | `handlebarsdotjs` |
@@ -1483,6 +1490,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Juniper Networks` | `junipernetworks` |
 | `JUnit5` | `junit5` |
 | `Jupyter` | `jupyter` |
+| `Just` | `just` |
 | `Just Eat` | `justeat` |
 | `JustGiving` | `justgiving` |
 | `K3s` | `k3s` |
@@ -1729,6 +1737,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `MAMP` | `mamp` |
 | `MAN` | `man` |
 | `ManageIQ` | `manageiq` |
+| `Mangacollec` | `mangacollec` |
 | `MangaUpdates` | `mangaupdates` |
 | `Manjaro` | `manjaro` |
 | `Mantine` | `mantine` |
@@ -1963,6 +1972,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Node-RED` | `nodered` |
 | `Node.js` | `nodedotjs` |
 | `NodeBB` | `nodebb` |
+| `NodeGui` | `nodegui` |
 | `Nodemon` | `nodemon` |
 | `Nokia` | `nokia` |
 | `Nomad` | `nomad` |
@@ -2043,6 +2053,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenAI Gym` | `openaigym` |
 | `OpenAPI Initiative` | `openapiinitiative` |
 | `OpenBSD` | `openbsd` |
+| `OpenCage` | `opencage` |
 | `OpenCritic` | `opencritic` |
 | `OpenCV` | `opencv` |
 | `OpenFaaS` | `openfaas` |
@@ -2206,6 +2217,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pixiv` | `pixiv` |
 | `Pixlr` | `pixlr` |
 | `pkgsrc` | `pkgsrc` |
+| `Plane` | `plane` |
 | `Planet` | `planet` |
 | `PlanetScale` | `planetscale` |
 | `PlanGrid` | `plangrid` |
@@ -2246,6 +2258,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Polygon` | `polygon` |
 | `Polymer Project` | `polymerproject` |
 | `Polywork` | `polywork` |
+| `Pomerium` | `pomerium` |
 | `Pond5` | `pond5` |
 | `Pop!_OS` | `popos` |
 | `Porkbun` | `porkbun` |
@@ -2608,6 +2621,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Session` | `session` |
 | `Sessionize` | `sessionize` |
 | `Setapp` | `setapp` |
+| `Setuptools` | `setuptools` |
 | `SFML` | `sfml` |
 | `shadcn/ui` | `shadcnui` |
 | `Shadow` | `shadow` |
