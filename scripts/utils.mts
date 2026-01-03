@@ -1,5 +1,3 @@
-// @ts-check
-/* eslint jsdoc/reject-any-type: off */
 /**
  * @file Internal utilities.
  *
@@ -9,18 +7,15 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
-
-/**
- * @typedef {import("../types.js").IconData} IconData
- * @typedef {import("../types.js").DuplicateAlias} DuplicateAlias
- */
+import type {DuplicateAlias, IconData} from '../data/simple-icons.d.ts';
+import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mts';
 
 /**
  * Get JSON schema data.
- * @returns {Promise<any>} JSON schema data.
+ * @returns JSON schema data.
  */
 export const getJsonSchemaData = async () =>
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 	JSON.parse(
 		await fs.readFile(
 			path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
@@ -30,10 +25,10 @@ export const getJsonSchemaData = async () =>
 
 /**
  * Write icons data to data/simple-icons.json.
- * @param {IconData[]} iconsData Icons data array.
- * @param {boolean} [minify] Whether to minify the JSON output.
+ * @param iconsData Icons data array.
+ * @param minify Whether to minify the JSON output.
  */
-export const writeIconsData = async (iconsData, minify = false) => {
+export const writeIconsData = async (iconsData: IconData[], minify = false) => {
 	await fs.writeFile(
 		getIconsDataPath(),
 		`${JSON.stringify(iconsData, null, minify ? 0 : '\t')}\n`,
@@ -43,7 +38,7 @@ export const writeIconsData = async (iconsData, minify = false) => {
 
 /**
  * Get SPDX license IDs from `spdx-license-ids` package.
- * @returns {Promise<string[]>} Set of SPDX license IDs.
+ * @returns Set of SPDX license IDs.
  */
 export const getSpdxLicenseIds = async () =>
 	JSON.parse(
@@ -57,37 +52,36 @@ export const getSpdxLicenseIds = async () =>
 			),
 			'utf8',
 		),
-	);
+	) as string[];
 
 /**
  * The compare function for sorting icons in *data/simple-icons.json*.
- * @param {IconData} a Icon A.
- * @param {IconData} b Icon B.
- * @returns {number} Comparison result.
+ * @param a Icon A.
+ * @param b Icon B.
+ * @returns Comparison result.
  */
-export const sortIconsCompare = (a, b) =>
+export const sortIconsCompare = (a: IconData, b: IconData) =>
 	a.title === b.title
 		? collator.compare(getIconSlug(a), getIconSlug(b))
 		: collator.compare(a.title, b.title);
 
 /**
  * The compare function for sorting icon duplicate aliases in *data/simple-icons.json*.
- * @param {DuplicateAlias} a Duplicate alias A.
- * @param {DuplicateAlias} b Duplicate alias B.
- * @returns {number} Comparison result.
+ * @param a Duplicate alias A.
+ * @param b Duplicate alias B.
+ * @returns Comparison result.
  */
-const sortDuplicatesCompare = (a, b) =>
+const sortDuplicatesCompare = (a: DuplicateAlias, b: DuplicateAlias) =>
 	a.title === b.title
 		? collator.compare(titleToSlug(a.title), titleToSlug(b.title))
 		: collator.compare(a.title, b.title);
 
 /**
  * Sort icon data or duplicate alias object.
- * @template {IconData | DuplicateAlias} T Either icon data or duplicate alias.
- * @param {T} icon The icon data or duplicate alias as it appears in *data/simple-icons.json*.
- * @returns {T} The sorted icon data or duplicate alias.
+ * @param icon The icon data or duplicate alias as it appears in *data/simple-icons.json*.
+ * @returns The sorted icon data or duplicate alias.
  */
-const sortIconOrDuplicate = (icon) => {
+const sortIconOrDuplicate = <T extends IconData | DuplicateAlias>(icon: T) => {
 	const keyOrder = [
 		'title',
 		'slug',
@@ -100,60 +94,58 @@ const sortIconOrDuplicate = (icon) => {
 		'loc',
 	];
 
-	/** @type {T} */
 	const sortedIcon = Object.assign(
 		Object.fromEntries(
 			Object.entries(icon).sort(
 				([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 			),
 		),
-	);
+	) as T;
 
 	return sortedIcon;
 };
 
 /**
  * Sort license object.
- * @param {IconData['license']} license The license object as it appears in *data/simple-icons.json*.
- * @returns {IconData['license']} The sorted license object.
+ * @param license The license object as it appears in *data/simple-icons.json*.
+ * @returns The sorted license object.
  */
-const sortLicense = (license) => {
+const sortLicense = (license: IconData['license']) => {
 	if (!license) return undefined;
 	const keyOrder = ['type', 'url'];
 
-	/** @type {IconData['license']} */
 	const sortedLicense = Object.assign(
 		Object.fromEntries(
 			Object.entries(license).sort(
 				([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 			),
 		),
-	);
+	) as IconData['license'];
 
 	return sortedLicense;
 };
 
 /**
  * Sort object key alphabetically.
- * @param {IconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
- * @returns {{[_: string]: string} | undefined} The sorted aliases object.
+ * @param object The aliases object as it appears in *data/simple-icons.json*.
+ * @returns The sorted aliases object.
  */
-const sortAlphabetically = (object) => {
+const sortAlphabetically = (object: IconData['aliases']) => {
 	if (!object) return undefined;
 	const sorted = Object.assign(
 		Object.fromEntries(
 			Object.entries(object).sort(([key1], [key2]) => (key1 > key2 ? 1 : -1)),
 		),
-	);
+	) as Record<string, string>;
 	return sorted;
 };
 
 /**
  * Sort icons data.
- * @param {IconData[]} iconsData The icons data as it appears in *data/simple-icons.json*.
- * @returns {IconData[]} The sorted icons data.
+ * @param iconsData The icons data as it appears in *data/simple-icons.json*.
+ * @returns The sorted icons data.
  */
-export const formatIconData = (iconsData) => {
+export const formatIconData = (iconsData: IconData[]) => {
 	const iconsDataCopy = structuredClone(iconsData);
 	const icons = iconsDataCopy.map((icon) =>
 		sortIconOrDuplicate({
@@ -182,10 +174,10 @@ export const formatIconData = (iconsData) => {
 
 /**
  * Check if a file exists.
- * @param {string} fpath File path to check.
- * @returns {Promise<boolean>} True if the file exists, false otherwise.
+ * @param fpath File path to check.
+ * @returns True if the file exists, false otherwise.
  */
-export const fileExists = async (fpath) => {
+export const fileExists = async (fpath: string) => {
 	try {
 		await fs.access(fpath);
 		return true;
