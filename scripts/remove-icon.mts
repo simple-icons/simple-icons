@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Script to remove an icon and its data.
@@ -10,8 +9,8 @@ import path from 'node:path';
 import process from 'node:process';
 import {search} from '@inquirer/prompts';
 import {search as fuzzySearch} from 'fast-fuzzy';
-import {getIconSlug, getIconsData} from '../sdk.mjs';
-import {writeIconsData} from './utils.js';
+import {getIconSlug, getIconsData} from '../sdk.mts';
+import {writeIconsData} from './utils.mts';
 
 process.exitCode = 1;
 process.on('uncaughtException', (error) => {

@@ -11,3 +11,7 @@ package-lock.json  -diff
 
 # Don't export/archive these files
 .github            export-ignore
+
+# Make github-linguist detect correctly TypeScript files
+# (workaround for https://github.com/github-linguist/linguist/issues/7348)
+*.ts               linguist-language=TypeScript

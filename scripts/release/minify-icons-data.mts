@@ -1,11 +1,10 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Minify data/simple-icons.json file.
  */
-import {getIconSlug, getIconsData} from '../../sdk.mjs';
-import {formatIconData, writeIconsData} from '../utils.js';
+import {getIconSlug, getIconsData} from '../../sdk.mts';
+import {formatIconData, writeIconsData} from '../utils.mts';
 
 const plainIcons = await getIconsData();
 const iconsWithSlugs = plainIcons.map((icon) =>

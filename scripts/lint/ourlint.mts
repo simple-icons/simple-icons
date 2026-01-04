@@ -1,56 +1,63 @@
 #!/usr/bin/env node
-// @ts-check
 /**
  * @file
  * Linters for the package that can't easily be implemented in the existing ones.
  */
 
-/**
- * @typedef {import("../../types.js").IconData} IconData
- * @typedef {import("../../types.js").CustomLicense} CustomLicense
- */
-
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
+import type {IconData} from '../../data/simple-icons.d.ts';
 import {
 	collator,
 	getIconSlug,
 	getIconsDataString,
 	normalizeNewlines,
 	titleToSlug,
-} from '../../sdk.mjs';
+} from '../../sdk.mts';
 import {
 	fileExists,
 	formatIconData,
 	getSpdxLicenseIds,
 	sortIconsCompare,
-} from '../utils.js';
+} from '../utils.mts';
 
 const iconsDirectory = path.resolve(import.meta.dirname, '..', '..', 'icons');
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (data: IconData[], dataString: string) => Promise<string | undefined> | string | undefined}}
  */
-const TESTS = {
+const tests: Record<
+	string,
+	(
+		data: IconData[],
+		dataString: string,
+	) => Promise<string | undefined> | string | undefined
+> = {
 	/**
 	 * Tests whether our icons are in alphabetical order.
-	 * @param {IconData[]} icons Icons data.
-	 * @returns {string|undefined} Error message or undefined.
+	 * @param icons Icons data.
+	 * @returns Error message or undefined.
 	 */
-	alphabetical(icons) {
+	alphabetical(icons: IconData[]) {
 		/**
 		 * Collects invalid alphabet ordered icons.
-		 * @param {IconData[]} invalidEntries Invalid icons reference.
-		 * @param {IconData} icon Icon to check.
-		 * @param {number} index Index of the icon.
-		 * @param {IconData[]} array Array of icons.
-		 * @returns {IconData[]} Invalid icons.
+		 * @param invalidEntries Invalid icons reference.
+		 * @param icon Icon to check.
+		 * @param index Index of the icon.
+		 * @param array Array of icons.
+		 * @returns Invalid icons.
 		 */
-		const collector = (invalidEntries, icon, index, array) => {
+		const collector = (
+			invalidEntries: IconData[],
+			icon: IconData,
+			index: number,
+			array: IconData[],
+		) => {
 			if (index > 0) {
 				const previous = array[index - 1];
+				if (!previous) return invalidEntries;
+
 				const comparison = collator.compare(icon.title, previous.title);
 				if (comparison < 0) {
 					invalidEntries.push(icon);
@@ -68,10 +75,10 @@ const TESTS = {
 
 		/**
 		 * Format an icon for display in the error message.
-		 * @param {IconData} icon Icon to format.
-		 * @returns {string} Formatted icon.
+		 * @param icon Icon to format.
+		 * @returns Formatted icon.
 		 */
-		const format = (icon) => {
+		const format = (icon: IconData) => {
 			if (icon.slug) {
 				return `${icon.title} (${icon.slug})`;
 			}
@@ -85,7 +92,7 @@ const TESTS = {
 		 * @param {IconData} targetIcon Icon to find.
 		 * @returns {string} Expected position of the icon.
 		 */
-		const findPositon = (expectedOrder, targetIcon) => {
+		const findPositon = (expectedOrder: IconData[], targetIcon: IconData) => {
 			const foundIndex = expectedOrder.findIndex(
 				(icon) =>
 					targetIcon.title === icon.title && targetIcon.slug === icon.slug,
@@ -105,10 +112,12 @@ const TESTS = {
 			return `Some icons aren't in alphabetical order:
 ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
 		}
+
+		return undefined;
 	},
 
 	/* Check the formatting of the data file */
-	prettified(data, dataString) {
+	prettified(data: IconData[], dataString: string) {
 		const normalizedDataString = normalizeNewlines(dataString);
 		const dataPretty = `${JSON.stringify(data, null, '\t')}\n`;
 
@@ -116,92 +125,49 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			const dataDiff = fakeDiff(normalizedDataString, dataPretty);
 			return `Data file is formatted incorrectly:\n\n${dataDiff}`;
 		}
+
+		return undefined;
 	},
 
 	/* Check redundant trailing slash in URL */
-	checkUrls(icons) {
-		/**
-		 * Check if an URL has a redundant trailing slash.
-		 * @param {URL} $url URL instance.
-		 * @param {string} url Original URL string.
-		 * @returns {boolean} Whether the URL has a redundant trailing slash.
-		 */
-		const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
+	checkUrls(icons: IconData[]) {
+		const hasRedundantTrailingSlash = ($url: URL, url: string) =>
+			url === $url.origin + '/';
 
-		/**
-		 * Check if an URL is static wikimedia asset URL.
-		 * @param {URL} $url URL instance.
-		 * @returns {boolean} Whether the URL is static wikimedia asset URL.
-		 */
-		const isStaticWikimediaAssetUrl = ($url) =>
+		const isStaticWikimediaAssetUrl = ($url: URL) =>
 			$url.hostname === 'upload.wikimedia.org';
 
-		/**
-		 * Check if an URL is raw GitHub asset URL.
-		 * @param {URL} $url URL instance.
-		 * @returns {boolean} Whether the URL is raw GitHub asset URL.
-		 */
-		const isRawGithubAssetUrl = ($url) =>
+		const isRawGithubAssetUrl = ($url: URL) =>
 			$url.hostname === 'raw.githubusercontent.com';
 
-		/**
-		 * Check if URl is user attachment URL.
-		 * @param {URL} $url URL instance.
-		 * @returns {boolean} Whether the URL is user attachment URL.
-		 */
-		const isGitHubUserAttachmentUrl = ($url) =>
+		const isGitHubUserAttachmentUrl = ($url: URL) =>
 			$url.hostname === 'github.com' &&
 			$url.pathname.startsWith('/user-attachments/assets');
 
-		/**
-		 * Check if an URL is a GitHub URL.
-		 * @param {URL} $url URL instance.
-		 * @returns {boolean} Whether the URL is a GitHub URL.
-		 */
-		const isGitHubUrl = ($url) => $url.hostname === 'github.com';
+		const isGitHubUrl = ($url: URL) => $url.hostname === 'github.com';
 
-		/**
-		 * Regex to match a permalink GitHub URL for a file.
-		 */
 		const permalinkGitHubRegex =
 			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
 
-		/**
-		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
-		 */
+		// URLs excluded from the GitHub URL check as are used by GitHub brands.
 		const gitHubExcludedUrls = new Set([
 			'https://github.com/logos',
 			'https://github.com/features/actions',
 			'https://github.com/sponsors',
 		]);
 
-		/**
-		 * Check if an URL is a permanent GitHub URL for a file.
-		 * @param {string} url URL string.
-		 * @returns {boolean} Whether the URL is a GitHub URL for a file.
-		 */
-		const isPermalinkGitHubFileUrl = (url) => permalinkGitHubRegex.test(url);
+		const isPermalinkGitHubFileUrl = (url: string) =>
+			permalinkGitHubRegex.test(url);
 
-		/**
-		 * Url fields with a boolean indicating if is an icon source URL.
-		 * @type {[boolean, string][]}
-		 */
-		const allUrlFields = [];
+		const allUrlFields: Array<[boolean, string]> = [];
 		for (const icon of icons) {
 			allUrlFields.push([true, icon.source]);
 			if (icon.guidelines) {
 				allUrlFields.push([false, icon.guidelines]);
 			}
 
-			if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
-				allUrlFields.push([
-					false,
-					// TODO: `hasOwn` is not currently supported by TS.
-					// See https://github.com/microsoft/TypeScript/issues/44253
-					/** @type {string} */
-					// @ts-expect-error
-					icon.license.url,
-				]);
+			if (icon.license && 'url' in icon.license) {
+				allUrlFields.push([false, icon.license.url]);
 			}
 		}
 
@@ -242,10 +208,12 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		if (invalidUrls.length > 0) {
 			return `Invalid URLs:\n\n${invalidUrls.join('\n\n')}`;
 		}
+
+		return undefined;
 	},
 
 	/* Check if all licenses are valid SPDX identifiers */
-	async checkLicense(icons) {
+	async checkLicense(icons: IconData[]) {
 		const spdxLicenseIds = new Set(await getSpdxLicenseIds());
 		const badLicenses = [];
 		for (const icon of icons) {
@@ -263,10 +231,12 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		if (badLicenses.length > 0) {
 			return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
 		}
+
+		return undefined;
 	},
 
 	/* Ensure that fields are sorted in the same way for all icons */
-	fieldsSorted(icons) {
+	fieldsSorted(icons: IconData[]) {
 		const formatted = formatIconData(icons);
 		const previous = JSON.stringify(icons, null, '\t');
 		const sorted = JSON.stringify(formatted, null, '\t');
@@ -274,15 +244,17 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			const diff = fakeDiff(previous, sorted);
 			return `Fields are not sorted in the same way for all icons:\n\n${diff}`;
 		}
+
+		return undefined;
 	},
 
 	/* Ensure that aliases constraints are enforced. */
-	checkAliases(icons) {
+	checkAliases(icons: IconData[]) {
 		const errors = [];
 
 		for (const icon of icons) {
 			// Old aliases must be different from the title
-			const oldAliases = icon.aliases?.old || [];
+			const oldAliases = icon.aliases?.old ?? [];
 			for (const oldAlias of oldAliases) {
 				if (oldAlias === icon.title) {
 					errors.push(
@@ -293,7 +265,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			}
 
 			// AKA aliases must be different from the title
-			const akaAliases = icon.aliases?.aka || [];
+			const akaAliases = icon.aliases?.aka ?? [];
 			for (const akaAlias of akaAliases) {
 				if (akaAlias === icon.title) {
 					errors.push(
@@ -304,7 +276,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			}
 
 			// Duplicate aliases titles must be different from the title
-			const duplicateAliases = icon.aliases?.dup || [];
+			const duplicateAliases = icon.aliases?.dup ?? [];
 			for (const {title: duplicateAliasTitle} of duplicateAliases) {
 				if (duplicateAliasTitle === icon.title) {
 					errors.push(
@@ -328,7 +300,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			}
 
 			// Localized aliases must be different from the title
-			const locAliases = icon.aliases?.loc || {};
+			const locAliases = icon.aliases?.loc ?? {};
 			for (const [lang, locAlias] of Object.entries(locAliases)) {
 				if (locAlias === icon.title) {
 					errors.push(
@@ -343,7 +315,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Ensure that titles constraints are enforced. */
-	checkTitles(icons) {
+	checkTitles(icons: IconData[]) {
 		const titles = new Set();
 		const duplicateTitles = [];
 		for (const icon of icons) {
@@ -371,7 +343,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	},
 
 	/* Ensure that slugs constraints are enforced. */
-	async checkSlugs(icons) {
+	async checkSlugs(icons: IconData[]) {
 		const errors = [];
 
 		for (const icon of icons) {
@@ -444,11 +416,11 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 };
 
 const iconsDataString = await getIconsDataString();
-const iconsData = JSON.parse(iconsDataString);
+const iconsData = JSON.parse(iconsDataString) as IconData[];
 
 const errors = (
 	await Promise.all(
-		Object.values(TESTS).map((test) => test(iconsData, iconsDataString)),
+		Object.values(tests).map(async (test) => test(iconsData, iconsDataString)),
 	)
 )
 	// eslint-disable-next-line unicorn/no-await-expression-member

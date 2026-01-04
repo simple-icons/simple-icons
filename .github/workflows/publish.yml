@@ -77,7 +77,7 @@ jobs:
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Reformat to regular markdown
-        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.ts "${{ steps.get-version.outputs.version }}"
       - name: Configure GIT credentials
         run: |
           git config user.name "simple-icons[bot]"
@@ -104,7 +104,7 @@ jobs:
           name: ${{ steps.commit.outputs.title }}
           body: ${{ steps.commit.outputs.body }}
       - name: Send release to Discord
-        run: node scripts/release/discord-release-message.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/discord-release-message.ts "${{ steps.get-version.outputs.version }}"
         env:
           DISCORD_RELEASES_ROLE_ID: ${{ secrets.DISCORD_RELEASES_ROLE_ID }}
           DISCORD_RELEASES_WEBHOOK_URL: ${{ secrets.DISCORD_RELEASES_WEBHOOK_URL }}

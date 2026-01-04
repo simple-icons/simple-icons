@@ -1,19 +1,13 @@
-// @ts-check
 /**
  * @file XO Flat config file.
  */
-import headers from 'eslint-plugin-headers';
-import jsdoc from 'eslint-plugin-jsdoc';
+import {type FlatXoConfig} from 'xo';
 
-/** @type {import('xo').FlatXoConfig} */
-const xoConfig = [
+const xoConfig: FlatXoConfig = [
 	{
 		prettier: true,
 	},
-	/** @type {import('xo').XoConfigItem} */
-	(jsdoc.configs['flat/recommended']),
 	{
-		plugins: {jsdoc, headers},
 		rules: {
 			'sort-imports': [
 				'error',
@@ -46,23 +40,6 @@ const xoConfig = [
 				'warn',
 				{
 					terms: ['fixme', 'xxx'],
-				},
-			],
-			'jsdoc/require-file-overview': 'error',
-			'jsdoc/require-description': 'error',
-			'jsdoc/no-bad-blocks': 'error',
-			'jsdoc/no-blank-blocks': 'error',
-			'jsdoc/no-blank-block-descriptions': 'error',
-			'jsdoc/check-syntax': 'error',
-			'jsdoc/require-asterisk-prefix': 'error',
-			'jsdoc/require-description-complete-sentence': 'error',
-			'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
-			'headers/header-format': [
-				'error',
-				{
-					source: 'string',
-					content: '@ts-check',
-					style: 'line',
 				},
 			],
 		},
