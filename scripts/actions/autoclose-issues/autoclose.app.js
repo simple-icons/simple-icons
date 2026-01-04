@@ -50,10 +50,22 @@ const checkIfCanBeClosed = async (githubRepository, issueNumber) => {
 	const json = /** @type {Issue} */ (await response.json());
 	const {labels, state, title, body} = json;
 	const labelNames = new Set(labels.map((label) => label.name));
-	if (state === 'closed') return undefined;
-	if (labelNames.has('meta')) return undefined;
-	if (labelNames.has('in discussion')) return undefined;
-	if (!labelNames.has('new icon')) return undefined;
+	if (state === 'closed') {
+		return undefined;
+	}
+
+	if (labelNames.has('meta')) {
+		return undefined;
+	}
+
+	if (labelNames.has('in discussion')) {
+		return undefined;
+	}
+
+	if (!labelNames.has('new icon')) {
+		return undefined;
+	}
+
 	const matched = rules.find((rule) =>
 		rule.patterns.some((pattern) => {
 			const brandNamePattern = new RegExp(
@@ -63,7 +75,10 @@ const checkIfCanBeClosed = async (githubRepository, issueNumber) => {
 			return pattern.test(title) || brandNamePattern.test(body);
 		}),
 	);
-	if (!matched) return undefined;
+	if (!matched) {
+		return undefined;
+	}
+
 	return matched.reason;
 };
 

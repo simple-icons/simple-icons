@@ -115,13 +115,17 @@ const filterIssuesByLabels = (issueLabels, openIssues) => {
  * @returns {string} Formatted title.
  */
 function formatTitle(title, exclude) {
-	if (!exclude) return title;
+	if (!exclude) {
+		return title;
+	}
 
 	let result = title;
 
 	for (const keyword of exclude) {
 		const trimmed = keyword.trim();
-		if (trimmed.length === 0) continue;
+		if (trimmed.length === 0) {
+			continue;
+		}
 
 		result = result.replaceAll(new RegExp(trimmed, 'igm'), '');
 	}
@@ -146,7 +150,10 @@ const searchForPotentialDuplicates = (
 ) => {
 	const issues = [];
 	for (const issue of openIssues) {
-		if (issue.number === issueNumber) continue;
+		if (issue.number === issueNumber) {
+			continue;
+		}
+
 		issue.formattedTitle = formatTitle(issue.title, config.exclude);
 		issues.push(issue);
 	}

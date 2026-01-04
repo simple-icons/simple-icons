@@ -406,9 +406,9 @@ const config = {
 					}
 
 					// @ts-expect-error
-					const {segments} = svgpath(iconPath).abs().unshort();
-					memoizedAbsSegments = segments;
-					return segments;
+					const {segments: segs} = svgpath(iconPath).abs().unshort();
+					memoizedAbsSegments = segs;
+					return segs;
 				};
 
 				const lowerMovementCommands = ['m', 'l'];
