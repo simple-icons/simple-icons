@@ -193,15 +193,8 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				allUrlFields.push([false, icon.guidelines]);
 			}
 
-			if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
-				allUrlFields.push([
-					false,
-					// TODO: `hasOwn` is not currently supported by TS.
-					// See https://github.com/microsoft/TypeScript/issues/44253
-					/** @type {string} */
-					// @ts-expect-error
-					icon.license.url,
-				]);
+			if (icon.license !== undefined && 'url' in icon.license) {
+				allUrlFields.push([false, icon.license.url]);
 			}
 		}
 
