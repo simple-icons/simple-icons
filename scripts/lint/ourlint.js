@@ -92,8 +92,14 @@ const TESTS = {
 			);
 			const before = expectedOrder[foundIndex - 1];
 			const after = expectedOrder[foundIndex + 1];
-			if (before) return `should be after ${format(before)}`;
-			if (after) return `should be before ${format(after)}`;
+			if (before) {
+				return `should be after ${format(before)}`;
+			}
+
+			if (after) {
+				return `should be before ${format(after)}`;
+			}
+
 			return 'not found';
 		};
 
@@ -206,7 +212,9 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				invalidUrls.push(fakeDiff(url, $url.origin));
 			}
 
-			if (isGitHubUserAttachmentUrl($url)) continue;
+			if (isGitHubUserAttachmentUrl($url)) {
+				continue;
+			}
 
 			if (isStaticWikimediaAssetUrl($url)) {
 				const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
@@ -448,6 +456,9 @@ const errors = (
 	.filter(Boolean);
 
 if (errors.length > 0) {
-	for (const error of errors) console.error(`\u001B[31m${error}\u001B[0m`);
+	for (const error of errors) {
+		console.error(`\u001B[31m${error}\u001B[0m`);
+	}
+
 	process.exit(1);
 }
