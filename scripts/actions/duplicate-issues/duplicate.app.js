@@ -55,10 +55,7 @@ const getAllOpenIssues = async (githubRepository) => {
 		const pageIssues = json.filter((issue) => !issue.pull_request);
 
 		process.stdout.write(`${pageIssues.length} issues\n`);
-		if (pageIssues.length === 0) break;
-		for (const issue of pageIssues) {
-			issues.push(issue);
-		}
+		issues.push(...pageIssues);
 
 		const linkHeader = response.headers.get('Link');
 		if (!linkHeader || !linkHeader.includes('rel="next"')) {
