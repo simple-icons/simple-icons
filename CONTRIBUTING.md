@@ -206,7 +206,7 @@ There are many different tools for editing SVG files, some options include:
 | :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
 | [Affinity](https://www.affinity.studio/) | Vector Graphics Editor | Windows, Mac | Free |
-| [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
+| [SVGEdit](https://svgedit.netlify.app) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 
