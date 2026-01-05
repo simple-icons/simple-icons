@@ -11549,7 +11549,10 @@
 	{
 		"title": "Omarchy",
 		"hex": "9ECE6A",
-		"source": "https://omarchy.org"
+		"source": "https://omarchy.org",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "OnePlus",
