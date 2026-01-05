@@ -99,11 +99,11 @@ const iconDataAndObjectToJsRepr = (icon) =>
  * without meta charset in SVG `<title>` elements, we need to ensure the same for scripts.
  * @param {string} filepath The path to the file to write.
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {'cjs'} [format] The format of the resulting JavaScript file.
+ * @param {'cjs'} [jsFormat] The jsFormat of the resulting JavaScript file.
  */
-const writeJs = async (filepath, rawJavaScript, format = undefined) => {
+const writeJs = async (filepath, rawJavaScript, jsFormat = undefined) => {
 	/** @type {import('esbuild').TransformOptions} */
-	const options = {minify: true, charset: 'ascii', format};
+	const options = {minify: true, charset: 'ascii', format: jsFormat};
 	const {code} = await esbuildTransform(rawJavaScript, options);
 	// ESBuild adds a trailing newline to the end of the file
 	await fs.writeFile(filepath, code.trimEnd());
