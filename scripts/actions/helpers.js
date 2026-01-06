@@ -98,9 +98,9 @@ export const printError = (error) => {
 };
 
 /**
- * Returns a validated label name.
+ * Returns GitHub labels after checking they exist in .github/labels.yml.
  * @param {{[key: string]: string}} labels Object with label names.
- * @throws {Error} If the label does not exist in .github/labels.yml.
+ * @throws {Error} If one label does not exist in .github/labels.yml.
  * @returns {Promise<{[key: string]: string}>} Label name.
  */
 export const ghLabels = async (labels) => {
