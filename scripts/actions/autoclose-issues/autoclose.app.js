@@ -110,7 +110,7 @@ const readEnv = () => {
 	const {GITHUB_REPOSITORY, ISSUE_NUMBER} = process.env;
 	if (GITHUB_REPOSITORY === undefined || ISSUE_NUMBER === undefined) {
 		throw new Error(
-			'GITHUB_REPOSITORY and ISSUE_NUMBER environment variables are required.',
+			'GITHUB_REPOSITORY and ISSUE_NUMBER environment variables are required.\n',
 		);
 	}
 
