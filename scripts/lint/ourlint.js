@@ -453,24 +453,10 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		const labels = await getLabels();
 		const labelerLabels = await getLabelerLabels();
 
-		/**
-		 * Builds an error message for a label present in one file but missing in another.
-		 * @param {string} label Label name.
-		 * @param {string} presentInFile File where the label is present.
-		 * @param {string} missingInFile File where the label is missing.
-		 * @returns {string} Error message.
-		 */
-		const presentMissingFilesMessage = (label, presentInFile, missingInFile) =>
-			`Label "${label}" is present in ${presentInFile} but missing in ${missingInFile}. Please, synchronize both files.`;
-
 		for (const label of labelerLabels) {
 			if (!labels.has(label)) {
 				errors.push(
-					presentMissingFilesMessage(
-						label,
-						'.github/labeler.yml',
-						'.github/labels.yml',
-					),
+					`Label "${label}" is present in '.github/labeler.yml' but missing in .github/labels.yml. Please, synchronize both files.`,
 				);
 			}
 		}
