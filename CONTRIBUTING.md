@@ -538,7 +538,7 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Developing Third-Party Extensions
 
-![Extensions](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfExtensions&suffix=%20extensions&label=%20&color=483d8b) ![Libraries](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfLibraries&suffix=%20libraries&label=%20&color=009698)
+![Extensions](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfExtensions&suffix=%20extensions&label=&color=483d8b) ![Libraries](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfLibraries&suffix=%20libraries&label=&color=009698)
 
 An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 
