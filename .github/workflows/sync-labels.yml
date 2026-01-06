@@ -21,9 +21,9 @@ on:
 
 jobs:
   labels:
+    runs-on: ubuntu-latest
     permissions:
       issues: write
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Sync labels
