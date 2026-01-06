@@ -8,17 +8,19 @@ jobs:
   sanity-check:
     name: Pre-publish checks
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Run linters
         run: npm run lint
       - name: Build NodeJS package
@@ -30,20 +32,21 @@ jobs:
     needs: sanity-check
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
+      contents: read
+      id-token: write # for OIDC authentication
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
-          cache-dependency-path: '**/package.json'
+          cache-dependency-path: '**/package-lock.json'
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Install dependencies
-        run: npm i --ignore-scripts --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
       - name: Reformat to regular markdown
         run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
       - name: Update SDK Typescript definitions
@@ -53,14 +56,13 @@ jobs:
       - name: Build NodeJS package
         run: npm run build
       - name: Deploy to NPM
-        uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          provenance: true
+        run: npm publish
   github:
     name: GitHub release
     needs: sanity-check
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
@@ -68,7 +70,7 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v3
@@ -111,6 +113,8 @@ jobs:
     name: Trigger simple-icons-font release
     needs: npm
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
@@ -128,6 +132,8 @@ jobs:
     name: Trigger simpleicons.org website update
     needs: npm
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token

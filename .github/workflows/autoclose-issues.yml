@@ -1,12 +1,13 @@
 name: Autocloser
 on:
   issues:
-    # we allow 'reopend' and 'edited' in case the issue was closed by accident
     types: [opened]
 
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
       - uses: actions/create-github-app-token@v2
         id: app-token
@@ -14,9 +15,9 @@ jobs:
           app-id: ${{ vars.BOT_APP_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Autoclose Issues
-        run: node scripts/autoclose-issues/autoclose.app.js
+        run: node scripts/actions/autoclose-issues/autoclose.app.js
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}

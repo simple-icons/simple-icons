@@ -8,17 +8,19 @@
 /**
  * @typedef {import("../sdk.js").IconData} IconData
  */
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import process from 'node:process';
-import {checkbox, confirm, input, search} from '@inquirer/prompts';
+import {
+	checkbox,
+	confirm,
+	input as inputPrompt,
+	search,
+} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import {
-	getIconsDataString,
-	normalizeColor,
-	titleToSlug,
-	urlRegex,
-} from '../sdk.mjs';
+import {getIconsDataString, normalizeColor, titleToSlug} from '../sdk.mjs';
 import {
 	formatIconData,
 	getJsonSchemaData,
@@ -37,7 +39,7 @@ process.on('uncaughtException', (error) => {
 	}
 });
 
-/** @type {import('../sdk.js').IconData[]} */
+/** @type {import('../types.d.ts').IconData[]} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
@@ -53,6 +55,20 @@ const licenseTypes = [
 	{name: 'Custom', value: 'custom'},
 	...spdxLicenseIds.map((id) => ({name: id, value: id})),
 ];
+
+/**
+ * Build a regex to validate HTTPs URLs.
+ * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
+ */
+const urlRegex = async () =>
+	new RegExp(
+		JSON.parse(
+			await fs.readFile(
+				path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
+				'utf8',
+			),
+		).definitions.url.pattern,
+	);
 
 /**
  * Whether an input is a valid URL.
@@ -93,20 +109,24 @@ const previewHexColor = (input) => {
 	const luminance = HEX_REGEX.test(input)
 		? getRelativeLuminance.default(`#${color}`)
 		: -1;
-	if (luminance === -1) return input.toUpperCase();
+	if (luminance === -1) {
+		return input.toUpperCase();
+	}
+
 	return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
 		input.toUpperCase(),
 	);
 };
 
 /** @type {IconData} */
+// @ts-expect-error: `slug` is not required in our source simple-icons.json file.
 const answers = {
 	title: '',
 	hex: '',
 	source: '',
 };
 
-answers.title = await input({
+answers.title = await inputPrompt({
 	message: 'What is the title of this icon?',
 	validate: (input) =>
 		input.trim().length > 0
@@ -115,14 +135,14 @@ answers.title = await input({
 });
 
 answers.hex = normalizeColor(
-	await input({
+	await inputPrompt({
 		message: 'What is the brand color of this icon?',
 		validate: isValidHexColor,
 		transformer: previewHexColor,
 	}),
 );
 
-answers.source = await input({
+answers.source = await inputPrompt({
 	message: 'What is the source URL of the icon?',
 	validate: isValidURL,
 });
@@ -132,7 +152,7 @@ if (
 		message: 'Does this icon have brand guidelines?',
 	})
 ) {
-	answers.guidelines = await input({
+	answers.guidelines = await inputPrompt({
 		message: 'What is the URL for the brand guidelines?',
 		validate: isValidURL,
 	});
@@ -159,7 +179,7 @@ if (
 
 	if (answers.license.type === 'custom') {
 		// @ts-expect-error
-		answers.license.url = await input({
+		answers.license.url = await inputPrompt({
 			message: `What is the URL for the license? (optional)`,
 			validate: (input) => input.length === 0 || isValidURL(input),
 		});
@@ -175,18 +195,25 @@ if (
 	answers.aliases = await checkbox({
 		message: 'What types of aliases do you want to add?',
 		choices: aliasTypes,
-	}).then(async (aliases) => {
-		/** @type {{[_: string]: string[]}} */
-		const result = {};
-		for (const alias of aliases) {
-			// eslint-disable-next-line no-await-in-loop
-			result[alias] = await input({
-				message: `What ${alias} aliases would you like to add? (separate with commas)`,
-			}).then((aliases) => aliases.split(',').map((alias) => alias.trim()));
-		}
+	})
+		// eslint-disable-next-line promise/prefer-await-to-then
+		.then(async (aliases) => {
+			/** @type {{[_: string]: string[]}} */
+			const result = {};
 
-		return aliases.length > 0 ? result : undefined;
-	});
+			for (const alias of aliases) {
+				// eslint-disable-next-line no-await-in-loop
+				result[alias] = await inputPrompt({
+					message: `What ${alias} aliases would you like to add? (separate with commas)`,
+				})
+					// eslint-disable-next-line promise/prefer-await-to-then
+					.then((aliases_) =>
+						aliases_.split(',').map((alias_) => alias_.trim()),
+					);
+			}
+
+			return aliases.length > 0 ? result : undefined;
+		});
 }
 
 process.stdout.write(

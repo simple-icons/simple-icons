@@ -32,12 +32,14 @@
 						"aka": {
 							"description": "The brand is also known as (e.g. full length name or abbreviation)",
 							"type": "array",
-							"items": {"type": "string"}
+							"items": {"type": "string"},
+							"uniqueItems": true
 						},
 						"dup": {
 							"description": "Different brands that use the exact same icon",
 							"type": "array",
-							"items": {"$ref": "#/definitions/duplicate"}
+							"items": {"$ref": "#/definitions/duplicate"},
+							"uniqueItems": true
 						},
 						"loc": {
 							"description": "Localized names of the brand",
@@ -46,7 +48,8 @@
 						"old": {
 							"description": "Old names, for backwards compatibility",
 							"type": "array",
-							"items": {"type": "string"}
+							"items": {"type": "string"},
+							"uniqueItems": true
 						}
 					},
 					"minProperties": 1,
