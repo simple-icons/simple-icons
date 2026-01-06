@@ -20,10 +20,6 @@ Over 3300 SVG icons for popular brands. See them all on one page at <a href="htt
 > [!IMPORTANT]\
 > We ask that all users read our [legal disclaimer](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md) before using icons from Simple Icons.
 
-<p align="center">
-<a href="https://simpleicons.org">simpleicons.org</a> - <a href="#cdn-with-colors">cdn.simpleicons.org</a> - <a href="https://github.com/simple-icons/simple-icons-font">simple-icons-font</a>
-</p>
-
 ### General Usage
 
 Icons can be downloaded as SVGs directly from [simpleicons.org](https://simpleicons.org) - simply click the download button of the icon you want, and the download will start automatically.
