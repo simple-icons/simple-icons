@@ -4720,6 +4720,15 @@
 		"source": "https://www.edx.org"
 	},
 	{
+		"title": "Effect",
+		"hex": "FFFFFF",
+		"source": "https://effect.website",
+		"license": {
+			"type": "custom",
+			"url": "https://effectful.co/terms-conditions"
+		}
+	},
+	{
 		"title": "egghead",
 		"hex": "FCFBFA",
 		"source": "https://egghead.io"
@@ -11623,6 +11632,14 @@
 		"title": "Omada Cloud",
 		"hex": "10C1D0",
 		"source": "https://omada.tplinkcloud.com"
+	},
+	{
+		"title": "Omarchy",
+		"hex": "9ECE6A",
+		"source": "https://omarchy.org",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "OnePlus",
