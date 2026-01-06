@@ -20,6 +20,10 @@ Over 3300 SVG icons for popular brands. See them all on one page at <a href="htt
 > [!IMPORTANT]\
 > We ask that all users read our [legal disclaimer](https://github.com/simple-icons/simple-icons/blob/develop/DISCLAIMER.md) before using icons from Simple Icons.
 
+<p align="center">
+<a href="https://simpleicons.org">simpleicons.org</a>&nbsp; - &nbsp;<a href="#cdn-with-colors">cdn.simpleicons.org</a>&nbsp; - &nbsp;<a href="https://github.com/simple-icons/simple-icons-font">simple-icons-font</a>
+</p>
+
 ### General Usage
 
 Icons can be downloaded as SVGs directly from [simpleicons.org](https://simpleicons.org) - simply click the download button of the icon you want, and the download will start automatically.
@@ -137,7 +141,7 @@ import type {SimpleIcon} from 'simple-icons';
 
 ### PHP Usage <img src="https://cdn.simpleicons.org/php/000/fff" alt="Php" align=left width=24 height=24>
 
-The icons are also available through our Packagist package. To install, simply run:
+The icons are also available through [our Packagist package](https://packagist.org/packages/simple-icons/simple-icons). To install, simply run:
 
 ```shell
 composer require simple-icons/simple-icons
