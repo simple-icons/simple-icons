@@ -7,6 +7,12 @@ on:
     branches:
       - develop
   workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Run in dry-run mode (no changes applied)'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   labels:
@@ -20,3 +26,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
           skip-delete: false
+          dry-run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry-run || false }}
