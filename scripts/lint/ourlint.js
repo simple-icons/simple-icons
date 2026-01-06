@@ -456,7 +456,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		for (const label of labelerLabels) {
 			if (!labels.has(label)) {
 				errors.push(
-					`Label "${label}" is present in '.github/labeler.yml' but missing in .github/labels.yml. Please, synchronize both files.`,
+					`Label "${label}" is present in '.github/labeler.yml' but missing in '.github/labels.yml'. Please, synchronize both files.`,
 				);
 			}
 		}
