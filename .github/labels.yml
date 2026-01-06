@@ -1,5 +1,5 @@
 - name: abandoned
-  color: '666666'
+  color: 666666
   description: Pull requests that have been abandoned by the contributor.
 - name: assessing
   color: f9d0c4
@@ -8,7 +8,7 @@
   color: e6473d
   description: Issues or pull requests awaiting reply from an individual before it may be addressed.
 - name: breaking change
-  color: '000000'
+  color: 000000
   description: Issues or pull requests that include a breaking change and scheduled for the next major release.
 - name: dependencies
   color: f71d6d
