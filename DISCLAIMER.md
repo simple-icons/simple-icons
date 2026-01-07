@@ -14,6 +14,8 @@ Simple Icons asks that its users read this disclaimer fully before including an 
 > [!IMPORTANT]\
 > The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
 
+<!-- makdownlint-disable-next-line no-blanks-blockquote -->
+
 > [!NOTE]\
 > Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.
 
@@ -45,6 +47,8 @@ Should a brand wish for their icon or data to be updated, please [submit an issu
 ## Removal of Brands
 
 Should a brand wish for their icon to be removed from the package, contact `removals at simpleicons dot org` explaining your affiliation with the company, and reasons for removal. Alternatively, it is also possible to [submit an issue][removal-issues] on [the Simple Icons GitHub repository] with the same information. We generally remove icons that no longer [meet our criteria] twice a year in our major releases - but can occasionally make exceptions for immediate removal of brands.
+
+The pull request of icon removal must be submitted by the Simple Icons maintainer.
 
 [meet our criteria]: https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#requesting-an-icon
 [icon-outdated-issues]: https://github.com/simple-icons/simple-icons/issues/new?assignees=&labels=update+icon%2Fdata&template=icon_update.yml&title=Update%3A+

@@ -1,0 +1,6 @@
+exclude = [
+	'^https://www\.npmjs\.com',
+	'^https://inkscape\.org',
+	'^https://www\.figma\.com/community/plugin',
+	'^https://www\.adobe\.com/products/illustrator\.html',
+]

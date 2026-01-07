@@ -1,0 +1,18 @@
+{
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": "..",
+		"target": "base"
+	},
+	"postCreateCommand": "npm ci --no-audit --no-fund",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig",
+				"esbenp.prettier-vscode",
+				"samverschueren.linter-xo",
+				"davidanson.vscode-markdownlint"
+			]
+		}
+	}
+}
