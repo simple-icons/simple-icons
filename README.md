@@ -137,7 +137,7 @@ import type {SimpleIcon} from 'simple-icons';
 
 ### PHP Usage <img src="https://cdn.simpleicons.org/php/000/fff" alt="Php" align=left width=24 height=24>
 
-The icons are also available through our Packagist package. To install, simply run:
+The icons are also available through [our Packagist package](https://packagist.org/packages/simple-icons/simple-icons). To install, simply run:
 
 ```shell
 composer require simple-icons/simple-icons
