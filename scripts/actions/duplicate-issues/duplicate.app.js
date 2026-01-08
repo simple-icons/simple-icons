@@ -14,9 +14,15 @@ import {
 } from '../helpers.js';
 
 /**
- * @typedef {object} Config
- * @property {number} threshold - Minimum threshold to mark as a duplicate.
- * @property {string[]} exclude - Words to exclude from the similarity check.
+ * @typedef {object} IssueConfig Issue related configuration.
+ * @property {number} minimumTitleLength Minimum length of the issue title to check.
+ */
+
+/**
+ * @typedef {object} Config Potential duplicate checker configuration.
+ * @property {number} threshold Minimum threshold to mark as a duplicate.
+ * @property {string[]} exclude Words to exclude from the similarity check.
+ * @property {IssueConfig} issue Issue related configuration.
  */
 
 /** @type {Config} */
@@ -131,8 +137,8 @@ function formatTitle(title, exclude) {
 	}
 
 	return result
-		.replaceAll(/[.,-/#!$%^&*;:{}=\-_`~()?¿¡]/g, ' ')
-		.replace(/\s+/, ' ')
+		.replaceAll(/[^\p{L}\p{N}\p{M}\s]/gu, ' ')
+		.replaceAll(/\s+/g, ' ')
 		.trim();
 }
 
@@ -155,6 +161,10 @@ const searchForPotentialDuplicates = (
 		}
 
 		issue.formattedTitle = formatTitle(issue.title, config.exclude);
+		if (issue.formattedTitle.length < config.issue.minimumTitleLength) {
+			continue;
+		}
+
 		issues.push(issue);
 	}
 
@@ -215,6 +225,13 @@ const main = async () => {
 			return 0;
 		}
 
+		if (formattedIssueTitle.length < config.issue.minimumTitleLength) {
+			console.warn(
+				`Formatted issue title is too short ("${formattedIssueTitle}"), skipping duplicate check.`,
+			);
+			return 0;
+		}
+
 		const openIssues = await getAllOpenIssues(githubRepository);
 		const sameLabelsIssues = filterIssuesByLabels(issueLabels, openIssues);
 
@@ -225,7 +242,7 @@ const main = async () => {
 		);
 		if (duplicates.length > 0) {
 			process.stdout.write(
-				`Found ${duplicates.length} potential duplicates for issue #${issueNumber}.\n`,
+				`Found ${duplicates.length} potential duplicates for issue #${issueNumber} with title "${issueTitle}".\n`,
 			);
 			for (const dup of duplicates) {
 				process.stdout.write(`  + ${dup.title} → #${dup.number}\n`);
