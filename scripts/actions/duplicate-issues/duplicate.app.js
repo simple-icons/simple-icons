@@ -23,12 +23,32 @@ import {
  * @property {number} threshold Minimum threshold to mark as a duplicate.
  * @property {string[]} exclude Words to exclude from the similarity check.
  * @property {IssueConfig} issue Issue related configuration.
+ * @property {number} [maxDuplicates] Maximum number of duplicates to list in the comment.
  */
+
+/**
+ * Build configuration from default values.
+ * @param {Config} config Configuration object.
+ * @returns {Config} Configuration with default values.
+ */
+const fromDefaultConfig = (config) => {
+	return {
+		threshold: config.threshold ?? 0.85,
+		issue: {
+			minimumTitleLength:
+				config.issue?.minimumTitleLength === undefined
+					? 4
+					: config.issue.minimumTitleLength,
+		},
+		maxDuplicates: config.maxDuplicates,
+		exclude: config.exclude ?? [],
+	};
+};
 
 /** @type {Config} */
 const config = await import(
 	path.join(import.meta.dirname, 'duplicate.config.js')
-).then((module) => module.default);
+).then((module) => fromDefaultConfig(module.default));
 
 /**
  * @typedef {object} Issue Issue object.
@@ -254,7 +274,10 @@ const main = async () => {
 				);
 			} else {
 				await addLabels(githubRepository, issueNumber, ['potential duplicate']);
-				const duplicatesList = duplicates
+				// Limit the number of duplicates listed in the comment
+				const maxDuplicates = config.maxDuplicates ?? duplicates.length;
+				const limitedDuplicates = duplicates.slice(0, maxDuplicates);
+				const duplicatesList = limitedDuplicates
 					.map((issue) => `- ${issue.title} → #${issue.number}`)
 					.join('\n');
 				const reason =

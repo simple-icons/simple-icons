@@ -9,6 +9,7 @@ const config = {
 	issue: {
 		minimumTitleLength: 4,
 	},
+	maxDuplicates: 3,
 	exclude: [
 		// Action verbs
 		'adding',
