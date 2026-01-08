@@ -6,10 +6,10 @@
 /** @type {import('./duplicate.app.js').Config} */
 const config = {
 	threshold: 0.85,
+	maxDuplicates: 3,
 	issue: {
 		minimumTitleLength: 4,
 	},
-	maxDuplicates: 3,
 	exclude: [
 		// Action verbs
 		'adding',
