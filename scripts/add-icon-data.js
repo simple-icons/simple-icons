@@ -11,7 +11,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {checkbox, confirm, input, search} from '@inquirer/prompts';
+import {
+	checkbox,
+	confirm,
+	input as inputPrompt,
+	search,
+} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
@@ -104,7 +109,10 @@ const previewHexColor = (input) => {
 	const luminance = HEX_REGEX.test(input)
 		? getRelativeLuminance.default(`#${color}`)
 		: -1;
-	if (luminance === -1) return input.toUpperCase();
+	if (luminance === -1) {
+		return input.toUpperCase();
+	}
+
 	return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
 		input.toUpperCase(),
 	);
@@ -118,7 +126,7 @@ const answers = {
 	source: '',
 };
 
-answers.title = await input({
+answers.title = await inputPrompt({
 	message: 'What is the title of this icon?',
 	validate: (input) =>
 		input.trim().length > 0
@@ -127,14 +135,14 @@ answers.title = await input({
 });
 
 answers.hex = normalizeColor(
-	await input({
+	await inputPrompt({
 		message: 'What is the brand color of this icon?',
 		validate: isValidHexColor,
 		transformer: previewHexColor,
 	}),
 );
 
-answers.source = await input({
+answers.source = await inputPrompt({
 	message: 'What is the source URL of the icon?',
 	validate: isValidURL,
 });
@@ -144,7 +152,7 @@ if (
 		message: 'Does this icon have brand guidelines?',
 	})
 ) {
-	answers.guidelines = await input({
+	answers.guidelines = await inputPrompt({
 		message: 'What is the URL for the brand guidelines?',
 		validate: isValidURL,
 	});
@@ -171,7 +179,7 @@ if (
 
 	if (answers.license.type === 'custom') {
 		// @ts-expect-error
-		answers.license.url = await input({
+		answers.license.url = await inputPrompt({
 			message: `What is the URL for the license? (optional)`,
 			validate: (input) => input.length === 0 || isValidURL(input),
 		});
@@ -192,13 +200,16 @@ if (
 		.then(async (aliases) => {
 			/** @type {{[_: string]: string[]}} */
 			const result = {};
+
 			for (const alias of aliases) {
 				// eslint-disable-next-line no-await-in-loop
-				result[alias] = await input({
+				result[alias] = await inputPrompt({
 					message: `What ${alias} aliases would you like to add? (separate with commas)`,
 				})
 					// eslint-disable-next-line promise/prefer-await-to-then
-					.then((aliases) => aliases.split(',').map((alias) => alias.trim()));
+					.then((aliases_) =>
+						aliases_.split(',').map((alias_) => alias_.trim()),
+					);
 			}
 
 			return aliases.length > 0 ? result : undefined;

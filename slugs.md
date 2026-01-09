@@ -352,6 +352,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Bitdefender` | `bitdefender` |
 | `Bitly` | `bitly` |
 | `Bitrise` | `bitrise` |
+| `Bitsy` | `bitsy` |
 | `BitTorrent` | `bittorrent` |
 | `Bitwarden` | `bitwarden` |
 | `Bitwig` | `bitwig` |
@@ -686,7 +687,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DAF` | `daf` |
 | `daily.dev` | `dailydotdev` |
 | `Dailymotion` | `dailymotion` |
-| `DaisyUI` | `daisyui` |
+| `daisyUI` | `daisyui` |
 | `Dapr` | `dapr` |
 | `Dark Reader` | `darkreader` |
 | `Dart` | `dart` |
@@ -1204,6 +1205,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Grand Frais` | `grandfrais` |
 | `GrapheneOS` | `grapheneos` |
 | `Graphite` | `graphite` |
+| `Graphite` | `graphite_editor` |
 | `GraphQL` | `graphql` |
 | `Grav` | `grav` |
 | `Gravatar` | `gravatar` |
@@ -1373,6 +1375,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `IKEA` | `ikea` |
 | `Île-de-France Mobilités` | `iledefrancemobilites` |
 | `iLovePDF` | `ilovepdf` |
+| `Image Toolbox` | `imagetoolbox` |
 | `Image.sc` | `imagedotsc` |
 | `ImageJ` | `imagej` |
 | `IMDb` | `imdb` |
@@ -1847,6 +1850,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mock Service Worker` | `mockserviceworker` |
 | `Modal` | `modal` |
 | `Model Context Protocol` | `modelcontextprotocol` |
+| `ModelScope` | `modelscope` |
 | `Modin` | `modin` |
 | `Modrinth` | `modrinth` |
 | `MODX` | `modx` |
@@ -3208,6 +3212,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `WazirX` | `wazirx` |
 | `Wear OS` | `wearos` |
 | `Weasyl` | `weasyl` |
+| `Web Awesome` | `webawesome` |
 | `WEB.DE` | `webdotde` |
 | `Web3.js` | `web3dotjs` |
 | `WebAssembly` | `webassembly` |
