@@ -128,11 +128,10 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	checkUrls(icons) {
 		/**
 		 * Check if an URL has a redundant trailing slash.
-		 * @param {URL} $url URL instance.
 		 * @param {string} url Original URL string.
 		 * @returns {boolean} Whether the URL has a redundant trailing slash.
 		 */
-		const hasRedundantTrailingSlash = ($url, url) => url === $url.origin + '/';
+		const hasRedundantTrailingSlash = (url) => url.endsWith('/');
 
 		/**
 		 * Check if an URL is static wikimedia asset URL.
@@ -208,8 +207,8 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		for (const [isSourceUrl, url] of allUrlFields) {
 			const $url = new globalThis.URL(url);
 
-			if (hasRedundantTrailingSlash($url, url)) {
-				invalidUrls.push(fakeDiff(url, $url.origin));
+			if (hasRedundantTrailingSlash(url)) {
+				invalidUrls.push(fakeDiff(url, url.slice(0, -1)));
 			}
 
 			if (isGitHubUserAttachmentUrl($url)) {
