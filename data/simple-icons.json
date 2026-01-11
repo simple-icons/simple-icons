@@ -3562,9 +3562,9 @@
 		"title": "Coreboot",
 		"hex": "000000",
 		"source": "https://coreboot.org/assets/images/banner.svg",
-		"guidelines": "https://coreboot.org",
 		"license": {
-			"type": "CC-BY-4.0"
+			"type": "custom",
+			"url": "https://coreboot.org/about.html"
 		}
 	},
 	{
