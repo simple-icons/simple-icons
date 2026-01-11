@@ -3559,6 +3559,15 @@
 		"source": "https://www.cora.fr"
 	},
 	{
+		"title": "Coreboot",
+		"hex": "000000",
+		"source": "https://coreboot.org/assets/images/banner.svg",
+		"license": {
+			"type": "custom",
+			"url": "https://coreboot.org/about.html"
+		}
+	},
+	{
 		"title": "CorelDRAW",
 		"hex": "000000",
 		"source": "https://www.coreldraw.com/en/learn/webinars/ebook-embroidery"
@@ -14695,8 +14704,8 @@
 	},
 	{
 		"title": "Sanity",
-		"hex": "F03E2F",
-		"source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
+		"hex": "0D0E12",
+		"source": "https://github.com/sanity-io/logos/blob/e298a1ac2757c83910fe08b496a115bc9aef06bd/src/sanityMonogram.tsx",
 		"license": {
 			"type": "MIT"
 		}
