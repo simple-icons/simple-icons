@@ -737,6 +737,12 @@
 		}
 	},
 	{
+		"title": "AniChart",
+		"hex": "41B1EA",
+		"source": "https://anichart.net",
+		"guidelines": "https://anilist.co/terms"
+	},
+	{
 		"title": "AniList",
 		"hex": "02A9FF",
 		"source": "https://anilist.co"
@@ -1070,6 +1076,15 @@
 	{
 		"title": "Apache Parquet",
 		"hex": "50ABF1",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
+		"title": "Apache PDFBox",
+		"hex": "34A5DA",
 		"source": "https://apache.org/logos",
 		"guidelines": "https://www.apache.org/foundation/marks",
 		"license": {
@@ -4714,6 +4729,15 @@
 		"source": "https://www.edx.org"
 	},
 	{
+		"title": "Effect",
+		"hex": "FFFFFF",
+		"source": "https://effect.website",
+		"license": {
+			"type": "custom",
+			"url": "https://effectful.co/terms-conditions"
+		}
+	},
+	{
 		"title": "egghead",
 		"hex": "FCFBFA",
 		"source": "https://egghead.io"
@@ -5547,6 +5571,12 @@
 		"license": {
 			"type": "CC-BY-SA-4.0"
 		}
+	},
+	{
+		"title": "Flower",
+		"hex": "F2B705",
+		"source": "https://flower.ai/visuals",
+		"guidelines": "https://flower.ai/visuals"
 	},
 	{
 		"title": "Fluent Bit",
@@ -11215,6 +11245,15 @@
 		"source": "https://nim-lang.org"
 	},
 	{
+		"title": "niri",
+		"hex": "D55C44",
+		"source": "https://yalter.github.io/niri/logo/niri-icon-smol.svg",
+		"guidelines": "https://yalter.github.io/niri/Name-and-Logo.html",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Nissan",
 		"hex": "C3002F",
 		"source": "https://www.nissan.ie"
@@ -11552,6 +11591,12 @@
 		"guidelines": "https://en.facebookbrand.com/oculus/"
 	},
 	{
+		"title": "Odido",
+		"hex": "2C72FF",
+		"source": "https://www.odido.nl",
+		"guidelines": "https://merk.odido.nl/en/logo"
+	},
+	{
 		"title": "Odin",
 		"hex": "3882D2",
 		"source": "https://github.com/odin-lang/artwork/blob/5f887a73f3cc5a4b61971ec15854ae456b886426/logo/emblem-without-background.svg"
@@ -11602,6 +11647,14 @@
 		"title": "Omada Cloud",
 		"hex": "10C1D0",
 		"source": "https://omada.tplinkcloud.com"
+	},
+	{
+		"title": "Omarchy",
+		"hex": "9ECE6A",
+		"source": "https://omarchy.org",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "OnePlus",
@@ -12597,6 +12650,11 @@
 		"title": "Pioneer DJ",
 		"hex": "1A1928",
 		"source": "https://www.pioneerdj.com"
+	},
+	{
+		"title": "Pipecat",
+		"hex": "000000",
+		"source": "https://www.pipecat.ai"
 	},
 	{
 		"title": "Piped",
@@ -13829,8 +13887,8 @@
 	},
 	{
 		"title": "Read the Docs",
-		"hex": "8CA1AF",
-		"source": "https://github.com/readthedocs/readthedocs.org/blob/2dc9706c4fe7fa6d4410ed0e5aedca8d4796fe0f/media/readthedocsbranding.ai"
+		"hex": "000000",
+		"source": "https://github.com/readthedocs/readthedocs.org/blob/d8f71fff113d8f63e7eeed1fc1f5456a132b2d3e/docs/img/logo.svg"
 	},
 	{
 		"title": "Read.cv",
@@ -13959,6 +14017,11 @@
 		"title": "Refined GitHub",
 		"hex": "9E95B7",
 		"source": "https://github.com/refined-github/refined-github/blob/f30ca4a22528e9720e23b85d4cd38f074d64b179/media/icon.svg"
+	},
+	{
+		"title": "Reflex",
+		"hex": "6E56CF",
+		"source": "https://reflex.dev/logos/light/reflex.svg"
 	},
 	{
 		"title": "Reka UI",
@@ -14619,8 +14682,8 @@
 	},
 	{
 		"title": "Sanity",
-		"hex": "F03E2F",
-		"source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
+		"hex": "0D0E12",
+		"source": "https://github.com/sanity-io/logos/blob/e298a1ac2757c83910fe08b496a115bc9aef06bd/src/sanityMonogram.tsx",
 		"license": {
 			"type": "MIT"
 		}
@@ -14690,6 +14753,11 @@
 		"hex": "4F0599",
 		"source": "https://ultraviolet.scaleway.com",
 		"guidelines": "https://ultraviolet.scaleway.com"
+	},
+	{
+		"title": "Scan",
+		"hex": "004C97",
+		"source": "https://www.scan.co.uk"
 	},
 	{
 		"title": "Scania",
