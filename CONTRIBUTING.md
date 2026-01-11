@@ -7,7 +7,7 @@
 > [!IMPORTANT]\
 > We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
 
-Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://guides.github.com/introduction/flow/).
+Simple Icons welcomes contributions and corrections. Before contributing, please make sure you have read the guidelines below. If you decide to contribute anything, please follow the steps below. If you're new to _git_ and/or _GitHub_, we suggest you go through [the GitHub Guides](https://docs.github.com/en/get-started/using-github/github-flow).
 
 1. Fork this repository
 1. (Optional) Clone the fork
@@ -121,8 +121,9 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
    - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00, or,
    - [Docker](https://www.docker.com): 500k weekly downloads.
-1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.org/software).
-   - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.org/network) should be 100,000 or higher.
+   - [NuGet](https://nugettrends.com): 500k total and 10k monthly downloads.
+1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.com/software).
+   - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.com/servers) should be 100,000 or higher.
 1. The brand's popularity can be illustrated by other publicly available & verifiable statistic (e.g., downloads, usage).
    - Stats should preferably also include data on one of our existing brands so a direct comparison can be made.
 1. The brand's popularity can be illustrated through a worldwide Google Trends comparison, or similar.
@@ -205,7 +206,7 @@ There are many different tools for editing SVG files, some options include:
 | :-- | :-- | :-: | :-: |
 | [Inkscape](https://inkscape.org/) | Vector Graphics Editor | Windows, Mac, Linux | Free |
 | [Affinity](https://www.affinity.studio/) | Vector Graphics Editor | Windows, Mac | Free |
-| [SVGEdit](https://svgedit.netlify.app/editor/index.html) | Vector Graphics Editor | Web | Free |
+| [SVGEdit](https://svgedit.netlify.app) | Vector Graphics Editor | Web | Free |
 | [Boxy SVG](https://boxy-svg.com/) | Vector Graphics Editor | Windows, Mac, Linux | $ / Free (Linux, Web) |
 | [Adobe Illustrator](https://www.adobe.com/products/illustrator.html) | Vector Graphics Editor | Windows, Mac | $ - $$$ |
 
@@ -392,7 +393,7 @@ If the SVG is sourced from:
 - **Company website**: If the SVG is found on the company website (but there is no branding page) the source URL should link to a common page, such as the home page or about page, that includes the source image and not the image file itself.
 - **GitHub**: For an SVG from a GitHub (GitLab, BitBucket, etc.) repository the source URL should link to the file that was used as source material. If the color does not come from the file, its origin should be stated in the Pull Request description.
 
-  The commit hash should always be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://help.github.com/en/github/managing-files-in-a-repository/getting-permanent-links-to-files).
+  The commit hash should always be part of the URL. On GitHub, you can get the correct URL by pressing <kbd>y</kbd> on the GitHub page you want to link to. You can get help at the [getting permanent links to files page](https://docs.github.com/en/repositories/working-with-files/using-files/getting-permanent-links-to-files).
 
 - **Wikipedia**: For an SVG from Wikipedia/Wikimedia the source URL should link to the logo file's page on the relevant site, and not the brand's Wikipedia pages. For example, [this is the link for AmericanExpress](https://commons.wikimedia.org/wiki/File:American_Express_logo.svg).
 
@@ -536,6 +537,8 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 ```
 
 ## Developing Third-Party Extensions
+
+![Extensions](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfExtensions&suffix=%20extensions&label=&color=483d8b) ![Libraries](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfLibraries&suffix=%20libraries&label=&color=009698)
 
 An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
 

@@ -118,7 +118,10 @@ const sortIconOrDuplicate = (icon) => {
  * @returns {IconData['license']} The sorted license object.
  */
 const sortLicense = (license) => {
-	if (!license) return undefined;
+	if (!license) {
+		return undefined;
+	}
+
 	const keyOrder = ['type', 'url'];
 
 	/** @type {IconData['license']} */
@@ -139,7 +142,10 @@ const sortLicense = (license) => {
  * @returns {{[_: string]: string} | undefined} The sorted aliases object.
  */
 const sortAlphabetically = (object) => {
-	if (!object) return undefined;
+	if (!object) {
+		return undefined;
+	}
+
 	const sorted = Object.assign(
 		Object.fromEntries(
 			Object.entries(object).sort(([key1], [key2]) => (key1 > key2 ? 1 : -1)),
