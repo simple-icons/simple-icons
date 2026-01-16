@@ -22,15 +22,41 @@ const LABELS = await ghLabels({
 });
 
 /**
- * @typedef {object} Config
- * @property {number} threshold - Minimum threshold to mark as a duplicate.
- * @property {string[]} exclude - Words to exclude from the similarity check.
+ * @typedef {object} IssueConfig Issue related configuration.
+ * @property {number} minimumTitleLength Minimum length of the issue title to check.
  */
+
+/**
+ * @typedef {object} Config Potential duplicate checker configuration.
+ * @property {number} threshold Minimum threshold to mark as a duplicate.
+ * @property {string[]} exclude Words to exclude from the similarity check.
+ * @property {IssueConfig} issue Issue related configuration.
+ * @property {number} [maxDuplicates] Maximum number of duplicates to list in the comment.
+ */
+
+/**
+ * Build configuration from default values.
+ * @param {Config} config Configuration object.
+ * @returns {Config} Configuration with default values.
+ */
+const fromDefaultConfig = (config) => {
+	return {
+		threshold: config.threshold ?? 0.85,
+		issue: {
+			minimumTitleLength:
+				config.issue?.minimumTitleLength === undefined
+					? 4
+					: config.issue.minimumTitleLength,
+		},
+		maxDuplicates: config.maxDuplicates,
+		exclude: config.exclude ?? [],
+	};
+};
 
 /** @type {Config} */
 const config = await import(
 	path.join(import.meta.dirname, 'duplicate.config.js')
-).then((module) => module.default);
+).then((module) => fromDefaultConfig(module.default));
 
 /**
  * @typedef {object} Issue Issue object.
@@ -130,8 +156,8 @@ function formatTitle(title, exclude) {
 	}
 
 	return result
-		.replaceAll(/[.,-/#!$%^&*;:{}=\-_`~()?¿¡]/g, ' ')
-		.replace(/\s+/, ' ')
+		.replaceAll(/[^\p{L}\p{N}\p{M}\s]/gu, ' ')
+		.replaceAll(/\s+/g, ' ')
 		.trim();
 }
 
@@ -154,6 +180,10 @@ const searchForPotentialDuplicates = (
 		}
 
 		issue.formattedTitle = formatTitle(issue.title, config.exclude);
+		if (issue.formattedTitle.length < config.issue.minimumTitleLength) {
+			continue;
+		}
+
 		issues.push(issue);
 	}
 
@@ -214,6 +244,13 @@ const main = async () => {
 			return 0;
 		}
 
+		if (formattedIssueTitle.length < config.issue.minimumTitleLength) {
+			console.warn(
+				`Formatted issue title is too short ("${formattedIssueTitle}"), skipping duplicate check.`,
+			);
+			return 0;
+		}
+
 		const openIssues = await getAllOpenIssues(githubRepository);
 		const sameLabelsIssues = filterIssuesByLabels(issueLabels, openIssues);
 
@@ -224,7 +261,7 @@ const main = async () => {
 		);
 		if (duplicates.length > 0) {
 			process.stdout.write(
-				`Found ${duplicates.length} potential duplicates for issue #${issueNumber}.\n`,
+				`Found ${duplicates.length} potential duplicates for issue #${issueNumber} with title "${issueTitle}".\n`,
 			);
 			for (const dup of duplicates) {
 				process.stdout.write(`  + ${dup.title} → #${dup.number}\n`);
@@ -236,7 +273,10 @@ const main = async () => {
 				);
 			} else {
 				await addLabels(githubRepository, issueNumber, ['potential duplicate']);
-				const duplicatesList = duplicates
+				// Limit the number of duplicates listed in the comment
+				const maxDuplicates = config.maxDuplicates ?? duplicates.length;
+				const limitedDuplicates = duplicates.slice(0, maxDuplicates);
+				const duplicatesList = limitedDuplicates
 					.map((issue) => `- ${issue.title} → #${issue.number}`)
 					.join('\n');
 				const reason =

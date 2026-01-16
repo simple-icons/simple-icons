@@ -1083,6 +1083,15 @@
 		}
 	},
 	{
+		"title": "Apache PDFBox",
+		"hex": "34A5DA",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
 		"title": "Apache Pulsar",
 		"hex": "188FFF",
 		"source": "https://apache.org/logos",
@@ -2878,6 +2887,11 @@
 		"source": "https://uk.ceair.com/newCMS/uk/en/content/en_Footer/Support/201904/t20190404_5763.html"
 	},
 	{
+		"title": "China Railway",
+		"hex": "FF2600",
+		"source": "https://commons.wikimedia.org/wiki/File:China_Railways.svg"
+	},
+	{
 		"title": "China Southern Airlines",
 		"hex": "008BCB",
 		"source": "https://www.csair.com/en/about/investor/yejibaogao/2020/"
@@ -3548,6 +3562,15 @@
 		"title": "Cora",
 		"hex": "E61845",
 		"source": "https://www.cora.fr"
+	},
+	{
+		"title": "Coreboot",
+		"hex": "000000",
+		"source": "https://coreboot.org/assets/images/banner.svg",
+		"license": {
+			"type": "custom",
+			"url": "https://coreboot.org/about.html"
+		}
 	},
 	{
 		"title": "CorelDRAW",
@@ -5562,6 +5585,12 @@
 		"license": {
 			"type": "CC-BY-SA-4.0"
 		}
+	},
+	{
+		"title": "Flower",
+		"hex": "F2B705",
+		"source": "https://flower.ai/visuals",
+		"guidelines": "https://flower.ai/visuals"
 	},
 	{
 		"title": "Fluent Bit",
@@ -12637,6 +12666,11 @@
 		"source": "https://www.pioneerdj.com"
 	},
 	{
+		"title": "Pipecat",
+		"hex": "000000",
+		"source": "https://www.pipecat.ai"
+	},
+	{
 		"title": "Piped",
 		"hex": "F84330",
 		"source": "https://github.com/TeamPiped/Piped/blob/71a3742f18893b87cad15e832855bd2bd7c2b557/public/img/icons/logo.svg"
@@ -14662,8 +14696,8 @@
 	},
 	{
 		"title": "Sanity",
-		"hex": "F03E2F",
-		"source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
+		"hex": "0D0E12",
+		"source": "https://github.com/sanity-io/logos/blob/e298a1ac2757c83910fe08b496a115bc9aef06bd/src/sanityMonogram.tsx",
 		"license": {
 			"type": "MIT"
 		}
@@ -16771,6 +16805,12 @@
 		"source": "https://www.thingiverse.com"
 	},
 	{
+		"title": "Things",
+		"hex": "2473E7",
+		"source": "https://culturedcode.com/things/",
+		"guidelines": "https://culturedcode.com/terms/#using_our_service"
+	},
+	{
 		"title": "ThinkPad",
 		"hex": "EE2624",
 		"source": "https://www.lenovo.com/us/en/thinkpad"
@@ -18642,9 +18682,9 @@
 	},
 	{
 		"title": "Woo",
-		"hex": "96588A",
+		"hex": "873EFF",
 		"source": "https://woocommerce.com/style-guide",
-		"guidelines": "https://woocommerce.com/trademark-guidelines"
+		"guidelines": "https://woocommerce.com/brand-and-logo-guidelines"
 	},
 	{
 		"title": "WooCommerce",
