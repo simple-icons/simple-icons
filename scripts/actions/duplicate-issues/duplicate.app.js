@@ -9,9 +9,17 @@ import {Searcher} from 'fast-fuzzy';
 import {
 	addLabels,
 	commentWithReason,
+	ghLabels,
 	githubFetch,
 	printError,
 } from '../helpers.js';
+
+const LABELS = await ghLabels({
+	newIcon: 'new icon',
+	updateIconData: 'update icon/data',
+	breakingChange: 'breaking change',
+	potentialDuplicate: 'potential duplicate',
+});
 
 /**
  * @typedef {object} IssueConfig Issue related configuration.
@@ -97,40 +105,31 @@ const getAllOpenIssues = async (githubRepository) => {
 
 /**
  * Filter issues to only search for them that have the same labels.
- * @param {string[]} issueLabels Labels of the issue to check.
+ * @param {Set<string>} issueLabels Labels of the issue to check.
  * @param {Issue[]} openIssues List of open issues.
  * @returns {Issue[]} Filtered list of open issues.
  */
 const filterIssuesByLabels = (issueLabels, openIssues) => {
 	if (
-		!issueLabels.includes('new icon') &&
-		!issueLabels.includes('update icon/data') &&
-		!issueLabels.includes('breaking change')
+		!issueLabels.has(LABELS.newIcon) &&
+		!issueLabels.has(LABELS.updateIconData) &&
+		!issueLabels.has(LABELS.breakingChange)
 	) {
 		return openIssues;
 	}
 
-	return openIssues.filter((issue) => {
-		const issueLabelNames = new Set(issue.labels.map((label) => label.name));
-		if (issueLabelNames.has('new icon') && issueLabels.includes('new icon')) {
-			return true;
-		}
-
-		if (
-			issueLabelNames.has('update icon/data') &&
-			issueLabels.includes('update icon/data')
-		) {
-			return true;
-		}
-
-		if (
-			issueLabelNames.has('breaking change') &&
-			issueLabels.includes('breaking change')
-		) {
-			return true;
-		}
-
-		return false;
+	return openIssues.filter((otherIssue) => {
+		const otherIssueLabelNames = new Set(
+			otherIssue.labels.map((label) => label.name),
+		);
+		return (
+			(otherIssueLabelNames.has(LABELS.newIcon) &&
+				issueLabels.has(LABELS.newIcon)) ||
+			(otherIssueLabelNames.has(LABELS.updateIconData) &&
+				issueLabels.has(LABELS.updateIconData)) ||
+			(otherIssueLabelNames.has(LABELS.breakingChange) &&
+				issueLabels.has(LABELS.breakingChange))
+		);
 	});
 };
 
@@ -202,7 +201,7 @@ const searchForPotentialDuplicates = (
  *   githubRepository: string,
  *   issueNumber: number,
  *   issueTitle: string,
- *   issueLabels: string[],
+ *   issueLabels: Set<string>,
  *   dryRun: boolean,
  * }} Environment variables.
  */
@@ -216,7 +215,7 @@ const readEnv = () => {
 		ISSUE_LABELS === undefined
 	) {
 		throw new Error(
-			'GITHUB_REPOSITORY, ISSUE_NUMBER, ISSUE_TITLE and ISSUE_LABELS environment variables are required.',
+			'GITHUB_REPOSITORY, ISSUE_NUMBER, ISSUE_TITLE and ISSUE_LABELS environment variables are required.\n',
 		);
 	}
 
@@ -224,7 +223,7 @@ const readEnv = () => {
 		githubRepository: GITHUB_REPOSITORY,
 		issueNumber: Number(ISSUE_NUMBER),
 		issueTitle: ISSUE_TITLE,
-		issueLabels: ISSUE_LABELS.split(','),
+		issueLabels: new Set(ISSUE_LABELS.split(',').map((s) => s.trim())),
 		dryRun: DRY_RUN === 'true',
 	};
 };

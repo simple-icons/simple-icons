@@ -23,6 +23,8 @@ import {
 import {
 	fileExists,
 	formatIconData,
+	getLabelerLabels,
+	getLabels,
 	getSpdxLicenseIds,
 	sortIconsCompare,
 } from '../utils.js';
@@ -441,6 +443,25 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		}
 
 		return errors.join('\n') || undefined;
+	},
+
+	/* Check that labels usage is synchronized across the project. */
+	async checkLabelsSync() {
+		const errors = [];
+
+		// All labels in .github/labeler.yml should be present in .github/labels.yml
+		const labels = await getLabels();
+		const labelerLabels = await getLabelerLabels();
+
+		for (const label of labelerLabels) {
+			if (!labels.has(label)) {
+				errors.push(
+					`Label "${label}" is present in '.github/labeler.yml' but missing in '.github/labels.yml'. Please, synchronize both files.`,
+				);
+			}
+		}
+
+		return errors.join('\n');
 	},
 };
 

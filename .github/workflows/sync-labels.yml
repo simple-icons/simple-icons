@@ -1,0 +1,36 @@
+name: Sync GitHub labels
+
+on:
+  push:
+    paths:
+      - '.github/labels.yml'
+    branches:
+      - develop
+  workflow_dispatch:
+    inputs:
+      dry-run:
+        description: 'Run in dry-run mode (no changes applied)'
+        required: false
+        default: false
+        type: boolean
+      skip-delete:
+        description: 'Skip deleting labels that are not in the labels.yml file'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync labels
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: .github/labels.yml
+          skip-delete: ${{ inputs.skip-delete || false }}
+          dry-run: ${{ inputs.dry-run || false }}
