@@ -9,9 +9,18 @@ import process from 'node:process';
 import {
 	addLabels,
 	commentWithReason,
+	ghLabels,
 	githubFetch,
 	printError,
 } from '../helpers.js';
+
+const LABELS = await ghLabels({
+	duplicate: 'duplicate',
+	wontAdd: "won't add",
+	meta: 'meta',
+	inDiscussion: 'in discussion',
+	newIcon: 'new icon',
+});
 
 /**
  * @typedef {object} Rule
@@ -50,19 +59,12 @@ const checkIfCanBeClosed = async (githubRepository, issueNumber) => {
 	const json = /** @type {Issue} */ (await response.json());
 	const {labels, state, title, body} = json;
 	const labelNames = new Set(labels.map((label) => label.name));
-	if (state === 'closed') {
-		return undefined;
-	}
-
-	if (labelNames.has('meta')) {
-		return undefined;
-	}
-
-	if (labelNames.has('in discussion')) {
-		return undefined;
-	}
-
-	if (!labelNames.has('new icon')) {
+	if (
+		state === 'closed' ||
+		labelNames.has(LABELS.meta) ||
+		labelNames.has(LABELS.inDiscussion) ||
+		labelNames.has(LABELS.newIcon)
+	) {
 		return undefined;
 	}
 
@@ -108,7 +110,7 @@ const readEnv = () => {
 	const {GITHUB_REPOSITORY, ISSUE_NUMBER} = process.env;
 	if (GITHUB_REPOSITORY === undefined || ISSUE_NUMBER === undefined) {
 		throw new Error(
-			'GITHUB_REPOSITORY and ISSUE_NUMBER environment variables are required.',
+			'GITHUB_REPOSITORY and ISSUE_NUMBER environment variables are required.\n',
 		);
 	}
 
@@ -129,8 +131,8 @@ const main = async () => {
 		if (reason) {
 			await closeAsNotPlanned(githubRepository, issueNumber);
 			await addLabels(githubRepository, issueNumber, [
-				'duplicate',
-				"won't add",
+				LABELS.duplicate,
+				LABELS.wontAdd,
 			]);
 			await commentWithReason(githubRepository, issueNumber, reason);
 		}
