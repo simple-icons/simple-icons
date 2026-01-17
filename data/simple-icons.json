@@ -737,6 +737,12 @@
 		}
 	},
 	{
+		"title": "AniChart",
+		"hex": "41B1EA",
+		"source": "https://anichart.net",
+		"guidelines": "https://anilist.co/terms"
+	},
+	{
 		"title": "AniList",
 		"hex": "02A9FF",
 		"source": "https://anilist.co"
@@ -1077,6 +1083,15 @@
 		}
 	},
 	{
+		"title": "Apache PDFBox",
+		"hex": "34A5DA",
+		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
 		"title": "Apache Pulsar",
 		"hex": "188FFF",
 		"source": "https://apache.org/logos",
@@ -1184,6 +1199,11 @@
 		"hex": "2322F0",
 		"source": "https://appian.com",
 		"guidelines": "https://assets.appian.com/uploads/assets/Appian_BrandGuidelines_Newsroom.pdf"
+	},
+	{
+		"title": "AppImage",
+		"hex": "739FB9",
+		"source": "https://appimage.org"
 	},
 	{
 		"title": "Appium",
@@ -1954,6 +1974,15 @@
 		"source": "https://bio.link"
 	},
 	{
+		"title": "Bioconductor",
+		"hex": "1A81C2",
+		"source": "https://github.com/Bioconductor/BiocStickers/blob/2e3af2dd45ce43e18110c91b687ebcb996cffae9/Bioconductor/Bioconductor-note.svg",
+		"guidelines": "https://bioconductor.org/about/logo/",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Biome",
 		"hex": "60A5FA",
 		"source": "https://github.com/biomejs/resources/blob/551f36498dfe34b24bc7755fcdd0fa501b757cf4/svg/icon-light-mono.svg",
@@ -2013,6 +2042,11 @@
 		"title": "Bitrise",
 		"hex": "683D87",
 		"source": "https://www.bitrise.io/presskit"
+	},
+	{
+		"title": "Bitsy",
+		"hex": "6767B2",
+		"source": "https://www.bitsy.org/image/cat.svg"
 	},
 	{
 		"title": "BitTorrent",
@@ -2853,6 +2887,11 @@
 		"source": "https://uk.ceair.com/newCMS/uk/en/content/en_Footer/Support/201904/t20190404_5763.html"
 	},
 	{
+		"title": "China Railway",
+		"hex": "FF2600",
+		"source": "https://commons.wikimedia.org/wiki/File:China_Railways.svg"
+	},
+	{
 		"title": "China Southern Airlines",
 		"hex": "008BCB",
 		"source": "https://www.csair.com/en/about/investor/yejibaogao/2020/"
@@ -3525,6 +3564,15 @@
 		"source": "https://www.cora.fr"
 	},
 	{
+		"title": "Coreboot",
+		"hex": "000000",
+		"source": "https://coreboot.org/assets/images/banner.svg",
+		"license": {
+			"type": "custom",
+			"url": "https://coreboot.org/about.html"
+		}
+	},
+	{
 		"title": "CorelDRAW",
 		"hex": "000000",
 		"source": "https://www.coreldraw.com/en/learn/webinars/ebook-embroidery"
@@ -3820,9 +3868,10 @@
 		"source": "https://careers.dailymotion.com"
 	},
 	{
-		"title": "DaisyUI",
-		"hex": "1AD1A5",
-		"source": "https://daisyui.com"
+		"title": "daisyUI",
+		"hex": "FFC63A",
+		"source": "https://daisyui.com/brand",
+		"guidelines": "https://daisyui.com/brand"
 	},
 	{
 		"title": "Dapr",
@@ -4150,6 +4199,19 @@
 		"title": "Devbox",
 		"hex": "280459",
 		"source": "https://github.com/jetify-com/devbox/blob/c3cab01d7375726f0121a25fc0f5c838484246f7/docs/app/static/img/devbox_logo_light.svg"
+	},
+	{
+		"title": "Development Containers",
+		"hex": "2753E3",
+		"source": "https://github.com/microsoft/fluentui-system-icons/blob/3e1e525f4499a22d46039ef54e9b9a86b809bc66/assets/Cube/SVG/ic_fluent_cube_24_regular.svg",
+		"license": {
+			"type": "CC-BY-4.0"
+		},
+		"aliases": {
+			"aka": [
+				"devcontainers"
+			]
+		}
 	},
 	{
 		"title": "DevExpress",
@@ -4692,6 +4754,15 @@
 		"title": "edX",
 		"hex": "02262B",
 		"source": "https://www.edx.org"
+	},
+	{
+		"title": "Effect",
+		"hex": "FFFFFF",
+		"source": "https://effect.website",
+		"license": {
+			"type": "custom",
+			"url": "https://effectful.co/terms-conditions"
+		}
 	},
 	{
 		"title": "egghead",
@@ -5374,6 +5445,11 @@
 		"source": "https://commons.wikimedia.org/wiki/File:FileZilla_logo.svg"
 	},
 	{
+		"title": "Fillout",
+		"hex": "FFC738",
+		"source": "https://www.fillout.com/brand"
+	},
+	{
 		"title": "Fineco",
 		"hex": "00549F",
 		"source": "https://finecobank.com"
@@ -5522,6 +5598,12 @@
 		"license": {
 			"type": "CC-BY-SA-4.0"
 		}
+	},
+	{
+		"title": "Flower",
+		"hex": "F2B705",
+		"source": "https://flower.ai/visuals",
+		"guidelines": "https://flower.ai/visuals"
 	},
 	{
 		"title": "Fluent Bit",
@@ -6566,6 +6648,11 @@
 		"source": "https://home.google.com/welcome/"
 	},
 	{
+		"title": "Google Jules",
+		"hex": "715CD7",
+		"source": "https://jules.google"
+	},
+	{
 		"title": "Google Keep",
 		"hex": "FFBB00",
 		"source": "https://about.google/brand-resource-center/logos-list/"
@@ -6761,6 +6848,17 @@
 		"title": "Graphite",
 		"hex": "000000",
 		"source": "https://graphite.dev"
+	},
+	{
+		"title": "Graphite",
+		"slug": "graphite_editor",
+		"hex": "473A3A",
+		"source": "https://graphite.art/logo",
+		"guidelines": "https://graphite.art/logo",
+		"license": {
+			"type": "custom",
+			"url": "https://graphite.art/license/#branding"
+		}
 	},
 	{
 		"title": "GraphQL",
@@ -7002,6 +7100,12 @@
 		"title": "HackerRank",
 		"hex": "00EA64",
 		"source": "https://www.hackerrank.com/about-us/"
+	},
+	{
+		"title": "HackMD",
+		"hex": "453AFF",
+		"source": "https://hackmd.io/logo.svg",
+		"guidelines": "https://hackmd.io/s/press-kit"
 	},
 	{
 		"title": "Hackster",
@@ -7723,6 +7827,11 @@
 		}
 	},
 	{
+		"title": "Image Toolbox",
+		"hex": "60EA78",
+		"source": "https://github.com/T8RIN/ImageToolbox/blob/d60ab01ea8e76235eee1b6ea5fe80d7cb34d9c50/fastlane/metadata/android/en-US/images/icon.svg"
+	},
+	{
 		"title": "Image.sc",
 		"hex": "039CB2",
 		"source": "https://forum.image.sc"
@@ -8381,6 +8490,11 @@
 		"hex": "F37626",
 		"source": "https://github.com/jupyter/design/blob/80716ee75dd7b2a6ec6abcd89922d020483589b1/logos/Logo%20Mark/logomark-whitebody-whitemoons/logomark-whitebody-whitemoons.svg",
 		"guidelines": "https://github.com/jupyter/design"
+	},
+	{
+		"title": "Just",
+		"hex": "000000",
+		"source": "https://just.systems"
 	},
 	{
 		"title": "Just Eat",
@@ -9815,6 +9929,11 @@
 		"source": "https://www.manageiq.org/logo/"
 	},
 	{
+		"title": "Mangacollec",
+		"hex": "DA1F05",
+		"source": "https://www.mangacollec.com"
+	},
+	{
 		"title": "MangaUpdates",
 		"hex": "FF8C15",
 		"source": "https://www.mangaupdates.com",
@@ -10429,6 +10548,11 @@
 				"MCP"
 			]
 		}
+	},
+	{
+		"title": "ModelScope",
+		"hex": "624AFF",
+		"source": "https://modelscope.cn/models/modelscope/logos/resolve/master/svg/modelscope-simple.svg"
 	},
 	{
 		"title": "Modin",
@@ -11148,6 +11272,15 @@
 		"source": "https://nim-lang.org"
 	},
 	{
+		"title": "niri",
+		"hex": "D55C44",
+		"source": "https://yalter.github.io/niri/logo/niri-icon-smol.svg",
+		"guidelines": "https://yalter.github.io/niri/Name-and-Logo.html",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Nissan",
 		"hex": "C3002F",
 		"source": "https://www.nissan.ie"
@@ -11180,6 +11313,11 @@
 		"license": {
 			"type": "CC-BY-NC-4.0"
 		}
+	},
+	{
+		"title": "NodeGui",
+		"hex": "000000",
+		"source": "https://github.com/nodegui/nodegui/blob/740a371981b555e94d4e7aaa734a80532cecfb16/extras/logo/nodegui.svg"
 	},
 	{
 		"title": "Nodemon",
@@ -11480,6 +11618,12 @@
 		"guidelines": "https://en.facebookbrand.com/oculus/"
 	},
 	{
+		"title": "Odido",
+		"hex": "2C72FF",
+		"source": "https://www.odido.nl",
+		"guidelines": "https://merk.odido.nl/en/logo"
+	},
+	{
 		"title": "Odin",
 		"hex": "3882D2",
 		"source": "https://github.com/odin-lang/artwork/blob/5f887a73f3cc5a4b61971ec15854ae456b886426/logo/emblem-without-background.svg"
@@ -11530,6 +11674,14 @@
 		"title": "Omada Cloud",
 		"hex": "10C1D0",
 		"source": "https://omada.tplinkcloud.com"
+	},
+	{
+		"title": "Omarchy",
+		"hex": "9ECE6A",
+		"source": "https://omarchy.org",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "OnePlus",
@@ -11633,6 +11785,12 @@
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
+	},
+	{
+		"title": "OpenCage",
+		"hex": "1A8865",
+		"source": "https://opencagedata.com/branding",
+		"guidelines": "https://opencagedata.com/branding"
 	},
 	{
 		"title": "OpenCritic",
@@ -11982,12 +12140,8 @@
 	},
 	{
 		"title": "Oxc",
-		"hex": "FF915C",
-		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
-		"guidelines": "https://oxc.rs/branding.html",
-		"license": {
-			"type": "CC0-1.0"
-		}
+		"hex": "00F7F1",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/oxc/oxc-icon-color-bracketless.svg"
 	},
 	{
 		"title": "Oxygen",
@@ -12521,6 +12675,11 @@
 		"source": "https://www.pioneerdj.com"
 	},
 	{
+		"title": "Pipecat",
+		"hex": "000000",
+		"source": "https://www.pipecat.ai"
+	},
+	{
 		"title": "Piped",
 		"hex": "F84330",
 		"source": "https://github.com/TeamPiped/Piped/blob/71a3742f18893b87cad15e832855bd2bd7c2b557/public/img/icons/logo.svg"
@@ -12572,6 +12731,11 @@
 		"title": "pkgsrc",
 		"hex": "FF6600",
 		"source": "https://pkgsrc.org"
+	},
+	{
+		"title": "Plane",
+		"hex": "121212",
+		"source": "https://plane.so/brand-logos/logo-with-wordmark.svg"
 	},
 	{
 		"title": "Planet",
@@ -12794,6 +12958,11 @@
 		"title": "Polywork",
 		"hex": "543DE0",
 		"source": "https://www.polywork.com"
+	},
+	{
+		"title": "Pomerium",
+		"hex": "6F43E7",
+		"source": "https://www.pomerium.com/static-img/logo-light-icon.svg"
 	},
 	{
 		"title": "Pond5",
@@ -13746,8 +13915,8 @@
 	},
 	{
 		"title": "Read the Docs",
-		"hex": "8CA1AF",
-		"source": "https://github.com/readthedocs/readthedocs.org/blob/2dc9706c4fe7fa6d4410ed0e5aedca8d4796fe0f/media/readthedocsbranding.ai"
+		"hex": "000000",
+		"source": "https://github.com/readthedocs/readthedocs.org/blob/d8f71fff113d8f63e7eeed1fc1f5456a132b2d3e/docs/img/logo.svg"
 	},
 	{
 		"title": "Read.cv",
@@ -13876,6 +14045,11 @@
 		"title": "Refined GitHub",
 		"hex": "9E95B7",
 		"source": "https://github.com/refined-github/refined-github/blob/f30ca4a22528e9720e23b85d4cd38f074d64b179/media/icon.svg"
+	},
+	{
+		"title": "Reflex",
+		"hex": "6E56CF",
+		"source": "https://reflex.dev/logos/light/reflex.svg"
 	},
 	{
 		"title": "Reka UI",
@@ -14216,8 +14390,8 @@
 	},
 	{
 		"title": "Rolldown",
-		"hex": "FF7E17",
-		"source": "https://rolldown.rs/lightning-down.svg"
+		"hex": "FF4100",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/rolldown/rolldown-icon-color-bracketless.svg"
 	},
 	{
 		"title": "Rolls-Royce",
@@ -14536,8 +14710,8 @@
 	},
 	{
 		"title": "Sanity",
-		"hex": "F03E2F",
-		"source": "https://github.com/sanity-io/logos/blob/6934d28ae0b5f63b0386810997b8be61ec7009b5/src/sanityMonogram.tsx",
+		"hex": "0D0E12",
+		"source": "https://github.com/sanity-io/logos/blob/e298a1ac2757c83910fe08b496a115bc9aef06bd/src/sanityMonogram.tsx",
 		"license": {
 			"type": "MIT"
 		}
@@ -14607,6 +14781,11 @@
 		"hex": "4F0599",
 		"source": "https://ultraviolet.scaleway.com",
 		"guidelines": "https://ultraviolet.scaleway.com"
+	},
+	{
+		"title": "Scan",
+		"hex": "004C97",
+		"source": "https://www.scan.co.uk"
 	},
 	{
 		"title": "Scania",
@@ -14844,6 +15023,15 @@
 		"title": "Setapp",
 		"hex": "E6C3A5",
 		"source": "https://setapp.com"
+	},
+	{
+		"title": "Setuptools",
+		"hex": "336790",
+		"source": "https://github.com/pypa/setuptools/blob/c3f486f0f7ebf8fa141dfd7314cbcaba7370db0b/docs/images/logo.svg",
+		"guidelines": "https://setuptools.pypa.io/en/latest/artwork.html",
+		"license": {
+			"type": "MIT"
+		}
 	},
 	{
 		"title": "SFML",
@@ -16631,6 +16819,12 @@
 		"source": "https://www.thingiverse.com"
 	},
 	{
+		"title": "Things",
+		"hex": "2473E7",
+		"source": "https://culturedcode.com/things/",
+		"guidelines": "https://culturedcode.com/terms/#using_our_service"
+	},
+	{
 		"title": "ThinkPad",
 		"hex": "EE2624",
 		"source": "https://www.lenovo.com/us/en/thinkpad"
@@ -17849,8 +18043,8 @@
 	},
 	{
 		"title": "Vite",
-		"hex": "646CFF",
-		"source": "https://vitejs.dev"
+		"hex": "9135FF",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vite/vite-icon-color-bracketless.svg"
 	},
 	{
 		"title": "VitePress",
@@ -17864,8 +18058,8 @@
 	},
 	{
 		"title": "Vitest",
-		"hex": "6E9F18",
-		"source": "https://vitest.dev"
+		"hex": "00FF74",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vitest/vitest-icon-color-bracketless.svg"
 	},
 	{
 		"title": "Viva Wallet",
@@ -18143,6 +18337,11 @@
 		"title": "Weasyl",
 		"hex": "990000",
 		"source": "https://www.weasyl.com"
+	},
+	{
+		"title": "Web Awesome",
+		"hex": "F36944",
+		"source": "https://fontawesome.com/icons/web-awesome"
 	},
 	{
 		"title": "WEB.DE",
@@ -18497,9 +18696,9 @@
 	},
 	{
 		"title": "Woo",
-		"hex": "96588A",
+		"hex": "873EFF",
 		"source": "https://woocommerce.com/style-guide",
-		"guidelines": "https://woocommerce.com/trademark-guidelines"
+		"guidelines": "https://woocommerce.com/brand-and-logo-guidelines"
 	},
 	{
 		"title": "WooCommerce",
