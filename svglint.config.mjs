@@ -120,16 +120,21 @@ const isNumber = (string_) =>
  * @typedef {{fixtures: {
  *     iconPath: string,
  *     segments: import('svg-path-segments').Segment[],
- *     bbox: import('svg-path-bbox').BBox
+ *     bbox: import('svg-path-bbox').BBox,
+ *     absSegments: Segment['segments'],
+ *     pathDIndex: number,
  * }}} Info
  */
 /** @type {import('svglint').Config} */
 const config = {
-	fixtures(_, $) {
+	fixtures(_, $, ast) {
 		const iconPath = $.find('path').attr('d');
 		const segments = parsePath(iconPath);
+		const pathDIndex = getPathDIndex(ast.source);
+		// @ts-expect-error
+		const absSegments = svgpath(iconPath).abs().unshort().segments;
 		const bbox = svgPathBbox(iconPath);
-		return {iconPath, segments, bbox};
+		return {iconPath, segments, bbox, absSegments, pathDIndex};
 	},
 	rules: {
 		elm: {
@@ -355,7 +360,7 @@ const config = {
 				reporter,
 				$,
 				ast,
-				/** @type {Info} */ {fixtures: {segments, iconPath}},
+				/** @type {Info} */ {fixtures: {segments, iconPath, pathDIndex}},
 			) => {
 				reporter.name = 'icon-precision';
 
@@ -376,9 +381,7 @@ const config = {
 							errorMessage += ` of chain "${readableChain}"`;
 						}
 
-						errorMessage += ` at index ${
-							segment.start + getPathDIndex(ast.source)
-						}`;
+						errorMessage += ` at index ${segment.start + pathDIndex}`;
 						reporter.error(
 							'Maximum precision should not be greater than' +
 								` ${iconMaxFloatPrecision}; ${errorMessage}`,
@@ -390,26 +393,11 @@ const config = {
 				reporter,
 				$,
 				ast,
-				/** @type {Info} */ {fixtures: {segments, iconPath}},
+				/** @type {Info} */ {
+					fixtures: {segments, iconPath, pathDIndex, absSegments},
+				},
 			) => {
 				reporter.name = 'ineffective-segments';
-
-				/** @type {Segment['segments'] | null} */
-				let memoizedAbsSegments = null;
-				/**
-				 * Get abs segments of the icon path.
-				 * @returns {Segment['segments']} Absolutized segments of the icon path.
-				 */
-				const getAbsSegments = () => {
-					if (memoizedAbsSegments !== null) {
-						return memoizedAbsSegments;
-					}
-
-					// @ts-expect-error
-					const {segments: segs} = svgpath(iconPath).abs().unshort();
-					memoizedAbsSegments = segs;
-					return segs;
-				};
 
 				const lowerMovementCommands = ['m', 'l'];
 				const lowerDirectionCommands = ['h', 'v'];
@@ -489,10 +477,10 @@ const config = {
 						}
 
 						if (index > 0) {
-							const absSegments = getAbsSegments();
 							const previousSegment = absSegments[index - 1];
 							let yPreviousCoord = previousSegment.at(-1);
 							let xPreviousCoord = previousSegment.at(-2);
+
 							// If the previous command was a direction one,
 							// we need to iterate back until we find the missing coordinates
 							if (upperDirectionCommands.includes(xPreviousCoord)) {
@@ -638,9 +626,7 @@ const config = {
 							errorMessage += ` in chain "${readableChain}"`;
 						}
 
-						errorMessage += ` at index ${
-							segment.start + getPathDIndex(ast.source)
-						}`;
+						errorMessage += ` at index ${segment.start + pathDIndex}`;
 
 						reporter.error(`${errorMessage} (${resolutionTip})`);
 					}
@@ -650,7 +636,7 @@ const config = {
 				reporter,
 				$,
 				ast,
-				/** @type {Info} */ {fixtures: {segments, iconPath}},
+				/** @type {Info} */ {fixtures: {segments, iconPath, pathDIndex}},
 			) => {
 				reporter.name = 'collinear-segments';
 				/**
@@ -862,7 +848,6 @@ const config = {
 					return;
 				}
 
-				const pathDIndex = getPathDIndex(ast.source);
 				for (const segment of collinearSegments) {
 					let errorMessage = `Collinear segment "${iconPath.slice(
 						segment.start,
@@ -897,15 +882,18 @@ const config = {
 					}
 				}
 			},
-			(reporter, $, ast, /** @type {Info} */ {fixtures: {iconPath}}) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {iconPath, pathDIndex}},
+			) => {
 				reporter.name = 'negative-zeros';
 
 				// Find negative zeros inside path
 				const negativeZeroMatches = [...iconPath.matchAll(negativeZerosRegexp)];
 				if (negativeZeroMatches.length > 0) {
 					// Calculate the index for each match in the file
-					const pathDIndex = getPathDIndex(ast.source);
-
 					for (const match of negativeZeroMatches) {
 						const negativeZeroFileIndex = match.index + pathDIndex;
 						const previousChar = ast.source[negativeZeroFileIndex - 1];
@@ -942,7 +930,7 @@ const config = {
 				reporter,
 				$,
 				ast,
-				/** @type {Info} */ {fixtures: {segments, iconPath}},
+				/** @type {Info} */ {fixtures: {segments, iconPath, pathDIndex}},
 			) => {
 				reporter.name = 'final-closepath';
 
@@ -957,7 +945,6 @@ const config = {
 				if (endsWithZ && lastSegment.end - lastSegment.start > 1) {
 					const ending = iconPath.slice(lastSegment.start + 1);
 					const closepath = iconPath.at(lastSegment.start);
-					const pathDIndex = getPathDIndex(ast.source);
 					const index = pathDIndex + lastSegment.start + 2;
 					const errorMessage =
 						`Invalid character(s) "${ending}" after the final` +
@@ -966,7 +953,12 @@ const config = {
 					reporter.error(errorMessage);
 				}
 			},
-			(reporter, $, ast, /** @type {Info} */ {fixtures: {iconPath}}) => {
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {iconPath, pathDIndex}},
+			) => {
 				reporter.name = 'path-format';
 
 				if (!SVG_PATH_REGEX.test(iconPath)) {
@@ -986,7 +978,6 @@ const config = {
 						'',
 					);
 					const invalidCharactersMsgs = [];
-					const pathDIndex = getPathDIndex(ast.source);
 
 					for (const [i, char] of Object.entries(iconPath)) {
 						if (!validPathCharacters.includes(char)) {
@@ -1016,6 +1007,31 @@ const config = {
 						)}. The path should be self-closing,` +
 						' use "/>" instead of "></path>".';
 					reporter.error(`Invalid SVG content format: ${reason}`);
+				}
+			},
+			(
+				reporter,
+				$,
+				ast,
+				/** @type {Info} */ {fixtures: {iconPath, pathDIndex}},
+			) => {
+				reporter.name = 'simplifiable-numbers';
+
+				// Regex to find decimal numbers that don't start with 0, . or -.
+				const numberPattern = /(?<![\d.])[1-9]\d*\.\d+(?!\d)/g;
+
+				for (const match of iconPath.matchAll(numberPattern)) {
+					const original = match[0];
+					const simplified = Number.parseFloat(original).toString();
+
+					// Only report if the representation changes
+					if (simplified !== original) {
+						const indexInFile = pathDIndex + match.index;
+
+						reporter.error(
+							`Number "${original}" at index ${indexInFile} must be simplified to "${simplified}"`,
+						);
+					}
 				}
 			},
 		],
