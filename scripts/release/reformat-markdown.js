@@ -24,6 +24,12 @@ const reformat = async (filePath) => {
 	await writeFile(
 		filePath,
 		fileContent
+			// Add &nbsp; spaces after icons that are inside a CDN link before text
+			// Fixes rendering in npmjs.com and packagist.org
+			.replaceAll(
+				/<img src="https:\/\/cdn.simpleicons.org\/([^\/]+)\/000\/fff"([^>]+)>([^<]+)<\/a>/g,
+				'<img src="https://cdn.simpleicons.org/$1/000/fff"$2>&nbsp;$3</a>',
+			)
 			// Replace all CDN links with raw links
 			.replaceAll(
 				/https:\/\/cdn.simpleicons.org\/(.+)\/000\/fff/g,
