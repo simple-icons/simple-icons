@@ -120,16 +120,18 @@ const isNumber = (string_) =>
  * @typedef {{fixtures: {
  *     iconPath: string,
  *     segments: import('svg-path-segments').Segment[],
- *     bbox: import('svg-path-bbox').BBox
+ *     bbox: import('svg-path-bbox').BBox,
+ *     pathDIndex: number
  * }}} Info
  */
 /** @type {import('svglint').Config} */
 const config = {
-	fixtures(_, $) {
+	fixtures(_, $, ast) {
 		const iconPath = $.find('path').attr('d');
 		const segments = parsePath(iconPath);
 		const bbox = svgPathBbox(iconPath);
-		return {iconPath, segments, bbox};
+		const pathDIndex = getPathDIndex(ast.source);
+		return {iconPath, segments, bbox, pathDIndex};
 	},
 	rules: {
 		elm: {
@@ -1016,6 +1018,19 @@ const config = {
 						)}. The path should be self-closing,` +
 						' use "/>" instead of "></path>".';
 					reporter.error(`Invalid SVG content format: ${reason}`);
+				}
+			},
+			(reporter, $, ast) => {
+				reporter.name = 'spacing-consistency';
+
+				const multipleSpacesPattern = / {2,}/g;
+
+				for (const match of ast.source.matchAll(multipleSpacesPattern)) {
+					const spaceCount = match[0].length;
+
+					reporter.error(
+						`Found ${spaceCount} consecutive spaces at index ${match.index} (should be single space)`,
+					);
 				}
 			},
 		],
