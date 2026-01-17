@@ -1034,6 +1034,19 @@ const config = {
 					}
 				}
 			},
+			(reporter, $, ast) => {
+				reporter.name = 'spacing-consistency';
+
+				const multipleSpacesPattern = / {2,}/g;
+
+				for (const match of ast.source.matchAll(multipleSpacesPattern)) {
+					const spaceCount = match[0].length;
+
+					reporter.error(
+						`Found ${spaceCount} consecutive spaces at index ${match.index} (should be single space)`,
+					);
+				}
+			},
 		],
 	},
 };
