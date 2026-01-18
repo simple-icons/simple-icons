@@ -6,7 +6,9 @@ repos:
         entry: npm run format:icondata
         language: system
         pass_filenames: false
-        files: ^data/simple-icons\.json$
+        files:
+          glob:
+            - data/simple-icons.json
       - id: prettier
         name: Prettier
         entry: npm run prettier -- --write
@@ -14,7 +16,7 @@ repos:
         pass_filenames: false
       - id: xo
         name: XO
-        entry: xo --fix
+        entry: npx xo --fix
         language: system
         pass_filenames: false
         types: [javascript]
@@ -32,16 +34,18 @@ repos:
         types: [json]
       - id: svglint
         name: SVG Lint
-        entry: svglint --ci --config svglint.config.mjs --git-changed
+        entry: npx svglint --ci --config svglint.config.mjs --git-changed
         pass_filenames: false
         language: system
         types: [svg]
-        files: ^icons/.*\.svg$
+        files:
+          glob:
+            - icons/*.svg
         verbose: true
         stages: [commit]
       - id: markdownlint
         name: Markdownlint
-        entry: "markdownlint-cli2 '**/*.md' '#node_modules'"
+        entry: "npx markdownlint-cli2 '**/*.md' '#node_modules'"
         pass_filenames: false
         types: [markdown]
         language: system
