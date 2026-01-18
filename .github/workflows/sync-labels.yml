@@ -6,6 +6,8 @@ on:
       - '.github/labels.yml'
     branches:
       - develop
+  label:
+    types: [created, edited, deleted]
   workflow_dispatch:
     inputs:
       dry-run:
@@ -21,11 +23,17 @@ on:
 
 jobs:
   labels:
+    # Avoid infinite loop by ignoring actions triggered by the bot itself
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
     steps:
+      - name: Block manual label changes
+        if: github.event_name == 'label'
+        run: |
+          echo "❌ Labels must be modified via .github/labels.yml. Restoring..."
       - uses: actions/checkout@v4
       - name: Sync labels
         uses: crazy-max/ghaction-github-labeler@v5
