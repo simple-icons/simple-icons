@@ -2,7 +2,7 @@
 // @ts-check
 /**
  * @file
- * Script to add data for a new icon to the simple-icons dataset.
+ * Add data for a new icon to the simple-icons dataset.
  */
 
 /**

@@ -2887,6 +2887,11 @@
 		"source": "https://uk.ceair.com/newCMS/uk/en/content/en_Footer/Support/201904/t20190404_5763.html"
 	},
 	{
+		"title": "China Railway",
+		"hex": "FF2600",
+		"source": "https://commons.wikimedia.org/wiki/File:China_Railways.svg"
+	},
+	{
 		"title": "China Southern Airlines",
 		"hex": "008BCB",
 		"source": "https://www.csair.com/en/about/investor/yejibaogao/2020/"
@@ -3559,6 +3564,15 @@
 		"source": "https://www.cora.fr"
 	},
 	{
+		"title": "Coreboot",
+		"hex": "000000",
+		"source": "https://coreboot.org/assets/images/banner.svg",
+		"license": {
+			"type": "custom",
+			"url": "https://coreboot.org/about.html"
+		}
+	},
+	{
 		"title": "CorelDRAW",
 		"hex": "000000",
 		"source": "https://www.coreldraw.com/en/learn/webinars/ebook-embroidery"
@@ -4185,6 +4199,19 @@
 		"title": "Devbox",
 		"hex": "280459",
 		"source": "https://github.com/jetify-com/devbox/blob/c3cab01d7375726f0121a25fc0f5c838484246f7/docs/app/static/img/devbox_logo_light.svg"
+	},
+	{
+		"title": "Development Containers",
+		"hex": "2753E3",
+		"source": "https://github.com/microsoft/fluentui-system-icons/blob/3e1e525f4499a22d46039ef54e9b9a86b809bc66/assets/Cube/SVG/ic_fluent_cube_24_regular.svg",
+		"license": {
+			"type": "CC-BY-4.0"
+		},
+		"aliases": {
+			"aka": [
+				"devcontainers"
+			]
+		}
 	},
 	{
 		"title": "DevExpress",
@@ -12113,12 +12140,8 @@
 	},
 	{
 		"title": "Oxc",
-		"hex": "FF915C",
-		"source": "https://github.com/oxc-project/oxc-assets/blob/10eecc9742ac6857f8f5d1ea922608e29db41b36/round.svg",
-		"guidelines": "https://oxc.rs/branding.html",
-		"license": {
-			"type": "CC0-1.0"
-		}
+		"hex": "00F7F1",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/oxc/oxc-icon-color-bracketless.svg"
 	},
 	{
 		"title": "Oxygen",
@@ -13044,6 +13067,11 @@
 		"title": "Prefect",
 		"hex": "070E10",
 		"source": "https://www.prefect.io"
+	},
+	{
+		"title": "prek",
+		"hex": "F54327",
+		"source": "https://github.com/j178/prek/blob/414d0cc088431f0ec268b82c51458ca39b538cd7/docs/assets/badge-v0.json"
 	},
 	{
 		"title": "PreMiD",
@@ -14362,8 +14390,8 @@
 	},
 	{
 		"title": "Rolldown",
-		"hex": "FF7E17",
-		"source": "https://rolldown.rs/lightning-down.svg"
+		"hex": "FF4100",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/rolldown/rolldown-icon-color-bracketless.svg"
 	},
 	{
 		"title": "Rolls-Royce",
@@ -16791,6 +16819,12 @@
 		"source": "https://www.thingiverse.com"
 	},
 	{
+		"title": "Things",
+		"hex": "2473E7",
+		"source": "https://culturedcode.com/things/",
+		"guidelines": "https://culturedcode.com/terms/#using_our_service"
+	},
+	{
 		"title": "ThinkPad",
 		"hex": "EE2624",
 		"source": "https://www.lenovo.com/us/en/thinkpad"
@@ -18009,8 +18043,8 @@
 	},
 	{
 		"title": "Vite",
-		"hex": "646CFF",
-		"source": "https://vitejs.dev"
+		"hex": "9135FF",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vite/vite-icon-color-bracketless.svg"
 	},
 	{
 		"title": "VitePress",
@@ -18024,8 +18058,8 @@
 	},
 	{
 		"title": "Vitest",
-		"hex": "6E9F18",
-		"source": "https://vitest.dev"
+		"hex": "00FF74",
+		"source": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vitest/vitest-icon-color-bracketless.svg"
 	},
 	{
 		"title": "Viva Wallet",
@@ -18662,9 +18696,9 @@
 	},
 	{
 		"title": "Woo",
-		"hex": "96588A",
+		"hex": "873EFF",
 		"source": "https://woocommerce.com/style-guide",
-		"guidelines": "https://woocommerce.com/trademark-guidelines"
+		"guidelines": "https://woocommerce.com/brand-and-logo-guidelines"
 	},
 	{
 		"title": "WooCommerce",
