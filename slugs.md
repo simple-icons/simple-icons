@@ -506,6 +506,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chevrolet` | `chevrolet` |
 | `Chia Network` | `chianetwork` |
 | `China Eastern Airlines` | `chinaeasternairlines` |
+| `China Railway` | `chinarailway` |
 | `China Southern Airlines` | `chinasouthernairlines` |
 | `Chocolatey` | `chocolatey` |
 | `Chromatic` | `chromatic` |
@@ -633,6 +634,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Copa Airlines` | `copaairlines` |
 | `Coppel` | `coppel` |
 | `Cora` | `cora` |
+| `Coreboot` | `coreboot` |
 | `CorelDRAW` | `coreldraw` |
 | `Corona Engine` | `coronaengine` |
 | `Corona Renderer` | `coronarenderer` |
@@ -745,6 +747,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Welle` | `deutschewelle` |
 | `dev.to` | `devdotto` |
 | `Devbox` | `devbox` |
+| `Development Containers` | `developmentcontainers` |
 | `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
@@ -2290,6 +2293,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pre-commit` | `precommit` |
 | `Preact` | `preact` |
 | `Prefect` | `prefect` |
+| `prek` | `prek` |
 | `PreMiD` | `premid` |
 | `Premier League` | `premierleague` |
 | `PrepBytes` | `prepbytes` |
@@ -2949,6 +2953,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Washington Post` | `thewashingtonpost` |
 | `The Weather Channel` | `theweatherchannel` |
 | `Thingiverse` | `thingiverse` |
+| `Things` | `things` |
 | `ThinkPad` | `thinkpad` |
 | `thirdweb` | `thirdweb` |
 | `Threadless` | `threadless` |

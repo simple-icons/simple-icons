@@ -162,7 +162,7 @@ export const normalizeColor = (text) => {
 };
 
 /**
- * Parse module and author from a line in the third party extensions/libraries table.
+ * Parse module and author from a line in the third-party extensions/libraries table.
  * @param {string} line The line to parse.
  * @returns {ThirdPartyExtension} The parsed module and author.
  */
@@ -203,7 +203,7 @@ const parseModuleAuthorFromLine = (line) => {
 /**
  * Parse extensions from a table header.
  * @param {string} tableHeader Markdown header of the table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions or libraries.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third-party extensions or libraries.
  */
 const parseExtensionsFromSectionTable = async (tableHeader) => {
 	const readme = await fs.readFile(
@@ -219,15 +219,15 @@ const parseExtensionsFromSectionTable = async (tableHeader) => {
 };
 
 /**
- * Get information about third party extensions from the README table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions.
+ * Get information about third-party extensions from the README table.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third-party extensions.
  */
 export const getThirdPartyExtensions = async () =>
 	parseExtensionsFromSectionTable('## Third-Party Extensions');
 
 /**
- * Get information about third party libraries from the README table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries.
+ * Get information about third-party libraries from the README table.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third-party libraries.
  */
 export const getThirdPartyLibraries = async () =>
 	parseExtensionsFromSectionTable('## Third-Party Libraries');

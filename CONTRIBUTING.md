@@ -186,7 +186,7 @@ If the icon includes a (registered) trademark icon we follow the guidelines belo
 - If brand guidelines explicitly require including the symbol, it must be included.
 - If the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
 - If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups]), it must be included.
-- If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
+- If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if it is a _trademark symbol_ (™).
 - If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
 - If there is no explicit requirement that a symbol must be included, it must not be included.
 
@@ -445,7 +445,7 @@ Where the nested `title` is the name of the duplicate brand. The other fields, `
 
 ##### Localization
 
-We collect localized names to make it possible to find the brand by it's local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
+We collect localized names to make it possible to find the brand by its local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
 
 ```json
 {
@@ -485,7 +485,7 @@ Old names may be retained indefinitely, but can be removed at any time, ideally 
 
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
-If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
+If you have an affiliation to the brand you are contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
 Don't submit multiple icon additions or updates in one pull request. If you want to add or update multiple icons, please create a separate pull request for each one.
 
@@ -540,7 +540,7 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ![Extensions](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfExtensions&suffix=%20extensions&label=&color=483d8b) ![Libraries](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfLibraries&suffix=%20libraries&label=&color=009698)
 
-An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
+An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third-party extensions with JavaScript and TypeScript.
 
 ```typescript
 import {getIconsData, type IconData} from 'simple-icons/sdk';
