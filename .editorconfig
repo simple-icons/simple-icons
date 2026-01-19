@@ -13,7 +13,7 @@ indent_size=unset
 [*.svg]
 insert_final_newline=false
 
-[*.yml]
+[*.{yml,yaml}]
 indent_style=space
 
 [.github/**/*.md]
