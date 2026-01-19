@@ -119,8 +119,8 @@ To be considered popular enough to be within our scope, a brand must be in exist
    - [crates.io](https://crates.io): 1,200,000 recent (100k weekly) downloads,
    - [PyPi Stats](https://pypistats.org): 100k weekly downloads,
    - [Homebrew Formulae](https://formulae.brew.sh): 5k installs in the last 30 days or 50k installs in the last year,
-   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00, or,
-   - [Docker](https://www.docker.com): 500k weekly downloads.
+   - [Arch User Repository](https://aur.archlinux.org): popularity of 7.00,
+   - [Docker](https://www.docker.com): 500k weekly downloads, or,
    - [NuGet](https://nugettrends.com): 500k total and 10k monthly downloads.
 1. If the brand is a Fediverse project, it needs to have a minimum of 10,000 Monthly Active Users as listed on [FediDB](https://fedidb.com/software).
    - In addition, for **servers** that have a unique recognizable logo, the User Count as listed on [FediDB](https://fedidb.com/servers) should be 100,000 or higher.
