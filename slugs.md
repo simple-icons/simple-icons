@@ -135,6 +135,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Android Auto` | `androidauto` |
 | `Android Studio` | `androidstudio` |
 | `Angular` | `angular` |
+| `AniChart` | `anichart` |
 | `AniList` | `anilist` |
 | `Animal Planet` | `animalplanet` |
 | `Anime.js` | `animedotjs` |
@@ -180,6 +181,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache NiFi` | `apachenifi` |
 | `Apache OpenOffice` | `apacheopenoffice` |
 | `Apache Parquet` | `apacheparquet` |
+| `Apache PDFBox` | `apachepdfbox` |
 | `Apache Pulsar` | `apachepulsar` |
 | `Apache RocketMQ` | `apacherocketmq` |
 | `Apache Solr` | `apachesolr` |
@@ -504,6 +506,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Chevrolet` | `chevrolet` |
 | `Chia Network` | `chianetwork` |
 | `China Eastern Airlines` | `chinaeasternairlines` |
+| `China Railway` | `chinarailway` |
 | `China Southern Airlines` | `chinasouthernairlines` |
 | `Chocolatey` | `chocolatey` |
 | `Chromatic` | `chromatic` |
@@ -631,6 +634,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Copa Airlines` | `copaairlines` |
 | `Coppel` | `coppel` |
 | `Cora` | `cora` |
+| `Coreboot` | `coreboot` |
 | `CorelDRAW` | `coreldraw` |
 | `Corona Engine` | `coronaengine` |
 | `Corona Renderer` | `coronarenderer` |
@@ -743,6 +747,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Deutsche Welle` | `deutschewelle` |
 | `dev.to` | `devdotto` |
 | `Devbox` | `devbox` |
+| `Development Containers` | `developmentcontainers` |
 | `DevExpress` | `devexpress` |
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
@@ -839,6 +844,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `EditorConfig` | `editorconfig` |
 | `Educative` | `educative` |
 | `edX` | `edx` |
+| `Effect` | `effect` |
 | `egghead` | `egghead` |
 | `Egnyte` | `egnyte` |
 | `Eight` | `eight` |
@@ -990,6 +996,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Floatplane` | `floatplane` |
 | `Flood` | `flood` |
 | `Floorp` | `floorp` |
+| `Flower` | `flower` |
 | `Fluent Bit` | `fluentbit` |
 | `Fluentd` | `fluentd` |
 | `Fluke` | `fluke` |
@@ -1970,6 +1977,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nike` | `nike` |
 | `Nikon` | `nikon` |
 | `Nim` | `nim` |
+| `niri` | `niri` |
 | `Nissan` | `nissan` |
 | `NixOS` | `nixos` |
 | `Nobara Linux` | `nobaralinux` |
@@ -2029,6 +2037,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OctoPrint` | `octoprint` |
 | `Octopus Deploy` | `octopusdeploy` |
 | `Oculus` | `oculus` |
+| `Odido` | `odido` |
 | `Odin` | `odin` |
 | `Odnoklassniki` | `odnoklassniki` |
 | `Odoo` | `odoo` |
@@ -2039,6 +2048,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OKX` | `okx` |
 | `Ollama` | `ollama` |
 | `Omada Cloud` | `omadacloud` |
+| `Omarchy` | `omarchy` |
 | `OnePlus` | `oneplus` |
 | `OneStream` | `onestream` |
 | `OnlyFans` | `onlyfans` |
@@ -2211,6 +2221,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pino` | `pino` |
 | `Pinterest` | `pinterest` |
 | `Pioneer DJ` | `pioneerdj` |
+| `Pipecat` | `pipecat` |
 | `Piped` | `piped` |
 | `pipx` | `pipx` |
 | `Pivotal Tracker` | `pivotaltracker` |
@@ -2282,6 +2293,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `pre-commit` | `precommit` |
 | `Preact` | `preact` |
 | `Prefect` | `prefect` |
+| `prek` | `prek` |
 | `PreMiD` | `premid` |
 | `Premier League` | `premierleague` |
 | `PrepBytes` | `prepbytes` |
@@ -2450,6 +2462,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Reebok` | `reebok` |
 | `Refine` | `refine` |
 | `Refined GitHub` | `refinedgithub` |
+| `Reflex` | `reflex` |
 | `Reka UI` | `rekaui` |
 | `Relay` | `relay` |
 | `Reliance Industries Limited` | `relianceindustrieslimited` |
@@ -2579,6 +2592,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Scala` | `scala` |
 | `Scalar` | `scalar` |
 | `Scaleway` | `scaleway` |
+| `Scan` | `scan` |
 | `Scania` | `scania` |
 | `Schneider Electric` | `schneiderelectric` |
 | `scikit-learn` | `scikitlearn` |
@@ -2939,6 +2953,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `The Washington Post` | `thewashingtonpost` |
 | `The Weather Channel` | `theweatherchannel` |
 | `Thingiverse` | `thingiverse` |
+| `Things` | `things` |
 | `ThinkPad` | `thinkpad` |
 | `thirdweb` | `thirdweb` |
 | `Threadless` | `threadless` |

@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "16.4.0",
+	"version": "16.6.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -74,7 +74,7 @@
 		"lint": "npm run ourlint && npm run prettierlint && npm run jslint && npm run jsonlint && npm run svglint && npm run wslint && npm run tslint && npm run markdownlint",
 		"markdownlint": "markdownlint-cli2 '**/*.md' '#node_modules'",
 		"ourlint": "node scripts/lint/ourlint.js",
-		"prepare": "node -e \"process.exit(process.env.CI ? 0 : 1)\" || husky",
+		"prepare": "node -e \"process.exit(process.env.CI ? 0 : 1)\" || prek install",
 		"prepublishOnly": "npm run build",
 		"prettier": "prettier --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
 		"prettierlint": "npm run prettier -- --check --cache",
@@ -93,6 +93,7 @@
 	},
 	"devDependencies": {
 		"@inquirer/prompts": "7.10.1",
+		"@j178/prek": "0.2.30",
 		"@types/mocha": "10.0.10",
 		"@types/node": "24.10.1",
 		"chalk": "5.6.2",
@@ -103,7 +104,6 @@
 		"fake-diff": "1.0.0",
 		"fast-fuzzy": "1.12.0",
 		"get-relative-luminance": "1.0.0",
-		"husky": "9.1.7",
 		"jsonschema": "1.5.0",
 		"markdownlint-cli2": "0.19.0",
 		"mocha": "11.7.5",
@@ -112,7 +112,7 @@
 		"spdx-license-ids": "3.0.22",
 		"svg-path-bbox": "2.1.0",
 		"svg-path-segments": "2.0.1",
-		"svglint": "4.1.2",
+		"svglint": "4.2.0",
 		"svgo": "4.0.0",
 		"svgpath": "2.6.0",
 		"typescript": "5.9.3",
