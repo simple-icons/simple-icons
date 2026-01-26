@@ -127,7 +127,7 @@ If you need to iterate over all icons, use:
 import * as icons from 'simple-icons';
 ```
 
-#### TypeScript Usage <img src="https://cdn.simpleicons.org/typescript/000/fff" alt="Typescript" align=left width=19 height=19>
+#### TypeScript Usage <img src="https://cdn.simpleicons.org/typescript/000/fff" alt="TypeScript" align=left width=19 height=19>
 
 Type definitions are bundled with the package.
 
