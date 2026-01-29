@@ -177,29 +177,6 @@ const build = async () => {
 
 	// Create a CommonJS SDK file
 	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), 'cjs');
-
-	// Build deprecated `simple-icons/icons` entrypoint.
-	// TODO: This must be removed at v17.
-	const deprecatedMessage =
-		`⚠️ The entrypoint 'simple-icons/icons' is deprecated and` +
-		` will be removed in version 17.0.0`;
-	const jsDeprecationMessage =
-		`${deprecatedMessage}. Please, import icons from 'simple-icons'` +
-		` using \`require('simple-icons')\` instead of \`require('simple-icons/icons')\`.`;
-	const iconsIndexJs =
-		`console.warn("${jsDeprecationMessage}");` +
-		`module.exports=require('./index.js');`;
-	const iconsIndexJsFile = path.resolve(rootDirectory, 'index-icons.js');
-	await writeJs(iconsIndexJsFile, iconsIndexJs);
-
-	const mjsDeprecationMessage =
-		`${deprecatedMessage}. Please, import icons from 'simple-icons'` +
-		` using \`import ... from 'simple-icons'\` instead of \`import ... from 'simple-icons/icons'\`.`;
-	const iconsIndexMjs =
-		`console.warn("${mjsDeprecationMessage}");` +
-		`export * from './index.mjs';`;
-	const iconsIndexMjsFile = path.resolve(rootDirectory, 'index-icons.mjs');
-	await writeJs(iconsIndexMjsFile, iconsIndexMjs);
 };
 
 await build();
