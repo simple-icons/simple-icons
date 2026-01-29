@@ -34,17 +34,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 1. Commit and push to the new branch
 1. Make a pull request
 
-## Table of contents
-
-- [Requesting an Icon](#requesting-an-icon)
-  - [Forbidden Brands](#forbidden-brands)
-  - [Assessing Popularity](#assessing-popularity)
-  - [Opening an Issue](#opening-an-issue)
-- [Adding or Updating an Icon](#adding-or-updating-an-icon)
-  - [Requesting Permission](#requesting-permission)
-- [Testing Package Locally](#testing-package-locally)
-- [Using Docker](#using-docker)
-
 ## Requesting an Icon
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
