@@ -2,13 +2,6 @@
 
 Simple Icons asks that its users read this disclaimer fully before including an icon in their project.
 
-## Table of Contents
-
-- [Licenses, Copyrights & Trademarks](#licenses-copyrights--trademarks)
-- [Brand Guidelines](#brand-guidelines)
-- [Update of Brands](#update-of-brands)
-- [Removal of Brands](#removal-of-brands)
-
 ## Licenses, Copyrights & Trademarks
 
 > [!IMPORTANT]\
