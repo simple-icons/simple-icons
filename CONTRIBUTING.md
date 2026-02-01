@@ -89,6 +89,14 @@ If you are in doubt, feel free to submit it and we'll have a look.
 > [!NOTE]\
 > Please make your way through the following metrics _in order_, only moving on to the next metric if the current metric is not applicable to the brand being assessed or if it would put the brand outside our scope.
 
+You can verify if a repository or package meets these criteria by running:
+
+```shell
+npm run check-popularity
+```
+
+This script checks GitHub stars and NPM downloads against our thresholds.
+
 To be considered popular enough to be within our scope, a brand must be in existence for at least one year and meet one of the following metrics of popularity, in order of preference:
 
 1. Its website's Traffic.cv global rank is in the top 500k.

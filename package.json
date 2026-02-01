@@ -65,6 +65,7 @@
 	"scripts": {
 		"add-icon-data": "node scripts/add-icon-data.js",
 		"build": "node scripts/build/package.js",
+		"check-popularity": "node scripts/check-popularity.js",
 		"clean": "node scripts/build/clean.js",
 		"format": "npm run format:icondata && npm run prettier -- --write && npm run xo:fix",
 		"format:icondata": "node scripts/format-icon-data.js",
