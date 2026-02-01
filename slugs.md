@@ -628,6 +628,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Contributor Covenant` | `contributorcovenant` |
 | `Conventional Commits` | `conventionalcommits` |
 | `Convertio` | `convertio` |
+| `Convex` | `convex` |
 | `Cookiecutter` | `cookiecutter` |
 | `Cooler Master` | `coolermaster` |
 | `Coolify` | `coolify` |
@@ -752,6 +753,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DeviantArt` | `deviantart` |
 | `Devpost` | `devpost` |
 | `devRant` | `devrant` |
+| `Devuan` | `devuan` |
 | `Dgraph` | `dgraph` |
 | `DHL` | `dhl` |
 | `diagrams.net` | `diagramsdotnet` |
@@ -1406,6 +1408,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `InfoQ` | `infoq` |
 | `Infosys` | `infosys` |
 | `Infracost` | `infracost` |
+| `Infuse` | `infuse` |
 | `Ingress` | `ingress` |
 | `Inkdrop` | `inkdrop` |
 | `Inkscape` | `inkscape` |
@@ -1570,6 +1573,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Koc` | `koc` |
 | `Kodak` | `kodak` |
 | `Kodi` | `kodi` |
+| `Kodular` | `kodular` |
 | `Koenigsegg` | `koenigsegg` |
 | `Kofax` | `kofax` |
 | `Komoot` | `komoot` |
@@ -2110,6 +2114,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Org` | `org` |
 | `Organic Maps` | `organicmaps` |
 | `Origin` | `origin` |
+| `Ory` | `ory` |
 | `Osano` | `osano` |
 | `OSF` | `osf` |
 | `OSGeo` | `osgeo` |
