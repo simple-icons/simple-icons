@@ -34,17 +34,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 1. Commit and push to the new branch
 1. Make a pull request
 
-## Table of contents
-
-- [Requesting an Icon](#requesting-an-icon)
-  - [Forbidden Brands](#forbidden-brands)
-  - [Assessing Popularity](#assessing-popularity)
-  - [Opening an Issue](#opening-an-issue)
-- [Adding or Updating an Icon](#adding-or-updating-an-icon)
-  - [Requesting Permission](#requesting-permission)
-- [Testing Package Locally](#testing-package-locally)
-- [Using Docker](#using-docker)
-
 ## Requesting an Icon
 
 We welcome icon requests. Before you submit a new issue please make sure the icon:
@@ -510,6 +499,16 @@ Kind regards,
 
 [Your name]
 ```
+
+### AI Usage Policy
+
+The Simple Icons project follows these rules regarding AI usage:
+
+- Any use of AI tools must be clearly disclosed in the pull request.
+- All AI-generated or AI-assisted content must be reviewed and approved by a human contributor before submission.
+- Contributors are fully responsible for ensuring that AI-assisted content is legally compliant, and compatible with the brand’s licensing and trademark requirements.
+- AI tools must not be used to directly generate, replicate, or closely imitate proprietary or copyrighted brand artwork.
+- Maintainers may request additional clarification, changes, or reject contributions if the use of AI tools is not properly disclosed or raises legal or quality concerns.
 
 ## Testing Package Locally
 

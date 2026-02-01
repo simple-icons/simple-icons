@@ -63,7 +63,7 @@ const checkIfCanBeClosed = async (githubRepository, issueNumber) => {
 		state === 'closed' ||
 		labelNames.has(LABELS.meta) ||
 		labelNames.has(LABELS.inDiscussion) ||
-		labelNames.has(LABELS.newIcon)
+		!labelNames.has(LABELS.newIcon)
 	) {
 		return undefined;
 	}
