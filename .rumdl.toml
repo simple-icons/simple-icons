@@ -1,0 +1,4 @@
+[global]
+disable = ["MD013", "MD033", "MD041"]
+exclude = ["node_modules"]
+include = ["**/*.md"]
