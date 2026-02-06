@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
@@ -35,7 +35,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm
@@ -78,7 +78,7 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
-        run: sed -i 's/icons\/\*\.svg/$npm_config_icons/' package.json
+        run: sed -i 's/\\"icons\/\*\.svg\\"/$npm_config_icons/' package.json
       - name: Prepare docs (docs changed)
         # only lint changed docs
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs == 'true'
@@ -113,7 +113,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Use Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
           cache: npm

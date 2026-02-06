@@ -23,6 +23,8 @@ import {
 import {
 	fileExists,
 	formatIconData,
+	getLabelerLabels,
+	getLabels,
 	getSpdxLicenseIds,
 	sortIconsCompare,
 } from '../utils.js';
@@ -92,8 +94,14 @@ const TESTS = {
 			);
 			const before = expectedOrder[foundIndex - 1];
 			const after = expectedOrder[foundIndex + 1];
-			if (before) return `should be after ${format(before)}`;
-			if (after) return `should be before ${format(after)}`;
+			if (before) {
+				return `should be after ${format(before)}`;
+			}
+
+			if (after) {
+				return `should be before ${format(after)}`;
+			}
+
 			return 'not found';
 		};
 
@@ -193,15 +201,8 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				allUrlFields.push([false, icon.guidelines]);
 			}
 
-			if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
-				allUrlFields.push([
-					false,
-					// TODO: `hasOwn` is not currently supported by TS.
-					// See https://github.com/microsoft/TypeScript/issues/44253
-					/** @type {string} */
-					// @ts-expect-error
-					icon.license.url,
-				]);
+			if (icon.license !== undefined && 'url' in icon.license) {
+				allUrlFields.push([false, icon.license.url]);
 			}
 		}
 
@@ -213,7 +214,9 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				invalidUrls.push(fakeDiff(url, $url.origin));
 			}
 
-			if (isGitHubUserAttachmentUrl($url)) continue;
+			if (isGitHubUserAttachmentUrl($url)) {
+				continue;
+			}
 
 			if (isStaticWikimediaAssetUrl($url)) {
 				const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
@@ -441,6 +444,25 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 
 		return errors.join('\n') || undefined;
 	},
+
+	/* Check that labels usage is synchronized across the project. */
+	async checkLabelsSync() {
+		const errors = [];
+
+		// All labels in .github/labeler.yml should be present in .github/labels.yml
+		const labels = await getLabels();
+		const labelerLabels = await getLabelerLabels();
+
+		for (const label of labelerLabels) {
+			if (!labels.has(label)) {
+				errors.push(
+					`Label "${label}" is present in '.github/labeler.yml' but missing in '.github/labels.yml'. Please, synchronize both files.`,
+				);
+			}
+		}
+
+		return errors.join('\n');
+	},
 };
 
 const iconsDataString = await getIconsDataString();
@@ -455,6 +477,9 @@ const errors = (
 	.filter(Boolean);
 
 if (errors.length > 0) {
-	for (const error of errors) console.error(`\u001B[31m${error}\u001B[0m`);
+	for (const error of errors) {
+		console.error(`\u001B[31m${error}\u001B[0m`);
+	}
+
 	process.exit(1);
 }
