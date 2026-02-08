@@ -731,12 +731,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DeepL` | `deepl` |
 | `DeepMind` | `deepmind` |
 | `Deepnote` | `deepnote` |
+| `Deezer` | `deezer` |
 | `Deliveroo` | `deliveroo` |
 | `Dell` | `dell` |
 | `Delphi` | `delphi` |
 | `Delta` | `delta` |
 | `Deluge` | `deluge` |
 | `Deno` | `deno` |
+| `Deno Deploy` | `denodeploy` |
 | `Denon` | `denon` |
 | `Dependabot` | `dependabot` |
 | `Depositphotos` | `depositphotos` |
@@ -1931,6 +1933,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NBA` | `nba` |
 | `NBB` | `nbb` |
 | `NBC` | `nbc` |
+| `NDI` | `ndi` |
 | `NDR` | `ndr` |
 | `NEAR` | `near` |
 | `Nebula` | `nebula` |
@@ -2150,6 +2153,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Palo Alto Software` | `paloaltosoftware` |
 | `Panasonic` | `panasonic` |
 | `pandas` | `pandas` |
+| `Pandoc` | `pandoc` |
 | `Pandora` | `pandora` |
 | `Pantheon` | `pantheon` |
 | `Paperless-ngx` | `paperlessngx` |
