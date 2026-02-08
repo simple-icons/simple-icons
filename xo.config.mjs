@@ -15,6 +15,8 @@ const xoConfig = [
 	{
 		plugins: {jsdoc, headers},
 		rules: {
+			'no-shadow': 'error',
+			curly: 'error',
 			'sort-imports': [
 				'error',
 				{
@@ -41,6 +43,11 @@ const xoConfig = [
 					'newlines-between': 'never',
 				},
 			],
+			'import-x/no-duplicates': 'error',
+			'import-x/no-cycle': 'error',
+			'import-x/no-self-import': 'error',
+			'import-x/no-useless-path-segments': 'error',
+			'import-x/no-unresolved': ['error', {ignore: ['index.mjs']}],
 			'no-console': ['error', {allow: ['warn', 'error']}],
 			'no-warning-comments': [
 				'warn',

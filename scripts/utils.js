@@ -118,7 +118,10 @@ const sortIconOrDuplicate = (icon) => {
  * @returns {IconData['license']} The sorted license object.
  */
 const sortLicense = (license) => {
-	if (!license) return undefined;
+	if (!license) {
+		return undefined;
+	}
+
 	const keyOrder = ['type', 'url'];
 
 	/** @type {IconData['license']} */
@@ -139,7 +142,10 @@ const sortLicense = (license) => {
  * @returns {{[_: string]: string} | undefined} The sorted aliases object.
  */
 const sortAlphabetically = (object) => {
-	if (!object) return undefined;
+	if (!object) {
+		return undefined;
+	}
+
 	const sorted = Object.assign(
 		Object.fromEntries(
 			Object.entries(object).sort(([key1], [key2]) => (key1 > key2 ? 1 : -1)),
@@ -193,3 +199,78 @@ export const fileExists = async (fpath) => {
 		return false;
 	}
 };
+
+/**
+ * Get labels file content.
+ * @returns {Promise<string>} Labels file content.
+ */
+const getLabelsFileContent = async () => {
+	const labelsPath = path.resolve(
+		import.meta.dirname,
+		'..',
+		'.github',
+		'labels.yml',
+	);
+	return fs.readFile(labelsPath, 'utf8');
+};
+
+/**
+ * Get labels from .github/labels.yml file.
+ * @returns {Promise<Set<string>>} Label names.
+ */
+export const getLabels = async () => {
+	const content = await getLabelsFileContent();
+	const labels = new Set();
+	for (const line of content.split('\n')) {
+		if (line.startsWith('- name: ')) {
+			const labelName = line.slice(8);
+			labels.add(labelName);
+		}
+	}
+
+	return labels;
+};
+
+/**
+ * Get labeler file content.
+ * @returns {Promise<string>} Labeler file content.
+ */
+const getLabelerFileContent = async () => {
+	const labelersPath = path.resolve(
+		import.meta.dirname,
+		'..',
+		'.github',
+		'labeler.yml',
+	);
+	return fs.readFile(labelersPath, 'utf8');
+};
+
+/**
+ * Get labeler's labels.
+ * @returns {Promise<Set<string>>} Labeler's labels.
+ */
+export const getLabelerLabels = async () => {
+	const content = await getLabelerFileContent();
+	const labels = new Set();
+	for (const line of content.split('\n')) {
+		if (line.startsWith(' ')) {
+			continue;
+		}
+
+		const trimmedLine = line.trim();
+		if (trimmedLine.endsWith(':')) {
+			const labelName = trimmedLine.slice(0, -1);
+			labels.add(labelName);
+		}
+	}
+
+	return labels;
+};
+
+/**
+ * Convert an unknown error to a string.
+ * @param {unknown} error The error to convert.
+ * @returns {string} The error message.
+ */
+export const unknownErrorToString = (error) =>
+	error instanceof Error ? error.message : String(error);
