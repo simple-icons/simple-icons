@@ -45,7 +45,7 @@ repos:
         stages: [commit]
       - id: markdownlint
         name: Markdownlint
-        entry: "npx markdownlint-cli2 '**/*.md' '#node_modules'"
-        pass_filenames: false
+        entry: 'npx rumdl'
+        pass_filenames: true
         types: [markdown]
         language: system
