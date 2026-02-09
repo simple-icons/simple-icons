@@ -45,7 +45,7 @@ repos:
         stages: [commit]
       - id: markdownlint
         name: Markdownlint
-        entry: 'npx rumdl'
+        entry: npx rumdl
         pass_filenames: true
         types: [markdown]
         language: system
