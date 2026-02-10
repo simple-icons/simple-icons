@@ -437,7 +437,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 			if (inferredSlugs.has(slug)) {
 				const conflictingTitles = inferredSlugs
 					.get(slug)
-					.filter((t) => t !== title);
+					.filter((/** @type {string} */ t) => t !== title);
 				for (const conflictingTitle of conflictingTitles) {
 					errors.push(
 						`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from the title of the icon "${conflictingTitle}".` +
