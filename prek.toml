@@ -34,7 +34,7 @@ always_run = true
 
 [[repos.hooks]]
 id = "jsonlint"
-name = "JSON Lint"
+name = "JSON lint"
 entry = "node --run jsonlint"
 language = "system"
 pass_filenames = false
@@ -42,7 +42,7 @@ types = ["json"]
 
 [[repos.hooks]]
 id = "svglint"
-name = "SVG Lint"
+name = "SVG lint"
 entry = "node --run svglint:base -- --git-changed"
 language = "system"
 pass_filenames = false
@@ -53,7 +53,7 @@ stages = ["commit"]
 
 [[repos.hooks]]
 id = "markdownlint"
-name = "Markdownlint"
+name = "Markdown lint"
 entry = "node --run markdownlint"
 language = "system"
 pass_filenames = false
