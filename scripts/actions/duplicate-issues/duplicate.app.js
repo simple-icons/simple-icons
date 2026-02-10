@@ -43,10 +43,7 @@ const fromDefaultConfig = (config) => {
 	return {
 		threshold: config.threshold ?? 0.85,
 		issue: {
-			minimumTitleLength:
-				config.issue?.minimumTitleLength === undefined
-					? 4
-					: config.issue.minimumTitleLength,
+			minimumTitleLength: config.issue?.minimumTitleLength ?? 4,
 		},
 		maxDuplicates: config.maxDuplicates,
 		exclude: config.exclude ?? [],
@@ -74,33 +71,79 @@ const config = await import(
  * @returns {Promise<Issue[]>} List of open issues.
  */
 const getAllOpenIssues = async (githubRepository) => {
-	const issues = [];
-	let page = 1;
-	process.stdout.write('Fetching all open issues...\n');
-	while (true) {
-		process.stdout.write(`  - Page ${page}: `);
+	const MAX_RETRIES = 10;
+	const RETRY_DELAY = 1000;
+	const BATCH_SIZE = 8;
+
+	/**
+	 * Fetch a single page with retry logic.
+	 * @param {number} page Page number to fetch.
+	 * @param {number} retries Remaining retries.
+	 * @returns {Promise<{issues: Issue[], isEmpty: boolean}>} Fetched issues and whether the page is empty.
+	 */
+	const fetchPage = async (page, retries = MAX_RETRIES) => {
 		const url = `https://api.github.com/repos/${githubRepository}/issues?state=open&per_page=100&page=${page}`;
-		// eslint-disable-next-line no-await-in-loop
-		const response = await githubFetch(url, {method: 'GET'});
+
+		try {
+			const response = await githubFetch(url, {method: 'GET'});
+			const json = /** @type {Issue[]} */ (await response.json());
+			const pageIssues = json.filter((issue) => !issue.pull_request);
+
+			return {issues: pageIssues, isEmpty: json.length === 0};
+		} catch (error) {
+			if (retries > 0) {
+				process.stdout.write(`    Retry page ${page} (${retries} left)...\n`);
+				await new Promise((resolve) => {
+					setTimeout(resolve, RETRY_DELAY);
+				});
+
+				return fetchPage(page, retries - 1);
+			}
+
+			throw error;
+		}
+	};
+
+	process.stdout.write('Fetching all open issues...\n');
+
+	const allIssues = [];
+	let currentPage = 1;
+	let foundEmpty = false;
+
+	while (!foundEmpty) {
+		// Fetch BATCH_SIZE pages in parallel
+		const pagesToFetch = Array.from(
+			{length: BATCH_SIZE},
+			(_, i) => currentPage + i,
+		);
 
 		// eslint-disable-next-line no-await-in-loop
-		const json = /** @type {Issue[]} */ (await response.json());
+		const results = await Promise.all(
+			pagesToFetch.map(async (page) => {
+				const result = await fetchPage(page);
+				process.stdout.write(
+					`  - Page ${page}: ${result.issues.length} issues\n`,
+				);
+				return result;
+			}),
+		);
 
-		const pageIssues = json.filter((issue) => !issue.pull_request);
+		// Process results in order
+		for (const result of results) {
+			if (result.isEmpty) {
+				foundEmpty = true;
+				break;
+			}
 
-		process.stdout.write(`${pageIssues.length} issues\n`);
-		issues.push(...pageIssues);
-
-		const linkHeader = response.headers.get('Link');
-		if (!linkHeader || !linkHeader.includes('rel="next"')) {
-			// There is no "next" → last page
-			break;
+			allIssues.push(...result.issues);
 		}
 
-		page += 1;
+		currentPage += BATCH_SIZE;
 	}
 
-	return issues;
+	process.stdout.write(`Found a total of ${allIssues.length} open issues.\n`);
+
+	return allIssues;
 };
 
 /**

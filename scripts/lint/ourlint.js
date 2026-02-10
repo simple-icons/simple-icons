@@ -377,6 +377,19 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 	async checkSlugs(icons) {
 		const errors = [];
 
+		const inferredSlugs = new Map();
+		for (const icon of icons) {
+			const inferred = titleToSlug(icon.title);
+			if (!inferredSlugs.has(inferred)) {
+				inferredSlugs.set(inferred, []);
+			}
+
+			inferredSlugs.get(inferred).push(icon.title);
+		}
+
+		const fileChecks = [];
+		const customSlugs = new Map();
+
 		for (const icon of icons) {
 			const {slug, title} = icon;
 
@@ -407,38 +420,44 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				continue;
 			}
 
-			// Icons with custom slugs must have the corresponding icon file.
 			const iconFilePath = path.resolve(iconsDirectory, `${slug}.svg`);
-			// eslint-disable-next-line no-await-in-loop
-			const iconFilePathExists = await fileExists(iconFilePath);
-			if (!iconFilePathExists) {
+			fileChecks.push({title, slug, path: iconFilePath});
+
+			// Custom slugs must be unique.
+			if (customSlugs.has(slug)) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" that is not unique.` +
+						` It is already used by "${customSlugs.get(slug)}". Please, ensure that all slugs are unique.`,
+				);
+			} else {
+				customSlugs.set(slug, title);
+			}
+
+			// Custom slugs must be different from slugs inferred from titles.
+			if (inferredSlugs.has(slug)) {
+				const conflictingTitles = inferredSlugs
+					.get(slug)
+					.filter((t) => t !== title);
+				for (const conflictingTitle of conflictingTitles) {
+					errors.push(
+						`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from the title of the icon "${conflictingTitle}".` +
+							' Please, ensure that all slugs are unique.',
+					);
+				}
+			}
+		}
+
+		// Icons with custom slugs must have the corresponding icon file.
+		const fileExistsResults = await Promise.all(
+			fileChecks.map((check) => fileExists(check.path)),
+		);
+
+		for (const [i, {title, slug}] of fileChecks.entries()) {
+			if (!fileExistsResults[i]) {
 				errors.push(
 					`Icon "${title}" has a slug "${slug}" but the corresponding icon file "icons/${slug}.svg" does not exist.` +
 						' Please, create the icon file or remove the slug.',
 				);
-				continue;
-			}
-
-			for (const otherIcon of icons) {
-				if (otherIcon.title === title) {
-					continue;
-				}
-
-				// Custom slugs must be unique.
-				if (otherIcon.slug === slug) {
-					errors.push(
-						`Icon "${title}" has a slug "${slug}" that is not unique.` +
-							` It is already used by "${otherIcon.title}". Please, ensure that all slugs are unique.`,
-					);
-				}
-
-				// Custom slugs must be different from slugs inferred from titles.
-				if (slug === titleToSlug(otherIcon.title)) {
-					errors.push(
-						`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from the title of the icon "${otherIcon.title}".` +
-							' Please, ensure that all slugs are unique.',
-					);
-				}
 			}
 		}
 
