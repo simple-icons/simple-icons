@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Build NodeJS package
-        run: npm run build
+        run: node --run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -80,7 +80,11 @@ jobs:
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
         run: sed -i 's/\\"icons\/\*\.svg\\"/$npm_config_icons/' package.json
       - name: Run linter
+<<<<<<< HEAD
         run: npm run lint --icons="$ICONS_FILES"
+=======
+        run: node --run lint --icons="$ICONS_FILES" --docs="$DOCS_FILES"
+>>>>>>> dc6233ae (Use `node --run` for scripts)
         env:
           ICONS_FILES: ${{ steps.changes.outputs.icons_files }}
           # Authorise GitHub API requests for editorconfig-checker
@@ -112,4 +116,4 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run tests
-        run: npm run test
+        run: node --run test
