@@ -27,7 +27,7 @@ types = ["javascript"]
 [[repos.hooks]]
 id = "ourlint"
 name = "Our lint"
-entry = "node scripts/lint/ourlint.js"
+entry = "node --run ourlint"
 language = "system"
 pass_filenames = false
 always_run = true
@@ -35,7 +35,7 @@ always_run = true
 [[repos.hooks]]
 id = "jsonlint"
 name = "JSON Lint"
-entry = "node scripts/lint/jsonlint.js"
+entry = "node --run jsonlint"
 language = "system"
 pass_filenames = false
 types = ["json"]
