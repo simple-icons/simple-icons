@@ -4102,6 +4102,12 @@
 		"source": "https://deepnote.com"
 	},
 	{
+		"title": "Deezer",
+		"hex": "A238FF",
+		"source": "https://deezerbrand.com/document/37#/-/logo",
+		"guidelines": "https://deezerbrand.com/document/37#/-/logo"
+	},
+	{
 		"title": "Deliveroo",
 		"hex": "00CCBC",
 		"source": "https://deliveroo.com"
@@ -4133,11 +4139,18 @@
 	},
 	{
 		"title": "Deno",
-		"hex": "70FFAF",
+		"hex": "000000",
 		"source": "https://github.com/denoland/docs/blob/5dee713844c7447f80acd4093caa9d350d80bf36/static/img/logo.svg",
+		"guidelines": "https://deno.com/brand",
 		"license": {
 			"type": "MIT"
 		}
+	},
+	{
+		"title": "Deno Deploy",
+		"hex": "002633",
+		"source": "https://deno.com/logos/deploy/mark.svg",
+		"guidelines": "https://deno.com/brand"
 	},
 	{
 		"title": "Denon",
@@ -10986,6 +10999,11 @@
 		"source": "https://www.nbcnews.com"
 	},
 	{
+		"title": "NDI",
+		"hex": "000000",
+		"source": "https://docs.ndi.video/brand/brand-elements/logo"
+	},
+	{
 		"title": "NDR",
 		"hex": "0C1754",
 		"source": "https://www.ndr.de"
@@ -12279,6 +12297,14 @@
 		"hex": "150458",
 		"source": "https://pandas.pydata.org/about/citing.html",
 		"guidelines": "https://pandas.pydata.org/about/citing.html"
+	},
+	{
+		"title": "Pandoc",
+		"hex": "4093DA",
+		"source": "https://github.com/tarleb/pandoc-logo/blob/1c547bbfaefa7e842c67e617775a44bc2342db8e/pandoc.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Pandora",
@@ -16233,6 +16259,12 @@
 		"guidelines": "https://stackoverflow.com/legal/trademark-guidance"
 	},
 	{
+		"title": "Supercell",
+		"hex": "FFFFFF",
+		"source": "https://brand.supercell.com/media",
+		"guidelines": "https://brand.supercell.com/media"
+	},
+	{
 		"title": "Supercrease",
 		"hex": "000000",
 		"source": "https://supercrease.com/wp-content/themes/super-crease/assets/svgs/super-crease.svg"
@@ -16511,6 +16543,11 @@
 		"title": "TAROM",
 		"hex": "003366",
 		"source": "https://www.tarom.ro"
+	},
+	{
+		"title": "Tarteaucitron",
+		"hex": "F7D917",
+		"source": "https://tarteaucitron.io/wp-content/uploads/2024/09/cropped-logo.png"
 	},
 	{
 		"title": "Task",
