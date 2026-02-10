@@ -4,7 +4,7 @@ repo = "local"
 [[repos.hooks]]
 id = "format-icon-data"
 name = "Format icon data"
-entry = "npm run format:icondata"
+entry = "node --run format:icondata"
 language = "system"
 pass_filenames = false
 files.glob = "data/simple-icons.json"
@@ -12,14 +12,14 @@ files.glob = "data/simple-icons.json"
 [[repos.hooks]]
 id = "prettier"
 name = "Prettier"
-entry = "npm run prettier -- --write"
+entry = "node --run prettier -- --write"
 language = "system"
 pass_filenames = false
 
 [[repos.hooks]]
 id = "xo"
 name = "XO"
-entry = "npx xo --fix"
+entry = "node --run xo:fix"
 language = "system"
 pass_filenames = false
 types = ["javascript"]
@@ -43,7 +43,7 @@ types = ["json"]
 [[repos.hooks]]
 id = "svglint"
 name = "SVG Lint"
-entry = "npx svglint --ci --config svglint.config.mjs --git-changed"
+entry = "node --run svglint:base -- --git-changed"
 language = "system"
 pass_filenames = false
 types = ["svg"]
@@ -54,7 +54,7 @@ stages = ["commit"]
 [[repos.hooks]]
 id = "markdownlint"
 name = "Markdownlint"
-entry = "npx markdownlint-cli2 '**/*.md' '#node_modules'"
+entry = "node --run markdownlint"
 language = "system"
 pass_filenames = false
 types = ["markdown"]
