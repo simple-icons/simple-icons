@@ -50,6 +50,9 @@ jobs:
         with:
           list-files: shell
           filters: |
+            docs:
+              - '*!(slugs).md'
+              - '.github/**.md'
             icons:
               - 'icons/*.svg'
             slugs:
