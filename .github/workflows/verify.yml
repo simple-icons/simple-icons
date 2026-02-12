@@ -112,4 +112,6 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run tests
-        run: node --run test
+        run: |
+          node --run build
+          node --run test
