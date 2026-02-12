@@ -23,12 +23,10 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Run linters
         run: node --run lint
-      - name: Build NodeJS package
+      - name: Build Node.js package
         run: node --run build
       - name: Run tests
-        run: |
-          node --run build
-          node --run test
+        run: node --run test
   npm:
     name: NPM Package
     needs: sanity-check
@@ -55,7 +53,7 @@ jobs:
         run: node scripts/release/update-sdk-ts-defs.js
       - name: Minify icons data file
         run: node scripts/release/minify-icons-data.js
-      - name: Build NodeJS package
+      - name: Build Node.js package
         run: node --run build
       - name: Deploy to NPM
         run: npm publish

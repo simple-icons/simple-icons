@@ -23,7 +23,7 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-      - name: Build NodeJS package
+      - name: Build Node.js package
         run: node --run build
   lint:
     name: Lint
@@ -111,7 +111,7 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+      - name: Build Node.js package
+        run: node --run build
       - name: Run tests
-        run: |
-          node --run build
-          node --run test
+        run: node --run test
