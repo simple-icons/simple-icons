@@ -10,9 +10,9 @@ pass_filenames = false
 files.glob = "data/simple-icons.json"
 
 [[repos.hooks]]
-id = "prettier"
-name = "Prettier"
-entry = "node --run prettier -- --write"
+id = "oxfmt"
+name = "Oxfmt"
+entry = "node --run oxfmt"
 language = "system"
 pass_filenames = false
 

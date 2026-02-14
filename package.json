@@ -3,13 +3,15 @@
 	"version": "16.8.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
-		"svg",
-		"icons"
+		"icons",
+		"svg"
 	],
 	"homepage": "https://simpleicons.org",
 	"bugs": {
 		"url": "https://github.com/simple-icons/simple-icons/issues"
 	},
+	"license": "CC0-1.0",
+	"author": "Simple Icons Collaborators",
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@github.com/simple-icons/simple-icons.git"
@@ -24,9 +26,9 @@
 			"url": "https://github.com/sponsors/simple-icons"
 		}
 	],
-	"license": "CC0-1.0",
-	"author": "Simple Icons Collaborators",
 	"sideEffects": false,
+	"main": "index.js",
+	"types": "index.d.ts",
 	"exports": {
 		".": {
 			"types": "./index.d.ts",
@@ -60,24 +62,22 @@
 			"default": "./data/simple-icons.json"
 		}
 	},
-	"main": "index.js",
-	"types": "index.d.ts",
 	"scripts": {
 		"add-icon-data": "node scripts/add-icon-data.js",
 		"build": "node scripts/build/package.js",
 		"clean": "node scripts/build/clean.js",
-		"format": "node --run format:icondata && node --run prettier -- --write && node --run xo:fix",
+		"format": "node --run format:icondata && node --run oxfmt -- --write && node --run xo:fix",
 		"format:icondata": "node scripts/format-icon-data.js",
 		"get-filename": "node scripts/get-filename.js",
 		"jslint": "xo",
 		"jsonlint": "node scripts/lint/jsonlint.js",
-		"lint": "node --run ourlint && node --run prettierlint && node --run jslint && node --run jsonlint && node --run svglint && node --run wslint && node --run tslint && node --run markdownlint",
+		"lint": "node --run ourlint && node --run oxfmtlint && node --run jslint && node --run jsonlint && node --run svglint && node --run wslint && node --run tslint && node --run markdownlint",
 		"markdownlint": "rumdl check .",
 		"ourlint": "node scripts/lint/ourlint.js",
 		"prepare": "node -e \"process.exit(process.env.CI ? 0 : 1)\" || prek install",
 		"prepublishOnly": "node --run build",
-		"prettier": "prettier --ignore-unknown \"**/*.!(js|jsx|mjs|cjs|ts|tsx|mts|cts|svg)\"",
-		"prettierlint": "node --run prettier -- --check --cache",
+		"oxfmt": "oxfmt",
+		"oxfmtlint": "node --run oxfmt -- --check",
 		"postpublish": "node --run clean",
 		"remove-icon": "node scripts/remove-icon.js",
 		"svglint": "node --run svglint:base -- \"icons/*.svg\"",
@@ -107,7 +107,7 @@
 		"jsonschema": "1.5.0",
 		"mocha": "11.7.5",
 		"named-html-entities-json": "1.0.0",
-		"prettier-plugin-packagejson": "2.5.19",
+		"oxfmt": "0.32.0",
 		"rumdl": "0.1.12",
 		"spdx-license-ids": "3.0.22",
 		"svg-path-bbox": "2.1.0",
