@@ -1400,6 +1400,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Indeed` | `indeed` |
 | `Indian Super League` | `indiansuperleague` |
 | `Indie Hackers` | `indiehackers` |
+| `IndieWeb` | `indieweb` |
 | `IndiGo` | `indigo` |
 | `Inductive Automation` | `inductiveautomation` |
 | `Inertia` | `inertia` |
@@ -2113,6 +2114,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Optimism` | `optimism` |
 | `Optuna` | `optuna` |
 | `Orange` | `orange` |
+| `Orchard Core` | `orchardcore` |
 | `ORCID` | `orcid` |
 | `Org` | `org` |
 | `Organic Maps` | `organicmaps` |
@@ -2854,6 +2856,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
+| `Supercell` | `supercell` |
 | `Supercrease` | `supercrease` |
 | `Supermicro` | `supermicro` |
 | `Surfshark` | `surfshark` |
@@ -2904,6 +2907,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tapas` | `tapas` |
 | `Target` | `target` |
 | `TAROM` | `tarom` |
+| `Tarteaucitron` | `tarteaucitron` |
 | `Task` | `task` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
