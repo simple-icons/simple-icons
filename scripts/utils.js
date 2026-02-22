@@ -100,13 +100,12 @@ const sortIconOrDuplicate = (icon) => {
 		'loc',
 	];
 
-	/** @type {T} */
-	const sortedIcon = Object.assign(
+	const sortedIcon = /** @type {T} */ (
 		Object.fromEntries(
 			Object.entries(icon).sort(
 				([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 			),
-		),
+		)
 	);
 
 	return sortedIcon;
@@ -124,13 +123,12 @@ const sortLicense = (license) => {
 
 	const keyOrder = ['type', 'url'];
 
-	/** @type {IconData['license']} */
-	const sortedLicense = Object.assign(
+	const sortedLicense = /** @type {IconData['license']} */ (
 		Object.fromEntries(
 			Object.entries(license).sort(
 				([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 			),
-		),
+		)
 	);
 
 	return sortedLicense;
@@ -146,10 +144,10 @@ const sortAlphabetically = (object) => {
 		return undefined;
 	}
 
-	const sorted = Object.assign(
+	const sorted = /** @type {any} */ (
 		Object.fromEntries(
 			Object.entries(object).sort(([key1], [key2]) => (key1 > key2 ? 1 : -1)),
-		),
+		)
 	);
 	return sorted;
 };
