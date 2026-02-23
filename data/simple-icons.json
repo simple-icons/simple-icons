@@ -1783,6 +1783,11 @@
 		"source": "https://barmenia.de"
 	},
 	{
+		"title": "Base UI",
+		"hex": "EDEDED",
+		"source": "https://base-ui.com"
+	},
+	{
 		"title": "Basecamp",
 		"hex": "1D2D35",
 		"source": "https://basecamp.com/about/press"
@@ -4102,6 +4107,12 @@
 		"source": "https://deepnote.com"
 	},
 	{
+		"title": "Deezer",
+		"hex": "A238FF",
+		"source": "https://deezerbrand.com/document/37#/-/logo",
+		"guidelines": "https://deezerbrand.com/document/37#/-/logo"
+	},
+	{
 		"title": "Deliveroo",
 		"hex": "00CCBC",
 		"source": "https://deliveroo.com"
@@ -4133,11 +4144,18 @@
 	},
 	{
 		"title": "Deno",
-		"hex": "70FFAF",
+		"hex": "000000",
 		"source": "https://github.com/denoland/docs/blob/5dee713844c7447f80acd4093caa9d350d80bf36/static/img/logo.svg",
+		"guidelines": "https://deno.com/brand",
 		"license": {
 			"type": "MIT"
 		}
+	},
+	{
+		"title": "Deno Deploy",
+		"hex": "002633",
+		"source": "https://deno.com/logos/deploy/mark.svg",
+		"guidelines": "https://deno.com/brand"
 	},
 	{
 		"title": "Denon",
@@ -7913,6 +7931,12 @@
 		"source": "https://www.indiehackers.com"
 	},
 	{
+		"title": "IndieWeb",
+		"hex": "FF0000",
+		"source": "https://indieweb.org/images/d/d4/IWC_Vector.svg",
+		"guidelines": "https://indieweb.org/logo"
+	},
+	{
 		"title": "IndiGo",
 		"hex": "09009B",
 		"source": "https://www.goindigo.in"
@@ -9695,6 +9719,11 @@
 		"source": "https://loopback.io/resources"
 	},
 	{
+		"title": "Loops",
+		"hex": "FC5200",
+		"source": "https://app.loops.so/loops.svg"
+	},
+	{
 		"title": "Loot Crate",
 		"hex": "1E1E1E",
 		"source": "https://lootcrate.com"
@@ -10986,6 +11015,11 @@
 		"source": "https://www.nbcnews.com"
 	},
 	{
+		"title": "NDI",
+		"hex": "000000",
+		"source": "https://docs.ndi.video/brand/brand-elements/logo"
+	},
+	{
 		"title": "NDR",
 		"hex": "0C1754",
 		"source": "https://www.ndr.de"
@@ -12048,6 +12082,12 @@
 		"guidelines": "https://system.design.orange.com/0c1af118d/p/494474-guidelines"
 	},
 	{
+		"title": "Orchard Core",
+		"hex": "41B670",
+		"source": "https://docs.orchardcore.net/en/latest/reference/branding/assets/logo/symbol/color/orchard-core-symbol-logo-color.svg",
+		"guidelines": "https://docs.orchardcore.net/en/latest/reference/branding/"
+	},
+	{
 		"title": "ORCID",
 		"hex": "A6CE39",
 		"source": "https://orcid.figshare.com/articles/figure/ORCID_iD_icon_graphics/5008697",
@@ -12281,9 +12321,22 @@
 		"guidelines": "https://pandas.pydata.org/about/citing.html"
 	},
 	{
+		"title": "Pandoc",
+		"hex": "4093DA",
+		"source": "https://github.com/tarleb/pandoc-logo/blob/1c547bbfaefa7e842c67e617775a44bc2342db8e/pandoc.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Pandora",
 		"hex": "224099",
 		"source": "https://www.pandoraforbrands.com"
+	},
+	{
+		"title": "Pangolin",
+		"hex": "F36118",
+		"source": "https://github.com/fosrl/pangolin/blob/b4c01349d19c65c60b189c735a3e3f7e9ab8f9f0/public/logo/pangolin_orange.svg"
 	},
 	{
 		"title": "Pantheon",
@@ -16241,6 +16294,12 @@
 		"guidelines": "https://stackoverflow.com/legal/trademark-guidance"
 	},
 	{
+		"title": "Supercell",
+		"hex": "FFFFFF",
+		"source": "https://brand.supercell.com/media",
+		"guidelines": "https://brand.supercell.com/media"
+	},
+	{
 		"title": "Supercrease",
 		"hex": "000000",
 		"source": "https://supercrease.com/wp-content/themes/super-crease/assets/svgs/super-crease.svg"
@@ -16519,6 +16578,11 @@
 		"title": "TAROM",
 		"hex": "003366",
 		"source": "https://www.tarom.ro"
+	},
+	{
+		"title": "Tarteaucitron",
+		"hex": "F7D917",
+		"source": "https://tarteaucitron.io/wp-content/uploads/2024/09/cropped-logo.png"
 	},
 	{
 		"title": "Task",
@@ -16934,6 +16998,12 @@
 		"title": "TIDAL",
 		"hex": "000000",
 		"source": "https://tidal.com/press"
+	},
+	{
+		"title": "TiDB",
+		"hex": "DC150B",
+		"source": "https://www.pingcap.com/tidb-brand-guidelines/",
+		"guidelines": "https://www.pingcap.com/tidb-brand-guidelines/"
 	},
 	{
 		"title": "TiddlyWiki",
@@ -18987,6 +19057,11 @@
 		"title": "Yeti",
 		"hex": "00263C",
 		"source": "https://www.yeti.com"
+	},
+	{
+		"title": "Yew",
+		"hex": "009A5B",
+		"source": "https://github.com/yewstack/yew/blob/38e2478d9a2b7a251f6fd068675618326d18fd5a/website/static/img/logo.svg"
 	},
 	{
 		"title": "Yii",

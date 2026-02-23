@@ -731,12 +731,14 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DeepL` | `deepl` |
 | `DeepMind` | `deepmind` |
 | `Deepnote` | `deepnote` |
+| `Deezer` | `deezer` |
 | `Deliveroo` | `deliveroo` |
 | `Dell` | `dell` |
 | `Delphi` | `delphi` |
 | `Delta` | `delta` |
 | `Deluge` | `deluge` |
 | `Deno` | `deno` |
+| `Deno Deploy` | `denodeploy` |
 | `Denon` | `denon` |
 | `Dependabot` | `dependabot` |
 | `Depositphotos` | `depositphotos` |
@@ -1398,6 +1400,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Indeed` | `indeed` |
 | `Indian Super League` | `indiansuperleague` |
 | `Indie Hackers` | `indiehackers` |
+| `IndieWeb` | `indieweb` |
 | `IndiGo` | `indigo` |
 | `Inductive Automation` | `inductiveautomation` |
 | `Inertia` | `inertia` |
@@ -1931,6 +1934,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NBA` | `nba` |
 | `NBB` | `nbb` |
 | `NBC` | `nbc` |
+| `NDI` | `ndi` |
 | `NDR` | `ndr` |
 | `NEAR` | `near` |
 | `Nebula` | `nebula` |
@@ -2110,6 +2114,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Optimism` | `optimism` |
 | `Optuna` | `optuna` |
 | `Orange` | `orange` |
+| `Orchard Core` | `orchardcore` |
 | `ORCID` | `orcid` |
 | `Org` | `org` |
 | `Organic Maps` | `organicmaps` |
@@ -2150,6 +2155,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Palo Alto Software` | `paloaltosoftware` |
 | `Panasonic` | `panasonic` |
 | `pandas` | `pandas` |
+| `Pandoc` | `pandoc` |
 | `Pandora` | `pandora` |
 | `Pantheon` | `pantheon` |
 | `Paperless-ngx` | `paperlessngx` |
@@ -2850,6 +2856,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
 | `Super User` | `superuser` |
+| `Supercell` | `supercell` |
 | `Supercrease` | `supercrease` |
 | `Supermicro` | `supermicro` |
 | `Surfshark` | `surfshark` |
@@ -2900,6 +2907,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tapas` | `tapas` |
 | `Target` | `target` |
 | `TAROM` | `tarom` |
+| `Tarteaucitron` | `tarteaucitron` |
 | `Task` | `task` |
 | `Tasmota` | `tasmota` |
 | `Tata` | `tata` |
