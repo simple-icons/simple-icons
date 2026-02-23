@@ -23,8 +23,8 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-      - name: Build NodeJS package
-        run: npm run build
+      - name: Build Node.js package
+        run: node --run build
   lint:
     name: Lint
     runs-on: ubuntu-latest
@@ -78,20 +78,12 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
-        run: sed -i 's/\\"icons\/\*\.svg\\"/$npm_config_icons/' package.json
-      - name: Prepare docs (docs changed)
-        # only lint changed docs
-        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs == 'true'
-        run: sed -i "s/'\*\*\/\*\.md'/"'$npm_config_docs'"/" package.json
-      - name: Prepare docs (no docs changed)
-        # only lint README.md if no changes in docs
-        if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.docs != 'true'
-        run: sed -i "s/'\*\*\/\*\.md'/README.md/" package.json
-      - name: Run linter
-        run: npm run lint --icons="$ICONS_FILES" --docs="$DOCS_FILES"
         env:
-          ICONS_FILES: ${{ steps.changes.outputs.icons_files }}
-          DOCS_FILES: ${{ steps.changes.outputs.docs_files }}
+          npm_config_icons: ${{ steps.changes.outputs.icons_files }}
+        run: sed -i 's/\\"icons\/\*\.svg\\"/$npm_config_icons/' package.json
+      - name: Run linter
+        run: npm run lint
+        env:
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
@@ -120,5 +112,7 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+      - name: Build Node.js package
+        run: node --run build
       - name: Run tests
-        run: npm run test
+        run: node --run test
