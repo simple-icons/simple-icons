@@ -1783,6 +1783,11 @@
 		"source": "https://barmenia.de"
 	},
 	{
+		"title": "Base UI",
+		"hex": "EDEDED",
+		"source": "https://base-ui.com"
+	},
+	{
 		"title": "Basecamp",
 		"hex": "1D2D35",
 		"source": "https://basecamp.com/about/press"
@@ -3533,6 +3538,12 @@
 		"source": "https://convertio.co"
 	},
 	{
+		"title": "Convex",
+		"hex": "EE342F",
+		"source": "https://www.convex.dev/brand",
+		"guidelines": "https://www.convex.dev/brand"
+	},
+	{
 		"title": "Cookiecutter",
 		"hex": "D4AA00",
 		"source": "https://github.com/cookiecutter/cookiecutter/blob/52dd18513bbab7f0fbfcb2938c9644d9092247cf/logo/cookiecutter-logo.svg"
@@ -4096,6 +4107,12 @@
 		"source": "https://deepnote.com"
 	},
 	{
+		"title": "Deezer",
+		"hex": "A238FF",
+		"source": "https://deezerbrand.com/document/37#/-/logo",
+		"guidelines": "https://deezerbrand.com/document/37#/-/logo"
+	},
+	{
 		"title": "Deliveroo",
 		"hex": "00CCBC",
 		"source": "https://deliveroo.com"
@@ -4127,11 +4144,18 @@
 	},
 	{
 		"title": "Deno",
-		"hex": "70FFAF",
+		"hex": "000000",
 		"source": "https://github.com/denoland/docs/blob/5dee713844c7447f80acd4093caa9d350d80bf36/static/img/logo.svg",
+		"guidelines": "https://deno.com/brand",
 		"license": {
 			"type": "MIT"
 		}
+	},
+	{
+		"title": "Deno Deploy",
+		"hex": "002633",
+		"source": "https://deno.com/logos/deploy/mark.svg",
+		"guidelines": "https://deno.com/brand"
 	},
 	{
 		"title": "Denon",
@@ -4232,6 +4256,14 @@
 		"title": "devRant",
 		"hex": "F99A66",
 		"source": "https://devrant.com"
+	},
+	{
+		"title": "Devuan",
+		"hex": "004489",
+		"source": "https://git.devuan.org/devuan/documentation/src/commit/f4931e70e17f043c2824d591bba7c7f70ed583b6/art/graphics/logo/devuan-emblem.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Dgraph",
@@ -6132,6 +6164,11 @@
 		"guidelines": "https://www.ghostery.com/press/"
 	},
 	{
+		"title": "Ghostfolio",
+		"hex": "36CFCC",
+		"source": "https://github.com/ghostfolio/ghostfolio/blob/cc92ecf62a014b27146338bb7a20ed6eeb525fba/apps/client/src/assets/ghost.svg"
+	},
+	{
 		"title": "Ghostty",
 		"hex": "3551F3",
 		"source": "https://github.com/ghostty-org/website/blob/7093f052a2f35e0247fcb828ede644ed74a749a0/public/ghostty-logo.svg"
@@ -7899,6 +7936,12 @@
 		"source": "https://www.indiehackers.com"
 	},
 	{
+		"title": "IndieWeb",
+		"hex": "FF0000",
+		"source": "https://indieweb.org/images/d/d4/IWC_Vector.svg",
+		"guidelines": "https://indieweb.org/logo"
+	},
+	{
 		"title": "IndiGo",
 		"hex": "09009B",
 		"source": "https://www.goindigo.in"
@@ -7949,6 +7992,12 @@
 		"title": "Infracost",
 		"hex": "DB44B8",
 		"source": "https://www.infracost.io/img/logo.svg"
+	},
+	{
+		"title": "Infuse",
+		"hex": "FF8000",
+		"source": "https://static.firecore.com/images/icons/infuse-mono.svg",
+		"guidelines": "https://firecore.com/terms"
 	},
 	{
 		"title": "Ingress",
@@ -8606,6 +8655,11 @@
 		"source": "https://github.com/GoogleContainerTools/kaniko/blob/cf5ca26aa4e2f7bf0de56efdf3b4e86b0ff74ed0/logo/Kaniko-Logo-Monochrome.svg"
 	},
 	{
+		"title": "Karakeep",
+		"hex": "000000",
+		"source": "https://karakeep.app/icons/karakeep-full.svg"
+	},
+	{
 		"title": "Karlsruher Verkehrsverbund",
 		"hex": "9B2321",
 		"source": "https://commons.wikimedia.org/wiki/File:KVV_2010.svg"
@@ -8931,6 +8985,11 @@
 		"title": "Kodi",
 		"hex": "17B2E7",
 		"source": "https://kodi.tv"
+	},
+	{
+		"title": "Kodular",
+		"hex": "4527A0",
+		"source": "https://www.kodular.io"
 	},
 	{
 		"title": "Koenigsegg",
@@ -9489,6 +9548,11 @@
 		"source": "https://linktr.ee"
 	},
 	{
+		"title": "Linkvertise",
+		"hex": "FF8114",
+		"source": "https://linkvertise.com/assets/img/linkvertise_logo_big.svg"
+	},
+	{
 		"title": "Linphone",
 		"hex": "FF5E00",
 		"source": "https://gitlab.linphone.org/BC/public/linphone-desktop/-/blob/90dff93a24cafb6a0144b345233ca53bf8c3d92e/Linphone/data/image/logo.svg"
@@ -9673,6 +9737,11 @@
 		"title": "LoopBack",
 		"hex": "3F5DFF",
 		"source": "https://loopback.io/resources"
+	},
+	{
+		"title": "Loops",
+		"hex": "FC5200",
+		"source": "https://app.loops.so/loops.svg"
 	},
 	{
 		"title": "Loot Crate",
@@ -10966,6 +11035,11 @@
 		"source": "https://www.nbcnews.com"
 	},
 	{
+		"title": "NDI",
+		"hex": "000000",
+		"source": "https://docs.ndi.video/brand/brand-elements/logo"
+	},
+	{
 		"title": "NDR",
 		"hex": "0C1754",
 		"source": "https://www.ndr.de"
@@ -12028,6 +12102,12 @@
 		"guidelines": "https://system.design.orange.com/0c1af118d/p/494474-guidelines"
 	},
 	{
+		"title": "Orchard Core",
+		"hex": "41B670",
+		"source": "https://docs.orchardcore.net/en/latest/reference/branding/assets/logo/symbol/color/orchard-core-symbol-logo-color.svg",
+		"guidelines": "https://docs.orchardcore.net/en/latest/reference/branding/"
+	},
+	{
 		"title": "ORCID",
 		"hex": "A6CE39",
 		"source": "https://orcid.figshare.com/articles/figure/ORCID_iD_icon_graphics/5008697",
@@ -12047,6 +12127,12 @@
 		"title": "Origin",
 		"hex": "F56C2D",
 		"source": "https://www.origin.com/gbr/en-us/store"
+	},
+	{
+		"title": "Ory",
+		"hex": "4F46E5",
+		"source": "https://www.ory.com/brand",
+		"guidelines": "https://www.ory.com/brand"
 	},
 	{
 		"title": "Osano",
@@ -12255,9 +12341,22 @@
 		"guidelines": "https://pandas.pydata.org/about/citing.html"
 	},
 	{
+		"title": "Pandoc",
+		"hex": "4093DA",
+		"source": "https://github.com/tarleb/pandoc-logo/blob/1c547bbfaefa7e842c67e617775a44bc2342db8e/pandoc.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Pandora",
 		"hex": "224099",
 		"source": "https://www.pandoraforbrands.com"
+	},
+	{
+		"title": "Pangolin",
+		"hex": "F36118",
+		"source": "https://github.com/fosrl/pangolin/blob/b4c01349d19c65c60b189c735a3e3f7e9ab8f9f0/public/logo/pangolin_orange.svg"
 	},
 	{
 		"title": "Pantheon",
@@ -15496,6 +15595,11 @@
 		"source": "https://getsol.us/branding/"
 	},
 	{
+		"title": "solved.ac",
+		"hex": "17CE3A",
+		"source": "https://static.solved.ac/logo.svg"
+	},
+	{
 		"title": "Sonar",
 		"hex": "FD3456",
 		"source": "https://www.sonarsource.com"
@@ -16207,6 +16311,12 @@
 		"guidelines": "https://stackoverflow.com/legal/trademark-guidance"
 	},
 	{
+		"title": "Supercell",
+		"hex": "FFFFFF",
+		"source": "https://brand.supercell.com/media",
+		"guidelines": "https://brand.supercell.com/media"
+	},
+	{
 		"title": "Supercrease",
 		"hex": "000000",
 		"source": "https://supercrease.com/wp-content/themes/super-crease/assets/svgs/super-crease.svg"
@@ -16485,6 +16595,11 @@
 		"title": "TAROM",
 		"hex": "003366",
 		"source": "https://www.tarom.ro"
+	},
+	{
+		"title": "Tarteaucitron",
+		"hex": "F7D917",
+		"source": "https://tarteaucitron.io/wp-content/uploads/2024/09/cropped-logo.png"
 	},
 	{
 		"title": "Task",
@@ -16902,6 +17017,12 @@
 		"source": "https://tidal.com/press"
 	},
 	{
+		"title": "TiDB",
+		"hex": "DC150B",
+		"source": "https://www.pingcap.com/tidb-brand-guidelines/",
+		"guidelines": "https://www.pingcap.com/tidb-brand-guidelines/"
+	},
+	{
 		"title": "TiddlyWiki",
 		"hex": "111111",
 		"source": "https://tiddlywiki.com"
@@ -17203,6 +17324,11 @@
 		"title": "Treyarch",
 		"hex": "000000",
 		"source": "https://en.wikipedia.org/wiki/File:Treyarch_logo.svg"
+	},
+	{
+		"title": "Trezor",
+		"hex": "141609",
+		"source": "https://satoshilabs.visualbook.pro/content/2_trezor/1_logos/2_symbol/trezor-symbol-black-rgb.svg"
 	},
 	{
 		"title": "Tricentis",
@@ -17877,8 +18003,8 @@
 	},
 	{
 		"title": "Vencord",
-		"hex": "D3859B",
-		"source": "https://github.com/Vencord/Vesktop/blob/ccff1ac3efde2b4fc826d2f411d79e42d80dcb70/build/icon.png"
+		"hex": "EB7396",
+		"source": "https://github.com/Vencord/Vesktop/blob/1f17c18362b12a9e8af21e571e844d05bda87ff5/build/icon.svg"
 	},
 	{
 		"title": "Venmo",
@@ -18953,6 +19079,11 @@
 		"title": "Yeti",
 		"hex": "00263C",
 		"source": "https://www.yeti.com"
+	},
+	{
+		"title": "Yew",
+		"hex": "009A5B",
+		"source": "https://github.com/yewstack/yew/blob/38e2478d9a2b7a251f6fd068675618326d18fd5a/website/static/img/logo.svg"
 	},
 	{
 		"title": "Yii",
