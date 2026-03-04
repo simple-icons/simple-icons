@@ -453,7 +453,7 @@ Where the `locale` is an [IETF language tag] and each localized title is **diffe
 
 ##### Old Names
 
-We collect old names to make it possible to find the brand by it's old name. To add an old name you add the following to the icon data:
+We collect old names to make it possible to find the brand by its old name. To add an old name you add the following to the icon data:
 
 ```json
 {

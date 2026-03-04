@@ -3,7 +3,7 @@
 /**
  * @file Internal utilities.
  *
- * Here resides all the functionality that does not qualifies to reside
+ * Here resides all the functionality that does not qualify to reside
  * in the SDK because is not publicly exposed.
  */
 
@@ -96,7 +96,7 @@ const sortIconOrDuplicate = (icon) => {
 		'guidelines',
 		'license',
 		'aliases',
-		// This is not appears in icon data but it's in the alias object.
+		// This does not appear in icon data but it's in the alias object.
 		'loc',
 	];
 

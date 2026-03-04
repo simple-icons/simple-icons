@@ -12,7 +12,7 @@ import svgpath from 'svgpath';
 import {SVG_PATH_REGEX, getIconsData, htmlFriendlyToTitle} from './sdk.mjs';
 
 /**
- * The svgpath library does not includes a `segments` property on their interface.
+ * The svgpath library does not include a `segments` property on their interface.
  * See https://github.com/fontello/svgpath/pull/67/files for more information.
  * @typedef {import('svg-path-segments').Segment & {segments: [string, ...number[]][]}} Segment
  */
@@ -214,7 +214,7 @@ const config = {
 				];
 				if (namedEntitiesCodepoints.length > 0) {
 					for (const match of namedEntitiesCodepoints) {
-						const namedEntiyReprIndex =
+						const namedEntityReprIndex =
 							getTitleTextIndex(ast.source) + match.index + 1;
 
 						if (!xmlNamedEntities.includes(match[1].toLowerCase())) {
@@ -237,7 +237,7 @@ const config = {
 
 							reporter.error(
 								'Named entity representation of encoded character' +
-									` "${match[0]}" found at index ${namedEntiyReprIndex}.` +
+									` "${match[0]}" found at index ${namedEntityReprIndex}.` +
 									` Replace it with ${replacement}.`,
 							);
 						}
@@ -409,11 +409,11 @@ const config = {
 				];
 				const upperMovementCommands = ['M', 'L'];
 				const upperHorDirectionCommand = 'H';
-				const upperVersionDirectionCommand = 'V';
+				const upperVerticalDirectionCommand = 'V';
 				/** @type {(string | number | undefined)[]} */
 				const upperDirectionCommands = [
 					upperHorDirectionCommand,
-					upperVersionDirectionCommand,
+					upperVerticalDirectionCommand,
 				];
 				const upperCurveCommand = 'C';
 				const upperShorthandCurveCommand = 'S';
@@ -504,7 +504,7 @@ const config = {
 
 									// If the previous command was a vertical movement,
 									// we need to consider the single coordinate as y
-									if (upperVersionDirectionCommand === xPreviousCoordDeep) {
+									if (upperVerticalDirectionCommand === xPreviousCoordDeep) {
 										xPreviousCoordDeep = undefined;
 									}
 
@@ -560,7 +560,7 @@ const config = {
 									x1Coord === xPreviousCoord) ||
 								// Absolute vertical direction (V) having
 								// the same y coordinate as the previous segment
-								(upperVersionDirectionCommand === command &&
+								(upperVerticalDirectionCommand === command &&
 									x1Coord === yPreviousCoord) ||
 								// Absolute movement (M or L) having the same
 								// coordinate as the previous segment
@@ -641,7 +641,7 @@ const config = {
 				reporter.name = 'collinear-segments';
 				/**
 				 * Extracts collinear coordinates from SVG path straight lines
-				 * (does not extracts collinear coordinates from curves).
+				 * (does not extract collinear coordinates from curves).
 				 * @returns {import('svg-path-segments').Segment[]} The collinear segments.
 				 */
 				// eslint-disable-next-line complexity
