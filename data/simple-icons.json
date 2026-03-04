@@ -148,6 +148,11 @@
 		"source": "https://www.abbvie.com"
 	},
 	{
+		"title": "Algora",
+		"hex": "5A3ABF",
+		"source": "https://algora.io/asset/storage/v1/object/public/images/logo-256px.png"
+	},
+	{
 		"title": "about.me",
 		"hex": "333333",
 		"source": "https://about.me/assets",
@@ -334,7 +339,7 @@
 		"source": "https://www.aeroflot.ru/ru-en/information/onboard/press"
 	},
 	{
-		"title": "Aeroméxico",
+		"title": "Aerom\u00e9xico",
 		"hex": "0B2343",
 		"source": "https://www.aeromexico.com"
 	},
@@ -345,7 +350,7 @@
 		"guidelines": "https://afdian.com/album/248b4bb2c9b111e9a9bb52540025c377/c3d32ae4b5f311eab4a952540025c377",
 		"aliases": {
 			"loc": {
-				"zh-CN": "爱发电"
+				"zh-CN": "\u7231\u53d1\u7535"
 			}
 		}
 	},
@@ -551,7 +556,7 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Aldi_Nord_201x_logo.svg"
 	},
 	{
-		"title": "Aldi Süd",
+		"title": "Aldi S\u00fcd",
 		"hex": "00005F",
 		"source": "https://www.aldi-sued.de"
 	},
@@ -659,7 +664,7 @@
 				"Ameblo"
 			],
 			"loc": {
-				"ja-JP": "アメブロ"
+				"ja-JP": "\u30a2\u30e1\u30d6\u30ed"
 			}
 		}
 	},
@@ -1733,7 +1738,7 @@
 		"source": "https://www.baidu.com"
 	},
 	{
-		"title": "Bakaláři",
+		"title": "Bakal\u00e1\u0159i",
 		"hex": "00A2E2",
 		"source": "https://konference.bakalari.cz"
 	},
@@ -2704,7 +2709,7 @@
 				}
 			],
 			"loc": {
-				"fr-CA": "Société Radio-Canada"
+				"fr-CA": "Soci\u00e9t\u00e9 Radio-Canada"
 			}
 		}
 	},
@@ -2972,7 +2977,7 @@
 		"source": "https://brand.citrix.com"
 	},
 	{
-		"title": "Citroën",
+		"title": "Citro\u00ebn",
 		"hex": "DA291C",
 		"source": "https://www.stellantis.com/en/brands/citroen"
 	},
@@ -3931,7 +3936,7 @@
 		"source": "https://github.com/dask/dask/blob/67e648922512615f94f8a90726423e721d0e3eb2/docs/source/images/dask_icon_black.svg"
 	},
 	{
-		"title": "Dassault Systèmes",
+		"title": "Dassault Syst\u00e8mes",
 		"hex": "005386",
 		"source": "https://www.3ds.com",
 		"aliases": {
@@ -4015,7 +4020,7 @@
 		"source": "https://www.meituan.com/media",
 		"aliases": {
 			"loc": {
-				"zh-CN": "大众点评"
+				"zh-CN": "\u5927\u4f17\u70b9\u8bc4"
 			}
 		}
 	},
@@ -4205,7 +4210,7 @@
 			],
 			"loc": {
 				"de-AT": "Magenta Telekom",
-				"mk-MK": "Македонски Телеком"
+				"mk-MK": "\u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438 \u0422\u0435\u043b\u0435\u043a\u043e\u043c"
 			}
 		}
 	},
@@ -4700,7 +4705,7 @@
 		"source": "https://easyeda.com",
 		"aliases": {
 			"loc": {
-				"zh-CN": "嘉立创EDA"
+				"zh-CN": "\u5609\u7acb\u521bEDA"
 			}
 		}
 	},
@@ -6490,7 +6495,7 @@
 		"guidelines": "https://about.google/brand-resource-center/brand-elements/",
 		"aliases": {
 			"loc": {
-				"ko-KR": "구글"
+				"ko-KR": "\uad6c\uae00"
 			}
 		}
 	},
@@ -7409,7 +7414,7 @@
 		"source": "https://hexlet.io",
 		"aliases": {
 			"loc": {
-				"ru-RU": "Хекслет"
+				"ru-RU": "\u0425\u0435\u043a\u0441\u043b\u0435\u0442"
 			}
 		}
 	},
@@ -7840,7 +7845,7 @@
 		"source": "https://www.ikea.com"
 	},
 	{
-		"title": "Île-de-France Mobilités",
+		"title": "\u00cele-de-France Mobilit\u00e9s",
 		"hex": "67B4E7",
 		"source": "https://www.iledefrance-mobilites.fr"
 	},
@@ -8205,7 +8210,7 @@
 		"source": "https://www.isc2.org",
 		"aliases": {
 			"aka": [
-				"(ISC)²"
+				"(ISC)\u00b2"
 			]
 		}
 	},
@@ -8616,7 +8621,7 @@
 		"source": "https://www.kakaocorp.com/kakao/introduce/ci",
 		"aliases": {
 			"loc": {
-				"ko-KR": "카카오"
+				"ko-KR": "\uce74\uce74\uc624"
 			}
 		}
 	},
@@ -8626,7 +8631,7 @@
 		"source": "https://commons.wikimedia.org/wiki/File:KakaoTalk_logo.svg",
 		"aliases": {
 			"loc": {
-				"ko-KR": "카카오톡"
+				"ko-KR": "\uce74\uce74\uc624\ud1a1"
 			}
 		}
 	},
@@ -8870,7 +8875,7 @@
 		"guidelines": "https://www.kinopoisk.ru/special/branding",
 		"aliases": {
 			"loc": {
-				"ru-RU": "КиноПоиск"
+				"ru-RU": "\u041a\u0438\u043d\u043e\u041f\u043e\u0438\u0441\u043a"
 			}
 		}
 	},
@@ -9040,7 +9045,7 @@
 		"guidelines": "https://www.jetbrains.com/company/brand/",
 		"aliases": {
 			"loc": {
-				"ko-KR": "코틀린"
+				"ko-KR": "\ucf54\ud2c0\ub9b0"
 			}
 		}
 	},
@@ -9128,7 +9133,7 @@
 		"source": "https://uk.kyocera.com"
 	},
 	{
-		"title": "L'Équipe",
+		"title": "L'\u00c9quipe",
 		"hex": "E42829",
 		"source": "https://commons.wikimedia.org/wiki/File:L_Equipe_Logo.svg"
 	},
@@ -9150,7 +9155,7 @@
 		"source": "https://www.lada.ru",
 		"aliases": {
 			"loc": {
-				"ru-RU": "Лада"
+				"ru-RU": "\u041b\u0430\u0434\u0430"
 			}
 		}
 	},
@@ -9511,8 +9516,8 @@
 		"guidelines": "https://line.me/en/logo",
 		"aliases": {
 			"loc": {
-				"ja-JP": "ライン",
-				"ko-KR": "라인"
+				"ja-JP": "\u30e9\u30a4\u30f3",
+				"ko-KR": "\ub77c\uc778"
 			}
 		}
 	},
@@ -10288,7 +10293,7 @@
 		"source": "https://www.meituan.com/media",
 		"aliases": {
 			"loc": {
-				"zh-CN": "美团"
+				"zh-CN": "\u7f8e\u56e2"
 			}
 		}
 	},
@@ -10298,7 +10303,7 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Meizu.svg",
 		"aliases": {
 			"loc": {
-				"zh-CN": "魅族"
+				"zh-CN": "\u9b45\u65cf"
 			}
 		}
 	},
@@ -10385,7 +10390,7 @@
 		"source": "https://facebook.github.io/metro/"
 	},
 	{
-		"title": "Metro de la Ciudad de México",
+		"title": "Metro de la Ciudad de M\u00e9xico",
 		"hex": "F77E1C",
 		"source": "https://es.wikipedia.org/wiki/Archivo:Metro_de_la_Ciudad_de_M%C3%A9xico_(logo)_version_2019.svg"
 	},
@@ -10395,7 +10400,7 @@
 		"source": "https://commons.wikimedia.org/wiki/File:MetroMadridLogo.svg"
 	},
 	{
-		"title": "Métro de Paris",
+		"title": "M\u00e9tro de Paris",
 		"hex": "003E95",
 		"source": "https://www.ratp.fr"
 	},
@@ -10831,7 +10836,7 @@
 		}
 	},
 	{
-		"title": "Müller",
+		"title": "M\u00fcller",
 		"hex": "F46519",
 		"source": "https://www.mueller.de"
 	},
@@ -10959,7 +10964,7 @@
 		"source": "https://namu.wiki/w/%ED%8C%8C%EC%9D%BC:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%20%EC%95%84%EC%9D%B4%EC%BD%98.svg",
 		"aliases": {
 			"loc": {
-				"ko-KR": "나무위키"
+				"ko-KR": "\ub098\ubb34\uc704\ud0a4"
 			}
 		}
 	},
@@ -11015,8 +11020,8 @@
 		"guidelines": "https://developers.naver.com/docs/login/bi/bi.md",
 		"aliases": {
 			"loc": {
-				"ja-JP": "ネイバー",
-				"ko-KR": "네이버"
+				"ja-JP": "\u30cd\u30a4\u30d0\u30fc",
+				"ko-KR": "\ub124\uc774\ubc84"
 			}
 		}
 	},
@@ -11119,7 +11124,7 @@
 		"source": "https://y.music.163.com/m",
 		"aliases": {
 			"loc": {
-				"zh-CN": "网易云音乐"
+				"zh-CN": "\u7f51\u6613\u4e91\u97f3\u4e50"
 			}
 		}
 	},
@@ -11192,7 +11197,7 @@
 				}
 			],
 			"loc": {
-				"ja-JP": "新日本プロレスリング"
+				"ja-JP": "\u65b0\u65e5\u672c\u30d7\u30ed\u30ec\u30b9\u30ea\u30f3\u30b0"
 			}
 		}
 	},
@@ -11610,12 +11615,12 @@
 		"guidelines": "https://www.telefonica.de/presse/fotos/logos.html"
 	},
 	{
-		"title": "ÖBB",
+		"title": "\u00d6BB",
 		"hex": "E40327",
 		"source": "https://presse.oebb.at/de/fotos-videos/oebb-logos",
 		"aliases": {
 			"aka": [
-				"Österreichische Bundesbahnen"
+				"\u00d6sterreichische Bundesbahnen"
 			]
 		}
 	},
@@ -12701,7 +12706,7 @@
 		"source": "https://magicalmirai.com"
 	},
 	{
-		"title": "Picard Surgelés",
+		"title": "Picard Surgel\u00e9s",
 		"hex": "2D4999",
 		"source": "https://www.picard.fr"
 	},
@@ -14595,7 +14600,7 @@
 		"guidelines": "https://www.rstudio.com/about/logos"
 	},
 	{
-		"title": "RTÉ",
+		"title": "RT\u00c9",
 		"hex": "00A7B3",
 		"source": "https://www.rte.ie/archives/"
 	},
@@ -14615,10 +14620,10 @@
 		"source": "https://www.rtm.fr",
 		"aliases": {
 			"aka": [
-				"Régie des Transports Métropolitains"
+				"R\u00e9gie des Transports M\u00e9tropolitains"
 			],
 			"old": [
-				"Régie des Transports de Marseille"
+				"R\u00e9gie des Transports de Marseille"
 			]
 		}
 	},
@@ -14822,7 +14827,7 @@
 		}
 	},
 	{
-		"title": "São Paulo Metro",
+		"title": "S\u00e3o Paulo Metro",
 		"hex": "004382",
 		"source": "https://commons.wikimedia.org/wiki/File:Sao_Paulo_Metro_Logo.svg"
 	},
@@ -15350,12 +15355,12 @@
 				"sy"
 			],
 			"loc": {
-				"zh-CN": "思源笔记",
-				"zh-HK": "思源筆記",
-				"zh-MO": "思源筆記",
-				"zh-MY": "思源笔记",
-				"zh-SG": "思源笔记",
-				"zh-TW": "思源筆記"
+				"zh-CN": "\u601d\u6e90\u7b14\u8bb0",
+				"zh-HK": "\u601d\u6e90\u7b46\u8a18",
+				"zh-MO": "\u601d\u6e90\u7b46\u8a18",
+				"zh-MY": "\u601d\u6e90\u7b14\u8bb0",
+				"zh-SG": "\u601d\u6e90\u7b14\u8bb0",
+				"zh-TW": "\u601d\u6e90\u7b46\u8a18"
 			}
 		}
 	},
@@ -15391,7 +15396,7 @@
 		"source": "https://www.skillshare.com"
 	},
 	{
-		"title": "ŠKODA",
+		"title": "\u0160KODA",
 		"hex": "0E3A2F",
 		"source": "https://www.skoda-connect.com"
 	},
@@ -15542,7 +15547,7 @@
 		"source": "https://socket.io"
 	},
 	{
-		"title": "Softcatalà",
+		"title": "Softcatal\u00e0",
 		"hex": "BA2626",
 		"source": "https://www.softcatala.org/uploads/2016/03/SC_marca.svg",
 		"guidelines": "https://www.softcatala.org/premsa/imatge-corporativa",
@@ -15926,8 +15931,8 @@
 		"aliases": {
 			"loc": {
 				"ch-DE": "Schweizerische Radio- und Fernsehgesellschaft",
-				"ch-FR": "Société suisse de radiodiffusion et télévision",
-				"ch-IT": "Società svizzera di radiotelevisione",
+				"ch-FR": "Soci\u00e9t\u00e9 suisse de radiodiffusion et t\u00e9l\u00e9vision",
+				"ch-IT": "Societ\u00e0 svizzera di radiotelevisione",
 				"ch-RM": "Societad Svizra da Radio e Televisiun",
 				"gb-EN": "Swiss Broadcasting Corporation"
 			}
@@ -16491,7 +16496,7 @@
 		"source": "https://tabelog.com",
 		"aliases": {
 			"loc": {
-				"ja-JP": "食べログ"
+				"ja-JP": "\u98df\u3079\u30ed\u30b0"
 			}
 		}
 	},
@@ -16506,7 +16511,7 @@
 		"source": "https://www.tacobell.com"
 	},
 	{
-		"title": "tado°",
+		"title": "tado\u00b0",
 		"hex": "FFA900",
 		"source": "https://www.tado.com/gb-en/press-assets"
 	},
@@ -16698,12 +16703,12 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Tele_5_Logo_2021.svg"
 	},
 	{
-		"title": "Télé-Québec",
+		"title": "T\u00e9l\u00e9-Qu\u00e9bec",
 		"hex": "1343FB",
 		"source": "https://www.telequebec.tv/societe/logo-et-normes-techniques"
 	},
 	{
-		"title": "Telefónica",
+		"title": "Telef\u00f3nica",
 		"hex": "0066FF",
 		"source": "https://commons.wikimedia.org/wiki/File:Telef%C3%B3nica_2021_logo.svg"
 	},
@@ -17099,7 +17104,7 @@
 		"source": "https://tistory.com",
 		"aliases": {
 			"loc": {
-				"ko-KR": "티스토리"
+				"ko-KR": "\ud2f0\uc2a4\ud1a0\ub9ac"
 			}
 		}
 	},
@@ -17728,7 +17733,7 @@
 		"source": "https://www.uniqlo.com",
 		"aliases": {
 			"loc": {
-				"ja-JP": "ユニクロ"
+				"ja-JP": "\u30e6\u30cb\u30af\u30ed"
 			}
 		}
 	},
@@ -18087,7 +18092,7 @@
 				"VM"
 			],
 			"loc": {
-				"ko-KR": "빅토리아메트릭스"
+				"ko-KR": "\ube45\ud1a0\ub9ac\uc544\uba54\ud2b8\ub9ad\uc2a4"
 			}
 		}
 	},
@@ -18955,7 +18960,7 @@
 		"source": "https://pro.xiaohongshu.com",
 		"aliases": {
 			"loc": {
-				"zh-CN": "小红书"
+				"zh-CN": "\u5c0f\u7ea2\u4e66"
 			}
 		}
 	},
@@ -19160,7 +19165,7 @@
 		"source": "https://github.com/YunoHost/doc/blob/0157b052481407b3c06cc2892de225f14c42520b/images/ynh_logo_black.svg"
 	},
 	{
-		"title": "Żabka",
+		"title": "\u017babka",
 		"hex": "006420",
 		"source": "https://www.zabka.pl"
 	},
