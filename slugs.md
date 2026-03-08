@@ -534,6 +534,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clever Cloud` | `clevercloud` |
 | `ClickHouse` | `clickhouse` |
 | `ClickUp` | `clickup` |
+| `Cline` | `cline` |
 | `CLion` | `clion` |
 | `Clockify` | `clockify` |
 | `Clojure` | `clojure` |
@@ -782,6 +783,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DJI` | `dji` |
 | `Dlib` | `dlib` |
 | `DLNA` | `dlna` |
+| `dlthub` | `dlthub` |
 | `dm` | `dm` |
 | `DMM` | `dmm` |
 | `Docker` | `docker` |
@@ -1708,6 +1710,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LogMeIn` | `logmein` |
 | `Logseq` | `logseq` |
 | `Logstash` | `logstash` |
+| `Longhorn` | `longhorn` |
 | `Looker` | `looker` |
 | `Loom` | `loom` |
 | `Loop` | `loop` |
