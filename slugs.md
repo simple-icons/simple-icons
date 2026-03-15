@@ -624,6 +624,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Contactless Payment` | `contactlesspayment` |
 | `containerd` | `containerd` |
 | `Contao` | `contao` |
+| `Contensis` | `contensis` |
 | `Contentful` | `contentful` |
 | `Contentstack` | `contentstack` |
 | `Continente` | `continente` |
@@ -763,6 +764,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `diagrams.net` | `diagramsdotnet` |
 | `Dialogflow` | `dialogflow` |
 | `Diaspora` | `diaspora` |
+| `DiceBear` | `dicebear` |
 | `Dictionary.com` | `dictionarydotcom` |
 | `Digg` | `digg` |
 | `Digi-Key Electronics` | `digikeyelectronics` |
