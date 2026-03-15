@@ -534,6 +534,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Clever Cloud` | `clevercloud` |
 | `ClickHouse` | `clickhouse` |
 | `ClickUp` | `clickup` |
+| `Cline` | `cline` |
 | `CLion` | `clion` |
 | `Clockify` | `clockify` |
 | `Clojure` | `clojure` |
@@ -623,6 +624,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Contactless Payment` | `contactlesspayment` |
 | `containerd` | `containerd` |
 | `Contao` | `contao` |
+| `Contensis` | `contensis` |
 | `Contentful` | `contentful` |
 | `Contentstack` | `contentstack` |
 | `Continente` | `continente` |
@@ -762,6 +764,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `diagrams.net` | `diagramsdotnet` |
 | `Dialogflow` | `dialogflow` |
 | `Diaspora` | `diaspora` |
+| `DiceBear` | `dicebear` |
 | `Dictionary.com` | `dictionarydotcom` |
 | `Digg` | `digg` |
 | `Digi-Key Electronics` | `digikeyelectronics` |
@@ -782,6 +785,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DJI` | `dji` |
 | `Dlib` | `dlib` |
 | `DLNA` | `dlna` |
+| `dlthub` | `dlthub` |
 | `dm` | `dm` |
 | `DMM` | `dmm` |
 | `Docker` | `docker` |
@@ -1708,6 +1712,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LogMeIn` | `logmein` |
 | `Logseq` | `logseq` |
 | `Logstash` | `logstash` |
+| `Longhorn` | `longhorn` |
 | `Looker` | `looker` |
 | `Loom` | `loom` |
 | `Loop` | `loop` |

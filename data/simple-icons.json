@@ -3506,6 +3506,11 @@
 		"guidelines": "https://contao.org/en/media"
 	},
 	{
+		"title": "Contensis",
+		"hex": "37BFA7",
+		"source": "https://github.com/contensis/cli/blob/d98c9ab312de942b2417040fc51a021de39a7fd5/assets/contensis-logo.svg"
+	},
+	{
 		"title": "Contentful",
 		"hex": "2478CC",
 		"source": "https://press.contentful.com/media_kits"
@@ -4300,6 +4305,14 @@
 		"title": "Diaspora",
 		"hex": "000000",
 		"source": "https://wiki.diasporafoundation.org/Branding"
+	},
+	{
+		"title": "DiceBear",
+		"hex": "0284C7",
+		"source": "https://github.com/dicebear/brand/blob/f1471839b82900c1b6da4a606d28b319949ebfc9/src/icon.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
 	},
 	{
 		"title": "Dictionary.com",
