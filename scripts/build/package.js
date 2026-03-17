@@ -134,10 +134,7 @@ const buildIcons = async () =>
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			/** @type {IconDataAndObject} */
 			// @ts-expect-error: Some properties does not exist. We can polish it in TypeScript migration.
-			const icon = {...iconData, svg};
-			// eslint-disable-next-line unicorn/no-immediate-mutation
-			icon.path = svgToPath(svg);
-			icon.slug = slug;
+			const icon = {...iconData, svg, path: svgToPath(svg), slug};
 			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
 			const iconExportName = slugToVariableName(slug);
 			return {icon, iconObjectRepr, iconExportName};
