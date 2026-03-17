@@ -52,7 +52,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @param {string} value The value to escape.
  * @returns {string} The escaped value.
  */
-const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
+const escape = (value) => value.replaceAll(/(?<!\\)'/gv, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
@@ -133,9 +133,8 @@ const buildIcons = async () =>
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			/** @type {IconDataAndObject} */
-			const icon = {};
-			Object.assign(icon, iconData);
-			icon.svg = svg;
+			const icon = {...iconData, svg};
+			// eslint-disable-next-line unicorn/no-immediate-mutation
 			icon.path = svgToPath(svg);
 			icon.slug = slug;
 			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
