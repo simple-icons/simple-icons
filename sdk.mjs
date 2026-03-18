@@ -29,15 +29,15 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 
 const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
 	`[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
-	'g',
+	'gv',
 );
 
-const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/gv;
 
 /**
  * Regex to validate SVG paths.
  */
-export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
+export const SVG_PATH_REGEX = /^m[\-mzlhvcsqtae\d,. ]+$/iv;
 
 /**
  * Get the slug/filename for an icon.
@@ -88,7 +88,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 		.replaceAll('"', '&quot;')
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
-		.replaceAll(/./g, (char) => {
+		.replaceAll(/./gv, (char) => {
 			const charCode = char.codePointAt(0) || 0;
 			return charCode > 127 ? `&#${charCode};` : char;
 		});
@@ -101,11 +101,11 @@ export const titleToHtmlFriendly = (brandTitle) =>
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 	htmlFriendlyTitle
-		.replaceAll(/&#(\d+);/g, (_, number_) =>
+		.replaceAll(/&#(\d+);/gv, (_, number_) =>
 			String.fromCodePoint(Number.parseInt(number_, 10)),
 		)
 		.replaceAll(
-			/&(quot|amp|lt|gt);/g,
+			/&(quot|amp|lt|gt);/gv,
 			/**
 			 * Replace HTML entity references with their respective decoded characters.
 			 * @param {string} _ Full match.
@@ -168,22 +168,22 @@ export const normalizeColor = (text) => {
  */
 const parseModuleAuthorFromLine = (line) => {
 	const [module_, author] = line.split(' | ');
-	const moduleName = />([^<]+)<\/a>$/.exec(module_)?.[1];
+	const moduleName = />([^<]+)<\/a>$/v.exec(module_)?.[1];
 	if (moduleName === undefined) {
 		throw new Error(`Module name improperly parsed from line: ${line}`);
 	}
 
-	const moduleUrl = /^\s*<a href="(.[^"]+)"/.exec(module_)?.[1];
+	const moduleUrl = /^\s*<a href="(.[^"]+)"/v.exec(module_)?.[1];
 	if (moduleUrl === undefined) {
 		throw new Error(`Module URL improperly parsed from line: ${line}`);
 	}
 
-	const authorName = /\[(.+)]/.exec(author)?.[1];
+	const authorName = /\[(.+)\]/v.exec(author)?.[1];
 	if (authorName === undefined) {
 		throw new Error(`Author improperly parsed from line: ${line}`);
 	}
 
-	const authorUrl = /\((.+)\)/.exec(author)?.[1];
+	const authorUrl = /\((.+)\)/v.exec(author)?.[1];
 	if (authorUrl === undefined) {
 		throw new Error(`Author URL improperly parsed from line: ${line}`);
 	}

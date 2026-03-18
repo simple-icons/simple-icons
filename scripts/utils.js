@@ -103,7 +103,7 @@ const sortIconOrDuplicate = (icon) => {
 	/** @type {T} */
 	const sortedIcon = Object.assign(
 		Object.fromEntries(
-			Object.entries(icon).sort(
+			Object.entries(icon).toSorted(
 				([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 			),
 		),
@@ -127,7 +127,7 @@ const sortLicense = (license) => {
 	/** @type {IconData['license']} */
 	const sortedLicense = Object.assign(
 		Object.fromEntries(
-			Object.entries(license).sort(
+			Object.entries(license).toSorted(
 				([key1], [key2]) => keyOrder.indexOf(key1) - keyOrder.indexOf(key2),
 			),
 		),
@@ -148,7 +148,9 @@ const sortAlphabetically = (object) => {
 
 	const sorted = Object.assign(
 		Object.fromEntries(
-			Object.entries(object).sort(([key1], [key2]) => (key1 > key2 ? 1 : -1)),
+			Object.entries(object).toSorted(([key1], [key2]) =>
+				key1 > key2 ? 1 : -1,
+			),
 		),
 	);
 	return sorted;
@@ -167,9 +169,9 @@ export const formatIconData = (iconsData) => {
 			license: sortLicense(icon.license),
 			aliases: icon.aliases
 				? sortAlphabetically({
-						aka: icon.aliases.aka?.sort(collator.compare),
+						aka: icon.aliases.aka?.toSorted(collator.compare),
 						dup: icon.aliases.dup
-							? icon.aliases.dup.sort(sortDuplicatesCompare).map((d) =>
+							? icon.aliases.dup.toSorted(sortDuplicatesCompare).map((d) =>
 									sortIconOrDuplicate({
 										...d,
 										loc: sortAlphabetically(d.loc),
@@ -177,7 +179,7 @@ export const formatIconData = (iconsData) => {
 								)
 							: undefined,
 						loc: sortAlphabetically(icon.aliases.loc),
-						old: icon.aliases.old?.sort(collator.compare),
+						old: icon.aliases.old?.toSorted(collator.compare),
 					})
 				: undefined,
 		}),
