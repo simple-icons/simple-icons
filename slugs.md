@@ -2389,7 +2389,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qatar Airways` | `qatarairways` |
 | `qbittorrent` | `qbittorrent` |
 | `QEMU` | `qemu` |
-| `Qgis` | `qgis` |
+| `QGIS` | `qgis` |
 | `Qi` | `qi` |
 | `Qiita` | `qiita` |
 | `Qiskit` | `qiskit` |
