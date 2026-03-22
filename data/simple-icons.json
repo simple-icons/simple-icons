@@ -4320,6 +4320,11 @@
 		"source": "https://www.dictionary.com"
 	},
 	{
+		"title": "Dify",
+		"hex": "0033FF",
+		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg"
+	},
+	{
 		"title": "Digg",
 		"hex": "000000",
 		"source": "https://digg.com"
@@ -9184,7 +9189,7 @@
 	},
 	{
 		"title": "LangChain",
-		"hex": "1C3C3C",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com"
 	},
 	{
@@ -11885,6 +11890,15 @@
 		"guidelines": "https://www.openapis.org/faq/style-guide"
 	},
 	{
+		"title": "OpenBao",
+		"hex": "336D5C",
+		"source": "https://github.com/openbao/artwork/blob/8f75904040f9ca4fcba2b7a46581ecee536315b5/black/openbao-single-black.svg",
+		"guidelines": "https://openbao.org/docs/policies/brand/",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
@@ -13606,7 +13620,7 @@
 		"source": "https://wiki.qemu.org/Logo"
 	},
 	{
-		"title": "Qgis",
+		"title": "QGIS",
 		"hex": "589632",
 		"source": "https://www.qgis.org/en/site/getinvolved/styleguide.html",
 		"guidelines": "https://www.qgis.org/en/site/getinvolved/styleguide.html"
