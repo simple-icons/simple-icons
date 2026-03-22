@@ -766,6 +766,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Diaspora` | `diaspora` |
 | `DiceBear` | `dicebear` |
 | `Dictionary.com` | `dictionarydotcom` |
+| `Dify` | `dify` |
 | `Digg` | `digg` |
 | `Digi-Key Electronics` | `digikeyelectronics` |
 | `DigitalOcean` | `digitalocean` |
@@ -2084,6 +2085,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Open3D` | `open3d` |
 | `OpenAI Gym` | `openaigym` |
 | `OpenAPI Initiative` | `openapiinitiative` |
+| `OpenBao` | `openbao` |
 | `OpenBSD` | `openbsd` |
 | `OpenCage` | `opencage` |
 | `OpenCritic` | `opencritic` |
@@ -2389,7 +2391,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qatar Airways` | `qatarairways` |
 | `qbittorrent` | `qbittorrent` |
 | `QEMU` | `qemu` |
-| `Qgis` | `qgis` |
+| `QGIS` | `qgis` |
 | `Qi` | `qi` |
 | `Qiita` | `qiita` |
 | `Qiskit` | `qiskit` |
