@@ -58,26 +58,17 @@ const licenseTypes = [
 
 /**
  * Build a regex to validate HTTPs URLs.
- * @returns {Promise<RegExp>} Regex to validate HTTPs URLs.
+ * @returns {RegExp} Regex to validate HTTPs URLs.
  */
-const urlRegex = async () =>
-	new RegExp(
-		JSON.parse(
-			await fs.readFile(
-				path.resolve(import.meta.dirname, '..', '.jsonschema.json'),
-				'utf8',
-			),
-		).definitions.url.pattern,
-		'v',
-	);
+const urlRegex = () => new RegExp(jsonSchema.definitions.url.pattern, 'v');
 
 /**
  * Whether an input is a valid URL.
  * @param {string} input URL input.
- * @returns {Promise<boolean|string>} Whether the input is a valid URL.
+ * @returns {boolean|string} Whether the input is a valid URL.
  */
-const isValidURL = async (input) => {
-	const regex = await urlRegex();
+const isValidURL = (input) => {
+	const regex = urlRegex();
 	return regex.test(input) || 'Must be a valid and secure (https://) URL.';
 };
 
