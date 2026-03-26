@@ -4327,7 +4327,12 @@
 	{
 		"title": "Dify",
 		"hex": "0033FF",
-		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg"
+		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg",
+		"guidelines": "https://dify.ai/dify-brand-usage-terms",
+		"license": {
+			"type": "custom",
+			"url": "https://dify.ai/end-user-license-agreement"
+		}
 	},
 	{
 		"title": "Digg",
@@ -13625,7 +13630,7 @@
 		"source": "https://wiki.qemu.org/Logo"
 	},
 	{
-		"title": "Qgis",
+		"title": "QGIS",
 		"hex": "589632",
 		"source": "https://www.qgis.org/en/site/getinvolved/styleguide.html",
 		"guidelines": "https://www.qgis.org/en/site/getinvolved/styleguide.html"
