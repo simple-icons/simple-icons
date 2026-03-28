@@ -39,7 +39,7 @@ jobs:
 #          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
 
 #      - name: Checkout
-#        uses: actions/checkout@v4
+#        uses: actions/checkout@v5
 
 #      - id: get-labels
 #        uses: ./.github/actions/get-labels
