@@ -13,7 +13,7 @@ import type {
  * Raw icon data as it is defined in the data/simple-icons.json file before being
  * processed for publishing.
  *
- * The properties slug and license are added during the build process.
+ * The properties slug and license are added during the release process.
  */
 export type RawIconData = Omit<IconData, 'slug' | 'license'> & {
 	slug?: string;
