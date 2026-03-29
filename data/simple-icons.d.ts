@@ -12,7 +12,7 @@ export type IconData = {
 	source: string;
 	slug: string;
 	guidelines?: string;
-	license?: SPDXLicense | CustomLicense;
+	license?: License;
 	aliases?: Aliases;
 };
 
