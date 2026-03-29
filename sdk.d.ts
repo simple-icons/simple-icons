@@ -29,7 +29,6 @@ type ThirdPartyExtensionSubject = {
 /* eslint-disable */
 
 export const SVG_PATH_REGEX: RegExp;
-export function getIconSlug(icon: IconData): string;
 export function svgToPath(svg: string): string;
 export function titleToSlug(title: string): string;
 export function slugToVariableName(slug: string): string;
