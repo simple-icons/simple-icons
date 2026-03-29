@@ -4322,7 +4322,12 @@
 	{
 		"title": "Dify",
 		"hex": "0033FF",
-		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg"
+		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg",
+		"guidelines": "https://dify.ai/dify-brand-usage-terms",
+		"license": {
+			"type": "custom",
+			"url": "https://dify.ai/end-user-license-agreement"
+		}
 	},
 	{
 		"title": "Digg",
@@ -5287,6 +5292,11 @@
 		"title": "Fairphone",
 		"hex": "4495D1",
 		"source": "https://www.fairphone.com"
+	},
+	{
+		"title": "Faker",
+		"hex": "779B2E",
+		"source": "https://github.com/faker-js/faker/blob/b4acc285d6e0323802926a8f9d3134ce06114a63/docs/public/favicon.svg"
 	},
 	{
 		"title": "Falco",
@@ -13367,6 +13377,11 @@
 		"source": "https://pronouns.page/design"
 	},
 	{
+		"title": "ProseMirror",
+		"hex": "000000",
+		"source": "https://github.com/ProseMirror/prosemirror/blob/e30c5109570a6c05abab853c29920eb614dd8e35/assets/prosemirror_light.svg"
+	},
+	{
 		"title": "ProSieben",
 		"hex": "E6000F",
 		"source": "https://www.prosieben.de"
@@ -13613,6 +13628,12 @@
 		"title": "qbittorrent",
 		"hex": "2F67BA",
 		"source": "https://github.com/qbittorrent/qBittorrent/blob/73028f9930d9ab9d89edb60ed4aedb66d75669d9/src/icons/qbittorrent-tray-light.svg"
+	},
+	{
+		"title": "Qdrant",
+		"hex": "DC244C",
+		"source": "https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-white.svg",
+		"guidelines": "https://qdrant.tech/brand-resources/"
 	},
 	{
 		"title": "QEMU",
