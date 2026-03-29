@@ -940,6 +940,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `FACEIT` | `faceit` |
 | `Facepunch` | `facepunch` |
 | `Fairphone` | `fairphone` |
+| `Faker` | `faker` |
 | `Falco` | `falco` |
 | `Falcon` | `falcon` |
 | `FamPay` | `fampay` |
@@ -2346,6 +2347,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Progress` | `progress` |
 | `Prometheus` | `prometheus` |
 | `Pronouns.page` | `pronounsdotpage` |
+| `ProseMirror` | `prosemirror` |
 | `ProSieben` | `prosieben` |
 | `Proteus` | `proteus` |
 | `Proto.io` | `protodotio` |
@@ -2390,6 +2392,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Qase` | `qase` |
 | `Qatar Airways` | `qatarairways` |
 | `qbittorrent` | `qbittorrent` |
+| `Qdrant` | `qdrant` |
 | `QEMU` | `qemu` |
 | `QGIS` | `qgis` |
 | `Qi` | `qi` |
