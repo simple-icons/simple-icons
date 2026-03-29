@@ -5,9 +5,6 @@
  * Add data for a new icon to the simple-icons dataset.
  */
 
-/**
- * @typedef {import("../sdk.js").IconData} IconData
- */
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
@@ -20,14 +17,17 @@ import {
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import {getIconsDataString, normalizeColor, titleToSlug} from '../sdk.mjs';
+import {normalizeColor, titleToSlug} from '../sdk.mjs';
 import {
 	formatIconData,
 	getJsonSchemaData,
+	getRawIconsData,
 	getSpdxLicenseIds,
 	sortIconsCompare,
 	writeIconsData,
 } from './utils.js';
+
+/** @typedef {import('./utils.d.ts').RawIconData} RawIconData */
 
 process.exitCode = 1;
 process.on('uncaughtException', (error) => {
@@ -39,8 +39,7 @@ process.on('uncaughtException', (error) => {
 	}
 });
 
-/** @type {import('../types.d.ts').IconData[]} */
-const iconsData = JSON.parse(await getIconsDataString());
+const iconsData = await getRawIconsData();
 const jsonSchema = await getJsonSchemaData();
 
 const HEX_REGEX = /^#?[a-f\d]{3,8}$/iv;
@@ -119,8 +118,7 @@ const previewHexColor = (input) => {
 	);
 };
 
-/** @type {IconData} */
-// @ts-expect-error: `slug` is not required in our source simple-icons.json file.
+/** @type {RawIconData} */
 const answers = {
 	title: '',
 	hex: '',
@@ -165,26 +163,27 @@ if (
 		message: 'Does this icon have a license?',
 	})
 ) {
-	answers.license = {
-		type: await search({
-			message: "What is the icon's license?",
-			async source(input) {
-				input = (input || '').trim();
-				return input
-					? fuzzySearch(input, licenseTypes, {
-							keySelector: (x) => x.value,
-						})
-					: licenseTypes;
-			},
-		}),
-	};
+	const licenseType = await search({
+		message: "What is the icon's license?",
+		async source(input) {
+			input = (input || '').trim();
+			return input
+				? fuzzySearch(input, licenseTypes, {
+						keySelector: (x) => x.value,
+					})
+				: licenseTypes;
+		},
+	});
+	answers.license = {type: licenseType};
 
-	if (answers.license.type === 'custom') {
-		// @ts-expect-error
-		answers.license.url = await inputPrompt({
-			message: `What is the URL for the license? (optional)`,
-			validate: (input) => input.length === 0 || isValidURL(input),
-		});
+	if (licenseType === 'custom') {
+		answers.license = {
+			type: licenseType,
+			url: await inputPrompt({
+				message: `What is the URL for the license? (optional)`,
+				validate: (input) => input.length === 0 || isValidURL(input),
+			}),
+		};
 	}
 }
 
@@ -194,28 +193,23 @@ if (
 		default: false,
 	})
 ) {
-	answers.aliases = await checkbox({
+	const selectedAliases = await checkbox({
 		message: 'What types of aliases do you want to add?',
 		choices: aliasTypes,
-	})
-		// TODO: eslint-disable-next-line promise/prefer-await-to-then
-		.then(async (aliases) => {
-			/** @type {{[_: string]: string[]}} */
-			const result = {};
+	});
 
-			for (const alias of aliases) {
-				// eslint-disable-next-line no-await-in-loop
-				result[alias] = await inputPrompt({
-					message: `What ${alias} aliases would you like to add? (separate with commas)`,
-				})
-					// TODO: eslint-disable-next-line promise/prefer-await-to-then
-					.then((aliases_) =>
-						aliases_.split(',').map((alias_) => alias_.trim()),
-					);
-			}
+	/** @type {{[_: string]: string[]}} */
+	const result = {};
 
-			return aliases.length > 0 ? result : undefined;
+	for (const alias of selectedAliases) {
+		// eslint-disable-next-line no-await-in-loop
+		const rawInput = await inputPrompt({
+			message: `What ${alias} aliases would you like to add? (separate with commas)`,
 		});
+		result[alias] = rawInput.split(',').map((alias_) => alias_.trim());
+	}
+
+	answers.aliases = selectedAliases.length > 0 ? result : undefined;
 }
 
 process.stdout.write(

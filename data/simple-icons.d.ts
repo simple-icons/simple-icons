@@ -12,8 +12,19 @@ export type IconData = {
 	source: string;
 	slug: string;
 	guidelines?: string;
-	license?: Omit<SPDXLicense, 'url'> | CustomLicense;
+	license?: SPDXLicense | CustomLicense;
 	aliases?: Aliases;
+};
+
+/**
+ * Raw icon data as it is defined in the data/simple-icons.json file before being
+ * processed for publishing.
+ *
+ * The properties slug and license are added during the build process.
+ */
+export type RawIconData = Omit<IconData, 'slug' | 'license'> & {
+	slug?: string;
+	license?: Omit<SPDXLicense, 'url'> | CustomLicense;
 };
 
 /**
