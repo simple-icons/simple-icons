@@ -6,7 +6,7 @@
  */
 
 /**
- * @typedef {import('../../data/simple-icons.js').RawIconData} RawIconData
+ * @typedef {import('../types.js').RawIconData} RawIconData
  * @typedef {import('../../types.js').SimpleIcon & RawIconData} IconDataAndObject
  */
 
@@ -114,7 +114,10 @@ const writeTs = async (filepath, rawTypeScript) => {
 const buildIcons = async () =>
 	Promise.all(
 		icons.map(async (rawIconData) => {
-			const slug = getIconSlug(rawIconData);
+			const slug = getIconSlug({
+				title: rawIconData.title,
+				slug: rawIconData.slug || '',
+			});
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			const svgPath = svgToPath(svg);

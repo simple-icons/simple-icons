@@ -41,7 +41,7 @@ export const SVG_PATH_REGEX = /^m[\-mzlhvcsqtae\d,. ]+$/iv;
 
 /**
  * Get the slug/filename for an icon.
- * @param {IconData} icon The icon data as it appears in *data/simple-icons.json*.
+ * @param {Pick<IconData, 'slug' | 'title'>} icon The icon data as it appears in *data/simple-icons.json*.
  * @returns {string} The slug/filename for the icon.
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);

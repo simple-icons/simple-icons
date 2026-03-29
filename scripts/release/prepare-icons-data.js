@@ -18,7 +18,10 @@ const icons = rawIcons.map((rawIcon) => {
 	return {
 		...restIcon,
 		license: rawLicenseToLicense(license),
-		slug: slug === undefined ? getIconSlug(rawIcon) : slug,
+		slug:
+			slug === undefined
+				? getIconSlug({title: restIcon.title, slug: slug || ''})
+				: slug,
 	};
 });
 await writeIconsData(formatIconData(icons), true);

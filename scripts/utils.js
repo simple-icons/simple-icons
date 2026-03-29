@@ -19,7 +19,7 @@ import {
 
 /**
  * @typedef {import("../types.d.ts").IconData} IconData
- * @typedef {import('../data/simple-icons.d.ts').RawIconData} RawIconData
+ * @typedef {import('./types.d.ts').RawIconData} RawIconData
  * @typedef {import("../types.d.ts").DuplicateAlias} DuplicateAlias
  */
 
