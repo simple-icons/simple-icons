@@ -15,12 +15,12 @@ import path from 'node:path';
 import {format} from 'node:util';
 import {transform as esbuildTransform} from 'esbuild';
 import {
-	getIconSlug,
 	slugToVariableName,
 	svgToPath,
 	titleToHtmlFriendly,
 } from '../../sdk.mjs';
 import {
+	getIconSlug,
 	getRawIconsData,
 	rawLicenseToLicense,
 	sortIconsCompare,

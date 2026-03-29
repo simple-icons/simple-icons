@@ -11,7 +11,6 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {
 	collator,
-	getIconSlug,
 	getIconsDataPath,
 	getIconsDataString,
 	titleToSlug,
@@ -22,6 +21,13 @@ import {
  * @typedef {import('./types.d.ts').RawIconData} RawIconData
  * @typedef {import("../types.d.ts").DuplicateAlias} DuplicateAlias
  */
+
+/**
+ * Get the slug/filename for an icon.
+ * @param {Pick<RawIconData, 'slug' | 'title'>} icon The icon data as it appears in *data/simple-icons.json*.
+ * @returns {string} The slug/filename for the icon.
+ */
+export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
 
 /**
  * Get JSON schema data.
@@ -77,8 +83,8 @@ export const getSpdxLicenseIds = async () =>
 
 /**
  * The compare function for sorting icons in *data/simple-icons.json*.
- * @param {IconData | RawIconData} a Icon A.
- * @param {IconData | RawIconData} b Icon B.
+ * @param {RawIconData} a Icon A.
+ * @param {RawIconData} b Icon B.
  * @returns {number} Comparison result.
  */
 export const sortIconsCompare = (a, b) =>
@@ -99,7 +105,7 @@ const sortDuplicatesCompare = (a, b) =>
 
 /**
  * Sort icon data or duplicate alias object.
- * @template {IconData | DuplicateAlias} T Either icon data or duplicate alias.
+ * @template {RawIconData | DuplicateAlias} T Either icon data or duplicate alias.
  * @param {T} icon The icon data or duplicate alias as it appears in *data/simple-icons.json*.
  * @returns {T} The sorted icon data or duplicate alias.
  */
@@ -172,7 +178,7 @@ const sortLicense = (license) => {
 
 /**
  * Sort object key alphabetically.
- * @param {IconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
+ * @param {RawIconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
  * @returns {{[_: string]: string} | undefined} The sorted aliases object.
  */
 const sortAlphabetically = (object) => {

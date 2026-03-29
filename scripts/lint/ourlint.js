@@ -6,7 +6,7 @@
  */
 
 /**
- * @typedef {import("../../types.js").IconData} IconData
+ * @typedef {import("../types.js").RawIconData} RawIconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
  */
 
@@ -15,7 +15,6 @@ import process from 'node:process';
 import fakeDiff from 'fake-diff';
 import {
 	collator,
-	getIconSlug,
 	getIconsDataString,
 	normalizeNewlines,
 	titleToSlug,
@@ -23,6 +22,7 @@ import {
 import {
 	fileExists,
 	formatIconData,
+	getIconSlug,
 	getLabelerLabels,
 	getLabels,
 	getSpdxLicenseIds,
@@ -33,22 +33,22 @@ const iconsDirectory = path.resolve(import.meta.dirname, '..', '..', 'icons');
 
 /**
  * Contains our tests so they can be isolated from each other.
- * @type {{[k: string]: (data: IconData[], dataString: string) => Promise<string | undefined> | string | undefined}}
+ * @type {{[k: string]: (data: RawIconData[], dataString: string) => Promise<string | undefined> | string | undefined}}
  */
 const TESTS = {
 	/**
 	 * Tests whether our icons are in alphabetical order.
-	 * @param {IconData[]} icons Icons data.
+	 * @param {RawIconData[]} icons Icons data.
 	 * @returns {string|undefined} Error message or undefined.
 	 */
 	alphabetical(icons) {
 		/**
 		 * Collects invalid alphabet ordered icons.
-		 * @param {IconData[]} invalidEntries Invalid icons reference.
-		 * @param {IconData} icon Icon to check.
+		 * @param {RawIconData[]} invalidEntries Invalid icons reference.
+		 * @param {RawIconData} icon Icon to check.
 		 * @param {number} index Index of the icon.
-		 * @param {IconData[]} array Array of icons.
-		 * @returns {IconData[]} Invalid icons.
+		 * @param {RawIconData[]} array Array of icons.
+		 * @returns {RawIconData[]} Invalid icons.
 		 */
 		const collector = (invalidEntries, icon, index, array) => {
 			if (index > 0) {
@@ -70,7 +70,7 @@ const TESTS = {
 
 		/**
 		 * Format an icon for display in the error message.
-		 * @param {IconData} icon Icon to format.
+		 * @param {RawIconData} icon Icon to format.
 		 * @returns {string} Formatted icon.
 		 */
 		const format = (icon) => {
@@ -83,8 +83,8 @@ const TESTS = {
 
 		/**
 		 * Find the expected position of an icon.
-		 * @param {IconData[]} expectedOrder Expected order of the icons.
-		 * @param {IconData} targetIcon Icon to find.
+		 * @param {RawIconData[]} expectedOrder Expected order of the icons.
+		 * @param {RawIconData} targetIcon Icon to find.
 		 * @returns {string} Expected position of the icon.
 		 */
 		const findPositon = (expectedOrder, targetIcon) => {

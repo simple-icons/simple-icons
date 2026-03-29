@@ -4,9 +4,10 @@
  * @file
  * Minify data/simple-icons.json file and add slugs to all icons.
  */
-import {getIconSlug} from '../../sdk.mjs';
+
 import {
 	formatIconData,
+	getIconSlug,
 	getRawIconsData,
 	rawLicenseToLicense,
 	writeIconsData,
@@ -18,10 +19,7 @@ const icons = rawIcons.map((rawIcon) => {
 	return {
 		...restIcon,
 		license: rawLicenseToLicense(license),
-		slug:
-			slug === undefined
-				? getIconSlug({title: restIcon.title, slug: slug || ''})
-				: slug,
+		slug: slug === undefined ? getIconSlug(rawIcon) : slug,
 	};
 });
 await writeIconsData(formatIconData(icons), true);

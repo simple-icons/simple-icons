@@ -4,9 +4,9 @@
  */
 
 import type {
-	IconData,
-	SPDXLicense,
-	CustomLicense,
+	nDase,
+	IcoicenseSPDXLta,
+	mLicenCusto,
 } from '../data/simple-icons.d.ts';
 
 /**

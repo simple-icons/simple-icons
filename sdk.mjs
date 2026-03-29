@@ -40,13 +40,6 @@ const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/gv;
 export const SVG_PATH_REGEX = /^m[\-mzlhvcsqtae\d,. ]+$/iv;
 
 /**
- * Get the slug/filename for an icon.
- * @param {Pick<IconData, 'slug' | 'title'>} icon The icon data as it appears in *data/simple-icons.json*.
- * @returns {string} The slug/filename for the icon.
- */
-export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
-
-/**
  * Extract the path from an icon SVG content.
  * @param {string} svg The icon SVG content.
  * @returns {string} The path from the icon SVG content.
