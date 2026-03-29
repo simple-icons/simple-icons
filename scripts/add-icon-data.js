@@ -17,13 +17,14 @@ import {
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
-import {normalizeColor, titleToSlug} from '../sdk.mjs';
+import {normalizeColor} from '../sdk.mjs';
 import {
 	formatIconData,
 	getJsonSchemaData,
 	getRawIconsData,
 	getSpdxLicenseIds,
 	sortIconsCompare,
+	titleToSlug,
 	writeIconsData,
 } from './utils.js';
 

@@ -7,7 +7,7 @@ import {strict as assert} from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {describe, it} from 'mocha';
-import {SVG_PATH_REGEX} from '../sdk.mjs';
+import {SVG_PATH_REGEX} from '../scripts/utils.js';
 
 const iconsDirectory = path.resolve(import.meta.dirname, '..', 'icons');
 

@@ -9,8 +9,8 @@ import path from 'node:path';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
-import {getRawIconsData} from './scripts/utils.js';
-import {SVG_PATH_REGEX, htmlFriendlyToTitle} from './sdk.mjs';
+import {SVG_PATH_REGEX, getRawIconsData} from './scripts/utils.js';
+import {htmlFriendlyToTitle} from './sdk.mjs';
 
 /**
  * The svgpath library does not includes a `segments` property on their interface.

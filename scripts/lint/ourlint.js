@@ -13,12 +13,7 @@
 import path from 'node:path';
 import process from 'node:process';
 import fakeDiff from 'fake-diff';
-import {
-	collator,
-	getIconsDataString,
-	normalizeNewlines,
-	titleToSlug,
-} from '../../sdk.mjs';
+import {collator, getIconsDataString, normalizeNewlines} from '../../sdk.mjs';
 import {
 	fileExists,
 	formatIconData,
@@ -27,6 +22,7 @@ import {
 	getLabels,
 	getSpdxLicenseIds,
 	sortIconsCompare,
+	titleToSlug,
 } from '../utils.js';
 
 const iconsDirectory = path.resolve(import.meta.dirname, '..', '..', 'icons');

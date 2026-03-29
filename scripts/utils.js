@@ -9,12 +9,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {
-	collator,
-	getIconsDataPath,
-	getIconsDataString,
-	titleToSlug,
-} from '../sdk.mjs';
+import {collator, getIconsDataPath, getIconsDataString} from '../sdk.mjs';
 
 /**
  * @typedef {import("../types.d.ts").IconData} IconData
@@ -22,12 +17,55 @@ import {
  * @typedef {import("../types.d.ts").DuplicateAlias} DuplicateAlias
  */
 
+/** @type {{ [key: string]: string }} */
+const TITLE_TO_SLUG_REPLACEMENTS = {
+	'+': 'plus',
+	'.': 'dot',
+	'&': 'and',
+	đ: 'd',
+	ħ: 'h',
+	ı: 'i',
+	ĸ: 'k',
+	ŀ: 'l',
+	ł: 'l',
+	ß: 'ss',
+	ŧ: 't',
+	ø: 'o',
+};
+
+const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
+	`[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
+	'gv',
+);
+
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/gv;
+
+/**
+ * Regex to validate SVG paths.
+ */
+export const SVG_PATH_REGEX = /^m[\-mzlhvcsqtae\d,. ]+$/iv;
+
 /**
  * Get the slug/filename for an icon.
  * @param {Pick<RawIconData, 'slug' | 'title'>} icon The icon data as it appears in *data/simple-icons.json*.
  * @returns {string} The slug/filename for the icon.
  */
 export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
+
+/**
+ * Converts a brand title into a slug/filename.
+ * @param {string} title The title to convert.
+ * @returns {string} The slug/filename for the title.
+ */
+export const titleToSlug = (title) =>
+	title
+		.toLowerCase()
+		.replaceAll(
+			TITLE_TO_SLUG_CHARS_REGEX,
+			(char) => TITLE_TO_SLUG_REPLACEMENTS[char],
+		)
+		.normalize('NFD')
+		.replaceAll(TITLE_TO_SLUG_RANGE_REGEX, '');
 
 /**
  * Get JSON schema data.
