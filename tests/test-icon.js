@@ -56,6 +56,7 @@ export const testIcon = (icon, subject, slug) => {
 
 		it(`has ${icon.license ? 'the correct' : 'no'} "license"`, () => {
 			if (icon.license) {
+				assert.notEqual(subject.license, undefined);
 				assert.equal(subject.license?.type, icon.license.type);
 				if (icon.license.type === 'custom') {
 					const {license} = icon;

@@ -114,10 +114,7 @@ const writeTs = async (filepath, rawTypeScript) => {
 const buildIcons = async () =>
 	Promise.all(
 		icons.map(async (rawIconData) => {
-			const slug = getIconSlug({
-				title: rawIconData.title,
-				slug: rawIconData.slug || '',
-			});
+			const slug = getIconSlug(rawIconData);
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			const svgPath = svgToPath(svg);
