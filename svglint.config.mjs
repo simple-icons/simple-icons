@@ -658,8 +658,8 @@ const config = {
 
 					for (let s = 0; s < segments.length; s++) {
 						const seg = segments[s];
-						const parms = seg.params;
-						const cmd = parms[0];
+						const params = seg.params;
+						const cmd = params[0];
 						const nextCmd =
 							s + 1 < segments.length ? segments[s + 1].params[0] : undefined;
 
@@ -667,8 +667,8 @@ const config = {
 							// Next switch cases have been ordered by frequency
 							// of occurrence in the SVG paths of the icons
 							case 'M': {
-								currentAbsCoord[0] = parms[1];
-								currentAbsCoord[1] = parms[2];
+								currentAbsCoord[0] = params[1];
+								currentAbsCoord[1] = params[2];
 								// SVG 1.1:
 								// If a moveto is followed by multiple pairs of coordinates,
 								// the subsequent pairs are treated as implicit lineto commands.
@@ -680,8 +680,8 @@ const config = {
 							}
 
 							case 'm': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[1];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[2];
 								if (seg.chain === undefined || seg.chain.start === seg.start) {
 									startPoint = undefined;
 								}
@@ -690,34 +690,34 @@ const config = {
 							}
 
 							case 'H': {
-								currentAbsCoord[0] = parms[1];
+								currentAbsCoord[0] = params[1];
 								break;
 							}
 
 							case 'h': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[1];
 								break;
 							}
 
 							case 'V': {
-								currentAbsCoord[1] = parms[1];
+								currentAbsCoord[1] = params[1];
 								break;
 							}
 
 							case 'v': {
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[1];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[1];
 								break;
 							}
 
 							case 'L': {
-								currentAbsCoord[0] = parms[1];
-								currentAbsCoord[1] = parms[2];
+								currentAbsCoord[0] = params[1];
+								currentAbsCoord[1] = params[2];
 								break;
 							}
 
 							case 'l': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[1];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[2];
 								break;
 							}
 
@@ -733,62 +733,62 @@ const config = {
 							}
 
 							case 'C': {
-								currentAbsCoord[0] = parms[5];
-								currentAbsCoord[1] = parms[6];
+								currentAbsCoord[0] = params[5];
+								currentAbsCoord[1] = params[6];
 								break;
 							}
 
 							case 'c': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[5];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[6];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[5];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[6];
 								break;
 							}
 
 							case 'A': {
-								currentAbsCoord[0] = parms[6];
-								currentAbsCoord[1] = parms[7];
+								currentAbsCoord[0] = params[6];
+								currentAbsCoord[1] = params[7];
 								break;
 							}
 
 							case 'a': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[6];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[7];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[6];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[7];
 								break;
 							}
 
 							case 's': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[1];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[2];
 								break;
 							}
 
 							case 'S': {
-								currentAbsCoord[0] = parms[1];
-								currentAbsCoord[1] = parms[2];
+								currentAbsCoord[0] = params[1];
+								currentAbsCoord[1] = params[2];
 								break;
 							}
 
 							case 't': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[1];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[2];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[1];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[2];
 								break;
 							}
 
 							case 'T': {
-								currentAbsCoord[0] = parms[1];
-								currentAbsCoord[1] = parms[2];
+								currentAbsCoord[0] = params[1];
+								currentAbsCoord[1] = params[2];
 								break;
 							}
 
 							case 'Q': {
-								currentAbsCoord[0] = parms[3];
-								currentAbsCoord[1] = parms[4];
+								currentAbsCoord[0] = params[3];
+								currentAbsCoord[1] = params[4];
 								break;
 							}
 
 							case 'q': {
-								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + parms[3];
-								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + parms[4];
+								currentAbsCoord[0] = (currentAbsCoord[0] || 0) + params[3];
+								currentAbsCoord[1] = (currentAbsCoord[1] || 0) + params[4];
 								break;
 							}
 
