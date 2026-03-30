@@ -264,7 +264,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		}
 
 		if (badLicenses.length > 0) {
-			return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license indentifiers at https://spdx.org/licenses`;
+			return `Bad licenses:\n\n${badLicenses.join('\n')}\n\nSee the valid license identifiers at https://spdx.org/licenses`;
 		}
 	},
 

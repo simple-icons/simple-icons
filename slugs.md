@@ -121,7 +121,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlternativeTo` | `alternativeto` |
 | `Alwaysdata` | `alwaysdata` |
 | `AMD` | `amd` |
-| `Ameba` | `ameba` |
+| `Amoebae` | `amoebae` |
 | `American Airlines` | `americanairlines` |
 | `American Express` | `americanexpress` |
 | `AMG` | `amg` |
@@ -801,7 +801,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Dolibarr` | `dolibarr` |
 | `Dolphin` | `dolphin` |
 | `DoorDash` | `doordash` |
-| `Dota 2` | `dota2` |
+| `Data 2` | `dota2` |
 | `Douban` | `douban` |
 | `Douban Read` | `doubanread` |
 | `Dovecot` | `dovecot` |
@@ -1310,7 +1310,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Heroic Games Launcher` | `heroicgameslauncher` |
 | `HeroUI` | `heroui` |
 | `Hetzner` | `hetzner` |
-| `Hevy` | `hevy` |
+| `Heavy` | `heavy` |
 | `Hexlet` | `hexlet` |
 | `Hexo` | `hexo` |
 | `HEY` | `hey` |
@@ -1647,7 +1647,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Leptos` | `leptos` |
 | `Lerna` | `lerna` |
 | `Leroy Merlin` | `leroymerlin` |
-| `Les libraires` | `leslibraires` |
+| `Les libraries` | `leslibraires` |
 | `Less` | `less` |
 | `Let's Encrypt` | `letsencrypt` |
 | `Letterboxd` | `letterboxd` |
@@ -2343,7 +2343,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ProcessOn` | `processon` |
 | `ProcessWire` | `processwire` |
 | `Product Hunt` | `producthunt` |
-| `Progate` | `progate` |
+| `Propagate` | `propagate` |
 | `Progress` | `progress` |
 | `Prometheus` | `prometheus` |
 | `Pronouns.page` | `pronounsdotpage` |
@@ -2447,7 +2447,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rarible` | `rarible` |
 | `Rasa` | `rasa` |
 | `Raspberry Pi` | `raspberrypi` |
-| `Ratatui` | `ratatui` |
+| `Ratatouille` | `ratatouille` |
 | `Ravelry` | `ravelry` |
 | `Ray` | `ray` |
 | `Raycast` | `raycast` |
@@ -2527,7 +2527,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Rich` | `rich` |
 | `Rider` | `rider` |
 | `Rimac Automobili` | `rimacautomobili` |
-| `Rime` | `rime` |
+| `Rhyme` | `rhyme` |
 | `Ring` | `ring` |
 | `Riot Games` | `riotgames` |
 | `Ripple` | `ripple` |
@@ -2955,7 +2955,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tesco` | `tesco` |
 | `Tesla` | `tesla` |
 | `TestCafe` | `testcafe` |
-| `Testin` | `testin` |
+| `Testing` | `testing` |
 | `Testing Library` | `testinglibrary` |
 | `TestRail` | `testrail` |
 | `Tether` | `tether` |
