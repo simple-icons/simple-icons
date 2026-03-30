@@ -78,12 +78,11 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Prepare icons
         if: steps.pr.outputs.is_normal == 'true' && steps.changes.outputs.icons == 'true'
-        env:
-          npm_config_icons: ${{ steps.changes.outputs.icons_files }}
         run: sed -i 's/\\"icons\/\*\.svg\\"/$npm_config_icons/' package.json
       - name: Run linter
-        run: npm run lint
+        run: node --run lint
         env:
+          npm_config_icons: ${{ steps.changes.outputs.icons_files }}
           # Authorise GitHub API requests for editorconfig-checker
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check documentation links
