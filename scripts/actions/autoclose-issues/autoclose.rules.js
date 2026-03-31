@@ -8,51 +8,56 @@ const autocloseTerm = 'This issue was automatically closed. Please refer to ';
 /** @type {import('./autoclose.app.js').Config} */
 const rules = [
 	{
-		patterns: [/matlab/i],
+		patterns: [/matlab/iv],
 		reason: autocloseTerm + '#1233.',
 	},
 	{
-		patterns: [/disney\s*(?:plus|\+)?/i],
+		patterns: [/disney\s*(?:plus|\+)?/iv],
 		reason: autocloseTerm + '#2309.',
 	},
 	{
-		patterns: [/british\s*petroleum/i],
+		patterns: [/british\s*petroleum/iv],
 		reason: autocloseTerm + '#5849.',
 	},
 	{
-		patterns: [/mattel/i, /barbie/i, /hot\s*wheels/i, /fisher[-\s]*price/i],
+		patterns: [
+			/mattel/iv,
+			/barbie/iv,
+			/hot\s*wheels/iv,
+			/fisher[\-\s]*price/iv,
+		],
 		reason: autocloseTerm + '#6656.',
 	},
 	{
-		patterns: [/oracle/i, /java(?:\s|$)/i],
+		patterns: [/oracle/iv, /java(?:\s|$)/iv],
 		reason: autocloseTerm + '#7374.',
 	},
 	{
-		patterns: [/microchip/i],
+		patterns: [/microchip/iv],
 		reason: autocloseTerm + '#9373.',
 	},
 	{
-		patterns: [/adobe/i, /photoshop/i],
+		patterns: [/adobe/iv, /photoshop/iv],
 		reason: autocloseTerm + '#10018.',
 	},
 	{
-		patterns: [/microsoft/i, /vs\s*code/, /visual\s*studio/i, /windows/i],
+		patterns: [/microsoft/iv, /vs\s*code/iv, /visual\s*studio/iv, /windows/iv],
 		reason: autocloseTerm + '#11236.',
 	},
 	{
-		patterns: [/linked\s*in/i],
+		patterns: [/linked\s*in/iv],
 		reason: autocloseTerm + '#11236 #11372.',
 	},
 	{
-		patterns: [/amazon/i, /aws/i],
+		patterns: [/amazon/iv, /aws/iv],
 		reason: autocloseTerm + '#13056.',
 	},
 	{
-		patterns: [/yahoo/i, /engadget/i, /aol/i],
+		patterns: [/yahoo/iv, /engadget/iv, /aol/iv],
 		reason: autocloseTerm + '#9861.',
 	},
 	{
-		patterns: [/twilio/i, /sendgrid/i, /authy/i, /segment/i],
+		patterns: [/twilio/iv, /sendgrid/iv, /authy/iv, /segment/iv],
 		reason: autocloseTerm + '#13386.',
 	},
 ];

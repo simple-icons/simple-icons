@@ -3506,6 +3506,11 @@
 		"guidelines": "https://contao.org/en/media"
 	},
 	{
+		"title": "Contensis",
+		"hex": "37BFA7",
+		"source": "https://github.com/contensis/cli/blob/d98c9ab312de942b2417040fc51a021de39a7fd5/assets/contensis-logo.svg"
+	},
+	{
 		"title": "Contentful",
 		"hex": "2478CC",
 		"source": "https://press.contentful.com/media_kits"
@@ -3606,9 +3611,9 @@
 	},
 	{
 		"title": "Corsair",
-		"hex": "000000",
-		"source": "https://www.corsair.com",
-		"guidelines": "https://www.corsair.com/press"
+		"hex": "231F20",
+		"source": "https://www.corsair.com/newsroom/company-logos",
+		"guidelines": "https://www.corsair.com/newsroom/company-logos"
 	},
 	{
 		"title": "Couchbase",
@@ -4302,9 +4307,27 @@
 		"source": "https://wiki.diasporafoundation.org/Branding"
 	},
 	{
+		"title": "DiceBear",
+		"hex": "0284C7",
+		"source": "https://github.com/dicebear/brand/blob/f1471839b82900c1b6da4a606d28b319949ebfc9/src/icon.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Dictionary.com",
 		"hex": "0049D7",
 		"source": "https://www.dictionary.com"
+	},
+	{
+		"title": "Dify",
+		"hex": "0033FF",
+		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg",
+		"guidelines": "https://dify.ai/dify-brand-usage-terms",
+		"license": {
+			"type": "custom",
+			"url": "https://dify.ai/end-user-license-agreement"
+		}
 	},
 	{
 		"title": "Digg",
@@ -4403,6 +4426,11 @@
 		"title": "DLNA",
 		"hex": "48A842",
 		"source": "https://commons.wikimedia.org/wiki/File:DLNA_logo.svg"
+	},
+	{
+		"title": "dlthub",
+		"hex": "59C1D5",
+		"source": "https://github.com/dlt-hub/dlt/blob/3201e053ddffd399ed060f5cc33dc72439cb5c7b/docs/website/static/img/dlt-logo.svg"
 	},
 	{
 		"title": "dm",
@@ -5264,6 +5292,11 @@
 		"title": "Fairphone",
 		"hex": "4495D1",
 		"source": "https://www.fairphone.com"
+	},
+	{
+		"title": "Faker",
+		"hex": "779B2E",
+		"source": "https://github.com/faker-js/faker/blob/b4acc285d6e0323802926a8f9d3134ce06114a63/docs/public/favicon.svg"
 	},
 	{
 		"title": "Falco",
@@ -9166,7 +9199,7 @@
 	},
 	{
 		"title": "LangChain",
-		"hex": "1C3C3C",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com"
 	},
 	{
@@ -11867,6 +11900,15 @@
 		"guidelines": "https://www.openapis.org/faq/style-guide"
 	},
 	{
+		"title": "OpenBao",
+		"hex": "336D5C",
+		"source": "https://github.com/openbao/artwork/blob/8f75904040f9ca4fcba2b7a46581ecee536315b5/black/openbao-single-black.svg",
+		"guidelines": "https://openbao.org/docs/policies/brand/",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
@@ -13335,6 +13377,11 @@
 		"source": "https://pronouns.page/design"
 	},
 	{
+		"title": "ProseMirror",
+		"hex": "000000",
+		"source": "https://github.com/ProseMirror/prosemirror/blob/e30c5109570a6c05abab853c29920eb614dd8e35/assets/prosemirror_light.svg"
+	},
+	{
 		"title": "ProSieben",
 		"hex": "E6000F",
 		"source": "https://www.prosieben.de"
@@ -13583,12 +13630,18 @@
 		"source": "https://github.com/qbittorrent/qBittorrent/blob/73028f9930d9ab9d89edb60ed4aedb66d75669d9/src/icons/qbittorrent-tray-light.svg"
 	},
 	{
+		"title": "Qdrant",
+		"hex": "DC244C",
+		"source": "https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-white.svg",
+		"guidelines": "https://qdrant.tech/brand-resources/"
+	},
+	{
 		"title": "QEMU",
 		"hex": "FF6600",
 		"source": "https://wiki.qemu.org/Logo"
 	},
 	{
-		"title": "Qgis",
+		"title": "QGIS",
 		"hex": "589632",
 		"source": "https://www.qgis.org/en/site/getinvolved/styleguide.html",
 		"guidelines": "https://www.qgis.org/en/site/getinvolved/styleguide.html"
@@ -14717,6 +14770,16 @@
 		"source": "https://github.com/rustdesk/rustdesk/blob/80857c22c9ee1578b4329aec3250c3e6f285a7d2/res/logo.svg"
 	},
 	{
+		"title": "RustFS",
+		"hex": "0196D0",
+		"source": "https://github.com/rustfs/console/blob/3b632beee404cf195e55f558e94f343326e564f9/public/logo.svg",
+		"guidelines": "https://docs.rustfs.com/trademark/",
+		"license": {
+			"type": "custom",
+			"url": "https://docs.rustfs.com/trademark/#trademark-usage-policy-document"
+		}
+	},
+	{
 		"title": "RxDB",
 		"hex": "8D1F89",
 		"source": "https://github.com/pubkey/rxdb/blob/0c554dbcf7a4e6c48cd581ec1e3b130a4b5ab7d6/docs/files/logo/logo.svg"
@@ -15811,6 +15874,14 @@
 		"source": "https://github.com/sphinx-doc/sphinx/blob/ed84d63e6f2c4fd43b97fc43ee8be4156a13af9e/doc/_static/favicon.svg",
 		"license": {
 			"type": "BSD-3-Clause"
+		}
+	},
+	{
+		"title": "SpiderMonkey",
+		"hex": "FFD681",
+		"source": "https://github.com/mozilla-spidermonkey/spidermonkey.dev/blob/b65d91dc571bf0646a36bc68fc648ee022164fab/favicon.svg",
+		"license": {
+			"type": "MPL-2.0"
 		}
 	},
 	{
@@ -17544,6 +17615,11 @@
 		"hex": "9146FF",
 		"source": "https://brand.twitch.tv",
 		"guidelines": "https://brand.twitch.tv"
+	},
+	{
+		"title": "ty",
+		"hex": "46EBE1",
+		"source": "https://docs.astral.sh/ty/assets/logo-letter.svg"
 	},
 	{
 		"title": "Typeform",

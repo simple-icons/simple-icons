@@ -15,7 +15,7 @@ test('README third-party extensions must be alphabetically sorted', async () => 
 		(extension) => extension.module.name,
 	);
 
-	const expectedOrder = [...thirdPartyExtensionsNames].sort();
+	const expectedOrder = thirdPartyExtensionsNames.toSorted();
 	assert.deepEqual(
 		thirdPartyExtensionsNames,
 		expectedOrder,
@@ -31,7 +31,7 @@ test('README third-party libraries must be alphabetically sorted', async () => {
 		(library) => library.module.name,
 	);
 
-	const expectedOrder = [...thirdPartyLibrariesNames].sort();
+	const expectedOrder = thirdPartyLibrariesNames.toSorted();
 	assert.deepEqual(
 		thirdPartyLibrariesNames,
 		expectedOrder,
