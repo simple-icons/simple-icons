@@ -2588,6 +2588,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Runrun.it` | `runrundotit` |
 | `Rust` | `rust` |
 | `RustDesk` | `rustdesk` |
+| `RustFS` | `rustfs` |
 | `RxDB` | `rxdb` |
 | `Ryanair` | `ryanair` |
 | `Rye` | `rye` |
@@ -2782,6 +2783,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SpeedyPage` | `speedypage` |
 | `Sphere Online Judge` | `spoj` |
 | `Sphinx` | `sphinx` |
+| `SpiderMonkey` | `spidermonkey` |
 | `SpigotMC` | `spigotmc` |
 | `Spine` | `spine` |
 | `Spinnaker` | `spinnaker` |
@@ -3093,6 +3095,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Twinkly` | `twinkly` |
 | `Twinmotion` | `twinmotion` |
 | `Twitch` | `twitch` |
+| `ty` | `ty` |
 | `Typeform` | `typeform` |
 | `TypeORM` | `typeorm` |
 | `Typer` | `typer` |
