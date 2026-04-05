@@ -75,6 +75,8 @@ You can use a `viewbox=auto` parameter to get an auto-sized viewbox. This is use
 <img height="20" src="https://cdn.simpleicons.org/awesomelists?viewbox=auto" />
 ```
 
+See [simple-icons-cdn](https://github.com/LitoMore/simple-icons-cdn) to learn more usages.
+
 ### Node Usage <img src="https://cdn.simpleicons.org/nodedotjs/000/fff" alt="Node" align=left width=24>
 
 The icons are also available through our npm package. To install, simply run:
