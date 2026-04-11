@@ -19012,6 +19012,16 @@
 		}
 	},
 	{
+		"title": "X Ai",
+		"hex": "000000",
+		"source": "https://x.ai",
+		"guidelines": "https://x.ai/legal/terms-of-service",
+		"license": {
+			"type": "custom",
+			"url": "https://x.ai/legal/brand-guidelines"
+		}
+	},
+	{
 		"title": "X.Org",
 		"hex": "F28834",
 		"source": "https://commons.wikimedia.org/wiki/File:X.Org_Logo.svg"
