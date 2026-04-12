@@ -1783,6 +1783,11 @@
 		"source": "https://barmenia.de"
 	},
 	{
+		"title": "Base UI",
+		"hex": "EDEDED",
+		"source": "https://base-ui.com"
+	},
+	{
 		"title": "Basecamp",
 		"hex": "1D2D35",
 		"source": "https://basecamp.com/about/press"
@@ -2535,6 +2540,11 @@
 		"source": "https://cachethq.io/press"
 	},
 	{
+		"title": "CachyOS",
+		"hex": "00AA88",
+		"source": "https://commons.wikimedia.org/wiki/File:CachyOS_Logo.svg"
+	},
+	{
 		"title": "Caddy",
 		"hex": "1F88C0",
 		"source": "https://caddyserver.com"
@@ -3023,6 +3033,11 @@
 		"source": "https://clickup.com/brand"
 	},
 	{
+		"title": "Cline",
+		"hex": "18181B",
+		"source": "https://cline.bot/assets/branding/logos/cline-wordmark-black.svg"
+	},
+	{
 		"title": "CLion",
 		"hex": "000000",
 		"source": "https://www.jetbrains.com/company/brand/logos/",
@@ -3496,6 +3511,11 @@
 		"guidelines": "https://contao.org/en/media"
 	},
 	{
+		"title": "Contensis",
+		"hex": "37BFA7",
+		"source": "https://github.com/contensis/cli/blob/d98c9ab312de942b2417040fc51a021de39a7fd5/assets/contensis-logo.svg"
+	},
+	{
 		"title": "Contentful",
 		"hex": "2478CC",
 		"source": "https://press.contentful.com/media_kits"
@@ -3596,9 +3616,9 @@
 	},
 	{
 		"title": "Corsair",
-		"hex": "000000",
-		"source": "https://www.corsair.com",
-		"guidelines": "https://www.corsair.com/press"
+		"hex": "231F20",
+		"source": "https://www.corsair.com/newsroom/company-logos",
+		"guidelines": "https://www.corsair.com/newsroom/company-logos"
 	},
 	{
 		"title": "Couchbase",
@@ -4292,9 +4312,27 @@
 		"source": "https://wiki.diasporafoundation.org/Branding"
 	},
 	{
+		"title": "DiceBear",
+		"hex": "0284C7",
+		"source": "https://github.com/dicebear/brand/blob/f1471839b82900c1b6da4a606d28b319949ebfc9/src/icon.svg",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "Dictionary.com",
 		"hex": "0049D7",
 		"source": "https://www.dictionary.com"
+	},
+	{
+		"title": "Dify",
+		"hex": "0033FF",
+		"source": "https://github.com/langgenius/dify/blob/48f6b2e885eb40230dfe318fe4d3fb71b50dbc02/web/public/logo/logo.svg",
+		"guidelines": "https://dify.ai/dify-brand-usage-terms",
+		"license": {
+			"type": "custom",
+			"url": "https://dify.ai/end-user-license-agreement"
+		}
 	},
 	{
 		"title": "Digg",
@@ -4393,6 +4431,11 @@
 		"title": "DLNA",
 		"hex": "48A842",
 		"source": "https://commons.wikimedia.org/wiki/File:DLNA_logo.svg"
+	},
+	{
+		"title": "dlthub",
+		"hex": "59C1D5",
+		"source": "https://github.com/dlt-hub/dlt/blob/3201e053ddffd399ed060f5cc33dc72439cb5c7b/docs/website/static/img/dlt-logo.svg"
 	},
 	{
 		"title": "dm",
@@ -5256,6 +5299,11 @@
 		"source": "https://www.fairphone.com"
 	},
 	{
+		"title": "Faker",
+		"hex": "779B2E",
+		"source": "https://github.com/faker-js/faker/blob/b4acc285d6e0323802926a8f9d3134ce06114a63/docs/public/favicon.svg"
+	},
+	{
 		"title": "Falco",
 		"hex": "00AEC7",
 		"source": "https://falco.org/community/falco-brand",
@@ -5666,6 +5714,12 @@
 			"type": "custom",
 			"url": "https://www.linuxfoundation.org/legal/trademark-usage"
 		}
+	},
+	{
+		"title": "Fluxer",
+		"hex": "4641D9",
+		"source": "https://fluxer.app/press",
+		"guidelines": "https://fluxer.app/press"
 	},
 	{
 		"title": "Fly.io",
@@ -6157,6 +6211,11 @@
 		"hex": "00AEF0",
 		"source": "https://www.ghostery.com",
 		"guidelines": "https://www.ghostery.com/press/"
+	},
+	{
+		"title": "Ghostfolio",
+		"hex": "36CFCC",
+		"source": "https://github.com/ghostfolio/ghostfolio/blob/cc92ecf62a014b27146338bb7a20ed6eeb525fba/apps/client/src/assets/ghost.svg"
 	},
 	{
 		"title": "Ghostty",
@@ -7926,6 +7985,12 @@
 		"source": "https://www.indiehackers.com"
 	},
 	{
+		"title": "IndieWeb",
+		"hex": "FF0000",
+		"source": "https://indieweb.org/images/d/d4/IWC_Vector.svg",
+		"guidelines": "https://indieweb.org/logo"
+	},
+	{
 		"title": "IndiGo",
 		"hex": "09009B",
 		"source": "https://www.goindigo.in"
@@ -8639,6 +8704,11 @@
 		"source": "https://github.com/GoogleContainerTools/kaniko/blob/cf5ca26aa4e2f7bf0de56efdf3b4e86b0ff74ed0/logo/Kaniko-Logo-Monochrome.svg"
 	},
 	{
+		"title": "Karakeep",
+		"hex": "000000",
+		"source": "https://karakeep.app/icons/karakeep-full.svg"
+	},
+	{
 		"title": "Karlsruher Verkehrsverbund",
 		"hex": "9B2321",
 		"source": "https://commons.wikimedia.org/wiki/File:KVV_2010.svg"
@@ -9140,7 +9210,7 @@
 	},
 	{
 		"title": "LangChain",
-		"hex": "1C3C3C",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com"
 	},
 	{
@@ -9527,6 +9597,11 @@
 		"source": "https://linktr.ee"
 	},
 	{
+		"title": "Linkvertise",
+		"hex": "FF8114",
+		"source": "https://linkvertise.com/assets/img/linkvertise_logo_big.svg"
+	},
+	{
 		"title": "Linphone",
 		"hex": "FF5E00",
 		"source": "https://gitlab.linphone.org/BC/public/linphone-desktop/-/blob/90dff93a24cafb6a0144b345233ca53bf8c3d92e/Linphone/data/image/logo.svg"
@@ -9688,6 +9763,12 @@
 		"guidelines": "https://www.elastic.co/brand"
 	},
 	{
+		"title": "Longhorn",
+		"hex": "5F224B",
+		"source": "https://github.com/longhorn/website/blob/9da045e3527e6f4655dea456837baf656763e92e/static/img/icon-longhorn.svg",
+		"guidelines": "https://www.linuxfoundation.org/legal/trademark-usage"
+	},
+	{
 		"title": "Looker",
 		"hex": "4285F4",
 		"source": "https://looker.com"
@@ -9706,6 +9787,11 @@
 		"title": "LoopBack",
 		"hex": "3F5DFF",
 		"source": "https://loopback.io/resources"
+	},
+	{
+		"title": "Loops",
+		"hex": "FC5200",
+		"source": "https://app.loops.so/loops.svg"
 	},
 	{
 		"title": "Loot Crate",
@@ -11825,6 +11911,15 @@
 		"guidelines": "https://www.openapis.org/faq/style-guide"
 	},
 	{
+		"title": "OpenBao",
+		"hex": "336D5C",
+		"source": "https://github.com/openbao/artwork/blob/8f75904040f9ca4fcba2b7a46581ecee536315b5/black/openbao-single-black.svg",
+		"guidelines": "https://openbao.org/docs/policies/brand/",
+		"license": {
+			"type": "CC-BY-SA-4.0"
+		}
+	},
+	{
 		"title": "OpenBSD",
 		"hex": "F2CA30",
 		"source": "https://en.wikipedia.org/wiki/OpenBSD"
@@ -12064,6 +12159,12 @@
 		"hex": "FF7900",
 		"source": "https://brand.orange.com",
 		"guidelines": "https://system.design.orange.com/0c1af118d/p/494474-guidelines"
+	},
+	{
+		"title": "Orchard Core",
+		"hex": "41B670",
+		"source": "https://docs.orchardcore.net/en/latest/reference/branding/assets/logo/symbol/color/orchard-core-symbol-logo-color.svg",
+		"guidelines": "https://docs.orchardcore.net/en/latest/reference/branding/"
 	},
 	{
 		"title": "ORCID",
@@ -12310,6 +12411,11 @@
 		"title": "Pandora",
 		"hex": "224099",
 		"source": "https://www.pandoraforbrands.com"
+	},
+	{
+		"title": "Pangolin",
+		"hex": "F36118",
+		"source": "https://github.com/fosrl/pangolin/blob/b4c01349d19c65c60b189c735a3e3f7e9ab8f9f0/public/logo/pangolin_orange.svg"
 	},
 	{
 		"title": "Pantheon",
@@ -13282,6 +13388,11 @@
 		"source": "https://pronouns.page/design"
 	},
 	{
+		"title": "ProseMirror",
+		"hex": "000000",
+		"source": "https://github.com/ProseMirror/prosemirror/blob/e30c5109570a6c05abab853c29920eb614dd8e35/assets/prosemirror_light.svg"
+	},
+	{
 		"title": "ProSieben",
 		"hex": "E6000F",
 		"source": "https://www.prosieben.de"
@@ -13530,12 +13641,18 @@
 		"source": "https://github.com/qbittorrent/qBittorrent/blob/73028f9930d9ab9d89edb60ed4aedb66d75669d9/src/icons/qbittorrent-tray-light.svg"
 	},
 	{
+		"title": "Qdrant",
+		"hex": "DC244C",
+		"source": "https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-white.svg",
+		"guidelines": "https://qdrant.tech/brand-resources/"
+	},
+	{
 		"title": "QEMU",
 		"hex": "FF6600",
 		"source": "https://wiki.qemu.org/Logo"
 	},
 	{
-		"title": "Qgis",
+		"title": "QGIS",
 		"hex": "589632",
 		"source": "https://www.qgis.org/en/site/getinvolved/styleguide.html",
 		"guidelines": "https://www.qgis.org/en/site/getinvolved/styleguide.html"
@@ -14664,6 +14781,16 @@
 		"source": "https://github.com/rustdesk/rustdesk/blob/80857c22c9ee1578b4329aec3250c3e6f285a7d2/res/logo.svg"
 	},
 	{
+		"title": "RustFS",
+		"hex": "0196D0",
+		"source": "https://github.com/rustfs/console/blob/3b632beee404cf195e55f558e94f343326e564f9/public/logo.svg",
+		"guidelines": "https://docs.rustfs.com/trademark/",
+		"license": {
+			"type": "custom",
+			"url": "https://docs.rustfs.com/trademark/#trademark-usage-policy-document"
+		}
+	},
+	{
 		"title": "RxDB",
 		"hex": "8D1F89",
 		"source": "https://github.com/pubkey/rxdb/blob/0c554dbcf7a4e6c48cd581ec1e3b130a4b5ab7d6/docs/files/logo/logo.svg"
@@ -15548,6 +15675,11 @@
 		"source": "https://getsol.us/branding/"
 	},
 	{
+		"title": "solved.ac",
+		"hex": "17CE3A",
+		"source": "https://static.solved.ac/logo.svg"
+	},
+	{
 		"title": "Sonar",
 		"hex": "FD3456",
 		"source": "https://www.sonarsource.com"
@@ -15753,6 +15885,14 @@
 		"source": "https://github.com/sphinx-doc/sphinx/blob/ed84d63e6f2c4fd43b97fc43ee8be4156a13af9e/doc/_static/favicon.svg",
 		"license": {
 			"type": "BSD-3-Clause"
+		}
+	},
+	{
+		"title": "SpiderMonkey",
+		"hex": "FFD681",
+		"source": "https://github.com/mozilla-spidermonkey/spidermonkey.dev/blob/b65d91dc571bf0646a36bc68fc648ee022164fab/favicon.svg",
+		"license": {
+			"type": "MPL-2.0"
 		}
 	},
 	{
@@ -16965,6 +17105,12 @@
 		"source": "https://tidal.com/press"
 	},
 	{
+		"title": "TiDB",
+		"hex": "DC150B",
+		"source": "https://www.pingcap.com/tidb-brand-guidelines/",
+		"guidelines": "https://www.pingcap.com/tidb-brand-guidelines/"
+	},
+	{
 		"title": "TiddlyWiki",
 		"hex": "111111",
 		"source": "https://tiddlywiki.com"
@@ -17268,6 +17414,11 @@
 		"source": "https://en.wikipedia.org/wiki/File:Treyarch_logo.svg"
 	},
 	{
+		"title": "Trezor",
+		"hex": "141609",
+		"source": "https://satoshilabs.visualbook.pro/content/2_trezor/1_logos/2_symbol/trezor-symbol-black-rgb.svg"
+	},
+	{
 		"title": "Tricentis",
 		"hex": "12438C",
 		"source": "https://www.tricentis.com"
@@ -17325,6 +17476,11 @@
 		"hex": "1904DA",
 		"source": "https://www.aquasec.com/brand",
 		"guidelines": "https://www.aquasec.com/brand"
+	},
+	{
+		"title": "TRMNL",
+		"hex": "F8654B",
+		"source": "https://trmnl.com/brand"
 	},
 	{
 		"title": "Trove",
@@ -17470,6 +17626,11 @@
 		"hex": "9146FF",
 		"source": "https://brand.twitch.tv",
 		"guidelines": "https://brand.twitch.tv"
+	},
+	{
+		"title": "ty",
+		"hex": "46EBE1",
+		"source": "https://docs.astral.sh/ty/assets/logo-letter.svg"
 	},
 	{
 		"title": "Typeform",
@@ -17940,8 +18101,8 @@
 	},
 	{
 		"title": "Vencord",
-		"hex": "D3859B",
-		"source": "https://github.com/Vencord/Vesktop/blob/ccff1ac3efde2b4fc826d2f411d79e42d80dcb70/build/icon.png"
+		"hex": "EB7396",
+		"source": "https://github.com/Vencord/Vesktop/blob/1f17c18362b12a9e8af21e571e844d05bda87ff5/build/icon.svg"
 	},
 	{
 		"title": "Venmo",
@@ -19021,6 +19182,11 @@
 		"title": "Yeti",
 		"hex": "00263C",
 		"source": "https://www.yeti.com"
+	},
+	{
+		"title": "Yew",
+		"hex": "009A5B",
+		"source": "https://github.com/yewstack/yew/blob/38e2478d9a2b7a251f6fd068675618326d18fd5a/website/static/img/logo.svg"
 	},
 	{
 		"title": "Yii",
