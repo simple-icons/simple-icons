@@ -1,7 +1,3 @@
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-  <rect x="1" y="9" width="8" height="6" rx="2"/>
-  <rect x="15" y="2" width="8" height="6" rx="2"/>
-  <rect x="15" y="16" width="8" height="6" rx="2"/>
-  <rect x="9" y="11.5" width="4" height="1.5" rx="0.5"/>
-  <rect x="12.5" y="5" width="1.5" height="14" rx="0.5"/>
+<svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+  <path d="M3.5 8h4a2.5 2.5 0 0 1 2.5 2.5v3a2.5 2.5 0 0 1-2.5 2.5h-4a2.5 2.5 0 0 1-2.5-2.5v-3a2.5 2.5 0 0 1 2.5-2.5ZM15.25 2h5.75a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-5.75a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2ZM15.25 16h5.75a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-5.75a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2ZM10 11.25h1.75v1.5h-1.75ZM11.75 4.5h1.5v15h-1.5Z")/>>
 </svg>
