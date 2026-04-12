@@ -445,6 +445,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `C++` | `cplusplus` |
 | `C++ Builder` | `cplusplusbuilder` |
 | `Cachet` | `cachet` |
+| `CachyOS` | `cachyos` |
 | `Caddy` | `caddy` |
 | `Cadillac` | `cadillac` |
 | `CafePress` | `cafepress` |
@@ -1013,6 +1014,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fluke` | `fluke` |
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
+| `Fluxer` | `fluxer` |
 | `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
@@ -3069,6 +3071,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tripadvisor` | `tripadvisor` |
 | `trivago` | `trivago` |
 | `Trivy` | `trivy` |
+| `TRMNL` | `trmnl` |
 | `Trove` | `trove` |
 | `tRPC` | `trpc` |
 | `TrueNAS` | `truenas` |
