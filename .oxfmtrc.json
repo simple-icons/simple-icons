@@ -1,0 +1,9 @@
+{
+	"useTabs": true,
+	"singleQuote": true,
+	"bracketSpacing": false,
+	"proseWrap": "never",
+	"embeddedLanguageFormatting": "off",
+	"printWidth": 80,
+	"ignorePatterns": ["LICENSE.md", "slugs.md", "data/simple-icons.json"]
+}
