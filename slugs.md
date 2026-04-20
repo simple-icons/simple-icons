@@ -1712,6 +1712,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Local` | `local` |
 | `LocalSend` | `localsend` |
 | `LocalXpose` | `localxpose` |
+| `Locust` | `locust` |
 | `Lodash` | `lodash` |
 | `LogMeIn` | `logmein` |
 | `Logseq` | `logseq` |
@@ -3222,6 +3223,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `vivo` | `vivo` |
 | `VK` | `vk` |
 | `VLC media player` | `vlcmediaplayer` |
+| `vLLM` | `vllm` |
 | `VMware` | `vmware` |
 | `Vodafone` | `vodafone` |
 | `voelkner` | `voelkner` |
