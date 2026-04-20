@@ -445,6 +445,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `C++` | `cplusplus` |
 | `C++ Builder` | `cplusplusbuilder` |
 | `Cachet` | `cachet` |
+| `CachyOS` | `cachyos` |
 | `Caddy` | `caddy` |
 | `Cadillac` | `cadillac` |
 | `CafePress` | `cafepress` |
@@ -1013,6 +1014,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fluke` | `fluke` |
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
+| `Fluxer` | `fluxer` |
 | `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
@@ -1710,6 +1712,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Local` | `local` |
 | `LocalSend` | `localsend` |
 | `LocalXpose` | `localxpose` |
+| `Locust` | `locust` |
 | `Lodash` | `lodash` |
 | `LogMeIn` | `logmein` |
 | `Logseq` | `logseq` |
@@ -2588,6 +2591,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Runrun.it` | `runrundotit` |
 | `Rust` | `rust` |
 | `RustDesk` | `rustdesk` |
+| `RustFS` | `rustfs` |
 | `RxDB` | `rxdb` |
 | `Ryanair` | `ryanair` |
 | `Rye` | `rye` |
@@ -2782,6 +2786,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `SpeedyPage` | `speedypage` |
 | `Sphere Online Judge` | `spoj` |
 | `Sphinx` | `sphinx` |
+| `SpiderMonkey` | `spidermonkey` |
 | `SpigotMC` | `spigotmc` |
 | `Spine` | `spine` |
 | `Spinnaker` | `spinnaker` |
@@ -3067,6 +3072,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tripadvisor` | `tripadvisor` |
 | `trivago` | `trivago` |
 | `Trivy` | `trivy` |
+| `TRMNL` | `trmnl` |
 | `Trove` | `trove` |
 | `tRPC` | `trpc` |
 | `TrueNAS` | `truenas` |
@@ -3093,6 +3099,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Twinkly` | `twinkly` |
 | `Twinmotion` | `twinmotion` |
 | `Twitch` | `twitch` |
+| `ty` | `ty` |
 | `Typeform` | `typeform` |
 | `TypeORM` | `typeorm` |
 | `Typer` | `typer` |
@@ -3216,6 +3223,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `vivo` | `vivo` |
 | `VK` | `vk` |
 | `VLC media player` | `vlcmediaplayer` |
+| `vLLM` | `vllm` |
 | `VMware` | `vmware` |
 | `Vodafone` | `vodafone` |
 | `voelkner` | `voelkner` |

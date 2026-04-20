@@ -2540,6 +2540,11 @@
 		"source": "https://cachethq.io/press"
 	},
 	{
+		"title": "CachyOS",
+		"hex": "00AA88",
+		"source": "https://commons.wikimedia.org/wiki/File:CachyOS_Logo.svg"
+	},
+	{
 		"title": "Caddy",
 		"hex": "1F88C0",
 		"source": "https://caddyserver.com"
@@ -5094,8 +5099,8 @@
 	},
 	{
 		"title": "ESPHome",
-		"hex": "000000",
-		"source": "https://esphome.io"
+		"hex": "18BCF2",
+		"source": "https://github.com/esphome/developers.esphome.io/blob/7c0304aa36536c63c93b1f19ba18969f96df0e08/docs/images/logo.svg"
 	},
 	{
 		"title": "Espressif",
@@ -5709,6 +5714,12 @@
 			"type": "custom",
 			"url": "https://www.linuxfoundation.org/legal/trademark-usage"
 		}
+	},
+	{
+		"title": "Fluxer",
+		"hex": "4641D9",
+		"source": "https://fluxer.app/press",
+		"guidelines": "https://fluxer.app/press"
 	},
 	{
 		"title": "Fly.io",
@@ -9730,6 +9741,11 @@
 		"source": "https://localxpose.io"
 	},
 	{
+		"title": "Locust",
+		"hex": "B8EE4B",
+		"source": "https://github.com/locustio/locust/blob/2c8f587a60a0c5b0bb27ee395b0d1ca5149ca6f2/locust/webui/src/assets/Logo.tsx"
+	},
+	{
 		"title": "Lodash",
 		"hex": "3492FF",
 		"source": "https://github.com/lodash/lodash.com/blob/c8d41c62b446f08905fd94802db4da8da05d3e92/assets/img/lodash.svg"
@@ -11109,6 +11125,12 @@
 		"hex": "4581C3",
 		"source": "https://neo4j.com/brand/#logo",
 		"guidelines": "https://neo4j.com/brand/#logo"
+	},
+	{
+		"title": "Neon",
+		"hex": "34D59A",
+		"source": "https://neon.com/brand",
+		"guidelines": "https://neon.com/brand"
 	},
 	{
 		"title": "Neovim",
@@ -17472,6 +17494,11 @@
 		"guidelines": "https://www.aquasec.com/brand"
 	},
 	{
+		"title": "TRMNL",
+		"hex": "F8654B",
+		"source": "https://trmnl.com/brand"
+	},
+	{
 		"title": "Trove",
 		"hex": "2D004B",
 		"source": "https://trove.nla.gov.au/about/who-we-are/our-logo",
@@ -18320,6 +18347,11 @@
 		"title": "VLC media player",
 		"hex": "FF8800",
 		"source": "https://code.videolan.org/videolan/vlc/-/blob/1ce7f686ee17a028d2d79627ae69f22d905f2e23/extras/package/macosx/asset_sources/vlc_app_icon.svg"
+	},
+	{
+		"title": "vLLM",
+		"hex": "30A2FF",
+		"source": "https://github.com/vllm-project/media-kit/blob/79b2ea5db25b723f2d81dae203a87c5b9a076722/vLLM-Logo.svg"
 	},
 	{
 		"title": "VMware",
