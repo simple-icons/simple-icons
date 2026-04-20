@@ -2,7 +2,7 @@
 // @ts-check
 /**
  * @file
- * Script to remove an icon and its data.
+ * Remove an icon and its data.
  */
 
 import fs from 'node:fs/promises';
@@ -38,7 +38,10 @@ const icons = iconsData.map((icon, index) => {
 const found = await search({
 	message: 'Search for an icon to remove:',
 	async source(input) {
-		if (!input) return [];
+		if (!input) {
+			return [];
+		}
+
 		return fuzzySearch(input, icons, {
 			keySelector: (icon) => [icon.value.title, icon.value.slug],
 		});

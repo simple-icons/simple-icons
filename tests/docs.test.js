@@ -7,7 +7,7 @@ import {strict as assert} from 'node:assert';
 import {test} from 'mocha';
 import {getThirdPartyExtensions, getThirdPartyLibraries} from '../sdk.mjs';
 
-test('README third party extensions must be alphabetically sorted', async () => {
+test('README third-party extensions must be alphabetically sorted', async () => {
 	const thirdPartyExtensions = await getThirdPartyExtensions();
 	assert.ok(thirdPartyExtensions.length > 0);
 
@@ -15,15 +15,15 @@ test('README third party extensions must be alphabetically sorted', async () => 
 		(extension) => extension.module.name,
 	);
 
-	const expectedOrder = [...thirdPartyExtensionsNames].sort();
+	const expectedOrder = thirdPartyExtensionsNames.toSorted();
 	assert.deepEqual(
 		thirdPartyExtensionsNames,
 		expectedOrder,
-		'Wrong alphabetical order of third party extensions in README.',
+		'Wrong alphabetical order of third-party extensions in README.',
 	);
 });
 
-test('README third party libraries must be alphabetically sorted', async () => {
+test('README third-party libraries must be alphabetically sorted', async () => {
 	const thirdPartyLibraries = await getThirdPartyLibraries();
 	assert.ok(thirdPartyLibraries.length > 0);
 
@@ -31,10 +31,10 @@ test('README third party libraries must be alphabetically sorted', async () => {
 		(library) => library.module.name,
 	);
 
-	const expectedOrder = [...thirdPartyLibrariesNames].sort();
+	const expectedOrder = thirdPartyLibrariesNames.toSorted();
 	assert.deepEqual(
 		thirdPartyLibrariesNames,
 		expectedOrder,
-		'Wrong alphabetical order of third party libraries in README.',
+		'Wrong alphabetical order of third-party libraries in README.',
 	);
 });

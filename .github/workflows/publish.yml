@@ -22,11 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Run linters
-        run: npm run lint
-      - name: Build NodeJS package
-        run: npm run build
+        run: node --run lint
+      - name: Build Node.js package
+        run: node --run build
       - name: Run tests
-        run: npm run test
+        run: node --run test
   npm:
     name: NPM Package
     needs: sanity-check
@@ -48,13 +48,13 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Reformat to regular markdown
-        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
       - name: Minify icons data file
         run: node scripts/release/minify-icons-data.js
-      - name: Build NodeJS package
-        run: npm run build
+      - name: Build Node.js package
+        run: node --run build
       - name: Deploy to NPM
         run: npm publish
   github:
@@ -77,7 +77,7 @@ jobs:
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Reformat to regular markdown
-        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js
       - name: Configure GIT credentials
         run: |
           git config user.name "simple-icons[bot]"

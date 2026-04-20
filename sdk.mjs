@@ -29,15 +29,15 @@ const TITLE_TO_SLUG_REPLACEMENTS = {
 
 const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
 	`[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
-	'g',
+	'gv',
 );
 
-const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/g;
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/gv;
 
 /**
  * Regex to validate SVG paths.
  */
-export const SVG_PATH_REGEX = /^m[-mzlhvcsqtae\d,. ]+$/i;
+export const SVG_PATH_REGEX = /^m[\-mzlhvcsqtae\d,. ]+$/iv;
 
 /**
  * Get the slug/filename for an icon.
@@ -88,7 +88,7 @@ export const titleToHtmlFriendly = (brandTitle) =>
 		.replaceAll('"', '&quot;')
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
-		.replaceAll(/./g, (char) => {
+		.replaceAll(/./gv, (char) => {
 			const charCode = char.codePointAt(0) || 0;
 			return charCode > 127 ? `&#${charCode};` : char;
 		});
@@ -101,11 +101,11 @@ export const titleToHtmlFriendly = (brandTitle) =>
  */
 export const htmlFriendlyToTitle = (htmlFriendlyTitle) =>
 	htmlFriendlyTitle
-		.replaceAll(/&#(\d+);/g, (_, number_) =>
+		.replaceAll(/&#(\d+);/gv, (_, number_) =>
 			String.fromCodePoint(Number.parseInt(number_, 10)),
 		)
 		.replaceAll(
-			/&(quot|amp|lt|gt);/g,
+			/&(quot|amp|lt|gt);/gv,
 			/**
 			 * Replace HTML entity references with their respective decoded characters.
 			 * @param {string} _ Full match.
@@ -162,98 +162,75 @@ export const normalizeColor = (text) => {
 };
 
 /**
- * Get information about third party extensions from the README table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party extensions.
+ * Parse module and author from a line in the third-party extensions/libraries table.
+ * @param {string} line The line to parse.
+ * @returns {ThirdPartyExtension} The parsed module and author.
  */
-export const getThirdPartyExtensions = async () =>
-	normalizeNewlines(
-		await fs.readFile(path.join(import.meta.dirname, 'README.md'), 'utf8'),
-	)
-		.split('## Third-Party Extensions')[1]
-		.split('|\n\n')[0]
-		.split('|\n|')
-		.slice(2)
-		.map((line) => {
-			const [module_, author] = line.split(' | ');
-			const module = module_.split('<img src="')[0];
-			const moduleName = /\[(.+)]/.exec(module)?.[1];
-			if (moduleName === undefined) {
-				throw new Error(`Module name improperly parsed from line: ${line}`);
-			}
+const parseModuleAuthorFromLine = (line) => {
+	const [module_, author] = line.split(' | ');
+	const moduleName = />([^<]+)<\/a>$/v.exec(module_)?.[1];
+	if (moduleName === undefined) {
+		throw new Error(`Module name improperly parsed from line: ${line}`);
+	}
 
-			const moduleUrl = /\((.+)\)/.exec(module)?.[1];
-			if (moduleUrl === undefined) {
-				throw new Error(`Module URL improperly parsed from line: ${line}`);
-			}
+	const moduleUrl = /^\s*<a href="(.[^"]+)"/v.exec(module_)?.[1];
+	if (moduleUrl === undefined) {
+		throw new Error(`Module URL improperly parsed from line: ${line}`);
+	}
 
-			const authorName = /\[(.+)]/.exec(author)?.[1];
-			if (authorName === undefined) {
-				throw new Error(`Author improperly parsed from line: ${line}`);
-			}
+	const authorName = /\[(.+)\]/v.exec(author)?.[1];
+	if (authorName === undefined) {
+		throw new Error(`Author improperly parsed from line: ${line}`);
+	}
 
-			const authorUrl = /\((.+)\)/.exec(author)?.[1];
-			if (authorUrl === undefined) {
-				throw new Error(`Author URL improperly parsed from line: ${line}`);
-			}
+	const authorUrl = /\((.+)\)/v.exec(author)?.[1];
+	if (authorUrl === undefined) {
+		throw new Error(`Author URL improperly parsed from line: ${line}`);
+	}
 
-			return {
-				module: {
-					name: moduleName,
-					url: moduleUrl,
-				},
-				author: {
-					name: authorName,
-					url: authorUrl,
-				},
-			};
-		});
+	return {
+		module: {
+			name: moduleName,
+			url: moduleUrl,
+		},
+		author: {
+			name: authorName,
+			url: authorUrl,
+		},
+	};
+};
 
 /**
- * Get information about third party libraries from the README table.
- * @returns {Promise<ThirdPartyExtension[]>} Information about third party libraries.
+ * Parse extensions from a table header.
+ * @param {string} tableHeader Markdown header of the table.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third-party extensions or libraries.
  */
-export const getThirdPartyLibraries = async () =>
-	normalizeNewlines(
-		await fs.readFile(path.join(import.meta.dirname, 'README.md'), 'utf8'),
-	)
-		.split('## Third-Party Libraries')[1]
+const parseExtensionsFromSectionTable = async (tableHeader) => {
+	const readme = await fs.readFile(
+		path.join(import.meta.dirname, 'README.md'),
+		'utf8',
+	);
+	return normalizeNewlines(readme)
+		.split(tableHeader)[1]
 		.split('|\n\n')[0]
 		.split('|\n|')
 		.slice(2)
-		.map((line) => {
-			let [module, author] = line.split(' | ');
-			module = module.split('<img src="')[0];
-			const moduleName = /\[(.+)]/.exec(module)?.[1];
-			if (moduleName === undefined) {
-				throw new Error(`Module name improperly parsed from line: ${line}`);
-			}
+		.map((line) => parseModuleAuthorFromLine(line));
+};
 
-			const moduleUrl = /\((.+)\)/.exec(module)?.[1];
-			if (moduleUrl === undefined) {
-				throw new Error(`Module URL improperly parsed from line: ${line}`);
-			}
+/**
+ * Get information about third-party extensions from the README table.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third-party extensions.
+ */
+export const getThirdPartyExtensions = async () =>
+	parseExtensionsFromSectionTable('## Third-Party Extensions');
 
-			const authorName = /\[(.+)]/.exec(author)?.[1];
-			if (authorName === undefined) {
-				throw new Error(`Author improperly parsed from line: ${line}`);
-			}
-
-			const authorUrl = /\((.+)\)/.exec(author)?.[1];
-			if (authorUrl === undefined) {
-				throw new Error(`Author URL improperly parsed from line: ${line}`);
-			}
-
-			return {
-				module: {
-					name: moduleName,
-					url: moduleUrl,
-				},
-				author: {
-					name: authorName,
-					url: authorUrl,
-				},
-			};
-		});
+/**
+ * Get information about third-party libraries from the README table.
+ * @returns {Promise<ThirdPartyExtension[]>} Information about third-party libraries.
+ */
+export const getThirdPartyLibraries = async () =>
+	parseExtensionsFromSectionTable('## Third-Party Libraries');
 
 /**
  * `Intl.Collator` object ready to be used for icon titles sorting.
