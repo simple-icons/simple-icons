@@ -108,7 +108,7 @@ const isNewIcon = (input) =>
 const previewHexColor = (input) => {
 	const color = normalizeColor(input);
 	const luminance = HEX_REGEX.test(input)
-		? getRelativeLuminance.default(`#${color}`)
+		? getRelativeLuminance(`#${color}`)
 		: -1;
 	if (luminance === -1) {
 		return input.toUpperCase();
