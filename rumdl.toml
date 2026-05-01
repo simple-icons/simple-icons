@@ -5,5 +5,4 @@ include = ["**/*.md"]
 cache-dir = "node_modules/.cache/rumdl"
 
 [MD076]
-style = "tight"
 allow-loose-continuation = true
