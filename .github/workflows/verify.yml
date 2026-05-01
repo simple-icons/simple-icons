@@ -14,7 +14,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
@@ -33,7 +33,7 @@ jobs:
       pull-requests: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
@@ -45,7 +45,7 @@ jobs:
         id: pr
         run: echo "is_normal=$(echo ${{ github.base_ref != 'master' && github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'meta') == false }})" >> $GITHUB_OUTPUT
       - name: Detect changed files
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4
         id: changes
         with:
           list-files: shell
@@ -102,7 +102,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
