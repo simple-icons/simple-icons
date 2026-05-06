@@ -6070,11 +6070,6 @@
 		"source": "https://hydron.holdings/media/media_kit"
 	},
 	{
- 		"title": "Grafana Loki",
- 		"hex": "F5A623",
-  		"source": "https://grafana.com/oss/loki/"
-	},
-	{
 		"title": "Galaxus",
 		"hex": "000000",
 		"source": "https://www.galaxus.de"
@@ -6928,6 +6923,11 @@
 		"title": "Grafana",
 		"hex": "F46800",
 		"source": "https://grafana.com"
+	},
+	{
+ 		"title": "Grafana Loki",
+ 		"hex": "F5A623",
+  		"source": "https://grafana.com/oss/loki/"
 	},
 	{
 		"title": "Grammarly",
