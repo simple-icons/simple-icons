@@ -518,6 +518,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
 | `Cinnamon` | `cinnamon` |
+| `Cinny` | `cinny` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
 | `CircuitVerse` | `circuitverse` |
@@ -1301,6 +1302,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hedera` | `hedera` |
 | `HedgeDoc` | `hedgedoc` |
 | `Helium` | `helium` |
+| `Helium Browser` | `heliumbrowser` |
 | `Helix` | `helix` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
@@ -1620,6 +1622,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LADA` | `lada` |
 | `Lamborghini` | `lamborghini` |
 | `LangChain` | `langchain` |
+| `LangChain Corporate` | `langchaincorporate` |
 | `Langflow` | `langflow` |
 | `LangGraph` | `langgraph` |
 | `LanguageTool` | `languagetool` |
