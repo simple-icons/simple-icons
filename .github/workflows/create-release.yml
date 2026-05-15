@@ -95,7 +95,7 @@ jobs:
       - name: Commit version bump
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: Bump version
+          commit_message: Bump version to ${{ needs.release-pr.outputs.new-version }}
           commit_user_name: 'simple-icons[bot]'
           commit_user_email: 'simple-icons[bot]@users.noreply.github.com'
           commit_author: 'simple-icons[bot] <simple-icons[bot]@users.noreply.github.com>'

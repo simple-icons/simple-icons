@@ -7,9 +7,6 @@
 
 import {readFile, writeFile} from 'node:fs/promises';
 import path from 'node:path';
-import process from 'node:process';
-
-const LINKS_BRANCH = process.argv[2] || 'develop';
 
 const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const readmeFile = path.resolve(rootDirectory, 'README.md');
@@ -30,11 +27,6 @@ const reformat = async (filePath) => {
 			.replaceAll(
 				/<img src="https:\/\/cdn.simpleicons.org\/([^\/]+)\/000\/fff"([^>]+)>([^<]+)<\/a>/gv,
 				'<img src="https://cdn.simpleicons.org/$1/000/fff"$2>&nbsp;$3</a>',
-			)
-			// Replace all CDN links with raw links
-			.replaceAll(
-				/https:\/\/cdn.simpleicons.org\/(.+)\/000\/fff/gv,
-				`https://raw.githubusercontent.com/simple-icons/simple-icons/${LINKS_BRANCH}/icons/$1.svg`,
 			)
 			// Replace all GitHub blockquotes with regular markdown
 			// Reference: https://github.com/orgs/community/discussions/16925

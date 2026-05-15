@@ -445,6 +445,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `C++` | `cplusplus` |
 | `C++ Builder` | `cplusplusbuilder` |
 | `Cachet` | `cachet` |
+| `CachyOS` | `cachyos` |
 | `Caddy` | `caddy` |
 | `Cadillac` | `cadillac` |
 | `CafePress` | `cafepress` |
@@ -517,6 +518,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
 | `Cinnamon` | `cinnamon` |
+| `Cinny` | `cinny` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
 | `CircuitVerse` | `circuitverse` |
@@ -734,6 +736,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `DeepL` | `deepl` |
 | `DeepMind` | `deepmind` |
 | `Deepnote` | `deepnote` |
+| `DeepSeek` | `deepseek` |
 | `Deezer` | `deezer` |
 | `Deliveroo` | `deliveroo` |
 | `Dell` | `dell` |
@@ -1013,6 +1016,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fluke` | `fluke` |
 | `Flutter` | `flutter` |
 | `Flux` | `flux` |
+| `Fluxer` | `fluxer` |
 | `Fly.io` | `flydotio` |
 | `Flyway` | `flyway` |
 | `FMOD` | `fmod` |
@@ -1298,6 +1302,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hedera` | `hedera` |
 | `HedgeDoc` | `hedgedoc` |
 | `Helium` | `helium` |
+| `Helium Browser` | `heliumbrowser` |
 | `Helix` | `helix` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
@@ -1617,6 +1622,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LADA` | `lada` |
 | `Lamborghini` | `lamborghini` |
 | `LangChain` | `langchain` |
+| `LangChain Corporate` | `langchaincorporate` |
 | `Langflow` | `langflow` |
 | `LangGraph` | `langgraph` |
 | `LanguageTool` | `languagetool` |
@@ -1710,6 +1716,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Local` | `local` |
 | `LocalSend` | `localsend` |
 | `LocalXpose` | `localxpose` |
+| `Locust` | `locust` |
 | `Lodash` | `lodash` |
 | `LogMeIn` | `logmein` |
 | `Logseq` | `logseq` |
@@ -1898,6 +1905,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Moo` | `moo` |
 | `Moodle` | `moodle` |
 | `Moonrepo` | `moonrepo` |
+| `Moonshot AI` | `moonshotai` |
 | `Moq` | `moq` |
 | `Moqups` | `moqups` |
 | `Morrisons` | `morrisons` |
@@ -1953,6 +1961,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `NEC` | `nec` |
 | `Nederlandse Spoorwegen` | `nederlandsespoorwegen` |
 | `Neo4j` | `neo4j` |
+| `Neon` | `neon` |
 | `Neovim` | `neovim` |
 | `Neptune` | `neptune` |
 | `NestJS` | `nestjs` |
@@ -2424,6 +2433,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Quizlet` | `quizlet` |
 | `Quora` | `quora` |
 | `Qwant` | `qwant` |
+| `QWen` | `qwen` |
 | `Qwik` | `qwik` |
 | `Qwiklabs` | `qwiklabs` |
 | `Qzone` | `qzone` |
@@ -3069,6 +3079,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Tripadvisor` | `tripadvisor` |
 | `trivago` | `trivago` |
 | `Trivy` | `trivy` |
+| `TRMNL` | `trmnl` |
 | `Trove` | `trove` |
 | `tRPC` | `trpc` |
 | `TrueNAS` | `truenas` |
@@ -3219,6 +3230,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `vivo` | `vivo` |
 | `VK` | `vk` |
 | `VLC media player` | `vlcmediaplayer` |
+| `vLLM` | `vllm` |
 | `VMware` | `vmware` |
 | `Vodafone` | `vodafone` |
 | `voelkner` | `voelkner` |
