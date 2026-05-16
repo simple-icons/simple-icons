@@ -16,11 +16,19 @@ export type {IconData, DuplicateAlias, Aliases} from './types.d.ts';
  * @see {@link https://github.com/simple-icons/simple-icons#third-party-extensions Third-Party Extensions}
  */
 export type ThirdPartyExtension = {
-	module: ThirdPartyExtensionSubject;
-	author: ThirdPartyExtensionSubject;
+	module: ThirdPartyExtensionModule;
+	author: ThirdPartyExtensionAuthor;
 };
 
-type ThirdPartyExtensionSubject = {
+type ThirdPartyExtensionModule = {
+	name: string;
+	url: string;
+	image: {
+		url: string;
+	};
+};
+
+type ThirdPartyExtensionAuthor = {
 	name: string;
 	url: string;
 };
