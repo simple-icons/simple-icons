@@ -169,6 +169,7 @@ The below are known extensions to third-party tools.
 
 | Extension | Author |
 | :-- | :-- |
+| <a href="https://awaitwidget.com/simple-icons"><img src="https://litomore.me/icons/await.svg" alt="Await" align="left" width=24 height=24>Await widget</a> | [@LitoMore](https://github.com/LitoMore) |
 | <a href="https://github.com/mondeja/simple-icons-blender"><img src="https://cdn.simpleicons.org/blender/000/fff" alt="Blender" align=left width=24 height=24>Blender add-on</a> | [@mondeja](https://github.com/mondeja) |
 | <a href="https://boxy-svg.com/ideas/298/simple-icons-library-provider"><img src="https://cdn.simpleicons.org/boxysvg/000/fff" alt="Boxy SVG" align=left width=24 height=24>Boxy SVG library</a> | [@Jarek](https://boxy-svg.com/profiles/0000000000/jarek) |
 | <a href="https://github.com/mondeja/simple-icons-drawio"><img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24>Drawio library</a> | [@mondeja](https://github.com/mondeja) |
