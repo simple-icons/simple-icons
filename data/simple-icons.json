@@ -45,7 +45,7 @@
 	},
 	{
 		"title": "1Password",
-		"hex": "3B66BC",
+		"hex": "145FE4",
 		"source": "https://1password.com/press",
 		"guidelines": "https://1password.com/press"
 	},
@@ -2947,6 +2947,11 @@
 		"source": "https://projects.linuxmint.com/cinnamon"
 	},
 	{
+		"title": "Cinny",
+		"hex": "000000",
+		"source": "https://cinny.in/assets/cinny.svg"
+	},
+	{
 		"title": "Circle",
 		"hex": "8669AE",
 		"source": "https://www.circle.com"
@@ -4120,6 +4125,11 @@
 		"title": "Deepnote",
 		"hex": "3793EF",
 		"source": "https://deepnote.com"
+	},
+	{
+		"title": "DeepSeek",
+		"hex": "5786FE",
+		"source": "https://www.deepseek.com"
 	},
 	{
 		"title": "Deezer",
@@ -6251,8 +6261,8 @@
 	},
 	{
 		"title": "Git",
-		"hex": "F05032",
-		"source": "https://git-scm.com/downloads/logos",
+		"hex": "F03C2E",
+		"source": "https://git-scm.com/community/logos",
 		"license": {
 			"type": "CC-BY-3.0"
 		}
@@ -7380,6 +7390,11 @@
 		"title": "Helium",
 		"hex": "0ACF83",
 		"source": "https://www.helium.com"
+	},
+	{
+		"title": "Helium Browser",
+		"hex": "3450D1",
+		"source": "https://github.com/imputnet/helium-macos/blob/0567a6078847e7dd11ce3c4f2eedcf49aa327dfe/resources/assets/AppIcon.icon/Assets/logo.svg"
 	},
 	{
 		"title": "Helix",
@@ -9211,6 +9226,11 @@
 	{
 		"title": "LangChain",
 		"hex": "7FC8FF",
+		"source": "https://www.langchain.com/langchain"
+	},
+	{
+		"title": "LangChain Corporate",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com"
 	},
 	{
@@ -9220,7 +9240,7 @@
 	},
 	{
 		"title": "LangGraph",
-		"hex": "1C3C3C",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com/langgraph"
 	},
 	{
@@ -10796,6 +10816,11 @@
 		"title": "Moonrepo",
 		"hex": "6F53F3",
 		"source": "https://moonrepo.dev"
+	},
+	{
+		"title": "Moonshot AI",
+		"hex": "000000",
+		"source": "https://www.moonshot.cn"
 	},
 	{
 		"title": "Moq",
@@ -13848,6 +13873,11 @@
 		"title": "Qwant",
 		"hex": "282B2F",
 		"source": "https://about.qwant.com"
+	},
+	{
+		"title": "QWen",
+		"hex": "6950EF",
+		"source": "https://qwen.ai"
 	},
 	{
 		"title": "Qwik",
@@ -17104,6 +17134,11 @@
 		"title": "Thymeleaf",
 		"hex": "005F0F",
 		"source": "https://github.com/thymeleaf/thymeleaf-org/blob/0427d4d4c6f08d3a1fbed3bc90ceeebcf094b532/artwork/thymeleaf%202016/thymeleaf.svg"
+	},
+	{
+		"title": "Ticket Tailor",
+		"hex": "222432",
+		"source": "https://www.tickettailor.com"
 	},
 	{
 		"title": "Ticketmaster",
