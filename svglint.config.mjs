@@ -9,7 +9,8 @@ import path from 'node:path';
 import {svgPathBbox} from 'svg-path-bbox';
 import parsePath from 'svg-path-segments';
 import svgpath from 'svgpath';
-import {SVG_PATH_REGEX, getIconsData, htmlFriendlyToTitle} from './sdk.mjs';
+import {SVG_PATH_REGEX, getRawIconsData} from './scripts/utils.js';
+import {htmlFriendlyToTitle} from './sdk.mjs';
 
 /**
  * The svgpath library does not includes a `segments` property on their interface.
@@ -24,7 +25,7 @@ const htmlNamedEntitiesFile = path.join(
 	'index.json',
 );
 
-const icons = await getIconsData();
+const icons = await getRawIconsData();
 const htmlNamedEntities = JSON.parse(
 	await fs.readFile(htmlNamedEntitiesFile, 'utf8'),
 );

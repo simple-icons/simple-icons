@@ -7,10 +7,9 @@
 
 import process from 'node:process';
 import {Validator} from 'jsonschema';
-import {getIconsData} from '../../sdk.mjs';
-import {getJsonSchemaData} from '../utils.js';
+import {getJsonSchemaData, getRawIconsData} from '../utils.js';
 
-const icons = await getIconsData();
+const icons = await getRawIconsData();
 const schema = await getJsonSchemaData();
 
 const validator = new Validator();
