@@ -178,6 +178,11 @@ const parseModuleAuthorFromLine = (line) => {
 		throw new Error(`Module URL improperly parsed from line: ${line}`);
 	}
 
+	const moduleImageUrl = /<img src="(.[^"]+)"/v.exec(module_)?.[1];
+	if (moduleImageUrl === undefined) {
+		throw new Error(`Module image URL improperly parsed from line: ${line}`);
+	}
+
 	const authorName = /\[(.+)\]/v.exec(author)?.[1];
 	if (authorName === undefined) {
 		throw new Error(`Author improperly parsed from line: ${line}`);
@@ -192,6 +197,9 @@ const parseModuleAuthorFromLine = (line) => {
 		module: {
 			name: moduleName,
 			url: moduleUrl,
+			image: {
+				url: moduleImageUrl,
+			},
 		},
 		author: {
 			name: authorName,
