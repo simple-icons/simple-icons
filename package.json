@@ -92,10 +92,10 @@
 		"xo:fix": "xo --fix"
 	},
 	"devDependencies": {
-		"@inquirer/prompts": "8.4.2",
-		"@j178/prek": "0.3.11",
+		"@inquirer/prompts": "8.4.3",
+		"@j178/prek": "0.4.0",
 		"@types/mocha": "10.0.10",
-		"@types/node": "24.12.2",
+		"@types/node": "25.8.0",
 		"chalk": "5.6.2",
 		"editorconfig-checker": "6.1.1",
 		"esbuild": "0.28.0",
@@ -108,14 +108,14 @@
 		"mocha": "11.7.5",
 		"named-html-entities-json": "1.0.0",
 		"prettier-plugin-packagejson": "3.0.2",
-		"rumdl": "0.1.85",
+		"rumdl": "0.1.93",
 		"spdx-license-ids": "3.0.23",
 		"svg-path-bbox": "2.1.0",
 		"svg-path-segments": "2.0.1",
 		"svglint": "4.2.1",
 		"svgo": "4.0.1",
 		"svgpath": "2.6.0",
-		"typescript": "5.9.3",
+		"typescript": "6.0.3",
 		"xo": "2.0.2"
 	},
 	"engines": {
