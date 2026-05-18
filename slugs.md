@@ -3007,6 +3007,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Thunderstore` | `thunderstore` |
 | `Thurgauer Kantonalbank` | `thurgauerkantonalbank` |
 | `Thymeleaf` | `thymeleaf` |
+| `Ticket Tailor` | `tickettailor` |
 | `Ticketmaster` | `ticketmaster` |
 | `TickTick` | `ticktick` |
 | `TIDAL` | `tidal` |
