@@ -12344,6 +12344,17 @@
 		}
 	},
 	{
+		"title": "OWASP Juice Shop",
+		"slug": "juiceshop",
+		"hex": "B38F00",
+		"source": "https://github.com/OWASP/owasp-swag/blob/b7d8241dd155eeb1f132e95caa647bb7f5b252a5/projects/juice-shop/logos/JuiceShop_Logo.svg",
+		"guidelines": "https://github.com/OWASP/owasp-swag/tree/master/projects/juice-shop",
+		"license": {
+			"type": "CC BY-NC-SA 4.0",
+			"url": "https://github.com/OWASP/owasp-swag/blob/master/projects/juice-shop/LICENSE"
+		}
+	},
+	{
 		"title": "ownCloud",
 		"hex": "041E42",
 		"source": "https://owncloud.com"
