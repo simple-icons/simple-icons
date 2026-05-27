@@ -279,7 +279,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
 | `AVM` | `avm` |
-| `Await` | `await` |
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
 | `Awwwards` | `awwwards` |
@@ -1712,7 +1711,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LiveKit` | `livekit` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
-| `LM Studio` | `lmstudio` |
 | `LMMS` | `lmms` |
 | `Lobsters` | `lobsters` |
 | `Local` | `local` |
@@ -2124,7 +2122,6 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenTelemetry` | `opentelemetry` |
 | `OpenText` | `opentext` |
 | `OpenTofu` | `opentofu` |
-| `OpenTUI` | `opentui` |
 | `Openverse` | `openverse` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
