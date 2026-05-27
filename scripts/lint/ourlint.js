@@ -108,7 +108,7 @@ const TESTS = {
 		// eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
 		const invalids = icons.reduce(collector, []);
 		if (invalids.length > 0) {
-			const expectedOrder = [...icons].sort(sortIconsCompare);
+			const expectedOrder = icons.toSorted(sortIconsCompare);
 
 			return `Some icons aren't in alphabetical order:
 ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
@@ -172,7 +172,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 * Regex to match a permalink GitHub URL for a file.
 		 */
 		const permalinkGitHubRegex =
-			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+			/^https:\/\/github\.com\/[^\/]+\/[^\/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/v;
 
 		/**
 		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
