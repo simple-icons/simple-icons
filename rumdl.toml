@@ -3,3 +3,6 @@ disable = ["MD013", "MD033", "MD041"]
 exclude = ["node_modules"]
 include = ["**/*.md"]
 cache-dir = "node_modules/.cache/rumdl"
+
+[MD076]
+allow-loose-continuation = true
