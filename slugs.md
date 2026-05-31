@@ -156,6 +156,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache` | `apache` |
 | `Apache Airflow` | `apacheairflow` |
 | `Apache Ant` | `apacheant` |
+| `Apache Arrow` | `apachearrow` |
 | `Apache Avro` | `apacheavro` |
 | `Apache Cassandra` | `apachecassandra` |
 | `Apache CloudStack` | `apachecloudstack` |
@@ -533,6 +534,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Claris` | `claris` |
 | `Clarivate` | `clarivate` |
 | `Claude` | `claude` |
+| `Claude Code` | `claudecode` |
 | `Clerk` | `clerk` |
 | `Clever Cloud` | `clevercloud` |
 | `ClickHouse` | `clickhouse` |
