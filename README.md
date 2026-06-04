@@ -12,7 +12,7 @@ Over 3400 SVG icons for popular brands. See them all on one page at <a href="htt
 <br/>
 <a href="https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop"><img src="https://img.shields.io/github/actions/workflow/status/simple-icons/simple-icons/verify.yml?branch=develop&logo=github&label=tests" alt="Build status"/></a>
 <a href="https://discord.gg/vUXFa7t5xJ"><img src="https://img.shields.io/discord/1142044630909726760?logo=discord&logoColor=white&label=discord" alt="Number of users active in our Discord server"/></a>
-<a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
+<a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective&logoColor=fff" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
 ## Usage
@@ -169,6 +169,7 @@ The below are known extensions to third-party tools.
 
 | Extension | Author |
 | :-- | :-- |
+| <a href="https://awaitwidget.com/simple-icons"><img src="https://cdn.simpleicons.org/await/000/fff" alt="Await" align="left" width=24 height=24>Await widget</a> | [@LitoMore](https://github.com/LitoMore) |
 | <a href="https://github.com/mondeja/simple-icons-blender"><img src="https://cdn.simpleicons.org/blender/000/fff" alt="Blender" align=left width=24 height=24>Blender add-on</a> | [@mondeja](https://github.com/mondeja) |
 | <a href="https://boxy-svg.com/ideas/298/simple-icons-library-provider"><img src="https://cdn.simpleicons.org/boxysvg/000/fff" alt="Boxy SVG" align=left width=24 height=24>Boxy SVG library</a> | [@Jarek](https://boxy-svg.com/profiles/0000000000/jarek) |
 | <a href="https://github.com/mondeja/simple-icons-drawio"><img src="https://cdn.simpleicons.org/diagramsdotnet/000/fff" alt="Drawio" align=left width=24 height=24>Drawio library</a> | [@mondeja](https://github.com/mondeja) |

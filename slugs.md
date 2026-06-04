@@ -156,6 +156,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache` | `apache` |
 | `Apache Airflow` | `apacheairflow` |
 | `Apache Ant` | `apacheant` |
+| `Apache Arrow` | `apachearrow` |
 | `Apache Avro` | `apacheavro` |
 | `Apache Cassandra` | `apachecassandra` |
 | `Apache CloudStack` | `apachecloudstack` |
@@ -279,6 +280,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
 | `AVM` | `avm` |
+| `Await` | `await` |
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
 | `Awwwards` | `awwwards` |
@@ -518,6 +520,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Cilium` | `cilium` |
 | `Cinema 4D` | `cinema4d` |
 | `Cinnamon` | `cinnamon` |
+| `Cinny` | `cinny` |
 | `Circle` | `circle` |
 | `CircleCI` | `circleci` |
 | `CircuitVerse` | `circuitverse` |
@@ -531,6 +534,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Claris` | `claris` |
 | `Clarivate` | `clarivate` |
 | `Claude` | `claude` |
+| `Claude Code` | `claudecode` |
 | `Clerk` | `clerk` |
 | `Clever Cloud` | `clevercloud` |
 | `ClickHouse` | `clickhouse` |
@@ -1301,6 +1305,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hedera` | `hedera` |
 | `HedgeDoc` | `hedgedoc` |
 | `Helium` | `helium` |
+| `Helium Browser` | `heliumbrowser` |
 | `Helix` | `helix` |
 | `HelloFresh` | `hellofresh` |
 | `Helly Hansen` | `hellyhansen` |
@@ -1620,6 +1625,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LADA` | `lada` |
 | `Lamborghini` | `lamborghini` |
 | `LangChain` | `langchain` |
+| `LangChain Corporate` | `langchaincorporate` |
 | `Langflow` | `langflow` |
 | `LangGraph` | `langgraph` |
 | `LanguageTool` | `languagetool` |
@@ -1708,6 +1714,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LiveKit` | `livekit` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
+| `LM Studio` | `lmstudio` |
 | `LMMS` | `lmms` |
 | `Lobsters` | `lobsters` |
 | `Local` | `local` |
@@ -2119,6 +2126,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenTelemetry` | `opentelemetry` |
 | `OpenText` | `opentext` |
 | `OpenTofu` | `opentofu` |
+| `OpenTUI` | `opentui` |
 | `Openverse` | `openverse` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
@@ -3004,6 +3012,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Thunderstore` | `thunderstore` |
 | `Thurgauer Kantonalbank` | `thurgauerkantonalbank` |
 | `Thymeleaf` | `thymeleaf` |
+| `Ticket Tailor` | `tickettailor` |
 | `Ticketmaster` | `ticketmaster` |
 | `TickTick` | `ticktick` |
 | `TIDAL` | `tidal` |

@@ -366,6 +366,11 @@
 		"source": "https://www.aftership.com"
 	},
 	{
+		"title": "Agent Skills",
+		"hex": "000000",
+		"source": "https://github.com/agentskills/agentskills/blob/5d4c1fda3f786fff826c7f56b6cb3341e7f3a911/docs/favicon.svg"
+	},
+	{
 		"title": "Agora",
 		"hex": "099DFD",
 		"source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg",
@@ -853,6 +858,15 @@
 		"title": "Apache Ant",
 		"hex": "A81C7D",
 		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
+		"title": "Apache Arrow",
+		"hex": "000000",
+		"source": "https://arrow.apache.org/visual_identity",
 		"guidelines": "https://www.apache.org/foundation/marks",
 		"license": {
 			"type": "Apache-2.0"
@@ -1634,6 +1648,11 @@
 		"hex": "E2001A",
 		"source": "https://en.fritz.com/about-avm/press/press-media",
 		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
+	},
+	{
+		"title": "Await",
+		"hex": "7858F5",
+		"source": "https://awaitwidget.com"
 	},
 	{
 		"title": "Awesome Lists",
@@ -2947,6 +2966,11 @@
 		"source": "https://projects.linuxmint.com/cinnamon"
 	},
 	{
+		"title": "Cinny",
+		"hex": "000000",
+		"source": "https://cinny.in/assets/cinny.svg"
+	},
+	{
 		"title": "Circle",
 		"hex": "8669AE",
 		"source": "https://www.circle.com"
@@ -3011,6 +3035,11 @@
 		"title": "Claude",
 		"hex": "D97757",
 		"source": "https://claude.ai"
+	},
+	{
+		"title": "Claude Code",
+		"hex": "D97757",
+		"source": "https://code.claude.com"
 	},
 	{
 		"title": "Clerk",
@@ -7387,6 +7416,11 @@
 		"source": "https://www.helium.com"
 	},
 	{
+		"title": "Helium Browser",
+		"hex": "3450D1",
+		"source": "https://github.com/imputnet/helium-macos/blob/0567a6078847e7dd11ce3c4f2eedcf49aa327dfe/resources/assets/AppIcon.icon/Assets/logo.svg"
+	},
+	{
 		"title": "Helix",
 		"hex": "281733",
 		"source": "https://helix-editor.com"
@@ -9216,6 +9250,11 @@
 	{
 		"title": "LangChain",
 		"hex": "7FC8FF",
+		"source": "https://www.langchain.com/langchain"
+	},
+	{
+		"title": "LangChain Corporate",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com"
 	},
 	{
@@ -9225,7 +9264,7 @@
 	},
 	{
 		"title": "LangGraph",
-		"hex": "1C3C3C",
+		"hex": "7FC8FF",
 		"source": "https://www.langchain.com/langgraph"
 	},
 	{
@@ -9716,6 +9755,11 @@
 		"title": "LLVM",
 		"hex": "262D3A",
 		"source": "https://llvm.org/Logo.html"
+	},
+	{
+		"title": "LM Studio",
+		"hex": "000000",
+		"source": "https://files.lmstudio.ai/lmstudio_icon.svg"
 	},
 	{
 		"title": "LMMS",
@@ -11438,7 +11482,11 @@
 	{
 		"title": "NixOS",
 		"hex": "5277C3",
-		"source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
+		"source": "https://brand.nixos.org/logos/nixos-logomark-black-flat-minimal.svg",
+		"guidelines": "https://brand.nixos.org/documents/nixos-branding-guide.pdf",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Nobara Linux",
@@ -12107,6 +12155,11 @@
 				"Terraform"
 			]
 		}
+	},
+	{
+		"title": "OpenTUI",
+		"hex": "000000",
+		"source": "https://github.com/anomalyco/opentui/blob/5969eee9b44b16a64a77ffa917e98daf08bb44f9/packages/web/public/favicon.svg"
 	},
 	{
 		"title": "Openverse",
@@ -17119,6 +17172,11 @@
 		"title": "Thymeleaf",
 		"hex": "005F0F",
 		"source": "https://github.com/thymeleaf/thymeleaf-org/blob/0427d4d4c6f08d3a1fbed3bc90ceeebcf094b532/artwork/thymeleaf%202016/thymeleaf.svg"
+	},
+	{
+		"title": "Ticket Tailor",
+		"hex": "222432",
+		"source": "https://www.tickettailor.com"
 	},
 	{
 		"title": "Ticketmaster",
