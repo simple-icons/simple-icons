@@ -366,6 +366,11 @@
 		"source": "https://www.aftership.com"
 	},
 	{
+		"title": "Agent Skills",
+		"hex": "000000",
+		"source": "https://github.com/agentskills/agentskills/blob/5d4c1fda3f786fff826c7f56b6cb3341e7f3a911/docs/favicon.svg"
+	},
+	{
 		"title": "Agora",
 		"hex": "099DFD",
 		"source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg",
@@ -9966,6 +9971,11 @@
 		"source": "https://www.lyft.com/press"
 	},
 	{
+		"title": "M5Stack",
+		"hex": "0077C8",
+		"source": "https://static-cdn.m5stack.com/resource/public/assets/m5logo2022.svg"
+	},
+	{
 		"title": "MAAS",
 		"hex": "E95420",
 		"source": "https://design.ubuntu.com/resources",
@@ -11477,7 +11487,11 @@
 	{
 		"title": "NixOS",
 		"hex": "5277C3",
-		"source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
+		"source": "https://brand.nixos.org/logos/nixos-logomark-black-flat-minimal.svg",
+		"guidelines": "https://brand.nixos.org/documents/nixos-branding-guide.pdf",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Nobara Linux",
@@ -11989,6 +12003,11 @@
 		"hex": "1A8865",
 		"source": "https://opencagedata.com/branding",
 		"guidelines": "https://opencagedata.com/branding"
+	},
+	{
+		"title": "OpenCode",
+		"hex": "000000",
+		"source": "https://github.com/anomalyco/opencode/blob/1251a870cb384543c150c4a72fb101b55eec971b/packages/identity/mark.svg"
 	},
 	{
 		"title": "OpenCritic",
@@ -12800,6 +12819,11 @@
 		"hex": "000000",
 		"source": "https://www.jetbrains.com/company/brand/logos/",
 		"guidelines": "https://www.jetbrains.com/company/brand/"
+	},
+	{
+		"title": "Pi",
+		"hex": "000000",
+		"source": "https://pi.dev/favicon.svg"
 	},
 	{
 		"title": "Pi Network",
