@@ -19,7 +19,7 @@ jobs:
         with:
           client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: simple-icons/labeler@v1
+      - uses: simple-icons/labeler@v2
         with:
           repo-token: ${{ steps.app-token.outputs.token }}
 # TODO: The next job has been temporarily disabled until the maintainers
