@@ -366,6 +366,11 @@
 		"source": "https://www.aftership.com"
 	},
 	{
+		"title": "Agent Skills",
+		"hex": "000000",
+		"source": "https://github.com/agentskills/agentskills/blob/5d4c1fda3f786fff826c7f56b6cb3341e7f3a911/docs/favicon.svg"
+	},
+	{
 		"title": "Agora",
 		"hex": "099DFD",
 		"source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg",
@@ -3032,6 +3037,11 @@
 		"source": "https://claude.ai"
 	},
 	{
+		"title": "Claude Code",
+		"hex": "D97757",
+		"source": "https://code.claude.com"
+	},
+	{
 		"title": "Clerk",
 		"hex": "6C47FF",
 		"source": "https://clerk.com"
@@ -3201,8 +3211,8 @@
 	},
 	{
 		"title": "Cockpit",
-		"hex": "0066CC",
-		"source": "https://github.com/cockpit-project/cockpit-project.github.io/blob/b851b3477d90017961ac9b252401c9a6cb6239f1/images/site/cockpit-logo.svg"
+		"hex": "2A7AE2",
+		"source": "https://github.com/cockpit-project/cockpit/blob/e0e3ba3feecf4d01e6c10a4771855b1ecc57105c/src/branding/default/logo.svg"
 	},
 	{
 		"title": "Cockroach Labs",
@@ -9961,6 +9971,11 @@
 		"source": "https://www.lyft.com/press"
 	},
 	{
+		"title": "M5Stack",
+		"hex": "0077C8",
+		"source": "https://static-cdn.m5stack.com/resource/public/assets/m5logo2022.svg"
+	},
+	{
 		"title": "MAAS",
 		"hex": "E95420",
 		"source": "https://design.ubuntu.com/resources",
@@ -11477,7 +11492,11 @@
 	{
 		"title": "NixOS",
 		"hex": "5277C3",
-		"source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
+		"source": "https://brand.nixos.org/logos/nixos-logomark-black-flat-minimal.svg",
+		"guidelines": "https://brand.nixos.org/documents/nixos-branding-guide.pdf",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Nobara Linux",
@@ -11989,6 +12008,11 @@
 		"hex": "1A8865",
 		"source": "https://opencagedata.com/branding",
 		"guidelines": "https://opencagedata.com/branding"
+	},
+	{
+		"title": "OpenCode",
+		"hex": "000000",
+		"source": "https://github.com/anomalyco/opencode/blob/1251a870cb384543c150c4a72fb101b55eec971b/packages/identity/mark.svg"
 	},
 	{
 		"title": "OpenCritic",
@@ -12800,6 +12824,11 @@
 		"hex": "000000",
 		"source": "https://www.jetbrains.com/company/brand/logos/",
 		"guidelines": "https://www.jetbrains.com/company/brand/"
+	},
+	{
+		"title": "Pi",
+		"hex": "000000",
+		"source": "https://pi.dev/favicon.svg"
 	},
 	{
 		"title": "Pi Network",
@@ -16727,6 +16756,12 @@
 		"title": "Tampermonkey",
 		"hex": "00485B",
 		"source": "https://commons.wikimedia.org/wiki/File:Tampermonkey_logo.svg"
+	},
+	{
+		"title": "Tangled",
+		"hex": "000000",
+		"source": "https://tangled.org/tangled.org/core/blob/a5d661f5506280d56929442f7f196f536c514ae7/appview/pages/templates/fragments/dolly/logo.html",
+		"guidelines": "https://tangled.org/brand"
 	},
 	{
 		"title": "TanStack",
