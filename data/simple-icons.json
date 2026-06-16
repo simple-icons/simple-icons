@@ -13991,7 +13991,10 @@
 	{
 		"title": "Radiant Earth",
 		"hex": "469695",
-		"source": "https://radiant.earth"
+		"source": "https://radiant.earth",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Radio France",
