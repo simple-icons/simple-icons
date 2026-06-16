@@ -3211,8 +3211,8 @@
 	},
 	{
 		"title": "Cockpit",
-		"hex": "0066CC",
-		"source": "https://github.com/cockpit-project/cockpit-project.github.io/blob/b851b3477d90017961ac9b252401c9a6cb6239f1/images/site/cockpit-logo.svg"
+		"hex": "2A7AE2",
+		"source": "https://github.com/cockpit-project/cockpit/blob/e0e3ba3feecf4d01e6c10a4771855b1ecc57105c/src/branding/default/logo.svg"
 	},
 	{
 		"title": "Cockroach Labs",
@@ -10457,6 +10457,11 @@
 		"guidelines": "https://www.facebook.com/brand/resources/meta/company-brand"
 	},
 	{
+		"title": "Meta AI",
+		"hex": "9844FF",
+		"source": "https://meta.ai/images/meta-ai-orbit-logo-gradient-3d_light.svg"
+	},
+	{
 		"title": "Metabase",
 		"hex": "509EE3",
 		"source": "https://www.metabase.com"
@@ -16756,6 +16761,12 @@
 		"title": "Tampermonkey",
 		"hex": "00485B",
 		"source": "https://commons.wikimedia.org/wiki/File:Tampermonkey_logo.svg"
+	},
+	{
+		"title": "Tangled",
+		"hex": "000000",
+		"source": "https://tangled.org/tangled.org/core/blob/a5d661f5506280d56929442f7f196f536c514ae7/appview/pages/templates/fragments/dolly/logo.html",
+		"guidelines": "https://tangled.org/brand"
 	},
 	{
 		"title": "TanStack",

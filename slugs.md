@@ -70,6 +70,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AFFiNE` | `affine` |
 | `Afterpay` | `afterpay` |
 | `AfterShip` | `aftership` |
+| `Agent Skills` | `agentskills` |
 | `Agora` | `agora` |
 | `AI Dungeon` | `aidungeon` |
 | `AIB` | `aib` |
@@ -1752,6 +1753,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LVGL` | `lvgl` |
 | `Lydia` | `lydia` |
 | `Lyft` | `lyft` |
+| `M5Stack` | `m5stack` |
 | `MAAS` | `maas` |
 | `macOS` | `macos` |
 | `MacPaw` | `macpaw` |
@@ -2102,6 +2104,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenBao` | `openbao` |
 | `OpenBSD` | `openbsd` |
 | `OpenCage` | `opencage` |
+| `OpenCode` | `opencode` |
 | `OpenCritic` | `opencritic` |
 | `OpenCV` | `opencv` |
 | `OpenFaaS` | `openfaas` |
@@ -2241,6 +2244,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `phpBB` | `phpbb` |
 | `phpMyAdmin` | `phpmyadmin` |
 | `PhpStorm` | `phpstorm` |
+| `Pi` | `pi` |
 | `Pi Network` | `pinetwork` |
 | `Pi-hole` | `pihole` |
 | `Piaggio Group` | `piaggiogroup` |
