@@ -5,17 +5,21 @@ on:
 
 jobs:
   add-labels:
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
     runs-on: ubuntu-latest
     if: |
       github.event.action == 'opened' &&
       github.event.pull_request.base.ref != 'master'
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-      - uses: simple-icons/labeler@v1
+      - uses: simple-icons/labeler@v2
         with:
           repo-token: ${{ steps.app-token.outputs.token }}
 # TODO: The next job has been temporarily disabled until the maintainers
@@ -28,14 +32,14 @@ jobs:
 #      github.event.pull_request.base.ref != 'master'
 #    needs: add-labels
 #    steps:
-#      - uses: actions/create-github-app-token@v1
+#      - uses: actions/create-github-app-token@v3
 #        id: app-token
 #        with:
-#          app-id: ${{ vars.BOT_APP_ID }}
+#          client-id: ${{ secrets.BOT_CLIENT_ID }}
 #          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
 
 #      - name: Checkout
-#        uses: actions/checkout@v4
+#        uses: actions/checkout@v5
 
 #      - id: get-labels
 #        uses: ./.github/actions/get-labels
@@ -142,10 +146,10 @@ jobs:
 #      github.event.pull_request.merged == false &&
 #      github.event.pull_request.base.ref != 'master'
 #    steps:
-#      - uses: actions/create-github-app-token@v1
+#      - uses: actions/create-github-app-token@v3
 #        id: app-token
 #        with:
-#          app-id: ${{ vars.BOT_APP_ID }}
+#          client-id: ${{ secrets.BOT_CLIENT_ID }}
 #          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
 #      - name: Assign closed pull requests to "Completed or Abandoned"
 #        uses: srggrs/assign-one-project-github-action@1.3.1

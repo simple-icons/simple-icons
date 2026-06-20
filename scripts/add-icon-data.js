@@ -2,7 +2,7 @@
 // @ts-check
 /**
  * @file
- * Script to add data for a new icon to the simple-icons dataset.
+ * Add data for a new icon to the simple-icons dataset.
  */
 
 /**
@@ -11,7 +11,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {checkbox, confirm, input, search} from '@inquirer/prompts';
+import {
+	checkbox,
+	confirm,
+	input as inputPrompt,
+	search,
+} from '@inquirer/prompts';
 import chalk from 'chalk';
 import {search as fuzzySearch} from 'fast-fuzzy';
 import getRelativeLuminance from 'get-relative-luminance';
@@ -34,11 +39,11 @@ process.on('uncaughtException', (error) => {
 	}
 });
 
-/** @type {import('../sdk.js').IconData[]} */
+/** @type {import('../types.d.ts').IconData[]} */
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
-const HEX_REGEX = /^#?[a-f\d]{3,8}$/i;
+const HEX_REGEX = /^#?[a-f\d]{3,8}$/iv;
 
 const aliasTypes = ['aka', 'old'].map((key) => ({
 	name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
@@ -63,6 +68,7 @@ const urlRegex = async () =>
 				'utf8',
 			),
 		).definitions.url.pattern,
+		'v',
 	);
 
 /**
@@ -102,22 +108,27 @@ const isNewIcon = (input) =>
 const previewHexColor = (input) => {
 	const color = normalizeColor(input);
 	const luminance = HEX_REGEX.test(input)
-		? getRelativeLuminance.default(`#${color}`)
+		? getRelativeLuminance(`#${color}`)
 		: -1;
-	if (luminance === -1) return input.toUpperCase();
+	if (luminance === -1) {
+		return input.toUpperCase();
+	}
+
 	return chalk.bgHex(`#${color}`).hex(luminance < 0.4 ? '#fff' : '#000')(
 		input.toUpperCase(),
 	);
 };
 
 /** @type {IconData} */
+// @ts-expect-error: `slug` is not required in our source simple-icons.json file.
 const answers = {
 	title: '',
 	hex: '',
 	source: '',
 };
 
-answers.title = await input({
+// eslint-disable-next-line unicorn/no-immediate-mutation
+answers.title = await inputPrompt({
 	message: 'What is the title of this icon?',
 	validate: (input) =>
 		input.trim().length > 0
@@ -126,14 +137,14 @@ answers.title = await input({
 });
 
 answers.hex = normalizeColor(
-	await input({
+	await inputPrompt({
 		message: 'What is the brand color of this icon?',
 		validate: isValidHexColor,
 		transformer: previewHexColor,
 	}),
 );
 
-answers.source = await input({
+answers.source = await inputPrompt({
 	message: 'What is the source URL of the icon?',
 	validate: isValidURL,
 });
@@ -143,7 +154,7 @@ if (
 		message: 'Does this icon have brand guidelines?',
 	})
 ) {
-	answers.guidelines = await input({
+	answers.guidelines = await inputPrompt({
 		message: 'What is the URL for the brand guidelines?',
 		validate: isValidURL,
 	});
@@ -170,7 +181,7 @@ if (
 
 	if (answers.license.type === 'custom') {
 		// @ts-expect-error
-		answers.license.url = await input({
+		answers.license.url = await inputPrompt({
 			message: `What is the URL for the license? (optional)`,
 			validate: (input) => input.length === 0 || isValidURL(input),
 		});
@@ -187,17 +198,20 @@ if (
 		message: 'What types of aliases do you want to add?',
 		choices: aliasTypes,
 	})
-		// eslint-disable-next-line promise/prefer-await-to-then
+		// TODO: eslint-disable-next-line promise/prefer-await-to-then
 		.then(async (aliases) => {
 			/** @type {{[_: string]: string[]}} */
 			const result = {};
+
 			for (const alias of aliases) {
 				// eslint-disable-next-line no-await-in-loop
-				result[alias] = await input({
+				result[alias] = await inputPrompt({
 					message: `What ${alias} aliases would you like to add? (separate with commas)`,
 				})
-					// eslint-disable-next-line promise/prefer-await-to-then
-					.then((aliases) => aliases.split(',').map((alias) => alias.trim()));
+					// TODO: eslint-disable-next-line promise/prefer-await-to-then
+					.then((aliases_) =>
+						aliases_.split(',').map((alias_) => alias_.trim()),
+					);
 			}
 
 			return aliases.length > 0 ? result : undefined;

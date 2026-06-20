@@ -6,7 +6,7 @@
  */
 
 /**
- * @typedef {import("../../sdk.mjs").IconData} IconData
+ * @typedef {import("../../types.js").IconData} IconData
  * @typedef {import("../../types.js").CustomLicense} CustomLicense
  */
 
@@ -18,8 +18,18 @@ import {
 	getIconSlug,
 	getIconsDataString,
 	normalizeNewlines,
+	titleToSlug,
 } from '../../sdk.mjs';
-import {formatIconData, getSpdxLicenseIds, sortIconsCompare} from '../utils.js';
+import {
+	fileExists,
+	formatIconData,
+	getLabelerLabels,
+	getLabels,
+	getSpdxLicenseIds,
+	sortIconsCompare,
+} from '../utils.js';
+
+const iconsDirectory = path.resolve(import.meta.dirname, '..', '..', 'icons');
 
 /**
  * Contains our tests so they can be isolated from each other.
@@ -84,15 +94,21 @@ const TESTS = {
 			);
 			const before = expectedOrder[foundIndex - 1];
 			const after = expectedOrder[foundIndex + 1];
-			if (before) return `should be after ${format(before)}`;
-			if (after) return `should be before ${format(after)}`;
+			if (before) {
+				return `should be after ${format(before)}`;
+			}
+
+			if (after) {
+				return `should be before ${format(after)}`;
+			}
+
 			return 'not found';
 		};
 
 		// eslint-disable-next-line unicorn/no-array-reduce, unicorn/no-array-callback-reference
 		const invalids = icons.reduce(collector, []);
 		if (invalids.length > 0) {
-			const expectedOrder = [...icons].sort(sortIconsCompare);
+			const expectedOrder = icons.toSorted(sortIconsCompare);
 
 			return `Some icons aren't in alphabetical order:
 ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).join('\n')}`;
@@ -156,7 +172,7 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 		 * Regex to match a permalink GitHub URL for a file.
 		 */
 		const permalinkGitHubRegex =
-			/^https:\/\/github\.com\/[^/]+\/[^/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/;
+			/^https:\/\/github\.com\/[^\/]+\/[^\/]+\/(blob\/[a-f\d]{40}\/\S+)|(tree\/[a-f\d]{40}(\/\S+)?)|(((issues)|(pull)|(discussions))\/\d+#((issue)|(issuecomment)|(discussioncomment))-\d+)|(wiki\/\S+\/[a-f\d]{40})$/v;
 
 		/**
 		 * URLs excluded from the GitHub URL check as are used by GitHub brands.
@@ -185,15 +201,8 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				allUrlFields.push([false, icon.guidelines]);
 			}
 
-			if (icon.license !== undefined && Object.hasOwn(icon.license, 'url')) {
-				allUrlFields.push([
-					false,
-					// TODO: `hasOwn` is not currently supported by TS.
-					// See https://github.com/microsoft/TypeScript/issues/44253
-					/** @type {string} */
-					// @ts-expect-error
-					icon.license.url,
-				]);
+			if (icon.license !== undefined && 'url' in icon.license) {
+				allUrlFields.push([false, icon.license.url]);
 			}
 		}
 
@@ -205,7 +214,9 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 				invalidUrls.push(fakeDiff(url, $url.origin));
 			}
 
-			if (isGitHubUserAttachmentUrl($url)) continue;
+			if (isGitHubUserAttachmentUrl($url)) {
+				continue;
+			}
 
 			if (isStaticWikimediaAssetUrl($url)) {
 				const expectedUrl = `https://commons.wikimedia.org/wiki/File:${path.basename($url.pathname)}`;
@@ -333,6 +344,144 @@ ${invalids.map((icon) => `${format(icon)} ${findPositon(expectedOrder, icon)}`).
 
 		return errors.join('\n') || undefined;
 	},
+
+	/* Ensure that titles constraints are enforced. */
+	checkTitles(icons) {
+		const titles = new Set();
+		const duplicateTitles = [];
+		for (const icon of icons) {
+			const {title, slug} = icon;
+
+			// Titles of icons that do not have slug must be unique.
+			if (slug === undefined) {
+				if (titles.has(title)) {
+					duplicateTitles.push(title);
+				} else {
+					titles.add(title);
+				}
+			}
+		}
+
+		const errors = [];
+		if (duplicateTitles.length > 0) {
+			const message =
+				`Found duplicate title for icons that do not have slug: ${duplicateTitles.join(', ')}.` +
+				`\nPlease, ensure that all titles are unique or these icons have proper slugs.`;
+			errors.push(message);
+		}
+
+		return errors.join('\n') || undefined;
+	},
+
+	/* Ensure that slugs constraints are enforced. */
+	async checkSlugs(icons) {
+		const errors = [];
+
+		const inferredSlugs = new Map();
+		for (const icon of icons) {
+			const inferred = titleToSlug(icon.title);
+			if (!inferredSlugs.has(inferred)) {
+				inferredSlugs.set(inferred, []);
+			}
+
+			inferredSlugs.get(inferred).push(icon.title);
+		}
+
+		const fileChecks = [];
+		const customSlugs = new Map();
+
+		for (const icon of icons) {
+			const {slug, title} = icon;
+
+			if (slug === undefined) {
+				continue;
+			}
+
+			// Custom slugs must be necessary. If a title is converted to a slug
+			// and it is the same as the slug, then it is not necessary.
+			if (titleToSlug(title) === slug) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from its title.` +
+						' Please, remove the slug.',
+				);
+				continue;
+			}
+
+			// Custom slugs must be normalized with almost the same rules that
+			// are used for slugs inferred from titles. We allow underscores in
+			// custom slugs to ensure that they are unique.
+			const normalizedSlug = titleToSlug(slug);
+			const slugWithoutUnderscores = slug.replaceAll('_', '');
+			if (normalizedSlug !== slugWithoutUnderscores) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" that is not normalized according to the rules used for titles.` +
+						` Please, rewrite as "${normalizedSlug}" or use another slug.`,
+				);
+				continue;
+			}
+
+			const iconFilePath = path.resolve(iconsDirectory, `${slug}.svg`);
+			fileChecks.push({title, slug, path: iconFilePath});
+
+			// Custom slugs must be unique.
+			if (customSlugs.has(slug)) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" that is not unique.` +
+						` It is already used by "${customSlugs.get(slug)}". Please, ensure that all slugs are unique.`,
+				);
+			} else {
+				customSlugs.set(slug, title);
+			}
+
+			// Custom slugs must be different from slugs inferred from titles.
+			if (inferredSlugs.has(slug)) {
+				const conflictingTitles = inferredSlugs
+					.get(slug)
+					.filter((/** @type {string} */ t) => t !== title);
+				for (const conflictingTitle of conflictingTitles) {
+					errors.push(
+						`Icon "${title}" has a slug "${slug}" that is the same as the slug inferred from the title of the icon "${conflictingTitle}".` +
+							' Please, ensure that all slugs are unique.',
+					);
+				}
+			}
+		}
+
+		// Icons with custom slugs must have the corresponding icon file.
+		const fileExistsResults = await Promise.all(
+			fileChecks.map((check) => fileExists(check.path)),
+		);
+
+		for (const [i, {title, slug}] of fileChecks.entries()) {
+			if (!fileExistsResults[i]) {
+				errors.push(
+					`Icon "${title}" has a slug "${slug}" but the corresponding icon file "icons/${slug}.svg" does not exist.` +
+						' Please, create the icon file or remove the slug.',
+				);
+			}
+		}
+
+		return errors.join('\n') || undefined;
+	},
+
+	/* Check that labels usage is synchronized across the project. */
+	async checkLabelsSync() {
+		const errors = [];
+
+		// All labels in .github/labeler.yml should be present in .github/labels.yml
+		const labels = await getLabels();
+		const labelerLabels = await getLabelerLabels();
+
+		for (const label of labelerLabels) {
+			if (!labels.has(label)) {
+				errors.push(
+					`Label "${label}" is present in '.github/labeler.yml' but missing in '.github/labels.yml'. Please, synchronize both files.`,
+				);
+			}
+		}
+
+		return errors.join('\n');
+	},
 };
 
 const iconsDataString = await getIconsDataString();
@@ -347,6 +496,9 @@ const errors = (
 	.filter(Boolean);
 
 if (errors.length > 0) {
-	for (const error of errors) console.error(`\u001B[31m${error}\u001B[0m`);
+	for (const error of errors) {
+		console.error(`\u001B[31m${error}\u001B[0m`);
+	}
+
 	process.exit(1);
 }

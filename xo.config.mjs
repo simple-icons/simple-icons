@@ -1,17 +1,23 @@
+// @ts-check
 /**
  * @file XO Flat config file.
  */
-import {importX} from 'eslint-plugin-import-x';
+import headers from 'eslint-plugin-headers';
 import jsdoc from 'eslint-plugin-jsdoc';
 
+/** @type {import('xo').FlatXoConfig} */
 const xoConfig = [
 	{
 		prettier: true,
 	},
-	jsdoc.configs['flat/recommended'],
+	/** @type {import('xo').XoConfigItem} */
+	(jsdoc.configs['flat/recommended']),
 	{
-		plugins: {jsdoc, 'import-x': importX},
+		// @ts-expect-error: The `eslint-plugin-headers` package has some issues with its types.
+		plugins: {jsdoc, headers},
 		rules: {
+			'no-shadow': 'error',
+			curly: 'error',
 			'sort-imports': [
 				'error',
 				{
@@ -38,6 +44,11 @@ const xoConfig = [
 					'newlines-between': 'never',
 				},
 			],
+			'import-x/no-duplicates': 'error',
+			'import-x/no-cycle': 'error',
+			'import-x/no-self-import': 'error',
+			'import-x/no-useless-path-segments': 'error',
+			'import-x/no-unresolved': ['error', {ignore: ['index.mjs']}],
 			'no-console': ['error', {allow: ['warn', 'error']}],
 			'no-warning-comments': [
 				'warn',
@@ -54,6 +65,14 @@ const xoConfig = [
 			'jsdoc/require-asterisk-prefix': 'error',
 			'jsdoc/require-description-complete-sentence': 'error',
 			'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
+			'headers/header-format': [
+				'error',
+				{
+					source: 'string',
+					content: '@ts-check',
+					style: 'line',
+				},
+			],
 		},
 	},
 	{

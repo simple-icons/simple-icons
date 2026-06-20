@@ -7,7 +7,6 @@
 
 /**
  * @typedef {import('../../types.js').License} License
- * @typedef {import('esbuild').TransformOptions} EsBuildTransformOptions
  */
 
 import {promises as fs} from 'node:fs';
@@ -42,7 +41,7 @@ const iconObjectTemplateFile = path.resolve(
 /**
  * Merged type from icon data and icon JS object needed to build by reference
  * to not decrease performance in the build process.
- * @typedef {import('../../types.js').SimpleIcon & import('../../sdk.d.ts').IconData} IconDataAndObject
+ * @typedef {import('../../types.js').SimpleIcon & import('../../types.d.ts').IconData} IconDataAndObject
  */
 
 const icons = await getIconsData();
@@ -53,7 +52,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @param {string} value The value to escape.
  * @returns {string} The escaped value.
  */
-const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
+const escape = (value) => value.replaceAll(/(?<!\\)'/gv, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
@@ -90,14 +89,24 @@ const iconDataAndObjectToJsRepr = (icon) =>
 
 /**
  * Write JavaScript content to a file.
+ *
+ * ESBuild by default uses `ascii` encoding for JavaScript files, so the titles of icons
+ * are encoded using escape sequences (eg. "Aerom\xE9xico" instead of "Aeroméxico").
+ * See {@link https://esbuild.github.io/api/#charset}.
+ * Although this adds a minimal size overhead, it is needed to ensure that our distributed
+ * JavaScript files are compatible with all JavaScript environments. Especially, browsers
+ * that are not using `<meta charset="utf-8">` in their HTML. As we support browsers
+ * without meta charset in SVG `<title>` elements, we need to ensure the same for scripts.
  * @param {string} filepath The path to the file to write.
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {EsBuildTransformOptions} [options] The options to pass to esbuild.
+ * @param {'cjs'} [jsFormat] The jsFormat of the resulting JavaScript file.
  */
-const writeJs = async (filepath, rawJavaScript, options = undefined) => {
-	options = options === undefined ? {minify: true} : options;
+const writeJs = async (filepath, rawJavaScript, jsFormat = undefined) => {
+	/** @type {import('esbuild').TransformOptions} */
+	const options = {minify: true, charset: 'ascii', format: jsFormat};
 	const {code} = await esbuildTransform(rawJavaScript, options);
-	await fs.writeFile(filepath, code);
+	// ESBuild adds a trailing newline to the end of the file
+	await fs.writeFile(filepath, code.trimEnd());
 };
 
 /**
@@ -124,11 +133,8 @@ const buildIcons = async () =>
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			/** @type {IconDataAndObject} */
-			const icon = {};
-			Object.assign(icon, iconData);
-			icon.svg = svg;
-			icon.path = svgToPath(svg);
-			icon.slug = slug;
+			// @ts-expect-error: Some properties does not exist. We can polish it in TypeScript migration.
+			const icon = {...iconData, svg, path: svgToPath(svg), slug};
 			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
 			const iconExportName = slugToVariableName(slug);
 			return {icon, iconObjectRepr, iconExportName};
@@ -167,9 +173,30 @@ const build = async () => {
 	await writeTs(indexDtsFile, rawIndexDts);
 
 	// Create a CommonJS SDK file
-	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), {
-		format: 'cjs',
-	});
+	await writeJs(sdkJsFile, await fs.readFile(sdkMjsFile, UTF8), 'cjs');
+
+	// Build deprecated `simple-icons/icons` entrypoint.
+	// TODO: This must be removed at v17.
+	const deprecatedMessage =
+		`⚠️ The entrypoint 'simple-icons/icons' is deprecated and` +
+		` will be removed in version 17.0.0`;
+	const jsDeprecationMessage =
+		`${deprecatedMessage}. Please, import icons from 'simple-icons'` +
+		` using \`require('simple-icons')\` instead of \`require('simple-icons/icons')\`.`;
+	const iconsIndexJs =
+		`console.warn("${jsDeprecationMessage}");` +
+		`module.exports=require('./index.js');`;
+	const iconsIndexJsFile = path.resolve(rootDirectory, 'index-icons.js');
+	await writeJs(iconsIndexJsFile, iconsIndexJs);
+
+	const mjsDeprecationMessage =
+		`${deprecatedMessage}. Please, import icons from 'simple-icons'` +
+		` using \`import ... from 'simple-icons'\` instead of \`import ... from 'simple-icons/icons'\`.`;
+	const iconsIndexMjs =
+		`console.warn("${mjsDeprecationMessage}");` +
+		`export * from './index.mjs';`;
+	const iconsIndexMjsFile = path.resolve(rootDirectory, 'index-icons.mjs');
+	await writeJs(iconsIndexMjsFile, iconsIndexMjs);
 };
 
 await build();
