@@ -965,6 +965,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fathom` | `fathom` |
 | `Fauna` | `fauna` |
 | `Favro` | `favro` |
+| `Fawry` | `fawry` |
 | `FCC` | `fcc` |
 | `FedEx` | `fedex` |
 | `Fedora` | `fedora` |
@@ -1840,6 +1841,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mermaid` | `mermaid` |
 | `Messenger` | `messenger` |
 | `Meta` | `meta` |
+| `Meta AI` | `metaai` |
 | `Metabase` | `metabase` |
 | `Metacritic` | `metacritic` |
 | `MetaFilter` | `metafilter` |
@@ -2453,6 +2455,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RAD Studio` | `radstudio` |
 | `Radar` | `radar` |
 | `radarr` | `radarr` |
+| `Radiant Earth` | `radiantearth` |
 | `Radio France` | `radiofrance` |
 | `Radix UI` | `radixui` |
 | `Railway` | `railway` |
@@ -2940,6 +2943,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Talos` | `talos` |
 | `Tamiya` | `tamiya` |
 | `Tampermonkey` | `tampermonkey` |
+| `Tangled` | `tangled` |
 | `TanStack` | `tanstack` |
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
