@@ -70,6 +70,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AFFiNE` | `affine` |
 | `Afterpay` | `afterpay` |
 | `AfterShip` | `aftership` |
+| `Agent Skills` | `agentskills` |
 | `Agora` | `agora` |
 | `AI Dungeon` | `aidungeon` |
 | `AIB` | `aib` |
@@ -156,6 +157,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Apache` | `apache` |
 | `Apache Airflow` | `apacheairflow` |
 | `Apache Ant` | `apacheant` |
+| `Apache Arrow` | `apachearrow` |
 | `Apache Avro` | `apacheavro` |
 | `Apache Cassandra` | `apachecassandra` |
 | `Apache CloudStack` | `apachecloudstack` |
@@ -279,6 +281,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `avianca` | `avianca` |
 | `Avira` | `avira` |
 | `AVM` | `avm` |
+| `Await` | `await` |
 | `Awesome Lists` | `awesomelists` |
 | `awesomeWM` | `awesomewm` |
 | `Awwwards` | `awwwards` |
@@ -532,6 +535,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Claris` | `claris` |
 | `Clarivate` | `clarivate` |
 | `Claude` | `claude` |
+| `Claude Code` | `claudecode` |
 | `Clerk` | `clerk` |
 | `Clever Cloud` | `clevercloud` |
 | `ClickHouse` | `clickhouse` |
@@ -961,6 +965,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Fathom` | `fathom` |
 | `Fauna` | `fauna` |
 | `Favro` | `favro` |
+| `Fawry` | `fawry` |
 | `FCC` | `fcc` |
 | `FedEx` | `fedex` |
 | `Fedora` | `fedora` |
@@ -1711,6 +1716,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LiveKit` | `livekit` |
 | `Livewire` | `livewire` |
 | `LLVM` | `llvm` |
+| `LM Studio` | `lmstudio` |
 | `LMMS` | `lmms` |
 | `Lobsters` | `lobsters` |
 | `Local` | `local` |
@@ -1748,6 +1754,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `LVGL` | `lvgl` |
 | `Lydia` | `lydia` |
 | `Lyft` | `lyft` |
+| `M5Stack` | `m5stack` |
 | `MAAS` | `maas` |
 | `macOS` | `macos` |
 | `MacPaw` | `macpaw` |
@@ -1834,6 +1841,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Mermaid` | `mermaid` |
 | `Messenger` | `messenger` |
 | `Meta` | `meta` |
+| `Meta AI` | `metaai` |
 | `Metabase` | `metabase` |
 | `Metacritic` | `metacritic` |
 | `MetaFilter` | `metafilter` |
@@ -2098,6 +2106,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenBao` | `openbao` |
 | `OpenBSD` | `openbsd` |
 | `OpenCage` | `opencage` |
+| `OpenCode` | `opencode` |
 | `OpenCritic` | `opencritic` |
 | `OpenCV` | `opencv` |
 | `OpenFaaS` | `openfaas` |
@@ -2122,6 +2131,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `OpenTelemetry` | `opentelemetry` |
 | `OpenText` | `opentext` |
 | `OpenTofu` | `opentofu` |
+| `OpenTUI` | `opentui` |
 | `Openverse` | `openverse` |
 | `OpenVPN` | `openvpn` |
 | `OpenWrt` | `openwrt` |
@@ -2236,6 +2246,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `phpBB` | `phpbb` |
 | `phpMyAdmin` | `phpmyadmin` |
 | `PhpStorm` | `phpstorm` |
+| `Pi` | `pi` |
 | `Pi Network` | `pinetwork` |
 | `Pi-hole` | `pihole` |
 | `Piaggio Group` | `piaggiogroup` |
@@ -2444,6 +2455,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `RAD Studio` | `radstudio` |
 | `Radar` | `radar` |
 | `radarr` | `radarr` |
+| `Radiant Earth` | `radiantearth` |
 | `Radio France` | `radiofrance` |
 | `Radix UI` | `radixui` |
 | `Railway` | `railway` |
@@ -2931,6 +2943,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Talos` | `talos` |
 | `Tamiya` | `tamiya` |
 | `Tampermonkey` | `tampermonkey` |
+| `Tangled` | `tangled` |
 | `TanStack` | `tanstack` |
 | `Taobao` | `taobao` |
 | `Tapas` | `tapas` |
@@ -3007,6 +3020,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Thunderstore` | `thunderstore` |
 | `Thurgauer Kantonalbank` | `thurgauerkantonalbank` |
 | `Thymeleaf` | `thymeleaf` |
+| `Ticket Tailor` | `tickettailor` |
 | `Ticketmaster` | `ticketmaster` |
 | `TickTick` | `ticktick` |
 | `TIDAL` | `tidal` |
