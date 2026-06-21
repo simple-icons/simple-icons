@@ -478,6 +478,8 @@ If you have an affiliation to the brand you are contributing that allows you to 
 
 Don't submit multiple icon additions or updates in one pull request. If you want to add or update multiple icons, please create a separate pull request for each one.
 
+When reviewing SVG changes on the GitHub PR changes page, you can use [Simple Icons Companion](https://github.com/LitoMore/simple-icons-companion) to compare icon diffs with overlay, points, and colors.
+
 ### Requesting Permission
 
 If a brand's terms and conditions state that we need permission to include their brand, we will tag related issues and PRs with `permission required`. Anybody creating a PR for one of these icons is responsible (even if we discover permission requirements during PR review) for obtaining said permission.

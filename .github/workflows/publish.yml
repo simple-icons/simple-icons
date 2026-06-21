@@ -12,7 +12,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
@@ -36,7 +36,7 @@ jobs:
       id-token: write # for OIDC authentication
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
@@ -48,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Reformat to regular markdown
-        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js
       - name: Update SDK Typescript definitions
         run: node scripts/release/update-sdk-ts-defs.js
       - name: Minify icons data file
@@ -64,20 +64,20 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Get commit message (for release title and body)
         id: commit
         uses: kceb/git-message-action@v3
       - id: get-version
         uses: ./.github/actions/get-version
       - name: Reformat to regular markdown
-        run: node scripts/release/reformat-markdown.js "${{ steps.get-version.outputs.version }}"
+        run: node scripts/release/reformat-markdown.js
       - name: Configure GIT credentials
         run: |
           git config user.name "simple-icons[bot]"
@@ -96,7 +96,7 @@ jobs:
         env:
           GIT_MESSAGE: ${{ steps.commit.outputs.git-message }}
       - name: Create release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         with:
@@ -116,10 +116,10 @@ jobs:
     permissions:
       actions: write
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
           repositories: 'simple-icons-font'
       - name: Trigger simple-icons-font release
@@ -135,10 +135,10 @@ jobs:
     permissions:
       actions: write
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
           repositories: 'simple-icons-website-rs'
       - name: Trigger simpleicons.org website update

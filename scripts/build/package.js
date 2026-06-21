@@ -52,7 +52,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @param {string} value The value to escape.
  * @returns {string} The escaped value.
  */
-const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
+const escape = (value) => value.replaceAll(/(?<!\\)'/gv, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
@@ -133,11 +133,8 @@ const buildIcons = async () =>
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			/** @type {IconDataAndObject} */
-			const icon = {};
-			Object.assign(icon, iconData);
-			icon.svg = svg;
-			icon.path = svgToPath(svg);
-			icon.slug = slug;
+			// @ts-expect-error: Some properties does not exist. We can polish it in TypeScript migration.
+			const icon = {...iconData, svg, path: svgToPath(svg), slug};
 			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
 			const iconExportName = slugToVariableName(slug);
 			return {icon, iconObjectRepr, iconExportName};

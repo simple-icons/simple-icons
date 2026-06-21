@@ -72,7 +72,7 @@ const checkIfCanBeClosed = async (githubRepository, issueNumber) => {
 		rule.patterns.some((pattern) => {
 			const brandNamePattern = new RegExp(
 				`### Brand Name\n*${pattern.source.replaceAll('$', '')}\n*###`,
-				'i',
+				'iv',
 			);
 			return pattern.test(title) || brandNamePattern.test(body);
 		}),

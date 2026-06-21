@@ -41,7 +41,7 @@ const updateVersionInReadmeIfNecessary = async (majorVersion) => {
 	let content = await fs.readFile(readmeFile, 'utf8');
 
 	content = content.replaceAll(
-		/simple-icons@v\d+/g,
+		/simple-icons@v\d+/gv,
 		`simple-icons@v${majorVersion}`,
 	);
 
