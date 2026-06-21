@@ -7,13 +7,13 @@ import {strict as assert} from 'node:assert';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {describe, it} from 'mocha';
-import {SVG_PATH_REGEX} from '../sdk.mjs';
+import {SVG_PATH_REGEX} from '../scripts/utils.js';
 
 const iconsDirectory = path.resolve(import.meta.dirname, '..', 'icons');
 
 /**
  * Checks if icon data matches a subject icon.
- * @param {import('../types.d.ts').IconData} icon Icon data.
+ * @param {import('../scripts/types.d.ts').RawIconData} icon Icon data.
  * @param {import('../types.d.ts').SimpleIcon} subject
  * Icon object to check against icon data.
  * @param {string} slug Icon data slug.
@@ -56,6 +56,7 @@ export const testIcon = (icon, subject, slug) => {
 
 		it(`has ${icon.license ? 'the correct' : 'no'} "license"`, () => {
 			if (icon.license) {
+				assert.notEqual(subject.license, undefined);
 				assert.equal(subject.license?.type, icon.license.type);
 				if (icon.license.type === 'custom') {
 					const {license} = icon;
