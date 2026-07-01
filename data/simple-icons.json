@@ -8165,6 +8165,22 @@
 		"source": "https://www.instatus.com"
 	},
 	{
+  		"title": "Instituto Federal",
+		"hex": "000000",
+		"source": "https://pt.wikipedia.org/wiki/Ficheiro:Instituto_Federal_Marca_2015.svg",
+		"guidelines": "https://web.archive.org/web/20190102031956if_/http://redefederal.mec.gov.br/images/pdf/manual.pdf",
+	  	"aliases": {
+			"aka": [
+			  "IF",
+			  "Rede Federal",
+			  "Federal Institutes"
+				   ],
+			"loc": {
+			  "pt-BR": "Instituto Federal de Educação, Ciência e Tecnologia"
+				   }
+				   }
+	},
+	{
 		"title": "Instructables",
 		"hex": "FABF15",
 		"source": "https://www.instructables.com/community/Official-Instructables-Logos-1/"
