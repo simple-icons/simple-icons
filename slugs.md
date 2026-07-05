@@ -1137,6 +1137,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gitter` | `gitter` |
 | `GL.iNet` | `gldotinet` |
 | `Glance` | `glance` |
+| `Glass` | `glass` |
 | `Glassdoor` | `glassdoor` |
 | `Gleam` | `gleam` |
 | `Glide` | `glide` |
