@@ -1,0 +1,63 @@
+name: Packages
+description: Report problems and suggest ideas for the NPM and Packagist packages
+labels: [package]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a new issue, make sure it isn't covered by an existing issue.
+        Please search for [issues with the `package` label][package-issues] (including
+        closed issues) before you continue.
+
+        [package-issues]: https://github.com/simple-icons/simple-icons/labels/package
+
+  - type: dropdown
+    attributes:
+      label: Kind of Issue
+      description: |
+        If your issue type is not here, select "other" and explain in the
+        "Description" field below.
+      options: [Bug, Feature, Performance, Other]
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: This issue concerns the...
+      options: [NPM package, Packagist package]
+      multiple: true
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Package Version
+      placeholder: 'Example: 5.11.0'
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Other Software
+      description: |
+        The software that you are using the package with (Node.js & NPM, PHP & Packagist,
+        Browser(s), other) and their versions. You can put "None" if you are unsure.
+      placeholder: |
+        Example:
+        Node.js v16
+        Chrome 92.0.4515.159 (Official Build) (64-bit)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Anything relevant, for example:
+        - For bugs: "Steps to reproduce" and "Expected behavior"
+        - For feature requests: An example of a use case
+        - For performance: An example where performance is poor
+      placeholder: 'Example: The NPM package does not work for my use case...'
+    validations:
+      required: true

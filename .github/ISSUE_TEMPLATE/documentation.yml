@@ -1,0 +1,34 @@
+name: Documentation
+description: Report problems and suggest ideas for the documentation
+labels: [docs]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a new issue, make sure it isn't covered by an existing issue.
+        Please search for [issues with the `docs` label][docs-issues] (including
+        closed issues) before you continue.
+
+        [docs-issues]: https://github.com/simple-icons/simple-icons/labels/docs
+
+  - type: dropdown
+    attributes:
+      label: Kind of Issue
+      description: |
+        If your issue type is not here, select "other" and explain in the
+        "Description" field below.
+      options: [Improvement, Mistake, Other]
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: |
+        Include as much detail as possible, for example:
+        - A (perma)link to the docs in question
+        - Suggestions for how to change the docs
+      placeholder: "Example: The documentation doesn't cover my use case of the NPM package..."
+    validations:
+      required: true

@@ -1,0 +1,25 @@
+name: Get issue/pull request labels
+description: Get the current labels of an issue or pull request
+
+inputs:
+  issue_number:
+    description: Issue or pull request number to get labels from
+    required: true
+  github-token:
+    description: GitHub token used to authenticate with the GitHub API
+    required: true
+outputs:
+  labels:
+    description: Labels of the issue or pull request
+    value: ${{ steps.get-labels.outputs.labels }}
+
+runs:
+  using: composite
+  steps:
+    - id: get-labels
+      shell: sh
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+      run: |
+        labels="$(gh api 'repos/simple-icons/simple-icons/issues/${{ inputs.issue_number }}' --jq '.labels.[].name' | tr '\n' ',')"
+        echo "labels=$labels" >> $GITHUB_OUTPUT

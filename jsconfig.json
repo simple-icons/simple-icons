@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "es2024",
+		"module": "node16",
+		"moduleResolution": "node16",
+		"checkJs": false,
+		"skipLibCheck": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"types": ["node"]
+	}
+}

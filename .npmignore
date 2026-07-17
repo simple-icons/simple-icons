@@ -1,0 +1,21 @@
+# Ignore all files in root
+/*
+# Except the ones we want to publish
+!data/
+!icons/
+!package.json
+!DISCLAIMER.md
+!README.md
+!LICENSE.md
+!VERSIONING.md
+!index.js
+!index-icons.js
+!index.mjs
+!index-icons.mjs
+!index.d.ts
+!types.d.ts
+!sdk.mjs
+!sdk.js
+!sdk.d.ts
+!.jsonschema.json
+!jsconfig.json

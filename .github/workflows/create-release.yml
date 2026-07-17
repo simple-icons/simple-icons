@@ -1,0 +1,101 @@
+name: Create Release Pull Request
+on:
+  # THIS WORKFLOW SHOULD NEVER BE TRIGGERED ON A PUSH EVENT. IF TRIGGERED ON A
+  # PUSH EVENT IT MAY CREATE AN ENDLESS STREAM OF 'version bump' COMMITS.
+  workflow_dispatch:
+  schedule:
+    # "At 00:00 on Sunday" (https://crontab.guru/once-a-week)
+    - cron: '0 0 * * 0'
+
+# This Workflow can be triggered manually through the GitHub UI or API. For the
+# API use the following request:
+#   curl -X POST \
+#        -H "Authorization: Bearer <token>" \
+#        -d '{"ref":"develop"}' \
+#        https://api.github.com/repos/simple-icons/simple-icons/actions/workflows/create-release.yml/dispatches
+# Replacing <token> by a personal access token with scope `public_repo`
+
+jobs:
+  check-is-fork:
+    name: Check if running in a fork
+    runs-on: ubuntu-latest
+    permissions: {}
+    outputs:
+      is-fork: ${{ steps.check.outputs.is-fork }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/check-is-fork
+        id: check
+        with:
+          in-fork-message: 'Create Release Pull Request workflow only can run in the main repository, skipping.'
+  release-pr:
+    runs-on: ubuntu-latest
+    needs: check-is-fork
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    if: |
+      github.event_name != 'push' &&
+      needs.check-is-fork.outputs.is-fork != 'true'
+    outputs:
+      did-create-pr: ${{ steps.release.outputs.did-create-pr }}
+      new-version: ${{ steps.release.outputs.new-version }}
+    steps:
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: simple-icons/release-action@v3
+        id: release
+        with:
+          repo-token: ${{ steps.app-token.outputs.token }}
+  version-bump:
+    runs-on: ubuntu-latest
+    needs: release-pr
+    permissions:
+      contents: write
+    if: |
+      github.event_name != 'push' &&
+      needs.release-pr.outputs.did-create-pr == 'true'
+    steps:
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          # Ensure the commit can be pushed regardless of branch protections (must belong to an admin of this repo)
+          token: ${{ steps.app-token.outputs.token }}
+          # Ensure we are checked out on the develop branch
+          ref: develop
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: '**/package-lock.json'
+      - name: Bump version
+        run: |
+          npm version --no-commit-hooks --no-git-tag-version \
+            "${{ needs.release-pr.outputs.new-version }}"
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Update major version in CDN URLs
+        run: node scripts/release/update-cdn-urls.js
+      - name: Update SVGs count milestone
+        run: node scripts/release/update-svgs-count.js
+      - name: Update slugs table
+        run: node scripts/release/update-slugs-table.js
+      - name: Update SDK Typescript definitions
+        run: node scripts/release/update-sdk-ts-defs.js
+      - name: Commit version bump
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: Bump version to ${{ needs.release-pr.outputs.new-version }}
+          commit_user_name: 'simple-icons[bot]'
+          commit_user_email: 'simple-icons[bot]@users.noreply.github.com'
+          commit_author: 'simple-icons[bot] <simple-icons[bot]@users.noreply.github.com>'

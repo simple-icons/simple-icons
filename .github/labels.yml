@@ -1,0 +1,84 @@
+- name: abandoned
+  color: 666666
+  description: Pull requests that have been abandoned by the contributor.
+- name: assessing
+  color: f9d0c4
+  description: Issues or icons that require manual input from a project maintainer before work can begin.
+- name: awaiting reply
+  color: e6473d
+  description: Issues or pull requests awaiting reply from an individual before it may be addressed.
+- name: breaking change
+  color: 000000
+  description: Issues or pull requests that include a breaking change and scheduled for the next major release.
+- name: dependencies
+  color: f71d6d
+  description: Pull requests that update dependencies of the project.
+- name: docs
+  color: b60205
+  description: Issues for improving or updating package documentation.
+- name: duplicate
+  color: dddddd
+  description: Issues or pull requests that already exist.
+- name: good first issue
+  color: 0e8a16
+  description: Issues we believe are simple and a good first stab at contributing to the project.
+- name: in discussion
+  color: a158c9
+  description: There is an ongoing discussion that should be finished before we can continue.
+- name: incomplete
+  color: 95e666
+  description: Issue or pull request where the required information is either incomplete or missing altogether.
+- name: meta
+  color: d32cac
+  description: Issues or pull requests regarding the project or repository itself.
+- name: new icon
+  color: 1d76db
+  description: Issues or pull requests for adding a new icon.
+- name: out of scope
+  color: aa0033
+  description: Issues or pull requests that are beyond the scope of the project.
+- name: package
+  color: fcddae
+  description: Pull requests or issues that affect the NPM package.
+- name: pending
+  color: d4b488
+  description: Issues that are pending because of e.g. a scheduled brand update.
+- name: permission denied
+  color: b60205
+  description: We have been explicitly denied permission by the trademark owner or the company's legal terms.
+- name: permission granted
+  color: 0e8a16
+  description: Explicit permission granted by trademark owner or company's legal terms for us to include this icon.
+- name: permission not needed
+  color: 0e8a16
+  description: Nothing identified that would require us to seek permission or prohibit us from including this icon.
+- name: permission requested
+  color: ff4466
+  description: Awaiting response from trademark owner. Take no action in the meantime.
+- name: permission required
+  color: d93f0b
+  description: Contact trademark owner for permission to include this icon. Take no other action in the meantime.
+- name: permissions in review
+  color: ff5500
+  description: We are checking if permission is needed to include this icon. Take no action in the meantime.
+- name: potential duplicate
+  color: eeeeee
+  description: Issues or pull requests that may already exist.
+- name: release
+  color: c0e1f7
+  description: Pull requests that released a new version.
+- name: skip release note
+  color: cccccc
+  description: Changes in pull request will not be listed in release note.
+- name: spam
+  color: fbca04
+  description: Issues and pull requests identified as spam.
+- name: update icon/data
+  color: 98f9e9
+  description: Issues or pull requests regarding icons that are outdated, this can be the SVG or color or both.
+- name: vector unavailable
+  color: fbca04
+  description: Issues and Pull Requests where no official SVG is available.
+- name: won't add
+  color: 18016b
+  description: Icon requests or other features that won't be added.

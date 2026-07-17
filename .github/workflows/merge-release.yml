@@ -1,0 +1,20 @@
+name: Merge Release Pull Request
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: contains(github.event.pull_request.labels.*.name, 'release')
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: simple-icons/release-action@v3
+        with:
+          repo-token: ${{ steps.app-token.outputs.token }}

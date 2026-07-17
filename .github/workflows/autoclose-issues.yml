@@ -1,0 +1,23 @@
+name: Autocloser
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/create-github-app-token@v3
+        id: app-token
+        with:
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Autoclose Issues
+        run: node scripts/actions/autoclose-issues/autoclose.app.js
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
