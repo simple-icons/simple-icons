@@ -1574,6 +1574,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kick` | `kick` |
 | `Kickstarter` | `kickstarter` |
 | `Kik` | `kik` |
+| `KIMI` | `kimi` |
 | `Kingston Technology` | `kingstontechnology` |
 | `Kinopoisk` | `kinopoisk` |
 | `Kinsta` | `kinsta` |
@@ -3410,6 +3411,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yr` | `yr` |
 | `Yubico` | `yubico` |
 | `YunoHost` | `yunohost` |
+| `Z.ai` | `zdotai` |
 | `Żabka` | `zabka` |
 | `Zaim` | `zaim` |
 | `Zalando` | `zalando` |
