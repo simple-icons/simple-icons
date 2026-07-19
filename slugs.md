@@ -577,6 +577,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Code Climate` | `codeclimate` |
 | `Code::Blocks` | `codeblocks` |
 | `Codeberg` | `codeberg` |
+| `CodeBuddy` | `codebuddy` |
 | `Codecademy` | `codecademy` |
 | `CodeceptJS` | `codeceptjs` |
 | `CodeChef` | `codechef` |
