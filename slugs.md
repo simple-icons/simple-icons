@@ -1575,7 +1575,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kick` | `kick` |
 | `Kickstarter` | `kickstarter` |
 | `Kik` | `kik` |
-| `KIMI` | `kimi` |
+| `Kimi` | `kimi` |
 | `Kingston Technology` | `kingstontechnology` |
 | `Kinopoisk` | `kinopoisk` |
 | `Kinsta` | `kinsta` |
