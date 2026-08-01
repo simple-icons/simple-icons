@@ -14,7 +14,9 @@ const icons = await getIconsData();
 const schema = await getJsonSchemaData();
 
 const validator = new Validator();
-const result = validator.validate(icons, schema);
+const result = validator.validate(icons, schema, {
+	base: new URL('../../.jsonschema.json', import.meta.url).href,
+});
 if (result.errors.length > 0) {
 	for (const error of result.errors) {
 		console.error(error);
