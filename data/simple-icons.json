@@ -9786,7 +9786,14 @@
 	{
 		"title": "LM Studio",
 		"hex": "000000",
-		"source": "https://files.lmstudio.ai/lmstudio_icon.svg"
+		"source": "https://files.lmstudio.ai/lmstudio_icon2.svg",
+		"aliases": {
+			"aka": [
+				"Bionic",
+				"LM Studio Bionic",
+				"lmstudio"
+			]
+		}
 	},
 	{
 		"title": "LMMS",
@@ -16800,8 +16807,8 @@
 	},
 	{
 		"title": "TanStack",
-		"hex": "000000",
-		"source": "https://tanstack.com/images/logos/logo-black.svg",
+		"hex": "ECE8D1",
+		"source": "https://tanstack.com/images/brand/tanstack-emblem-cream.svg",
 		"guidelines": "https://tanstack.com/brand-guide"
 	},
 	{
