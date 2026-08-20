@@ -3070,6 +3070,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `tqdm` | `tqdm` |
 | `Traccar` | `traccar` |
 | `TradingView` | `tradingview` |
+| `TRAE` | `trae` |
 | `Traefik Mesh` | `traefikmesh` |
 | `Traefik Proxy` | `traefikproxy` |
 | `Trailforks` | `trailforks` |
@@ -3426,6 +3427,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ZDF` | `zdf` |
 | `ZebPay` | `zebpay` |
 | `Zebra Technologies` | `zebratechnologies` |
+| `ZecTrix` | `zectrix` |
 | `Zed Industries` | `zedindustries` |
 | `Zelle` | `zelle` |
 | `Zen Browser` | `zenbrowser` |
@@ -3456,4 +3458,5 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zotero` | `zotero` |
 | `Zsh` | `zsh` |
 | `Zulip` | `zulip` |
+| `zx` | `zx` |
 | `Zyte` | `zyte` |

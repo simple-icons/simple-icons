@@ -9786,7 +9786,14 @@
 	{
 		"title": "LM Studio",
 		"hex": "000000",
-		"source": "https://files.lmstudio.ai/lmstudio_icon.svg"
+		"source": "https://files.lmstudio.ai/lmstudio_icon2.svg",
+		"aliases": {
+			"aka": [
+				"Bionic",
+				"LM Studio Bionic",
+				"lmstudio"
+			]
+		}
 	},
 	{
 		"title": "LMMS",
@@ -16805,8 +16812,8 @@
 	},
 	{
 		"title": "TanStack",
-		"hex": "000000",
-		"source": "https://tanstack.com/images/logos/logo-black.svg",
+		"hex": "ECE8D1",
+		"source": "https://tanstack.com/images/brand/tanstack-emblem-cream.svg",
 		"guidelines": "https://tanstack.com/brand-guide"
 	},
 	{
@@ -17483,6 +17490,11 @@
 		"title": "TradingView",
 		"hex": "131622",
 		"source": "https://www.tradingview.com/media-kit"
+	},
+	{
+		"title": "TRAE",
+		"hex": "32F08C",
+		"source": "https://www.trae.ai"
 	},
 	{
 		"title": "Traefik Mesh",
@@ -19495,6 +19507,11 @@
 		"source": "https://www.zebra.com"
 	},
 	{
+		"title": "ZecTrix",
+		"hex": "000000",
+		"source": "https://cloud.zectrix.com/logo.svg"
+	},
+	{
 		"title": "Zed Industries",
 		"hex": "084CCF",
 		"source": "https://github.com/zed-industries/zed/blob/ccc939124fa2f366b3029926447fd0a0c46a85c7/assets/icons/logo_96.svg"
@@ -19657,6 +19674,11 @@
 		"title": "Zulip",
 		"hex": "6492FE",
 		"source": "https://github.com/zulip/zulip/blob/df9e40491dc77b658d943cff36a816d46e32ce1b/static/images/logo/zulip-org-logo.svg"
+	},
+	{
+		"title": "zx",
+		"hex": "F11A7B",
+		"source": "https://google.github.io/zx/img/logo.svg"
 	},
 	{
 		"title": "Zyte",
