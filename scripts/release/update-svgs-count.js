@@ -10,7 +10,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import {getIconsData} from '../../sdk.mjs';
+import {getRawIconsData} from '../utils.js';
 
 const regexMatcher = /Over\s(\d+)\s/v;
 const updateRange = 100;
@@ -30,7 +30,7 @@ try {
 		process.exit(1);
 	} else {
 		const overNIconsInReadme = Number.parseInt(match[1], 10);
-		const iconsData = await getIconsData();
+		const iconsData = await getRawIconsData();
 		const nIcons = iconsData.length;
 		const nIconsRounded = Math.floor(nIcons / updateRange) * updateRange;
 

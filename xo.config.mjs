@@ -88,6 +88,13 @@ const xoConfig = [
 			'max-depth': 'off',
 		},
 	},
+	{
+		files: ['scripts/types.d.ts'],
+		rules: {
+			// TODO: sort-imports is breaking the file
+			'sort-imports': 'off',
+		},
+	},
 ];
 
 export default xoConfig;
