@@ -35,13 +35,6 @@
 			"require": "./index.js",
 			"default": "./index.js"
 		},
-		"./icons": {
-			"types": "./index.d.ts",
-			"import": "./index-icons.mjs",
-			"module": "./index-icons.mjs",
-			"require": "./index-icons.js",
-			"default": "./index-icons.js"
-		},
 		"./icons/*": [
 			"./icons/*"
 		],
