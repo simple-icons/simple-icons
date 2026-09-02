@@ -100,6 +100,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Alacritty` | `alacritty` |
 | `Alamy` | `alamy` |
 | `Albert Heijn` | `albertheijn` |
+| `Album of the Year` | `albumoftheyear` |
 | `Alby` | `alby` |
 | `Alchemy` | `alchemy` |
 | `Aldi Nord` | `aldinord` |
@@ -2722,6 +2723,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Simkl` | `simkl` |
 | `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
+| `Simple Icons CDN` | `simpleiconscdn` |
 | `SimpleLocalize` | `simplelocalize` |
 | `SimpleLogin` | `simplelogin` |
 | `Simplenote` | `simplenote` |
@@ -2975,6 +2977,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Telegraph` | `telegraph` |
 | `Telenor` | `telenor` |
 | `Temporal` | `temporal` |
+| `Tencent Hy` | `tencenthy` |
 | `TensorFlow` | `tensorflow` |
 | `Teradata` | `teradata` |
 | `teratail` | `teratail` |
@@ -3081,6 +3084,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Transport for Ireland` | `transportforireland` |
 | `Transport for London` | `transportforlondon` |
 | `Travis CI` | `travisci` |
+| `Traxsource` | `traxsource` |
 | `Treehouse` | `treehouse` |
 | `Trello` | `trello` |
 | `Trend Micro` | `trendmicro` |
