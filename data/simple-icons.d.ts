@@ -56,4 +56,5 @@ export type CustomLicense = {
 declare const icons: IconData[];
 
 export default icons;
+// @ts-expect-error TS2309: Preserve CommonJS compatibility alongside the default export.
 export = icons;
