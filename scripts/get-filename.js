@@ -7,7 +7,7 @@
  */
 
 import process from 'node:process';
-import {titleToSlug} from '../sdk.mjs';
+import {titleToSlug} from './utils.js';
 
 if (process.argv.length < 3) {
 	console.error('Provide a brand name as argument');
