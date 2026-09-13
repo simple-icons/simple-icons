@@ -118,6 +118,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlliedModders` | `alliedmodders` |
 | `AllTrails` | `alltrails` |
 | `AlmaLinux` | `almalinux` |
+| `alphaXiv` | `alphaxiv` |
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
 | `AlternativeTo` | `alternativeto` |
