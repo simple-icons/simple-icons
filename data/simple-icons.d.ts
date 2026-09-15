@@ -56,5 +56,6 @@ export type CustomLicense = {
 declare const icons: IconData[];
 
 export default icons;
-// @ts-expect-error TS2309: Preserve CommonJS compatibility alongside the default export.
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment -- Here we use @ts-ignore to avoid a possible "unused @ts-expect-error directive" error.
+// @ts-ignore TS2309: Preserve CommonJS compatibility alongside the default export.
 export = icons;
