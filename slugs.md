@@ -100,6 +100,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Alacritty` | `alacritty` |
 | `Alamy` | `alamy` |
 | `Albert Heijn` | `albertheijn` |
+| `Album of the Year` | `albumoftheyear` |
 | `Alby` | `alby` |
 | `Alchemy` | `alchemy` |
 | `Aldi Nord` | `aldinord` |
@@ -117,6 +118,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlliedModders` | `alliedmodders` |
 | `AllTrails` | `alltrails` |
 | `AlmaLinux` | `almalinux` |
+| `alphaXiv` | `alphaxiv` |
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
 | `AlternativeTo` | `alternativeto` |
@@ -252,6 +254,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Atari` | `atari` |
 | `AtlasOS` | `atlasos` |
 | `Atlassian` | `atlassian` |
+| `AtomGit` | `atomgit` |
 | `Auchan` | `auchan` |
 | `Audacity` | `audacity` |
 | `Audi` | `audi` |
@@ -577,6 +580,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Code Climate` | `codeclimate` |
 | `Code::Blocks` | `codeblocks` |
 | `Codeberg` | `codeberg` |
+| `CodeBuddy` | `codebuddy` |
 | `Codecademy` | `codecademy` |
 | `CodeceptJS` | `codeceptjs` |
 | `CodeChef` | `codechef` |
@@ -1137,6 +1141,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Gitter` | `gitter` |
 | `GL.iNet` | `gldotinet` |
 | `Glance` | `glance` |
+| `Glass` | `glass` |
 | `Glassdoor` | `glassdoor` |
 | `Gleam` | `gleam` |
 | `Glide` | `glide` |
@@ -1573,6 +1578,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kick` | `kick` |
 | `Kickstarter` | `kickstarter` |
 | `Kik` | `kik` |
+| `Kimi` | `kimi` |
 | `Kingston Technology` | `kingstontechnology` |
 | `Kinopoisk` | `kinopoisk` |
 | `Kinsta` | `kinsta` |
@@ -2092,6 +2098,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ONLYOFFICE` | `onlyoffice` |
 | `ONNX` | `onnx` |
 | `OnStar` | `onstar` |
+| `OOMOL` | `oomol` |
 | `Opel` | `opel` |
 | `Open Access` | `openaccess` |
 | `Open Badges` | `openbadges` |
@@ -2719,6 +2726,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Simkl` | `simkl` |
 | `Simple Analytics` | `simpleanalytics` |
 | `Simple Icons` | `simpleicons` |
+| `Simple Icons CDN` | `simpleiconscdn` |
 | `SimpleLocalize` | `simplelocalize` |
 | `SimpleLogin` | `simplelogin` |
 | `Simplenote` | `simplenote` |
@@ -2972,6 +2980,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Telegraph` | `telegraph` |
 | `Telenor` | `telenor` |
 | `Temporal` | `temporal` |
+| `Tencent Hy` | `tencenthy` |
 | `TensorFlow` | `tensorflow` |
 | `Teradata` | `teradata` |
 | `teratail` | `teratail` |
@@ -3067,6 +3076,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `tqdm` | `tqdm` |
 | `Traccar` | `traccar` |
 | `TradingView` | `tradingview` |
+| `TRAE` | `trae` |
 | `Traefik Mesh` | `traefikmesh` |
 | `Traefik Proxy` | `traefikproxy` |
 | `Trailforks` | `trailforks` |
@@ -3077,6 +3087,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Transport for Ireland` | `transportforireland` |
 | `Transport for London` | `transportforlondon` |
 | `Travis CI` | `travisci` |
+| `Traxsource` | `traxsource` |
 | `Treehouse` | `treehouse` |
 | `Trello` | `trello` |
 | `Trend Micro` | `trendmicro` |
@@ -3409,6 +3420,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Yr` | `yr` |
 | `Yubico` | `yubico` |
 | `YunoHost` | `yunohost` |
+| `Z.ai` | `zdotai` |
 | `Żabka` | `zabka` |
 | `Zaim` | `zaim` |
 | `Zalando` | `zalando` |
@@ -3422,6 +3434,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ZDF` | `zdf` |
 | `ZebPay` | `zebpay` |
 | `Zebra Technologies` | `zebratechnologies` |
+| `ZecTrix` | `zectrix` |
 | `Zed Industries` | `zedindustries` |
 | `Zelle` | `zelle` |
 | `Zen Browser` | `zenbrowser` |
@@ -3452,4 +3465,5 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zotero` | `zotero` |
 | `Zsh` | `zsh` |
 | `Zulip` | `zulip` |
+| `zx` | `zx` |
 | `Zyte` | `zyte` |
