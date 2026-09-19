@@ -2,7 +2,7 @@
 
 # Contributing to Simple Icons
 
-[![Good first issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522good%2520first%2520issue%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=github&label=good%20first%20issues&color=228f6c&labelColor=228f6c&logoColor=white&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+label%3A%22good+first+issue%22+-linked%3Apr) [![Icon issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22) [![Code issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr) [![Documentation issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
+[![Icon issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3A%2522update%2520icon%2Fdata%2522%2C%2522new%2520icon%2522%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=svg&logoColor=333&label=icon%20issues&labelColor=FFB13B&color=FFB13B&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+icon%22%2C%22update+icon%2Fdata%22) [![Code issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520is%3Aissue%2520is%3Aopen%2520label%3Ameta%2Cpackage%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=typescript&logoColor=white&label=code%20issues&labelColor=3178C6&color=3178C6&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+is%3Aopen+label%3Adocs%2Cmeta%2Cpackage+-linked%3Apr) [![Documentation issues](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Drepo%3Asimple-icons%2Fsimple-icons%2520label%3Adocs%2520is%3Aopen%2520-linked%3Apr&query=%24.total_count&suffix=%20open&logo=markdown&label=docs%20issues&labelColor=343a40&color=343a40&logoColor=FFF&style=flat-square)](https://github.com/simple-icons/simple-icons/issues?q=is%3Aopen+is%3Aissue+label%3Adocs+-linked%3Apr)
 
 > [!IMPORTANT]\
 > We ask that all users read our [legal disclaimer](./DISCLAIMER.md) before contributing to Simple Icons.
@@ -33,17 +33,6 @@ Simple Icons welcomes contributions and corrections. Before contributing, please
 1. Start hacking on the new branch
 1. Commit and push to the new branch
 1. Make a pull request
-
-## Table of contents
-
-- [Requesting an Icon](#requesting-an-icon)
-  - [Forbidden Brands](#forbidden-brands)
-  - [Assessing Popularity](#assessing-popularity)
-  - [Opening an Issue](#opening-an-issue)
-- [Adding or Updating an Icon](#adding-or-updating-an-icon)
-  - [Requesting Permission](#requesting-permission)
-- [Testing Package Locally](#testing-package-locally)
-- [Using Docker](#using-docker)
 
 ## Requesting an Icon
 
@@ -137,7 +126,7 @@ As a last resort, after exhausting all other options above, and where applicable
 - It is active,
 - It has a minimum of 5k GitHub stars,
 - It has an average of 1k stars for each year of its existence (e.g., a project started 10 years ago would require a minimum of 10k stars), and,
-- Its [star history](https://star-history.com) is on a consistently upward trajectory.
+- Its [star history](https://www.star-history.com/) is on a consistently upward trajectory.
 
 If all else fails, though, feel free to make a good case for the popularity of the brand you're requesting on any other grounds, provided it can be backed up with verifiable data. Example: a car manufacturer's own website falls outside our scope but a major dealership dealing exclusively or primarily in that brand falls within our scope - in that case we'd accept the manufacturer as being popular. If you can provide a _particularly_ good metric that can be applied to other brands then it will be added to this list.
 
@@ -186,7 +175,7 @@ If the icon includes a (registered) trademark icon we follow the guidelines belo
 - If brand guidelines explicitly require including the symbol, it must be included.
 - If the brand itself includes the symbol with all uses of the logo, even at small sizes, it must be included.
 - If the symbol is incorporated into the design of the logo (e.g. [Chupa Chups]), it must be included.
-- If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if is a _trademark symbol_ (™).
+- If there is ambiguity about the conditions under which the symbol is required, it must be included if it is a _registered trademark symbol_ (®) but not if it is a _trademark symbol_ (™).
 - If brand guidelines say it _may_ be removed, usually when the icon is displayed at small sizes, it must not be included.
 - If there is no explicit requirement that a symbol must be included, it must not be included.
 
@@ -445,7 +434,7 @@ Where the nested `title` is the name of the duplicate brand. The other fields, `
 
 ##### Localization
 
-We collect localized names to make it possible to find the brand by it's local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
+We collect localized names to make it possible to find the brand by its local name, as well as to provide SVGs with localized titles. To add a localized name you add the following to the icon data:
 
 ```json
 {
@@ -485,9 +474,11 @@ Old names may be retained indefinitely, but can be removed at any time, ideally 
 
 Once you've completed the previous steps, create a pull request to merge your edits into the _develop_ branch. You can run `npm run lint` to check if there are any issues you still need to address.
 
-If you have an affiliation to the brand you contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
+If you have an affiliation to the brand you are contributing that allows you to speak on their behalf then please disclose that in your pull request as it can help speed up our research and review processes.
 
 Don't submit multiple icon additions or updates in one pull request. If you want to add or update multiple icons, please create a separate pull request for each one.
+
+When reviewing SVG changes on the GitHub PR changes page, you can use [Simple Icons Companion](https://github.com/LitoMore/simple-icons-companion) to compare icon diffs with overlay, points, and colors.
 
 ### Requesting Permission
 
@@ -510,6 +501,16 @@ Kind regards,
 
 [Your name]
 ```
+
+### AI Usage Policy
+
+The Simple Icons project follows these rules regarding AI usage:
+
+- Any use of AI tools must be clearly disclosed in the pull request.
+- All AI-generated or AI-assisted content must be reviewed and approved by a human contributor before submission.
+- Contributors are fully responsible for ensuring that AI-assisted content is legally compliant, and compatible with the brand’s licensing and trademark requirements.
+- AI tools must not be used to directly generate, replicate, or closely imitate proprietary or copyrighted brand artwork.
+- Maintainers may request additional clarification, changes, or reject contributions if the use of AI tools is not properly disclosed or raises legal or quality concerns.
 
 ## Testing Package Locally
 
@@ -538,7 +539,9 @@ docker run -it --rm --entrypoint "/bin/ash" simple-icons
 
 ## Developing Third-Party Extensions
 
-An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third party extensions with JavaScript and TypeScript.
+![Extensions](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfExtensions&suffix=%20extensions&label=&color=483d8b) ![Libraries](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fsimpleicons.org%2Fstats.json&query=numberOfLibraries&suffix=%20libraries&label=&color=009698)
+
+An SDK is included in the `simple-icons/sdk` entrypoint of the npm package to make it easier the development of third-party extensions with JavaScript and TypeScript.
 
 ```typescript
 import {getIconsData, type IconData} from 'simple-icons/sdk';

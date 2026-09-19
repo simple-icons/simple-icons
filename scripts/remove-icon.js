@@ -2,7 +2,7 @@
 // @ts-check
 /**
  * @file
- * Script to remove an icon and its data.
+ * Remove an icon and its data.
  */
 
 import fs from 'node:fs/promises';

@@ -2,19 +2,12 @@
 
 Simple Icons asks that its users read this disclaimer fully before including an icon in their project.
 
-## Table of Contents
-
-- [Licenses, Copyrights & Trademarks](#licenses-copyrights--trademarks)
-- [Brand Guidelines](#brand-guidelines)
-- [Update of Brands](#update-of-brands)
-- [Removal of Brands](#removal-of-brands)
-
 ## Licenses, Copyrights & Trademarks
 
 > [!IMPORTANT]\
-> The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of licence data for a particular icon does not imply that the icon is not released under a license.
+> The addition of licenses to Simple Icons is an ongoing project. Hence, the absence of license data for a particular icon does not imply that the icon is not released under a license.
 
-<!-- makdownlint-disable-next-line no-blanks-blockquote -->
+<!-- markdownlint-disable-next-line no-blanks-blockquote -->
 
 > [!NOTE]\
 > Simple Icons is released under CC0 - though that doesn't mean to imply that all icons within the project are also CC0. Please see individual licenses where available.

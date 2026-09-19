@@ -3,6 +3,7 @@
  * @file Helper functions for GitHub actions.
  */
 import process from 'node:process';
+import {getLabels, unknownErrorToString} from '../utils.js';
 
 const {GITHUB_TOKEN} = process.env;
 
@@ -92,9 +93,30 @@ export const commentWithReason = async (
  * @param {unknown} error The error to print.
  */
 export const printError = (error) => {
-	if (error instanceof Error) {
-		console.error(error.message);
-	} else {
-		console.error(String(error));
+	const message = unknownErrorToString(error);
+	process.stderr.write(message);
+};
+
+/**
+ * Returns GitHub labels after checking they exist in .github/labels.yml.
+ * @param {{[key: string]: string}} labels Object with label names.
+ * @throws {Error} If one label does not exist in .github/labels.yml.
+ * @returns {Promise<{[key: string]: string}>} Label name.
+ */
+export const ghLabels = async (labels) => {
+	const currentLabels = await getLabels();
+	const missingLabels = Object.values(labels).filter(
+		(label) => !currentLabels.has(label),
+	);
+
+	if (missingLabels.length > 0) {
+		const readableMissingLabels = missingLabels
+			.map((label) => `"${label}"`)
+			.join(', ');
+		throw new Error(
+			`The following labels are missing in .github/labels.yml: ${readableMissingLabels}`,
+		);
 	}
+
+	return labels;
 };
