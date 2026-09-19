@@ -34,9 +34,9 @@ jobs:
         if: github.event_name == 'label'
         run: |
           echo "❌ Labels must be modified via .github/labels.yml. Restoring..."
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Sync labels
-        uses: crazy-max/ghaction-github-labeler@v5
+        uses: crazy-max/ghaction-github-labeler@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
