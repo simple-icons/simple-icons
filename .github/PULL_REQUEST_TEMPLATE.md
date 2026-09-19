@@ -24,6 +24,7 @@ As part of the checklist below, you acknowledge you have reviewed the terms of s
 
 - [ ] I have reviewed the [forbidden brands](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#forbidden-brands) list and confirm the brand I am submitting a PR for is not one of them, nor is it a subsidiary of one of those brands
 - [ ] I have reviewed the brand's terms of service, and am confident we can add this icon
+- [ ] I confirm that I did not use AI tools to create this PR, or that any AI assistance has been fully disclosed in this PR
 - [ ] I updated the JSON data in `data/simple-icons.json`
 - [ ] I optimized the icon with SVGO or SVGOMG
 - [ ] The SVG `viewbox` is `0 0 24 24`
@@ -35,5 +36,6 @@ Anything relevant, for example:
   - Why did you pick the hex value?
   - Did you manually vectorize the logo?
   - Have you used multiple sources?
+  - Did you use AI tools?
   - etc.
 -->

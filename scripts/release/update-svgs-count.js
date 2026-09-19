@@ -12,7 +12,7 @@ import path from 'node:path';
 import process from 'node:process';
 import {getIconsData} from '../../sdk.mjs';
 
-const regexMatcher = /Over\s(\d+)\s/;
+const regexMatcher = /Over\s(\d+)\s/v;
 const updateRange = 100;
 
 const rootDirectory = path.resolve(import.meta.dirname, '..', '..');

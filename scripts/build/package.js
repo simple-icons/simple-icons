@@ -52,7 +52,7 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @param {string} value The value to escape.
  * @returns {string} The escaped value.
  */
-const escape = (value) => value.replaceAll(/(?<!\\)'/g, String.raw`\'`);
+const escape = (value) => value.replaceAll(/(?<!\\)'/gv, String.raw`\'`);
 
 /**
  * Converts a license object to a URL if the URL is not defined.
@@ -99,11 +99,11 @@ const iconDataAndObjectToJsRepr = (icon) =>
  * without meta charset in SVG `<title>` elements, we need to ensure the same for scripts.
  * @param {string} filepath The path to the file to write.
  * @param {string} rawJavaScript The raw JavaScript content to write to the file.
- * @param {'cjs'} [format] The format of the resulting JavaScript file.
+ * @param {'cjs'} [jsFormat] The jsFormat of the resulting JavaScript file.
  */
-const writeJs = async (filepath, rawJavaScript, format = undefined) => {
+const writeJs = async (filepath, rawJavaScript, jsFormat = undefined) => {
 	/** @type {import('esbuild').TransformOptions} */
-	const options = {minify: true, charset: 'ascii', format};
+	const options = {minify: true, charset: 'ascii', format: jsFormat};
 	const {code} = await esbuildTransform(rawJavaScript, options);
 	// ESBuild adds a trailing newline to the end of the file
 	await fs.writeFile(filepath, code.trimEnd());
@@ -133,11 +133,8 @@ const buildIcons = async () =>
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
 			/** @type {IconDataAndObject} */
-			const icon = {};
-			Object.assign(icon, iconData);
-			icon.svg = svg;
-			icon.path = svgToPath(svg);
-			icon.slug = slug;
+			// @ts-expect-error: Some properties does not exist. We can polish it in TypeScript migration.
+			const icon = {...iconData, svg, path: svgToPath(svg), slug};
 			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
 			const iconExportName = slugToVariableName(slug);
 			return {icon, iconObjectRepr, iconExportName};
