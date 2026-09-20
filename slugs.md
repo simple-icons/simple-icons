@@ -1163,6 +1163,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GoCD` | `gocd` |
 | `GoDaddy` | `godaddy` |
 | `Godot Engine` | `godotengine` |
+| `Godox` | `godox` |
 | `GoFundMe` | `gofundme` |
 | `GOG.com` | `gogdotcom` |
 | `Gojek` | `gojek` |
