@@ -16555,6 +16555,15 @@
 		"guidelines": "https://sites.google.com/sumologic.com/sumo-logic-brand/home"
 	},
 	{
+		"title": "SumUp",
+		"hex": "1E1C1C",
+		"source": "https://github.com/sumup-oss/circuit-ui/blob/5fef93b8747e140a87ec760b14cbf259a20a8c60/packages/circuit-ui/components/SumUpLogo/SumUpLogo.tsx",
+		"guidelines": "https://github.com/sumup-oss/circuit-ui/tree/main/docs",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
 		"title": "Suno",
 		"hex": "000000",
 		"source": "https://suno.com"
