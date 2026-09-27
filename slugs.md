@@ -1380,6 +1380,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
 | `HyperX` | `hyperx` |
+| `Hypit` | `hypit` |
 | `Hypothesis` | `hypothesis` |
 | `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
