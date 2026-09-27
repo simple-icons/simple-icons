@@ -18,10 +18,10 @@ jobs:
     if: github.event.pull_request.merged
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: mondeja/remove-labels-gh-action@v2
         with:
@@ -34,6 +34,7 @@ jobs:
             invalid
             out of scope
             pending
+            permission in review
             permission required
             won't add
 
@@ -44,10 +45,10 @@ jobs:
       (!github.event.pull_request.merged)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: mondeja/remove-labels-gh-action@v2
         with:
@@ -56,16 +57,17 @@ jobs:
             in discussion
             pending
             assessing
+            permission in review
 
   remove-closed-issue-labels:
     name: Remove closed issue labels
     if: github.event.issue.state == 'closed'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: app-token
         with:
-          app-id: ${{ vars.BOT_APP_ID }}
+          client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - uses: mondeja/remove-labels-gh-action@v2
         with:
@@ -74,3 +76,4 @@ jobs:
             in discussion
             pending
             assessing
+            permission in review

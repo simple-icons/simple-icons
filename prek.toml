@@ -1,0 +1,60 @@
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "format-icon-data"
+name = "Format icon data"
+entry = "node --run format:icondata"
+language = "system"
+pass_filenames = false
+files.glob = "data/simple-icons.json"
+
+[[repos.hooks]]
+id = "prettier"
+name = "Prettier"
+entry = "node --run prettier -- --write"
+language = "system"
+pass_filenames = false
+
+[[repos.hooks]]
+id = "xo"
+name = "XO"
+entry = "node --run xo:fix"
+language = "system"
+pass_filenames = false
+types = ["javascript"]
+
+[[repos.hooks]]
+id = "ourlint"
+name = "Our lint"
+entry = "node --run ourlint"
+language = "system"
+pass_filenames = false
+always_run = true
+
+[[repos.hooks]]
+id = "jsonlint"
+name = "JSON lint"
+entry = "node --run jsonlint"
+language = "system"
+pass_filenames = false
+types = ["json"]
+
+[[repos.hooks]]
+id = "svglint"
+name = "SVG lint"
+entry = "node --run svglint:base -- --git-changed"
+language = "system"
+pass_filenames = false
+types = ["svg"]
+files.glob = "icons/*.svg"
+verbose = true
+stages = ["commit"]
+
+[[repos.hooks]]
+id = "markdownlint"
+name = "Markdown lint"
+entry = "node --run markdownlint"
+language = "system"
+pass_filenames = false
+types = ["markdown"]
