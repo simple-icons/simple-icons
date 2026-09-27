@@ -30,8 +30,8 @@ const htmlNamedEntities = JSON.parse(
 );
 
 const svgRegexp =
-	/^<svg( \S*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/;
-const negativeZerosRegexp = /-0(?=[^.]|[\s\d\w]|$)/g;
+	/^<svg( \S*=".*"){3}><title>.*<\/title><path d=".*"\/><\/svg>$/v;
+const negativeZerosRegexp = /-0(?=[^.]|[\s\d\w]|$)/gv;
 
 const iconSize = 24;
 const iconTargetCenter = iconSize / 2;
@@ -46,7 +46,7 @@ const iconTolerance = 0.001;
  */
 const removeLeadingZeros = (numberOrString) =>
 	// Convert 0.03 to '.03'
-	numberOrString.toString().replace(/^(-?)(0)(\.?.+)/, '$1$3');
+	numberOrString.toString().replace(/^(-?)(0)(\.?.+)/v, '$1$3');
 /**
  * Given three points, returns if the middle one (x2, y2) is collinear
  *   to the line formed by the two limit points.
@@ -69,7 +69,7 @@ const collinear = (x1, y1, x2, y2, x3, y3) =>
  */
 const countDecimals = (number_) => {
 	if (number_ && number_ % 1) {
-		const [base, op, trail] = number_.toExponential().split(/e([+-])/);
+		const [base, op, trail] = number_.toExponential().split(/e([+\-])/v);
 		const elen = Number.parseInt(trail, 10);
 		const index = base.indexOf('.');
 		return index === -1
@@ -179,7 +179,7 @@ const config = {
 
 				// Avoid character codepoints as hexadecimal representation
 				const hexadecimalCodepoints = [
-					...iconTitleText.matchAll(/&#x([A-Fa-f\d]+);/g),
+					...iconTitleText.matchAll(/&#x([A-Fa-f\d]+);/gv),
 				];
 				if (hexadecimalCodepoints.length > 0) {
 					_validCodepointsRepr = false;
@@ -210,7 +210,7 @@ const config = {
 
 				// Avoid character codepoints as named entities
 				const namedEntitiesCodepoints = [
-					...iconTitleText.matchAll(/&([A-Za-z\d]+);/g),
+					...iconTitleText.matchAll(/&([A-Za-z\d]+);/gv),
 				];
 				if (namedEntitiesCodepoints.length > 0) {
 					for (const match of namedEntitiesCodepoints) {
@@ -247,7 +247,7 @@ const config = {
 				if (_validCodepointsRepr) {
 					// Compare encoded title with original title and report error if not equal
 					const encodingMatches = [
-						...iconTitleText.matchAll(/&(#(\d+)|(amp|quot|lt|gt));/g),
+						...iconTitleText.matchAll(/&(#(\d+)|(amp|quot|lt|gt));/gv),
 					];
 					const encodedBuf = [];
 
@@ -974,7 +974,7 @@ const config = {
 					}
 
 					const validPathCharacters = SVG_PATH_REGEX.source.replaceAll(
-						/[[\]+^$]/g,
+						/[\[\]+^$]/gv,
 						'',
 					);
 					const invalidCharactersMsgs = [];
@@ -1018,7 +1018,7 @@ const config = {
 				reporter.name = 'simplifiable-numbers';
 
 				// Regex to find decimal numbers that don't start with 0, . or -.
-				const numberPattern = /(?<![\d.])[1-9]\d*\.\d+(?!\d)/g;
+				const numberPattern = /(?<![\d.])[1-9]\d*\.\d+(?!\d)/gv;
 
 				for (const match of iconPath.matchAll(numberPattern)) {
 					const original = match[0];
@@ -1037,7 +1037,7 @@ const config = {
 			(reporter, $, ast) => {
 				reporter.name = 'spacing-consistency';
 
-				const multipleSpacesPattern = / {2,}/g;
+				const multipleSpacesPattern = / {2,}/gv;
 
 				for (const match of ast.source.matchAll(multipleSpacesPattern)) {
 					const spaceCount = match[0].length;

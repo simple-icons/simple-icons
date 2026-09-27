@@ -43,7 +43,7 @@ process.on('uncaughtException', (error) => {
 const iconsData = JSON.parse(await getIconsDataString());
 const jsonSchema = await getJsonSchemaData();
 
-const HEX_REGEX = /^#?[a-f\d]{3,8}$/i;
+const HEX_REGEX = /^#?[a-f\d]{3,8}$/iv;
 
 const aliasTypes = ['aka', 'old'].map((key) => ({
 	name: `${key} (${jsonSchema.definitions.brand.properties.aliases.properties[key].description})`,
@@ -68,6 +68,7 @@ const urlRegex = async () =>
 				'utf8',
 			),
 		).definitions.url.pattern,
+		'v',
 	);
 
 /**
@@ -107,7 +108,7 @@ const isNewIcon = (input) =>
 const previewHexColor = (input) => {
 	const color = normalizeColor(input);
 	const luminance = HEX_REGEX.test(input)
-		? getRelativeLuminance.default(`#${color}`)
+		? getRelativeLuminance(`#${color}`)
 		: -1;
 	if (luminance === -1) {
 		return input.toUpperCase();
@@ -126,6 +127,7 @@ const answers = {
 	source: '',
 };
 
+// eslint-disable-next-line unicorn/no-immediate-mutation
 answers.title = await inputPrompt({
 	message: 'What is the title of this icon?',
 	validate: (input) =>
@@ -196,7 +198,7 @@ if (
 		message: 'What types of aliases do you want to add?',
 		choices: aliasTypes,
 	})
-		// eslint-disable-next-line promise/prefer-await-to-then
+		// TODO: eslint-disable-next-line promise/prefer-await-to-then
 		.then(async (aliases) => {
 			/** @type {{[_: string]: string[]}} */
 			const result = {};
@@ -206,7 +208,7 @@ if (
 				result[alias] = await inputPrompt({
 					message: `What ${alias} aliases would you like to add? (separate with commas)`,
 				})
-					// eslint-disable-next-line promise/prefer-await-to-then
+					// TODO: eslint-disable-next-line promise/prefer-await-to-then
 					.then((aliases_) =>
 						aliases_.split(',').map((alias_) => alias_.trim()),
 					);
