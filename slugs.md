@@ -118,6 +118,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `AlliedModders` | `alliedmodders` |
 | `AllTrails` | `alltrails` |
 | `AlmaLinux` | `almalinux` |
+| `alphaXiv` | `alphaxiv` |
 | `Alpine Linux` | `alpinelinux` |
 | `Alpine.js` | `alpinedotjs` |
 | `AlternativeTo` | `alternativeto` |
@@ -253,6 +254,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Atari` | `atari` |
 | `AtlasOS` | `atlasos` |
 | `Atlassian` | `atlassian` |
+| `AtomGit` | `atomgit` |
 | `Auchan` | `auchan` |
 | `Audacity` | `audacity` |
 | `Audi` | `audi` |
@@ -1161,6 +1163,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `GoCD` | `gocd` |
 | `GoDaddy` | `godaddy` |
 | `Godot Engine` | `godotengine` |
+| `Godox` | `godox` |
 | `GoFundMe` | `gofundme` |
 | `GOG.com` | `gogdotcom` |
 | `Gojek` | `gojek` |
@@ -1377,6 +1380,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
 | `HyperX` | `hyperx` |
+| `Hypit` | `hypit` |
 | `Hypothesis` | `hypothesis` |
 | `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
@@ -2096,6 +2100,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `ONLYOFFICE` | `onlyoffice` |
 | `ONNX` | `onnx` |
 | `OnStar` | `onstar` |
+| `OOMOL` | `oomol` |
 | `Opel` | `opel` |
 | `Open Access` | `openaccess` |
 | `Open Badges` | `openbadges` |
