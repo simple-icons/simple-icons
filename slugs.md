@@ -2042,6 +2042,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Note` | `note` |
 | `NotebookLM` | `notebooklm` |
 | `Notepad++` | `notepadplusplus` |
+| `Notesnook` | `notesnook` |
 | `Notion` | `notion` |
 | `Notist` | `notist` |
 | `Noun Project` | `nounproject` |
@@ -2903,6 +2904,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sui` | `sui` |
 | `Suitest` | `suitest` |
 | `Sumo Logic` | `sumologic` |
+| `SumUp` | `sumup` |
 | `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
