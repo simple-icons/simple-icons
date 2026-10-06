@@ -17693,9 +17693,11 @@
 	},
 	{
 		"title": "Trivy",
-		"hex": "1904DA",
-		"source": "https://www.aquasec.com/brand",
-		"guidelines": "https://www.aquasec.com/brand"
+		"hex": "031730",
+		"source": "https://github.com/aquasecurity/trivy/blob/8f815546c7b57dc11229b0098463dff0cfc9ed2c/brand/Trivy-OSS-Logo-Color-Horizontal-RGB.svg",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "TRMNL",
