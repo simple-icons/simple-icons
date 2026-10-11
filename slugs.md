@@ -243,6 +243,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `asciinema` | `asciinema` |
 | `ASDA` | `asda` |
 | `Aseprite` | `aseprite` |
+| `Aspire` | `aspire` |
 | `AssemblyScript` | `assemblyscript` |
 | `Asterisk` | `asterisk` |
 | `Aston Martin` | `astonmartin` |
@@ -3447,6 +3448,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zenn` | `zenn` |
 | `Zenodo` | `zenodo` |
 | `Zensar` | `zensar` |
+| `Zensical` | `zensical` |
 | `Zerodha` | `zerodha` |
 | `ZeroTier` | `zerotier` |
 | `Zettlr` | `zettlr` |
