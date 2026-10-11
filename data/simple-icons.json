@@ -366,6 +366,11 @@
 		"source": "https://www.aftership.com"
 	},
 	{
+		"title": "Agent Skills",
+		"hex": "000000",
+		"source": "https://github.com/agentskills/agentskills/blob/5d4c1fda3f786fff826c7f56b6cb3341e7f3a911/docs/favicon.svg"
+	},
+	{
 		"title": "Agora",
 		"hex": "099DFD",
 		"source": "https://github.com/AgoraIO/Docs-Source/blob/849872dd0496bada0a2dceecb3f79663e3b2d323/assets/images/others/agora-logo.svg",
@@ -535,6 +540,11 @@
 		"source": "https://www.ah.nl"
 	},
 	{
+		"title": "Album of the Year",
+		"hex": "222222",
+		"source": "https://albumoftheyear.org"
+	},
+	{
 		"title": "Alby",
 		"hex": "FFDF6F",
 		"source": "https://github.com/getAlby/media/blob/c24fee4a3f76d6cd000343a972f10590d3913b25/Alby-logo-icons/Alby-logo-head/alby.svg",
@@ -623,6 +633,11 @@
 		"hex": "000000",
 		"source": "https://almalinux.org",
 		"guidelines": "https://almalinux.org/p/the-almalinux-os-trademark-usage-policy/"
+	},
+	{
+		"title": "alphaXiv",
+		"hex": "9A2036",
+		"source": "https://alphaxiv.org"
 	},
 	{
 		"title": "Alpine Linux",
@@ -853,6 +868,15 @@
 		"title": "Apache Ant",
 		"hex": "A81C7D",
 		"source": "https://apache.org/logos",
+		"guidelines": "https://www.apache.org/foundation/marks",
+		"license": {
+			"type": "Apache-2.0"
+		}
+	},
+	{
+		"title": "Apache Arrow",
+		"hex": "000000",
+		"source": "https://arrow.apache.org/visual_identity",
 		"guidelines": "https://www.apache.org/foundation/marks",
 		"license": {
 			"type": "Apache-2.0"
@@ -1423,6 +1447,15 @@
 		"source": "https://www.aseprite.org"
 	},
 	{
+		"title": "Aspire",
+		"hex": "7455DD",
+		"source": "https://github.com/microsoft/aspire-brand/blob/f9eb464dec47870de23d55dd7b3c00d39122813d/logo/developer-tools/aspire-plain.svg",
+		"guidelines": "https://github.com/microsoft/aspire-brand/tree/main/logo/developer-tools#developer-icon-usage-permission",
+		"license": {
+			"type": "CC0-1.0"
+		}
+	},
+	{
 		"title": "AssemblyScript",
 		"hex": "007ACC",
 		"source": "https://www.assemblyscript.org"
@@ -1479,6 +1512,16 @@
 		"hex": "0052CC",
 		"source": "https://atlassian.design/resources/logo-library",
 		"guidelines": "https://atlassian.design/foundations/logos"
+	},
+	{
+		"title": "AtomGit",
+		"hex": "DA203E",
+		"source": "https://cdn-static.atomgit.com/doc/logo.svg",
+		"aliases": {
+			"old": [
+				"GitCode"
+			]
+		}
 	},
 	{
 		"title": "Auchan",
@@ -1634,6 +1677,11 @@
 		"hex": "E2001A",
 		"source": "https://en.fritz.com/about-avm/press/press-media",
 		"guidelines": "https://business.avm.de/de/data/allgemeine-nutzungsbedingungen-business-portal"
+	},
+	{
+		"title": "Await",
+		"hex": "7858F5",
+		"source": "https://awaitwidget.com"
 	},
 	{
 		"title": "Awesome Lists",
@@ -3023,6 +3071,11 @@
 		"source": "https://claude.ai"
 	},
 	{
+		"title": "Claude Code",
+		"hex": "D97757",
+		"source": "https://code.claude.com"
+	},
+	{
 		"title": "Clerk",
 		"hex": "6C47FF",
 		"source": "https://clerk.com"
@@ -3192,8 +3245,8 @@
 	},
 	{
 		"title": "Cockpit",
-		"hex": "0066CC",
-		"source": "https://github.com/cockpit-project/cockpit-project.github.io/blob/b851b3477d90017961ac9b252401c9a6cb6239f1/images/site/cockpit-logo.svg"
+		"hex": "2A7AE2",
+		"source": "https://github.com/cockpit-project/cockpit/blob/e0e3ba3feecf4d01e6c10a4771855b1ecc57105c/src/branding/default/logo.svg"
 	},
 	{
 		"title": "Cockroach Labs",
@@ -3241,6 +3294,11 @@
 		"license": {
 			"type": "CC0-1.0"
 		}
+	},
+	{
+		"title": "CodeBuddy",
+		"hex": "6C4DFF",
+		"source": "https://www.codebuddy.cn"
 	},
 	{
 		"title": "Codecademy",
@@ -5233,8 +5291,13 @@
 	},
 	{
 		"title": "Express",
-		"hex": "000000",
-		"source": "https://github.com/openjs-foundation/artwork/blob/ac43961d1157f973c54f210cf5e0c9c45e3d3f10/projects/express/express-icon-black.svg"
+		"hex": "0A0A0A",
+		"source": "https://github.com/openjs-foundation/artwork/blob/3816245ebbf4707bdafde748350ac8476b6b5b62/projects/express/express-icon-black.svg",
+		"aliases": {
+			"aka": [
+				"Express.js"
+			]
+		}
 	},
 	{
 		"title": "Express.com",
@@ -5404,6 +5467,11 @@
 		"title": "Favro",
 		"hex": "512DA8",
 		"source": "https://favro.com/login"
+	},
+	{
+		"title": "Fawry",
+		"hex": "FFD300",
+		"source": "https://www.fawry.com/financials-and-earning-releases"
 	},
 	{
 		"title": "FCC",
@@ -6378,6 +6446,12 @@
 		"source": "https://github.com/glanceapp/glance/blob/c88fd526e55117445c7f4440c83b661faa402047/internal/glance/static/favicon.svg"
 	},
 	{
+		"title": "Glass",
+		"hex": "FFCC00",
+		"source": "https://glass.photo/brand",
+		"guidelines": "https://glass.photo/brand"
+	},
+	{
 		"title": "Glassdoor",
 		"hex": "00A162",
 		"source": "https://www.glassdoor.com/about/newsroom",
@@ -6513,6 +6587,11 @@
 		"license": {
 			"type": "CC-BY-4.0"
 		}
+	},
+	{
+		"title": "Godox",
+		"hex": "FF6600",
+		"source": "https://www.godox.com"
 	},
 	{
 		"title": "GoFundMe",
@@ -7762,6 +7841,11 @@
 		"source": "https://ca.hyperx.com/cdn/shop/files/image_placeholder.svg"
 	},
 	{
+		"title": "Hypit",
+		"hex": "DF3C68",
+		"source": "https://github.com/hypit-ai/hypit/blob/2c320059c1260d0f6f8101472395f91f2f9c8243/docs/public/hypit-logo-dark.svg"
+	},
+	{
 		"title": "Hypothesis",
 		"hex": "BD1C2B",
 		"source": "https://web.hypothes.is/brand/"
@@ -8923,6 +9007,12 @@
 		"source": "https://www.kik.com/news/"
 	},
 	{
+		"title": "Kimi",
+		"hex": "000000",
+		"source": "https://moonshotai.github.io/Branding-Guide",
+		"guidelines": "https://moonshotai.github.io/Branding-Guide"
+	},
+	{
 		"title": "Kingston Technology",
 		"hex": "000000",
 		"source": "https://www.kingston.com",
@@ -9738,6 +9828,18 @@
 		"source": "https://llvm.org/Logo.html"
 	},
 	{
+		"title": "LM Studio",
+		"hex": "000000",
+		"source": "https://files.lmstudio.ai/lmstudio_icon2.svg",
+		"aliases": {
+			"aka": [
+				"Bionic",
+				"LM Studio Bionic",
+				"lmstudio"
+			]
+		}
+	},
+	{
 		"title": "LMMS",
 		"hex": "10B146",
 		"source": "https://lmms.io/branding"
@@ -9945,6 +10047,11 @@
 		"title": "Lyft",
 		"hex": "FF00BF",
 		"source": "https://www.lyft.com/press"
+	},
+	{
+		"title": "M5Stack",
+		"hex": "0077C8",
+		"source": "https://static-cdn.m5stack.com/resource/public/assets/m5logo2022.svg"
 	},
 	{
 		"title": "MAAS",
@@ -10426,6 +10533,11 @@
 		"hex": "0467DF",
 		"source": "https://www.meta.com",
 		"guidelines": "https://www.facebook.com/brand/resources/meta/company-brand"
+	},
+	{
+		"title": "Meta AI",
+		"hex": "9844FF",
+		"source": "https://meta.ai/images/meta-ai-orbit-logo-gradient-3d_light.svg"
 	},
 	{
 		"title": "Metabase",
@@ -11458,7 +11570,11 @@
 	{
 		"title": "NixOS",
 		"hex": "5277C3",
-		"source": "https://github.com/NixOS/nixos-homepage/tree/58cfdb770aba28b73446a1b3ee65a5cec4f0d44f/logo"
+		"source": "https://brand.nixos.org/logos/nixos-logomark-black-flat-minimal.svg",
+		"guidelines": "https://brand.nixos.org/documents/nixos-branding-guide.pdf",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Nobara Linux",
@@ -11551,6 +11667,11 @@
 		"title": "Notepad++",
 		"hex": "90E59A",
 		"source": "https://github.com/notepad-plus-plus/notepad-plus-plus/blob/1f2c63cce173e3e1dc5922637c81a851693e2856/PowerEditor/misc/chameleon/chameleon-pencil.eps"
+	},
+	{
+		"title": "Notesnook",
+		"hex": "000000",
+		"source": "https://github.com/streetwriters/notesnook/blob/20bbb6dd5b8d9fa0b3924f20d315babe0e3f6173/apps/web/public/favicon.svg"
 	},
 	{
 		"title": "Notion",
@@ -11886,6 +12007,12 @@
 		"source": "https://www.onstar.com"
 	},
 	{
+		"title": "OOMOL",
+		"hex": "0D1117",
+		"source": "https://oomol.com/en/brand-assets/",
+		"guidelines": "https://oomol.com/en/brand-assets/"
+	},
+	{
 		"title": "Opel",
 		"hex": "F7FF14",
 		"source": "https://www.stellantis.com/en/brands/opel"
@@ -11970,6 +12097,11 @@
 		"hex": "1A8865",
 		"source": "https://opencagedata.com/branding",
 		"guidelines": "https://opencagedata.com/branding"
+	},
+	{
+		"title": "OpenCode",
+		"hex": "000000",
+		"source": "https://github.com/anomalyco/opencode/blob/1251a870cb384543c150c4a72fb101b55eec971b/packages/identity/mark.svg"
 	},
 	{
 		"title": "OpenCritic",
@@ -12122,6 +12254,11 @@
 				"Terraform"
 			]
 		}
+	},
+	{
+		"title": "OpenTUI",
+		"hex": "000000",
+		"source": "https://github.com/anomalyco/opentui/blob/5969eee9b44b16a64a77ffa917e98daf08bb44f9/packages/web/public/favicon.svg"
 	},
 	{
 		"title": "Openverse",
@@ -12776,6 +12913,11 @@
 		"hex": "000000",
 		"source": "https://www.jetbrains.com/company/brand/logos/",
 		"guidelines": "https://www.jetbrains.com/company/brand/"
+	},
+	{
+		"title": "Pi",
+		"hex": "000000",
+		"source": "https://pi.dev/favicon.svg"
 	},
 	{
 		"title": "Pi Network",
@@ -13934,6 +14076,14 @@
 		"title": "radarr",
 		"hex": "FFCB3D",
 		"source": "https://github.com/Radarr/Radarr/blob/5f624a147bb62d37b731d9a0ae02bfd338793962/Logo/Radarr.svg"
+	},
+	{
+		"title": "Radiant Earth",
+		"hex": "469695",
+		"source": "https://radiant.earth",
+		"license": {
+			"type": "CC-BY-4.0"
+		}
 	},
 	{
 		"title": "Radio France",
@@ -15341,7 +15491,7 @@
 	},
 	{
 		"title": "Shortcut",
-		"hex": "58B1E4",
+		"hex": "494BCB",
 		"source": "https://www.shortcut.com/branding",
 		"guidelines": "https://www.shortcut.com/branding"
 	},
@@ -15419,6 +15569,11 @@
 		"license": {
 			"type": "CC0-1.0"
 		}
+	},
+	{
+		"title": "Simple Icons CDN",
+		"hex": "111111",
+		"source": "https://cdn.simpleicons.org"
 	},
 	{
 		"title": "SimpleLocalize",
@@ -16424,6 +16579,12 @@
 		"guidelines": "https://sites.google.com/sumologic.com/sumo-logic-brand/home"
 	},
 	{
+		"title": "SumUp",
+		"hex": "1E1C1C",
+		"source": "https://circuit.sumup.com/?path=/docs/brand-sumuplogo--docs",
+		"guidelines": "https://github.com/sumup-oss/circuit-ui/tree/main/docs"
+	},
+	{
 		"title": "Suno",
 		"hex": "000000",
 		"source": "https://suno.com"
@@ -16705,9 +16866,15 @@
 		"source": "https://commons.wikimedia.org/wiki/File:Tampermonkey_logo.svg"
 	},
 	{
-		"title": "TanStack",
+		"title": "Tangled",
 		"hex": "000000",
-		"source": "https://tanstack.com/images/logos/logo-black.svg",
+		"source": "https://tangled.org/tangled.org/core/blob/a5d661f5506280d56929442f7f196f536c514ae7/appview/pages/templates/fragments/dolly/logo.html",
+		"guidelines": "https://tangled.org/brand"
+	},
+	{
+		"title": "TanStack",
+		"hex": "ECE8D1",
+		"source": "https://tanstack.com/images/brand/tanstack-emblem-cream.svg",
 		"guidelines": "https://tanstack.com/brand-guide"
 	},
 	{
@@ -16864,6 +17031,11 @@
 		"title": "Temporal",
 		"hex": "000000",
 		"source": "https://github.com/temporalio/temporaldotio/blob/b6b5f3ed1fda818d5d6c07e27ec15d51a61f2267/public/images/icons/temporal-no-text.svg"
+	},
+	{
+		"title": "Tencent Hy",
+		"hex": "0052D9",
+		"source": "https://hy.tencent.ai"
 	},
 	{
 		"title": "TensorFlow",
@@ -17096,8 +17268,8 @@
 	{
 		"title": "Threads",
 		"hex": "000000",
-		"source": "https://about.meta.com/brand/resources/instagram/threads",
-		"guidelines": "https://about.meta.com/brand/resources/instagram/threads"
+		"source": "https://www.meta.com/brand/resources/instagram/threads",
+		"guidelines": "https://www.meta.com/brand/resources/instagram/threads"
 	},
 	{
 		"title": "Three.js",
@@ -17134,6 +17306,11 @@
 		"title": "Thymeleaf",
 		"hex": "005F0F",
 		"source": "https://github.com/thymeleaf/thymeleaf-org/blob/0427d4d4c6f08d3a1fbed3bc90ceeebcf094b532/artwork/thymeleaf%202016/thymeleaf.svg"
+	},
+	{
+		"title": "Ticket Tailor",
+		"hex": "222432",
+		"source": "https://www.tickettailor.com"
 	},
 	{
 		"title": "Ticketmaster",
@@ -17381,6 +17558,11 @@
 		"source": "https://www.tradingview.com/media-kit"
 	},
 	{
+		"title": "TRAE",
+		"hex": "32F08C",
+		"source": "https://www.trae.ai"
+	},
+	{
 		"title": "Traefik Mesh",
 		"hex": "9D0FB0",
 		"source": "https://github.com/traefik/mesh/blob/ef03c40b78c08931d47fdad0be10d1986f4e21bc/docs/content/assets/img/traefik-mesh-logo.svg"
@@ -17432,6 +17614,12 @@
 		"title": "Travis CI",
 		"hex": "3EAAAF",
 		"source": "https://travis-ci.com/logo"
+	},
+	{
+		"title": "Traxsource",
+		"hex": "40A0FF",
+		"source": "https://www.traxsource.com/logos-and-images/",
+		"guidelines": "https://www.traxsource.com/logos-and-images/"
 	},
 	{
 		"title": "Treehouse",
@@ -19308,6 +19496,11 @@
 		"source": "https://github.com/YunoHost/doc/blob/0157b052481407b3c06cc2892de225f14c42520b/images/ynh_logo_black.svg"
 	},
 	{
+		"title": "Z.ai",
+		"hex": "2D2D2D",
+		"source": "https://z-cdn.chatglm.cn/z-ai/static/logo.svg"
+	},
+	{
 		"title": "Żabka",
 		"hex": "006420",
 		"source": "https://www.zabka.pl"
@@ -19386,6 +19579,11 @@
 		"source": "https://www.zebra.com"
 	},
 	{
+		"title": "ZecTrix",
+		"hex": "000000",
+		"source": "https://cloud.zectrix.com/logo.svg"
+	},
+	{
 		"title": "Zed Industries",
 		"hex": "084CCF",
 		"source": "https://github.com/zed-industries/zed/blob/ccc939124fa2f366b3029926447fd0a0c46a85c7/assets/icons/logo_96.svg"
@@ -19426,6 +19624,11 @@
 		"title": "Zensar",
 		"hex": "000000",
 		"source": "https://www.zensar.com/about/our-story/our-brand/#logo"
+	},
+	{
+		"title": "Zensical",
+		"hex": "FFA656",
+		"source": "https://zensical.org/about/press-kit/"
 	},
 	{
 		"title": "Zerodha",
@@ -19548,6 +19751,11 @@
 		"title": "Zulip",
 		"hex": "6492FE",
 		"source": "https://github.com/zulip/zulip/blob/df9e40491dc77b658d943cff36a816d46e32ce1b/static/images/logo/zulip-org-logo.svg"
+	},
+	{
+		"title": "zx",
+		"hex": "F11A7B",
+		"source": "https://google.github.io/zx/img/logo.svg"
 	},
 	{
 		"title": "Zyte",
