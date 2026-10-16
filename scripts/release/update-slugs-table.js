@@ -7,7 +7,7 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {getIconSlug, getIconsData} from '../../sdk.mjs';
+import {getIconSlug, getRawIconsData} from '../utils.js';
 
 const rootDirectory = path.resolve(import.meta.dirname, '..', '..');
 const slugsFile = path.resolve(rootDirectory, 'slugs.md');
@@ -23,7 +23,7 @@ update the script at '${path.relative(rootDirectory, import.meta.filename)}'.
 | :--- | :--- |
 `;
 
-const icons = await getIconsData();
+const icons = await getRawIconsData();
 for (const icon of icons) {
 	const brandName = icon.title;
 	const brandSlug = getIconSlug(icon);
