@@ -1447,6 +1447,15 @@
 		"source": "https://www.aseprite.org"
 	},
 	{
+		"title": "Aspire",
+		"hex": "7455DD",
+		"source": "https://github.com/microsoft/aspire-brand/blob/f9eb464dec47870de23d55dd7b3c00d39122813d/logo/developer-tools/aspire-plain.svg",
+		"guidelines": "https://github.com/microsoft/aspire-brand/tree/main/logo/developer-tools#developer-icon-usage-permission",
+		"license": {
+			"type": "CC0-1.0"
+		}
+	},
+	{
 		"title": "AssemblyScript",
 		"hex": "007ACC",
 		"source": "https://www.assemblyscript.org"
@@ -5002,8 +5011,9 @@
 	},
 	{
 		"title": "Elixir",
-		"hex": "4B275F",
-		"source": "https://github.com/elixir-lang/elixir-lang.github.com/tree/031746384ee23b9be19298c92a9699c56cc05845/images/logo"
+		"hex": "8847B9",
+		"source": "https://github.com/elixir-lang/elixir-lang.github.com/tree/031746384ee23b9be19298c92a9699c56cc05845/images/logo",
+		"guidelines": "https://elixir-lang.org/trademarks/"
 	},
 	{
 		"title": "Elk",
@@ -7830,6 +7840,11 @@
 		"title": "HyperX",
 		"hex": "E21836",
 		"source": "https://ca.hyperx.com/cdn/shop/files/image_placeholder.svg"
+	},
+	{
+		"title": "Hypit",
+		"hex": "DF3C68",
+		"source": "https://github.com/hypit-ai/hypit/blob/2c320059c1260d0f6f8101472395f91f2f9c8243/docs/public/hypit-logo-dark.svg"
 	},
 	{
 		"title": "Hypothesis",
@@ -11653,6 +11668,11 @@
 		"title": "Notepad++",
 		"hex": "90E59A",
 		"source": "https://github.com/notepad-plus-plus/notepad-plus-plus/blob/1f2c63cce173e3e1dc5922637c81a851693e2856/PowerEditor/misc/chameleon/chameleon-pencil.eps"
+	},
+	{
+		"title": "Notesnook",
+		"hex": "000000",
+		"source": "https://github.com/streetwriters/notesnook/blob/20bbb6dd5b8d9fa0b3924f20d315babe0e3f6173/apps/web/public/favicon.svg"
 	},
 	{
 		"title": "Notion",
@@ -16560,6 +16580,12 @@
 		"guidelines": "https://sites.google.com/sumologic.com/sumo-logic-brand/home"
 	},
 	{
+		"title": "SumUp",
+		"hex": "1E1C1C",
+		"source": "https://circuit.sumup.com/?path=/docs/brand-sumuplogo--docs",
+		"guidelines": "https://github.com/sumup-oss/circuit-ui/tree/main/docs"
+	},
+	{
 		"title": "Suno",
 		"hex": "000000",
 		"source": "https://suno.com"
@@ -19599,6 +19625,11 @@
 		"title": "Zensar",
 		"hex": "000000",
 		"source": "https://www.zensar.com/about/our-story/our-brand/#logo"
+	},
+	{
+		"title": "Zensical",
+		"hex": "FFA656",
+		"source": "https://zensical.org/about/press-kit/"
 	},
 	{
 		"title": "Zerodha",

@@ -243,6 +243,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `asciinema` | `asciinema` |
 | `ASDA` | `asda` |
 | `Aseprite` | `aseprite` |
+| `Aspire` | `aspire` |
 | `AssemblyScript` | `assemblyscript` |
 | `Asterisk` | `asterisk` |
 | `Aston Martin` | `astonmartin` |
@@ -1380,6 +1381,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Hyper` | `hyper` |
 | `Hyperskill` | `hyperskill` |
 | `HyperX` | `hyperx` |
+| `Hypit` | `hypit` |
 | `Hypothesis` | `hypothesis` |
 | `Hyprland` | `hyprland` |
 | `Hyundai` | `hyundai` |
@@ -2041,6 +2043,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Note` | `note` |
 | `NotebookLM` | `notebooklm` |
 | `Notepad++` | `notepadplusplus` |
+| `Notesnook` | `notesnook` |
 | `Notion` | `notion` |
 | `Notist` | `notist` |
 | `Noun Project` | `nounproject` |
@@ -2902,6 +2905,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Sui` | `sui` |
 | `Suitest` | `suitest` |
 | `Sumo Logic` | `sumologic` |
+| `SumUp` | `sumup` |
 | `Suno` | `suno` |
 | `Sunrise` | `sunrise` |
 | `Supabase` | `supabase` |
@@ -3444,6 +3448,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zenn` | `zenn` |
 | `Zenodo` | `zenodo` |
 | `Zensar` | `zensar` |
+| `Zensical` | `zensical` |
 | `Zerodha` | `zerodha` |
 | `ZeroTier` | `zerotier` |
 | `Zettlr` | `zettlr` |
