@@ -1290,6 +1290,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Handshake` | `handshake` |
 | `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
+| `HAProxy` | `haproxy` |
 | `Harbor` | `harbor` |
 | `HarmonyOS` | `harmonyos` |
 | `Hashcat` | `hashcat` |
