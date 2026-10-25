@@ -9,12 +9,63 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {collator, getIconSlug, getIconsDataPath, titleToSlug} from '../sdk.mjs';
+import {collator, getIconsDataPath, getIconsDataString} from '../sdk.mjs';
 
 /**
- * @typedef {import("../types.js").IconData} IconData
- * @typedef {import("../types.js").DuplicateAlias} DuplicateAlias
+ * @typedef {import("../types.d.ts").IconData} IconData
+ * @typedef {import('./types.d.ts').RawIconData} RawIconData
+ * @typedef {import("../types.d.ts").DuplicateAlias} DuplicateAlias
  */
+
+/** @type {{ [key: string]: string }} */
+const TITLE_TO_SLUG_REPLACEMENTS = {
+	'+': 'plus',
+	'.': 'dot',
+	'&': 'and',
+	đ: 'd',
+	ħ: 'h',
+	ı: 'i',
+	ĸ: 'k',
+	ŀ: 'l',
+	ł: 'l',
+	ß: 'ss',
+	ŧ: 't',
+	ø: 'o',
+};
+
+const TITLE_TO_SLUG_CHARS_REGEX = new RegExp(
+	`[${Object.keys(TITLE_TO_SLUG_REPLACEMENTS).join('')}]`,
+	'gv',
+);
+
+const TITLE_TO_SLUG_RANGE_REGEX = /[^a-z\d]/gv;
+
+/**
+ * Regex to validate SVG paths.
+ */
+export const SVG_PATH_REGEX = /^m[\-mzlhvcsqtae\d,. ]+$/iv;
+
+/**
+ * Get the slug/filename for an icon.
+ * @param {Pick<RawIconData, 'slug' | 'title'>} icon The icon data as it appears in *data/simple-icons.json*.
+ * @returns {string} The slug/filename for the icon.
+ */
+export const getIconSlug = (icon) => icon.slug || titleToSlug(icon.title);
+
+/**
+ * Converts a brand title into a slug/filename.
+ * @param {string} title The title to convert.
+ * @returns {string} The slug/filename for the title.
+ */
+export const titleToSlug = (title) =>
+	title
+		.toLowerCase()
+		.replaceAll(
+			TITLE_TO_SLUG_CHARS_REGEX,
+			(char) => TITLE_TO_SLUG_REPLACEMENTS[char],
+		)
+		.normalize('NFD')
+		.replaceAll(TITLE_TO_SLUG_RANGE_REGEX, '');
 
 /**
  * Get JSON schema data.
@@ -29,8 +80,17 @@ export const getJsonSchemaData = async () =>
 	);
 
 /**
+ * Get icons data as object from *data/simple-icons.json*.
+ * @returns {Promise<RawIconData[]>} Icons data as array from *data/simple-icons.json*.
+ */
+export const getRawIconsData = async () => {
+	const fileContents = await getIconsDataString();
+	return JSON.parse(fileContents);
+};
+
+/**
  * Write icons data to data/simple-icons.json.
- * @param {IconData[]} iconsData Icons data array.
+ * @param {(IconData | RawIconData)[]} iconsData Icons data array.
  * @param {boolean} [minify] Whether to minify the JSON output.
  */
 export const writeIconsData = async (iconsData, minify = false) => {
@@ -61,8 +121,8 @@ export const getSpdxLicenseIds = async () =>
 
 /**
  * The compare function for sorting icons in *data/simple-icons.json*.
- * @param {IconData} a Icon A.
- * @param {IconData} b Icon B.
+ * @param {RawIconData} a Icon A.
+ * @param {RawIconData} b Icon B.
  * @returns {number} Comparison result.
  */
 export const sortIconsCompare = (a, b) =>
@@ -83,7 +143,7 @@ const sortDuplicatesCompare = (a, b) =>
 
 /**
  * Sort icon data or duplicate alias object.
- * @template {IconData | DuplicateAlias} T Either icon data or duplicate alias.
+ * @template {RawIconData | DuplicateAlias} T Either icon data or duplicate alias.
  * @param {T} icon The icon data or duplicate alias as it appears in *data/simple-icons.json*.
  * @returns {T} The sorted icon data or duplicate alias.
  */
@@ -113,9 +173,27 @@ const sortIconOrDuplicate = (icon) => {
 };
 
 /**
+ * Converts a raw icon license object to a final license object with a URL.
+ * @param {RawIconData['license']} rawLicense The license object or URL.
+ * @returns {IconData['license']} The license object with a URL.
+ */
+export const rawLicenseToLicense = (rawLicense) => {
+	if (rawLicense === undefined) {
+		return undefined;
+	}
+
+	const licenseType = rawLicense.type;
+	const licenseUrl =
+		'url' in rawLicense
+			? rawLicense.url
+			: `https://spdx.org/licenses/${licenseType}`;
+	return {type: licenseType, url: licenseUrl};
+};
+
+/**
  * Sort license object.
- * @param {IconData['license']} license The license object as it appears in *data/simple-icons.json*.
- * @returns {IconData['license']} The sorted license object.
+ * @param {RawIconData['license']} license The license object as it appears in *data/simple-icons.json*.
+ * @returns {RawIconData['license']} The sorted license object.
  */
 const sortLicense = (license) => {
 	if (!license) {
@@ -124,7 +202,7 @@ const sortLicense = (license) => {
 
 	const keyOrder = ['type', 'url'];
 
-	/** @type {IconData['license']} */
+	/** @type {RawIconData['license']} */
 	const sortedLicense = Object.assign(
 		Object.fromEntries(
 			Object.entries(license).toSorted(
@@ -138,7 +216,7 @@ const sortLicense = (license) => {
 
 /**
  * Sort object key alphabetically.
- * @param {IconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
+ * @param {RawIconData['aliases']} object The aliases object as it appears in *data/simple-icons.json*.
  * @returns {{[_: string]: string} | undefined} The sorted aliases object.
  */
 const sortAlphabetically = (object) => {
@@ -158,8 +236,8 @@ const sortAlphabetically = (object) => {
 
 /**
  * Sort icons data.
- * @param {IconData[]} iconsData The icons data as it appears in *data/simple-icons.json*.
- * @returns {IconData[]} The sorted icons data.
+ * @param {RawIconData[]} iconsData The icons data as it appears in *data/simple-icons.json*.
+ * @returns {RawIconData[]} The sorted icons data.
  */
 export const formatIconData = (iconsData) => {
 	const iconsDataCopy = structuredClone(iconsData);
