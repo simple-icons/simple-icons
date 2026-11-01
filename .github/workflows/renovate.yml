@@ -13,7 +13,7 @@ jobs:
     outputs:
       is-fork: ${{ steps.check.outputs.is-fork }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/check-is-fork
         id: check
         with:
@@ -36,13 +36,13 @@ jobs:
           client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
       - name: Renovate
-        uses: renovatebot/github-action@v46.1.12
+        uses: renovatebot/github-action@v46.3.11
         with:
           configurationFile: .github/renovate.json5
           token: ${{ steps.app-token.outputs.token }}

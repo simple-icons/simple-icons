@@ -15,7 +15,7 @@ jobs:
           client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Autoclose Issues
         run: node scripts/actions/autoclose-issues/autoclose.app.js
         env:
