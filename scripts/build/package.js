@@ -6,7 +6,8 @@
  */
 
 /**
- * @typedef {import('../../types.js').License} License
+ * @typedef {import('../types.js').RawIconData} RawIconData
+ * @typedef {import('../../types.js').SimpleIcon & RawIconData} IconDataAndObject
  */
 
 import {promises as fs} from 'node:fs';
@@ -14,13 +15,16 @@ import path from 'node:path';
 import {format} from 'node:util';
 import {transform as esbuildTransform} from 'esbuild';
 import {
-	getIconSlug,
-	getIconsData,
 	slugToVariableName,
 	svgToPath,
 	titleToHtmlFriendly,
 } from '../../sdk.mjs';
-import {sortIconsCompare} from '../utils.js';
+import {
+	getIconSlug,
+	getRawIconsData,
+	rawLicenseToLicense,
+	sortIconsCompare,
+} from '../utils.js';
 
 const UTF8 = 'utf8';
 
@@ -38,13 +42,7 @@ const iconObjectTemplateFile = path.resolve(
 	'icon-object.js.template',
 );
 
-/**
- * Merged type from icon data and icon JS object needed to build by reference
- * to not decrease performance in the build process.
- * @typedef {import('../../types.js').SimpleIcon & import('../../types.d.ts').IconData} IconDataAndObject
- */
-
-const icons = await getIconsData();
+const icons = await getRawIconsData();
 const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
 
 /**
@@ -53,19 +51,6 @@ const iconObjectTemplate = await fs.readFile(iconObjectTemplateFile, UTF8);
  * @returns {string} The escaped value.
  */
 const escape = (value) => value.replaceAll(/(?<!\\)'/gv, String.raw`\'`);
-
-/**
- * Converts a license object to a URL if the URL is not defined.
- * @param {License} license The license object or URL.
- * @returns {License} The license object with a URL.
- */
-const licenseToString = (license) => {
-	if (license.url === undefined) {
-		license.url = `https://spdx.org/licenses/${license.type}`;
-	}
-
-	return license;
-};
 
 /**
  * Converts an icon object to a JavaScript object.
@@ -84,7 +69,7 @@ const iconDataAndObjectToJsRepr = (icon) =>
 		icon.guidelines ? `\n  guidelines: '${escape(icon.guidelines)}',` : '',
 		icon.license === undefined
 			? ''
-			: `\n  license: ${JSON.stringify(licenseToString(icon.license))},`,
+			: `\n  license: ${JSON.stringify(icon.license)},`,
 	);
 
 /**
@@ -128,13 +113,21 @@ const writeTs = async (filepath, rawTypeScript) => {
  */
 const buildIcons = async () =>
 	Promise.all(
-		icons.map(async (iconData) => {
-			const slug = getIconSlug(iconData);
+		icons.map(async (rawIconData) => {
+			const slug = getIconSlug(rawIconData);
 			const svgFilepath = path.resolve(iconsDirectory, `${slug}.svg`);
 			const svg = await fs.readFile(svgFilepath, UTF8);
+			const svgPath = svgToPath(svg);
+			const {license: rawIconLicense, ...iconDataWithoutLicense} = rawIconData;
+			const license = rawLicenseToLicense(rawIconLicense);
 			/** @type {IconDataAndObject} */
-			// @ts-expect-error: Some properties does not exist. We can polish it in TypeScript migration.
-			const icon = {...iconData, svg, path: svgToPath(svg), slug};
+			const icon = {
+				...iconDataWithoutLicense,
+				svg,
+				path: svgPath,
+				slug,
+				license,
+			};
 			const iconObjectRepr = iconDataAndObjectToJsRepr(icon);
 			const iconExportName = slugToVariableName(slug);
 			return {icon, iconObjectRepr, iconExportName};
