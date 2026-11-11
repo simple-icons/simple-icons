@@ -11584,6 +11584,16 @@
 		}
 	},
 	{
+		"title": "Nmap",
+		"hex": "B2DFF1",
+		"source": "https://nmap.org/images/sitelogo-nmap.svg",
+		"guidelines": "https://nmap.org/book/man-legal.html",
+		"license": {
+			"type": "custom",
+			"url": "https://svn.nmap.org/nmap/LICENSE"
+		}
+	},
+	{
 		"title": "Nobara Linux",
 		"hex": "000000",
 		"source": "https://wiki.nobaraproject.org"
