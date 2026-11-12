@@ -9055,6 +9055,14 @@
 		"source": "https://kitsu.io"
 	},
 	{
+		"title": "kitty",
+		"hex": "000000",
+		"source": "https://sw.kovidgoyal.net/kitty",
+		"license": {
+			"type": "GPL-3.0-only"
+		}
+	},
+	{
 		"title": "Kiwix",
 		"hex": "000000",
 		"source": "https://wiki.kiwix.org/wiki/Logo",
@@ -17584,6 +17592,12 @@
 		"title": "Traefik Proxy",
 		"hex": "24A1C1",
 		"source": "https://traefik.io/traefik"
+	},
+	{
+		"title": "Traffic.cv",
+		"hex": "635BFF",
+		"source": "https://traffic.cv/logo.svg",
+		"guidelines": "https://traffic.cv/terms-of-service"
 	},
 	{
 		"title": "Trailforks",
