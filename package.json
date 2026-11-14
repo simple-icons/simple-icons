@@ -1,6 +1,6 @@
 {
 	"name": "simple-icons",
-	"version": "16.36.0",
+	"version": "16.37.0",
 	"description": "SVG icons for popular brands https://simpleicons.org",
 	"keywords": [
 		"svg",
@@ -62,6 +62,24 @@
 	},
 	"main": "index.js",
 	"types": "index.d.ts",
+	"files": [
+		"data/simple-icons.json",
+		"data/simple-icons.d.ts",
+		"icons",
+		"DISCLAIMER.md",
+		"VERSIONING.md",
+		"index.js",
+		"index-icons.js",
+		"index.mjs",
+		"index-icons.mjs",
+		"index.d.ts",
+		"types.d.ts",
+		"sdk.mjs",
+		"sdk.js",
+		"sdk.d.ts",
+		".jsonschema.json",
+		"jsconfig.json"
+	],
 	"scripts": {
 		"add-icon-data": "node scripts/add-icon-data.js",
 		"build": "node scripts/build/package.js",
