@@ -12812,6 +12812,23 @@
 		"source": "https://penpot.app"
 	},
 	{
+		"title": "PeopleCert",
+		"hex": "FF3200",
+		"source": "https://www.peoplecert.org",
+		"aliases": {
+			"dup": [
+				{
+					"title": "ITIL",
+					"hex": "8F63E5"
+				},
+				{
+					"title": "PRINCE2",
+					"hex": "2EBFA5"
+				}
+			]
+		}
+	},
+	{
 		"title": "Percy",
 		"hex": "9E66BF",
 		"source": "https://percy.io"
