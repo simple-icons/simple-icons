@@ -13,6 +13,7 @@ const xoConfig = [
 	/** @type {import('xo').XoConfigItem} */
 	(jsdoc.configs['flat/recommended']),
 	{
+		// @ts-expect-error: The `eslint-plugin-headers` package has some issues with its types.
 		plugins: {jsdoc, headers},
 		rules: {
 			'no-shadow': 'error',

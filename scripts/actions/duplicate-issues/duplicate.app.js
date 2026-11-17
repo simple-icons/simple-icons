@@ -195,12 +195,12 @@ function formatTitle(title, exclude) {
 			continue;
 		}
 
-		result = result.replaceAll(new RegExp(trimmed, 'igm'), '');
+		result = result.replaceAll(new RegExp(trimmed, 'igmv'), '');
 	}
 
 	return result
-		.replaceAll(/[^\p{L}\p{N}\p{M}\s]/gu, ' ')
-		.replaceAll(/\s+/g, ' ')
+		.replaceAll(/[^\p{L}\p{N}\p{M}\s]/gv, ' ')
+		.replaceAll(/\s+/gv, ' ')
 		.trim();
 }
 
