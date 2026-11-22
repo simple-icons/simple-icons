@@ -9063,6 +9063,14 @@
 		"source": "https://kitsu.io"
 	},
 	{
+		"title": "kitty",
+		"hex": "000000",
+		"source": "https://sw.kovidgoyal.net/kitty",
+		"license": {
+			"type": "GPL-3.0-only"
+		}
+	},
+	{
 		"title": "Kiwix",
 		"hex": "000000",
 		"source": "https://wiki.kiwix.org/wiki/Logo",
@@ -10271,8 +10279,8 @@
 	},
 	{
 		"title": "Marko",
-		"hex": "2596BE",
-		"source": "https://github.com/marko-js/website/blob/c03b8229e8fe8e01fde6c0772bc1cb0ceae9be05/src/logos/marko.svg"
+		"hex": "CC0067",
+		"source": "https://github.com/marko-js/website/blob/c6f06d9dcda664895c4699023d30dfa54816f87b/public/assets/logomark-black.svg"
 	},
 	{
 		"title": "Marriott",
@@ -11354,18 +11362,9 @@
 	},
 	{
 		"title": "Netlify",
-		"hex": "00C7B7",
-		"source": "https://www.netlify.com/press/",
-		"guidelines": "https://www.netlify.com/press/",
-		"aliases": {
-			"dup": [
-				{
-					"title": "Netlify CMS",
-					"hex": "C9FA4B",
-					"source": "https://www.netlifycms.org"
-				}
-			]
-		}
+		"hex": "000000",
+		"source": "https://www.netlify.com/about/#brand-assets",
+		"guidelines": "https://www.netlify.com/about/#brand-assets"
 	},
 	{
 		"title": "Nette",
@@ -11874,6 +11873,12 @@
 		"license": {
 			"type": "Unlicense"
 		}
+	},
+	{
+		"title": "OceanBase",
+		"hex": "0181FD",
+		"source": "https://github.com/oceanbase/oceanbase/blob/9098aa6be373240e180ec628a886f39ad0047b7c/images/logo.svg",
+		"guidelines": "https://en.oceanbase.com/legal/service-agreement"
 	},
 	{
 		"title": "OCLC",
@@ -17586,6 +17591,12 @@
 		"title": "Traefik Proxy",
 		"hex": "24A1C1",
 		"source": "https://traefik.io/traefik"
+	},
+	{
+		"title": "Traffic.cv",
+		"hex": "635BFF",
+		"source": "https://traffic.cv/logo.svg",
+		"guidelines": "https://traffic.cv/terms-of-service"
 	},
 	{
 		"title": "Trailforks",
