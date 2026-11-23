@@ -57,8 +57,10 @@ body:
 
   - type: checkboxes
     attributes:
-      label: Forbidden Brands
+      label: Confirmations
       options:
+        - label: I have searched [existing issues with the `new icon` label](https://github.com/simple-icons/simple-icons/issues?q=is%3Aissue+label%3A%22new+icon%22), including closed issues.
+          required: true
         - label: I have reviewed the list of [forbidden brands](https://github.com/simple-icons/simple-icons/blob/develop/CONTRIBUTING.md#forbidden-brands) and can confirm the brand I am requesting is not one of them, nor is it a subsidiary of one of them.
           required: true
 

@@ -1290,6 +1290,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Handshake` | `handshake` |
 | `Handshake` | `handshake_protocol` |
 | `HappyCow` | `happycow` |
+| `HAProxy` | `haproxy` |
 | `Harbor` | `harbor` |
 | `HarmonyOS` | `harmonyos` |
 | `Hashcat` | `hashcat` |
@@ -1588,6 +1589,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kirby` | `kirby` |
 | `Kit` | `kit` |
 | `Kitsu` | `kitsu` |
+| `kitty` | `kitty` |
 | `Kiwix` | `kiwix` |
 | `Klarna` | `klarna` |
 | `Kleinanzeigen` | `kleinanzeigen` |
@@ -1994,6 +1996,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Nette` | `nette` |
 | `Netto` | `netto` |
 | `Neutralinojs` | `neutralinojs` |
+| `New API` | `newapi` |
 | `New Balance` | `newbalance` |
 | `New Japan Pro-Wrestling` | `newjapanprowrestling` |
 | `New Relic` | `newrelic` |
@@ -2076,6 +2079,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Obsidian` | `obsidian` |
 | `Obtainium` | `obtainium` |
 | `OCaml` | `ocaml` |
+| `OceanBase` | `oceanbase` |
 | `OCLC` | `oclc` |
 | `oclif` | `oclif` |
 | `Octane Render` | `octanerender` |
@@ -3084,6 +3088,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TRAE` | `trae` |
 | `Traefik Mesh` | `traefikmesh` |
 | `Traefik Proxy` | `traefikproxy` |
+| `Traffic.cv` | `trafficdotcv` |
 | `Trailforks` | `trailforks` |
 | `TrainerRoad` | `trainerroad` |
 | `Trakt` | `trakt` |
@@ -3458,6 +3463,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Zigbee2MQTT` | `zigbee2mqtt` |
 | `Ziggo` | `ziggo` |
 | `Zilch` | `zilch` |
+| `Zilliz` | `zilliz` |
 | `Zillow` | `zillow` |
 | `ZincSearch` | `zincsearch` |
 | `Zingat` | `zingat` |
