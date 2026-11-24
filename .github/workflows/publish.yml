@@ -128,7 +128,7 @@ jobs:
             -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             -d '{"ref":"develop"}' \
             https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
-  # The current simpleicons.org website is maintained at https://github.com/LitoMore/simpleicons.org.
+  # The current simpleicons.org website is maintained at https://github.com/simple-icons/simpleicons.org.
   website:
     name: Trigger legacy simple-icons-website-rs deployment
     needs: npm
