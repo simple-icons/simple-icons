@@ -1589,6 +1589,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `Kirby` | `kirby` |
 | `Kit` | `kit` |
 | `Kitsu` | `kitsu` |
+| `kitty` | `kitty` |
 | `Kiwix` | `kiwix` |
 | `Klarna` | `klarna` |
 | `Kleinanzeigen` | `kleinanzeigen` |
@@ -3087,6 +3088,7 @@ update the script at 'scripts/release/update-slugs-table.js'.
 | `TRAE` | `trae` |
 | `Traefik Mesh` | `traefikmesh` |
 | `Traefik Proxy` | `traefikproxy` |
+| `Traffic.cv` | `trafficdotcv` |
 | `Trailforks` | `trailforks` |
 | `TrainerRoad` | `trainerroad` |
 | `Trakt` | `trakt` |
