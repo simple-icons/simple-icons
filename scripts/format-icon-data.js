@@ -4,8 +4,7 @@
  * @file
  * Format data/simple-icons.json.
  */
-import {getIconsData} from '../sdk.mjs';
-import {formatIconData, writeIconsData} from './utils.js';
+import {formatIconData, getRawIconsData, writeIconsData} from './utils.js';
 
-const icons = await getIconsData();
+const icons = await getRawIconsData();
 writeIconsData(formatIconData(icons));
