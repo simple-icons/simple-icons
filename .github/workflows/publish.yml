@@ -109,42 +109,27 @@ jobs:
           DISCORD_RELEASES_ROLE_ID: ${{ secrets.DISCORD_RELEASES_ROLE_ID }}
           DISCORD_RELEASES_WEBHOOK_URL: ${{ secrets.DISCORD_RELEASES_WEBHOOK_URL }}
         continue-on-error: true
-  font:
-    name: Trigger simple-icons-font release
-    needs: npm
+  downstream:
+    name: Trigger ${{ matrix.repository }}
+    needs: [npm, github]
     runs-on: ubuntu-latest
     permissions:
-      actions: write
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        # The current simpleicons.org website is maintained at https://github.com/LitoMore/simpleicons.org.
+        repository:
+          [simple-icons-font, simple-icons-website-rs, simpleicons.org]
     steps:
       - uses: actions/create-github-app-token@v3
         id: app-token
         with:
           client-id: ${{ secrets.BOT_CLIENT_ID }}
           private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-          repositories: 'simple-icons-font'
-      - name: Trigger simple-icons-font release
-        run: |
-          curl -X POST \
-            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
-            -d '{"ref":"develop"}' \
-            https://api.github.com/repos/simple-icons/simple-icons-font/actions/workflows/auto-release.yml/dispatches
-  # The current simpleicons.org website is maintained at https://github.com/LitoMore/simpleicons.org.
-  website:
-    name: Trigger legacy simple-icons-website-rs deployment
-    needs: npm
-    runs-on: ubuntu-latest
-    permissions:
-      actions: write
-    steps:
-      - uses: actions/create-github-app-token@v3
-        id: app-token
-        with:
-          client-id: ${{ secrets.BOT_CLIENT_ID }}
-          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-          repositories: 'simple-icons-website-rs'
-      - name: Trigger legacy simple-icons-website-rs deployment
-        run: |
-          curl -X POST \
-            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
-            -d '{"ref":"master"}' \
-            https://api.github.com/repos/simple-icons/simple-icons-website-rs/actions/workflows/auto-release.yml/dispatches
+          repositories: ${{ matrix.repository }}
+      - name: Dispatch the receiver's default branch
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          GH_REPO: simple-icons/${{ matrix.repository }}
+        run: gh workflow run auto-release.yml
